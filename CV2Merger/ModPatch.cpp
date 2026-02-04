@@ -2,6 +2,7 @@
 #include <filesystem>
 #include "Util.h"
 #include "magic_enum.hpp"
+#include "Config.h"
 
 std::map<std::string, SDK::FCharacterCustomizeDataTableInnerList> ModPatch::DT_Inner_Female;
 std::map<std::string, SDK::FCharacterCustomizeDataTableInnerList> ModPatch::DT_Inner_Male;

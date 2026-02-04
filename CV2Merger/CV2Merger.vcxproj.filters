@@ -72,6 +72,9 @@
     <ClInclude Include="SDK\CoreUObject_structs.hpp">
       <Filter>SDK</Filter>
     </ClInclude>
+    <ClInclude Include="Config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -104,5 +107,13 @@
     <ClCompile Include="SDK\CoreUObject_functions.cpp">
       <Filter>SDK</Filter>
     </ClCompile>
+    <ClCompile Include="Config.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="RHFFConfig.toml">
+      <Filter>Resource Files</Filter>
+    </CopyFileToFolders>
   </ItemGroup>
 </Project>

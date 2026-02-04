@@ -4,9 +4,8 @@
 #include "SDK.hpp"
 #include "ModPatch.h"
 #include "Util.h"
-
-static HMODULE MainHModule = nullptr;
-static bool Initialized = false;
+#include "Config.h"
+#include <filesystem>
 
 #pragma region Sigs
 
@@ -86,7 +85,6 @@ void Patch_FlagCondition(SDK::UDataTable* TablePtr, std::map<std::string, T> Mod
 HOOK(void, __stdcall, Hook_UGameFlowManager_OnShaderCompileWaitFinished, Sig_UGameFlowManager_OnShaderCompileWaitFinished, uint64_t* param1)
 {
     ModPatch::init();
-	EnableConsole();
     orig_Hook_UGameFlowManager_OnShaderCompileWaitFinished(param1);
 }
 
@@ -350,13 +348,16 @@ BOOL APIENTRY DllMain( HMODULE hModule,
     switch (ul_reason_for_call)
     {
     case DLL_PROCESS_ATTACH:
-        MainHModule = hModule;
+        Config::init();
 
-        if (!GetConsoleWindow()) {
+        if (!GetConsoleWindow() && Config::Console) {
             AllocConsole();
             AttachConsole(GetCurrentProcessId());
             freopen("CON", "w", stdout);
         }
+
+        
+
 		INSTALL_HOOK(Hook_UGameFlowManager_OnShaderCompileWaitFinished);
         INSTALL_HOOK(Hook_UDataTable_Serialize);
         INSTALL_HOOK(Hook_CameraResetPressed);
