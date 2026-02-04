@@ -360,7 +360,10 @@ BOOL APIENTRY DllMain( HMODULE hModule,
 
 		INSTALL_HOOK(Hook_UGameFlowManager_OnShaderCompileWaitFinished);
         INSTALL_HOOK(Hook_UDataTable_Serialize);
-        INSTALL_HOOK(Hook_CameraResetPressed);
+        if (Config::AccessoryInfo)
+        {
+            INSTALL_HOOK(Hook_CameraResetPressed);
+        }
 		return TRUE;
     case DLL_THREAD_ATTACH:
     case DLL_THREAD_DETACH:
