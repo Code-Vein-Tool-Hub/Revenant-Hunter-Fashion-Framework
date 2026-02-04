@@ -23,6 +23,10 @@ void* Sig_UDataTable_Serialize = sigScan(
     "\x48\x89\x5C\x24\x2A\x57\x48\x81\xEC\xC0\x01\x00\x00\x48\x8B\x05\x2A\x2A\x2A\x2A\x48\x33\xC4\x48\x89\x84\x24\x2A\x2A\x2A\x2A\x48\x8D\x05\x2A\x2A\x2A\x2A\x48\x89\x54\x24\x2A\x48\x89\x44\x24\x2A\x48\x8B\xFA",
     "xxxx?xxxxxxxxxxx????xxxxxxx????xxx????xxxx?xxxx?xxx");
 
+void* Sig_ACharacterCustomizePawn_CameraResetPressed = sigScan(
+    "\x40\x53\x48\x83\xEC\x30\x80\xB9\x2A\x2A\x2A\x2A\x00\x48\x89\xCB",
+    "xxxxxxxx????xxxx");
+
 #pragma endregion
 
 #pragma region Functions
@@ -310,6 +314,32 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
     return;
 }
 
+HOOK(void, __stdcall, Hook_CameraResetPressed, Sig_ACharacterCustomizePawn_CameraResetPressed, SDK::ACharacterCustomizePawn* _this)
+{
+    printf("[CV2Merger] Camera rest from %s\n", _this->GetName().c_str());
+
+    SDK::FName name;
+    SDK::FEulerAngleTransform LocalRoot;
+    SDK::FEulerAngleTransform LocalOrient;
+    SDK::FEulerAngleTransform LocalMesh;
+    _this->GetAccessoryTransforms(&LocalRoot, &LocalOrient, &LocalMesh);
+
+    printf("[CV2Merger] GetAccessoryTransforms:\n");
+    printf("    LocalRoot\n        Translation: [%f, %f, %f]:\n", LocalRoot.Translation.X, LocalRoot.Translation.Y, LocalRoot.Translation.Z);
+    printf("        Rotation: [%f, %f, %f]:\n", LocalRoot.Rotation.X, LocalRoot.Rotation.Y, LocalRoot.Rotation.Z);
+    printf("        Scale: [%f, %f, %f]:\n", LocalRoot.Scale.X, LocalRoot.Scale.Y, LocalRoot.Scale.Z);
+
+    printf("    LocalOrient\n        Translation: [%f, %f, %f]:\n", LocalOrient.Translation.X, LocalOrient.Translation.Y, LocalOrient.Translation.Z);
+    printf("        Rotation: [%f, %f, %f]:\n", LocalOrient.Rotation.X, LocalOrient.Rotation.Y, LocalOrient.Rotation.Z);
+    printf("        Scale: [%f, %f, %f]:\n", LocalOrient.Scale.X, LocalOrient.Scale.Y, LocalOrient.Scale.Z);
+
+    printf("    LocalMesh\n        Translation: [%f, %f, %f]:\n", LocalMesh.Translation.X, LocalMesh.Translation.Y, LocalMesh.Translation.Z);
+    printf("        Rotation: [%f, %f, %f]:\n", LocalMesh.Rotation.X, LocalMesh.Rotation.Y, LocalMesh.Rotation.Z);
+    printf("        Scale: [%f, %f, %f]:\n", LocalMesh.Scale.X, LocalMesh.Scale.Y, LocalMesh.Scale.Z);
+
+    orig_Hook_CameraResetPressed(_this);
+}
+
 #pragma endregion
 
 BOOL APIENTRY DllMain( HMODULE hModule,
@@ -329,6 +359,7 @@ BOOL APIENTRY DllMain( HMODULE hModule,
         }
 		INSTALL_HOOK(Hook_UGameFlowManager_OnShaderCompileWaitFinished);
         INSTALL_HOOK(Hook_UDataTable_Serialize);
+        INSTALL_HOOK(Hook_CameraResetPressed);
 		return TRUE;
     case DLL_THREAD_ATTACH:
     case DLL_THREAD_DETACH:
