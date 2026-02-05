@@ -94,7 +94,7 @@ void ModPatch::ProcessInnerTable(toml::table table, std::map<std::string, SDK::F
 			SDK::FCharacterCustomizeDataTableClothPartVisibility partVis = *new SDK::FCharacterCustomizeDataTableClothPartVisibility();
 
 			SDK::TSoftObjectPtr<SDK::UTexture2D> clothTexturepath;
-			clothTexturepath.ObjectID = { .AssetPath = FNameHelper::FNameFromString(data->get(0)->value_or("")) };
+			clothTexturepath.ObjectID = { .AssetPath = FNameHelper::FNameFromString(partArray->get(0)->value_or("")) };
 			partVis.ClothPartTexture = clothTexturepath;
 
 			toml::array* HideParamsArray = partArray->get(1)->as_array();
