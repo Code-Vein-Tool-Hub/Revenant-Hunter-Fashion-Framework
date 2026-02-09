@@ -356,8 +356,6 @@ BOOL APIENTRY DllMain( HMODULE hModule,
             freopen("CON", "w", stdout);
         }
 
-        
-
 		INSTALL_HOOK(Hook_UGameFlowManager_OnShaderCompileWaitFinished);
         INSTALL_HOOK(Hook_UDataTable_Serialize);
         if (Config::AccessoryInfo)

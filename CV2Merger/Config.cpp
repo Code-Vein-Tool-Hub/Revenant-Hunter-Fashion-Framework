@@ -29,7 +29,7 @@ bool Config::init()
 	}
 
 	Console = config["General"]["Enable_Console"].value_or(true);
-	Console = config["General"]["Acc_Info_Tool"].value_or(false);
+	AccessoryInfo = config["General"]["Acc_Info_Tool"].value_or(false);
 
 	return true;
 }
