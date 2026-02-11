@@ -33,6 +33,7 @@ Supported DataTables:
 - DT_HairSide
 - DT_HairTop
 - DT_HairSetList_Female/DT_HairSetList_Male
+- DT_AccessoryAttachToList
 
 ## Credits
 [Dumper-7](https://github.com/Encryqed/Dumper-7) - For SDK creation  
