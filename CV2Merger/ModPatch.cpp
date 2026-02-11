@@ -16,6 +16,7 @@ std::map<std::string, SDK::FCharacterCustomizeDataTableOuterList> ModPatch::DT_O
 std::map<std::string, SDK::FCharacterCustomizeDataTableOuterList> ModPatch::DT_Outer_Male;
 
 std::map<std::string, SDK::FCharacterCustomizeDataTableAccessoryPreset> ModPatch::DT_AccessoryPresetDLC_Free;
+std::map<std::string, SDK::FCharacterCustomizeDataTableAttachToList> ModPatch::DT_AccessoryAttachToList;
 
 std::map<std::string, SDK::FCharacterCustomizeDataTableHairBase> ModPatch::DT_HairBaseList;
 std::map<std::string, SDK::FCharacterCustomizeDataTableHairPart> ModPatch::DT_HairBack;
@@ -286,7 +287,11 @@ void ModPatch::ProcessGlovesTable(toml::table table, std::map<std::string, SDK::
 		Gloves.LeftFingerExposureMap = *new SDK::TMap<SDK::ECharacterCustomizeFinger, bool>();
 		for (auto& finger : *data->get(6)->as_array())
 		{
-			
+			toml::array* fingerArray = finger.as_array();
+			SDK::ECharacterCustomizeFinger Key = magic_enum::enum_cast<SDK::ECharacterCustomizeFinger>(fingerArray->get(0)->value_or("MAX")).value_or(SDK::ECharacterCustomizeFinger::MAX);
+			bool Value = fingerArray->get(1)->value_or(true);
+
+			//Curently no way to make a new TMap in memory
 		}
 		Gloves.RightFingerExposureMap = *new SDK::TMap<SDK::ECharacterCustomizeFinger, bool>();
 		for (auto& finger : *data->get(7)->as_array())
@@ -740,6 +745,59 @@ void ModPatch::ProcessHairSetTable(toml::table table, std::map<std::string, SDK:
 	}
 }
 
+void ModPatch::ProcessAccessoryAttachToTable(toml::table table, std::map<std::string, SDK::FCharacterCustomizeDataTableAttachToList>* DataTable)
+{
+	for (auto& [key, value] : table)
+	{
+		std::string name = key.str().data();
+		toml::array* data = nullptr;
+
+		if (value.is_array())
+			data = value.as_array();
+		else
+		{
+			printf("[CV2Merger] [TOML] entry \"%s\" in toml is not an array", name);
+			continue;
+		}
+
+		if (data->size() <= 0)
+		{
+			printf("[CV2Merger] [TOML] entry data for \"%s\" is empty in toml\n", name.c_str());
+			continue;
+		}
+		if (DataTable->contains(name.c_str()))
+		{
+			printf("[CV2Merger] [TOML] Duplicate entry for \"%s\" found in toml\n", name.c_str());
+			continue;
+		}
+
+		SDK::FCharacterCustomizeDataTableAttachToList AttachTo = *new SDK::FCharacterCustomizeDataTableAttachToList();
+		AttachTo.DisplayName = FNameHelper::FTextFromString(data->get(0)->value_or(""));
+		AttachTo.SocketName = FNameHelper::FNameFromString(data->get(1)->value_or(""));
+		AttachTo.AttachTargetMeshType = magic_enum::enum_cast<SDK::EAttachTargetMesh>(data->get(2)->value_or("BodyBase")).value_or(SDK::EAttachTargetMesh::BodyBase);
+
+		AttachTo.SocketTransform = *new SDK::FTransform();
+		auto trans = data->get(3)->as_array();
+		AttachTo.SocketTransform.Rotation.X = trans->get(0)->as_array()->get(0)->value_or(0.0);
+		AttachTo.SocketTransform.Rotation.Y = trans->get(0)->as_array()->get(1)->value_or(0.0);
+		AttachTo.SocketTransform.Rotation.Z = trans->get(0)->as_array()->get(2)->value_or(0.0);
+		AttachTo.SocketTransform.Rotation.W = trans->get(0)->as_array()->get(3)->value_or(1.0);
+
+		AttachTo.SocketTransform.Translation.X = trans->get(1)->as_array()->get(0)->value_or(0.0);
+		AttachTo.SocketTransform.Translation.Y = trans->get(1)->as_array()->get(1)->value_or(0.0);
+		AttachTo.SocketTransform.Translation.Z = trans->get(1)->as_array()->get(2)->value_or(0.0);
+
+		AttachTo.SocketTransform.Scale3D.X = trans->get(2)->as_array()->get(0)->value_or(1.0);
+		AttachTo.SocketTransform.Scale3D.X = trans->get(2)->as_array()->get(1)->value_or(1.0);
+		AttachTo.SocketTransform.Scale3D.X = trans->get(2)->as_array()->get(2)->value_or(1.0);
+
+		AttachTo.MoveType = magic_enum::enum_cast<SDK::ECharacterCustomizeAttachToMoveType>(data->get(4)->value_or("Cylindrical")).value_or(SDK::ECharacterCustomizeAttachToMoveType::Cylindrical);
+		AttachTo.bKeepWearingInSpa = data->get(5)->value_or(false);
+
+		DataTable->insert({ name, AttachTo });
+	}
+}
+
 bool ModPatch::init()
 {
 	printf("[CV2Merger] [TOML] Processing toml patches...\n");
@@ -823,7 +881,9 @@ bool ModPatch::init()
 		table = config["DT_AccessoryPresetDLC_Free"].as_table();
 		if (table)
 			ProcessAccessoryPresetTable(*table, &DT_AccessoryPresetDLC_Free);
-
+		table = config["DT_AccessoryAttachToList"].as_table();
+		if (table)
+			ProcessAccessoryAttachToTable(*table, &DT_AccessoryAttachToList);
 
 		table = config["DT_HairBaseList"].as_table();
 		if (table)

@@ -7,11 +7,17 @@ namespace FNameHelper
 {
 	SDK::FName FNameFromString(const std::string str);
 	SDK::FString FStringFromString(const std::string str);
+	SDK::FText FTextFromString(const std::string str);
 }
 
 namespace TArrayHelper
 {
 	void ResizeTArray(void* TargetArray, int Size);
+}
+
+namespace TMapHelper
+{
+	
 }
 
 SDK::UObject* FindObjectByClass(const std::string& Name, SDK::UClass* uclass);

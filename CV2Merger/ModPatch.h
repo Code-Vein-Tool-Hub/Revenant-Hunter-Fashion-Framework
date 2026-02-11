@@ -17,6 +17,7 @@ public:
 	static std::map<std::string, SDK::FCharacterCustomizeDataTableOuterList> DT_Outer_Male;
 
 	static std::map<std::string, SDK::FCharacterCustomizeDataTableAccessoryPreset> DT_AccessoryPresetDLC_Free;
+	static std::map<std::string, SDK::FCharacterCustomizeDataTableAttachToList> DT_AccessoryAttachToList;
 
 	static std::map<std::string, SDK::FCharacterCustomizeDataTableHairBase> DT_HairBaseList;
 	static std::map<std::string, SDK::FCharacterCustomizeDataTableHairPart> DT_HairBack;
@@ -36,6 +37,7 @@ private:
 	static void ProcessOuterTable(toml::table table, std::map<std::string, SDK::FCharacterCustomizeDataTableOuterList>* DataTable);
 
 	static void ProcessAccessoryPresetTable(toml::table table, std::map<std::string, SDK::FCharacterCustomizeDataTableAccessoryPreset>* DataTable);
+	static void ProcessAccessoryAttachToTable(toml::table table, std::map<std::string, SDK::FCharacterCustomizeDataTableAttachToList>* DataTable);
 
 	static void ProcessHairBaseTable(toml::table table, std::map<std::string, SDK::FCharacterCustomizeDataTableHairBase>* DataTable);
 	static void ProcessHairPartTable(toml::table table, std::map<std::string, SDK::FCharacterCustomizeDataTableHairPart>* DataTable);

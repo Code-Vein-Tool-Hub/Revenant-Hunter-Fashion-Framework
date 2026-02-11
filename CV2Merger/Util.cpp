@@ -20,6 +20,10 @@ namespace FNameHelper
 	{
 		return SDK::UKismetStringLibrary::Conv_NameToString(FNameFromString(str));
 	}
+	SDK::FText FTextFromString(const std::string str)
+	{
+		return SDK::UKismetTextLibrary::Conv_NameToText(FNameFromString(str));
+	}
 }
 
 namespace TArrayHelper

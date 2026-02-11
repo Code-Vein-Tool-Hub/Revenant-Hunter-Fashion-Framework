@@ -220,6 +220,17 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
 			Patch_FlagCondition(_this, ModPatch::DT_AccessoryPresetDLC_Free, 0x01B0);
         }
     }
+    if (TableName == "DT_AccessoryAttachToList")
+    {
+        if (ModPatch::DT_AccessoryAttachToList.size() > 0)
+        {
+            for (auto& entry : ModPatch::DT_AccessoryAttachToList)
+            {
+                UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
+                printf("[CV2Merger] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
+            }
+        }
+    }
 
     if (TableName == "DT_Boots_Female")
     {
