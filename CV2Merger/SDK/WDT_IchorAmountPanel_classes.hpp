@@ -35,11 +35,11 @@ public:
 	float                                         ForcedShowTime;                                    // 0x0640(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ForcedShowByUsage();
-	void HideByGadgetPanel();
-	void NotifyIchorChanged(double InCurrentIchor, double InMaxIchor, EResourceChangeFactor InChangeFactor);
-	void OnBattleStateChanged(bool InBattleState);
 	void OnForcedShowByUsageEnd();
+	void OnBattleStateChanged(bool InBattleState);
+	void HideByGadgetPanel();
+	void ForcedShowByUsage();
+	void NotifyIchorChanged(double InCurrentIchor, double InMaxIchor, EResourceChangeFactor InChangeFactor);
 
 public:
 	static class UClass* StaticClass()

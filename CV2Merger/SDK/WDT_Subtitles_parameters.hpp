@@ -18,23 +18,93 @@
 namespace SDK::Params
 {
 
-// Function WDT_Subtitles.WDT_Subtitles_C.ApplyConfiguration
-// 0x0058 (0x0058 - 0x0000)
-struct WDT_Subtitles_C_ApplyConfiguration final
+// Function WDT_Subtitles.WDT_Subtitles_C.UpdateSpeakerVisibility
+// 0x0001 (0x0001 - 0x0000)
+struct WDT_Subtitles_C_UpdateSpeakerVisibility final
 {
 public:
-	class UConfigurationManager*                  CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FConfigurationAccessibilitySaveData    CallFunc_GetConfigAccessibilitySaveData_ReturnValue; // 0x000C(0x0024)(ConstParm, NoDestructor)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FClamp_ReturnValue;                       // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FClamp_Value_ImplicitCast;                // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_A_ImplicitCast;          // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetUserSpecifiedScale_InUserSpecifiedScale_ImplicitCast; // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetRenderOpacity_InOpacity_ImplicitCast;  // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bInVisible;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WDT_Subtitles_C_ApplyConfiguration;
+DUMPER7_ASSERTS_WDT_Subtitles_C_UpdateSpeakerVisibility;
+
+// Function WDT_Subtitles.WDT_Subtitles_C.UpdateSkipButtonVisibility
+// 0x0001 (0x0001 - 0x0000)
+struct WDT_Subtitles_C_UpdateSkipButtonVisibility final
+{
+public:
+	bool                                          InIsVisibility;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_Subtitles_C_UpdateSkipButtonVisibility;
+
+// Function WDT_Subtitles.WDT_Subtitles_C.SetTalkText
+// 0x0060 (0x0060 - 0x0000)
+struct WDT_Subtitles_C_SetTalkText final
+{
+public:
+	class FText                                   InSpeakerText;                                     // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+	class FText                                   InTalkText;                                        // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+	bool                                          CallFunc_TextIsEmpty_ReturnValue;                  // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsCutScene_ReturnValue;                   // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_23[0x5];                                       // 0x0023(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UConfigurationManager*                  CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FConfigurationAccessibilitySaveData    CallFunc_GetConfigAccessibilitySaveData_ReturnValue; // 0x0034(0x0024)(ConstParm, NoDestructor)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_TextIsEmpty_ReturnValue_1;                // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_TextIsEmpty_ReturnValue_2;                // 0x005A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x005B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_Subtitles_C_SetTalkText;
+
+// Function WDT_Subtitles.WDT_Subtitles_C.SetSkipIndicatorPercent
+// 0x0004 (0x0004 - 0x0000)
+struct WDT_Subtitles_C_SetSkipIndicatorPercent final
+{
+public:
+	float                                         NewPercent;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_Subtitles_C_SetSkipIndicatorPercent;
+
+// Function WDT_Subtitles.WDT_Subtitles_C.SetShowSkipIndicator
+// 0x0001 (0x0001 - 0x0000)
+struct WDT_Subtitles_C_SetShowSkipIndicator final
+{
+public:
+	bool                                          bShowWidget;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_Subtitles_C_SetShowSkipIndicator;
+
+// Function WDT_Subtitles.WDT_Subtitles_C.SetShowLeaveMultiplayIndicator
+// 0x0001 (0x0001 - 0x0000)
+struct WDT_Subtitles_C_SetShowLeaveMultiplayIndicator final
+{
+public:
+	bool                                          bShowWidget;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_Subtitles_C_SetShowLeaveMultiplayIndicator;
+
+// Function WDT_Subtitles.WDT_Subtitles_C.SetLeaveMultiplayIndicatorPercent
+// 0x0004 (0x0004 - 0x0000)
+struct WDT_Subtitles_C_SetLeaveMultiplayIndicatorPercent final
+{
+public:
+	float                                         NewPercent;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_Subtitles_C_SetLeaveMultiplayIndicatorPercent;
+
+// Function WDT_Subtitles.WDT_Subtitles_C.InpActEvt_IA_UI_StatementSkip_K2Node_EnhancedInputActionEvent_0
+// 0x0030 (0x0030 - 0x0000)
+struct WDT_Subtitles_C_InpActEvt_IA_UI_StatementSkip_K2Node_EnhancedInputActionEvent_0 final
+{
+public:
+	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_Subtitles_C_InpActEvt_IA_UI_StatementSkip_K2Node_EnhancedInputActionEvent_0;
 
 // Function WDT_Subtitles.WDT_Subtitles_C.ExecuteUbergraph_WDT_Subtitles
 // 0x00E8 (0x00E8 - 0x0000)
@@ -98,93 +168,23 @@ public:
 };
 DUMPER7_ASSERTS_WDT_Subtitles_C_ExecuteUbergraph_WDT_Subtitles;
 
-// Function WDT_Subtitles.WDT_Subtitles_C.InpActEvt_IA_UI_StatementSkip_K2Node_EnhancedInputActionEvent_0
-// 0x0030 (0x0030 - 0x0000)
-struct WDT_Subtitles_C_InpActEvt_IA_UI_StatementSkip_K2Node_EnhancedInputActionEvent_0 final
+// Function WDT_Subtitles.WDT_Subtitles_C.ApplyConfiguration
+// 0x0058 (0x0058 - 0x0000)
+struct WDT_Subtitles_C_ApplyConfiguration final
 {
 public:
-	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UConfigurationManager*                  CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FConfigurationAccessibilitySaveData    CallFunc_GetConfigAccessibilitySaveData_ReturnValue; // 0x000C(0x0024)(ConstParm, NoDestructor)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FClamp_ReturnValue;                       // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FClamp_Value_ImplicitCast;                // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_A_ImplicitCast;          // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetUserSpecifiedScale_InUserSpecifiedScale_ImplicitCast; // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetRenderOpacity_InOpacity_ImplicitCast;  // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WDT_Subtitles_C_InpActEvt_IA_UI_StatementSkip_K2Node_EnhancedInputActionEvent_0;
-
-// Function WDT_Subtitles.WDT_Subtitles_C.SetLeaveMultiplayIndicatorPercent
-// 0x0004 (0x0004 - 0x0000)
-struct WDT_Subtitles_C_SetLeaveMultiplayIndicatorPercent final
-{
-public:
-	float                                         NewPercent;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_Subtitles_C_SetLeaveMultiplayIndicatorPercent;
-
-// Function WDT_Subtitles.WDT_Subtitles_C.SetShowLeaveMultiplayIndicator
-// 0x0001 (0x0001 - 0x0000)
-struct WDT_Subtitles_C_SetShowLeaveMultiplayIndicator final
-{
-public:
-	bool                                          bShowWidget;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_Subtitles_C_SetShowLeaveMultiplayIndicator;
-
-// Function WDT_Subtitles.WDT_Subtitles_C.SetShowSkipIndicator
-// 0x0001 (0x0001 - 0x0000)
-struct WDT_Subtitles_C_SetShowSkipIndicator final
-{
-public:
-	bool                                          bShowWidget;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_Subtitles_C_SetShowSkipIndicator;
-
-// Function WDT_Subtitles.WDT_Subtitles_C.SetSkipIndicatorPercent
-// 0x0004 (0x0004 - 0x0000)
-struct WDT_Subtitles_C_SetSkipIndicatorPercent final
-{
-public:
-	float                                         NewPercent;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_Subtitles_C_SetSkipIndicatorPercent;
-
-// Function WDT_Subtitles.WDT_Subtitles_C.SetTalkText
-// 0x0060 (0x0060 - 0x0000)
-struct WDT_Subtitles_C_SetTalkText final
-{
-public:
-	class FText                                   InSpeakerText;                                     // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
-	class FText                                   InTalkText;                                        // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
-	bool                                          CallFunc_TextIsEmpty_ReturnValue;                  // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsCutScene_ReturnValue;                   // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_23[0x5];                                       // 0x0023(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UConfigurationManager*                  CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FConfigurationAccessibilitySaveData    CallFunc_GetConfigAccessibilitySaveData_ReturnValue; // 0x0034(0x0024)(ConstParm, NoDestructor)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_TextIsEmpty_ReturnValue_1;                // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_TextIsEmpty_ReturnValue_2;                // 0x005A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x005B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_Subtitles_C_SetTalkText;
-
-// Function WDT_Subtitles.WDT_Subtitles_C.UpdateSkipButtonVisibility
-// 0x0001 (0x0001 - 0x0000)
-struct WDT_Subtitles_C_UpdateSkipButtonVisibility final
-{
-public:
-	bool                                          InIsVisibility;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_Subtitles_C_UpdateSkipButtonVisibility;
-
-// Function WDT_Subtitles.WDT_Subtitles_C.UpdateSpeakerVisibility
-// 0x0001 (0x0001 - 0x0000)
-struct WDT_Subtitles_C_UpdateSpeakerVisibility final
-{
-public:
-	bool                                          bInVisible;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_Subtitles_C_UpdateSpeakerVisibility;
+DUMPER7_ASSERTS_WDT_Subtitles_C_ApplyConfiguration;
 
 }
 

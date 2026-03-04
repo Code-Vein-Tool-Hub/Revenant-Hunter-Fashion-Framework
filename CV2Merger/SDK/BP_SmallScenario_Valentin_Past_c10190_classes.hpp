@@ -20,14 +20,14 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_SmallScenario_Valentin_Past_c10190.BP_SmallScenario_Valentin_Past_c10190_C
-// 0x0038 (0x03C8 - 0x0390)
+// 0x0038 (0x0400 - 0x03C8)
 class ABP_SmallScenario_Valentin_Past_c10190_C final : public ABP_SmallScenarioBase_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_SmallScenario_Valentin_Past_c10190_C; // 0x0390(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FStoryFlagEvaluationFormula            bPlayed_c10150;                                    // 0x0398(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	struct FStoryFlagEvaluationFormula            bPlayed_c10200;                                    // 0x03A8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	struct FStoryFlagEvaluationFormula            bPlayed_c10250;                                    // 0x03B8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_SmallScenario_Valentin_Past_c10190_C; // 0x03C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FStoryFlagEvaluationFormula            bPlayed_c10150;                                    // 0x03D0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FStoryFlagEvaluationFormula            bPlayed_c10200;                                    // 0x03E0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FStoryFlagEvaluationFormula            bPlayed_c10250;                                    // 0x03F0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
 	void Abort();

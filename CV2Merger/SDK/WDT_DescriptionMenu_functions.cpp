@@ -17,6 +17,252 @@
 namespace SDK
 {
 
+// Function WDT_DescriptionMenu.WDT_DescriptionMenu_C.SelectUpperDescription
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWDT_DescriptionMenu_C::SelectUpperDescription()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_DescriptionMenu_C", "SelectUpperDescription");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WDT_DescriptionMenu.WDT_DescriptionMenu_C.SelectLowerDescription
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWDT_DescriptionMenu_C::SelectLowerDescription()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_DescriptionMenu_C", "SelectLowerDescription");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WDT_DescriptionMenu.WDT_DescriptionMenu_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_DescriptionMenu_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_DescriptionMenu_C", "PreConstruct");
+
+	Params::WDT_DescriptionMenu_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_DescriptionMenu.WDT_DescriptionMenu_C.OnUpPressed
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWDT_DescriptionMenu_C::OnUpPressed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_DescriptionMenu_C", "OnUpPressed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WDT_DescriptionMenu.WDT_DescriptionMenu_C.OnRightPressed
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWDT_DescriptionMenu_C::OnRightPressed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_DescriptionMenu_C", "OnRightPressed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WDT_DescriptionMenu.WDT_DescriptionMenu_C.OnOpened
+// (Event, Protected, BlueprintEvent)
+
+void UWDT_DescriptionMenu_C::OnOpened()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_DescriptionMenu_C", "OnOpened");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WDT_DescriptionMenu.WDT_DescriptionMenu_C.OnMenuInitialized
+// (Event, Protected, BlueprintEvent)
+
+void UWDT_DescriptionMenu_C::OnMenuInitialized()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_DescriptionMenu_C", "OnMenuInitialized");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WDT_DescriptionMenu.WDT_DescriptionMenu_C.OnLeftPressed
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWDT_DescriptionMenu_C::OnLeftPressed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_DescriptionMenu_C", "OnLeftPressed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WDT_DescriptionMenu.WDT_DescriptionMenu_C.OnGetOpenAnimation
+// (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UWidgetAnimation*                 ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
+
+class UWidgetAnimation* UWDT_DescriptionMenu_C::OnGetOpenAnimation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_DescriptionMenu_C", "OnGetOpenAnimation");
+
+	Params::WDT_DescriptionMenu_C_OnGetOpenAnimation Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function WDT_DescriptionMenu.WDT_DescriptionMenu_C.OnFinishing
+// (Event, Protected, BlueprintEvent)
+
+void UWDT_DescriptionMenu_C::OnFinishing()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_DescriptionMenu_C", "OnFinishing");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WDT_DescriptionMenu.WDT_DescriptionMenu_C.OnFieldMenuCloseAnimationFinish
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWDT_DescriptionMenu_C::OnFieldMenuCloseAnimationFinish()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_DescriptionMenu_C", "OnFieldMenuCloseAnimationFinish");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WDT_DescriptionMenu.WDT_DescriptionMenu_C.OnFieldMenuButton
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWDT_DescriptionMenu_C::OnFieldMenuButton()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_DescriptionMenu_C", "OnFieldMenuButton");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WDT_DescriptionMenu.WDT_DescriptionMenu_C.OnDownPressed
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWDT_DescriptionMenu_C::OnDownPressed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_DescriptionMenu_C", "OnDownPressed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WDT_DescriptionMenu.WDT_DescriptionMenu_C.OnDecide
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWDT_DescriptionMenu_C::OnDecide()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_DescriptionMenu_C", "OnDecide");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WDT_DescriptionMenu.WDT_DescriptionMenu_C.OnCancel
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWDT_DescriptionMenu_C::OnCancel()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_DescriptionMenu_C", "OnCancel");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WDT_DescriptionMenu.WDT_DescriptionMenu_C.IsDescriptionIndex
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// int32                                   InIndex                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_DescriptionMenu_C::IsDescriptionIndex(int32 InIndex, bool* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_DescriptionMenu_C", "IsDescriptionIndex");
+
+	Params::WDT_DescriptionMenu_C_IsDescriptionIndex Parms{};
+
+	Parms.InIndex = InIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+}
+
+
 // Function WDT_DescriptionMenu.WDT_DescriptionMenu_C.InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_4
 // (BlueprintEvent)
 // Parameters:
@@ -95,32 +341,6 @@ void UWDT_DescriptionMenu_C::InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEven
 }
 
 
-// Function WDT_DescriptionMenu.WDT_DescriptionMenu_C.InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_3
-// (BlueprintEvent)
-// Parameters:
-// const struct FInputActionValue&         ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// float                                   ElapsedTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const class UInputAction*               SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_DescriptionMenu_C::InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_3(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_DescriptionMenu_C", "InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_3");
-
-	Params::WDT_DescriptionMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_3 Parms{};
-
-	Parms.ActionValue = std::move(ActionValue);
-	Parms.ElapsedTime = ElapsedTime;
-	Parms.TriggeredTime = TriggeredTime;
-	Parms.SourceAction = SourceAction;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WDT_DescriptionMenu.WDT_DescriptionMenu_C.InpActEvt_IA_UI_FieldMenu_K2Node_EnhancedInputActionEvent_0
 // (BlueprintEvent)
 // Parameters:
@@ -137,6 +357,32 @@ void UWDT_DescriptionMenu_C::InpActEvt_IA_UI_FieldMenu_K2Node_EnhancedInputActio
 		Func = Class->GetFunction("WDT_DescriptionMenu_C", "InpActEvt_IA_UI_FieldMenu_K2Node_EnhancedInputActionEvent_0");
 
 	Params::WDT_DescriptionMenu_C_InpActEvt_IA_UI_FieldMenu_K2Node_EnhancedInputActionEvent_0 Parms{};
+
+	Parms.ActionValue = std::move(ActionValue);
+	Parms.ElapsedTime = ElapsedTime;
+	Parms.TriggeredTime = TriggeredTime;
+	Parms.SourceAction = SourceAction;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_DescriptionMenu.WDT_DescriptionMenu_C.InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_3
+// (BlueprintEvent)
+// Parameters:
+// const struct FInputActionValue&         ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// float                                   ElapsedTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class UInputAction*               SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_DescriptionMenu_C::InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_3(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_DescriptionMenu_C", "InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_3");
+
+	Params::WDT_DescriptionMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_3 Parms{};
 
 	Parms.ActionValue = std::move(ActionValue);
 	Parms.ElapsedTime = ElapsedTime;
@@ -199,6 +445,20 @@ void UWDT_DescriptionMenu_C::InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInpu
 }
 
 
+// Function WDT_DescriptionMenu.WDT_DescriptionMenu_C.Initialize
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWDT_DescriptionMenu_C::Initialize()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_DescriptionMenu_C", "Initialize");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WDT_DescriptionMenu.WDT_DescriptionMenu_C.GetMaxListIndex
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -220,17 +480,24 @@ void UWDT_DescriptionMenu_C::GetMaxListIndex(int32* OutNum)
 }
 
 
-// Function WDT_DescriptionMenu.WDT_DescriptionMenu_C.Initialize
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function WDT_DescriptionMenu.WDT_DescriptionMenu_C.GetCurrentListIndex
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// int32*                                  OutNum                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_DescriptionMenu_C::Initialize()
+void UWDT_DescriptionMenu_C::GetCurrentListIndex(int32* OutNum)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_DescriptionMenu_C", "Initialize");
+		Func = Class->GetFunction("WDT_DescriptionMenu_C", "GetCurrentListIndex");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::WDT_DescriptionMenu_C_GetCurrentListIndex Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (OutNum != nullptr)
+		*OutNum = Parms.OutNum;
 }
 
 
@@ -254,24 +521,17 @@ void UWDT_DescriptionMenu_C::ExecuteUbergraph_WDT_DescriptionMenu(int32 EntryPoi
 }
 
 
-// Function WDT_DescriptionMenu.WDT_DescriptionMenu_C.GetCurrentListIndex
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// int32*                                  OutNum                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function WDT_DescriptionMenu.WDT_DescriptionMenu_C.BuildDescriptionList
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UWDT_DescriptionMenu_C::GetCurrentListIndex(int32* OutNum)
+void UWDT_DescriptionMenu_C::BuildDescriptionList()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_DescriptionMenu_C", "GetCurrentListIndex");
+		Func = Class->GetFunction("WDT_DescriptionMenu_C", "BuildDescriptionList");
 
-	Params::WDT_DescriptionMenu_C_GetCurrentListIndex Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (OutNum != nullptr)
-		*OutNum = Parms.OutNum;
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -297,20 +557,6 @@ void UWDT_DescriptionMenu_C::BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_
 }
 
 
-// Function WDT_DescriptionMenu.WDT_DescriptionMenu_C.BuildDescriptionList
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UWDT_DescriptionMenu_C::BuildDescriptionList()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_DescriptionMenu_C", "BuildDescriptionList");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function WDT_DescriptionMenu.WDT_DescriptionMenu_C.BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_0_OnListEntryInitializedDynamic__DelegateSignature
 // (BlueprintEvent)
 // Parameters:
@@ -330,252 +576,6 @@ void UWDT_DescriptionMenu_C::BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_
 	Parms.Widget = Widget;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_DescriptionMenu.WDT_DescriptionMenu_C.IsDescriptionIndex
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// int32                                   InIndex                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool*                                   OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_DescriptionMenu_C::IsDescriptionIndex(int32 InIndex, bool* OutResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_DescriptionMenu_C", "IsDescriptionIndex");
-
-	Params::WDT_DescriptionMenu_C_IsDescriptionIndex Parms{};
-
-	Parms.InIndex = InIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (OutResult != nullptr)
-		*OutResult = Parms.OutResult;
-}
-
-
-// Function WDT_DescriptionMenu.WDT_DescriptionMenu_C.OnCancel
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWDT_DescriptionMenu_C::OnCancel()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_DescriptionMenu_C", "OnCancel");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WDT_DescriptionMenu.WDT_DescriptionMenu_C.OnDecide
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWDT_DescriptionMenu_C::OnDecide()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_DescriptionMenu_C", "OnDecide");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WDT_DescriptionMenu.WDT_DescriptionMenu_C.OnDownPressed
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWDT_DescriptionMenu_C::OnDownPressed()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_DescriptionMenu_C", "OnDownPressed");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WDT_DescriptionMenu.WDT_DescriptionMenu_C.OnFieldMenuButton
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UWDT_DescriptionMenu_C::OnFieldMenuButton()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_DescriptionMenu_C", "OnFieldMenuButton");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WDT_DescriptionMenu.WDT_DescriptionMenu_C.OnFieldMenuCloseAnimationFinish
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWDT_DescriptionMenu_C::OnFieldMenuCloseAnimationFinish()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_DescriptionMenu_C", "OnFieldMenuCloseAnimationFinish");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WDT_DescriptionMenu.WDT_DescriptionMenu_C.OnFinishing
-// (Event, Protected, BlueprintEvent)
-
-void UWDT_DescriptionMenu_C::OnFinishing()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_DescriptionMenu_C", "OnFinishing");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WDT_DescriptionMenu.WDT_DescriptionMenu_C.OnGetOpenAnimation
-// (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UWidgetAnimation*                 ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
-
-class UWidgetAnimation* UWDT_DescriptionMenu_C::OnGetOpenAnimation()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_DescriptionMenu_C", "OnGetOpenAnimation");
-
-	Params::WDT_DescriptionMenu_C_OnGetOpenAnimation Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function WDT_DescriptionMenu.WDT_DescriptionMenu_C.OnLeftPressed
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWDT_DescriptionMenu_C::OnLeftPressed()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_DescriptionMenu_C", "OnLeftPressed");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WDT_DescriptionMenu.WDT_DescriptionMenu_C.OnMenuInitialized
-// (Event, Protected, BlueprintEvent)
-
-void UWDT_DescriptionMenu_C::OnMenuInitialized()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_DescriptionMenu_C", "OnMenuInitialized");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WDT_DescriptionMenu.WDT_DescriptionMenu_C.OnOpened
-// (Event, Protected, BlueprintEvent)
-
-void UWDT_DescriptionMenu_C::OnOpened()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_DescriptionMenu_C", "OnOpened");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WDT_DescriptionMenu.WDT_DescriptionMenu_C.OnRightPressed
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWDT_DescriptionMenu_C::OnRightPressed()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_DescriptionMenu_C", "OnRightPressed");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WDT_DescriptionMenu.WDT_DescriptionMenu_C.OnUpPressed
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWDT_DescriptionMenu_C::OnUpPressed()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_DescriptionMenu_C", "OnUpPressed");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WDT_DescriptionMenu.WDT_DescriptionMenu_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_DescriptionMenu_C::PreConstruct(bool IsDesignTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_DescriptionMenu_C", "PreConstruct");
-
-	Params::WDT_DescriptionMenu_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_DescriptionMenu.WDT_DescriptionMenu_C.SelectLowerDescription
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWDT_DescriptionMenu_C::SelectLowerDescription()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_DescriptionMenu_C", "SelectLowerDescription");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WDT_DescriptionMenu.WDT_DescriptionMenu_C.SelectUpperDescription
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWDT_DescriptionMenu_C::SelectUpperDescription()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_DescriptionMenu_C", "SelectUpperDescription");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_EffectManager.BP_EffectManager_C
-// 0x0000 (0x00E0 - 0x00E0)
+// 0x0000 (0x0130 - 0x0130)
 class UBP_EffectManager_C final : public UEffectManager
 {
 public:

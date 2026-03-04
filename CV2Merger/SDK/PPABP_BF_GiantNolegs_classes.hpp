@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "AppAnimGraph_structs.hpp"
-#include "Engine_structs.hpp"
 #include "KawaiiPhysics_structs.hpp"
+#include "Engine_structs.hpp"
 #include "ControlRig_structs.hpp"
+#include "AppAnimGraph_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Extensions_classes.hpp"
 
@@ -22,7 +22,7 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass PPABP_BF_GiantNolegs.PPABP_BF_GiantNolegs_C
-// 0x4D50 (0x5460 - 0x0710)
+// 0xA1E0 (0xA8F0 - 0x0710)
 class UPPABP_BF_GiantNolegs_C final : public UAnimDynamicsPostProcessAnimInstance
 {
 public:
@@ -33,28 +33,50 @@ public:
 	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose;                     // 0x0748(0x00B8)()
 	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x0800(0x0020)()
 	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x0820(0x0020)()
-	struct FAppAnimNode_RigidBody                 AppAnimGraphNode_RigidBody;                        // 0x0840(0x09B0)()
-	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_7;                     // 0x11F0(0x07B0)()
-	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_6;                     // 0x19A0(0x07B0)()
-	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_5;                     // 0x2150(0x07B0)()
-	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_4;                     // 0x2900(0x07B0)()
-	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_3;                     // 0x30B0(0x07B0)()
-	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_2;                     // 0x3860(0x07B0)()
-	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_1;                     // 0x4010(0x07B0)()
-	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics;                       // 0x47C0(0x07B0)()
-	struct FAnimNode_ControlRig                   AnimGraphNode_ControlRig;                          // 0x4F70(0x04D0)(ContainsInstancedReference)
-	struct FVector                                Gravity_Param;                                     // 0x5440(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_18;                    // 0x0840(0x07B0)()
+	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_17;                    // 0x0FF0(0x07B0)()
+	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_16;                    // 0x17A0(0x07B0)()
+	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_15;                    // 0x1F50(0x07B0)()
+	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_14;                    // 0x2700(0x07B0)()
+	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_13;                    // 0x2EB0(0x07B0)()
+	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_12;                    // 0x3660(0x07B0)()
+	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_11;                    // 0x3E10(0x07B0)()
+	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_10;                    // 0x45C0(0x07B0)()
+	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_9;                     // 0x4D70(0x07B0)()
+	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_8;                     // 0x5520(0x07B0)()
+	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_7;                     // 0x5CD0(0x07B0)()
+	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_6;                     // 0x6480(0x07B0)()
+	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_5;                     // 0x6C30(0x07B0)()
+	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_4;                     // 0x73E0(0x07B0)()
+	struct FAnimNode_ControlRig                   AnimGraphNode_ControlRig;                          // 0x7B90(0x04D0)(ContainsInstancedReference)
+	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_3;                     // 0x8060(0x07B0)()
+	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_2;                     // 0x8810(0x07B0)()
+	struct FAppAnimNode_RigidBody                 AppAnimGraphNode_RigidBody;                        // 0x8FC0(0x09B0)()
+	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_1;                     // 0x9970(0x07B0)()
+	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics;                       // 0xA120(0x07B0)()
+	struct FVector                                Gravity_Param;                                     // 0xA8D0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AnimGraph(const struct FPoseLink& InPose, struct FPoseLink* AnimGraph_0);
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_BF_GiantNolegs_AnimGraphNode_KawaiiPhysics_0C31EDA444FCA9FDB3C7C48A2D77FB2F();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_BF_GiantNolegs_AnimGraphNode_KawaiiPhysics_1AA0EAC749C76133E666C4B3443A1854();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_BF_GiantNolegs_AnimGraphNode_KawaiiPhysics_2CCAA1BA449C1D05155663B306F322B5();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_BF_GiantNolegs_AnimGraphNode_KawaiiPhysics_2F1E1DBB4423D10A68F4DA85EF66E451();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_BF_GiantNolegs_AnimGraphNode_KawaiiPhysics_3CF063414D31BACBD15EB791CBEF7964();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_BF_GiantNolegs_AnimGraphNode_KawaiiPhysics_54ABCFDB450E843E30EE739A83A78800();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_BF_GiantNolegs_AnimGraphNode_KawaiiPhysics_599719E948318FEBB6F2979CAA54E521();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_BF_GiantNolegs_AnimGraphNode_KawaiiPhysics_6CCC9D7A48DD3D0F6C7360917B428C97();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_BF_GiantNolegs_AnimGraphNode_KawaiiPhysics_8B9E213348329E9CCAA101989E31BC3A();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_BF_GiantNolegs_AnimGraphNode_KawaiiPhysics_9930B40349F136BC1A21BDB7451AE20D();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_BF_GiantNolegs_AnimGraphNode_KawaiiPhysics_9E2CD1E6477176A06FEFCA871FBF833C();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_BF_GiantNolegs_AnimGraphNode_KawaiiPhysics_A0C5D494423689A3E860F2BB5021B159();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_BF_GiantNolegs_AnimGraphNode_KawaiiPhysics_A575372F4326797AF8F605997CC37CCE();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_BF_GiantNolegs_AnimGraphNode_KawaiiPhysics_B21838A94E89A3D9293278B7E6399345();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_BF_GiantNolegs_AnimGraphNode_KawaiiPhysics_BC53A69B4266647E6E3DA2B3ADD1751D();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_BF_GiantNolegs_AnimGraphNode_KawaiiPhysics_BE631BAC4EB8F5C7496BB091D7815914();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_BF_GiantNolegs_AnimGraphNode_KawaiiPhysics_D11FB026427DC6063AE4E3B3088BE646();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_BF_GiantNolegs_AnimGraphNode_KawaiiPhysics_E6D743D84B73C8AF29FFA28ED4ECAED5();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_BF_GiantNolegs_AnimGraphNode_KawaiiPhysics_F55CCA3641E3752364117CB010F2EEC4();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_BF_GiantNolegs_AppAnimGraphNode_RigidBody_E03E371446CD9159F22E96A7BD74DA41();
 	void ExecuteUbergraph_PPABP_BF_GiantNolegs(int32 EntryPoint);
 

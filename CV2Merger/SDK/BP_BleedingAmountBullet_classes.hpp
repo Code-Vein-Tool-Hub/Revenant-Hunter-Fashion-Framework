@@ -19,17 +19,17 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_BleedingAmountBullet.BP_BleedingAmountBullet_C
-// 0x0350 (0x15C0 - 0x1270)
+// 0x0350 (0x1610 - 0x12C0)
 class ABP_BleedingAmountBullet_C final : public AProjectileBullet
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1270(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	double                                        MiddleBleedingAmount;                              // 0x1278(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        HighBleedingAmount;                                // 0x1280(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1288[0x8];                                     // 0x1288(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBulletSpawnInfo                       SmallLauncherParameter;                            // 0x1290(0x0110)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	struct FBulletSpawnInfo                       MiddleLauncherParameter;                           // 0x13A0(0x0110)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	struct FBulletSpawnInfo                       HighLauncherParameter;                             // 0x14B0(0x0110)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x12C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	double                                        MiddleBleedingAmount;                              // 0x12C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        HighBleedingAmount;                                // 0x12D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_12D8[0x8];                                     // 0x12D8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBulletSpawnInfo                       SmallLauncherParameter;                            // 0x12E0(0x0110)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	struct FBulletSpawnInfo                       MiddleLauncherParameter;                           // 0x13F0(0x0110)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	struct FBulletSpawnInfo                       HighLauncherParameter;                             // 0x1500(0x0110)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
 
 public:
 	void ExecuteUbergraph_BP_BleedingAmountBullet(int32 EntryPoint);

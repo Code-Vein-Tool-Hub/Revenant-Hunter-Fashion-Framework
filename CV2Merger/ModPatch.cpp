@@ -487,6 +487,15 @@ void ModPatch::ProcessAccessoryPresetTable(toml::table table, std::map<std::stri
 		meshpath.ObjectID = { .AssetPath = FNameHelper::FNameFromString(data->get(1)->value_or("")) };
 		AccessoryPreset.Mesh = meshpath;
 		AccessoryPreset.AnimClass = nullptr;
+
+		SDK::TSoftObjectPtr<SDK::UAnimInstance> animInstancePath = *new SDK::TSoftObjectPtr<SDK::UAnimInstance>();
+		animInstancePath.ObjectID = { .AssetPath = FNameHelper::FNameFromString(data->get(2)->value_or("")) };
+		if (animInstancePath.Get() != nullptr)
+		{
+			AccessoryPreset.AnimClass = animInstancePath.Get()->StaticClass();
+		}
+		
+
 		AccessoryPreset.AttachRowName = FNameHelper::FNameFromString(data->get(3)->value_or(""));
 
 		auto rootTrans = data->get(4)->as_array();

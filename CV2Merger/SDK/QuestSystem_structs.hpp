@@ -104,15 +104,15 @@ public:
 };
 DUMPER7_ASSERTS_FQSDataProviderBase;
 
-// ScriptStruct QuestSystem.QSDataProviderFloatValue
+// ScriptStruct QuestSystem.QSDataProviderIntegerValue
 // 0x0008 (0x0020 - 0x0018)
-struct FQSDataProviderFloatValue final : public FQSDataProviderBase
+struct FQSDataProviderIntegerValue final : public FQSDataProviderBase
 {
 public:
-	float                                         Value;                                             // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Value;                                             // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FQSDataProviderFloatValue;
+DUMPER7_ASSERTS_FQSDataProviderIntegerValue;
 
 // ScriptStruct QuestSystem.QSSharedMemorySelecter
 // 0x0010 (0x0010 - 0x0000)
@@ -134,15 +134,15 @@ public:
 };
 DUMPER7_ASSERTS_FQSDataProviderBoolValue;
 
-// ScriptStruct QuestSystem.QSDataProviderIntegerValue
+// ScriptStruct QuestSystem.QSDataProviderFloatValue
 // 0x0008 (0x0020 - 0x0018)
-struct FQSDataProviderIntegerValue final : public FQSDataProviderBase
+struct FQSDataProviderFloatValue final : public FQSDataProviderBase
 {
 public:
-	int32                                         Value;                                             // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Value;                                             // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FQSDataProviderIntegerValue;
+DUMPER7_ASSERTS_FQSDataProviderFloatValue;
 
 // ScriptStruct QuestSystem.QSDataProviderDoubleValue
 // 0x0008 (0x0020 - 0x0018)

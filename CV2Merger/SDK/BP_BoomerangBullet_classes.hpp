@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_BoomerangBullet.BP_BoomerangBullet_C
-// 0x0000 (0x1270 - 0x1270)
+// 0x0000 (0x12C0 - 0x12C0)
 class ABP_BoomerangBullet_C final : public AProjectileBullet
 {
 public:

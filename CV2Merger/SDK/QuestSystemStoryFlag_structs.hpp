@@ -97,14 +97,15 @@ enum class EQSVolatileStoryFlagIntegerCompare : uint8
 	EQSVolatileStoryFlagIntegerCompare_MAX   = 6,
 };
 
-// ScriptStruct QuestSystemStoryFlag.QuestSpawnConditionKeyCache
-// 0x0010 (0x0010 - 0x0000)
-struct FQuestSpawnConditionKeyCache final
+// ScriptStruct QuestSystemStoryFlag.QuestSpawnDefinitionDataRow
+// 0x0038 (0x0040 - 0x0008)
+struct FQuestSpawnDefinitionDataRow final : public FTableRowBase
 {
 public:
-	TArray<class FName>                           KeyCache;                                          // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FStoryFlagEvaluationFormula            StartConditions;                                   // 0x0008(0x0010)(Edit, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UQuestSystemAsset>       QuestAsset;                                        // 0x0018(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FQuestSpawnConditionKeyCache;
+DUMPER7_ASSERTS_FQuestSpawnDefinitionDataRow;
 
 // ScriptStruct QuestSystemStoryFlag.QuestProgressHandle
 // 0x000C (0x000C - 0x0000)
@@ -115,6 +116,20 @@ public:
 	int32                                         Identifier;                                        // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FQuestProgressHandle;
+
+// ScriptStruct QuestSystemStoryFlag.QuestSummaryInfo
+// 0x0038 (0x0038 - 0x0000)
+struct FQuestSummaryInfo final
+{
+public:
+	class FText                                   QuestName;                                         // 0x0000(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	class FText                                   QuestDescription;                                  // 0x0010(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	TArray<class FText>                           Synopsis;                                          // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          bNew;                                              // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bClear;                                            // 0x0031(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FQuestSummaryInfo;
 
 // ScriptStruct QuestSystemStoryFlag.QuestProgressInfo
 // 0x0018 (0x0018 - 0x0000)
@@ -136,15 +151,14 @@ public:
 };
 DUMPER7_ASSERTS_FQuestMessageFlagChange;
 
-// ScriptStruct QuestSystemStoryFlag.QuestSpawnDefinitionDataRow
-// 0x0038 (0x0040 - 0x0008)
-struct FQuestSpawnDefinitionDataRow final : public FTableRowBase
+// ScriptStruct QuestSystemStoryFlag.QuestSpawnConditionKeyCache
+// 0x0010 (0x0010 - 0x0000)
+struct FQuestSpawnConditionKeyCache final
 {
 public:
-	struct FStoryFlagEvaluationFormula            StartConditions;                                   // 0x0008(0x0010)(Edit, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class UQuestSystemAsset>       QuestAsset;                                        // 0x0018(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FName>                           KeyCache;                                          // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FQuestSpawnDefinitionDataRow;
+DUMPER7_ASSERTS_FQuestSpawnConditionKeyCache;
 
 // ScriptStruct QuestSystemStoryFlag.QuestSpawnInfo
 // 0x0010 (0x0010 - 0x0000)
@@ -166,20 +180,6 @@ public:
 	TArray<int32>                                 Progresses;                                        // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FQuestProgressConditions;
-
-// ScriptStruct QuestSystemStoryFlag.QuestSummaryInfo
-// 0x0038 (0x0038 - 0x0000)
-struct FQuestSummaryInfo final
-{
-public:
-	class FText                                   QuestName;                                         // 0x0000(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	class FText                                   QuestDescription;                                  // 0x0010(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	TArray<class FText>                           Synopsis;                                          // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	bool                                          bNew;                                              // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bClear;                                            // 0x0031(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FQuestSummaryInfo;
 
 // ScriptStruct QuestSystemStoryFlag.QuestSummarySectionDetails
 // 0x0020 (0x0020 - 0x0000)

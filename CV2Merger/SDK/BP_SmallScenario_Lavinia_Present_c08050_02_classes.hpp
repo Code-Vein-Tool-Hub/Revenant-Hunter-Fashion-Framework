@@ -18,11 +18,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_SmallScenario_Lavinia_Present_c08050_02.BP_SmallScenario_Lavinia_Present_c08050_02_C
-// 0x0008 (0x03A0 - 0x0398)
+// 0x0008 (0x03D8 - 0x03D0)
 class ABP_SmallScenario_Lavinia_Present_c08050_02_C final : public ABP_SmallScenarioGainBoosterBase_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_SmallScenario_Lavinia_Present_c08050_02_C; // 0x0398(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_SmallScenario_Lavinia_Present_c08050_02_C; // 0x03D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void Abort();

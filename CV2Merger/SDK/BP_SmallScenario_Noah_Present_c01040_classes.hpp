@@ -19,12 +19,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_SmallScenario_Noah_Present_c01040.BP_SmallScenario_Noah_Present_c01040_C
-// 0x0098 (0x0428 - 0x0390)
+// 0x0098 (0x0460 - 0x03C8)
 class ABP_SmallScenario_Noah_Present_c01040_C final : public ABP_SmallScenarioBase_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_SmallScenario_Noah_Present_c01040_C; // 0x0390(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FSmallScenarioDialogData               NewVar;                                            // 0x0398(0x0090)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_SmallScenario_Noah_Present_c01040_C; // 0x03C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FSmallScenarioDialogData               NewVar;                                            // 0x03D0(0x0090)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void Abort();

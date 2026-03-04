@@ -98,15 +98,6 @@ enum class EAIFwPTEvalPathfindingMode : uint8
 	EAIFwPTEvalPathfindingMode_MAX           = 3,
 };
 
-// ScriptStruct AIFramework.AIFwBlackboard
-// 0x0018 (0x0018 - 0x0000)
-struct alignas(0x08) FAIFwBlackboard final
-{
-public:
-	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FAIFwBlackboard;
-
 // ScriptStruct AIFramework.AIFwBTArgument
 // 0x0040 (0x0040 - 0x0000)
 struct FAIFwBTArgument final
@@ -144,6 +135,22 @@ public:
 	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FAIFwBTNodeProperty;
+
+// ScriptStruct AIFramework.AIFwBTNodePropertyEnumBase
+// 0x0000 (0x0010 - 0x0010)
+struct FAIFwBTNodePropertyEnumBase final : public FAIFwBTNodeProperty
+{
+};
+DUMPER7_ASSERTS_FAIFwBTNodePropertyEnumBase;
+
+// ScriptStruct AIFramework.AIFwBlackboard
+// 0x0018 (0x0018 - 0x0000)
+struct alignas(0x08) FAIFwBlackboard final
+{
+public:
+	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FAIFwBlackboard;
 
 // ScriptStruct AIFramework.AIFwBTNodePropertyBool
 // 0x0008 (0x0018 - 0x0010)
@@ -183,13 +190,6 @@ public:
 	class FString                                 DefaultValue;                                      // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FAIFwBTNodePropertyString;
-
-// ScriptStruct AIFramework.AIFwBTNodePropertyEnumBase
-// 0x0000 (0x0010 - 0x0010)
-struct FAIFwBTNodePropertyEnumBase final : public FAIFwBTNodeProperty
-{
-};
-DUMPER7_ASSERTS_FAIFwBTNodePropertyEnumBase;
 
 // ScriptStruct AIFramework.AIFwClothoidCurve
 // 0x000C (0x000C - 0x0000)

@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_UIManager.BP_UIManager_C
-// 0x0000 (0x05A0 - 0x05A0)
+// 0x0000 (0x05B0 - 0x05B0)
 class UBP_UIManager_C final : public UAppUIManager
 {
 public:

@@ -98,6 +98,18 @@ enum class ECommonSessionOnlineMode : uint8
 	ECommonSessionOnlineMode_MAX             = 3,
 };
 
+// ScriptStruct CommonUser.OnlineResultInformation
+// 0x0028 (0x0028 - 0x0000)
+struct FOnlineResultInformation final
+{
+public:
+	bool                                          bWasSuccessful;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 ErrorId;                                           // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   ErrorText;                                         // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FOnlineResultInformation;
+
 // ScriptStruct CommonUser.CommonUserInitializeParams
 // 0x0028 (0x0028 - 0x0000)
 struct FCommonUserInitializeParams final
@@ -116,18 +128,6 @@ public:
 	TDelegate<void(const class UCommonUserInfo* UserInfo, bool bSuccess, class FText Error, ECommonUserPrivilege RequestedPrivilege, ECommonUserOnlineContext OnlineContext)> OnUserInitializeComplete; // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FCommonUserInitializeParams;
-
-// ScriptStruct CommonUser.OnlineResultInformation
-// 0x0028 (0x0028 - 0x0000)
-struct FOnlineResultInformation final
-{
-public:
-	bool                                          bWasSuccessful;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ErrorId;                                           // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   ErrorText;                                         // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FOnlineResultInformation;
 
 }
 

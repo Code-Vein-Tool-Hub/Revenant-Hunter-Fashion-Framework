@@ -11,36 +11,36 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "E_CharacterVisualControl_CharacterMode_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Extensions_classes.hpp"
+#include "E_CharacterVisualControl_CharacterMode_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_CharacterCustomizeComponent.BP_CharacterCustomizeComponent_C
-// 0x0160 (0x2D60 - 0x2C00)
+// 0x0160 (0x2DA0 - 0x2C40)
 class UBP_CharacterCustomizeComponent_C final : public UCharacterCustomizeComponent
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x2C00(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	TArray<class USkeletalMeshComponent*>         VanishProcess_MeshArray;                           // 0x2C08(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	double                                        VanishProcess_CurrentTime;                         // 0x2C18(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          VanishProcess_Wait;                                // 0x2C20(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2C21[0x7];                                     // 0x2C21(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        VanishProcess_WaitTimeRange;                       // 0x2C28(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          VanishProcess_Vanish;                              // 0x2C30(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2C31[0x7];                                     // 0x2C31(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        VanishProcess_VanishTimeRange;                     // 0x2C38(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                VanishProcess_VanishCenter;                        // 0x2C40(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRuntimeFloatCurve                     VanishProcess_Curve;                               // 0x2C58(0x0088)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class UNiagaraSystem*                         VanishBodyEffect_Asset;                            // 0x2CE0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraSystem*                         VanishDeathEffect_Asset;                           // 0x2CE8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TMap<class USkeletalMeshComponent*, class UBP_VanishBodyEffect_C*> VanishBodyEffect_Map;         // 0x2CF0(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	bool                                          Vanish_Death;                                      // 0x2D40(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2D41[0x7];                                     // 0x2D41(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FName>                           IgnoreEffectMeshNameArray;                         // 0x2D48(0x0010)(Edit, BlueprintVisible)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x2C40(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	TArray<class USkeletalMeshComponent*>         VanishProcess_MeshArray;                           // 0x2C48(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	double                                        VanishProcess_CurrentTime;                         // 0x2C58(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          VanishProcess_Wait;                                // 0x2C60(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2C61[0x7];                                     // 0x2C61(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        VanishProcess_WaitTimeRange;                       // 0x2C68(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          VanishProcess_Vanish;                              // 0x2C70(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2C71[0x7];                                     // 0x2C71(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        VanishProcess_VanishTimeRange;                     // 0x2C78(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                VanishProcess_VanishCenter;                        // 0x2C80(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRuntimeFloatCurve                     VanishProcess_Curve;                               // 0x2C98(0x0088)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class UNiagaraSystem*                         VanishBodyEffect_Asset;                            // 0x2D20(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraSystem*                         VanishDeathEffect_Asset;                           // 0x2D28(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TMap<class USkeletalMeshComponent*, class UBP_VanishBodyEffect_C*> VanishBodyEffect_Map;         // 0x2D30(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	bool                                          Vanish_Death;                                      // 0x2D80(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2D81[0x7];                                     // 0x2D81(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FName>                           IgnoreEffectMeshNameArray;                         // 0x2D88(0x0010)(Edit, BlueprintVisible)
 
 public:
 	void ExecuteUbergraph_BP_CharacterCustomizeComponent(int32 EntryPoint);

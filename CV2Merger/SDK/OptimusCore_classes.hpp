@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "OptimusCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "ComputeFramework_structs.hpp"
 #include "ComputeFramework_classes.hpp"
-#include "OptimusCore_structs.hpp"
 #include "Engine_classes.hpp"
 
 
@@ -2371,6 +2371,35 @@ public:
 };
 DUMPER7_ASSERTS_UOptimusActionStack;
 
+// Class OptimusCore.OptimusNodePin
+// 0x0068 (0x0090 - 0x0028)
+class UOptimusNodePin final : public UObject
+{
+public:
+	bool                                          bIsGroupingPin;                                    // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	EOptimusNodePinDirection                      Direction;                                         // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	EOptimusNodePinStorageType                    StorageType;                                       // 0x002A(0x0001)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_2B[0x5];                                       // 0x002B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FOptimusDataDomain                     DataDomain;                                        // 0x0030(0x0040)(NativeAccessSpecifierPrivate)
+	struct FOptimusDataTypeRef                    DataType;                                          // 0x0070(0x0010)(NoDestructor, NativeAccessSpecifierPrivate)
+	TArray<class UOptimusNodePin*>                SubPins;                                           // 0x0080(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OptimusNodePin")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OptimusNodePin")
+	}
+	static class UOptimusNodePin* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOptimusNodePin>();
+	}
+};
+DUMPER7_ASSERTS_UOptimusNodePin;
+
 // Class OptimusCore.OptimusComponentSourceBinding
 // 0x0028 (0x0050 - 0x0028)
 class UOptimusComponentSourceBinding final : public UObject
@@ -2762,35 +2791,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UOptimusNodePair;
-
-// Class OptimusCore.OptimusNodePin
-// 0x0068 (0x0090 - 0x0028)
-class UOptimusNodePin final : public UObject
-{
-public:
-	bool                                          bIsGroupingPin;                                    // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	EOptimusNodePinDirection                      Direction;                                         // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	EOptimusNodePinStorageType                    StorageType;                                       // 0x002A(0x0001)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2B[0x5];                                       // 0x002B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FOptimusDataDomain                     DataDomain;                                        // 0x0030(0x0040)(NativeAccessSpecifierPrivate)
-	struct FOptimusDataTypeRef                    DataType;                                          // 0x0070(0x0010)(NoDestructor, NativeAccessSpecifierPrivate)
-	TArray<class UOptimusNodePin*>                SubPins;                                           // 0x0080(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("OptimusNodePin")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"OptimusNodePin")
-	}
-	static class UOptimusNodePin* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOptimusNodePin>();
-	}
-};
-DUMPER7_ASSERTS_UOptimusNodePin;
 
 // Class OptimusCore.OptimusResourceDescription
 // 0x0068 (0x0090 - 0x0028)

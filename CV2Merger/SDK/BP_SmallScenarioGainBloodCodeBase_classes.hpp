@@ -13,24 +13,24 @@
 #include "StoryFlagSystem_structs.hpp"
 #include "Extensions_structs.hpp"
 #include "Engine_structs.hpp"
-#include "GameplayTags_structs.hpp"
 #include "BP_SmallScenarioBase_classes.hpp"
+#include "GameplayTags_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_SmallScenarioGainBloodCodeBase.BP_SmallScenarioGainBloodCodeBase_C
-// 0x0038 (0x03C8 - 0x0390)
+// 0x0038 (0x0400 - 0x03C8)
 class ABP_SmallScenarioGainBloodCodeBase_C : public ABP_SmallScenarioBase_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_SmallScenarioGainBloodCodeBase_C; // 0x0390(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FArticleBulkInfo                       ArticleBulkInfo;                                   // 0x0398(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FStoryFlagLabel                        FlagLabel;                                         // 0x03A8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           FlagValueBeforeGain;                               // 0x03B0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           FlagValueAfterGain;                                // 0x03B8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FStoryFlagLabel                        FlagAfterLabelOverride;                            // 0x03C0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_SmallScenarioGainBloodCodeBase_C; // 0x03C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FArticleBulkInfo                       ArticleBulkInfo;                                   // 0x03D0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FStoryFlagLabel                        FlagLabel;                                         // 0x03E0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           FlagValueBeforeGain;                               // 0x03E8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           FlagValueAfterGain;                                // 0x03F0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FStoryFlagLabel                        FlagAfterLabelOverride;                            // 0x03F8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_SmallScenarioGainBloodCodeBase(int32 EntryPoint);

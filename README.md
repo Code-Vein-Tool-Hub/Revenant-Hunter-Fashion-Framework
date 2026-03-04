@@ -2,7 +2,7 @@
 RHFF is a framework for adding new standalone outfits and accessories in Code Vein 2
 
 > [!IMPORTANT]
-> This Plugin was made off of the latest(v1.0.3.0) of the **Steam** version of the game, other versions are not actively supported.  
+> This Plugin was made off of the latest(v1.0.5.0) of the **Steam** version of the game, other versions are not actively supported.  
 
 ## Navigation
 [Installation](#installation)  

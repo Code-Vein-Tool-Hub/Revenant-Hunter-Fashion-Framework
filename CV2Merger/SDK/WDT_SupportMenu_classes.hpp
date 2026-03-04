@@ -11,18 +11,16 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "STR_SupportMenuItemBaseList_structs.hpp"
 #include "Extensions_structs.hpp"
 #include "Extensions_classes.hpp"
-#include "GameplayTags_structs.hpp"
-#include "STR_SupportMenuItemBaseList_structs.hpp"
-#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WDT_SupportMenu.WDT_SupportMenu_C
-// 0x0298 (0x0850 - 0x05B8)
+// 0x0240 (0x07F8 - 0x05B8)
 class UWDT_SupportMenu_C final : public UAppMenuBase
 {
 public:
@@ -62,12 +60,10 @@ public:
 	int32                                         DescriptionLastSelectedIndex;                      // 0x07E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          WasJustPressedSwitchKey;                           // 0x07E4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          WasJustPressedHorizonKey;                          // 0x07E5(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7E6[0x2];                                      // 0x07E6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<struct FGameplayTag, struct FVector2D>   NewVar;                                            // 0x07E8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          PressdMenuSpecialLeft;                             // 0x0838(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_839[0x7];                                      // 0x0839(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        ScrollSpeed;                                       // 0x0840(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EPlayerInputType                              PlayerInputType;                                   // 0x0848(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          PressdMenuSpecialLeft;                             // 0x07E6(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7E7[0x1];                                      // 0x07E7(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        ScrollSpeed;                                       // 0x07E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EPlayerInputType                              PlayerInputType;                                   // 0x07F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AddCategory(TArray<class FName>& InCategoryList, class FName InNewCategory);
@@ -87,7 +83,7 @@ public:
 	void BuildLouDiaryListView();
 	void CategoryDataToDescriptionInfo(const class FText& TitleText, class FName CategoryKeyName, struct FDescriptionInfoTable* OutDescriptionInfo);
 	void CategoryDataToKeywordData(const class FText& InTitleText, class FName InCategoryKeyName, struct FKeywordDataTableRow* OutKeywordData);
-	void CategoryDataToLouDiaryData(const class FText& InTitleText, class FName InCategoryKeyName, struct FLouDiaryDataTableRow* OutLouDiaryData);
+	void CategoryDataToLouDiaryData(const class FText& InTitleText, class FName InCategoryKeyName, const struct FStoryFlagEvaluationFormula& DeactivateFlag, struct FLouDiaryDataTableRow* OutLouDiaryData);
 	void ChangeCategoryNewGetDescription(TArray<class FName>& InCategoryKeyList, class FName InKeywordID);
 	void ChangeCategoryNewGetInstruction(TArray<class FName>& InCategoryKeyList, class FName InKeywordID);
 	void ChangeCategoryNewGetKeyword(TArray<class FName>& InCategoryKeyList, class FName InKeywordID);
@@ -104,6 +100,7 @@ public:
 	void ForcedTransitToMapMenu();
 	void GetDisplayCategoryNameList(TArray<class FName>* OutNum);
 	void GetDisplayCategoryNum(int32* OutNum);
+	void GetLouDiaryCategoryDataByName(class FName InCategoryName, struct FLouDiaryDataTableRow* OutLouDiaryCategoryData);
 	void GetLouDiaryFInishedText(class FName InID, class FText* OutText);
 	void GetSelectCategory(class FName* OutCategoryName);
 	void GetSelectMenuType(ESupportMenuType* OutType);

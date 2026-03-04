@@ -19,12 +19,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_SmallScenario_Lycoris_Present_a20160_Yadorigi.BP_SmallScenario_Lycoris_Present_a20160_Yadorigi_C
-// 0x0018 (0x03E0 - 0x03C8)
+// 0x0018 (0x0418 - 0x0400)
 class ABP_SmallScenario_Lycoris_Present_a20160_Yadorigi_C final : public ABP_SmallScenarioGainBloodCodeBase_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_SmallScenario_Lycoris_Present_a20160_Yadorigi_C; // 0x03C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FStoryFlagEvaluationFormula            Checke30325;                                       // 0x03D0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_SmallScenario_Lycoris_Present_a20160_Yadorigi_C; // 0x0400(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FStoryFlagEvaluationFormula            Checke30325;                                       // 0x0408(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
 	void Abort();

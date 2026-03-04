@@ -13,9 +13,9 @@
 #include "StoryFlagSystem_structs.hpp"
 #include "Extensions_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "STR_SupportMenuItemBaseList_structs.hpp"
 #include "EnhancedInput_structs.hpp"
-#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params
@@ -52,7 +52,7 @@ public:
 DUMPER7_ASSERTS_WDT_SupportMenu_C_AddItemDataMap;
 
 // Function WDT_SupportMenu.WDT_SupportMenu_C.AddLouDiaryList
-// 0x0130 (0x0130 - 0x0000)
+// 0x0200 (0x0200 - 0x0000)
 struct WDT_SupportMenu_C_AddLouDiaryList final
 {
 public:
@@ -70,19 +70,23 @@ public:
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00FC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_FD[0x3];                                       // 0x00FD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   CallFunc_Array_Get_Item;                           // 0x0100(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0108(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsFeatureReleased_IsReleased;             // 0x010C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsFeatureIconGrayOut_OutFindValidFeaturetag; // 0x010D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsFeatureTagListValid_OutFindValidFeaturetag; // 0x010E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsStoryFlagEvaluationFormulaAnalysis_ReturnValue; // 0x010F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_NameName_ReturnValue;            // 0x0111(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_112[0x6];                                      // 0x0112(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBP_SupportMenuLouDiarydItemData_C*     CallFunc_SpawnObject_ReturnValue;                  // 0x0118(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UBP_LouDiaryManager_C*                  CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0120(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetLouDiaryNewFlag_OutNewFlag;            // 0x0128(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetLouDiaryNewFlag_ReturnValue;           // 0x0129(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x012A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLouDiaryDataTableRow                  CallFunc_GetLouDiaryCategoryDataByName_OutLouDiaryCategoryData; // 0x0108(0x00D0)()
+	bool                                          CallFunc_IsStoryFlagEvaluationFormulaAnalysis_ReturnValue; // 0x01D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1D9[0x3];                                      // 0x01D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x01DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsFeatureReleased_IsReleased;             // 0x01E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsFeatureIconGrayOut_OutFindValidFeaturetag; // 0x01E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsFeatureTagListValid_OutFindValidFeaturetag; // 0x01E2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsStoryFlagEvaluationFormulaAnalysis_ReturnValue_1; // 0x01E3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x01E4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x01E5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_NameName_ReturnValue;            // 0x01E6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1E7[0x1];                                      // 0x01E7(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_SupportMenuLouDiarydItemData_C*     CallFunc_SpawnObject_ReturnValue;                  // 0x01E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UBP_LouDiaryManager_C*                  CallFunc_GetWorldSubsystem_ReturnValue;            // 0x01F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetLouDiaryNewFlag_OutNewFlag;            // 0x01F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetLouDiaryNewFlag_ReturnValue;           // 0x01F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x01FA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WDT_SupportMenu_C_AddLouDiaryList;
 
@@ -260,16 +264,17 @@ public:
 DUMPER7_ASSERTS_WDT_SupportMenu_C_CategoryDataToKeywordData;
 
 // Function WDT_SupportMenu.WDT_SupportMenu_C.CategoryDataToLouDiaryData
-// 0x01D0 (0x01D0 - 0x0000)
+// 0x01E0 (0x01E0 - 0x0000)
 struct WDT_SupportMenu_C_CategoryDataToLouDiaryData final
 {
 public:
 	class FText                                   InTitleText;                                       // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
 	class FName                                   InCategoryKeyName;                                 // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLouDiaryDataTableRow                  OutLouDiaryData;                                   // 0x0018(0x00D0)(Parm, OutParm)
-	TArray<class FName>                           TempKeyName;                                       // 0x00E8(0x0010)(Edit, BlueprintVisible)
-	struct FLouDiaryDataTableRow                  K2Node_MakeStruct_LouDiaryDataTableRow;            // 0x00F8(0x00D0)()
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x01C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FStoryFlagEvaluationFormula            DeactivateFlag;                                    // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	struct FLouDiaryDataTableRow                  OutLouDiaryData;                                   // 0x0028(0x00D0)(Parm, OutParm)
+	TArray<class FName>                           TempKeyName;                                       // 0x00F8(0x0010)(Edit, BlueprintVisible)
+	struct FLouDiaryDataTableRow                  K2Node_MakeStruct_LouDiaryDataTableRow;            // 0x0108(0x00D0)()
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x01D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WDT_SupportMenu_C_CategoryDataToLouDiaryData;
 
@@ -952,6 +957,23 @@ public:
 };
 DUMPER7_ASSERTS_WDT_SupportMenu_C_GetDisplayCategoryNum;
 
+// Function WDT_SupportMenu.WDT_SupportMenu_C.GetLouDiaryCategoryDataByName
+// 0x0218 (0x0218 - 0x0000)
+struct WDT_SupportMenu_C_GetLouDiaryCategoryDataByName final
+{
+public:
+	class FName                                   InCategoryName;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLouDiaryDataTableRow                  OutLouDiaryCategoryData;                           // 0x0008(0x00D0)(Parm, OutParm)
+	class UBP_LouDiaryManager_C*                  CallFunc_GetWorldSubsystem_ReturnValue;            // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UDataTable*                             CallFunc_GetLouDiaryCategoryTable_ReturnValue;     // 0x00E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FLouDiaryCategoryTable                 CallFunc_GetDataTableRowFromName_OutRow;           // 0x00E8(0x0048)()
+	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_131[0x7];                                      // 0x0131(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_SupportMenuFormat_ReturnValue;            // 0x0138(0x0010)()
+	struct FLouDiaryDataTableRow                  CallFunc_CategoryDataToLouDiaryData_OutLouDiaryData; // 0x0148(0x00D0)()
+};
+DUMPER7_ASSERTS_WDT_SupportMenu_C_GetLouDiaryCategoryDataByName;
+
 // Function WDT_SupportMenu.WDT_SupportMenu_C.GetLouDiaryFInishedText
 // 0x0128 (0x0128 - 0x0000)
 struct WDT_SupportMenu_C_GetLouDiaryFInishedText final
@@ -1565,61 +1587,63 @@ public:
 DUMPER7_ASSERTS_WDT_SupportMenu_C_MakeKeywordChildItemDataList;
 
 // Function WDT_SupportMenu.WDT_SupportMenu_C.MakeLouDiaryCategoryItemDataList
-// 0x0318 (0x0318 - 0x0000)
+// 0x0330 (0x0330 - 0x0000)
 struct WDT_SupportMenu_C_MakeLouDiaryCategoryItemDataList final
 {
 public:
 	TArray<class FName>                           L_FinishedItemKeyList;                             // 0x0000(0x0010)(Edit, BlueprintVisible)
 	TArray<class UBP_SupportMenuItemDataBase_C*>  L_MapItem;                                         // 0x0010(0x0010)(Edit, BlueprintVisible)
-	bool                                          CallFunc_GetDebugFullSupportMenu_ReturnValue;      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBP_LouDiaryManager_C*                  CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0048(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UDataTable*                             CallFunc_GetLouDiaryCategoryTable_ReturnValue;     // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UBP_LouDiaryManager_C*                  CallFunc_GetWorldSubsystem_ReturnValue_1;          // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UDataTable*                             CallFunc_GetLouDiaryCategoryTable_ReturnValue_1;   // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_Array_Get_Item;                           // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class FName>                           CallFunc_GetDataTableRowNames_OutRowNames;         // 0x0070(0x0010)(ReferenceParm)
-	struct FLouDiaryCategoryTable                 CallFunc_GetDataTableRowFromName_OutRow;           // 0x0080(0x0038)()
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetDebugFullSupportMenu_ReturnValue;      // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UBP_LouDiaryManager_C*                  CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UDataTable*                             CallFunc_GetLouDiaryCategoryTable_ReturnValue;     // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0044(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_45[0x3];                                       // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_LouDiaryManager_C*                  CallFunc_GetWorldSubsystem_ReturnValue_1;          // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UDataTable*                             CallFunc_GetLouDiaryCategoryTable_ReturnValue_1;   // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_Array_Get_Item;                           // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class FName>                           CallFunc_GetDataTableRowNames_OutRowNames;         // 0x0060(0x0010)(ReferenceParm)
+	struct FLouDiaryCategoryTable                 CallFunc_GetDataTableRowFromName_OutRow;           // 0x0070(0x0048)()
 	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_B9[0x3];                                       // 0x00B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   CallFunc_Array_Get_Item_1;                         // 0x00BC(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_Value;                           // 0x00C4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x00C5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x00C6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C7[0x1];                                       // 0x00C7(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          CallFunc_IsStoryFlagEvaluationFormulaAnalysis_ReturnValue; // 0x00C7(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FText                                   CallFunc_SupportMenuFormat_ReturnValue;            // 0x00C8(0x0010)()
-	struct FLouDiaryDataTableRow                  CallFunc_CategoryDataToLouDiaryData_OutLouDiaryData; // 0x00D8(0x00D0)()
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x01A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x01AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_DC[0x4];                                       // 0x00DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLouDiaryDataTableRow                  CallFunc_CategoryDataToLouDiaryData_OutLouDiaryData; // 0x00E0(0x00D0)()
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x01B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1B2[0x6];                                      // 0x01B2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBP_LouDiaryManager_C*                  CallFunc_GetWorldSubsystem_ReturnValue_2;          // 0x01B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UDataTable*                             CallFunc_GetLouDiaryCategoryTable_ReturnValue_2;   // 0x01C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x01C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1CC[0x4];                                      // 0x01CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLouDiaryCategoryTable                 CallFunc_GetDataTableRowFromName_OutRow_1;         // 0x01D0(0x0038)()
-	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue_1;    // 0x0208(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_209[0x7];                                      // 0x0209(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBP_SupportMenuLouDiarydItemData_C*     CallFunc_SpawnObject_ReturnValue;                  // 0x0210(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsStoryFlagEvaluationFormulaAnalysis_ReturnValue; // 0x0218(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_219[0x7];                                      // 0x0219(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_SupportMenuFormat_ReturnValue_1;          // 0x0220(0x0010)()
-	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0230(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_231[0x7];                                      // 0x0231(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLouDiaryDataTableRow                  CallFunc_CategoryDataToLouDiaryData_OutLouDiaryData_1; // 0x0238(0x00D0)()
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0308(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_309[0x7];                                      // 0x0309(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBP_SupportMenuLouDiarydItemData_C*     CallFunc_SpawnObject_ReturnValue_1;                // 0x0310(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1B1[0x3];                                      // 0x01B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x01B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x01B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1BC[0x4];                                      // 0x01BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_LouDiaryManager_C*                  CallFunc_GetWorldSubsystem_ReturnValue_2;          // 0x01C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UDataTable*                             CallFunc_GetLouDiaryCategoryTable_ReturnValue_2;   // 0x01C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x01D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1D1[0x7];                                      // 0x01D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLouDiaryCategoryTable                 CallFunc_GetDataTableRowFromName_OutRow_1;         // 0x01D8(0x0048)()
+	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue_1;    // 0x0220(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_221[0x3];                                      // 0x0221(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0224(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsStoryFlagEvaluationFormulaAnalysis_ReturnValue_1; // 0x0228(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsStoryFlagEvaluationFormulaAnalysis_ReturnValue_2; // 0x0229(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_22A[0x6];                                      // 0x022A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_SupportMenuFormat_ReturnValue_1;          // 0x0230(0x0010)()
+	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0240(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_241[0x7];                                      // 0x0241(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLouDiaryDataTableRow                  CallFunc_CategoryDataToLouDiaryData_OutLouDiaryData_1; // 0x0248(0x00D0)()
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0318(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_319[0x3];                                      // 0x0319(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x031C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UBP_SupportMenuLouDiarydItemData_C*     CallFunc_SpawnObject_ReturnValue;                  // 0x0320(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UBP_SupportMenuLouDiarydItemData_C*     CallFunc_SpawnObject_ReturnValue_1;                // 0x0328(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WDT_SupportMenu_C_MakeLouDiaryCategoryItemDataList;
 

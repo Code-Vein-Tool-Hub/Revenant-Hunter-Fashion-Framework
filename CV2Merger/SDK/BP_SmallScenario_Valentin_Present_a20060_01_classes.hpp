@@ -18,11 +18,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_SmallScenario_Valentin_Present_a20060_01.BP_SmallScenario_Valentin_Present_a20060_01_C
-// 0x0008 (0x03D0 - 0x03C8)
+// 0x0008 (0x0408 - 0x0400)
 class ABP_SmallScenario_Valentin_Present_a20060_01_C final : public ABP_SmallScenarioGainBloodCodeBase_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_SmallScenario_Valentin_Present_a20060_01_C; // 0x03C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_SmallScenario_Valentin_Present_a20060_01_C; // 0x0400(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void Abort();

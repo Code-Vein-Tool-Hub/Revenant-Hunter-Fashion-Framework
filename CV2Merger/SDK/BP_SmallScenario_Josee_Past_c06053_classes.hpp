@@ -20,12 +20,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_SmallScenario_Josee_Past_c06053.BP_SmallScenario_Josee_Past_c06053_C
-// 0x0018 (0x03A8 - 0x0390)
+// 0x0018 (0x03E0 - 0x03C8)
 class ABP_SmallScenario_Josee_Past_c06053_C final : public ABP_SmallScenarioBase_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_SmallScenario_Josee_Past_c06053_C; // 0x0390(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FStoryFlagEvaluationFormula            Check_e20950;                                      // 0x0398(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_SmallScenario_Josee_Past_c06053_C; // 0x03C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FStoryFlagEvaluationFormula            Check_e20950;                                      // 0x03D0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
 	void Abort();

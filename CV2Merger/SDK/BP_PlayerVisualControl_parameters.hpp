@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "E_CharacterVisualControl_CharacterMode_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Extensions_structs.hpp"
 #include "Niagara_structs.hpp"
+#include "E_CharacterVisualControl_CharacterMode_structs.hpp"
 #include "Engine_structs.hpp"
 
 
@@ -1702,22 +1702,19 @@ public:
 DUMPER7_ASSERTS_BP_PlayerVisualControl_C_TimeTravelFastTravelEvent;
 
 // Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.UnsummonBody
-// 0x0048 (0x0048 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct BP_PlayerVisualControl_C_UnsummonBody final
 {
 public:
 	class ACharacter*                             CallFunc_GetCharacterActor_ReturnValue;            // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActionHumanEquipment_Weapon*           CallFunc_VCF_GetWeaponActor_ReturnValue;           // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	const class AActionHumanEquipment_Vampire*    CallFunc_VCF_GetBloodVeil_ReturnValue;             // 0x0010(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IEquipmentVisualControlInterface> CallFunc_K2_GetEquipmentVisualControl_self_CastInput; // 0x0020(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UEquipmentVisualControlComponent* CallFunc_K2_GetEquipmentVisualControl_ReturnValue; // 0x0030(0x0008)(ConstParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UBP_PlayerEquipmentVisualControl_Weapon_C* K2Node_DynamicCast_AsBP_Player_Equipment_Visual_Control_Weapon; // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsHideWeapon_ReturnValue;                 // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMeshComponent*                 CallFunc_GetBloodSuckMesh_ReturnValue;             // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_PlayerVisualControl_C_UnsummonBody;
 

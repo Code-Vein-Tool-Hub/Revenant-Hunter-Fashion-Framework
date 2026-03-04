@@ -17,130 +17,63 @@
 namespace SDK::Params
 {
 
-// Function WDT_BuddyThumbnailPiece.WDT_BuddyThumbnailPiece_C.Uncheck
-// 0x0002 (0x0002 - 0x0000)
-struct WDT_BuddyThumbnailPiece_C_Uncheck final
+// Function WDT_BuddyThumbnailPiece.WDT_BuddyThumbnailPiece_C.BP_OnItemExpansionChanged
+// 0x0001 (0x0001 - 0x0000)
+struct WDT_BuddyThumbnailPiece_C_BP_OnItemExpansionChanged final
+{
+public:
+	bool                                          bIsExpanded;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_BuddyThumbnailPiece_C_BP_OnItemExpansionChanged;
+
+// Function WDT_BuddyThumbnailPiece.WDT_BuddyThumbnailPiece_C.BP_OnItemSelectionChanged
+// 0x0001 (0x0001 - 0x0000)
+struct WDT_BuddyThumbnailPiece_C_BP_OnItemSelectionChanged final
+{
+public:
+	bool                                          bIsSelected;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_BuddyThumbnailPiece_C_BP_OnItemSelectionChanged;
+
+// Function WDT_BuddyThumbnailPiece.WDT_BuddyThumbnailPiece_C.Check
+// 0x0003 (0x0003 - 0x0000)
+struct WDT_BuddyThumbnailPiece_C_Check final
 {
 public:
 	bool                                          PlayAnimation_0;                                   // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          AnotherAppearance;                                 // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ReturnValue;                                       // 0x0002(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WDT_BuddyThumbnailPiece_C_Uncheck;
+DUMPER7_ASSERTS_WDT_BuddyThumbnailPiece_C_Check;
 
-// Function WDT_BuddyThumbnailPiece.WDT_BuddyThumbnailPiece_C.SetTexture
-// 0x0010 (0x0010 - 0x0000)
-struct WDT_BuddyThumbnailPiece_C_SetTexture final
+// Function WDT_BuddyThumbnailPiece.WDT_BuddyThumbnailPiece_C.ClearSubTexture
+// 0x000C (0x000C - 0x0000)
+struct WDT_BuddyThumbnailPiece_C_ClearSubTexture final
 {
 public:
-	class UTexture2D*                             Texture;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FName                                   ImageId;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WDT_BuddyThumbnailPiece_C_SetTexture;
+DUMPER7_ASSERTS_WDT_BuddyThumbnailPiece_C_ClearSubTexture;
 
-// Function WDT_BuddyThumbnailPiece.WDT_BuddyThumbnailPiece_C.SetSubTexture
-// 0x0018 (0x0018 - 0x0000)
-struct WDT_BuddyThumbnailPiece_C_SetSubTexture final
+// Function WDT_BuddyThumbnailPiece.WDT_BuddyThumbnailPiece_C.ClearTexture
+// 0x0001 (0x0001 - 0x0000)
+struct WDT_BuddyThumbnailPiece_C_ClearTexture final
 {
 public:
-	class FName                                   ImageId;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UTexture2D*                             Texture;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WDT_BuddyThumbnailPiece_C_SetSubTexture;
+DUMPER7_ASSERTS_WDT_BuddyThumbnailPiece_C_ClearTexture;
 
-// Function WDT_BuddyThumbnailPiece.WDT_BuddyThumbnailPiece_C.SetSubLazyTexture
-// 0x0038 (0x0038 - 0x0000)
-struct WDT_BuddyThumbnailPiece_C_SetSubLazyTexture final
-{
-public:
-	class FName                                   ImageId;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TSoftObjectPtr<class UTexture2D>              LazyTexture;                                       // 0x0008(0x0028)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash)
-	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_BuddyThumbnailPiece_C_SetSubLazyTexture;
-
-// Function WDT_BuddyThumbnailPiece.WDT_BuddyThumbnailPiece_C.SetLazyTexture
-// 0x0030 (0x0030 - 0x0000)
-struct WDT_BuddyThumbnailPiece_C_SetLazyTexture final
-{
-public:
-	TSoftObjectPtr<class UTexture2D>              LazyTexture;                                       // 0x0000(0x0028)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash)
-	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_BuddyThumbnailPiece_C_SetLazyTexture;
-
-// Function WDT_BuddyThumbnailPiece.WDT_BuddyThumbnailPiece_C.SetInfo
-// 0x0010 (0x0010 - 0x0000)
-struct WDT_BuddyThumbnailPiece_C_SetInfo final
-{
-public:
-	class UMaterialInstance*                      IconMaterial;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsCantCall;                                        // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable;                                // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x000B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_BuddyThumbnailPiece_C_SetInfo;
-
-// Function WDT_BuddyThumbnailPiece.WDT_BuddyThumbnailPiece_C.Select
+// Function WDT_BuddyThumbnailPiece.WDT_BuddyThumbnailPiece_C.Deselect
 // 0x0002 (0x0002 - 0x0000)
-struct WDT_BuddyThumbnailPiece_C_Select final
+struct WDT_BuddyThumbnailPiece_C_Deselect final
 {
 public:
 	bool                                          PlayAnimation_0;                                   // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WDT_BuddyThumbnailPiece_C_Select;
-
-// Function WDT_BuddyThumbnailPiece.WDT_BuddyThumbnailPiece_C.Reset
-// 0x0001 (0x0001 - 0x0000)
-struct WDT_BuddyThumbnailPiece_C_Reset final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_BuddyThumbnailPiece_C_Reset;
-
-// Function WDT_BuddyThumbnailPiece.WDT_BuddyThumbnailPiece_C.OnListItemObjectSet
-// 0x0008 (0x0008 - 0x0000)
-struct WDT_BuddyThumbnailPiece_C_OnListItemObjectSet final
-{
-public:
-	class UObject*                                ListItemObject;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_BuddyThumbnailPiece_C_OnListItemObjectSet;
-
-// Function WDT_BuddyThumbnailPiece.WDT_BuddyThumbnailPiece_C.OnFocusReceived
-// 0x01B0 (0x01B0 - 0x0000)
-struct WDT_BuddyThumbnailPiece_C_OnFocusReceived final
-{
-public:
-	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-	struct FFocusEvent                            InFocusEvent;                                      // 0x0038(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	struct FEventReply                            ReturnValue;                                       // 0x0040(0x00B8)(Parm, OutParm, ReturnParm)
-	struct FEventReply                            CallFunc_Unhandled_ReturnValue;                    // 0x00F8(0x00B8)()
-};
-DUMPER7_ASSERTS_WDT_BuddyThumbnailPiece_C_OnFocusReceived;
-
-// Function WDT_BuddyThumbnailPiece.WDT_BuddyThumbnailPiece_C.IsChecked
-// 0x0001 (0x0001 - 0x0000)
-struct WDT_BuddyThumbnailPiece_C_IsChecked final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_BuddyThumbnailPiece_C_IsChecked;
-
-// Function WDT_BuddyThumbnailPiece.WDT_BuddyThumbnailPiece_C.FlipTexture
-// 0x0002 (0x0002 - 0x0000)
-struct WDT_BuddyThumbnailPiece_C_FlipTexture final
-{
-public:
-	bool                                          IsInverse;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_BuddyThumbnailPiece_C_FlipTexture;
+DUMPER7_ASSERTS_WDT_BuddyThumbnailPiece_C_Deselect;
 
 // Function WDT_BuddyThumbnailPiece.WDT_BuddyThumbnailPiece_C.ExecuteUbergraph_WDT_BuddyThumbnailPiece
 // 0x0018 (0x0018 - 0x0000)
@@ -157,63 +90,130 @@ public:
 };
 DUMPER7_ASSERTS_WDT_BuddyThumbnailPiece_C_ExecuteUbergraph_WDT_BuddyThumbnailPiece;
 
-// Function WDT_BuddyThumbnailPiece.WDT_BuddyThumbnailPiece_C.Deselect
+// Function WDT_BuddyThumbnailPiece.WDT_BuddyThumbnailPiece_C.FlipTexture
 // 0x0002 (0x0002 - 0x0000)
-struct WDT_BuddyThumbnailPiece_C_Deselect final
+struct WDT_BuddyThumbnailPiece_C_FlipTexture final
+{
+public:
+	bool                                          IsInverse;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_BuddyThumbnailPiece_C_FlipTexture;
+
+// Function WDT_BuddyThumbnailPiece.WDT_BuddyThumbnailPiece_C.IsChecked
+// 0x0001 (0x0001 - 0x0000)
+struct WDT_BuddyThumbnailPiece_C_IsChecked final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_BuddyThumbnailPiece_C_IsChecked;
+
+// Function WDT_BuddyThumbnailPiece.WDT_BuddyThumbnailPiece_C.OnFocusReceived
+// 0x01B0 (0x01B0 - 0x0000)
+struct WDT_BuddyThumbnailPiece_C_OnFocusReceived final
+{
+public:
+	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+	struct FFocusEvent                            InFocusEvent;                                      // 0x0038(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	struct FEventReply                            ReturnValue;                                       // 0x0040(0x00B8)(Parm, OutParm, ReturnParm)
+	struct FEventReply                            CallFunc_Unhandled_ReturnValue;                    // 0x00F8(0x00B8)()
+};
+DUMPER7_ASSERTS_WDT_BuddyThumbnailPiece_C_OnFocusReceived;
+
+// Function WDT_BuddyThumbnailPiece.WDT_BuddyThumbnailPiece_C.OnListItemObjectSet
+// 0x0008 (0x0008 - 0x0000)
+struct WDT_BuddyThumbnailPiece_C_OnListItemObjectSet final
+{
+public:
+	class UObject*                                ListItemObject;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_BuddyThumbnailPiece_C_OnListItemObjectSet;
+
+// Function WDT_BuddyThumbnailPiece.WDT_BuddyThumbnailPiece_C.Reset
+// 0x0001 (0x0001 - 0x0000)
+struct WDT_BuddyThumbnailPiece_C_Reset final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_BuddyThumbnailPiece_C_Reset;
+
+// Function WDT_BuddyThumbnailPiece.WDT_BuddyThumbnailPiece_C.Select
+// 0x0002 (0x0002 - 0x0000)
+struct WDT_BuddyThumbnailPiece_C_Select final
 {
 public:
 	bool                                          PlayAnimation_0;                                   // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WDT_BuddyThumbnailPiece_C_Deselect;
+DUMPER7_ASSERTS_WDT_BuddyThumbnailPiece_C_Select;
 
-// Function WDT_BuddyThumbnailPiece.WDT_BuddyThumbnailPiece_C.ClearTexture
-// 0x0001 (0x0001 - 0x0000)
-struct WDT_BuddyThumbnailPiece_C_ClearTexture final
+// Function WDT_BuddyThumbnailPiece.WDT_BuddyThumbnailPiece_C.SetInfo
+// 0x0010 (0x0010 - 0x0000)
+struct WDT_BuddyThumbnailPiece_C_SetInfo final
 {
 public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstance*                      IconMaterial;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsCantCall;                                        // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x000B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WDT_BuddyThumbnailPiece_C_ClearTexture;
+DUMPER7_ASSERTS_WDT_BuddyThumbnailPiece_C_SetInfo;
 
-// Function WDT_BuddyThumbnailPiece.WDT_BuddyThumbnailPiece_C.ClearSubTexture
-// 0x000C (0x000C - 0x0000)
-struct WDT_BuddyThumbnailPiece_C_ClearSubTexture final
+// Function WDT_BuddyThumbnailPiece.WDT_BuddyThumbnailPiece_C.SetLazyTexture
+// 0x0030 (0x0030 - 0x0000)
+struct WDT_BuddyThumbnailPiece_C_SetLazyTexture final
+{
+public:
+	TSoftObjectPtr<class UTexture2D>              LazyTexture;                                       // 0x0000(0x0028)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash)
+	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_BuddyThumbnailPiece_C_SetLazyTexture;
+
+// Function WDT_BuddyThumbnailPiece.WDT_BuddyThumbnailPiece_C.SetSubLazyTexture
+// 0x0038 (0x0038 - 0x0000)
+struct WDT_BuddyThumbnailPiece_C_SetSubLazyTexture final
 {
 public:
 	class FName                                   ImageId;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TSoftObjectPtr<class UTexture2D>              LazyTexture;                                       // 0x0008(0x0028)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash)
+	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_BuddyThumbnailPiece_C_SetSubLazyTexture;
+
+// Function WDT_BuddyThumbnailPiece.WDT_BuddyThumbnailPiece_C.SetSubTexture
+// 0x0018 (0x0018 - 0x0000)
+struct WDT_BuddyThumbnailPiece_C_SetSubTexture final
+{
+public:
+	class FName                                   ImageId;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UTexture2D*                             Texture;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_BuddyThumbnailPiece_C_SetSubTexture;
+
+// Function WDT_BuddyThumbnailPiece.WDT_BuddyThumbnailPiece_C.SetTexture
+// 0x0010 (0x0010 - 0x0000)
+struct WDT_BuddyThumbnailPiece_C_SetTexture final
+{
+public:
+	class UTexture2D*                             Texture;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WDT_BuddyThumbnailPiece_C_ClearSubTexture;
+DUMPER7_ASSERTS_WDT_BuddyThumbnailPiece_C_SetTexture;
 
-// Function WDT_BuddyThumbnailPiece.WDT_BuddyThumbnailPiece_C.Check
-// 0x0003 (0x0003 - 0x0000)
-struct WDT_BuddyThumbnailPiece_C_Check final
+// Function WDT_BuddyThumbnailPiece.WDT_BuddyThumbnailPiece_C.Uncheck
+// 0x0002 (0x0002 - 0x0000)
+struct WDT_BuddyThumbnailPiece_C_Uncheck final
 {
 public:
 	bool                                          PlayAnimation_0;                                   // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          AnotherAppearance;                                 // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ReturnValue;                                       // 0x0002(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WDT_BuddyThumbnailPiece_C_Check;
-
-// Function WDT_BuddyThumbnailPiece.WDT_BuddyThumbnailPiece_C.BP_OnItemSelectionChanged
-// 0x0001 (0x0001 - 0x0000)
-struct WDT_BuddyThumbnailPiece_C_BP_OnItemSelectionChanged final
-{
-public:
-	bool                                          bIsSelected;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_BuddyThumbnailPiece_C_BP_OnItemSelectionChanged;
-
-// Function WDT_BuddyThumbnailPiece.WDT_BuddyThumbnailPiece_C.BP_OnItemExpansionChanged
-// 0x0001 (0x0001 - 0x0000)
-struct WDT_BuddyThumbnailPiece_C_BP_OnItemExpansionChanged final
-{
-public:
-	bool                                          bIsExpanded;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_BuddyThumbnailPiece_C_BP_OnItemExpansionChanged;
+DUMPER7_ASSERTS_WDT_BuddyThumbnailPiece_C_Uncheck;
 
 }
 

@@ -12,6 +12,7 @@
 
 #include "BasicUI_classes.hpp"
 #include "SlateCore_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 namespace SDK

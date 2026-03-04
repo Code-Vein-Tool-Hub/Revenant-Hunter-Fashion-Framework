@@ -91,33 +91,6 @@ public:
 };
 DUMPER7_ASSERTS_LevelVariantSetsActor_SwitchOnVariantByName;
 
-// Function VariantManagerContent.SwitchActor.SelectOption
-// 0x0004 (0x0004 - 0x0000)
-struct SwitchActor_SelectOption final
-{
-public:
-	int32                                         OptionIndex;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SwitchActor_SelectOption;
-
-// Function VariantManagerContent.SwitchActor.GetOptions
-// 0x0010 (0x0010 - 0x0000)
-struct SwitchActor_GetOptions final
-{
-public:
-	TArray<class AActor*>                         ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SwitchActor_GetOptions;
-
-// Function VariantManagerContent.SwitchActor.GetSelectedOption
-// 0x0004 (0x0004 - 0x0000)
-struct SwitchActor_GetSelectedOption final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SwitchActor_GetSelectedOption;
-
 // Function VariantManagerContent.PropertyValue.GetFullDisplayString
 // 0x0010 (0x0010 - 0x0000)
 struct PropertyValue_GetFullDisplayString final
@@ -144,6 +117,33 @@ public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_PropertyValue_HasRecordedData;
+
+// Function VariantManagerContent.SwitchActor.SelectOption
+// 0x0004 (0x0004 - 0x0000)
+struct SwitchActor_SelectOption final
+{
+public:
+	int32                                         OptionIndex;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SwitchActor_SelectOption;
+
+// Function VariantManagerContent.SwitchActor.GetOptions
+// 0x0010 (0x0010 - 0x0000)
+struct SwitchActor_GetOptions final
+{
+public:
+	TArray<class AActor*>                         ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SwitchActor_GetOptions;
+
+// Function VariantManagerContent.SwitchActor.GetSelectedOption
+// 0x0004 (0x0004 - 0x0000)
+struct SwitchActor_GetSelectedOption final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SwitchActor_GetSelectedOption;
 
 // Function VariantManagerContent.Variant.AddDependency
 // 0x0060 (0x0060 - 0x0000)

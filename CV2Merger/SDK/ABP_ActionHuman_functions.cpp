@@ -1634,6 +1634,28 @@ void UABP_ActionHuman_C::OnFullBodyIdleStateBecomeRelevant(const struct FAnimUpd
 }
 
 
+// Function ABP_ActionHuman.ABP_ActionHuman_C.OnFullBodyIdleStateUpdate
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FAnimUpdateContext&        Context                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FAnimNodeReference&        Node                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
+
+void UABP_ActionHuman_C::OnFullBodyIdleStateUpdate(const struct FAnimUpdateContext& Context, const struct FAnimNodeReference& Node)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABP_ActionHuman_C", "OnFullBodyIdleStateUpdate");
+
+	Params::ABP_ActionHuman_C_OnFullBodyIdleStateUpdate Parms{};
+
+	Parms.Context = std::move(Context);
+	Parms.Node = std::move(Node);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function ABP_ActionHuman.ABP_ActionHuman_C.OnFullBodyStartStateBecomeRelevant
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -1697,6 +1719,20 @@ void UABP_ActionHuman_C::OnIdleStateExit(const struct FAnimUpdateContext& Contex
 	Parms.Node = std::move(Node);
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ABP_ActionHuman.ABP_ActionHuman_C.OnLinkedAnimClassesUpdatedDelegate_Event
+// (BlueprintCallable, BlueprintEvent)
+
+void UABP_ActionHuman_C::OnLinkedAnimClassesUpdatedDelegate_Event()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABP_ActionHuman_C", "OnLinkedAnimClassesUpdatedDelegate_Event");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -2043,19 +2079,24 @@ void UABP_ActionHuman_C::UpperBodySlot(const struct FPoseLink& InPose_PreUpperBo
 }
 
 
-// Function ABP_ActionHuman.ABP_ActionHuman_C.GetCharacterMovementComponent
+// Function ABP_ActionHuman.ABP_ActionHuman_C.FindAngleBetween
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// class UActionHumanMovementComponent*    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   InFrom                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   InTo                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-class UActionHumanMovementComponent* UABP_ActionHuman_C::GetCharacterMovementComponent() const
+double UABP_ActionHuman_C::FindAngleBetween(const struct FVector& InFrom, const struct FVector& InTo) const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_ActionHuman_C", "GetCharacterMovementComponent");
+		Func = Class->GetFunction("ABP_ActionHuman_C", "FindAngleBetween");
 
-	Params::ABP_ActionHuman_C_GetCharacterMovementComponent Parms{};
+	Params::ABP_ActionHuman_C_FindAngleBetween Parms{};
+
+	Parms.InFrom = std::move(InFrom);
+	Parms.InTo = std::move(InTo);
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -2083,24 +2124,19 @@ class AActionHumanCharacter* UABP_ActionHuman_C::GetAppCharacter() const
 }
 
 
-// Function ABP_ActionHuman.ABP_ActionHuman_C.FindAngleBetween
+// Function ABP_ActionHuman.ABP_ActionHuman_C.GetCharacterMovementComponent
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// const struct FVector&                   InFrom                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FVector&                   InTo                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UActionHumanMovementComponent*    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-double UABP_ActionHuman_C::FindAngleBetween(const struct FVector& InFrom, const struct FVector& InTo) const
+class UActionHumanMovementComponent* UABP_ActionHuman_C::GetCharacterMovementComponent() const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_ActionHuman_C", "FindAngleBetween");
+		Func = Class->GetFunction("ABP_ActionHuman_C", "GetCharacterMovementComponent");
 
-	Params::ABP_ActionHuman_C_FindAngleBetween Parms{};
-
-	Parms.InFrom = std::move(InFrom);
-	Parms.InTo = std::move(InTo);
+	Params::ABP_ActionHuman_C_GetCharacterMovementComponent Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 

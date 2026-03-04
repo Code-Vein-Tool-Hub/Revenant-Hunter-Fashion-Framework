@@ -18,11 +18,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_SmallScenario_Zenon_Present_a00100_Greeting_03.BP_SmallScenario_Zenon_Present_a00100_Greeting_03_C
-// 0x0008 (0x0398 - 0x0390)
+// 0x0008 (0x03D0 - 0x03C8)
 class ABP_SmallScenario_Zenon_Present_a00100_Greeting_03_C final : public ABP_SmallScenarioBase_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_SmallScenario_Zenon_Present_a00100_Greeting_03_C; // 0x0390(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_SmallScenario_Zenon_Present_a00100_Greeting_03_C; // 0x03C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void Abort();

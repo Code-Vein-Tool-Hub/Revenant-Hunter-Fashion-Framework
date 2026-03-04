@@ -45,14 +45,14 @@ struct alignas(0x01) FTypedElementDataStorageColumn
 #pragma pack(pop)
 DUMPER7_ASSERTS_FTypedElementDataStorageColumn;
 
-// ScriptStruct TypedElementFramework.TypedElementUObjectColumn
-// 0x0008 (0x0008 - 0x0000)
-struct alignas(0x04) FTypedElementUObjectColumn final : public FTypedElementDataStorageColumn
+// ScriptStruct TypedElementFramework.TypedElementChildAlertColumn
+// 0x0010 (0x0010 - 0x0000)
+struct alignas(0x08) FTypedElementChildAlertColumn final : public FTypedElementDataStorageColumn
 {
 public:
-	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FTypedElementUObjectColumn;
+DUMPER7_ASSERTS_FTypedElementChildAlertColumn;
 
 // ScriptStruct TypedElementFramework.ScriptTypedElementHandle
 // 0x0008 (0x0008 - 0x0000)
@@ -75,14 +75,14 @@ public:
 };
 DUMPER7_ASSERTS_FTypedElementAlertColumn;
 
-// ScriptStruct TypedElementFramework.TypedElementChildAlertColumn
-// 0x0010 (0x0010 - 0x0000)
-struct alignas(0x08) FTypedElementChildAlertColumn final : public FTypedElementDataStorageColumn
+// ScriptStruct TypedElementFramework.TypedElementUObjectColumn
+// 0x0008 (0x0008 - 0x0000)
+struct alignas(0x04) FTypedElementUObjectColumn final : public FTypedElementDataStorageColumn
 {
 public:
-	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FTypedElementChildAlertColumn;
+DUMPER7_ASSERTS_FTypedElementUObjectColumn;
 
 // ScriptStruct TypedElementFramework.TypedElementExternalObjectColumn
 // 0x0008 (0x0008 - 0x0000)

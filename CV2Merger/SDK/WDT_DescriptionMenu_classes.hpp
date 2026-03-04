@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "Extensions_structs.hpp"
 #include "Extensions_classes.hpp"
-#include "Engine_structs.hpp"
 
 
 namespace SDK
@@ -40,36 +40,36 @@ public:
 	TArray<struct FInstructionInfoTable>          InstructionDataList;                               // 0x0630(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
+	void SelectUpperDescription();
+	void SelectLowerDescription();
+	void PreConstruct(bool IsDesignTime);
+	void OnUpPressed();
+	void OnRightPressed();
+	void OnOpened();
+	void OnMenuInitialized();
+	void OnLeftPressed();
+	class UWidgetAnimation* OnGetOpenAnimation();
+	void OnFinishing();
+	void OnFieldMenuCloseAnimationFinish();
+	void OnFieldMenuButton();
+	void OnDownPressed();
+	void OnDecide();
+	void OnCancel();
+	void IsDescriptionIndex(int32 InIndex, bool* OutResult);
 	void InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_4(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
 	void InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEvent_1(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
 	void InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent_2(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_3(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
 	void InpActEvt_IA_UI_FieldMenu_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_3(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
 	void InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_6(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
 	void InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_5(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void GetMaxListIndex(int32* OutNum);
 	void Initialize();
-	void ExecuteUbergraph_WDT_DescriptionMenu(int32 EntryPoint);
+	void GetMaxListIndex(int32* OutNum);
 	void GetCurrentListIndex(int32* OutNum);
-	void BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_1_OnListItemSelectionChangedDynamic__DelegateSignature(class UObject* Item, bool bIsSelected);
+	void ExecuteUbergraph_WDT_DescriptionMenu(int32 EntryPoint);
 	void BuildDescriptionList();
+	void BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_1_OnListItemSelectionChangedDynamic__DelegateSignature(class UObject* Item, bool bIsSelected);
 	void BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_0_OnListEntryInitializedDynamic__DelegateSignature(class UObject* Item, class UUserWidget* Widget);
-	void IsDescriptionIndex(int32 InIndex, bool* OutResult);
-	void OnCancel();
-	void OnDecide();
-	void OnDownPressed();
-	void OnFieldMenuButton();
-	void OnFieldMenuCloseAnimationFinish();
-	void OnFinishing();
-	class UWidgetAnimation* OnGetOpenAnimation();
-	void OnLeftPressed();
-	void OnMenuInitialized();
-	void OnOpened();
-	void OnRightPressed();
-	void OnUpPressed();
-	void PreConstruct(bool IsDesignTime);
-	void SelectLowerDescription();
-	void SelectUpperDescription();
 
 public:
 	static class UClass* StaticClass()

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "KawaiiPhysics_structs.hpp"
 #include "Engine_classes.hpp"
+#include "KawaiiPhysics_structs.hpp"
 
 
 namespace SDK

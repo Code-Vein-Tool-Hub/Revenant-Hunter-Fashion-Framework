@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "Extensions_structs.hpp"
 #include "Engine_structs.hpp"
 #include "BasicUI_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "WDT_ConfigStandardPageBase_classes.hpp"
-#include "Extensions_structs.hpp"
 
 
 namespace SDK

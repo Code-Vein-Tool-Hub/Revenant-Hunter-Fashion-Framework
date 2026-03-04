@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_SmallScenarioGainBoosterBase.BP_SmallScenarioGainBoosterBase_C
-// 0x0008 (0x0398 - 0x0390)
+// 0x0008 (0x03D0 - 0x03C8)
 class ABP_SmallScenarioGainBoosterBase_C : public ABP_SmallScenarioBase_C
 {
 public:
-	class UDataTable*                             GainBoosterSmallScenarioDataTable;                 // 0x0390(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UDataTable*                             GainBoosterSmallScenarioDataTable;                 // 0x03C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void GainBooster();

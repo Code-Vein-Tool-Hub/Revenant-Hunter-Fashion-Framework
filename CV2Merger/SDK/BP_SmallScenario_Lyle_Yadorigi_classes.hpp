@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "GameplayTags_structs.hpp"
 #include "BP_SmallScenarioBase_classes.hpp"
+#include "GameplayTags_structs.hpp"
 #include "Extensions_structs.hpp"
 
 
@@ -20,17 +20,17 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_SmallScenario_Lyle_Yadorigi.BP_SmallScenario_Lyle_Yadorigi_C
-// 0x0080 (0x0410 - 0x0390)
+// 0x0080 (0x0448 - 0x03C8)
 class ABP_SmallScenario_Lyle_Yadorigi_C final : public ABP_SmallScenarioBase_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_SmallScenario_Lyle_Yadorigi_C;   // 0x0390(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FGameplayTag                           Buddy;                                             // 0x0398(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TMap<class FName, class UClass*>              PresentScenarioMap;                                // 0x03A0(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class UDataTable*                             CharaEpSelectorData;                               // 0x03F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UDataTable*                             GreetingSelectorData;                              // 0x03F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UDataTable*                             PresentResponseDT;                                 // 0x0400(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UDataTable*                             FarewellSelectorData;                              // 0x0408(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_SmallScenario_Lyle_Yadorigi_C;   // 0x03C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FGameplayTag                           Buddy;                                             // 0x03D0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TMap<class FName, class UClass*>              PresentScenarioMap;                                // 0x03D8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class UDataTable*                             CharaEpSelectorData;                               // 0x0428(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UDataTable*                             GreetingSelectorData;                              // 0x0430(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UDataTable*                             PresentResponseDT;                                 // 0x0438(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UDataTable*                             FarewellSelectorData;                              // 0x0440(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Abort();

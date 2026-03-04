@@ -17,17 +17,37 @@
 namespace SDK
 {
 
-// Function WDT_IchorAmountPanel.WDT_IchorAmountPanel_C.ForcedShowByUsage
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function WDT_IchorAmountPanel.WDT_IchorAmountPanel_C.OnForcedShowByUsageEnd
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UWDT_IchorAmountPanel_C::ForcedShowByUsage()
+void UWDT_IchorAmountPanel_C::OnForcedShowByUsageEnd()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_IchorAmountPanel_C", "ForcedShowByUsage");
+		Func = Class->GetFunction("WDT_IchorAmountPanel_C", "OnForcedShowByUsageEnd");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WDT_IchorAmountPanel.WDT_IchorAmountPanel_C.OnBattleStateChanged
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    InBattleState                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_IchorAmountPanel_C::OnBattleStateChanged(bool InBattleState)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_IchorAmountPanel_C", "OnBattleStateChanged");
+
+	Params::WDT_IchorAmountPanel_C_OnBattleStateChanged Parms{};
+
+	Parms.InBattleState = InBattleState;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -40,6 +60,20 @@ void UWDT_IchorAmountPanel_C::HideByGadgetPanel()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("WDT_IchorAmountPanel_C", "HideByGadgetPanel");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WDT_IchorAmountPanel.WDT_IchorAmountPanel_C.ForcedShowByUsage
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWDT_IchorAmountPanel_C::ForcedShowByUsage()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_IchorAmountPanel_C", "ForcedShowByUsage");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -66,40 +100,6 @@ void UWDT_IchorAmountPanel_C::NotifyIchorChanged(double InCurrentIchor, double I
 	Parms.InChangeFactor = InChangeFactor;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_IchorAmountPanel.WDT_IchorAmountPanel_C.OnBattleStateChanged
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    InBattleState                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_IchorAmountPanel_C::OnBattleStateChanged(bool InBattleState)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_IchorAmountPanel_C", "OnBattleStateChanged");
-
-	Params::WDT_IchorAmountPanel_C_OnBattleStateChanged Parms{};
-
-	Parms.InBattleState = InBattleState;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_IchorAmountPanel.WDT_IchorAmountPanel_C.OnForcedShowByUsageEnd
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWDT_IchorAmountPanel_C::OnForcedShowByUsageEnd()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_IchorAmountPanel_C", "OnForcedShowByUsageEnd");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

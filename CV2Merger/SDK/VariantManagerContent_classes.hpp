@@ -102,38 +102,6 @@ public:
 };
 DUMPER7_ASSERTS_ULevelVariantSetsFunctionDirector;
 
-// Class VariantManagerContent.SwitchActor
-// 0x0030 (0x02D0 - 0x02A0)
-class ASwitchActor final : public AActor
-{
-public:
-	uint8                                         Pad_2A0[0x20];                                     // 0x02A0(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
-	class USceneComponent*                        SceneComponent;                                    // 0x02C0(0x0008)(Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
-	int32                                         LastSelectedOption;                                // 0x02C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2CC[0x4];                                      // 0x02CC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void SelectOption(int32 OptionIndex);
-
-	TArray<class AActor*> GetOptions() const;
-	int32 GetSelectedOption() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("SwitchActor")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SwitchActor")
-	}
-	static class ASwitchActor* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ASwitchActor>();
-	}
-};
-DUMPER7_ASSERTS_ASwitchActor;
-
 // Class VariantManagerContent.PropertyValue
 // 0x0198 (0x01C0 - 0x0028)
 class UPropertyValue : public UObject
@@ -175,26 +143,6 @@ public:
 };
 DUMPER7_ASSERTS_UPropertyValue;
 
-// Class VariantManagerContent.PropertyValueVisibility
-// 0x0000 (0x01C0 - 0x01C0)
-class UPropertyValueVisibility final : public UPropertyValue
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("PropertyValueVisibility")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"PropertyValueVisibility")
-	}
-	static class UPropertyValueVisibility* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPropertyValueVisibility>();
-	}
-};
-DUMPER7_ASSERTS_UPropertyValueVisibility;
-
 // Class VariantManagerContent.PropertyValueTransform
 // 0x0000 (0x01C0 - 0x01C0)
 class UPropertyValueTransform final : public UPropertyValue
@@ -214,6 +162,26 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UPropertyValueTransform;
+
+// Class VariantManagerContent.PropertyValueVisibility
+// 0x0000 (0x01C0 - 0x01C0)
+class UPropertyValueVisibility final : public UPropertyValue
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PropertyValueVisibility")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PropertyValueVisibility")
+	}
+	static class UPropertyValueVisibility* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPropertyValueVisibility>();
+	}
+};
+DUMPER7_ASSERTS_UPropertyValueVisibility;
 
 // Class VariantManagerContent.PropertyValueColor
 // 0x0000 (0x01C0 - 0x01C0)
@@ -294,6 +262,38 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UPropertyValueSoftObject;
+
+// Class VariantManagerContent.SwitchActor
+// 0x0030 (0x02D0 - 0x02A0)
+class ASwitchActor final : public AActor
+{
+public:
+	uint8                                         Pad_2A0[0x20];                                     // 0x02A0(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
+	class USceneComponent*                        SceneComponent;                                    // 0x02C0(0x0008)(Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+	int32                                         LastSelectedOption;                                // 0x02C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_2CC[0x4];                                      // 0x02CC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void SelectOption(int32 OptionIndex);
+
+	TArray<class AActor*> GetOptions() const;
+	int32 GetSelectedOption() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SwitchActor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SwitchActor")
+	}
+	static class ASwitchActor* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASwitchActor>();
+	}
+};
+DUMPER7_ASSERTS_ASwitchActor;
 
 // Class VariantManagerContent.Variant
 // 0x0048 (0x0070 - 0x0028)

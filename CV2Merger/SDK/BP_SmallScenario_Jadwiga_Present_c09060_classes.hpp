@@ -19,12 +19,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_SmallScenario_Jadwiga_Present_c09060.BP_SmallScenario_Jadwiga_Present_c09060_C
-// 0x0018 (0x03A8 - 0x0390)
+// 0x0018 (0x03E0 - 0x03C8)
 class ABP_SmallScenario_Jadwiga_Present_c09060_C final : public ABP_SmallScenarioBase_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_SmallScenario_Jadwiga_Present_c09060_C; // 0x0390(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FArticleBulkInfo                       ArticleBulkInfo;                                   // 0x0398(0x0010)(Edit, BlueprintVisible)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_SmallScenario_Jadwiga_Present_c09060_C; // 0x03C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FArticleBulkInfo                       ArticleBulkInfo;                                   // 0x03D0(0x0010)(Edit, BlueprintVisible)
 
 public:
 	void Abort();

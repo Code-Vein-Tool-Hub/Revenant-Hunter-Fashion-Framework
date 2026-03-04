@@ -64,7 +64,7 @@ void UWDT_SupportMenu_C::AddItemDataMap(class FName InCategory, class UBP_Suppor
 
 
 // Function WDT_SupportMenu.WDT_SupportMenu_C.AddLouDiaryList
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<class FName>&                    InCategoryList                                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // class FName                             InItemKey                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -356,9 +356,10 @@ void UWDT_SupportMenu_C::CategoryDataToKeywordData(const class FText& InTitleTex
 // Parameters:
 // const class FText&                      InTitleText                                            (BlueprintVisible, BlueprintReadOnly, Parm)
 // class FName                             InCategoryKeyName                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FStoryFlagEvaluationFormula&DeactivateFlag                                         (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 // struct FLouDiaryDataTableRow*           OutLouDiaryData                                        (Parm, OutParm)
 
-void UWDT_SupportMenu_C::CategoryDataToLouDiaryData(const class FText& InTitleText, class FName InCategoryKeyName, struct FLouDiaryDataTableRow* OutLouDiaryData)
+void UWDT_SupportMenu_C::CategoryDataToLouDiaryData(const class FText& InTitleText, class FName InCategoryKeyName, const struct FStoryFlagEvaluationFormula& DeactivateFlag, struct FLouDiaryDataTableRow* OutLouDiaryData)
 {
 	static class UFunction* Func = nullptr;
 
@@ -369,6 +370,7 @@ void UWDT_SupportMenu_C::CategoryDataToLouDiaryData(const class FText& InTitleTe
 
 	Parms.InTitleText = std::move(InTitleText);
 	Parms.InCategoryKeyName = InCategoryKeyName;
+	Parms.DeactivateFlag = std::move(DeactivateFlag);
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -719,6 +721,30 @@ void UWDT_SupportMenu_C::GetDisplayCategoryNum(int32* OutNum)
 
 	if (OutNum != nullptr)
 		*OutNum = Parms.OutNum;
+}
+
+
+// Function WDT_SupportMenu.WDT_SupportMenu_C.GetLouDiaryCategoryDataByName
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class FName                             InCategoryName                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FLouDiaryDataTableRow*           OutLouDiaryCategoryData                                (Parm, OutParm)
+
+void UWDT_SupportMenu_C::GetLouDiaryCategoryDataByName(class FName InCategoryName, struct FLouDiaryDataTableRow* OutLouDiaryCategoryData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_SupportMenu_C", "GetLouDiaryCategoryDataByName");
+
+	Params::WDT_SupportMenu_C_GetLouDiaryCategoryDataByName Parms{};
+
+	Parms.InCategoryName = InCategoryName;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (OutLouDiaryCategoryData != nullptr)
+		*OutLouDiaryCategoryData = std::move(Parms.OutLouDiaryCategoryData);
 }
 
 
