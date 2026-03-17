@@ -51,6 +51,30 @@ void UWDT_IchorAmountPanel_C::OnBattleStateChanged(bool InBattleState)
 }
 
 
+// Function WDT_IchorAmountPanel.WDT_IchorAmountPanel_C.NotifyIchorChanged
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  InCurrentIchor                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  InMaxIchor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EResourceChangeFactor                   InChangeFactor                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_IchorAmountPanel_C::NotifyIchorChanged(double InCurrentIchor, double InMaxIchor, EResourceChangeFactor InChangeFactor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_IchorAmountPanel_C", "NotifyIchorChanged");
+
+	Params::WDT_IchorAmountPanel_C_NotifyIchorChanged Parms{};
+
+	Parms.InCurrentIchor = InCurrentIchor;
+	Parms.InMaxIchor = InMaxIchor;
+	Parms.InChangeFactor = InChangeFactor;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WDT_IchorAmountPanel.WDT_IchorAmountPanel_C.HideByGadgetPanel
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -76,30 +100,6 @@ void UWDT_IchorAmountPanel_C::ForcedShowByUsage()
 		Func = Class->GetFunction("WDT_IchorAmountPanel_C", "ForcedShowByUsage");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WDT_IchorAmountPanel.WDT_IchorAmountPanel_C.NotifyIchorChanged
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double                                  InCurrentIchor                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  InMaxIchor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EResourceChangeFactor                   InChangeFactor                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_IchorAmountPanel_C::NotifyIchorChanged(double InCurrentIchor, double InMaxIchor, EResourceChangeFactor InChangeFactor)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_IchorAmountPanel_C", "NotifyIchorChanged");
-
-	Params::WDT_IchorAmountPanel_C_NotifyIchorChanged Parms{};
-
-	Parms.InCurrentIchor = InCurrentIchor;
-	Parms.InMaxIchor = InMaxIchor;
-	Parms.InChangeFactor = InChangeFactor;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

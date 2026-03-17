@@ -97,26 +97,6 @@ enum class EQSVolatileStoryFlagIntegerCompare : uint8
 	EQSVolatileStoryFlagIntegerCompare_MAX   = 6,
 };
 
-// ScriptStruct QuestSystemStoryFlag.QuestSpawnDefinitionDataRow
-// 0x0038 (0x0040 - 0x0008)
-struct FQuestSpawnDefinitionDataRow final : public FTableRowBase
-{
-public:
-	struct FStoryFlagEvaluationFormula            StartConditions;                                   // 0x0008(0x0010)(Edit, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class UQuestSystemAsset>       QuestAsset;                                        // 0x0018(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FQuestSpawnDefinitionDataRow;
-
-// ScriptStruct QuestSystemStoryFlag.QuestProgressHandle
-// 0x000C (0x000C - 0x0000)
-struct FQuestProgressHandle final
-{
-public:
-	TWeakObjectPtr<class UObject>                 WeakRequestObject;                                 // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Identifier;                                        // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FQuestProgressHandle;
-
 // ScriptStruct QuestSystemStoryFlag.QuestSummaryInfo
 // 0x0038 (0x0038 - 0x0000)
 struct FQuestSummaryInfo final
@@ -130,6 +110,26 @@ public:
 	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FQuestSummaryInfo;
+
+// ScriptStruct QuestSystemStoryFlag.QuestProgressHandle
+// 0x000C (0x000C - 0x0000)
+struct FQuestProgressHandle final
+{
+public:
+	TWeakObjectPtr<class UObject>                 WeakRequestObject;                                 // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Identifier;                                        // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FQuestProgressHandle;
+
+// ScriptStruct QuestSystemStoryFlag.QuestSpawnDefinitionDataRow
+// 0x0038 (0x0040 - 0x0008)
+struct FQuestSpawnDefinitionDataRow final : public FTableRowBase
+{
+public:
+	struct FStoryFlagEvaluationFormula            StartConditions;                                   // 0x0008(0x0010)(Edit, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UQuestSystemAsset>       QuestAsset;                                        // 0x0018(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FQuestSpawnDefinitionDataRow;
 
 // ScriptStruct QuestSystemStoryFlag.QuestProgressInfo
 // 0x0018 (0x0018 - 0x0000)

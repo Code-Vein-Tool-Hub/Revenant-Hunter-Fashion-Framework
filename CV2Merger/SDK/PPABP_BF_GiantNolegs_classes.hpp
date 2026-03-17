@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "KawaiiPhysics_structs.hpp"
 #include "Engine_structs.hpp"
 #include "ControlRig_structs.hpp"
-#include "AppAnimGraph_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "KawaiiPhysics_structs.hpp"
+#include "AppAnimGraph_structs.hpp"
 #include "Extensions_classes.hpp"
 
 

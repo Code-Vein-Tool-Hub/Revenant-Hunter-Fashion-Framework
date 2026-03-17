@@ -37,9 +37,9 @@ public:
 public:
 	void OnForcedShowByUsageEnd();
 	void OnBattleStateChanged(bool InBattleState);
+	void NotifyIchorChanged(double InCurrentIchor, double InMaxIchor, EResourceChangeFactor InChangeFactor);
 	void HideByGadgetPanel();
 	void ForcedShowByUsage();
-	void NotifyIchorChanged(double InCurrentIchor, double InMaxIchor, EResourceChangeFactor InChangeFactor);
 
 public:
 	static class UClass* StaticClass()

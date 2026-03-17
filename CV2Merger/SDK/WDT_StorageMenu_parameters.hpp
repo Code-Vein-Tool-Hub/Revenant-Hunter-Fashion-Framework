@@ -13,8 +13,8 @@
 #include "EnhancedInput_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Extensions_structs.hpp"
-#include "EN_StorageMenuState_structs.hpp"
 #include "UMG_structs.hpp"
+#include "EN_StorageMenuState_structs.hpp"
 
 
 namespace SDK::Params

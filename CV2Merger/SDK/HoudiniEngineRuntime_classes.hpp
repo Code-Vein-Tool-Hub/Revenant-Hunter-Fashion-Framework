@@ -51,36 +51,6 @@ public:
 };
 DUMPER7_ASSERTS_UHoudiniAsset;
 
-// Class HoudiniEngineRuntime.HoudiniParameterRampFloatPoint
-// 0x0028 (0x0050 - 0x0028)
-class UHoudiniParameterRampFloatPoint final : public UObject
-{
-public:
-	float                                         Position;                                          // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Value;                                             // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EHoudiniRampInterpolationType                 Interpolation;                                     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         InstanceIndex;                                     // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UHoudiniParameterFloat*                 PositionParentParm;                                // 0x0038(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UHoudiniParameterFloat*                 ValueParentParm;                                   // 0x0040(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UHoudiniParameterChoice*                InterpolationParentParm;                           // 0x0048(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("HoudiniParameterRampFloatPoint")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"HoudiniParameterRampFloatPoint")
-	}
-	static class UHoudiniParameterRampFloatPoint* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UHoudiniParameterRampFloatPoint>();
-	}
-};
-DUMPER7_ASSERTS_UHoudiniParameterRampFloatPoint;
-
 // Class HoudiniEngineRuntime.HoudiniAssetActor
 // 0x0008 (0x02A8 - 0x02A0)
 class AHoudiniAssetActor final : public AActor
@@ -199,6 +169,128 @@ public:
 #pragma pack(pop)
 DUMPER7_ASSERTS_UHoudiniAssetComponent;
 
+// Class HoudiniEngineRuntime.HoudiniParameter
+// 0x00E0 (0x0108 - 0x0028)
+class UHoudiniParameter : public UObject
+{
+public:
+	class FString                                 Name_0;                                            // 0x0028(0x0010)(ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class FString                                 Label;                                             // 0x0038(0x0010)(ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EHoudiniParameterType                         ParmType;                                          // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EHoudiniParameterChoiceListType               ChoiceListType;                                    // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_4A[0x2];                                       // 0x004A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint32                                        TupleSize;                                         // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	int32                                         NodeID;                                            // 0x0050(0x0004)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	int32                                         ParmId;                                            // 0x0054(0x0004)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	int32                                         ParentParmId;                                      // 0x0058(0x0004)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	int32                                         ChildIndex;                                        // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bIsVisible;                                        // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bIsParentFolderVisible;                            // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bIsDisabled;                                       // 0x0062(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bHasChanged;                                       // 0x0063(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bNeedsToTriggerUpdate;                             // 0x0064(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bIsDefault;                                        // 0x0065(0x0001)(ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bIsSpare;                                          // 0x0066(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bJoinNext;                                         // 0x0067(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bIsLabelVisible;                                   // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bIsChildOfMultiParm;                               // 0x0069(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bIsDirectChildOfMultiParm;                         // 0x006A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bPendingRevertToDefault;                           // 0x006B(0x0001)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 TuplePendingRevertToDefault;                       // 0x0070(0x0010)(ZeroConstructor, DuplicateTransient, Protected, NativeAccessSpecifierProtected)
+	class FString                                 Help;                                              // 0x0080(0x0010)(ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint32                                        TagCount;                                          // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	int32                                         ValueIndex;                                        // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bHasExpression;                                    // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bShowExpression;                                   // 0x0099(0x0001)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_9A[0x6];                                       // 0x009A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 ParamExpression;                                   // 0x00A0(0x0010)(ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TMap<class FString, class FString>            Tags;                                              // 0x00B0(0x0050)(Protected, NativeAccessSpecifierProtected)
+	bool                                          bAutoUpdate;                                       // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_101[0x7];                                      // 0x0101(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("HoudiniParameter")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"HoudiniParameter")
+	}
+	static class UHoudiniParameter* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UHoudiniParameter>();
+	}
+};
+DUMPER7_ASSERTS_UHoudiniParameter;
+
+// Class HoudiniEngineRuntime.HoudiniParameterMultiParm
+// 0x0048 (0x0150 - 0x0108)
+class UHoudiniParameterMultiParm : public UHoudiniParameter
+{
+public:
+	bool                                          bIsShown;                                          // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_109[0x3];                                      // 0x0109(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Value;                                             // 0x010C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 TemplateName;                                      // 0x0110(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MultiparmValue;                                    // 0x0120(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint32                                        MultiParmInstanceNum;                              // 0x0124(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint32                                        MultiParmInstanceLength;                           // 0x0128(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint32                                        MultiParmInstanceCount;                            // 0x012C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint32                                        InstanceStartOffset;                               // 0x0130(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_134[0x4];                                      // 0x0134(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<EHoudiniMultiParmModificationType>     MultiParmInstanceLastModifyArray;                  // 0x0138(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	int32                                         DefaultInstanceCount;                              // 0x0148(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14C[0x4];                                      // 0x014C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("HoudiniParameterMultiParm")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"HoudiniParameterMultiParm")
+	}
+	static class UHoudiniParameterMultiParm* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UHoudiniParameterMultiParm>();
+	}
+};
+DUMPER7_ASSERTS_UHoudiniParameterMultiParm;
+
+// Class HoudiniEngineRuntime.HoudiniParameterRampFloat
+// 0x0068 (0x01B8 - 0x0150)
+class UHoudiniParameterRampFloat final : public UHoudiniParameterMultiParm
+{
+public:
+	TArray<class UHoudiniParameterRampFloatPoint*> Points;                                           // 0x0150(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	TArray<class UHoudiniParameterRampFloatPoint*> CachedPoints;                                     // 0x0160(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	TArray<float>                                 DefaultPositions;                                  // 0x0170(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<float>                                 DefaultValues;                                     // 0x0180(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<int32>                                 DefaultChoices;                                    // 0x0190(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	int32                                         NumDefaultPoints;                                  // 0x01A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCaching;                                          // 0x01A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1A5[0x3];                                      // 0x01A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UHoudiniParameterRampModificationEvent*> ModificationEvents;                        // 0x01A8(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("HoudiniParameterRampFloat")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"HoudiniParameterRampFloat")
+	}
+	static class UHoudiniParameterRampFloat* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UHoudiniParameterRampFloat>();
+	}
+};
+DUMPER7_ASSERTS_UHoudiniParameterRampFloat;
+
 // Class HoudiniEngineRuntime.HoudiniAssetBlueprintComponent
 // 0x0100 (0x0BC0 - 0x0AC0)
 class UHoudiniAssetBlueprintComponent final : public UHoudiniAssetComponent
@@ -265,81 +357,28 @@ public:
 };
 DUMPER7_ASSERTS_IHoudiniEngineCopyPropertiesInterface;
 
-// Class HoudiniEngineRuntime.HoudiniParameter
-// 0x00E0 (0x0108 - 0x0028)
-class UHoudiniParameter : public UObject
+// Class HoudiniEngineRuntime.HoudiniParameterLabel
+// 0x0010 (0x0118 - 0x0108)
+class UHoudiniParameterLabel final : public UHoudiniParameter
 {
 public:
-	class FString                                 Name_0;                                            // 0x0028(0x0010)(ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class FString                                 Label;                                             // 0x0038(0x0010)(ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	EHoudiniParameterType                         ParmType;                                          // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	EHoudiniParameterChoiceListType               ChoiceListType;                                    // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_4A[0x2];                                       // 0x004A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	uint32                                        TupleSize;                                         // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	int32                                         NodeID;                                            // 0x0050(0x0004)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	int32                                         ParmId;                                            // 0x0054(0x0004)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	int32                                         ParentParmId;                                      // 0x0058(0x0004)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	int32                                         ChildIndex;                                        // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bIsVisible;                                        // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bIsParentFolderVisible;                            // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bIsDisabled;                                       // 0x0062(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bHasChanged;                                       // 0x0063(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bNeedsToTriggerUpdate;                             // 0x0064(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bIsDefault;                                        // 0x0065(0x0001)(ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bIsSpare;                                          // 0x0066(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bJoinNext;                                         // 0x0067(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bIsLabelVisible;                                   // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bIsChildOfMultiParm;                               // 0x0069(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bIsDirectChildOfMultiParm;                         // 0x006A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bPendingRevertToDefault;                           // 0x006B(0x0001)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 TuplePendingRevertToDefault;                       // 0x0070(0x0010)(ZeroConstructor, DuplicateTransient, Protected, NativeAccessSpecifierProtected)
-	class FString                                 Help;                                              // 0x0080(0x0010)(ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint32                                        TagCount;                                          // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	int32                                         ValueIndex;                                        // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bHasExpression;                                    // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bShowExpression;                                   // 0x0099(0x0001)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_9A[0x6];                                       // 0x009A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ParamExpression;                                   // 0x00A0(0x0010)(ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TMap<class FString, class FString>            Tags;                                              // 0x00B0(0x0050)(Protected, NativeAccessSpecifierProtected)
-	bool                                          bAutoUpdate;                                       // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_101[0x7];                                      // 0x0101(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<class FString>                         LabelStrings;                                      // 0x0108(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("HoudiniParameter")
+		STATIC_CLASS_IMPL("HoudiniParameterLabel")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"HoudiniParameter")
+		STATIC_NAME_IMPL(L"HoudiniParameterLabel")
 	}
-	static class UHoudiniParameter* GetDefaultObj()
+	static class UHoudiniParameterLabel* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UHoudiniParameter>();
+		return GetDefaultObjImpl<UHoudiniParameterLabel>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniParameter;
-
-// Class HoudiniEngineRuntime.HoudiniParameterSeparator
-// 0x0000 (0x0108 - 0x0108)
-class UHoudiniParameterSeparator final : public UHoudiniParameter
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("HoudiniParameterSeparator")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"HoudiniParameterSeparator")
-	}
-	static class UHoudiniParameterSeparator* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UHoudiniParameterSeparator>();
-	}
-};
-DUMPER7_ASSERTS_UHoudiniParameterSeparator;
+DUMPER7_ASSERTS_UHoudiniParameterLabel;
 
 // Class HoudiniEngineRuntime.HoudiniEngineEditorSettings
 // 0x0000 (0x0038 - 0x0038)
@@ -385,29 +424,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UHoudiniHandleParameter;
-
-// Class HoudiniEngineRuntime.HoudiniParameterOperatorPath
-// 0x0008 (0x0110 - 0x0108)
-class UHoudiniParameterOperatorPath final : public UHoudiniParameter
-{
-public:
-	TWeakObjectPtr<class UHoudiniInput>           HoudiniInput;                                      // 0x0108(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("HoudiniParameterOperatorPath")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"HoudiniParameterOperatorPath")
-	}
-	static class UHoudiniParameterOperatorPath* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UHoudiniParameterOperatorPath>();
-	}
-};
-DUMPER7_ASSERTS_UHoudiniParameterOperatorPath;
 
 // Class HoudiniEngineRuntime.HoudiniHandleComponent
 // 0x0040 (0x0270 - 0x0230)
@@ -642,6 +658,26 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UHoudiniInputAnimation;
+
+// Class HoudiniEngineRuntime.HoudiniParameterSeparator
+// 0x0000 (0x0108 - 0x0108)
+class UHoudiniParameterSeparator final : public UHoudiniParameter
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("HoudiniParameterSeparator")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"HoudiniParameterSeparator")
+	}
+	static class UHoudiniParameterSeparator* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UHoudiniParameterSeparator>();
+	}
+};
+DUMPER7_ASSERTS_UHoudiniParameterSeparator;
 
 // Class HoudiniEngineRuntime.HoudiniInputGeometryCollection
 // 0x0000 (0x0220 - 0x0220)
@@ -1471,6 +1507,38 @@ public:
 };
 DUMPER7_ASSERTS_UHoudiniParameterButton;
 
+// Class HoudiniEngineRuntime.HoudiniParameterRampColor
+// 0x0070 (0x01C0 - 0x0150)
+class UHoudiniParameterRampColor final : public UHoudiniParameterMultiParm
+{
+public:
+	TArray<class UHoudiniParameterRampColorPoint*> Points;                                           // 0x0150(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	bool                                          bCaching;                                          // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_161[0x7];                                      // 0x0161(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UHoudiniParameterRampColorPoint*> CachedPoints;                                     // 0x0168(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	TArray<float>                                 DefaultPositions;                                  // 0x0178(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FLinearColor>                   DefaultValues;                                     // 0x0188(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<int32>                                 DefaultChoices;                                    // 0x0198(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	int32                                         NumDefaultPoints;                                  // 0x01A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1AC[0x4];                                      // 0x01AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UHoudiniParameterRampModificationEvent*> ModificationEvents;                        // 0x01B0(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("HoudiniParameterRampColor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"HoudiniParameterRampColor")
+	}
+	static class UHoudiniParameterRampColor* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UHoudiniParameterRampColor>();
+	}
+};
+DUMPER7_ASSERTS_UHoudiniParameterRampColor;
+
 // Class HoudiniEngineRuntime.HoudiniParameterButtonStrip
 // 0x0018 (0x0120 - 0x0108)
 class UHoudiniParameterButtonStrip final : public UHoudiniParameter
@@ -1528,33 +1596,6 @@ public:
 };
 DUMPER7_ASSERTS_UHoudiniParameterChoice;
 
-// Class HoudiniEngineRuntime.HoudiniParameterString
-// 0x0038 (0x0140 - 0x0108)
-class UHoudiniParameterString final : public UHoudiniParameter
-{
-public:
-	TArray<class FString>                         Values;                                            // 0x0108(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	TArray<class FString>                         DefaultValues;                                     // 0x0118(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	TArray<class UObject*>                        ChosenAssets;                                      // 0x0128(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	bool                                          bIsAssetRef;                                       // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_139[0x7];                                      // 0x0139(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("HoudiniParameterString")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"HoudiniParameterString")
-	}
-	static class UHoudiniParameterString* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UHoudiniParameterString>();
-	}
-};
-DUMPER7_ASSERTS_UHoudiniParameterString;
-
 // Class HoudiniEngineRuntime.HoudiniParameterColor
 // 0x0028 (0x0130 - 0x0108)
 class UHoudiniParameterColor final : public UHoudiniParameter
@@ -1607,37 +1648,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UHoudiniParameterFile;
-
-// Class HoudiniEngineRuntime.HoudiniParameterRampModificationEvent
-// 0x0028 (0x0050 - 0x0028)
-class UHoudiniParameterRampModificationEvent final : public UObject
-{
-public:
-	bool                                          bIsInsertEvent;                                    // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bIsFloatRamp;                                      // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2A[0x2];                                       // 0x002A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         DeleteInstanceIndex;                               // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         InsertPosition;                                    // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         InsertFloat;                                       // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           InsertColor;                                       // 0x0038(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EHoudiniRampInterpolationType                 InsertInterpolation;                               // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("HoudiniParameterRampModificationEvent")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"HoudiniParameterRampModificationEvent")
-	}
-	static class UHoudiniParameterRampModificationEvent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UHoudiniParameterRampModificationEvent>();
-	}
-};
-DUMPER7_ASSERTS_UHoudiniParameterRampModificationEvent;
 
 // Class HoudiniEngineRuntime.HoudiniParameterFloat
 // 0x0050 (0x0158 - 0x0108)
@@ -1706,6 +1716,37 @@ public:
 };
 DUMPER7_ASSERTS_UHoudiniParameterFolder;
 
+// Class HoudiniEngineRuntime.HoudiniParameterRampColorPoint
+// 0x0038 (0x0060 - 0x0028)
+class UHoudiniParameterRampColorPoint final : public UObject
+{
+public:
+	float                                         Position;                                          // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           Value;                                             // 0x002C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EHoudiniRampInterpolationType                 Interpolation;                                     // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         InstanceIndex;                                     // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UHoudiniParameterFloat*                 PositionParentParm;                                // 0x0048(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UHoudiniParameterColor*                 ValueParentParm;                                   // 0x0050(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UHoudiniParameterChoice*                InterpolationParentParm;                           // 0x0058(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("HoudiniParameterRampColorPoint")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"HoudiniParameterRampColorPoint")
+	}
+	static class UHoudiniParameterRampColorPoint* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UHoudiniParameterRampColorPoint>();
+	}
+};
+DUMPER7_ASSERTS_UHoudiniParameterRampColorPoint;
+
 // Class HoudiniEngineRuntime.HoudiniParameterFolderList
 // 0x0018 (0x0120 - 0x0108)
 class UHoudiniParameterFolderList final : public UHoudiniParameter
@@ -1767,157 +1808,116 @@ public:
 };
 DUMPER7_ASSERTS_UHoudiniParameterInt;
 
-// Class HoudiniEngineRuntime.HoudiniParameterMultiParm
-// 0x0048 (0x0150 - 0x0108)
-class UHoudiniParameterMultiParm : public UHoudiniParameter
+// Class HoudiniEngineRuntime.HoudiniParameterOperatorPath
+// 0x0008 (0x0110 - 0x0108)
+class UHoudiniParameterOperatorPath final : public UHoudiniParameter
 {
 public:
-	bool                                          bIsShown;                                          // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_109[0x3];                                      // 0x0109(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Value;                                             // 0x010C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 TemplateName;                                      // 0x0110(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MultiparmValue;                                    // 0x0120(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint32                                        MultiParmInstanceNum;                              // 0x0124(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint32                                        MultiParmInstanceLength;                           // 0x0128(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint32                                        MultiParmInstanceCount;                            // 0x012C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint32                                        InstanceStartOffset;                               // 0x0130(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_134[0x4];                                      // 0x0134(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<EHoudiniMultiParmModificationType>     MultiParmInstanceLastModifyArray;                  // 0x0138(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	int32                                         DefaultInstanceCount;                              // 0x0148(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14C[0x4];                                      // 0x014C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TWeakObjectPtr<class UHoudiniInput>           HoudiniInput;                                      // 0x0108(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("HoudiniParameterMultiParm")
+		STATIC_CLASS_IMPL("HoudiniParameterOperatorPath")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"HoudiniParameterMultiParm")
+		STATIC_NAME_IMPL(L"HoudiniParameterOperatorPath")
 	}
-	static class UHoudiniParameterMultiParm* GetDefaultObj()
+	static class UHoudiniParameterOperatorPath* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UHoudiniParameterMultiParm>();
+		return GetDefaultObjImpl<UHoudiniParameterOperatorPath>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniParameterMultiParm;
+DUMPER7_ASSERTS_UHoudiniParameterOperatorPath;
 
-// Class HoudiniEngineRuntime.HoudiniParameterRampColor
-// 0x0070 (0x01C0 - 0x0150)
-class UHoudiniParameterRampColor final : public UHoudiniParameterMultiParm
+// Class HoudiniEngineRuntime.HoudiniParameterRampModificationEvent
+// 0x0028 (0x0050 - 0x0028)
+class UHoudiniParameterRampModificationEvent final : public UObject
 {
 public:
-	TArray<class UHoudiniParameterRampColorPoint*> Points;                                           // 0x0150(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	bool                                          bCaching;                                          // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_161[0x7];                                      // 0x0161(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UHoudiniParameterRampColorPoint*> CachedPoints;                                     // 0x0168(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	TArray<float>                                 DefaultPositions;                                  // 0x0178(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FLinearColor>                   DefaultValues;                                     // 0x0188(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<int32>                                 DefaultChoices;                                    // 0x0198(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	int32                                         NumDefaultPoints;                                  // 0x01A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1AC[0x4];                                      // 0x01AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UHoudiniParameterRampModificationEvent*> ModificationEvents;                        // 0x01B0(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	bool                                          bIsInsertEvent;                                    // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bIsFloatRamp;                                      // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_2A[0x2];                                       // 0x002A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         DeleteInstanceIndex;                               // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InsertPosition;                                    // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InsertFloat;                                       // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           InsertColor;                                       // 0x0038(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EHoudiniRampInterpolationType                 InsertInterpolation;                               // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("HoudiniParameterRampColor")
+		STATIC_CLASS_IMPL("HoudiniParameterRampModificationEvent")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"HoudiniParameterRampColor")
+		STATIC_NAME_IMPL(L"HoudiniParameterRampModificationEvent")
 	}
-	static class UHoudiniParameterRampColor* GetDefaultObj()
+	static class UHoudiniParameterRampModificationEvent* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UHoudiniParameterRampColor>();
+		return GetDefaultObjImpl<UHoudiniParameterRampModificationEvent>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniParameterRampColor;
+DUMPER7_ASSERTS_UHoudiniParameterRampModificationEvent;
 
-// Class HoudiniEngineRuntime.HoudiniParameterLabel
-// 0x0010 (0x0118 - 0x0108)
-class UHoudiniParameterLabel final : public UHoudiniParameter
-{
-public:
-	TArray<class FString>                         LabelStrings;                                      // 0x0108(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("HoudiniParameterLabel")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"HoudiniParameterLabel")
-	}
-	static class UHoudiniParameterLabel* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UHoudiniParameterLabel>();
-	}
-};
-DUMPER7_ASSERTS_UHoudiniParameterLabel;
-
-// Class HoudiniEngineRuntime.HoudiniParameterRampColorPoint
-// 0x0038 (0x0060 - 0x0028)
-class UHoudiniParameterRampColorPoint final : public UObject
+// Class HoudiniEngineRuntime.HoudiniParameterRampFloatPoint
+// 0x0028 (0x0050 - 0x0028)
+class UHoudiniParameterRampFloatPoint final : public UObject
 {
 public:
 	float                                         Position;                                          // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           Value;                                             // 0x002C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EHoudiniRampInterpolationType                 Interpolation;                                     // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         InstanceIndex;                                     // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UHoudiniParameterFloat*                 PositionParentParm;                                // 0x0048(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UHoudiniParameterColor*                 ValueParentParm;                                   // 0x0050(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UHoudiniParameterChoice*                InterpolationParentParm;                           // 0x0058(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Value;                                             // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EHoudiniRampInterpolationType                 Interpolation;                                     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         InstanceIndex;                                     // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UHoudiniParameterFloat*                 PositionParentParm;                                // 0x0038(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UHoudiniParameterFloat*                 ValueParentParm;                                   // 0x0040(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UHoudiniParameterChoice*                InterpolationParentParm;                           // 0x0048(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("HoudiniParameterRampColorPoint")
+		STATIC_CLASS_IMPL("HoudiniParameterRampFloatPoint")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"HoudiniParameterRampColorPoint")
+		STATIC_NAME_IMPL(L"HoudiniParameterRampFloatPoint")
 	}
-	static class UHoudiniParameterRampColorPoint* GetDefaultObj()
+	static class UHoudiniParameterRampFloatPoint* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UHoudiniParameterRampColorPoint>();
+		return GetDefaultObjImpl<UHoudiniParameterRampFloatPoint>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniParameterRampColorPoint;
+DUMPER7_ASSERTS_UHoudiniParameterRampFloatPoint;
 
-// Class HoudiniEngineRuntime.HoudiniParameterRampFloat
-// 0x0068 (0x01B8 - 0x0150)
-class UHoudiniParameterRampFloat final : public UHoudiniParameterMultiParm
+// Class HoudiniEngineRuntime.HoudiniParameterString
+// 0x0038 (0x0140 - 0x0108)
+class UHoudiniParameterString final : public UHoudiniParameter
 {
 public:
-	TArray<class UHoudiniParameterRampFloatPoint*> Points;                                           // 0x0150(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	TArray<class UHoudiniParameterRampFloatPoint*> CachedPoints;                                     // 0x0160(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	TArray<float>                                 DefaultPositions;                                  // 0x0170(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<float>                                 DefaultValues;                                     // 0x0180(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<int32>                                 DefaultChoices;                                    // 0x0190(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	int32                                         NumDefaultPoints;                                  // 0x01A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCaching;                                          // 0x01A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1A5[0x3];                                      // 0x01A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UHoudiniParameterRampModificationEvent*> ModificationEvents;                        // 0x01A8(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	TArray<class FString>                         Values;                                            // 0x0108(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	TArray<class FString>                         DefaultValues;                                     // 0x0118(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	TArray<class UObject*>                        ChosenAssets;                                      // 0x0128(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	bool                                          bIsAssetRef;                                       // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_139[0x7];                                      // 0x0139(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("HoudiniParameterRampFloat")
+		STATIC_CLASS_IMPL("HoudiniParameterString")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"HoudiniParameterRampFloat")
+		STATIC_NAME_IMPL(L"HoudiniParameterString")
 	}
-	static class UHoudiniParameterRampFloat* GetDefaultObj()
+	static class UHoudiniParameterString* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UHoudiniParameterRampFloat>();
+		return GetDefaultObjImpl<UHoudiniParameterString>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniParameterRampFloat;
+DUMPER7_ASSERTS_UHoudiniParameterString;
 
 // Class HoudiniEngineRuntime.HoudiniParameterToggle
 // 0x0020 (0x0128 - 0x0108)

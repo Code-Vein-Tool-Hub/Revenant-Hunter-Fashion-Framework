@@ -13,8 +13,8 @@
 #include "Engine_structs.hpp"
 #include "Extensions_structs.hpp"
 #include "Extensions_classes.hpp"
-#include "STR_FeatureQuestList_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "STR_FeatureQuestList_structs.hpp"
 
 
 namespace SDK

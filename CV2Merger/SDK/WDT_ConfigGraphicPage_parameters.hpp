@@ -13,8 +13,8 @@
 #include "Extensions_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "GameplayTags_structs.hpp"
-#include "STR_ConfigPieceBaseList_structs.hpp"
 #include "EnhancedInput_structs.hpp"
+#include "STR_ConfigPieceBaseList_structs.hpp"
 
 
 namespace SDK::Params

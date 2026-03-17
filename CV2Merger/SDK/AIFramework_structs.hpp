@@ -136,21 +136,15 @@ public:
 };
 DUMPER7_ASSERTS_FAIFwBTNodeProperty;
 
-// ScriptStruct AIFramework.AIFwBTNodePropertyEnumBase
-// 0x0000 (0x0010 - 0x0010)
-struct FAIFwBTNodePropertyEnumBase final : public FAIFwBTNodeProperty
-{
-};
-DUMPER7_ASSERTS_FAIFwBTNodePropertyEnumBase;
-
-// ScriptStruct AIFramework.AIFwBlackboard
-// 0x0018 (0x0018 - 0x0000)
-struct alignas(0x08) FAIFwBlackboard final
+// ScriptStruct AIFramework.AIFwBTNodePropertyInt
+// 0x0008 (0x0018 - 0x0010)
+struct FAIFwBTNodePropertyInt final : public FAIFwBTNodeProperty
 {
 public:
-	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         DefaultValue;                                      // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FAIFwBlackboard;
+DUMPER7_ASSERTS_FAIFwBTNodePropertyInt;
 
 // ScriptStruct AIFramework.AIFwBTNodePropertyBool
 // 0x0008 (0x0018 - 0x0010)
@@ -162,15 +156,23 @@ public:
 };
 DUMPER7_ASSERTS_FAIFwBTNodePropertyBool;
 
-// ScriptStruct AIFramework.AIFwBTNodePropertyInt
-// 0x0008 (0x0018 - 0x0010)
-struct FAIFwBTNodePropertyInt final : public FAIFwBTNodeProperty
+// ScriptStruct AIFramework.AIFwHTNMethod
+// 0x0010 (0x0010 - 0x0000)
+struct alignas(0x08) FAIFwHTNMethod final
 {
 public:
-	int32                                         DefaultValue;                                      // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FAIFwBTNodePropertyInt;
+DUMPER7_ASSERTS_FAIFwHTNMethod;
+
+// ScriptStruct AIFramework.AIFwBlackboard
+// 0x0018 (0x0018 - 0x0000)
+struct alignas(0x08) FAIFwBlackboard final
+{
+public:
+	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FAIFwBlackboard;
 
 // ScriptStruct AIFramework.AIFwBTNodePropertyFloat
 // 0x0008 (0x0018 - 0x0010)
@@ -190,6 +192,13 @@ public:
 	class FString                                 DefaultValue;                                      // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FAIFwBTNodePropertyString;
+
+// ScriptStruct AIFramework.AIFwBTNodePropertyEnumBase
+// 0x0000 (0x0010 - 0x0010)
+struct FAIFwBTNodePropertyEnumBase final : public FAIFwBTNodeProperty
+{
+};
+DUMPER7_ASSERTS_FAIFwBTNodePropertyEnumBase;
 
 // ScriptStruct AIFramework.AIFwClothoidCurve
 // 0x000C (0x000C - 0x0000)
@@ -227,15 +236,6 @@ public:
 	float                                         Length;                                            // 0x003C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FAIFwMultipleClothoidSegment;
-
-// ScriptStruct AIFramework.AIFwHTNMethod
-// 0x0010 (0x0010 - 0x0000)
-struct alignas(0x08) FAIFwHTNMethod final
-{
-public:
-	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FAIFwHTNMethod;
 
 // ScriptStruct AIFramework.AIFwHTNTask
 // 0x0008 (0x0008 - 0x0000)

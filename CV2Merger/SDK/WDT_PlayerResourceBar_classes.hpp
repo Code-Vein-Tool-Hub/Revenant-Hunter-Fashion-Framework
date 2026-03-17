@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "Slate_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "Slate_structs.hpp"
 #include "Extensions_classes.hpp"
 
 

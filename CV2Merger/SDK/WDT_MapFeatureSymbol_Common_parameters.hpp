@@ -16,33 +16,43 @@
 namespace SDK::Params
 {
 
-// Function WDT_MapFeatureSymbol_Common.WDT_MapFeatureSymbol_Common_C.SetTexture
+// Function WDT_MapFeatureSymbol_Common.WDT_MapFeatureSymbol_Common_C.ExecuteUbergraph_WDT_MapFeatureSymbol_Common
+// 0x0004 (0x0004 - 0x0000)
+struct WDT_MapFeatureSymbol_Common_C_ExecuteUbergraph_WDT_MapFeatureSymbol_Common final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_MapFeatureSymbol_Common_C_ExecuteUbergraph_WDT_MapFeatureSymbol_Common;
+
+// Function WDT_MapFeatureSymbol_Common.WDT_MapFeatureSymbol_Common_C.GetHeight
 // 0x0010 (0x0010 - 0x0000)
-struct WDT_MapFeatureSymbol_Common_C_SetTexture final
+struct WDT_MapFeatureSymbol_Common_C_GetHeight final
 {
 public:
-	class UTexture2D*                             Texture;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        OutHeight;                                         // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_FunctionResult_OutHeight_ImplicitCast;      // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WDT_MapFeatureSymbol_Common_C_SetTexture;
+DUMPER7_ASSERTS_WDT_MapFeatureSymbol_Common_C_GetHeight;
 
-// Function WDT_MapFeatureSymbol_Common.WDT_MapFeatureSymbol_Common_C.SetQuestIconVisibility
-// 0x0001 (0x0001 - 0x0000)
-struct WDT_MapFeatureSymbol_Common_C_SetQuestIconVisibility final
+// Function WDT_MapFeatureSymbol_Common.WDT_MapFeatureSymbol_Common_C.GetWidth
+// 0x0010 (0x0010 - 0x0000)
+struct WDT_MapFeatureSymbol_Common_C_GetWidth final
 {
 public:
-	bool                                          InIsVisible;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        OutWidth;                                          // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_FunctionResult_OutWidth_ImplicitCast;       // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WDT_MapFeatureSymbol_Common_C_SetQuestIconVisibility;
+DUMPER7_ASSERTS_WDT_MapFeatureSymbol_Common_C_GetWidth;
 
-// Function WDT_MapFeatureSymbol_Common.WDT_MapFeatureSymbol_Common_C.SetProhibited
+// Function WDT_MapFeatureSymbol_Common.WDT_MapFeatureSymbol_Common_C.IsProhibited
 // 0x0001 (0x0001 - 0x0000)
-struct WDT_MapFeatureSymbol_Common_C_SetProhibited final
+struct WDT_MapFeatureSymbol_Common_C_IsProhibited final
 {
 public:
-	bool                                          InProhibited;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          OutProhibited;                                     // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WDT_MapFeatureSymbol_Common_C_SetProhibited;
+DUMPER7_ASSERTS_WDT_MapFeatureSymbol_Common_C_IsProhibited;
 
 // Function WDT_MapFeatureSymbol_Common.WDT_MapFeatureSymbol_Common_C.SetGrayOut
 // 0x002C (0x002C - 0x0000)
@@ -56,43 +66,33 @@ public:
 };
 DUMPER7_ASSERTS_WDT_MapFeatureSymbol_Common_C_SetGrayOut;
 
-// Function WDT_MapFeatureSymbol_Common.WDT_MapFeatureSymbol_Common_C.IsProhibited
+// Function WDT_MapFeatureSymbol_Common.WDT_MapFeatureSymbol_Common_C.SetProhibited
 // 0x0001 (0x0001 - 0x0000)
-struct WDT_MapFeatureSymbol_Common_C_IsProhibited final
+struct WDT_MapFeatureSymbol_Common_C_SetProhibited final
 {
 public:
-	bool                                          OutProhibited;                                     // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          InProhibited;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WDT_MapFeatureSymbol_Common_C_IsProhibited;
+DUMPER7_ASSERTS_WDT_MapFeatureSymbol_Common_C_SetProhibited;
 
-// Function WDT_MapFeatureSymbol_Common.WDT_MapFeatureSymbol_Common_C.GetWidth
+// Function WDT_MapFeatureSymbol_Common.WDT_MapFeatureSymbol_Common_C.SetQuestIconVisibility
+// 0x0001 (0x0001 - 0x0000)
+struct WDT_MapFeatureSymbol_Common_C_SetQuestIconVisibility final
+{
+public:
+	bool                                          InIsVisible;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_MapFeatureSymbol_Common_C_SetQuestIconVisibility;
+
+// Function WDT_MapFeatureSymbol_Common.WDT_MapFeatureSymbol_Common_C.SetTexture
 // 0x0010 (0x0010 - 0x0000)
-struct WDT_MapFeatureSymbol_Common_C_GetWidth final
+struct WDT_MapFeatureSymbol_Common_C_SetTexture final
 {
 public:
-	double                                        OutWidth;                                          // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_FunctionResult_OutWidth_ImplicitCast;       // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UTexture2D*                             Texture;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WDT_MapFeatureSymbol_Common_C_GetWidth;
-
-// Function WDT_MapFeatureSymbol_Common.WDT_MapFeatureSymbol_Common_C.GetHeight
-// 0x0010 (0x0010 - 0x0000)
-struct WDT_MapFeatureSymbol_Common_C_GetHeight final
-{
-public:
-	double                                        OutHeight;                                         // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_FunctionResult_OutHeight_ImplicitCast;      // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_MapFeatureSymbol_Common_C_GetHeight;
-
-// Function WDT_MapFeatureSymbol_Common.WDT_MapFeatureSymbol_Common_C.ExecuteUbergraph_WDT_MapFeatureSymbol_Common
-// 0x0004 (0x0004 - 0x0000)
-struct WDT_MapFeatureSymbol_Common_C_ExecuteUbergraph_WDT_MapFeatureSymbol_Common final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_MapFeatureSymbol_Common_C_ExecuteUbergraph_WDT_MapFeatureSymbol_Common;
+DUMPER7_ASSERTS_WDT_MapFeatureSymbol_Common_C_SetTexture;
 
 }
 

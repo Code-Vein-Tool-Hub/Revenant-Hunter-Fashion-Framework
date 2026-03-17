@@ -54,6 +54,15 @@ public:
 };
 DUMPER7_ASSERTS_FTypedElementChildAlertColumn;
 
+// ScriptStruct TypedElementFramework.TypedElementPackageReference
+// 0x0008 (0x0008 - 0x0000)
+struct alignas(0x08) FTypedElementPackageReference final : public FTypedElementDataStorageColumn
+{
+public:
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FTypedElementPackageReference;
+
 // ScriptStruct TypedElementFramework.ScriptTypedElementHandle
 // 0x0008 (0x0008 - 0x0000)
 struct alignas(0x08) FScriptTypedElementHandle final
@@ -203,15 +212,6 @@ public:
 	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FTypedElementPackageUnresolvedReference;
-
-// ScriptStruct TypedElementFramework.TypedElementPackageReference
-// 0x0008 (0x0008 - 0x0000)
-struct alignas(0x08) FTypedElementPackageReference final : public FTypedElementDataStorageColumn
-{
-public:
-	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FTypedElementPackageReference;
 
 // ScriptStruct TypedElementFramework.TypedElementPackagePathColumn
 // 0x0010 (0x0010 - 0x0000)

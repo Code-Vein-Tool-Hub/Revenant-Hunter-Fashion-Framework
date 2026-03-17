@@ -13,9 +13,9 @@
 #include "StoryFlagSystem_structs.hpp"
 #include "Extensions_structs.hpp"
 #include "GameplayTags_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "STR_SupportMenuItemBaseList_structs.hpp"
 #include "EnhancedInput_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params

@@ -59,12 +59,12 @@ public:
 	void SetLeaveMultiplayIndicatorPercent(float NewPercent);
 	void OnOpened();
 	void OnInputDeviceChanged();
+	void OnInitialized();
 	void OnForceClose();
 	void OnClosed();
 	void InpActEvt_IA_UI_StatementSkip_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
 	void ExecuteUbergraph_WDT_Subtitles(int32 EntryPoint);
 	void Construct();
-	void OnInitialized();
 	void ApplyConfiguration();
 
 public:

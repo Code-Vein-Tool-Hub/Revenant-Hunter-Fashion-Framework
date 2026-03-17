@@ -42,9 +42,6 @@
     <ClInclude Include="SDK\Extensions_classes.hpp">
       <Filter>SDK</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\Extensions_structs.hpp">
-      <Filter>SDK</Filter>
-    </ClInclude>
     <ClInclude Include="SDK\StoryFlagSystem_structs.hpp">
       <Filter>SDK</Filter>
     </ClInclude>

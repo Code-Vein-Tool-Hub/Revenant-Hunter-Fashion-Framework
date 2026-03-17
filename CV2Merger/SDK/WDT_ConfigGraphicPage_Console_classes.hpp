@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "BasicUI_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "BasicUI_structs.hpp"
 #include "WDT_ConfigStandardPageBase_classes.hpp"
 
 

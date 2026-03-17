@@ -40,14 +40,14 @@ enum class EStoryFlagCompare : uint8
 	EStoryFlagCompare_MAX                    = 6,
 };
 
-// ScriptStruct StoryFlagSystem.StoryFlagTagDataRow
-// 0x0010 (0x0018 - 0x0008)
-struct FStoryFlagTagDataRow final : public FTableRowBase
+// ScriptStruct StoryFlagSystem.StoryFlagAliasLabel
+// 0x0008 (0x0008 - 0x0000)
+struct FStoryFlagAliasLabel final
 {
 public:
-	class FText                                   Description;                                       // 0x0008(0x0010)(Edit, NativeAccessSpecifierPublic)
+	class FName                                   Label;                                             // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FStoryFlagTagDataRow;
+DUMPER7_ASSERTS_FStoryFlagAliasLabel;
 
 // ScriptStruct StoryFlagSystem.SymbolEvaluationFormulaBase
 // 0x0010 (0x0010 - 0x0000)
@@ -90,15 +90,6 @@ public:
 };
 DUMPER7_ASSERTS_FStoryFlagPresetLabel;
 
-// ScriptStruct StoryFlagSystem.EFA_Token
-// 0x0020 (0x0020 - 0x0000)
-struct alignas(0x08) FEFA_Token final
-{
-public:
-	uint8                                         Pad_0[0x20];                                       // 0x0000(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FEFA_Token;
-
 // ScriptStruct StoryFlagSystem.StoryFlagLabel
 // 0x0008 (0x0008 - 0x0000)
 struct FStoryFlagLabel final
@@ -121,14 +112,14 @@ public:
 };
 DUMPER7_ASSERTS_FStoryFlagChangeParam;
 
-// ScriptStruct StoryFlagSystem.StoryFlagAliasLabel
-// 0x0008 (0x0008 - 0x0000)
-struct FStoryFlagAliasLabel final
+// ScriptStruct StoryFlagSystem.EFA_Token
+// 0x0020 (0x0020 - 0x0000)
+struct alignas(0x08) FEFA_Token final
 {
 public:
-	class FName                                   Label;                                             // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_0[0x20];                                       // 0x0000(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FStoryFlagAliasLabel;
+DUMPER7_ASSERTS_FEFA_Token;
 
 // ScriptStruct StoryFlagSystem.StoryFlagDefinitionDataRow
 // 0x0058 (0x0060 - 0x0008)
@@ -174,6 +165,15 @@ public:
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FStoryFlagCondition;
+
+// ScriptStruct StoryFlagSystem.StoryFlagTagDataRow
+// 0x0010 (0x0018 - 0x0008)
+struct FStoryFlagTagDataRow final : public FTableRowBase
+{
+public:
+	class FText                                   Description;                                       // 0x0008(0x0010)(Edit, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FStoryFlagTagDataRow;
 
 // ScriptStruct StoryFlagSystem.StoryFlagEvaluationFormulaAliasDataRow
 // 0x0028 (0x0030 - 0x0008)

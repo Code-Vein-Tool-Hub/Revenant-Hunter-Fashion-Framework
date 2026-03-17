@@ -542,6 +542,13 @@ struct FAnimNode_MeshSpaceRefPose final : public FAnimNode_Base
 };
 DUMPER7_ASSERTS_FAnimNode_MeshSpaceRefPose;
 
+// ScriptStruct AnimGraphRuntime.SequencePlayerReference
+// 0x0000 (0x0010 - 0x0010)
+struct FSequencePlayerReference final : public FAnimNodeReference
+{
+};
+DUMPER7_ASSERTS_FSequencePlayerReference;
+
 // ScriptStruct AnimGraphRuntime.AnimNode_BlendSpacePlayerBase
 // 0x0030 (0x0068 - 0x0038)
 struct FAnimNode_BlendSpacePlayerBase : public FAnimNode_AssetPlayerBase
@@ -1138,30 +1145,6 @@ public:
 };
 DUMPER7_ASSERTS_FRandomPlayerSequenceEntry;
 
-// ScriptStruct AnimGraphRuntime.RBFEntry
-// 0x0010 (0x0010 - 0x0000)
-struct FRBFEntry
-{
-public:
-	TArray<float>                                 Values;                                            // 0x0000(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FRBFEntry;
-
-// ScriptStruct AnimGraphRuntime.RBFTarget
-// 0x0090 (0x00A0 - 0x0010)
-struct FRBFTarget final : public FRBFEntry
-{
-public:
-	float                                         ScaleFactor;                                       // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bApplyCustomCurve;                                 // 0x0014(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRichCurve                             CustomCurve;                                       // 0x0018(0x0080)(Edit, NativeAccessSpecifierPublic)
-	ERBFDistanceMethod                            DistanceMethod;                                    // 0x0098(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ERBFFunctionType                              FunctionType;                                      // 0x0099(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9A[0x6];                                       // 0x009A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FRBFTarget;
-
 // ScriptStruct AnimGraphRuntime.AnimNode_RandomPlayer
 // 0x0068 (0x0078 - 0x0010)
 struct FAnimNode_RandomPlayer final : public FAnimNode_AssetPlayerRelevancyBase
@@ -1210,12 +1193,12 @@ public:
 };
 DUMPER7_ASSERTS_FAnimNode_RotationOffsetBlendSpaceGraph;
 
-// ScriptStruct AnimGraphRuntime.ModifyCurveAnimNodeReference
+// ScriptStruct AnimGraphRuntime.LinkedAnimGraphReference
 // 0x0000 (0x0010 - 0x0010)
-struct FModifyCurveAnimNodeReference final : public FAnimNodeReference
+struct FLinkedAnimGraphReference final : public FAnimNodeReference
 {
 };
-DUMPER7_ASSERTS_FModifyCurveAnimNodeReference;
+DUMPER7_ASSERTS_FLinkedAnimGraphReference;
 
 // ScriptStruct AnimGraphRuntime.AnimNode_SequenceEvaluator_Standalone
 // 0x0030 (0x0070 - 0x0040)
@@ -1807,13 +1790,6 @@ struct FLayeredBoneBlendReference final : public FAnimNodeReference
 };
 DUMPER7_ASSERTS_FLayeredBoneBlendReference;
 
-// ScriptStruct AnimGraphRuntime.LinkedAnimGraphReference
-// 0x0000 (0x0010 - 0x0010)
-struct FLinkedAnimGraphReference final : public FAnimNodeReference
-{
-};
-DUMPER7_ASSERTS_FLinkedAnimGraphReference;
-
 // ScriptStruct AnimGraphRuntime.MirrorAnimNodeReference
 // 0x0000 (0x0010 - 0x0010)
 struct FMirrorAnimNodeReference final : public FAnimNodeReference
@@ -1821,19 +1797,43 @@ struct FMirrorAnimNodeReference final : public FAnimNodeReference
 };
 DUMPER7_ASSERTS_FMirrorAnimNodeReference;
 
+// ScriptStruct AnimGraphRuntime.ModifyCurveAnimNodeReference
+// 0x0000 (0x0010 - 0x0010)
+struct FModifyCurveAnimNodeReference final : public FAnimNodeReference
+{
+};
+DUMPER7_ASSERTS_FModifyCurveAnimNodeReference;
+
+// ScriptStruct AnimGraphRuntime.RBFEntry
+// 0x0010 (0x0010 - 0x0000)
+struct FRBFEntry
+{
+public:
+	TArray<float>                                 Values;                                            // 0x0000(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRBFEntry;
+
+// ScriptStruct AnimGraphRuntime.RBFTarget
+// 0x0090 (0x00A0 - 0x0010)
+struct FRBFTarget final : public FRBFEntry
+{
+public:
+	float                                         ScaleFactor;                                       // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bApplyCustomCurve;                                 // 0x0014(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRichCurve                             CustomCurve;                                       // 0x0018(0x0080)(Edit, NativeAccessSpecifierPublic)
+	ERBFDistanceMethod                            DistanceMethod;                                    // 0x0098(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ERBFFunctionType                              FunctionType;                                      // 0x0099(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9A[0x6];                                       // 0x009A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRBFTarget;
+
 // ScriptStruct AnimGraphRuntime.SequenceEvaluatorReference
 // 0x0000 (0x0010 - 0x0010)
 struct FSequenceEvaluatorReference final : public FAnimNodeReference
 {
 };
 DUMPER7_ASSERTS_FSequenceEvaluatorReference;
-
-// ScriptStruct AnimGraphRuntime.SequencePlayerReference
-// 0x0000 (0x0010 - 0x0010)
-struct FSequencePlayerReference final : public FAnimNodeReference
-{
-};
-DUMPER7_ASSERTS_FSequencePlayerReference;
 
 // ScriptStruct AnimGraphRuntime.SkeletalControlReference
 // 0x0000 (0x0010 - 0x0010)

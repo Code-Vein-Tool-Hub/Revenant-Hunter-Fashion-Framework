@@ -12,8 +12,8 @@
 
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "Extensions_structs.hpp"
 #include "WDT_Status_PieceBase_classes.hpp"
+#include "Extensions_structs.hpp"
 
 
 namespace SDK

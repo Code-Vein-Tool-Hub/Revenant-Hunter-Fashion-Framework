@@ -11,10 +11,10 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "BasicUI_structs.hpp"
 #include "Extensions_structs.hpp"
 #include "Extensions_classes.hpp"
 #include "GameplayTags_structs.hpp"
-#include "BasicUI_structs.hpp"
 
 
 namespace SDK

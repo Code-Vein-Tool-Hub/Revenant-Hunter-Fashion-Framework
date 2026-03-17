@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_TitleCharacter.BP_TitleCharacter_C
-// 0x0010 (0x0740 - 0x0730)
+// 0x0010 (0x0850 - 0x0840)
 class ABP_TitleCharacter_C final : public AAppCharacter
 {
 public:
-	class UBP_CharacterCustomizeComponent_C*      BP_CharacterCustomizeComponent;                    // 0x0730(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBP_CharacterCustomizeComponent_C*      BP_CharacterCustomizeComponent;                    // 0x0840(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()

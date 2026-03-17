@@ -13,8 +13,8 @@
 #include "Engine_structs.hpp"
 #include "Extensions_structs.hpp"
 #include "Extensions_classes.hpp"
-#include "E_CharacterVisualControl_CharacterMode_structs.hpp"
 #include "E_MortalSin_GhostRebirth_Type_structs.hpp"
+#include "E_CharacterVisualControl_CharacterMode_structs.hpp"
 
 
 namespace SDK

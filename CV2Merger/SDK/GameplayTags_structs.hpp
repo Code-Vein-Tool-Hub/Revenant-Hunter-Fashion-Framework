@@ -64,6 +64,13 @@ enum class EGameplayTagSelectionType : uint8
 	EGameplayTagSelectionType_MAX            = 4,
 };
 
+// ScriptStruct GameplayTags.GameplayTagContainerNetSerializerConfig
+// 0x0000 (0x0010 - 0x0010)
+struct FGameplayTagContainerNetSerializerConfig final : public FNetSerializerConfig
+{
+};
+DUMPER7_ASSERTS_FGameplayTagContainerNetSerializerConfig;
+
 // ScriptStruct GameplayTags.GameplayTag
 // 0x0008 (0x0008 - 0x0000)
 struct FGameplayTag
@@ -82,13 +89,6 @@ public:
 	TArray<struct FGameplayTag>                   ParentTags;                                        // 0x0010(0x0010)(ZeroConstructor, Transient, Protected, NativeAccessSpecifierProtected)
 };
 DUMPER7_ASSERTS_FGameplayTagContainer;
-
-// ScriptStruct GameplayTags.GameplayTagContainerNetSerializerConfig
-// 0x0000 (0x0010 - 0x0010)
-struct FGameplayTagContainerNetSerializerConfig final : public FNetSerializerConfig
-{
-};
-DUMPER7_ASSERTS_FGameplayTagContainerNetSerializerConfig;
 
 // ScriptStruct GameplayTags.GameplayTagQuery
 // 0x0048 (0x0048 - 0x0000)

@@ -17,82 +17,34 @@
 namespace SDK
 {
 
-// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.BigenMessage
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class FText&                      MessageText_0                                          (BlueprintVisible, BlueprintReadOnly, Parm)
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.WidgetAnimationEvt_BuddyChangeMenu_OpenAnim_K2Node_WidgetAnimationEvent_0
+// (BlueprintEvent)
 
-void UWDT_BuddyChangeMenu_C::BigenMessage(const class FText& MessageText_0)
+void UWDT_BuddyChangeMenu_C::WidgetAnimationEvt_BuddyChangeMenu_OpenAnim_K2Node_WidgetAnimationEvent_0()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "BigenMessage");
+		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "WidgetAnimationEvt_BuddyChangeMenu_OpenAnim_K2Node_WidgetAnimationEvent_0");
 
-	Params::WDT_BuddyChangeMenu_C_BigenMessage Parms{};
-
-	Parms.MessageText_0 = std::move(MessageText_0);
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.BndEvt__WDT_BuddyChangeMenu_BudyGridScroller_K2Node_ComponentBoundEvent_0_OnItemIsHoveredChangedDynamic__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UObject*                          Item                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool                                    bIsHovered                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_BuddyChangeMenu_C::BndEvt__WDT_BuddyChangeMenu_BudyGridScroller_K2Node_ComponentBoundEvent_0_OnItemIsHoveredChangedDynamic__DelegateSignature(class UObject* Item, bool bIsHovered)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "BndEvt__WDT_BuddyChangeMenu_BudyGridScroller_K2Node_ComponentBoundEvent_0_OnItemIsHoveredChangedDynamic__DelegateSignature");
-
-	Params::WDT_BuddyChangeMenu_C_BndEvt__WDT_BuddyChangeMenu_BudyGridScroller_K2Node_ComponentBoundEvent_0_OnItemIsHoveredChangedDynamic__DelegateSignature Parms{};
-
-	Parms.Item = Item;
-	Parms.bIsHovered = bIsHovered;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.BndEvt__WDT_BuddyChangeMenu_BudyGridScroller_K2Node_ComponentBoundEvent_2_SimpleListItemEventDynamic__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UObject*                          Item                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_BuddyChangeMenu_C::BndEvt__WDT_BuddyChangeMenu_BudyGridScroller_K2Node_ComponentBoundEvent_2_SimpleListItemEventDynamic__DelegateSignature(class UObject* Item)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "BndEvt__WDT_BuddyChangeMenu_BudyGridScroller_K2Node_ComponentBoundEvent_2_SimpleListItemEventDynamic__DelegateSignature");
-
-	Params::WDT_BuddyChangeMenu_C_BndEvt__WDT_BuddyChangeMenu_BudyGridScroller_K2Node_ComponentBoundEvent_2_SimpleListItemEventDynamic__DelegateSignature Parms{};
-
-	Parms.Item = Item;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.BndEvt__WDT_BuddyChangeMenu_GridScroller_117_K2Node_ComponentBoundEvent_0_OnListEntryInitializedDynamic__DelegateSignature
-// (BlueprintEvent)
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.WDT_BuddyChangeMenu_AutoGenFunc
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                          Item                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class UUserWidget*                      Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_BuddyChangeMenu_C::BndEvt__WDT_BuddyChangeMenu_GridScroller_117_K2Node_ComponentBoundEvent_0_OnListEntryInitializedDynamic__DelegateSignature(class UObject* Item, class UUserWidget* Widget)
+void UWDT_BuddyChangeMenu_C::WDT_BuddyChangeMenu_AutoGenFunc(class UObject* Item, class UUserWidget* Widget)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "BndEvt__WDT_BuddyChangeMenu_GridScroller_117_K2Node_ComponentBoundEvent_0_OnListEntryInitializedDynamic__DelegateSignature");
+		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "WDT_BuddyChangeMenu_AutoGenFunc");
 
-	Params::WDT_BuddyChangeMenu_C_BndEvt__WDT_BuddyChangeMenu_GridScroller_117_K2Node_ComponentBoundEvent_0_OnListEntryInitializedDynamic__DelegateSignature Parms{};
+	Params::WDT_BuddyChangeMenu_C_WDT_BuddyChangeMenu_AutoGenFunc Parms{};
 
 	Parms.Item = Item;
 	Parms.Widget = Widget;
@@ -101,89 +53,47 @@ void UWDT_BuddyChangeMenu_C::BndEvt__WDT_BuddyChangeMenu_GridScroller_117_K2Node
 }
 
 
-// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.BndEvt__WDT_BuddyChangeMenu_GridScroller_117_K2Node_ComponentBoundEvent_1_OnListItemSelectionChangedDynamic__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UObject*                          Item                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool                                    bIsSelected                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_BuddyChangeMenu_C::BndEvt__WDT_BuddyChangeMenu_GridScroller_117_K2Node_ComponentBoundEvent_1_OnListItemSelectionChangedDynamic__DelegateSignature(class UObject* Item, bool bIsSelected)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "BndEvt__WDT_BuddyChangeMenu_GridScroller_117_K2Node_ComponentBoundEvent_1_OnListItemSelectionChangedDynamic__DelegateSignature");
-
-	Params::WDT_BuddyChangeMenu_C_BndEvt__WDT_BuddyChangeMenu_GridScroller_117_K2Node_ComponentBoundEvent_1_OnListItemSelectionChangedDynamic__DelegateSignature Parms{};
-
-	Parms.Item = Item;
-	Parms.bIsSelected = bIsSelected;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.BP_OnActivated
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.OnOpening
 // (Event, Protected, BlueprintEvent)
 
-void UWDT_BuddyChangeMenu_C::BP_OnActivated()
+void UWDT_BuddyChangeMenu_C::OnOpening()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "BP_OnActivated");
+		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "OnOpening");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.BP_OnDeactivated
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.OnMouseLeftClickMenu
 // (Event, Protected, BlueprintEvent)
 
-void UWDT_BuddyChangeMenu_C::BP_OnDeactivated()
+void UWDT_BuddyChangeMenu_C::OnMouseLeftClickMenu()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "BP_OnDeactivated");
+		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "OnMouseLeftClickMenu");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.BuildRequest
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.OnGetOpenAnimation
+// (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   InNumber                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UWidgetAnimation*                 ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_BuddyChangeMenu_C::BuildRequest(int32 InNumber)
+class UWidgetAnimation* UWDT_BuddyChangeMenu_C::OnGetOpenAnimation()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "BuildRequest");
+		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "OnGetOpenAnimation");
 
-	Params::WDT_BuddyChangeMenu_C_BuildRequest Parms{};
-
-	Parms.InNumber = InNumber;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.Can Processing Input
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-bool UWDT_BuddyChangeMenu_C::Can_Processing_Input()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "Can Processing Input");
-
-	Params::WDT_BuddyChangeMenu_C_Can_Processing_Input Parms{};
+	Params::WDT_BuddyChangeMenu_C_OnGetOpenAnimation Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -191,99 +101,75 @@ bool UWDT_BuddyChangeMenu_C::Can_Processing_Input()
 }
 
 
-// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.DecideInput
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.OnGetCloseAnimation
+// (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UWidgetAnimation*                 ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_BuddyChangeMenu_C::DecideInput()
+class UWidgetAnimation* UWDT_BuddyChangeMenu_C::OnGetCloseAnimation()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "DecideInput");
+		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "OnGetCloseAnimation");
+
+	Params::WDT_BuddyChangeMenu_C_OnGetCloseAnimation Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.OnClosing
+// (Event, Protected, BlueprintEvent)
+
+void UWDT_BuddyChangeMenu_C::OnClosing()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "OnClosing");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.ExecuteUbergraph_WDT_BuddyChangeMenu
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_BuddyChangeMenu_C::ExecuteUbergraph_WDT_BuddyChangeMenu(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "ExecuteUbergraph_WDT_BuddyChangeMenu");
-
-	Params::WDT_BuddyChangeMenu_C_ExecuteUbergraph_WDT_BuddyChangeMenu Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.GridSelectionChanged
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.NotifyChangeBuddyMenu
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UObject*                          Object                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool                                    Condition                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InIndex                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_BuddyChangeMenu_C::GridSelectionChanged(class UObject* Object, bool Condition)
+void UWDT_BuddyChangeMenu_C::NotifyChangeBuddyMenu(int32 InIndex)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "GridSelectionChanged");
+		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "NotifyChangeBuddyMenu");
 
-	Params::WDT_BuddyChangeMenu_C_GridSelectionChanged Parms{};
+	Params::WDT_BuddyChangeMenu_C_NotifyChangeBuddyMenu Parms{};
 
-	Parms.Object = Object;
-	Parms.Condition = Condition;
+	Parms.InIndex = InIndex;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.InitGrid
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UObject*                          Item                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UUserWidget*                      InWidget                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_BuddyChangeMenu_C::InitGrid(class UObject* Item, class UUserWidget* InWidget)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "InitGrid");
-
-	Params::WDT_BuddyChangeMenu_C_InitGrid Parms{};
-
-	Parms.Item = Item;
-	Parms.InWidget = InWidget;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.InitMenu
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.MessageEnd
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWDT_BuddyChangeMenu_C::InitMenu()
+void UWDT_BuddyChangeMenu_C::MessageEnd()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "InitMenu");
+		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "MessageEnd");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.InpActEvt_IA_UI_Cancel_K2Node_EnhancedInputActionEvent_0
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3
 // (BlueprintEvent)
 // Parameters:
 // const struct FInputActionValue&         ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
@@ -291,92 +177,14 @@ void UWDT_BuddyChangeMenu_C::InitMenu()
 // float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const class UInputAction*               SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_BuddyChangeMenu_C::InpActEvt_IA_UI_Cancel_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+void UWDT_BuddyChangeMenu_C::InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "InpActEvt_IA_UI_Cancel_K2Node_EnhancedInputActionEvent_0");
+		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3");
 
-	Params::WDT_BuddyChangeMenu_C_InpActEvt_IA_UI_Cancel_K2Node_EnhancedInputActionEvent_0 Parms{};
-
-	Parms.ActionValue = std::move(ActionValue);
-	Parms.ElapsedTime = ElapsedTime;
-	Parms.TriggeredTime = TriggeredTime;
-	Parms.SourceAction = SourceAction;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.InpActEvt_IA_UI_Decide_K2Node_EnhancedInputActionEvent_1
-// (BlueprintEvent)
-// Parameters:
-// const struct FInputActionValue&         ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// float                                   ElapsedTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const class UInputAction*               SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_BuddyChangeMenu_C::InpActEvt_IA_UI_Decide_K2Node_EnhancedInputActionEvent_1(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "InpActEvt_IA_UI_Decide_K2Node_EnhancedInputActionEvent_1");
-
-	Params::WDT_BuddyChangeMenu_C_InpActEvt_IA_UI_Decide_K2Node_EnhancedInputActionEvent_1 Parms{};
-
-	Parms.ActionValue = std::move(ActionValue);
-	Parms.ElapsedTime = ElapsedTime;
-	Parms.TriggeredTime = TriggeredTime;
-	Parms.SourceAction = SourceAction;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2
-// (BlueprintEvent)
-// Parameters:
-// const struct FInputActionValue&         ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// float                                   ElapsedTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const class UInputAction*               SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_BuddyChangeMenu_C::InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2");
-
-	Params::WDT_BuddyChangeMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2 Parms{};
-
-	Parms.ActionValue = std::move(ActionValue);
-	Parms.ElapsedTime = ElapsedTime;
-	Parms.TriggeredTime = TriggeredTime;
-	Parms.SourceAction = SourceAction;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent_4
-// (BlueprintEvent)
-// Parameters:
-// const struct FInputActionValue&         ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// float                                   ElapsedTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const class UInputAction*               SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_BuddyChangeMenu_C::InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent_4(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent_4");
-
-	Params::WDT_BuddyChangeMenu_C_InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent_4 Parms{};
+	Params::WDT_BuddyChangeMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3 Parms{};
 
 	Parms.ActionValue = std::move(ActionValue);
 	Parms.ElapsedTime = ElapsedTime;
@@ -413,7 +221,7 @@ void UWDT_BuddyChangeMenu_C::InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEve
 }
 
 
-// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent_4
 // (BlueprintEvent)
 // Parameters:
 // const struct FInputActionValue&         ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
@@ -421,14 +229,14 @@ void UWDT_BuddyChangeMenu_C::InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEve
 // float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const class UInputAction*               SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_BuddyChangeMenu_C::InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+void UWDT_BuddyChangeMenu_C::InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent_4(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3");
+		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent_4");
 
-	Params::WDT_BuddyChangeMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3 Parms{};
+	Params::WDT_BuddyChangeMenu_C_InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent_4 Parms{};
 
 	Parms.ActionValue = std::move(ActionValue);
 	Parms.ElapsedTime = ElapsedTime;
@@ -439,136 +247,280 @@ void UWDT_BuddyChangeMenu_C::InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_
 }
 
 
-// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.MessageEnd
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2
+// (BlueprintEvent)
+// Parameters:
+// const struct FInputActionValue&         ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// float                                   ElapsedTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class UInputAction*               SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_BuddyChangeMenu_C::MessageEnd()
+void UWDT_BuddyChangeMenu_C::InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "MessageEnd");
+		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2");
+
+	Params::WDT_BuddyChangeMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2 Parms{};
+
+	Parms.ActionValue = std::move(ActionValue);
+	Parms.ElapsedTime = ElapsedTime;
+	Parms.TriggeredTime = TriggeredTime;
+	Parms.SourceAction = SourceAction;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.InpActEvt_IA_UI_Decide_K2Node_EnhancedInputActionEvent_1
+// (BlueprintEvent)
+// Parameters:
+// const struct FInputActionValue&         ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// float                                   ElapsedTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class UInputAction*               SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_BuddyChangeMenu_C::InpActEvt_IA_UI_Decide_K2Node_EnhancedInputActionEvent_1(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "InpActEvt_IA_UI_Decide_K2Node_EnhancedInputActionEvent_1");
+
+	Params::WDT_BuddyChangeMenu_C_InpActEvt_IA_UI_Decide_K2Node_EnhancedInputActionEvent_1 Parms{};
+
+	Parms.ActionValue = std::move(ActionValue);
+	Parms.ElapsedTime = ElapsedTime;
+	Parms.TriggeredTime = TriggeredTime;
+	Parms.SourceAction = SourceAction;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.InpActEvt_IA_UI_Cancel_K2Node_EnhancedInputActionEvent_0
+// (BlueprintEvent)
+// Parameters:
+// const struct FInputActionValue&         ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// float                                   ElapsedTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class UInputAction*               SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_BuddyChangeMenu_C::InpActEvt_IA_UI_Cancel_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "InpActEvt_IA_UI_Cancel_K2Node_EnhancedInputActionEvent_0");
+
+	Params::WDT_BuddyChangeMenu_C_InpActEvt_IA_UI_Cancel_K2Node_EnhancedInputActionEvent_0 Parms{};
+
+	Parms.ActionValue = std::move(ActionValue);
+	Parms.ElapsedTime = ElapsedTime;
+	Parms.TriggeredTime = TriggeredTime;
+	Parms.SourceAction = SourceAction;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.InitMenu
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWDT_BuddyChangeMenu_C::InitMenu()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "InitMenu");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.NotifyChangeBuddyMenu
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.InitGrid
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   InIndex                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          Item                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UUserWidget*                      InWidget                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_BuddyChangeMenu_C::NotifyChangeBuddyMenu(int32 InIndex)
+void UWDT_BuddyChangeMenu_C::InitGrid(class UObject* Item, class UUserWidget* InWidget)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "NotifyChangeBuddyMenu");
+		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "InitGrid");
 
-	Params::WDT_BuddyChangeMenu_C_NotifyChangeBuddyMenu Parms{};
+	Params::WDT_BuddyChangeMenu_C_InitGrid Parms{};
 
-	Parms.InIndex = InIndex;
+	Parms.Item = Item;
+	Parms.InWidget = InWidget;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.OnClosing
-// (Event, Protected, BlueprintEvent)
-
-void UWDT_BuddyChangeMenu_C::OnClosing()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "OnClosing");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.OnGetCloseAnimation
-// (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.GridSelectionChanged
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidgetAnimation*                 ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          Object                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    Condition                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-class UWidgetAnimation* UWDT_BuddyChangeMenu_C::OnGetCloseAnimation()
+void UWDT_BuddyChangeMenu_C::GridSelectionChanged(class UObject* Object, bool Condition)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "OnGetCloseAnimation");
+		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "GridSelectionChanged");
 
-	Params::WDT_BuddyChangeMenu_C_OnGetCloseAnimation Parms{};
+	Params::WDT_BuddyChangeMenu_C_GridSelectionChanged Parms{};
+
+	Parms.Object = Object;
+	Parms.Condition = Condition;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
 }
 
 
-// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.OnGetOpenAnimation
-// (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.ExecuteUbergraph_WDT_BuddyChangeMenu
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// class UWidgetAnimation*                 ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-class UWidgetAnimation* UWDT_BuddyChangeMenu_C::OnGetOpenAnimation()
+void UWDT_BuddyChangeMenu_C::ExecuteUbergraph_WDT_BuddyChangeMenu(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "OnGetOpenAnimation");
+		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "ExecuteUbergraph_WDT_BuddyChangeMenu");
 
-	Params::WDT_BuddyChangeMenu_C_OnGetOpenAnimation Parms{};
+	Params::WDT_BuddyChangeMenu_C_ExecuteUbergraph_WDT_BuddyChangeMenu Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
 }
 
 
-// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.OnMouseLeftClickMenu
-// (Event, Protected, BlueprintEvent)
-
-void UWDT_BuddyChangeMenu_C::OnMouseLeftClickMenu()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "OnMouseLeftClickMenu");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.OnOpening
-// (Event, Protected, BlueprintEvent)
-
-void UWDT_BuddyChangeMenu_C::OnOpening()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "OnOpening");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.WDT_BuddyChangeMenu_AutoGenFunc
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.DecideInput
 // (Public, BlueprintCallable, BlueprintEvent)
+
+void UWDT_BuddyChangeMenu_C::DecideInput()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "DecideInput");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.Can Processing Input
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool UWDT_BuddyChangeMenu_C::Can_Processing_Input()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "Can Processing Input");
+
+	Params::WDT_BuddyChangeMenu_C_Can_Processing_Input Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.BuildRequest
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InNumber                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_BuddyChangeMenu_C::BuildRequest(int32 InNumber)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "BuildRequest");
+
+	Params::WDT_BuddyChangeMenu_C_BuildRequest Parms{};
+
+	Parms.InNumber = InNumber;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.BP_OnDeactivated
+// (Event, Protected, BlueprintEvent)
+
+void UWDT_BuddyChangeMenu_C::BP_OnDeactivated()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "BP_OnDeactivated");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.BP_OnActivated
+// (Event, Protected, BlueprintEvent)
+
+void UWDT_BuddyChangeMenu_C::BP_OnActivated()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "BP_OnActivated");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.BndEvt__WDT_BuddyChangeMenu_GridScroller_117_K2Node_ComponentBoundEvent_1_OnListItemSelectionChangedDynamic__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UObject*                          Item                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsSelected                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_BuddyChangeMenu_C::BndEvt__WDT_BuddyChangeMenu_GridScroller_117_K2Node_ComponentBoundEvent_1_OnListItemSelectionChangedDynamic__DelegateSignature(class UObject* Item, bool bIsSelected)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "BndEvt__WDT_BuddyChangeMenu_GridScroller_117_K2Node_ComponentBoundEvent_1_OnListItemSelectionChangedDynamic__DelegateSignature");
+
+	Params::WDT_BuddyChangeMenu_C_BndEvt__WDT_BuddyChangeMenu_GridScroller_117_K2Node_ComponentBoundEvent_1_OnListItemSelectionChangedDynamic__DelegateSignature Parms{};
+
+	Parms.Item = Item;
+	Parms.bIsSelected = bIsSelected;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.BndEvt__WDT_BuddyChangeMenu_GridScroller_117_K2Node_ComponentBoundEvent_0_OnListEntryInitializedDynamic__DelegateSignature
+// (BlueprintEvent)
 // Parameters:
 // class UObject*                          Item                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class UUserWidget*                      Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_BuddyChangeMenu_C::WDT_BuddyChangeMenu_AutoGenFunc(class UObject* Item, class UUserWidget* Widget)
+void UWDT_BuddyChangeMenu_C::BndEvt__WDT_BuddyChangeMenu_GridScroller_117_K2Node_ComponentBoundEvent_0_OnListEntryInitializedDynamic__DelegateSignature(class UObject* Item, class UUserWidget* Widget)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "WDT_BuddyChangeMenu_AutoGenFunc");
+		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "BndEvt__WDT_BuddyChangeMenu_GridScroller_117_K2Node_ComponentBoundEvent_0_OnListEntryInitializedDynamic__DelegateSignature");
 
-	Params::WDT_BuddyChangeMenu_C_WDT_BuddyChangeMenu_AutoGenFunc Parms{};
+	Params::WDT_BuddyChangeMenu_C_BndEvt__WDT_BuddyChangeMenu_GridScroller_117_K2Node_ComponentBoundEvent_0_OnListEntryInitializedDynamic__DelegateSignature Parms{};
 
 	Parms.Item = Item;
 	Parms.Widget = Widget;
@@ -577,17 +529,65 @@ void UWDT_BuddyChangeMenu_C::WDT_BuddyChangeMenu_AutoGenFunc(class UObject* Item
 }
 
 
-// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.WidgetAnimationEvt_BuddyChangeMenu_OpenAnim_K2Node_WidgetAnimationEvent_0
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.BndEvt__WDT_BuddyChangeMenu_BudyGridScroller_K2Node_ComponentBoundEvent_2_SimpleListItemEventDynamic__DelegateSignature
 // (BlueprintEvent)
+// Parameters:
+// class UObject*                          Item                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_BuddyChangeMenu_C::WidgetAnimationEvt_BuddyChangeMenu_OpenAnim_K2Node_WidgetAnimationEvent_0()
+void UWDT_BuddyChangeMenu_C::BndEvt__WDT_BuddyChangeMenu_BudyGridScroller_K2Node_ComponentBoundEvent_2_SimpleListItemEventDynamic__DelegateSignature(class UObject* Item)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "WidgetAnimationEvt_BuddyChangeMenu_OpenAnim_K2Node_WidgetAnimationEvent_0");
+		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "BndEvt__WDT_BuddyChangeMenu_BudyGridScroller_K2Node_ComponentBoundEvent_2_SimpleListItemEventDynamic__DelegateSignature");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::WDT_BuddyChangeMenu_C_BndEvt__WDT_BuddyChangeMenu_BudyGridScroller_K2Node_ComponentBoundEvent_2_SimpleListItemEventDynamic__DelegateSignature Parms{};
+
+	Parms.Item = Item;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.BndEvt__WDT_BuddyChangeMenu_BudyGridScroller_K2Node_ComponentBoundEvent_0_OnItemIsHoveredChangedDynamic__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UObject*                          Item                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsHovered                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_BuddyChangeMenu_C::BndEvt__WDT_BuddyChangeMenu_BudyGridScroller_K2Node_ComponentBoundEvent_0_OnItemIsHoveredChangedDynamic__DelegateSignature(class UObject* Item, bool bIsHovered)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "BndEvt__WDT_BuddyChangeMenu_BudyGridScroller_K2Node_ComponentBoundEvent_0_OnItemIsHoveredChangedDynamic__DelegateSignature");
+
+	Params::WDT_BuddyChangeMenu_C_BndEvt__WDT_BuddyChangeMenu_BudyGridScroller_K2Node_ComponentBoundEvent_0_OnItemIsHoveredChangedDynamic__DelegateSignature Parms{};
+
+	Parms.Item = Item;
+	Parms.bIsHovered = bIsHovered;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.BigenMessage
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FText&                      MessageText_0                                          (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UWDT_BuddyChangeMenu_C::BigenMessage(const class FText& MessageText_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "BigenMessage");
+
+	Params::WDT_BuddyChangeMenu_C_BigenMessage Parms{};
+
+	Parms.MessageText_0 = std::move(MessageText_0);
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

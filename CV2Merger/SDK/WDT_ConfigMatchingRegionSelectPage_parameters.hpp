@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "EnhancedInput_structs.hpp"
 #include "STR_ConfigPieceBaseList_structs.hpp"
 #include "Extensions_structs.hpp"
-#include "EnhancedInput_structs.hpp"
 
 
 namespace SDK::Params

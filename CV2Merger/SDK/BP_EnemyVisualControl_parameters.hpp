@@ -13,8 +13,8 @@
 #include "CoreUObject_structs.hpp"
 #include "Extensions_structs.hpp"
 #include "Niagara_structs.hpp"
-#include "E_CharacterVisualControl_CharacterMode_structs.hpp"
 #include "E_MortalSin_GhostRebirth_Type_structs.hpp"
+#include "E_CharacterVisualControl_CharacterMode_structs.hpp"
 #include "Engine_structs.hpp"
 
 

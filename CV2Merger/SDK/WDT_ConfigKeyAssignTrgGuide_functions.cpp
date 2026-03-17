@@ -17,37 +17,23 @@
 namespace SDK
 {
 
-// Function WDT_ConfigKeyAssignTrgGuide.WDT_ConfigKeyAssignTrgGuide_C.ChangeTrgGuide
+// Function WDT_ConfigKeyAssignTrgGuide.WDT_ConfigKeyAssignTrgGuide_C.SetInitializeTextVisibility
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    InIsCategory                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    InFlag                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_ConfigKeyAssignTrgGuide_C::ChangeTrgGuide(bool InIsCategory)
+void UWDT_ConfigKeyAssignTrgGuide_C::SetInitializeTextVisibility(bool InFlag)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_ConfigKeyAssignTrgGuide_C", "ChangeTrgGuide");
+		Func = Class->GetFunction("WDT_ConfigKeyAssignTrgGuide_C", "SetInitializeTextVisibility");
 
-	Params::WDT_ConfigKeyAssignTrgGuide_C_ChangeTrgGuide Parms{};
+	Params::WDT_ConfigKeyAssignTrgGuide_C_SetInitializeTextVisibility Parms{};
 
-	Parms.InIsCategory = InIsCategory;
+	Parms.InFlag = InFlag;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_ConfigKeyAssignTrgGuide.WDT_ConfigKeyAssignTrgGuide_C.RefreshKeyImage
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWDT_ConfigKeyAssignTrgGuide_C::RefreshKeyImage()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_ConfigKeyAssignTrgGuide_C", "RefreshKeyImage");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -71,21 +57,35 @@ void UWDT_ConfigKeyAssignTrgGuide_C::SetInitializeHoldGaugePercent(double InPerc
 }
 
 
-// Function WDT_ConfigKeyAssignTrgGuide.WDT_ConfigKeyAssignTrgGuide_C.SetInitializeTextVisibility
+// Function WDT_ConfigKeyAssignTrgGuide.WDT_ConfigKeyAssignTrgGuide_C.RefreshKeyImage
 // (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    InFlag                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_ConfigKeyAssignTrgGuide_C::SetInitializeTextVisibility(bool InFlag)
+void UWDT_ConfigKeyAssignTrgGuide_C::RefreshKeyImage()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_ConfigKeyAssignTrgGuide_C", "SetInitializeTextVisibility");
+		Func = Class->GetFunction("WDT_ConfigKeyAssignTrgGuide_C", "RefreshKeyImage");
 
-	Params::WDT_ConfigKeyAssignTrgGuide_C_SetInitializeTextVisibility Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.InFlag = InFlag;
+
+// Function WDT_ConfigKeyAssignTrgGuide.WDT_ConfigKeyAssignTrgGuide_C.ChangeTrgGuide
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    InIsCategory                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_ConfigKeyAssignTrgGuide_C::ChangeTrgGuide(bool InIsCategory)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_ConfigKeyAssignTrgGuide_C", "ChangeTrgGuide");
+
+	Params::WDT_ConfigKeyAssignTrgGuide_C_ChangeTrgGuide Parms{};
+
+	Parms.InIsCategory = InIsCategory;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

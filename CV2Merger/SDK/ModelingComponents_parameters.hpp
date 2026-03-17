@@ -17,46 +17,6 @@
 namespace SDK::Params
 {
 
-// Function ModelingComponents.ModelingObjectsCreationAPI.CreateMaterialObject
-// 0x0038 (0x0038 - 0x0000)
-struct ModelingObjectsCreationAPI_CreateMaterialObject final
-{
-public:
-	struct FCreateMaterialObjectParams            CreateMaterialParams;                              // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FCreateMaterialObjectResult            ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ModelingObjectsCreationAPI_CreateMaterialObject;
-
-// Function ModelingComponents.ModelingObjectsCreationAPI.CreateMeshObject
-// 0x0690 (0x0690 - 0x0000)
-struct ModelingObjectsCreationAPI_CreateMeshObject final
-{
-public:
-	struct FCreateMeshObjectParams                CreateMeshParams;                                  // 0x0000(0x0670)(ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	struct FCreateMeshObjectResult                ReturnValue;                                       // 0x0670(0x0020)(Parm, OutParm, ReturnParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ModelingObjectsCreationAPI_CreateMeshObject;
-
-// Function ModelingComponents.ModelingObjectsCreationAPI.CreateNewActor
-// 0x00A0 (0x00A0 - 0x0000)
-struct ModelingObjectsCreationAPI_CreateNewActor final
-{
-public:
-	struct FCreateActorParams                     CreateActorParams;                                 // 0x0000(0x0090)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FCreateActorResult                     ReturnValue;                                       // 0x0090(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ModelingObjectsCreationAPI_CreateNewActor;
-
-// Function ModelingComponents.ModelingObjectsCreationAPI.CreateTextureObject
-// 0x0040 (0x0040 - 0x0000)
-struct ModelingObjectsCreationAPI_CreateTextureObject final
-{
-public:
-	struct FCreateTextureObjectParams             CreateTexParams;                                   // 0x0000(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FCreateTextureObjectResult             ReturnValue;                                       // 0x0030(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ModelingObjectsCreationAPI_CreateTextureObject;
-
 // Function ModelingComponents.OctreeDynamicMeshComponent.SetDynamicMesh
 // 0x0008 (0x0008 - 0x0000)
 struct OctreeDynamicMeshComponent_SetDynamicMesh final
@@ -274,6 +234,46 @@ public:
 	class APreviewGeometryActor*                  ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_PreviewGeometry_GetActor;
+
+// Function ModelingComponents.ModelingObjectsCreationAPI.CreateMaterialObject
+// 0x0038 (0x0038 - 0x0000)
+struct ModelingObjectsCreationAPI_CreateMaterialObject final
+{
+public:
+	struct FCreateMaterialObjectParams            CreateMaterialParams;                              // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FCreateMaterialObjectResult            ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ModelingObjectsCreationAPI_CreateMaterialObject;
+
+// Function ModelingComponents.ModelingObjectsCreationAPI.CreateMeshObject
+// 0x0690 (0x0690 - 0x0000)
+struct ModelingObjectsCreationAPI_CreateMeshObject final
+{
+public:
+	struct FCreateMeshObjectParams                CreateMeshParams;                                  // 0x0000(0x0670)(ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	struct FCreateMeshObjectResult                ReturnValue;                                       // 0x0670(0x0020)(Parm, OutParm, ReturnParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ModelingObjectsCreationAPI_CreateMeshObject;
+
+// Function ModelingComponents.ModelingObjectsCreationAPI.CreateNewActor
+// 0x00A0 (0x00A0 - 0x0000)
+struct ModelingObjectsCreationAPI_CreateNewActor final
+{
+public:
+	struct FCreateActorParams                     CreateActorParams;                                 // 0x0000(0x0090)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FCreateActorResult                     ReturnValue;                                       // 0x0090(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ModelingObjectsCreationAPI_CreateNewActor;
+
+// Function ModelingComponents.ModelingObjectsCreationAPI.CreateTextureObject
+// 0x0040 (0x0040 - 0x0000)
+struct ModelingObjectsCreationAPI_CreateTextureObject final
+{
+public:
+	struct FCreateTextureObjectParams             CreateTexParams;                                   // 0x0000(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FCreateTextureObjectResult             ReturnValue;                                       // 0x0030(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ModelingObjectsCreationAPI_CreateTextureObject;
 
 // Function ModelingComponents.CreateMeshObjectTypeProperties.GetOutputTypeNamesFunc
 // 0x0010 (0x0010 - 0x0000)

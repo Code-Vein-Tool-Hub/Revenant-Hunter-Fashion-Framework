@@ -91,6 +91,15 @@ enum class EQSTRPlayerDistanceCompare : uint8
 	EQSTRPlayerDistanceCompare_MAX           = 4,
 };
 
+// ScriptStruct QuestSystem.QSActorBinding
+// 0x0008 (0x0008 - 0x0000)
+struct FQSActorBinding final
+{
+public:
+	class FName                                   ActorName;                                         // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FQSActorBinding;
+
 // ScriptStruct QuestSystem.QSDataProviderBase
 // 0x0018 (0x0018 - 0x0000)
 struct FQSDataProviderBase
@@ -104,15 +113,14 @@ public:
 };
 DUMPER7_ASSERTS_FQSDataProviderBase;
 
-// ScriptStruct QuestSystem.QSDataProviderIntegerValue
+// ScriptStruct QuestSystem.QSDataProviderActorBindingValue
 // 0x0008 (0x0020 - 0x0018)
-struct FQSDataProviderIntegerValue final : public FQSDataProviderBase
+struct FQSDataProviderActorBindingValue final : public FQSDataProviderBase
 {
 public:
-	int32                                         Value;                                             // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FQSActorBinding                        Value;                                             // 0x0018(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FQSDataProviderIntegerValue;
+DUMPER7_ASSERTS_FQSDataProviderActorBindingValue;
 
 // ScriptStruct QuestSystem.QSSharedMemorySelecter
 // 0x0010 (0x0010 - 0x0000)
@@ -133,6 +141,16 @@ public:
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FQSDataProviderBoolValue;
+
+// ScriptStruct QuestSystem.QSDataProviderIntegerValue
+// 0x0008 (0x0020 - 0x0018)
+struct FQSDataProviderIntegerValue final : public FQSDataProviderBase
+{
+public:
+	int32                                         Value;                                             // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FQSDataProviderIntegerValue;
 
 // ScriptStruct QuestSystem.QSDataProviderFloatValue
 // 0x0008 (0x0020 - 0x0018)
@@ -161,24 +179,6 @@ public:
 	class FName                                   Value;                                             // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FQSDataProviderNameValue;
-
-// ScriptStruct QuestSystem.QSActorBinding
-// 0x0008 (0x0008 - 0x0000)
-struct FQSActorBinding final
-{
-public:
-	class FName                                   ActorName;                                         // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FQSActorBinding;
-
-// ScriptStruct QuestSystem.QSDataProviderActorBindingValue
-// 0x0008 (0x0020 - 0x0018)
-struct FQSDataProviderActorBindingValue final : public FQSDataProviderBase
-{
-public:
-	struct FQSActorBinding                        Value;                                             // 0x0018(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FQSDataProviderActorBindingValue;
 
 // ScriptStruct QuestSystem.QSDataProviderSharedMemorySelecterValue
 // 0x0010 (0x0028 - 0x0018)

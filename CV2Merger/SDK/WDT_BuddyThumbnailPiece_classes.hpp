@@ -32,26 +32,26 @@ public:
 	class UImage*                                 MouseArea;                                         // 0x05F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void BP_OnEntryReleased();
-	void BP_OnItemExpansionChanged(bool bIsExpanded);
-	void BP_OnItemSelectionChanged(bool bIsSelected);
-	bool Check(bool PlayAnimation_0, bool AnotherAppearance);
-	bool ClearSubTexture(class FName ImageId);
-	bool ClearTexture();
-	bool Deselect(bool PlayAnimation_0);
-	void ExecuteUbergraph_WDT_BuddyThumbnailPiece(int32 EntryPoint);
-	bool FlipTexture(bool IsInverse);
-	bool IsChecked();
-	struct FEventReply OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent);
-	void OnListItemObjectSet(class UObject* ListItemObject);
-	bool Reset();
-	bool Select(bool PlayAnimation_0);
-	void SetInfo(class UMaterialInstance* IconMaterial, bool IsCantCall);
-	bool SetLazyTexture(const TSoftObjectPtr<class UTexture2D>& LazyTexture);
-	bool SetSubLazyTexture(class FName ImageId, const TSoftObjectPtr<class UTexture2D>& LazyTexture);
-	bool SetSubTexture(class FName ImageId, class UTexture2D* Texture);
-	bool SetTexture(class UTexture2D* Texture);
 	bool Uncheck(bool PlayAnimation_0);
+	bool SetTexture(class UTexture2D* Texture);
+	bool SetSubTexture(class FName ImageId, class UTexture2D* Texture);
+	bool SetSubLazyTexture(class FName ImageId, const TSoftObjectPtr<class UTexture2D>& LazyTexture);
+	bool SetLazyTexture(const TSoftObjectPtr<class UTexture2D>& LazyTexture);
+	void SetInfo(class UMaterialInstance* IconMaterial, bool IsCantCall);
+	bool Select(bool PlayAnimation_0);
+	bool Reset();
+	void OnListItemObjectSet(class UObject* ListItemObject);
+	struct FEventReply OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent);
+	bool IsChecked();
+	bool FlipTexture(bool IsInverse);
+	void ExecuteUbergraph_WDT_BuddyThumbnailPiece(int32 EntryPoint);
+	bool Deselect(bool PlayAnimation_0);
+	bool ClearTexture();
+	bool ClearSubTexture(class FName ImageId);
+	bool Check(bool PlayAnimation_0, bool AnotherAppearance);
+	void BP_OnItemSelectionChanged(bool bIsSelected);
+	void BP_OnItemExpansionChanged(bool bIsExpanded);
+	void BP_OnEntryReleased();
 
 public:
 	static class UClass* StaticClass()

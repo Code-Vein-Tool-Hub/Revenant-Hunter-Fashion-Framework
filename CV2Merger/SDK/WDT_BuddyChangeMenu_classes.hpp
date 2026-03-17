@@ -54,35 +54,35 @@ public:
 	int32                                         CurrentBuddyIndex;                                 // 0x0690(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void BigenMessage(const class FText& MessageText_0);
-	void BndEvt__WDT_BuddyChangeMenu_BudyGridScroller_K2Node_ComponentBoundEvent_0_OnItemIsHoveredChangedDynamic__DelegateSignature(class UObject* Item, bool bIsHovered);
-	void BndEvt__WDT_BuddyChangeMenu_BudyGridScroller_K2Node_ComponentBoundEvent_2_SimpleListItemEventDynamic__DelegateSignature(class UObject* Item);
-	void BndEvt__WDT_BuddyChangeMenu_GridScroller_117_K2Node_ComponentBoundEvent_0_OnListEntryInitializedDynamic__DelegateSignature(class UObject* Item, class UUserWidget* Widget);
-	void BndEvt__WDT_BuddyChangeMenu_GridScroller_117_K2Node_ComponentBoundEvent_1_OnListItemSelectionChangedDynamic__DelegateSignature(class UObject* Item, bool bIsSelected);
-	void BP_OnActivated();
-	void BP_OnDeactivated();
-	void BuildRequest(int32 InNumber);
-	bool Can_Processing_Input();
-	void DecideInput();
-	void ExecuteUbergraph_WDT_BuddyChangeMenu(int32 EntryPoint);
-	void GridSelectionChanged(class UObject* Object, bool Condition);
-	void InitGrid(class UObject* Item, class UUserWidget* InWidget);
-	void InitMenu();
-	void InpActEvt_IA_UI_Cancel_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_UI_Decide_K2Node_EnhancedInputActionEvent_1(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent_4(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEvent_5(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void MessageEnd();
-	void NotifyChangeBuddyMenu(int32 InIndex);
-	void OnClosing();
-	class UWidgetAnimation* OnGetCloseAnimation();
-	class UWidgetAnimation* OnGetOpenAnimation();
-	void OnMouseLeftClickMenu();
-	void OnOpening();
-	void WDT_BuddyChangeMenu_AutoGenFunc(class UObject* Item, class UUserWidget* Widget);
 	void WidgetAnimationEvt_BuddyChangeMenu_OpenAnim_K2Node_WidgetAnimationEvent_0();
+	void WDT_BuddyChangeMenu_AutoGenFunc(class UObject* Item, class UUserWidget* Widget);
+	void OnOpening();
+	void OnMouseLeftClickMenu();
+	class UWidgetAnimation* OnGetOpenAnimation();
+	class UWidgetAnimation* OnGetCloseAnimation();
+	void OnClosing();
+	void NotifyChangeBuddyMenu(int32 InIndex);
+	void MessageEnd();
+	void InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEvent_5(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent_4(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_UI_Decide_K2Node_EnhancedInputActionEvent_1(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_UI_Cancel_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InitMenu();
+	void InitGrid(class UObject* Item, class UUserWidget* InWidget);
+	void GridSelectionChanged(class UObject* Object, bool Condition);
+	void ExecuteUbergraph_WDT_BuddyChangeMenu(int32 EntryPoint);
+	void DecideInput();
+	bool Can_Processing_Input();
+	void BuildRequest(int32 InNumber);
+	void BP_OnDeactivated();
+	void BP_OnActivated();
+	void BndEvt__WDT_BuddyChangeMenu_GridScroller_117_K2Node_ComponentBoundEvent_1_OnListItemSelectionChangedDynamic__DelegateSignature(class UObject* Item, bool bIsSelected);
+	void BndEvt__WDT_BuddyChangeMenu_GridScroller_117_K2Node_ComponentBoundEvent_0_OnListEntryInitializedDynamic__DelegateSignature(class UObject* Item, class UUserWidget* Widget);
+	void BndEvt__WDT_BuddyChangeMenu_BudyGridScroller_K2Node_ComponentBoundEvent_2_SimpleListItemEventDynamic__DelegateSignature(class UObject* Item);
+	void BndEvt__WDT_BuddyChangeMenu_BudyGridScroller_K2Node_ComponentBoundEvent_0_OnItemIsHoveredChangedDynamic__DelegateSignature(class UObject* Item, bool bIsHovered);
+	void BigenMessage(const class FText& MessageText_0);
 
 public:
 	static class UClass* StaticClass()

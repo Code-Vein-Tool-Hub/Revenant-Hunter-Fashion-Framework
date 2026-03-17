@@ -39,10 +39,10 @@ public:
 	class UMaterialInstanceDynamic*               MI_InitializeAllOnlyHoldGauge;                     // 0x0538(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ChangeTrgGuide(bool InIsCategory);
-	void RefreshKeyImage();
-	void SetInitializeHoldGaugePercent(double InPercent);
 	void SetInitializeTextVisibility(bool InFlag);
+	void SetInitializeHoldGaugePercent(double InPercent);
+	void RefreshKeyImage();
+	void ChangeTrgGuide(bool InIsCategory);
 
 public:
 	static class UClass* StaticClass()

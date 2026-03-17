@@ -12,8 +12,8 @@
 
 #include "STR_PEVC_AppearEquipment_Data_structs.hpp"
 #include "GameplayAbilities_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params

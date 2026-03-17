@@ -18,104 +18,198 @@
 namespace SDK::Params
 {
 
-// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.BigenMessage
-// 0x0038 (0x0038 - 0x0000)
-struct WDT_BuddyChangeMenu_C_BigenMessage final
-{
-public:
-	class FText                                   MessageText_0;                                     // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
-	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_PlayUIAudioEvent_ReturnValue;             // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x001C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x0030(0x0008)(NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_BuddyChangeMenu_C_BigenMessage;
-
-// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.BndEvt__WDT_BuddyChangeMenu_BudyGridScroller_K2Node_ComponentBoundEvent_0_OnItemIsHoveredChangedDynamic__DelegateSignature
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.WDT_BuddyChangeMenu_AutoGenFunc
 // 0x0010 (0x0010 - 0x0000)
-struct WDT_BuddyChangeMenu_C_BndEvt__WDT_BuddyChangeMenu_BudyGridScroller_K2Node_ComponentBoundEvent_0_OnItemIsHoveredChangedDynamic__DelegateSignature final
-{
-public:
-	class UObject*                                Item;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          bIsHovered;                                        // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_BuddyChangeMenu_C_BndEvt__WDT_BuddyChangeMenu_BudyGridScroller_K2Node_ComponentBoundEvent_0_OnItemIsHoveredChangedDynamic__DelegateSignature;
-
-// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.BndEvt__WDT_BuddyChangeMenu_BudyGridScroller_K2Node_ComponentBoundEvent_2_SimpleListItemEventDynamic__DelegateSignature
-// 0x0008 (0x0008 - 0x0000)
-struct WDT_BuddyChangeMenu_C_BndEvt__WDT_BuddyChangeMenu_BudyGridScroller_K2Node_ComponentBoundEvent_2_SimpleListItemEventDynamic__DelegateSignature final
-{
-public:
-	class UObject*                                Item;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_BuddyChangeMenu_C_BndEvt__WDT_BuddyChangeMenu_BudyGridScroller_K2Node_ComponentBoundEvent_2_SimpleListItemEventDynamic__DelegateSignature;
-
-// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.BndEvt__WDT_BuddyChangeMenu_GridScroller_117_K2Node_ComponentBoundEvent_0_OnListEntryInitializedDynamic__DelegateSignature
-// 0x0010 (0x0010 - 0x0000)
-struct WDT_BuddyChangeMenu_C_BndEvt__WDT_BuddyChangeMenu_GridScroller_117_K2Node_ComponentBoundEvent_0_OnListEntryInitializedDynamic__DelegateSignature final
+struct WDT_BuddyChangeMenu_C_WDT_BuddyChangeMenu_AutoGenFunc final
 {
 public:
 	class UObject*                                Item;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UUserWidget*                            Widget;                                            // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WDT_BuddyChangeMenu_C_BndEvt__WDT_BuddyChangeMenu_GridScroller_117_K2Node_ComponentBoundEvent_0_OnListEntryInitializedDynamic__DelegateSignature;
+DUMPER7_ASSERTS_WDT_BuddyChangeMenu_C_WDT_BuddyChangeMenu_AutoGenFunc;
 
-// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.BndEvt__WDT_BuddyChangeMenu_GridScroller_117_K2Node_ComponentBoundEvent_1_OnListItemSelectionChangedDynamic__DelegateSignature
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.OnGetOpenAnimation
+// 0x0008 (0x0008 - 0x0000)
+struct WDT_BuddyChangeMenu_C_OnGetOpenAnimation final
+{
+public:
+	class UWidgetAnimation*                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_BuddyChangeMenu_C_OnGetOpenAnimation;
+
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.OnGetCloseAnimation
+// 0x0008 (0x0008 - 0x0000)
+struct WDT_BuddyChangeMenu_C_OnGetCloseAnimation final
+{
+public:
+	class UWidgetAnimation*                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_BuddyChangeMenu_C_OnGetCloseAnimation;
+
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.NotifyChangeBuddyMenu
+// 0x00A0 (0x00A0 - 0x0000)
+struct WDT_BuddyChangeMenu_C_NotifyChangeBuddyMenu final
+{
+public:
+	int32                                         InIndex;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class ICheckableInterface>   K2Node_DynamicCast_AsCheckable_Interface;          // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUserWidget*                            CallFunc_GetSelectedWidget_ReturnValue;            // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Check_ReturnValue;                        // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class ICheckableInterface>   K2Node_DynamicCast_AsCheckable_Interface_1;        // 0x0030(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUIBuddyInfo                           CallFunc_GetBuddyInfo_OutInfo;                     // 0x0048(0x0050)()
+	bool                                          CallFunc_Uncheck_ReturnValue;                      // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_BuddyChangeMenu_C_NotifyChangeBuddyMenu;
+
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.MessageEnd
 // 0x0010 (0x0010 - 0x0000)
-struct WDT_BuddyChangeMenu_C_BndEvt__WDT_BuddyChangeMenu_GridScroller_117_K2Node_ComponentBoundEvent_1_OnListItemSelectionChangedDynamic__DelegateSignature final
+struct WDT_BuddyChangeMenu_C_MessageEnd final
+{
+public:
+	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_PlayUIAudioEvent_ReturnValue;             // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_BuddyChangeMenu_C_MessageEnd;
+
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3
+// 0x0030 (0x0030 - 0x0000)
+struct WDT_BuddyChangeMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3 final
+{
+public:
+	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_BuddyChangeMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3;
+
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEvent_5
+// 0x0030 (0x0030 - 0x0000)
+struct WDT_BuddyChangeMenu_C_InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEvent_5 final
+{
+public:
+	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_BuddyChangeMenu_C_InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEvent_5;
+
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent_4
+// 0x0030 (0x0030 - 0x0000)
+struct WDT_BuddyChangeMenu_C_InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent_4 final
+{
+public:
+	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_BuddyChangeMenu_C_InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent_4;
+
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2
+// 0x0030 (0x0030 - 0x0000)
+struct WDT_BuddyChangeMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2 final
+{
+public:
+	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_BuddyChangeMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2;
+
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.InpActEvt_IA_UI_Decide_K2Node_EnhancedInputActionEvent_1
+// 0x0030 (0x0030 - 0x0000)
+struct WDT_BuddyChangeMenu_C_InpActEvt_IA_UI_Decide_K2Node_EnhancedInputActionEvent_1 final
+{
+public:
+	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_BuddyChangeMenu_C_InpActEvt_IA_UI_Decide_K2Node_EnhancedInputActionEvent_1;
+
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.InpActEvt_IA_UI_Cancel_K2Node_EnhancedInputActionEvent_0
+// 0x0030 (0x0030 - 0x0000)
+struct WDT_BuddyChangeMenu_C_InpActEvt_IA_UI_Cancel_K2Node_EnhancedInputActionEvent_0 final
+{
+public:
+	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_BuddyChangeMenu_C_InpActEvt_IA_UI_Cancel_K2Node_EnhancedInputActionEvent_0;
+
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.InitMenu
+// 0x0028 (0x0028 - 0x0000)
+struct WDT_BuddyChangeMenu_C_InitMenu final
+{
+public:
+	int32                                         L_BuddyNumber;                                     // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetBuddyNumber_ReturnValue;               // 0x0004(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUIObjectBase*                          CallFunc_GetUIObject_ReturnValue;                  // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UCampMenuUIObject*                      K2Node_DynamicCast_AsCamp_Menu_UIObject;           // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_BuddyChangeMenu_C_InitMenu;
+
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.InitGrid
+// 0x0128 (0x0128 - 0x0000)
+struct WDT_BuddyChangeMenu_C_InitGrid final
 {
 public:
 	class UObject*                                Item;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          bIsSelected;                                       // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UUserWidget*                            InWidget;                                          // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FUIBuddyInfo                           L_Info;                                            // 0x0010(0x0050)(Edit, BlueprintVisible)
+	TScriptInterface<class IResetInterface>       K2Node_DynamicCast_AsReset_Interface;              // 0x0060(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWDT_BuddyThumbnailPiece_C*             K2Node_DynamicCast_AsWDT_Buddy_Thumbnail_Piece;    // 0x0078(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Reset_ReturnValue;                        // 0x0081(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_82[0x6];                                       // 0x0082(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class ICheckableInterface>   CallFunc_Check_self_CastInput;                     // 0x0088(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Check_ReturnValue;                        // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_CheckableScrollerItem_C*            K2Node_DynamicCast_AsBP_Checkable_Scroller_Item;   // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A9[0x3];                                       // 0x00A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetElementIndex_ReturnValue;              // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Conv_BoolToString_ReturnValue;            // 0x00B8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x00C8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FUIBuddyInfo                           CallFunc_GetBuddyInfo_OutInfo;                     // 0x00D8(0x0050)()
 };
-DUMPER7_ASSERTS_WDT_BuddyChangeMenu_C_BndEvt__WDT_BuddyChangeMenu_GridScroller_117_K2Node_ComponentBoundEvent_1_OnListItemSelectionChangedDynamic__DelegateSignature;
+DUMPER7_ASSERTS_WDT_BuddyChangeMenu_C_InitGrid;
 
-// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.BuildRequest
-// 0x001C (0x001C - 0x0000)
-struct WDT_BuddyChangeMenu_C_BuildRequest final
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.GridSelectionChanged
+// 0x00C0 (0x00C0 - 0x0000)
+struct WDT_BuddyChangeMenu_C_GridSelectionChanged final
 {
 public:
-	int32                                         InNumber;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class UObject* Item, class UUserWidget* Widget)> K2Node_CreateDelegate_OutputDelegate; // 0x0004(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetCurrentBuddyIndex_ReturnValue;         // 0x0014(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Clamp_ReturnValue;                        // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                Object;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          Condition;                                         // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUIBuddyInfo                           L_Info;                                            // 0x0010(0x0050)(Edit, BlueprintVisible)
+	class UBP_CheckableScrollerItem_C*            K2Node_DynamicCast_AsBP_Checkable_Scroller_Item;   // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_69[0x3];                                       // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetElementIndex_ReturnValue;              // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FUIBuddyInfo                           CallFunc_GetBuddyInfo_OutInfo;                     // 0x0070(0x0050)()
 };
-DUMPER7_ASSERTS_WDT_BuddyChangeMenu_C_BuildRequest;
-
-// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.Can Processing Input
-// 0x0006 (0x0006 - 0x0000)
-struct WDT_BuddyChangeMenu_C_Can_Processing_Input final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsActivated_ReturnValue;                  // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_BuddyChangeMenu_C_Can_Processing_Input;
-
-// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.DecideInput
-// 0x0028 (0x0028 - 0x0000)
-struct WDT_BuddyChangeMenu_C_DecideInput final
-{
-public:
-	bool                                          CallFunc_Close_ReturnValue;                        // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_PlayUIAudioEvent_ReturnValue;             // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetSelectionIndex_ReturnValue;            // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetSelectionIndex_ReturnValue_1;          // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_RequestChangeBuddy_ReturnValue;           // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_K2_IsValidTimerHandle_ReturnValue;        // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_BuddyChangeMenu_C_DecideInput;
+DUMPER7_ASSERTS_WDT_BuddyChangeMenu_C_GridSelectionChanged;
 
 // Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.ExecuteUbergraph_WDT_BuddyChangeMenu
 // 0x0358 (0x0358 - 0x0000)
@@ -263,198 +357,104 @@ public:
 };
 DUMPER7_ASSERTS_WDT_BuddyChangeMenu_C_ExecuteUbergraph_WDT_BuddyChangeMenu;
 
-// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.GridSelectionChanged
-// 0x00C0 (0x00C0 - 0x0000)
-struct WDT_BuddyChangeMenu_C_GridSelectionChanged final
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.DecideInput
+// 0x0028 (0x0028 - 0x0000)
+struct WDT_BuddyChangeMenu_C_DecideInput final
 {
 public:
-	class UObject*                                Object;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          Condition;                                         // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUIBuddyInfo                           L_Info;                                            // 0x0010(0x0050)(Edit, BlueprintVisible)
-	class UBP_CheckableScrollerItem_C*            K2Node_DynamicCast_AsBP_Checkable_Scroller_Item;   // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_69[0x3];                                       // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetElementIndex_ReturnValue;              // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FUIBuddyInfo                           CallFunc_GetBuddyInfo_OutInfo;                     // 0x0070(0x0050)()
+	bool                                          CallFunc_Close_ReturnValue;                        // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_PlayUIAudioEvent_ReturnValue;             // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetSelectionIndex_ReturnValue;            // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetSelectionIndex_ReturnValue_1;          // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_RequestChangeBuddy_ReturnValue;           // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_K2_IsValidTimerHandle_ReturnValue;        // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WDT_BuddyChangeMenu_C_GridSelectionChanged;
+DUMPER7_ASSERTS_WDT_BuddyChangeMenu_C_DecideInput;
 
-// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.InitGrid
-// 0x0128 (0x0128 - 0x0000)
-struct WDT_BuddyChangeMenu_C_InitGrid final
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.Can Processing Input
+// 0x0006 (0x0006 - 0x0000)
+struct WDT_BuddyChangeMenu_C_Can_Processing_Input final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsActivated_ReturnValue;                  // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_BuddyChangeMenu_C_Can_Processing_Input;
+
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.BuildRequest
+// 0x001C (0x001C - 0x0000)
+struct WDT_BuddyChangeMenu_C_BuildRequest final
+{
+public:
+	int32                                         InNumber;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class UObject* Item, class UUserWidget* Widget)> K2Node_CreateDelegate_OutputDelegate; // 0x0004(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetCurrentBuddyIndex_ReturnValue;         // 0x0014(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Clamp_ReturnValue;                        // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_BuddyChangeMenu_C_BuildRequest;
+
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.BndEvt__WDT_BuddyChangeMenu_GridScroller_117_K2Node_ComponentBoundEvent_1_OnListItemSelectionChangedDynamic__DelegateSignature
+// 0x0010 (0x0010 - 0x0000)
+struct WDT_BuddyChangeMenu_C_BndEvt__WDT_BuddyChangeMenu_GridScroller_117_K2Node_ComponentBoundEvent_1_OnListItemSelectionChangedDynamic__DelegateSignature final
 {
 public:
 	class UObject*                                Item;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UUserWidget*                            InWidget;                                          // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FUIBuddyInfo                           L_Info;                                            // 0x0010(0x0050)(Edit, BlueprintVisible)
-	TScriptInterface<class IResetInterface>       K2Node_DynamicCast_AsReset_Interface;              // 0x0060(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWDT_BuddyThumbnailPiece_C*             K2Node_DynamicCast_AsWDT_Buddy_Thumbnail_Piece;    // 0x0078(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Reset_ReturnValue;                        // 0x0081(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_82[0x6];                                       // 0x0082(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class ICheckableInterface>   CallFunc_Check_self_CastInput;                     // 0x0088(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Check_ReturnValue;                        // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBP_CheckableScrollerItem_C*            K2Node_DynamicCast_AsBP_Checkable_Scroller_Item;   // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A9[0x3];                                       // 0x00A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetElementIndex_ReturnValue;              // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Conv_BoolToString_ReturnValue;            // 0x00B8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x00C8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FUIBuddyInfo                           CallFunc_GetBuddyInfo_OutInfo;                     // 0x00D8(0x0050)()
+	bool                                          bIsSelected;                                       // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WDT_BuddyChangeMenu_C_InitGrid;
+DUMPER7_ASSERTS_WDT_BuddyChangeMenu_C_BndEvt__WDT_BuddyChangeMenu_GridScroller_117_K2Node_ComponentBoundEvent_1_OnListItemSelectionChangedDynamic__DelegateSignature;
 
-// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.InitMenu
-// 0x0028 (0x0028 - 0x0000)
-struct WDT_BuddyChangeMenu_C_InitMenu final
-{
-public:
-	int32                                         L_BuddyNumber;                                     // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetBuddyNumber_ReturnValue;               // 0x0004(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUIObjectBase*                          CallFunc_GetUIObject_ReturnValue;                  // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UCampMenuUIObject*                      K2Node_DynamicCast_AsCamp_Menu_UIObject;           // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_BuddyChangeMenu_C_InitMenu;
-
-// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.InpActEvt_IA_UI_Cancel_K2Node_EnhancedInputActionEvent_0
-// 0x0030 (0x0030 - 0x0000)
-struct WDT_BuddyChangeMenu_C_InpActEvt_IA_UI_Cancel_K2Node_EnhancedInputActionEvent_0 final
-{
-public:
-	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_BuddyChangeMenu_C_InpActEvt_IA_UI_Cancel_K2Node_EnhancedInputActionEvent_0;
-
-// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.InpActEvt_IA_UI_Decide_K2Node_EnhancedInputActionEvent_1
-// 0x0030 (0x0030 - 0x0000)
-struct WDT_BuddyChangeMenu_C_InpActEvt_IA_UI_Decide_K2Node_EnhancedInputActionEvent_1 final
-{
-public:
-	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_BuddyChangeMenu_C_InpActEvt_IA_UI_Decide_K2Node_EnhancedInputActionEvent_1;
-
-// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2
-// 0x0030 (0x0030 - 0x0000)
-struct WDT_BuddyChangeMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2 final
-{
-public:
-	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_BuddyChangeMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2;
-
-// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent_4
-// 0x0030 (0x0030 - 0x0000)
-struct WDT_BuddyChangeMenu_C_InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent_4 final
-{
-public:
-	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_BuddyChangeMenu_C_InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent_4;
-
-// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEvent_5
-// 0x0030 (0x0030 - 0x0000)
-struct WDT_BuddyChangeMenu_C_InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEvent_5 final
-{
-public:
-	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_BuddyChangeMenu_C_InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEvent_5;
-
-// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3
-// 0x0030 (0x0030 - 0x0000)
-struct WDT_BuddyChangeMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3 final
-{
-public:
-	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_BuddyChangeMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3;
-
-// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.MessageEnd
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.BndEvt__WDT_BuddyChangeMenu_GridScroller_117_K2Node_ComponentBoundEvent_0_OnListEntryInitializedDynamic__DelegateSignature
 // 0x0010 (0x0010 - 0x0000)
-struct WDT_BuddyChangeMenu_C_MessageEnd final
-{
-public:
-	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_PlayUIAudioEvent_ReturnValue;             // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_BuddyChangeMenu_C_MessageEnd;
-
-// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.NotifyChangeBuddyMenu
-// 0x00A0 (0x00A0 - 0x0000)
-struct WDT_BuddyChangeMenu_C_NotifyChangeBuddyMenu final
-{
-public:
-	int32                                         InIndex;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class ICheckableInterface>   K2Node_DynamicCast_AsCheckable_Interface;          // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUserWidget*                            CallFunc_GetSelectedWidget_ReturnValue;            // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Check_ReturnValue;                        // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class ICheckableInterface>   K2Node_DynamicCast_AsCheckable_Interface_1;        // 0x0030(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUIBuddyInfo                           CallFunc_GetBuddyInfo_OutInfo;                     // 0x0048(0x0050)()
-	bool                                          CallFunc_Uncheck_ReturnValue;                      // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_BuddyChangeMenu_C_NotifyChangeBuddyMenu;
-
-// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.OnGetCloseAnimation
-// 0x0008 (0x0008 - 0x0000)
-struct WDT_BuddyChangeMenu_C_OnGetCloseAnimation final
-{
-public:
-	class UWidgetAnimation*                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_BuddyChangeMenu_C_OnGetCloseAnimation;
-
-// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.OnGetOpenAnimation
-// 0x0008 (0x0008 - 0x0000)
-struct WDT_BuddyChangeMenu_C_OnGetOpenAnimation final
-{
-public:
-	class UWidgetAnimation*                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_BuddyChangeMenu_C_OnGetOpenAnimation;
-
-// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.WDT_BuddyChangeMenu_AutoGenFunc
-// 0x0010 (0x0010 - 0x0000)
-struct WDT_BuddyChangeMenu_C_WDT_BuddyChangeMenu_AutoGenFunc final
+struct WDT_BuddyChangeMenu_C_BndEvt__WDT_BuddyChangeMenu_GridScroller_117_K2Node_ComponentBoundEvent_0_OnListEntryInitializedDynamic__DelegateSignature final
 {
 public:
 	class UObject*                                Item;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UUserWidget*                            Widget;                                            // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WDT_BuddyChangeMenu_C_WDT_BuddyChangeMenu_AutoGenFunc;
+DUMPER7_ASSERTS_WDT_BuddyChangeMenu_C_BndEvt__WDT_BuddyChangeMenu_GridScroller_117_K2Node_ComponentBoundEvent_0_OnListEntryInitializedDynamic__DelegateSignature;
+
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.BndEvt__WDT_BuddyChangeMenu_BudyGridScroller_K2Node_ComponentBoundEvent_2_SimpleListItemEventDynamic__DelegateSignature
+// 0x0008 (0x0008 - 0x0000)
+struct WDT_BuddyChangeMenu_C_BndEvt__WDT_BuddyChangeMenu_BudyGridScroller_K2Node_ComponentBoundEvent_2_SimpleListItemEventDynamic__DelegateSignature final
+{
+public:
+	class UObject*                                Item;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_BuddyChangeMenu_C_BndEvt__WDT_BuddyChangeMenu_BudyGridScroller_K2Node_ComponentBoundEvent_2_SimpleListItemEventDynamic__DelegateSignature;
+
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.BndEvt__WDT_BuddyChangeMenu_BudyGridScroller_K2Node_ComponentBoundEvent_0_OnItemIsHoveredChangedDynamic__DelegateSignature
+// 0x0010 (0x0010 - 0x0000)
+struct WDT_BuddyChangeMenu_C_BndEvt__WDT_BuddyChangeMenu_BudyGridScroller_K2Node_ComponentBoundEvent_0_OnItemIsHoveredChangedDynamic__DelegateSignature final
+{
+public:
+	class UObject*                                Item;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          bIsHovered;                                        // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_BuddyChangeMenu_C_BndEvt__WDT_BuddyChangeMenu_BudyGridScroller_K2Node_ComponentBoundEvent_0_OnItemIsHoveredChangedDynamic__DelegateSignature;
+
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.BigenMessage
+// 0x0038 (0x0038 - 0x0000)
+struct WDT_BuddyChangeMenu_C_BigenMessage final
+{
+public:
+	class FText                                   MessageText_0;                                     // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_PlayUIAudioEvent_ReturnValue;             // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x001C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x0030(0x0008)(NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_BuddyChangeMenu_C_BigenMessage;
 
 }
 

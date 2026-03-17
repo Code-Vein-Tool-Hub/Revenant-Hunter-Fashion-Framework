@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_BindableCineActor.BP_BindableCineActor_C
-// 0x0000 (0x0DD0 - 0x0DD0)
+// 0x0000 (0x0EE0 - 0x0EE0)
 class ABP_BindableCineActor_C final : public ABindableCinematicCharacter
 {
 public:

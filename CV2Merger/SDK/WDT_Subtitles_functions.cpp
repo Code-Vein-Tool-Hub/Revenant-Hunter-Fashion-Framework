@@ -187,6 +187,20 @@ void UWDT_Subtitles_C::OnInputDeviceChanged()
 }
 
 
+// Function WDT_Subtitles.WDT_Subtitles_C.OnInitialized
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWDT_Subtitles_C::OnInitialized()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_Subtitles_C", "OnInitialized");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WDT_Subtitles.WDT_Subtitles_C.OnForceClose
 // (BlueprintCallable, BlueprintEvent)
 
@@ -270,20 +284,6 @@ void UWDT_Subtitles_C::Construct()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("WDT_Subtitles_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WDT_Subtitles.WDT_Subtitles_C.OnInitialized
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWDT_Subtitles_C::OnInitialized()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Subtitles_C", "OnInitialized");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

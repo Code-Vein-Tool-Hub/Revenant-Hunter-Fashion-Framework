@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_classes.hpp"
-#include "Text3D_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Text3D_structs.hpp"
 
 
 namespace SDK

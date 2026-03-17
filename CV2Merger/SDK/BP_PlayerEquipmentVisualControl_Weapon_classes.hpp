@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "BP_PlayerEquipmentVisualControl_classes.hpp"
+#include "Engine_structs.hpp"
 #include "STR_PEVC_AppearEquipment_Data_structs.hpp"
 #include "GameplayAbilities_structs.hpp"
 #include "Extensions_structs.hpp"

@@ -12,14 +12,14 @@
 
 #include "CoreUObject_structs.hpp"
 #include "BasicUI_structs.hpp"
-#include "SlateCore_structs.hpp"
-#include "GameplayTags_structs.hpp"
-#include "Extensions_structs.hpp"
-#include "EnhancedInput_structs.hpp"
-#include "STR_MapFeatureUICoordinateCorrection_structs.hpp"
-#include "UMG_structs.hpp"
 #include "STR_MapFeatureInfoUI_structs.hpp"
+#include "SlateCore_structs.hpp"
+#include "Extensions_structs.hpp"
+#include "STR_MapFeatureUICoordinateCorrection_structs.hpp"
+#include "GameplayTags_structs.hpp"
+#include "EnhancedInput_structs.hpp"
 #include "STR_FeatureQuestList_structs.hpp"
+#include "UMG_structs.hpp"
 #include "Engine_structs.hpp"
 
 

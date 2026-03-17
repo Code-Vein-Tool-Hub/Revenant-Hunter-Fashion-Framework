@@ -983,6 +983,15 @@ public:
 };
 DUMPER7_ASSERTS_FBox;
 
+// ScriptStruct CoreUObject.ObjectCookedMetaDataStore
+// 0x0050 (0x0050 - 0x0000)
+struct FObjectCookedMetaDataStore final
+{
+public:
+	TMap<class FName, class FString>              ObjectMetaData;                                    // 0x0000(0x0050)(NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FObjectCookedMetaDataStore;
+
 // ScriptStruct CoreUObject.Box2D
 // 0x0028 (0x0028 - 0x0000)
 struct FBox2D final
@@ -994,34 +1003,6 @@ public:
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FBox2D;
-
-// ScriptStruct CoreUObject.ObjectCookedMetaDataStore
-// 0x0050 (0x0050 - 0x0000)
-struct FObjectCookedMetaDataStore final
-{
-public:
-	TMap<class FName, class FString>              ObjectMetaData;                                    // 0x0000(0x0050)(NativeAccessSpecifierPrivate)
-};
-DUMPER7_ASSERTS_FObjectCookedMetaDataStore;
-
-// ScriptStruct CoreUObject.FieldCookedMetaDataStore
-// 0x0050 (0x0050 - 0x0000)
-struct FFieldCookedMetaDataStore final
-{
-public:
-	TMap<class FName, class FString>              FieldMetaData;                                     // 0x0000(0x0050)(NativeAccessSpecifierPrivate)
-};
-DUMPER7_ASSERTS_FFieldCookedMetaDataStore;
-
-// ScriptStruct CoreUObject.StructCookedMetaDataStore
-// 0x00A0 (0x00A0 - 0x0000)
-struct FStructCookedMetaDataStore final
-{
-public:
-	struct FObjectCookedMetaDataStore             ObjectMetaData;                                    // 0x0000(0x0050)(NativeAccessSpecifierPrivate)
-	TMap<class FName, struct FFieldCookedMetaDataStore> PropertiesMetaData;                          // 0x0050(0x0050)(NativeAccessSpecifierPrivate)
-};
-DUMPER7_ASSERTS_FStructCookedMetaDataStore;
 
 // ScriptStruct CoreUObject.Vector2f
 // 0x0008 (0x0008 - 0x0000)
@@ -1698,6 +1679,28 @@ public:
 };
 DUMPER7_ASSERTS_FQuat4f;
 
+// ScriptStruct CoreUObject.OverriddenPropertyNodeID
+// 0x0010 (0x0010 - 0x0000)
+struct FOverriddenPropertyNodeID final
+{
+public:
+	class FName                                   Path;                                              // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UObject*                                Object;                                            // 0x0008(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+};
+DUMPER7_ASSERTS_FOverriddenPropertyNodeID;
+
+// ScriptStruct CoreUObject.OverriddenPropertyNode
+// 0x0068 (0x0068 - 0x0000)
+struct FOverriddenPropertyNode final
+{
+public:
+	struct FOverriddenPropertyNodeID              NodeID;                                            // 0x0000(0x0010)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EOverriddenPropertyOperation                  Operation;                                         // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<struct FOverriddenPropertyNodeID, struct FOverriddenPropertyNodeID> SubPropertyNodeKeys;    // 0x0018(0x0050)(NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FOverriddenPropertyNode;
+
 // ScriptStruct CoreUObject.RandomStream
 // 0x0008 (0x0008 - 0x0000)
 struct FRandomStream final
@@ -2095,28 +2098,6 @@ public:
 };
 DUMPER7_ASSERTS_FUint64Point;
 
-// ScriptStruct CoreUObject.OverriddenPropertyNodeID
-// 0x0010 (0x0010 - 0x0000)
-struct FOverriddenPropertyNodeID final
-{
-public:
-	class FName                                   Path;                                              // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UObject*                                Object;                                            // 0x0008(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-};
-DUMPER7_ASSERTS_FOverriddenPropertyNodeID;
-
-// ScriptStruct CoreUObject.OverriddenPropertyNode
-// 0x0068 (0x0068 - 0x0000)
-struct FOverriddenPropertyNode final
-{
-public:
-	struct FOverriddenPropertyNodeID              NodeID;                                            // 0x0000(0x0010)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EOverriddenPropertyOperation                  Operation;                                         // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<struct FOverriddenPropertyNodeID, struct FOverriddenPropertyNodeID> SubPropertyNodeKeys;    // 0x0018(0x0050)(NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FOverriddenPropertyNode;
-
 // ScriptStruct CoreUObject.Uint64Vector
 // 0x0018 (0x0018 - 0x0000)
 struct FUint64Vector final
@@ -2239,6 +2220,25 @@ public:
 	uint8                                         Pad_58[0x8];                                       // 0x0058(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FOverriddenPropertySet;
+
+// ScriptStruct CoreUObject.FieldCookedMetaDataStore
+// 0x0050 (0x0050 - 0x0000)
+struct FFieldCookedMetaDataStore final
+{
+public:
+	TMap<class FName, class FString>              FieldMetaData;                                     // 0x0000(0x0050)(NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FFieldCookedMetaDataStore;
+
+// ScriptStruct CoreUObject.StructCookedMetaDataStore
+// 0x00A0 (0x00A0 - 0x0000)
+struct FStructCookedMetaDataStore final
+{
+public:
+	struct FObjectCookedMetaDataStore             ObjectMetaData;                                    // 0x0000(0x0050)(NativeAccessSpecifierPrivate)
+	TMap<class FName, struct FFieldCookedMetaDataStore> PropertiesMetaData;                          // 0x0050(0x0050)(NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FStructCookedMetaDataStore;
 
 }
 
