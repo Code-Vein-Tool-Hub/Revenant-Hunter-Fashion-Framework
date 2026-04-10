@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
+#include "ProxyTable_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "Chooser_structs.hpp"
 #include "StructUtils_structs.hpp"
+#include "Chooser_structs.hpp"
 #include "Engine_classes.hpp"
-#include "ProxyTable_structs.hpp"
 
 
 namespace SDK

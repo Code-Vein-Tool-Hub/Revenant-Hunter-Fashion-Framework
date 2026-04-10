@@ -17,11 +17,11 @@ namespace SDK::Params
 {
 
 // Function WDT_ParameterHelp.WDT_ParameterHelp_C.SetBuddyInfo
-// 0x0050 (0x0050 - 0x0000)
+// 0x00B0 (0x00B0 - 0x0000)
 struct WDT_ParameterHelp_C_SetBuddyInfo final
 {
 public:
-	struct FUIBuddyInfo                           InBuddyInfo;                                       // 0x0000(0x0050)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FUIBuddyInfo                           InBuddyInfo;                                       // 0x0000(0x00B0)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
 DUMPER7_ASSERTS_WDT_ParameterHelp_C_SetBuddyInfo;
 

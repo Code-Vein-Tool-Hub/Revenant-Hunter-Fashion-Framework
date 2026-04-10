@@ -11,13 +11,13 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "STR_ConfigKeyAssignDuplicationKeyItem_structs.hpp"
 #include "Extensions_structs.hpp"
-#include "WDT_ConfigStandardPageBase_classes.hpp"
-#include "STR_ConfigKeyAssignEntryBaseList_structs.hpp"
 #include "GameplayTags_structs.hpp"
 #include "InputCore_structs.hpp"
+#include "STR_ConfigKeyAssignEntryBaseList_structs.hpp"
+#include "WDT_ConfigStandardPageBase_classes.hpp"
 #include "BasicUI_structs.hpp"
+#include "STR_ConfigKeyAssignDuplicationKeyItem_structs.hpp"
 
 
 namespace SDK

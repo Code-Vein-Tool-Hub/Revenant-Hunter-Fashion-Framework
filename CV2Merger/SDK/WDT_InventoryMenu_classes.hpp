@@ -13,10 +13,10 @@
 #include "Engine_structs.hpp"
 #include "STR_InventoryCategoryPalletInfo_structs.hpp"
 #include "BasicUI_structs.hpp"
-#include "UMG_structs.hpp"
 #include "EN_InventoryMenuDialogType_structs.hpp"
 #include "Extensions_structs.hpp"
 #include "Extensions_classes.hpp"
+#include "UMG_structs.hpp"
 
 
 namespace SDK

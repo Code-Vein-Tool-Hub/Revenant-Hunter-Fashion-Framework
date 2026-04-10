@@ -18,15 +18,15 @@ namespace SDK::Params
 {
 
 // Function WDT_BuddyInfo.WDT_BuddyInfo_C.SetBuddyInfo
-// 0x0090 (0x0090 - 0x0000)
+// 0x00F0 (0x00F0 - 0x0000)
 struct WDT_BuddyInfo_C_SetBuddyInfo final
 {
 public:
-	struct FUIBuddyInfo                           NewParam1;                                         // 0x0000(0x0050)(BlueprintVisible, BlueprintReadOnly, Parm)
-	TArray<struct FUIBuddyFeatureInfo>            L_SynergyArray;                                    // 0x0050(0x0010)(Edit, BlueprintVisible)
-	TArray<struct FUIBuddyFeatureInfo>            L_FeatureArray;                                    // 0x0060(0x0010)(Edit, BlueprintVisible)
-	class FText                                   CallFunc_Get_Feature_Text_Output_Get;              // 0x0070(0x0010)()
-	class FText                                   CallFunc_Get_Feature_Text_Output_Get_1;            // 0x0080(0x0010)()
+	struct FUIBuddyInfo                           NewParam1;                                         // 0x0000(0x00B0)(BlueprintVisible, BlueprintReadOnly, Parm)
+	TArray<struct FUIBuddyFeatureInfo>            L_SynergyArray;                                    // 0x00B0(0x0010)(Edit, BlueprintVisible)
+	TArray<struct FUIBuddyFeatureInfo>            L_FeatureArray;                                    // 0x00C0(0x0010)(Edit, BlueprintVisible)
+	class FText                                   CallFunc_Get_Feature_Text_Output_Get;              // 0x00D0(0x0010)()
+	class FText                                   CallFunc_Get_Feature_Text_Output_Get_1;            // 0x00E0(0x0010)()
 };
 DUMPER7_ASSERTS_WDT_BuddyInfo_C_SetBuddyInfo;
 

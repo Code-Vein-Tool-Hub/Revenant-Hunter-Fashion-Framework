@@ -13,8 +13,8 @@
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 #include "ST_DrawScar_CaptureData_structs.hpp"
-#include "Extensions_structs.hpp"
 #include "Niagara_structs.hpp"
+#include "Extensions_structs.hpp"
 
 
 namespace SDK::Params

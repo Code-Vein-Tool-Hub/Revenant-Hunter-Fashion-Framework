@@ -36,13 +36,14 @@ public:
 DUMPER7_ASSERTS_WDT_StatusSummary_Resistant_C_PreConstruct;
 
 // Function WDT_StatusSummary_Resistant.WDT_StatusSummary_Resistant_C.SetValue
-// 0x0028 (0x0028 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct WDT_StatusSummary_Resistant_C_SetValue final
 {
 public:
 	int32                                         InValue;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSlateColor                            CallFunc_GetTextColorByCompareResult_TextColor;    // 0x0004(0x0014)()
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0018(0x0010)()
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0008(0x0010)()
+	struct FSlateColor                            CallFunc_GetTextColorByCompareResult_TextColor;    // 0x0018(0x0014)()
 };
 DUMPER7_ASSERTS_WDT_StatusSummary_Resistant_C_SetValue;
 

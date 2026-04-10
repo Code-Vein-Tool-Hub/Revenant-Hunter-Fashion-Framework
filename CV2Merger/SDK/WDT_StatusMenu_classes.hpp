@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "Extensions_structs.hpp"
 #include "Extensions_classes.hpp"
-#include "Engine_structs.hpp"
 #include "BasicUI_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "UMG_structs.hpp"
@@ -22,7 +22,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WDT_StatusMenu.WDT_StatusMenu_C
-// 0x0280 (0x0838 - 0x05B8)
+// 0x02E0 (0x0898 - 0x05B8)
 class UWDT_StatusMenu_C final : public UAppMenuBase
 {
 public:
@@ -95,8 +95,8 @@ public:
 	uint8                                         Pad_7BE[0x2];                                      // 0x07BE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FUIWeaponGadgetInfo>            Weapon1GadgetInfos;                                // 0x07C0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TArray<struct FUIWeaponGadgetInfo>            Weapon2GadgetInfos;                                // 0x07D0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FUIBuddyInfo                           BuddyInfo;                                         // 0x07E0(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          IsOpened;                                          // 0x0830(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FUIBuddyInfo                           BuddyInfo;                                         // 0x07E0(0x00B0)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          IsOpened;                                          // 0x0890(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BP_OnActivated();

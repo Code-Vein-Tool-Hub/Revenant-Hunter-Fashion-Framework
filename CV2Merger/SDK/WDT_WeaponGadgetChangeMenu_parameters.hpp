@@ -12,9 +12,9 @@
 
 #include "Extensions_structs.hpp"
 #include "BasicUI_structs.hpp"
-#include "EN_WeapnGadgetSelectState_structs.hpp"
 #include "UMG_structs.hpp"
 #include "EnhancedInput_structs.hpp"
+#include "EN_WeapnGadgetSelectState_structs.hpp"
 #include "Engine_structs.hpp"
 
 

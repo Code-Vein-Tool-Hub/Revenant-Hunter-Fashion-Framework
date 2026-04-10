@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "DeveloperSettings_classes.hpp"
-#include "StructUtils_structs.hpp"
-#include "MovieRenderPipelineCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "DeveloperSettings_classes.hpp"
+#include "MovieRenderPipelineCore_structs.hpp"
+#include "StructUtils_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "UMG_classes.hpp"
@@ -62,62 +62,6 @@ public:
 };
 DUMPER7_ASSERTS_UMovieGraphNode;
 
-// Class MovieRenderPipelineCore.MovieGraphOutputNode
-// 0x0000 (0x00A0 - 0x00A0)
-class UMovieGraphOutputNode final : public UMovieGraphNode
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MovieGraphOutputNode")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MovieGraphOutputNode")
-	}
-	static class UMovieGraphOutputNode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMovieGraphOutputNode>();
-	}
-};
-DUMPER7_ASSERTS_UMovieGraphOutputNode;
-
-// Class MovieRenderPipelineCore.MovieGraphConditionGroupQueryBase
-// 0x0008 (0x0030 - 0x0028)
-class UMovieGraphConditionGroupQueryBase : public UObject
-{
-public:
-	EMovieGraphConditionGroupQueryOpType          OpType;                                            // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bIsEnabled;                                        // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void SetEnabled(const bool bEnabled);
-	void SetOperationType(const EMovieGraphConditionGroupQueryOpType OperationType);
-
-	void Evaluate(const TArray<class AActor*>& InActorsToQuery, const class UWorld* InWorld, TSet<class AActor*>* OutMatchingActors) const;
-	EMovieGraphConditionGroupQueryOpType GetOperationType() const;
-	bool IsEditorOnlyQuery() const;
-	bool IsEnabled() const;
-	bool IsFirstConditionGroupQuery() const;
-	bool ShouldHidePropertyNames() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MovieGraphConditionGroupQueryBase")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MovieGraphConditionGroupQueryBase")
-	}
-	static class UMovieGraphConditionGroupQueryBase* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMovieGraphConditionGroupQueryBase>();
-	}
-};
-DUMPER7_ASSERTS_UMovieGraphConditionGroupQueryBase;
-
 // Class MovieRenderPipelineCore.MovieGraphSettingNode
 // 0x0000 (0x00A0 - 0x00A0)
 class UMovieGraphSettingNode : public UMovieGraphNode
@@ -138,53 +82,32 @@ public:
 };
 DUMPER7_ASSERTS_UMovieGraphSettingNode;
 
-// Class MovieRenderPipelineCore.MovieGraphConditionGroupQuery_EditorFolder
-// 0x0010 (0x0040 - 0x0030)
-class UMovieGraphConditionGroupQuery_EditorFolder final : public UMovieGraphConditionGroupQueryBase
+// Class MovieRenderPipelineCore.MovieGraphCameraSettingNode
+// 0x0008 (0x00A8 - 0x00A0)
+class UMovieGraphCameraSettingNode final : public UMovieGraphSettingNode
 {
 public:
-	TArray<class FName>                           FolderPaths;                                       // 0x0030(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         bOverride_ShutterTiming : 1;                       // 0x00A0(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_OverscanPercentage : 1;                  // 0x00A0(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	EMoviePipelineShutterTiming                   ShutterTiming;                                     // 0x00A1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A2[0x2];                                       // 0x00A2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         OverscanPercentage;                                // 0x00A4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("MovieGraphConditionGroupQuery_EditorFolder")
+		STATIC_CLASS_IMPL("MovieGraphCameraSettingNode")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"MovieGraphConditionGroupQuery_EditorFolder")
+		STATIC_NAME_IMPL(L"MovieGraphCameraSettingNode")
 	}
-	static class UMovieGraphConditionGroupQuery_EditorFolder* GetDefaultObj()
+	static class UMovieGraphCameraSettingNode* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UMovieGraphConditionGroupQuery_EditorFolder>();
+		return GetDefaultObjImpl<UMovieGraphCameraSettingNode>();
 	}
 };
-DUMPER7_ASSERTS_UMovieGraphConditionGroupQuery_EditorFolder;
-
-// Class MovieRenderPipelineCore.MovieGraphApplyCVarPresetNode
-// 0x0018 (0x00B8 - 0x00A0)
-class UMovieGraphApplyCVarPresetNode final : public UMovieGraphSettingNode
-{
-public:
-	uint8                                         bOverride_ConsoleVariablePreset : 1;               // 0x00A0(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IMovieSceneConsoleVariableTrackInterface> ConsoleVariablePreset;          // 0x00A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MovieGraphApplyCVarPresetNode")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MovieGraphApplyCVarPresetNode")
-	}
-	static class UMovieGraphApplyCVarPresetNode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMovieGraphApplyCVarPresetNode>();
-	}
-};
-DUMPER7_ASSERTS_UMovieGraphApplyCVarPresetNode;
+DUMPER7_ASSERTS_UMovieGraphCameraSettingNode;
 
 // Class MovieRenderPipelineCore.MovieGraphValueContainer
 // 0x0018 (0x0040 - 0x0028)
@@ -318,53 +241,161 @@ public:
 };
 DUMPER7_ASSERTS_UMovieGraphGlobalVariable;
 
-// Class MovieRenderPipelineCore.MovieGraphGlobalVariable_FrameNumber
+// Class MovieRenderPipelineCore.MovieGraphGlobalVariable_ShotName
 // 0x0000 (0x0078 - 0x0078)
-class UMovieGraphGlobalVariable_FrameNumber final : public UMovieGraphGlobalVariable
+class UMovieGraphGlobalVariable_ShotName final : public UMovieGraphGlobalVariable
 {
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("MovieGraphGlobalVariable_FrameNumber")
+		STATIC_CLASS_IMPL("MovieGraphGlobalVariable_ShotName")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"MovieGraphGlobalVariable_FrameNumber")
+		STATIC_NAME_IMPL(L"MovieGraphGlobalVariable_ShotName")
 	}
-	static class UMovieGraphGlobalVariable_FrameNumber* GetDefaultObj()
+	static class UMovieGraphGlobalVariable_ShotName* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UMovieGraphGlobalVariable_FrameNumber>();
+		return GetDefaultObjImpl<UMovieGraphGlobalVariable_ShotName>();
 	}
 };
-DUMPER7_ASSERTS_UMovieGraphGlobalVariable_FrameNumber;
+DUMPER7_ASSERTS_UMovieGraphGlobalVariable_ShotName;
 
-// Class MovieRenderPipelineCore.MoviePipelineInProcessExecutorSettings
-// 0x0030 (0x0068 - 0x0038)
-class UMoviePipelineInProcessExecutorSettings final : public UDeveloperSettings
+// Class MovieRenderPipelineCore.MoviePipelineGameMode
+// 0x0000 (0x0338 - 0x0338)
+class AMoviePipelineGameMode final : public AGameModeBase
 {
 public:
-	bool                                          bCloseEditor;                                      // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 AdditionalCommandLineArguments;                    // 0x0040(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 InheritedCommandLineArguments;                     // 0x0050(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, Config, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         InitialDelayFrameCount;                            // 0x0060(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MoviePipelineGameMode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MoviePipelineGameMode")
+	}
+	static class AMoviePipelineGameMode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AMoviePipelineGameMode>();
+	}
+};
+DUMPER7_ASSERTS_AMoviePipelineGameMode;
+
+// Class MovieRenderPipelineCore.MoviePipelineBase
+// 0x0060 (0x0088 - 0x0028)
+class UMoviePipelineBase : public UObject
+{
+public:
+	TMulticastInlineDelegate<void(const struct FMoviePipelineOutputData& Results)> OnMoviePipelineWorkFinishedDelegate; // 0x0028(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const struct FMoviePipelineOutputData& Results)> OnMoviePipelineShotWorkFinishedDelegate; // 0x0038(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_48[0x40];                                      // 0x0048(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void RequestShutdown(bool bIsError);
+	void Shutdown(bool bIsError);
+
+	EMovieRenderPipelineState GetPipelineState() const;
+	bool IsShutdownRequested() const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("MoviePipelineInProcessExecutorSettings")
+		STATIC_CLASS_IMPL("MoviePipelineBase")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"MoviePipelineInProcessExecutorSettings")
+		STATIC_NAME_IMPL(L"MoviePipelineBase")
 	}
-	static class UMoviePipelineInProcessExecutorSettings* GetDefaultObj()
+	static class UMoviePipelineBase* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UMoviePipelineInProcessExecutorSettings>();
+		return GetDefaultObjImpl<UMoviePipelineBase>();
 	}
 };
-DUMPER7_ASSERTS_UMoviePipelineInProcessExecutorSettings;
+DUMPER7_ASSERTS_UMoviePipelineBase;
+
+// Class MovieRenderPipelineCore.MovieGraphApplyCVarPresetNode
+// 0x0018 (0x00B8 - 0x00A0)
+class UMovieGraphApplyCVarPresetNode final : public UMovieGraphSettingNode
+{
+public:
+	uint8                                         bOverride_ConsoleVariablePreset : 1;               // 0x00A0(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IMovieSceneConsoleVariableTrackInterface> ConsoleVariablePreset;          // 0x00A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MovieGraphApplyCVarPresetNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieGraphApplyCVarPresetNode")
+	}
+	static class UMovieGraphApplyCVarPresetNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMovieGraphApplyCVarPresetNode>();
+	}
+};
+DUMPER7_ASSERTS_UMovieGraphApplyCVarPresetNode;
+
+// Class MovieRenderPipelineCore.MovieGraphConditionGroupQueryBase
+// 0x0008 (0x0030 - 0x0028)
+class UMovieGraphConditionGroupQueryBase : public UObject
+{
+public:
+	EMovieGraphConditionGroupQueryOpType          OpType;                                            // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bIsEnabled;                                        // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void SetEnabled(const bool bEnabled);
+	void SetOperationType(const EMovieGraphConditionGroupQueryOpType OperationType);
+
+	void Evaluate(const TArray<class AActor*>& InActorsToQuery, const class UWorld* InWorld, TSet<class AActor*>* OutMatchingActors) const;
+	EMovieGraphConditionGroupQueryOpType GetOperationType() const;
+	bool IsEditorOnlyQuery() const;
+	bool IsEnabled() const;
+	bool IsFirstConditionGroupQuery() const;
+	bool ShouldHidePropertyNames() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MovieGraphConditionGroupQueryBase")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieGraphConditionGroupQueryBase")
+	}
+	static class UMovieGraphConditionGroupQueryBase* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMovieGraphConditionGroupQueryBase>();
+	}
+};
+DUMPER7_ASSERTS_UMovieGraphConditionGroupQueryBase;
+
+// Class MovieRenderPipelineCore.MovieGraphConditionGroupQuery_ActorTagName
+// 0x0010 (0x0040 - 0x0030)
+class UMovieGraphConditionGroupQuery_ActorTagName final : public UMovieGraphConditionGroupQueryBase
+{
+public:
+	class FString                                 TagsToMatch;                                       // 0x0030(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MovieGraphConditionGroupQuery_ActorTagName")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieGraphConditionGroupQuery_ActorTagName")
+	}
+	static class UMovieGraphConditionGroupQuery_ActorTagName* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMovieGraphConditionGroupQuery_ActorTagName>();
+	}
+};
+DUMPER7_ASSERTS_UMovieGraphConditionGroupQuery_ActorTagName;
 
 // Class MovieRenderPipelineCore.MovieGraphFileOutputNode
 // 0x0018 (0x00B8 - 0x00A0)
@@ -391,28 +422,64 @@ public:
 };
 DUMPER7_ASSERTS_UMovieGraphFileOutputNode;
 
-// Class MovieRenderPipelineCore.MovieGraphProjectSettings
-// 0x0010 (0x0048 - 0x0038)
-class UMovieGraphProjectSettings final : public UDeveloperSettings
+// Class MovieRenderPipelineCore.MovieGraphRenderPassNode
+// 0x0000 (0x00A0 - 0x00A0)
+class UMovieGraphRenderPassNode : public UMovieGraphSettingNode
 {
 public:
-	TArray<struct FMovieGraphNamedResolution>     DefaultNamedResolutions;                           // 0x0038(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MovieGraphRenderPassNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieGraphRenderPassNode")
+	}
+	static class UMovieGraphRenderPassNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMovieGraphRenderPassNode>();
+	}
+};
+DUMPER7_ASSERTS_UMovieGraphRenderPassNode;
+
+// Class MovieRenderPipelineCore.MovieGraphConditionGroup
+// 0x00C8 (0x00F0 - 0x0028)
+class UMovieGraphConditionGroup final : public UObject
+{
+public:
+	struct FGuid                                  ID;                                                // 0x0028(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	EMovieGraphConditionGroupOpType               OpType;                                            // 0x0038(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UMovieGraphConditionGroupQueryBase*> Queries;                                       // 0x0040(0x0010)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
+	TSet<class AActor*>                           QueryResult;                                       // 0x0050(0x0050)(Transient, NativeAccessSpecifierPrivate)
+	TSet<class AActor*>                           EvaluationResult;                                  // 0x00A0(0x0050)(Transient, NativeAccessSpecifierPrivate)
+
+public:
+	class UMovieGraphConditionGroupQueryBase* AddQuery(const TSubclassOf<class UMovieGraphConditionGroupQueryBase>& InQueryType, const int32 InsertIndex);
+	bool MoveQueryToIndex(class UMovieGraphConditionGroupQueryBase* InQuery, const int32 NewIndex);
+	bool RemoveQuery(class UMovieGraphConditionGroupQueryBase* InQuery);
+	void SetOperationType(const EMovieGraphConditionGroupOpType OperationType);
+
+	TSet<class AActor*> Evaluate(const class UWorld* InWorld) const;
+	EMovieGraphConditionGroupOpType GetOperationType() const;
+	const TArray<class UMovieGraphConditionGroupQueryBase*> GetQueries() const;
+	bool IsFirstConditionGroup() const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("MovieGraphProjectSettings")
+		STATIC_CLASS_IMPL("MovieGraphConditionGroup")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"MovieGraphProjectSettings")
+		STATIC_NAME_IMPL(L"MovieGraphConditionGroup")
 	}
-	static class UMovieGraphProjectSettings* GetDefaultObj()
+	static class UMovieGraphConditionGroup* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UMovieGraphProjectSettings>();
+		return GetDefaultObjImpl<UMovieGraphConditionGroup>();
 	}
 };
-DUMPER7_ASSERTS_UMovieGraphProjectSettings;
+DUMPER7_ASSERTS_UMovieGraphConditionGroup;
 
 // Class MovieRenderPipelineCore.MovieGraphAudioOutputNode
 // 0x0010 (0x00C8 - 0x00B8)
@@ -505,116 +572,6 @@ public:
 };
 DUMPER7_ASSERTS_UMovieGraphBranchNode;
 
-// Class MovieRenderPipelineCore.MovieGraphInterfaceBase
-// 0x0008 (0x0080 - 0x0078)
-class UMovieGraphInterfaceBase : public UMovieGraphMember
-{
-public:
-	bool                                          bIsBranch;                                         // 0x0078(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MovieGraphInterfaceBase")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MovieGraphInterfaceBase")
-	}
-	static class UMovieGraphInterfaceBase* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMovieGraphInterfaceBase>();
-	}
-};
-DUMPER7_ASSERTS_UMovieGraphInterfaceBase;
-
-// Class MovieRenderPipelineCore.MovieGraphOutput
-// 0x0000 (0x0080 - 0x0080)
-class UMovieGraphOutput final : public UMovieGraphInterfaceBase
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MovieGraphOutput")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MovieGraphOutput")
-	}
-	static class UMovieGraphOutput* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMovieGraphOutput>();
-	}
-};
-DUMPER7_ASSERTS_UMovieGraphOutput;
-
-// Class MovieRenderPipelineCore.MovieRenderDebugWidget
-// 0x0000 (0x02F8 - 0x02F8)
-class UMovieRenderDebugWidget final : public UUserWidget
-{
-public:
-	void OnInitializedForPipeline(class UMoviePipeline* ForPipeline);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MovieRenderDebugWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MovieRenderDebugWidget")
-	}
-	static class UMovieRenderDebugWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMovieRenderDebugWidget>();
-	}
-};
-DUMPER7_ASSERTS_UMovieRenderDebugWidget;
-
-// Class MovieRenderPipelineCore.MovieGraphRenderPassNode
-// 0x0000 (0x00A0 - 0x00A0)
-class UMovieGraphRenderPassNode : public UMovieGraphSettingNode
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MovieGraphRenderPassNode")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MovieGraphRenderPassNode")
-	}
-	static class UMovieGraphRenderPassNode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMovieGraphRenderPassNode>();
-	}
-};
-DUMPER7_ASSERTS_UMovieGraphRenderPassNode;
-
-// Class MovieRenderPipelineCore.MovieGraphConditionGroupQuery_Actor
-// 0x0010 (0x0040 - 0x0030)
-class UMovieGraphConditionGroupQuery_Actor final : public UMovieGraphConditionGroupQueryBase
-{
-public:
-	TArray<TSoftObjectPtr<class AActor>>          ActorsToMatch;                                     // 0x0030(0x0010)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MovieGraphConditionGroupQuery_Actor")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MovieGraphConditionGroupQuery_Actor")
-	}
-	static class UMovieGraphConditionGroupQuery_Actor* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMovieGraphConditionGroupQuery_Actor>();
-	}
-};
-DUMPER7_ASSERTS_UMovieGraphConditionGroupQuery_Actor;
-
 // Class MovieRenderPipelineCore.MovieGraphWidgetRendererBaseNode
 // 0x0078 (0x0118 - 0x00A0)
 class UMovieGraphWidgetRendererBaseNode : public UMovieGraphRenderPassNode
@@ -639,29 +596,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UMovieGraphWidgetRendererBaseNode;
-
-// Class MovieRenderPipelineCore.MovieGraphConditionGroupQuery_Sublevel
-// 0x0010 (0x0040 - 0x0030)
-class UMovieGraphConditionGroupQuery_Sublevel final : public UMovieGraphConditionGroupQueryBase
-{
-public:
-	TArray<TSoftObjectPtr<class UWorld>>          SubLevels;                                         // 0x0030(0x0010)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MovieGraphConditionGroupQuery_Sublevel")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MovieGraphConditionGroupQuery_Sublevel")
-	}
-	static class UMovieGraphConditionGroupQuery_Sublevel* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMovieGraphConditionGroupQuery_Sublevel>();
-	}
-};
-DUMPER7_ASSERTS_UMovieGraphConditionGroupQuery_Sublevel;
 
 // Class MovieRenderPipelineCore.MovieGraphBurnInNode
 // 0x0078 (0x0190 - 0x0118)
@@ -711,33 +645,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UMovieGraphBurnInWidget;
-
-// Class MovieRenderPipelineCore.MovieGraphCameraSettingNode
-// 0x0008 (0x00A8 - 0x00A0)
-class UMovieGraphCameraSettingNode final : public UMovieGraphSettingNode
-{
-public:
-	uint8                                         bOverride_ShutterTiming : 1;                       // 0x00A0(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverride_OverscanPercentage : 1;                  // 0x00A0(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	EMoviePipelineShutterTiming                   ShutterTiming;                                     // 0x00A1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A2[0x2];                                       // 0x00A2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         OverscanPercentage;                                // 0x00A4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MovieGraphCameraSettingNode")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MovieGraphCameraSettingNode")
-	}
-	static class UMovieGraphCameraSettingNode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMovieGraphCameraSettingNode>();
-	}
-};
-DUMPER7_ASSERTS_UMovieGraphCameraSettingNode;
 
 // Class MovieRenderPipelineCore.MovieGraphCollectionNode
 // 0x0010 (0x00B0 - 0x00A0)
@@ -812,26 +719,6 @@ public:
 };
 DUMPER7_ASSERTS_UMovieGraphCommandLineEncoderNode;
 
-// Class MovieRenderPipelineCore.MovieGraphGlobalVariable_ShotName
-// 0x0000 (0x0078 - 0x0078)
-class UMovieGraphGlobalVariable_ShotName final : public UMovieGraphGlobalVariable
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MovieGraphGlobalVariable_ShotName")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MovieGraphGlobalVariable_ShotName")
-	}
-	static class UMovieGraphGlobalVariable_ShotName* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMovieGraphGlobalVariable_ShotName>();
-	}
-};
-DUMPER7_ASSERTS_UMovieGraphGlobalVariable_ShotName;
-
 // Class MovieRenderPipelineCore.MovieGraphGlobalVariable_SequenceName
 // 0x0000 (0x0078 - 0x0078)
 class UMovieGraphGlobalVariable_SequenceName final : public UMovieGraphGlobalVariable
@@ -851,6 +738,26 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UMovieGraphGlobalVariable_SequenceName;
+
+// Class MovieRenderPipelineCore.MovieGraphGlobalVariable_FrameNumber
+// 0x0000 (0x0078 - 0x0078)
+class UMovieGraphGlobalVariable_FrameNumber final : public UMovieGraphGlobalVariable
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MovieGraphGlobalVariable_FrameNumber")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieGraphGlobalVariable_FrameNumber")
+	}
+	static class UMovieGraphGlobalVariable_FrameNumber* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMovieGraphGlobalVariable_FrameNumber>();
+	}
+};
+DUMPER7_ASSERTS_UMovieGraphGlobalVariable_FrameNumber;
 
 // Class MovieRenderPipelineCore.MovieGraphGlobalVariable_CameraName
 // 0x0000 (0x0078 - 0x0078)
@@ -872,6 +779,30 @@ public:
 };
 DUMPER7_ASSERTS_UMovieGraphGlobalVariable_CameraName;
 
+// Class MovieRenderPipelineCore.MovieGraphInterfaceBase
+// 0x0008 (0x0080 - 0x0078)
+class UMovieGraphInterfaceBase : public UMovieGraphMember
+{
+public:
+	bool                                          bIsBranch;                                         // 0x0078(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MovieGraphInterfaceBase")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieGraphInterfaceBase")
+	}
+	static class UMovieGraphInterfaceBase* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMovieGraphInterfaceBase>();
+	}
+};
+DUMPER7_ASSERTS_UMovieGraphInterfaceBase;
+
 // Class MovieRenderPipelineCore.MovieGraphInput
 // 0x0000 (0x0080 - 0x0080)
 class UMovieGraphInput final : public UMovieGraphInterfaceBase
@@ -891,6 +822,26 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UMovieGraphInput;
+
+// Class MovieRenderPipelineCore.MovieGraphOutput
+// 0x0000 (0x0080 - 0x0080)
+class UMovieGraphOutput final : public UMovieGraphInterfaceBase
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MovieGraphOutput")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieGraphOutput")
+	}
+	static class UMovieGraphOutput* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMovieGraphOutput>();
+	}
+};
+DUMPER7_ASSERTS_UMovieGraphOutput;
 
 // Class MovieRenderPipelineCore.MovieGraphEvaluatedConfig
 // 0x0050 (0x0078 - 0x0028)
@@ -1514,6 +1465,26 @@ public:
 };
 DUMPER7_ASSERTS_IMovieGraphPostRenderNode;
 
+// Class MovieRenderPipelineCore.MovieGraphOutputNode
+// 0x0000 (0x00A0 - 0x00A0)
+class UMovieGraphOutputNode final : public UMovieGraphNode
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MovieGraphOutputNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieGraphOutputNode")
+	}
+	static class UMovieGraphOutputNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMovieGraphOutputNode>();
+	}
+};
+DUMPER7_ASSERTS_UMovieGraphOutputNode;
+
 // Class MovieRenderPipelineCore.MovieGraphPin
 // 0x0038 (0x0060 - 0x0028)
 class UMovieGraphPin final : public UObject
@@ -1541,38 +1512,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UMovieGraphPin;
-
-// Class MovieRenderPipelineCore.MoviePipelineBase
-// 0x0060 (0x0088 - 0x0028)
-class UMoviePipelineBase : public UObject
-{
-public:
-	TMulticastInlineDelegate<void(const struct FMoviePipelineOutputData& Results)> OnMoviePipelineWorkFinishedDelegate; // 0x0028(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(const struct FMoviePipelineOutputData& Results)> OnMoviePipelineShotWorkFinishedDelegate; // 0x0038(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_48[0x40];                                      // 0x0048(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void RequestShutdown(bool bIsError);
-	void Shutdown(bool bIsError);
-
-	EMovieRenderPipelineState GetPipelineState() const;
-	bool IsShutdownRequested() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MoviePipelineBase")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MoviePipelineBase")
-	}
-	static class UMoviePipelineBase* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMoviePipelineBase>();
-	}
-};
-DUMPER7_ASSERTS_UMoviePipelineBase;
 
 // Class MovieRenderPipelineCore.MovieGraphPipeline
 // 0x0150 (0x01D8 - 0x0088)
@@ -1625,6 +1564,29 @@ public:
 };
 DUMPER7_ASSERTS_UMovieGraphPipeline;
 
+// Class MovieRenderPipelineCore.MovieGraphProjectSettings
+// 0x0010 (0x0048 - 0x0038)
+class UMovieGraphProjectSettings final : public UDeveloperSettings
+{
+public:
+	TArray<struct FMovieGraphNamedResolution>     DefaultNamedResolutions;                           // 0x0038(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MovieGraphProjectSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieGraphProjectSettings")
+	}
+	static class UMovieGraphProjectSettings* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMovieGraphProjectSettings>();
+	}
+};
+DUMPER7_ASSERTS_UMovieGraphProjectSettings;
+
 // Class MovieRenderPipelineCore.MovieGraphRemoveRenderSettingNode
 // 0x0008 (0x00A8 - 0x00A0)
 class UMovieGraphRemoveRenderSettingNode final : public UMovieGraphNode
@@ -1673,28 +1635,28 @@ public:
 };
 DUMPER7_ASSERTS_UMovieGraphRenderLayerNode;
 
-// Class MovieRenderPipelineCore.MovieGraphConditionGroupQuery_ActorTagName
+// Class MovieRenderPipelineCore.MovieGraphConditionGroupQuery_Actor
 // 0x0010 (0x0040 - 0x0030)
-class UMovieGraphConditionGroupQuery_ActorTagName final : public UMovieGraphConditionGroupQueryBase
+class UMovieGraphConditionGroupQuery_Actor final : public UMovieGraphConditionGroupQueryBase
 {
 public:
-	class FString                                 TagsToMatch;                                       // 0x0030(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<TSoftObjectPtr<class AActor>>          ActorsToMatch;                                     // 0x0030(0x0010)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("MovieGraphConditionGroupQuery_ActorTagName")
+		STATIC_CLASS_IMPL("MovieGraphConditionGroupQuery_Actor")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"MovieGraphConditionGroupQuery_ActorTagName")
+		STATIC_NAME_IMPL(L"MovieGraphConditionGroupQuery_Actor")
 	}
-	static class UMovieGraphConditionGroupQuery_ActorTagName* GetDefaultObj()
+	static class UMovieGraphConditionGroupQuery_Actor* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UMovieGraphConditionGroupQuery_ActorTagName>();
+		return GetDefaultObjImpl<UMovieGraphConditionGroupQuery_Actor>();
 	}
 };
-DUMPER7_ASSERTS_UMovieGraphConditionGroupQuery_ActorTagName;
+DUMPER7_ASSERTS_UMovieGraphConditionGroupQuery_Actor;
 
 // Class MovieRenderPipelineCore.MovieGraphConditionGroupQuery_ActorName
 // 0x0010 (0x0040 - 0x0030)
@@ -1790,44 +1752,51 @@ public:
 };
 DUMPER7_ASSERTS_UMovieGraphConditionGroupQuery_ComponentType;
 
-// Class MovieRenderPipelineCore.MovieGraphConditionGroup
-// 0x00C8 (0x00F0 - 0x0028)
-class UMovieGraphConditionGroup final : public UObject
+// Class MovieRenderPipelineCore.MovieGraphConditionGroupQuery_EditorFolder
+// 0x0010 (0x0040 - 0x0030)
+class UMovieGraphConditionGroupQuery_EditorFolder final : public UMovieGraphConditionGroupQueryBase
 {
 public:
-	struct FGuid                                  ID;                                                // 0x0028(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	EMovieGraphConditionGroupOpType               OpType;                                            // 0x0038(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UMovieGraphConditionGroupQueryBase*> Queries;                                       // 0x0040(0x0010)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
-	TSet<class AActor*>                           QueryResult;                                       // 0x0050(0x0050)(Transient, NativeAccessSpecifierPrivate)
-	TSet<class AActor*>                           EvaluationResult;                                  // 0x00A0(0x0050)(Transient, NativeAccessSpecifierPrivate)
-
-public:
-	class UMovieGraphConditionGroupQueryBase* AddQuery(const TSubclassOf<class UMovieGraphConditionGroupQueryBase>& InQueryType, const int32 InsertIndex);
-	bool MoveQueryToIndex(class UMovieGraphConditionGroupQueryBase* InQuery, const int32 NewIndex);
-	bool RemoveQuery(class UMovieGraphConditionGroupQueryBase* InQuery);
-	void SetOperationType(const EMovieGraphConditionGroupOpType OperationType);
-
-	TSet<class AActor*> Evaluate(const class UWorld* InWorld) const;
-	EMovieGraphConditionGroupOpType GetOperationType() const;
-	const TArray<class UMovieGraphConditionGroupQueryBase*> GetQueries() const;
-	bool IsFirstConditionGroup() const;
+	TArray<class FName>                           FolderPaths;                                       // 0x0030(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("MovieGraphConditionGroup")
+		STATIC_CLASS_IMPL("MovieGraphConditionGroupQuery_EditorFolder")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"MovieGraphConditionGroup")
+		STATIC_NAME_IMPL(L"MovieGraphConditionGroupQuery_EditorFolder")
 	}
-	static class UMovieGraphConditionGroup* GetDefaultObj()
+	static class UMovieGraphConditionGroupQuery_EditorFolder* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UMovieGraphConditionGroup>();
+		return GetDefaultObjImpl<UMovieGraphConditionGroupQuery_EditorFolder>();
 	}
 };
-DUMPER7_ASSERTS_UMovieGraphConditionGroup;
+DUMPER7_ASSERTS_UMovieGraphConditionGroupQuery_EditorFolder;
+
+// Class MovieRenderPipelineCore.MovieGraphConditionGroupQuery_Sublevel
+// 0x0010 (0x0040 - 0x0030)
+class UMovieGraphConditionGroupQuery_Sublevel final : public UMovieGraphConditionGroupQueryBase
+{
+public:
+	TArray<TSoftObjectPtr<class UWorld>>          SubLevels;                                         // 0x0030(0x0010)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MovieGraphConditionGroupQuery_Sublevel")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieGraphConditionGroupQuery_Sublevel")
+	}
+	static class UMovieGraphConditionGroupQuery_Sublevel* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMovieGraphConditionGroupQuery_Sublevel>();
+	}
+};
+DUMPER7_ASSERTS_UMovieGraphConditionGroupQuery_Sublevel;
 
 // Class MovieRenderPipelineCore.MovieGraphCollection
 // 0x0020 (0x0048 - 0x0028)
@@ -2389,26 +2358,6 @@ public:
 };
 DUMPER7_ASSERTS_UMoviePipelineCameraSetting;
 
-// Class MovieRenderPipelineCore.MoviePipelineGameMode
-// 0x0000 (0x0338 - 0x0338)
-class AMoviePipelineGameMode final : public AGameModeBase
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MoviePipelineGameMode")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MoviePipelineGameMode")
-	}
-	static class AMoviePipelineGameMode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<AMoviePipelineGameMode>();
-	}
-};
-DUMPER7_ASSERTS_AMoviePipelineGameMode;
-
 // Class MovieRenderPipelineCore.MoviePipelineHighResSetting
 // 0x0020 (0x0068 - 0x0048)
 class UMoviePipelineHighResSetting final : public UMoviePipelineSetting
@@ -2438,6 +2387,34 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UMoviePipelineHighResSetting;
+
+// Class MovieRenderPipelineCore.MoviePipelineInProcessExecutorSettings
+// 0x0030 (0x0068 - 0x0038)
+class UMoviePipelineInProcessExecutorSettings final : public UDeveloperSettings
+{
+public:
+	bool                                          bCloseEditor;                                      // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 AdditionalCommandLineArguments;                    // 0x0040(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 InheritedCommandLineArguments;                     // 0x0050(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, Config, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         InitialDelayFrameCount;                            // 0x0060(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MoviePipelineInProcessExecutorSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MoviePipelineInProcessExecutorSettings")
+	}
+	static class UMoviePipelineInProcessExecutorSettings* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMoviePipelineInProcessExecutorSettings>();
+	}
+};
+DUMPER7_ASSERTS_UMoviePipelineInProcessExecutorSettings;
 
 // Class MovieRenderPipelineCore.MoviePipelineOutputBase
 // 0x0000 (0x0048 - 0x0048)
@@ -2512,6 +2489,29 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UMoviePipelineViewFamilySetting;
+
+// Class MovieRenderPipelineCore.MovieRenderDebugWidget
+// 0x0000 (0x02F8 - 0x02F8)
+class UMovieRenderDebugWidget final : public UUserWidget
+{
+public:
+	void OnInitializedForPipeline(class UMoviePipeline* ForPipeline);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MovieRenderDebugWidget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieRenderDebugWidget")
+	}
+	static class UMovieRenderDebugWidget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMovieRenderDebugWidget>();
+	}
+};
+DUMPER7_ASSERTS_UMovieRenderDebugWidget;
 
 // Class MovieRenderPipelineCore.MovieGraphRenderPreviewWidget
 // 0x0000 (0x02F8 - 0x02F8)

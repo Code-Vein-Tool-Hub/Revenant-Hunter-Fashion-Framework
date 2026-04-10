@@ -56,15 +56,6 @@ public:
 };
 DUMPER7_ASSERTS_WDT_DescriptionLog_C_SetPageIndex;
 
-// Function WDT_DescriptionLog.WDT_DescriptionLog_C.SetDescription
-// 0x0038 (0x0038 - 0x0000)
-struct WDT_DescriptionLog_C_SetDescription final
-{
-public:
-	struct FDescriptionInfoTable                  InDescriptionData;                                 // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm)
-};
-DUMPER7_ASSERTS_WDT_DescriptionLog_C_SetDescription;
-
 // Function WDT_DescriptionLog.WDT_DescriptionLog_C.SetInstruction
 // 0x0048 (0x0048 - 0x0000)
 struct WDT_DescriptionLog_C_SetInstruction final
@@ -73,6 +64,15 @@ public:
 	struct FInstructionInfoTable                  InInstructionData;                                 // 0x0000(0x0048)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
 DUMPER7_ASSERTS_WDT_DescriptionLog_C_SetInstruction;
+
+// Function WDT_DescriptionLog.WDT_DescriptionLog_C.SetDescription
+// 0x0038 (0x0038 - 0x0000)
+struct WDT_DescriptionLog_C_SetDescription final
+{
+public:
+	struct FDescriptionInfoTable                  InDescriptionData;                                 // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm)
+};
+DUMPER7_ASSERTS_WDT_DescriptionLog_C_SetDescription;
 
 }
 

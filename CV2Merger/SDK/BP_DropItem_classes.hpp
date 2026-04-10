@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_DropItem.BP_DropItem_C
-// 0x0000 (0x04A0 - 0x04A0)
+// 0x0000 (0x0528 - 0x0528)
 class ABP_DropItem_C final : public ABP_PickupItem_C
 {
 public:

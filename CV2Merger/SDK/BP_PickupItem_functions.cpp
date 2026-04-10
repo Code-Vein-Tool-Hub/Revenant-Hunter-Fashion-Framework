@@ -57,60 +57,6 @@ void ABP_PickupItem_C::OnInteractionEnd_BP(class AActor* InActor)
 }
 
 
-// Function BP_PickupItem.BP_PickupItem_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_PickupItem_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PickupItem_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_PickupItem.BP_PickupItem_C.ReceiveEndPlay
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// EEndPlayReason                          EndPlayReason                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_PickupItem_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PickupItem_C", "ReceiveEndPlay");
-
-	Params::BP_PickupItem_C_ReceiveEndPlay Parms{};
-
-	Parms.EndPlayReason = EndPlayReason;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_PickupItem.BP_PickupItem_C.UpdateEffect_BP
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// const EArticleEffectRarity              InRarity                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_PickupItem_C::UpdateEffect_BP(const EArticleEffectRarity InRarity)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PickupItem_C", "UpdateEffect_BP");
-
-	Params::BP_PickupItem_C_UpdateEffect_BP Parms{};
-
-	Parms.InRarity = InRarity;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_PickupItem.BP_PickupItem_C.UpdateHiddenByGameFlag_BP
 // (Event, Protected, BlueprintEvent)
 // Parameters:
@@ -128,20 +74,6 @@ void ABP_PickupItem_C::UpdateHiddenByGameFlag_BP(const bool bShouldHide)
 	Parms.bShouldHide = bShouldHide;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_PickupItem.BP_PickupItem_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_PickupItem_C::UserConstructionScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PickupItem_C", "UserConstructionScript");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

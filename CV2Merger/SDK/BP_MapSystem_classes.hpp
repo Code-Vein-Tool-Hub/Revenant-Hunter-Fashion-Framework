@@ -11,30 +11,30 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "STR_FeatureQuestList_structs.hpp"
 #include "Extensions_structs.hpp"
 #include "Extensions_classes.hpp"
 #include "GameplayTags_structs.hpp"
-#include "STR_FeatureQuestList_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_MapSystem.BP_MapSystem_C
-// 0x0098 (0x0860 - 0x07C8)
+// 0x0098 (0x0870 - 0x07D8)
 class ABP_MapSystem_C final : public AMapSystem
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x07C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x07D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 TopLeftMapAreaTarget;                              // 0x07D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 TopRightMapAreaTarget;                             // 0x07E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 BottomRightMapAreaTarget;                          // 0x07E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 BottomLeftMapAreaTarget;                           // 0x07F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          MapTargetsFound;                                   // 0x07F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7F9[0x7];                                      // 0x07F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FFieldTargetHandle>             UserMarkerFieldTargetHandleArray;                  // 0x0800(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TMap<struct FGameplayTag, struct FSTR_FeatureQuestList> FeatureQuestMap;                         // 0x0810(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x07D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x07E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 TopLeftMapAreaTarget;                              // 0x07E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 TopRightMapAreaTarget;                             // 0x07F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 BottomRightMapAreaTarget;                          // 0x07F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 BottomLeftMapAreaTarget;                           // 0x0800(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          MapTargetsFound;                                   // 0x0808(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_809[0x7];                                      // 0x0809(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FFieldTargetHandle>             UserMarkerFieldTargetHandleArray;                  // 0x0810(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TMap<struct FGameplayTag, struct FSTR_FeatureQuestList> FeatureQuestMap;                         // 0x0820(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void AddUserMarkerFieldTarget(const struct FFieldTargetInfo& InFieldTargetInfo, struct FFieldTargetHandle* OutFieldTargetHandle, bool* OutSuccessful);

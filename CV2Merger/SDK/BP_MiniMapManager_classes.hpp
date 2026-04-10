@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_MiniMapManager.BP_MiniMapManager_C
-// 0x0000 (0x0168 - 0x0168)
+// 0x0000 (0x0180 - 0x0180)
 class UBP_MiniMapManager_C final : public UMiniMapManager
 {
 public:

@@ -135,16 +135,6 @@ public:
 };
 DUMPER7_ASSERTS_WDT_FieldMenu_C_UnequipSelectedPiece;
 
-// Function WDT_FieldMenu.WDT_FieldMenu_C.TransitToTutorialMenu
-// 0x0018 (0x0018 - 0x0000)
-struct WDT_FieldMenu_C_TransitToTutorialMenu final
-{
-public:
-	TScriptInterface<class IIF_FieldMenuUIObject_C> K2Node_DynamicCast_AsIF_Field_Menu_UIObject;     // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_FieldMenu_C_TransitToTutorialMenu;
-
 // Function WDT_FieldMenu.WDT_FieldMenu_C.TransitToWeaponMenu
 // 0x0020 (0x0020 - 0x0000)
 struct WDT_FieldMenu_C_TransitToWeaponMenu final
@@ -156,6 +146,16 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WDT_FieldMenu_C_TransitToWeaponMenu;
+
+// Function WDT_FieldMenu.WDT_FieldMenu_C.TransitToTutorialMenu
+// 0x0018 (0x0018 - 0x0000)
+struct WDT_FieldMenu_C_TransitToTutorialMenu final
+{
+public:
+	TScriptInterface<class IIF_FieldMenuUIObject_C> K2Node_DynamicCast_AsIF_Field_Menu_UIObject;     // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_FieldMenu_C_TransitToTutorialMenu;
 
 // Function WDT_FieldMenu.WDT_FieldMenu_C.TransitToSupportMenu
 // 0x0018 (0x0018 - 0x0000)
@@ -177,16 +177,6 @@ public:
 };
 DUMPER7_ASSERTS_WDT_FieldMenu_C_TransitToStatusMenu;
 
-// Function WDT_FieldMenu.WDT_FieldMenu_C.TransitToJailMenu
-// 0x0018 (0x0018 - 0x0000)
-struct WDT_FieldMenu_C_TransitToJailMenu final
-{
-public:
-	TScriptInterface<class IIF_FieldMenuUIObject_C> K2Node_DynamicCast_AsIF_Field_Menu_UIObject;     // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_FieldMenu_C_TransitToJailMenu;
-
 // Function WDT_FieldMenu.WDT_FieldMenu_C.TransitToPhotoModeMenu
 // 0x0018 (0x0018 - 0x0000)
 struct WDT_FieldMenu_C_TransitToPhotoModeMenu final
@@ -197,16 +187,6 @@ public:
 };
 DUMPER7_ASSERTS_WDT_FieldMenu_C_TransitToPhotoModeMenu;
 
-// Function WDT_FieldMenu.WDT_FieldMenu_C.TransitToItemSyntheticMenu
-// 0x0018 (0x0018 - 0x0000)
-struct WDT_FieldMenu_C_TransitToItemSyntheticMenu final
-{
-public:
-	TScriptInterface<class IIF_FieldMenuUIObject_C> K2Node_DynamicCast_AsIF_Field_Menu_UIObject;     // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_FieldMenu_C_TransitToItemSyntheticMenu;
-
 // Function WDT_FieldMenu.WDT_FieldMenu_C.TransitToMatchingMenu
 // 0x0018 (0x0018 - 0x0000)
 struct WDT_FieldMenu_C_TransitToMatchingMenu final
@@ -216,6 +196,36 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WDT_FieldMenu_C_TransitToMatchingMenu;
+
+// Function WDT_FieldMenu.WDT_FieldMenu_C.TransitToKeywordMenu
+// 0x0018 (0x0018 - 0x0000)
+struct WDT_FieldMenu_C_TransitToKeywordMenu final
+{
+public:
+	TScriptInterface<class IIF_FieldMenuUIObject_C> K2Node_DynamicCast_AsIF_Field_Menu_UIObject;     // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_FieldMenu_C_TransitToKeywordMenu;
+
+// Function WDT_FieldMenu.WDT_FieldMenu_C.TransitToJailMenu
+// 0x0018 (0x0018 - 0x0000)
+struct WDT_FieldMenu_C_TransitToJailMenu final
+{
+public:
+	TScriptInterface<class IIF_FieldMenuUIObject_C> K2Node_DynamicCast_AsIF_Field_Menu_UIObject;     // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_FieldMenu_C_TransitToJailMenu;
+
+// Function WDT_FieldMenu.WDT_FieldMenu_C.TransitToItemSyntheticMenu
+// 0x0018 (0x0018 - 0x0000)
+struct WDT_FieldMenu_C_TransitToItemSyntheticMenu final
+{
+public:
+	TScriptInterface<class IIF_FieldMenuUIObject_C> K2Node_DynamicCast_AsIF_Field_Menu_UIObject;     // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_FieldMenu_C_TransitToItemSyntheticMenu;
 
 // Function WDT_FieldMenu.WDT_FieldMenu_C.TransitToItemShortcutMenu
 // 0x0020 (0x0020 - 0x0000)
@@ -228,16 +238,6 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WDT_FieldMenu_C_TransitToItemShortcutMenu;
-
-// Function WDT_FieldMenu.WDT_FieldMenu_C.TransitToKeywordMenu
-// 0x0018 (0x0018 - 0x0000)
-struct WDT_FieldMenu_C_TransitToKeywordMenu final
-{
-public:
-	TScriptInterface<class IIF_FieldMenuUIObject_C> K2Node_DynamicCast_AsIF_Field_Menu_UIObject;     // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_FieldMenu_C_TransitToKeywordMenu;
 
 // Function WDT_FieldMenu.WDT_FieldMenu_C.TransitToInventoryMenu
 // 0x0018 (0x0018 - 0x0000)
@@ -259,6 +259,16 @@ public:
 };
 DUMPER7_ASSERTS_WDT_FieldMenu_C_TransitToIndependentGadgetMenu;
 
+// Function WDT_FieldMenu.WDT_FieldMenu_C.TransitToDefensiveGadgetMenu
+// 0x0018 (0x0018 - 0x0000)
+struct WDT_FieldMenu_C_TransitToDefensiveGadgetMenu final
+{
+public:
+	TScriptInterface<class IIF_FieldMenuUIObject_C> K2Node_DynamicCast_AsIF_Field_Menu_UIObject;     // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_FieldMenu_C_TransitToDefensiveGadgetMenu;
+
 // Function WDT_FieldMenu.WDT_FieldMenu_C.TransitToBoosterMenu
 // 0x0020 (0x0020 - 0x0000)
 struct WDT_FieldMenu_C_TransitToBoosterMenu final
@@ -271,26 +281,6 @@ public:
 };
 DUMPER7_ASSERTS_WDT_FieldMenu_C_TransitToBoosterMenu;
 
-// Function WDT_FieldMenu.WDT_FieldMenu_C.TransitToDefensiveGadgetMenu
-// 0x0018 (0x0018 - 0x0000)
-struct WDT_FieldMenu_C_TransitToDefensiveGadgetMenu final
-{
-public:
-	TScriptInterface<class IIF_FieldMenuUIObject_C> K2Node_DynamicCast_AsIF_Field_Menu_UIObject;     // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_FieldMenu_C_TransitToDefensiveGadgetMenu;
-
-// Function WDT_FieldMenu.WDT_FieldMenu_C.TransitConfigurationMenu
-// 0x0018 (0x0018 - 0x0000)
-struct WDT_FieldMenu_C_TransitConfigurationMenu final
-{
-public:
-	TScriptInterface<class IIF_FieldMenuUIObject_C> K2Node_DynamicCast_AsIF_Field_Menu_UIObject;     // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_FieldMenu_C_TransitConfigurationMenu;
-
 // Function WDT_FieldMenu.WDT_FieldMenu_C.TransitToBloodCodeMenu
 // 0x0020 (0x0020 - 0x0000)
 struct WDT_FieldMenu_C_TransitToBloodCodeMenu final
@@ -302,6 +292,16 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WDT_FieldMenu_C_TransitToBloodCodeMenu;
+
+// Function WDT_FieldMenu.WDT_FieldMenu_C.TransitConfigurationMenu
+// 0x0018 (0x0018 - 0x0000)
+struct WDT_FieldMenu_C_TransitConfigurationMenu final
+{
+public:
+	TScriptInterface<class IIF_FieldMenuUIObject_C> K2Node_DynamicCast_AsIF_Field_Menu_UIObject;     // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_FieldMenu_C_TransitConfigurationMenu;
 
 // Function WDT_FieldMenu.WDT_FieldMenu_C.SetProhibited
 // 0x0001 (0x0001 - 0x0000)
@@ -354,6 +354,23 @@ public:
 };
 DUMPER7_ASSERTS_WDT_FieldMenu_C_ResetWeapon;
 
+// Function WDT_FieldMenu.WDT_FieldMenu_C.ResetJail
+// 0x0180 (0x0180 - 0x0000)
+struct WDT_FieldMenu_C_ResetJail final
+{
+public:
+	TScriptInterface<class ITextureInterface>     CallFunc_SetLazyTexture_self_CastInput;            // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SetLazyTexture_ReturnValue;               // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetEquippedJailIndex_ReturnValue;         // 0x0014(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FUIJailInfo                            CallFunc_GetJailInfoByIndex_OutJailInfo;           // 0x0018(0x0148)()
+	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_161[0x7];                                      // 0x0161(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class ITextureInterface>     CallFunc_SetLazyTexture_self_CastInput_1;          // 0x0168(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SetLazyTexture_ReturnValue_1;             // 0x0178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_FieldMenu_C_ResetJail;
+
 // Function WDT_FieldMenu.WDT_FieldMenu_C.ResetItemShortcuts
 // 0x0110 (0x0110 - 0x0000)
 struct WDT_FieldMenu_C_ResetItemShortcuts final
@@ -386,23 +403,6 @@ public:
 };
 DUMPER7_ASSERTS_WDT_FieldMenu_C_ResetItemShortcuts;
 
-// Function WDT_FieldMenu.WDT_FieldMenu_C.ResetJail
-// 0x0180 (0x0180 - 0x0000)
-struct WDT_FieldMenu_C_ResetJail final
-{
-public:
-	TScriptInterface<class ITextureInterface>     CallFunc_SetLazyTexture_self_CastInput;            // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SetLazyTexture_ReturnValue;               // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetEquippedJailIndex_ReturnValue;         // 0x0014(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FUIJailInfo                            CallFunc_GetJailInfoByIndex_OutJailInfo;           // 0x0018(0x0148)()
-	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_161[0x7];                                      // 0x0161(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class ITextureInterface>     CallFunc_SetLazyTexture_self_CastInput_1;          // 0x0168(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SetLazyTexture_ReturnValue_1;             // 0x0178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_FieldMenu_C_ResetJail;
-
 // Function WDT_FieldMenu.WDT_FieldMenu_C.ResetIndependentGadget
 // 0x0128 (0x0128 - 0x0000)
 struct WDT_FieldMenu_C_ResetIndependentGadget final
@@ -431,6 +431,33 @@ public:
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WDT_FieldMenu_C_ResetExpToNext;
+
+// Function WDT_FieldMenu.WDT_FieldMenu_C.ResetDefensiveGadget
+// 0x0178 (0x0178 - 0x0000)
+struct WDT_FieldMenu_C_ResetDefensiveGadget final
+{
+public:
+	TScriptInterface<class ITextureInterface>     CallFunc_ClearSubTexture_self_CastInput;           // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_ClearSubTexture_ReturnValue;              // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class ITextureInterface>     CallFunc_ClearSubTexture_self_CastInput_1;         // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_ClearSubTexture_ReturnValue_1;            // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class ITextureInterface>     CallFunc_SetLazyTexture_self_CastInput;            // 0x0030(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SetLazyTexture_ReturnValue;               // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetEquippedDefensiveGadgetIndex_ReturnValue; // 0x0044(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FUIDefensiveGadgetInfo                 CallFunc_GetDefensiveGadgetInfoByIndex_OutDefensiveGadgetInfo; // 0x0048(0x00F8)()
+	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_141[0x7];                                      // 0x0141(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class ITextureInterface>     CallFunc_SetLazyTexture_self_CastInput_1;          // 0x0148(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SetLazyTexture_ReturnValue_1;             // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_159[0x7];                                      // 0x0159(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class ITextureInterface>     CallFunc_SetSubLazyTexture_self_CastInput;         // 0x0160(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SetSubLazyTexture_ReturnValue;            // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue;   // 0x0171(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_FieldMenu_C_ResetDefensiveGadget;
 
 // Function WDT_FieldMenu.WDT_FieldMenu_C.ResetBooster
 // 0x0100 (0x0100 - 0x0000)
@@ -463,33 +490,6 @@ public:
 	bool                                          CallFunc_SetLazyTexture_ReturnValue_1;             // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WDT_FieldMenu_C_ResetBooster;
-
-// Function WDT_FieldMenu.WDT_FieldMenu_C.ResetDefensiveGadget
-// 0x0178 (0x0178 - 0x0000)
-struct WDT_FieldMenu_C_ResetDefensiveGadget final
-{
-public:
-	TScriptInterface<class ITextureInterface>     CallFunc_ClearSubTexture_self_CastInput;           // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_ClearSubTexture_ReturnValue;              // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class ITextureInterface>     CallFunc_ClearSubTexture_self_CastInput_1;         // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_ClearSubTexture_ReturnValue_1;            // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class ITextureInterface>     CallFunc_SetLazyTexture_self_CastInput;            // 0x0030(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SetLazyTexture_ReturnValue;               // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetEquippedDefensiveGadgetIndex_ReturnValue; // 0x0044(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FUIDefensiveGadgetInfo                 CallFunc_GetDefensiveGadgetInfoByIndex_OutDefensiveGadgetInfo; // 0x0048(0x00F8)()
-	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_141[0x7];                                      // 0x0141(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class ITextureInterface>     CallFunc_SetLazyTexture_self_CastInput_1;          // 0x0148(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SetLazyTexture_ReturnValue_1;             // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_159[0x7];                                      // 0x0159(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class ITextureInterface>     CallFunc_SetSubLazyTexture_self_CastInput;         // 0x0160(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SetSubLazyTexture_ReturnValue;            // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue;   // 0x0171(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_FieldMenu_C_ResetDefensiveGadget;
 
 // Function WDT_FieldMenu.WDT_FieldMenu_C.ResetBloodCode
 // 0x0110 (0x0110 - 0x0000)
@@ -545,15 +545,6 @@ public:
 };
 DUMPER7_ASSERTS_WDT_FieldMenu_C_OnUpPressed;
 
-// Function WDT_FieldMenu.WDT_FieldMenu_C.OnMouseLeftClickMenuPiece
-// 0x0008 (0x0008 - 0x0000)
-struct WDT_FieldMenu_C_OnMouseLeftClickMenuPiece final
-{
-public:
-	class UMenuPieceBase*                         MenuPiece;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_FieldMenu_C_OnMouseLeftClickMenuPiece;
-
 // Function WDT_FieldMenu.WDT_FieldMenu_C.OnRightPressed
 // 0x0010 (0x0010 - 0x0000)
 struct WDT_FieldMenu_C_OnRightPressed final
@@ -566,6 +557,15 @@ public:
 };
 DUMPER7_ASSERTS_WDT_FieldMenu_C_OnRightPressed;
 
+// Function WDT_FieldMenu.WDT_FieldMenu_C.OnMouseLeftClickMenuPiece
+// 0x0008 (0x0008 - 0x0000)
+struct WDT_FieldMenu_C_OnMouseLeftClickMenuPiece final
+{
+public:
+	class UMenuPieceBase*                         MenuPiece;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_FieldMenu_C_OnMouseLeftClickMenuPiece;
+
 // Function WDT_FieldMenu.WDT_FieldMenu_C.OnMouseEnterMenuPiece
 // 0x0008 (0x0008 - 0x0000)
 struct WDT_FieldMenu_C_OnMouseEnterMenuPiece final
@@ -574,15 +574,6 @@ public:
 	class UMenuPieceBase*                         MenuPiece;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WDT_FieldMenu_C_OnMouseEnterMenuPiece;
-
-// Function WDT_FieldMenu.WDT_FieldMenu_C.OnFieldMenuCloseAnimationFinish
-// 0x0001 (0x0001 - 0x0000)
-struct WDT_FieldMenu_C_OnFieldMenuCloseAnimationFinish final
-{
-public:
-	bool                                          CallFunc_Close_ReturnValue;                        // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_FieldMenu_C_OnFieldMenuCloseAnimationFinish;
 
 // Function WDT_FieldMenu.WDT_FieldMenu_C.OnLeftPressed
 // 0x0010 (0x0010 - 0x0000)
@@ -595,6 +586,15 @@ public:
 	bool                                          CallFunc_SelectNextPieceByDirection_bOutIsNextSelectionSuccessful; // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WDT_FieldMenu_C_OnLeftPressed;
+
+// Function WDT_FieldMenu.WDT_FieldMenu_C.OnFieldMenuCloseAnimationFinish
+// 0x0001 (0x0001 - 0x0000)
+struct WDT_FieldMenu_C_OnFieldMenuCloseAnimationFinish final
+{
+public:
+	bool                                          CallFunc_Close_ReturnValue;                        // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_FieldMenu_C_OnFieldMenuCloseAnimationFinish;
 
 // Function WDT_FieldMenu.WDT_FieldMenu_C.OnFieldMenuButtonReleased
 // 0x0030 (0x0030 - 0x0000)
@@ -663,6 +663,17 @@ public:
 };
 DUMPER7_ASSERTS_WDT_FieldMenu_C_OnDecideReleased;
 
+// Function WDT_FieldMenu.WDT_FieldMenu_C.OnCancelReleased
+// 0x0003 (0x0003 - 0x0000)
+struct WDT_FieldMenu_C_OnCancelReleased final
+{
+public:
+	bool                                          CallFunc_IsActivated_ReturnValue;                  // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Close_ReturnValue;                        // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_FieldMenu_C_OnCancelReleased;
+
 // Function WDT_FieldMenu.WDT_FieldMenu_C.InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_5
 // 0x0030 (0x0030 - 0x0000)
 struct WDT_FieldMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_5 final
@@ -675,16 +686,17 @@ public:
 };
 DUMPER7_ASSERTS_WDT_FieldMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_5;
 
-// Function WDT_FieldMenu.WDT_FieldMenu_C.OnCancelReleased
-// 0x0003 (0x0003 - 0x0000)
-struct WDT_FieldMenu_C_OnCancelReleased final
+// Function WDT_FieldMenu.WDT_FieldMenu_C.InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEvent_2
+// 0x0030 (0x0030 - 0x0000)
+struct WDT_FieldMenu_C_InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEvent_2 final
 {
 public:
-	bool                                          CallFunc_IsActivated_ReturnValue;                  // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Close_ReturnValue;                        // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WDT_FieldMenu_C_OnCancelReleased;
+DUMPER7_ASSERTS_WDT_FieldMenu_C_InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEvent_2;
 
 // Function WDT_FieldMenu.WDT_FieldMenu_C.InpActEvt_IA_UI_MenuSpecial1_K2Node_EnhancedInputActionEvent_0
 // 0x0030 (0x0030 - 0x0000)
@@ -697,18 +709,6 @@ public:
 	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WDT_FieldMenu_C_InpActEvt_IA_UI_MenuSpecial1_K2Node_EnhancedInputActionEvent_0;
-
-// Function WDT_FieldMenu.WDT_FieldMenu_C.InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEvent_2
-// 0x0030 (0x0030 - 0x0000)
-struct WDT_FieldMenu_C_InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEvent_2 final
-{
-public:
-	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_FieldMenu_C_InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEvent_2;
 
 // Function WDT_FieldMenu.WDT_FieldMenu_C.InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent_3
 // 0x0030 (0x0030 - 0x0000)
@@ -734,18 +734,6 @@ public:
 };
 DUMPER7_ASSERTS_WDT_FieldMenu_C_InpActEvt_IA_UI_FieldMenu_K2Node_EnhancedInputActionEvent_1;
 
-// Function WDT_FieldMenu.WDT_FieldMenu_C.InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_7
-// 0x0030 (0x0030 - 0x0000)
-struct WDT_FieldMenu_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_7 final
-{
-public:
-	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_FieldMenu_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_7;
-
 // Function WDT_FieldMenu.WDT_FieldMenu_C.InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_4
 // 0x0030 (0x0030 - 0x0000)
 struct WDT_FieldMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_4 final
@@ -758,17 +746,17 @@ public:
 };
 DUMPER7_ASSERTS_WDT_FieldMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_4;
 
-// Function WDT_FieldMenu.WDT_FieldMenu_C.GetWeaponTile
-// 0x0018 (0x0018 - 0x0000)
-struct WDT_FieldMenu_C_GetWeaponTile final
+// Function WDT_FieldMenu.WDT_FieldMenu_C.InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_7
+// 0x0030 (0x0030 - 0x0000)
+struct WDT_FieldMenu_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_7 final
 {
 public:
-	EUIWeaponSlot                                 InSlot;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWDT_FieldMenuTileRegular_C*            OutTile;                                           // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WDT_FieldMenu_C_GetWeaponTile;
+DUMPER7_ASSERTS_WDT_FieldMenu_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_7;
 
 // Function WDT_FieldMenu.WDT_FieldMenu_C.InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_6
 // 0x0030 (0x0030 - 0x0000)
@@ -781,6 +769,28 @@ public:
 	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WDT_FieldMenu_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_6;
+
+// Function WDT_FieldMenu.WDT_FieldMenu_C.Initialize
+// 0x0002 (0x0002 - 0x0000)
+struct WDT_FieldMenu_C_Initialize final
+{
+public:
+	bool                                          CallFunc_HasDelegatesProperlyBound_ReturnValue;    // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_FieldMenu_C_Initialize;
+
+// Function WDT_FieldMenu.WDT_FieldMenu_C.GetWeaponTile
+// 0x0018 (0x0018 - 0x0000)
+struct WDT_FieldMenu_C_GetWeaponTile final
+{
+public:
+	EUIWeaponSlot                                 InSlot;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWDT_FieldMenuTileRegular_C*            OutTile;                                           // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_FieldMenu_C_GetWeaponTile;
 
 // Function WDT_FieldMenu.WDT_FieldMenu_C.GetItemShortcutTile
 // 0x0058 (0x0058 - 0x0000)
@@ -806,25 +816,6 @@ public:
 };
 DUMPER7_ASSERTS_WDT_FieldMenu_C_GetItemShortcutTile;
 
-// Function WDT_FieldMenu.WDT_FieldMenu_C.Initialize
-// 0x0002 (0x0002 - 0x0000)
-struct WDT_FieldMenu_C_Initialize final
-{
-public:
-	bool                                          CallFunc_HasDelegatesProperlyBound_ReturnValue;    // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_FieldMenu_C_Initialize;
-
-// Function WDT_FieldMenu.WDT_FieldMenu_C.FieldMenuCanvas_Event
-// 0x0008 (0x0008 - 0x0000)
-struct WDT_FieldMenu_C_FieldMenuCanvas_Event final
-{
-public:
-	class UCanvasPanel*                           FieldMenuCanvas_0;                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_FieldMenu_C_FieldMenuCanvas_Event;
-
 // Function WDT_FieldMenu.WDT_FieldMenu_C.GetBoosterTile
 // 0x0018 (0x0018 - 0x0000)
 struct WDT_FieldMenu_C_GetBoosterTile final
@@ -836,6 +827,15 @@ public:
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WDT_FieldMenu_C_GetBoosterTile;
+
+// Function WDT_FieldMenu.WDT_FieldMenu_C.FieldMenuCanvas_Event
+// 0x0008 (0x0008 - 0x0000)
+struct WDT_FieldMenu_C_FieldMenuCanvas_Event final
+{
+public:
+	class UCanvasPanel*                           FieldMenuCanvas_0;                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_FieldMenu_C_FieldMenuCanvas_Event;
 
 // Function WDT_FieldMenu.WDT_FieldMenu_C.ExecuteUbergraph_WDT_FieldMenu
 // 0x0448 (0x0448 - 0x0000)

@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "STR_BodyTrailEffectData_structs.hpp"
 #include "Extensions_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "GameplayTags_structs.hpp"
 #include "E_CharacterVisualControl_CharacterMode_structs.hpp"
+#include "STR_BodyTrailEffectData_structs.hpp"
 #include "Engine_structs.hpp"
+#include "GameplayTags_structs.hpp"
 
 
 namespace SDK::Params

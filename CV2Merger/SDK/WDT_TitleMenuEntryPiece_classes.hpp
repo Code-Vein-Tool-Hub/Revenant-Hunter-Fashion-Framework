@@ -35,15 +35,15 @@ public:
 	class UTexture2D*                             ItemIconTexture;                                   // 0x0628(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
 public:
-	bool Blink();
-	void BP_OnEntryReleased();
-	void BP_OnItemExpansionChanged(bool bIsExpanded);
-	void BP_OnItemSelectionChanged(bool bIsSelected);
-	bool Deselect(bool PlayAnimation_0);
+	bool Select(bool PlayAnimation_0);
+	void PreConstruct(bool IsDesignTime);
 	void ExecuteUbergraph_WDT_TitleMenuEntryPiece(int32 EntryPoint);
 	void OnListItemObjectSet(class UObject* ListItemObject);
-	void PreConstruct(bool IsDesignTime);
-	bool Select(bool PlayAnimation_0);
+	bool Deselect(bool PlayAnimation_0);
+	void BP_OnItemSelectionChanged(bool bIsSelected);
+	void BP_OnEntryReleased();
+	void BP_OnItemExpansionChanged(bool bIsExpanded);
+	bool Blink();
 
 public:
 	static class UClass* StaticClass()

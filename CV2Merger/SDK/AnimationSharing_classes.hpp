@@ -162,30 +162,6 @@ public:
 };
 DUMPER7_ASSERTS_UAnimSharingInstance;
 
-// Class AnimationSharing.AnimationSharingSetup
-// 0x0020 (0x0048 - 0x0028)
-class UAnimationSharingSetup final : public UObject
-{
-public:
-	TArray<struct FPerSkeletonAnimationSharingSetup> SkeletonSetups;                                 // 0x0028(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
-	struct FAnimationSharingScalability           ScalabilitySettings;                               // 0x0038(0x0010)(Edit, Config, NoDestructor, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("AnimationSharingSetup")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"AnimationSharingSetup")
-	}
-	static class UAnimationSharingSetup* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAnimationSharingSetup>();
-	}
-};
-DUMPER7_ASSERTS_UAnimationSharingSetup;
-
 // Class AnimationSharing.AnimationSharingManager
 // 0x0060 (0x0088 - 0x0028)
 class UAnimationSharingManager final : public UObject
@@ -217,6 +193,30 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UAnimationSharingManager;
+
+// Class AnimationSharing.AnimationSharingSetup
+// 0x0020 (0x0048 - 0x0028)
+class UAnimationSharingSetup final : public UObject
+{
+public:
+	TArray<struct FPerSkeletonAnimationSharingSetup> SkeletonSetups;                                 // 0x0028(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	struct FAnimationSharingScalability           ScalabilitySettings;                               // 0x0038(0x0010)(Edit, Config, NoDestructor, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("AnimationSharingSetup")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AnimationSharingSetup")
+	}
+	static class UAnimationSharingSetup* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAnimationSharingSetup>();
+	}
+};
+DUMPER7_ASSERTS_UAnimationSharingSetup;
 
 }
 

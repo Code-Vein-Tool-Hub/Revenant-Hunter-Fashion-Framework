@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_ConfigurationManager.BP_ConfigurationManager_C
-// 0x0000 (0x0528 - 0x0528)
+// 0x0000 (0x0538 - 0x0538)
 class UBP_ConfigurationManager_C final : public UConfigurationManager
 {
 public:

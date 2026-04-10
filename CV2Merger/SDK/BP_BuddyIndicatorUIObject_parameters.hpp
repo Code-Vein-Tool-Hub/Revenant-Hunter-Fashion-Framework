@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "GameplayTags_structs.hpp"
-#include "StoryFlagSystem_structs.hpp"
 #include "Extensions_structs.hpp"
+#include "StoryFlagSystem_structs.hpp"
 
 
 namespace SDK::Params

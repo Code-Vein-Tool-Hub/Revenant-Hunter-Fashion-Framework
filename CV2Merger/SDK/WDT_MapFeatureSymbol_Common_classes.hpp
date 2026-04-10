@@ -31,15 +31,15 @@ public:
 	class UTextBlock*                             QuestPin;                                          // 0x0628(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void Construct();
-	void ExecuteUbergraph_WDT_MapFeatureSymbol_Common(int32 EntryPoint);
-	void GetHeight(double* OutHeight);
-	void GetWidth(double* OutWidth);
-	void IsProhibited(bool* OutProhibited);
-	void SetGrayOut(bool InIsGrayOut);
-	void SetProhibited(bool InProhibited);
-	void SetQuestIconVisibility(bool InIsVisible);
 	bool SetTexture(class UTexture2D* Texture);
+	void SetQuestIconVisibility(bool InIsVisible);
+	void SetProhibited(bool InProhibited);
+	void SetGrayOut(bool InIsGrayOut);
+	void IsProhibited(bool* OutProhibited);
+	void GetWidth(double* OutWidth);
+	void GetHeight(double* OutHeight);
+	void ExecuteUbergraph_WDT_MapFeatureSymbol_Common(int32 EntryPoint);
+	void Construct();
 
 public:
 	static class UClass* StaticClass()

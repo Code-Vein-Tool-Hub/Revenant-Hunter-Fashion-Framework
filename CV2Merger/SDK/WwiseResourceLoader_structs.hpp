@@ -144,6 +144,15 @@ public:
 };
 DUMPER7_ASSERTS_FWwiseObjectInfo;
 
+// ScriptStruct WwiseResourceLoader.WwiseSharedPlatformId
+// 0x0010 (0x0010 - 0x0000)
+struct alignas(0x08) FWwiseSharedPlatformId final
+{
+public:
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FWwiseSharedPlatformId;
+
 // ScriptStruct WwiseResourceLoader.WwiseEventInfo
 // 0x0004 (0x0024 - 0x0020)
 struct FWwiseEventInfo final : public FWwiseObjectInfo
@@ -286,15 +295,6 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FWwiseSharedLanguageId;
-
-// ScriptStruct WwiseResourceLoader.WwiseSharedPlatformId
-// 0x0010 (0x0010 - 0x0000)
-struct alignas(0x08) FWwiseSharedPlatformId final
-{
-public:
-	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FWwiseSharedPlatformId;
 
 // ScriptStruct WwiseResourceLoader.WwiseTriggerCookedData
 // 0x000C (0x000C - 0x0000)

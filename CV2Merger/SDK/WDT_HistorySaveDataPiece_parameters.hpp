@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "Extensions_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
@@ -27,32 +27,36 @@ public:
 DUMPER7_ASSERTS_WDT_HistorySaveDataPiece_C_SetOptionText;
 
 // Function WDT_HistorySaveDataPiece.WDT_HistorySaveDataPiece_C.SetHistorySaveDataInfo
-// 0x02A8 (0x02A8 - 0x0000)
+// 0x02D0 (0x02D0 - 0x0000)
 struct WDT_HistorySaveDataPiece_C_SetHistorySaveDataInfo final
 {
 public:
 	struct FUIHistorySaveDataInfo                 InSaveData;                                        // 0x0000(0x0058)(BlueprintVisible, BlueprintReadOnly, Parm)
 	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0058(0x0010)()
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x0070(0x0010)()
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0080(0x0010)()
-	class FString                                 CallFunc_MakeLiteralString_ReturnValue;            // 0x0090(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue_2;          // 0x00A0(0x0010)()
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue_3;          // 0x00B0(0x0010)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x00C0(0x0048)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0108(0x0048)(HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue_4;          // 0x0150(0x0010)()
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue_5;          // 0x0160(0x0010)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x0170(0x0048)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_3;            // 0x01B8(0x0048)(HasGetValueTypeHash)
-	class FString                                 CallFunc_MakeLiteralString_ReturnValue_1;          // 0x0200(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue_6;          // 0x0210(0x0010)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_4;            // 0x0220(0x0048)(HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0268(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0278(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_AsDateTimeWithCustomFormat_ReturnValue;   // 0x0288(0x0010)()
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0298(0x0010)()
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x0068(0x0010)()
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue_2;          // 0x0078(0x0010)()
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue_3;          // 0x0090(0x0010)()
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x00A0(0x0010)()
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_MakeLiteralString_ReturnValue;            // 0x00B8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue_4;          // 0x00C8(0x0010)()
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue_5;          // 0x00D8(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x00E8(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0130(0x0048)(HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue_6;          // 0x0178(0x0010)()
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue_7;          // 0x0188(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x0198(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_3;            // 0x01E0(0x0048)(HasGetValueTypeHash)
+	class FString                                 CallFunc_MakeLiteralString_ReturnValue_1;          // 0x0228(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue_8;          // 0x0238(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_4;            // 0x0248(0x0048)(HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0290(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x02A0(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_AsDateTimeWithCustomFormat_ReturnValue;   // 0x02B0(0x0010)()
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x02C0(0x0010)()
 };
 DUMPER7_ASSERTS_WDT_HistorySaveDataPiece_C_SetHistorySaveDataInfo;
 

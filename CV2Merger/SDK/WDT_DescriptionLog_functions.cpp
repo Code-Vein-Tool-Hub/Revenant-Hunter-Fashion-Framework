@@ -93,6 +93,26 @@ void UWDT_DescriptionLog_C::SetPageIndex(int32 InIndex)
 }
 
 
+// Function WDT_DescriptionLog.WDT_DescriptionLog_C.SetInstruction
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FInstructionInfoTable&     InInstructionData                                      (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UWDT_DescriptionLog_C::SetInstruction(const struct FInstructionInfoTable& InInstructionData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_DescriptionLog_C", "SetInstruction");
+
+	Params::WDT_DescriptionLog_C_SetInstruction Parms{};
+
+	Parms.InInstructionData = std::move(InInstructionData);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WDT_DescriptionLog.WDT_DescriptionLog_C.SetDescription
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -124,26 +144,6 @@ void UWDT_DescriptionLog_C::ClearDescription()
 		Func = Class->GetFunction("WDT_DescriptionLog_C", "ClearDescription");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WDT_DescriptionLog.WDT_DescriptionLog_C.SetInstruction
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FInstructionInfoTable&     InInstructionData                                      (BlueprintVisible, BlueprintReadOnly, Parm)
-
-void UWDT_DescriptionLog_C::SetInstruction(const struct FInstructionInfoTable& InInstructionData)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_DescriptionLog_C", "SetInstruction");
-
-	Params::WDT_DescriptionLog_C_SetInstruction Parms{};
-
-	Parms.InInstructionData = std::move(InInstructionData);
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

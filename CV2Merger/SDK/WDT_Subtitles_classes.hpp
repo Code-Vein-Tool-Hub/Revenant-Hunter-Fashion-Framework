@@ -50,22 +50,22 @@ public:
 	bool                                          EndSkip_Delay;                                     // 0x0688(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void UpdateSpeakerVisibility(bool bInVisible);
-	void UpdateSkipButtonVisibility(bool InIsVisibility);
-	void SetTalkText(const class FText& InSpeakerText, const class FText& InTalkText);
-	void SetSkipIndicatorPercent(float NewPercent);
-	void SetShowSkipIndicator(bool bShowWidget);
-	void SetShowLeaveMultiplayIndicator(bool bShowWidget);
-	void SetLeaveMultiplayIndicatorPercent(float NewPercent);
-	void OnOpened();
-	void OnInputDeviceChanged();
-	void OnInitialized();
-	void OnForceClose();
-	void OnClosed();
-	void InpActEvt_IA_UI_StatementSkip_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void ExecuteUbergraph_WDT_Subtitles(int32 EntryPoint);
-	void Construct();
 	void ApplyConfiguration();
+	void Construct();
+	void ExecuteUbergraph_WDT_Subtitles(int32 EntryPoint);
+	void InpActEvt_IA_UI_StatementSkip_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void OnClosed();
+	void OnForceClose();
+	void OnInitialized();
+	void OnInputDeviceChanged();
+	void OnOpened();
+	void SetLeaveMultiplayIndicatorPercent(float NewPercent);
+	void SetShowLeaveMultiplayIndicator(bool bShowWidget);
+	void SetShowSkipIndicator(bool bShowWidget);
+	void SetSkipIndicatorPercent(float NewPercent);
+	void SetTalkText(const class FText& InSpeakerText, const class FText& InTalkText);
+	void UpdateSkipButtonVisibility(bool InIsVisibility);
+	void UpdateSpeakerVisibility(bool bInVisible);
 
 public:
 	static class UClass* StaticClass()

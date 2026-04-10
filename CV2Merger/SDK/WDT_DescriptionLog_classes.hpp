@@ -38,9 +38,9 @@ public:
 	void ToRightPage();
 	void ToLeftPage();
 	void SetPageIndex(int32 InIndex);
+	void SetInstruction(const struct FInstructionInfoTable& InInstructionData);
 	void SetDescription(const struct FDescriptionInfoTable& InDescriptionData);
 	void ClearDescription();
-	void SetInstruction(const struct FInstructionInfoTable& InInstructionData);
 
 public:
 	static class UClass* StaticClass()

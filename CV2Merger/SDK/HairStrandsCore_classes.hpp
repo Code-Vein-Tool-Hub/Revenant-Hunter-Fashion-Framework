@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "Niagara_classes.hpp"
 #include "HairStrandsCore_structs.hpp"
 #include "MovieScene_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "Niagara_classes.hpp"
 
 
 namespace SDK

@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "Extensions_structs.hpp"
 #include "Extensions_classes.hpp"
+#include "CoreUObject_structs.hpp"
 #include "E_CharacterVisualControl_CharacterMode_structs.hpp"
 
 
@@ -124,6 +124,7 @@ public:
 	void EndSoulBodyEffect();
 	void ExecuteUbergraph_BP_PlayerVisualControl(int32 EntryPoint);
 	TArray<class UMeshComponent*> GetAllOtherMesh();
+	void HideAccessory(bool bHide);
 	void Initialize();
 	void IsActiveDisplayMoveHistory3D(bool* Result);
 	void IsCurveExists(class USkeletalMeshComponent* Mesh, class FName CurveName, bool* Result);
@@ -135,6 +136,7 @@ public:
 	void MoveHistory3D_SetMiddleHistoryIndex(int32 InMiddleHistoryIndex);
 	void MoveHistory3D_SetVisibility(bool Visibility);
 	void MoveHistory3D_Spawn();
+	void OnAvoidDeathActivatedEvent();
 	bool OnBeginBuff(EPlayerBuffType InBuffType);
 	void OnChangeWeaponType(EPlayerWeaponType InNextType);
 	void OnChangeWeaponType_Implement(EPlayerWeaponType NextType);

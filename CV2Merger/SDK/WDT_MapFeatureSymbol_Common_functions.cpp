@@ -17,118 +17,44 @@
 namespace SDK
 {
 
-// Function WDT_MapFeatureSymbol_Common.WDT_MapFeatureSymbol_Common_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWDT_MapFeatureSymbol_Common_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_MapFeatureSymbol_Common_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WDT_MapFeatureSymbol_Common.WDT_MapFeatureSymbol_Common_C.ExecuteUbergraph_WDT_MapFeatureSymbol_Common
-// (Final, UbergraphFunction)
+// Function WDT_MapFeatureSymbol_Common.WDT_MapFeatureSymbol_Common_C.SetTexture
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UTexture2D*                       Texture                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_MapFeatureSymbol_Common_C::ExecuteUbergraph_WDT_MapFeatureSymbol_Common(int32 EntryPoint)
+bool UWDT_MapFeatureSymbol_Common_C::SetTexture(class UTexture2D* Texture)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_MapFeatureSymbol_Common_C", "ExecuteUbergraph_WDT_MapFeatureSymbol_Common");
+		Func = Class->GetFunction("WDT_MapFeatureSymbol_Common_C", "SetTexture");
 
-	Params::WDT_MapFeatureSymbol_Common_C_ExecuteUbergraph_WDT_MapFeatureSymbol_Common Parms{};
+	Params::WDT_MapFeatureSymbol_Common_C_SetTexture Parms{};
 
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_MapFeatureSymbol_Common.WDT_MapFeatureSymbol_Common_C.GetHeight
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// double*                                 OutHeight                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_MapFeatureSymbol_Common_C::GetHeight(double* OutHeight)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_MapFeatureSymbol_Common_C", "GetHeight");
-
-	Params::WDT_MapFeatureSymbol_Common_C_GetHeight Parms{};
+	Parms.Texture = Texture;
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (OutHeight != nullptr)
-		*OutHeight = Parms.OutHeight;
+	return Parms.ReturnValue;
 }
 
 
-// Function WDT_MapFeatureSymbol_Common.WDT_MapFeatureSymbol_Common_C.GetWidth
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function WDT_MapFeatureSymbol_Common.WDT_MapFeatureSymbol_Common_C.SetQuestIconVisibility
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// double*                                 OutWidth                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    InIsVisible                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_MapFeatureSymbol_Common_C::GetWidth(double* OutWidth)
+void UWDT_MapFeatureSymbol_Common_C::SetQuestIconVisibility(bool InIsVisible)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_MapFeatureSymbol_Common_C", "GetWidth");
+		Func = Class->GetFunction("WDT_MapFeatureSymbol_Common_C", "SetQuestIconVisibility");
 
-	Params::WDT_MapFeatureSymbol_Common_C_GetWidth Parms{};
+	Params::WDT_MapFeatureSymbol_Common_C_SetQuestIconVisibility Parms{};
 
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (OutWidth != nullptr)
-		*OutWidth = Parms.OutWidth;
-}
-
-
-// Function WDT_MapFeatureSymbol_Common.WDT_MapFeatureSymbol_Common_C.IsProhibited
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// bool*                                   OutProhibited                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_MapFeatureSymbol_Common_C::IsProhibited(bool* OutProhibited)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_MapFeatureSymbol_Common_C", "IsProhibited");
-
-	Params::WDT_MapFeatureSymbol_Common_C_IsProhibited Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (OutProhibited != nullptr)
-		*OutProhibited = Parms.OutProhibited;
-}
-
-
-// Function WDT_MapFeatureSymbol_Common.WDT_MapFeatureSymbol_Common_C.SetGrayOut
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    InIsGrayOut                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_MapFeatureSymbol_Common_C::SetGrayOut(bool InIsGrayOut)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_MapFeatureSymbol_Common_C", "SetGrayOut");
-
-	Params::WDT_MapFeatureSymbol_Common_C_SetGrayOut Parms{};
-
-	Parms.InIsGrayOut = InIsGrayOut;
+	Parms.InIsVisible = InIsVisible;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -154,46 +80,120 @@ void UWDT_MapFeatureSymbol_Common_C::SetProhibited(bool InProhibited)
 }
 
 
-// Function WDT_MapFeatureSymbol_Common.WDT_MapFeatureSymbol_Common_C.SetQuestIconVisibility
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function WDT_MapFeatureSymbol_Common.WDT_MapFeatureSymbol_Common_C.SetGrayOut
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    InIsVisible                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    InIsGrayOut                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_MapFeatureSymbol_Common_C::SetQuestIconVisibility(bool InIsVisible)
+void UWDT_MapFeatureSymbol_Common_C::SetGrayOut(bool InIsGrayOut)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_MapFeatureSymbol_Common_C", "SetQuestIconVisibility");
+		Func = Class->GetFunction("WDT_MapFeatureSymbol_Common_C", "SetGrayOut");
 
-	Params::WDT_MapFeatureSymbol_Common_C_SetQuestIconVisibility Parms{};
+	Params::WDT_MapFeatureSymbol_Common_C_SetGrayOut Parms{};
 
-	Parms.InIsVisible = InIsVisible;
+	Parms.InIsGrayOut = InIsGrayOut;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WDT_MapFeatureSymbol_Common.WDT_MapFeatureSymbol_Common_C.SetTexture
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function WDT_MapFeatureSymbol_Common.WDT_MapFeatureSymbol_Common_C.IsProhibited
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class UTexture2D*                       Texture                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   OutProhibited                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-bool UWDT_MapFeatureSymbol_Common_C::SetTexture(class UTexture2D* Texture)
+void UWDT_MapFeatureSymbol_Common_C::IsProhibited(bool* OutProhibited)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_MapFeatureSymbol_Common_C", "SetTexture");
+		Func = Class->GetFunction("WDT_MapFeatureSymbol_Common_C", "IsProhibited");
 
-	Params::WDT_MapFeatureSymbol_Common_C_SetTexture Parms{};
-
-	Parms.Texture = Texture;
+	Params::WDT_MapFeatureSymbol_Common_C_IsProhibited Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	return Parms.ReturnValue;
+	if (OutProhibited != nullptr)
+		*OutProhibited = Parms.OutProhibited;
+}
+
+
+// Function WDT_MapFeatureSymbol_Common.WDT_MapFeatureSymbol_Common_C.GetWidth
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// double*                                 OutWidth                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_MapFeatureSymbol_Common_C::GetWidth(double* OutWidth)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_MapFeatureSymbol_Common_C", "GetWidth");
+
+	Params::WDT_MapFeatureSymbol_Common_C_GetWidth Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (OutWidth != nullptr)
+		*OutWidth = Parms.OutWidth;
+}
+
+
+// Function WDT_MapFeatureSymbol_Common.WDT_MapFeatureSymbol_Common_C.GetHeight
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// double*                                 OutHeight                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_MapFeatureSymbol_Common_C::GetHeight(double* OutHeight)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_MapFeatureSymbol_Common_C", "GetHeight");
+
+	Params::WDT_MapFeatureSymbol_Common_C_GetHeight Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (OutHeight != nullptr)
+		*OutHeight = Parms.OutHeight;
+}
+
+
+// Function WDT_MapFeatureSymbol_Common.WDT_MapFeatureSymbol_Common_C.ExecuteUbergraph_WDT_MapFeatureSymbol_Common
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_MapFeatureSymbol_Common_C::ExecuteUbergraph_WDT_MapFeatureSymbol_Common(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_MapFeatureSymbol_Common_C", "ExecuteUbergraph_WDT_MapFeatureSymbol_Common");
+
+	Params::WDT_MapFeatureSymbol_Common_C_ExecuteUbergraph_WDT_MapFeatureSymbol_Common Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_MapFeatureSymbol_Common.WDT_MapFeatureSymbol_Common_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWDT_MapFeatureSymbol_Common_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_MapFeatureSymbol_Common_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

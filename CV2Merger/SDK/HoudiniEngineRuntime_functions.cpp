@@ -103,6 +103,119 @@ void UHoudiniAssetBlueprintComponent::SetToggleValueAt(const class FString& Name
 }
 
 
+// Function HoudiniEngineRuntime.HoudiniToolData.PopulateFromJSONData
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    JSONData                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UHoudiniToolData::PopulateFromJSONData(const class FString& JSONData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("HoudiniToolData", "PopulateFromJSONData");
+
+	Params::HoudiniToolData_PopulateFromJSONData Parms{};
+
+	Parms.JSONData = std::move(JSONData);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function HoudiniEngineRuntime.HoudiniToolData.PopulateFromJSONFile
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    JsonFilePath                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UHoudiniToolData::PopulateFromJSONFile(const class FString& JsonFilePath)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("HoudiniToolData", "PopulateFromJSONFile");
+
+	Params::HoudiniToolData_PopulateFromJSONFile Parms{};
+
+	Parms.JsonFilePath = std::move(JsonFilePath);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function HoudiniEngineRuntime.HoudiniToolData.SaveToJSONFile
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    JsonFilePath                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UHoudiniToolData::SaveToJSONFile(const class FString& JsonFilePath)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("HoudiniToolData", "SaveToJSONFile");
+
+	Params::HoudiniToolData_SaveToJSONFile Parms{};
+
+	Parms.JsonFilePath = std::move(JsonFilePath);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function HoudiniEngineRuntime.HoudiniToolData.ConvertToJSONData
+// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class FString*                          JSONData                                               (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UHoudiniToolData::ConvertToJSONData(class FString* JSONData) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("HoudiniToolData", "ConvertToJSONData");
+
+	Params::HoudiniToolData_ConvertToJSONData Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (JSONData != nullptr)
+		*JSONData = std::move(Parms.JSONData);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function HoudiniEngineRuntime.HoudiniStaticMesh.AddStaticMaterial
 // (Final, Native, Public, HasOutParams)
 // Parameters:
@@ -1317,119 +1430,6 @@ bool UHoudiniStaticMeshComponent::IsHoudiniIconVisible() const
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function HoudiniEngineRuntime.HoudiniToolData.PopulateFromJSONData
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    JSONData                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UHoudiniToolData::PopulateFromJSONData(const class FString& JSONData)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HoudiniToolData", "PopulateFromJSONData");
-
-	Params::HoudiniToolData_PopulateFromJSONData Parms{};
-
-	Parms.JSONData = std::move(JSONData);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function HoudiniEngineRuntime.HoudiniToolData.PopulateFromJSONFile
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    JsonFilePath                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UHoudiniToolData::PopulateFromJSONFile(const class FString& JsonFilePath)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HoudiniToolData", "PopulateFromJSONFile");
-
-	Params::HoudiniToolData_PopulateFromJSONFile Parms{};
-
-	Parms.JsonFilePath = std::move(JsonFilePath);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function HoudiniEngineRuntime.HoudiniToolData.SaveToJSONFile
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    JsonFilePath                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UHoudiniToolData::SaveToJSONFile(const class FString& JsonFilePath)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HoudiniToolData", "SaveToJSONFile");
-
-	Params::HoudiniToolData_SaveToJSONFile Parms{};
-
-	Parms.JsonFilePath = std::move(JsonFilePath);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function HoudiniEngineRuntime.HoudiniToolData.ConvertToJSONData
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class FString*                          JSONData                                               (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UHoudiniToolData::ConvertToJSONData(class FString* JSONData) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HoudiniToolData", "ConvertToJSONData");
-
-	Params::HoudiniToolData_ConvertToJSONData Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (JSONData != nullptr)
-		*JSONData = std::move(Parms.JSONData);
 
 	return Parms.ReturnValue;
 }

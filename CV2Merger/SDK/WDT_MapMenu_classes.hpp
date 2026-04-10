@@ -42,6 +42,7 @@ public:
 	void OnOpened();
 	void OnOpening();
 	void SetSelectFeature(const struct FGameplayTag& InFeatureId, class FName InSelectLouDiaryID);
+	void WidgetAnimationEvt_MapOpenAnimation_K2Node_WidgetAnimationEvent_0();
 
 public:
 	static class UClass* StaticClass()

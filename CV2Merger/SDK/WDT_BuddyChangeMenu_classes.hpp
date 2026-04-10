@@ -11,15 +11,16 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "Extensions_classes.hpp"
 #include "StoryFlagSystem_structs.hpp"
+#include "Extensions_classes.hpp"
+#include "UMG_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C
-// 0x00E0 (0x0698 - 0x05B8)
+// 0x00E8 (0x06A0 - 0x05B8)
 class UWDT_BuddyChangeMenu_C final : public UAppMenuBase
 {
 public:
@@ -37,21 +38,22 @@ public:
 	class UBorder*                                SelectionFilter;                                   // 0x0610(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UTextBlock*                             TextBlock;                                         // 0x0618(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWDT_BuddyInfo_C*                       WDT_BuddyInfo;                                     // 0x0620(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          bPlayingAnimation;                                 // 0x0628(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_629[0x7];                                      // 0x0629(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCampMenuUIObject*                      CampMenuUIObject;                                  // 0x0630(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           CantLevelUpMessegeTimerHandle;                     // 0x0638(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CantSummonText;                                    // 0x0640(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class FText                                   NoOneRespondsText;                                 // 0x0650(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          bNoOneResponds;                                    // 0x0660(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_661[0x7];                                      // 0x0661(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   ForceSettingText;                                  // 0x0668(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          Is_Force;                                          // 0x0678(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_679[0x3];                                      // 0x0679(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FStoryFlagLabel                        FirstOpen_BuddyChange;                             // 0x067C(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_684[0x4];                                      // 0x0684(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUserWidget*                            CheckingWidget;                                    // 0x0688(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CurrentBuddyIndex;                                 // 0x0690(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWDT_NPCClosenessInfo_C*                WDT_NPCClosenessInfo;                              // 0x0628(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	bool                                          bPlayingAnimation;                                 // 0x0630(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_631[0x7];                                      // 0x0631(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCampMenuUIObject*                      CampMenuUIObject;                                  // 0x0638(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           CantLevelUpMessegeTimerHandle;                     // 0x0640(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CantSummonText;                                    // 0x0648(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class FText                                   NoOneRespondsText;                                 // 0x0658(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          bNoOneResponds;                                    // 0x0668(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_669[0x7];                                      // 0x0669(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   ForceSettingText;                                  // 0x0670(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          Is_Force;                                          // 0x0680(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_681[0x3];                                      // 0x0681(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FStoryFlagLabel                        FirstOpen_BuddyChange;                             // 0x0684(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_68C[0x4];                                      // 0x068C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUserWidget*                            CheckingWidget;                                    // 0x0690(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CurrentBuddyIndex;                                 // 0x0698(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void WidgetAnimationEvt_BuddyChangeMenu_OpenAnim_K2Node_WidgetAnimationEvent_0();

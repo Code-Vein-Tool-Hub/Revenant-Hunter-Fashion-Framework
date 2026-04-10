@@ -18,12 +18,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_Buddy.BP_Buddy_C
-// 0x0010 (0x1920 - 0x1910)
+// 0x0010 (0x1940 - 0x1930)
 class ABP_Buddy_C final : public ABuddyCharacter
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1910(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	double                                        SeeThroughDistance;                                // 0x1918(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1930(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	double                                        SeeThroughDistance;                                // 0x1938(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_Buddy(int32 EntryPoint);

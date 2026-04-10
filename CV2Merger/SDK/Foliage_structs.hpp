@@ -100,6 +100,17 @@ public:
 };
 DUMPER7_ASSERTS_FFoliageVertexColorChannelMask;
 
+// ScriptStruct Foliage.FoliageDensityFalloff
+// 0x0090 (0x0090 - 0x0000)
+struct FFoliageDensityFalloff final
+{
+public:
+	bool                                          bUseFalloffCurve;                                  // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRuntimeFloatCurve                     FalloffCurve;                                      // 0x0008(0x0088)(Edit, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FFoliageDensityFalloff;
+
 // ScriptStruct Foliage.ProceduralFoliageInstance
 // 0x0080 (0x0080 - 0x0000)
 struct FProceduralFoliageInstance final
@@ -116,17 +127,6 @@ public:
 	uint8                                         Pad_68[0x18];                                      // 0x0068(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FProceduralFoliageInstance;
-
-// ScriptStruct Foliage.FoliageDensityFalloff
-// 0x0090 (0x0090 - 0x0000)
-struct FFoliageDensityFalloff final
-{
-public:
-	bool                                          bUseFalloffCurve;                                  // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRuntimeFloatCurve                     FalloffCurve;                                      // 0x0008(0x0088)(Edit, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFoliageDensityFalloff;
 
 }
 

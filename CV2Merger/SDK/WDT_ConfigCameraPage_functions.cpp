@@ -99,7 +99,28 @@ void UWDT_ConfigCameraPage_C::ExecuteUbergraph_WDT_ConfigCameraPage(int32 EntryP
 }
 
 
-// Function WDT_ConfigCameraPage.WDT_ConfigCameraPage_C.InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_11
+// Function WDT_ConfigCameraPage.WDT_ConfigCameraPage_C.HasPhotoModeInputMappingContext
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool*                                   NewParam                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_ConfigCameraPage_C::HasPhotoModeInputMappingContext(bool* NewParam)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_ConfigCameraPage_C", "HasPhotoModeInputMappingContext");
+
+	Params::WDT_ConfigCameraPage_C_HasPhotoModeInputMappingContext Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (NewParam != nullptr)
+		*NewParam = Parms.NewParam;
+}
+
+
+// Function WDT_ConfigCameraPage.WDT_ConfigCameraPage_C.InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_12
 // (BlueprintEvent)
 // Parameters:
 // const struct FInputActionValue&         ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
@@ -107,14 +128,14 @@ void UWDT_ConfigCameraPage_C::ExecuteUbergraph_WDT_ConfigCameraPage(int32 EntryP
 // float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const class UInputAction*               SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_ConfigCameraPage_C::InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_11(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+void UWDT_ConfigCameraPage_C::InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_12(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_ConfigCameraPage_C", "InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_11");
+		Func = Class->GetFunction("WDT_ConfigCameraPage_C", "InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_12");
 
-	Params::WDT_ConfigCameraPage_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_11 Parms{};
+	Params::WDT_ConfigCameraPage_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_12 Parms{};
 
 	Parms.ActionValue = std::move(ActionValue);
 	Parms.ElapsedTime = ElapsedTime;
@@ -125,7 +146,7 @@ void UWDT_ConfigCameraPage_C::InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInp
 }
 
 
-// Function WDT_ConfigCameraPage.WDT_ConfigCameraPage_C.InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_6
+// Function WDT_ConfigCameraPage.WDT_ConfigCameraPage_C.InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_7
 // (BlueprintEvent)
 // Parameters:
 // const struct FInputActionValue&         ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
@@ -133,14 +154,14 @@ void UWDT_ConfigCameraPage_C::InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInp
 // float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const class UInputAction*               SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_ConfigCameraPage_C::InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_6(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+void UWDT_ConfigCameraPage_C::InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_7(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_ConfigCameraPage_C", "InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_6");
+		Func = Class->GetFunction("WDT_ConfigCameraPage_C", "InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_7");
 
-	Params::WDT_ConfigCameraPage_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_6 Parms{};
+	Params::WDT_ConfigCameraPage_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_7 Parms{};
 
 	Parms.ActionValue = std::move(ActionValue);
 	Parms.ElapsedTime = ElapsedTime;
@@ -151,7 +172,7 @@ void UWDT_ConfigCameraPage_C::InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInp
 }
 
 
-// Function WDT_ConfigCameraPage.WDT_ConfigCameraPage_C.InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_12
+// Function WDT_ConfigCameraPage.WDT_ConfigCameraPage_C.InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_13
 // (BlueprintEvent)
 // Parameters:
 // const struct FInputActionValue&         ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
@@ -159,40 +180,14 @@ void UWDT_ConfigCameraPage_C::InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInp
 // float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const class UInputAction*               SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_ConfigCameraPage_C::InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_12(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+void UWDT_ConfigCameraPage_C::InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_13(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_ConfigCameraPage_C", "InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_12");
+		Func = Class->GetFunction("WDT_ConfigCameraPage_C", "InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_13");
 
-	Params::WDT_ConfigCameraPage_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_12 Parms{};
-
-	Parms.ActionValue = std::move(ActionValue);
-	Parms.ElapsedTime = ElapsedTime;
-	Parms.TriggeredTime = TriggeredTime;
-	Parms.SourceAction = SourceAction;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_ConfigCameraPage.WDT_ConfigCameraPage_C.InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent_7
-// (BlueprintEvent)
-// Parameters:
-// const struct FInputActionValue&         ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// float                                   ElapsedTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const class UInputAction*               SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_ConfigCameraPage_C::InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent_7(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_ConfigCameraPage_C", "InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent_7");
-
-	Params::WDT_ConfigCameraPage_C_InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent_7 Parms{};
+	Params::WDT_ConfigCameraPage_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_13 Parms{};
 
 	Parms.ActionValue = std::move(ActionValue);
 	Parms.ElapsedTime = ElapsedTime;
@@ -229,7 +224,7 @@ void UWDT_ConfigCameraPage_C::InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEve
 }
 
 
-// Function WDT_ConfigCameraPage.WDT_ConfigCameraPage_C.InpActEvt_IA_UI_MenuSpecial1_K2Node_EnhancedInputActionEvent_5
+// Function WDT_ConfigCameraPage.WDT_ConfigCameraPage_C.InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent_9
 // (BlueprintEvent)
 // Parameters:
 // const struct FInputActionValue&         ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
@@ -237,14 +232,14 @@ void UWDT_ConfigCameraPage_C::InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEve
 // float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const class UInputAction*               SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_ConfigCameraPage_C::InpActEvt_IA_UI_MenuSpecial1_K2Node_EnhancedInputActionEvent_5(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+void UWDT_ConfigCameraPage_C::InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent_9(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_ConfigCameraPage_C", "InpActEvt_IA_UI_MenuSpecial1_K2Node_EnhancedInputActionEvent_5");
+		Func = Class->GetFunction("WDT_ConfigCameraPage_C", "InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent_9");
 
-	Params::WDT_ConfigCameraPage_C_InpActEvt_IA_UI_MenuSpecial1_K2Node_EnhancedInputActionEvent_5 Parms{};
+	Params::WDT_ConfigCameraPage_C_InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent_9 Parms{};
 
 	Parms.ActionValue = std::move(ActionValue);
 	Parms.ElapsedTime = ElapsedTime;
@@ -255,7 +250,7 @@ void UWDT_ConfigCameraPage_C::InpActEvt_IA_UI_MenuSpecial1_K2Node_EnhancedInputA
 }
 
 
-// Function WDT_ConfigCameraPage.WDT_ConfigCameraPage_C.InpActEvt_IA_UI_MenuSpecial4_K2Node_EnhancedInputActionEvent_4
+// Function WDT_ConfigCameraPage.WDT_ConfigCameraPage_C.InpActEvt_IA_UI_MenuSpecial1_K2Node_EnhancedInputActionEvent_6
 // (BlueprintEvent)
 // Parameters:
 // const struct FInputActionValue&         ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
@@ -263,14 +258,66 @@ void UWDT_ConfigCameraPage_C::InpActEvt_IA_UI_MenuSpecial1_K2Node_EnhancedInputA
 // float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const class UInputAction*               SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_ConfigCameraPage_C::InpActEvt_IA_UI_MenuSpecial4_K2Node_EnhancedInputActionEvent_4(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+void UWDT_ConfigCameraPage_C::InpActEvt_IA_UI_MenuSpecial1_K2Node_EnhancedInputActionEvent_6(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_ConfigCameraPage_C", "InpActEvt_IA_UI_MenuSpecial4_K2Node_EnhancedInputActionEvent_4");
+		Func = Class->GetFunction("WDT_ConfigCameraPage_C", "InpActEvt_IA_UI_MenuSpecial1_K2Node_EnhancedInputActionEvent_6");
 
-	Params::WDT_ConfigCameraPage_C_InpActEvt_IA_UI_MenuSpecial4_K2Node_EnhancedInputActionEvent_4 Parms{};
+	Params::WDT_ConfigCameraPage_C_InpActEvt_IA_UI_MenuSpecial1_K2Node_EnhancedInputActionEvent_6 Parms{};
+
+	Parms.ActionValue = std::move(ActionValue);
+	Parms.ElapsedTime = ElapsedTime;
+	Parms.TriggeredTime = TriggeredTime;
+	Parms.SourceAction = SourceAction;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_ConfigCameraPage.WDT_ConfigCameraPage_C.InpActEvt_IA_UI_MenuSpecial4_K2Node_EnhancedInputActionEvent_5
+// (BlueprintEvent)
+// Parameters:
+// const struct FInputActionValue&         ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// float                                   ElapsedTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class UInputAction*               SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_ConfigCameraPage_C::InpActEvt_IA_UI_MenuSpecial4_K2Node_EnhancedInputActionEvent_5(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_ConfigCameraPage_C", "InpActEvt_IA_UI_MenuSpecial4_K2Node_EnhancedInputActionEvent_5");
+
+	Params::WDT_ConfigCameraPage_C_InpActEvt_IA_UI_MenuSpecial4_K2Node_EnhancedInputActionEvent_5 Parms{};
+
+	Parms.ActionValue = std::move(ActionValue);
+	Parms.ElapsedTime = ElapsedTime;
+	Parms.TriggeredTime = TriggeredTime;
+	Parms.SourceAction = SourceAction;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_ConfigCameraPage.WDT_ConfigCameraPage_C.InpActEvt_IA_UI_PhotoMode_Decide_K2Node_EnhancedInputActionEvent_0
+// (BlueprintEvent)
+// Parameters:
+// const struct FInputActionValue&         ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// float                                   ElapsedTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class UInputAction*               SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_ConfigCameraPage_C::InpActEvt_IA_UI_PhotoMode_Decide_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_ConfigCameraPage_C", "InpActEvt_IA_UI_PhotoMode_Decide_K2Node_EnhancedInputActionEvent_0");
+
+	Params::WDT_ConfigCameraPage_C_InpActEvt_IA_UI_PhotoMode_Decide_K2Node_EnhancedInputActionEvent_0 Parms{};
 
 	Parms.ActionValue = std::move(ActionValue);
 	Parms.ElapsedTime = ElapsedTime;
@@ -307,7 +354,7 @@ void UWDT_ConfigCameraPage_C::InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEv
 }
 
 
-// Function WDT_ConfigCameraPage.WDT_ConfigCameraPage_C.InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEvent_9
+// Function WDT_ConfigCameraPage.WDT_ConfigCameraPage_C.InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEvent_11
 // (BlueprintEvent)
 // Parameters:
 // const struct FInputActionValue&         ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
@@ -315,40 +362,14 @@ void UWDT_ConfigCameraPage_C::InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEv
 // float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const class UInputAction*               SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_ConfigCameraPage_C::InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEvent_9(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+void UWDT_ConfigCameraPage_C::InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEvent_11(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_ConfigCameraPage_C", "InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEvent_9");
+		Func = Class->GetFunction("WDT_ConfigCameraPage_C", "InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEvent_11");
 
-	Params::WDT_ConfigCameraPage_C_InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEvent_9 Parms{};
-
-	Parms.ActionValue = std::move(ActionValue);
-	Parms.ElapsedTime = ElapsedTime;
-	Parms.TriggeredTime = TriggeredTime;
-	Parms.SourceAction = SourceAction;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_ConfigCameraPage.WDT_ConfigCameraPage_C.InpActEvt_IA_UI_SwitchLeft_K2Node_EnhancedInputActionEvent_2
-// (BlueprintEvent)
-// Parameters:
-// const struct FInputActionValue&         ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// float                                   ElapsedTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const class UInputAction*               SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_ConfigCameraPage_C::InpActEvt_IA_UI_SwitchLeft_K2Node_EnhancedInputActionEvent_2(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_ConfigCameraPage_C", "InpActEvt_IA_UI_SwitchLeft_K2Node_EnhancedInputActionEvent_2");
-
-	Params::WDT_ConfigCameraPage_C_InpActEvt_IA_UI_SwitchLeft_K2Node_EnhancedInputActionEvent_2 Parms{};
+	Params::WDT_ConfigCameraPage_C_InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEvent_11 Parms{};
 
 	Parms.ActionValue = std::move(ActionValue);
 	Parms.ElapsedTime = ElapsedTime;
@@ -385,7 +406,7 @@ void UWDT_ConfigCameraPage_C::InpActEvt_IA_UI_SwitchLeft_K2Node_EnhancedInputAct
 }
 
 
-// Function WDT_ConfigCameraPage.WDT_ConfigCameraPage_C.InpActEvt_IA_UI_SwitchRight_K2Node_EnhancedInputActionEvent_0
+// Function WDT_ConfigCameraPage.WDT_ConfigCameraPage_C.InpActEvt_IA_UI_SwitchLeft_K2Node_EnhancedInputActionEvent_4
 // (BlueprintEvent)
 // Parameters:
 // const struct FInputActionValue&         ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
@@ -393,14 +414,14 @@ void UWDT_ConfigCameraPage_C::InpActEvt_IA_UI_SwitchLeft_K2Node_EnhancedInputAct
 // float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const class UInputAction*               SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_ConfigCameraPage_C::InpActEvt_IA_UI_SwitchRight_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+void UWDT_ConfigCameraPage_C::InpActEvt_IA_UI_SwitchLeft_K2Node_EnhancedInputActionEvent_4(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_ConfigCameraPage_C", "InpActEvt_IA_UI_SwitchRight_K2Node_EnhancedInputActionEvent_0");
+		Func = Class->GetFunction("WDT_ConfigCameraPage_C", "InpActEvt_IA_UI_SwitchLeft_K2Node_EnhancedInputActionEvent_4");
 
-	Params::WDT_ConfigCameraPage_C_InpActEvt_IA_UI_SwitchRight_K2Node_EnhancedInputActionEvent_0 Parms{};
+	Params::WDT_ConfigCameraPage_C_InpActEvt_IA_UI_SwitchLeft_K2Node_EnhancedInputActionEvent_4 Parms{};
 
 	Parms.ActionValue = std::move(ActionValue);
 	Parms.ElapsedTime = ElapsedTime;
@@ -437,7 +458,7 @@ void UWDT_ConfigCameraPage_C::InpActEvt_IA_UI_SwitchRight_K2Node_EnhancedInputAc
 }
 
 
-// Function WDT_ConfigCameraPage.WDT_ConfigCameraPage_C.InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_13
+// Function WDT_ConfigCameraPage.WDT_ConfigCameraPage_C.InpActEvt_IA_UI_SwitchRight_K2Node_EnhancedInputActionEvent_2
 // (BlueprintEvent)
 // Parameters:
 // const struct FInputActionValue&         ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
@@ -445,14 +466,40 @@ void UWDT_ConfigCameraPage_C::InpActEvt_IA_UI_SwitchRight_K2Node_EnhancedInputAc
 // float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const class UInputAction*               SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_ConfigCameraPage_C::InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_13(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+void UWDT_ConfigCameraPage_C::InpActEvt_IA_UI_SwitchRight_K2Node_EnhancedInputActionEvent_2(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_ConfigCameraPage_C", "InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_13");
+		Func = Class->GetFunction("WDT_ConfigCameraPage_C", "InpActEvt_IA_UI_SwitchRight_K2Node_EnhancedInputActionEvent_2");
 
-	Params::WDT_ConfigCameraPage_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_13 Parms{};
+	Params::WDT_ConfigCameraPage_C_InpActEvt_IA_UI_SwitchRight_K2Node_EnhancedInputActionEvent_2 Parms{};
+
+	Parms.ActionValue = std::move(ActionValue);
+	Parms.ElapsedTime = ElapsedTime;
+	Parms.TriggeredTime = TriggeredTime;
+	Parms.SourceAction = SourceAction;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_ConfigCameraPage.WDT_ConfigCameraPage_C.InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_14
+// (BlueprintEvent)
+// Parameters:
+// const struct FInputActionValue&         ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// float                                   ElapsedTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class UInputAction*               SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_ConfigCameraPage_C::InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_14(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_ConfigCameraPage_C", "InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_14");
+
+	Params::WDT_ConfigCameraPage_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_14 Parms{};
 
 	Parms.ActionValue = std::move(ActionValue);
 	Parms.ElapsedTime = ElapsedTime;

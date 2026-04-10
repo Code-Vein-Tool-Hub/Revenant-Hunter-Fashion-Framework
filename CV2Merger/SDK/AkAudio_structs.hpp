@@ -532,72 +532,6 @@ enum class EAkFitToGeometryMode : uint8
 	EAkFitToGeometryMode_MAX                 = 3,
 };
 
-// ScriptStruct AkAudio.AkChannelMask
-// 0x0004 (0x0004 - 0x0000)
-struct FAkChannelMask final
-{
-public:
-	int32                                         ChannelMask;                                       // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FAkChannelMask;
-
-// ScriptStruct AkAudio.AkMidiEventBase
-// 0x0002 (0x0002 - 0x0000)
-struct FAkMidiEventBase
-{
-public:
-	EAkMidiEventType                              Type;                                              // 0x0000(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Chan;                                              // 0x0001(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FAkMidiEventBase;
-
-// ScriptStruct AkAudio.AkMidiProgramChange
-// 0x0001 (0x0003 - 0x0002)
-struct FAkMidiProgramChange final : public FAkMidiEventBase
-{
-public:
-	uint8                                         ProgramNum;                                        // 0x0002(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FAkMidiProgramChange;
-
-// ScriptStruct AkAudio.AKWaapiJsonObject
-// 0x0010 (0x0010 - 0x0000)
-struct alignas(0x08) FAKWaapiJsonObject final
-{
-public:
-	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FAKWaapiJsonObject;
-
-// ScriptStruct AkAudio.AkAudioSession
-// 0x000C (0x000C - 0x0000)
-struct FAkAudioSession final
-{
-public:
-	EAkAudioSessionCategory                       AudioSessionCategory;                              // 0x0000(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint32                                        AudioSessionCategoryOptions;                       // 0x0004(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EAkAudioSessionMode                           AudioSessionMode;                                  // 0x0008(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FAkAudioSession;
-
-// ScriptStruct AkAudio.MovieSceneAkAudioEventTemplate
-// 0x0008 (0x0028 - 0x0020)
-struct FMovieSceneAkAudioEventTemplate final : public FMovieSceneEvalTemplate
-{
-public:
-	class UMovieSceneAkAudioEventSection*         Section;                                           // 0x0020(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FMovieSceneAkAudioEventTemplate;
-
-// ScriptStruct AkAudio.AkWaapiSubscriptionId
-// 0x0008 (0x0008 - 0x0000)
-struct alignas(0x08) FAkWaapiSubscriptionId final
-{
-public:
-	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FAkWaapiSubscriptionId;
-
 // ScriptStruct AkAudio.AkAdvancedInitializationSettings
 // 0x0030 (0x0030 - 0x0000)
 struct FAkAdvancedInitializationSettings
@@ -621,28 +555,6 @@ public:
 };
 DUMPER7_ASSERTS_FAkAdvancedInitializationSettings;
 
-// ScriptStruct AkAudio.AkCommunicationSettings
-// 0x0018 (0x0018 - 0x0000)
-struct FAkCommunicationSettings
-{
-public:
-	uint32                                        PoolSize;                                          // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint16                                        DiscoveryBroadcastPort;                            // 0x0004(0x0002)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint16                                        CommandPort;                                       // 0x0006(0x0002)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 NetworkName;                                       // 0x0008(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FAkCommunicationSettings;
-
-// ScriptStruct AkAudio.AkCommunicationSettingsWithSystemInitialization
-// 0x0008 (0x0020 - 0x0018)
-struct FAkCommunicationSettingsWithSystemInitialization final : public FAkCommunicationSettings
-{
-public:
-	bool                                          InitializeSystemComms;                             // 0x0018(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FAkCommunicationSettingsWithSystemInitialization;
-
 // ScriptStruct AkAudio.AkAdvancedInitializationSettingsWithMultiCoreRendering
 // 0x000C (0x003C - 0x0030)
 struct FAkAdvancedInitializationSettingsWithMultiCoreRendering : public FAkAdvancedInitializationSettings
@@ -654,23 +566,6 @@ public:
 	uint32                                        JobWorkerMaxExecutionTimeUSec;                     // 0x0038(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FAkAdvancedInitializationSettingsWithMultiCoreRendering;
-
-// ScriptStruct AkAudio.AkPS5AdvancedInitializationSettings
-// 0x0014 (0x0050 - 0x003C)
-struct FAkPS5AdvancedInitializationSettings final : public FAkAdvancedInitializationSettingsWithMultiCoreRendering
-{
-public:
-	bool                                          UseHardwareCodecLowLatencyMode;                    // 0x003C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bVorbisHwAcceleration;                             // 0x003D(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnable3DAudioSync;                                // 0x003E(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3F[0x1];                                       // 0x003F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	uint32                                        uNumOperationsForHwMixing;                         // 0x0040(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bPlotQueueLevel;                                   // 0x0044(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_45[0x3];                                       // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	uint32                                        NumAudioOut2Ports;                                 // 0x0048(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint32                                        NumAudioOut2ObjectPorts;                           // 0x004C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FAkPS5AdvancedInitializationSettings;
 
 // ScriptStruct AkAudio.AkAndroidAdvancedInitializationSettings
 // 0x0008 (0x0044 - 0x003C)
@@ -684,6 +579,66 @@ public:
 };
 DUMPER7_ASSERTS_FAkAndroidAdvancedInitializationSettings;
 
+// ScriptStruct AkAudio.AkWindowsAdvancedInitializationSettings
+// 0x0008 (0x0044 - 0x003C)
+struct FAkWindowsAdvancedInitializationSettings final : public FAkAdvancedInitializationSettingsWithMultiCoreRendering
+{
+public:
+	bool                                          UseHeadMountedDisplayAudioDevice;                  // 0x003C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint32                                        MaxSystemAudioObjects;                             // 0x0040(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FAkWindowsAdvancedInitializationSettings;
+
+// ScriptStruct AkAudio.AKWaapiJsonObject
+// 0x0010 (0x0010 - 0x0000)
+struct alignas(0x08) FAKWaapiJsonObject final
+{
+public:
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FAKWaapiJsonObject;
+
+// ScriptStruct AkAudio.AkAudioSession
+// 0x000C (0x000C - 0x0000)
+struct FAkAudioSession final
+{
+public:
+	EAkAudioSessionCategory                       AudioSessionCategory;                              // 0x0000(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint32                                        AudioSessionCategoryOptions;                       // 0x0004(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAkAudioSessionMode                           AudioSessionMode;                                  // 0x0008(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FAkAudioSession;
+
+// ScriptStruct AkAudio.AkWinGDKAdvancedInitializationSettings
+// 0x0008 (0x0044 - 0x003C)
+struct FAkWinGDKAdvancedInitializationSettings final : public FAkAdvancedInitializationSettingsWithMultiCoreRendering
+{
+public:
+	bool                                          UseHeadMountedDisplayAudioDevice;                  // 0x003C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint32                                        uMaxSystemAudioObjects;                            // 0x0040(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FAkWinGDKAdvancedInitializationSettings;
+
+// ScriptStruct AkAudio.AkWaapiSubscriptionId
+// 0x0008 (0x0008 - 0x0000)
+struct alignas(0x08) FAkWaapiSubscriptionId final
+{
+public:
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FAkWaapiSubscriptionId;
+
+// ScriptStruct AkAudio.AkChannelMask
+// 0x0004 (0x0004 - 0x0000)
+struct FAkChannelMask final
+{
+public:
+	int32                                         ChannelMask;                                       // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FAkChannelMask;
+
 // ScriptStruct AkAudio.AkOutputSettings
 // 0x0010 (0x0010 - 0x0000)
 struct FAkOutputSettings final
@@ -696,6 +651,16 @@ public:
 	uint8                                         Pad_E[0x2];                                        // 0x000E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FAkOutputSettings;
+
+// ScriptStruct AkAudio.AkMidiEventBase
+// 0x0002 (0x0002 - 0x0000)
+struct FAkMidiEventBase
+{
+public:
+	EAkMidiEventType                              Type;                                              // 0x0000(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Chan;                                              // 0x0001(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FAkMidiEventBase;
 
 // ScriptStruct AkAudio.AkMidiGeneric
 // 0x0002 (0x0004 - 0x0002)
@@ -756,6 +721,15 @@ public:
 	uint8                                         Value;                                             // 0x0002(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FAkMidiChannelAftertouch;
+
+// ScriptStruct AkAudio.AkMidiProgramChange
+// 0x0001 (0x0003 - 0x0002)
+struct FAkMidiProgramChange final : public FAkMidiEventBase
+{
+public:
+	uint8                                         ProgramNum;                                        // 0x0002(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FAkMidiProgramChange;
 
 // ScriptStruct AkAudio.AkSegmentInfo
 // 0x0024 (0x0024 - 0x0000)
@@ -884,6 +858,28 @@ public:
 };
 DUMPER7_ASSERTS_FAkSpatialAudioSettings;
 
+// ScriptStruct AkAudio.AkCommunicationSettings
+// 0x0018 (0x0018 - 0x0000)
+struct FAkCommunicationSettings
+{
+public:
+	uint32                                        PoolSize;                                          // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint16                                        DiscoveryBroadcastPort;                            // 0x0004(0x0002)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint16                                        CommandPort;                                       // 0x0006(0x0002)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 NetworkName;                                       // 0x0008(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FAkCommunicationSettings;
+
+// ScriptStruct AkAudio.AkCommunicationSettingsWithSystemInitialization
+// 0x0008 (0x0020 - 0x0018)
+struct FAkCommunicationSettingsWithSystemInitialization final : public FAkCommunicationSettings
+{
+public:
+	bool                                          InitializeSystemComms;                             // 0x0018(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FAkCommunicationSettingsWithSystemInitialization;
+
 // ScriptStruct AkAudio.AkCommunicationSettingsWithCommSelection
 // 0x0008 (0x0020 - 0x0018)
 struct FAkCommunicationSettingsWithCommSelection final : public FAkCommunicationSettings
@@ -945,6 +941,23 @@ public:
 	class FString                                 ItemProperty;                                      // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FAkPropertyToControl;
+
+// ScriptStruct AkAudio.AkPS5AdvancedInitializationSettings
+// 0x0014 (0x0050 - 0x003C)
+struct FAkPS5AdvancedInitializationSettings final : public FAkAdvancedInitializationSettingsWithMultiCoreRendering
+{
+public:
+	bool                                          UseHardwareCodecLowLatencyMode;                    // 0x003C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bVorbisHwAcceleration;                             // 0x003D(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnable3DAudioSync;                                // 0x003E(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3F[0x1];                                       // 0x003F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint32                                        uNumOperationsForHwMixing;                         // 0x0040(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPlotQueueLevel;                                   // 0x0044(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_45[0x3];                                       // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint32                                        NumAudioOut2Ports;                                 // 0x0048(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint32                                        NumAudioOut2ObjectPorts;                           // 0x004C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FAkPS5AdvancedInitializationSettings;
 
 // ScriptStruct AkAudio.AkReverbDescriptor
 // 0x0028 (0x0028 - 0x0000)
@@ -1049,28 +1062,6 @@ public:
 };
 DUMPER7_ASSERTS_FAkWaapiUri;
 
-// ScriptStruct AkAudio.AkWindowsAdvancedInitializationSettings
-// 0x0008 (0x0044 - 0x003C)
-struct FAkWindowsAdvancedInitializationSettings final : public FAkAdvancedInitializationSettingsWithMultiCoreRendering
-{
-public:
-	bool                                          UseHeadMountedDisplayAudioDevice;                  // 0x003C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	uint32                                        MaxSystemAudioObjects;                             // 0x0040(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FAkWindowsAdvancedInitializationSettings;
-
-// ScriptStruct AkAudio.AkWinGDKAdvancedInitializationSettings
-// 0x0008 (0x0044 - 0x003C)
-struct FAkWinGDKAdvancedInitializationSettings final : public FAkAdvancedInitializationSettingsWithMultiCoreRendering
-{
-public:
-	bool                                          UseHeadMountedDisplayAudioDevice;                  // 0x003C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	uint32                                        uMaxSystemAudioObjects;                            // 0x0040(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FAkWinGDKAdvancedInitializationSettings;
-
 // ScriptStruct AkAudio.AkXSXAdvancedInitializationSettings
 // 0x000C (0x0048 - 0x003C)
 struct FAkXSXAdvancedInitializationSettings final : public FAkAdvancedInitializationSettingsWithMultiCoreRendering
@@ -1094,6 +1085,15 @@ public:
 	uint32                                        NonCachedSize;                                     // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FAkXSXApuHeapInitializationSettings;
+
+// ScriptStruct AkAudio.MovieSceneAkAudioEventTemplate
+// 0x0008 (0x0028 - 0x0020)
+struct FMovieSceneAkAudioEventTemplate final : public FMovieSceneEvalTemplate
+{
+public:
+	class UMovieSceneAkAudioEventSection*         Section;                                           // 0x0020(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FMovieSceneAkAudioEventTemplate;
 
 // ScriptStruct AkAudio.MovieSceneAkAudioRTPCTemplate
 // 0x0008 (0x0028 - 0x0020)

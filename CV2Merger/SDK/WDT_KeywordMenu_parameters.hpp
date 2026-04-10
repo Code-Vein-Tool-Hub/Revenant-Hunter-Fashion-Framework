@@ -17,68 +17,218 @@
 namespace SDK::Params
 {
 
-// Function WDT_KeywordMenu.WDT_KeywordMenu_C.BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_0_OnListEntryInitializedDynamic__DelegateSignature
-// 0x0010 (0x0010 - 0x0000)
-struct WDT_KeywordMenu_C_BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_0_OnListEntryInitializedDynamic__DelegateSignature final
+// Function WDT_KeywordMenu.WDT_KeywordMenu_C.SelectUpperDescription
+// 0x0020 (0x0020 - 0x0000)
+struct WDT_KeywordMenu_C_SelectUpperDescription final
 {
 public:
-	class UObject*                                Item;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UUserWidget*                            Widget;                                            // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_NewIndex;                                        // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_DescriptionListData_C*              L_ListItemObject;                                  // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetCurrentListIndex_OutNum;               // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WDT_KeywordMenu_C_BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_0_OnListEntryInitializedDynamic__DelegateSignature;
+DUMPER7_ASSERTS_WDT_KeywordMenu_C_SelectUpperDescription;
 
-// Function WDT_KeywordMenu.WDT_KeywordMenu_C.BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_1_OnListItemSelectionChangedDynamic__DelegateSignature
-// 0x0010 (0x0010 - 0x0000)
-struct WDT_KeywordMenu_C_BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_1_OnListItemSelectionChangedDynamic__DelegateSignature final
+// Function WDT_KeywordMenu.WDT_KeywordMenu_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WDT_KeywordMenu_C_PreConstruct final
 {
 public:
-	class UObject*                                Item;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          bIsSelected;                                       // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WDT_KeywordMenu_C_BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_1_OnListItemSelectionChangedDynamic__DelegateSignature;
+DUMPER7_ASSERTS_WDT_KeywordMenu_C_PreConstruct;
 
-// Function WDT_KeywordMenu.WDT_KeywordMenu_C.BuildKeywordList
-// 0x00D8 (0x00D8 - 0x0000)
-struct WDT_KeywordMenu_C_BuildKeywordList final
+// Function WDT_KeywordMenu.WDT_KeywordMenu_C.SelectLowerDescription
+// 0x0018 (0x0018 - 0x0000)
+struct WDT_KeywordMenu_C_SelectLowerDescription final
 {
 public:
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBP_KeywordListData_C*                  CallFunc_SpawnObject_ReturnValue;                  // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UBP_KeywordManager_C*                   CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UDataTable*                             CallFunc_GetKeywordTable_ReturnValue;              // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<class FName>                           CallFunc_GetDataTableRowNames_OutRowNames;         // 0x0038(0x0010)(ReferenceParm)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   CallFunc_Array_Get_Item;                           // 0x004C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FKeywordDataTableRow                   CallFunc_GetKeywordDataByID_OutKeywordData;        // 0x0058(0x0068)()
-	bool                                          CallFunc_GetKeywordDataByID_ReturnValue;           // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C1[0x3];                                       // 0x00C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x00C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x00C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x00CC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetStoryFlagValueByBoolean_ReturnValue;   // 0x00CD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CE[0x2];                                       // 0x00CE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x00D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_BoolBool_ReturnValue;          // 0x00D4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_NewIndex;                                        // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetNumItems_ReturnValue;                  // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetCurrentListIndex_OutNum;               // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WDT_KeywordMenu_C_BuildKeywordList;
+DUMPER7_ASSERTS_WDT_KeywordMenu_C_SelectLowerDescription;
 
-// Function WDT_KeywordMenu.WDT_KeywordMenu_C.Display Keyword Data
-// 0x0068 (0x0068 - 0x0000)
-struct WDT_KeywordMenu_C_Display_Keyword_Data final
+// Function WDT_KeywordMenu.WDT_KeywordMenu_C.OnUpPressed
+// 0x0003 (0x0003 - 0x0000)
+struct WDT_KeywordMenu_C_OnUpPressed final
 {
 public:
-	struct FKeywordDataTableRow                   InKeywodData;                                      // 0x0000(0x0068)(BlueprintVisible, BlueprintReadOnly, Parm)
+	bool                                          CallFunc_IsActivated_ReturnValue;                  // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WDT_KeywordMenu_C_Display_Keyword_Data;
+DUMPER7_ASSERTS_WDT_KeywordMenu_C_OnUpPressed;
+
+// Function WDT_KeywordMenu.WDT_KeywordMenu_C.OnGetOpenAnimation
+// 0x0008 (0x0008 - 0x0000)
+struct WDT_KeywordMenu_C_OnGetOpenAnimation final
+{
+public:
+	class UWidgetAnimation*                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_KeywordMenu_C_OnGetOpenAnimation;
+
+// Function WDT_KeywordMenu.WDT_KeywordMenu_C.OnFieldMenuCloseAnimationFinish
+// 0x0001 (0x0001 - 0x0000)
+struct WDT_KeywordMenu_C_OnFieldMenuCloseAnimationFinish final
+{
+public:
+	bool                                          CallFunc_Close_ReturnValue;                        // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_KeywordMenu_C_OnFieldMenuCloseAnimationFinish;
+
+// Function WDT_KeywordMenu.WDT_KeywordMenu_C.OnFieldMenuButton
+// 0x0030 (0x0030 - 0x0000)
+struct WDT_KeywordMenu_C_OnFieldMenuButton final
+{
+public:
+	struct FModifyContextOptions                  K2Node_MakeStruct_ModifyContextOptions;            // 0x0000(0x0001)(NoDestructor)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UEnhancedInputLocalPlayerSubsystem*     CallFunc_GetLocalPlayerSubsystem_ReturnValue;      // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IEnhancedInputSubsystemInterface> CallFunc_RemoveMappingContext_self_CastInput; // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsActivated_ReturnValue;                  // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_KeywordMenu_C_OnFieldMenuButton;
+
+// Function WDT_KeywordMenu.WDT_KeywordMenu_C.OnDownPressed
+// 0x0003 (0x0003 - 0x0000)
+struct WDT_KeywordMenu_C_OnDownPressed final
+{
+public:
+	bool                                          CallFunc_IsActivated_ReturnValue;                  // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_KeywordMenu_C_OnDownPressed;
+
+// Function WDT_KeywordMenu.WDT_KeywordMenu_C.OnCancel
+// 0x0005 (0x0005 - 0x0000)
+struct WDT_KeywordMenu_C_OnCancel final
+{
+public:
+	bool                                          CallFunc_Close_ReturnValue;                        // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsActivated_ReturnValue;                  // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_KeywordMenu_C_OnCancel;
+
+// Function WDT_KeywordMenu.WDT_KeywordMenu_C.OnDecide
+// 0x0003 (0x0003 - 0x0000)
+struct WDT_KeywordMenu_C_OnDecide final
+{
+public:
+	bool                                          CallFunc_IsActivated_ReturnValue;                  // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_KeywordMenu_C_OnDecide;
+
+// Function WDT_KeywordMenu.WDT_KeywordMenu_C.InpActEvt_IA_UI_FieldMenu_K2Node_EnhancedInputActionEvent_0
+// 0x0030 (0x0030 - 0x0000)
+struct WDT_KeywordMenu_C_InpActEvt_IA_UI_FieldMenu_K2Node_EnhancedInputActionEvent_0 final
+{
+public:
+	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_KeywordMenu_C_InpActEvt_IA_UI_FieldMenu_K2Node_EnhancedInputActionEvent_0;
+
+// Function WDT_KeywordMenu.WDT_KeywordMenu_C.InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_2
+// 0x0030 (0x0030 - 0x0000)
+struct WDT_KeywordMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_2 final
+{
+public:
+	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_KeywordMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_2;
+
+// Function WDT_KeywordMenu.WDT_KeywordMenu_C.InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_4
+// 0x0030 (0x0030 - 0x0000)
+struct WDT_KeywordMenu_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_4 final
+{
+public:
+	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_KeywordMenu_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_4;
+
+// Function WDT_KeywordMenu.WDT_KeywordMenu_C.InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_1
+// 0x0030 (0x0030 - 0x0000)
+struct WDT_KeywordMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_1 final
+{
+public:
+	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_KeywordMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_1;
+
+// Function WDT_KeywordMenu.WDT_KeywordMenu_C.Initialize
+// 0x0008 (0x0008 - 0x0000)
+struct WDT_KeywordMenu_C_Initialize final
+{
+public:
+	int32                                         CallFunc_GetNumItems_ReturnValue;                  // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_KeywordMenu_C_Initialize;
+
+// Function WDT_KeywordMenu.WDT_KeywordMenu_C.InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_3
+// 0x0030 (0x0030 - 0x0000)
+struct WDT_KeywordMenu_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_3 final
+{
+public:
+	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_KeywordMenu_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_3;
+
+// Function WDT_KeywordMenu.WDT_KeywordMenu_C.Hide Keyword Data
+// 0x0001 (0x0001 - 0x0000)
+struct WDT_KeywordMenu_C_Hide_Keyword_Data final
+{
+public:
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_KeywordMenu_C_Hide_Keyword_Data;
+
+// Function WDT_KeywordMenu.WDT_KeywordMenu_C.GetCurrentListIndex
+// 0x0020 (0x0020 - 0x0000)
+struct WDT_KeywordMenu_C_GetCurrentListIndex final
+{
+public:
+	int32                                         OutNum;                                            // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                CallFunc_BP_GetSelectedItem_ReturnValue;           // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UBP_KeywordListData_C*                  K2Node_DynamicCast_AsBP_Keyword_List_Data;         // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetListIndex_OutIndex;                    // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_KeywordMenu_C_GetCurrentListIndex;
 
 // Function WDT_KeywordMenu.WDT_KeywordMenu_C.ExecuteUbergraph_WDT_KeywordMenu
 // 0x0290 (0x0290 - 0x0000)
@@ -177,218 +327,68 @@ public:
 };
 DUMPER7_ASSERTS_WDT_KeywordMenu_C_ExecuteUbergraph_WDT_KeywordMenu;
 
-// Function WDT_KeywordMenu.WDT_KeywordMenu_C.GetCurrentListIndex
-// 0x0020 (0x0020 - 0x0000)
-struct WDT_KeywordMenu_C_GetCurrentListIndex final
+// Function WDT_KeywordMenu.WDT_KeywordMenu_C.BuildKeywordList
+// 0x00D8 (0x00D8 - 0x0000)
+struct WDT_KeywordMenu_C_BuildKeywordList final
 {
 public:
-	int32                                         OutNum;                                            // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                CallFunc_BP_GetSelectedItem_ReturnValue;           // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UBP_KeywordListData_C*                  K2Node_DynamicCast_AsBP_Keyword_List_Data;         // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetListIndex_OutIndex;                    // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_KeywordListData_C*                  CallFunc_SpawnObject_ReturnValue;                  // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UBP_KeywordManager_C*                   CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UDataTable*                             CallFunc_GetKeywordTable_ReturnValue;              // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<class FName>                           CallFunc_GetDataTableRowNames_OutRowNames;         // 0x0038(0x0010)(ReferenceParm)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   CallFunc_Array_Get_Item;                           // 0x004C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FKeywordDataTableRow                   CallFunc_GetKeywordDataByID_OutKeywordData;        // 0x0058(0x0068)()
+	bool                                          CallFunc_GetKeywordDataByID_ReturnValue;           // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C1[0x3];                                       // 0x00C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x00C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x00C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x00CC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetStoryFlagValueByBoolean_ReturnValue;   // 0x00CD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CE[0x2];                                       // 0x00CE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x00D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_BoolBool_ReturnValue;          // 0x00D4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WDT_KeywordMenu_C_GetCurrentListIndex;
+DUMPER7_ASSERTS_WDT_KeywordMenu_C_BuildKeywordList;
 
-// Function WDT_KeywordMenu.WDT_KeywordMenu_C.Hide Keyword Data
-// 0x0001 (0x0001 - 0x0000)
-struct WDT_KeywordMenu_C_Hide_Keyword_Data final
+// Function WDT_KeywordMenu.WDT_KeywordMenu_C.Display Keyword Data
+// 0x0068 (0x0068 - 0x0000)
+struct WDT_KeywordMenu_C_Display_Keyword_Data final
 {
 public:
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FKeywordDataTableRow                   InKeywodData;                                      // 0x0000(0x0068)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-DUMPER7_ASSERTS_WDT_KeywordMenu_C_Hide_Keyword_Data;
+DUMPER7_ASSERTS_WDT_KeywordMenu_C_Display_Keyword_Data;
 
-// Function WDT_KeywordMenu.WDT_KeywordMenu_C.Initialize
-// 0x0008 (0x0008 - 0x0000)
-struct WDT_KeywordMenu_C_Initialize final
+// Function WDT_KeywordMenu.WDT_KeywordMenu_C.BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_1_OnListItemSelectionChangedDynamic__DelegateSignature
+// 0x0010 (0x0010 - 0x0000)
+struct WDT_KeywordMenu_C_BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_1_OnListItemSelectionChangedDynamic__DelegateSignature final
 {
 public:
-	int32                                         CallFunc_GetNumItems_ReturnValue;                  // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                Item;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          bIsSelected;                                       // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WDT_KeywordMenu_C_Initialize;
+DUMPER7_ASSERTS_WDT_KeywordMenu_C_BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_1_OnListItemSelectionChangedDynamic__DelegateSignature;
 
-// Function WDT_KeywordMenu.WDT_KeywordMenu_C.InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_3
-// 0x0030 (0x0030 - 0x0000)
-struct WDT_KeywordMenu_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_3 final
+// Function WDT_KeywordMenu.WDT_KeywordMenu_C.BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_0_OnListEntryInitializedDynamic__DelegateSignature
+// 0x0010 (0x0010 - 0x0000)
+struct WDT_KeywordMenu_C_BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_0_OnListEntryInitializedDynamic__DelegateSignature final
 {
 public:
-	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                Item;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UUserWidget*                            Widget;                                            // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WDT_KeywordMenu_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_3;
-
-// Function WDT_KeywordMenu.WDT_KeywordMenu_C.InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_4
-// 0x0030 (0x0030 - 0x0000)
-struct WDT_KeywordMenu_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_4 final
-{
-public:
-	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_KeywordMenu_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_4;
-
-// Function WDT_KeywordMenu.WDT_KeywordMenu_C.InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_1
-// 0x0030 (0x0030 - 0x0000)
-struct WDT_KeywordMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_1 final
-{
-public:
-	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_KeywordMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_1;
-
-// Function WDT_KeywordMenu.WDT_KeywordMenu_C.InpActEvt_IA_UI_FieldMenu_K2Node_EnhancedInputActionEvent_0
-// 0x0030 (0x0030 - 0x0000)
-struct WDT_KeywordMenu_C_InpActEvt_IA_UI_FieldMenu_K2Node_EnhancedInputActionEvent_0 final
-{
-public:
-	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_KeywordMenu_C_InpActEvt_IA_UI_FieldMenu_K2Node_EnhancedInputActionEvent_0;
-
-// Function WDT_KeywordMenu.WDT_KeywordMenu_C.InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_2
-// 0x0030 (0x0030 - 0x0000)
-struct WDT_KeywordMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_2 final
-{
-public:
-	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_KeywordMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_2;
-
-// Function WDT_KeywordMenu.WDT_KeywordMenu_C.OnCancel
-// 0x0005 (0x0005 - 0x0000)
-struct WDT_KeywordMenu_C_OnCancel final
-{
-public:
-	bool                                          CallFunc_Close_ReturnValue;                        // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsActivated_ReturnValue;                  // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_KeywordMenu_C_OnCancel;
-
-// Function WDT_KeywordMenu.WDT_KeywordMenu_C.OnDecide
-// 0x0003 (0x0003 - 0x0000)
-struct WDT_KeywordMenu_C_OnDecide final
-{
-public:
-	bool                                          CallFunc_IsActivated_ReturnValue;                  // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_KeywordMenu_C_OnDecide;
-
-// Function WDT_KeywordMenu.WDT_KeywordMenu_C.OnDownPressed
-// 0x0003 (0x0003 - 0x0000)
-struct WDT_KeywordMenu_C_OnDownPressed final
-{
-public:
-	bool                                          CallFunc_IsActivated_ReturnValue;                  // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_KeywordMenu_C_OnDownPressed;
-
-// Function WDT_KeywordMenu.WDT_KeywordMenu_C.OnFieldMenuButton
-// 0x0030 (0x0030 - 0x0000)
-struct WDT_KeywordMenu_C_OnFieldMenuButton final
-{
-public:
-	struct FModifyContextOptions                  K2Node_MakeStruct_ModifyContextOptions;            // 0x0000(0x0001)(NoDestructor)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UEnhancedInputLocalPlayerSubsystem*     CallFunc_GetLocalPlayerSubsystem_ReturnValue;      // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IEnhancedInputSubsystemInterface> CallFunc_RemoveMappingContext_self_CastInput; // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsActivated_ReturnValue;                  // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_KeywordMenu_C_OnFieldMenuButton;
-
-// Function WDT_KeywordMenu.WDT_KeywordMenu_C.OnFieldMenuCloseAnimationFinish
-// 0x0001 (0x0001 - 0x0000)
-struct WDT_KeywordMenu_C_OnFieldMenuCloseAnimationFinish final
-{
-public:
-	bool                                          CallFunc_Close_ReturnValue;                        // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_KeywordMenu_C_OnFieldMenuCloseAnimationFinish;
-
-// Function WDT_KeywordMenu.WDT_KeywordMenu_C.OnGetOpenAnimation
-// 0x0008 (0x0008 - 0x0000)
-struct WDT_KeywordMenu_C_OnGetOpenAnimation final
-{
-public:
-	class UWidgetAnimation*                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_KeywordMenu_C_OnGetOpenAnimation;
-
-// Function WDT_KeywordMenu.WDT_KeywordMenu_C.OnUpPressed
-// 0x0003 (0x0003 - 0x0000)
-struct WDT_KeywordMenu_C_OnUpPressed final
-{
-public:
-	bool                                          CallFunc_IsActivated_ReturnValue;                  // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_KeywordMenu_C_OnUpPressed;
-
-// Function WDT_KeywordMenu.WDT_KeywordMenu_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WDT_KeywordMenu_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_KeywordMenu_C_PreConstruct;
-
-// Function WDT_KeywordMenu.WDT_KeywordMenu_C.SelectLowerDescription
-// 0x0018 (0x0018 - 0x0000)
-struct WDT_KeywordMenu_C_SelectLowerDescription final
-{
-public:
-	int32                                         L_NewIndex;                                        // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetNumItems_ReturnValue;                  // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetCurrentListIndex_OutNum;               // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_KeywordMenu_C_SelectLowerDescription;
-
-// Function WDT_KeywordMenu.WDT_KeywordMenu_C.SelectUpperDescription
-// 0x0020 (0x0020 - 0x0000)
-struct WDT_KeywordMenu_C_SelectUpperDescription final
-{
-public:
-	int32                                         L_NewIndex;                                        // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBP_DescriptionListData_C*              L_ListItemObject;                                  // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetCurrentListIndex_OutNum;               // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_KeywordMenu_C_SelectUpperDescription;
+DUMPER7_ASSERTS_WDT_KeywordMenu_C_BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_0_OnListEntryInitializedDynamic__DelegateSignature;
 
 }
 

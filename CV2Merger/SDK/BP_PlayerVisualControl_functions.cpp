@@ -601,6 +601,26 @@ TArray<class UMeshComponent*> UBP_PlayerVisualControl_C::GetAllOtherMesh()
 }
 
 
+// Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.HideAccessory
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bHide                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_PlayerVisualControl_C::HideAccessory(bool bHide)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerVisualControl_C", "HideAccessory");
+
+	Params::BP_PlayerVisualControl_C_HideAccessory Parms{};
+
+	Parms.bHide = bHide;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.Initialize
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
@@ -807,6 +827,20 @@ void UBP_PlayerVisualControl_C::MoveHistory3D_Spawn()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BP_PlayerVisualControl_C", "MoveHistory3D_Spawn");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.OnAvoidDeathActivatedEvent
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_PlayerVisualControl_C::OnAvoidDeathActivatedEvent()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerVisualControl_C", "OnAvoidDeathActivatedEvent");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

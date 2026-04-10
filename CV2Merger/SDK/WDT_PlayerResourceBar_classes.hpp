@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "SlateCore_structs.hpp"
-#include "Slate_structs.hpp"
 #include "Extensions_classes.hpp"
+#include "Slate_structs.hpp"
+#include "SlateCore_structs.hpp"
 
 
 namespace SDK
@@ -60,22 +60,22 @@ public:
 	class UBP_StatusIndicatorUIObject_C*          StatusIndicatorUIObject;                           // 0x0948(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void Construct();
-	void ExecuteUbergraph_WDT_PlayerResourceBar(int32 EntryPoint);
 	bool GetFlag(class FName FlagName);
 	void GetResourcePercent(double* OutPercent);
-	void PlayAttention();
-	void PreConstruct(bool IsDesignTime);
-	void ResetBackGaugeResource(bool InIsHeal);
-	void SetMaxResource(double MaxResource_0);
-	void SetRecoverableResource(double InResource);
-	void SetResource(double CurrentResource_0);
-	void StartBackGauge();
 	void StopAttention();
-	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void PlayAttention();
+	void ResetBackGaugeResource(bool InIsHeal);
 	void TickBackGauge(double InDeltaTime);
-	void Update_Gauges(bool InIsHeal);
+	void StartBackGauge();
 	void UpdateResource(double InCurrentResource, double InMaxResource, double InRecoverabeResource);
+	void Update_Gauges(bool InIsHeal);
+	void SetRecoverableResource(double InResource);
+	void SetMaxResource(double MaxResource_0);
+	void SetResource(double CurrentResource_0);
+	void PreConstruct(bool IsDesignTime);
+	void Construct();
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void ExecuteUbergraph_WDT_PlayerResourceBar(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

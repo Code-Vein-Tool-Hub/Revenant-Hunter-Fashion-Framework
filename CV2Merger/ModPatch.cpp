@@ -16,6 +16,7 @@ std::map<std::string, SDK::FCharacterCustomizeDataTableOuterList> ModPatch::DT_O
 std::map<std::string, SDK::FCharacterCustomizeDataTableOuterList> ModPatch::DT_Outer_Male;
 
 std::map<std::string, SDK::FCharacterCustomizeDataTableAccessoryPreset> ModPatch::DT_AccessoryPresetDLC_Free;
+std::map<std::string, SDK::FCharacterCustomizeDataTableAccessoryPreset> ModPatch::DT_AccessoryPresetIsHat;
 std::map<std::string, SDK::FCharacterCustomizeDataTableAttachToList> ModPatch::DT_AccessoryAttachToList;
 
 std::map<std::string, SDK::FCharacterCustomizeDataTableHairBase> ModPatch::DT_HairBaseList;
@@ -385,7 +386,7 @@ void ModPatch::ProcessMaskTable(toml::table table, std::map<std::string, SDK::FC
 			partVis.PartType = magic_enum::enum_cast<SDK::ECharacterCustomizePartType>(partArray->get(4)->value_or("General")).value_or(SDK::ECharacterCustomizePartType::General);
 			Mask.PartVisibilityInfoArray.Add(partVis);
 		}
-		Mask.HairAffectType = magic_enum::enum_cast<SDK::ECharacterCustomizeClothHairAffectType>(data->get(6)->value_or("General")).value_or(SDK::ECharacterCustomizeClothHairAffectType::None);
+		Mask.HairAffectType = magic_enum::enum_cast<SDK::ECharacterCustomizeClothHairAffectType>(data->get(6)->value_or("None")).value_or(SDK::ECharacterCustomizeClothHairAffectType::None);
 
 		DataTable->insert({ name, Mask });
 	}
@@ -575,8 +576,8 @@ void ModPatch::ProcessAccessoryPresetTable(toml::table table, std::map<std::stri
 			AccessoryPreset.FlagCondition = *new SDK::FStoryFlagEvaluationFormula();
 		AccessoryPreset.FlagCondition.EvaluationFormula = FNameHelper::FStringFromString(data->get(13)->value_or(""));
 		AccessoryPreset.bIsHat = data->get(14)->value_or(false);
-		AccessoryPreset.bIsHat = data->get(15)->value_or(false);
-		AccessoryPreset.bIsHat = data->get(16)->value_or(false);
+		AccessoryPreset.bSpaEnable = data->get(15)->value_or(false);
+		AccessoryPreset.bIsToSameAsHair = data->get(16)->value_or(false);
 
 		DataTable->insert({ name, AccessoryPreset });
 	}
@@ -890,6 +891,9 @@ bool ModPatch::init()
 		table = config["DT_AccessoryPresetDLC_Free"].as_table();
 		if (table)
 			ProcessAccessoryPresetTable(*table, &DT_AccessoryPresetDLC_Free);
+		table = config["DT_AccessoryPresetIsHat"].as_table();
+		if (table)
+			ProcessAccessoryPresetTable(*table, &DT_AccessoryPresetIsHat);
 		table = config["DT_AccessoryAttachToList"].as_table();
 		if (table)
 			ProcessAccessoryAttachToTable(*table, &DT_AccessoryAttachToList);

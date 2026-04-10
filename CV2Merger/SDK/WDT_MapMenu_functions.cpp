@@ -211,5 +211,19 @@ void UWDT_MapMenu_C::SetSelectFeature(const struct FGameplayTag& InFeatureId, cl
 	UObject::ProcessEvent(Func, &Parms);
 }
 
+
+// Function WDT_MapMenu.WDT_MapMenu_C.WidgetAnimationEvt_MapOpenAnimation_K2Node_WidgetAnimationEvent_0
+// (BlueprintEvent)
+
+void UWDT_MapMenu_C::WidgetAnimationEvt_MapOpenAnimation_K2Node_WidgetAnimationEvent_0()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_MapMenu_C", "WidgetAnimationEvt_MapOpenAnimation_K2Node_WidgetAnimationEvent_0");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
 }
 

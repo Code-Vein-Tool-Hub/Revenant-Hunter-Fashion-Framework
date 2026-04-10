@@ -81,16 +81,20 @@ public:
 };
 DUMPER7_ASSERTS_FDataRegistryLookup;
 
-// ScriptStruct DataRegistry.DataRegistrySource_DataTableRules
-// 0x0008 (0x0008 - 0x0000)
-struct FDataRegistrySource_DataTableRules final
+// ScriptStruct DataRegistry.DataRegistryCachePolicy
+// 0x0014 (0x0014 - 0x0000)
+struct FDataRegistryCachePolicy final
 {
 public:
-	bool                                          bPrecacheTable;                                    // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CachedTableKeepSeconds;                            // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCacheIsAlwaysVolatile;                            // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseCurveTableCacheVersion;                        // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         MinNumberKept;                                     // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxNumberKept;                                     // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ForceKeepSeconds;                                  // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ForceReleaseSeconds;                               // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FDataRegistrySource_DataTableRules;
+DUMPER7_ASSERTS_FDataRegistryCachePolicy;
 
 // ScriptStruct DataRegistry.DataRegistryType
 // 0x0008 (0x0008 - 0x0000)
@@ -111,20 +115,16 @@ public:
 };
 DUMPER7_ASSERTS_FDataRegistryId;
 
-// ScriptStruct DataRegistry.DataRegistryCachePolicy
-// 0x0014 (0x0014 - 0x0000)
-struct FDataRegistryCachePolicy final
+// ScriptStruct DataRegistry.DataRegistrySource_DataTableRules
+// 0x0008 (0x0008 - 0x0000)
+struct FDataRegistrySource_DataTableRules final
 {
 public:
-	bool                                          bCacheIsAlwaysVolatile;                            // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseCurveTableCacheVersion;                        // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         MinNumberKept;                                     // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxNumberKept;                                     // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ForceKeepSeconds;                                  // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ForceReleaseSeconds;                               // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPrecacheTable;                                    // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CachedTableKeepSeconds;                            // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FDataRegistryCachePolicy;
+DUMPER7_ASSERTS_FDataRegistrySource_DataTableRules;
 
 // ScriptStruct DataRegistry.DataRegistrySourceItemId
 // 0x0040 (0x0040 - 0x0000)

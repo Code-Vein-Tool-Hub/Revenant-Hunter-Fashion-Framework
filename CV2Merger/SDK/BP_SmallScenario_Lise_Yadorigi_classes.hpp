@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "BP_SmallScenarioBase_classes.hpp"
 #include "GameplayTags_structs.hpp"
 #include "Extensions_structs.hpp"
+#include "BP_SmallScenarioBase_classes.hpp"
 
 
 namespace SDK

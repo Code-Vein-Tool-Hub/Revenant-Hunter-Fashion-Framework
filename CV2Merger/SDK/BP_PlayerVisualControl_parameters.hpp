@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
+#include "Niagara_structs.hpp"
 #include "Extensions_structs.hpp"
 #include "E_CharacterVisualControl_CharacterMode_structs.hpp"
-#include "Niagara_structs.hpp"
 #include "Engine_structs.hpp"
 
 
@@ -373,6 +373,18 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_PlayerVisualControl_C_GetAllOtherMesh;
+
+// Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.HideAccessory
+// 0x0004 (0x0004 - 0x0000)
+struct BP_PlayerVisualControl_C_HideAccessory final
+{
+public:
+	bool                                          bHide;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          InVisibility;                                      // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_PlayerVisualControl_C_HideAccessory;
 
 // Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.Initialize
 // 0x0060 (0x0060 - 0x0000)
@@ -756,7 +768,7 @@ public:
 DUMPER7_ASSERTS_BP_PlayerVisualControl_C_OnResetCurveValueEnd;
 
 // Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.OnSimpleAnimNotify_Begin
-// 0x0040 (0x0040 - 0x0000)
+// 0x0050 (0x0050 - 0x0000)
 struct BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin final
 {
 public:
@@ -769,16 +781,19 @@ public:
 	class UANS_BodyTrailEffect_C*                 InBodyTrailEffect;                                 // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_OnSimpleAnimNotify_Begin_ReturnValue;     // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	const class UANS_BodyTrailEffect_C*           K2Node_DynamicCast_AsANS_Body_Trail_Effect;        // 0x0030(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	const class UANS_HideAccessory_C*             K2Node_DynamicCast_AsANS_Hide_Accessory;           // 0x0030(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_OnSimpleAnimNotify_Begin_ReturnValue_1;   // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x003A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchName_CmpSuccess;                      // 0x003B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	const class UANS_BodyTrailEffect_C*           K2Node_DynamicCast_AsANS_Body_Trail_Effect;        // 0x0040(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_OnSimpleAnimNotify_Begin_ReturnValue_1;   // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x004A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchName_CmpSuccess;                      // 0x004B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin;
 
 // Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.OnSimpleAnimNotify_End
-// 0x0030 (0x0030 - 0x0000)
+// 0x0040 (0x0040 - 0x0000)
 struct BP_PlayerVisualControl_C_OnSimpleAnimNotify_End final
 {
 public:
@@ -787,11 +802,14 @@ public:
 	class FName                                   InMessage;                                         // 0x0010(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_OnSimpleAnimNotify_End_ReturnValue;       // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_OnSimpleAnimNotify_End_ReturnValue_1;     // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1B[0x5];                                       // 0x001B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	const class UANS_BodyTrailEffect_C*           K2Node_DynamicCast_AsANS_Body_Trail_Effect;        // 0x0020(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	const class UANS_HideAccessory_C*             K2Node_DynamicCast_AsANS_Hide_Accessory;           // 0x0020(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	const class UANS_BodyTrailEffect_C*           K2Node_DynamicCast_AsANS_Body_Trail_Effect;        // 0x0030(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_OnSimpleAnimNotify_End_ReturnValue_1;     // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x003A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_PlayerVisualControl_C_OnSimpleAnimNotify_End;
 

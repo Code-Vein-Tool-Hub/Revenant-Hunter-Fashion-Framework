@@ -51,6 +51,50 @@ public:
 };
 DUMPER7_ASSERTS_HoudiniAssetBlueprintComponent_SetToggleValueAt;
 
+// Function HoudiniEngineRuntime.HoudiniToolData.PopulateFromJSONData
+// 0x0018 (0x0018 - 0x0000)
+struct HoudiniToolData_PopulateFromJSONData final
+{
+public:
+	class FString                                 JSONData;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_HoudiniToolData_PopulateFromJSONData;
+
+// Function HoudiniEngineRuntime.HoudiniToolData.PopulateFromJSONFile
+// 0x0018 (0x0018 - 0x0000)
+struct HoudiniToolData_PopulateFromJSONFile final
+{
+public:
+	class FString                                 JsonFilePath;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_HoudiniToolData_PopulateFromJSONFile;
+
+// Function HoudiniEngineRuntime.HoudiniToolData.SaveToJSONFile
+// 0x0018 (0x0018 - 0x0000)
+struct HoudiniToolData_SaveToJSONFile final
+{
+public:
+	class FString                                 JsonFilePath;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_HoudiniToolData_SaveToJSONFile;
+
+// Function HoudiniEngineRuntime.HoudiniToolData.ConvertToJSONData
+// 0x0018 (0x0018 - 0x0000)
+struct HoudiniToolData_ConvertToJSONData final
+{
+public:
+	class FString                                 JSONData;                                          // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_HoudiniToolData_ConvertToJSONData;
+
 // Function HoudiniEngineRuntime.HoudiniStaticMesh.AddStaticMaterial
 // 0x0038 (0x0038 - 0x0000)
 struct HoudiniStaticMesh_AddStaticMaterial final
@@ -489,50 +533,6 @@ public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_HoudiniStaticMeshComponent_IsHoudiniIconVisible;
-
-// Function HoudiniEngineRuntime.HoudiniToolData.PopulateFromJSONData
-// 0x0018 (0x0018 - 0x0000)
-struct HoudiniToolData_PopulateFromJSONData final
-{
-public:
-	class FString                                 JSONData;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_HoudiniToolData_PopulateFromJSONData;
-
-// Function HoudiniEngineRuntime.HoudiniToolData.PopulateFromJSONFile
-// 0x0018 (0x0018 - 0x0000)
-struct HoudiniToolData_PopulateFromJSONFile final
-{
-public:
-	class FString                                 JsonFilePath;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_HoudiniToolData_PopulateFromJSONFile;
-
-// Function HoudiniEngineRuntime.HoudiniToolData.SaveToJSONFile
-// 0x0018 (0x0018 - 0x0000)
-struct HoudiniToolData_SaveToJSONFile final
-{
-public:
-	class FString                                 JsonFilePath;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_HoudiniToolData_SaveToJSONFile;
-
-// Function HoudiniEngineRuntime.HoudiniToolData.ConvertToJSONData
-// 0x0018 (0x0018 - 0x0000)
-struct HoudiniToolData_ConvertToJSONData final
-{
-public:
-	class FString                                 JSONData;                                          // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_HoudiniToolData_ConvertToJSONData;
 
 }
 

@@ -17,6 +17,7 @@ public:
 	static std::map<std::string, SDK::FCharacterCustomizeDataTableOuterList> DT_Outer_Male;
 
 	static std::map<std::string, SDK::FCharacterCustomizeDataTableAccessoryPreset> DT_AccessoryPresetDLC_Free;
+	static std::map<std::string, SDK::FCharacterCustomizeDataTableAccessoryPreset> DT_AccessoryPresetIsHat;
 	static std::map<std::string, SDK::FCharacterCustomizeDataTableAttachToList> DT_AccessoryAttachToList;
 
 	static std::map<std::string, SDK::FCharacterCustomizeDataTableHairBase> DT_HairBaseList;

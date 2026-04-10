@@ -125,212 +125,6 @@ class UMovieGraphPin* UMovieGraphNode::GetOutputPin(const class FName& InPinLabe
 }
 
 
-// Function MovieRenderPipelineCore.MovieGraphConditionGroupQueryBase.SetEnabled
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const bool                              bEnabled                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMovieGraphConditionGroupQueryBase::SetEnabled(const bool bEnabled)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieGraphConditionGroupQueryBase", "SetEnabled");
-
-	Params::MovieGraphConditionGroupQueryBase_SetEnabled Parms{};
-
-	Parms.bEnabled = bEnabled;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MovieRenderPipelineCore.MovieGraphConditionGroupQueryBase.SetOperationType
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const EMovieGraphConditionGroupQueryOpTypeOperationType                                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMovieGraphConditionGroupQueryBase::SetOperationType(const EMovieGraphConditionGroupQueryOpType OperationType)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieGraphConditionGroupQueryBase", "SetOperationType");
-
-	Params::MovieGraphConditionGroupQueryBase_SetOperationType Parms{};
-
-	Parms.OperationType = OperationType;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MovieRenderPipelineCore.MovieGraphConditionGroupQueryBase.Evaluate
-// (Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const TArray<class AActor*>&            InActorsToQuery                                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// const class UWorld*                     InWorld                                                (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TSet<class AActor*>*                    OutMatchingActors                                      (Parm, OutParm, NativeAccessSpecifierPublic)
-
-void UMovieGraphConditionGroupQueryBase::Evaluate(const TArray<class AActor*>& InActorsToQuery, const class UWorld* InWorld, TSet<class AActor*>* OutMatchingActors) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieGraphConditionGroupQueryBase", "Evaluate");
-
-	Params::MovieGraphConditionGroupQueryBase_Evaluate Parms{};
-
-	Parms.InActorsToQuery = std::move(InActorsToQuery);
-	Parms.InWorld = InWorld;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutMatchingActors != nullptr)
-		*OutMatchingActors = std::move(Parms.OutMatchingActors);
-}
-
-
-// Function MovieRenderPipelineCore.MovieGraphConditionGroupQueryBase.GetOperationType
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// EMovieGraphConditionGroupQueryOpType    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-EMovieGraphConditionGroupQueryOpType UMovieGraphConditionGroupQueryBase::GetOperationType() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieGraphConditionGroupQueryBase", "GetOperationType");
-
-	Params::MovieGraphConditionGroupQueryBase_GetOperationType Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MovieRenderPipelineCore.MovieGraphConditionGroupQueryBase.IsEditorOnlyQuery
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMovieGraphConditionGroupQueryBase::IsEditorOnlyQuery() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieGraphConditionGroupQueryBase", "IsEditorOnlyQuery");
-
-	Params::MovieGraphConditionGroupQueryBase_IsEditorOnlyQuery Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MovieRenderPipelineCore.MovieGraphConditionGroupQueryBase.IsEnabled
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMovieGraphConditionGroupQueryBase::IsEnabled() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieGraphConditionGroupQueryBase", "IsEnabled");
-
-	Params::MovieGraphConditionGroupQueryBase_IsEnabled Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MovieRenderPipelineCore.MovieGraphConditionGroupQueryBase.IsFirstConditionGroupQuery
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMovieGraphConditionGroupQueryBase::IsFirstConditionGroupQuery() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieGraphConditionGroupQueryBase", "IsFirstConditionGroupQuery");
-
-	Params::MovieGraphConditionGroupQueryBase_IsFirstConditionGroupQuery Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MovieRenderPipelineCore.MovieGraphConditionGroupQueryBase.ShouldHidePropertyNames
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMovieGraphConditionGroupQueryBase::ShouldHidePropertyNames() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieGraphConditionGroupQueryBase", "ShouldHidePropertyNames");
-
-	Params::MovieGraphConditionGroupQueryBase_ShouldHidePropertyNames Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function MovieRenderPipelineCore.MovieGraphValueContainer.GetValueSerializedString
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -1304,6 +1098,528 @@ class FString UMovieGraphMember::GetMemberName() const
 }
 
 
+// Function MovieRenderPipelineCore.MoviePipelineBase.RequestShutdown
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    bIsError                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMoviePipelineBase::RequestShutdown(bool bIsError)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MoviePipelineBase", "RequestShutdown");
+
+	Params::MoviePipelineBase_RequestShutdown Parms{};
+
+	Parms.bIsError = bIsError;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MovieRenderPipelineCore.MoviePipelineBase.Shutdown
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    bIsError                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMoviePipelineBase::Shutdown(bool bIsError)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MoviePipelineBase", "Shutdown");
+
+	Params::MoviePipelineBase_Shutdown Parms{};
+
+	Parms.bIsError = bIsError;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MovieRenderPipelineCore.MoviePipelineBase.GetPipelineState
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// EMovieRenderPipelineState               ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+EMovieRenderPipelineState UMoviePipelineBase::GetPipelineState() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MoviePipelineBase", "GetPipelineState");
+
+	Params::MoviePipelineBase_GetPipelineState Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieRenderPipelineCore.MoviePipelineBase.IsShutdownRequested
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMoviePipelineBase::IsShutdownRequested() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MoviePipelineBase", "IsShutdownRequested");
+
+	Params::MoviePipelineBase_IsShutdownRequested Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieRenderPipelineCore.MovieGraphConditionGroupQueryBase.SetEnabled
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const bool                              bEnabled                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMovieGraphConditionGroupQueryBase::SetEnabled(const bool bEnabled)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieGraphConditionGroupQueryBase", "SetEnabled");
+
+	Params::MovieGraphConditionGroupQueryBase_SetEnabled Parms{};
+
+	Parms.bEnabled = bEnabled;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MovieRenderPipelineCore.MovieGraphConditionGroupQueryBase.SetOperationType
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const EMovieGraphConditionGroupQueryOpTypeOperationType                                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMovieGraphConditionGroupQueryBase::SetOperationType(const EMovieGraphConditionGroupQueryOpType OperationType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieGraphConditionGroupQueryBase", "SetOperationType");
+
+	Params::MovieGraphConditionGroupQueryBase_SetOperationType Parms{};
+
+	Parms.OperationType = OperationType;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MovieRenderPipelineCore.MovieGraphConditionGroupQueryBase.Evaluate
+// (Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const TArray<class AActor*>&            InActorsToQuery                                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const class UWorld*                     InWorld                                                (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TSet<class AActor*>*                    OutMatchingActors                                      (Parm, OutParm, NativeAccessSpecifierPublic)
+
+void UMovieGraphConditionGroupQueryBase::Evaluate(const TArray<class AActor*>& InActorsToQuery, const class UWorld* InWorld, TSet<class AActor*>* OutMatchingActors) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieGraphConditionGroupQueryBase", "Evaluate");
+
+	Params::MovieGraphConditionGroupQueryBase_Evaluate Parms{};
+
+	Parms.InActorsToQuery = std::move(InActorsToQuery);
+	Parms.InWorld = InWorld;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutMatchingActors != nullptr)
+		*OutMatchingActors = std::move(Parms.OutMatchingActors);
+}
+
+
+// Function MovieRenderPipelineCore.MovieGraphConditionGroupQueryBase.GetOperationType
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// EMovieGraphConditionGroupQueryOpType    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+EMovieGraphConditionGroupQueryOpType UMovieGraphConditionGroupQueryBase::GetOperationType() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieGraphConditionGroupQueryBase", "GetOperationType");
+
+	Params::MovieGraphConditionGroupQueryBase_GetOperationType Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieRenderPipelineCore.MovieGraphConditionGroupQueryBase.IsEditorOnlyQuery
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMovieGraphConditionGroupQueryBase::IsEditorOnlyQuery() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieGraphConditionGroupQueryBase", "IsEditorOnlyQuery");
+
+	Params::MovieGraphConditionGroupQueryBase_IsEditorOnlyQuery Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieRenderPipelineCore.MovieGraphConditionGroupQueryBase.IsEnabled
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMovieGraphConditionGroupQueryBase::IsEnabled() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieGraphConditionGroupQueryBase", "IsEnabled");
+
+	Params::MovieGraphConditionGroupQueryBase_IsEnabled Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieRenderPipelineCore.MovieGraphConditionGroupQueryBase.IsFirstConditionGroupQuery
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMovieGraphConditionGroupQueryBase::IsFirstConditionGroupQuery() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieGraphConditionGroupQueryBase", "IsFirstConditionGroupQuery");
+
+	Params::MovieGraphConditionGroupQueryBase_IsFirstConditionGroupQuery Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieRenderPipelineCore.MovieGraphConditionGroupQueryBase.ShouldHidePropertyNames
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMovieGraphConditionGroupQueryBase::ShouldHidePropertyNames() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieGraphConditionGroupQueryBase", "ShouldHidePropertyNames");
+
+	Params::MovieGraphConditionGroupQueryBase_ShouldHidePropertyNames Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieRenderPipelineCore.MovieGraphConditionGroup.AddQuery
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const TSubclassOf<class UMovieGraphConditionGroupQueryBase>&InQueryType                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const int32                             InsertIndex                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMovieGraphConditionGroupQueryBase*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UMovieGraphConditionGroupQueryBase* UMovieGraphConditionGroup::AddQuery(const TSubclassOf<class UMovieGraphConditionGroupQueryBase>& InQueryType, const int32 InsertIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieGraphConditionGroup", "AddQuery");
+
+	Params::MovieGraphConditionGroup_AddQuery Parms{};
+
+	Parms.InQueryType = InQueryType;
+	Parms.InsertIndex = InsertIndex;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieRenderPipelineCore.MovieGraphConditionGroup.MoveQueryToIndex
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UMovieGraphConditionGroupQueryBase*InQuery                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const int32                             NewIndex                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMovieGraphConditionGroup::MoveQueryToIndex(class UMovieGraphConditionGroupQueryBase* InQuery, const int32 NewIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieGraphConditionGroup", "MoveQueryToIndex");
+
+	Params::MovieGraphConditionGroup_MoveQueryToIndex Parms{};
+
+	Parms.InQuery = InQuery;
+	Parms.NewIndex = NewIndex;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieRenderPipelineCore.MovieGraphConditionGroup.RemoveQuery
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UMovieGraphConditionGroupQueryBase*InQuery                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMovieGraphConditionGroup::RemoveQuery(class UMovieGraphConditionGroupQueryBase* InQuery)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieGraphConditionGroup", "RemoveQuery");
+
+	Params::MovieGraphConditionGroup_RemoveQuery Parms{};
+
+	Parms.InQuery = InQuery;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieRenderPipelineCore.MovieGraphConditionGroup.SetOperationType
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const EMovieGraphConditionGroupOpType   OperationType                                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMovieGraphConditionGroup::SetOperationType(const EMovieGraphConditionGroupOpType OperationType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieGraphConditionGroup", "SetOperationType");
+
+	Params::MovieGraphConditionGroup_SetOperationType Parms{};
+
+	Parms.OperationType = OperationType;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MovieRenderPipelineCore.MovieGraphConditionGroup.Evaluate
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const class UWorld*                     InWorld                                                (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TSet<class AActor*>                     ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+TSet<class AActor*> UMovieGraphConditionGroup::Evaluate(const class UWorld* InWorld) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieGraphConditionGroup", "Evaluate");
+
+	Params::MovieGraphConditionGroup_Evaluate Parms{};
+
+	Parms.InWorld = InWorld;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieRenderPipelineCore.MovieGraphConditionGroup.GetOperationType
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// EMovieGraphConditionGroupOpType         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+EMovieGraphConditionGroupOpType UMovieGraphConditionGroup::GetOperationType() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieGraphConditionGroup", "GetOperationType");
+
+	Params::MovieGraphConditionGroup_GetOperationType Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieRenderPipelineCore.MovieGraphConditionGroup.GetQueries
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const TArray<class UMovieGraphConditionGroupQueryBase*>ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+
+const TArray<class UMovieGraphConditionGroupQueryBase*> UMovieGraphConditionGroup::GetQueries() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieGraphConditionGroup", "GetQueries");
+
+	Params::MovieGraphConditionGroup_GetQueries Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieRenderPipelineCore.MovieGraphConditionGroup.IsFirstConditionGroup
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMovieGraphConditionGroup::IsFirstConditionGroup() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieGraphConditionGroup", "IsFirstConditionGroup");
+
+	Params::MovieGraphConditionGroup_IsFirstConditionGroup Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function MovieRenderPipelineCore.MovieGraphBlueprintLibrary.GetCompletionPercentage
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
@@ -2060,26 +2376,6 @@ int32 UMovieGraphBlueprintLibrary::ResolveVersionNumber(const struct FMovieGraph
 	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
-}
-
-
-// Function MovieRenderPipelineCore.MovieRenderDebugWidget.OnInitializedForPipeline
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class UMoviePipeline*                   ForPipeline                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMovieRenderDebugWidget::OnInitializedForPipeline(class UMoviePipeline* ForPipeline)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieRenderDebugWidget", "OnInitializedForPipeline");
-
-	Params::MovieRenderDebugWidget_OnInitializedForPipeline Parms{};
-
-	Parms.ForPipeline = ForPipeline;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -3152,106 +3448,6 @@ TArray<class UMovieGraphNode*> UMovieGraphPin::GetConnectedNodes() const
 }
 
 
-// Function MovieRenderPipelineCore.MoviePipelineBase.RequestShutdown
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                                    bIsError                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMoviePipelineBase::RequestShutdown(bool bIsError)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MoviePipelineBase", "RequestShutdown");
-
-	Params::MoviePipelineBase_RequestShutdown Parms{};
-
-	Parms.bIsError = bIsError;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MovieRenderPipelineCore.MoviePipelineBase.Shutdown
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                                    bIsError                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMoviePipelineBase::Shutdown(bool bIsError)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MoviePipelineBase", "Shutdown");
-
-	Params::MoviePipelineBase_Shutdown Parms{};
-
-	Parms.bIsError = bIsError;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MovieRenderPipelineCore.MoviePipelineBase.GetPipelineState
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// EMovieRenderPipelineState               ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-EMovieRenderPipelineState UMoviePipelineBase::GetPipelineState() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MoviePipelineBase", "GetPipelineState");
-
-	Params::MoviePipelineBase_GetPipelineState Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MovieRenderPipelineCore.MoviePipelineBase.IsShutdownRequested
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMoviePipelineBase::IsShutdownRequested() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MoviePipelineBase", "IsShutdownRequested");
-
-	Params::MoviePipelineBase_IsShutdownRequested Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function MovieRenderPipelineCore.MovieGraphPipeline.Initialize
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
@@ -3464,222 +3660,6 @@ class UMovieGraphTimeStepBase* UMovieGraphPipeline::GetTimeStepInstance() const
 		Func = Class->GetFunction("MovieGraphPipeline", "GetTimeStepInstance");
 
 	Params::MovieGraphPipeline_GetTimeStepInstance Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MovieRenderPipelineCore.MovieGraphConditionGroup.AddQuery
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const TSubclassOf<class UMovieGraphConditionGroupQueryBase>&InQueryType                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const int32                             InsertIndex                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UMovieGraphConditionGroupQueryBase*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UMovieGraphConditionGroupQueryBase* UMovieGraphConditionGroup::AddQuery(const TSubclassOf<class UMovieGraphConditionGroupQueryBase>& InQueryType, const int32 InsertIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieGraphConditionGroup", "AddQuery");
-
-	Params::MovieGraphConditionGroup_AddQuery Parms{};
-
-	Parms.InQueryType = InQueryType;
-	Parms.InsertIndex = InsertIndex;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MovieRenderPipelineCore.MovieGraphConditionGroup.MoveQueryToIndex
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UMovieGraphConditionGroupQueryBase*InQuery                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const int32                             NewIndex                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMovieGraphConditionGroup::MoveQueryToIndex(class UMovieGraphConditionGroupQueryBase* InQuery, const int32 NewIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieGraphConditionGroup", "MoveQueryToIndex");
-
-	Params::MovieGraphConditionGroup_MoveQueryToIndex Parms{};
-
-	Parms.InQuery = InQuery;
-	Parms.NewIndex = NewIndex;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MovieRenderPipelineCore.MovieGraphConditionGroup.RemoveQuery
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UMovieGraphConditionGroupQueryBase*InQuery                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMovieGraphConditionGroup::RemoveQuery(class UMovieGraphConditionGroupQueryBase* InQuery)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieGraphConditionGroup", "RemoveQuery");
-
-	Params::MovieGraphConditionGroup_RemoveQuery Parms{};
-
-	Parms.InQuery = InQuery;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MovieRenderPipelineCore.MovieGraphConditionGroup.SetOperationType
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const EMovieGraphConditionGroupOpType   OperationType                                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMovieGraphConditionGroup::SetOperationType(const EMovieGraphConditionGroupOpType OperationType)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieGraphConditionGroup", "SetOperationType");
-
-	Params::MovieGraphConditionGroup_SetOperationType Parms{};
-
-	Parms.OperationType = OperationType;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MovieRenderPipelineCore.MovieGraphConditionGroup.Evaluate
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const class UWorld*                     InWorld                                                (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TSet<class AActor*>                     ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-
-TSet<class AActor*> UMovieGraphConditionGroup::Evaluate(const class UWorld* InWorld) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieGraphConditionGroup", "Evaluate");
-
-	Params::MovieGraphConditionGroup_Evaluate Parms{};
-
-	Parms.InWorld = InWorld;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MovieRenderPipelineCore.MovieGraphConditionGroup.GetOperationType
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// EMovieGraphConditionGroupOpType         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-EMovieGraphConditionGroupOpType UMovieGraphConditionGroup::GetOperationType() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieGraphConditionGroup", "GetOperationType");
-
-	Params::MovieGraphConditionGroup_GetOperationType Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MovieRenderPipelineCore.MovieGraphConditionGroup.GetQueries
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const TArray<class UMovieGraphConditionGroupQueryBase*>ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
-
-const TArray<class UMovieGraphConditionGroupQueryBase*> UMovieGraphConditionGroup::GetQueries() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieGraphConditionGroup", "GetQueries");
-
-	Params::MovieGraphConditionGroup_GetQueries Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MovieRenderPipelineCore.MovieGraphConditionGroup.IsFirstConditionGroup
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMovieGraphConditionGroup::IsFirstConditionGroup() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieGraphConditionGroup", "IsFirstConditionGroup");
-
-	Params::MovieGraphConditionGroup_IsFirstConditionGroup Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -5806,6 +5786,26 @@ struct FMoviePipelineFormatArgs UMoviePipelineSetting_BlueprintBase::ReceiveGetF
 	InOutFormatArgs = std::move(Parms.InOutFormatArgs);
 
 	return Parms.ReturnValue;
+}
+
+
+// Function MovieRenderPipelineCore.MovieRenderDebugWidget.OnInitializedForPipeline
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class UMoviePipeline*                   ForPipeline                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMovieRenderDebugWidget::OnInitializedForPipeline(class UMoviePipeline* ForPipeline)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieRenderDebugWidget", "OnInitializedForPipeline");
+
+	Params::MovieRenderDebugWidget_OnInitializedForPipeline Parms{};
+
+	Parms.ForPipeline = ForPipeline;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

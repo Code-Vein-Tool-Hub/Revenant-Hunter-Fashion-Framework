@@ -99,16 +99,12 @@ enum class ECommonSwitcherTransitionFallbackStrategy : uint8
 	ECommonSwitcherTransitionFallbackStrategy_MAX = 5,
 };
 
-// ScriptStruct CommonUI.CommonButtonStyleOptionalSlateSound
-// 0x0020 (0x0020 - 0x0000)
-struct FCommonButtonStyleOptionalSlateSound final
+// ScriptStruct CommonUI.UITag
+// 0x0000 (0x0008 - 0x0008)
+struct FUITag : public FGameplayTag
 {
-public:
-	bool                                          bHasSound;                                         // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateSound                            Sound;                                             // 0x0008(0x0018)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FCommonButtonStyleOptionalSlateSound;
+DUMPER7_ASSERTS_FUITag;
 
 // ScriptStruct CommonUI.CommonNumberFormattingOptions
 // 0x0014 (0x0014 - 0x0000)
@@ -124,13 +120,6 @@ public:
 	int32                                         MaximumFractionalDigits;                           // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FCommonNumberFormattingOptions;
-
-// ScriptStruct CommonUI.UITag
-// 0x0000 (0x0008 - 0x0008)
-struct FUITag : public FGameplayTag
-{
-};
-DUMPER7_ASSERTS_FUITag;
 
 // ScriptStruct CommonUI.CommonRegisteredTabInfo
 // 0x0018 (0x0018 - 0x0000)
@@ -184,6 +173,17 @@ public:
 	uint8                                         Pad_11[0xF];                                       // 0x0011(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FCommonInputActionHandlerData;
+
+// ScriptStruct CommonUI.CommonButtonStyleOptionalSlateSound
+// 0x0020 (0x0020 - 0x0000)
+struct FCommonButtonStyleOptionalSlateSound final
+{
+public:
+	bool                                          bHasSound;                                         // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateSound                            Sound;                                             // 0x0008(0x0018)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FCommonButtonStyleOptionalSlateSound;
 
 // ScriptStruct CommonUI.RichTextIconData
 // 0x0048 (0x0050 - 0x0008)

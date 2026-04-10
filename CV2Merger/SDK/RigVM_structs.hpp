@@ -378,29 +378,36 @@ struct FRigVMFunction_MathBase : public FRigVMStruct
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathBase;
 
-// ScriptStruct RigVM.RigVMFunction_MathDoubleBase
+// ScriptStruct RigVM.RigVMFunction_MathVectorBase
 // 0x0000 (0x0008 - 0x0008)
-struct FRigVMFunction_MathDoubleBase : public FRigVMFunction_MathBase
+struct FRigVMFunction_MathVectorBase : public FRigVMFunction_MathBase
 {
 };
-DUMPER7_ASSERTS_FRigVMFunction_MathDoubleBase;
+DUMPER7_ASSERTS_FRigVMFunction_MathVectorBase;
 
-// ScriptStruct RigVM.RigVMFunction_MathDoubleUnaryOp
-// 0x0010 (0x0018 - 0x0008)
-struct FRigVMFunction_MathDoubleUnaryOp : public FRigVMFunction_MathDoubleBase
+// ScriptStruct RigVM.RigVMFunction_MathVectorMirrorTransform
+// 0x00A8 (0x00B0 - 0x0008)
+struct FRigVMFunction_MathVectorMirrorTransform final : public FRigVMFunction_MathVectorBase
 {
 public:
-	double                                        Value;                                             // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        Result;                                            // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Value;                                             // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAxis                                         MirrorAxis;                                        // 0x0020(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAxis                                         AxisToFlip;                                        // 0x0021(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_22[0xE];                                       // 0x0022(0x000E)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CentralTransform;                                  // 0x0030(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Result;                                            // 0x0090(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A8[0x8];                                       // 0x00A8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FRigVMFunction_MathDoubleUnaryOp;
+DUMPER7_ASSERTS_FRigVMFunction_MathVectorMirrorTransform;
 
-// ScriptStruct RigVM.RigVMFunction_MathDoubleTan
-// 0x0000 (0x0018 - 0x0018)
-struct FRigVMFunction_MathDoubleTan final : public FRigVMFunction_MathDoubleUnaryOp
+// ScriptStruct RigVM.RigVMDispatchFactory
+// 0x0070 (0x0070 - 0x0000)
+struct alignas(0x08) FRigVMDispatchFactory
 {
+public:
+	uint8                                         Pad_0[0x70];                                       // 0x0000(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FRigVMFunction_MathDoubleTan;
+DUMPER7_ASSERTS_FRigVMDispatchFactory;
 
 // ScriptStruct RigVM.RigVMBaseOp
 // 0x0001 (0x0001 - 0x0000)
@@ -411,39 +418,40 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMBaseOp;
 
-// ScriptStruct RigVM.RigVMSenaryOp
-// 0x0025 (0x0026 - 0x0001)
-struct alignas(0x02) FRigVMSenaryOp final : public FRigVMBaseOp
+// ScriptStruct RigVM.RigVMTernaryOp
+// 0x0013 (0x0014 - 0x0001)
+struct alignas(0x02) FRigVMTernaryOp final : public FRigVMBaseOp
 {
 public:
-	uint8                                         Pad_1[0x25];                                       // 0x0001(0x0025)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x13];                                       // 0x0001(0x0013)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FRigVMSenaryOp;
+DUMPER7_ASSERTS_FRigVMTernaryOp;
 
-// ScriptStruct RigVM.RigVMFunction_MathVectorBase
+// ScriptStruct RigVM.RigVMFunction_MathBoolBase
 // 0x0000 (0x0008 - 0x0008)
-struct FRigVMFunction_MathVectorBase : public FRigVMFunction_MathBase
+struct FRigVMFunction_MathBoolBase : public FRigVMFunction_MathBase
 {
 };
-DUMPER7_ASSERTS_FRigVMFunction_MathVectorBase;
+DUMPER7_ASSERTS_FRigVMFunction_MathBoolBase;
 
-// ScriptStruct RigVM.RigVMFunction_MathVectorBinaryOp
-// 0x0048 (0x0050 - 0x0008)
-struct FRigVMFunction_MathVectorBinaryOp : public FRigVMFunction_MathVectorBase
+// ScriptStruct RigVM.RigVMFunction_MathBoolBinaryOp
+// 0x0008 (0x0010 - 0x0008)
+struct FRigVMFunction_MathBoolBinaryOp : public FRigVMFunction_MathBoolBase
 {
 public:
-	struct FVector                                A;                                                 // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                B;                                                 // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Result;                                            // 0x0038(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          A;                                                 // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          B;                                                 // 0x0009(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Result;                                            // 0x000A(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B[0x5];                                        // 0x000B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FRigVMFunction_MathVectorBinaryOp;
+DUMPER7_ASSERTS_FRigVMFunction_MathBoolBinaryOp;
 
-// ScriptStruct RigVM.RigVMFunction_MathVectorSub
-// 0x0000 (0x0050 - 0x0050)
-struct FRigVMFunction_MathVectorSub final : public FRigVMFunction_MathVectorBinaryOp
+// ScriptStruct RigVM.RigVMFunction_MathBoolNand2
+// 0x0000 (0x0010 - 0x0010)
+struct FRigVMFunction_MathBoolNand2 final : public FRigVMFunction_MathBoolBinaryOp
 {
 };
-DUMPER7_ASSERTS_FRigVMFunction_MathVectorSub;
+DUMPER7_ASSERTS_FRigVMFunction_MathBoolNand2;
 
 // ScriptStruct RigVM.RigVMDrawInstruction
 // 0x00D0 (0x00D0 - 0x0000)
@@ -472,89 +480,12 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMDrawContainer;
 
-// ScriptStruct RigVM.RigVMExtendedExecuteContext
-// 0x0230 (0x0230 - 0x0000)
-struct alignas(0x08) FRigVMExtendedExecuteContext final
-{
-public:
-	uint8                                         Pad_0[0x230];                                      // 0x0000(0x0230)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FRigVMExtendedExecuteContext;
-
-// ScriptStruct RigVM.RigVMQuinaryOp
-// 0x001F (0x0020 - 0x0001)
-struct alignas(0x02) FRigVMQuinaryOp final : public FRigVMBaseOp
-{
-public:
-	uint8                                         Pad_1[0x1F];                                       // 0x0001(0x001F)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FRigVMQuinaryOp;
-
-// ScriptStruct RigVM.RigVMFunction_MathBoolBase
-// 0x0000 (0x0008 - 0x0008)
-struct FRigVMFunction_MathBoolBase : public FRigVMFunction_MathBase
+// ScriptStruct RigVM.RigVMDrawInterface
+// 0x0000 (0x0018 - 0x0018)
+struct FRigVMDrawInterface final : public FRigVMDrawContainer
 {
 };
-DUMPER7_ASSERTS_FRigVMFunction_MathBoolBase;
-
-// ScriptStruct RigVM.RigVMFunction_MathBoolEquals
-// 0x0008 (0x0010 - 0x0008)
-struct FRigVMFunction_MathBoolEquals final : public FRigVMFunction_MathBoolBase
-{
-public:
-	bool                                          A;                                                 // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          B;                                                 // 0x0009(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Result;                                            // 0x000A(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B[0x5];                                        // 0x000B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathBoolEquals;
-
-// ScriptStruct RigVM.RigVMRuntimeSettings
-// 0x0018 (0x0018 - 0x0000)
-struct alignas(0x08) FRigVMRuntimeSettings final
-{
-public:
-	int32                                         MaximumArraySize;                                  // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x14];                                       // 0x0004(0x0014)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FRigVMRuntimeSettings;
-
-// ScriptStruct RigVM.RigVMDispatchFactory
-// 0x0070 (0x0070 - 0x0000)
-struct alignas(0x08) FRigVMDispatchFactory
-{
-public:
-	uint8                                         Pad_0[0x70];                                       // 0x0000(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FRigVMDispatchFactory;
-
-// ScriptStruct RigVM.RigVMDispatch_CastEnumToInt
-// 0x0000 (0x0070 - 0x0070)
-struct FRigVMDispatch_CastEnumToInt final : public FRigVMDispatchFactory
-{
-};
-DUMPER7_ASSERTS_FRigVMDispatch_CastEnumToInt;
-
-// ScriptStruct RigVM.RigVMFunction_MathVectorDistance
-// 0x0038 (0x0040 - 0x0008)
-struct FRigVMFunction_MathVectorDistance final : public FRigVMFunction_MathVectorBase
-{
-public:
-	struct FVector                                A;                                                 // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                B;                                                 // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Result;                                            // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathVectorDistance;
-
-// ScriptStruct RigVM.RigVMDecorator
-// 0x0010 (0x0018 - 0x0008)
-struct FRigVMDecorator final : public FRigVMStruct
-{
-public:
-	uint8                                         Pad_8[0x10];                                       // 0x0008(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FRigVMDecorator;
+DUMPER7_ASSERTS_FRigVMDrawInterface;
 
 // ScriptStruct RigVM.RigVMDispatch_CoreBase
 // 0x0000 (0x0070 - 0x0070)
@@ -562,197 +493,6 @@ struct FRigVMDispatch_CoreBase : public FRigVMDispatchFactory
 {
 };
 DUMPER7_ASSERTS_FRigVMDispatch_CoreBase;
-
-// ScriptStruct RigVM.RigVMDispatch_MakeStruct
-// 0x0000 (0x0070 - 0x0070)
-struct FRigVMDispatch_MakeStruct : public FRigVMDispatch_CoreBase
-{
-};
-DUMPER7_ASSERTS_FRigVMDispatch_MakeStruct;
-
-// ScriptStruct RigVM.RigVMFourPointBezier
-// 0x0060 (0x0060 - 0x0000)
-struct FRigVMFourPointBezier final
-{
-public:
-	struct FVector                                A;                                                 // 0x0000(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                B;                                                 // 0x0018(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                C;                                                 // 0x0030(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                D;                                                 // 0x0048(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FRigVMFourPointBezier;
-
-// ScriptStruct RigVM.RigVMFunction_MathVectorBezierFourPoint
-// 0x0098 (0x00A0 - 0x0008)
-struct FRigVMFunction_MathVectorBezierFourPoint final : public FRigVMFunction_MathVectorBase
-{
-public:
-	struct FRigVMFourPointBezier                  Bezier;                                            // 0x0008(0x0060)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         T;                                                 // 0x0068(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                Result;                                            // 0x0070(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Tangent;                                           // 0x0088(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathVectorBezierFourPoint;
-
-// ScriptStruct RigVM.RigVMDispatch_CoreEquals
-// 0x0000 (0x0070 - 0x0070)
-struct FRigVMDispatch_CoreEquals : public FRigVMDispatch_CoreBase
-{
-};
-DUMPER7_ASSERTS_FRigVMDispatch_CoreEquals;
-
-// ScriptStruct RigVM.RigVMDispatch_CoreNotEquals
-// 0x0000 (0x0070 - 0x0070)
-struct FRigVMDispatch_CoreNotEquals final : public FRigVMDispatch_CoreEquals
-{
-};
-DUMPER7_ASSERTS_FRigVMDispatch_CoreNotEquals;
-
-// ScriptStruct RigVM.RigVMFunction_MathVectorArrayAverage
-// 0x0028 (0x0030 - 0x0008)
-struct FRigVMFunction_MathVectorArrayAverage final : public FRigVMFunction_MathVectorBase
-{
-public:
-	TArray<struct FVector>                        Array;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	struct FVector                                Average;                                           // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathVectorArrayAverage;
-
-// ScriptStruct RigVM.RigVMDispatch_CastIntToEnum
-// 0x0000 (0x0070 - 0x0070)
-struct FRigVMDispatch_CastIntToEnum final : public FRigVMDispatchFactory
-{
-};
-DUMPER7_ASSERTS_FRigVMDispatch_CastIntToEnum;
-
-// ScriptStruct RigVM.RigVMDispatch_SelectInt32
-// 0x0000 (0x0070 - 0x0070)
-struct FRigVMDispatch_SelectInt32 final : public FRigVMDispatch_CoreBase
-{
-};
-DUMPER7_ASSERTS_FRigVMDispatch_SelectInt32;
-
-// ScriptStruct RigVM.RigVMDispatch_CastObject
-// 0x0000 (0x0070 - 0x0070)
-struct FRigVMDispatch_CastObject final : public FRigVMDispatchFactory
-{
-};
-DUMPER7_ASSERTS_FRigVMDispatch_CastObject;
-
-// ScriptStruct RigVM.RigVMFunction_MathIntersectPlane
-// 0x0080 (0x0088 - 0x0008)
-struct FRigVMFunction_MathIntersectPlane final : public FRigVMFunction_MathVectorBase
-{
-public:
-	struct FVector                                Start;                                             // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Direction;                                         // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                PlanePoint;                                        // 0x0038(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                PlaneNormal;                                       // 0x0050(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Result;                                            // 0x0068(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Distance;                                          // 0x0080(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathIntersectPlane;
-
-// ScriptStruct RigVM.RigVMExternalVariableDef
-// 0x0028 (0x0028 - 0x0000)
-struct alignas(0x08) FRigVMExternalVariableDef
-{
-public:
-	uint8                                         Pad_0[0x28];                                       // 0x0000(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FRigVMExternalVariableDef;
-
-// ScriptStruct RigVM.RigVMExternalVariable
-// 0x0008 (0x0030 - 0x0028)
-struct FRigVMExternalVariable final : public FRigVMExternalVariableDef
-{
-public:
-	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FRigVMExternalVariable;
-
-// ScriptStruct RigVM.RigVMFunction_MathVectorParallel
-// 0x0038 (0x0040 - 0x0008)
-struct FRigVMFunction_MathVectorParallel final : public FRigVMFunction_MathVectorBase
-{
-public:
-	struct FVector                                A;                                                 // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                B;                                                 // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Result;                                            // 0x0038(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathVectorParallel;
-
-// ScriptStruct RigVM.RigVMFunction_AnimBase
-// 0x0000 (0x0008 - 0x0008)
-struct FRigVMFunction_AnimBase : public FRigVMStruct
-{
-};
-DUMPER7_ASSERTS_FRigVMFunction_AnimBase;
-
-// ScriptStruct RigVM.RigVMFunction_DebugBase
-// 0x0000 (0x0008 - 0x0008)
-struct FRigVMFunction_DebugBase : public FRigVMStruct
-{
-};
-DUMPER7_ASSERTS_FRigVMFunction_DebugBase;
-
-// ScriptStruct RigVM.RigVMFunction_MathVectorMirrorTransform
-// 0x00A8 (0x00B0 - 0x0008)
-struct FRigVMFunction_MathVectorMirrorTransform final : public FRigVMFunction_MathVectorBase
-{
-public:
-	struct FVector                                Value;                                             // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EAxis                                         MirrorAxis;                                        // 0x0020(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EAxis                                         AxisToFlip;                                        // 0x0021(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_22[0xE];                                       // 0x0022(0x000E)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CentralTransform;                                  // 0x0030(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Result;                                            // 0x0090(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A8[0x8];                                       // 0x00A8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathVectorMirrorTransform;
-
-// ScriptStruct RigVM.RigVMExecuteContext
-// 0x00F0 (0x00F0 - 0x0000)
-struct alignas(0x10) FRigVMExecuteContext
-{
-public:
-	uint8                                         Pad_0[0xF0];                                       // 0x0000(0x00F0)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FRigVMExecuteContext;
-
-// ScriptStruct RigVM.RigVMStructMutable
-// 0x00F8 (0x0100 - 0x0008)
-struct FRigVMStructMutable : public FRigVMStruct
-{
-public:
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRigVMExecuteContext                   ExecuteContext;                                    // 0x0010(0x00F0)(Edit, BlueprintVisible, Transient, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FRigVMStructMutable;
-
-// ScriptStruct RigVM.RigVMSimPoint
-// 0x0040 (0x0040 - 0x0000)
-struct FRigVMSimPoint final
-{
-public:
-	float                                         Mass;                                              // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Size;                                              // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LinearDamping;                                     // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         InheritMotion;                                     // 0x000C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Position;                                          // 0x0010(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                LinearVelocity;                                    // 0x0028(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FRigVMSimPoint;
-
-// ScriptStruct RigVM.RigVMFunction_DebugBaseMutable
-// 0x0000 (0x0100 - 0x0100)
-struct FRigVMFunction_DebugBaseMutable : public FRigVMStructMutable
-{
-};
-DUMPER7_ASSERTS_FRigVMFunction_DebugBaseMutable;
 
 // ScriptStruct RigVM.RigVMDispatch_ArrayBase
 // 0x0000 (0x0070 - 0x0070)
@@ -782,20 +522,312 @@ struct FRigVMDispatch_ArrayReverse final : public FRigVMDispatch_ArrayReset
 };
 DUMPER7_ASSERTS_FRigVMDispatch_ArrayReverse;
 
-// ScriptStruct RigVM.RigVMFunction_NoiseDouble
-// 0x0038 (0x0040 - 0x0008)
-struct FRigVMFunction_NoiseDouble final : public FRigVMFunction_MathBase
+// ScriptStruct RigVM.RigVMFourPointBezier
+// 0x0060 (0x0060 - 0x0000)
+struct FRigVMFourPointBezier final
+{
+public:
+	struct FVector                                A;                                                 // 0x0000(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                B;                                                 // 0x0018(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                C;                                                 // 0x0030(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                D;                                                 // 0x0048(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRigVMFourPointBezier;
+
+// ScriptStruct RigVM.RigVMFunction_MathVectorBezierFourPoint
+// 0x0098 (0x00A0 - 0x0008)
+struct FRigVMFunction_MathVectorBezierFourPoint final : public FRigVMFunction_MathVectorBase
+{
+public:
+	struct FRigVMFourPointBezier                  Bezier;                                            // 0x0008(0x0060)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         T;                                                 // 0x0068(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                Result;                                            // 0x0070(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Tangent;                                           // 0x0088(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathVectorBezierFourPoint;
+
+// ScriptStruct RigVM.RigVMExtendedExecuteContext
+// 0x0230 (0x0230 - 0x0000)
+struct alignas(0x08) FRigVMExtendedExecuteContext final
+{
+public:
+	uint8                                         Pad_0[0x230];                                      // 0x0000(0x0230)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRigVMExtendedExecuteContext;
+
+// ScriptStruct RigVM.RigVMDecorator
+// 0x0010 (0x0018 - 0x0008)
+struct FRigVMDecorator final : public FRigVMStruct
+{
+public:
+	uint8                                         Pad_8[0x10];                                       // 0x0008(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRigVMDecorator;
+
+// ScriptStruct RigVM.RigVMFunction_MathDoubleBase
+// 0x0000 (0x0008 - 0x0008)
+struct FRigVMFunction_MathDoubleBase : public FRigVMFunction_MathBase
+{
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathDoubleBase;
+
+// ScriptStruct RigVM.RigVMFunction_MathDoubleFloor
+// 0x0018 (0x0020 - 0x0008)
+struct FRigVMFunction_MathDoubleFloor final : public FRigVMFunction_MathDoubleBase
 {
 public:
 	double                                        Value;                                             // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        Speed;                                             // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        Frequency;                                         // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        Minimum;                                           // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        Maximum;                                           // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        Result;                                            // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        Time;                                              // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        Result;                                            // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Int;                                               // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FRigVMFunction_NoiseDouble;
+DUMPER7_ASSERTS_FRigVMFunction_MathDoubleFloor;
+
+// ScriptStruct RigVM.RigVMMemoryStatistics
+// 0x000C (0x000C - 0x0000)
+struct FRigVMMemoryStatistics final
+{
+public:
+	int32                                         RegisterCount;                                     // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         DataBytes;                                         // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TotalBytes;                                        // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRigVMMemoryStatistics;
+
+// ScriptStruct RigVM.RigVMFunction_MathTransformBase
+// 0x0000 (0x0008 - 0x0008)
+struct FRigVMFunction_MathTransformBase : public FRigVMFunction_MathBase
+{
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathTransformBase;
+
+// ScriptStruct RigVM.RigVMFunction_MathTransformMakeRelative
+// 0x0128 (0x0130 - 0x0008)
+struct FRigVMFunction_MathTransformMakeRelative final : public FRigVMFunction_MathTransformBase
+{
+public:
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             Global;                                            // 0x0010(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             Parent;                                            // 0x0070(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             Local;                                             // 0x00D0(0x0060)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathTransformMakeRelative;
+
+// ScriptStruct RigVM.RigVMFunction_MathVectorParallel
+// 0x0038 (0x0040 - 0x0008)
+struct FRigVMFunction_MathVectorParallel final : public FRigVMFunction_MathVectorBase
+{
+public:
+	struct FVector                                A;                                                 // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                B;                                                 // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Result;                                            // 0x0038(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathVectorParallel;
+
+// ScriptStruct RigVM.RigVMFunction_MathVectorMakeRelative
+// 0x0048 (0x0050 - 0x0008)
+struct FRigVMFunction_MathVectorMakeRelative final : public FRigVMFunction_MathVectorBase
+{
+public:
+	struct FVector                                Global;                                            // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Parent;                                            // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Local;                                             // 0x0038(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathVectorMakeRelative;
+
+// ScriptStruct RigVM.RigVMFunction_AnimBase
+// 0x0000 (0x0008 - 0x0008)
+struct FRigVMFunction_AnimBase : public FRigVMStruct
+{
+};
+DUMPER7_ASSERTS_FRigVMFunction_AnimBase;
+
+// ScriptStruct RigVM.RigVMFunction_SimBase
+// 0x0000 (0x0008 - 0x0008)
+struct FRigVMFunction_SimBase : public FRigVMStruct
+{
+};
+DUMPER7_ASSERTS_FRigVMFunction_SimBase;
+
+// ScriptStruct RigVM.RigVMFunction_AccumulateBase
+// 0x0000 (0x0008 - 0x0008)
+struct FRigVMFunction_AccumulateBase : public FRigVMFunction_SimBase
+{
+};
+DUMPER7_ASSERTS_FRigVMFunction_AccumulateBase;
+
+// ScriptStruct RigVM.RigVMFunction_AccumulateFloatMul
+// 0x0018 (0x0020 - 0x0008)
+struct FRigVMFunction_AccumulateFloatMul final : public FRigVMFunction_AccumulateBase
+{
+public:
+	float                                         Multiplier;                                        // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InitialValue;                                      // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIntegrateDeltaTime;                               // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Result;                                            // 0x0014(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AccumulatedValue;                                  // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsInitialized;                                    // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRigVMFunction_AccumulateFloatMul;
+
+// ScriptStruct RigVM.RigVMRuntimeSettings
+// 0x0018 (0x0018 - 0x0000)
+struct alignas(0x08) FRigVMRuntimeSettings final
+{
+public:
+	int32                                         MaximumArraySize;                                  // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x14];                                       // 0x0004(0x0014)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRigVMRuntimeSettings;
+
+// ScriptStruct RigVM.RigVMDispatch_CastEnumToInt
+// 0x0000 (0x0070 - 0x0070)
+struct FRigVMDispatch_CastEnumToInt final : public FRigVMDispatchFactory
+{
+};
+DUMPER7_ASSERTS_FRigVMDispatch_CastEnumToInt;
+
+// ScriptStruct RigVM.RigVMFunction_MathVectorMakeBezierFourPoint
+// 0x0060 (0x0068 - 0x0008)
+struct FRigVMFunction_MathVectorMakeBezierFourPoint final : public FRigVMFunction_MathVectorBase
+{
+public:
+	struct FRigVMFourPointBezier                  Bezier;                                            // 0x0008(0x0060)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathVectorMakeBezierFourPoint;
+
+// ScriptStruct RigVM.RigVMDispatch_CastIntToEnum
+// 0x0000 (0x0070 - 0x0070)
+struct FRigVMDispatch_CastIntToEnum final : public FRigVMDispatchFactory
+{
+};
+DUMPER7_ASSERTS_FRigVMDispatch_CastIntToEnum;
+
+// ScriptStruct RigVM.RigVMDispatch_ArrayGetAtIndex
+// 0x0000 (0x0070 - 0x0070)
+struct FRigVMDispatch_ArrayGetAtIndex final : public FRigVMDispatch_ArrayBase
+{
+};
+DUMPER7_ASSERTS_FRigVMDispatch_ArrayGetAtIndex;
+
+// ScriptStruct RigVM.RigVMDispatch_CastObject
+// 0x0000 (0x0070 - 0x0070)
+struct FRigVMDispatch_CastObject final : public FRigVMDispatchFactory
+{
+};
+DUMPER7_ASSERTS_FRigVMDispatch_CastObject;
+
+// ScriptStruct RigVM.RigVMFunction_MathVectorMirror
+// 0x0048 (0x0050 - 0x0008)
+struct FRigVMFunction_MathVectorMirror final : public FRigVMFunction_MathVectorBase
+{
+public:
+	struct FVector                                Value;                                             // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Normal;                                            // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Result;                                            // 0x0038(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathVectorMirror;
+
+// ScriptStruct RigVM.RigVMExternalVariableDef
+// 0x0028 (0x0028 - 0x0000)
+struct alignas(0x08) FRigVMExternalVariableDef
+{
+public:
+	uint8                                         Pad_0[0x28];                                       // 0x0000(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRigVMExternalVariableDef;
+
+// ScriptStruct RigVM.RigVMExternalVariable
+// 0x0008 (0x0030 - 0x0028)
+struct FRigVMExternalVariable final : public FRigVMExternalVariableDef
+{
+public:
+	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRigVMExternalVariable;
+
+// ScriptStruct RigVM.RigVMDispatch_ArrayIterator
+// 0x0000 (0x0070 - 0x0070)
+struct FRigVMDispatch_ArrayIterator final : public FRigVMDispatch_ArrayBaseMutable
+{
+};
+DUMPER7_ASSERTS_FRigVMDispatch_ArrayIterator;
+
+// ScriptStruct RigVM.RigVMFunction_DebugBase
+// 0x0000 (0x0008 - 0x0008)
+struct FRigVMFunction_DebugBase : public FRigVMStruct
+{
+};
+DUMPER7_ASSERTS_FRigVMFunction_DebugBase;
+
+// ScriptStruct RigVM.RigVMFunction_MathTransformTransformVector
+// 0x0098 (0x00A0 - 0x0008)
+struct FRigVMFunction_MathTransformTransformVector final : public FRigVMFunction_MathTransformBase
+{
+public:
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             Transform;                                         // 0x0010(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Location;                                          // 0x0070(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Result;                                            // 0x0088(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathTransformTransformVector;
+
+// ScriptStruct RigVM.RigVMExecuteContext
+// 0x00F0 (0x00F0 - 0x0000)
+struct alignas(0x10) FRigVMExecuteContext
+{
+public:
+	uint8                                         Pad_0[0xF0];                                       // 0x0000(0x00F0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRigVMExecuteContext;
+
+// ScriptStruct RigVM.RigVMStructMutable
+// 0x00F8 (0x0100 - 0x0008)
+struct FRigVMStructMutable : public FRigVMStruct
+{
+public:
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRigVMExecuteContext                   ExecuteContext;                                    // 0x0010(0x00F0)(Edit, BlueprintVisible, Transient, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRigVMStructMutable;
+
+// ScriptStruct RigVM.RigVMFunction_MathTransformMakeAbsolute
+// 0x0128 (0x0130 - 0x0008)
+struct FRigVMFunction_MathTransformMakeAbsolute final : public FRigVMFunction_MathTransformBase
+{
+public:
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             Local;                                             // 0x0010(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             Parent;                                            // 0x0070(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             Global;                                            // 0x00D0(0x0060)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathTransformMakeAbsolute;
+
+// ScriptStruct RigVM.RigVMFunction_DebugBaseMutable
+// 0x0000 (0x0100 - 0x0100)
+struct FRigVMFunction_DebugBaseMutable : public FRigVMStructMutable
+{
+};
+DUMPER7_ASSERTS_FRigVMFunction_DebugBaseMutable;
+
+// ScriptStruct RigVM.RigVMFunction_MathIntersectPlane
+// 0x0080 (0x0088 - 0x0008)
+struct FRigVMFunction_MathIntersectPlane final : public FRigVMFunction_MathVectorBase
+{
+public:
+	struct FVector                                Start;                                             // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Direction;                                         // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                PlanePoint;                                        // 0x0038(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                PlaneNormal;                                       // 0x0050(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Result;                                            // 0x0068(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Distance;                                          // 0x0080(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathIntersectPlane;
 
 // ScriptStruct RigVM.RigVMFunction_MathMutableBase
 // 0x0000 (0x0100 - 0x0100)
@@ -803,13 +835,6 @@ struct FRigVMFunction_MathMutableBase : public FRigVMStructMutable
 {
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathMutableBase;
-
-// ScriptStruct RigVM.RigVMDispatch_ArrayDifference
-// 0x0000 (0x0070 - 0x0070)
-struct FRigVMDispatch_ArrayDifference : public FRigVMDispatch_ArrayBase
-{
-};
-DUMPER7_ASSERTS_FRigVMDispatch_ArrayDifference;
 
 // ScriptStruct RigVM.RigVMFunction_Sequence
 // 0x02D8 (0x02E0 - 0x0008)
@@ -823,30 +848,28 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_Sequence;
 
-// ScriptStruct RigVM.RigVMDispatch_ArraySetAtIndex
-// 0x0000 (0x0070 - 0x0070)
-struct FRigVMDispatch_ArraySetAtIndex : public FRigVMDispatch_ArrayBaseMutable
-{
-};
-DUMPER7_ASSERTS_FRigVMDispatch_ArraySetAtIndex;
-
-// ScriptStruct RigVM.RigVMDispatch_ArrayInsert
-// 0x0000 (0x0070 - 0x0070)
-struct FRigVMDispatch_ArrayInsert final : public FRigVMDispatch_ArraySetAtIndex
-{
-};
-DUMPER7_ASSERTS_FRigVMDispatch_ArrayInsert;
-
-// ScriptStruct RigVM.RigVMFunction_MathVectorMakeRelative
-// 0x0048 (0x0050 - 0x0008)
-struct FRigVMFunction_MathVectorMakeRelative final : public FRigVMFunction_MathVectorBase
+// ScriptStruct RigVM.RigVMFunction_MathVectorArraySum
+// 0x0028 (0x0030 - 0x0008)
+struct FRigVMFunction_MathVectorArraySum final : public FRigVMFunction_MathVectorBase
 {
 public:
-	struct FVector                                Global;                                            // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Parent;                                            // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Local;                                             // 0x0038(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FVector>                        Array;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FVector                                Sum;                                               // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FRigVMFunction_MathVectorMakeRelative;
+DUMPER7_ASSERTS_FRigVMFunction_MathVectorArraySum;
+
+// ScriptStruct RigVM.RigVMFunction_MathTransformSelectBool
+// 0x0128 (0x0130 - 0x0008)
+struct FRigVMFunction_MathTransformSelectBool final : public FRigVMFunction_MathTransformBase
+{
+public:
+	bool                                          Condition;                                         // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             IfTrue;                                            // 0x0010(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             IfFalse;                                           // 0x0070(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             Result;                                            // 0x00D0(0x0060)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathTransformSelectBool;
 
 // ScriptStruct RigVM.RigVMUnknownType
 // 0x0004 (0x0004 - 0x0000)
@@ -857,31 +880,6 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMUnknownType;
 
-// ScriptStruct RigVM.RigVMFunction_SimBase
-// 0x0000 (0x0008 - 0x0008)
-struct FRigVMFunction_SimBase : public FRigVMStruct
-{
-};
-DUMPER7_ASSERTS_FRigVMFunction_SimBase;
-
-// ScriptStruct RigVM.RigVMFunction_RandomVector
-// 0x0050 (0x0058 - 0x0008)
-struct FRigVMFunction_RandomVector final : public FRigVMFunction_MathBase
-{
-public:
-	int32                                         Seed;                                              // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Minimum;                                           // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Maximum;                                           // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Duration;                                          // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Result;                                            // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                LastResult;                                        // 0x0030(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         LastSeed;                                          // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         BaseSeed;                                          // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TimeLeft;                                          // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FRigVMFunction_RandomVector;
-
 // ScriptStruct RigVM.RigVMFunction_SimBaseMutable
 // 0x0000 (0x0100 - 0x0100)
 struct FRigVMFunction_SimBaseMutable : public FRigVMStructMutable
@@ -889,12 +887,24 @@ struct FRigVMFunction_SimBaseMutable : public FRigVMStructMutable
 };
 DUMPER7_ASSERTS_FRigVMFunction_SimBaseMutable;
 
-// ScriptStruct RigVM.RigVMFunction_ControlFlowBase
+// ScriptStruct RigVM.RigVMFunction_MathFloatBase
 // 0x0000 (0x0008 - 0x0008)
-struct FRigVMFunction_ControlFlowBase : public FRigVMStruct
+struct FRigVMFunction_MathFloatBase : public FRigVMFunction_MathBase
 {
 };
-DUMPER7_ASSERTS_FRigVMFunction_ControlFlowBase;
+DUMPER7_ASSERTS_FRigVMFunction_MathFloatBase;
+
+// ScriptStruct RigVM.RigVMFunction_MathFloatEquals
+// 0x0010 (0x0018 - 0x0008)
+struct FRigVMFunction_MathFloatEquals final : public FRigVMFunction_MathFloatBase
+{
+public:
+	float                                         A;                                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         B;                                                 // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Result;                                            // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathFloatEquals;
 
 // ScriptStruct RigVM.RigVMGraphFunctionIdentifier
 // 0x0040 (0x0040 - 0x0000)
@@ -1073,107 +1083,82 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMGraphFunctionStore;
 
-// ScriptStruct RigVM.RigVMFunction_MathVectorFromFloat
-// 0x0020 (0x0028 - 0x0008)
-struct FRigVMFunction_MathVectorFromFloat final : public FRigVMFunction_MathVectorBase
-{
-public:
-	float                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                Result;                                            // 0x0010(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathVectorFromFloat;
-
-// ScriptStruct RigVM.RigVMDispatch_ArrayRemove
-// 0x0000 (0x0070 - 0x0070)
-struct FRigVMDispatch_ArrayRemove final : public FRigVMDispatch_ArrayBaseMutable
-{
-};
-DUMPER7_ASSERTS_FRigVMDispatch_ArrayRemove;
-
-// ScriptStruct RigVM.RigVMFunction_MathTransformBase
-// 0x0000 (0x0008 - 0x0008)
-struct FRigVMFunction_MathTransformBase : public FRigVMFunction_MathBase
-{
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathTransformBase;
-
-// ScriptStruct RigVM.RigVMFunction_MathTransformMirrorTransform
-// 0x0138 (0x0140 - 0x0008)
-struct FRigVMFunction_MathTransformMirrorTransform final : public FRigVMFunction_MathTransformBase
-{
-public:
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             Value;                                             // 0x0010(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EAxis                                         MirrorAxis;                                        // 0x0070(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EAxis                                         AxisToFlip;                                        // 0x0071(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_72[0xE];                                       // 0x0072(0x000E)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CentralTransform;                                  // 0x0080(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTransform                             Result;                                            // 0x00E0(0x0060)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathTransformMirrorTransform;
-
-// ScriptStruct RigVM.RigVMFunction_NoiseVector2
-// 0x0088 (0x0090 - 0x0008)
-struct FRigVMFunction_NoiseVector2 final : public FRigVMFunction_MathBase
-{
-public:
-	struct FVector                                Value;                                             // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Speed;                                             // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Frequency;                                         // 0x0038(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        Minimum;                                           // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        Maximum;                                           // 0x0058(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Result;                                            // 0x0060(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Time;                                              // 0x0078(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FRigVMFunction_NoiseVector2;
-
-// ScriptStruct RigVM.RigVMFunction_MathVectorBinaryAggregateOp
-// 0x0048 (0x0050 - 0x0008)
-struct FRigVMFunction_MathVectorBinaryAggregateOp : public FRigVMFunction_MathVectorBase
-{
-public:
-	struct FVector                                A;                                                 // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                B;                                                 // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Result;                                            // 0x0038(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathVectorBinaryAggregateOp;
-
-// ScriptStruct RigVM.RigVMFunction_MathFloatBase
-// 0x0000 (0x0008 - 0x0008)
-struct FRigVMFunction_MathFloatBase : public FRigVMFunction_MathBase
-{
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathFloatBase;
-
-// ScriptStruct RigVM.RigVMFunction_MathFloatUnaryOp
-// 0x0008 (0x0010 - 0x0008)
-struct FRigVMFunction_MathFloatUnaryOp : public FRigVMFunction_MathFloatBase
-{
-public:
-	float                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Result;                                            // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathFloatUnaryOp;
-
-// ScriptStruct RigVM.RigVMFunction_MathFloatRad
-// 0x0000 (0x0010 - 0x0010)
-struct FRigVMFunction_MathFloatRad final : public FRigVMFunction_MathFloatUnaryOp
-{
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathFloatRad;
-
-// ScriptStruct RigVM.RigVMFunction_MathDoubleIsNearlyZero
-// 0x0018 (0x0020 - 0x0008)
-struct FRigVMFunction_MathDoubleIsNearlyZero final : public FRigVMFunction_MathDoubleBase
+// ScriptStruct RigVM.RigVMFunction_MathDoubleUnaryOp
+// 0x0010 (0x0018 - 0x0008)
+struct FRigVMFunction_MathDoubleUnaryOp : public FRigVMFunction_MathDoubleBase
 {
 public:
 	double                                        Value;                                             // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        Tolerance;                                         // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        Result;                                            // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathDoubleUnaryOp;
+
+// ScriptStruct RigVM.RigVMFunction_MathDoubleSign
+// 0x0000 (0x0018 - 0x0018)
+struct FRigVMFunction_MathDoubleSign final : public FRigVMFunction_MathDoubleUnaryOp
+{
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathDoubleSign;
+
+// ScriptStruct RigVM.RigVMFunction_MathFloatGreaterEqual
+// 0x0010 (0x0018 - 0x0008)
+struct FRigVMFunction_MathFloatGreaterEqual final : public FRigVMFunction_MathFloatBase
+{
+public:
+	float                                         A;                                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         B;                                                 // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Result;                                            // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathFloatGreaterEqual;
+
+// ScriptStruct RigVM.RigVMFunction_MathFloatLerp
+// 0x0010 (0x0018 - 0x0008)
+struct FRigVMFunction_MathFloatLerp final : public FRigVMFunction_MathFloatBase
+{
+public:
+	float                                         A;                                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         B;                                                 // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         T;                                                 // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Result;                                            // 0x0014(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathFloatLerp;
+
+// ScriptStruct RigVM.RigVMFunction_MathDoubleRound
+// 0x0018 (0x0020 - 0x0008)
+struct FRigVMFunction_MathDoubleRound final : public FRigVMFunction_MathDoubleBase
+{
+public:
+	double                                        Value;                                             // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        Result;                                            // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Int;                                               // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathDoubleRound;
+
+// ScriptStruct RigVM.RigVMFunction_MathDoubleGreaterEqual
+// 0x0018 (0x0020 - 0x0008)
+struct FRigVMFunction_MathDoubleGreaterEqual final : public FRigVMFunction_MathDoubleBase
+{
+public:
+	double                                        A;                                                 // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        B;                                                 // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          Result;                                            // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FRigVMFunction_MathDoubleIsNearlyZero;
+DUMPER7_ASSERTS_FRigVMFunction_MathDoubleGreaterEqual;
+
+// ScriptStruct RigVM.RigVMFunction_MathDoubleLerp
+// 0x0020 (0x0028 - 0x0008)
+struct FRigVMFunction_MathDoubleLerp final : public FRigVMFunction_MathDoubleBase
+{
+public:
+	double                                        A;                                                 // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        B;                                                 // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        T;                                                 // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        Result;                                            // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathDoubleLerp;
 
 // ScriptStruct RigVM.RigVMMemoryStorageStruct
 // 0x0040 (0x0050 - 0x0010)
@@ -1183,24 +1168,6 @@ public:
 	uint8                                         Pad_10[0x40];                                      // 0x0010(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FRigVMMemoryStorageStruct;
-
-// ScriptStruct RigVM.RigVMFunction_MathFloatAsin
-// 0x0000 (0x0010 - 0x0010)
-struct FRigVMFunction_MathFloatAsin final : public FRigVMFunction_MathFloatUnaryOp
-{
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathFloatAsin;
-
-// ScriptStruct RigVM.RigVMMemoryStatistics
-// 0x000C (0x000C - 0x0000)
-struct FRigVMMemoryStatistics final
-{
-public:
-	int32                                         RegisterCount;                                     // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         DataBytes;                                         // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         TotalBytes;                                        // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FRigVMMemoryStatistics;
 
 // ScriptStruct RigVM.RigVMByteCodeStatistics
 // 0x0008 (0x0008 - 0x0000)
@@ -1212,18 +1179,17 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMByteCodeStatistics;
 
-// ScriptStruct RigVM.RigVMFunction_MathFloatSelectBool
-// 0x0010 (0x0018 - 0x0008)
-struct FRigVMFunction_MathFloatSelectBool final : public FRigVMFunction_MathFloatBase
+// ScriptStruct RigVM.RigVMFunction_MathDoubleGreater
+// 0x0018 (0x0020 - 0x0008)
+struct FRigVMFunction_MathDoubleGreater final : public FRigVMFunction_MathDoubleBase
 {
 public:
-	bool                                          Condition;                                         // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         IfTrue;                                            // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         IfFalse;                                           // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Result;                                            // 0x0014(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        A;                                                 // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        B;                                                 // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Result;                                            // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FRigVMFunction_MathFloatSelectBool;
+DUMPER7_ASSERTS_FRigVMFunction_MathDoubleGreater;
 
 // ScriptStruct RigVM.RigVMStatistics
 // 0x0038 (0x0038 - 0x0000)
@@ -1249,17 +1215,12 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMGraphFunctionHeaderArray;
 
-// ScriptStruct RigVM.RigVMFunction_MathDoubleGreaterEqual
-// 0x0018 (0x0020 - 0x0008)
-struct FRigVMFunction_MathDoubleGreaterEqual final : public FRigVMFunction_MathDoubleBase
+// ScriptStruct RigVM.RigVMFunction_MathDoubleTan
+// 0x0000 (0x0018 - 0x0018)
+struct FRigVMFunction_MathDoubleTan final : public FRigVMFunction_MathDoubleUnaryOp
 {
-public:
-	double                                        A;                                                 // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        B;                                                 // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Result;                                            // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FRigVMFunction_MathDoubleGreaterEqual;
+DUMPER7_ASSERTS_FRigVMFunction_MathDoubleTan;
 
 // ScriptStruct RigVM.RigVMParameter
 // 0x0030 (0x0030 - 0x0000)
@@ -1276,12 +1237,17 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMParameter;
 
-// ScriptStruct RigVM.RigVMFunction_MathDoubleAcos
-// 0x0000 (0x0018 - 0x0018)
-struct FRigVMFunction_MathDoubleAcos final : public FRigVMFunction_MathDoubleUnaryOp
+// ScriptStruct RigVM.RigVMFunction_MathDoubleIsNearlyZero
+// 0x0018 (0x0020 - 0x0008)
+struct FRigVMFunction_MathDoubleIsNearlyZero final : public FRigVMFunction_MathDoubleBase
 {
+public:
+	double                                        Value;                                             // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        Tolerance;                                         // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Result;                                            // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FRigVMFunction_MathDoubleAcos;
+DUMPER7_ASSERTS_FRigVMFunction_MathDoubleIsNearlyZero;
 
 // ScriptStruct RigVM.RigVMExecuteOp
 // 0x0009 (0x000A - 0x0001)
@@ -1301,12 +1267,17 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMUnaryOp;
 
-// ScriptStruct RigVM.RigVMFunction_MathDoubleDeg
-// 0x0000 (0x0018 - 0x0018)
-struct FRigVMFunction_MathDoubleDeg final : public FRigVMFunction_MathDoubleUnaryOp
+// ScriptStruct RigVM.RigVMFunction_MathDoubleEquals
+// 0x0018 (0x0020 - 0x0008)
+struct FRigVMFunction_MathDoubleEquals final : public FRigVMFunction_MathDoubleBase
 {
+public:
+	double                                        A;                                                 // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        B;                                                 // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Result;                                            // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FRigVMFunction_MathDoubleDeg;
+DUMPER7_ASSERTS_FRigVMFunction_MathDoubleEquals;
 
 // ScriptStruct RigVM.RigVMBinaryOp
 // 0x000D (0x000E - 0x0001)
@@ -1317,26 +1288,12 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMBinaryOp;
 
-// ScriptStruct RigVM.RigVMTernaryOp
-// 0x0013 (0x0014 - 0x0001)
-struct alignas(0x02) FRigVMTernaryOp final : public FRigVMBaseOp
+// ScriptStruct RigVM.RigVMFunction_MathDoubleSin
+// 0x0000 (0x0018 - 0x0018)
+struct FRigVMFunction_MathDoubleSin final : public FRigVMFunction_MathDoubleUnaryOp
 {
-public:
-	uint8                                         Pad_1[0x13];                                       // 0x0001(0x0013)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FRigVMTernaryOp;
-
-// ScriptStruct RigVM.RigVMFunction_MathDoubleGreater
-// 0x0018 (0x0020 - 0x0008)
-struct FRigVMFunction_MathDoubleGreater final : public FRigVMFunction_MathDoubleBase
-{
-public:
-	double                                        A;                                                 // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        B;                                                 // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Result;                                            // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathDoubleGreater;
+DUMPER7_ASSERTS_FRigVMFunction_MathDoubleSin;
 
 // ScriptStruct RigVM.RigVMQuaternaryOp
 // 0x0019 (0x001A - 0x0001)
@@ -1347,6 +1304,34 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMQuaternaryOp;
 
+// ScriptStruct RigVM.RigVMQuinaryOp
+// 0x001F (0x0020 - 0x0001)
+struct alignas(0x02) FRigVMQuinaryOp final : public FRigVMBaseOp
+{
+public:
+	uint8                                         Pad_1[0x1F];                                       // 0x0001(0x001F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRigVMQuinaryOp;
+
+// ScriptStruct RigVM.RigVMFunction_MathDoubleArrayAverage
+// 0x0018 (0x0020 - 0x0008)
+struct FRigVMFunction_MathDoubleArrayAverage final : public FRigVMFunction_MathDoubleBase
+{
+public:
+	TArray<double>                                Array;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	double                                        Average;                                           // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathDoubleArrayAverage;
+
+// ScriptStruct RigVM.RigVMSenaryOp
+// 0x0025 (0x0026 - 0x0001)
+struct alignas(0x02) FRigVMSenaryOp final : public FRigVMBaseOp
+{
+public:
+	uint8                                         Pad_1[0x25];                                       // 0x0001(0x0025)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRigVMSenaryOp;
+
 // ScriptStruct RigVM.RigVMCopyOp
 // 0x0011 (0x0012 - 0x0001)
 struct alignas(0x02) FRigVMCopyOp final : public FRigVMBaseOp
@@ -1356,15 +1341,12 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMCopyOp;
 
-// ScriptStruct RigVM.RigVMFunction_MathFloatConstant
-// 0x0008 (0x0010 - 0x0008)
-struct FRigVMFunction_MathFloatConstant : public FRigVMFunction_MathFloatBase
+// ScriptStruct RigVM.RigVMFunction_MathDoubleAcos
+// 0x0000 (0x0018 - 0x0018)
+struct FRigVMFunction_MathDoubleAcos final : public FRigVMFunction_MathDoubleUnaryOp
 {
-public:
-	float                                         Value;                                             // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FRigVMFunction_MathFloatConstant;
+DUMPER7_ASSERTS_FRigVMFunction_MathDoubleAcos;
 
 // ScriptStruct RigVM.RigVMComparisonOp
 // 0x0013 (0x0014 - 0x0001)
@@ -1384,23 +1366,12 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMJumpOp;
 
-// ScriptStruct RigVM.RigVMFunction_MathDoubleBinaryOp
-// 0x0018 (0x0020 - 0x0008)
-struct FRigVMFunction_MathDoubleBinaryOp : public FRigVMFunction_MathDoubleBase
-{
-public:
-	double                                        A;                                                 // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        B;                                                 // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        Result;                                            // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathDoubleBinaryOp;
-
-// ScriptStruct RigVM.RigVMFunction_MathDoubleAtan2
-// 0x0000 (0x0020 - 0x0020)
-struct FRigVMFunction_MathDoubleAtan2 final : public FRigVMFunction_MathDoubleBinaryOp
+// ScriptStruct RigVM.RigVMFunction_MathDoubleDeg
+// 0x0000 (0x0018 - 0x0018)
+struct FRigVMFunction_MathDoubleDeg final : public FRigVMFunction_MathDoubleUnaryOp
 {
 };
-DUMPER7_ASSERTS_FRigVMFunction_MathDoubleAtan2;
+DUMPER7_ASSERTS_FRigVMFunction_MathDoubleDeg;
 
 // ScriptStruct RigVM.RigVMJumpIfOp
 // 0x0008 (0x0010 - 0x0008)
@@ -1418,12 +1389,19 @@ struct FRigVMChangeTypeOp final : public FRigVMUnaryOp
 };
 DUMPER7_ASSERTS_FRigVMChangeTypeOp;
 
-// ScriptStruct RigVM.RigVMFunction_MathDoubleSin
-// 0x0000 (0x0018 - 0x0018)
-struct FRigVMFunction_MathDoubleSin final : public FRigVMFunction_MathDoubleUnaryOp
+// ScriptStruct RigVM.RigVMDispatch_MakeStruct
+// 0x0000 (0x0070 - 0x0070)
+struct FRigVMDispatch_MakeStruct : public FRigVMDispatch_CoreBase
 {
 };
-DUMPER7_ASSERTS_FRigVMFunction_MathDoubleSin;
+DUMPER7_ASSERTS_FRigVMDispatch_MakeStruct;
+
+// ScriptStruct RigVM.RigVMDispatch_BreakStruct
+// 0x0000 (0x0070 - 0x0070)
+struct FRigVMDispatch_BreakStruct final : public FRigVMDispatch_MakeStruct
+{
+};
+DUMPER7_ASSERTS_FRigVMDispatch_BreakStruct;
 
 // ScriptStruct RigVM.RigVMInvokeEntryOp
 // 0x000B (0x000C - 0x0001)
@@ -1443,15 +1421,22 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMJumpToBranchOp;
 
-// ScriptStruct RigVM.RigVMFunction_MathDoubleArrayAverage
-// 0x0018 (0x0020 - 0x0008)
-struct FRigVMFunction_MathDoubleArrayAverage final : public FRigVMFunction_MathDoubleBase
+// ScriptStruct RigVM.RigVMFunction_MathFloatConstant
+// 0x0008 (0x0010 - 0x0008)
+struct FRigVMFunction_MathFloatConstant : public FRigVMFunction_MathFloatBase
 {
 public:
-	TArray<double>                                Array;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	double                                        Average;                                           // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Value;                                             // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FRigVMFunction_MathDoubleArrayAverage;
+DUMPER7_ASSERTS_FRigVMFunction_MathFloatConstant;
+
+// ScriptStruct RigVM.RigVMFunction_MathFloatConstHalfPi
+// 0x0000 (0x0010 - 0x0010)
+struct FRigVMFunction_MathFloatConstHalfPi final : public FRigVMFunction_MathFloatConstant
+{
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathFloatConstHalfPi;
 
 // ScriptStruct RigVM.RigVMRunInstructionsOp
 // 0x0008 (0x0010 - 0x0008)
@@ -1474,13 +1459,6 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMInstruction;
 
-// ScriptStruct RigVM.RigVMFunction_MathFloatConstE
-// 0x0000 (0x0010 - 0x0010)
-struct FRigVMFunction_MathFloatConstE final : public FRigVMFunction_MathFloatConstant
-{
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathFloatConstE;
-
 // ScriptStruct RigVM.RigVMInstructionArray
 // 0x0010 (0x0010 - 0x0000)
 struct FRigVMInstructionArray final
@@ -1499,18 +1477,6 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMBreakpoint;
 
-// ScriptStruct RigVM.RigVMFunction_MathFloatBinaryOp
-// 0x0010 (0x0018 - 0x0008)
-struct FRigVMFunction_MathFloatBinaryOp : public FRigVMFunction_MathFloatBase
-{
-public:
-	float                                         A;                                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         B;                                                 // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Result;                                            // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathFloatBinaryOp;
-
 // ScriptStruct RigVM.RigVMDebugInfo
 // 0x0148 (0x0148 - 0x0000)
 struct alignas(0x08) FRigVMDebugInfo final
@@ -1520,19 +1486,15 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMDebugInfo;
 
-// ScriptStruct RigVM.RigVMDrawInterface
-// 0x0000 (0x0018 - 0x0018)
-struct FRigVMDrawInterface final : public FRigVMDrawContainer
+// ScriptStruct RigVM.RigVMFunction_MathFloatMake
+// 0x0008 (0x0010 - 0x0008)
+struct FRigVMFunction_MathFloatMake final : public FRigVMFunction_MathFloatBase
 {
+public:
+	float                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FRigVMDrawInterface;
-
-// ScriptStruct RigVM.RigVMFunction_MathDoubleExponential
-// 0x0000 (0x0018 - 0x0018)
-struct FRigVMFunction_MathDoubleExponential final : public FRigVMFunction_MathDoubleUnaryOp
-{
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathDoubleExponential;
+DUMPER7_ASSERTS_FRigVMFunction_MathFloatMake;
 
 // ScriptStruct RigVM.RigVMSlice
 // 0x0014 (0x0014 - 0x0000)
@@ -1552,24 +1514,24 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMInstructionSetExecuteState;
 
-// ScriptStruct RigVM.RigVMFunction_NameBase
-// 0x0000 (0x0008 - 0x0008)
-struct FRigVMFunction_NameBase : public FRigVMStruct
-{
-};
-DUMPER7_ASSERTS_FRigVMFunction_NameBase;
-
-// ScriptStruct RigVM.RigVMFunction_EndsWith
-// 0x0018 (0x0020 - 0x0008)
-struct FRigVMFunction_EndsWith final : public FRigVMFunction_NameBase
+// ScriptStruct RigVM.RigVMFunction_MathFloatBinaryAggregateOp
+// 0x0010 (0x0018 - 0x0008)
+struct FRigVMFunction_MathFloatBinaryAggregateOp : public FRigVMFunction_MathFloatBase
 {
 public:
-	class FName                                   Name;                                              // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   Ending;                                            // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Result;                                            // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         A;                                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         B;                                                 // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Result;                                            // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FRigVMFunction_EndsWith;
+DUMPER7_ASSERTS_FRigVMFunction_MathFloatBinaryAggregateOp;
+
+// ScriptStruct RigVM.RigVMFunction_MathFloatMin
+// 0x0000 (0x0018 - 0x0018)
+struct FRigVMFunction_MathFloatMin final : public FRigVMFunction_MathFloatBinaryAggregateOp
+{
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathFloatMin;
 
 // ScriptStruct RigVM.RigVMRegister
 // 0x0024 (0x0024 - 0x0000)
@@ -1613,12 +1575,19 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMRegisterOffset;
 
-// ScriptStruct RigVM.RigVMFunction_MathFloatPow
-// 0x0000 (0x0018 - 0x0018)
-struct FRigVMFunction_MathFloatPow final : public FRigVMFunction_MathFloatBinaryOp
+// ScriptStruct RigVM.RigVMFunction_ControlFlowBase
+// 0x0000 (0x0008 - 0x0008)
+struct FRigVMFunction_ControlFlowBase : public FRigVMStruct
 {
 };
-DUMPER7_ASSERTS_FRigVMFunction_MathFloatPow;
+DUMPER7_ASSERTS_FRigVMFunction_ControlFlowBase;
+
+// ScriptStruct RigVM.RigVMFunction_MathFloatConstE
+// 0x0000 (0x0010 - 0x0010)
+struct FRigVMFunction_MathFloatConstE final : public FRigVMFunction_MathFloatConstant
+{
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathFloatConstE;
 
 // ScriptStruct RigVM.RigVMMemoryContainer
 // 0x00A0 (0x00A0 - 0x0000)
@@ -1647,6 +1616,25 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMInstructionVisitInfo;
 
+// ScriptStruct RigVM.RigVMDispatch_SelectInt32
+// 0x0000 (0x0070 - 0x0070)
+struct FRigVMDispatch_SelectInt32 final : public FRigVMDispatch_CoreBase
+{
+};
+DUMPER7_ASSERTS_FRigVMDispatch_SelectInt32;
+
+// ScriptStruct RigVM.RigVMFunction_MathFloatBinaryOp
+// 0x0010 (0x0018 - 0x0008)
+struct FRigVMFunction_MathFloatBinaryOp : public FRigVMFunction_MathFloatBase
+{
+public:
+	float                                         A;                                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         B;                                                 // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Result;                                            // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathFloatBinaryOp;
+
 // ScriptStruct RigVM.RigVMProfilingInfo
 // 0x0028 (0x0028 - 0x0000)
 struct alignas(0x08) FRigVMProfilingInfo final
@@ -1665,6 +1653,13 @@ public:
 	class UObject*                                CPPTypeObject;                                     // 0x0008(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 };
 DUMPER7_ASSERTS_FRigVMTemplateArgumentType;
+
+// ScriptStruct RigVM.RigVMFunction_MathFloatDiv
+// 0x0000 (0x0018 - 0x0018)
+struct FRigVMFunction_MathFloatDiv final : public FRigVMFunction_MathFloatBinaryOp
+{
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathFloatDiv;
 
 // ScriptStruct RigVM.RigVMUserWorkflow
 // 0x0058 (0x0058 - 0x0000)
@@ -1691,24 +1686,17 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_AnimEasingType;
 
-// ScriptStruct RigVM.RigVMFunction_MathFloatBinaryAggregateOp
+// ScriptStruct RigVM.RigVMFunction_MathFloatRound
 // 0x0010 (0x0018 - 0x0008)
-struct FRigVMFunction_MathFloatBinaryAggregateOp : public FRigVMFunction_MathFloatBase
+struct FRigVMFunction_MathFloatRound final : public FRigVMFunction_MathFloatBase
 {
 public:
-	float                                         A;                                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         B;                                                 // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Result;                                            // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Result;                                            // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Int;                                               // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FRigVMFunction_MathFloatBinaryAggregateOp;
-
-// ScriptStruct RigVM.RigVMFunction_MathFloatMin
-// 0x0000 (0x0018 - 0x0018)
-struct FRigVMFunction_MathFloatMin final : public FRigVMFunction_MathFloatBinaryAggregateOp
-{
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathFloatMin;
+DUMPER7_ASSERTS_FRigVMFunction_MathFloatRound;
 
 // ScriptStruct RigVM.RigVMFunction_AnimEasing
 // 0x0020 (0x0028 - 0x0008)
@@ -1744,12 +1732,12 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_AnimEvalRichCurve;
 
-// ScriptStruct RigVM.RigVMFunction_MathFloatSign
-// 0x0000 (0x0010 - 0x0010)
-struct FRigVMFunction_MathFloatSign final : public FRigVMFunction_MathFloatUnaryOp
+// ScriptStruct RigVM.RigVMFunction_MathFloatPow
+// 0x0000 (0x0018 - 0x0018)
+struct FRigVMFunction_MathFloatPow final : public FRigVMFunction_MathFloatBinaryOp
 {
 };
-DUMPER7_ASSERTS_FRigVMFunction_MathFloatSign;
+DUMPER7_ASSERTS_FRigVMFunction_MathFloatPow;
 
 // ScriptStruct RigVM.RigVMFunction_AnimRichCurve
 // 0x0088 (0x0090 - 0x0008)
@@ -1770,30 +1758,12 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_GetDeltaTime;
 
-// ScriptStruct RigVM.RigVMFunction_StringBase
-// 0x0000 (0x0008 - 0x0008)
-struct FRigVMFunction_StringBase : public FRigVMStruct
+// ScriptStruct RigVM.RigVMFunction_MathFloatSub
+// 0x0000 (0x0018 - 0x0018)
+struct FRigVMFunction_MathFloatSub final : public FRigVMFunction_MathFloatBinaryOp
 {
 };
-DUMPER7_ASSERTS_FRigVMFunction_StringBase;
-
-// ScriptStruct RigVM.RigVMFunction_StringConcat
-// 0x0030 (0x0038 - 0x0008)
-struct FRigVMFunction_StringConcat final : public FRigVMFunction_StringBase
-{
-public:
-	class FString                                 A;                                                 // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 B;                                                 // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Result;                                            // 0x0028(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FRigVMFunction_StringConcat;
-
-// ScriptStruct RigVM.RigVMFunction_MathFloatNegate
-// 0x0000 (0x0010 - 0x0010)
-struct FRigVMFunction_MathFloatNegate final : public FRigVMFunction_MathFloatUnaryOp
-{
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathFloatNegate;
+DUMPER7_ASSERTS_FRigVMFunction_MathFloatSub;
 
 // ScriptStruct RigVM.RigVMFunction_GetWorldTime
 // 0x0020 (0x0028 - 0x0008)
@@ -1821,24 +1791,17 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_FramesToSeconds;
 
-// ScriptStruct RigVM.RigVMFunction_Contains
-// 0x0018 (0x0020 - 0x0008)
-struct FRigVMFunction_Contains final : public FRigVMFunction_NameBase
+// ScriptStruct RigVM.RigVMFunction_MathFloatFloor
+// 0x0010 (0x0018 - 0x0008)
+struct FRigVMFunction_MathFloatFloor final : public FRigVMFunction_MathFloatBase
 {
 public:
-	class FName                                   Name;                                              // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   Search;                                            // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Result;                                            // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Result;                                            // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Int;                                               // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FRigVMFunction_Contains;
-
-// ScriptStruct RigVM.RigVMFunction_MathFloatDiv
-// 0x0000 (0x0018 - 0x0018)
-struct FRigVMFunction_MathFloatDiv final : public FRigVMFunction_MathFloatBinaryOp
-{
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathFloatDiv;
+DUMPER7_ASSERTS_FRigVMFunction_MathFloatFloor;
 
 // ScriptStruct RigVM.RigVMFunction_SecondsToFrames
 // 0x0008 (0x0010 - 0x0008)
@@ -1866,17 +1829,17 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_DebugLineNoSpace;
 
-// ScriptStruct RigVM.RigVMFunction_MathFloatRound
+// ScriptStruct RigVM.RigVMFunction_MathFloatGreater
 // 0x0010 (0x0018 - 0x0008)
-struct FRigVMFunction_MathFloatRound final : public FRigVMFunction_MathFloatBase
+struct FRigVMFunction_MathFloatGreater final : public FRigVMFunction_MathFloatBase
 {
 public:
-	float                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Result;                                            // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Int;                                               // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         A;                                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         B;                                                 // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Result;                                            // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FRigVMFunction_MathFloatRound;
+DUMPER7_ASSERTS_FRigVMFunction_MathFloatGreater;
 
 // ScriptStruct RigVM.RigVMFunction_DebugLineStripNoSpace
 // 0x00A0 (0x01A0 - 0x0100)
@@ -1912,17 +1875,22 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_DebugPoint;
 
-// ScriptStruct RigVM.RigVMFunction_MathFloatGreaterEqual
-// 0x0010 (0x0018 - 0x0008)
-struct FRigVMFunction_MathFloatGreaterEqual final : public FRigVMFunction_MathFloatBase
+// ScriptStruct RigVM.RigVMFunction_MathFloatUnaryOp
+// 0x0008 (0x0010 - 0x0008)
+struct FRigVMFunction_MathFloatUnaryOp : public FRigVMFunction_MathFloatBase
 {
 public:
-	float                                         A;                                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         B;                                                 // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Result;                                            // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Result;                                            // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FRigVMFunction_MathFloatGreaterEqual;
+DUMPER7_ASSERTS_FRigVMFunction_MathFloatUnaryOp;
+
+// ScriptStruct RigVM.RigVMFunction_MathFloatSign
+// 0x0000 (0x0010 - 0x0010)
+struct FRigVMFunction_MathFloatSign final : public FRigVMFunction_MathFloatUnaryOp
+{
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathFloatSign;
 
 // ScriptStruct RigVM.RigVMFunction_DebugPointMutable
 // 0x00B0 (0x01B0 - 0x0100)
@@ -1959,17 +1927,12 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_DebugRectangle;
 
-// ScriptStruct RigVM.RigVMFunction_MathFloatLerp
-// 0x0010 (0x0018 - 0x0008)
-struct FRigVMFunction_MathFloatLerp final : public FRigVMFunction_MathFloatBase
+// ScriptStruct RigVM.RigVMFunction_MathFloatNegate
+// 0x0000 (0x0010 - 0x0010)
+struct FRigVMFunction_MathFloatNegate final : public FRigVMFunction_MathFloatUnaryOp
 {
-public:
-	float                                         A;                                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         B;                                                 // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         T;                                                 // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Result;                                            // 0x0014(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FRigVMFunction_MathFloatLerp;
+DUMPER7_ASSERTS_FRigVMFunction_MathFloatNegate;
 
 // ScriptStruct RigVM.RigVMFunction_DebugRectangleNoSpace
 // 0x00F0 (0x01F0 - 0x0100)
@@ -2007,17 +1970,24 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_DebugArc;
 
-// ScriptStruct RigVM.RigVMFunction_MathFloatFloor
-// 0x0010 (0x0018 - 0x0008)
-struct FRigVMFunction_MathFloatFloor final : public FRigVMFunction_MathFloatBase
+// ScriptStruct RigVM.RigVMFunction_MathQuaternionBase
+// 0x0000 (0x0008 - 0x0008)
+struct FRigVMFunction_MathQuaternionBase : public FRigVMFunction_MathBase
+{
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathQuaternionBase;
+
+// ScriptStruct RigVM.RigVMFunction_MathQuaternionBinaryOp
+// 0x0068 (0x0070 - 0x0008)
+struct FRigVMFunction_MathQuaternionBinaryOp final : public FRigVMFunction_MathQuaternionBase
 {
 public:
-	float                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Result;                                            // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Int;                                               // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FQuat                                  A;                                                 // 0x0010(0x0020)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FQuat                                  B;                                                 // 0x0030(0x0020)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FQuat                                  Result;                                            // 0x0050(0x0020)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FRigVMFunction_MathFloatFloor;
+DUMPER7_ASSERTS_FRigVMFunction_MathQuaternionBinaryOp;
 
 // ScriptStruct RigVM.RigVMFunction_DebugArcNoSpace
 // 0x0100 (0x0200 - 0x0100)
@@ -2056,17 +2026,12 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_DebugTransformMutableNoSpace;
 
-// ScriptStruct RigVM.RigVMFunction_MathFloatGreater
-// 0x0010 (0x0018 - 0x0008)
-struct FRigVMFunction_MathFloatGreater final : public FRigVMFunction_MathFloatBase
+// ScriptStruct RigVM.RigVMFunction_MathFloatRad
+// 0x0000 (0x0010 - 0x0010)
+struct FRigVMFunction_MathFloatRad final : public FRigVMFunction_MathFloatUnaryOp
 {
-public:
-	float                                         A;                                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         B;                                                 // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Result;                                            // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FRigVMFunction_MathFloatGreater;
+DUMPER7_ASSERTS_FRigVMFunction_MathFloatRad;
 
 // ScriptStruct RigVM.RigVMFunction_DebugTransformArrayMutable_WorkData
 // 0x0010 (0x0010 - 0x0000)
@@ -2096,12 +2061,17 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_DebugTransformArrayMutableNoSpace;
 
-// ScriptStruct RigVM.RigVMFunction_MathFloatCos
-// 0x0000 (0x0010 - 0x0010)
-struct FRigVMFunction_MathFloatCos final : public FRigVMFunction_MathFloatUnaryOp
+// ScriptStruct RigVM.RigVMFunction_MathQuaternionFromEuler
+// 0x0048 (0x0050 - 0x0008)
+struct FRigVMFunction_MathQuaternionFromEuler final : public FRigVMFunction_MathQuaternionBase
 {
+public:
+	struct FVector                                Euler;                                             // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EEulerRotationOrder                           RotationOrder;                                     // 0x0020(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0xF];                                       // 0x0021(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FQuat                                  Result;                                            // 0x0030(0x0020)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FRigVMFunction_MathFloatCos;
+DUMPER7_ASSERTS_FRigVMFunction_MathQuaternionFromEuler;
 
 // ScriptStruct RigVM.RigVMFunction_VisualDebugVector
 // 0x0040 (0x0048 - 0x0008)
@@ -2136,18 +2106,6 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_VisualDebugVectorNoSpace;
 
-// ScriptStruct RigVM.RigVMFunction_MathFloatIsNearlyZero
-// 0x0010 (0x0018 - 0x0008)
-struct FRigVMFunction_MathFloatIsNearlyZero final : public FRigVMFunction_MathFloatBase
-{
-public:
-	float                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Tolerance;                                         // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Result;                                            // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathFloatIsNearlyZero;
-
 // ScriptStruct RigVM.RigVMFunction_VisualDebugQuat
 // 0x0048 (0x0050 - 0x0008)
 struct FRigVMFunction_VisualDebugQuat final : public FRigVMFunction_DebugBase
@@ -2179,17 +2137,18 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_VisualDebugQuatNoSpace;
 
-// ScriptStruct RigVM.RigVMFunction_MathFloatEquals
+// ScriptStruct RigVM.RigVMFunction_MathFloatSelectBool
 // 0x0010 (0x0018 - 0x0008)
-struct FRigVMFunction_MathFloatEquals final : public FRigVMFunction_MathFloatBase
+struct FRigVMFunction_MathFloatSelectBool final : public FRigVMFunction_MathFloatBase
 {
 public:
-	float                                         A;                                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         B;                                                 // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Result;                                            // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          Condition;                                         // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         IfTrue;                                            // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         IfFalse;                                           // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Result;                                            // 0x0014(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FRigVMFunction_MathFloatEquals;
+DUMPER7_ASSERTS_FRigVMFunction_MathFloatSelectBool;
 
 // ScriptStruct RigVM.RigVMFunction_VisualDebugTransform
 // 0x0088 (0x0090 - 0x0008)
@@ -2222,24 +2181,21 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_VisualDebugTransformNoSpace;
 
-// ScriptStruct RigVM.RigVMFunction_MathQuaternionBase
-// 0x0000 (0x0008 - 0x0008)
-struct FRigVMFunction_MathQuaternionBase : public FRigVMFunction_MathBase
-{
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathQuaternionBase;
-
-// ScriptStruct RigVM.RigVMFunction_MathQuaternionScale
-// 0x0038 (0x0040 - 0x0008)
-struct FRigVMFunction_MathQuaternionScale final : public FRigVMFunction_MathQuaternionBase
+// ScriptStruct RigVM.RigVMFunction_MathFloatLawOfCosine
+// 0x0020 (0x0028 - 0x0008)
+struct FRigVMFunction_MathFloatLawOfCosine final : public FRigVMFunction_MathFloatBase
 {
 public:
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FQuat                                  Value;                                             // 0x0010(0x0020)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Scale;                                             // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34[0xC];                                       // 0x0034(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         A;                                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         B;                                                 // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         C;                                                 // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AlphaAngle;                                        // 0x0014(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BetaAngle;                                         // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         GammaAngle;                                        // 0x001C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bValid;                                            // 0x0020(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FRigVMFunction_MathQuaternionScale;
+DUMPER7_ASSERTS_FRigVMFunction_MathFloatLawOfCosine;
 
 // ScriptStruct RigVM.RigVMFunction_ForLoopCount
 // 0x0110 (0x0210 - 0x0100)
@@ -2267,16 +2223,12 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_UserDefinedEvent;
 
-// ScriptStruct RigVM.RigVMFunction_MathFloatArraySum
-// 0x0018 (0x0020 - 0x0008)
-struct FRigVMFunction_MathFloatArraySum final : public FRigVMFunction_MathFloatBase
+// ScriptStruct RigVM.RigVMFunction_MathFloatCos
+// 0x0000 (0x0010 - 0x0010)
+struct FRigVMFunction_MathFloatCos final : public FRigVMFunction_MathFloatUnaryOp
 {
-public:
-	TArray<float>                                 Array;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	float                                         Sum;                                               // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FRigVMFunction_MathFloatArraySum;
+DUMPER7_ASSERTS_FRigVMFunction_MathFloatCos;
 
 // ScriptStruct RigVM.RigVMFunction_MathBoolConstant
 // 0x0008 (0x0010 - 0x0008)
@@ -2288,24 +2240,17 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathBoolConstant;
 
-// ScriptStruct RigVM.RigVMFunction_MathQuaternionBinaryAggregateOp
-// 0x0068 (0x0070 - 0x0008)
-struct FRigVMFunction_MathQuaternionBinaryAggregateOp : public FRigVMFunction_MathQuaternionBase
+// ScriptStruct RigVM.RigVMFunction_MathFloatIsNearlyZero
+// 0x0010 (0x0018 - 0x0008)
+struct FRigVMFunction_MathFloatIsNearlyZero final : public FRigVMFunction_MathFloatBase
 {
 public:
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FQuat                                  A;                                                 // 0x0010(0x0020)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FQuat                                  B;                                                 // 0x0030(0x0020)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FQuat                                  Result;                                            // 0x0050(0x0020)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Tolerance;                                         // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Result;                                            // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FRigVMFunction_MathQuaternionBinaryAggregateOp;
-
-// ScriptStruct RigVM.RigVMFunction_MathQuaternionMul
-// 0x0000 (0x0070 - 0x0070)
-struct FRigVMFunction_MathQuaternionMul final : public FRigVMFunction_MathQuaternionBinaryAggregateOp
-{
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathQuaternionMul;
+DUMPER7_ASSERTS_FRigVMFunction_MathFloatIsNearlyZero;
 
 // ScriptStruct RigVM.RigVMFunction_MathBoolUnaryOp
 // 0x0008 (0x0010 - 0x0008)
@@ -2318,30 +2263,12 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathBoolUnaryOp;
 
-// ScriptStruct RigVM.RigVMFunction_MathBoolBinaryOp
-// 0x0008 (0x0010 - 0x0008)
-struct FRigVMFunction_MathBoolBinaryOp : public FRigVMFunction_MathBoolBase
+// ScriptStruct RigVM.RigVMFunction_MathFloatAtan
+// 0x0000 (0x0010 - 0x0010)
+struct FRigVMFunction_MathFloatAtan final : public FRigVMFunction_MathFloatUnaryOp
 {
-public:
-	bool                                          A;                                                 // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          B;                                                 // 0x0009(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Result;                                            // 0x000A(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B[0x5];                                        // 0x000B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FRigVMFunction_MathBoolBinaryOp;
-
-// ScriptStruct RigVM.RigVMFunction_MathQuaternionToAxisAndAngle
-// 0x0048 (0x0050 - 0x0008)
-struct FRigVMFunction_MathQuaternionToAxisAndAngle final : public FRigVMFunction_MathQuaternionBase
-{
-public:
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FQuat                                  Value;                                             // 0x0010(0x0020)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Axis;                                              // 0x0030(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Angle;                                             // 0x0048(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathQuaternionToAxisAndAngle;
+DUMPER7_ASSERTS_FRigVMFunction_MathFloatAtan;
 
 // ScriptStruct RigVM.RigVMFunction_MathBoolBinaryAggregateOp
 // 0x0008 (0x0010 - 0x0008)
@@ -2365,21 +2292,22 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathBoolMake;
 
-// ScriptStruct RigVM.RigVMFunction_MathFloatLawOfCosine
-// 0x0020 (0x0028 - 0x0008)
-struct FRigVMFunction_MathFloatLawOfCosine final : public FRigVMFunction_MathFloatBase
+// ScriptStruct RigVM.RigVMFunction_MathIntBase
+// 0x0000 (0x0008 - 0x0008)
+struct FRigVMFunction_MathIntBase : public FRigVMFunction_MathBase
+{
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathIntBase;
+
+// ScriptStruct RigVM.RigVMFunction_MathIntMake
+// 0x0008 (0x0010 - 0x0008)
+struct FRigVMFunction_MathIntMake final : public FRigVMFunction_MathIntBase
 {
 public:
-	float                                         A;                                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         B;                                                 // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         C;                                                 // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AlphaAngle;                                        // 0x0014(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BetaAngle;                                         // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         GammaAngle;                                        // 0x001C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bValid;                                            // 0x0020(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FRigVMFunction_MathFloatLawOfCosine;
+DUMPER7_ASSERTS_FRigVMFunction_MathIntMake;
 
 // ScriptStruct RigVM.RigVMFunction_MathBoolConstTrue
 // 0x0000 (0x0010 - 0x0010)
@@ -2395,31 +2323,16 @@ struct FRigVMFunction_MathBoolConstFalse final : public FRigVMFunction_MathBoolC
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathBoolConstFalse;
 
-// ScriptStruct RigVM.RigVMFunction_MathIntBase
-// 0x0000 (0x0008 - 0x0008)
-struct FRigVMFunction_MathIntBase : public FRigVMFunction_MathBase
-{
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathIntBase;
-
-// ScriptStruct RigVM.RigVMFunction_MathIntBinaryOp
-// 0x0010 (0x0018 - 0x0008)
-struct FRigVMFunction_MathIntBinaryOp : public FRigVMFunction_MathIntBase
+// ScriptStruct RigVM.RigVMFunction_MathFloatArraySum
+// 0x0018 (0x0020 - 0x0008)
+struct FRigVMFunction_MathFloatArraySum final : public FRigVMFunction_MathFloatBase
 {
 public:
-	int32                                         A;                                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         B;                                                 // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Result;                                            // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<float>                                 Array;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	float                                         Sum;                                               // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FRigVMFunction_MathIntBinaryOp;
-
-// ScriptStruct RigVM.RigVMFunction_MathIntSub
-// 0x0000 (0x0018 - 0x0018)
-struct FRigVMFunction_MathIntSub final : public FRigVMFunction_MathIntBinaryOp
-{
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathIntSub;
+DUMPER7_ASSERTS_FRigVMFunction_MathFloatArraySum;
 
 // ScriptStruct RigVM.RigVMFunction_MathBoolNot
 // 0x0000 (0x0010 - 0x0010)
@@ -2435,6 +2348,13 @@ struct FRigVMFunction_MathBoolAnd final : public FRigVMFunction_MathBoolBinaryAg
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathBoolAnd;
 
+// ScriptStruct RigVM.RigVMFunction_MathFloatAsin
+// 0x0000 (0x0010 - 0x0010)
+struct FRigVMFunction_MathFloatAsin final : public FRigVMFunction_MathFloatUnaryOp
+{
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathFloatAsin;
+
 // ScriptStruct RigVM.RigVMFunction_MathBoolNand
 // 0x0000 (0x0010 - 0x0010)
 struct FRigVMFunction_MathBoolNand final : public FRigVMFunction_MathBoolBinaryOp
@@ -2442,19 +2362,17 @@ struct FRigVMFunction_MathBoolNand final : public FRigVMFunction_MathBoolBinaryO
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathBoolNand;
 
-// ScriptStruct RigVM.RigVMFunction_MathBoolNand2
-// 0x0000 (0x0010 - 0x0010)
-struct FRigVMFunction_MathBoolNand2 final : public FRigVMFunction_MathBoolBinaryOp
+// ScriptStruct RigVM.RigVMFunction_MathIntBinaryOp
+// 0x0010 (0x0018 - 0x0008)
+struct FRigVMFunction_MathIntBinaryOp : public FRigVMFunction_MathIntBase
 {
+public:
+	int32                                         A;                                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         B;                                                 // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Result;                                            // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FRigVMFunction_MathBoolNand2;
-
-// ScriptStruct RigVM.RigVMFunction_MathFloatAtan
-// 0x0000 (0x0010 - 0x0010)
-struct FRigVMFunction_MathFloatAtan final : public FRigVMFunction_MathFloatUnaryOp
-{
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathFloatAtan;
+DUMPER7_ASSERTS_FRigVMFunction_MathIntBinaryOp;
 
 // ScriptStruct RigVM.RigVMFunction_MathBoolOr
 // 0x0000 (0x0010 - 0x0010)
@@ -2463,15 +2381,24 @@ struct FRigVMFunction_MathBoolOr final : public FRigVMFunction_MathBoolBinaryAgg
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathBoolOr;
 
-// ScriptStruct RigVM.RigVMFunction_MathIntMake
+// ScriptStruct RigVM.RigVMFunction_MathBoolEquals
 // 0x0008 (0x0010 - 0x0008)
-struct FRigVMFunction_MathIntMake final : public FRigVMFunction_MathIntBase
+struct FRigVMFunction_MathBoolEquals final : public FRigVMFunction_MathBoolBase
 {
 public:
-	int32                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          A;                                                 // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          B;                                                 // 0x0009(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Result;                                            // 0x000A(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B[0x5];                                        // 0x000B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FRigVMFunction_MathIntMake;
+DUMPER7_ASSERTS_FRigVMFunction_MathBoolEquals;
+
+// ScriptStruct RigVM.RigVMFunction_MathIntPow
+// 0x0000 (0x0018 - 0x0018)
+struct FRigVMFunction_MathIntPow final : public FRigVMFunction_MathIntBinaryOp
+{
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathIntPow;
 
 // ScriptStruct RigVM.RigVMFunction_MathBoolNotEquals
 // 0x0008 (0x0010 - 0x0008)
@@ -2498,22 +2425,12 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathBoolToggled;
 
-// ScriptStruct RigVM.RigVMFunction_MathIntUnaryOp
-// 0x0008 (0x0010 - 0x0008)
-struct FRigVMFunction_MathIntUnaryOp : public FRigVMFunction_MathIntBase
-{
-public:
-	int32                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Result;                                            // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathIntUnaryOp;
-
-// ScriptStruct RigVM.RigVMFunction_MathIntAbs
-// 0x0000 (0x0010 - 0x0010)
-struct FRigVMFunction_MathIntAbs final : public FRigVMFunction_MathIntUnaryOp
+// ScriptStruct RigVM.RigVMFunction_MathIntSub
+// 0x0000 (0x0018 - 0x0018)
+struct FRigVMFunction_MathIntSub final : public FRigVMFunction_MathIntBinaryOp
 {
 };
-DUMPER7_ASSERTS_FRigVMFunction_MathIntAbs;
+DUMPER7_ASSERTS_FRigVMFunction_MathIntSub;
 
 // ScriptStruct RigVM.RigVMFunction_MathBoolFlipFlop
 // 0x0010 (0x0018 - 0x0008)
@@ -2544,13 +2461,6 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathBoolOnce;
 
-// ScriptStruct RigVM.RigVMFunction_MathIntDiv
-// 0x0000 (0x0018 - 0x0018)
-struct FRigVMFunction_MathIntDiv final : public FRigVMFunction_MathIntBinaryOp
-{
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathIntDiv;
-
 // ScriptStruct RigVM.RigVMFunction_MathBoolToFloat
 // 0x0008 (0x0010 - 0x0008)
 struct FRigVMFunction_MathBoolToFloat final : public FRigVMFunction_MathBoolBase
@@ -2573,6 +2483,13 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathBoolToInteger;
 
+// ScriptStruct RigVM.RigVMFunction_MathDoubleExponential
+// 0x0000 (0x0018 - 0x0018)
+struct FRigVMFunction_MathDoubleExponential final : public FRigVMFunction_MathDoubleUnaryOp
+{
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathDoubleExponential;
+
 // ScriptStruct RigVM.RigVMFunction_MathColorBase
 // 0x0000 (0x0008 - 0x0008)
 struct FRigVMFunction_MathColorBase : public FRigVMFunction_MathBase
@@ -2591,12 +2508,17 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathColorBinaryOp;
 
-// ScriptStruct RigVM.RigVMFunction_MathIntPow
-// 0x0000 (0x0018 - 0x0018)
-struct FRigVMFunction_MathIntPow final : public FRigVMFunction_MathIntBinaryOp
+// ScriptStruct RigVM.RigVMFunction_MathIntNotEquals
+// 0x0010 (0x0018 - 0x0008)
+struct FRigVMFunction_MathIntNotEquals final : public FRigVMFunction_MathIntBase
 {
+public:
+	int32                                         A;                                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         B;                                                 // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Result;                                            // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FRigVMFunction_MathIntPow;
+DUMPER7_ASSERTS_FRigVMFunction_MathIntNotEquals;
 
 // ScriptStruct RigVM.RigVMFunction_MathColorBinaryAggregateOp
 // 0x0030 (0x0038 - 0x0008)
@@ -2622,18 +2544,6 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathColorMake;
 
-// ScriptStruct RigVM.RigVMFunction_MathIntLess
-// 0x0010 (0x0018 - 0x0008)
-struct FRigVMFunction_MathIntLess final : public FRigVMFunction_MathIntBase
-{
-public:
-	int32                                         A;                                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         B;                                                 // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Result;                                            // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathIntLess;
-
 // ScriptStruct RigVM.RigVMFunction_MathColorFromFloat
 // 0x0018 (0x0020 - 0x0008)
 struct FRigVMFunction_MathColorFromFloat final : public FRigVMFunction_MathColorBase
@@ -2655,16 +2565,23 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathColorFromDouble;
 
-// ScriptStruct RigVM.RigVMFunction_MathIntToDouble
-// 0x0010 (0x0018 - 0x0008)
-struct FRigVMFunction_MathIntToDouble final : public FRigVMFunction_MathIntBase
+// ScriptStruct RigVM.RigVMFunction_MathDoubleBinaryOp
+// 0x0018 (0x0020 - 0x0008)
+struct FRigVMFunction_MathDoubleBinaryOp : public FRigVMFunction_MathDoubleBase
 {
 public:
-	int32                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        Result;                                            // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        A;                                                 // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        B;                                                 // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        Result;                                            // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FRigVMFunction_MathIntToDouble;
+DUMPER7_ASSERTS_FRigVMFunction_MathDoubleBinaryOp;
+
+// ScriptStruct RigVM.RigVMFunction_MathDoubleAtan2
+// 0x0000 (0x0020 - 0x0020)
+struct FRigVMFunction_MathDoubleAtan2 final : public FRigVMFunction_MathDoubleBinaryOp
+{
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathDoubleAtan2;
 
 // ScriptStruct RigVM.RigVMFunction_MathColorAdd
 // 0x0000 (0x0038 - 0x0038)
@@ -2680,24 +2597,17 @@ struct FRigVMFunction_MathColorSub final : public FRigVMFunction_MathColorBinary
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathColorSub;
 
-// ScriptStruct RigVM.RigVMFunction_MathIntBinaryAggregateOp
+// ScriptStruct RigVM.RigVMFunction_MathIntClamp
 // 0x0010 (0x0018 - 0x0008)
-struct FRigVMFunction_MathIntBinaryAggregateOp : public FRigVMFunction_MathIntBase
+struct FRigVMFunction_MathIntClamp final : public FRigVMFunction_MathIntBase
 {
 public:
-	int32                                         A;                                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         B;                                                 // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Result;                                            // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Minimum;                                           // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Maximum;                                           // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Result;                                            // 0x0014(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FRigVMFunction_MathIntBinaryAggregateOp;
-
-// ScriptStruct RigVM.RigVMFunction_MathIntMin
-// 0x0000 (0x0018 - 0x0018)
-struct FRigVMFunction_MathIntMin final : public FRigVMFunction_MathIntBinaryAggregateOp
-{
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathIntMin;
+DUMPER7_ASSERTS_FRigVMFunction_MathIntClamp;
 
 // ScriptStruct RigVM.RigVMFunction_MathColorMul
 // 0x0000 (0x0038 - 0x0038)
@@ -2719,12 +2629,16 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathColorLerp;
 
-// ScriptStruct RigVM.RigVMFunction_MathFloatConstHalfPi
-// 0x0000 (0x0010 - 0x0010)
-struct FRigVMFunction_MathFloatConstHalfPi final : public FRigVMFunction_MathFloatConstant
+// ScriptStruct RigVM.RigVMFunction_MathIntToName
+// 0x0010 (0x0018 - 0x0008)
+struct FRigVMFunction_MathIntToName final : public FRigVMFunction_MathIntBase
 {
+public:
+	int32                                         Number;                                            // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         PaddedSize;                                        // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Result;                                            // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FRigVMFunction_MathFloatConstHalfPi;
+DUMPER7_ASSERTS_FRigVMFunction_MathIntToName;
 
 // ScriptStruct RigVM.RigVMFunction_MathDoubleConstant
 // 0x0008 (0x0010 - 0x0008)
@@ -2735,30 +2649,28 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathDoubleConstant;
 
-// ScriptStruct RigVM.RigVMFunction_MathMatrixBase
-// 0x0000 (0x0008 - 0x0008)
-struct FRigVMFunction_MathMatrixBase : public FRigVMFunction_MathBase
-{
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathMatrixBase;
-
-// ScriptStruct RigVM.RigVMFunction_MathMatrixUnaryOp
-// 0x0108 (0x0110 - 0x0008)
-struct FRigVMFunction_MathMatrixUnaryOp : public FRigVMFunction_MathMatrixBase
+// ScriptStruct RigVM.RigVMFunction_MathIntLess
+// 0x0010 (0x0018 - 0x0008)
+struct FRigVMFunction_MathIntLess final : public FRigVMFunction_MathIntBase
 {
 public:
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMatrix                                Value;                                             // 0x0010(0x0080)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FMatrix                                Result;                                            // 0x0090(0x0080)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         A;                                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         B;                                                 // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Result;                                            // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FRigVMFunction_MathMatrixUnaryOp;
+DUMPER7_ASSERTS_FRigVMFunction_MathIntLess;
 
-// ScriptStruct RigVM.RigVMFunction_MathFloatSub
-// 0x0000 (0x0018 - 0x0018)
-struct FRigVMFunction_MathFloatSub final : public FRigVMFunction_MathFloatBinaryOp
+// ScriptStruct RigVM.RigVMFunction_MathIntToDouble
+// 0x0010 (0x0018 - 0x0008)
+struct FRigVMFunction_MathIntToDouble final : public FRigVMFunction_MathIntBase
 {
+public:
+	int32                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Result;                                            // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FRigVMFunction_MathFloatSub;
+DUMPER7_ASSERTS_FRigVMFunction_MathIntToDouble;
 
 // ScriptStruct RigVM.RigVMFunction_MathDoubleBinaryAggregateOp
 // 0x0018 (0x0020 - 0x0008)
@@ -2780,15 +2692,16 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathDoubleMake;
 
-// ScriptStruct RigVM.RigVMFunction_MathFloatMake
-// 0x0008 (0x0010 - 0x0008)
-struct FRigVMFunction_MathFloatMake final : public FRigVMFunction_MathFloatBase
+// ScriptStruct RigVM.RigVMFunction_MathIntArrayAverage
+// 0x0018 (0x0020 - 0x0008)
+struct FRigVMFunction_MathIntArrayAverage final : public FRigVMFunction_MathIntBase
 {
 public:
-	float                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 Array;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	int32                                         Average;                                           // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FRigVMFunction_MathFloatMake;
+DUMPER7_ASSERTS_FRigVMFunction_MathIntArrayAverage;
 
 // ScriptStruct RigVM.RigVMFunction_MathDoubleConstPi
 // 0x0000 (0x0010 - 0x0010)
@@ -2804,16 +2717,26 @@ struct FRigVMFunction_MathDoubleConstHalfPi final : public FRigVMFunction_MathDo
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathDoubleConstHalfPi;
 
-// ScriptStruct RigVM.RigVMFunction_MathIntToName
-// 0x0010 (0x0018 - 0x0008)
-struct FRigVMFunction_MathIntToName final : public FRigVMFunction_MathIntBase
+// ScriptStruct RigVM.RigVMFunction_MathMatrixBase
+// 0x0000 (0x0008 - 0x0008)
+struct FRigVMFunction_MathMatrixBase : public FRigVMFunction_MathBase
+{
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathMatrixBase;
+
+// ScriptStruct RigVM.RigVMFunction_MathMatrixToVectors
+// 0x00E8 (0x00F0 - 0x0008)
+struct FRigVMFunction_MathMatrixToVectors final : public FRigVMFunction_MathMatrixBase
 {
 public:
-	int32                                         Number;                                            // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         PaddedSize;                                        // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   Result;                                            // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMatrix                                Value;                                             // 0x0010(0x0080)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                Origin;                                            // 0x0090(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                X;                                                 // 0x00A8(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Y;                                                 // 0x00C0(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Z;                                                 // 0x00D8(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FRigVMFunction_MathIntToName;
+DUMPER7_ASSERTS_FRigVMFunction_MathMatrixToVectors;
 
 // ScriptStruct RigVM.RigVMFunction_MathDoubleConstTwoPi
 // 0x0000 (0x0010 - 0x0010)
@@ -2828,6 +2751,110 @@ struct FRigVMFunction_MathDoubleConstE final : public FRigVMFunction_MathDoubleC
 {
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathDoubleConstE;
+
+// ScriptStruct RigVM.RigVMFunction_MathMatrixUnaryOp
+// 0x0108 (0x0110 - 0x0008)
+struct FRigVMFunction_MathMatrixUnaryOp : public FRigVMFunction_MathMatrixBase
+{
+public:
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMatrix                                Value;                                             // 0x0010(0x0080)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FMatrix                                Result;                                            // 0x0090(0x0080)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathMatrixUnaryOp;
+
+// ScriptStruct RigVM.RigVMFunction_MathDoubleAdd
+// 0x0000 (0x0020 - 0x0020)
+struct FRigVMFunction_MathDoubleAdd final : public FRigVMFunction_MathDoubleBinaryAggregateOp
+{
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathDoubleAdd;
+
+// ScriptStruct RigVM.RigVMFunction_MathDoubleSub
+// 0x0000 (0x0020 - 0x0020)
+struct FRigVMFunction_MathDoubleSub final : public FRigVMFunction_MathDoubleBinaryOp
+{
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathDoubleSub;
+
+// ScriptStruct RigVM.RigVMFunction_MathIntLessEqual
+// 0x0010 (0x0018 - 0x0008)
+struct FRigVMFunction_MathIntLessEqual final : public FRigVMFunction_MathIntBase
+{
+public:
+	int32                                         A;                                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         B;                                                 // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Result;                                            // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathIntLessEqual;
+
+// ScriptStruct RigVM.RigVMFunction_MathDoubleMul
+// 0x0000 (0x0020 - 0x0020)
+struct FRigVMFunction_MathDoubleMul final : public FRigVMFunction_MathDoubleBinaryAggregateOp
+{
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathDoubleMul;
+
+// ScriptStruct RigVM.RigVMFunction_MathDoubleDiv
+// 0x0000 (0x0020 - 0x0020)
+struct FRigVMFunction_MathDoubleDiv final : public FRigVMFunction_MathDoubleBinaryOp
+{
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathDoubleDiv;
+
+// ScriptStruct RigVM.RigVMFunction_MathMatrixFromTransform
+// 0x00E8 (0x00F0 - 0x0008)
+struct FRigVMFunction_MathMatrixFromTransform final : public FRigVMFunction_MathMatrixBase
+{
+public:
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             Transform;                                         // 0x0010(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FMatrix                                Result;                                            // 0x0070(0x0080)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathMatrixFromTransform;
+
+// ScriptStruct RigVM.RigVMFunction_MathDoubleMod
+// 0x0000 (0x0020 - 0x0020)
+struct FRigVMFunction_MathDoubleMod final : public FRigVMFunction_MathDoubleBinaryOp
+{
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathDoubleMod;
+
+// ScriptStruct RigVM.RigVMFunction_MathDoubleMin
+// 0x0000 (0x0020 - 0x0020)
+struct FRigVMFunction_MathDoubleMin final : public FRigVMFunction_MathDoubleBinaryAggregateOp
+{
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathDoubleMin;
+
+// ScriptStruct RigVM.RigVMFunction_MathQuaternionMake
+// 0x0038 (0x0040 - 0x0008)
+struct FRigVMFunction_MathQuaternionMake final : public FRigVMFunction_MathQuaternionBase
+{
+public:
+	float                                         X;                                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Y;                                                 // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Z;                                                 // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         W;                                                 // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_18[0x8];                                       // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FQuat                                  Result;                                            // 0x0020(0x0020)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathQuaternionMake;
+
+// ScriptStruct RigVM.RigVMFunction_MathDoubleMax
+// 0x0000 (0x0020 - 0x0020)
+struct FRigVMFunction_MathDoubleMax final : public FRigVMFunction_MathDoubleBinaryAggregateOp
+{
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathDoubleMax;
+
+// ScriptStruct RigVM.RigVMFunction_MathDoublePow
+// 0x0000 (0x0020 - 0x0020)
+struct FRigVMFunction_MathDoublePow final : public FRigVMFunction_MathDoubleBinaryOp
+{
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathDoublePow;
 
 // ScriptStruct RigVM.RigVMFunction_MathMatrixBinaryAggregateOp
 // 0x0188 (0x0190 - 0x0008)
@@ -2847,99 +2874,6 @@ struct FRigVMFunction_MathMatrixMul final : public FRigVMFunction_MathMatrixBina
 {
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathMatrixMul;
-
-// ScriptStruct RigVM.RigVMFunction_MathDoubleAdd
-// 0x0000 (0x0020 - 0x0020)
-struct FRigVMFunction_MathDoubleAdd final : public FRigVMFunction_MathDoubleBinaryAggregateOp
-{
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathDoubleAdd;
-
-// ScriptStruct RigVM.RigVMFunction_MathDoubleSub
-// 0x0000 (0x0020 - 0x0020)
-struct FRigVMFunction_MathDoubleSub final : public FRigVMFunction_MathDoubleBinaryOp
-{
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathDoubleSub;
-
-// ScriptStruct RigVM.RigVMFunction_MathDoubleMul
-// 0x0000 (0x0020 - 0x0020)
-struct FRigVMFunction_MathDoubleMul final : public FRigVMFunction_MathDoubleBinaryAggregateOp
-{
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathDoubleMul;
-
-// ScriptStruct RigVM.RigVMFunction_MathDoubleDiv
-// 0x0000 (0x0020 - 0x0020)
-struct FRigVMFunction_MathDoubleDiv final : public FRigVMFunction_MathDoubleBinaryOp
-{
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathDoubleDiv;
-
-// ScriptStruct RigVM.RigVMFunction_MathIntArrayAverage
-// 0x0018 (0x0020 - 0x0008)
-struct FRigVMFunction_MathIntArrayAverage final : public FRigVMFunction_MathIntBase
-{
-public:
-	TArray<int32>                                 Array;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	int32                                         Average;                                           // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathIntArrayAverage;
-
-// ScriptStruct RigVM.RigVMFunction_MathDoubleMod
-// 0x0000 (0x0020 - 0x0020)
-struct FRigVMFunction_MathDoubleMod final : public FRigVMFunction_MathDoubleBinaryOp
-{
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathDoubleMod;
-
-// ScriptStruct RigVM.RigVMFunction_MathDoubleMin
-// 0x0000 (0x0020 - 0x0020)
-struct FRigVMFunction_MathDoubleMin final : public FRigVMFunction_MathDoubleBinaryAggregateOp
-{
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathDoubleMin;
-
-// ScriptStruct RigVM.RigVMFunction_MathMatrixToVectors
-// 0x00E8 (0x00F0 - 0x0008)
-struct FRigVMFunction_MathMatrixToVectors final : public FRigVMFunction_MathMatrixBase
-{
-public:
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMatrix                                Value;                                             // 0x0010(0x0080)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector                                Origin;                                            // 0x0090(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                X;                                                 // 0x00A8(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Y;                                                 // 0x00C0(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Z;                                                 // 0x00D8(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathMatrixToVectors;
-
-// ScriptStruct RigVM.RigVMFunction_MathDoubleMax
-// 0x0000 (0x0020 - 0x0020)
-struct FRigVMFunction_MathDoubleMax final : public FRigVMFunction_MathDoubleBinaryAggregateOp
-{
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathDoubleMax;
-
-// ScriptStruct RigVM.RigVMFunction_MathDoublePow
-// 0x0000 (0x0020 - 0x0020)
-struct FRigVMFunction_MathDoublePow final : public FRigVMFunction_MathDoubleBinaryOp
-{
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathDoublePow;
-
-// ScriptStruct RigVM.RigVMFunction_MathQuaternionFromEuler
-// 0x0048 (0x0050 - 0x0008)
-struct FRigVMFunction_MathQuaternionFromEuler final : public FRigVMFunction_MathQuaternionBase
-{
-public:
-	struct FVector                                Euler;                                             // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EEulerRotationOrder                           RotationOrder;                                     // 0x0020(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0xF];                                       // 0x0021(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FQuat                                  Result;                                            // 0x0030(0x0020)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathQuaternionFromEuler;
 
 // ScriptStruct RigVM.RigVMFunction_MathDoubleSqrt
 // 0x0000 (0x0018 - 0x0018)
@@ -2962,29 +2896,6 @@ struct FRigVMFunction_MathDoubleAbs final : public FRigVMFunction_MathDoubleUnar
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathDoubleAbs;
 
-// ScriptStruct RigVM.RigVMFunction_MathDoubleFloor
-// 0x0018 (0x0020 - 0x0008)
-struct FRigVMFunction_MathDoubleFloor final : public FRigVMFunction_MathDoubleBase
-{
-public:
-	double                                        Value;                                             // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        Result;                                            // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Int;                                               // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathDoubleFloor;
-
-// ScriptStruct RigVM.RigVMFunction_MathMatrixFromTransform
-// 0x00E8 (0x00F0 - 0x0008)
-struct FRigVMFunction_MathMatrixFromTransform final : public FRigVMFunction_MathMatrixBase
-{
-public:
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             Transform;                                         // 0x0010(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FMatrix                                Result;                                            // 0x0070(0x0080)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathMatrixFromTransform;
-
 // ScriptStruct RigVM.RigVMFunction_MathDoubleCeil
 // 0x0018 (0x0020 - 0x0008)
 struct FRigVMFunction_MathDoubleCeil final : public FRigVMFunction_MathDoubleBase
@@ -2997,32 +2908,6 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathDoubleCeil;
 
-// ScriptStruct RigVM.RigVMFunction_MathDoubleRound
-// 0x0018 (0x0020 - 0x0008)
-struct FRigVMFunction_MathDoubleRound final : public FRigVMFunction_MathDoubleBase
-{
-public:
-	double                                        Value;                                             // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        Result;                                            // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Int;                                               // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathDoubleRound;
-
-// ScriptStruct RigVM.RigVMFunction_MathQuaternionMake
-// 0x0038 (0x0040 - 0x0008)
-struct FRigVMFunction_MathQuaternionMake final : public FRigVMFunction_MathQuaternionBase
-{
-public:
-	float                                         X;                                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Y;                                                 // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Z;                                                 // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         W;                                                 // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_18[0x8];                                       // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FQuat                                  Result;                                            // 0x0020(0x0020)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathQuaternionMake;
-
 // ScriptStruct RigVM.RigVMFunction_MathDoubleToInt
 // 0x0010 (0x0018 - 0x0008)
 struct FRigVMFunction_MathDoubleToInt final : public FRigVMFunction_MathDoubleBase
@@ -3033,26 +2918,6 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathDoubleToInt;
-
-// ScriptStruct RigVM.RigVMFunction_MathDoubleSign
-// 0x0000 (0x0018 - 0x0018)
-struct FRigVMFunction_MathDoubleSign final : public FRigVMFunction_MathDoubleUnaryOp
-{
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathDoubleSign;
-
-// ScriptStruct RigVM.RigVMFunction_MathQuaternionToEuler
-// 0x0048 (0x0050 - 0x0008)
-struct FRigVMFunction_MathQuaternionToEuler final : public FRigVMFunction_MathQuaternionBase
-{
-public:
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FQuat                                  Value;                                             // 0x0010(0x0020)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EEulerRotationOrder                           RotationOrder;                                     // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                Result;                                            // 0x0038(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathQuaternionToEuler;
 
 // ScriptStruct RigVM.RigVMFunction_MathDoubleClamp
 // 0x0020 (0x0028 - 0x0008)
@@ -3065,28 +2930,6 @@ public:
 	double                                        Result;                                            // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathDoubleClamp;
-
-// ScriptStruct RigVM.RigVMFunction_MathDoubleLerp
-// 0x0020 (0x0028 - 0x0008)
-struct FRigVMFunction_MathDoubleLerp final : public FRigVMFunction_MathDoubleBase
-{
-public:
-	double                                        A;                                                 // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        B;                                                 // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        T;                                                 // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        Result;                                            // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathDoubleLerp;
-
-// ScriptStruct RigVM.RigVMFunction_MathQuaternionFromRotatorV2
-// 0x0038 (0x0040 - 0x0008)
-struct FRigVMFunction_MathQuaternionFromRotatorV2 final : public FRigVMFunction_MathQuaternionBase
-{
-public:
-	struct FRotator                               Value;                                             // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FQuat                                  Result;                                            // 0x0020(0x0020)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathQuaternionFromRotatorV2;
 
 // ScriptStruct RigVM.RigVMFunction_MathDoubleRemap
 // 0x0038 (0x0040 - 0x0008)
@@ -3103,30 +2946,6 @@ public:
 	double                                        Result;                                            // 0x0038(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathDoubleRemap;
-
-// ScriptStruct RigVM.RigVMFunction_MathDoubleEquals
-// 0x0018 (0x0020 - 0x0008)
-struct FRigVMFunction_MathDoubleEquals final : public FRigVMFunction_MathDoubleBase
-{
-public:
-	double                                        A;                                                 // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        B;                                                 // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Result;                                            // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathDoubleEquals;
-
-// ScriptStruct RigVM.RigVMFunction_MathQuaternionBinaryOp
-// 0x0068 (0x0070 - 0x0008)
-struct FRigVMFunction_MathQuaternionBinaryOp final : public FRigVMFunction_MathQuaternionBase
-{
-public:
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FQuat                                  A;                                                 // 0x0010(0x0020)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FQuat                                  B;                                                 // 0x0030(0x0020)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FQuat                                  Result;                                            // 0x0050(0x0020)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathQuaternionBinaryOp;
 
 // ScriptStruct RigVM.RigVMFunction_MathDoubleNotEquals
 // 0x0018 (0x0020 - 0x0008)
@@ -3238,12 +3057,33 @@ struct FRigVMFunction_MathFloatConstPi final : public FRigVMFunction_MathFloatCo
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathFloatConstPi;
 
+// ScriptStruct RigVM.RigVMDispatch_CoreEquals
+// 0x0000 (0x0070 - 0x0070)
+struct FRigVMDispatch_CoreEquals : public FRigVMDispatch_CoreBase
+{
+};
+DUMPER7_ASSERTS_FRigVMDispatch_CoreEquals;
+
+// ScriptStruct RigVM.RigVMDispatch_CoreNotEquals
+// 0x0000 (0x0070 - 0x0070)
+struct FRigVMDispatch_CoreNotEquals final : public FRigVMDispatch_CoreEquals
+{
+};
+DUMPER7_ASSERTS_FRigVMDispatch_CoreNotEquals;
+
 // ScriptStruct RigVM.RigVMFunction_MathFloatConstTwoPi
 // 0x0000 (0x0010 - 0x0010)
 struct FRigVMFunction_MathFloatConstTwoPi final : public FRigVMFunction_MathFloatConstant
 {
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathFloatConstTwoPi;
+
+// ScriptStruct RigVM.RigVMDispatch_SwitchInt32
+// 0x0000 (0x0070 - 0x0070)
+struct FRigVMDispatch_SwitchInt32 final : public FRigVMDispatch_CoreBase
+{
+};
+DUMPER7_ASSERTS_FRigVMDispatch_SwitchInt32;
 
 // ScriptStruct RigVM.RigVMFunction_MathFloatAdd
 // 0x0000 (0x0018 - 0x0018)
@@ -3272,17 +3112,6 @@ struct FRigVMFunction_MathFloatMax final : public FRigVMFunction_MathFloatBinary
 {
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathFloatMax;
-
-// ScriptStruct RigVM.RigVMFunction_NameConcat
-// 0x0018 (0x0020 - 0x0008)
-struct FRigVMFunction_NameConcat final : public FRigVMFunction_NameBase
-{
-public:
-	class FName                                   A;                                                 // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   B;                                                 // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   Result;                                            // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FRigVMFunction_NameConcat;
 
 // ScriptStruct RigVM.RigVMFunction_MathFloatSqrt
 // 0x0000 (0x0010 - 0x0010)
@@ -3451,6 +3280,28 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathFloatArrayAverage;
 
+// ScriptStruct RigVM.RigVMFunction_MathIntUnaryOp
+// 0x0008 (0x0010 - 0x0008)
+struct FRigVMFunction_MathIntUnaryOp : public FRigVMFunction_MathIntBase
+{
+public:
+	int32                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Result;                                            // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathIntUnaryOp;
+
+// ScriptStruct RigVM.RigVMFunction_MathIntBinaryAggregateOp
+// 0x0010 (0x0018 - 0x0008)
+struct FRigVMFunction_MathIntBinaryAggregateOp : public FRigVMFunction_MathIntBase
+{
+public:
+	int32                                         A;                                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         B;                                                 // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Result;                                            // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathIntBinaryAggregateOp;
+
 // ScriptStruct RigVM.RigVMFunction_MathIntAdd
 // 0x0000 (0x0018 - 0x0018)
 struct FRigVMFunction_MathIntAdd final : public FRigVMFunction_MathIntBinaryAggregateOp
@@ -3465,12 +3316,26 @@ struct FRigVMFunction_MathIntMul final : public FRigVMFunction_MathIntBinaryAggr
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathIntMul;
 
+// ScriptStruct RigVM.RigVMFunction_MathIntDiv
+// 0x0000 (0x0018 - 0x0018)
+struct FRigVMFunction_MathIntDiv final : public FRigVMFunction_MathIntBinaryOp
+{
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathIntDiv;
+
 // ScriptStruct RigVM.RigVMFunction_MathIntMod
 // 0x0000 (0x0018 - 0x0018)
 struct FRigVMFunction_MathIntMod final : public FRigVMFunction_MathIntBinaryOp
 {
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathIntMod;
+
+// ScriptStruct RigVM.RigVMFunction_MathIntMin
+// 0x0000 (0x0018 - 0x0018)
+struct FRigVMFunction_MathIntMin final : public FRigVMFunction_MathIntBinaryAggregateOp
+{
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathIntMin;
 
 // ScriptStruct RigVM.RigVMFunction_MathIntMax
 // 0x0000 (0x0018 - 0x0018)
@@ -3485,6 +3350,13 @@ struct FRigVMFunction_MathIntNegate final : public FRigVMFunction_MathIntUnaryOp
 {
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathIntNegate;
+
+// ScriptStruct RigVM.RigVMFunction_MathIntAbs
+// 0x0000 (0x0010 - 0x0010)
+struct FRigVMFunction_MathIntAbs final : public FRigVMFunction_MathIntUnaryOp
+{
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathIntAbs;
 
 // ScriptStruct RigVM.RigVMFunction_MathIntToFloat
 // 0x0008 (0x0010 - 0x0008)
@@ -3503,18 +3375,6 @@ struct FRigVMFunction_MathIntSign final : public FRigVMFunction_MathIntUnaryOp
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathIntSign;
 
-// ScriptStruct RigVM.RigVMFunction_MathIntClamp
-// 0x0010 (0x0018 - 0x0008)
-struct FRigVMFunction_MathIntClamp final : public FRigVMFunction_MathIntBase
-{
-public:
-	int32                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Minimum;                                           // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Maximum;                                           // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Result;                                            // 0x0014(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathIntClamp;
-
 // ScriptStruct RigVM.RigVMFunction_MathIntEquals
 // 0x0010 (0x0018 - 0x0008)
 struct FRigVMFunction_MathIntEquals final : public FRigVMFunction_MathIntBase
@@ -3526,18 +3386,6 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathIntEquals;
-
-// ScriptStruct RigVM.RigVMFunction_MathIntNotEquals
-// 0x0010 (0x0018 - 0x0008)
-struct FRigVMFunction_MathIntNotEquals final : public FRigVMFunction_MathIntBase
-{
-public:
-	int32                                         A;                                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         B;                                                 // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Result;                                            // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathIntNotEquals;
 
 // ScriptStruct RigVM.RigVMFunction_MathIntGreater
 // 0x0010 (0x0018 - 0x0008)
@@ -3562,18 +3410,6 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathIntGreaterEqual;
-
-// ScriptStruct RigVM.RigVMFunction_MathIntLessEqual
-// 0x0010 (0x0018 - 0x0008)
-struct FRigVMFunction_MathIntLessEqual final : public FRigVMFunction_MathIntBase
-{
-public:
-	int32                                         A;                                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         B;                                                 // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Result;                                            // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathIntLessEqual;
 
 // ScriptStruct RigVM.RigVMFunction_MathIntArraySum
 // 0x0018 (0x0020 - 0x0008)
@@ -3663,6 +3499,18 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathQuaternionUnaryOp;
 
+// ScriptStruct RigVM.RigVMFunction_MathQuaternionBinaryAggregateOp
+// 0x0068 (0x0070 - 0x0008)
+struct FRigVMFunction_MathQuaternionBinaryAggregateOp : public FRigVMFunction_MathQuaternionBase
+{
+public:
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FQuat                                  A;                                                 // 0x0010(0x0020)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FQuat                                  B;                                                 // 0x0030(0x0020)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FQuat                                  Result;                                            // 0x0050(0x0020)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathQuaternionBinaryAggregateOp;
+
 // ScriptStruct RigVM.RigVMFunction_MathQuaternionFromAxisAndAngle
 // 0x0048 (0x0050 - 0x0008)
 struct FRigVMFunction_MathQuaternionFromAxisAndAngle final : public FRigVMFunction_MathQuaternionBase
@@ -3685,6 +3533,23 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathQuaternionFromRotator;
 
+// ScriptStruct RigVM.RigVMFunction_MathQuaternionFromRotatorV2
+// 0x0038 (0x0040 - 0x0008)
+struct FRigVMFunction_MathQuaternionFromRotatorV2 final : public FRigVMFunction_MathQuaternionBase
+{
+public:
+	struct FRotator                               Value;                                             // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FQuat                                  Result;                                            // 0x0020(0x0020)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathQuaternionFromRotatorV2;
+
+// ScriptStruct RigVM.RigDispatch_FromString
+// 0x0000 (0x0070 - 0x0070)
+struct FRigDispatch_FromString final : public FRigVMDispatchFactory
+{
+};
+DUMPER7_ASSERTS_FRigDispatch_FromString;
+
 // ScriptStruct RigVM.RigVMFunction_MathQuaternionFromTwoVectors
 // 0x0058 (0x0060 - 0x0008)
 struct FRigVMFunction_MathQuaternionFromTwoVectors final : public FRigVMFunction_MathQuaternionBase
@@ -3696,6 +3561,19 @@ public:
 	struct FQuat                                  Result;                                            // 0x0040(0x0020)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathQuaternionFromTwoVectors;
+
+// ScriptStruct RigVM.RigVMFunction_MathQuaternionToAxisAndAngle
+// 0x0048 (0x0050 - 0x0008)
+struct FRigVMFunction_MathQuaternionToAxisAndAngle final : public FRigVMFunction_MathQuaternionBase
+{
+public:
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FQuat                                  Value;                                             // 0x0010(0x0020)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Axis;                                              // 0x0030(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Angle;                                             // 0x0048(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathQuaternionToAxisAndAngle;
 
 // ScriptStruct RigVM.RigVMFunction_MathQuaternionToVectors
 // 0x0078 (0x0080 - 0x0008)
@@ -3711,6 +3589,47 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathQuaternionToVectors;
 
+// ScriptStruct RigVM.RigVMFunction_StringBase
+// 0x0000 (0x0008 - 0x0008)
+struct FRigVMFunction_StringBase : public FRigVMStruct
+{
+};
+DUMPER7_ASSERTS_FRigVMFunction_StringBase;
+
+// ScriptStruct RigVM.RigVMFunction_StringJoin
+// 0x0030 (0x0038 - 0x0008)
+struct FRigVMFunction_StringJoin final : public FRigVMFunction_StringBase
+{
+public:
+	TArray<class FString>                         Values;                                            // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	class FString                                 Separator;                                         // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Result;                                            // 0x0028(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRigVMFunction_StringJoin;
+
+// ScriptStruct RigVM.RigVMFunction_MathQuaternionScale
+// 0x0038 (0x0040 - 0x0008)
+struct FRigVMFunction_MathQuaternionScale final : public FRigVMFunction_MathQuaternionBase
+{
+public:
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FQuat                                  Value;                                             // 0x0010(0x0020)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Scale;                                             // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_34[0xC];                                       // 0x0034(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathQuaternionScale;
+
+// ScriptStruct RigVM.RigVMFunction_StringSplit
+// 0x0030 (0x0038 - 0x0008)
+struct FRigVMFunction_StringSplit final : public FRigVMFunction_StringBase
+{
+public:
+	class FString                                 Value;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Separator;                                         // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FString>                         Result;                                            // 0x0028(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRigVMFunction_StringSplit;
+
 // ScriptStruct RigVM.RigVMFunction_MathQuaternionScaleV2
 // 0x0058 (0x0060 - 0x0008)
 struct FRigVMFunction_MathQuaternionScaleV2 final : public FRigVMFunction_MathQuaternionBase
@@ -3724,6 +3643,35 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathQuaternionScaleV2;
 
+// ScriptStruct RigVM.RigVMFunction_AccumulateVectorAdd
+// 0x0070 (0x0078 - 0x0008)
+struct FRigVMFunction_AccumulateVectorAdd final : public FRigVMFunction_AccumulateBase
+{
+public:
+	struct FVector                                Increment;                                         // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                InitialValue;                                      // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIntegrateDeltaTime;                               // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                Result;                                            // 0x0040(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                AccumulatedValue;                                  // 0x0058(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsInitialized;                                    // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRigVMFunction_AccumulateVectorAdd;
+
+// ScriptStruct RigVM.RigVMFunction_MathQuaternionToEuler
+// 0x0048 (0x0050 - 0x0008)
+struct FRigVMFunction_MathQuaternionToEuler final : public FRigVMFunction_MathQuaternionBase
+{
+public:
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FQuat                                  Value;                                             // 0x0010(0x0020)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EEulerRotationOrder                           RotationOrder;                                     // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                Result;                                            // 0x0038(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathQuaternionToEuler;
+
 // ScriptStruct RigVM.RigVMFunction_MathQuaternionToRotator
 // 0x0048 (0x0050 - 0x0008)
 struct FRigVMFunction_MathQuaternionToRotator final : public FRigVMFunction_MathQuaternionBase
@@ -3735,6 +3683,13 @@ public:
 	uint8                                         Pad_48[0x8];                                       // 0x0048(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathQuaternionToRotator;
+
+// ScriptStruct RigVM.RigVMFunction_MathQuaternionMul
+// 0x0000 (0x0070 - 0x0070)
+struct FRigVMFunction_MathQuaternionMul final : public FRigVMFunction_MathQuaternionBinaryAggregateOp
+{
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathQuaternionMul;
 
 // ScriptStruct RigVM.RigVMFunction_MathQuaternionInverse
 // 0x0000 (0x0050 - 0x0050)
@@ -3756,31 +3711,6 @@ public:
 	struct FQuat                                  Result;                                            // 0x0060(0x0020)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathQuaternionSlerp;
-
-// ScriptStruct RigVM.RigVMFunction_AccumulateBase
-// 0x0000 (0x0008 - 0x0008)
-struct FRigVMFunction_AccumulateBase : public FRigVMFunction_SimBase
-{
-};
-DUMPER7_ASSERTS_FRigVMFunction_AccumulateBase;
-
-// ScriptStruct RigVM.RigVMFunction_AccumulateQuatLerp
-// 0x00A8 (0x00B0 - 0x0008)
-struct FRigVMFunction_AccumulateQuatLerp final : public FRigVMFunction_AccumulateBase
-{
-public:
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FQuat                                  TargetValue;                                       // 0x0010(0x0020)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FQuat                                  InitialValue;                                      // 0x0030(0x0020)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Blend;                                             // 0x0050(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIntegrateDeltaTime;                               // 0x0054(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_55[0xB];                                       // 0x0055(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FQuat                                  Result;                                            // 0x0060(0x0020)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FQuat                                  AccumulatedValue;                                  // 0x0080(0x0020)(IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsInitialized;                                    // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A1[0xF];                                       // 0x00A1(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FRigVMFunction_AccumulateQuatLerp;
 
 // ScriptStruct RigVM.RigVMFunction_MathQuaternionEquals
 // 0x0058 (0x0060 - 0x0008)
@@ -3821,24 +3751,6 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathQuaternionSelectBool;
 
-// ScriptStruct RigVM.RigVMFunction_AccumulateTransformMul
-// 0x01A8 (0x01B0 - 0x0008)
-struct FRigVMFunction_AccumulateTransformMul final : public FRigVMFunction_AccumulateBase
-{
-public:
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             Multiplier;                                        // 0x0010(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTransform                             InitialValue;                                      // 0x0070(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bFlipOrder;                                        // 0x00D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIntegrateDeltaTime;                               // 0x00D1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D2[0xE];                                       // 0x00D2(0x000E)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             Result;                                            // 0x00E0(0x0060)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTransform                             AccumulatedValue;                                  // 0x0140(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsInitialized;                                    // 0x01A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1A1[0xF];                                      // 0x01A1(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FRigVMFunction_AccumulateTransformMul;
-
 // ScriptStruct RigVM.RigVMFunction_MathQuaternionDot
 // 0x0058 (0x0060 - 0x0008)
 struct FRigVMFunction_MathQuaternionDot final : public FRigVMFunction_MathQuaternionBase
@@ -3852,45 +3764,12 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathQuaternionDot;
 
-// ScriptStruct RigVM.RigVMFunction_AccumulateQuatMul
-// 0x00A8 (0x00B0 - 0x0008)
-struct FRigVMFunction_AccumulateQuatMul final : public FRigVMFunction_AccumulateBase
-{
-public:
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FQuat                                  Multiplier;                                        // 0x0010(0x0020)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FQuat                                  InitialValue;                                      // 0x0030(0x0020)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bFlipOrder;                                        // 0x0050(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIntegrateDeltaTime;                               // 0x0051(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_52[0xE];                                       // 0x0052(0x000E)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FQuat                                  Result;                                            // 0x0060(0x0020)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FQuat                                  AccumulatedValue;                                  // 0x0080(0x0020)(IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsInitialized;                                    // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A1[0xF];                                       // 0x00A1(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FRigVMFunction_AccumulateQuatMul;
-
 // ScriptStruct RigVM.RigVMFunction_MathQuaternionUnit
 // 0x0000 (0x0050 - 0x0050)
 struct FRigVMFunction_MathQuaternionUnit final : public FRigVMFunction_MathQuaternionUnaryOp
 {
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathQuaternionUnit;
-
-// ScriptStruct RigVM.RigVMFunction_AccumulateVectorRange
-// 0x0080 (0x0088 - 0x0008)
-struct FRigVMFunction_AccumulateVectorRange final : public FRigVMFunction_AccumulateBase
-{
-public:
-	struct FVector                                Value;                                             // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Minimum;                                           // 0x0020(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Maximum;                                           // 0x0038(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                AccumulatedMinimum;                                // 0x0050(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                AccumulatedMaximum;                                // 0x0068(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsInitialized;                                    // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FRigVMFunction_AccumulateVectorRange;
 
 // ScriptStruct RigVM.RigVMFunction_MathQuaternionRotateVector
 // 0x0058 (0x0060 - 0x0008)
@@ -4122,6 +4001,21 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathRBFInterpolateQuatFloat;
 
+// ScriptStruct RigVM.RigVMFunction_KalmanVector
+// 0x0050 (0x0058 - 0x0008)
+struct FRigVMFunction_KalmanVector final : public FRigVMFunction_SimBase
+{
+public:
+	struct FVector                                Value;                                             // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         BufferSize;                                        // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                Result;                                            // 0x0028(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FVector>                        Buffer;                                            // 0x0040(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	int32                                         LastInsertIndex;                                   // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRigVMFunction_KalmanVector;
+
 // ScriptStruct RigVM.MathRBFInterpolateQuatVector_Target
 // 0x0040 (0x0040 - 0x0000)
 struct FMathRBFInterpolateQuatVector_Target final
@@ -4174,6 +4068,28 @@ public:
 };
 DUMPER7_ASSERTS_FMathRBFInterpolateQuatQuat_Target;
 
+// ScriptStruct RigVM.RigVMFunction_TimeLoop
+// 0x0030 (0x0038 - 0x0008)
+struct FRigVMFunction_TimeLoop final : public FRigVMFunction_SimBase
+{
+public:
+	float                                         Speed;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Duration;                                          // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Normalize;                                         // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Absolute;                                          // 0x0014(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Relative;                                          // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FlipFlop;                                          // 0x001C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Even;                                              // 0x0020(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         AccumulatedAbsolute;                               // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AccumulatedRelative;                               // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NumIterations;                                     // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsInitialized;                                    // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRigVMFunction_TimeLoop;
+
 // ScriptStruct RigVM.RigVMFunction_MathRBFInterpolateQuatQuat
 // 0x0030 (0x0120 - 0x00F0)
 struct FRigVMFunction_MathRBFInterpolateQuatQuat final : public FRigVMFunction_MathRBFInterpolateQuatBase
@@ -4184,6 +4100,19 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathRBFInterpolateQuatQuat;
 
+// ScriptStruct RigVM.RigVMFunction_Timeline
+// 0x0010 (0x0018 - 0x0008)
+struct FRigVMFunction_Timeline final : public FRigVMFunction_SimBase
+{
+public:
+	float                                         Speed;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Time;                                              // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AccumulatedValue;                                  // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsInitialized;                                    // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRigVMFunction_Timeline;
+
 // ScriptStruct RigVM.MathRBFInterpolateQuatXform_Target
 // 0x0080 (0x0080 - 0x0000)
 struct FMathRBFInterpolateQuatXform_Target final
@@ -4193,6 +4122,32 @@ public:
 	struct FTransform                             Value;                                             // 0x0020(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FMathRBFInterpolateQuatXform_Target;
+
+// ScriptStruct RigVM.RigVMFunction_AlphaInterpVector
+// 0x0098 (0x00A0 - 0x0008)
+struct FRigVMFunction_AlphaInterpVector final : public FRigVMFunction_SimBase
+{
+public:
+	struct FVector                                Value;                                             // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Scale;                                             // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Bias;                                              // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bMapRange;                                         // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FInputRange                            InRange;                                           // 0x002C(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FInputRange                            OutRange;                                          // 0x0034(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bClampResult;                                      // 0x003C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ClampMin;                                          // 0x0040(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ClampMax;                                          // 0x0044(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInterpResult;                                     // 0x0048(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         InterpSpeedIncreasing;                             // 0x004C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InterpSpeedDecreasing;                             // 0x0050(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                Result;                                            // 0x0058(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FInputScaleBiasClamp                   ScaleBiasClamp;                                    // 0x0070(0x0030)(NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRigVMFunction_AlphaInterpVector;
 
 // ScriptStruct RigVM.RigVMFunction_MathRBFInterpolateQuatXform
 // 0x0070 (0x0160 - 0x00F0)
@@ -4214,6 +4169,21 @@ public:
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FMathRBFInterpolateVectorFloat_Target;
+
+// ScriptStruct RigVM.RigVMFunction_KalmanFloat
+// 0x0028 (0x0030 - 0x0008)
+struct FRigVMFunction_KalmanFloat final : public FRigVMFunction_SimBase
+{
+public:
+	float                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         BufferSize;                                        // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Result;                                            // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<float>                                 Buffer;                                            // 0x0018(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	int32                                         LastInsertIndex;                                   // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRigVMFunction_KalmanFloat;
 
 // ScriptStruct RigVM.RigVMFunction_MathRBFInterpolateVectorFloat
 // 0x0020 (0x00E0 - 0x00C0)
@@ -4278,6 +4248,24 @@ public:
 };
 DUMPER7_ASSERTS_FMathRBFInterpolateVectorQuat_Target;
 
+// ScriptStruct RigVM.RigVMFunction_AccumulateTransformMul
+// 0x01A8 (0x01B0 - 0x0008)
+struct FRigVMFunction_AccumulateTransformMul final : public FRigVMFunction_AccumulateBase
+{
+public:
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             Multiplier;                                        // 0x0010(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             InitialValue;                                      // 0x0070(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bFlipOrder;                                        // 0x00D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIntegrateDeltaTime;                               // 0x00D1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D2[0xE];                                       // 0x00D2(0x000E)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             Result;                                            // 0x00E0(0x0060)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             AccumulatedValue;                                  // 0x0140(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsInitialized;                                    // 0x01A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1A1[0xF];                                      // 0x01A1(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRigVMFunction_AccumulateTransformMul;
+
 // ScriptStruct RigVM.RigVMFunction_MathRBFInterpolateVectorQuat
 // 0x0030 (0x00F0 - 0x00C0)
 struct FRigVMFunction_MathRBFInterpolateVectorQuat final : public FRigVMFunction_MathRBFInterpolateVectorBase
@@ -4287,6 +4275,24 @@ public:
 	struct FQuat                                  Output;                                            // 0x00D0(0x0020)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathRBFInterpolateVectorQuat;
+
+// ScriptStruct RigVM.RigVMFunction_AccumulateQuatMul
+// 0x00A8 (0x00B0 - 0x0008)
+struct FRigVMFunction_AccumulateQuatMul final : public FRigVMFunction_AccumulateBase
+{
+public:
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FQuat                                  Multiplier;                                        // 0x0010(0x0020)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FQuat                                  InitialValue;                                      // 0x0030(0x0020)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bFlipOrder;                                        // 0x0050(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIntegrateDeltaTime;                               // 0x0051(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_52[0xE];                                       // 0x0052(0x000E)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FQuat                                  Result;                                            // 0x0060(0x0020)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FQuat                                  AccumulatedValue;                                  // 0x0080(0x0020)(IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsInitialized;                                    // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A1[0xF];                                       // 0x00A1(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRigVMFunction_AccumulateQuatMul;
 
 // ScriptStruct RigVM.MathRBFInterpolateVectorXform_Target
 // 0x0080 (0x0080 - 0x0000)
@@ -4299,28 +4305,6 @@ public:
 };
 DUMPER7_ASSERTS_FMathRBFInterpolateVectorXform_Target;
 
-// ScriptStruct RigVM.RigVMFunction_TimeLoop
-// 0x0030 (0x0038 - 0x0008)
-struct FRigVMFunction_TimeLoop final : public FRigVMFunction_SimBase
-{
-public:
-	float                                         Speed;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Duration;                                          // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Normalize;                                         // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Absolute;                                          // 0x0014(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Relative;                                          // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FlipFlop;                                          // 0x001C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Even;                                              // 0x0020(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         AccumulatedAbsolute;                               // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AccumulatedRelative;                               // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         NumIterations;                                     // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsInitialized;                                    // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FRigVMFunction_TimeLoop;
-
 // ScriptStruct RigVM.RigVMFunction_MathRBFInterpolateVectorXform
 // 0x0070 (0x0130 - 0x00C0)
 struct FRigVMFunction_MathRBFInterpolateVectorXform final : public FRigVMFunction_MathRBFInterpolateVectorBase
@@ -4330,6 +4314,36 @@ public:
 	struct FTransform                             Output;                                            // 0x00D0(0x0060)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathRBFInterpolateVectorXform;
+
+// ScriptStruct RigVM.RigVMFunction_AccumulateFloatRange
+// 0x0018 (0x0020 - 0x0008)
+struct FRigVMFunction_AccumulateFloatRange final : public FRigVMFunction_AccumulateBase
+{
+public:
+	float                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Minimum;                                           // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Maximum;                                           // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AccumulatedMinimum;                                // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AccumulatedMaximum;                                // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsInitialized;                                    // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRigVMFunction_AccumulateFloatRange;
+
+// ScriptStruct RigVM.RigVMFunction_DeltaFromPreviousQuat
+// 0x0098 (0x00A0 - 0x0008)
+struct FRigVMFunction_DeltaFromPreviousQuat final : public FRigVMFunction_SimBase
+{
+public:
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FQuat                                  Value;                                             // 0x0010(0x0020)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FQuat                                  Delta;                                             // 0x0030(0x0020)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FQuat                                  PreviousValue;                                     // 0x0050(0x0020)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FQuat                                  Cache;                                             // 0x0070(0x0020)(IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsInitialized;                                    // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_91[0xF];                                       // 0x0091(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRigVMFunction_DeltaFromPreviousQuat;
 
 // ScriptStruct RigVM.RigVMFunction_MathTransformMutableBase
 // 0x0000 (0x0100 - 0x0100)
@@ -4348,6 +4362,23 @@ public:
 	struct FTransform                             Result;                                            // 0x0070(0x0060)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathTransformUnaryOp;
+
+// ScriptStruct RigVM.RigVMFunction_AccumulateVectorLerp
+// 0x0070 (0x0078 - 0x0008)
+struct FRigVMFunction_AccumulateVectorLerp final : public FRigVMFunction_AccumulateBase
+{
+public:
+	struct FVector                                TargetValue;                                       // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                InitialValue;                                      // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Blend;                                             // 0x0038(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIntegrateDeltaTime;                               // 0x003C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                Result;                                            // 0x0040(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                AccumulatedValue;                                  // 0x0058(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsInitialized;                                    // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRigVMFunction_AccumulateVectorLerp;
 
 // ScriptStruct RigVM.RigVMFunction_MathTransformBinaryOp
 // 0x0128 (0x0130 - 0x0008)
@@ -4396,19 +4427,21 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathTransformFromEulerTransform;
 
-// ScriptStruct RigVM.RigVMFunction_DeltaFromPreviousFloat
-// 0x0018 (0x0020 - 0x0008)
-struct FRigVMFunction_DeltaFromPreviousFloat final : public FRigVMFunction_SimBase
+// ScriptStruct RigVM.RigVMFunction_AccumulateVectorMul
+// 0x0070 (0x0078 - 0x0008)
+struct FRigVMFunction_AccumulateVectorMul final : public FRigVMFunction_AccumulateBase
 {
 public:
-	float                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Delta;                                             // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PreviousValue;                                     // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Cache;                                             // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsInitialized;                                    // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FVector                                Multiplier;                                        // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                InitialValue;                                      // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIntegrateDeltaTime;                               // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                Result;                                            // 0x0040(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                AccumulatedValue;                                  // 0x0058(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsInitialized;                                    // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FRigVMFunction_DeltaFromPreviousFloat;
+DUMPER7_ASSERTS_FRigVMFunction_AccumulateVectorMul;
 
 // ScriptStruct RigVM.RigVMFunction_MathTransformFromEulerTransformV2
 // 0x00A8 (0x00B0 - 0x0008)
@@ -4419,33 +4452,6 @@ public:
 	struct FTransform                             Result;                                            // 0x0050(0x0060)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathTransformFromEulerTransformV2;
-
-// ScriptStruct RigVM.RigVMFunction_AlphaInterpQuat
-// 0x00B8 (0x00C0 - 0x0008)
-struct FRigVMFunction_AlphaInterpQuat final : public FRigVMFunction_SimBase
-{
-public:
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FQuat                                  Value;                                             // 0x0010(0x0020)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Scale;                                             // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Bias;                                              // 0x0034(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bMapRange;                                         // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FInputRange                            InRange;                                           // 0x003C(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FInputRange                            OutRange;                                          // 0x0044(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bClampResult;                                      // 0x004C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4D[0x3];                                       // 0x004D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ClampMin;                                          // 0x0050(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ClampMax;                                          // 0x0054(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInterpResult;                                     // 0x0058(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_59[0x3];                                       // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         InterpSpeedIncreasing;                             // 0x005C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         InterpSpeedDecreasing;                             // 0x0060(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_64[0xC];                                       // 0x0064(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FQuat                                  Result;                                            // 0x0070(0x0020)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FInputScaleBiasClamp                   ScaleBiasClamp;                                    // 0x0090(0x0030)(NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FRigVMFunction_AlphaInterpQuat;
 
 // ScriptStruct RigVM.RigVMFunction_MathTransformToEulerTransform
 // 0x00B8 (0x00C0 - 0x0008)
@@ -4473,20 +4479,23 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathTransformToVectors;
 
-// ScriptStruct RigVM.RigVMFunction_KalmanVector
-// 0x0050 (0x0058 - 0x0008)
-struct FRigVMFunction_KalmanVector final : public FRigVMFunction_SimBase
+// ScriptStruct RigVM.RigVMFunction_AccumulateQuatLerp
+// 0x00A8 (0x00B0 - 0x0008)
+struct FRigVMFunction_AccumulateQuatLerp final : public FRigVMFunction_AccumulateBase
 {
 public:
-	struct FVector                                Value;                                             // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         BufferSize;                                        // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                Result;                                            // 0x0028(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FVector>                        Buffer;                                            // 0x0040(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	int32                                         LastInsertIndex;                                   // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FQuat                                  TargetValue;                                       // 0x0010(0x0020)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FQuat                                  InitialValue;                                      // 0x0030(0x0020)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Blend;                                             // 0x0050(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIntegrateDeltaTime;                               // 0x0054(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_55[0xB];                                       // 0x0055(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FQuat                                  Result;                                            // 0x0060(0x0020)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FQuat                                  AccumulatedValue;                                  // 0x0080(0x0020)(IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsInitialized;                                    // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A1[0xF];                                       // 0x00A1(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FRigVMFunction_KalmanVector;
+DUMPER7_ASSERTS_FRigVMFunction_AccumulateQuatLerp;
 
 // ScriptStruct RigVM.RigVMFunction_MathTransformMul
 // 0x0000 (0x0130 - 0x0130)
@@ -4495,64 +4504,15 @@ struct FRigVMFunction_MathTransformMul final : public FRigVMFunction_MathTransfo
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathTransformMul;
 
-// ScriptStruct RigVM.RigVMFunction_VerletIntegrateVector
-// 0x00D0 (0x00D8 - 0x0008)
-struct FRigVMFunction_VerletIntegrateVector final : public FRigVMFunction_SimBase
+// ScriptStruct RigVM.RigVMFunction_StringReverse
+// 0x0020 (0x0028 - 0x0008)
+struct FRigVMFunction_StringReverse final : public FRigVMFunction_StringBase
 {
 public:
-	struct FVector                                Target;                                            // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Strength;                                          // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Damp;                                              // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Blend;                                             // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                Force;                                             // 0x0030(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Position;                                          // 0x0048(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Velocity;                                          // 0x0060(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Acceleration;                                      // 0x0078(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRigVMSimPoint                         Point;                                             // 0x0090(0x0040)(Transient, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bInitialized;                                      // 0x00D0(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D1[0x7];                                       // 0x00D1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FString                                 Value;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Reverse;                                           // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FRigVMFunction_VerletIntegrateVector;
-
-// ScriptStruct RigVM.RigVMFunction_MathTransformMakeRelative
-// 0x0128 (0x0130 - 0x0008)
-struct FRigVMFunction_MathTransformMakeRelative final : public FRigVMFunction_MathTransformBase
-{
-public:
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             Global;                                            // 0x0010(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTransform                             Parent;                                            // 0x0070(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTransform                             Local;                                             // 0x00D0(0x0060)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathTransformMakeRelative;
-
-// ScriptStruct RigVM.RigVMFunction_MathTransformMakeAbsolute
-// 0x0128 (0x0130 - 0x0008)
-struct FRigVMFunction_MathTransformMakeAbsolute final : public FRigVMFunction_MathTransformBase
-{
-public:
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             Local;                                             // 0x0010(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTransform                             Parent;                                            // 0x0070(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTransform                             Global;                                            // 0x00D0(0x0060)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathTransformMakeAbsolute;
-
-// ScriptStruct RigVM.RigVMFunction_DeltaFromPreviousQuat
-// 0x0098 (0x00A0 - 0x0008)
-struct FRigVMFunction_DeltaFromPreviousQuat final : public FRigVMFunction_SimBase
-{
-public:
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FQuat                                  Value;                                             // 0x0010(0x0020)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FQuat                                  Delta;                                             // 0x0030(0x0020)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FQuat                                  PreviousValue;                                     // 0x0050(0x0020)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FQuat                                  Cache;                                             // 0x0070(0x0020)(IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsInitialized;                                    // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_91[0xF];                                       // 0x0091(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FRigVMFunction_DeltaFromPreviousQuat;
+DUMPER7_ASSERTS_FRigVMFunction_StringReverse;
 
 // ScriptStruct RigVM.RigVMFunction_MathTransformAccumulateArray
 // 0x0090 (0x0190 - 0x0100)
@@ -4566,6 +4526,16 @@ public:
 	TArray<int32>                                 ParentIndices;                                     // 0x0180(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathTransformAccumulateArray;
+
+// ScriptStruct RigVM.RigVMFunction_StringToLowercase
+// 0x0020 (0x0028 - 0x0008)
+struct FRigVMFunction_StringToLowercase final : public FRigVMFunction_StringBase
+{
+public:
+	class FString                                 Value;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Result;                                            // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRigVMFunction_StringToLowercase;
 
 // ScriptStruct RigVM.RigVMFunction_MathTransformInverse
 // 0x0000 (0x00D0 - 0x00D0)
@@ -4588,44 +4558,23 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathTransformLerp;
 
-// ScriptStruct RigVM.RigVMFunction_MathTransformSelectBool
-// 0x0128 (0x0130 - 0x0008)
-struct FRigVMFunction_MathTransformSelectBool final : public FRigVMFunction_MathTransformBase
+// ScriptStruct RigVM.RigVMFunction_RandomVector
+// 0x0050 (0x0058 - 0x0008)
+struct FRigVMFunction_RandomVector final : public FRigVMFunction_MathBase
 {
 public:
-	bool                                          Condition;                                         // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             IfTrue;                                            // 0x0010(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTransform                             IfFalse;                                           // 0x0070(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTransform                             Result;                                            // 0x00D0(0x0060)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Seed;                                              // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Minimum;                                           // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Maximum;                                           // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Duration;                                          // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Result;                                            // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                LastResult;                                        // 0x0030(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         LastSeed;                                          // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         BaseSeed;                                          // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TimeLeft;                                          // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FRigVMFunction_MathTransformSelectBool;
-
-// ScriptStruct RigVM.RigVMFunction_AlphaInterpVector
-// 0x0098 (0x00A0 - 0x0008)
-struct FRigVMFunction_AlphaInterpVector final : public FRigVMFunction_SimBase
-{
-public:
-	struct FVector                                Value;                                             // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Scale;                                             // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Bias;                                              // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bMapRange;                                         // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FInputRange                            InRange;                                           // 0x002C(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FInputRange                            OutRange;                                          // 0x0034(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bClampResult;                                      // 0x003C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ClampMin;                                          // 0x0040(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ClampMax;                                          // 0x0044(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInterpResult;                                     // 0x0048(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         InterpSpeedIncreasing;                             // 0x004C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         InterpSpeedDecreasing;                             // 0x0050(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                Result;                                            // 0x0058(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FInputScaleBiasClamp                   ScaleBiasClamp;                                    // 0x0070(0x0030)(NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FRigVMFunction_AlphaInterpVector;
+DUMPER7_ASSERTS_FRigVMFunction_RandomVector;
 
 // ScriptStruct RigVM.RigVMFunction_MathTransformRotateVector
 // 0x0098 (0x00A0 - 0x0008)
@@ -4639,17 +4588,17 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathTransformRotateVector;
 
-// ScriptStruct RigVM.RigVMFunction_MathTransformTransformVector
-// 0x0098 (0x00A0 - 0x0008)
-struct FRigVMFunction_MathTransformTransformVector final : public FRigVMFunction_MathTransformBase
+// ScriptStruct RigVM.RigVMFunction_StringRight
+// 0x0028 (0x0030 - 0x0008)
+struct FRigVMFunction_StringRight final : public FRigVMFunction_StringBase
 {
 public:
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             Transform;                                         // 0x0010(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Location;                                          // 0x0070(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Result;                                            // 0x0088(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Value;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Count;                                             // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Result;                                            // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FRigVMFunction_MathTransformTransformVector;
+DUMPER7_ASSERTS_FRigVMFunction_StringRight;
 
 // ScriptStruct RigVM.RigVMFunction_MathTransformFromSRT
 // 0x0108 (0x0110 - 0x0008)
@@ -4667,21 +4616,6 @@ public:
 	uint8                                         Pad_108[0x8];                                      // 0x0108(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathTransformFromSRT;
-
-// ScriptStruct RigVM.RigVMFunction_DeltaFromPreviousTransform
-// 0x0198 (0x01A0 - 0x0008)
-struct FRigVMFunction_DeltaFromPreviousTransform final : public FRigVMFunction_SimBase
-{
-public:
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             Value;                                             // 0x0010(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTransform                             Delta;                                             // 0x0070(0x0060)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTransform                             PreviousValue;                                     // 0x00D0(0x0060)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTransform                             Cache;                                             // 0x0130(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsInitialized;                                    // 0x0190(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_191[0xF];                                      // 0x0191(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FRigVMFunction_DeltaFromPreviousTransform;
 
 // ScriptStruct RigVM.RigVMFunction_MathTransformArrayToSRT
 // 0x0040 (0x0048 - 0x0008)
@@ -4718,12 +4652,30 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathTransformClampSpatially;
 
-// ScriptStruct RigVM.RigDispatch_FromString
-// 0x0000 (0x0070 - 0x0070)
-struct FRigDispatch_FromString final : public FRigVMDispatchFactory
+// ScriptStruct RigVM.RigVMFunction_MathTransformMirrorTransform
+// 0x0138 (0x0140 - 0x0008)
+struct FRigVMFunction_MathTransformMirrorTransform final : public FRigVMFunction_MathTransformBase
 {
+public:
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             Value;                                             // 0x0010(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAxis                                         MirrorAxis;                                        // 0x0070(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAxis                                         AxisToFlip;                                        // 0x0071(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_72[0xE];                                       // 0x0072(0x000E)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CentralTransform;                                  // 0x0080(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             Result;                                            // 0x00E0(0x0060)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FRigDispatch_FromString;
+DUMPER7_ASSERTS_FRigVMFunction_MathTransformMirrorTransform;
+
+// ScriptStruct RigVM.RigVMFunction_StringToUppercase
+// 0x0020 (0x0028 - 0x0008)
+struct FRigVMFunction_StringToUppercase final : public FRigVMFunction_StringBase
+{
+public:
+	class FString                                 Value;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Result;                                            // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRigVMFunction_StringToUppercase;
 
 // ScriptStruct RigVM.RigVMFunction_MathVectorUnaryOp
 // 0x0030 (0x0038 - 0x0008)
@@ -4735,12 +4687,39 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathVectorUnaryOp;
 
-// ScriptStruct RigVM.RigVMDispatch_ArrayGetAtIndex
-// 0x0000 (0x0070 - 0x0070)
-struct FRigVMDispatch_ArrayGetAtIndex final : public FRigVMDispatch_ArrayBase
+// ScriptStruct RigVM.RigVMFunction_MathVectorBinaryOp
+// 0x0048 (0x0050 - 0x0008)
+struct FRigVMFunction_MathVectorBinaryOp : public FRigVMFunction_MathVectorBase
 {
+public:
+	struct FVector                                A;                                                 // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                B;                                                 // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Result;                                            // 0x0038(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FRigVMDispatch_ArrayGetAtIndex;
+DUMPER7_ASSERTS_FRigVMFunction_MathVectorBinaryOp;
+
+// ScriptStruct RigVM.RigVMFunction_StringMiddle
+// 0x0028 (0x0030 - 0x0008)
+struct FRigVMFunction_StringMiddle final : public FRigVMFunction_StringBase
+{
+public:
+	class FString                                 Value;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Start;                                             // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Count;                                             // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Result;                                            // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRigVMFunction_StringMiddle;
+
+// ScriptStruct RigVM.RigVMFunction_MathVectorBinaryAggregateOp
+// 0x0048 (0x0050 - 0x0008)
+struct FRigVMFunction_MathVectorBinaryAggregateOp : public FRigVMFunction_MathVectorBase
+{
+public:
+	struct FVector                                A;                                                 // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                B;                                                 // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Result;                                            // 0x0038(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathVectorBinaryAggregateOp;
 
 // ScriptStruct RigVM.RigVMFunction_MathVectorMake
 // 0x0028 (0x0030 - 0x0008)
@@ -4755,21 +4734,49 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathVectorMake;
 
-// ScriptStruct RigVM.RigVMFunction_AccumulateVectorAdd
-// 0x0070 (0x0078 - 0x0008)
-struct FRigVMFunction_AccumulateVectorAdd final : public FRigVMFunction_AccumulateBase
+// ScriptStruct RigVM.RigVMFunction_StringEndsWith
+// 0x0028 (0x0030 - 0x0008)
+struct FRigVMFunction_StringEndsWith final : public FRigVMFunction_StringBase
 {
 public:
-	struct FVector                                Increment;                                         // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                InitialValue;                                      // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIntegrateDeltaTime;                               // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                Result;                                            // 0x0040(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                AccumulatedValue;                                  // 0x0058(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsInitialized;                                    // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FString                                 Name;                                              // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Ending;                                            // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Result;                                            // 0x0028(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FRigVMFunction_AccumulateVectorAdd;
+DUMPER7_ASSERTS_FRigVMFunction_StringEndsWith;
+
+// ScriptStruct RigVM.RigVMFunction_MathVectorFromFloat
+// 0x0020 (0x0028 - 0x0008)
+struct FRigVMFunction_MathVectorFromFloat final : public FRigVMFunction_MathVectorBase
+{
+public:
+	float                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                Result;                                            // 0x0010(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathVectorFromFloat;
+
+// ScriptStruct RigVM.RigVMFunction_NameBase
+// 0x0000 (0x0008 - 0x0008)
+struct FRigVMFunction_NameBase : public FRigVMStruct
+{
+};
+DUMPER7_ASSERTS_FRigVMFunction_NameBase;
+
+// ScriptStruct RigVM.RigVMFunction_NameTruncate
+// 0x0020 (0x0028 - 0x0008)
+struct FRigVMFunction_NameTruncate final : public FRigVMFunction_NameBase
+{
+public:
+	class FName                                   Name;                                              // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Count;                                             // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          FromEnd;                                           // 0x0014(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   Remainder;                                         // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Chopped;                                           // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRigVMFunction_NameTruncate;
 
 // ScriptStruct RigVM.RigVMFunction_MathVectorFromDouble
 // 0x0020 (0x0028 - 0x0008)
@@ -4788,6 +4795,24 @@ struct FRigVMFunction_MathVectorAdd final : public FRigVMFunction_MathVectorBina
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathVectorAdd;
 
+// ScriptStruct RigVM.RigVMFunction_StringConcat
+// 0x0030 (0x0038 - 0x0008)
+struct FRigVMFunction_StringConcat final : public FRigVMFunction_StringBase
+{
+public:
+	class FString                                 A;                                                 // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 B;                                                 // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Result;                                            // 0x0028(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRigVMFunction_StringConcat;
+
+// ScriptStruct RigVM.RigVMFunction_MathVectorSub
+// 0x0000 (0x0050 - 0x0050)
+struct FRigVMFunction_MathVectorSub final : public FRigVMFunction_MathVectorBinaryOp
+{
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathVectorSub;
+
 // ScriptStruct RigVM.RigVMFunction_MathVectorMul
 // 0x0000 (0x0050 - 0x0050)
 struct FRigVMFunction_MathVectorMul final : public FRigVMFunction_MathVectorBinaryAggregateOp
@@ -4795,12 +4820,16 @@ struct FRigVMFunction_MathVectorMul final : public FRigVMFunction_MathVectorBina
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathVectorMul;
 
-// ScriptStruct RigVM.RigDispatch_ToString
-// 0x0000 (0x0070 - 0x0070)
-struct FRigDispatch_ToString final : public FRigVMDispatchFactory
+// ScriptStruct RigVM.RigVMFunction_StringLength
+// 0x0018 (0x0020 - 0x0008)
+struct FRigVMFunction_StringLength final : public FRigVMFunction_StringBase
 {
+public:
+	class FString                                 Value;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Length;                                            // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FRigDispatch_ToString;
+DUMPER7_ASSERTS_FRigVMFunction_StringLength;
 
 // ScriptStruct RigVM.RigVMFunction_MathVectorScale
 // 0x0038 (0x0040 - 0x0008)
@@ -4821,28 +4850,24 @@ struct FRigVMFunction_MathVectorDiv final : public FRigVMFunction_MathVectorBina
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathVectorDiv;
 
+// ScriptStruct RigVM.RigVMFunction_EndsWith
+// 0x0018 (0x0020 - 0x0008)
+struct FRigVMFunction_EndsWith final : public FRigVMFunction_NameBase
+{
+public:
+	class FName                                   Name;                                              // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Ending;                                            // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Result;                                            // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRigVMFunction_EndsWith;
+
 // ScriptStruct RigVM.RigVMFunction_MathVectorMod
 // 0x0000 (0x0050 - 0x0050)
 struct FRigVMFunction_MathVectorMod final : public FRigVMFunction_MathVectorBinaryOp
 {
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathVectorMod;
-
-// ScriptStruct RigVM.RigVMFunction_AccumulateFloatMul
-// 0x0018 (0x0020 - 0x0008)
-struct FRigVMFunction_AccumulateFloatMul final : public FRigVMFunction_AccumulateBase
-{
-public:
-	float                                         Multiplier;                                        // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         InitialValue;                                      // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIntegrateDeltaTime;                               // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Result;                                            // 0x0014(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AccumulatedValue;                                  // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsInitialized;                                    // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FRigVMFunction_AccumulateFloatMul;
 
 // ScriptStruct RigVM.RigVMFunction_MathVectorMin
 // 0x0000 (0x0050 - 0x0050)
@@ -4858,36 +4883,12 @@ struct FRigVMFunction_MathVectorMax final : public FRigVMFunction_MathVectorBina
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathVectorMax;
 
-// ScriptStruct RigVM.RigVMFunction_StringMiddle
-// 0x0028 (0x0030 - 0x0008)
-struct FRigVMFunction_StringMiddle final : public FRigVMFunction_StringBase
-{
-public:
-	class FString                                 Value;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Start;                                             // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Count;                                             // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Result;                                            // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FRigVMFunction_StringMiddle;
-
 // ScriptStruct RigVM.RigVMFunction_MathVectorNegate
 // 0x0000 (0x0038 - 0x0038)
 struct FRigVMFunction_MathVectorNegate final : public FRigVMFunction_MathVectorUnaryOp
 {
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathVectorNegate;
-
-// ScriptStruct RigVM.RigVMFunction_StringStartsWith
-// 0x0028 (0x0030 - 0x0008)
-struct FRigVMFunction_StringStartsWith final : public FRigVMFunction_StringBase
-{
-public:
-	class FString                                 Name;                                              // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Start;                                             // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Result;                                            // 0x0028(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FRigVMFunction_StringStartsWith;
 
 // ScriptStruct RigVM.RigVMFunction_MathVectorAbs
 // 0x0000 (0x0038 - 0x0038)
@@ -4903,15 +4904,17 @@ struct FRigVMFunction_MathVectorFloor final : public FRigVMFunction_MathVectorUn
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathVectorFloor;
 
-// ScriptStruct RigVM.RigVMFunction_StringReverse
-// 0x0020 (0x0028 - 0x0008)
-struct FRigVMFunction_StringReverse final : public FRigVMFunction_StringBase
+// ScriptStruct RigVM.RigVMFunction_Contains
+// 0x0018 (0x0020 - 0x0008)
+struct FRigVMFunction_Contains final : public FRigVMFunction_NameBase
 {
 public:
-	class FString                                 Value;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Reverse;                                           // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Name;                                              // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Search;                                            // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Result;                                            // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FRigVMFunction_StringReverse;
+DUMPER7_ASSERTS_FRigVMFunction_Contains;
 
 // ScriptStruct RigVM.RigVMFunction_MathVectorCeil
 // 0x0000 (0x0038 - 0x0038)
@@ -4920,15 +4923,17 @@ struct FRigVMFunction_MathVectorCeil final : public FRigVMFunction_MathVectorUna
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathVectorCeil;
 
-// ScriptStruct RigVM.RigVMFunction_StringToLowercase
-// 0x0020 (0x0028 - 0x0008)
-struct FRigVMFunction_StringToLowercase final : public FRigVMFunction_StringBase
+// ScriptStruct RigVM.RigVMFunction_StartsWith
+// 0x0018 (0x0020 - 0x0008)
+struct FRigVMFunction_StartsWith final : public FRigVMFunction_NameBase
 {
 public:
-	class FString                                 Value;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Result;                                            // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Name;                                              // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Start;                                             // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Result;                                            // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FRigVMFunction_StringToLowercase;
+DUMPER7_ASSERTS_FRigVMFunction_StartsWith;
 
 // ScriptStruct RigVM.RigVMFunction_MathVectorRound
 // 0x0000 (0x0038 - 0x0038)
@@ -4936,17 +4941,6 @@ struct FRigVMFunction_MathVectorRound final : public FRigVMFunction_MathVectorUn
 {
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathVectorRound;
-
-// ScriptStruct RigVM.RigVMFunction_StringJoin
-// 0x0030 (0x0038 - 0x0008)
-struct FRigVMFunction_StringJoin final : public FRigVMFunction_StringBase
-{
-public:
-	TArray<class FString>                         Values;                                            // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	class FString                                 Separator;                                         // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Result;                                            // 0x0028(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FRigVMFunction_StringJoin;
 
 // ScriptStruct RigVM.RigVMFunction_MathVectorSign
 // 0x0000 (0x0038 - 0x0038)
@@ -4966,17 +4960,6 @@ public:
 	struct FVector                                Result;                                            // 0x0050(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathVectorClamp;
-
-// ScriptStruct RigVM.RigVMFunction_StringLength
-// 0x0018 (0x0020 - 0x0008)
-struct FRigVMFunction_StringLength final : public FRigVMFunction_StringBase
-{
-public:
-	class FString                                 Value;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Length;                                            // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FRigVMFunction_StringLength;
 
 // ScriptStruct RigVM.RigVMFunction_MathVectorLerp
 // 0x0050 (0x0058 - 0x0008)
@@ -5007,6 +4990,40 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathVectorRemap;
 
+// ScriptStruct RigVM.RigVMSimPoint
+// 0x0040 (0x0040 - 0x0000)
+struct FRigVMSimPoint final
+{
+public:
+	float                                         Mass;                                              // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Size;                                              // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LinearDamping;                                     // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InheritMotion;                                     // 0x000C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Position;                                          // 0x0010(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                LinearVelocity;                                    // 0x0028(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRigVMSimPoint;
+
+// ScriptStruct RigVM.RigVMFunction_VerletIntegrateVector
+// 0x00D0 (0x00D8 - 0x0008)
+struct FRigVMFunction_VerletIntegrateVector final : public FRigVMFunction_SimBase
+{
+public:
+	struct FVector                                Target;                                            // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Strength;                                          // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Damp;                                              // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Blend;                                             // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                Force;                                             // 0x0030(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Position;                                          // 0x0048(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Velocity;                                          // 0x0060(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Acceleration;                                      // 0x0078(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRigVMSimPoint                         Point;                                             // 0x0090(0x0040)(Transient, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bInitialized;                                      // 0x00D0(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D1[0x7];                                       // 0x00D1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRigVMFunction_VerletIntegrateVector;
+
 // ScriptStruct RigVM.RigVMFunction_MathVectorEquals
 // 0x0038 (0x0040 - 0x0008)
 struct FRigVMFunction_MathVectorEquals final : public FRigVMFunction_MathVectorBase
@@ -5018,18 +5035,6 @@ public:
 	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathVectorEquals;
-
-// ScriptStruct RigVM.RigVMFunction_NameReplace
-// 0x0020 (0x0028 - 0x0008)
-struct FRigVMFunction_NameReplace final : public FRigVMFunction_NameBase
-{
-public:
-	class FName                                   Name;                                              // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   Old;                                               // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   New;                                               // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   Result;                                            // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FRigVMFunction_NameReplace;
 
 // ScriptStruct RigVM.RigVMFunction_MathVectorNotEquals
 // 0x0038 (0x0040 - 0x0008)
@@ -5068,16 +5073,6 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathVectorIsNearlyEqual;
 
-// ScriptStruct RigVM.RigVMFunction_StringToUppercase
-// 0x0020 (0x0028 - 0x0008)
-struct FRigVMFunction_StringToUppercase final : public FRigVMFunction_StringBase
-{
-public:
-	class FString                                 Value;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Result;                                            // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FRigVMFunction_StringToUppercase;
-
 // ScriptStruct RigVM.RigVMFunction_MathVectorSelectBool
 // 0x0050 (0x0058 - 0x0008)
 struct FRigVMFunction_MathVectorSelectBool final : public FRigVMFunction_MathVectorBase
@@ -5091,15 +5086,19 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathVectorSelectBool;
 
-// ScriptStruct RigVM.RigVMFunction_StringTrimWhitespace
-// 0x0020 (0x0028 - 0x0008)
-struct FRigVMFunction_StringTrimWhitespace final : public FRigVMFunction_StringBase
+// ScriptStruct RigVM.RigVMDispatch_ArrayDifference
+// 0x0000 (0x0070 - 0x0070)
+struct FRigVMDispatch_ArrayDifference : public FRigVMDispatch_ArrayBase
 {
-public:
-	class FString                                 Value;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Result;                                            // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FRigVMFunction_StringTrimWhitespace;
+DUMPER7_ASSERTS_FRigVMDispatch_ArrayDifference;
+
+// ScriptStruct RigVM.RigVMDispatch_ArrayIntersection
+// 0x0000 (0x0070 - 0x0070)
+struct FRigVMDispatch_ArrayIntersection final : public FRigVMDispatch_ArrayDifference
+{
+};
+DUMPER7_ASSERTS_FRigVMDispatch_ArrayIntersection;
 
 // ScriptStruct RigVM.RigVMFunction_MathVectorDeg
 // 0x0000 (0x0038 - 0x0038)
@@ -5107,6 +5106,20 @@ struct FRigVMFunction_MathVectorDeg final : public FRigVMFunction_MathVectorUnar
 {
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathVectorDeg;
+
+// ScriptStruct RigVM.RigVMDispatch_ArraySetAtIndex
+// 0x0000 (0x0070 - 0x0070)
+struct FRigVMDispatch_ArraySetAtIndex : public FRigVMDispatch_ArrayBaseMutable
+{
+};
+DUMPER7_ASSERTS_FRigVMDispatch_ArraySetAtIndex;
+
+// ScriptStruct RigVM.RigVMDispatch_ArrayAdd
+// 0x0000 (0x0070 - 0x0070)
+struct FRigVMDispatch_ArrayAdd final : public FRigVMDispatch_ArraySetAtIndex
+{
+};
+DUMPER7_ASSERTS_FRigVMDispatch_ArrayAdd;
 
 // ScriptStruct RigVM.RigVMFunction_MathVectorRad
 // 0x0000 (0x0038 - 0x0038)
@@ -5126,6 +5139,13 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathVectorLengthSquared;
 
+// ScriptStruct RigVM.RigVMDispatch_ArrayClone
+// 0x0000 (0x0070 - 0x0070)
+struct FRigVMDispatch_ArrayClone final : public FRigVMDispatch_ArrayBase
+{
+};
+DUMPER7_ASSERTS_FRigVMDispatch_ArrayClone;
+
 // ScriptStruct RigVM.RigVMFunction_MathVectorLength
 // 0x0020 (0x0028 - 0x0008)
 struct FRigVMFunction_MathVectorLength final : public FRigVMFunction_MathVectorBase
@@ -5136,6 +5156,25 @@ public:
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathVectorLength;
+
+// ScriptStruct RigVM.RigVMDispatch_ArrayAppend
+// 0x0000 (0x0070 - 0x0070)
+struct FRigVMDispatch_ArrayAppend : public FRigVMDispatch_ArrayBaseMutable
+{
+};
+DUMPER7_ASSERTS_FRigVMDispatch_ArrayAppend;
+
+// ScriptStruct RigVM.RigVMFunction_MathVectorDistance
+// 0x0038 (0x0040 - 0x0008)
+struct FRigVMFunction_MathVectorDistance final : public FRigVMFunction_MathVectorBase
+{
+public:
+	struct FVector                                A;                                                 // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                B;                                                 // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Result;                                            // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRigVMFunction_MathVectorDistance;
 
 // ScriptStruct RigVM.RigVMFunction_MathVectorCross
 // 0x0000 (0x0050 - 0x0050)
@@ -5155,6 +5194,13 @@ public:
 	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathVectorDot;
+
+// ScriptStruct RigVM.RigVMDispatch_ArrayRemove
+// 0x0000 (0x0070 - 0x0070)
+struct FRigVMDispatch_ArrayRemove final : public FRigVMDispatch_ArrayBaseMutable
+{
+};
+DUMPER7_ASSERTS_FRigVMDispatch_ArrayRemove;
 
 // ScriptStruct RigVM.RigVMFunction_MathVectorUnit
 // 0x0000 (0x0038 - 0x0038)
@@ -5187,31 +5233,6 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathVectorClampLength;
 
-// ScriptStruct RigVM.RigVMDispatch_SwitchInt32
-// 0x0000 (0x0070 - 0x0070)
-struct FRigVMDispatch_SwitchInt32 final : public FRigVMDispatch_CoreBase
-{
-};
-DUMPER7_ASSERTS_FRigVMDispatch_SwitchInt32;
-
-// ScriptStruct RigVM.RigVMFunction_MathVectorMirror
-// 0x0048 (0x0050 - 0x0008)
-struct FRigVMFunction_MathVectorMirror final : public FRigVMFunction_MathVectorBase
-{
-public:
-	struct FVector                                Value;                                             // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Normal;                                            // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Result;                                            // 0x0038(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FRigVMFunction_MathVectorMirror;
-
-// ScriptStruct RigVM.RigVMDispatch_ArrayIterator
-// 0x0000 (0x0070 - 0x0070)
-struct FRigVMDispatch_ArrayIterator final : public FRigVMDispatch_ArrayBaseMutable
-{
-};
-DUMPER7_ASSERTS_FRigVMDispatch_ArrayIterator;
-
 // ScriptStruct RigVM.RigVMFunction_MathVectorAngle
 // 0x0038 (0x0040 - 0x0008)
 struct FRigVMFunction_MathVectorAngle final : public FRigVMFunction_MathVectorBase
@@ -5224,12 +5245,12 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathVectorAngle;
 
-// ScriptStruct RigVM.RigVMDispatch_BreakStruct
+// ScriptStruct RigVM.RigVMDispatch_ArrayFind
 // 0x0000 (0x0070 - 0x0070)
-struct FRigVMDispatch_BreakStruct final : public FRigVMDispatch_MakeStruct
+struct FRigVMDispatch_ArrayFind final : public FRigVMDispatch_ArrayBase
 {
 };
-DUMPER7_ASSERTS_FRigVMDispatch_BreakStruct;
+DUMPER7_ASSERTS_FRigVMDispatch_ArrayFind;
 
 // ScriptStruct RigVM.RigVMFunction_MathVectorOrthogonal
 // 0x0038 (0x0040 - 0x0008)
@@ -5243,14 +5264,27 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathVectorOrthogonal;
 
-// ScriptStruct RigVM.RigVMFunction_MathVectorMakeBezierFourPoint
-// 0x0060 (0x0068 - 0x0008)
-struct FRigVMFunction_MathVectorMakeBezierFourPoint final : public FRigVMFunction_MathVectorBase
+// ScriptStruct RigVM.RigVMDispatch_ArrayMake
+// 0x0000 (0x0070 - 0x0070)
+struct FRigVMDispatch_ArrayMake final : public FRigVMDispatch_ArrayBase
+{
+};
+DUMPER7_ASSERTS_FRigVMDispatch_ArrayMake;
+
+// ScriptStruct RigVM.RigVMFunction_NoiseDouble
+// 0x0038 (0x0040 - 0x0008)
+struct FRigVMFunction_NoiseDouble final : public FRigVMFunction_MathBase
 {
 public:
-	struct FRigVMFourPointBezier                  Bezier;                                            // 0x0008(0x0060)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	double                                        Value;                                             // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        Speed;                                             // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        Frequency;                                         // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        Minimum;                                           // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        Maximum;                                           // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        Result;                                            // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        Time;                                              // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FRigVMFunction_MathVectorMakeBezierFourPoint;
+DUMPER7_ASSERTS_FRigVMFunction_NoiseDouble;
 
 // ScriptStruct RigVM.RigVMFunction_MathVectorClampSpatially
 // 0x00B8 (0x00C0 - 0x0008)
@@ -5298,29 +5332,15 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_MathVectorMakeAbsolute;
 
-// ScriptStruct RigVM.RigVMDispatch_If
-// 0x0000 (0x0070 - 0x0070)
-struct FRigVMDispatch_If final : public FRigVMDispatch_CoreBase
-{
-};
-DUMPER7_ASSERTS_FRigVMDispatch_If;
-
-// ScriptStruct RigVM.RigVMFunction_MathVectorArraySum
+// ScriptStruct RigVM.RigVMFunction_MathVectorArrayAverage
 // 0x0028 (0x0030 - 0x0008)
-struct FRigVMFunction_MathVectorArraySum final : public FRigVMFunction_MathVectorBase
+struct FRigVMFunction_MathVectorArrayAverage final : public FRigVMFunction_MathVectorBase
 {
 public:
 	TArray<struct FVector>                        Array;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	struct FVector                                Sum;                                               // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Average;                                           // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FRigVMFunction_MathVectorArraySum;
-
-// ScriptStruct RigVM.RigVMDispatch_ArrayFind
-// 0x0000 (0x0070 - 0x0070)
-struct FRigVMDispatch_ArrayFind final : public FRigVMDispatch_ArrayBase
-{
-};
-DUMPER7_ASSERTS_FRigVMDispatch_ArrayFind;
+DUMPER7_ASSERTS_FRigVMFunction_MathVectorArrayAverage;
 
 // ScriptStruct RigVM.RigVMFunction_NoiseFloat
 // 0x0020 (0x0028 - 0x0008)
@@ -5338,13 +5358,6 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_NoiseFloat;
 
-// ScriptStruct RigVM.RigVMDispatch_ArrayMake
-// 0x0000 (0x0070 - 0x0070)
-struct FRigVMDispatch_ArrayMake final : public FRigVMDispatch_ArrayBase
-{
-};
-DUMPER7_ASSERTS_FRigVMDispatch_ArrayMake;
-
 // ScriptStruct RigVM.RigVMFunction_NoiseVector
 // 0x0080 (0x0088 - 0x0008)
 struct FRigVMFunction_NoiseVector final : public FRigVMFunction_MathBase
@@ -5360,12 +5373,20 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_NoiseVector;
 
-// ScriptStruct RigVM.RigVMDispatch_ArrayAdd
-// 0x0000 (0x0070 - 0x0070)
-struct FRigVMDispatch_ArrayAdd final : public FRigVMDispatch_ArraySetAtIndex
+// ScriptStruct RigVM.RigVMFunction_NoiseVector2
+// 0x0088 (0x0090 - 0x0008)
+struct FRigVMFunction_NoiseVector2 final : public FRigVMFunction_MathBase
 {
+public:
+	struct FVector                                Value;                                             // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Speed;                                             // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Frequency;                                         // 0x0038(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        Minimum;                                           // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        Maximum;                                           // 0x0058(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Result;                                            // 0x0060(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Time;                                              // 0x0078(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FRigVMDispatch_ArrayAdd;
+DUMPER7_ASSERTS_FRigVMFunction_NoiseVector2;
 
 // ScriptStruct RigVM.RigVMFunction_RandomFloat
 // 0x0028 (0x0030 - 0x0008)
@@ -5412,19 +5433,12 @@ struct FRigVMDispatch_ArraySetNum final : public FRigVMDispatch_ArrayBaseMutable
 };
 DUMPER7_ASSERTS_FRigVMDispatch_ArraySetNum;
 
-// ScriptStruct RigVM.RigVMDispatch_ArrayAppend
+// ScriptStruct RigVM.RigVMDispatch_ArrayInsert
 // 0x0000 (0x0070 - 0x0070)
-struct FRigVMDispatch_ArrayAppend : public FRigVMDispatch_ArrayBaseMutable
+struct FRigVMDispatch_ArrayInsert final : public FRigVMDispatch_ArraySetAtIndex
 {
 };
-DUMPER7_ASSERTS_FRigVMDispatch_ArrayAppend;
-
-// ScriptStruct RigVM.RigVMDispatch_ArrayClone
-// 0x0000 (0x0070 - 0x0070)
-struct FRigVMDispatch_ArrayClone final : public FRigVMDispatch_ArrayBase
-{
-};
-DUMPER7_ASSERTS_FRigVMDispatch_ArrayClone;
+DUMPER7_ASSERTS_FRigVMDispatch_ArrayInsert;
 
 // ScriptStruct RigVM.RigVMDispatch_ArrayUnion
 // 0x0000 (0x0070 - 0x0070)
@@ -5433,19 +5447,19 @@ struct FRigVMDispatch_ArrayUnion final : public FRigVMDispatch_ArrayAppend
 };
 DUMPER7_ASSERTS_FRigVMDispatch_ArrayUnion;
 
-// ScriptStruct RigVM.RigVMDispatch_ArrayIntersection
-// 0x0000 (0x0070 - 0x0070)
-struct FRigVMDispatch_ArrayIntersection final : public FRigVMDispatch_ArrayDifference
-{
-};
-DUMPER7_ASSERTS_FRigVMDispatch_ArrayIntersection;
-
 // ScriptStruct RigVM.RigVMDispatch_Constant
 // 0x0000 (0x0070 - 0x0070)
 struct FRigVMDispatch_Constant final : public FRigVMDispatch_CoreBase
 {
 };
 DUMPER7_ASSERTS_FRigVMDispatch_Constant;
+
+// ScriptStruct RigVM.RigVMDispatch_If
+// 0x0000 (0x0070 - 0x0070)
+struct FRigVMDispatch_If final : public FRigVMDispatch_CoreBase
+{
+};
+DUMPER7_ASSERTS_FRigVMDispatch_If;
 
 // ScriptStruct RigVM.RigVMDispatch_Print
 // 0x0000 (0x0070 - 0x0070)
@@ -5471,31 +5485,28 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_ControlFlowBranch;
 
-// ScriptStruct RigVM.RigVMFunction_NameTruncate
-// 0x0020 (0x0028 - 0x0008)
-struct FRigVMFunction_NameTruncate final : public FRigVMFunction_NameBase
-{
-public:
-	class FName                                   Name;                                              // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Count;                                             // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          FromEnd;                                           // 0x0014(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   Remainder;                                         // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   Chopped;                                           // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FRigVMFunction_NameTruncate;
-
-// ScriptStruct RigVM.RigVMFunction_StartsWith
+// ScriptStruct RigVM.RigVMFunction_NameConcat
 // 0x0018 (0x0020 - 0x0008)
-struct FRigVMFunction_StartsWith final : public FRigVMFunction_NameBase
+struct FRigVMFunction_NameConcat final : public FRigVMFunction_NameBase
+{
+public:
+	class FName                                   A;                                                 // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   B;                                                 // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Result;                                            // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRigVMFunction_NameConcat;
+
+// ScriptStruct RigVM.RigVMFunction_NameReplace
+// 0x0020 (0x0028 - 0x0008)
+struct FRigVMFunction_NameReplace final : public FRigVMFunction_NameBase
 {
 public:
 	class FName                                   Name;                                              // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   Start;                                             // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Result;                                            // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FName                                   Old;                                               // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   New;                                               // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Result;                                            // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FRigVMFunction_StartsWith;
+DUMPER7_ASSERTS_FRigVMFunction_NameReplace;
 
 // ScriptStruct RigVM.RigVMFunction_StringTruncate
 // 0x0038 (0x0040 - 0x0008)
@@ -5523,17 +5534,17 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_StringReplace;
 
-// ScriptStruct RigVM.RigVMFunction_StringEndsWith
+// ScriptStruct RigVM.RigVMFunction_StringStartsWith
 // 0x0028 (0x0030 - 0x0008)
-struct FRigVMFunction_StringEndsWith final : public FRigVMFunction_StringBase
+struct FRigVMFunction_StringStartsWith final : public FRigVMFunction_StringBase
 {
 public:
 	class FString                                 Name;                                              // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Ending;                                            // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Start;                                             // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          Result;                                            // 0x0028(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FRigVMFunction_StringEndsWith;
+DUMPER7_ASSERTS_FRigVMFunction_StringStartsWith;
 
 // ScriptStruct RigVM.RigVMFunction_StringContains
 // 0x0028 (0x0030 - 0x0008)
@@ -5547,6 +5558,16 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_StringContains;
 
+// ScriptStruct RigVM.RigVMFunction_StringTrimWhitespace
+// 0x0020 (0x0028 - 0x0008)
+struct FRigVMFunction_StringTrimWhitespace final : public FRigVMFunction_StringBase
+{
+public:
+	class FString                                 Value;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Result;                                            // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRigVMFunction_StringTrimWhitespace;
+
 // ScriptStruct RigVM.RigVMFunction_StringLeft
 // 0x0028 (0x0030 - 0x0008)
 struct FRigVMFunction_StringLeft final : public FRigVMFunction_StringBase
@@ -5558,18 +5579,6 @@ public:
 	class FString                                 Result;                                            // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FRigVMFunction_StringLeft;
-
-// ScriptStruct RigVM.RigVMFunction_StringRight
-// 0x0028 (0x0030 - 0x0008)
-struct FRigVMFunction_StringRight final : public FRigVMFunction_StringBase
-{
-public:
-	class FString                                 Value;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Count;                                             // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Result;                                            // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FRigVMFunction_StringRight;
 
 // ScriptStruct RigVM.RigVMFunction_StringFind
 // 0x0028 (0x0030 - 0x0008)
@@ -5584,17 +5593,6 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_StringFind;
 
-// ScriptStruct RigVM.RigVMFunction_StringSplit
-// 0x0030 (0x0038 - 0x0008)
-struct FRigVMFunction_StringSplit final : public FRigVMFunction_StringBase
-{
-public:
-	class FString                                 Value;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Separator;                                         // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class FString>                         Result;                                            // 0x0028(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FRigVMFunction_StringSplit;
-
 // ScriptStruct RigVM.RigVMFunction_StringPadInteger
 // 0x0018 (0x0020 - 0x0008)
 struct FRigVMFunction_StringPadInteger final : public FRigVMFunction_StringBase
@@ -5605,6 +5603,13 @@ public:
 	class FString                                 Result;                                            // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FRigVMFunction_StringPadInteger;
+
+// ScriptStruct RigVM.RigDispatch_ToString
+// 0x0000 (0x0070 - 0x0070)
+struct FRigDispatch_ToString final : public FRigVMDispatchFactory
+{
+};
+DUMPER7_ASSERTS_FRigDispatch_ToString;
 
 // ScriptStruct RigVM.RigVMFunction_AccumulateFloatAdd
 // 0x0018 (0x0020 - 0x0008)
@@ -5622,22 +5627,6 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_AccumulateFloatAdd;
 
-// ScriptStruct RigVM.RigVMFunction_AccumulateVectorMul
-// 0x0070 (0x0078 - 0x0008)
-struct FRigVMFunction_AccumulateVectorMul final : public FRigVMFunction_AccumulateBase
-{
-public:
-	struct FVector                                Multiplier;                                        // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                InitialValue;                                      // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIntegrateDeltaTime;                               // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                Result;                                            // 0x0040(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                AccumulatedValue;                                  // 0x0058(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsInitialized;                                    // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FRigVMFunction_AccumulateVectorMul;
-
 // ScriptStruct RigVM.RigVMFunction_AccumulateFloatLerp
 // 0x0020 (0x0028 - 0x0008)
 struct FRigVMFunction_AccumulateFloatLerp final : public FRigVMFunction_AccumulateBase
@@ -5654,23 +5643,6 @@ public:
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FRigVMFunction_AccumulateFloatLerp;
-
-// ScriptStruct RigVM.RigVMFunction_AccumulateVectorLerp
-// 0x0070 (0x0078 - 0x0008)
-struct FRigVMFunction_AccumulateVectorLerp final : public FRigVMFunction_AccumulateBase
-{
-public:
-	struct FVector                                TargetValue;                                       // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                InitialValue;                                      // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Blend;                                             // 0x0038(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIntegrateDeltaTime;                               // 0x003C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                Result;                                            // 0x0040(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                AccumulatedValue;                                  // 0x0058(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsInitialized;                                    // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FRigVMFunction_AccumulateVectorLerp;
 
 // ScriptStruct RigVM.RigVMFunction_AccumulateTransformLerp
 // 0x01A8 (0x01B0 - 0x0008)
@@ -5690,20 +5662,20 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_AccumulateTransformLerp;
 
-// ScriptStruct RigVM.RigVMFunction_AccumulateFloatRange
-// 0x0018 (0x0020 - 0x0008)
-struct FRigVMFunction_AccumulateFloatRange final : public FRigVMFunction_AccumulateBase
+// ScriptStruct RigVM.RigVMFunction_AccumulateVectorRange
+// 0x0080 (0x0088 - 0x0008)
+struct FRigVMFunction_AccumulateVectorRange final : public FRigVMFunction_AccumulateBase
 {
 public:
-	float                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Minimum;                                           // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Maximum;                                           // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AccumulatedMinimum;                                // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AccumulatedMaximum;                                // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsInitialized;                                    // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FVector                                Value;                                             // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Minimum;                                           // 0x0020(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Maximum;                                           // 0x0038(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                AccumulatedMinimum;                                // 0x0050(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                AccumulatedMaximum;                                // 0x0068(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsInitialized;                                    // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FRigVMFunction_AccumulateFloatRange;
+DUMPER7_ASSERTS_FRigVMFunction_AccumulateVectorRange;
 
 // ScriptStruct RigVM.RigVMFunction_AlphaInterp
 // 0x0070 (0x0078 - 0x0008)
@@ -5731,6 +5703,47 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_AlphaInterp;
 
+// ScriptStruct RigVM.RigVMFunction_AlphaInterpQuat
+// 0x00B8 (0x00C0 - 0x0008)
+struct FRigVMFunction_AlphaInterpQuat final : public FRigVMFunction_SimBase
+{
+public:
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FQuat                                  Value;                                             // 0x0010(0x0020)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Scale;                                             // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Bias;                                              // 0x0034(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bMapRange;                                         // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FInputRange                            InRange;                                           // 0x003C(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FInputRange                            OutRange;                                          // 0x0044(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bClampResult;                                      // 0x004C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4D[0x3];                                       // 0x004D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ClampMin;                                          // 0x0050(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ClampMax;                                          // 0x0054(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInterpResult;                                     // 0x0058(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_59[0x3];                                       // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         InterpSpeedIncreasing;                             // 0x005C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InterpSpeedDecreasing;                             // 0x0060(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_64[0xC];                                       // 0x0064(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FQuat                                  Result;                                            // 0x0070(0x0020)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FInputScaleBiasClamp                   ScaleBiasClamp;                                    // 0x0090(0x0030)(NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRigVMFunction_AlphaInterpQuat;
+
+// ScriptStruct RigVM.RigVMFunction_DeltaFromPreviousFloat
+// 0x0018 (0x0020 - 0x0008)
+struct FRigVMFunction_DeltaFromPreviousFloat final : public FRigVMFunction_SimBase
+{
+public:
+	float                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Delta;                                             // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PreviousValue;                                     // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Cache;                                             // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsInitialized;                                    // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRigVMFunction_DeltaFromPreviousFloat;
+
 // ScriptStruct RigVM.RigVMFunction_DeltaFromPreviousVector
 // 0x0068 (0x0070 - 0x0008)
 struct FRigVMFunction_DeltaFromPreviousVector final : public FRigVMFunction_SimBase
@@ -5745,20 +5758,20 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMFunction_DeltaFromPreviousVector;
 
-// ScriptStruct RigVM.RigVMFunction_KalmanFloat
-// 0x0028 (0x0030 - 0x0008)
-struct FRigVMFunction_KalmanFloat final : public FRigVMFunction_SimBase
+// ScriptStruct RigVM.RigVMFunction_DeltaFromPreviousTransform
+// 0x0198 (0x01A0 - 0x0008)
+struct FRigVMFunction_DeltaFromPreviousTransform final : public FRigVMFunction_SimBase
 {
 public:
-	float                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         BufferSize;                                        // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Result;                                            // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<float>                                 Buffer;                                            // 0x0018(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	int32                                         LastInsertIndex;                                   // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             Value;                                             // 0x0010(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             Delta;                                             // 0x0070(0x0060)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             PreviousValue;                                     // 0x00D0(0x0060)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             Cache;                                             // 0x0130(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsInitialized;                                    // 0x0190(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_191[0xF];                                      // 0x0191(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FRigVMFunction_KalmanFloat;
+DUMPER7_ASSERTS_FRigVMFunction_DeltaFromPreviousTransform;
 
 // ScriptStruct RigVM.RigVMFunction_KalmanTransform
 // 0x00F8 (0x0100 - 0x0008)
@@ -5775,19 +5788,6 @@ public:
 	uint8                                         Pad_F4[0xC];                                       // 0x00F4(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FRigVMFunction_KalmanTransform;
-
-// ScriptStruct RigVM.RigVMFunction_Timeline
-// 0x0010 (0x0018 - 0x0008)
-struct FRigVMFunction_Timeline final : public FRigVMFunction_SimBase
-{
-public:
-	float                                         Speed;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Time;                                              // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AccumulatedValue;                                  // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsInitialized;                                    // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FRigVMFunction_Timeline;
 
 // ScriptStruct RigVM.RigVMFunction_TimeOffsetFloat
 // 0x0040 (0x0048 - 0x0008)

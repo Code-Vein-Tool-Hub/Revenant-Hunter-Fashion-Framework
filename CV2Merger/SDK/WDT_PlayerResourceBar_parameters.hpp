@@ -16,28 +16,6 @@
 namespace SDK::Params
 {
 
-// Function WDT_PlayerResourceBar.WDT_PlayerResourceBar_C.ExecuteUbergraph_WDT_PlayerResourceBar
-// 0x0820 (0x0820 - 0x0000)
-struct WDT_PlayerResourceBar_C_ExecuteUbergraph_WDT_PlayerResourceBar final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_IsDesignTime;                         // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0008(0x0038)(IsPlainOldData, NoDestructor)
-	float                                         K2Node_Event_InDeltaTime;                          // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_44[0xC];                                       // 0x0044(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FProgressBarStyle                      K2Node_MakeStruct_ProgressBarStyle;                // 0x0050(0x0290)()
-	struct FProgressBarStyle                      K2Node_MakeStruct_ProgressBarStyle_1;              // 0x02E0(0x0290)()
-	struct FProgressBarStyle                      K2Node_MakeStruct_ProgressBarStyle_2;              // 0x0570(0x0290)()
-	class UUIObjectBase*                          CallFunc_GetUIObjectByClass_ReturnValue;           // 0x0800(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UBP_StatusIndicatorUIObject_C*          K2Node_DynamicCast_AsBP_Status_Indicator_UIObject; // 0x0808(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0810(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_811[0x7];                                      // 0x0811(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_TickBackGauge_InDeltaTime_ImplicitCast;   // 0x0818(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_PlayerResourceBar_C_ExecuteUbergraph_WDT_PlayerResourceBar;
-
 // Function WDT_PlayerResourceBar.WDT_PlayerResourceBar_C.GetFlag
 // 0x000C (0x000C - 0x0000)
 struct WDT_PlayerResourceBar_C_GetFlag final
@@ -61,6 +39,15 @@ public:
 };
 DUMPER7_ASSERTS_WDT_PlayerResourceBar_C_GetResourcePercent;
 
+// Function WDT_PlayerResourceBar.WDT_PlayerResourceBar_C.StopAttention
+// 0x0001 (0x0001 - 0x0000)
+struct WDT_PlayerResourceBar_C_StopAttention final
+{
+public:
+	bool                                          CallFunc_IsAnimationPlaying_ReturnValue;           // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_PlayerResourceBar_C_StopAttention;
+
 // Function WDT_PlayerResourceBar.WDT_PlayerResourceBar_C.PlayAttention
 // 0x0010 (0x0010 - 0x0000)
 struct WDT_PlayerResourceBar_C_PlayAttention final
@@ -71,15 +58,6 @@ public:
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WDT_PlayerResourceBar_C_PlayAttention;
-
-// Function WDT_PlayerResourceBar.WDT_PlayerResourceBar_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WDT_PlayerResourceBar_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_PlayerResourceBar_C_PreConstruct;
 
 // Function WDT_PlayerResourceBar.WDT_PlayerResourceBar_C.ResetBackGaugeResource
 // 0x0018 (0x0018 - 0x0000)
@@ -93,58 +71,6 @@ public:
 	double                                        CallFunc_LessEqual_DoubleDouble_B_ImplicitCast;    // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WDT_PlayerResourceBar_C_ResetBackGaugeResource;
-
-// Function WDT_PlayerResourceBar.WDT_PlayerResourceBar_C.SetMaxResource
-// 0x0020 (0x0020 - 0x0000)
-struct WDT_PlayerResourceBar_C_SetMaxResource final
-{
-public:
-	double                                        MaxResource_0;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_FTrunc_ReturnValue;                       // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0010(0x0010)()
-};
-DUMPER7_ASSERTS_WDT_PlayerResourceBar_C_SetMaxResource;
-
-// Function WDT_PlayerResourceBar.WDT_PlayerResourceBar_C.SetRecoverableResource
-// 0x0008 (0x0008 - 0x0000)
-struct WDT_PlayerResourceBar_C_SetRecoverableResource final
-{
-public:
-	double                                        InResource;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_PlayerResourceBar_C_SetRecoverableResource;
-
-// Function WDT_PlayerResourceBar.WDT_PlayerResourceBar_C.SetResource
-// 0x0020 (0x0020 - 0x0000)
-struct WDT_PlayerResourceBar_C_SetResource final
-{
-public:
-	double                                        CurrentResource_0;                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_FTrunc_ReturnValue;                       // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0010(0x0010)()
-};
-DUMPER7_ASSERTS_WDT_PlayerResourceBar_C_SetResource;
-
-// Function WDT_PlayerResourceBar.WDT_PlayerResourceBar_C.StopAttention
-// 0x0001 (0x0001 - 0x0000)
-struct WDT_PlayerResourceBar_C_StopAttention final
-{
-public:
-	bool                                          CallFunc_IsAnimationPlaying_ReturnValue;           // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_PlayerResourceBar_C_StopAttention;
-
-// Function WDT_PlayerResourceBar.WDT_PlayerResourceBar_C.Tick
-// 0x003C (0x003C - 0x0000)
-struct WDT_PlayerResourceBar_C_Tick final
-{
-public:
-	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_PlayerResourceBar_C_Tick;
 
 // Function WDT_PlayerResourceBar.WDT_PlayerResourceBar_C.TickBackGauge
 // 0x0078 (0x0078 - 0x0000)
@@ -174,27 +100,6 @@ public:
 	float                                         CallFunc_SetPercent_InPercent_ImplicitCast;        // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WDT_PlayerResourceBar_C_TickBackGauge;
-
-// Function WDT_PlayerResourceBar.WDT_PlayerResourceBar_C.Update Gauges
-// 0x0038 (0x0038 - 0x0000)
-struct WDT_PlayerResourceBar_C_Update_Gauges final
-{
-public:
-	bool                                          InIsHeal;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_FTrunc_ReturnValue;                       // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue;       // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_16[0x2];                                       // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Less_DoubleDouble_A_ImplicitCast;         // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Less_DoubleDouble_B_ImplicitCast;         // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetPercent_InPercent_ImplicitCast;        // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetPercent_InPercent_ImplicitCast_1;      // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetPercent_InPercent_ImplicitCast_2;      // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_PlayerResourceBar_C_Update_Gauges;
 
 // Function WDT_PlayerResourceBar.WDT_PlayerResourceBar_C.UpdateResource
 // 0x0120 (0x0120 - 0x0000)
@@ -253,6 +158,101 @@ public:
 	float                                         CallFunc_SetPercent_InPercent_ImplicitCast_1;      // 0x0118(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WDT_PlayerResourceBar_C_UpdateResource;
+
+// Function WDT_PlayerResourceBar.WDT_PlayerResourceBar_C.Update Gauges
+// 0x0038 (0x0038 - 0x0000)
+struct WDT_PlayerResourceBar_C_Update_Gauges final
+{
+public:
+	bool                                          InIsHeal;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_FTrunc_ReturnValue;                       // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue;       // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_16[0x2];                                       // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Less_DoubleDouble_A_ImplicitCast;         // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Less_DoubleDouble_B_ImplicitCast;         // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetPercent_InPercent_ImplicitCast;        // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetPercent_InPercent_ImplicitCast_1;      // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetPercent_InPercent_ImplicitCast_2;      // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_PlayerResourceBar_C_Update_Gauges;
+
+// Function WDT_PlayerResourceBar.WDT_PlayerResourceBar_C.SetRecoverableResource
+// 0x0008 (0x0008 - 0x0000)
+struct WDT_PlayerResourceBar_C_SetRecoverableResource final
+{
+public:
+	double                                        InResource;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_PlayerResourceBar_C_SetRecoverableResource;
+
+// Function WDT_PlayerResourceBar.WDT_PlayerResourceBar_C.SetMaxResource
+// 0x0020 (0x0020 - 0x0000)
+struct WDT_PlayerResourceBar_C_SetMaxResource final
+{
+public:
+	double                                        MaxResource_0;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_FTrunc_ReturnValue;                       // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0010(0x0010)()
+};
+DUMPER7_ASSERTS_WDT_PlayerResourceBar_C_SetMaxResource;
+
+// Function WDT_PlayerResourceBar.WDT_PlayerResourceBar_C.SetResource
+// 0x0020 (0x0020 - 0x0000)
+struct WDT_PlayerResourceBar_C_SetResource final
+{
+public:
+	double                                        CurrentResource_0;                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_FTrunc_ReturnValue;                       // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0010(0x0010)()
+};
+DUMPER7_ASSERTS_WDT_PlayerResourceBar_C_SetResource;
+
+// Function WDT_PlayerResourceBar.WDT_PlayerResourceBar_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WDT_PlayerResourceBar_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_PlayerResourceBar_C_PreConstruct;
+
+// Function WDT_PlayerResourceBar.WDT_PlayerResourceBar_C.Tick
+// 0x003C (0x003C - 0x0000)
+struct WDT_PlayerResourceBar_C_Tick final
+{
+public:
+	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_PlayerResourceBar_C_Tick;
+
+// Function WDT_PlayerResourceBar.WDT_PlayerResourceBar_C.ExecuteUbergraph_WDT_PlayerResourceBar
+// 0x0820 (0x0820 - 0x0000)
+struct WDT_PlayerResourceBar_C_ExecuteUbergraph_WDT_PlayerResourceBar final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_IsDesignTime;                         // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0008(0x0038)(IsPlainOldData, NoDestructor)
+	float                                         K2Node_Event_InDeltaTime;                          // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_44[0xC];                                       // 0x0044(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FProgressBarStyle                      K2Node_MakeStruct_ProgressBarStyle;                // 0x0050(0x0290)()
+	struct FProgressBarStyle                      K2Node_MakeStruct_ProgressBarStyle_1;              // 0x02E0(0x0290)()
+	struct FProgressBarStyle                      K2Node_MakeStruct_ProgressBarStyle_2;              // 0x0570(0x0290)()
+	class UUIObjectBase*                          CallFunc_GetUIObjectByClass_ReturnValue;           // 0x0800(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UBP_StatusIndicatorUIObject_C*          K2Node_DynamicCast_AsBP_Status_Indicator_UIObject; // 0x0808(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0810(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_811[0x7];                                      // 0x0811(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_TickBackGauge_InDeltaTime_ImplicitCast;   // 0x0818(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_PlayerResourceBar_C_ExecuteUbergraph_WDT_PlayerResourceBar;
 
 }
 

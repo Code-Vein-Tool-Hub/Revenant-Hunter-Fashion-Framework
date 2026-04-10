@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Extensions_structs.hpp"
 #include "Engine_structs.hpp"
 #include "BP_SmallScenarioBase_classes.hpp"
+#include "Extensions_structs.hpp"
 
 
 namespace SDK
