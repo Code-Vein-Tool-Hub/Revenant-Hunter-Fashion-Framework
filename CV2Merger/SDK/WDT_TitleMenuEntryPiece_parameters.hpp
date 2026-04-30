@@ -14,18 +14,6 @@
 namespace SDK::Params
 {
 
-// Function WDT_TitleMenuEntryPiece.WDT_TitleMenuEntryPiece_C.Select
-// 0x0010 (0x0010 - 0x0000)
-struct WDT_TitleMenuEntryPiece_C_Select final
-{
-public:
-	bool                                          PlayAnimation_0;                                   // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_TitleMenuEntryPiece_C_Select;
-
 // Function WDT_TitleMenuEntryPiece.WDT_TitleMenuEntryPiece_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)
 struct WDT_TitleMenuEntryPiece_C_PreConstruct final
@@ -34,6 +22,15 @@ public:
 	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WDT_TitleMenuEntryPiece_C_PreConstruct;
+
+// Function WDT_TitleMenuEntryPiece.WDT_TitleMenuEntryPiece_C.OnListItemObjectSet
+// 0x0008 (0x0008 - 0x0000)
+struct WDT_TitleMenuEntryPiece_C_OnListItemObjectSet final
+{
+public:
+	class UObject*                                ListItemObject;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_TitleMenuEntryPiece_C_OnListItemObjectSet;
 
 // Function WDT_TitleMenuEntryPiece.WDT_TitleMenuEntryPiece_C.ExecuteUbergraph_WDT_TitleMenuEntryPiece
 // 0x0018 (0x0018 - 0x0000)
@@ -49,14 +46,14 @@ public:
 };
 DUMPER7_ASSERTS_WDT_TitleMenuEntryPiece_C_ExecuteUbergraph_WDT_TitleMenuEntryPiece;
 
-// Function WDT_TitleMenuEntryPiece.WDT_TitleMenuEntryPiece_C.OnListItemObjectSet
-// 0x0008 (0x0008 - 0x0000)
-struct WDT_TitleMenuEntryPiece_C_OnListItemObjectSet final
+// Function WDT_TitleMenuEntryPiece.WDT_TitleMenuEntryPiece_C.BP_OnItemSelectionChanged
+// 0x0001 (0x0001 - 0x0000)
+struct WDT_TitleMenuEntryPiece_C_BP_OnItemSelectionChanged final
 {
 public:
-	class UObject*                                ListItemObject;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          bIsSelected;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WDT_TitleMenuEntryPiece_C_OnListItemObjectSet;
+DUMPER7_ASSERTS_WDT_TitleMenuEntryPiece_C_BP_OnItemSelectionChanged;
 
 // Function WDT_TitleMenuEntryPiece.WDT_TitleMenuEntryPiece_C.Deselect
 // 0x0002 (0x0002 - 0x0000)
@@ -67,15 +64,6 @@ public:
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WDT_TitleMenuEntryPiece_C_Deselect;
-
-// Function WDT_TitleMenuEntryPiece.WDT_TitleMenuEntryPiece_C.BP_OnItemSelectionChanged
-// 0x0001 (0x0001 - 0x0000)
-struct WDT_TitleMenuEntryPiece_C_BP_OnItemSelectionChanged final
-{
-public:
-	bool                                          bIsSelected;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WDT_TitleMenuEntryPiece_C_BP_OnItemSelectionChanged;
 
 // Function WDT_TitleMenuEntryPiece.WDT_TitleMenuEntryPiece_C.BP_OnItemExpansionChanged
 // 0x0001 (0x0001 - 0x0000)
@@ -96,6 +84,18 @@ public:
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WDT_TitleMenuEntryPiece_C_Blink;
+
+// Function WDT_TitleMenuEntryPiece.WDT_TitleMenuEntryPiece_C.Select
+// 0x0010 (0x0010 - 0x0000)
+struct WDT_TitleMenuEntryPiece_C_Select final
+{
+public:
+	bool                                          PlayAnimation_0;                                   // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WDT_TitleMenuEntryPiece_C_Select;
 
 }
 

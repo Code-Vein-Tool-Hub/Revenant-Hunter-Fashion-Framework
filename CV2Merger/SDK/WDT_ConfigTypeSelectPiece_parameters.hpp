@@ -71,7 +71,7 @@ DUMPER7_ASSERTS_WDT_ConfigTypeSelectPiece_C_TextBack;
 struct WDT_ConfigTypeSelectPiece_C_SetTextList final
 {
 public:
-	TArray<class FText>                           TextList;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	TArray<class FText>                           textList;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
 DUMPER7_ASSERTS_WDT_ConfigTypeSelectPiece_C_SetTextList;
 

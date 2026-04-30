@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "StructUtils_structs.hpp"
-#include "BlendStack_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "BlendStack_structs.hpp"
 #include "Engine_structs.hpp"
 
 
@@ -102,37 +102,22 @@ public:
 };
 DUMPER7_ASSERTS_FChooserParameterBase;
 
-// ScriptStruct Chooser.ChooserParameterRandomizeBase
+// ScriptStruct Chooser.ChooserParameterFloatBase
 // 0x0000 (0x0008 - 0x0008)
-struct FChooserParameterRandomizeBase : public FChooserParameterBase
+struct FChooserParameterFloatBase : public FChooserParameterBase
 {
 };
-DUMPER7_ASSERTS_FChooserParameterRandomizeBase;
+DUMPER7_ASSERTS_FChooserParameterFloatBase;
 
-// ScriptStruct Chooser.RandomizeContextProperty
-// 0x0028 (0x0030 - 0x0008)
-struct FRandomizeContextProperty final : public FChooserParameterRandomizeBase
+// ScriptStruct Chooser.FloatContextProperty
+// 0x0038 (0x0040 - 0x0008)
+struct FFloatContextProperty final : public FChooserParameterFloatBase
 {
 public:
-	struct FChooserPropertyBinding                Binding;                                           // 0x0008(0x0028)(Edit, NativeAccessSpecifierPublic)
+	TArray<class FName>                           PropertyBindingChain;                              // 0x0008(0x0010)(ZeroConstructor, Deprecated, NativeAccessSpecifierPublic)
+	struct FChooserPropertyBinding                Binding;                                           // 0x0018(0x0028)(Edit, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FRandomizeContextProperty;
-
-// ScriptStruct Chooser.ChooserRandomizationContext
-// 0x0050 (0x0050 - 0x0000)
-struct alignas(0x08) FChooserRandomizationContext final
-{
-public:
-	uint8                                         Pad_0[0x50];                                       // 0x0000(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FChooserRandomizationContext;
-
-// ScriptStruct Chooser.ChooserParameterBoolBase
-// 0x0000 (0x0008 - 0x0008)
-struct FChooserParameterBoolBase : public FChooserParameterBase
-{
-};
-DUMPER7_ASSERTS_FChooserParameterBoolBase;
+DUMPER7_ASSERTS_FFloatContextProperty;
 
 // ScriptStruct Chooser.ObjectChooserBase
 // 0x0008 (0x0008 - 0x0000)
@@ -143,14 +128,21 @@ public:
 };
 DUMPER7_ASSERTS_FObjectChooserBase;
 
-// ScriptStruct Chooser.NestedChooser
+// ScriptStruct Chooser.EvaluateChooser
 // 0x0008 (0x0010 - 0x0008)
-struct FNestedChooser final : public FObjectChooserBase
+struct FEvaluateChooser final : public FObjectChooserBase
 {
 public:
-	class UChooserTable*                          Chooser;                                           // 0x0008(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UChooserTable*                          Chooser;                                           // 0x0008(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 };
-DUMPER7_ASSERTS_FNestedChooser;
+DUMPER7_ASSERTS_FEvaluateChooser;
+
+// ScriptStruct Chooser.ChooserParameterBoolBase
+// 0x0000 (0x0008 - 0x0008)
+struct FChooserParameterBoolBase : public FChooserParameterBase
+{
+};
+DUMPER7_ASSERTS_FChooserParameterBoolBase;
 
 // ScriptStruct Chooser.BoolContextProperty
 // 0x0038 (0x0040 - 0x0008)
@@ -162,23 +154,6 @@ public:
 };
 DUMPER7_ASSERTS_FBoolContextProperty;
 
-// ScriptStruct Chooser.ChooserParameterGameplayTagBase
-// 0x0000 (0x0008 - 0x0008)
-struct FChooserParameterGameplayTagBase : public FChooserParameterBase
-{
-};
-DUMPER7_ASSERTS_FChooserParameterGameplayTagBase;
-
-// ScriptStruct Chooser.GameplayTagContextProperty
-// 0x0038 (0x0040 - 0x0008)
-struct FGameplayTagContextProperty final : public FChooserParameterGameplayTagBase
-{
-public:
-	TArray<class FName>                           PropertyBindingChain;                              // 0x0008(0x0010)(ZeroConstructor, Deprecated, NativeAccessSpecifierPublic)
-	struct FChooserPropertyBinding                Binding;                                           // 0x0018(0x0028)(Edit, NoClear, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FGameplayTagContextProperty;
-
 // ScriptStruct Chooser.ChooserColumnBase
 // 0x0008 (0x0008 - 0x0000)
 struct alignas(0x08) FChooserColumnBase
@@ -187,79 +162,6 @@ public:
 	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FChooserColumnBase;
-
-// ScriptStruct Chooser.BoolColumn
-// 0x0020 (0x0028 - 0x0008)
-struct FBoolColumn final : public FChooserColumnBase
-{
-public:
-	struct FInstancedStruct                       InputValue;                                        // 0x0008(0x0010)(Edit, NoClear, NativeAccessSpecifierPublic)
-	TArray<EBoolColumnCellValue>                  RowValuesWithAny;                                  // 0x0018(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FBoolColumn;
-
-// ScriptStruct Chooser.ChooserEnumPropertyBinding
-// 0x0000 (0x0028 - 0x0028)
-struct FChooserEnumPropertyBinding final : public FChooserPropertyBinding
-{
-};
-DUMPER7_ASSERTS_FChooserEnumPropertyBinding;
-
-// ScriptStruct Chooser.ChooserParameterStructBase
-// 0x0000 (0x0008 - 0x0008)
-struct FChooserParameterStructBase : public FChooserParameterBase
-{
-};
-DUMPER7_ASSERTS_FChooserParameterStructBase;
-
-// ScriptStruct Chooser.ChooserObjectPropertyBinding
-// 0x0000 (0x0028 - 0x0028)
-struct FChooserObjectPropertyBinding final : public FChooserPropertyBinding
-{
-};
-DUMPER7_ASSERTS_FChooserObjectPropertyBinding;
-
-// ScriptStruct Chooser.ChooserStructPropertyBinding
-// 0x0000 (0x0028 - 0x0028)
-struct FChooserStructPropertyBinding final : public FChooserPropertyBinding
-{
-};
-DUMPER7_ASSERTS_FChooserStructPropertyBinding;
-
-// ScriptStruct Chooser.ChooserParameterObjectBase
-// 0x0000 (0x0008 - 0x0008)
-struct FChooserParameterObjectBase : public FChooserParameterBase
-{
-};
-DUMPER7_ASSERTS_FChooserParameterObjectBase;
-
-// ScriptStruct Chooser.ObjectContextProperty
-// 0x0028 (0x0030 - 0x0008)
-struct FObjectContextProperty final : public FChooserParameterObjectBase
-{
-public:
-	struct FChooserObjectPropertyBinding          Binding;                                           // 0x0008(0x0028)(Edit, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FObjectContextProperty;
-
-// ScriptStruct Chooser.ContextObjectTypeBase
-// 0x0004 (0x0004 - 0x0000)
-struct FContextObjectTypeBase
-{
-public:
-	EContextObjectDirection                       Direction;                                         // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FContextObjectTypeBase;
-
-// ScriptStruct Chooser.ContextObjectTypeClass
-// 0x000C (0x0010 - 0x0004)
-struct FContextObjectTypeClass final : public FContextObjectTypeBase
-{
-public:
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class UObject>                    Class;                                             // 0x0008(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-};
-DUMPER7_ASSERTS_FContextObjectTypeClass;
 
 // ScriptStruct Chooser.GameplayTagColumn
 // 0x0028 (0x0030 - 0x0008)
@@ -272,224 +174,6 @@ public:
 	TArray<struct FGameplayTagContainer>          RowValues;                                         // 0x0020(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FGameplayTagColumn;
-
-// ScriptStruct Chooser.ContextObjectTypeStruct
-// 0x000C (0x0010 - 0x0004)
-struct FContextObjectTypeStruct final : public FContextObjectTypeBase
-{
-public:
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UScriptStruct*                          Struct;                                            // 0x0008(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-};
-DUMPER7_ASSERTS_FContextObjectTypeStruct;
-
-// ScriptStruct Chooser.ChooserParameterEnumBase
-// 0x0000 (0x0008 - 0x0008)
-struct FChooserParameterEnumBase : public FChooserParameterBase
-{
-};
-DUMPER7_ASSERTS_FChooserParameterEnumBase;
-
-// ScriptStruct Chooser.EnumContextProperty
-// 0x0038 (0x0040 - 0x0008)
-struct FEnumContextProperty final : public FChooserParameterEnumBase
-{
-public:
-	TArray<class FName>                           PropertyBindingChain;                              // 0x0008(0x0010)(ZeroConstructor, Deprecated, NativeAccessSpecifierPublic)
-	struct FChooserEnumPropertyBinding            Binding;                                           // 0x0018(0x0028)(Edit, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FEnumContextProperty;
-
-// ScriptStruct Chooser.ChooserEnumRowData
-// 0x0008 (0x0008 - 0x0000)
-struct FChooserEnumRowData final
-{
-public:
-	EEnumColumnCellValueComparison                Comparison;                                        // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Value;                                             // 0x0004(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FChooserEnumRowData;
-
-// ScriptStruct Chooser.ChooserObjectRowData
-// 0x0030 (0x0030 - 0x0000)
-struct FChooserObjectRowData final
-{
-public:
-	EObjectColumnCellValueComparison              Comparison;                                        // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftObjectPtr<class UObject>                 Value;                                             // 0x0008(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FChooserObjectRowData;
-
-// ScriptStruct Chooser.ObjectColumn
-// 0x0020 (0x0028 - 0x0008)
-struct FObjectColumn final : public FChooserColumnBase
-{
-public:
-	struct FInstancedStruct                       InputValue;                                        // 0x0008(0x0010)(Edit, NoClear, NativeAccessSpecifierPublic)
-	TArray<struct FChooserObjectRowData>          RowValues;                                         // 0x0018(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FObjectColumn;
-
-// ScriptStruct Chooser.EnumColumn
-// 0x0020 (0x0028 - 0x0008)
-struct FEnumColumn final : public FChooserColumnBase
-{
-public:
-	struct FInstancedStruct                       InputValue;                                        // 0x0008(0x0010)(Edit, NoClear, NativeAccessSpecifierPublic)
-	TArray<struct FChooserEnumRowData>            RowValues;                                         // 0x0018(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FEnumColumn;
-
-// ScriptStruct Chooser.ChooserParameterFloatBase
-// 0x0000 (0x0008 - 0x0008)
-struct FChooserParameterFloatBase : public FChooserParameterBase
-{
-};
-DUMPER7_ASSERTS_FChooserParameterFloatBase;
-
-// ScriptStruct Chooser.OutputStructColumn
-// 0x0030 (0x0038 - 0x0008)
-struct FOutputStructColumn final : public FChooserColumnBase
-{
-public:
-	struct FInstancedStruct                       InputValue;                                        // 0x0008(0x0010)(Edit, NoClear, NativeAccessSpecifierPublic)
-	struct FInstancedStruct                       FallbackValue;                                     // 0x0018(0x0010)(Edit, NativeAccessSpecifierPublic)
-	TArray<struct FInstancedStruct>               RowValues;                                         // 0x0028(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FOutputStructColumn;
-
-// ScriptStruct Chooser.FloatContextProperty
-// 0x0038 (0x0040 - 0x0008)
-struct FFloatContextProperty final : public FChooserParameterFloatBase
-{
-public:
-	TArray<class FName>                           PropertyBindingChain;                              // 0x0008(0x0010)(ZeroConstructor, Deprecated, NativeAccessSpecifierPublic)
-	struct FChooserPropertyBinding                Binding;                                           // 0x0018(0x0028)(Edit, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFloatContextProperty;
-
-// ScriptStruct Chooser.ChooserFloatRangeRowData
-// 0x0008 (0x0008 - 0x0000)
-struct FChooserFloatRangeRowData final
-{
-public:
-	float                                         Min;                                               // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Max;                                               // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FChooserFloatRangeRowData;
-
-// ScriptStruct Chooser.FloatRangeColumn
-// 0x0020 (0x0028 - 0x0008)
-struct FFloatRangeColumn final : public FChooserColumnBase
-{
-public:
-	struct FInstancedStruct                       InputValue;                                        // 0x0008(0x0010)(Edit, NoClear, NativeAccessSpecifierPublic)
-	TArray<struct FChooserFloatRangeRowData>      RowValues;                                         // 0x0018(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFloatRangeColumn;
-
-// ScriptStruct Chooser.ChooserEvaluationInputObject
-// 0x0008 (0x0008 - 0x0000)
-struct alignas(0x08) FChooserEvaluationInputObject final
-{
-public:
-	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FChooserEvaluationInputObject;
-
-// ScriptStruct Chooser.ChooserEvaluationContext
-// 0x0078 (0x0078 - 0x0000)
-struct alignas(0x08) FChooserEvaluationContext final
-{
-public:
-	uint8                                         Pad_0[0x78];                                       // 0x0000(0x0078)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FChooserEvaluationContext;
-
-// ScriptStruct Chooser.AssetChooser
-// 0x0008 (0x0010 - 0x0008)
-struct FAssetChooser final : public FObjectChooserBase
-{
-public:
-	class UObject*                                Asset;                                             // 0x0008(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-};
-DUMPER7_ASSERTS_FAssetChooser;
-
-// ScriptStruct Chooser.ClassChooser
-// 0x0008 (0x0010 - 0x0008)
-struct FClassChooser final : public FObjectChooserBase
-{
-public:
-	TSubclassOf<class UObject>                    Class;                                             // 0x0008(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-};
-DUMPER7_ASSERTS_FClassChooser;
-
-// ScriptStruct Chooser.OutputBoolColumn
-// 0x0028 (0x0030 - 0x0008)
-struct FOutputBoolColumn final : public FChooserColumnBase
-{
-public:
-	struct FInstancedStruct                       InputValue;                                        // 0x0008(0x0010)(Edit, NoClear, NativeAccessSpecifierPublic)
-	bool                                          bFallbackValue;                                    // 0x0018(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<bool>                                  RowValues;                                         // 0x0020(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FOutputBoolColumn;
-
-// ScriptStruct Chooser.ChooserOutputEnumRowData
-// 0x0001 (0x0001 - 0x0000)
-struct FChooserOutputEnumRowData final
-{
-public:
-	uint8                                         Value;                                             // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FChooserOutputEnumRowData;
-
-// ScriptStruct Chooser.OutputEnumColumn
-// 0x0028 (0x0030 - 0x0008)
-struct FOutputEnumColumn final : public FChooserColumnBase
-{
-public:
-	struct FInstancedStruct                       InputValue;                                        // 0x0008(0x0010)(Edit, NoClear, NativeAccessSpecifierPublic)
-	struct FChooserOutputEnumRowData              FallbackValue;                                     // 0x0018(0x0001)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FChooserOutputEnumRowData>      RowValues;                                         // 0x0020(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FOutputEnumColumn;
-
-// ScriptStruct Chooser.OutputFloatColumn
-// 0x0028 (0x0030 - 0x0008)
-struct FOutputFloatColumn final : public FChooserColumnBase
-{
-public:
-	struct FInstancedStruct                       InputValue;                                        // 0x0008(0x0010)(Edit, NativeAccessSpecifierPublic)
-	double                                        FallbackValue;                                     // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<double>                                RowValues;                                         // 0x0020(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FOutputFloatColumn;
-
-// ScriptStruct Chooser.StructContextProperty
-// 0x0028 (0x0030 - 0x0008)
-struct FStructContextProperty final : public FChooserParameterStructBase
-{
-public:
-	struct FChooserStructPropertyBinding          Binding;                                           // 0x0008(0x0028)(Edit, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FStructContextProperty;
-
-// ScriptStruct Chooser.RandomizeColumn
-// 0x0028 (0x0030 - 0x0008)
-struct FRandomizeColumn final : public FChooserColumnBase
-{
-public:
-	struct FInstancedStruct                       InputValue;                                        // 0x0008(0x0010)(Edit, NoClear, NativeAccessSpecifierPublic)
-	float                                         RepeatProbabilityMultiplier;                       // 0x0018(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<float>                                 RowValues;                                         // 0x0020(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FRandomizeColumn;
 
 // ScriptStruct Chooser.AnimCurveOverride
 // 0x000C (0x000C - 0x0000)
@@ -533,6 +217,322 @@ public:
 };
 DUMPER7_ASSERTS_FChooserPlayerSettings;
 
+// ScriptStruct Chooser.ChooserEvaluationContext
+// 0x0078 (0x0078 - 0x0000)
+struct alignas(0x08) FChooserEvaluationContext final
+{
+public:
+	uint8                                         Pad_0[0x78];                                       // 0x0000(0x0078)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FChooserEvaluationContext;
+
+// ScriptStruct Chooser.BoolColumn
+// 0x0020 (0x0028 - 0x0008)
+struct FBoolColumn final : public FChooserColumnBase
+{
+public:
+	struct FInstancedStruct                       InputValue;                                        // 0x0008(0x0010)(Edit, NoClear, NativeAccessSpecifierPublic)
+	TArray<EBoolColumnCellValue>                  RowValuesWithAny;                                  // 0x0018(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FBoolColumn;
+
+// ScriptStruct Chooser.ChooserEnumPropertyBinding
+// 0x0000 (0x0028 - 0x0028)
+struct FChooserEnumPropertyBinding final : public FChooserPropertyBinding
+{
+};
+DUMPER7_ASSERTS_FChooserEnumPropertyBinding;
+
+// ScriptStruct Chooser.ChooserFloatRangeRowData
+// 0x0008 (0x0008 - 0x0000)
+struct FChooserFloatRangeRowData final
+{
+public:
+	float                                         Min;                                               // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Max;                                               // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FChooserFloatRangeRowData;
+
+// ScriptStruct Chooser.ChooserObjectPropertyBinding
+// 0x0000 (0x0028 - 0x0028)
+struct FChooserObjectPropertyBinding final : public FChooserPropertyBinding
+{
+};
+DUMPER7_ASSERTS_FChooserObjectPropertyBinding;
+
+// ScriptStruct Chooser.ChooserParameterRandomizeBase
+// 0x0000 (0x0008 - 0x0008)
+struct FChooserParameterRandomizeBase : public FChooserParameterBase
+{
+};
+DUMPER7_ASSERTS_FChooserParameterRandomizeBase;
+
+// ScriptStruct Chooser.ChooserStructPropertyBinding
+// 0x0000 (0x0028 - 0x0028)
+struct FChooserStructPropertyBinding final : public FChooserPropertyBinding
+{
+};
+DUMPER7_ASSERTS_FChooserStructPropertyBinding;
+
+// ScriptStruct Chooser.ContextObjectTypeBase
+// 0x0004 (0x0004 - 0x0000)
+struct FContextObjectTypeBase
+{
+public:
+	EContextObjectDirection                       Direction;                                         // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FContextObjectTypeBase;
+
+// ScriptStruct Chooser.ContextObjectTypeClass
+// 0x000C (0x0010 - 0x0004)
+struct FContextObjectTypeClass final : public FContextObjectTypeBase
+{
+public:
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class UObject>                    Class;                                             // 0x0008(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+};
+DUMPER7_ASSERTS_FContextObjectTypeClass;
+
+// ScriptStruct Chooser.AssetChooser
+// 0x0008 (0x0010 - 0x0008)
+struct FAssetChooser final : public FObjectChooserBase
+{
+public:
+	class UObject*                                Asset;                                             // 0x0008(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+};
+DUMPER7_ASSERTS_FAssetChooser;
+
+// ScriptStruct Chooser.ContextObjectTypeStruct
+// 0x000C (0x0010 - 0x0004)
+struct FContextObjectTypeStruct final : public FContextObjectTypeBase
+{
+public:
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UScriptStruct*                          Struct;                                            // 0x0008(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+};
+DUMPER7_ASSERTS_FContextObjectTypeStruct;
+
+// ScriptStruct Chooser.ChooserParameterEnumBase
+// 0x0000 (0x0008 - 0x0008)
+struct FChooserParameterEnumBase : public FChooserParameterBase
+{
+};
+DUMPER7_ASSERTS_FChooserParameterEnumBase;
+
+// ScriptStruct Chooser.ChooserOutputEnumRowData
+// 0x0001 (0x0001 - 0x0000)
+struct FChooserOutputEnumRowData final
+{
+public:
+	uint8                                         Value;                                             // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FChooserOutputEnumRowData;
+
+// ScriptStruct Chooser.EnumContextProperty
+// 0x0038 (0x0040 - 0x0008)
+struct FEnumContextProperty final : public FChooserParameterEnumBase
+{
+public:
+	TArray<class FName>                           PropertyBindingChain;                              // 0x0008(0x0010)(ZeroConstructor, Deprecated, NativeAccessSpecifierPublic)
+	struct FChooserEnumPropertyBinding            Binding;                                           // 0x0018(0x0028)(Edit, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FEnumContextProperty;
+
+// ScriptStruct Chooser.ChooserEnumRowData
+// 0x0008 (0x0008 - 0x0000)
+struct FChooserEnumRowData final
+{
+public:
+	EEnumColumnCellValueComparison                Comparison;                                        // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Value;                                             // 0x0004(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FChooserEnumRowData;
+
+// ScriptStruct Chooser.EnumColumn
+// 0x0020 (0x0028 - 0x0008)
+struct FEnumColumn final : public FChooserColumnBase
+{
+public:
+	struct FInstancedStruct                       InputValue;                                        // 0x0008(0x0010)(Edit, NoClear, NativeAccessSpecifierPublic)
+	TArray<struct FChooserEnumRowData>            RowValues;                                         // 0x0018(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FEnumColumn;
+
+// ScriptStruct Chooser.FloatRangeColumn
+// 0x0020 (0x0028 - 0x0008)
+struct FFloatRangeColumn final : public FChooserColumnBase
+{
+public:
+	struct FInstancedStruct                       InputValue;                                        // 0x0008(0x0010)(Edit, NoClear, NativeAccessSpecifierPublic)
+	TArray<struct FChooserFloatRangeRowData>      RowValues;                                         // 0x0018(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FFloatRangeColumn;
+
+// ScriptStruct Chooser.ChooserParameterGameplayTagBase
+// 0x0000 (0x0008 - 0x0008)
+struct FChooserParameterGameplayTagBase : public FChooserParameterBase
+{
+};
+DUMPER7_ASSERTS_FChooserParameterGameplayTagBase;
+
+// ScriptStruct Chooser.GameplayTagContextProperty
+// 0x0038 (0x0040 - 0x0008)
+struct FGameplayTagContextProperty final : public FChooserParameterGameplayTagBase
+{
+public:
+	TArray<class FName>                           PropertyBindingChain;                              // 0x0008(0x0010)(ZeroConstructor, Deprecated, NativeAccessSpecifierPublic)
+	struct FChooserPropertyBinding                Binding;                                           // 0x0018(0x0028)(Edit, NoClear, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FGameplayTagContextProperty;
+
+// ScriptStruct Chooser.ChooserParameterObjectBase
+// 0x0000 (0x0008 - 0x0008)
+struct FChooserParameterObjectBase : public FChooserParameterBase
+{
+};
+DUMPER7_ASSERTS_FChooserParameterObjectBase;
+
+// ScriptStruct Chooser.ChooserRandomizationContext
+// 0x0050 (0x0050 - 0x0000)
+struct alignas(0x08) FChooserRandomizationContext final
+{
+public:
+	uint8                                         Pad_0[0x50];                                       // 0x0000(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FChooserRandomizationContext;
+
+// ScriptStruct Chooser.ChooserParameterStructBase
+// 0x0000 (0x0008 - 0x0008)
+struct FChooserParameterStructBase : public FChooserParameterBase
+{
+};
+DUMPER7_ASSERTS_FChooserParameterStructBase;
+
+// ScriptStruct Chooser.ChooserEvaluationInputObject
+// 0x0008 (0x0008 - 0x0000)
+struct alignas(0x08) FChooserEvaluationInputObject final
+{
+public:
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FChooserEvaluationInputObject;
+
+// ScriptStruct Chooser.ClassChooser
+// 0x0008 (0x0010 - 0x0008)
+struct FClassChooser final : public FObjectChooserBase
+{
+public:
+	TSubclassOf<class UObject>                    Class;                                             // 0x0008(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+};
+DUMPER7_ASSERTS_FClassChooser;
+
+// ScriptStruct Chooser.ObjectContextProperty
+// 0x0028 (0x0030 - 0x0008)
+struct FObjectContextProperty final : public FChooserParameterObjectBase
+{
+public:
+	struct FChooserObjectPropertyBinding          Binding;                                           // 0x0008(0x0028)(Edit, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FObjectContextProperty;
+
+// ScriptStruct Chooser.ChooserObjectRowData
+// 0x0030 (0x0030 - 0x0000)
+struct FChooserObjectRowData final
+{
+public:
+	EObjectColumnCellValueComparison              Comparison;                                        // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UObject>                 Value;                                             // 0x0008(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FChooserObjectRowData;
+
+// ScriptStruct Chooser.ObjectColumn
+// 0x0020 (0x0028 - 0x0008)
+struct FObjectColumn final : public FChooserColumnBase
+{
+public:
+	struct FInstancedStruct                       InputValue;                                        // 0x0008(0x0010)(Edit, NoClear, NativeAccessSpecifierPublic)
+	TArray<struct FChooserObjectRowData>          RowValues;                                         // 0x0018(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FObjectColumn;
+
+// ScriptStruct Chooser.OutputBoolColumn
+// 0x0028 (0x0030 - 0x0008)
+struct FOutputBoolColumn final : public FChooserColumnBase
+{
+public:
+	struct FInstancedStruct                       InputValue;                                        // 0x0008(0x0010)(Edit, NoClear, NativeAccessSpecifierPublic)
+	bool                                          bFallbackValue;                                    // 0x0018(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<bool>                                  RowValues;                                         // 0x0020(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FOutputBoolColumn;
+
+// ScriptStruct Chooser.OutputEnumColumn
+// 0x0028 (0x0030 - 0x0008)
+struct FOutputEnumColumn final : public FChooserColumnBase
+{
+public:
+	struct FInstancedStruct                       InputValue;                                        // 0x0008(0x0010)(Edit, NoClear, NativeAccessSpecifierPublic)
+	struct FChooserOutputEnumRowData              FallbackValue;                                     // 0x0018(0x0001)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FChooserOutputEnumRowData>      RowValues;                                         // 0x0020(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FOutputEnumColumn;
+
+// ScriptStruct Chooser.OutputFloatColumn
+// 0x0028 (0x0030 - 0x0008)
+struct FOutputFloatColumn final : public FChooserColumnBase
+{
+public:
+	struct FInstancedStruct                       InputValue;                                        // 0x0008(0x0010)(Edit, NativeAccessSpecifierPublic)
+	double                                        FallbackValue;                                     // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<double>                                RowValues;                                         // 0x0020(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FOutputFloatColumn;
+
+// ScriptStruct Chooser.StructContextProperty
+// 0x0028 (0x0030 - 0x0008)
+struct FStructContextProperty final : public FChooserParameterStructBase
+{
+public:
+	struct FChooserStructPropertyBinding          Binding;                                           // 0x0008(0x0028)(Edit, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FStructContextProperty;
+
+// ScriptStruct Chooser.OutputStructColumn
+// 0x0030 (0x0038 - 0x0008)
+struct FOutputStructColumn final : public FChooserColumnBase
+{
+public:
+	struct FInstancedStruct                       InputValue;                                        // 0x0008(0x0010)(Edit, NoClear, NativeAccessSpecifierPublic)
+	struct FInstancedStruct                       FallbackValue;                                     // 0x0018(0x0010)(Edit, NativeAccessSpecifierPublic)
+	TArray<struct FInstancedStruct>               RowValues;                                         // 0x0028(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FOutputStructColumn;
+
+// ScriptStruct Chooser.RandomizeContextProperty
+// 0x0028 (0x0030 - 0x0008)
+struct FRandomizeContextProperty final : public FChooserParameterRandomizeBase
+{
+public:
+	struct FChooserPropertyBinding                Binding;                                           // 0x0008(0x0028)(Edit, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRandomizeContextProperty;
+
+// ScriptStruct Chooser.RandomizeColumn
+// 0x0028 (0x0030 - 0x0008)
+struct FRandomizeColumn final : public FChooserColumnBase
+{
+public:
+	struct FInstancedStruct                       InputValue;                                        // 0x0008(0x0010)(Edit, NoClear, NativeAccessSpecifierPublic)
+	float                                         RepeatProbabilityMultiplier;                       // 0x0018(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<float>                                 RowValues;                                         // 0x0020(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRandomizeColumn;
+
 // ScriptStruct Chooser.AnimNode_ChooserPlayer
 // 0x0190 (0x0240 - 0x00B0)
 struct FAnimNode_ChooserPlayer final : public FAnimNode_BlendStack_Standalone
@@ -553,14 +553,14 @@ public:
 };
 DUMPER7_ASSERTS_FAnimNode_ChooserPlayer;
 
-// ScriptStruct Chooser.EvaluateChooser
+// ScriptStruct Chooser.NestedChooser
 // 0x0008 (0x0010 - 0x0008)
-struct FEvaluateChooser final : public FObjectChooserBase
+struct FNestedChooser final : public FObjectChooserBase
 {
 public:
-	class UChooserTable*                          Chooser;                                           // 0x0008(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UChooserTable*                          Chooser;                                           // 0x0008(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 };
-DUMPER7_ASSERTS_FEvaluateChooser;
+DUMPER7_ASSERTS_FNestedChooser;
 
 }
 

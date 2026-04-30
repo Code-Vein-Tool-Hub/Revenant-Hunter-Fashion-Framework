@@ -17,29 +17,6 @@
 namespace SDK
 {
 
-// Function WDT_TitleMenuEntryPiece.WDT_TitleMenuEntryPiece_C.Select
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    PlayAnimation_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-bool UWDT_TitleMenuEntryPiece_C::Select(bool PlayAnimation_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_TitleMenuEntryPiece_C", "Select");
-
-	Params::WDT_TitleMenuEntryPiece_C_Select Parms{};
-
-	Parms.PlayAnimation_0 = PlayAnimation_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
 // Function WDT_TitleMenuEntryPiece.WDT_TitleMenuEntryPiece_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
@@ -55,6 +32,26 @@ void UWDT_TitleMenuEntryPiece_C::PreConstruct(bool IsDesignTime)
 	Params::WDT_TitleMenuEntryPiece_C_PreConstruct Parms{};
 
 	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_TitleMenuEntryPiece.WDT_TitleMenuEntryPiece_C.OnListItemObjectSet
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UObject*                          ListItemObject                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_TitleMenuEntryPiece_C::OnListItemObjectSet(class UObject* ListItemObject)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_TitleMenuEntryPiece_C", "OnListItemObjectSet");
+
+	Params::WDT_TitleMenuEntryPiece_C_OnListItemObjectSet Parms{};
+
+	Parms.ListItemObject = ListItemObject;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -80,21 +77,21 @@ void UWDT_TitleMenuEntryPiece_C::ExecuteUbergraph_WDT_TitleMenuEntryPiece(int32 
 }
 
 
-// Function WDT_TitleMenuEntryPiece.WDT_TitleMenuEntryPiece_C.OnListItemObjectSet
+// Function WDT_TitleMenuEntryPiece.WDT_TitleMenuEntryPiece_C.BP_OnItemSelectionChanged
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class UObject*                          ListItemObject                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsSelected                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_TitleMenuEntryPiece_C::OnListItemObjectSet(class UObject* ListItemObject)
+void UWDT_TitleMenuEntryPiece_C::BP_OnItemSelectionChanged(bool bIsSelected)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_TitleMenuEntryPiece_C", "OnListItemObjectSet");
+		Func = Class->GetFunction("WDT_TitleMenuEntryPiece_C", "BP_OnItemSelectionChanged");
 
-	Params::WDT_TitleMenuEntryPiece_C_OnListItemObjectSet Parms{};
+	Params::WDT_TitleMenuEntryPiece_C_BP_OnItemSelectionChanged Parms{};
 
-	Parms.ListItemObject = ListItemObject;
+	Parms.bIsSelected = bIsSelected;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -123,40 +120,6 @@ bool UWDT_TitleMenuEntryPiece_C::Deselect(bool PlayAnimation_0)
 }
 
 
-// Function WDT_TitleMenuEntryPiece.WDT_TitleMenuEntryPiece_C.BP_OnItemSelectionChanged
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bIsSelected                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_TitleMenuEntryPiece_C::BP_OnItemSelectionChanged(bool bIsSelected)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_TitleMenuEntryPiece_C", "BP_OnItemSelectionChanged");
-
-	Params::WDT_TitleMenuEntryPiece_C_BP_OnItemSelectionChanged Parms{};
-
-	Parms.bIsSelected = bIsSelected;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_TitleMenuEntryPiece.WDT_TitleMenuEntryPiece_C.BP_OnEntryReleased
-// (Event, Protected, BlueprintEvent)
-
-void UWDT_TitleMenuEntryPiece_C::BP_OnEntryReleased()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_TitleMenuEntryPiece_C", "BP_OnEntryReleased");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function WDT_TitleMenuEntryPiece.WDT_TitleMenuEntryPiece_C.BP_OnItemExpansionChanged
 // (Event, Protected, BlueprintEvent)
 // Parameters:
@@ -177,6 +140,20 @@ void UWDT_TitleMenuEntryPiece_C::BP_OnItemExpansionChanged(bool bIsExpanded)
 }
 
 
+// Function WDT_TitleMenuEntryPiece.WDT_TitleMenuEntryPiece_C.BP_OnEntryReleased
+// (Event, Protected, BlueprintEvent)
+
+void UWDT_TitleMenuEntryPiece_C::BP_OnEntryReleased()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_TitleMenuEntryPiece_C", "BP_OnEntryReleased");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WDT_TitleMenuEntryPiece.WDT_TitleMenuEntryPiece_C.Blink
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -190,6 +167,29 @@ bool UWDT_TitleMenuEntryPiece_C::Blink()
 		Func = Class->GetFunction("WDT_TitleMenuEntryPiece_C", "Blink");
 
 	Params::WDT_TitleMenuEntryPiece_C_Blink Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function WDT_TitleMenuEntryPiece.WDT_TitleMenuEntryPiece_C.Select
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    PlayAnimation_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool UWDT_TitleMenuEntryPiece_C::Select(bool PlayAnimation_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_TitleMenuEntryPiece_C", "Select");
+
+	Params::WDT_TitleMenuEntryPiece_C_Select Parms{};
+
+	Parms.PlayAnimation_0 = PlayAnimation_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 

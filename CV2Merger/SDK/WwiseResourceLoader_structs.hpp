@@ -132,6 +132,15 @@ public:
 };
 DUMPER7_ASSERTS_FWwiseEventCookedData;
 
+// ScriptStruct WwiseResourceLoader.WwiseSharedGroupValueKey
+// 0x0010 (0x0010 - 0x0000)
+struct alignas(0x08) FWwiseSharedGroupValueKey final
+{
+public:
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FWwiseSharedGroupValueKey;
+
 // ScriptStruct WwiseResourceLoader.WwiseObjectInfo
 // 0x0020 (0x0020 - 0x0000)
 struct FWwiseObjectInfo
@@ -143,15 +152,6 @@ public:
 	uint32                                        HardCodedSoundBankShortId;                         // 0x001C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FWwiseObjectInfo;
-
-// ScriptStruct WwiseResourceLoader.WwiseSharedPlatformId
-// 0x0010 (0x0010 - 0x0000)
-struct alignas(0x08) FWwiseSharedPlatformId final
-{
-public:
-	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FWwiseSharedPlatformId;
 
 // ScriptStruct WwiseResourceLoader.WwiseEventInfo
 // 0x0004 (0x0024 - 0x0020)
@@ -276,15 +276,6 @@ public:
 };
 DUMPER7_ASSERTS_FWwisePlatformId;
 
-// ScriptStruct WwiseResourceLoader.WwiseSharedGroupValueKey
-// 0x0010 (0x0010 - 0x0000)
-struct alignas(0x08) FWwiseSharedGroupValueKey final
-{
-public:
-	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FWwiseSharedGroupValueKey;
-
 // ScriptStruct WwiseResourceLoader.WwiseSharedLanguageId
 // 0x0018 (0x0018 - 0x0000)
 struct alignas(0x08) FWwiseSharedLanguageId final
@@ -295,6 +286,15 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FWwiseSharedLanguageId;
+
+// ScriptStruct WwiseResourceLoader.WwiseSharedPlatformId
+// 0x0010 (0x0010 - 0x0000)
+struct alignas(0x08) FWwiseSharedPlatformId final
+{
+public:
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FWwiseSharedPlatformId;
 
 // ScriptStruct WwiseResourceLoader.WwiseTriggerCookedData
 // 0x000C (0x000C - 0x0000)

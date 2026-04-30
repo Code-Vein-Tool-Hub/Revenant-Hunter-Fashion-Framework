@@ -74,9 +74,9 @@ void UWDT_ConfigTypeSelectPiece_C::TextBack(bool bInCanWarp)
 // Function WDT_ConfigTypeSelectPiece.WDT_ConfigTypeSelectPiece_C.SetTextList
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TArray<class FText>&                    TextList                                               (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TArray<class FText>&                    textList                                               (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UWDT_ConfigTypeSelectPiece_C::SetTextList(TArray<class FText>& TextList)
+void UWDT_ConfigTypeSelectPiece_C::SetTextList(TArray<class FText>& textList)
 {
 	static class UFunction* Func = nullptr;
 
@@ -85,11 +85,11 @@ void UWDT_ConfigTypeSelectPiece_C::SetTextList(TArray<class FText>& TextList)
 
 	Params::WDT_ConfigTypeSelectPiece_C_SetTextList Parms{};
 
-	Parms.TextList = std::move(TextList);
+	Parms.textList = std::move(textList);
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	TextList = std::move(Parms.TextList);
+	textList = std::move(Parms.textList);
 }
 
 

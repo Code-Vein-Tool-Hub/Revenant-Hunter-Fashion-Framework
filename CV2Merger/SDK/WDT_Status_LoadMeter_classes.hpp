@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "WDT_Status_PieceBase_classes.hpp"
 #include "UMG_structs.hpp"
+#include "WDT_Status_PieceBase_classes.hpp"
 
 
 namespace SDK

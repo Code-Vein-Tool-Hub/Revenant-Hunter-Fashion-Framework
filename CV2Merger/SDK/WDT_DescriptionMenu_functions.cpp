@@ -521,20 +521,6 @@ void UWDT_DescriptionMenu_C::ExecuteUbergraph_WDT_DescriptionMenu(int32 EntryPoi
 }
 
 
-// Function WDT_DescriptionMenu.WDT_DescriptionMenu_C.BuildDescriptionList
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UWDT_DescriptionMenu_C::BuildDescriptionList()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_DescriptionMenu_C", "BuildDescriptionList");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function WDT_DescriptionMenu.WDT_DescriptionMenu_C.BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_1_OnListItemSelectionChangedDynamic__DelegateSignature
 // (BlueprintEvent)
 // Parameters:
@@ -576,6 +562,20 @@ void UWDT_DescriptionMenu_C::BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_
 	Parms.Widget = Widget;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_DescriptionMenu.WDT_DescriptionMenu_C.BuildDescriptionList
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWDT_DescriptionMenu_C::BuildDescriptionList()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_DescriptionMenu_C", "BuildDescriptionList");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

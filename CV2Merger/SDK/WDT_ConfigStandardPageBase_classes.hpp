@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "STR_ConfigPieceBaseList_structs.hpp"
 #include "Extensions_classes.hpp"
+#include "STR_ConfigPieceBaseList_structs.hpp"
 
 
 namespace SDK

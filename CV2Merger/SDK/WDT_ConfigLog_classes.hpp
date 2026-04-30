@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "BasicUI_classes.hpp"
 #include "EN_ConfigPieceEditableType_structs.hpp"
+#include "BasicUI_classes.hpp"
 
 
 namespace SDK

@@ -43,7 +43,7 @@ public:
 	void PreConstruct(bool IsDesignTime);
 	void Next(bool bInCanWarp, bool* bOutIsChangeIndex);
 	void InitializeSelectImageLength(int32 InTabLength);
-	void Initialize(TArray<class FText>& TextList);
+	void Initialize(TArray<class FText>& textList);
 	void ExecuteUbergraph_WDT_ConfigTab(int32 EntryPoint);
 	void BndEvt__WDT_ConfigTab_TabList_K2Node_ComponentBoundEvent_1_OnItemIsHoveredChangedDynamic__DelegateSignature(class UObject* Item, bool bIsHovered);
 	void BndEvt__WDT_ConfigTab_TabList_K2Node_ComponentBoundEvent_0_SimpleListItemEventDynamic__DelegateSignature(class UObject* Item);

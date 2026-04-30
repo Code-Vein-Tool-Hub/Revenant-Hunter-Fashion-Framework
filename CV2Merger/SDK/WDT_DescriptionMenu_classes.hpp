@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "Extensions_structs.hpp"
 #include "Extensions_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK
@@ -67,9 +67,9 @@ public:
 	void GetMaxListIndex(int32* OutNum);
 	void GetCurrentListIndex(int32* OutNum);
 	void ExecuteUbergraph_WDT_DescriptionMenu(int32 EntryPoint);
-	void BuildDescriptionList();
 	void BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_1_OnListItemSelectionChangedDynamic__DelegateSignature(class UObject* Item, bool bIsSelected);
 	void BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_0_OnListEntryInitializedDynamic__DelegateSignature(class UObject* Item, class UUserWidget* Widget);
+	void BuildDescriptionList();
 
 public:
 	static class UClass* StaticClass()

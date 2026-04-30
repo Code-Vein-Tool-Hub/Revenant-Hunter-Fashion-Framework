@@ -12,8 +12,8 @@
 
 #include "Engine_structs.hpp"
 #include "GameplayTags_structs.hpp"
-#include "WDT_ConfigStandardPageBase_classes.hpp"
 #include "BasicUI_structs.hpp"
+#include "WDT_ConfigStandardPageBase_classes.hpp"
 
 
 namespace SDK

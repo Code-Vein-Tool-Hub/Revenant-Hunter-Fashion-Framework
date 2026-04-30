@@ -72,15 +72,6 @@ public:
 };
 DUMPER7_ASSERTS_FStoryFlagDataLayerInfo;
 
-// ScriptStruct StoryFlagSystem.EFA_Token
-// 0x0020 (0x0020 - 0x0000)
-struct alignas(0x08) FEFA_Token final
-{
-public:
-	uint8                                         Pad_0[0x20];                                       // 0x0000(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FEFA_Token;
-
 // ScriptStruct StoryFlagSystem.StoryFlagPresetLabel
 // 0x0008 (0x0008 - 0x0000)
 struct FStoryFlagPresetLabel final
@@ -120,6 +111,15 @@ public:
 	class FName                                   Label;                                             // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FStoryFlagAliasLabel;
+
+// ScriptStruct StoryFlagSystem.EFA_Token
+// 0x0020 (0x0020 - 0x0000)
+struct alignas(0x08) FEFA_Token final
+{
+public:
+	uint8                                         Pad_0[0x20];                                       // 0x0000(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FEFA_Token;
 
 // ScriptStruct StoryFlagSystem.StoryFlagDefinitionDataRow
 // 0x0058 (0x0060 - 0x0008)

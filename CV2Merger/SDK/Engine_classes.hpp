@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "AudioPlatformConfiguration_structs.hpp"
 #include "Engine_structs.hpp"
+#include "AudioPlatformConfiguration_structs.hpp"
 #include "FieldNotification_structs.hpp"
 #include "InputCore_structs.hpp"
 #include "GameplayTags_structs.hpp"

@@ -118,9 +118,9 @@ void UWDT_ConfigTab_C::InitializeSelectImageLength(int32 InTabLength)
 // Function WDT_ConfigTab.WDT_ConfigTab_C.Initialize
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TArray<class FText>&                    TextList                                               (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TArray<class FText>&                    textList                                               (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UWDT_ConfigTab_C::Initialize(TArray<class FText>& TextList)
+void UWDT_ConfigTab_C::Initialize(TArray<class FText>& textList)
 {
 	static class UFunction* Func = nullptr;
 
@@ -129,11 +129,11 @@ void UWDT_ConfigTab_C::Initialize(TArray<class FText>& TextList)
 
 	Params::WDT_ConfigTab_C_Initialize Parms{};
 
-	Parms.TextList = std::move(TextList);
+	Parms.textList = std::move(textList);
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	TextList = std::move(Parms.TextList);
+	textList = std::move(Parms.textList);
 }
 
 

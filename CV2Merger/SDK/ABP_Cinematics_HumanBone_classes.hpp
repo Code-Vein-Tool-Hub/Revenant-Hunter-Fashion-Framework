@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "ABP_Cinematics_HumanBone_structs.hpp"
 #include "AnimGraphRuntime_structs.hpp"
-#include "Engine_structs.hpp"
 #include "ControlRig_structs.hpp"
 #include "Extensions_structs.hpp"
 #include "Extensions_classes.hpp"

@@ -34,7 +34,7 @@ public:
 	void UpdateTypeText();
 	void TextNext(bool bInCanWarp);
 	void TextBack(bool bInCanWarp);
-	void SetTextList(TArray<class FText>& TextList);
+	void SetTextList(TArray<class FText>& textList);
 	void SetIsForcedLoop(bool Flag);
 	void SetIndexText(int32 TextIndex);
 	bool Select(bool PlayAnimation_0);

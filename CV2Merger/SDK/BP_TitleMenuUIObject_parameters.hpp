@@ -12,8 +12,8 @@
 
 #include "Extensions_structs.hpp"
 #include "BasicUI_structs.hpp"
-#include "UMG_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 namespace SDK::Params

@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_CinematicsSubSystem.BP_CinematicsSubSystem_C
-// 0x0000 (0x0238 - 0x0238)
+// 0x0000 (0x0250 - 0x0250)
 class UBP_CinematicsSubSystem_C final : public UCinematicSubsystem
 {
 public:

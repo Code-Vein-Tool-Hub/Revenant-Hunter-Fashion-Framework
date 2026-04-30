@@ -107,16 +107,6 @@ public:
 };
 DUMPER7_ASSERTS_FAIFwBTNodeProperty;
 
-// ScriptStruct AIFramework.AIFwBTNodePropertyFloat
-// 0x0008 (0x0018 - 0x0010)
-struct FAIFwBTNodePropertyFloat final : public FAIFwBTNodeProperty
-{
-public:
-	float                                         DefaultValue;                                      // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FAIFwBTNodePropertyFloat;
-
 // ScriptStruct AIFramework.AIFwBTArgument
 // 0x0040 (0x0040 - 0x0000)
 struct FAIFwBTArgument final
@@ -146,16 +136,6 @@ public:
 };
 DUMPER7_ASSERTS_FAIFwParameterizedBTRequest;
 
-// ScriptStruct AIFramework.AIFwBTNodePropertyInt
-// 0x0008 (0x0018 - 0x0010)
-struct FAIFwBTNodePropertyInt final : public FAIFwBTNodeProperty
-{
-public:
-	int32                                         DefaultValue;                                      // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FAIFwBTNodePropertyInt;
-
 // ScriptStruct AIFramework.AIFwBlackboard
 // 0x0018 (0x0018 - 0x0000)
 struct alignas(0x08) FAIFwBlackboard final
@@ -174,6 +154,26 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FAIFwBTNodePropertyBool;
+
+// ScriptStruct AIFramework.AIFwBTNodePropertyInt
+// 0x0008 (0x0018 - 0x0010)
+struct FAIFwBTNodePropertyInt final : public FAIFwBTNodeProperty
+{
+public:
+	int32                                         DefaultValue;                                      // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FAIFwBTNodePropertyInt;
+
+// ScriptStruct AIFramework.AIFwBTNodePropertyFloat
+// 0x0008 (0x0018 - 0x0010)
+struct FAIFwBTNodePropertyFloat final : public FAIFwBTNodeProperty
+{
+public:
+	float                                         DefaultValue;                                      // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FAIFwBTNodePropertyFloat;
 
 // ScriptStruct AIFramework.AIFwBTNodePropertyString
 // 0x0010 (0x0020 - 0x0010)

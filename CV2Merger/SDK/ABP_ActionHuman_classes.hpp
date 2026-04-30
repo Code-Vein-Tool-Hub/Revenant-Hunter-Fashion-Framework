@@ -11,13 +11,13 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "ABP_ActionHuman_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "AnimGraphRuntime_structs.hpp"
-#include "Extensions_structs.hpp"
-#include "Extensions_classes.hpp"
-#include "ABP_ActionHuman_structs.hpp"
 #include "AnimationWarpingRuntime_structs.hpp"
 #include "ControlRig_structs.hpp"
+#include "Extensions_structs.hpp"
+#include "Extensions_classes.hpp"
 
 
 namespace SDK
@@ -835,9 +835,9 @@ public:
 	void UpdateWeaponBlendAnimLayerParams(float InputPin);
 	void UpperBodySlot(const struct FPoseLink& InPose_PreUpperBody, struct FPoseLink* UpperBodySlot_0);
 
-	class UActionHumanMovementComponent* GetCharacterMovementComponent() const;
-	class AActionHumanCharacter* GetAppCharacter() const;
 	double FindAngleBetween(const struct FVector& InFrom, const struct FVector& InTo) const;
+	class AActionHumanCharacter* GetAppCharacter() const;
+	class UActionHumanMovementComponent* GetCharacterMovementComponent() const;
 	bool IsFootMoving(bool IsLeft, bool IsRight) const;
 	bool IsLeftFootMoving() const;
 	bool IsRightFootMoving() const;

@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_ExtensionsStoryFlagScript.BP_ExtensionsStoryFlagScript_C
-// 0x0000 (0x0138 - 0x0138)
+// 0x0000 (0x0158 - 0x0158)
 class UBP_ExtensionsStoryFlagScript_C final : public UExtensionsStoryFlagScript
 {
 public:

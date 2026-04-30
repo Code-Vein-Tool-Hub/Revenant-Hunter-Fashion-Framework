@@ -284,7 +284,7 @@ DUMPER7_ASSERTS_UEnvQueryTest;
 
 // Class AIModule.EnvQueryTest_Overlap
 // 0x0030 (0x0228 - 0x01F8)
-class UEnvQueryTest_Overlap final : public UEnvQueryTest
+class UEnvQueryTest_Overlap : public UEnvQueryTest
 {
 public:
 	struct FEnvOverlapData                        OverlapData;                                       // 0x01F8(0x0030)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)

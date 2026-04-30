@@ -91,16 +91,6 @@ enum class EQSTRPlayerDistanceCompare : uint8
 	EQSTRPlayerDistanceCompare_MAX           = 4,
 };
 
-// ScriptStruct QuestSystem.QSSharedMemorySelecter
-// 0x0010 (0x0010 - 0x0000)
-struct FQSSharedMemorySelecter final
-{
-public:
-	class FName                                   EntryName;                                         // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class UQSSharedMemoryKey>         KeyType;                                           // 0x0008(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FQSSharedMemorySelecter;
-
 // ScriptStruct QuestSystem.QSDataProviderBase
 // 0x0018 (0x0018 - 0x0000)
 struct FQSDataProviderBase
@@ -113,6 +103,43 @@ public:
 	TSubclassOf<class UQSDataProviderKey>         DataProviderKeyType;                               // 0x0010(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FQSDataProviderBase;
+
+// ScriptStruct QuestSystem.QSDataProviderDoubleValue
+// 0x0008 (0x0020 - 0x0018)
+struct FQSDataProviderDoubleValue final : public FQSDataProviderBase
+{
+public:
+	double                                        Value;                                             // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FQSDataProviderDoubleValue;
+
+// ScriptStruct QuestSystem.QSMessageParamBase
+// 0x0000 (0x0000 - 0x0000)
+#pragma pack(push, 0x1)
+struct alignas(0x01) FQSMessageParamBase
+{
+};
+#pragma pack(pop)
+DUMPER7_ASSERTS_FQSMessageParamBase;
+
+// ScriptStruct QuestSystem.QSSimpleMessageParam
+// 0x0008 (0x0008 - 0x0000)
+struct FQSSimpleMessageParam : public FQSMessageParamBase
+{
+public:
+	class FName                                   Message;                                           // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FQSSimpleMessageParam;
+
+// ScriptStruct QuestSystem.QSSharedMemorySelecter
+// 0x0010 (0x0010 - 0x0000)
+struct FQSSharedMemorySelecter final
+{
+public:
+	class FName                                   EntryName;                                         // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UQSSharedMemoryKey>         KeyType;                                           // 0x0008(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FQSSharedMemorySelecter;
 
 // ScriptStruct QuestSystem.QSDataProviderBoolValue
 // 0x0008 (0x0020 - 0x0018)
@@ -143,15 +170,6 @@ public:
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FQSDataProviderFloatValue;
-
-// ScriptStruct QuestSystem.QSDataProviderDoubleValue
-// 0x0008 (0x0020 - 0x0018)
-struct FQSDataProviderDoubleValue final : public FQSDataProviderBase
-{
-public:
-	double                                        Value;                                             // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FQSDataProviderDoubleValue;
 
 // ScriptStruct QuestSystem.QSDataProviderNameValue
 // 0x0008 (0x0020 - 0x0018)
@@ -283,24 +301,6 @@ public:
 	bool                                          bIsExcludeFromAllResets;                           // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FQSAssetSetting;
-
-// ScriptStruct QuestSystem.QSMessageParamBase
-// 0x0000 (0x0000 - 0x0000)
-#pragma pack(push, 0x1)
-struct alignas(0x01) FQSMessageParamBase
-{
-};
-#pragma pack(pop)
-DUMPER7_ASSERTS_FQSMessageParamBase;
-
-// ScriptStruct QuestSystem.QSSimpleMessageParam
-// 0x0008 (0x0008 - 0x0000)
-struct FQSSimpleMessageParam : public FQSMessageParamBase
-{
-public:
-	class FName                                   Message;                                           // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FQSSimpleMessageParam;
 
 }
 

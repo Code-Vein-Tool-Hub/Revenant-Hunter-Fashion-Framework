@@ -18,7 +18,7 @@ namespace SDK
 
 // BlueprintGeneratedClass TS_ButtonGuide_Shadow.TS_ButtonGuide_Shadow_C
 // 0x0000 (0x01B0 - 0x01B0)
-class UTS_ButtonGuide_Shadow_C : public UTS_ButtonGuide_C
+class UTS_ButtonGuide_Shadow_C final : public UTS_ButtonGuide_C
 {
 public:
 	static class UClass* StaticClass()

@@ -12,8 +12,8 @@
 
 #include "CoreUObject_classes.hpp"
 #include "DeveloperSettings_classes.hpp"
-#include "PhysicsCore_structs.hpp"
 #include "Chaos_structs.hpp"
+#include "PhysicsCore_structs.hpp"
 
 
 namespace SDK

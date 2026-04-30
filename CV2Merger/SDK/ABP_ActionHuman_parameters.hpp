@@ -1019,30 +1019,6 @@ public:
 };
 DUMPER7_ASSERTS_ABP_ActionHuman_C_UpperBodySlot;
 
-// Function ABP_ActionHuman.ABP_ActionHuman_C.GetCharacterMovementComponent
-// 0x0020 (0x0020 - 0x0000)
-struct ABP_ActionHuman_C_GetCharacterMovementComponent final
-{
-public:
-	class UActionHumanMovementComponent*          ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UActionHumanMovementComponent*          K2Node_DynamicCast_AsAction_Human_Movement_Component; // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_ABP_ActionHuman_C_GetCharacterMovementComponent;
-
-// Function ABP_ActionHuman.ABP_ActionHuman_C.GetAppCharacter
-// 0x0018 (0x0018 - 0x0000)
-struct ABP_ActionHuman_C_GetAppCharacter final
-{
-public:
-	class AActionHumanCharacter*                  ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
-	class AActionHumanCharacter*                  K2Node_DynamicCast_AsAction_Human_Character;       // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_ABP_ActionHuman_C_GetAppCharacter;
-
 // Function ABP_ActionHuman.ABP_ActionHuman_C.FindAngleBetween
 // 0x0068 (0x0068 - 0x0000)
 struct ABP_ActionHuman_C_FindAngleBetween final
@@ -1058,6 +1034,30 @@ public:
 	double                                        CallFunc_RadiansToDegrees_A_ImplicitCast;          // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_ABP_ActionHuman_C_FindAngleBetween;
+
+// Function ABP_ActionHuman.ABP_ActionHuman_C.GetAppCharacter
+// 0x0018 (0x0018 - 0x0000)
+struct ABP_ActionHuman_C_GetAppCharacter final
+{
+public:
+	class AActionHumanCharacter*                  ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
+	class AActionHumanCharacter*                  K2Node_DynamicCast_AsAction_Human_Character;       // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_ABP_ActionHuman_C_GetAppCharacter;
+
+// Function ABP_ActionHuman.ABP_ActionHuman_C.GetCharacterMovementComponent
+// 0x0020 (0x0020 - 0x0000)
+struct ABP_ActionHuman_C_GetCharacterMovementComponent final
+{
+public:
+	class UActionHumanMovementComponent*          ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UActionHumanMovementComponent*          K2Node_DynamicCast_AsAction_Human_Movement_Component; // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_ABP_ActionHuman_C_GetCharacterMovementComponent;
 
 // Function ABP_ActionHuman.ABP_ActionHuman_C.IsFootMoving
 // 0x0008 (0x0008 - 0x0000)

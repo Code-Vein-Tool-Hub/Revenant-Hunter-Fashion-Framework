@@ -209,15 +209,6 @@ enum class ENiagaraAppAudioParamType : uint8
 	ENiagaraAppAudioParamType_MAX            = 2,
 };
 
-// ScriptStruct AppAudio.AppAudioAnimFoleyState
-// 0x0038 (0x0038 - 0x0000)
-struct alignas(0x08) FAppAudioAnimFoleyState final
-{
-public:
-	uint8                                         Pad_0[0x38];                                       // 0x0000(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FAppAudioAnimFoleyState;
-
 // ScriptStruct AppAudio.OnAppAudioVoicePlayParam
 // 0x0020 (0x0020 - 0x0000)
 struct alignas(0x04) FOnAppAudioVoicePlayParam final
@@ -226,6 +217,32 @@ public:
 	uint8                                         Pad_0[0x20];                                       // 0x0000(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FOnAppAudioVoicePlayParam;
+
+// ScriptStruct AppAudio.AppAudioCircleAmbientPoints
+// 0x0010 (0x0010 - 0x0000)
+struct FAppAudioCircleAmbientPoints final
+{
+public:
+	TArray<struct FVector>                        Points;                                            // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FAppAudioCircleAmbientPoints;
+
+// ScriptStruct AppAudio.AppAudioAnimFoleyThresholdData
+// 0x0024 (0x0024 - 0x0000)
+struct FAppAudioAnimFoleyThresholdData final
+{
+public:
+	EAppAudioAnimFoleyTriggerType                 Type;                                              // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   TargetSocketName;                                  // 0x0004(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   ReferenceSocketName;                               // 0x000C(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   OriginSocketName;                                  // 0x0014(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bReverseThreshold;                                 // 0x001C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bFixedThreshold;                                   // 0x001D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1E[0x2];                                       // 0x001E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ThresholdValue;                                    // 0x0020(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FAppAudioAnimFoleyThresholdData;
 
 // ScriptStruct AppAudio.AppAudioVoicePlayerDelegateInfo
 // 0x0008 (0x0008 - 0x0000)
@@ -237,6 +254,24 @@ public:
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FAppAudioVoicePlayerDelegateInfo;
+
+// ScriptStruct AppAudio.AppAudioAnimFoleyState
+// 0x0038 (0x0038 - 0x0000)
+struct alignas(0x08) FAppAudioAnimFoleyState final
+{
+public:
+	uint8                                         Pad_0[0x38];                                       // 0x0000(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FAppAudioAnimFoleyState;
+
+// ScriptStruct AppAudio.AppAudioAnimFoleyCondExp
+// 0x0038 (0x0038 - 0x0000)
+struct alignas(0x08) FAppAudioAnimFoleyCondExp final
+{
+public:
+	uint8                                         Pad_0[0x38];                                       // 0x0000(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FAppAudioAnimFoleyCondExp;
 
 // ScriptStruct AppAudio.AppAudioAnimFoleyConditionData
 // 0x0050 (0x0050 - 0x0000)
@@ -258,41 +293,6 @@ public:
 	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FAppAudioAnimFoleyConditionData;
-
-// ScriptStruct AppAudio.AppAudioCircleAmbientPoints
-// 0x0010 (0x0010 - 0x0000)
-struct FAppAudioCircleAmbientPoints final
-{
-public:
-	TArray<struct FVector>                        Points;                                            // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FAppAudioCircleAmbientPoints;
-
-// ScriptStruct AppAudio.AppAudioAnimFoleyCondExp
-// 0x0038 (0x0038 - 0x0000)
-struct alignas(0x08) FAppAudioAnimFoleyCondExp final
-{
-public:
-	uint8                                         Pad_0[0x38];                                       // 0x0000(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FAppAudioAnimFoleyCondExp;
-
-// ScriptStruct AppAudio.AppAudioAnimFoleyThresholdData
-// 0x0024 (0x0024 - 0x0000)
-struct FAppAudioAnimFoleyThresholdData final
-{
-public:
-	EAppAudioAnimFoleyTriggerType                 Type;                                              // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   TargetSocketName;                                  // 0x0004(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   ReferenceSocketName;                               // 0x000C(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   OriginSocketName;                                  // 0x0014(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bReverseThreshold;                                 // 0x001C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bFixedThreshold;                                   // 0x001D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E[0x2];                                       // 0x001E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ThresholdValue;                                    // 0x0020(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FAppAudioAnimFoleyThresholdData;
 
 // ScriptStruct AppAudio.AppAudioAnimFoleyEvent
 // 0x0050 (0x0050 - 0x0000)

@@ -14,10 +14,10 @@
 #include "MovieScene_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "CinematicCamera_structs.hpp"
 #include "TemplateSequence_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "CinematicCamera_structs.hpp"
 
 
 namespace SDK
