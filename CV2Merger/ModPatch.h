@@ -30,6 +30,10 @@ public:
 	static std::map<std::string, SDK::FCharacterCustomizeDataTableHairSet> DT_HairSetList_Female;
 	static std::map<std::string, SDK::FCharacterCustomizeDataTableHairSet> DT_HairSetList_Male;
 
+	static std::map<std::string, SDK::FCharacterCustomizeDataTableTextureList> DT_EyeBase;
+	static std::map<std::string, SDK::FCharacterCustomizeDataTableEyeTexture> DT_EyeDetail;
+	static std::map<std::string, SDK::FCharacterCustomizeDataTableTextureList> DT_EyeHighlight;
+
 private:
 	static void ProcessInnerTable(toml::table table, std::map<std::string, SDK::FCharacterCustomizeDataTableInnerList>* DataTable);
 	static void ProcessBootsTable(toml::table table, std::map<std::string, SDK::FCharacterCustomizeDataTableBootsList>* DataTable);
@@ -43,6 +47,9 @@ private:
 	static void ProcessHairBaseTable(toml::table table, std::map<std::string, SDK::FCharacterCustomizeDataTableHairBase>* DataTable);
 	static void ProcessHairPartTable(toml::table table, std::map<std::string, SDK::FCharacterCustomizeDataTableHairPart>* DataTable);
 	static void ProcessHairSetTable(toml::table table, std::map<std::string, SDK::FCharacterCustomizeDataTableHairSet>* DataTable);
+
+	static void ProcessTextureListTable(toml::table table, std::map<std::string, SDK::FCharacterCustomizeDataTableTextureList>* DataTable);
+	static void ProcessEyeTextureTable(toml::table table, std::map<std::string, SDK::FCharacterCustomizeDataTableEyeTexture>* DataTable);
 
 public:
 	static bool init();

@@ -29,6 +29,10 @@ std::map<std::string, SDK::FCharacterCustomizeDataTableHairPart> ModPatch::DT_Ha
 std::map<std::string, SDK::FCharacterCustomizeDataTableHairSet> ModPatch::DT_HairSetList_Female;
 std::map<std::string, SDK::FCharacterCustomizeDataTableHairSet> ModPatch::DT_HairSetList_Male;
 
+std::map<std::string, SDK::FCharacterCustomizeDataTableTextureList> ModPatch::DT_EyeBase;
+std::map<std::string, SDK::FCharacterCustomizeDataTableEyeTexture> ModPatch::DT_EyeDetail;
+std::map<std::string, SDK::FCharacterCustomizeDataTableTextureList> ModPatch::DT_EyeHighlight;
+
 void ModPatch::ProcessInnerTable(toml::table table, std::map<std::string, SDK::FCharacterCustomizeDataTableInnerList>* DataTable)
 {
 	for (auto& [key, value] : table)
@@ -755,6 +759,88 @@ void ModPatch::ProcessHairSetTable(toml::table table, std::map<std::string, SDK:
 	}
 }
 
+void ModPatch::ProcessTextureListTable(toml::table table, std::map<std::string, SDK::FCharacterCustomizeDataTableTextureList>* DataTable)
+{
+	for (auto& [key, value] : table)
+	{
+		std::string name = key.str().data();
+		toml::array* data = nullptr;
+
+		if (value.is_array())
+			data = value.as_array();
+		else
+		{
+			printf("[CV2Merger] [TOML] entry \"%s\" in toml is not an array", name);
+			continue;
+		}
+
+		if (data->size() <= 0)
+		{
+			printf("[CV2Merger] [TOML] entry data for \"%s\" is empty in toml\n", name.c_str());
+			continue;
+		}
+		if (DataTable->contains(name.c_str()))
+		{
+			printf("[CV2Merger] [TOML] Duplicate entry for \"%s\" found in toml\n", name.c_str());
+			continue;
+		}
+
+		SDK::FCharacterCustomizeDataTableTextureList TextureList = *new SDK::FCharacterCustomizeDataTableTextureList();
+		SDK::TSoftObjectPtr<SDK::UTexture2D> thumbnailpath;
+		thumbnailpath.ObjectID = { .AssetPath = FNameHelper::FNameFromString(data->get(0)->value_or("")) };
+		TextureList.Thumbnail = thumbnailpath;
+
+		SDK::TSoftObjectPtr<SDK::UTexture2D> texturepath;
+		texturepath.ObjectID = { .AssetPath = FNameHelper::FNameFromString(data->get(1)->value_or("")) };
+		TextureList.Texture = texturepath;
+
+		DataTable->insert({ name, TextureList });
+	}
+}
+
+void ModPatch::ProcessEyeTextureTable(toml::table table, std::map<std::string, SDK::FCharacterCustomizeDataTableEyeTexture>* DataTable)
+{
+	for (auto& [key, value] : table)
+	{
+		std::string name = key.str().data();
+		toml::array* data = nullptr;
+
+		if (value.is_array())
+			data = value.as_array();
+		else
+		{
+			printf("[CV2Merger] [TOML] entry \"%s\" in toml is not an array", name);
+			continue;
+		}
+
+		if (data->size() <= 0)
+		{
+			printf("[CV2Merger] [TOML] entry data for \"%s\" is empty in toml\n", name.c_str());
+			continue;
+		}
+		if (DataTable->contains(name.c_str()))
+		{
+			printf("[CV2Merger] [TOML] Duplicate entry for \"%s\" found in toml\n", name.c_str());
+			continue;
+		}
+
+		SDK::FCharacterCustomizeDataTableEyeTexture EyeTexture = *new SDK::FCharacterCustomizeDataTableEyeTexture();
+		SDK::TSoftObjectPtr<SDK::UTexture2D> thumbnailpath;
+		thumbnailpath.ObjectID = { .AssetPath = FNameHelper::FNameFromString(data->get(0)->value_or("")) };
+		EyeTexture.Thumbnail = thumbnailpath;
+
+		SDK::TSoftObjectPtr<SDK::UTexture2D> texturepath;
+		texturepath.ObjectID = { .AssetPath = FNameHelper::FNameFromString(data->get(1)->value_or("")) };
+		EyeTexture.EyeTexture = texturepath;
+
+		SDK::TSoftObjectPtr<SDK::UTexture2D> Irispath;
+		Irispath.ObjectID = { .AssetPath = FNameHelper::FNameFromString(data->get(2)->value_or("")) };
+		EyeTexture.IrisReflectionTexture = Irispath;
+
+		DataTable->insert({ name, EyeTexture });
+	}
+}
+
 void ModPatch::ProcessAccessoryAttachToTable(toml::table table, std::map<std::string, SDK::FCharacterCustomizeDataTableAttachToList>* DataTable)
 {
 	for (auto& [key, value] : table)
@@ -926,6 +1012,16 @@ bool ModPatch::init()
 		table = config["DT_HairSetList_Male"].as_table();
 		if (table)
 			ProcessHairSetTable(*table, &DT_HairSetList_Male);
+
+		table = config["DT_EyeBase"].as_table();
+		if (table)
+			ProcessTextureListTable(*table, &DT_EyeBase);
+		table = config["DT_EyeDetail"].as_table();
+		if (table)
+			ProcessEyeTextureTable(*table, &DT_EyeDetail);
+		table = config["DT_EyeHighlight"].as_table();
+		if (table)
+			ProcessTextureListTable(*table, &DT_EyeHighlight);
 
 		i++;
 	}
