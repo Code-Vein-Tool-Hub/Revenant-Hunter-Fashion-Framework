@@ -202,6 +202,12 @@ namespace UC
 			SetType Value;
 			int32 HashNextId;
 			int32 HashIndex;
+
+		public:
+			SetElement(SetType Value)
+				: Value(Value)
+			{
+			}
 		};
 	}
 
@@ -400,7 +406,9 @@ namespace UC
 		{
 			if (*this)
 			{
-				return UtfN::Utf16StringToUtf8String<std::string>(Data, NumElements  - 1); // Exclude null-terminator
+				//return UtfN::Utf16StringToUtf8String<std::string>(Data, NumElements  - 1); // Exclude null-terminator
+				std::wstring wstring = std::wstring(Data);
+				return std::string(wstring.begin(), wstring.end());
 			}
 
 			return "";
@@ -612,7 +620,7 @@ namespace UC
 	private:
 		using FElementOrFreeListLink = ContainerImpl::TSparseArrayElementOrFreeListLink<ContainerImpl::TAlignedBytes<ElementSize, ElementAlign>>;
 
-	private:
+	public:
 		TArray<FElementOrFreeListLink> Data;
 		ContainerImpl::FBitArray AllocationFlags;
 		int32 FirstFreeIndex;
@@ -626,6 +634,13 @@ namespace UC
 
 		TSparseArray(TSparseArray&&) = default;
 		TSparseArray(const TSparseArray&) = default;
+
+		TSparseArray(int32 Size)
+		{
+			Data = TAllocatedArray<FElementOrFreeListLink>(Size);
+			FirstFreeIndex = -1;
+			NumFreeIndices = 0;
+		}
 
 	public:
 		TSparseArray& operator=(TSparseArray&&) = default;
@@ -646,6 +661,13 @@ namespace UC
 
 	public:
 		const ContainerImpl::FBitArray& GetAllocationFlags() const { return AllocationFlags; }
+
+	public:
+		inline bool Add(SparseArrayElementType Element)
+		{
+			//return Data.Add(SparseArrayElementType(Element));
+			return false;
+		}
 
 	public:
 		inline       SparseArrayElementType& operator[](int32 Index)       { VerifyIndex(Index); return *reinterpret_cast<SparseArrayElementType*>(&Data.GetUnsafe(Index).ElementData); }
@@ -670,7 +692,7 @@ namespace UC
 		using SetDataType = ContainerImpl::SetElement<SetElementType>;
 		using HashType = ContainerImpl::TInlineAllocator<1>::ForElementType<int32>;
 
-	private:
+	public:
 		TSparseArray<SetDataType> Elements;
 		HashType Hash;
 		int32 HashSize;
@@ -683,6 +705,12 @@ namespace UC
 
 		TSet(TSet&&) = default;
 		TSet(const TSet&) = default;
+
+		TSet(int32 Size)
+		{
+			Elements = TSparseArray<SetDataType>(Size);
+			HashSize = 64;
+		}
 
 	public:
 		TSet& operator=(TSet&&) = default;
@@ -705,6 +733,12 @@ namespace UC
 		const ContainerImpl::FBitArray& GetAllocationFlags() const { return Elements.GetAllocationFlags(); }
 
 	public:
+		inline bool Add(SetElementType Element)
+		{
+			return Elements.Add(SetDataType(Element));
+		}
+
+	public:
 		inline       SetElementType& operator[] (int32 Index)       { return Elements[Index].Value; }
 		inline const SetElementType& operator[] (int32 Index) const { return Elements[Index].Value; }
 
@@ -722,7 +756,7 @@ namespace UC
 	public:
 		using ElementType = TPair<KeyElementType, ValueElementType>;
 
-	private:
+	protected:
 		TSet<ElementType> Elements;
 
 	private:
@@ -754,6 +788,12 @@ namespace UC
 		}
 
 	public:
+		inline bool Add(KeyElementType Key, ValueElementType Value)
+		{
+			return Elements.Add(ElementType(Key, Value));
+		}
+
+	public:
 		inline       ElementType& operator[] (int32 Index)       { return Elements[Index]; }
 		inline const ElementType& operator[] (int32 Index) const { return Elements[Index]; }
 
@@ -763,6 +803,23 @@ namespace UC
 	public:
 		template<typename KeyType, typename ValueType> friend Iterators::TMapIterator<KeyType, ValueType> begin(const TMap& Map);
 		template<typename KeyType, typename ValueType> friend Iterators::TMapIterator<KeyType, ValueType> end  (const TMap& Map);
+	};
+
+	template<typename KeyElementType, typename ValueElementType>
+	class TAllocatedMap : public TMap<KeyElementType, ValueElementType>
+	{
+	public:
+		using ElementType = TPair<KeyElementType, ValueElementType>;
+
+	public:
+		TAllocatedMap(int32 Size)
+		{
+			this->Elements = TSet<ElementType>(Size);
+		}
+
+	public:
+		inline operator		  TMap<KeyElementType, ValueElementType>()		 { return *reinterpret_cast<      TMap<KeyElementType, ValueElementType>*>(this); }
+		inline operator const TMap<KeyElementType, ValueElementType>() const { return *reinterpret_cast<const TMap<KeyElementType, ValueElementType>*>(this); }
 	};
 
 	namespace Iterators

@@ -88,6 +88,23 @@ void Patch_FlagCondition(SDK::UDataTable* TablePtr, std::map<std::string, T> Mod
     }
 }
 
+void Tempfix_FingerTable(SDK::UDataTable* TablePtr, std::map<std::string, SDK::FCharacterCustomizeDataTableGlovesList> ModTable)
+{
+    SDK::FCharacterCustomizeDataTableGlovesList* FirstEntry = (SDK::FCharacterCustomizeDataTableGlovesList*)(TablePtr->RowMap[0].Second);
+    for (auto& entry : TablePtr->RowMap)
+    {
+        if (ModTable.contains(entry.First.ToString()))
+        {
+            SDK::FCharacterCustomizeDataTableGlovesList* RowEntry = (SDK::FCharacterCustomizeDataTableGlovesList*)(entry.Second);
+            if (RowEntry->bAffectNail == false)
+            {
+                RowEntry->LeftFingerExposureMap = FirstEntry->LeftFingerExposureMap;
+                RowEntry->RightFingerExposureMap = FirstEntry->RightFingerExposureMap;
+            }
+        }
+    }
+}
+
 #pragma endregion
 
 #pragma region Hooks
@@ -280,10 +297,12 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
         if (ModPatch::DT_Gloves_Female.size() > 0) {
             for (auto& entry : ModPatch::DT_Gloves_Female)
             {
+                //printf("[CVMerger] Entry location %p\n", &entry.second);
                 UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
                 printf("[CV2Merger] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
             Patch_FlagCondition(_this, ModPatch::DT_Gloves_Female, 0x058);
+            Tempfix_FingerTable(_this, ModPatch::DT_Gloves_Female);
         }
     }
     if (TableName == "DT_Gloves_Male")
@@ -295,6 +314,7 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
                 printf("[CV2Merger] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
             Patch_FlagCondition(_this, ModPatch::DT_Gloves_Male, 0x058);
+            Tempfix_FingerTable(_this, ModPatch::DT_Gloves_Female);
         }
     }
     if (TableName == "DT_Mask_Female")

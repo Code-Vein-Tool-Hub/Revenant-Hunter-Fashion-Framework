@@ -293,19 +293,26 @@ void ModPatch::ProcessGlovesTable(toml::table table, std::map<std::string, SDK::
 		Gloves.bAffectNail = data->get(5)->value_or(false);
 
 		//Find a way to make TMaps
-		Gloves.LeftFingerExposureMap = *new SDK::TMap<SDK::ECharacterCustomizeFinger, bool>();
+		Gloves.LeftFingerExposureMap = *new SDK::TAllocatedMap<SDK::ECharacterCustomizeFinger, bool>(5);
 		for (auto& finger : *data->get(6)->as_array())
 		{
 			toml::array* fingerArray = finger.as_array();
 			SDK::ECharacterCustomizeFinger Key = magic_enum::enum_cast<SDK::ECharacterCustomizeFinger>(fingerArray->get(0)->value_or("MAX")).value_or(SDK::ECharacterCustomizeFinger::MAX);
 			bool Value = fingerArray->get(1)->value_or(true);
 
-			//Curently no way to make a new TMap in memory
+			//SDK::UBlueprintMapLibrary::Map_Add(Gloves.LeftFingerExposureMap, Key, Value);
+			//TMapHelper::Map_Add<SDK::ECharacterCustomizeFinger, bool>(Gloves.LeftFingerExposureMap, Key, Value);
+			//Gloves.LeftFingerExposureMap.Add(Key, Value);
 		}
-		Gloves.RightFingerExposureMap = *new SDK::TMap<SDK::ECharacterCustomizeFinger, bool>();
+		Gloves.RightFingerExposureMap = *new SDK::TAllocatedMap<SDK::ECharacterCustomizeFinger, bool>(5);
 		for (auto& finger : *data->get(7)->as_array())
 		{
+			toml::array* fingerArray = finger.as_array();
+			SDK::ECharacterCustomizeFinger Key = magic_enum::enum_cast<SDK::ECharacterCustomizeFinger>(fingerArray->get(0)->value_or("MAX")).value_or(SDK::ECharacterCustomizeFinger::MAX);
+			bool Value = fingerArray->get(1)->value_or(true);
 
+			//TMapHelper::Map_Add<SDK::ECharacterCustomizeFinger, bool>(Gloves.LeftFingerExposureMap, Key, Value);
+			//Gloves.RightFingerExposureMap.Add(Key, Value);
 		}
 
 		DataTable->insert({ name, Gloves });

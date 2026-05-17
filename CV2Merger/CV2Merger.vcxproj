@@ -167,10 +167,13 @@
     <ClInclude Include="SDK\Engine_structs.hpp" />
     <ClInclude Include="SDK\Extensions_classes.hpp" />
     <ClInclude Include="SDK\Extensions_parameters.hpp" />
+    <ClInclude Include="SDK\Extensions_structs.hpp" />
     <ClInclude Include="SDK\StoryFlagSystem_classes.hpp" />
     <ClInclude Include="SDK\StoryFlagSystem_parameters.hpp" />
     <ClInclude Include="SDK\StoryFlagSystem_structs.hpp" />
     <ClInclude Include="Signature.h" />
+    <ClInclude Include="Struct.h" />
+    <ClInclude Include="UnrealContainers.hpp" />
     <ClInclude Include="Util.h" />
   </ItemGroup>
   <ItemGroup>
