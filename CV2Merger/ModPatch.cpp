@@ -196,7 +196,7 @@ void ModPatch::ProcessBootsTable(toml::table table, std::map<std::string, SDK::F
 			SDK::FCharacterCustomizeDataTableClothPartVisibility partVis = *new SDK::FCharacterCustomizeDataTableClothPartVisibility();
 
 			SDK::TSoftObjectPtr<SDK::UTexture2D> clothTexturepath;
-			clothTexturepath.ObjectID = { .AssetPath = FNameHelper::FNameFromString(data->get(0)->value_or("")) };
+			clothTexturepath.ObjectID = { .AssetPath = FNameHelper::FNameFromString(partArray->get(0)->value_or("")) };
 			partVis.ClothPartTexture = clothTexturepath;
 
 			toml::array* HideParamsArray = partArray->get(1)->as_array();
@@ -219,6 +219,10 @@ void ModPatch::ProcessBootsTable(toml::table table, std::map<std::string, SDK::F
 		}
 		Boots.RightHeightType = magic_enum::enum_cast<SDK::ECharacterCustomizeBootsHeightType>(data->get(6)->value_or("None")).value_or(SDK::ECharacterCustomizeBootsHeightType::None);
 		Boots.LeftHeightType = magic_enum::enum_cast<SDK::ECharacterCustomizeBootsHeightType>(data->get(7)->value_or("None")).value_or(SDK::ECharacterCustomizeBootsHeightType::None);
+
+		Boots.RightHeightDependentParameter = *new SDK::TAllocatedArray<SDK::FName>(data->get(8)->as_array()->size());
+		Boots.LeftHeightDependentParameter = *new SDK::TAllocatedArray<SDK::FName>(data->get(9)->as_array()->size());
+
 		for (auto& part : *data->get(8)->as_array())
 		{
 			Boots.RightHeightDependentParameter.Add(FNameHelper::FNameFromString(part.value_or("")));
