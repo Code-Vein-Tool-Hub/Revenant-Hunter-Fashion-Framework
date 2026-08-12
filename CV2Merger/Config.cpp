@@ -3,6 +3,7 @@
 
 bool Config::Console;
 bool Config::AccessoryInfo;
+bool Config::CompanionPakLoaded;
 
 bool Config::init()
 {
@@ -30,6 +31,23 @@ bool Config::init()
 
 	Console = config["General"]["Enable_Console"].value_or(true);
 	AccessoryInfo = config["General"]["Acc_Info_Tool"].value_or(false);
+
+	return true;
+}
+
+bool Config::postinit()
+{
+	std::string CompainionPakPath = "..\\..\\..\\Content\\Paks\\~mods\\z10_RHFF_P.pak";
+	if (std::filesystem::exists(CompainionPakPath))
+	{
+		printf("[RHFF] RHFF Companion pak found, extra functionality is available.\n");
+		CompanionPakLoaded = true;
+	}
+	else
+	{
+		printf("[RHFF] Unabled to find Companion pak in \"%s\", some functions will not be available\n", CompainionPakPath.c_str());
+		printf("[RHFF] Please install the \"z10-RHFF_P.pak\\utoc\\ucas\" to your ~mods folder, if you have it installed please report the issue and the reported path to Moonling\n");
+	}
 
 	return true;
 }

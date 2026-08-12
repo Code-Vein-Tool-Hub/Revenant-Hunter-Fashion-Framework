@@ -111,4 +111,10 @@ const HMODULE MODULE_HANDLE = GetModuleHandle(nullptr);
         printf(""##x##"\n", __VA_ARGS__); \
     }
 
+FORCEINLINE uint64_t GetAddressFromFuncCall(uint64_t a1)
+{
+    int opd = *(int*)(a1 + 1);
+    return (a1 + opd + 5);
+}
+
 #endif //PCH_H

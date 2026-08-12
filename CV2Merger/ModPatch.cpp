@@ -292,29 +292,66 @@ void ModPatch::ProcessGlovesTable(toml::table table, std::map<std::string, SDK::
 		Gloves.CustomizableColorNumber = data->get(4)->value_or(0);
 		Gloves.bAffectNail = data->get(5)->value_or(false);
 
-		//Find a way to make TMaps
-		Gloves.LeftFingerExposureMap = *new SDK::TAllocatedMap<SDK::ECharacterCustomizeFinger, bool>(5);
-		for (auto& finger : *data->get(6)->as_array())
+		if (Config::CompanionPakLoaded)
 		{
-			toml::array* fingerArray = finger.as_array();
-			SDK::ECharacterCustomizeFinger Key = magic_enum::enum_cast<SDK::ECharacterCustomizeFinger>(fingerArray->get(0)->value_or("MAX")).value_or(SDK::ECharacterCustomizeFinger::MAX);
-			bool Value = fingerArray->get(1)->value_or(true);
+			bool Thumb, Index, Middle, Ring, Pinky;
 
-			//SDK::UBlueprintMapLibrary::Map_Add(Gloves.LeftFingerExposureMap, Key, Value);
-			//TMapHelper::Map_Add<SDK::ECharacterCustomizeFinger, bool>(Gloves.LeftFingerExposureMap, Key, Value);
-			//Gloves.LeftFingerExposureMap.Add(Key, Value);
+			for (auto& finger : *data->get(6)->as_array())
+			{
+				toml::array* fingerArray = finger.as_array();
+				SDK::ECharacterCustomizeFinger Key = magic_enum::enum_cast<SDK::ECharacterCustomizeFinger>(fingerArray->get(0)->value_or("MAX")).value_or(SDK::ECharacterCustomizeFinger::MAX);
+				bool Value = fingerArray->get(1)->value_or(true);
+				switch (Key)
+				{
+				case SDK::ECharacterCustomizeFinger::Thumb:
+					Thumb = Value;
+					break;
+				case SDK::ECharacterCustomizeFinger::Index:
+					Index = Value;
+					break;
+				case SDK::ECharacterCustomizeFinger::Middle:
+					Middle = Value;
+					break;
+				case SDK::ECharacterCustomizeFinger::Ring:
+					Ring = Value;
+					break;
+				case SDK::ECharacterCustomizeFinger::Pinky:
+					Pinky = Value;
+					break;
+				default:
+					continue;
+				}
+			}
+			SDK::UBPFL_MapHelper_C::Make_Finger_Map(Thumb, Index, Middle, Ring, Pinky, SDK::UWorld::GetWorld(), &Gloves.LeftFingerExposureMap);
+			
+			for (auto& finger : *data->get(7)->as_array())
+			{
+				toml::array* fingerArray = finger.as_array();
+				SDK::ECharacterCustomizeFinger Key = magic_enum::enum_cast<SDK::ECharacterCustomizeFinger>(fingerArray->get(0)->value_or("MAX")).value_or(SDK::ECharacterCustomizeFinger::MAX);
+				bool Value = fingerArray->get(1)->value_or(true);
+				switch (Key)
+				{
+				case SDK::ECharacterCustomizeFinger::Thumb:
+					Thumb = Value;
+					break;
+				case SDK::ECharacterCustomizeFinger::Index:
+					Index = Value;
+					break;
+				case SDK::ECharacterCustomizeFinger::Middle:
+					Middle = Value;
+					break;
+				case SDK::ECharacterCustomizeFinger::Ring:
+					Ring = Value;
+					break;
+				case SDK::ECharacterCustomizeFinger::Pinky:
+					Pinky = Value;
+					break;
+				default:
+					continue;
+				}
+			}
+			SDK::UBPFL_MapHelper_C::Make_Finger_Map(Thumb, Index, Middle, Ring, Pinky, SDK::UWorld::GetWorld(), &Gloves.RightFingerExposureMap);
 		}
-		Gloves.RightFingerExposureMap = *new SDK::TAllocatedMap<SDK::ECharacterCustomizeFinger, bool>(5);
-		for (auto& finger : *data->get(7)->as_array())
-		{
-			toml::array* fingerArray = finger.as_array();
-			SDK::ECharacterCustomizeFinger Key = magic_enum::enum_cast<SDK::ECharacterCustomizeFinger>(fingerArray->get(0)->value_or("MAX")).value_or(SDK::ECharacterCustomizeFinger::MAX);
-			bool Value = fingerArray->get(1)->value_or(true);
-
-			//TMapHelper::Map_Add<SDK::ECharacterCustomizeFinger, bool>(Gloves.LeftFingerExposureMap, Key, Value);
-			//Gloves.RightFingerExposureMap.Add(Key, Value);
-		}
-
 		DataTable->insert({ name, Gloves });
 	}
 }

@@ -6,6 +6,7 @@
 #include "Util.h"
 #include "Config.h"
 #include <filesystem>
+#include <thread>
 
 #pragma region Sigs
 
@@ -26,21 +27,19 @@ void* Sig_ACharacterCustomizePawn_CameraResetPressed = sigScan(
     "\x40\x53\x48\x83\xEC\x30\x80\xB9\x2A\x2A\x2A\x2A\x00\x48\x89\xCB",
     "xxxxxxxx????xxxx");
 
-void* Sig_GetSupportedScreenResolutionArrayFromScreenMode = sigScan(
-    "\x48\x8B\xC4\x4C\x89\x40\x2A\x48\x89\x50\x2A\x55\x53\x41\x56\x48\x8D\x68\x2A",
-    "xxxxxx?xxx?xxxxxxx?");
+void* Sig_UObject_ProcessEvent = sigScan(
+    "\x40\x55\x56\x57\x41\x54\x41\x55\x41\x56\x41\x57\x48\x81\xEC\x10\x01\x00\x00",
+    "xxxxxxxxxxxxxxxxxxx");
 
-void* Sig_GetSupportedScreenResolutionArray = sigScan(
-    "\x48\x89\x54\x24\x2A\x55\x53\x41\x56\x48\x8D\x6C\x24\x2A\x48\x81\xEC\x50\x01\x00\x00",
-    "xxxx?xxxxxxxx?xxxxxxx");
+void* Sig_InputHook = sigScan(
+    "\x48\x89\x5C\x24\x2A\x48\x89\x74\x24\x2A\x57\x48\x83\xEC\x20\x48\x8B\x02\x41\x8B\xF8",
+    "xxxx?xxxx?xxxxxxxxxxx");
 
 #pragma endregion
 
 #pragma region Functions
 
 FUNCTION_PTR(void, __fastcall, UDataTable_AddRow, Sig_UDataTable_AddRow, SDK::UDataTable* _this, SDK::FName RowName, SDK::FTableRowBase* RowData);
-
-FUNCTION_PTR(uint64_t*, __fastcall, UConfigurationManager_GetSupportedScreenResolutionArray, Sig_GetSupportedScreenResolutionArray, SDK::UConfigurationManager* _this, uint64_t** OutScreenResolutionArray);
 
 void EnableConsole()
 {
@@ -50,29 +49,6 @@ void EnableConsole()
     SDK::UInputSettings::GetDefaultObj()->ConsoleKeys[0].KeyName = SDK::UKismetStringLibrary::Conv_StringToName(L"F2");
     SDK::UObject* NewObject = SDK::UGameplayStatics::SpawnObject(Engine->ConsoleClass, Engine->GameViewport);
     Engine->GameViewport->ViewportConsole = static_cast<SDK::UConsole*>(NewObject);
-}
-
-void Patch_Inner_FlagCondition(SDK::UDataTable* TablePtr, bool male = false)
-{
-    for (auto& entry : TablePtr->RowMap)
-    {
-        if (male)
-        {
-            if (ModPatch::DT_Inner_Male.contains(entry.First.ToString()))
-            {
-                //printf("[CV2Merger] Row Location %p\n", entry.Second);
-                WRITE_MEMORY(entry.Second + 0x58, uint8_t, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0)
-            }
-        }
-        else
-        {
-            if (ModPatch::DT_Inner_Female.contains(entry.First.ToString()))
-            {
-                //printf("[CV2Merger] Row Location %p\n", entry.Second);
-                WRITE_MEMORY(entry.Second + 0x58, uint8_t, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0)
-            }
-        }
-    }
 }
 
 template <typename T>
@@ -88,22 +64,9 @@ void Patch_FlagCondition(SDK::UDataTable* TablePtr, std::map<std::string, T> Mod
     }
 }
 
-void Tempfix_FingerTable(SDK::UDataTable* TablePtr, std::map<std::string, SDK::FCharacterCustomizeDataTableGlovesList> ModTable)
-{
-    SDK::FCharacterCustomizeDataTableGlovesList* FirstEntry = (SDK::FCharacterCustomizeDataTableGlovesList*)(TablePtr->RowMap[0].Second);
-    for (auto& entry : TablePtr->RowMap)
-    {
-        if (ModTable.contains(entry.First.ToString()))
-        {
-            SDK::FCharacterCustomizeDataTableGlovesList* RowEntry = (SDK::FCharacterCustomizeDataTableGlovesList*)(entry.Second);
-            if (RowEntry->bAffectNail == false)
-            {
-                RowEntry->LeftFingerExposureMap = FirstEntry->LeftFingerExposureMap;
-                RowEntry->RightFingerExposureMap = FirstEntry->RightFingerExposureMap;
-            }
-        }
-    }
-}
+#pragma endregion
+
+#pragma region Threads
 
 #pragma endregion
 
@@ -302,7 +265,6 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
                 printf("[CV2Merger] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
             Patch_FlagCondition(_this, ModPatch::DT_Gloves_Female, 0x058);
-            Tempfix_FingerTable(_this, ModPatch::DT_Gloves_Female);
         }
     }
     if (TableName == "DT_Gloves_Male")
@@ -314,7 +276,6 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
                 printf("[CV2Merger] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
             Patch_FlagCondition(_this, ModPatch::DT_Gloves_Male, 0x058);
-            Tempfix_FingerTable(_this, ModPatch::DT_Gloves_Female);
         }
     }
     if (TableName == "DT_Mask_Female")
@@ -422,9 +383,16 @@ HOOK(void, __stdcall, Hook_CameraResetPressed, Sig_ACharacterCustomizePawn_Camer
     orig_Hook_CameraResetPressed(_this);
 }
 
-HOOK(uint64_t*, __stdcall, Hook_UConfigurationManager_GetSupportedScreenResolutionArrayFromScreenMode, Sig_GetSupportedScreenResolutionArrayFromScreenMode, SDK::UConfigurationManager* _this, SDK::EGraphicsScreenMode& InScreenMode, uint64_t** OutScreenResolutionArray)
+HOOK(void, __stdcall, Hook_InputHook, Sig_InputHook, SDK::UGameViewportClient* _this, SDK::FKey Key, SDK::EInputEvent EventType)
 {
-    return UConfigurationManager_GetSupportedScreenResolutionArray(_this, OutScreenResolutionArray);
+    if (Key.KeyName.ToString() == "F7")
+    {
+        if (EventType == SDK::EInputEvent::IE_Pressed)
+        {
+            
+        }
+    }
+    orig_Hook_InputHook(_this, Key, EventType);
 }
 
 #pragma endregion
@@ -445,12 +413,17 @@ BOOL APIENTRY DllMain( HMODULE hModule,
             freopen("CON", "w", stdout);
         }
 
+        Config::postinit();
+
 		INSTALL_HOOK(Hook_UGameFlowManager_OnShaderCompileWaitFinished);
         INSTALL_HOOK(Hook_UDataTable_Serialize);
         if (Config::AccessoryInfo)
         {
             INSTALL_HOOK(Hook_CameraResetPressed);
         }
+        //Not needed right now but maybe i'll need this in the future
+        //INSTALL_HOOK(Hook_InputHook);
+
 		return TRUE;
     case DLL_THREAD_ATTACH:
     case DLL_THREAD_DETACH:
