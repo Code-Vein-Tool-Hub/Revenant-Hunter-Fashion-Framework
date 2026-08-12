@@ -352,6 +352,11 @@ void ModPatch::ProcessGlovesTable(toml::table table, std::map<std::string, SDK::
 			}
 			SDK::UBPFL_MapHelper_C::Make_Finger_Map(Thumb, Index, Middle, Ring, Pinky, SDK::UWorld::GetWorld(), &Gloves.RightFingerExposureMap);
 		}
+		else
+		{
+			printf("[RHFF] Failed to load companion pak, some functions will not be available\n");
+			printf("[RHFF] please install the z10_RHFF_P.pak\\z10_RHFF_P.ucas\\z10_RHFF_P.utoc to your ~mods folder and restart the game. \ndo NOT rename the pak\\ucas\\utoc files.\n");
+		}
 		DataTable->insert({ name, Gloves });
 	}
 }

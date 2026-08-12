@@ -35,6 +35,10 @@ void* Sig_InputHook = sigScan(
     "\x48\x89\x5C\x24\x2A\x48\x89\x74\x24\x2A\x57\x48\x83\xEC\x20\x48\x8B\x02\x41\x8B\xF8",
     "xxxx?xxxx?xxxxxxxxxxx");
 
+void* Sig_FPakPlatformFile_HandleMountPakDelegate = sigScan(
+    "\x48\x89\x5C\x24\x2A\x48\x89\x6C\x24\x2A\x56\x57\x41\x56\x48\x83\xEC\x40\x83\x7A\x2A\x00",
+    "xxxx?xxxx?xxxxxxxxxx?x");
+
 #pragma endregion
 
 #pragma region Functions
@@ -395,6 +399,34 @@ HOOK(void, __stdcall, Hook_InputHook, Sig_InputHook, SDK::UGameViewportClient* _
     orig_Hook_InputHook(_this, Key, EventType);
 }
 
+HOOK(uint64_t*, __stdcall, Hook_FPakPlatformFile_HandleMountPakDelegate, Sig_FPakPlatformFile_HandleMountPakDelegate, uint64_t* _this, SDK::FString PakFilePath, int PakOrder)
+{
+    printf("[RHFF] Mounting pak file: %s \n", PakFilePath.ToString().c_str());
+    return orig_Hook_FPakPlatformFile_HandleMountPakDelegate(_this, PakFilePath, PakOrder);
+}
+
+HOOK(HRESULT, __stdcall, hook_CreateFileW, &CreateFileW,
+    LPCWSTR               lpFileName,
+    DWORD                 dwDesiredAccess,
+    DWORD                 dwShareMode,
+    LPSECURITY_ATTRIBUTES lpSecurityAttributes,
+    DWORD                 dwCreationDisposition,
+    DWORD                 dwFlagsAndAttributes,
+    HANDLE                hTemplateFile
+)
+{
+    //if (wcsstr(lpFileName, L"hid") == NULL) // don't log audio
+    //{
+    //    printf("File Access Log: %S\r\n", lpFileName);
+    //}
+    if (wcsstr(lpFileName, L"z10_RHFF_P.pak"))
+    {
+        printf("[RHFF] Loaded RHFF Companion pak, extra functionality is available.\n");
+        Config::CompanionPakLoaded = true;
+    }
+    return orig_hook_CreateFileW(lpFileName, dwDesiredAccess, dwShareMode, lpSecurityAttributes, dwCreationDisposition, dwFlagsAndAttributes, hTemplateFile);
+}
+
 #pragma endregion
 
 BOOL APIENTRY DllMain( HMODULE hModule,
@@ -413,8 +445,7 @@ BOOL APIENTRY DllMain( HMODULE hModule,
             freopen("CON", "w", stdout);
         }
 
-        Config::postinit();
-
+        INSTALL_HOOK(hook_CreateFileW);
 		INSTALL_HOOK(Hook_UGameFlowManager_OnShaderCompileWaitFinished);
         INSTALL_HOOK(Hook_UDataTable_Serialize);
         if (Config::AccessoryInfo)
