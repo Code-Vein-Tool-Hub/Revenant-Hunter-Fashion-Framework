@@ -79,7 +79,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <TargetExt>.asi</TargetExt>
     <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);detours;toml;magic_enum</IncludePath>
-    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);detours;</LibraryPath>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);detours</LibraryPath>
     <TargetName>RHFF</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -159,6 +159,8 @@
     <ClInclude Include="ModPatch.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="SDK\Basic.hpp" />
+    <ClInclude Include="SDK\BPFL_MapHelper_classes.hpp" />
+    <ClInclude Include="SDK\BPFL_MapHelper_parameters.hpp" />
     <ClInclude Include="SDK\CoreUObject_classes.hpp" />
     <ClInclude Include="SDK\CoreUObject_parameters.hpp" />
     <ClInclude Include="SDK\CoreUObject_structs.hpp" />
@@ -171,6 +173,9 @@
     <ClInclude Include="SDK\StoryFlagSystem_classes.hpp" />
     <ClInclude Include="SDK\StoryFlagSystem_parameters.hpp" />
     <ClInclude Include="SDK\StoryFlagSystem_structs.hpp" />
+    <ClInclude Include="SDK\UMG_classes.hpp" />
+    <ClInclude Include="SDK\UMG_parameters.hpp" />
+    <ClInclude Include="SDK\UMG_structs.hpp" />
     <ClInclude Include="Signature.h" />
     <ClInclude Include="Struct.h" />
     <ClInclude Include="UnrealContainers.hpp" />
@@ -187,10 +192,12 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="SDK\Basic.cpp" />
+    <ClCompile Include="SDK\BPFL_MapHelper_functions.cpp" />
     <ClCompile Include="SDK\CoreUObject_functions.cpp" />
     <ClCompile Include="SDK\Engine_functions.cpp" />
     <ClCompile Include="SDK\Extensions_functions.cpp" />
     <ClCompile Include="SDK\StoryFlagSystem_functions.cpp" />
+    <ClCompile Include="SDK\UMG_functions.cpp" />
     <ClCompile Include="Signature.cpp" />
     <ClCompile Include="Util.cpp" />
   </ItemGroup>
@@ -205,6 +212,5 @@
     </CopyFileToFolders>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
-  <ImportGroup Label="ExtensionTargets">
-  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets" />
 </Project>
