@@ -1,4 +1,5 @@
 #include "Config.h"
+#include "Signature.h"
 #include <filesystem>
 
 bool Config::Console;
@@ -11,7 +12,7 @@ bool Config::init()
 	std::string fileString = "";
 
 	if (!std::filesystem::exists(std::filesystem::current_path().generic_string() + "\\RHFFConfig.toml")) {
-		printf("[CV2Merger] [Error] Could not find config path\n");
+		printf("[RHFF] [Error] Could not find config path\n");
 	}
 
 	try

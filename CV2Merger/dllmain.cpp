@@ -58,7 +58,7 @@ void Patch_FlagCondition(SDK::UDataTable* TablePtr, std::map<std::string, T> Mod
     {
         if (ModTable.contains(entry.First.ToString()))
         {
-            //printf("[CV2Merger] Row Location %p\n", entry.Second);
+            //printf("[RHFF] Row Location %p\n", entry.Second);
             WRITE_MEMORY(entry.Second + offset, uint8_t, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0)
         }
     }
@@ -80,18 +80,18 @@ HOOK(void, __stdcall, Hook_UGameFlowManager_OnShaderCompileWaitFinished, Sig_UGa
 
 HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::UDataTable* _this, uint64_t* param2)
 {
-    //printf("[CV2Merger] UDataTable::Serialize called for DataTable: %s\n", _this->GetName().c_str());
+    //printf("[RHFF] UDataTable::Serialize called for DataTable: %s\n", _this->GetName().c_str());
     orig_Hook_UDataTable_Serialize(_this, param2);
     std::string TableName = _this->GetName();
 
     if (TableName == "DT_Inner_Female")
     {
         if (ModPatch::DT_Inner_Female.size() > 0) {
-            //printf("[CV2Merger] DataTableName: %s\n", _this->GetFullName().c_str());
+            //printf("[RHFF] DataTableName: %s\n", _this->GetFullName().c_str());
             for (auto& entry : ModPatch::DT_Inner_Female)
             {
                 UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
-                printf("[CV2Merger] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
+                printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
             Patch_FlagCondition(_this, ModPatch::DT_Inner_Female, 0x58);
         }
@@ -102,7 +102,7 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
             for (auto& entry : ModPatch::DT_Inner_Male)
             {
                 UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
-                printf("[CV2Merger] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
+                printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
             Patch_FlagCondition(_this, ModPatch::DT_Inner_Male, 0x58);
         }
@@ -114,7 +114,7 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
             for (auto& entry : ModPatch::DT_HairBaseList)
             {
                 UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
-                printf("[CV2Merger] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
+                printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
 		}
     }
@@ -124,7 +124,7 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
             for (auto& entry : ModPatch::DT_HairBack)
             {
                 UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
-                printf("[CV2Merger] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
+                printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
         }
     }
@@ -134,7 +134,7 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
             for (auto& entry : ModPatch::DT_HairFront)
             {
                 UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
-                printf("[CV2Merger] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
+                printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
         }
 	}
@@ -144,7 +144,7 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
             for (auto& entry : ModPatch::DT_HairFrontSide)
             {
                 UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
-                printf("[CV2Merger] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
+                printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
 		}
     }
@@ -154,7 +154,7 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
             for (auto& entry : ModPatch::DT_HairOther)
             {
                 UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
-                printf("[CV2Merger] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
+                printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
         }
     }
@@ -164,7 +164,7 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
             for (auto& entry : ModPatch::DT_HairSide)
             {
                 UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
-                printf("[CV2Merger] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
+                printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
         }
     }
@@ -174,7 +174,7 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
             for (auto& entry : ModPatch::DT_HairTop)
             {
                 UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
-                printf("[CV2Merger] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
+                printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
         }
     }
@@ -184,7 +184,7 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
             for (auto& entry : ModPatch::DT_HairSetList_Female)
             {
                 UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
-                printf("[CV2Merger] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
+                printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
         }
     }
@@ -194,7 +194,7 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
             for (auto& entry : ModPatch::DT_HairSetList_Male)
             {
                 UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
-                printf("[CV2Merger] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
+                printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
         }
     }
@@ -205,7 +205,7 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
             for (auto& entry : ModPatch::DT_AccessoryPresetDLC_Free)
             {
                 UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
-                printf("[CV2Merger] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
+                printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
 			Patch_FlagCondition(_this, ModPatch::DT_AccessoryPresetDLC_Free, 0x01B0);
         }
@@ -216,7 +216,7 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
             for (auto& entry : ModPatch::DT_AccessoryPresetIsHat)
             {
                 UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
-                printf("[CV2Merger] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
+                printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
             Patch_FlagCondition(_this, ModPatch::DT_AccessoryPresetIsHat, 0x01B0);
         }
@@ -228,7 +228,7 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
             for (auto& entry : ModPatch::DT_AccessoryAttachToList)
             {
                 UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
-                printf("[CV2Merger] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
+                printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
         }
     }
@@ -239,7 +239,7 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
             for (auto& entry : ModPatch::DT_Boots_Female)
             {
                 UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
-                printf("[CV2Merger] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
+                printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
             Patch_FlagCondition(_this, ModPatch::DT_Boots_Female, 0x058);
         }
@@ -250,7 +250,7 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
             for (auto& entry : ModPatch::DT_Boots_Male)
             {
                 UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
-                printf("[CV2Merger] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
+                printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
             Patch_FlagCondition(_this, ModPatch::DT_Boots_Male, 0x058);
         }
@@ -262,7 +262,7 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
             {
                 //printf("[CVMerger] Entry location %p\n", &entry.second);
                 UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
-                printf("[CV2Merger] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
+                printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
             Patch_FlagCondition(_this, ModPatch::DT_Gloves_Female, 0x058);
         }
@@ -273,7 +273,7 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
             for (auto& entry : ModPatch::DT_Gloves_Male)
             {
                 UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
-                printf("[CV2Merger] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
+                printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
             Patch_FlagCondition(_this, ModPatch::DT_Gloves_Male, 0x058);
         }
@@ -284,7 +284,7 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
             for (auto& entry : ModPatch::DT_Mask_Female)
             {
                 UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
-                printf("[CV2Merger] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
+                printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
             Patch_FlagCondition(_this, ModPatch::DT_Mask_Female, 0x058);
         }
@@ -295,7 +295,7 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
             for (auto& entry : ModPatch::DT_Mask_Male)
             {
                 UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
-                printf("[CV2Merger] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
+                printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
             Patch_FlagCondition(_this, ModPatch::DT_Mask_Male, 0x058);
         }
@@ -306,7 +306,7 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
             for (auto& entry : ModPatch::DT_Outer_Female)
             {
                 UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
-                printf("[CV2Merger] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
+                printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
             Patch_FlagCondition(_this, ModPatch::DT_Outer_Female, 0x058);
         }
@@ -317,7 +317,7 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
             for (auto& entry : ModPatch::DT_Outer_Male)
             {
                 UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
-                printf("[CV2Merger] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
+                printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
             Patch_FlagCondition(_this, ModPatch::DT_Outer_Male, 0x058);
         }
@@ -329,7 +329,7 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
             for (auto& entry : ModPatch::DT_EyeBase)
             {
                 UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
-                printf("[CV2Merger] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
+                printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
         }
 	}
@@ -339,7 +339,7 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
             for (auto& entry : ModPatch::DT_EyeDetail)
             {
                 UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
-                printf("[CV2Merger] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
+                printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
         }
     }
@@ -349,7 +349,7 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
             for (auto& entry : ModPatch::DT_EyeHighlight)
             {
                 UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
-                printf("[CV2Merger] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
+                printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
         }
     }
@@ -359,7 +359,7 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
 
 HOOK(void, __stdcall, Hook_CameraResetPressed, Sig_ACharacterCustomizePawn_CameraResetPressed, SDK::ACharacterCustomizePawn* _this)
 {
-    printf("[CV2Merger] Camera rest from %s\n", _this->GetName().c_str());
+    printf("[RHFF] Camera rest from %s\n", _this->GetName().c_str());
 
     SDK::FName name;
     SDK::FEulerAngleTransform LocalRoot;
@@ -367,7 +367,7 @@ HOOK(void, __stdcall, Hook_CameraResetPressed, Sig_ACharacterCustomizePawn_Camer
     SDK::FEulerAngleTransform LocalMesh;
     _this->GetAccessoryTransforms(&LocalRoot, &LocalOrient, &LocalMesh);
 
-    printf("[CV2Merger] GetAccessoryTransforms:\n");
+    printf("[RHFF] GetAccessoryTransforms:\n");
     printf("    LocalRoot\n        Translation: [%f, %f, %f]:\n", LocalRoot.Translation.X, LocalRoot.Translation.Y, LocalRoot.Translation.Z);
     printf("        Rotation: [%f, %f, %f]:\n", LocalRoot.Rotation.X, LocalRoot.Rotation.Y, LocalRoot.Rotation.Z);
     printf("        Scale: [%f, %f, %f]:\n", LocalRoot.Scale.X, LocalRoot.Scale.Y, LocalRoot.Scale.Z);

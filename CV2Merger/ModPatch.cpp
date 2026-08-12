@@ -44,18 +44,18 @@ void ModPatch::ProcessInnerTable(toml::table table, std::map<std::string, SDK::F
 			data = value.as_array();
 		else
 		{
-			printf("[CV2Merger] [TOML] entry \"%s\" in toml is not an array", name);
+			printf("[RHFF] [TOML] entry \"%s\" in toml is not an array", name);
 			continue;
 		}
 
 		if (data->size() <= 0)
 		{
-			printf("[CV2Merger] [TOML] entry data for \"%s\" is empty in toml\n", name.c_str());
+			printf("[RHFF] [TOML] entry data for \"%s\" is empty in toml\n", name.c_str());
 			continue;
 		}
 		if (DataTable->contains(name.c_str()))
 		{
-			printf("[CV2Merger] [TOML] Duplicate entry for \"%s\" found in toml\n", name.c_str());
+			printf("[RHFF] [TOML] Duplicate entry for \"%s\" found in toml\n", name.c_str());
 			continue;
 		}
 
@@ -75,7 +75,7 @@ void ModPatch::ProcessInnerTable(toml::table table, std::map<std::string, SDK::F
 		}
 		if (data->get(3)->as_array()->size() != 7)
 		{
-			printf("[CV2Merger] [TOML] entry data for \"%s\" has invalid cloth color count in toml\n", name.c_str());
+			printf("[RHFF] [TOML] entry data for \"%s\" has invalid cloth color count in toml\n", name.c_str());
 		}
 		else
 		{
@@ -147,18 +147,18 @@ void ModPatch::ProcessBootsTable(toml::table table, std::map<std::string, SDK::F
 			data = value.as_array();
 		else
 		{
-			printf("[CV2Merger] [TOML] entry \"%s\" in toml is not an array", name);
+			printf("[RHFF] [TOML] entry \"%s\" in toml is not an array", name);
 			continue;
 		}
 
 		if (data->size() <= 0)
 		{
-			printf("[CV2Merger] [TOML] entry data for \"%s\" is empty in toml\n", name.c_str());
+			printf("[RHFF] [TOML] entry data for \"%s\" is empty in toml\n", name.c_str());
 			continue;
 		}
 		if (DataTable->contains(name.c_str()))
 		{
-			printf("[CV2Merger] [TOML] Duplicate entry for \"%s\" found in toml\n", name.c_str());
+			printf("[RHFF] [TOML] Duplicate entry for \"%s\" found in toml\n", name.c_str());
 			continue;
 		}
 
@@ -248,18 +248,18 @@ void ModPatch::ProcessGlovesTable(toml::table table, std::map<std::string, SDK::
 			data = value.as_array();
 		else
 		{
-			printf("[CV2Merger] [TOML] entry \"%s\" in toml is not an array", name);
+			printf("[RHFF] [TOML] entry \"%s\" in toml is not an array", name);
 			continue;
 		}
 
 		if (data->size() <= 0)
 		{
-			printf("[CV2Merger] [TOML] entry data for \"%s\" is empty in toml\n", name.c_str());
+			printf("[RHFF] [TOML] entry data for \"%s\" is empty in toml\n", name.c_str());
 			continue;
 		}
 		if (DataTable->contains(name.c_str()))
 		{
-			printf("[CV2Merger] [TOML] Duplicate entry for \"%s\" found in toml\n", name.c_str());
+			printf("[RHFF] [TOML] Duplicate entry for \"%s\" found in toml\n", name.c_str());
 			continue;
 		}
 
@@ -367,18 +367,18 @@ void ModPatch::ProcessMaskTable(toml::table table, std::map<std::string, SDK::FC
 			data = value.as_array();
 		else
 		{
-			printf("[CV2Merger] [TOML] entry \"%s\" in toml is not an array", name);
+			printf("[RHFF] [TOML] entry \"%s\" in toml is not an array", name);
 			continue;
 		}
 
 		if (data->size() <= 0)
 		{
-			printf("[CV2Merger] [TOML] entry data for \"%s\" is empty in toml\n", name.c_str());
+			printf("[RHFF] [TOML] entry data for \"%s\" is empty in toml\n", name.c_str());
 			continue;
 		}
 		if (DataTable->contains(name.c_str()))
 		{
-			printf("[CV2Merger] [TOML] Duplicate entry for \"%s\" found in toml\n", name.c_str());
+			printf("[RHFF] [TOML] Duplicate entry for \"%s\" found in toml\n", name.c_str());
 			continue;
 		}
 
@@ -455,18 +455,18 @@ void ModPatch::ProcessOuterTable(toml::table table, std::map<std::string, SDK::F
 			data = value.as_array();
 		else
 		{
-			printf("[CV2Merger] [TOML] entry \"%s\" in toml is not an array", name);
+			printf("[RHFF] [TOML] entry \"%s\" in toml is not an array", name);
 			continue;
 		}
 
 		if (data->size() <= 0)
 		{
-			printf("[CV2Merger] [TOML] entry data for \"%s\" is empty in toml\n", name.c_str());
+			printf("[RHFF] [TOML] entry data for \"%s\" is empty in toml\n", name.c_str());
 			continue;
 		}
 		if (DataTable->contains(name.c_str()))
 		{
-			printf("[CV2Merger] [TOML] Duplicate entry for \"%s\" found in toml\n", name.c_str());
+			printf("[RHFF] [TOML] Duplicate entry for \"%s\" found in toml\n", name.c_str());
 			continue;
 		}
 
@@ -516,18 +516,18 @@ void ModPatch::ProcessAccessoryPresetTable(toml::table table, std::map<std::stri
 			data = value.as_array();
 		else
 		{
-			printf("[CV2Merger] [TOML] entry \"%s\" in toml is not an array", name);
+			printf("[RHFF] [TOML] entry \"%s\" in toml is not an array", name);
 			continue;
 		}
 
 		if (data->size() <= 0)
 		{
-			printf("[CV2Merger] [TOML] entry data for \"%s\" is empty in toml\n", name.c_str());
+			printf("[RHFF] [TOML] entry data for \"%s\" is empty in toml\n", name.c_str());
 			continue;
 		}
 		if (DataTable->contains(name.c_str()))
 		{
-			printf("[CV2Merger] [TOML] Duplicate entry for \"%s\" found in toml\n", name.c_str());
+			printf("[RHFF] [TOML] Duplicate entry for \"%s\" found in toml\n", name.c_str());
 			continue;
 		}
 
@@ -646,18 +646,18 @@ void ModPatch::ProcessHairBaseTable(toml::table table, std::map<std::string, SDK
 			data = value.as_array();
 		else
 		{
-			printf("[CV2Merger] [TOML] entry \"%s\" in toml is not an array", name);
+			printf("[RHFF] [TOML] entry \"%s\" in toml is not an array", name);
 			continue;
 		}
 
 		if (data->size() <= 0)
 		{
-			printf("[CV2Merger] [TOML] entry data for \"%s\" is empty in toml\n", name.c_str());
+			printf("[RHFF] [TOML] entry data for \"%s\" is empty in toml\n", name.c_str());
 			continue;
 		}
 		if (DataTable->contains(name.c_str()))
 		{
-			printf("[CV2Merger] [TOML] Duplicate entry for \"%s\" found in toml\n", name.c_str());
+			printf("[RHFF] [TOML] Duplicate entry for \"%s\" found in toml\n", name.c_str());
 			continue;
 		}
 
@@ -720,18 +720,18 @@ void ModPatch::ProcessHairPartTable(toml::table table, std::map<std::string, SDK
 			data = value.as_array();
 		else
 		{
-			printf("[CV2Merger] [TOML] entry \"%s\" in toml is not an array", name);
+			printf("[RHFF] [TOML] entry \"%s\" in toml is not an array", name);
 			continue;
 		}
 
 		if (data->size() <= 0)
 		{
-			printf("[CV2Merger] [TOML] entry data for \"%s\" is empty in toml\n", name.c_str());
+			printf("[RHFF] [TOML] entry data for \"%s\" is empty in toml\n", name.c_str());
 			continue;
 		}
 		if (DataTable->contains(name.c_str()))
 		{
-			printf("[CV2Merger] [TOML] Duplicate entry for \"%s\" found in toml\n", name.c_str());
+			printf("[RHFF] [TOML] Duplicate entry for \"%s\" found in toml\n", name.c_str());
 			continue;
 		}
 
@@ -772,18 +772,18 @@ void ModPatch::ProcessHairSetTable(toml::table table, std::map<std::string, SDK:
 			data = value.as_array();
 		else
 		{
-			printf("[CV2Merger] [TOML] entry \"%s\" in toml is not an array", name);
+			printf("[RHFF] [TOML] entry \"%s\" in toml is not an array", name);
 			continue;
 		}
 
 		if (data->size() <= 0)
 		{
-			printf("[CV2Merger] [TOML] entry data for \"%s\" is empty in toml\n", name.c_str());
+			printf("[RHFF] [TOML] entry data for \"%s\" is empty in toml\n", name.c_str());
 			continue;
 		}
 		if (DataTable->contains(name.c_str()))
 		{
-			printf("[CV2Merger] [TOML] Duplicate entry for \"%s\" found in toml\n", name.c_str());
+			printf("[RHFF] [TOML] Duplicate entry for \"%s\" found in toml\n", name.c_str());
 			continue;
 		}
 
@@ -818,18 +818,18 @@ void ModPatch::ProcessTextureListTable(toml::table table, std::map<std::string, 
 			data = value.as_array();
 		else
 		{
-			printf("[CV2Merger] [TOML] entry \"%s\" in toml is not an array", name);
+			printf("[RHFF] [TOML] entry \"%s\" in toml is not an array", name);
 			continue;
 		}
 
 		if (data->size() <= 0)
 		{
-			printf("[CV2Merger] [TOML] entry data for \"%s\" is empty in toml\n", name.c_str());
+			printf("[RHFF] [TOML] entry data for \"%s\" is empty in toml\n", name.c_str());
 			continue;
 		}
 		if (DataTable->contains(name.c_str()))
 		{
-			printf("[CV2Merger] [TOML] Duplicate entry for \"%s\" found in toml\n", name.c_str());
+			printf("[RHFF] [TOML] Duplicate entry for \"%s\" found in toml\n", name.c_str());
 			continue;
 		}
 
@@ -857,18 +857,18 @@ void ModPatch::ProcessEyeTextureTable(toml::table table, std::map<std::string, S
 			data = value.as_array();
 		else
 		{
-			printf("[CV2Merger] [TOML] entry \"%s\" in toml is not an array", name);
+			printf("[RHFF] [TOML] entry \"%s\" in toml is not an array", name);
 			continue;
 		}
 
 		if (data->size() <= 0)
 		{
-			printf("[CV2Merger] [TOML] entry data for \"%s\" is empty in toml\n", name.c_str());
+			printf("[RHFF] [TOML] entry data for \"%s\" is empty in toml\n", name.c_str());
 			continue;
 		}
 		if (DataTable->contains(name.c_str()))
 		{
-			printf("[CV2Merger] [TOML] Duplicate entry for \"%s\" found in toml\n", name.c_str());
+			printf("[RHFF] [TOML] Duplicate entry for \"%s\" found in toml\n", name.c_str());
 			continue;
 		}
 
@@ -900,18 +900,18 @@ void ModPatch::ProcessAccessoryAttachToTable(toml::table table, std::map<std::st
 			data = value.as_array();
 		else
 		{
-			printf("[CV2Merger] [TOML] entry \"%s\" in toml is not an array", name);
+			printf("[RHFF] [TOML] entry \"%s\" in toml is not an array", name);
 			continue;
 		}
 
 		if (data->size() <= 0)
 		{
-			printf("[CV2Merger] [TOML] entry data for \"%s\" is empty in toml\n", name.c_str());
+			printf("[RHFF] [TOML] entry data for \"%s\" is empty in toml\n", name.c_str());
 			continue;
 		}
 		if (DataTable->contains(name.c_str()))
 		{
-			printf("[CV2Merger] [TOML] Duplicate entry for \"%s\" found in toml\n", name.c_str());
+			printf("[RHFF] [TOML] Duplicate entry for \"%s\" found in toml\n", name.c_str());
 			continue;
 		}
 
@@ -944,8 +944,8 @@ void ModPatch::ProcessAccessoryAttachToTable(toml::table table, std::map<std::st
 
 bool ModPatch::init()
 {
-	printf("[CV2Merger] [TOML] Processing toml patches...\n");
-	printf("[CV2Merger] Current File Path %s\n", std::filesystem::current_path().generic_string().c_str());
+	printf("[RHFF] [TOML] Processing toml patches...\n");
+	printf("[RHFF] Current File Path %s\n", std::filesystem::current_path().generic_string().c_str());
 	std::string basePath = std::filesystem::current_path().generic_string();
 	std::string modsPath = "";
 	if (basePath.contains("Win64"))
@@ -954,7 +954,7 @@ bool ModPatch::init()
 		modsPath = "..\\CodeVein2\\CodeVein2\\Content\\Paks";
 
 	if (!std::filesystem::exists(modsPath)) {
-		printf("[CV2Merger] [Error] Could not find mods path\n");
+		printf("[RHFF] [Error] Could not find mods path\n");
 		return false;
 	}
 
@@ -964,7 +964,7 @@ bool ModPatch::init()
 		if (std::filesystem::path(entry.path()).extension() != ".toml")
 			continue;
 
-		printf("[CV2Merger] [TOML] processing: %S\n", entry.path().filename().c_str());
+		printf("[RHFF] [TOML] processing: %S\n", entry.path().filename().c_str());
 		toml::table config;
 		std::string fileString = "";
 		try
@@ -1073,6 +1073,6 @@ bool ModPatch::init()
 
 		i++;
 	}
-	printf("[CV2Merger] [TOML] Finished proccessing %i toml patches\n", i);
+	printf("[RHFF] [TOML] Finished proccessing %i toml patches\n", i);
 	return true;
 }
