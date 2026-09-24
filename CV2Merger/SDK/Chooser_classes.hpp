@@ -11,10 +11,10 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_classes.hpp"
-#include "Chooser_structs.hpp"
 #include "GameplayTags_structs.hpp"
-#include "StructUtils_structs.hpp"
+#include "Chooser_structs.hpp"
 #include "Engine_classes.hpp"
+#include "StructUtils_structs.hpp"
 
 
 namespace SDK

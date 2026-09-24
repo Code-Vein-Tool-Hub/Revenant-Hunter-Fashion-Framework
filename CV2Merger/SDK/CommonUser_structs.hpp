@@ -98,22 +98,6 @@ enum class ECommonSessionOnlineMode : uint8
 	ECommonSessionOnlineMode_MAX             = 3,
 };
 
-// ScriptStruct CommonUser.OnlineResultInformation
-// 0x0028 (0x0028 - 0x0000)
-struct FOnlineResultInformation final
-{
-public:
-	bool                                          bWasSuccessful;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ErrorId;                                           // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   ErrorText;                                         // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FOnlineResultInformation) == 0x000008, "Wrong alignment on FOnlineResultInformation");
-static_assert(sizeof(FOnlineResultInformation) == 0x000028, "Wrong size on FOnlineResultInformation");
-static_assert(offsetof(FOnlineResultInformation, bWasSuccessful) == 0x000000, "Member 'FOnlineResultInformation::bWasSuccessful' has a wrong offset!");
-static_assert(offsetof(FOnlineResultInformation, ErrorId) == 0x000008, "Member 'FOnlineResultInformation::ErrorId' has a wrong offset!");
-static_assert(offsetof(FOnlineResultInformation, ErrorText) == 0x000018, "Member 'FOnlineResultInformation::ErrorText' has a wrong offset!");
-
 // ScriptStruct CommonUser.CommonUserInitializeParams
 // 0x0028 (0x0028 - 0x0000)
 struct FCommonUserInitializeParams final
@@ -143,6 +127,22 @@ static_assert(offsetof(FCommonUserInitializeParams, bCanCreateNewLocalPlayer) ==
 static_assert(offsetof(FCommonUserInitializeParams, bCanUseGuestLogin) == 0x000013, "Member 'FCommonUserInitializeParams::bCanUseGuestLogin' has a wrong offset!");
 static_assert(offsetof(FCommonUserInitializeParams, bSuppressLoginErrors) == 0x000014, "Member 'FCommonUserInitializeParams::bSuppressLoginErrors' has a wrong offset!");
 static_assert(offsetof(FCommonUserInitializeParams, OnUserInitializeComplete) == 0x000018, "Member 'FCommonUserInitializeParams::OnUserInitializeComplete' has a wrong offset!");
+
+// ScriptStruct CommonUser.OnlineResultInformation
+// 0x0028 (0x0028 - 0x0000)
+struct FOnlineResultInformation final
+{
+public:
+	bool                                          bWasSuccessful;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 ErrorId;                                           // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   ErrorText;                                         // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FOnlineResultInformation) == 0x000008, "Wrong alignment on FOnlineResultInformation");
+static_assert(sizeof(FOnlineResultInformation) == 0x000028, "Wrong size on FOnlineResultInformation");
+static_assert(offsetof(FOnlineResultInformation, bWasSuccessful) == 0x000000, "Member 'FOnlineResultInformation::bWasSuccessful' has a wrong offset!");
+static_assert(offsetof(FOnlineResultInformation, ErrorId) == 0x000008, "Member 'FOnlineResultInformation::ErrorId' has a wrong offset!");
+static_assert(offsetof(FOnlineResultInformation, ErrorText) == 0x000018, "Member 'FOnlineResultInformation::ErrorText' has a wrong offset!");
 
 }
 

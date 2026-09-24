@@ -11,20 +11,20 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "BP_SmallScenarioGainBloodCodeBase_classes.hpp"
 #include "StoryFlagSystem_structs.hpp"
+#include "BP_SmallScenarioGainBloodCodeBase_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_SmallScenario_Lycoris_Present_a20160_Yadorigi.BP_SmallScenario_Lycoris_Present_a20160_Yadorigi_C
-// 0x0018 (0x0418 - 0x0400)
+// 0x0018 (0x0428 - 0x0410)
 class ABP_SmallScenario_Lycoris_Present_a20160_Yadorigi_C final : public ABP_SmallScenarioGainBloodCodeBase_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_SmallScenario_Lycoris_Present_a20160_Yadorigi_C; // 0x0400(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FStoryFlagEvaluationFormula            Checke30325;                                       // 0x0408(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_SmallScenario_Lycoris_Present_a20160_Yadorigi_C; // 0x0410(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FStoryFlagEvaluationFormula            Checke30325;                                       // 0x0418(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
 	void Abort();
@@ -45,9 +45,9 @@ public:
 	}
 };
 static_assert(alignof(ABP_SmallScenario_Lycoris_Present_a20160_Yadorigi_C) == 0x000008, "Wrong alignment on ABP_SmallScenario_Lycoris_Present_a20160_Yadorigi_C");
-static_assert(sizeof(ABP_SmallScenario_Lycoris_Present_a20160_Yadorigi_C) == 0x000418, "Wrong size on ABP_SmallScenario_Lycoris_Present_a20160_Yadorigi_C");
-static_assert(offsetof(ABP_SmallScenario_Lycoris_Present_a20160_Yadorigi_C, UberGraphFrame_BP_SmallScenario_Lycoris_Present_a20160_Yadorigi_C) == 0x000400, "Member 'ABP_SmallScenario_Lycoris_Present_a20160_Yadorigi_C::UberGraphFrame_BP_SmallScenario_Lycoris_Present_a20160_Yadorigi_C' has a wrong offset!");
-static_assert(offsetof(ABP_SmallScenario_Lycoris_Present_a20160_Yadorigi_C, Checke30325) == 0x000408, "Member 'ABP_SmallScenario_Lycoris_Present_a20160_Yadorigi_C::Checke30325' has a wrong offset!");
+static_assert(sizeof(ABP_SmallScenario_Lycoris_Present_a20160_Yadorigi_C) == 0x000428, "Wrong size on ABP_SmallScenario_Lycoris_Present_a20160_Yadorigi_C");
+static_assert(offsetof(ABP_SmallScenario_Lycoris_Present_a20160_Yadorigi_C, UberGraphFrame_BP_SmallScenario_Lycoris_Present_a20160_Yadorigi_C) == 0x000410, "Member 'ABP_SmallScenario_Lycoris_Present_a20160_Yadorigi_C::UberGraphFrame_BP_SmallScenario_Lycoris_Present_a20160_Yadorigi_C' has a wrong offset!");
+static_assert(offsetof(ABP_SmallScenario_Lycoris_Present_a20160_Yadorigi_C, Checke30325) == 0x000418, "Member 'ABP_SmallScenario_Lycoris_Present_a20160_Yadorigi_C::Checke30325' has a wrong offset!");
 
 }
 

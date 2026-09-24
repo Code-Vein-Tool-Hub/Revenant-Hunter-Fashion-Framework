@@ -31,6 +31,17 @@ static_assert(sizeof(WDT_ConfigPieceBase_C_SetTitleText) == 0x000018, "Wrong siz
 static_assert(offsetof(WDT_ConfigPieceBase_C_SetTitleText, InText) == 0x000000, "Member 'WDT_ConfigPieceBase_C_SetTitleText::InText' has a wrong offset!");
 static_assert(offsetof(WDT_ConfigPieceBase_C_SetTitleText, Success) == 0x000010, "Member 'WDT_ConfigPieceBase_C_SetTitleText::Success' has a wrong offset!");
 
+// Function WDT_ConfigPieceBase.WDT_ConfigPieceBase_C.SetLogText
+// 0x0010 (0x0010 - 0x0000)
+struct WDT_ConfigPieceBase_C_SetLogText final
+{
+public:
+	class FText                                   InText;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+};
+static_assert(alignof(WDT_ConfigPieceBase_C_SetLogText) == 0x000008, "Wrong alignment on WDT_ConfigPieceBase_C_SetLogText");
+static_assert(sizeof(WDT_ConfigPieceBase_C_SetLogText) == 0x000010, "Wrong size on WDT_ConfigPieceBase_C_SetLogText");
+static_assert(offsetof(WDT_ConfigPieceBase_C_SetLogText, InText) == 0x000000, "Member 'WDT_ConfigPieceBase_C_SetLogText::InText' has a wrong offset!");
+
 // Function WDT_ConfigPieceBase.WDT_ConfigPieceBase_C.SetIsEditable
 // 0x0001 (0x0001 - 0x0000)
 struct WDT_ConfigPieceBase_C_SetIsEditable final

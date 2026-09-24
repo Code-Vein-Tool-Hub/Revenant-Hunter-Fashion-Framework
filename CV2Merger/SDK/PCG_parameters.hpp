@@ -12,205 +12,11 @@
 
 #include "PCG_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
 {
-
-// Function PCG.PCGMetadataSettingsBase.GetOutputDataFromPinOptions
-// 0x0010 (0x0010 - 0x0000)
-struct PCGMetadataSettingsBase_GetOutputDataFromPinOptions final
-{
-public:
-	TArray<class FName>                           ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(PCGMetadataSettingsBase_GetOutputDataFromPinOptions) == 0x000008, "Wrong alignment on PCGMetadataSettingsBase_GetOutputDataFromPinOptions");
-static_assert(sizeof(PCGMetadataSettingsBase_GetOutputDataFromPinOptions) == 0x000010, "Wrong size on PCGMetadataSettingsBase_GetOutputDataFromPinOptions");
-static_assert(offsetof(PCGMetadataSettingsBase_GetOutputDataFromPinOptions, ReturnValue) == 0x000000, "Member 'PCGMetadataSettingsBase_GetOutputDataFromPinOptions::ReturnValue' has a wrong offset!");
-
-// Function PCG.PCGAssetExporter.BP_ExportToAsset
-// 0x0010 (0x0010 - 0x0000)
-struct PCGAssetExporter_BP_ExportToAsset final
-{
-public:
-	class UPCGDataAsset*                          Asset;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(PCGAssetExporter_BP_ExportToAsset) == 0x000008, "Wrong alignment on PCGAssetExporter_BP_ExportToAsset");
-static_assert(sizeof(PCGAssetExporter_BP_ExportToAsset) == 0x000010, "Wrong size on PCGAssetExporter_BP_ExportToAsset");
-static_assert(offsetof(PCGAssetExporter_BP_ExportToAsset, Asset) == 0x000000, "Member 'PCGAssetExporter_BP_ExportToAsset::Asset' has a wrong offset!");
-static_assert(offsetof(PCGAssetExporter_BP_ExportToAsset, ReturnValue) == 0x000008, "Member 'PCGAssetExporter_BP_ExportToAsset::ReturnValue' has a wrong offset!");
-
-// Function PCG.PCGAssetExporter.BP_GetAssetType
-// 0x0008 (0x0008 - 0x0000)
-struct PCGAssetExporter_BP_GetAssetType final
-{
-public:
-	TSubclassOf<class UPCGDataAsset>              ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(PCGAssetExporter_BP_GetAssetType) == 0x000008, "Wrong alignment on PCGAssetExporter_BP_GetAssetType");
-static_assert(sizeof(PCGAssetExporter_BP_GetAssetType) == 0x000008, "Wrong size on PCGAssetExporter_BP_GetAssetType");
-static_assert(offsetof(PCGAssetExporter_BP_GetAssetType, ReturnValue) == 0x000000, "Member 'PCGAssetExporter_BP_GetAssetType::ReturnValue' has a wrong offset!");
-
-// Function PCG.PCGAttributePropertySelectorBlueprintHelpers.CopyAndFixLast
-// 0x0058 (0x0058 - 0x0000)
-struct PCGAttributePropertySelectorBlueprintHelpers_CopyAndFixLast final
-{
-public:
-	struct FPCGAttributePropertyInputSelector     Selector;                                          // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	const class UPCGData*                         InData;                                            // 0x0028(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPCGAttributePropertyInputSelector     ReturnValue;                                       // 0x0030(0x0028)(Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(PCGAttributePropertySelectorBlueprintHelpers_CopyAndFixLast) == 0x000008, "Wrong alignment on PCGAttributePropertySelectorBlueprintHelpers_CopyAndFixLast");
-static_assert(sizeof(PCGAttributePropertySelectorBlueprintHelpers_CopyAndFixLast) == 0x000058, "Wrong size on PCGAttributePropertySelectorBlueprintHelpers_CopyAndFixLast");
-static_assert(offsetof(PCGAttributePropertySelectorBlueprintHelpers_CopyAndFixLast, Selector) == 0x000000, "Member 'PCGAttributePropertySelectorBlueprintHelpers_CopyAndFixLast::Selector' has a wrong offset!");
-static_assert(offsetof(PCGAttributePropertySelectorBlueprintHelpers_CopyAndFixLast, InData) == 0x000028, "Member 'PCGAttributePropertySelectorBlueprintHelpers_CopyAndFixLast::InData' has a wrong offset!");
-static_assert(offsetof(PCGAttributePropertySelectorBlueprintHelpers_CopyAndFixLast, ReturnValue) == 0x000030, "Member 'PCGAttributePropertySelectorBlueprintHelpers_CopyAndFixLast::ReturnValue' has a wrong offset!");
-
-// Function PCG.PCGAttributePropertySelectorBlueprintHelpers.CopyAndFixSource
-// 0x0078 (0x0078 - 0x0000)
-struct PCGAttributePropertySelectorBlueprintHelpers_CopyAndFixSource final
-{
-public:
-	struct FPCGAttributePropertyOutputSelector    OutputSelector;                                    // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPCGAttributePropertyInputSelector     InputSelector;                                     // 0x0028(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPCGAttributePropertyOutputSelector    ReturnValue;                                       // 0x0050(0x0028)(Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(PCGAttributePropertySelectorBlueprintHelpers_CopyAndFixSource) == 0x000008, "Wrong alignment on PCGAttributePropertySelectorBlueprintHelpers_CopyAndFixSource");
-static_assert(sizeof(PCGAttributePropertySelectorBlueprintHelpers_CopyAndFixSource) == 0x000078, "Wrong size on PCGAttributePropertySelectorBlueprintHelpers_CopyAndFixSource");
-static_assert(offsetof(PCGAttributePropertySelectorBlueprintHelpers_CopyAndFixSource, OutputSelector) == 0x000000, "Member 'PCGAttributePropertySelectorBlueprintHelpers_CopyAndFixSource::OutputSelector' has a wrong offset!");
-static_assert(offsetof(PCGAttributePropertySelectorBlueprintHelpers_CopyAndFixSource, InputSelector) == 0x000028, "Member 'PCGAttributePropertySelectorBlueprintHelpers_CopyAndFixSource::InputSelector' has a wrong offset!");
-static_assert(offsetof(PCGAttributePropertySelectorBlueprintHelpers_CopyAndFixSource, ReturnValue) == 0x000050, "Member 'PCGAttributePropertySelectorBlueprintHelpers_CopyAndFixSource::ReturnValue' has a wrong offset!");
-
-// Function PCG.PCGAttributePropertySelectorBlueprintHelpers.GetAttributeName
-// 0x0030 (0x0030 - 0x0000)
-struct PCGAttributePropertySelectorBlueprintHelpers_GetAttributeName final
-{
-public:
-	struct FPCGAttributePropertySelector          Selector;                                          // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(PCGAttributePropertySelectorBlueprintHelpers_GetAttributeName) == 0x000008, "Wrong alignment on PCGAttributePropertySelectorBlueprintHelpers_GetAttributeName");
-static_assert(sizeof(PCGAttributePropertySelectorBlueprintHelpers_GetAttributeName) == 0x000030, "Wrong size on PCGAttributePropertySelectorBlueprintHelpers_GetAttributeName");
-static_assert(offsetof(PCGAttributePropertySelectorBlueprintHelpers_GetAttributeName, Selector) == 0x000000, "Member 'PCGAttributePropertySelectorBlueprintHelpers_GetAttributeName::Selector' has a wrong offset!");
-static_assert(offsetof(PCGAttributePropertySelectorBlueprintHelpers_GetAttributeName, ReturnValue) == 0x000028, "Member 'PCGAttributePropertySelectorBlueprintHelpers_GetAttributeName::ReturnValue' has a wrong offset!");
-
-// Function PCG.PCGAttributePropertySelectorBlueprintHelpers.GetExtraNames
-// 0x0038 (0x0038 - 0x0000)
-struct PCGAttributePropertySelectorBlueprintHelpers_GetExtraNames final
-{
-public:
-	struct FPCGAttributePropertySelector          Selector;                                          // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class FString>                         ReturnValue;                                       // 0x0028(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(PCGAttributePropertySelectorBlueprintHelpers_GetExtraNames) == 0x000008, "Wrong alignment on PCGAttributePropertySelectorBlueprintHelpers_GetExtraNames");
-static_assert(sizeof(PCGAttributePropertySelectorBlueprintHelpers_GetExtraNames) == 0x000038, "Wrong size on PCGAttributePropertySelectorBlueprintHelpers_GetExtraNames");
-static_assert(offsetof(PCGAttributePropertySelectorBlueprintHelpers_GetExtraNames, Selector) == 0x000000, "Member 'PCGAttributePropertySelectorBlueprintHelpers_GetExtraNames::Selector' has a wrong offset!");
-static_assert(offsetof(PCGAttributePropertySelectorBlueprintHelpers_GetExtraNames, ReturnValue) == 0x000028, "Member 'PCGAttributePropertySelectorBlueprintHelpers_GetExtraNames::ReturnValue' has a wrong offset!");
-
-// Function PCG.PCGAttributePropertySelectorBlueprintHelpers.GetExtraProperty
-// 0x0030 (0x0030 - 0x0000)
-struct PCGAttributePropertySelectorBlueprintHelpers_GetExtraProperty final
-{
-public:
-	struct FPCGAttributePropertySelector          Selector;                                          // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPCGExtraProperties                           ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(PCGAttributePropertySelectorBlueprintHelpers_GetExtraProperty) == 0x000008, "Wrong alignment on PCGAttributePropertySelectorBlueprintHelpers_GetExtraProperty");
-static_assert(sizeof(PCGAttributePropertySelectorBlueprintHelpers_GetExtraProperty) == 0x000030, "Wrong size on PCGAttributePropertySelectorBlueprintHelpers_GetExtraProperty");
-static_assert(offsetof(PCGAttributePropertySelectorBlueprintHelpers_GetExtraProperty, Selector) == 0x000000, "Member 'PCGAttributePropertySelectorBlueprintHelpers_GetExtraProperty::Selector' has a wrong offset!");
-static_assert(offsetof(PCGAttributePropertySelectorBlueprintHelpers_GetExtraProperty, ReturnValue) == 0x000028, "Member 'PCGAttributePropertySelectorBlueprintHelpers_GetExtraProperty::ReturnValue' has a wrong offset!");
-
-// Function PCG.PCGAttributePropertySelectorBlueprintHelpers.GetName
-// 0x0030 (0x0030 - 0x0000)
-struct PCGAttributePropertySelectorBlueprintHelpers_GetName final
-{
-public:
-	struct FPCGAttributePropertySelector          Selector;                                          // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(PCGAttributePropertySelectorBlueprintHelpers_GetName) == 0x000008, "Wrong alignment on PCGAttributePropertySelectorBlueprintHelpers_GetName");
-static_assert(sizeof(PCGAttributePropertySelectorBlueprintHelpers_GetName) == 0x000030, "Wrong size on PCGAttributePropertySelectorBlueprintHelpers_GetName");
-static_assert(offsetof(PCGAttributePropertySelectorBlueprintHelpers_GetName, Selector) == 0x000000, "Member 'PCGAttributePropertySelectorBlueprintHelpers_GetName::Selector' has a wrong offset!");
-static_assert(offsetof(PCGAttributePropertySelectorBlueprintHelpers_GetName, ReturnValue) == 0x000028, "Member 'PCGAttributePropertySelectorBlueprintHelpers_GetName::ReturnValue' has a wrong offset!");
-
-// Function PCG.PCGAttributePropertySelectorBlueprintHelpers.GetPointProperty
-// 0x0030 (0x0030 - 0x0000)
-struct PCGAttributePropertySelectorBlueprintHelpers_GetPointProperty final
-{
-public:
-	struct FPCGAttributePropertySelector          Selector;                                          // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPCGPointProperties                           ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(PCGAttributePropertySelectorBlueprintHelpers_GetPointProperty) == 0x000008, "Wrong alignment on PCGAttributePropertySelectorBlueprintHelpers_GetPointProperty");
-static_assert(sizeof(PCGAttributePropertySelectorBlueprintHelpers_GetPointProperty) == 0x000030, "Wrong size on PCGAttributePropertySelectorBlueprintHelpers_GetPointProperty");
-static_assert(offsetof(PCGAttributePropertySelectorBlueprintHelpers_GetPointProperty, Selector) == 0x000000, "Member 'PCGAttributePropertySelectorBlueprintHelpers_GetPointProperty::Selector' has a wrong offset!");
-static_assert(offsetof(PCGAttributePropertySelectorBlueprintHelpers_GetPointProperty, ReturnValue) == 0x000028, "Member 'PCGAttributePropertySelectorBlueprintHelpers_GetPointProperty::ReturnValue' has a wrong offset!");
-
-// Function PCG.PCGAttributePropertySelectorBlueprintHelpers.GetSelection
-// 0x0030 (0x0030 - 0x0000)
-struct PCGAttributePropertySelectorBlueprintHelpers_GetSelection final
-{
-public:
-	struct FPCGAttributePropertySelector          Selector;                                          // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPCGAttributePropertySelection                ReturnValue;                                       // 0x0028(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(PCGAttributePropertySelectorBlueprintHelpers_GetSelection) == 0x000008, "Wrong alignment on PCGAttributePropertySelectorBlueprintHelpers_GetSelection");
-static_assert(sizeof(PCGAttributePropertySelectorBlueprintHelpers_GetSelection) == 0x000030, "Wrong size on PCGAttributePropertySelectorBlueprintHelpers_GetSelection");
-static_assert(offsetof(PCGAttributePropertySelectorBlueprintHelpers_GetSelection, Selector) == 0x000000, "Member 'PCGAttributePropertySelectorBlueprintHelpers_GetSelection::Selector' has a wrong offset!");
-static_assert(offsetof(PCGAttributePropertySelectorBlueprintHelpers_GetSelection, ReturnValue) == 0x000028, "Member 'PCGAttributePropertySelectorBlueprintHelpers_GetSelection::ReturnValue' has a wrong offset!");
-
-// Function PCG.PCGAttributePropertySelectorBlueprintHelpers.SetAttributeName
-// 0x0038 (0x0038 - 0x0000)
-struct PCGAttributePropertySelectorBlueprintHelpers_SetAttributeName final
-{
-public:
-	struct FPCGAttributePropertySelector          Selector;                                          // 0x0000(0x0028)(Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   InAttributeName;                                   // 0x0028(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(PCGAttributePropertySelectorBlueprintHelpers_SetAttributeName) == 0x000008, "Wrong alignment on PCGAttributePropertySelectorBlueprintHelpers_SetAttributeName");
-static_assert(sizeof(PCGAttributePropertySelectorBlueprintHelpers_SetAttributeName) == 0x000038, "Wrong size on PCGAttributePropertySelectorBlueprintHelpers_SetAttributeName");
-static_assert(offsetof(PCGAttributePropertySelectorBlueprintHelpers_SetAttributeName, Selector) == 0x000000, "Member 'PCGAttributePropertySelectorBlueprintHelpers_SetAttributeName::Selector' has a wrong offset!");
-static_assert(offsetof(PCGAttributePropertySelectorBlueprintHelpers_SetAttributeName, InAttributeName) == 0x000028, "Member 'PCGAttributePropertySelectorBlueprintHelpers_SetAttributeName::InAttributeName' has a wrong offset!");
-static_assert(offsetof(PCGAttributePropertySelectorBlueprintHelpers_SetAttributeName, ReturnValue) == 0x000030, "Member 'PCGAttributePropertySelectorBlueprintHelpers_SetAttributeName::ReturnValue' has a wrong offset!");
-
-// Function PCG.PCGAttributePropertySelectorBlueprintHelpers.SetExtraProperty
-// 0x0030 (0x0030 - 0x0000)
-struct PCGAttributePropertySelectorBlueprintHelpers_SetExtraProperty final
-{
-public:
-	struct FPCGAttributePropertySelector          Selector;                                          // 0x0000(0x0028)(Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPCGExtraProperties                           InExtraProperty;                                   // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0029(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(PCGAttributePropertySelectorBlueprintHelpers_SetExtraProperty) == 0x000008, "Wrong alignment on PCGAttributePropertySelectorBlueprintHelpers_SetExtraProperty");
-static_assert(sizeof(PCGAttributePropertySelectorBlueprintHelpers_SetExtraProperty) == 0x000030, "Wrong size on PCGAttributePropertySelectorBlueprintHelpers_SetExtraProperty");
-static_assert(offsetof(PCGAttributePropertySelectorBlueprintHelpers_SetExtraProperty, Selector) == 0x000000, "Member 'PCGAttributePropertySelectorBlueprintHelpers_SetExtraProperty::Selector' has a wrong offset!");
-static_assert(offsetof(PCGAttributePropertySelectorBlueprintHelpers_SetExtraProperty, InExtraProperty) == 0x000028, "Member 'PCGAttributePropertySelectorBlueprintHelpers_SetExtraProperty::InExtraProperty' has a wrong offset!");
-static_assert(offsetof(PCGAttributePropertySelectorBlueprintHelpers_SetExtraProperty, ReturnValue) == 0x000029, "Member 'PCGAttributePropertySelectorBlueprintHelpers_SetExtraProperty::ReturnValue' has a wrong offset!");
-
-// Function PCG.PCGAttributePropertySelectorBlueprintHelpers.SetPointProperty
-// 0x0030 (0x0030 - 0x0000)
-struct PCGAttributePropertySelectorBlueprintHelpers_SetPointProperty final
-{
-public:
-	struct FPCGAttributePropertySelector          Selector;                                          // 0x0000(0x0028)(Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPCGPointProperties                           InPointProperty;                                   // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0029(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(PCGAttributePropertySelectorBlueprintHelpers_SetPointProperty) == 0x000008, "Wrong alignment on PCGAttributePropertySelectorBlueprintHelpers_SetPointProperty");
-static_assert(sizeof(PCGAttributePropertySelectorBlueprintHelpers_SetPointProperty) == 0x000030, "Wrong size on PCGAttributePropertySelectorBlueprintHelpers_SetPointProperty");
-static_assert(offsetof(PCGAttributePropertySelectorBlueprintHelpers_SetPointProperty, Selector) == 0x000000, "Member 'PCGAttributePropertySelectorBlueprintHelpers_SetPointProperty::Selector' has a wrong offset!");
-static_assert(offsetof(PCGAttributePropertySelectorBlueprintHelpers_SetPointProperty, InPointProperty) == 0x000028, "Member 'PCGAttributePropertySelectorBlueprintHelpers_SetPointProperty::InPointProperty' has a wrong offset!");
-static_assert(offsetof(PCGAttributePropertySelectorBlueprintHelpers_SetPointProperty, ReturnValue) == 0x000029, "Member 'PCGAttributePropertySelectorBlueprintHelpers_SetPointProperty::ReturnValue' has a wrong offset!");
 
 // Function PCG.PCGSpatialData.CreateEmptyMetadata
 // 0x0008 (0x0008 - 0x0000)
@@ -453,6 +259,215 @@ static_assert(alignof(PCGSpatialData_UnionWith) == 0x000008, "Wrong alignment on
 static_assert(sizeof(PCGSpatialData_UnionWith) == 0x000010, "Wrong size on PCGSpatialData_UnionWith");
 static_assert(offsetof(PCGSpatialData_UnionWith, InOther) == 0x000000, "Member 'PCGSpatialData_UnionWith::InOther' has a wrong offset!");
 static_assert(offsetof(PCGSpatialData_UnionWith, ReturnValue) == 0x000008, "Member 'PCGSpatialData_UnionWith::ReturnValue' has a wrong offset!");
+
+// Function PCG.PCGFunctionPrototypes.PrototypeWithPointAndMetadata
+// 0x00E0 (0x00E0 - 0x0000)
+struct PCGFunctionPrototypes_PrototypeWithPointAndMetadata final
+{
+public:
+	struct FPCGPoint                              Point;                                             // 0x0000(0x00D0)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	const class UPCGMetadata*                     MetaData;                                          // 0x00D0(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D8[0x8];                                       // 0x00D8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(PCGFunctionPrototypes_PrototypeWithPointAndMetadata) == 0x000010, "Wrong alignment on PCGFunctionPrototypes_PrototypeWithPointAndMetadata");
+static_assert(sizeof(PCGFunctionPrototypes_PrototypeWithPointAndMetadata) == 0x0000E0, "Wrong size on PCGFunctionPrototypes_PrototypeWithPointAndMetadata");
+static_assert(offsetof(PCGFunctionPrototypes_PrototypeWithPointAndMetadata, Point) == 0x000000, "Member 'PCGFunctionPrototypes_PrototypeWithPointAndMetadata::Point' has a wrong offset!");
+static_assert(offsetof(PCGFunctionPrototypes_PrototypeWithPointAndMetadata, MetaData) == 0x0000D0, "Member 'PCGFunctionPrototypes_PrototypeWithPointAndMetadata::MetaData' has a wrong offset!");
+
+// Function PCG.PCGMetadataSettingsBase.GetOutputDataFromPinOptions
+// 0x0010 (0x0010 - 0x0000)
+struct PCGMetadataSettingsBase_GetOutputDataFromPinOptions final
+{
+public:
+	TArray<class FName>                           ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PCGMetadataSettingsBase_GetOutputDataFromPinOptions) == 0x000008, "Wrong alignment on PCGMetadataSettingsBase_GetOutputDataFromPinOptions");
+static_assert(sizeof(PCGMetadataSettingsBase_GetOutputDataFromPinOptions) == 0x000010, "Wrong size on PCGMetadataSettingsBase_GetOutputDataFromPinOptions");
+static_assert(offsetof(PCGMetadataSettingsBase_GetOutputDataFromPinOptions, ReturnValue) == 0x000000, "Member 'PCGMetadataSettingsBase_GetOutputDataFromPinOptions::ReturnValue' has a wrong offset!");
+
+// Function PCG.PCGAssetExporter.BP_ExportToAsset
+// 0x0010 (0x0010 - 0x0000)
+struct PCGAssetExporter_BP_ExportToAsset final
+{
+public:
+	class UPCGDataAsset*                          Asset;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(PCGAssetExporter_BP_ExportToAsset) == 0x000008, "Wrong alignment on PCGAssetExporter_BP_ExportToAsset");
+static_assert(sizeof(PCGAssetExporter_BP_ExportToAsset) == 0x000010, "Wrong size on PCGAssetExporter_BP_ExportToAsset");
+static_assert(offsetof(PCGAssetExporter_BP_ExportToAsset, Asset) == 0x000000, "Member 'PCGAssetExporter_BP_ExportToAsset::Asset' has a wrong offset!");
+static_assert(offsetof(PCGAssetExporter_BP_ExportToAsset, ReturnValue) == 0x000008, "Member 'PCGAssetExporter_BP_ExportToAsset::ReturnValue' has a wrong offset!");
+
+// Function PCG.PCGAssetExporter.BP_GetAssetType
+// 0x0008 (0x0008 - 0x0000)
+struct PCGAssetExporter_BP_GetAssetType final
+{
+public:
+	TSubclassOf<class UPCGDataAsset>              ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PCGAssetExporter_BP_GetAssetType) == 0x000008, "Wrong alignment on PCGAssetExporter_BP_GetAssetType");
+static_assert(sizeof(PCGAssetExporter_BP_GetAssetType) == 0x000008, "Wrong size on PCGAssetExporter_BP_GetAssetType");
+static_assert(offsetof(PCGAssetExporter_BP_GetAssetType, ReturnValue) == 0x000000, "Member 'PCGAssetExporter_BP_GetAssetType::ReturnValue' has a wrong offset!");
+
+// Function PCG.PCGAttributePropertySelectorBlueprintHelpers.CopyAndFixLast
+// 0x0058 (0x0058 - 0x0000)
+struct PCGAttributePropertySelectorBlueprintHelpers_CopyAndFixLast final
+{
+public:
+	struct FPCGAttributePropertyInputSelector     Selector;                                          // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	const class UPCGData*                         InData;                                            // 0x0028(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPCGAttributePropertyInputSelector     ReturnValue;                                       // 0x0030(0x0028)(Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PCGAttributePropertySelectorBlueprintHelpers_CopyAndFixLast) == 0x000008, "Wrong alignment on PCGAttributePropertySelectorBlueprintHelpers_CopyAndFixLast");
+static_assert(sizeof(PCGAttributePropertySelectorBlueprintHelpers_CopyAndFixLast) == 0x000058, "Wrong size on PCGAttributePropertySelectorBlueprintHelpers_CopyAndFixLast");
+static_assert(offsetof(PCGAttributePropertySelectorBlueprintHelpers_CopyAndFixLast, Selector) == 0x000000, "Member 'PCGAttributePropertySelectorBlueprintHelpers_CopyAndFixLast::Selector' has a wrong offset!");
+static_assert(offsetof(PCGAttributePropertySelectorBlueprintHelpers_CopyAndFixLast, InData) == 0x000028, "Member 'PCGAttributePropertySelectorBlueprintHelpers_CopyAndFixLast::InData' has a wrong offset!");
+static_assert(offsetof(PCGAttributePropertySelectorBlueprintHelpers_CopyAndFixLast, ReturnValue) == 0x000030, "Member 'PCGAttributePropertySelectorBlueprintHelpers_CopyAndFixLast::ReturnValue' has a wrong offset!");
+
+// Function PCG.PCGAttributePropertySelectorBlueprintHelpers.CopyAndFixSource
+// 0x0078 (0x0078 - 0x0000)
+struct PCGAttributePropertySelectorBlueprintHelpers_CopyAndFixSource final
+{
+public:
+	struct FPCGAttributePropertyOutputSelector    OutputSelector;                                    // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPCGAttributePropertyInputSelector     InputSelector;                                     // 0x0028(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPCGAttributePropertyOutputSelector    ReturnValue;                                       // 0x0050(0x0028)(Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PCGAttributePropertySelectorBlueprintHelpers_CopyAndFixSource) == 0x000008, "Wrong alignment on PCGAttributePropertySelectorBlueprintHelpers_CopyAndFixSource");
+static_assert(sizeof(PCGAttributePropertySelectorBlueprintHelpers_CopyAndFixSource) == 0x000078, "Wrong size on PCGAttributePropertySelectorBlueprintHelpers_CopyAndFixSource");
+static_assert(offsetof(PCGAttributePropertySelectorBlueprintHelpers_CopyAndFixSource, OutputSelector) == 0x000000, "Member 'PCGAttributePropertySelectorBlueprintHelpers_CopyAndFixSource::OutputSelector' has a wrong offset!");
+static_assert(offsetof(PCGAttributePropertySelectorBlueprintHelpers_CopyAndFixSource, InputSelector) == 0x000028, "Member 'PCGAttributePropertySelectorBlueprintHelpers_CopyAndFixSource::InputSelector' has a wrong offset!");
+static_assert(offsetof(PCGAttributePropertySelectorBlueprintHelpers_CopyAndFixSource, ReturnValue) == 0x000050, "Member 'PCGAttributePropertySelectorBlueprintHelpers_CopyAndFixSource::ReturnValue' has a wrong offset!");
+
+// Function PCG.PCGAttributePropertySelectorBlueprintHelpers.GetAttributeName
+// 0x0030 (0x0030 - 0x0000)
+struct PCGAttributePropertySelectorBlueprintHelpers_GetAttributeName final
+{
+public:
+	struct FPCGAttributePropertySelector          Selector;                                          // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PCGAttributePropertySelectorBlueprintHelpers_GetAttributeName) == 0x000008, "Wrong alignment on PCGAttributePropertySelectorBlueprintHelpers_GetAttributeName");
+static_assert(sizeof(PCGAttributePropertySelectorBlueprintHelpers_GetAttributeName) == 0x000030, "Wrong size on PCGAttributePropertySelectorBlueprintHelpers_GetAttributeName");
+static_assert(offsetof(PCGAttributePropertySelectorBlueprintHelpers_GetAttributeName, Selector) == 0x000000, "Member 'PCGAttributePropertySelectorBlueprintHelpers_GetAttributeName::Selector' has a wrong offset!");
+static_assert(offsetof(PCGAttributePropertySelectorBlueprintHelpers_GetAttributeName, ReturnValue) == 0x000028, "Member 'PCGAttributePropertySelectorBlueprintHelpers_GetAttributeName::ReturnValue' has a wrong offset!");
+
+// Function PCG.PCGAttributePropertySelectorBlueprintHelpers.GetExtraNames
+// 0x0038 (0x0038 - 0x0000)
+struct PCGAttributePropertySelectorBlueprintHelpers_GetExtraNames final
+{
+public:
+	struct FPCGAttributePropertySelector          Selector;                                          // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FString>                         ReturnValue;                                       // 0x0028(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PCGAttributePropertySelectorBlueprintHelpers_GetExtraNames) == 0x000008, "Wrong alignment on PCGAttributePropertySelectorBlueprintHelpers_GetExtraNames");
+static_assert(sizeof(PCGAttributePropertySelectorBlueprintHelpers_GetExtraNames) == 0x000038, "Wrong size on PCGAttributePropertySelectorBlueprintHelpers_GetExtraNames");
+static_assert(offsetof(PCGAttributePropertySelectorBlueprintHelpers_GetExtraNames, Selector) == 0x000000, "Member 'PCGAttributePropertySelectorBlueprintHelpers_GetExtraNames::Selector' has a wrong offset!");
+static_assert(offsetof(PCGAttributePropertySelectorBlueprintHelpers_GetExtraNames, ReturnValue) == 0x000028, "Member 'PCGAttributePropertySelectorBlueprintHelpers_GetExtraNames::ReturnValue' has a wrong offset!");
+
+// Function PCG.PCGAttributePropertySelectorBlueprintHelpers.GetExtraProperty
+// 0x0030 (0x0030 - 0x0000)
+struct PCGAttributePropertySelectorBlueprintHelpers_GetExtraProperty final
+{
+public:
+	struct FPCGAttributePropertySelector          Selector;                                          // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGExtraProperties                           ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(PCGAttributePropertySelectorBlueprintHelpers_GetExtraProperty) == 0x000008, "Wrong alignment on PCGAttributePropertySelectorBlueprintHelpers_GetExtraProperty");
+static_assert(sizeof(PCGAttributePropertySelectorBlueprintHelpers_GetExtraProperty) == 0x000030, "Wrong size on PCGAttributePropertySelectorBlueprintHelpers_GetExtraProperty");
+static_assert(offsetof(PCGAttributePropertySelectorBlueprintHelpers_GetExtraProperty, Selector) == 0x000000, "Member 'PCGAttributePropertySelectorBlueprintHelpers_GetExtraProperty::Selector' has a wrong offset!");
+static_assert(offsetof(PCGAttributePropertySelectorBlueprintHelpers_GetExtraProperty, ReturnValue) == 0x000028, "Member 'PCGAttributePropertySelectorBlueprintHelpers_GetExtraProperty::ReturnValue' has a wrong offset!");
+
+// Function PCG.PCGAttributePropertySelectorBlueprintHelpers.GetName
+// 0x0030 (0x0030 - 0x0000)
+struct PCGAttributePropertySelectorBlueprintHelpers_GetName final
+{
+public:
+	struct FPCGAttributePropertySelector          Selector;                                          // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PCGAttributePropertySelectorBlueprintHelpers_GetName) == 0x000008, "Wrong alignment on PCGAttributePropertySelectorBlueprintHelpers_GetName");
+static_assert(sizeof(PCGAttributePropertySelectorBlueprintHelpers_GetName) == 0x000030, "Wrong size on PCGAttributePropertySelectorBlueprintHelpers_GetName");
+static_assert(offsetof(PCGAttributePropertySelectorBlueprintHelpers_GetName, Selector) == 0x000000, "Member 'PCGAttributePropertySelectorBlueprintHelpers_GetName::Selector' has a wrong offset!");
+static_assert(offsetof(PCGAttributePropertySelectorBlueprintHelpers_GetName, ReturnValue) == 0x000028, "Member 'PCGAttributePropertySelectorBlueprintHelpers_GetName::ReturnValue' has a wrong offset!");
+
+// Function PCG.PCGAttributePropertySelectorBlueprintHelpers.GetPointProperty
+// 0x0030 (0x0030 - 0x0000)
+struct PCGAttributePropertySelectorBlueprintHelpers_GetPointProperty final
+{
+public:
+	struct FPCGAttributePropertySelector          Selector;                                          // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGPointProperties                           ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(PCGAttributePropertySelectorBlueprintHelpers_GetPointProperty) == 0x000008, "Wrong alignment on PCGAttributePropertySelectorBlueprintHelpers_GetPointProperty");
+static_assert(sizeof(PCGAttributePropertySelectorBlueprintHelpers_GetPointProperty) == 0x000030, "Wrong size on PCGAttributePropertySelectorBlueprintHelpers_GetPointProperty");
+static_assert(offsetof(PCGAttributePropertySelectorBlueprintHelpers_GetPointProperty, Selector) == 0x000000, "Member 'PCGAttributePropertySelectorBlueprintHelpers_GetPointProperty::Selector' has a wrong offset!");
+static_assert(offsetof(PCGAttributePropertySelectorBlueprintHelpers_GetPointProperty, ReturnValue) == 0x000028, "Member 'PCGAttributePropertySelectorBlueprintHelpers_GetPointProperty::ReturnValue' has a wrong offset!");
+
+// Function PCG.PCGAttributePropertySelectorBlueprintHelpers.GetSelection
+// 0x0030 (0x0030 - 0x0000)
+struct PCGAttributePropertySelectorBlueprintHelpers_GetSelection final
+{
+public:
+	struct FPCGAttributePropertySelector          Selector;                                          // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGAttributePropertySelection                ReturnValue;                                       // 0x0028(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(PCGAttributePropertySelectorBlueprintHelpers_GetSelection) == 0x000008, "Wrong alignment on PCGAttributePropertySelectorBlueprintHelpers_GetSelection");
+static_assert(sizeof(PCGAttributePropertySelectorBlueprintHelpers_GetSelection) == 0x000030, "Wrong size on PCGAttributePropertySelectorBlueprintHelpers_GetSelection");
+static_assert(offsetof(PCGAttributePropertySelectorBlueprintHelpers_GetSelection, Selector) == 0x000000, "Member 'PCGAttributePropertySelectorBlueprintHelpers_GetSelection::Selector' has a wrong offset!");
+static_assert(offsetof(PCGAttributePropertySelectorBlueprintHelpers_GetSelection, ReturnValue) == 0x000028, "Member 'PCGAttributePropertySelectorBlueprintHelpers_GetSelection::ReturnValue' has a wrong offset!");
+
+// Function PCG.PCGAttributePropertySelectorBlueprintHelpers.SetAttributeName
+// 0x0038 (0x0038 - 0x0000)
+struct PCGAttributePropertySelectorBlueprintHelpers_SetAttributeName final
+{
+public:
+	struct FPCGAttributePropertySelector          Selector;                                          // 0x0000(0x0028)(Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InAttributeName;                                   // 0x0028(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(PCGAttributePropertySelectorBlueprintHelpers_SetAttributeName) == 0x000008, "Wrong alignment on PCGAttributePropertySelectorBlueprintHelpers_SetAttributeName");
+static_assert(sizeof(PCGAttributePropertySelectorBlueprintHelpers_SetAttributeName) == 0x000038, "Wrong size on PCGAttributePropertySelectorBlueprintHelpers_SetAttributeName");
+static_assert(offsetof(PCGAttributePropertySelectorBlueprintHelpers_SetAttributeName, Selector) == 0x000000, "Member 'PCGAttributePropertySelectorBlueprintHelpers_SetAttributeName::Selector' has a wrong offset!");
+static_assert(offsetof(PCGAttributePropertySelectorBlueprintHelpers_SetAttributeName, InAttributeName) == 0x000028, "Member 'PCGAttributePropertySelectorBlueprintHelpers_SetAttributeName::InAttributeName' has a wrong offset!");
+static_assert(offsetof(PCGAttributePropertySelectorBlueprintHelpers_SetAttributeName, ReturnValue) == 0x000030, "Member 'PCGAttributePropertySelectorBlueprintHelpers_SetAttributeName::ReturnValue' has a wrong offset!");
+
+// Function PCG.PCGAttributePropertySelectorBlueprintHelpers.SetExtraProperty
+// 0x0030 (0x0030 - 0x0000)
+struct PCGAttributePropertySelectorBlueprintHelpers_SetExtraProperty final
+{
+public:
+	struct FPCGAttributePropertySelector          Selector;                                          // 0x0000(0x0028)(Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGExtraProperties                           InExtraProperty;                                   // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0029(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(PCGAttributePropertySelectorBlueprintHelpers_SetExtraProperty) == 0x000008, "Wrong alignment on PCGAttributePropertySelectorBlueprintHelpers_SetExtraProperty");
+static_assert(sizeof(PCGAttributePropertySelectorBlueprintHelpers_SetExtraProperty) == 0x000030, "Wrong size on PCGAttributePropertySelectorBlueprintHelpers_SetExtraProperty");
+static_assert(offsetof(PCGAttributePropertySelectorBlueprintHelpers_SetExtraProperty, Selector) == 0x000000, "Member 'PCGAttributePropertySelectorBlueprintHelpers_SetExtraProperty::Selector' has a wrong offset!");
+static_assert(offsetof(PCGAttributePropertySelectorBlueprintHelpers_SetExtraProperty, InExtraProperty) == 0x000028, "Member 'PCGAttributePropertySelectorBlueprintHelpers_SetExtraProperty::InExtraProperty' has a wrong offset!");
+static_assert(offsetof(PCGAttributePropertySelectorBlueprintHelpers_SetExtraProperty, ReturnValue) == 0x000029, "Member 'PCGAttributePropertySelectorBlueprintHelpers_SetExtraProperty::ReturnValue' has a wrong offset!");
+
+// Function PCG.PCGAttributePropertySelectorBlueprintHelpers.SetPointProperty
+// 0x0030 (0x0030 - 0x0000)
+struct PCGAttributePropertySelectorBlueprintHelpers_SetPointProperty final
+{
+public:
+	struct FPCGAttributePropertySelector          Selector;                                          // 0x0000(0x0028)(Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGPointProperties                           InPointProperty;                                   // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0029(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(PCGAttributePropertySelectorBlueprintHelpers_SetPointProperty) == 0x000008, "Wrong alignment on PCGAttributePropertySelectorBlueprintHelpers_SetPointProperty");
+static_assert(sizeof(PCGAttributePropertySelectorBlueprintHelpers_SetPointProperty) == 0x000030, "Wrong size on PCGAttributePropertySelectorBlueprintHelpers_SetPointProperty");
+static_assert(offsetof(PCGAttributePropertySelectorBlueprintHelpers_SetPointProperty, Selector) == 0x000000, "Member 'PCGAttributePropertySelectorBlueprintHelpers_SetPointProperty::Selector' has a wrong offset!");
+static_assert(offsetof(PCGAttributePropertySelectorBlueprintHelpers_SetPointProperty, InPointProperty) == 0x000028, "Member 'PCGAttributePropertySelectorBlueprintHelpers_SetPointProperty::InPointProperty' has a wrong offset!");
+static_assert(offsetof(PCGAttributePropertySelectorBlueprintHelpers_SetPointProperty, ReturnValue) == 0x000029, "Member 'PCGAttributePropertySelectorBlueprintHelpers_SetPointProperty::ReturnValue' has a wrong offset!");
 
 // Function PCG.PCGGraphParametersHelpers.GetBoolParameter
 // 0x0018 (0x0018 - 0x0000)
@@ -1081,20 +1096,6 @@ static_assert(sizeof(PCGGraphParametersHelpers_SetVectorParameter) == 0x000028, 
 static_assert(offsetof(PCGGraphParametersHelpers_SetVectorParameter, GraphInterface) == 0x000000, "Member 'PCGGraphParametersHelpers_SetVectorParameter::GraphInterface' has a wrong offset!");
 static_assert(offsetof(PCGGraphParametersHelpers_SetVectorParameter, Name_0) == 0x000008, "Member 'PCGGraphParametersHelpers_SetVectorParameter::Name_0' has a wrong offset!");
 static_assert(offsetof(PCGGraphParametersHelpers_SetVectorParameter, Value) == 0x000010, "Member 'PCGGraphParametersHelpers_SetVectorParameter::Value' has a wrong offset!");
-
-// Function PCG.PCGFunctionPrototypes.PrototypeWithPointAndMetadata
-// 0x00E0 (0x00E0 - 0x0000)
-struct PCGFunctionPrototypes_PrototypeWithPointAndMetadata final
-{
-public:
-	struct FPCGPoint                              Point;                                             // 0x0000(0x00D0)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	const class UPCGMetadata*                     MetaData;                                          // 0x00D0(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D8[0x8];                                       // 0x00D8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(PCGFunctionPrototypes_PrototypeWithPointAndMetadata) == 0x000010, "Wrong alignment on PCGFunctionPrototypes_PrototypeWithPointAndMetadata");
-static_assert(sizeof(PCGFunctionPrototypes_PrototypeWithPointAndMetadata) == 0x0000E0, "Wrong size on PCGFunctionPrototypes_PrototypeWithPointAndMetadata");
-static_assert(offsetof(PCGFunctionPrototypes_PrototypeWithPointAndMetadata, Point) == 0x000000, "Member 'PCGFunctionPrototypes_PrototypeWithPointAndMetadata::Point' has a wrong offset!");
-static_assert(offsetof(PCGFunctionPrototypes_PrototypeWithPointAndMetadata, MetaData) == 0x0000D0, "Member 'PCGFunctionPrototypes_PrototypeWithPointAndMetadata::MetaData' has a wrong offset!");
 
 // Function PCG.PCGDifferenceData.AddDifference
 // 0x0008 (0x0008 - 0x0000)
@@ -4650,6 +4651,20 @@ public:
 static_assert(alignof(PCGPinPropertiesBlueprintHelpers_SetRequiredPin) == 0x000004, "Wrong alignment on PCGPinPropertiesBlueprintHelpers_SetRequiredPin");
 static_assert(sizeof(PCGPinPropertiesBlueprintHelpers_SetRequiredPin) == 0x000014, "Wrong size on PCGPinPropertiesBlueprintHelpers_SetRequiredPin");
 static_assert(offsetof(PCGPinPropertiesBlueprintHelpers_SetRequiredPin, PinProperties) == 0x000000, "Member 'PCGPinPropertiesBlueprintHelpers_SetRequiredPin::PinProperties' has a wrong offset!");
+
+// Function PCG.PCGVolume.OnDataLayerInstanceRuntimeStateChanged
+// 0x0010 (0x0010 - 0x0000)
+struct PCGVolume_OnDataLayerInstanceRuntimeStateChanged final
+{
+public:
+	const class UDataLayerInstance*               InDataLayer;                                       // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EDataLayerRuntimeState                        InState;                                           // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(PCGVolume_OnDataLayerInstanceRuntimeStateChanged) == 0x000008, "Wrong alignment on PCGVolume_OnDataLayerInstanceRuntimeStateChanged");
+static_assert(sizeof(PCGVolume_OnDataLayerInstanceRuntimeStateChanged) == 0x000010, "Wrong size on PCGVolume_OnDataLayerInstanceRuntimeStateChanged");
+static_assert(offsetof(PCGVolume_OnDataLayerInstanceRuntimeStateChanged, InDataLayer) == 0x000000, "Member 'PCGVolume_OnDataLayerInstanceRuntimeStateChanged::InDataLayer' has a wrong offset!");
+static_assert(offsetof(PCGVolume_OnDataLayerInstanceRuntimeStateChanged, InState) == 0x000008, "Member 'PCGVolume_OnDataLayerInstanceRuntimeStateChanged::InState' has a wrong offset!");
 
 // Function PCG.PCGDeterminismTestBlueprintBase.ExecuteTest
 // 0x0090 (0x0090 - 0x0000)

@@ -32,11 +32,11 @@ public:
 	class UTexture2D*                             IconTexture;                                       // 0x06F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_WDT_Status_NumberAndDiffWithIcon(int32 EntryPoint);
-	void PreConstruct(bool IsDesignTime);
-	void SetIcon(class UTexture2D* InTexture);
-	void SetNumber(int32 InNumber);
 	void SetNumberDiff(int32 InCurrentNumber, int32 InNumber, bool SwapComparison);
+	void SetNumber(int32 InNumber);
+	void SetIcon(class UTexture2D* InTexture);
+	void PreConstruct(bool IsDesignTime);
+	void ExecuteUbergraph_WDT_Status_NumberAndDiffWithIcon(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

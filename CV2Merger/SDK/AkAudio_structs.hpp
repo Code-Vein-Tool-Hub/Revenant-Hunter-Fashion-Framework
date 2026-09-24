@@ -532,6 +532,16 @@ enum class EAkFitToGeometryMode : uint8
 	EAkFitToGeometryMode_MAX                 = 3,
 };
 
+// ScriptStruct AkAudio.AKWaapiJsonObject
+// 0x0010 (0x0010 - 0x0000)
+struct alignas(0x08) FAKWaapiJsonObject final
+{
+public:
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FAKWaapiJsonObject) == 0x000008, "Wrong alignment on FAKWaapiJsonObject");
+static_assert(sizeof(FAKWaapiJsonObject) == 0x000010, "Wrong size on FAKWaapiJsonObject");
+
 // ScriptStruct AkAudio.AkAdvancedInitializationSettings
 // 0x0030 (0x0030 - 0x0000)
 struct FAkAdvancedInitializationSettings
@@ -568,6 +578,45 @@ static_assert(offsetof(FAkAdvancedInitializationSettings, DebugOutOfRangeCheckEn
 static_assert(offsetof(FAkAdvancedInitializationSettings, DebugOutOfRangeLimit) == 0x000028, "Member 'FAkAdvancedInitializationSettings::DebugOutOfRangeLimit' has a wrong offset!");
 static_assert(offsetof(FAkAdvancedInitializationSettings, VmPageSize) == 0x00002C, "Member 'FAkAdvancedInitializationSettings::VmPageSize' has a wrong offset!");
 
+// ScriptStruct AkAudio.AkCommunicationSettings
+// 0x0018 (0x0018 - 0x0000)
+struct FAkCommunicationSettings
+{
+public:
+	uint32                                        PoolSize;                                          // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint16                                        DiscoveryBroadcastPort;                            // 0x0004(0x0002)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint16                                        CommandPort;                                       // 0x0006(0x0002)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 NetworkName;                                       // 0x0008(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FAkCommunicationSettings) == 0x000008, "Wrong alignment on FAkCommunicationSettings");
+static_assert(sizeof(FAkCommunicationSettings) == 0x000018, "Wrong size on FAkCommunicationSettings");
+static_assert(offsetof(FAkCommunicationSettings, PoolSize) == 0x000000, "Member 'FAkCommunicationSettings::PoolSize' has a wrong offset!");
+static_assert(offsetof(FAkCommunicationSettings, DiscoveryBroadcastPort) == 0x000004, "Member 'FAkCommunicationSettings::DiscoveryBroadcastPort' has a wrong offset!");
+static_assert(offsetof(FAkCommunicationSettings, CommandPort) == 0x000006, "Member 'FAkCommunicationSettings::CommandPort' has a wrong offset!");
+static_assert(offsetof(FAkCommunicationSettings, NetworkName) == 0x000008, "Member 'FAkCommunicationSettings::NetworkName' has a wrong offset!");
+
+// ScriptStruct AkAudio.AkCommunicationSettingsWithSystemInitialization
+// 0x0008 (0x0020 - 0x0018)
+struct FAkCommunicationSettingsWithSystemInitialization final : public FAkCommunicationSettings
+{
+public:
+	bool                                          InitializeSystemComms;                             // 0x0018(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FAkCommunicationSettingsWithSystemInitialization) == 0x000008, "Wrong alignment on FAkCommunicationSettingsWithSystemInitialization");
+static_assert(sizeof(FAkCommunicationSettingsWithSystemInitialization) == 0x000020, "Wrong size on FAkCommunicationSettingsWithSystemInitialization");
+static_assert(offsetof(FAkCommunicationSettingsWithSystemInitialization, InitializeSystemComms) == 0x000018, "Member 'FAkCommunicationSettingsWithSystemInitialization::InitializeSystemComms' has a wrong offset!");
+
+// ScriptStruct AkAudio.AkWaapiSubscriptionId
+// 0x0008 (0x0008 - 0x0000)
+struct alignas(0x08) FAkWaapiSubscriptionId final
+{
+public:
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FAkWaapiSubscriptionId) == 0x000008, "Wrong alignment on FAkWaapiSubscriptionId");
+static_assert(sizeof(FAkWaapiSubscriptionId) == 0x000008, "Wrong size on FAkWaapiSubscriptionId");
+
 // ScriptStruct AkAudio.AkAdvancedInitializationSettingsWithMultiCoreRendering
 // 0x000C (0x003C - 0x0030)
 struct FAkAdvancedInitializationSettingsWithMultiCoreRendering : public FAkAdvancedInitializationSettings
@@ -584,27 +633,6 @@ static_assert(offsetof(FAkAdvancedInitializationSettingsWithMultiCoreRendering, 
 static_assert(offsetof(FAkAdvancedInitializationSettingsWithMultiCoreRendering, MaxNumJobWorkers) == 0x000034, "Member 'FAkAdvancedInitializationSettingsWithMultiCoreRendering::MaxNumJobWorkers' has a wrong offset!");
 static_assert(offsetof(FAkAdvancedInitializationSettingsWithMultiCoreRendering, JobWorkerMaxExecutionTimeUSec) == 0x000038, "Member 'FAkAdvancedInitializationSettingsWithMultiCoreRendering::JobWorkerMaxExecutionTimeUSec' has a wrong offset!");
 
-// ScriptStruct AkAudio.AkWaapiUri
-// 0x0010 (0x0010 - 0x0000)
-struct FAkWaapiUri final
-{
-public:
-	class FString                                 Uri;                                               // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FAkWaapiUri) == 0x000008, "Wrong alignment on FAkWaapiUri");
-static_assert(sizeof(FAkWaapiUri) == 0x000010, "Wrong size on FAkWaapiUri");
-static_assert(offsetof(FAkWaapiUri, Uri) == 0x000000, "Member 'FAkWaapiUri::Uri' has a wrong offset!");
-
-// ScriptStruct AkAudio.AKWaapiJsonObject
-// 0x0010 (0x0010 - 0x0000)
-struct alignas(0x08) FAKWaapiJsonObject final
-{
-public:
-	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FAKWaapiJsonObject) == 0x000008, "Wrong alignment on FAKWaapiJsonObject");
-static_assert(sizeof(FAKWaapiJsonObject) == 0x000010, "Wrong size on FAKWaapiJsonObject");
-
 // ScriptStruct AkAudio.AkAndroidAdvancedInitializationSettings
 // 0x0008 (0x0044 - 0x003C)
 struct FAkAndroidAdvancedInitializationSettings final : public FAkAdvancedInitializationSettingsWithMultiCoreRendering
@@ -620,30 +648,6 @@ static_assert(sizeof(FAkAndroidAdvancedInitializationSettings) == 0x000044, "Wro
 static_assert(offsetof(FAkAndroidAdvancedInitializationSettings, AudioAPI) == 0x00003C, "Member 'FAkAndroidAdvancedInitializationSettings::AudioAPI' has a wrong offset!");
 static_assert(offsetof(FAkAndroidAdvancedInitializationSettings, RoundFrameSizeToHardwareSize) == 0x000040, "Member 'FAkAndroidAdvancedInitializationSettings::RoundFrameSizeToHardwareSize' has a wrong offset!");
 static_assert(offsetof(FAkAndroidAdvancedInitializationSettings, bVerboseSink) == 0x000041, "Member 'FAkAndroidAdvancedInitializationSettings::bVerboseSink' has a wrong offset!");
-
-// ScriptStruct AkAudio.AkWindowsAdvancedInitializationSettings
-// 0x0008 (0x0044 - 0x003C)
-struct FAkWindowsAdvancedInitializationSettings final : public FAkAdvancedInitializationSettingsWithMultiCoreRendering
-{
-public:
-	bool                                          UseHeadMountedDisplayAudioDevice;                  // 0x003C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	uint32                                        MaxSystemAudioObjects;                             // 0x0040(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FAkWindowsAdvancedInitializationSettings) == 0x000004, "Wrong alignment on FAkWindowsAdvancedInitializationSettings");
-static_assert(sizeof(FAkWindowsAdvancedInitializationSettings) == 0x000044, "Wrong size on FAkWindowsAdvancedInitializationSettings");
-static_assert(offsetof(FAkWindowsAdvancedInitializationSettings, UseHeadMountedDisplayAudioDevice) == 0x00003C, "Member 'FAkWindowsAdvancedInitializationSettings::UseHeadMountedDisplayAudioDevice' has a wrong offset!");
-static_assert(offsetof(FAkWindowsAdvancedInitializationSettings, MaxSystemAudioObjects) == 0x000040, "Member 'FAkWindowsAdvancedInitializationSettings::MaxSystemAudioObjects' has a wrong offset!");
-
-// ScriptStruct AkAudio.AkWaapiSubscriptionId
-// 0x0008 (0x0008 - 0x0000)
-struct alignas(0x08) FAkWaapiSubscriptionId final
-{
-public:
-	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FAkWaapiSubscriptionId) == 0x000008, "Wrong alignment on FAkWaapiSubscriptionId");
-static_assert(sizeof(FAkWaapiSubscriptionId) == 0x000008, "Wrong size on FAkWaapiSubscriptionId");
 
 // ScriptStruct AkAudio.AkAudioSession
 // 0x000C (0x000C - 0x0000)
@@ -975,35 +979,6 @@ static_assert(offsetof(FAkSpatialAudioSettings, LoadBalancingSpread) == 0x000020
 static_assert(offsetof(FAkSpatialAudioSettings, EnableGeometricDiffractionAndTransmission) == 0x000024, "Member 'FAkSpatialAudioSettings::EnableGeometricDiffractionAndTransmission' has a wrong offset!");
 static_assert(offsetof(FAkSpatialAudioSettings, CalcEmitterVirtualPosition) == 0x000025, "Member 'FAkSpatialAudioSettings::CalcEmitterVirtualPosition' has a wrong offset!");
 
-// ScriptStruct AkAudio.AkCommunicationSettings
-// 0x0018 (0x0018 - 0x0000)
-struct FAkCommunicationSettings
-{
-public:
-	uint32                                        PoolSize;                                          // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint16                                        DiscoveryBroadcastPort;                            // 0x0004(0x0002)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint16                                        CommandPort;                                       // 0x0006(0x0002)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 NetworkName;                                       // 0x0008(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FAkCommunicationSettings) == 0x000008, "Wrong alignment on FAkCommunicationSettings");
-static_assert(sizeof(FAkCommunicationSettings) == 0x000018, "Wrong size on FAkCommunicationSettings");
-static_assert(offsetof(FAkCommunicationSettings, PoolSize) == 0x000000, "Member 'FAkCommunicationSettings::PoolSize' has a wrong offset!");
-static_assert(offsetof(FAkCommunicationSettings, DiscoveryBroadcastPort) == 0x000004, "Member 'FAkCommunicationSettings::DiscoveryBroadcastPort' has a wrong offset!");
-static_assert(offsetof(FAkCommunicationSettings, CommandPort) == 0x000006, "Member 'FAkCommunicationSettings::CommandPort' has a wrong offset!");
-static_assert(offsetof(FAkCommunicationSettings, NetworkName) == 0x000008, "Member 'FAkCommunicationSettings::NetworkName' has a wrong offset!");
-
-// ScriptStruct AkAudio.AkCommunicationSettingsWithSystemInitialization
-// 0x0008 (0x0020 - 0x0018)
-struct FAkCommunicationSettingsWithSystemInitialization final : public FAkCommunicationSettings
-{
-public:
-	bool                                          InitializeSystemComms;                             // 0x0018(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FAkCommunicationSettingsWithSystemInitialization) == 0x000008, "Wrong alignment on FAkCommunicationSettingsWithSystemInitialization");
-static_assert(sizeof(FAkCommunicationSettingsWithSystemInitialization) == 0x000020, "Wrong size on FAkCommunicationSettingsWithSystemInitialization");
-static_assert(offsetof(FAkCommunicationSettingsWithSystemInitialization, InitializeSystemComms) == 0x000018, "Member 'FAkCommunicationSettingsWithSystemInitialization::InitializeSystemComms' has a wrong offset!");
-
 // ScriptStruct AkAudio.AkCommunicationSettingsWithCommSelection
 // 0x0008 (0x0020 - 0x0018)
 struct FAkCommunicationSettingsWithCommSelection final : public FAkCommunicationSettings
@@ -1225,6 +1200,31 @@ public:
 static_assert(alignof(FAkWaapiFieldNames) == 0x000008, "Wrong alignment on FAkWaapiFieldNames");
 static_assert(sizeof(FAkWaapiFieldNames) == 0x000010, "Wrong size on FAkWaapiFieldNames");
 static_assert(offsetof(FAkWaapiFieldNames, FieldName) == 0x000000, "Member 'FAkWaapiFieldNames::FieldName' has a wrong offset!");
+
+// ScriptStruct AkAudio.AkWaapiUri
+// 0x0010 (0x0010 - 0x0000)
+struct FAkWaapiUri final
+{
+public:
+	class FString                                 Uri;                                               // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FAkWaapiUri) == 0x000008, "Wrong alignment on FAkWaapiUri");
+static_assert(sizeof(FAkWaapiUri) == 0x000010, "Wrong size on FAkWaapiUri");
+static_assert(offsetof(FAkWaapiUri, Uri) == 0x000000, "Member 'FAkWaapiUri::Uri' has a wrong offset!");
+
+// ScriptStruct AkAudio.AkWindowsAdvancedInitializationSettings
+// 0x0008 (0x0044 - 0x003C)
+struct FAkWindowsAdvancedInitializationSettings final : public FAkAdvancedInitializationSettingsWithMultiCoreRendering
+{
+public:
+	bool                                          UseHeadMountedDisplayAudioDevice;                  // 0x003C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint32                                        MaxSystemAudioObjects;                             // 0x0040(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FAkWindowsAdvancedInitializationSettings) == 0x000004, "Wrong alignment on FAkWindowsAdvancedInitializationSettings");
+static_assert(sizeof(FAkWindowsAdvancedInitializationSettings) == 0x000044, "Wrong size on FAkWindowsAdvancedInitializationSettings");
+static_assert(offsetof(FAkWindowsAdvancedInitializationSettings, UseHeadMountedDisplayAudioDevice) == 0x00003C, "Member 'FAkWindowsAdvancedInitializationSettings::UseHeadMountedDisplayAudioDevice' has a wrong offset!");
+static_assert(offsetof(FAkWindowsAdvancedInitializationSettings, MaxSystemAudioObjects) == 0x000040, "Member 'FAkWindowsAdvancedInitializationSettings::MaxSystemAudioObjects' has a wrong offset!");
 
 // ScriptStruct AkAudio.AkWinGDKAdvancedInitializationSettings
 // 0x0008 (0x0044 - 0x003C)

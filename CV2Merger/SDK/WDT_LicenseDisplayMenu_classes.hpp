@@ -30,19 +30,19 @@ public:
 	double                                        ScrollSpeed;                                       // 0x05E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void OnOpening();
-	void OnOpened();
-	void OnMouseRightClickMenu();
-	void OnMouseLeftClickMenuPiece(class UMenuPieceBase* MenuPiece);
-	void OnMouseLeaveMenuPiece(class UMenuPieceBase* MenuPiece);
-	void OnMouseEnterMenuPiece(class UMenuPieceBase* MenuPiece);
-	void OnInputDeviceChanged();
-	void OnClosing();
-	void OnClosed();
-	void InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_1(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_UI_Cancel_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
 	void ExecuteUbergraph_WDT_LicenseDisplayMenu(int32 EntryPoint);
+	void InpActEvt_IA_UI_Cancel_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_1(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void OnClosed();
+	void OnClosing();
+	void OnInputDeviceChanged();
+	void OnMouseEnterMenuPiece(class UMenuPieceBase* MenuPiece);
+	void OnMouseLeaveMenuPiece(class UMenuPieceBase* MenuPiece);
+	void OnMouseLeftClickMenuPiece(class UMenuPieceBase* MenuPiece);
+	void OnMouseRightClickMenu();
+	void OnOpened();
+	void OnOpening();
 
 public:
 	static class UClass* StaticClass()

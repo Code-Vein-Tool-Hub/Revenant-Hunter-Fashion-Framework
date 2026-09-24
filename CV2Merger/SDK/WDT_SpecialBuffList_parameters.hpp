@@ -101,7 +101,7 @@ static_assert(offsetof(WDT_SpecialBuffList_C_GetFeatureText, CallFunc_TextIsEmpt
 static_assert(offsetof(WDT_SpecialBuffList_C_GetFeatureText, CallFunc_Format_ReturnValue) == 0x000130, "Member 'WDT_SpecialBuffList_C_GetFeatureText::CallFunc_Format_ReturnValue' has a wrong offset!");
 
 // Function WDT_SpecialBuffList.WDT_SpecialBuffList_C.BuildFeatureText
-// 0x02C8 (0x02C8 - 0x0000)
+// 0x02D8 (0x02D8 - 0x0000)
 struct WDT_SpecialBuffList_C_BuildFeatureText final
 {
 public:
@@ -118,27 +118,28 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0088(0x0010)()
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x0098(0x0010)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x00A8(0x0048)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x00F0(0x0048)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x0138(0x0048)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_3;            // 0x0180(0x0048)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x01C8(0x0010)(ReferenceParm)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x01D8(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x01E8(0x0010)()
-	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x01F8(0x0010)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_4;            // 0x0208(0x0048)(HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0250(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0254(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_255[0x3];                                      // 0x0255(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0258(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_25C[0x4];                                      // 0x025C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_5;            // 0x0260(0x0048)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_2;                          // 0x02A8(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue_2;                     // 0x02B8(0x0010)()
+	class FText                                   CallFunc_FormatTextWithPlayerInfo_ReturnValue;     // 0x0098(0x0010)()
+	class FText                                   CallFunc_FormatTextWithPlayerInfo_ReturnValue_1;   // 0x00A8(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x00B8(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0100(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x0148(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_3;            // 0x0190(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x01D8(0x0010)(ReferenceParm)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x01E8(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x01F8(0x0010)()
+	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x0208(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_4;            // 0x0218(0x0048)(HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0260(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0264(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_265[0x3];                                      // 0x0265(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0268(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_26C[0x4];                                      // 0x026C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_5;            // 0x0270(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_2;                          // 0x02B8(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue_2;                     // 0x02C8(0x0010)()
 };
 static_assert(alignof(WDT_SpecialBuffList_C_BuildFeatureText) == 0x000008, "Wrong alignment on WDT_SpecialBuffList_C_BuildFeatureText");
-static_assert(sizeof(WDT_SpecialBuffList_C_BuildFeatureText) == 0x0002C8, "Wrong size on WDT_SpecialBuffList_C_BuildFeatureText");
+static_assert(sizeof(WDT_SpecialBuffList_C_BuildFeatureText) == 0x0002D8, "Wrong size on WDT_SpecialBuffList_C_BuildFeatureText");
 static_assert(offsetof(WDT_SpecialBuffList_C_BuildFeatureText, UIFeatureInfo) == 0x000000, "Member 'WDT_SpecialBuffList_C_BuildFeatureText::UIFeatureInfo' has a wrong offset!");
 static_assert(offsetof(WDT_SpecialBuffList_C_BuildFeatureText, OutText) == 0x000020, "Member 'WDT_SpecialBuffList_C_BuildFeatureText::OutText' has a wrong offset!");
 static_assert(offsetof(WDT_SpecialBuffList_C_BuildFeatureText, L_FeatureText) == 0x000030, "Member 'WDT_SpecialBuffList_C_BuildFeatureText::L_FeatureText' has a wrong offset!");
@@ -149,22 +150,23 @@ static_assert(offsetof(WDT_SpecialBuffList_C_BuildFeatureText, CallFunc_ParseInt
 static_assert(offsetof(WDT_SpecialBuffList_C_BuildFeatureText, CallFunc_Array_Get_Item) == 0x000070, "Member 'WDT_SpecialBuffList_C_BuildFeatureText::CallFunc_Array_Get_Item' has a wrong offset!");
 static_assert(offsetof(WDT_SpecialBuffList_C_BuildFeatureText, CallFunc_Array_Length_ReturnValue) == 0x000080, "Member 'WDT_SpecialBuffList_C_BuildFeatureText::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_SpecialBuffList_C_BuildFeatureText, CallFunc_Conv_StringToText_ReturnValue) == 0x000088, "Member 'WDT_SpecialBuffList_C_BuildFeatureText::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_SpecialBuffList_C_BuildFeatureText, CallFunc_Conv_StringToText_ReturnValue_1) == 0x000098, "Member 'WDT_SpecialBuffList_C_BuildFeatureText::CallFunc_Conv_StringToText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_SpecialBuffList_C_BuildFeatureText, K2Node_MakeStruct_FormatArgumentData) == 0x0000A8, "Member 'WDT_SpecialBuffList_C_BuildFeatureText::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(WDT_SpecialBuffList_C_BuildFeatureText, K2Node_MakeStruct_FormatArgumentData_1) == 0x0000F0, "Member 'WDT_SpecialBuffList_C_BuildFeatureText::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(WDT_SpecialBuffList_C_BuildFeatureText, K2Node_MakeStruct_FormatArgumentData_2) == 0x000138, "Member 'WDT_SpecialBuffList_C_BuildFeatureText::K2Node_MakeStruct_FormatArgumentData_2' has a wrong offset!");
-static_assert(offsetof(WDT_SpecialBuffList_C_BuildFeatureText, K2Node_MakeStruct_FormatArgumentData_3) == 0x000180, "Member 'WDT_SpecialBuffList_C_BuildFeatureText::K2Node_MakeStruct_FormatArgumentData_3' has a wrong offset!");
-static_assert(offsetof(WDT_SpecialBuffList_C_BuildFeatureText, K2Node_MakeArray_Array) == 0x0001C8, "Member 'WDT_SpecialBuffList_C_BuildFeatureText::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WDT_SpecialBuffList_C_BuildFeatureText, K2Node_MakeArray_Array_1) == 0x0001D8, "Member 'WDT_SpecialBuffList_C_BuildFeatureText::K2Node_MakeArray_Array_1' has a wrong offset!");
-static_assert(offsetof(WDT_SpecialBuffList_C_BuildFeatureText, CallFunc_Format_ReturnValue) == 0x0001E8, "Member 'WDT_SpecialBuffList_C_BuildFeatureText::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_SpecialBuffList_C_BuildFeatureText, CallFunc_Format_ReturnValue_1) == 0x0001F8, "Member 'WDT_SpecialBuffList_C_BuildFeatureText::CallFunc_Format_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_SpecialBuffList_C_BuildFeatureText, K2Node_MakeStruct_FormatArgumentData_4) == 0x000208, "Member 'WDT_SpecialBuffList_C_BuildFeatureText::K2Node_MakeStruct_FormatArgumentData_4' has a wrong offset!");
-static_assert(offsetof(WDT_SpecialBuffList_C_BuildFeatureText, Temp_int_Loop_Counter_Variable) == 0x000250, "Member 'WDT_SpecialBuffList_C_BuildFeatureText::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(WDT_SpecialBuffList_C_BuildFeatureText, CallFunc_Less_IntInt_ReturnValue) == 0x000254, "Member 'WDT_SpecialBuffList_C_BuildFeatureText::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_SpecialBuffList_C_BuildFeatureText, CallFunc_Add_IntInt_ReturnValue) == 0x000258, "Member 'WDT_SpecialBuffList_C_BuildFeatureText::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_SpecialBuffList_C_BuildFeatureText, K2Node_MakeStruct_FormatArgumentData_5) == 0x000260, "Member 'WDT_SpecialBuffList_C_BuildFeatureText::K2Node_MakeStruct_FormatArgumentData_5' has a wrong offset!");
-static_assert(offsetof(WDT_SpecialBuffList_C_BuildFeatureText, K2Node_MakeArray_Array_2) == 0x0002A8, "Member 'WDT_SpecialBuffList_C_BuildFeatureText::K2Node_MakeArray_Array_2' has a wrong offset!");
-static_assert(offsetof(WDT_SpecialBuffList_C_BuildFeatureText, CallFunc_Format_ReturnValue_2) == 0x0002B8, "Member 'WDT_SpecialBuffList_C_BuildFeatureText::CallFunc_Format_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_SpecialBuffList_C_BuildFeatureText, CallFunc_FormatTextWithPlayerInfo_ReturnValue) == 0x000098, "Member 'WDT_SpecialBuffList_C_BuildFeatureText::CallFunc_FormatTextWithPlayerInfo_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_SpecialBuffList_C_BuildFeatureText, CallFunc_FormatTextWithPlayerInfo_ReturnValue_1) == 0x0000A8, "Member 'WDT_SpecialBuffList_C_BuildFeatureText::CallFunc_FormatTextWithPlayerInfo_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_SpecialBuffList_C_BuildFeatureText, K2Node_MakeStruct_FormatArgumentData) == 0x0000B8, "Member 'WDT_SpecialBuffList_C_BuildFeatureText::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(WDT_SpecialBuffList_C_BuildFeatureText, K2Node_MakeStruct_FormatArgumentData_1) == 0x000100, "Member 'WDT_SpecialBuffList_C_BuildFeatureText::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
+static_assert(offsetof(WDT_SpecialBuffList_C_BuildFeatureText, K2Node_MakeStruct_FormatArgumentData_2) == 0x000148, "Member 'WDT_SpecialBuffList_C_BuildFeatureText::K2Node_MakeStruct_FormatArgumentData_2' has a wrong offset!");
+static_assert(offsetof(WDT_SpecialBuffList_C_BuildFeatureText, K2Node_MakeStruct_FormatArgumentData_3) == 0x000190, "Member 'WDT_SpecialBuffList_C_BuildFeatureText::K2Node_MakeStruct_FormatArgumentData_3' has a wrong offset!");
+static_assert(offsetof(WDT_SpecialBuffList_C_BuildFeatureText, K2Node_MakeArray_Array) == 0x0001D8, "Member 'WDT_SpecialBuffList_C_BuildFeatureText::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WDT_SpecialBuffList_C_BuildFeatureText, K2Node_MakeArray_Array_1) == 0x0001E8, "Member 'WDT_SpecialBuffList_C_BuildFeatureText::K2Node_MakeArray_Array_1' has a wrong offset!");
+static_assert(offsetof(WDT_SpecialBuffList_C_BuildFeatureText, CallFunc_Format_ReturnValue) == 0x0001F8, "Member 'WDT_SpecialBuffList_C_BuildFeatureText::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_SpecialBuffList_C_BuildFeatureText, CallFunc_Format_ReturnValue_1) == 0x000208, "Member 'WDT_SpecialBuffList_C_BuildFeatureText::CallFunc_Format_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_SpecialBuffList_C_BuildFeatureText, K2Node_MakeStruct_FormatArgumentData_4) == 0x000218, "Member 'WDT_SpecialBuffList_C_BuildFeatureText::K2Node_MakeStruct_FormatArgumentData_4' has a wrong offset!");
+static_assert(offsetof(WDT_SpecialBuffList_C_BuildFeatureText, Temp_int_Loop_Counter_Variable) == 0x000260, "Member 'WDT_SpecialBuffList_C_BuildFeatureText::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(WDT_SpecialBuffList_C_BuildFeatureText, CallFunc_Less_IntInt_ReturnValue) == 0x000264, "Member 'WDT_SpecialBuffList_C_BuildFeatureText::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_SpecialBuffList_C_BuildFeatureText, CallFunc_Add_IntInt_ReturnValue) == 0x000268, "Member 'WDT_SpecialBuffList_C_BuildFeatureText::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_SpecialBuffList_C_BuildFeatureText, K2Node_MakeStruct_FormatArgumentData_5) == 0x000270, "Member 'WDT_SpecialBuffList_C_BuildFeatureText::K2Node_MakeStruct_FormatArgumentData_5' has a wrong offset!");
+static_assert(offsetof(WDT_SpecialBuffList_C_BuildFeatureText, K2Node_MakeArray_Array_2) == 0x0002B8, "Member 'WDT_SpecialBuffList_C_BuildFeatureText::K2Node_MakeArray_Array_2' has a wrong offset!");
+static_assert(offsetof(WDT_SpecialBuffList_C_BuildFeatureText, CallFunc_Format_ReturnValue_2) == 0x0002C8, "Member 'WDT_SpecialBuffList_C_BuildFeatureText::CallFunc_Format_ReturnValue_2' has a wrong offset!");
 
 }
 

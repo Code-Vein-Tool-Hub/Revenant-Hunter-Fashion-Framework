@@ -11,10 +11,10 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "SlateCore_structs.hpp"
+#include "CommonInput_structs.hpp"
 #include "InputCore_structs.hpp"
 #include "GameplayTags_structs.hpp"
-#include "CommonInput_structs.hpp"
-#include "SlateCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 
@@ -99,26 +99,21 @@ enum class ECommonSwitcherTransitionFallbackStrategy : uint8
 	ECommonSwitcherTransitionFallbackStrategy_MAX = 5,
 };
 
-// ScriptStruct CommonUI.UIInputConfig
-// 0x0006 (0x0006 - 0x0000)
-struct FUIInputConfig final
+// ScriptStruct CommonUI.UITag
+// 0x0000 (0x0008 - 0x0008)
+struct FUITag : public FGameplayTag
 {
-public:
-	bool                                          bIgnoreMoveInput;                                  // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIgnoreLookInput;                                  // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ECommonInputMode                              InputMode;                                         // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	EMouseCaptureMode                             MouseCaptureMode;                                  // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	EMouseLockMode                                MouseLockMode;                                     // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bHideCursorDuringViewportCapture;                  // 0x0005(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 };
-static_assert(alignof(FUIInputConfig) == 0x000001, "Wrong alignment on FUIInputConfig");
-static_assert(sizeof(FUIInputConfig) == 0x000006, "Wrong size on FUIInputConfig");
-static_assert(offsetof(FUIInputConfig, bIgnoreMoveInput) == 0x000000, "Member 'FUIInputConfig::bIgnoreMoveInput' has a wrong offset!");
-static_assert(offsetof(FUIInputConfig, bIgnoreLookInput) == 0x000001, "Member 'FUIInputConfig::bIgnoreLookInput' has a wrong offset!");
-static_assert(offsetof(FUIInputConfig, InputMode) == 0x000002, "Member 'FUIInputConfig::InputMode' has a wrong offset!");
-static_assert(offsetof(FUIInputConfig, MouseCaptureMode) == 0x000003, "Member 'FUIInputConfig::MouseCaptureMode' has a wrong offset!");
-static_assert(offsetof(FUIInputConfig, MouseLockMode) == 0x000004, "Member 'FUIInputConfig::MouseLockMode' has a wrong offset!");
-static_assert(offsetof(FUIInputConfig, bHideCursorDuringViewportCapture) == 0x000005, "Member 'FUIInputConfig::bHideCursorDuringViewportCapture' has a wrong offset!");
+static_assert(alignof(FUITag) == 0x000004, "Wrong alignment on FUITag");
+static_assert(sizeof(FUITag) == 0x000008, "Wrong size on FUITag");
+
+// ScriptStruct CommonUI.UIActionTag
+// 0x0000 (0x0008 - 0x0008)
+struct FUIActionTag final : public FUITag
+{
+};
+static_assert(alignof(FUIActionTag) == 0x000004, "Wrong alignment on FUIActionTag");
+static_assert(sizeof(FUIActionTag) == 0x000008, "Wrong size on FUIActionTag");
 
 // ScriptStruct CommonUI.CommonNumberFormattingOptions
 // 0x0014 (0x0014 - 0x0000)
@@ -168,21 +163,26 @@ public:
 static_assert(alignof(FUIActionBindingHandle) == 0x000004, "Wrong alignment on FUIActionBindingHandle");
 static_assert(sizeof(FUIActionBindingHandle) == 0x000004, "Wrong size on FUIActionBindingHandle");
 
-// ScriptStruct CommonUI.UITag
-// 0x0000 (0x0008 - 0x0008)
-struct FUITag : public FGameplayTag
+// ScriptStruct CommonUI.UIInputConfig
+// 0x0006 (0x0006 - 0x0000)
+struct FUIInputConfig final
 {
+public:
+	bool                                          bIgnoreMoveInput;                                  // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIgnoreLookInput;                                  // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ECommonInputMode                              InputMode;                                         // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EMouseCaptureMode                             MouseCaptureMode;                                  // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EMouseLockMode                                MouseLockMode;                                     // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bHideCursorDuringViewportCapture;                  // 0x0005(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 };
-static_assert(alignof(FUITag) == 0x000004, "Wrong alignment on FUITag");
-static_assert(sizeof(FUITag) == 0x000008, "Wrong size on FUITag");
-
-// ScriptStruct CommonUI.UIActionTag
-// 0x0000 (0x0008 - 0x0008)
-struct FUIActionTag final : public FUITag
-{
-};
-static_assert(alignof(FUIActionTag) == 0x000004, "Wrong alignment on FUIActionTag");
-static_assert(sizeof(FUIActionTag) == 0x000008, "Wrong size on FUIActionTag");
+static_assert(alignof(FUIInputConfig) == 0x000001, "Wrong alignment on FUIInputConfig");
+static_assert(sizeof(FUIInputConfig) == 0x000006, "Wrong size on FUIInputConfig");
+static_assert(offsetof(FUIInputConfig, bIgnoreMoveInput) == 0x000000, "Member 'FUIInputConfig::bIgnoreMoveInput' has a wrong offset!");
+static_assert(offsetof(FUIInputConfig, bIgnoreLookInput) == 0x000001, "Member 'FUIInputConfig::bIgnoreLookInput' has a wrong offset!");
+static_assert(offsetof(FUIInputConfig, InputMode) == 0x000002, "Member 'FUIInputConfig::InputMode' has a wrong offset!");
+static_assert(offsetof(FUIInputConfig, MouseCaptureMode) == 0x000003, "Member 'FUIInputConfig::MouseCaptureMode' has a wrong offset!");
+static_assert(offsetof(FUIInputConfig, MouseLockMode) == 0x000004, "Member 'FUIInputConfig::MouseLockMode' has a wrong offset!");
+static_assert(offsetof(FUIInputConfig, bHideCursorDuringViewportCapture) == 0x000005, "Member 'FUIInputConfig::bHideCursorDuringViewportCapture' has a wrong offset!");
 
 // ScriptStruct CommonUI.CommonInputActionHandlerData
 // 0x0020 (0x0020 - 0x0000)

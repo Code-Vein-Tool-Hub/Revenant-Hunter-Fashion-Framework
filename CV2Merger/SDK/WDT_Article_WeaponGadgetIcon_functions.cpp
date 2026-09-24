@@ -17,30 +17,6 @@
 namespace SDK
 {
 
-// Function WDT_Article_WeaponGadgetIcon.WDT_Article_WeaponGadgetIcon_C.SetSoftTextureWithEmptyTexture
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TSoftObjectPtr<class UTexture2D>        SoftObjectReference                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash)
-// class UImage*                           TargetImage                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// class UTexture2D*                       EmptyTexture                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_Article_WeaponGadgetIcon_C::SetSoftTextureWithEmptyTexture(const TSoftObjectPtr<class UTexture2D>& SoftObjectReference, class UImage* TargetImage, class UTexture2D* EmptyTexture)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Article_WeaponGadgetIcon_C", "SetSoftTextureWithEmptyTexture");
-
-	Params::WDT_Article_WeaponGadgetIcon_C_SetSoftTextureWithEmptyTexture Parms{};
-
-	Parms.SoftObjectReference = SoftObjectReference;
-	Parms.TargetImage = TargetImage;
-	Parms.EmptyTexture = EmptyTexture;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WDT_Article_WeaponGadgetIcon.WDT_Article_WeaponGadgetIcon_C.SetValue
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -62,6 +38,30 @@ void UWDT_Article_WeaponGadgetIcon_C::SetValue(const TSoftObjectPtr<class UTextu
 	Parms.EmptyTexture = EmptyTexture;
 	Parms.IchorNum = IchorNum;
 	Parms.IsEmpty = IsEmpty;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_Article_WeaponGadgetIcon.WDT_Article_WeaponGadgetIcon_C.SetSoftTextureWithEmptyTexture
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TSoftObjectPtr<class UTexture2D>        SoftObjectReference                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash)
+// class UImage*                           TargetImage                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UTexture2D*                       EmptyTexture                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_Article_WeaponGadgetIcon_C::SetSoftTextureWithEmptyTexture(const TSoftObjectPtr<class UTexture2D>& SoftObjectReference, class UImage* TargetImage, class UTexture2D* EmptyTexture)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_Article_WeaponGadgetIcon_C", "SetSoftTextureWithEmptyTexture");
+
+	Params::WDT_Article_WeaponGadgetIcon_C_SetSoftTextureWithEmptyTexture Parms{};
+
+	Parms.SoftObjectReference = SoftObjectReference;
+	Parms.TargetImage = TargetImage;
+	Parms.EmptyTexture = EmptyTexture;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

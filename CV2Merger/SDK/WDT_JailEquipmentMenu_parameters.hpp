@@ -79,12 +79,14 @@ static_assert(sizeof(WDT_JailEquipmentMenu_C_BndEvt__WDT_JailEquipmentMenu_JailG
 static_assert(offsetof(WDT_JailEquipmentMenu_C_BndEvt__WDT_JailEquipmentMenu_JailGridBox_K2Node_ComponentBoundEvent_5_SimpleListItemEventDynamic__DelegateSignature, Item) == 0x000000, "Member 'WDT_JailEquipmentMenu_C_BndEvt__WDT_JailEquipmentMenu_JailGridBox_K2Node_ComponentBoundEvent_5_SimpleListItemEventDynamic__DelegateSignature::Item' has a wrong offset!");
 
 // Function WDT_JailEquipmentMenu.WDT_JailEquipmentMenu_C.ExecuteUbergraph_WDT_JailEquipmentMenu
-// 0x0908 (0x0908 - 0x0000)
+// 0x0940 (0x0940 - 0x0000)
 struct WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          CallFunc_GetStoryFlagValueByBoolean_ReturnValue;   // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FInputActionValue                      K2Node_EnhancedInputActionEvent_ActionValue_10;    // 0x0008(0x0020)(NoDestructor)
 	float                                         K2Node_EnhancedInputActionEvent_ElapsedTime_10;    // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_EnhancedInputActionEvent_TriggeredTime_10;  // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -251,13 +253,13 @@ public:
 	double                                        Temp_real_Variable_19;                             // 0x04F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UInputAction*                           Temp_object_Variable_9;                            // 0x0500(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsSelectMode_OutFlag;                     // 0x0508(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0509(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0509(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsSelectMode_OutFlag_1;                   // 0x050A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x050B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x050B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsSelectMode_OutFlag_2;                   // 0x050C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x050D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_3;                // 0x050D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsSelectMode_OutFlag_3;                   // 0x050E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_3;                // 0x050F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_4;                // 0x050F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FInputActionValue                      K2Node_EnhancedInputActionEvent_ActionValue_12;    // 0x0510(0x0020)(NoDestructor)
 	float                                         K2Node_EnhancedInputActionEvent_ElapsedTime_12;    // 0x0530(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_EnhancedInputActionEvent_TriggeredTime_12;  // 0x0534(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -280,7 +282,9 @@ public:
 	bool                                          CallFunc_IsShowSpecialBuffList_ReturnValue_8;      // 0x05D6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable_10;                             // 0x05D7(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_IsDesignTime;                         // 0x05D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5D9[0x7];                                      // 0x05D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          CallFunc_IsSelectMode_OutFlag_4;                   // 0x05D9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_5;                // 0x05DA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5DB[0x5];                                      // 0x05DB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUIObjectBase*                          CallFunc_GetUIObject_ReturnValue;                  // 0x05E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UFieldMenuUIObject*                     K2Node_DynamicCast_AsField_Menu_UIObject;          // 0x05E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x05F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -289,55 +293,61 @@ public:
 	uint8                                         Pad_604[0x4];                                      // 0x0604(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        K2Node_Event_InCurrentHealth;                      // 0x0608(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        K2Node_Event_InMaxHealth;                          // 0x0610(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FUIPlayerStatusSummaryInfo             CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo; // 0x0618(0x00B8)(NoDestructor)
-	int32                                         K2Node_Event_InCurrentStamina;                     // 0x06D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_Event_InMaxStamina;                         // 0x06D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_InProhibited;                         // 0x06D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6D9[0x7];                                      // 0x06D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                K2Node_ComponentBoundEvent_Item_3;                 // 0x06E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UUserWidget*                            K2Node_ComponentBoundEvent_Widget_1;               // 0x06E8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                K2Node_ComponentBoundEvent_Item_2;                 // 0x06F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_ComponentBoundEvent_bIsSelected;            // 0x06F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FUIPlayerStatusSummaryInfo             CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo; // 0x0618(0x00D8)()
+	int32                                         K2Node_Event_InCurrentStamina;                     // 0x06F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_Event_InMaxStamina;                         // 0x06F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_InProhibited;                         // 0x06F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_6F9[0x7];                                      // 0x06F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class ITextureInterface>     K2Node_DynamicCast_AsTexture_Interface;            // 0x0700(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0710(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_711[0x7];                                      // 0x0711(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBP_CheckableScrollerItem_C*            K2Node_DynamicCast_AsBP_Checkable_Scroller_Item;   // 0x0718(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0720(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_721[0x7];                                      // 0x0721(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBP_CheckableScrollerItem_C*            K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_1; // 0x0728(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0730(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_731[0x3];                                      // 0x0731(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetElementIndex_ReturnValue;              // 0x0734(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetElementIndex_ReturnValue_1;            // 0x0738(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_73C[0x4];                                      // 0x073C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUserWidget*                            K2Node_ComponentBoundEvent_Widget;                 // 0x0740(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class ISelectableInterface>  K2Node_DynamicCast_AsSelectable_Interface;         // 0x0748(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0758(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_759[0x7];                                      // 0x0759(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUIJailInfo                            CallFunc_GetJailInfoByIndex_OutJailInfo;           // 0x0760(0x0148)()
-	bool                                          CallFunc_Deselect_ReturnValue;                     // 0x08A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SetLazyTexture_ReturnValue;               // 0x08A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8AA[0x6];                                      // 0x08AA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                K2Node_ComponentBoundEvent_Item_1;                 // 0x08B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_ComponentBoundEvent_bIsHovered;             // 0x08B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8B9[0x7];                                      // 0x08B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBP_CheckableScrollerItem_C*            K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_2; // 0x08C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x08C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8C9[0x3];                                      // 0x08C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetElementIndex_ReturnValue_2;            // 0x08CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                K2Node_ComponentBoundEvent_Item;                   // 0x08D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetStoryFlagValueByBoolean_ReturnValue;   // 0x08D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D9[0x7];                                      // 0x08D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        Temp_real_Variable_20;                             // 0x08E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable_20_0;                           // 0x08E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable_21;                             // 0x08F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable_21_0;                           // 0x08F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UInputAction*                           Temp_object_Variable_10;                           // 0x0900(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                K2Node_ComponentBoundEvent_Item_3;                 // 0x0700(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UUserWidget*                            K2Node_ComponentBoundEvent_Widget_1;               // 0x0708(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                K2Node_ComponentBoundEvent_Item_2;                 // 0x0710(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_ComponentBoundEvent_bIsSelected;            // 0x0718(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_719[0x7];                                      // 0x0719(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class ITextureInterface>     K2Node_DynamicCast_AsTexture_Interface;            // 0x0720(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0730(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_731[0x7];                                      // 0x0731(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_CheckableScrollerItem_C*            K2Node_DynamicCast_AsBP_Checkable_Scroller_Item;   // 0x0738(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0740(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_741[0x7];                                      // 0x0741(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IIF_ScrollerItemHolder_C> K2Node_DynamicCast_AsIF_Scroller_Item_Holder;      // 0x0748(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0758(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_759[0x3];                                      // 0x0759(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetElementIndex_ReturnValue;              // 0x075C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UBP_CheckableScrollerItem_C*            K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_1; // 0x0760(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0768(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_769[0x3];                                      // 0x0769(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetElementIndex_ReturnValue_1;            // 0x076C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UUserWidget*                            K2Node_ComponentBoundEvent_Widget;                 // 0x0770(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class ISelectableInterface>  K2Node_DynamicCast_AsSelectable_Interface;         // 0x0778(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x0788(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_789[0x7];                                      // 0x0789(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUIJailInfo                            CallFunc_GetJailInfoByIndex_OutJailInfo;           // 0x0790(0x0148)()
+	bool                                          CallFunc_Deselect_ReturnValue;                     // 0x08D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SetLazyTexture_ReturnValue;               // 0x08D9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8DA[0x6];                                      // 0x08DA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                K2Node_ComponentBoundEvent_Item_1;                 // 0x08E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_ComponentBoundEvent_bIsHovered;             // 0x08E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8E9[0x7];                                      // 0x08E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_CheckableScrollerItem_C*            K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_2; // 0x08F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_6;                     // 0x08F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8F9[0x3];                                      // 0x08F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetElementIndex_ReturnValue_2;            // 0x08FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                K2Node_ComponentBoundEvent_Item;                   // 0x0900(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetStoryFlagValueByBoolean_ReturnValue_1; // 0x0908(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_909[0x7];                                      // 0x0909(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Temp_real_Variable_20;                             // 0x0910(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_20_0;                           // 0x0918(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_21;                             // 0x0920(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_21_0;                           // 0x0928(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UInputAction*                           Temp_object_Variable_10;                           // 0x0930(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsStoryFlagEvaluationFormulaAnalysis_ReturnValue; // 0x0938(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0939(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu) == 0x000008, "Wrong alignment on WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu");
-static_assert(sizeof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu) == 0x000908, "Wrong size on WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu");
+static_assert(sizeof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu) == 0x000940, "Wrong size on WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu");
 static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, EntryPoint) == 0x000000, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::EntryPoint' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, CallFunc_GetStoryFlagValueByBoolean_ReturnValue) == 0x000004, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::CallFunc_GetStoryFlagValueByBoolean_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, CallFunc_Not_PreBool_ReturnValue) == 0x000005, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_EnhancedInputActionEvent_ActionValue_10) == 0x000008, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_EnhancedInputActionEvent_ActionValue_10' has a wrong offset!");
 static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_EnhancedInputActionEvent_ElapsedTime_10) == 0x000028, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_EnhancedInputActionEvent_ElapsedTime_10' has a wrong offset!");
 static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_EnhancedInputActionEvent_TriggeredTime_10) == 0x00002C, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_EnhancedInputActionEvent_TriggeredTime_10' has a wrong offset!");
@@ -481,13 +491,13 @@ static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmen
 static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, Temp_real_Variable_19) == 0x0004F8, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::Temp_real_Variable_19' has a wrong offset!");
 static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, Temp_object_Variable_9) == 0x000500, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::Temp_object_Variable_9' has a wrong offset!");
 static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, CallFunc_IsSelectMode_OutFlag) == 0x000508, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::CallFunc_IsSelectMode_OutFlag' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, CallFunc_Not_PreBool_ReturnValue) == 0x000509, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, CallFunc_Not_PreBool_ReturnValue_1) == 0x000509, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, CallFunc_IsSelectMode_OutFlag_1) == 0x00050A, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::CallFunc_IsSelectMode_OutFlag_1' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, CallFunc_Not_PreBool_ReturnValue_1) == 0x00050B, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, CallFunc_Not_PreBool_ReturnValue_2) == 0x00050B, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::CallFunc_Not_PreBool_ReturnValue_2' has a wrong offset!");
 static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, CallFunc_IsSelectMode_OutFlag_2) == 0x00050C, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::CallFunc_IsSelectMode_OutFlag_2' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, CallFunc_Not_PreBool_ReturnValue_2) == 0x00050D, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::CallFunc_Not_PreBool_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, CallFunc_Not_PreBool_ReturnValue_3) == 0x00050D, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::CallFunc_Not_PreBool_ReturnValue_3' has a wrong offset!");
 static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, CallFunc_IsSelectMode_OutFlag_3) == 0x00050E, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::CallFunc_IsSelectMode_OutFlag_3' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, CallFunc_Not_PreBool_ReturnValue_3) == 0x00050F, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::CallFunc_Not_PreBool_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, CallFunc_Not_PreBool_ReturnValue_4) == 0x00050F, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::CallFunc_Not_PreBool_ReturnValue_4' has a wrong offset!");
 static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_EnhancedInputActionEvent_ActionValue_12) == 0x000510, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_EnhancedInputActionEvent_ActionValue_12' has a wrong offset!");
 static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_EnhancedInputActionEvent_ElapsedTime_12) == 0x000530, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_EnhancedInputActionEvent_ElapsedTime_12' has a wrong offset!");
 static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_EnhancedInputActionEvent_TriggeredTime_12) == 0x000534, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_EnhancedInputActionEvent_TriggeredTime_12' has a wrong offset!");
@@ -508,6 +518,8 @@ static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmen
 static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, CallFunc_IsShowSpecialBuffList_ReturnValue_8) == 0x0005D6, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::CallFunc_IsShowSpecialBuffList_ReturnValue_8' has a wrong offset!");
 static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, Temp_bool_Variable_10) == 0x0005D7, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::Temp_bool_Variable_10' has a wrong offset!");
 static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_Event_IsDesignTime) == 0x0005D8, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_Event_IsDesignTime' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, CallFunc_IsSelectMode_OutFlag_4) == 0x0005D9, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::CallFunc_IsSelectMode_OutFlag_4' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, CallFunc_Not_PreBool_ReturnValue_5) == 0x0005DA, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::CallFunc_Not_PreBool_ReturnValue_5' has a wrong offset!");
 static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, CallFunc_GetUIObject_ReturnValue) == 0x0005E0, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::CallFunc_GetUIObject_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_DynamicCast_AsField_Menu_UIObject) == 0x0005E8, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_DynamicCast_AsField_Menu_UIObject' has a wrong offset!");
 static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_DynamicCast_bSuccess) == 0x0005F0, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_DynamicCast_bSuccess' has a wrong offset!");
@@ -515,39 +527,43 @@ static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmen
 static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_Event_InCurrentHealth) == 0x000608, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_Event_InCurrentHealth' has a wrong offset!");
 static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_Event_InMaxHealth) == 0x000610, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_Event_InMaxHealth' has a wrong offset!");
 static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo) == 0x000618, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_Event_InCurrentStamina) == 0x0006D0, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_Event_InCurrentStamina' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_Event_InMaxStamina) == 0x0006D4, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_Event_InMaxStamina' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_Event_InProhibited) == 0x0006D8, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_Event_InProhibited' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_ComponentBoundEvent_Item_3) == 0x0006E0, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_ComponentBoundEvent_Item_3' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_ComponentBoundEvent_Widget_1) == 0x0006E8, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_ComponentBoundEvent_Widget_1' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_ComponentBoundEvent_Item_2) == 0x0006F0, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_ComponentBoundEvent_Item_2' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_ComponentBoundEvent_bIsSelected) == 0x0006F8, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_ComponentBoundEvent_bIsSelected' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_DynamicCast_AsTexture_Interface) == 0x000700, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_DynamicCast_AsTexture_Interface' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_DynamicCast_bSuccess_1) == 0x000710, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_DynamicCast_AsBP_Checkable_Scroller_Item) == 0x000718, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_DynamicCast_AsBP_Checkable_Scroller_Item' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_DynamicCast_bSuccess_2) == 0x000720, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_1) == 0x000728, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_1' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_DynamicCast_bSuccess_3) == 0x000730, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, CallFunc_GetElementIndex_ReturnValue) == 0x000734, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::CallFunc_GetElementIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, CallFunc_GetElementIndex_ReturnValue_1) == 0x000738, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::CallFunc_GetElementIndex_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_ComponentBoundEvent_Widget) == 0x000740, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_ComponentBoundEvent_Widget' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_DynamicCast_AsSelectable_Interface) == 0x000748, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_DynamicCast_AsSelectable_Interface' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_DynamicCast_bSuccess_4) == 0x000758, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, CallFunc_GetJailInfoByIndex_OutJailInfo) == 0x000760, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::CallFunc_GetJailInfoByIndex_OutJailInfo' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, CallFunc_Deselect_ReturnValue) == 0x0008A8, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::CallFunc_Deselect_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, CallFunc_SetLazyTexture_ReturnValue) == 0x0008A9, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::CallFunc_SetLazyTexture_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_ComponentBoundEvent_Item_1) == 0x0008B0, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_ComponentBoundEvent_Item_1' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_ComponentBoundEvent_bIsHovered) == 0x0008B8, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_ComponentBoundEvent_bIsHovered' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_2) == 0x0008C0, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_2' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_DynamicCast_bSuccess_5) == 0x0008C8, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_DynamicCast_bSuccess_5' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, CallFunc_GetElementIndex_ReturnValue_2) == 0x0008CC, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::CallFunc_GetElementIndex_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_ComponentBoundEvent_Item) == 0x0008D0, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_ComponentBoundEvent_Item' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, CallFunc_GetStoryFlagValueByBoolean_ReturnValue) == 0x0008D8, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::CallFunc_GetStoryFlagValueByBoolean_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, Temp_real_Variable_20) == 0x0008E0, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::Temp_real_Variable_20' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, Temp_real_Variable_20_0) == 0x0008E8, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::Temp_real_Variable_20_0' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, Temp_real_Variable_21) == 0x0008F0, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::Temp_real_Variable_21' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, Temp_real_Variable_21_0) == 0x0008F8, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::Temp_real_Variable_21_0' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, Temp_object_Variable_10) == 0x000900, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::Temp_object_Variable_10' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_Event_InCurrentStamina) == 0x0006F0, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_Event_InCurrentStamina' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_Event_InMaxStamina) == 0x0006F4, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_Event_InMaxStamina' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_Event_InProhibited) == 0x0006F8, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_Event_InProhibited' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_ComponentBoundEvent_Item_3) == 0x000700, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_ComponentBoundEvent_Item_3' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_ComponentBoundEvent_Widget_1) == 0x000708, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_ComponentBoundEvent_Widget_1' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_ComponentBoundEvent_Item_2) == 0x000710, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_ComponentBoundEvent_Item_2' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_ComponentBoundEvent_bIsSelected) == 0x000718, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_ComponentBoundEvent_bIsSelected' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_DynamicCast_AsTexture_Interface) == 0x000720, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_DynamicCast_AsTexture_Interface' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_DynamicCast_bSuccess_1) == 0x000730, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_DynamicCast_AsBP_Checkable_Scroller_Item) == 0x000738, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_DynamicCast_AsBP_Checkable_Scroller_Item' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_DynamicCast_bSuccess_2) == 0x000740, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_DynamicCast_AsIF_Scroller_Item_Holder) == 0x000748, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_DynamicCast_AsIF_Scroller_Item_Holder' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_DynamicCast_bSuccess_3) == 0x000758, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, CallFunc_GetElementIndex_ReturnValue) == 0x00075C, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::CallFunc_GetElementIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_1) == 0x000760, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_1' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_DynamicCast_bSuccess_4) == 0x000768, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, CallFunc_GetElementIndex_ReturnValue_1) == 0x00076C, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::CallFunc_GetElementIndex_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_ComponentBoundEvent_Widget) == 0x000770, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_ComponentBoundEvent_Widget' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_DynamicCast_AsSelectable_Interface) == 0x000778, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_DynamicCast_AsSelectable_Interface' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_DynamicCast_bSuccess_5) == 0x000788, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_DynamicCast_bSuccess_5' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, CallFunc_GetJailInfoByIndex_OutJailInfo) == 0x000790, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::CallFunc_GetJailInfoByIndex_OutJailInfo' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, CallFunc_Deselect_ReturnValue) == 0x0008D8, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::CallFunc_Deselect_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, CallFunc_SetLazyTexture_ReturnValue) == 0x0008D9, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::CallFunc_SetLazyTexture_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_ComponentBoundEvent_Item_1) == 0x0008E0, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_ComponentBoundEvent_Item_1' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_ComponentBoundEvent_bIsHovered) == 0x0008E8, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_ComponentBoundEvent_bIsHovered' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_2) == 0x0008F0, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_2' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_DynamicCast_bSuccess_6) == 0x0008F8, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_DynamicCast_bSuccess_6' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, CallFunc_GetElementIndex_ReturnValue_2) == 0x0008FC, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::CallFunc_GetElementIndex_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, K2Node_ComponentBoundEvent_Item) == 0x000900, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::K2Node_ComponentBoundEvent_Item' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, CallFunc_GetStoryFlagValueByBoolean_ReturnValue_1) == 0x000908, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::CallFunc_GetStoryFlagValueByBoolean_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, Temp_real_Variable_20) == 0x000910, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::Temp_real_Variable_20' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, Temp_real_Variable_20_0) == 0x000918, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::Temp_real_Variable_20_0' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, Temp_real_Variable_21) == 0x000920, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::Temp_real_Variable_21' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, Temp_real_Variable_21_0) == 0x000928, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::Temp_real_Variable_21_0' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, Temp_object_Variable_10) == 0x000930, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::Temp_object_Variable_10' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, CallFunc_IsStoryFlagEvaluationFormulaAnalysis_ReturnValue) == 0x000938, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::CallFunc_IsStoryFlagEvaluationFormulaAnalysis_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu, CallFunc_BooleanAND_ReturnValue) == 0x000939, "Member 'WDT_JailEquipmentMenu_C_ExecuteUbergraph_WDT_JailEquipmentMenu::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
 
 // Function WDT_JailEquipmentMenu.WDT_JailEquipmentMenu_C.Initialize
 // 0x0001 (0x0001 - 0x0000)
@@ -836,7 +852,7 @@ static_assert(offsetof(WDT_JailEquipmentMenu_C_OnCancelReleased, CallFunc_Boolea
 static_assert(offsetof(WDT_JailEquipmentMenu_C_OnCancelReleased, CallFunc_Close_ReturnValue) == 0x000004, "Member 'WDT_JailEquipmentMenu_C_OnCancelReleased::CallFunc_Close_ReturnValue' has a wrong offset!");
 
 // Function WDT_JailEquipmentMenu.WDT_JailEquipmentMenu_C.OnDecideReleased
-// 0x0288 (0x0288 - 0x0000)
+// 0x00A8 (0x00A8 - 0x0000)
 struct WDT_JailEquipmentMenu_C_OnDecideReleased final
 {
 public:
@@ -847,69 +863,74 @@ public:
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWDT_FieldMenuTilePieceBase_C*          L_FieldMenuTile;                                   // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetSelectionIndex_ReturnValue;            // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetSelectionIndex_ReturnValue_1;          // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_PlayUIAudioEvent_ReturnValue;             // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUIJailInfo                            CallFunc_GetJailInfoByIndex_OutJailInfo;           // 0x0030(0x0148)()
-	struct FUIPlayerStatusSummaryInfo             CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo; // 0x0178(0x00B8)(NoDestructor)
-	class UObject*                                CallFunc_BP_GetSelectedItem_ReturnValue;           // 0x0230(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UBP_CheckableScrollerItem_C*            K2Node_DynamicCast_AsBP_Checkable_Scroller_Item;   // 0x0238(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0240(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsEquipmentEnabled_ReturnValue;           // 0x0241(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_242[0x2];                                      // 0x0242(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetElementIndex_ReturnValue;              // 0x0244(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0248(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0249(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_24A[0x6];                                      // 0x024A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue_1;   // 0x0250(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetEquippedJailIndex_ReturnValue;         // 0x0258(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_PlayUIAudioEvent_ReturnValue_1;           // 0x025C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_25D[0x3];                                      // 0x025D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue_2;   // 0x0260(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_PlayUIAudioEvent_ReturnValue_2;           // 0x0268(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasDelegatesProperlyBound_ReturnValue;    // 0x0269(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsActivated_ReturnValue;                  // 0x026A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x026B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x026C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetIsEnabled_ReturnValue;                 // 0x026D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_26E[0x2];                                      // 0x026E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMenuPieceBase*                         CallFunc_GetSelectedMenuPiece_ReturnValue;         // 0x0270(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWDT_FieldMenuTilePieceBase_C*          K2Node_DynamicCast_AsWDT_Field_Menu_Tile_Piece_Base; // 0x0278(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0280(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                CallFunc_BP_GetSelectedItem_ReturnValue;           // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetSelectionIndex_ReturnValue_1;          // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_CheckableScrollerItem_C*            K2Node_DynamicCast_AsBP_Checkable_Scroller_Item;   // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                CallFunc_BP_GetSelectedItem_ReturnValue_1;         // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UBP_CheckableScrollerItem_C*            K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_1; // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsEquipmentEnabled_ReturnValue;           // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_62[0x2];                                       // 0x0062(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetElementIndex_ReturnValue;              // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0069(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6A[0x6];                                       // 0x006A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue_1;   // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetEquippedJailIndex_ReturnValue;         // 0x0078(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_PlayUIAudioEvent_ReturnValue_1;           // 0x007C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7D[0x3];                                       // 0x007D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue_2;   // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_PlayUIAudioEvent_ReturnValue_2;           // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasDelegatesProperlyBound_ReturnValue;    // 0x0089(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsActivated_ReturnValue;                  // 0x008A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x008B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x008C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetIsEnabled_ReturnValue;                 // 0x008D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8E[0x2];                                       // 0x008E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMenuPieceBase*                         CallFunc_GetSelectedMenuPiece_ReturnValue;         // 0x0090(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWDT_FieldMenuTilePieceBase_C*          K2Node_DynamicCast_AsWDT_Field_Menu_Tile_Piece_Base; // 0x0098(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_JailEquipmentMenu_C_OnDecideReleased) == 0x000008, "Wrong alignment on WDT_JailEquipmentMenu_C_OnDecideReleased");
-static_assert(sizeof(WDT_JailEquipmentMenu_C_OnDecideReleased) == 0x000288, "Wrong size on WDT_JailEquipmentMenu_C_OnDecideReleased");
+static_assert(sizeof(WDT_JailEquipmentMenu_C_OnDecideReleased) == 0x0000A8, "Wrong size on WDT_JailEquipmentMenu_C_OnDecideReleased");
 static_assert(offsetof(WDT_JailEquipmentMenu_C_OnDecideReleased, L_IsEquip) == 0x000000, "Member 'WDT_JailEquipmentMenu_C_OnDecideReleased::L_IsEquip' has a wrong offset!");
 static_assert(offsetof(WDT_JailEquipmentMenu_C_OnDecideReleased, L_EquippedIndex) == 0x000004, "Member 'WDT_JailEquipmentMenu_C_OnDecideReleased::L_EquippedIndex' has a wrong offset!");
 static_assert(offsetof(WDT_JailEquipmentMenu_C_OnDecideReleased, L_TargetSlotIndex) == 0x000008, "Member 'WDT_JailEquipmentMenu_C_OnDecideReleased::L_TargetSlotIndex' has a wrong offset!");
 static_assert(offsetof(WDT_JailEquipmentMenu_C_OnDecideReleased, L_FieldMenuTile) == 0x000010, "Member 'WDT_JailEquipmentMenu_C_OnDecideReleased::L_FieldMenuTile' has a wrong offset!");
 static_assert(offsetof(WDT_JailEquipmentMenu_C_OnDecideReleased, CallFunc_GetSelectionIndex_ReturnValue) == 0x000018, "Member 'WDT_JailEquipmentMenu_C_OnDecideReleased::CallFunc_GetSelectionIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_OnDecideReleased, CallFunc_GetSelectionIndex_ReturnValue_1) == 0x00001C, "Member 'WDT_JailEquipmentMenu_C_OnDecideReleased::CallFunc_GetSelectionIndex_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(WDT_JailEquipmentMenu_C_OnDecideReleased, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000020, "Member 'WDT_JailEquipmentMenu_C_OnDecideReleased::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_JailEquipmentMenu_C_OnDecideReleased, CallFunc_PlayUIAudioEvent_ReturnValue) == 0x000028, "Member 'WDT_JailEquipmentMenu_C_OnDecideReleased::CallFunc_PlayUIAudioEvent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_OnDecideReleased, CallFunc_GetJailInfoByIndex_OutJailInfo) == 0x000030, "Member 'WDT_JailEquipmentMenu_C_OnDecideReleased::CallFunc_GetJailInfoByIndex_OutJailInfo' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_OnDecideReleased, CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo) == 0x000178, "Member 'WDT_JailEquipmentMenu_C_OnDecideReleased::CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_OnDecideReleased, CallFunc_BP_GetSelectedItem_ReturnValue) == 0x000230, "Member 'WDT_JailEquipmentMenu_C_OnDecideReleased::CallFunc_BP_GetSelectedItem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_OnDecideReleased, K2Node_DynamicCast_AsBP_Checkable_Scroller_Item) == 0x000238, "Member 'WDT_JailEquipmentMenu_C_OnDecideReleased::K2Node_DynamicCast_AsBP_Checkable_Scroller_Item' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_OnDecideReleased, K2Node_DynamicCast_bSuccess) == 0x000240, "Member 'WDT_JailEquipmentMenu_C_OnDecideReleased::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_OnDecideReleased, CallFunc_IsEquipmentEnabled_ReturnValue) == 0x000241, "Member 'WDT_JailEquipmentMenu_C_OnDecideReleased::CallFunc_IsEquipmentEnabled_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_OnDecideReleased, CallFunc_GetElementIndex_ReturnValue) == 0x000244, "Member 'WDT_JailEquipmentMenu_C_OnDecideReleased::CallFunc_GetElementIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_OnDecideReleased, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000248, "Member 'WDT_JailEquipmentMenu_C_OnDecideReleased::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_OnDecideReleased, CallFunc_Not_PreBool_ReturnValue) == 0x000249, "Member 'WDT_JailEquipmentMenu_C_OnDecideReleased::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_OnDecideReleased, CallFunc_GetGameInstanceSubsystem_ReturnValue_1) == 0x000250, "Member 'WDT_JailEquipmentMenu_C_OnDecideReleased::CallFunc_GetGameInstanceSubsystem_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_OnDecideReleased, CallFunc_GetEquippedJailIndex_ReturnValue) == 0x000258, "Member 'WDT_JailEquipmentMenu_C_OnDecideReleased::CallFunc_GetEquippedJailIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_OnDecideReleased, CallFunc_PlayUIAudioEvent_ReturnValue_1) == 0x00025C, "Member 'WDT_JailEquipmentMenu_C_OnDecideReleased::CallFunc_PlayUIAudioEvent_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_OnDecideReleased, CallFunc_GetGameInstanceSubsystem_ReturnValue_2) == 0x000260, "Member 'WDT_JailEquipmentMenu_C_OnDecideReleased::CallFunc_GetGameInstanceSubsystem_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_OnDecideReleased, CallFunc_PlayUIAudioEvent_ReturnValue_2) == 0x000268, "Member 'WDT_JailEquipmentMenu_C_OnDecideReleased::CallFunc_PlayUIAudioEvent_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_OnDecideReleased, CallFunc_HasDelegatesProperlyBound_ReturnValue) == 0x000269, "Member 'WDT_JailEquipmentMenu_C_OnDecideReleased::CallFunc_HasDelegatesProperlyBound_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_OnDecideReleased, CallFunc_IsActivated_ReturnValue) == 0x00026A, "Member 'WDT_JailEquipmentMenu_C_OnDecideReleased::CallFunc_IsActivated_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_OnDecideReleased, CallFunc_IsVisible_ReturnValue) == 0x00026B, "Member 'WDT_JailEquipmentMenu_C_OnDecideReleased::CallFunc_IsVisible_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_OnDecideReleased, CallFunc_BooleanAND_ReturnValue) == 0x00026C, "Member 'WDT_JailEquipmentMenu_C_OnDecideReleased::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_OnDecideReleased, CallFunc_GetIsEnabled_ReturnValue) == 0x00026D, "Member 'WDT_JailEquipmentMenu_C_OnDecideReleased::CallFunc_GetIsEnabled_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_OnDecideReleased, CallFunc_GetSelectedMenuPiece_ReturnValue) == 0x000270, "Member 'WDT_JailEquipmentMenu_C_OnDecideReleased::CallFunc_GetSelectedMenuPiece_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_OnDecideReleased, K2Node_DynamicCast_AsWDT_Field_Menu_Tile_Piece_Base) == 0x000278, "Member 'WDT_JailEquipmentMenu_C_OnDecideReleased::K2Node_DynamicCast_AsWDT_Field_Menu_Tile_Piece_Base' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_OnDecideReleased, K2Node_DynamicCast_bSuccess_1) == 0x000280, "Member 'WDT_JailEquipmentMenu_C_OnDecideReleased::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_OnDecideReleased, CallFunc_BP_GetSelectedItem_ReturnValue) == 0x000030, "Member 'WDT_JailEquipmentMenu_C_OnDecideReleased::CallFunc_BP_GetSelectedItem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_OnDecideReleased, CallFunc_GetSelectionIndex_ReturnValue_1) == 0x000038, "Member 'WDT_JailEquipmentMenu_C_OnDecideReleased::CallFunc_GetSelectionIndex_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_OnDecideReleased, K2Node_DynamicCast_AsBP_Checkable_Scroller_Item) == 0x000040, "Member 'WDT_JailEquipmentMenu_C_OnDecideReleased::K2Node_DynamicCast_AsBP_Checkable_Scroller_Item' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_OnDecideReleased, K2Node_DynamicCast_bSuccess) == 0x000048, "Member 'WDT_JailEquipmentMenu_C_OnDecideReleased::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_OnDecideReleased, CallFunc_BP_GetSelectedItem_ReturnValue_1) == 0x000050, "Member 'WDT_JailEquipmentMenu_C_OnDecideReleased::CallFunc_BP_GetSelectedItem_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_OnDecideReleased, K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_1) == 0x000058, "Member 'WDT_JailEquipmentMenu_C_OnDecideReleased::K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_1' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_OnDecideReleased, K2Node_DynamicCast_bSuccess_1) == 0x000060, "Member 'WDT_JailEquipmentMenu_C_OnDecideReleased::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_OnDecideReleased, CallFunc_IsEquipmentEnabled_ReturnValue) == 0x000061, "Member 'WDT_JailEquipmentMenu_C_OnDecideReleased::CallFunc_IsEquipmentEnabled_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_OnDecideReleased, CallFunc_GetElementIndex_ReturnValue) == 0x000064, "Member 'WDT_JailEquipmentMenu_C_OnDecideReleased::CallFunc_GetElementIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_OnDecideReleased, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000068, "Member 'WDT_JailEquipmentMenu_C_OnDecideReleased::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_OnDecideReleased, CallFunc_Not_PreBool_ReturnValue) == 0x000069, "Member 'WDT_JailEquipmentMenu_C_OnDecideReleased::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_OnDecideReleased, CallFunc_GetGameInstanceSubsystem_ReturnValue_1) == 0x000070, "Member 'WDT_JailEquipmentMenu_C_OnDecideReleased::CallFunc_GetGameInstanceSubsystem_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_OnDecideReleased, CallFunc_GetEquippedJailIndex_ReturnValue) == 0x000078, "Member 'WDT_JailEquipmentMenu_C_OnDecideReleased::CallFunc_GetEquippedJailIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_OnDecideReleased, CallFunc_PlayUIAudioEvent_ReturnValue_1) == 0x00007C, "Member 'WDT_JailEquipmentMenu_C_OnDecideReleased::CallFunc_PlayUIAudioEvent_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_OnDecideReleased, CallFunc_GetGameInstanceSubsystem_ReturnValue_2) == 0x000080, "Member 'WDT_JailEquipmentMenu_C_OnDecideReleased::CallFunc_GetGameInstanceSubsystem_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_OnDecideReleased, CallFunc_PlayUIAudioEvent_ReturnValue_2) == 0x000088, "Member 'WDT_JailEquipmentMenu_C_OnDecideReleased::CallFunc_PlayUIAudioEvent_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_OnDecideReleased, CallFunc_HasDelegatesProperlyBound_ReturnValue) == 0x000089, "Member 'WDT_JailEquipmentMenu_C_OnDecideReleased::CallFunc_HasDelegatesProperlyBound_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_OnDecideReleased, CallFunc_IsActivated_ReturnValue) == 0x00008A, "Member 'WDT_JailEquipmentMenu_C_OnDecideReleased::CallFunc_IsActivated_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_OnDecideReleased, CallFunc_IsVisible_ReturnValue) == 0x00008B, "Member 'WDT_JailEquipmentMenu_C_OnDecideReleased::CallFunc_IsVisible_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_OnDecideReleased, CallFunc_BooleanAND_ReturnValue) == 0x00008C, "Member 'WDT_JailEquipmentMenu_C_OnDecideReleased::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_OnDecideReleased, CallFunc_GetIsEnabled_ReturnValue) == 0x00008D, "Member 'WDT_JailEquipmentMenu_C_OnDecideReleased::CallFunc_GetIsEnabled_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_OnDecideReleased, CallFunc_GetSelectedMenuPiece_ReturnValue) == 0x000090, "Member 'WDT_JailEquipmentMenu_C_OnDecideReleased::CallFunc_GetSelectedMenuPiece_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_OnDecideReleased, K2Node_DynamicCast_AsWDT_Field_Menu_Tile_Piece_Base) == 0x000098, "Member 'WDT_JailEquipmentMenu_C_OnDecideReleased::K2Node_DynamicCast_AsWDT_Field_Menu_Tile_Piece_Base' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_OnDecideReleased, K2Node_DynamicCast_bSuccess_2) == 0x0000A0, "Member 'WDT_JailEquipmentMenu_C_OnDecideReleased::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
 
 // Function WDT_JailEquipmentMenu.WDT_JailEquipmentMenu_C.OnDownPressed
 // 0x0018 (0x0018 - 0x0000)
@@ -1165,27 +1186,28 @@ static_assert(sizeof(WDT_JailEquipmentMenu_C_PreConstruct) == 0x000001, "Wrong s
 static_assert(offsetof(WDT_JailEquipmentMenu_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WDT_JailEquipmentMenu_C_PreConstruct::IsDesignTime' has a wrong offset!");
 
 // Function WDT_JailEquipmentMenu.WDT_JailEquipmentMenu_C.Reset
-// 0x00CC (0x00CC - 0x0000)
+// 0x00F0 (0x00F0 - 0x0000)
 struct WDT_JailEquipmentMenu_C_Reset final
 {
 public:
 	int32                                         CallFunc_GetEquippedJailIndex_ReturnValue;         // 0x0000(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FUIPlayerStatusSummaryInfo             CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo; // 0x0004(0x00B8)(NoDestructor)
-	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x00BC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_BD[0x3];                                       // 0x00BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetJailNumber_ReturnValue;                // 0x00C0(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x00C4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C5[0x3];                                       // 0x00C5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_SelectInt_ReturnValue;                    // 0x00C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUIPlayerStatusSummaryInfo             CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo; // 0x0008(0x00D8)()
+	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E1[0x3];                                       // 0x00E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetJailNumber_ReturnValue;                // 0x00E4(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E9[0x3];                                       // 0x00E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_SelectInt_ReturnValue;                    // 0x00EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WDT_JailEquipmentMenu_C_Reset) == 0x000004, "Wrong alignment on WDT_JailEquipmentMenu_C_Reset");
-static_assert(sizeof(WDT_JailEquipmentMenu_C_Reset) == 0x0000CC, "Wrong size on WDT_JailEquipmentMenu_C_Reset");
+static_assert(alignof(WDT_JailEquipmentMenu_C_Reset) == 0x000008, "Wrong alignment on WDT_JailEquipmentMenu_C_Reset");
+static_assert(sizeof(WDT_JailEquipmentMenu_C_Reset) == 0x0000F0, "Wrong size on WDT_JailEquipmentMenu_C_Reset");
 static_assert(offsetof(WDT_JailEquipmentMenu_C_Reset, CallFunc_GetEquippedJailIndex_ReturnValue) == 0x000000, "Member 'WDT_JailEquipmentMenu_C_Reset::CallFunc_GetEquippedJailIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_Reset, CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo) == 0x000004, "Member 'WDT_JailEquipmentMenu_C_Reset::CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_Reset, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x0000BC, "Member 'WDT_JailEquipmentMenu_C_Reset::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_Reset, CallFunc_GetJailNumber_ReturnValue) == 0x0000C0, "Member 'WDT_JailEquipmentMenu_C_Reset::CallFunc_GetJailNumber_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_Reset, CallFunc_Greater_IntInt_ReturnValue) == 0x0000C4, "Member 'WDT_JailEquipmentMenu_C_Reset::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_Reset, CallFunc_SelectInt_ReturnValue) == 0x0000C8, "Member 'WDT_JailEquipmentMenu_C_Reset::CallFunc_SelectInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_Reset, CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo) == 0x000008, "Member 'WDT_JailEquipmentMenu_C_Reset::CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_Reset, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x0000E0, "Member 'WDT_JailEquipmentMenu_C_Reset::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_Reset, CallFunc_GetJailNumber_ReturnValue) == 0x0000E4, "Member 'WDT_JailEquipmentMenu_C_Reset::CallFunc_GetJailNumber_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_Reset, CallFunc_Greater_IntInt_ReturnValue) == 0x0000E8, "Member 'WDT_JailEquipmentMenu_C_Reset::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_Reset, CallFunc_SelectInt_ReturnValue) == 0x0000EC, "Member 'WDT_JailEquipmentMenu_C_Reset::CallFunc_SelectInt_ReturnValue' has a wrong offset!");
 
 // Function WDT_JailEquipmentMenu.WDT_JailEquipmentMenu_C.SequenceEvent__ENTRYPOINTWDT_JailEquipmentMenu
 // 0x0008 (0x0008 - 0x0000)
@@ -1221,36 +1243,38 @@ static_assert(sizeof(WDT_JailEquipmentMenu_C_SetProhibited) == 0x000001, "Wrong 
 static_assert(offsetof(WDT_JailEquipmentMenu_C_SetProhibited, InProhibited) == 0x000000, "Member 'WDT_JailEquipmentMenu_C_SetProhibited::InProhibited' has a wrong offset!");
 
 // Function WDT_JailEquipmentMenu.WDT_JailEquipmentMenu_C.UpdateArticleInfo
-// 0x06C8 (0x06C8 - 0x0000)
+// 0x0750 (0x0750 - 0x0000)
 struct WDT_JailEquipmentMenu_C_UpdateArticleInfo final
 {
 public:
 	int32                                         InJailIndex;                                       // 0x0000(0x0004)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FUIPlayerStatusSummaryInfo             CallFunc_GetPlayerStatusSummaryInfoWithJail_OutSummaryInfo; // 0x0004(0x00B8)(NoDestructor)
-	int32                                         CallFunc_GetEquippedJailIndex_ReturnValue;         // 0x00BC(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FUIJailInfo                            CallFunc_GetJailInfoByIndex_OutJailInfo;           // 0x00C0(0x0148)()
-	struct FUIJailInfo                            CallFunc_GetJailInfoByIndex_OutJailInfo_1;         // 0x0208(0x0148)()
-	struct FUIPlayerStatusSummaryInfo             CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo; // 0x0350(0x00B8)(NoDestructor)
-	struct FUIPlayerStatusSummaryInfo             CallFunc_GetPlayerStatusSummaryInfoWithJail_OutSummaryInfo_1; // 0x0408(0x00B8)(NoDestructor)
-	struct FUIPlayerStatusSummaryInfo             CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo_1; // 0x04C0(0x00B8)(NoDestructor)
-	int32                                         CallFunc_GetEquippedJailIndex_ReturnValue_1;       // 0x0578(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x057C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57D[0x3];                                      // 0x057D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUIJailInfo                            CallFunc_GetJailInfoByIndex_OutJailInfo_2;         // 0x0580(0x0148)()
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUIPlayerStatusSummaryInfo             CallFunc_GetPlayerStatusSummaryInfoWithJail_OutSummaryInfo; // 0x0008(0x00D8)()
+	int32                                         CallFunc_GetEquippedJailIndex_ReturnValue;         // 0x00E0(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E4[0x4];                                       // 0x00E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUIJailInfo                            CallFunc_GetJailInfoByIndex_OutJailInfo;           // 0x00E8(0x0148)()
+	struct FUIJailInfo                            CallFunc_GetJailInfoByIndex_OutJailInfo_1;         // 0x0230(0x0148)()
+	struct FUIPlayerStatusSummaryInfo             CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo; // 0x0378(0x00D8)()
+	struct FUIPlayerStatusSummaryInfo             CallFunc_GetPlayerStatusSummaryInfoWithJail_OutSummaryInfo_1; // 0x0450(0x00D8)()
+	struct FUIPlayerStatusSummaryInfo             CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo_1; // 0x0528(0x00D8)()
+	int32                                         CallFunc_GetEquippedJailIndex_ReturnValue_1;       // 0x0600(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0604(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_605[0x3];                                      // 0x0605(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUIJailInfo                            CallFunc_GetJailInfoByIndex_OutJailInfo_2;         // 0x0608(0x0148)()
 };
 static_assert(alignof(WDT_JailEquipmentMenu_C_UpdateArticleInfo) == 0x000008, "Wrong alignment on WDT_JailEquipmentMenu_C_UpdateArticleInfo");
-static_assert(sizeof(WDT_JailEquipmentMenu_C_UpdateArticleInfo) == 0x0006C8, "Wrong size on WDT_JailEquipmentMenu_C_UpdateArticleInfo");
+static_assert(sizeof(WDT_JailEquipmentMenu_C_UpdateArticleInfo) == 0x000750, "Wrong size on WDT_JailEquipmentMenu_C_UpdateArticleInfo");
 static_assert(offsetof(WDT_JailEquipmentMenu_C_UpdateArticleInfo, InJailIndex) == 0x000000, "Member 'WDT_JailEquipmentMenu_C_UpdateArticleInfo::InJailIndex' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_UpdateArticleInfo, CallFunc_GetPlayerStatusSummaryInfoWithJail_OutSummaryInfo) == 0x000004, "Member 'WDT_JailEquipmentMenu_C_UpdateArticleInfo::CallFunc_GetPlayerStatusSummaryInfoWithJail_OutSummaryInfo' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_UpdateArticleInfo, CallFunc_GetEquippedJailIndex_ReturnValue) == 0x0000BC, "Member 'WDT_JailEquipmentMenu_C_UpdateArticleInfo::CallFunc_GetEquippedJailIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_UpdateArticleInfo, CallFunc_GetJailInfoByIndex_OutJailInfo) == 0x0000C0, "Member 'WDT_JailEquipmentMenu_C_UpdateArticleInfo::CallFunc_GetJailInfoByIndex_OutJailInfo' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_UpdateArticleInfo, CallFunc_GetJailInfoByIndex_OutJailInfo_1) == 0x000208, "Member 'WDT_JailEquipmentMenu_C_UpdateArticleInfo::CallFunc_GetJailInfoByIndex_OutJailInfo_1' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_UpdateArticleInfo, CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo) == 0x000350, "Member 'WDT_JailEquipmentMenu_C_UpdateArticleInfo::CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_UpdateArticleInfo, CallFunc_GetPlayerStatusSummaryInfoWithJail_OutSummaryInfo_1) == 0x000408, "Member 'WDT_JailEquipmentMenu_C_UpdateArticleInfo::CallFunc_GetPlayerStatusSummaryInfoWithJail_OutSummaryInfo_1' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_UpdateArticleInfo, CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo_1) == 0x0004C0, "Member 'WDT_JailEquipmentMenu_C_UpdateArticleInfo::CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo_1' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_UpdateArticleInfo, CallFunc_GetEquippedJailIndex_ReturnValue_1) == 0x000578, "Member 'WDT_JailEquipmentMenu_C_UpdateArticleInfo::CallFunc_GetEquippedJailIndex_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_UpdateArticleInfo, CallFunc_Less_IntInt_ReturnValue) == 0x00057C, "Member 'WDT_JailEquipmentMenu_C_UpdateArticleInfo::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_JailEquipmentMenu_C_UpdateArticleInfo, CallFunc_GetJailInfoByIndex_OutJailInfo_2) == 0x000580, "Member 'WDT_JailEquipmentMenu_C_UpdateArticleInfo::CallFunc_GetJailInfoByIndex_OutJailInfo_2' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_UpdateArticleInfo, CallFunc_GetPlayerStatusSummaryInfoWithJail_OutSummaryInfo) == 0x000008, "Member 'WDT_JailEquipmentMenu_C_UpdateArticleInfo::CallFunc_GetPlayerStatusSummaryInfoWithJail_OutSummaryInfo' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_UpdateArticleInfo, CallFunc_GetEquippedJailIndex_ReturnValue) == 0x0000E0, "Member 'WDT_JailEquipmentMenu_C_UpdateArticleInfo::CallFunc_GetEquippedJailIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_UpdateArticleInfo, CallFunc_GetJailInfoByIndex_OutJailInfo) == 0x0000E8, "Member 'WDT_JailEquipmentMenu_C_UpdateArticleInfo::CallFunc_GetJailInfoByIndex_OutJailInfo' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_UpdateArticleInfo, CallFunc_GetJailInfoByIndex_OutJailInfo_1) == 0x000230, "Member 'WDT_JailEquipmentMenu_C_UpdateArticleInfo::CallFunc_GetJailInfoByIndex_OutJailInfo_1' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_UpdateArticleInfo, CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo) == 0x000378, "Member 'WDT_JailEquipmentMenu_C_UpdateArticleInfo::CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_UpdateArticleInfo, CallFunc_GetPlayerStatusSummaryInfoWithJail_OutSummaryInfo_1) == 0x000450, "Member 'WDT_JailEquipmentMenu_C_UpdateArticleInfo::CallFunc_GetPlayerStatusSummaryInfoWithJail_OutSummaryInfo_1' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_UpdateArticleInfo, CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo_1) == 0x000528, "Member 'WDT_JailEquipmentMenu_C_UpdateArticleInfo::CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo_1' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_UpdateArticleInfo, CallFunc_GetEquippedJailIndex_ReturnValue_1) == 0x000600, "Member 'WDT_JailEquipmentMenu_C_UpdateArticleInfo::CallFunc_GetEquippedJailIndex_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_UpdateArticleInfo, CallFunc_Less_IntInt_ReturnValue) == 0x000604, "Member 'WDT_JailEquipmentMenu_C_UpdateArticleInfo::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_JailEquipmentMenu_C_UpdateArticleInfo, CallFunc_GetJailInfoByIndex_OutJailInfo_2) == 0x000608, "Member 'WDT_JailEquipmentMenu_C_UpdateArticleInfo::CallFunc_GetJailInfoByIndex_OutJailInfo_2' has a wrong offset!");
 
 // Function WDT_JailEquipmentMenu.WDT_JailEquipmentMenu_C.UpdateProhibited
 // 0x0001 (0x0001 - 0x0000)

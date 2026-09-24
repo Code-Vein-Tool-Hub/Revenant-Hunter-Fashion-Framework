@@ -74,35 +74,6 @@ enum class ESimulationQuery : uint8
 	ESimulationQuery_MAX                     = 4,
 };
 
-// ScriptStruct Foliage.FoliageVertexColorChannelMask
-// 0x000C (0x000C - 0x0000)
-struct FFoliageVertexColorChannelMask final
-{
-public:
-	uint8                                         UseMask : 1;                                       // 0x0000(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         MaskThreshold;                                     // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         InvertMask : 1;                                    // 0x0008(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FFoliageVertexColorChannelMask) == 0x000004, "Wrong alignment on FFoliageVertexColorChannelMask");
-static_assert(sizeof(FFoliageVertexColorChannelMask) == 0x00000C, "Wrong size on FFoliageVertexColorChannelMask");
-static_assert(offsetof(FFoliageVertexColorChannelMask, MaskThreshold) == 0x000004, "Member 'FFoliageVertexColorChannelMask::MaskThreshold' has a wrong offset!");
-
-// ScriptStruct Foliage.FoliageDensityFalloff
-// 0x0090 (0x0090 - 0x0000)
-struct FFoliageDensityFalloff final
-{
-public:
-	bool                                          bUseFalloffCurve;                                  // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRuntimeFloatCurve                     FalloffCurve;                                      // 0x0008(0x0088)(Edit, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FFoliageDensityFalloff) == 0x000008, "Wrong alignment on FFoliageDensityFalloff");
-static_assert(sizeof(FFoliageDensityFalloff) == 0x000090, "Wrong size on FFoliageDensityFalloff");
-static_assert(offsetof(FFoliageDensityFalloff, bUseFalloffCurve) == 0x000000, "Member 'FFoliageDensityFalloff::bUseFalloffCurve' has a wrong offset!");
-static_assert(offsetof(FFoliageDensityFalloff, FalloffCurve) == 0x000008, "Member 'FFoliageDensityFalloff::FalloffCurve' has a wrong offset!");
-
 // ScriptStruct Foliage.FoliageTypeObject
 // 0x0020 (0x0020 - 0x0000)
 struct FFoliageTypeObject final
@@ -120,6 +91,21 @@ static_assert(offsetof(FFoliageTypeObject, FoliageTypeObject) == 0x000000, "Memb
 static_assert(offsetof(FFoliageTypeObject, TypeInstance) == 0x000008, "Member 'FFoliageTypeObject::TypeInstance' has a wrong offset!");
 static_assert(offsetof(FFoliageTypeObject, bIsAsset) == 0x000010, "Member 'FFoliageTypeObject::bIsAsset' has a wrong offset!");
 static_assert(offsetof(FFoliageTypeObject, Type) == 0x000018, "Member 'FFoliageTypeObject::Type' has a wrong offset!");
+
+// ScriptStruct Foliage.FoliageVertexColorChannelMask
+// 0x000C (0x000C - 0x0000)
+struct FFoliageVertexColorChannelMask final
+{
+public:
+	uint8                                         UseMask : 1;                                       // 0x0000(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         MaskThreshold;                                     // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         InvertMask : 1;                                    // 0x0008(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FFoliageVertexColorChannelMask) == 0x000004, "Wrong alignment on FFoliageVertexColorChannelMask");
+static_assert(sizeof(FFoliageVertexColorChannelMask) == 0x00000C, "Wrong size on FFoliageVertexColorChannelMask");
+static_assert(offsetof(FFoliageVertexColorChannelMask, MaskThreshold) == 0x000004, "Member 'FFoliageVertexColorChannelMask::MaskThreshold' has a wrong offset!");
 
 // ScriptStruct Foliage.ProceduralFoliageInstance
 // 0x0080 (0x0080 - 0x0000)
@@ -144,6 +130,20 @@ static_assert(offsetof(FProceduralFoliageInstance, Age) == 0x000038, "Member 'FP
 static_assert(offsetof(FProceduralFoliageInstance, Normal) == 0x000040, "Member 'FProceduralFoliageInstance::Normal' has a wrong offset!");
 static_assert(offsetof(FProceduralFoliageInstance, Scale) == 0x000058, "Member 'FProceduralFoliageInstance::Scale' has a wrong offset!");
 static_assert(offsetof(FProceduralFoliageInstance, Type) == 0x000060, "Member 'FProceduralFoliageInstance::Type' has a wrong offset!");
+
+// ScriptStruct Foliage.FoliageDensityFalloff
+// 0x0090 (0x0090 - 0x0000)
+struct FFoliageDensityFalloff final
+{
+public:
+	bool                                          bUseFalloffCurve;                                  // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRuntimeFloatCurve                     FalloffCurve;                                      // 0x0008(0x0088)(Edit, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FFoliageDensityFalloff) == 0x000008, "Wrong alignment on FFoliageDensityFalloff");
+static_assert(sizeof(FFoliageDensityFalloff) == 0x000090, "Wrong size on FFoliageDensityFalloff");
+static_assert(offsetof(FFoliageDensityFalloff, bUseFalloffCurve) == 0x000000, "Member 'FFoliageDensityFalloff::bUseFalloffCurve' has a wrong offset!");
+static_assert(offsetof(FFoliageDensityFalloff, FalloffCurve) == 0x000008, "Member 'FFoliageDensityFalloff::FalloffCurve' has a wrong offset!");
 
 }
 

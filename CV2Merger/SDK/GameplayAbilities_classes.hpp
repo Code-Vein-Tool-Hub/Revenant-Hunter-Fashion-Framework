@@ -23,6 +23,124 @@
 namespace SDK
 {
 
+// Class GameplayAbilities.AbilityAsync
+// 0x0008 (0x0038 - 0x0030)
+class UAbilityAsync : public UCancellableAsyncAction
+{
+public:
+	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void EndAction();
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"AbilityAsync">();
+	}
+	static class UAbilityAsync* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAbilityAsync>();
+	}
+};
+static_assert(alignof(UAbilityAsync) == 0x000008, "Wrong alignment on UAbilityAsync");
+static_assert(sizeof(UAbilityAsync) == 0x000038, "Wrong size on UAbilityAsync");
+
+// Class GameplayAbilities.AbilityAsync_WaitGameplayEffectApplied
+// 0x0150 (0x0188 - 0x0038)
+class UAbilityAsync_WaitGameplayEffectApplied final : public UAbilityAsync
+{
+public:
+	FMulticastInlineDelegateProperty_             OnApplied;                                         // 0x0038(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_48[0x140];                                     // 0x0048(0x0140)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UAbilityAsync_WaitGameplayEffectApplied* WaitGameplayEffectAppliedToActor(class AActor* TargetActor, const struct FGameplayTargetDataFilterHandle& SourceFilter, const struct FGameplayTagRequirements& SourceTagRequirements, const struct FGameplayTagRequirements& TargetTagRequirements, bool TriggerOnce, bool ListenForPeriodicEffect);
+
+	void OnAppliedDelegate__DelegateSignature(class AActor* Source, const struct FGameplayEffectSpecHandle& SpecHandle, const struct FActiveGameplayEffectHandle& ActiveHandle);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"AbilityAsync_WaitGameplayEffectApplied">();
+	}
+	static class UAbilityAsync_WaitGameplayEffectApplied* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAbilityAsync_WaitGameplayEffectApplied>();
+	}
+};
+static_assert(alignof(UAbilityAsync_WaitGameplayEffectApplied) == 0x000008, "Wrong alignment on UAbilityAsync_WaitGameplayEffectApplied");
+static_assert(sizeof(UAbilityAsync_WaitGameplayEffectApplied) == 0x000188, "Wrong size on UAbilityAsync_WaitGameplayEffectApplied");
+static_assert(offsetof(UAbilityAsync_WaitGameplayEffectApplied, OnApplied) == 0x000038, "Member 'UAbilityAsync_WaitGameplayEffectApplied::OnApplied' has a wrong offset!");
+
+// Class GameplayAbilities.AbilitySystemDebugHUD
+// 0x0000 (0x0390 - 0x0390)
+class AAbilitySystemDebugHUD final : public AHUD
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"AbilitySystemDebugHUD">();
+	}
+	static class AAbilitySystemDebugHUD* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AAbilitySystemDebugHUD>();
+	}
+};
+static_assert(alignof(AAbilitySystemDebugHUD) == 0x000008, "Wrong alignment on AAbilitySystemDebugHUD");
+static_assert(sizeof(AAbilitySystemDebugHUD) == 0x000390, "Wrong size on AAbilitySystemDebugHUD");
+
+// Class GameplayAbilities.AbilityTask
+// 0x0018 (0x0080 - 0x0068)
+class UAbilityTask : public UGameplayTask
+{
+public:
+	class UGameplayAbility*                       Ability;                                           // 0x0068(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TWeakObjectPtr<class UAbilitySystemComponent> AbilitySystemComponent;                            // 0x0070(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_78[0x8];                                       // 0x0078(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"AbilityTask">();
+	}
+	static class UAbilityTask* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAbilityTask>();
+	}
+};
+static_assert(alignof(UAbilityTask) == 0x000008, "Wrong alignment on UAbilityTask");
+static_assert(sizeof(UAbilityTask) == 0x000080, "Wrong size on UAbilityTask");
+static_assert(offsetof(UAbilityTask, Ability) == 0x000068, "Member 'UAbilityTask::Ability' has a wrong offset!");
+static_assert(offsetof(UAbilityTask, AbilitySystemComponent) == 0x000070, "Member 'UAbilityTask::AbilitySystemComponent' has a wrong offset!");
+
+// Class GameplayAbilities.AbilityTask_WaitAttributeChangeRatioThreshold
+// 0x00C0 (0x0140 - 0x0080)
+class UAbilityTask_WaitAttributeChangeRatioThreshold final : public UAbilityTask
+{
+public:
+	FMulticastInlineDelegateProperty_             OnChange;                                          // 0x0080(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_90[0xA8];                                      // 0x0090(0x00A8)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAbilitySystemComponent*                ExternalOwner;                                     // 0x0138(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	static class UAbilityTask_WaitAttributeChangeRatioThreshold* WaitForAttributeChangeRatioThreshold(class UGameplayAbility* OwningAbility, const struct FGameplayAttribute& AttributeNumerator, const struct FGameplayAttribute& AttributeDenominator, EWaitAttributeChangeComparison ComparisonType, float ComparisonValue, bool bTriggerOnce, class AActor* OptionalExternalOwner);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"AbilityTask_WaitAttributeChangeRatioThreshold">();
+	}
+	static class UAbilityTask_WaitAttributeChangeRatioThreshold* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAbilityTask_WaitAttributeChangeRatioThreshold>();
+	}
+};
+static_assert(alignof(UAbilityTask_WaitAttributeChangeRatioThreshold) == 0x000008, "Wrong alignment on UAbilityTask_WaitAttributeChangeRatioThreshold");
+static_assert(sizeof(UAbilityTask_WaitAttributeChangeRatioThreshold) == 0x000140, "Wrong size on UAbilityTask_WaitAttributeChangeRatioThreshold");
+static_assert(offsetof(UAbilityTask_WaitAttributeChangeRatioThreshold, OnChange) == 0x000080, "Member 'UAbilityTask_WaitAttributeChangeRatioThreshold::OnChange' has a wrong offset!");
+static_assert(offsetof(UAbilityTask_WaitAttributeChangeRatioThreshold, ExternalOwner) == 0x000138, "Member 'UAbilityTask_WaitAttributeChangeRatioThreshold::ExternalOwner' has a wrong offset!");
+
 // Class GameplayAbilities.GameplayEffect
 // 0x0A48 (0x0A70 - 0x0028)
 class UGameplayEffect : public UObject
@@ -124,124 +242,6 @@ static_assert(offsetof(UGameplayEffect, StackExpirationPolicy) == 0x0009EA, "Mem
 static_assert(offsetof(UGameplayEffect, GrantedAbilities) == 0x0009F0, "Member 'UGameplayEffect::GrantedAbilities' has a wrong offset!");
 static_assert(offsetof(UGameplayEffect, GEComponents) == 0x000A60, "Member 'UGameplayEffect::GEComponents' has a wrong offset!");
 
-// Class GameplayAbilities.AbilityAsync
-// 0x0008 (0x0038 - 0x0030)
-class UAbilityAsync : public UCancellableAsyncAction
-{
-public:
-	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void EndAction();
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"AbilityAsync">();
-	}
-	static class UAbilityAsync* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAbilityAsync>();
-	}
-};
-static_assert(alignof(UAbilityAsync) == 0x000008, "Wrong alignment on UAbilityAsync");
-static_assert(sizeof(UAbilityAsync) == 0x000038, "Wrong size on UAbilityAsync");
-
-// Class GameplayAbilities.AbilityAsync_WaitGameplayEvent
-// 0x0028 (0x0060 - 0x0038)
-class UAbilityAsync_WaitGameplayEvent final : public UAbilityAsync
-{
-public:
-	FMulticastInlineDelegateProperty_             EventReceived;                                     // 0x0038(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_48[0x18];                                      // 0x0048(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UAbilityAsync_WaitGameplayEvent* WaitGameplayEventToActor(class AActor* TargetActor, const struct FGameplayTag& EventTag, bool OnlyTriggerOnce, bool OnlyMatchExact);
-
-	void EventReceivedDelegate__DelegateSignature(const struct FGameplayEventData& Payload);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"AbilityAsync_WaitGameplayEvent">();
-	}
-	static class UAbilityAsync_WaitGameplayEvent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAbilityAsync_WaitGameplayEvent>();
-	}
-};
-static_assert(alignof(UAbilityAsync_WaitGameplayEvent) == 0x000008, "Wrong alignment on UAbilityAsync_WaitGameplayEvent");
-static_assert(sizeof(UAbilityAsync_WaitGameplayEvent) == 0x000060, "Wrong size on UAbilityAsync_WaitGameplayEvent");
-static_assert(offsetof(UAbilityAsync_WaitGameplayEvent, EventReceived) == 0x000038, "Member 'UAbilityAsync_WaitGameplayEvent::EventReceived' has a wrong offset!");
-
-// Class GameplayAbilities.AbilitySystemDebugHUD
-// 0x0000 (0x0390 - 0x0390)
-class AAbilitySystemDebugHUD final : public AHUD
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"AbilitySystemDebugHUD">();
-	}
-	static class AAbilitySystemDebugHUD* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<AAbilitySystemDebugHUD>();
-	}
-};
-static_assert(alignof(AAbilitySystemDebugHUD) == 0x000008, "Wrong alignment on AAbilitySystemDebugHUD");
-static_assert(sizeof(AAbilitySystemDebugHUD) == 0x000390, "Wrong size on AAbilitySystemDebugHUD");
-
-// Class GameplayAbilities.AbilityTask
-// 0x0018 (0x0080 - 0x0068)
-class UAbilityTask : public UGameplayTask
-{
-public:
-	class UGameplayAbility*                       Ability;                                           // 0x0068(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TWeakObjectPtr<class UAbilitySystemComponent> AbilitySystemComponent;                            // 0x0070(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_78[0x8];                                       // 0x0078(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"AbilityTask">();
-	}
-	static class UAbilityTask* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAbilityTask>();
-	}
-};
-static_assert(alignof(UAbilityTask) == 0x000008, "Wrong alignment on UAbilityTask");
-static_assert(sizeof(UAbilityTask) == 0x000080, "Wrong size on UAbilityTask");
-static_assert(offsetof(UAbilityTask, Ability) == 0x000068, "Member 'UAbilityTask::Ability' has a wrong offset!");
-static_assert(offsetof(UAbilityTask, AbilitySystemComponent) == 0x000070, "Member 'UAbilityTask::AbilitySystemComponent' has a wrong offset!");
-
-// Class GameplayAbilities.AbilityTask_WaitAttributeChangeThreshold
-// 0x0070 (0x00F0 - 0x0080)
-class UAbilityTask_WaitAttributeChangeThreshold final : public UAbilityTask
-{
-public:
-	FMulticastInlineDelegateProperty_             OnChange;                                          // 0x0080(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_90[0x58];                                      // 0x0090(0x0058)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAbilitySystemComponent*                ExternalOwner;                                     // 0x00E8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	static class UAbilityTask_WaitAttributeChangeThreshold* WaitForAttributeChangeThreshold(class UGameplayAbility* OwningAbility, const struct FGameplayAttribute& Attribute, EWaitAttributeChangeComparison ComparisonType, float ComparisonValue, bool bTriggerOnce, class AActor* OptionalExternalOwner);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"AbilityTask_WaitAttributeChangeThreshold">();
-	}
-	static class UAbilityTask_WaitAttributeChangeThreshold* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAbilityTask_WaitAttributeChangeThreshold>();
-	}
-};
-static_assert(alignof(UAbilityTask_WaitAttributeChangeThreshold) == 0x000008, "Wrong alignment on UAbilityTask_WaitAttributeChangeThreshold");
-static_assert(sizeof(UAbilityTask_WaitAttributeChangeThreshold) == 0x0000F0, "Wrong size on UAbilityTask_WaitAttributeChangeThreshold");
-static_assert(offsetof(UAbilityTask_WaitAttributeChangeThreshold, OnChange) == 0x000080, "Member 'UAbilityTask_WaitAttributeChangeThreshold::OnChange' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_WaitAttributeChangeThreshold, ExternalOwner) == 0x0000E8, "Member 'UAbilityTask_WaitAttributeChangeThreshold::ExternalOwner' has a wrong offset!");
-
 // Class GameplayAbilities.GameplayEffectComponent
 // 0x0000 (0x0028 - 0x0028)
 class UGameplayEffectComponent : public UObject
@@ -258,6 +258,36 @@ public:
 };
 static_assert(alignof(UGameplayEffectComponent) == 0x000008, "Wrong alignment on UGameplayEffectComponent");
 static_assert(sizeof(UGameplayEffectComponent) == 0x000028, "Wrong size on UGameplayEffectComponent");
+
+// Class GameplayAbilities.AbilityTask_SpawnActor
+// 0x0048 (0x00C8 - 0x0080)
+class UAbilityTask_SpawnActor final : public UAbilityTask
+{
+public:
+	FMulticastInlineDelegateProperty_             Success;                                           // 0x0080(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             DidNotSpawn;                                       // 0x0090(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A0[0x28];                                      // 0x00A0(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UAbilityTask_SpawnActor* SpawnActor(class UGameplayAbility* OwningAbility, const struct FGameplayAbilityTargetDataHandle& TargetData, TSubclassOf<class AActor> Class_0);
+
+	bool BeginSpawningActor(class UGameplayAbility* OwningAbility, const struct FGameplayAbilityTargetDataHandle& TargetData, TSubclassOf<class AActor> Class_0, class AActor** SpawnedActor);
+	void FinishSpawningActor(class UGameplayAbility* OwningAbility, const struct FGameplayAbilityTargetDataHandle& TargetData, class AActor* SpawnedActor);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"AbilityTask_SpawnActor">();
+	}
+	static class UAbilityTask_SpawnActor* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAbilityTask_SpawnActor>();
+	}
+};
+static_assert(alignof(UAbilityTask_SpawnActor) == 0x000008, "Wrong alignment on UAbilityTask_SpawnActor");
+static_assert(sizeof(UAbilityTask_SpawnActor) == 0x0000C8, "Wrong size on UAbilityTask_SpawnActor");
+static_assert(offsetof(UAbilityTask_SpawnActor, Success) == 0x000080, "Member 'UAbilityTask_SpawnActor::Success' has a wrong offset!");
+static_assert(offsetof(UAbilityTask_SpawnActor, DidNotSpawn) == 0x000090, "Member 'UAbilityTask_SpawnActor::DidNotSpawn' has a wrong offset!");
 
 // Class GameplayAbilities.AbilitiesGameplayEffectComponent
 // 0x0010 (0x0038 - 0x0028)
@@ -280,32 +310,37 @@ static_assert(alignof(UAbilitiesGameplayEffectComponent) == 0x000008, "Wrong ali
 static_assert(sizeof(UAbilitiesGameplayEffectComponent) == 0x000038, "Wrong size on UAbilitiesGameplayEffectComponent");
 static_assert(offsetof(UAbilitiesGameplayEffectComponent, GrantAbilityConfigs) == 0x000028, "Member 'UAbilitiesGameplayEffectComponent::GrantAbilityConfigs' has a wrong offset!");
 
-// Class GameplayAbilities.AbilityTask_StartAbilityState
-// 0x0038 (0x00B8 - 0x0080)
-class UAbilityTask_StartAbilityState final : public UAbilityTask
+// Class GameplayAbilities.AbilityTask_WaitConfirmCancel
+// 0x0028 (0x00A8 - 0x0080)
+class UAbilityTask_WaitConfirmCancel final : public UAbilityTask
 {
 public:
-	FMulticastInlineDelegateProperty_             OnStateEnded;                                      // 0x0080(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnStateInterrupted;                                // 0x0090(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A0[0x18];                                      // 0x00A0(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnConfirm;                                         // 0x0080(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnCancel;                                          // 0x0090(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A0[0x8];                                       // 0x00A0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	static class UAbilityTask_StartAbilityState* StartAbilityState(class UGameplayAbility* OwningAbility, class FName StateName, bool bEndCurrentState);
+	static class UAbilityTask_WaitConfirmCancel* WaitConfirmCancel(class UGameplayAbility* OwningAbility);
+
+	void OnCancelCallback();
+	void OnConfirmCallback();
+	void OnLocalCancelCallback();
+	void OnLocalConfirmCallback();
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilityTask_StartAbilityState">();
+		return StaticClassImpl<"AbilityTask_WaitConfirmCancel">();
 	}
-	static class UAbilityTask_StartAbilityState* GetDefaultObj()
+	static class UAbilityTask_WaitConfirmCancel* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UAbilityTask_StartAbilityState>();
+		return GetDefaultObjImpl<UAbilityTask_WaitConfirmCancel>();
 	}
 };
-static_assert(alignof(UAbilityTask_StartAbilityState) == 0x000008, "Wrong alignment on UAbilityTask_StartAbilityState");
-static_assert(sizeof(UAbilityTask_StartAbilityState) == 0x0000B8, "Wrong size on UAbilityTask_StartAbilityState");
-static_assert(offsetof(UAbilityTask_StartAbilityState, OnStateEnded) == 0x000080, "Member 'UAbilityTask_StartAbilityState::OnStateEnded' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_StartAbilityState, OnStateInterrupted) == 0x000090, "Member 'UAbilityTask_StartAbilityState::OnStateInterrupted' has a wrong offset!");
+static_assert(alignof(UAbilityTask_WaitConfirmCancel) == 0x000008, "Wrong alignment on UAbilityTask_WaitConfirmCancel");
+static_assert(sizeof(UAbilityTask_WaitConfirmCancel) == 0x0000A8, "Wrong size on UAbilityTask_WaitConfirmCancel");
+static_assert(offsetof(UAbilityTask_WaitConfirmCancel, OnConfirm) == 0x000080, "Member 'UAbilityTask_WaitConfirmCancel::OnConfirm' has a wrong offset!");
+static_assert(offsetof(UAbilityTask_WaitConfirmCancel, OnCancel) == 0x000090, "Member 'UAbilityTask_WaitConfirmCancel::OnCancel' has a wrong offset!");
 
 // Class GameplayAbilities.AbilityAsync_WaitGameplayTagCountChanged
 // 0x0020 (0x0058 - 0x0038)
@@ -333,31 +368,6 @@ public:
 static_assert(alignof(UAbilityAsync_WaitGameplayTagCountChanged) == 0x000008, "Wrong alignment on UAbilityAsync_WaitGameplayTagCountChanged");
 static_assert(sizeof(UAbilityAsync_WaitGameplayTagCountChanged) == 0x000058, "Wrong size on UAbilityAsync_WaitGameplayTagCountChanged");
 static_assert(offsetof(UAbilityAsync_WaitGameplayTagCountChanged, TagCountChanged) == 0x000048, "Member 'UAbilityAsync_WaitGameplayTagCountChanged::TagCountChanged' has a wrong offset!");
-
-// Class GameplayAbilities.AbilityTask_WaitDelay
-// 0x0018 (0x0098 - 0x0080)
-class UAbilityTask_WaitDelay final : public UAbilityTask
-{
-public:
-	FMulticastInlineDelegateProperty_             OnFinish;                                          // 0x0080(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_90[0x8];                                       // 0x0090(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UAbilityTask_WaitDelay* WaitDelay(class UGameplayAbility* OwningAbility, float Time);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"AbilityTask_WaitDelay">();
-	}
-	static class UAbilityTask_WaitDelay* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAbilityTask_WaitDelay>();
-	}
-};
-static_assert(alignof(UAbilityTask_WaitDelay) == 0x000008, "Wrong alignment on UAbilityTask_WaitDelay");
-static_assert(sizeof(UAbilityTask_WaitDelay) == 0x000098, "Wrong size on UAbilityTask_WaitDelay");
-static_assert(offsetof(UAbilityTask_WaitDelay, OnFinish) == 0x000080, "Member 'UAbilityTask_WaitDelay::OnFinish' has a wrong offset!");
 
 // Class GameplayAbilities.AbilitySystemCheatManagerExtension
 // 0x0000 (0x0028 - 0x0028)
@@ -484,6 +494,34 @@ static_assert(offsetof(UAdditionalEffectsGameplayEffectComponent, OnCompleteAlwa
 static_assert(offsetof(UAdditionalEffectsGameplayEffectComponent, OnCompleteNormal) == 0x000050, "Member 'UAdditionalEffectsGameplayEffectComponent::OnCompleteNormal' has a wrong offset!");
 static_assert(offsetof(UAdditionalEffectsGameplayEffectComponent, OnCompletePrematurely) == 0x000060, "Member 'UAdditionalEffectsGameplayEffectComponent::OnCompletePrematurely' has a wrong offset!");
 
+// Class GameplayAbilities.AbilityTask_WaitCancel
+// 0x0018 (0x0098 - 0x0080)
+class UAbilityTask_WaitCancel final : public UAbilityTask
+{
+public:
+	FMulticastInlineDelegateProperty_             OnCancel;                                          // 0x0080(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_90[0x8];                                       // 0x0090(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UAbilityTask_WaitCancel* WaitCancel(class UGameplayAbility* OwningAbility);
+
+	void OnCancelCallback();
+	void OnLocalCancelCallback();
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"AbilityTask_WaitCancel">();
+	}
+	static class UAbilityTask_WaitCancel* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAbilityTask_WaitCancel>();
+	}
+};
+static_assert(alignof(UAbilityTask_WaitCancel) == 0x000008, "Wrong alignment on UAbilityTask_WaitCancel");
+static_assert(sizeof(UAbilityTask_WaitCancel) == 0x000098, "Wrong size on UAbilityTask_WaitCancel");
+static_assert(offsetof(UAbilityTask_WaitCancel, OnCancel) == 0x000080, "Member 'UAbilityTask_WaitCancel::OnCancel' has a wrong offset!");
+
 // Class GameplayAbilities.AssetTagsGameplayEffectComponent
 // 0x0060 (0x0088 - 0x0028)
 class UAssetTagsGameplayEffectComponent final : public UGameplayEffectComponent
@@ -504,33 +542,6 @@ public:
 static_assert(alignof(UAssetTagsGameplayEffectComponent) == 0x000008, "Wrong alignment on UAssetTagsGameplayEffectComponent");
 static_assert(sizeof(UAssetTagsGameplayEffectComponent) == 0x000088, "Wrong size on UAssetTagsGameplayEffectComponent");
 static_assert(offsetof(UAssetTagsGameplayEffectComponent, InheritableAssetTags) == 0x000028, "Member 'UAssetTagsGameplayEffectComponent::InheritableAssetTags' has a wrong offset!");
-
-// Class GameplayAbilities.AbilityTask_WaitConfirm
-// 0x0020 (0x00A0 - 0x0080)
-class UAbilityTask_WaitConfirm final : public UAbilityTask
-{
-public:
-	FMulticastInlineDelegateProperty_             OnConfirm;                                         // 0x0080(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_90[0x10];                                      // 0x0090(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UAbilityTask_WaitConfirm* WaitConfirm(class UGameplayAbility* OwningAbility);
-
-	void OnConfirmCallback(class UGameplayAbility* InAbility);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"AbilityTask_WaitConfirm">();
-	}
-	static class UAbilityTask_WaitConfirm* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAbilityTask_WaitConfirm>();
-	}
-};
-static_assert(alignof(UAbilityTask_WaitConfirm) == 0x000008, "Wrong alignment on UAbilityTask_WaitConfirm");
-static_assert(sizeof(UAbilityTask_WaitConfirm) == 0x0000A0, "Wrong size on UAbilityTask_WaitConfirm");
-static_assert(offsetof(UAbilityTask_WaitConfirm, OnConfirm) == 0x000080, "Member 'UAbilityTask_WaitConfirm::OnConfirm' has a wrong offset!");
 
 // Class GameplayAbilities.BlockAbilityTagsGameplayEffectComponent
 // 0x0060 (0x0088 - 0x0028)
@@ -728,6 +739,32 @@ static_assert(alignof(URemoveOtherGameplayEffectComponent) == 0x000008, "Wrong a
 static_assert(sizeof(URemoveOtherGameplayEffectComponent) == 0x000038, "Wrong size on URemoveOtherGameplayEffectComponent");
 static_assert(offsetof(URemoveOtherGameplayEffectComponent, RemoveGameplayEffectQueries) == 0x000028, "Member 'URemoveOtherGameplayEffectComponent::RemoveGameplayEffectQueries' has a wrong offset!");
 
+// Class GameplayAbilities.AbilityTask_WaitOverlap
+// 0x0010 (0x0090 - 0x0080)
+class UAbilityTask_WaitOverlap final : public UAbilityTask
+{
+public:
+	FMulticastInlineDelegateProperty_             OnOverlap;                                         // 0x0080(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+
+public:
+	static class UAbilityTask_WaitOverlap* WaitForOverlap(class UGameplayAbility* OwningAbility);
+
+	void OnHitCallback(class UPrimitiveComponent* HitComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"AbilityTask_WaitOverlap">();
+	}
+	static class UAbilityTask_WaitOverlap* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAbilityTask_WaitOverlap>();
+	}
+};
+static_assert(alignof(UAbilityTask_WaitOverlap) == 0x000008, "Wrong alignment on UAbilityTask_WaitOverlap");
+static_assert(sizeof(UAbilityTask_WaitOverlap) == 0x000090, "Wrong size on UAbilityTask_WaitOverlap");
+static_assert(offsetof(UAbilityTask_WaitOverlap, OnOverlap) == 0x000080, "Member 'UAbilityTask_WaitOverlap::OnOverlap' has a wrong offset!");
+
 // Class GameplayAbilities.TargetTagRequirementsGameplayEffectComponent
 // 0x0198 (0x01C0 - 0x0028)
 class UTargetTagRequirementsGameplayEffectComponent final : public UGameplayEffectComponent
@@ -752,45 +789,6 @@ static_assert(sizeof(UTargetTagRequirementsGameplayEffectComponent) == 0x0001C0,
 static_assert(offsetof(UTargetTagRequirementsGameplayEffectComponent, ApplicationTagRequirements) == 0x000028, "Member 'UTargetTagRequirementsGameplayEffectComponent::ApplicationTagRequirements' has a wrong offset!");
 static_assert(offsetof(UTargetTagRequirementsGameplayEffectComponent, OngoingTagRequirements) == 0x0000B0, "Member 'UTargetTagRequirementsGameplayEffectComponent::OngoingTagRequirements' has a wrong offset!");
 static_assert(offsetof(UTargetTagRequirementsGameplayEffectComponent, RemovalTagRequirements) == 0x000138, "Member 'UTargetTagRequirementsGameplayEffectComponent::RemovalTagRequirements' has a wrong offset!");
-
-// Class GameplayAbilities.AbilityTask_WaitTargetData
-// 0x0040 (0x00C0 - 0x0080)
-class UAbilityTask_WaitTargetData final : public UAbilityTask
-{
-public:
-	FMulticastInlineDelegateProperty_             ValidData;                                         // 0x0080(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             Cancelled;                                         // 0x0090(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TSubclassOf<class AGameplayAbilityTargetActor> TargetClass;                                       // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class AGameplayAbilityTargetActor*            TargetActor;                                       // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_B0[0x10];                                      // 0x00B0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UAbilityTask_WaitTargetData* WaitTargetData(class UGameplayAbility* OwningAbility, class FName TaskInstanceName, EGameplayTargetingConfirmation ConfirmationType, TSubclassOf<class AGameplayAbilityTargetActor> Class_0);
-	static class UAbilityTask_WaitTargetData* WaitTargetDataUsingActor(class UGameplayAbility* OwningAbility, class FName TaskInstanceName, EGameplayTargetingConfirmation ConfirmationType, class AGameplayAbilityTargetActor* TargetActor_0);
-
-	bool BeginSpawningActor(class UGameplayAbility* OwningAbility, TSubclassOf<class AGameplayAbilityTargetActor> Class_0, class AGameplayAbilityTargetActor** SpawnedActor);
-	void FinishSpawningActor(class UGameplayAbility* OwningAbility, class AGameplayAbilityTargetActor* SpawnedActor);
-	void OnTargetDataCancelledCallback(const struct FGameplayAbilityTargetDataHandle& Data);
-	void OnTargetDataReadyCallback(const struct FGameplayAbilityTargetDataHandle& Data);
-	void OnTargetDataReplicatedCallback(const struct FGameplayAbilityTargetDataHandle& Data, const struct FGameplayTag& ActivationTag);
-	void OnTargetDataReplicatedCancelledCallback();
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"AbilityTask_WaitTargetData">();
-	}
-	static class UAbilityTask_WaitTargetData* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAbilityTask_WaitTargetData>();
-	}
-};
-static_assert(alignof(UAbilityTask_WaitTargetData) == 0x000008, "Wrong alignment on UAbilityTask_WaitTargetData");
-static_assert(sizeof(UAbilityTask_WaitTargetData) == 0x0000C0, "Wrong size on UAbilityTask_WaitTargetData");
-static_assert(offsetof(UAbilityTask_WaitTargetData, ValidData) == 0x000080, "Member 'UAbilityTask_WaitTargetData::ValidData' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_WaitTargetData, Cancelled) == 0x000090, "Member 'UAbilityTask_WaitTargetData::Cancelled' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_WaitTargetData, TargetClass) == 0x0000A0, "Member 'UAbilityTask_WaitTargetData::TargetClass' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_WaitTargetData, TargetActor) == 0x0000A8, "Member 'UAbilityTask_WaitTargetData::TargetActor' has a wrong offset!");
 
 // Class GameplayAbilities.TargetTagsGameplayEffectComponent
 // 0x0060 (0x0088 - 0x0028)
@@ -840,49 +838,216 @@ static_assert(alignof(UAbilityAsync_WaitAttributeChanged) == 0x000008, "Wrong al
 static_assert(sizeof(UAbilityAsync_WaitAttributeChanged) == 0x000090, "Wrong size on UAbilityAsync_WaitAttributeChanged");
 static_assert(offsetof(UAbilityAsync_WaitAttributeChanged, Changed) == 0x000038, "Member 'UAbilityAsync_WaitAttributeChanged::Changed' has a wrong offset!");
 
-// Class GameplayAbilities.AbilityAsync_WaitGameplayEffectApplied
-// 0x0150 (0x0188 - 0x0038)
-class UAbilityAsync_WaitGameplayEffectApplied final : public UAbilityAsync
+// Class GameplayAbilities.AbilitySystemComponent
+// 0x11A8 (0x12C0 - 0x0118)
+class UAbilitySystemComponent : public UGameplayTasksComponent
 {
 public:
-	FMulticastInlineDelegateProperty_             OnApplied;                                         // 0x0038(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_48[0x140];                                     // 0x0048(0x0140)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_118[0x10];                                     // 0x0118(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FAttributeDefaults>             DefaultStartingData;                               // 0x0128(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	class FName                                   AffectedAnimInstanceTag;                           // 0x0138(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_140[0x208];                                    // 0x0140(0x0208)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         OutgoingDuration;                                  // 0x0348(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         IncomingDuration;                                  // 0x034C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_350[0x20];                                     // 0x0350(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FString>                         ClientDebugStrings;                                // 0x0370(0x0010)(Net, ZeroConstructor, RepNotify, NativeAccessSpecifierPublic)
+	TArray<class FString>                         ServerDebugStrings;                                // 0x0380(0x0010)(Net, ZeroConstructor, RepNotify, NativeAccessSpecifierPublic)
+	uint8                                         Pad_390[0x58];                                     // 0x0390(0x0058)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          UserAbilityActivationInhibited;                    // 0x03E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReplicationProxyEnabled;                           // 0x03E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSuppressGrantAbility;                             // 0x03EA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSuppressGameplayCues;                             // 0x03EB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3EC[0x4];                                      // 0x03EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class AGameplayAbilityTargetActor*>    SpawnedTargetActors;                               // 0x03F0(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
+	uint8                                         Pad_400[0x28];                                     // 0x0400(0x0028)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 OwnerActor;                                        // 0x0428(0x0008)(Net, ZeroConstructor, RepNotify, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class AActor*                                 AvatarActor;                                       // 0x0430(0x0008)(Net, ZeroConstructor, RepNotify, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_438[0x10];                                     // 0x0438(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayAbilitySpecContainer          ActivatableAbilities;                              // 0x0448(0x0120)(BlueprintVisible, BlueprintReadOnly, Net, Transient, RepNotify, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_568[0x30];                                     // 0x0568(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UGameplayAbility*>               AllReplicatedInstancedAbilities;                   // 0x0598(0x0010)(ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+	uint8                                         Pad_5A8[0x220];                                    // 0x05A8(0x0220)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayAbilityRepAnimMontage         RepAnimMontageInfo;                                // 0x07C8(0x0040)(Net, RepNotify, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	bool                                          bCachedIsNetSimulated;                             // 0x0808(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bPendingMontageRep;                                // 0x0809(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_80A[0x6];                                      // 0x080A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayAbilityLocalAnimMontage       LocalAnimMontageInfo;                              // 0x0810(0x0028)(NoDestructor, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_838[0xA0];                                     // 0x0838(0x00A0)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FActiveGameplayEffectsContainer        ActiveGameplayEffects;                             // 0x08D8(0x0308)(Net, Protected, NativeAccessSpecifierProtected)
+	struct FActiveGameplayCueContainer            ActiveGameplayCues;                                // 0x0BE0(0x0128)(Net, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+	struct FActiveGameplayCueContainer            MinimalReplicationGameplayCues;                    // 0x0D08(0x0128)(Net, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_E30[0x130];                                    // 0x0E30(0x0130)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<uint8>                                 BlockedAbilityBindings;                            // 0x0F60(0x0010)(Net, ZeroConstructor, Transient, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_F70[0x130];                                    // 0x0F70(0x0130)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMinimalReplicationTagCountMap         MinimalReplicationTags;                            // 0x10A0(0x0068)(Net, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+	TArray<class UAttributeSet*>                  SpawnedAttributes;                                 // 0x1108(0x0010)(ExportObject, Net, ZeroConstructor, Transient, RepNotify, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1118[0x10];                                    // 0x1118(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMinimalReplicationTagCountMap         ReplicatedLooseTags;                               // 0x1128(0x0068)(Net, ContainsInstancedReference, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1190[0x8];                                     // 0x1190(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FReplicatedPredictionKeyMap            ReplicatedPredictionKeyMap;                        // 0x1198(0x0118)(Net, Transient, NativeAccessSpecifierPublic)
+	uint8                                         Pad_12B0[0x10];                                    // 0x12B0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	static class UAbilityAsync_WaitGameplayEffectApplied* WaitGameplayEffectAppliedToActor(class AActor* TargetActor, const struct FGameplayTargetDataFilterHandle& SourceFilter, const struct FGameplayTagRequirements& SourceTagRequirements, const struct FGameplayTagRequirements& TargetTagRequirements, bool TriggerOnce, bool ListenForPeriodicEffect);
+	void AbilityAbilityKey__DelegateSignature(int32 InputID);
+	void AbilityConfirmOrCancel__DelegateSignature();
+	struct FActiveGameplayEffectHandle BP_ApplyGameplayEffectSpecToSelf(const struct FGameplayEffectSpecHandle& SpecHandle);
+	struct FActiveGameplayEffectHandle BP_ApplyGameplayEffectSpecToTarget(const struct FGameplayEffectSpecHandle& SpecHandle, class UAbilitySystemComponent* Target);
+	struct FActiveGameplayEffectHandle BP_ApplyGameplayEffectToSelf(TSubclassOf<class UGameplayEffect> GameplayEffectClass, float Level, const struct FGameplayEffectContextHandle& EffectContext);
+	struct FActiveGameplayEffectHandle BP_ApplyGameplayEffectToTarget(TSubclassOf<class UGameplayEffect> GameplayEffectClass, class UAbilitySystemComponent* Target, float Level, const struct FGameplayEffectContextHandle& Context);
+	void ClearAbility(const struct FGameplayAbilitySpecHandle& Handle);
+	void ClearAllAbilities();
+	void ClearAllAbilitiesWithInputID(int32 InputID);
+	void ClientActivateAbilityFailed(const struct FGameplayAbilitySpecHandle& AbilityToActivate, int16 PredictionKey);
+	void ClientActivateAbilitySucceed(const struct FGameplayAbilitySpecHandle& AbilityToActivate, const struct FPredictionKey& PredictionKey);
+	void ClientActivateAbilitySucceedWithEventData(const struct FGameplayAbilitySpecHandle& AbilityToActivate, const struct FPredictionKey& PredictionKey, const struct FGameplayEventData& TriggerEventData);
+	void ClientCancelAbility(const struct FGameplayAbilitySpecHandle& AbilityToCancel, const struct FGameplayAbilityActivationInfo& ActivationInfo);
+	void ClientEndAbility(const struct FGameplayAbilitySpecHandle& AbilityToEnd, const struct FGameplayAbilityActivationInfo& ActivationInfo);
+	void ClientPrintDebug_Response(const TArray<class FString>& Strings, int32 GameFlags);
+	void ClientSetReplicatedEvent(EAbilityGenericReplicatedEvent EventType, const struct FGameplayAbilitySpecHandle& AbilityHandle, const struct FPredictionKey& AbilityOriginalPredictionKey);
+	void ClientTryActivateAbility(const struct FGameplayAbilitySpecHandle& AbilityToActivate);
+	void GetAllAttributes(TArray<struct FGameplayAttribute>* OutAttributes);
+	void InputCancel();
+	void InputConfirm();
+	struct FGameplayAbilitySpecHandle K2_GiveAbility(TSubclassOf<class UGameplayAbility> AbilityClass, int32 Level, int32 InputID);
+	struct FGameplayAbilitySpecHandle K2_GiveAbilityAndActivateOnce(TSubclassOf<class UGameplayAbility> AbilityClass, int32 Level, int32 InputID);
+	void K2_InitStats(TSubclassOf<class UAttributeSet> Attributes, const class UDataTable* DataTable);
+	void NetMulticast_InvokeGameplayCueAdded(const struct FGameplayTag& GameplayCueTag, const struct FPredictionKey& PredictionKey, const struct FGameplayEffectContextHandle& EffectContext);
+	void NetMulticast_InvokeGameplayCueAdded_WithParams(const struct FGameplayTag& GameplayCueTag, const struct FPredictionKey& PredictionKey, const struct FGameplayCueParameters& Parameters);
+	void NetMulticast_InvokeGameplayCueAddedAndWhileActive_FromSpec(const struct FGameplayEffectSpecForRPC& Spec, const struct FPredictionKey& PredictionKey);
+	void NetMulticast_InvokeGameplayCueAddedAndWhileActive_WithParams(const struct FGameplayTag& GameplayCueTag, const struct FPredictionKey& PredictionKey, const struct FGameplayCueParameters& GameplayCueParameters);
+	void NetMulticast_InvokeGameplayCueExecuted(const struct FGameplayTag& GameplayCueTag, const struct FPredictionKey& PredictionKey, const struct FGameplayEffectContextHandle& EffectContext);
+	void NetMulticast_InvokeGameplayCueExecuted_FromSpec(const struct FGameplayEffectSpecForRPC& Spec, const struct FPredictionKey& PredictionKey);
+	void NetMulticast_InvokeGameplayCueExecuted_WithParams(const struct FGameplayTag& GameplayCueTag, const struct FPredictionKey& PredictionKey, const struct FGameplayCueParameters& GameplayCueParameters);
+	void NetMulticast_InvokeGameplayCuesAddedAndWhileActive_WithParams(const struct FGameplayTagContainer& GameplayCueTags, const struct FPredictionKey& PredictionKey, const struct FGameplayCueParameters& GameplayCueParameters);
+	void NetMulticast_InvokeGameplayCuesExecuted(const struct FGameplayTagContainer& GameplayCueTags, const struct FPredictionKey& PredictionKey, const struct FGameplayEffectContextHandle& EffectContext);
+	void NetMulticast_InvokeGameplayCuesExecuted_WithParams(const struct FGameplayTagContainer& GameplayCueTags, const struct FPredictionKey& PredictionKey, const struct FGameplayCueParameters& GameplayCueParameters);
+	void OnAvatarActorDestroyed(class AActor* InActor);
+	void OnOwnerActorDestroyed(class AActor* InActor);
+	void OnRep_ActivateAbilities();
+	void OnRep_ClientDebugString();
+	void OnRep_OwningActor();
+	void OnRep_ReplicatedAnimMontage();
+	void OnRep_ServerDebugString();
+	void OnRep_SpawnedAttributes(const TArray<class UAttributeSet*>& PreviousSpawnedAttributes);
+	void OnSpawnedAttributesEndPlayed(class AActor* InActor, EEndPlayReason EndPlayReason);
+	void PressInputID(int32 InputID);
+	void ReleaseInputID(int32 InputID);
+	int32 RemoveActiveEffectsWithAppliedTags(const struct FGameplayTagContainer& Tags);
+	int32 RemoveActiveEffectsWithGrantedTags(const struct FGameplayTagContainer& Tags);
+	int32 RemoveActiveEffectsWithSourceTags(const struct FGameplayTagContainer& Tags);
+	int32 RemoveActiveEffectsWithTags(const struct FGameplayTagContainer& Tags);
+	bool RemoveActiveGameplayEffect(const struct FActiveGameplayEffectHandle& Handle, int32 StacksToRemove);
+	void RemoveActiveGameplayEffectBySourceEffect(TSubclassOf<class UGameplayEffect> GameplayEffect, class UAbilitySystemComponent* InstigatorAbilitySystemComponent, int32 StacksToRemove);
+	void ServerAbilityRPCBatch(const struct GameplayAbilities::FServerAbilityRPCBatch& BatchInfo);
+	void ServerCancelAbility(const struct FGameplayAbilitySpecHandle& AbilityToCancel, const struct FGameplayAbilityActivationInfo& ActivationInfo);
+	void ServerCurrentMontageJumpToSectionName(class UAnimSequenceBase* ClientAnimation, class FName SectionName);
+	void ServerCurrentMontageSetNextSectionName(class UAnimSequenceBase* ClientAnimation, float ClientPosition, class FName SectionName, class FName NextSectionName);
+	void ServerCurrentMontageSetPlayRate(class UAnimSequenceBase* ClientAnimation, float InPlayRate);
+	void ServerEndAbility(const struct FGameplayAbilitySpecHandle& AbilityToEnd, const struct FGameplayAbilityActivationInfo& ActivationInfo, const struct FPredictionKey& PredictionKey);
+	void ServerPrintDebug_Request();
+	void ServerPrintDebug_RequestWithStrings(const TArray<class FString>& Strings);
+	void ServerSetInputPressed(const struct FGameplayAbilitySpecHandle& AbilityHandle);
+	void ServerSetInputReleased(const struct FGameplayAbilitySpecHandle& AbilityHandle);
+	void ServerSetReplicatedEvent(EAbilityGenericReplicatedEvent EventType, const struct FGameplayAbilitySpecHandle& AbilityHandle, const struct FPredictionKey& AbilityOriginalPredictionKey, const struct FPredictionKey& CurrentPredictionKey);
+	void ServerSetReplicatedEventWithPayload(EAbilityGenericReplicatedEvent EventType, const struct FGameplayAbilitySpecHandle& AbilityHandle, const struct FPredictionKey& AbilityOriginalPredictionKey, const struct FPredictionKey& CurrentPredictionKey, const struct FVector_NetQuantize100& VectorPayload);
+	void ServerSetReplicatedTargetData(const struct FGameplayAbilitySpecHandle& AbilityHandle, const struct FPredictionKey& AbilityOriginalPredictionKey, const struct FGameplayAbilityTargetDataHandle& ReplicatedTargetDataHandle, const struct FGameplayTag& ApplicationTag, const struct FPredictionKey& CurrentPredictionKey);
+	void ServerSetReplicatedTargetDataCancelled(const struct FGameplayAbilitySpecHandle& AbilityHandle, const struct FPredictionKey& AbilityOriginalPredictionKey, const struct FPredictionKey& CurrentPredictionKey);
+	void ServerTryActivateAbility(const struct FGameplayAbilitySpecHandle& AbilityToActivate, bool InputPressed, const struct FPredictionKey& PredictionKey);
+	void ServerTryActivateAbilityWithEventData(const struct FGameplayAbilitySpecHandle& AbilityToActivate, bool InputPressed, const struct FPredictionKey& PredictionKey, const struct FGameplayEventData& TriggerEventData);
+	void SetActiveGameplayEffectLevel(const struct FActiveGameplayEffectHandle& ActiveHandle, int32 NewLevel);
+	void SetActiveGameplayEffectLevelUsingQuery(const struct FGameplayEffectQuery& Query, int32 NewLevel);
+	void SetUserAbilityActivationInhibited(bool NewInhibit);
+	void TargetCancel();
+	void TargetConfirm();
+	bool TryActivateAbilitiesByTag(const struct FGameplayTagContainer& GameplayTagContainer, bool bAllowRemoteActivation);
+	bool TryActivateAbility(const struct FGameplayAbilitySpecHandle& AbilityToActivate, bool bAllowRemoteActivation);
+	bool TryActivateAbilityByClass(TSubclassOf<class UGameplayAbility> InAbilityToActivate, bool bAllowRemoteActivation);
+	void UpdateActiveGameplayEffectSetByCallerMagnitude(const struct FActiveGameplayEffectHandle& ActiveHandle, const struct FGameplayTag& SetByCallerTag, float NewValue);
+	void UpdateActiveGameplayEffectSetByCallerMagnitudes(const struct FActiveGameplayEffectHandle& ActiveHandle, const TMap<struct FGameplayTag, float>& NewSetByCallerValues);
 
-	void OnAppliedDelegate__DelegateSignature(class AActor* Source, const struct FGameplayEffectSpecHandle& SpecHandle, const struct FActiveGameplayEffectHandle& ActiveHandle);
+	void FindAllAbilitiesMatchingQuery(TArray<struct FGameplayAbilitySpecHandle>* OutAbilityHandles, const struct FGameplayTagQuery& Query) const;
+	void FindAllAbilitiesWithInputID(TArray<struct FGameplayAbilitySpecHandle>* OutAbilityHandles, int32 InputID) const;
+	void FindAllAbilitiesWithTags(TArray<struct FGameplayAbilitySpecHandle>* OutAbilityHandles, const struct FGameplayTagContainer& Tags, bool bExactMatch) const;
+	TArray<struct FActiveGameplayEffectHandle> GetActiveEffects(const struct FGameplayEffectQuery& Query) const;
+	TArray<struct FActiveGameplayEffectHandle> GetActiveEffectsWithAllTags(const struct FGameplayTagContainer& Tags) const;
+	void GetAllAbilities(TArray<struct FGameplayAbilitySpecHandle>* OutAbilityHandles) const;
+	const class UAttributeSet* GetAttributeSet(TSubclassOf<class UAttributeSet> AttributeSetClass) const;
+	float GetGameplayAttributeValue(const struct FGameplayAttribute& Attribute, bool* bFound) const;
+	int32 GetGameplayEffectCount(TSubclassOf<class UGameplayEffect> SourceGameplayEffect, class UAbilitySystemComponent* OptionalInstigatorFilterComponent, bool bEnforceOnGoingCheck) const;
+	int32 GetGameplayEffectCount_IfLoaded(TSoftClassPtr<class UClass> SoftSourceGameplayEffect, class UAbilitySystemComponent* OptionalInstigatorFilterComponent, bool bEnforceOnGoingCheck) const;
+	float GetGameplayEffectMagnitude(const struct FActiveGameplayEffectHandle& Handle, const struct FGameplayAttribute& Attribute) const;
+	int32 GetGameplayTagCount(const struct FGameplayTag& GameplayTag) const;
+	bool GetUserAbilityActivationInhibited() const;
+	bool IsGameplayCueActive(const struct FGameplayTag& GameplayCueTag) const;
+	struct FGameplayEffectContextHandle MakeEffectContext() const;
+	struct FGameplayEffectSpecHandle MakeOutgoingSpec(TSubclassOf<class UGameplayEffect> GameplayEffectClass, float Level, const struct FGameplayEffectContextHandle& Context) const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilityAsync_WaitGameplayEffectApplied">();
+		return StaticClassImpl<"AbilitySystemComponent">();
 	}
-	static class UAbilityAsync_WaitGameplayEffectApplied* GetDefaultObj()
+	static class UAbilitySystemComponent* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UAbilityAsync_WaitGameplayEffectApplied>();
+		return GetDefaultObjImpl<UAbilitySystemComponent>();
 	}
 };
-static_assert(alignof(UAbilityAsync_WaitGameplayEffectApplied) == 0x000008, "Wrong alignment on UAbilityAsync_WaitGameplayEffectApplied");
-static_assert(sizeof(UAbilityAsync_WaitGameplayEffectApplied) == 0x000188, "Wrong size on UAbilityAsync_WaitGameplayEffectApplied");
-static_assert(offsetof(UAbilityAsync_WaitGameplayEffectApplied, OnApplied) == 0x000038, "Member 'UAbilityAsync_WaitGameplayEffectApplied::OnApplied' has a wrong offset!");
+static_assert(alignof(UAbilitySystemComponent) == 0x000008, "Wrong alignment on UAbilitySystemComponent");
+static_assert(sizeof(UAbilitySystemComponent) == 0x0012C0, "Wrong size on UAbilitySystemComponent");
+static_assert(offsetof(UAbilitySystemComponent, DefaultStartingData) == 0x000128, "Member 'UAbilitySystemComponent::DefaultStartingData' has a wrong offset!");
+static_assert(offsetof(UAbilitySystemComponent, AffectedAnimInstanceTag) == 0x000138, "Member 'UAbilitySystemComponent::AffectedAnimInstanceTag' has a wrong offset!");
+static_assert(offsetof(UAbilitySystemComponent, OutgoingDuration) == 0x000348, "Member 'UAbilitySystemComponent::OutgoingDuration' has a wrong offset!");
+static_assert(offsetof(UAbilitySystemComponent, IncomingDuration) == 0x00034C, "Member 'UAbilitySystemComponent::IncomingDuration' has a wrong offset!");
+static_assert(offsetof(UAbilitySystemComponent, ClientDebugStrings) == 0x000370, "Member 'UAbilitySystemComponent::ClientDebugStrings' has a wrong offset!");
+static_assert(offsetof(UAbilitySystemComponent, ServerDebugStrings) == 0x000380, "Member 'UAbilitySystemComponent::ServerDebugStrings' has a wrong offset!");
+static_assert(offsetof(UAbilitySystemComponent, UserAbilityActivationInhibited) == 0x0003E8, "Member 'UAbilitySystemComponent::UserAbilityActivationInhibited' has a wrong offset!");
+static_assert(offsetof(UAbilitySystemComponent, ReplicationProxyEnabled) == 0x0003E9, "Member 'UAbilitySystemComponent::ReplicationProxyEnabled' has a wrong offset!");
+static_assert(offsetof(UAbilitySystemComponent, bSuppressGrantAbility) == 0x0003EA, "Member 'UAbilitySystemComponent::bSuppressGrantAbility' has a wrong offset!");
+static_assert(offsetof(UAbilitySystemComponent, bSuppressGameplayCues) == 0x0003EB, "Member 'UAbilitySystemComponent::bSuppressGameplayCues' has a wrong offset!");
+static_assert(offsetof(UAbilitySystemComponent, SpawnedTargetActors) == 0x0003F0, "Member 'UAbilitySystemComponent::SpawnedTargetActors' has a wrong offset!");
+static_assert(offsetof(UAbilitySystemComponent, OwnerActor) == 0x000428, "Member 'UAbilitySystemComponent::OwnerActor' has a wrong offset!");
+static_assert(offsetof(UAbilitySystemComponent, AvatarActor) == 0x000430, "Member 'UAbilitySystemComponent::AvatarActor' has a wrong offset!");
+static_assert(offsetof(UAbilitySystemComponent, ActivatableAbilities) == 0x000448, "Member 'UAbilitySystemComponent::ActivatableAbilities' has a wrong offset!");
+static_assert(offsetof(UAbilitySystemComponent, AllReplicatedInstancedAbilities) == 0x000598, "Member 'UAbilitySystemComponent::AllReplicatedInstancedAbilities' has a wrong offset!");
+static_assert(offsetof(UAbilitySystemComponent, RepAnimMontageInfo) == 0x0007C8, "Member 'UAbilitySystemComponent::RepAnimMontageInfo' has a wrong offset!");
+static_assert(offsetof(UAbilitySystemComponent, bCachedIsNetSimulated) == 0x000808, "Member 'UAbilitySystemComponent::bCachedIsNetSimulated' has a wrong offset!");
+static_assert(offsetof(UAbilitySystemComponent, bPendingMontageRep) == 0x000809, "Member 'UAbilitySystemComponent::bPendingMontageRep' has a wrong offset!");
+static_assert(offsetof(UAbilitySystemComponent, LocalAnimMontageInfo) == 0x000810, "Member 'UAbilitySystemComponent::LocalAnimMontageInfo' has a wrong offset!");
+static_assert(offsetof(UAbilitySystemComponent, ActiveGameplayEffects) == 0x0008D8, "Member 'UAbilitySystemComponent::ActiveGameplayEffects' has a wrong offset!");
+static_assert(offsetof(UAbilitySystemComponent, ActiveGameplayCues) == 0x000BE0, "Member 'UAbilitySystemComponent::ActiveGameplayCues' has a wrong offset!");
+static_assert(offsetof(UAbilitySystemComponent, MinimalReplicationGameplayCues) == 0x000D08, "Member 'UAbilitySystemComponent::MinimalReplicationGameplayCues' has a wrong offset!");
+static_assert(offsetof(UAbilitySystemComponent, BlockedAbilityBindings) == 0x000F60, "Member 'UAbilitySystemComponent::BlockedAbilityBindings' has a wrong offset!");
+static_assert(offsetof(UAbilitySystemComponent, MinimalReplicationTags) == 0x0010A0, "Member 'UAbilitySystemComponent::MinimalReplicationTags' has a wrong offset!");
+static_assert(offsetof(UAbilitySystemComponent, SpawnedAttributes) == 0x001108, "Member 'UAbilitySystemComponent::SpawnedAttributes' has a wrong offset!");
+static_assert(offsetof(UAbilitySystemComponent, ReplicatedLooseTags) == 0x001128, "Member 'UAbilitySystemComponent::ReplicatedLooseTags' has a wrong offset!");
+static_assert(offsetof(UAbilitySystemComponent, ReplicatedPredictionKeyMap) == 0x001198, "Member 'UAbilitySystemComponent::ReplicatedPredictionKeyMap' has a wrong offset!");
 
-// Class GameplayAbilities.AbilitySystemDebugHUDExtension
-// 0x0000 (0x0028 - 0x0028)
-class UAbilitySystemDebugHUDExtension : public UObject
+// Class GameplayAbilities.AbilityAsync_WaitGameplayEvent
+// 0x0028 (0x0060 - 0x0038)
+class UAbilityAsync_WaitGameplayEvent final : public UAbilityAsync
 {
+public:
+	FMulticastInlineDelegateProperty_             EventReceived;                                     // 0x0038(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_48[0x18];                                      // 0x0048(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UAbilityAsync_WaitGameplayEvent* WaitGameplayEventToActor(class AActor* TargetActor, const struct FGameplayTag& EventTag, bool OnlyTriggerOnce, bool OnlyMatchExact);
+
+	void EventReceivedDelegate__DelegateSignature(const struct FGameplayEventData& Payload);
+
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilitySystemDebugHUDExtension">();
+		return StaticClassImpl<"AbilityAsync_WaitGameplayEvent">();
 	}
-	static class UAbilitySystemDebugHUDExtension* GetDefaultObj()
+	static class UAbilityAsync_WaitGameplayEvent* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UAbilitySystemDebugHUDExtension>();
+		return GetDefaultObjImpl<UAbilityAsync_WaitGameplayEvent>();
 	}
 };
-static_assert(alignof(UAbilitySystemDebugHUDExtension) == 0x000008, "Wrong alignment on UAbilitySystemDebugHUDExtension");
-static_assert(sizeof(UAbilitySystemDebugHUDExtension) == 0x000028, "Wrong size on UAbilitySystemDebugHUDExtension");
+static_assert(alignof(UAbilityAsync_WaitGameplayEvent) == 0x000008, "Wrong alignment on UAbilityAsync_WaitGameplayEvent");
+static_assert(sizeof(UAbilityAsync_WaitGameplayEvent) == 0x000060, "Wrong size on UAbilityAsync_WaitGameplayEvent");
+static_assert(offsetof(UAbilityAsync_WaitGameplayEvent, EventReceived) == 0x000038, "Member 'UAbilityAsync_WaitGameplayEvent::EventReceived' has a wrong offset!");
 
 // Class GameplayAbilities.AbilityAsync_WaitGameplayTag
 // 0x0018 (0x0050 - 0x0038)
@@ -907,6 +1072,33 @@ public:
 static_assert(alignof(UAbilityAsync_WaitGameplayTag) == 0x000008, "Wrong alignment on UAbilityAsync_WaitGameplayTag");
 static_assert(sizeof(UAbilityAsync_WaitGameplayTag) == 0x000050, "Wrong size on UAbilityAsync_WaitGameplayTag");
 
+// Class GameplayAbilities.AbilityTask_WaitInputRelease
+// 0x0020 (0x00A0 - 0x0080)
+class UAbilityTask_WaitInputRelease final : public UAbilityTask
+{
+public:
+	FMulticastInlineDelegateProperty_             OnRelease;                                         // 0x0080(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_90[0x10];                                      // 0x0090(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UAbilityTask_WaitInputRelease* WaitInputRelease(class UGameplayAbility* OwningAbility, bool bTestAlreadyReleased);
+
+	void OnReleaseCallback();
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"AbilityTask_WaitInputRelease">();
+	}
+	static class UAbilityTask_WaitInputRelease* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAbilityTask_WaitInputRelease>();
+	}
+};
+static_assert(alignof(UAbilityTask_WaitInputRelease) == 0x000008, "Wrong alignment on UAbilityTask_WaitInputRelease");
+static_assert(sizeof(UAbilityTask_WaitInputRelease) == 0x0000A0, "Wrong size on UAbilityTask_WaitInputRelease");
+static_assert(offsetof(UAbilityTask_WaitInputRelease, OnRelease) == 0x000080, "Member 'UAbilityTask_WaitInputRelease::OnRelease' has a wrong offset!");
+
 // Class GameplayAbilities.AbilityAsync_WaitGameplayTagAdded
 // 0x0010 (0x0060 - 0x0050)
 class UAbilityAsync_WaitGameplayTagAdded final : public UAbilityAsync_WaitGameplayTag
@@ -930,33 +1122,6 @@ public:
 static_assert(alignof(UAbilityAsync_WaitGameplayTagAdded) == 0x000008, "Wrong alignment on UAbilityAsync_WaitGameplayTagAdded");
 static_assert(sizeof(UAbilityAsync_WaitGameplayTagAdded) == 0x000060, "Wrong size on UAbilityAsync_WaitGameplayTagAdded");
 static_assert(offsetof(UAbilityAsync_WaitGameplayTagAdded, Added) == 0x000050, "Member 'UAbilityAsync_WaitGameplayTagAdded::Added' has a wrong offset!");
-
-// Class GameplayAbilities.AbilityTask_WaitMovementModeChange
-// 0x0020 (0x00A0 - 0x0080)
-class UAbilityTask_WaitMovementModeChange final : public UAbilityTask
-{
-public:
-	FMulticastInlineDelegateProperty_             OnChange;                                          // 0x0080(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_90[0x10];                                      // 0x0090(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UAbilityTask_WaitMovementModeChange* CreateWaitMovementModeChange(class UGameplayAbility* OwningAbility, EMovementMode NewMode);
-
-	void OnMovementModeChange(class ACharacter* Character, EMovementMode PrevMovementMode, uint8 PreviousCustomMode);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"AbilityTask_WaitMovementModeChange">();
-	}
-	static class UAbilityTask_WaitMovementModeChange* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAbilityTask_WaitMovementModeChange>();
-	}
-};
-static_assert(alignof(UAbilityTask_WaitMovementModeChange) == 0x000008, "Wrong alignment on UAbilityTask_WaitMovementModeChange");
-static_assert(sizeof(UAbilityTask_WaitMovementModeChange) == 0x0000A0, "Wrong size on UAbilityTask_WaitMovementModeChange");
-static_assert(offsetof(UAbilityTask_WaitMovementModeChange, OnChange) == 0x000080, "Member 'UAbilityTask_WaitMovementModeChange::OnChange' has a wrong offset!");
 
 // Class GameplayAbilities.AbilityAsync_WaitGameplayTagRemoved
 // 0x0010 (0x0060 - 0x0050)
@@ -1523,6 +1688,33 @@ static_assert(offsetof(UAbilityTask_ApplyRootMotionConstantForce, bIsAdditive) =
 static_assert(offsetof(UAbilityTask_ApplyRootMotionConstantForce, StrengthOverTime) == 0x000100, "Member 'UAbilityTask_ApplyRootMotionConstantForce::StrengthOverTime' has a wrong offset!");
 static_assert(offsetof(UAbilityTask_ApplyRootMotionConstantForce, bEnableGravity) == 0x000108, "Member 'UAbilityTask_ApplyRootMotionConstantForce::bEnableGravity' has a wrong offset!");
 
+// Class GameplayAbilities.AbilityTask_WaitAttributeChangeThreshold
+// 0x0070 (0x00F0 - 0x0080)
+class UAbilityTask_WaitAttributeChangeThreshold final : public UAbilityTask
+{
+public:
+	FMulticastInlineDelegateProperty_             OnChange;                                          // 0x0080(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_90[0x58];                                      // 0x0090(0x0058)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAbilitySystemComponent*                ExternalOwner;                                     // 0x00E8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	static class UAbilityTask_WaitAttributeChangeThreshold* WaitForAttributeChangeThreshold(class UGameplayAbility* OwningAbility, const struct FGameplayAttribute& Attribute, EWaitAttributeChangeComparison ComparisonType, float ComparisonValue, bool bTriggerOnce, class AActor* OptionalExternalOwner);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"AbilityTask_WaitAttributeChangeThreshold">();
+	}
+	static class UAbilityTask_WaitAttributeChangeThreshold* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAbilityTask_WaitAttributeChangeThreshold>();
+	}
+};
+static_assert(alignof(UAbilityTask_WaitAttributeChangeThreshold) == 0x000008, "Wrong alignment on UAbilityTask_WaitAttributeChangeThreshold");
+static_assert(sizeof(UAbilityTask_WaitAttributeChangeThreshold) == 0x0000F0, "Wrong size on UAbilityTask_WaitAttributeChangeThreshold");
+static_assert(offsetof(UAbilityTask_WaitAttributeChangeThreshold, OnChange) == 0x000080, "Member 'UAbilityTask_WaitAttributeChangeThreshold::OnChange' has a wrong offset!");
+static_assert(offsetof(UAbilityTask_WaitAttributeChangeThreshold, ExternalOwner) == 0x0000E8, "Member 'UAbilityTask_WaitAttributeChangeThreshold::ExternalOwner' has a wrong offset!");
+
 // Class GameplayAbilities.AbilityTask_ApplyRootMotionJumpForce
 // 0x0068 (0x0130 - 0x00C8)
 class UAbilityTask_ApplyRootMotionJumpForce final : public UAbilityTask_ApplyRootMotion_Base
@@ -1569,34 +1761,6 @@ static_assert(offsetof(UAbilityTask_ApplyRootMotionJumpForce, MinimumLandedTrigg
 static_assert(offsetof(UAbilityTask_ApplyRootMotionJumpForce, bFinishOnLanded) == 0x000110, "Member 'UAbilityTask_ApplyRootMotionJumpForce::bFinishOnLanded' has a wrong offset!");
 static_assert(offsetof(UAbilityTask_ApplyRootMotionJumpForce, PathOffsetCurve) == 0x000118, "Member 'UAbilityTask_ApplyRootMotionJumpForce::PathOffsetCurve' has a wrong offset!");
 static_assert(offsetof(UAbilityTask_ApplyRootMotionJumpForce, TimeMappingCurve) == 0x000120, "Member 'UAbilityTask_ApplyRootMotionJumpForce::TimeMappingCurve' has a wrong offset!");
-
-// Class GameplayAbilities.AbilityTask_WaitCancel
-// 0x0018 (0x0098 - 0x0080)
-class UAbilityTask_WaitCancel final : public UAbilityTask
-{
-public:
-	FMulticastInlineDelegateProperty_             OnCancel;                                          // 0x0080(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_90[0x8];                                       // 0x0090(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UAbilityTask_WaitCancel* WaitCancel(class UGameplayAbility* OwningAbility);
-
-	void OnCancelCallback();
-	void OnLocalCancelCallback();
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"AbilityTask_WaitCancel">();
-	}
-	static class UAbilityTask_WaitCancel* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAbilityTask_WaitCancel>();
-	}
-};
-static_assert(alignof(UAbilityTask_WaitCancel) == 0x000008, "Wrong alignment on UAbilityTask_WaitCancel");
-static_assert(sizeof(UAbilityTask_WaitCancel) == 0x000098, "Wrong size on UAbilityTask_WaitCancel");
-static_assert(offsetof(UAbilityTask_WaitCancel, OnCancel) == 0x000080, "Member 'UAbilityTask_WaitCancel::OnCancel' has a wrong offset!");
 
 // Class GameplayAbilities.AbilityTask_ApplyRootMotionMoveToActorForce
 // 0x00C8 (0x0190 - 0x00C8)
@@ -1666,6 +1830,33 @@ static_assert(offsetof(UAbilityTask_ApplyRootMotionMoveToActorForce, TimeMapping
 static_assert(offsetof(UAbilityTask_ApplyRootMotionMoveToActorForce, TargetLerpSpeedHorizontalCurve) == 0x000178, "Member 'UAbilityTask_ApplyRootMotionMoveToActorForce::TargetLerpSpeedHorizontalCurve' has a wrong offset!");
 static_assert(offsetof(UAbilityTask_ApplyRootMotionMoveToActorForce, TargetLerpSpeedVerticalCurve) == 0x000180, "Member 'UAbilityTask_ApplyRootMotionMoveToActorForce::TargetLerpSpeedVerticalCurve' has a wrong offset!");
 
+// Class GameplayAbilities.AbilityTask_StartAbilityState
+// 0x0038 (0x00B8 - 0x0080)
+class UAbilityTask_StartAbilityState final : public UAbilityTask
+{
+public:
+	FMulticastInlineDelegateProperty_             OnStateEnded;                                      // 0x0080(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnStateInterrupted;                                // 0x0090(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A0[0x18];                                      // 0x00A0(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UAbilityTask_StartAbilityState* StartAbilityState(class UGameplayAbility* OwningAbility, class FName StateName, bool bEndCurrentState);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"AbilityTask_StartAbilityState">();
+	}
+	static class UAbilityTask_StartAbilityState* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAbilityTask_StartAbilityState>();
+	}
+};
+static_assert(alignof(UAbilityTask_StartAbilityState) == 0x000008, "Wrong alignment on UAbilityTask_StartAbilityState");
+static_assert(sizeof(UAbilityTask_StartAbilityState) == 0x0000B8, "Wrong size on UAbilityTask_StartAbilityState");
+static_assert(offsetof(UAbilityTask_StartAbilityState, OnStateEnded) == 0x000080, "Member 'UAbilityTask_StartAbilityState::OnStateEnded' has a wrong offset!");
+static_assert(offsetof(UAbilityTask_StartAbilityState, OnStateInterrupted) == 0x000090, "Member 'UAbilityTask_StartAbilityState::OnStateInterrupted' has a wrong offset!");
+
 // Class GameplayAbilities.AbilityTask_ApplyRootMotionMoveToForce
 // 0x0068 (0x0130 - 0x00C8)
 class UAbilityTask_ApplyRootMotionMoveToForce final : public UAbilityTask_ApplyRootMotion_Base
@@ -1707,35 +1898,6 @@ static_assert(offsetof(UAbilityTask_ApplyRootMotionMoveToForce, bSetNewMovementM
 static_assert(offsetof(UAbilityTask_ApplyRootMotionMoveToForce, NewMovementMode) == 0x00011D, "Member 'UAbilityTask_ApplyRootMotionMoveToForce::NewMovementMode' has a wrong offset!");
 static_assert(offsetof(UAbilityTask_ApplyRootMotionMoveToForce, bRestrictSpeedToExpected) == 0x00011E, "Member 'UAbilityTask_ApplyRootMotionMoveToForce::bRestrictSpeedToExpected' has a wrong offset!");
 static_assert(offsetof(UAbilityTask_ApplyRootMotionMoveToForce, PathOffsetCurve) == 0x000120, "Member 'UAbilityTask_ApplyRootMotionMoveToForce::PathOffsetCurve' has a wrong offset!");
-
-// Class GameplayAbilities.AbilityTask_VisualizeTargeting
-// 0x0028 (0x00A8 - 0x0080)
-class UAbilityTask_VisualizeTargeting final : public UAbilityTask
-{
-public:
-	FMulticastInlineDelegateProperty_             TimeElapsed;                                       // 0x0080(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_90[0x18];                                      // 0x0090(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UAbilityTask_VisualizeTargeting* VisualizeTargeting(class UGameplayAbility* OwningAbility, TSubclassOf<class AGameplayAbilityTargetActor> Class_0, class FName TaskInstanceName, float Duration);
-	static class UAbilityTask_VisualizeTargeting* VisualizeTargetingUsingActor(class UGameplayAbility* OwningAbility, class AGameplayAbilityTargetActor* TargetActor, class FName TaskInstanceName, float Duration);
-
-	bool BeginSpawningActor(class UGameplayAbility* OwningAbility, TSubclassOf<class AGameplayAbilityTargetActor> Class_0, class AGameplayAbilityTargetActor** SpawnedActor);
-	void FinishSpawningActor(class UGameplayAbility* OwningAbility, class AGameplayAbilityTargetActor* SpawnedActor);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"AbilityTask_VisualizeTargeting">();
-	}
-	static class UAbilityTask_VisualizeTargeting* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAbilityTask_VisualizeTargeting>();
-	}
-};
-static_assert(alignof(UAbilityTask_VisualizeTargeting) == 0x000008, "Wrong alignment on UAbilityTask_VisualizeTargeting");
-static_assert(sizeof(UAbilityTask_VisualizeTargeting) == 0x0000A8, "Wrong size on UAbilityTask_VisualizeTargeting");
-static_assert(offsetof(UAbilityTask_VisualizeTargeting, TimeElapsed) == 0x000080, "Member 'UAbilityTask_VisualizeTargeting::TimeElapsed' has a wrong offset!");
 
 // Class GameplayAbilities.AbilityTask_ApplyRootMotionRadialForce
 // 0x0070 (0x0138 - 0x00C8)
@@ -1850,6 +2012,34 @@ static_assert(alignof(UAbilityTask_NetworkSyncPoint) == 0x000008, "Wrong alignme
 static_assert(sizeof(UAbilityTask_NetworkSyncPoint) == 0x000098, "Wrong size on UAbilityTask_NetworkSyncPoint");
 static_assert(offsetof(UAbilityTask_NetworkSyncPoint, OnSync) == 0x000080, "Member 'UAbilityTask_NetworkSyncPoint::OnSync' has a wrong offset!");
 
+// Class GameplayAbilities.AbilityTask_WaitAttributeChange
+// 0x0078 (0x00F8 - 0x0080)
+class UAbilityTask_WaitAttributeChange final : public UAbilityTask
+{
+public:
+	FMulticastInlineDelegateProperty_             OnChange;                                          // 0x0080(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_90[0x60];                                      // 0x0090(0x0060)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAbilitySystemComponent*                ExternalOwner;                                     // 0x00F0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	static class UAbilityTask_WaitAttributeChange* WaitForAttributeChange(class UGameplayAbility* OwningAbility, const struct FGameplayAttribute& Attribute, const struct FGameplayTag& WithSrcTag, const struct FGameplayTag& WithoutSrcTag, bool TriggerOnce, class AActor* OptionalExternalOwner);
+	static class UAbilityTask_WaitAttributeChange* WaitForAttributeChangeWithComparison(class UGameplayAbility* OwningAbility, const struct FGameplayAttribute& InAttribute, const struct FGameplayTag& InWithTag, const struct FGameplayTag& InWithoutTag, EWaitAttributeChangeComparison InComparisonType, float InComparisonValue, bool TriggerOnce, class AActor* OptionalExternalOwner);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"AbilityTask_WaitAttributeChange">();
+	}
+	static class UAbilityTask_WaitAttributeChange* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAbilityTask_WaitAttributeChange>();
+	}
+};
+static_assert(alignof(UAbilityTask_WaitAttributeChange) == 0x000008, "Wrong alignment on UAbilityTask_WaitAttributeChange");
+static_assert(sizeof(UAbilityTask_WaitAttributeChange) == 0x0000F8, "Wrong size on UAbilityTask_WaitAttributeChange");
+static_assert(offsetof(UAbilityTask_WaitAttributeChange, OnChange) == 0x000080, "Member 'UAbilityTask_WaitAttributeChange::OnChange' has a wrong offset!");
+static_assert(offsetof(UAbilityTask_WaitAttributeChange, ExternalOwner) == 0x0000F0, "Member 'UAbilityTask_WaitAttributeChange::ExternalOwner' has a wrong offset!");
+
 // Class GameplayAbilities.AbilityTask_PlayMontageAndWait
 // 0x0088 (0x0108 - 0x0080)
 class UAbilityTask_PlayMontageAndWait : public UAbilityTask
@@ -1901,33 +2091,6 @@ static_assert(offsetof(UAbilityTask_PlayMontageAndWait, StartTimeSeconds) == 0x0
 static_assert(offsetof(UAbilityTask_PlayMontageAndWait, bStopWhenAbilityEnds) == 0x000104, "Member 'UAbilityTask_PlayMontageAndWait::bStopWhenAbilityEnds' has a wrong offset!");
 static_assert(offsetof(UAbilityTask_PlayMontageAndWait, bAllowInterruptAfterBlendOut) == 0x000105, "Member 'UAbilityTask_PlayMontageAndWait::bAllowInterruptAfterBlendOut' has a wrong offset!");
 
-// Class GameplayAbilities.AbilityTask_WaitAttributeChangeRatioThreshold
-// 0x00C0 (0x0140 - 0x0080)
-class UAbilityTask_WaitAttributeChangeRatioThreshold final : public UAbilityTask
-{
-public:
-	FMulticastInlineDelegateProperty_             OnChange;                                          // 0x0080(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_90[0xA8];                                      // 0x0090(0x00A8)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAbilitySystemComponent*                ExternalOwner;                                     // 0x0138(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	static class UAbilityTask_WaitAttributeChangeRatioThreshold* WaitForAttributeChangeRatioThreshold(class UGameplayAbility* OwningAbility, const struct FGameplayAttribute& AttributeNumerator, const struct FGameplayAttribute& AttributeDenominator, EWaitAttributeChangeComparison ComparisonType, float ComparisonValue, bool bTriggerOnce, class AActor* OptionalExternalOwner);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"AbilityTask_WaitAttributeChangeRatioThreshold">();
-	}
-	static class UAbilityTask_WaitAttributeChangeRatioThreshold* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAbilityTask_WaitAttributeChangeRatioThreshold>();
-	}
-};
-static_assert(alignof(UAbilityTask_WaitAttributeChangeRatioThreshold) == 0x000008, "Wrong alignment on UAbilityTask_WaitAttributeChangeRatioThreshold");
-static_assert(sizeof(UAbilityTask_WaitAttributeChangeRatioThreshold) == 0x000140, "Wrong size on UAbilityTask_WaitAttributeChangeRatioThreshold");
-static_assert(offsetof(UAbilityTask_WaitAttributeChangeRatioThreshold, OnChange) == 0x000080, "Member 'UAbilityTask_WaitAttributeChangeRatioThreshold::OnChange' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_WaitAttributeChangeRatioThreshold, ExternalOwner) == 0x000138, "Member 'UAbilityTask_WaitAttributeChangeRatioThreshold::ExternalOwner' has a wrong offset!");
-
 // Class GameplayAbilities.AbilityTask_Repeat
 // 0x0038 (0x00B8 - 0x0080)
 class UAbilityTask_Repeat final : public UAbilityTask
@@ -1955,35 +2118,34 @@ static_assert(sizeof(UAbilityTask_Repeat) == 0x0000B8, "Wrong size on UAbilityTa
 static_assert(offsetof(UAbilityTask_Repeat, OnPerformAction) == 0x000080, "Member 'UAbilityTask_Repeat::OnPerformAction' has a wrong offset!");
 static_assert(offsetof(UAbilityTask_Repeat, OnFinished) == 0x000090, "Member 'UAbilityTask_Repeat::OnFinished' has a wrong offset!");
 
-// Class GameplayAbilities.AbilityTask_SpawnActor
-// 0x0048 (0x00C8 - 0x0080)
-class UAbilityTask_SpawnActor final : public UAbilityTask
+// Class GameplayAbilities.AbilityTask_VisualizeTargeting
+// 0x0028 (0x00A8 - 0x0080)
+class UAbilityTask_VisualizeTargeting final : public UAbilityTask
 {
 public:
-	FMulticastInlineDelegateProperty_             Success;                                           // 0x0080(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             DidNotSpawn;                                       // 0x0090(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A0[0x28];                                      // 0x00A0(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             TimeElapsed;                                       // 0x0080(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_90[0x18];                                      // 0x0090(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	static class UAbilityTask_SpawnActor* SpawnActor(class UGameplayAbility* OwningAbility, const struct FGameplayAbilityTargetDataHandle& TargetData, TSubclassOf<class AActor> Class_0);
+	static class UAbilityTask_VisualizeTargeting* VisualizeTargeting(class UGameplayAbility* OwningAbility, TSubclassOf<class AGameplayAbilityTargetActor> Class_0, class FName TaskInstanceName, float Duration);
+	static class UAbilityTask_VisualizeTargeting* VisualizeTargetingUsingActor(class UGameplayAbility* OwningAbility, class AGameplayAbilityTargetActor* TargetActor, class FName TaskInstanceName, float Duration);
 
-	bool BeginSpawningActor(class UGameplayAbility* OwningAbility, const struct FGameplayAbilityTargetDataHandle& TargetData, TSubclassOf<class AActor> Class_0, class AActor** SpawnedActor);
-	void FinishSpawningActor(class UGameplayAbility* OwningAbility, const struct FGameplayAbilityTargetDataHandle& TargetData, class AActor* SpawnedActor);
+	bool BeginSpawningActor(class UGameplayAbility* OwningAbility, TSubclassOf<class AGameplayAbilityTargetActor> Class_0, class AGameplayAbilityTargetActor** SpawnedActor);
+	void FinishSpawningActor(class UGameplayAbility* OwningAbility, class AGameplayAbilityTargetActor* SpawnedActor);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilityTask_SpawnActor">();
+		return StaticClassImpl<"AbilityTask_VisualizeTargeting">();
 	}
-	static class UAbilityTask_SpawnActor* GetDefaultObj()
+	static class UAbilityTask_VisualizeTargeting* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UAbilityTask_SpawnActor>();
+		return GetDefaultObjImpl<UAbilityTask_VisualizeTargeting>();
 	}
 };
-static_assert(alignof(UAbilityTask_SpawnActor) == 0x000008, "Wrong alignment on UAbilityTask_SpawnActor");
-static_assert(sizeof(UAbilityTask_SpawnActor) == 0x0000C8, "Wrong size on UAbilityTask_SpawnActor");
-static_assert(offsetof(UAbilityTask_SpawnActor, Success) == 0x000080, "Member 'UAbilityTask_SpawnActor::Success' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_SpawnActor, DidNotSpawn) == 0x000090, "Member 'UAbilityTask_SpawnActor::DidNotSpawn' has a wrong offset!");
+static_assert(alignof(UAbilityTask_VisualizeTargeting) == 0x000008, "Wrong alignment on UAbilityTask_VisualizeTargeting");
+static_assert(sizeof(UAbilityTask_VisualizeTargeting) == 0x0000A8, "Wrong size on UAbilityTask_VisualizeTargeting");
+static_assert(offsetof(UAbilityTask_VisualizeTargeting, TimeElapsed) == 0x000080, "Member 'UAbilityTask_VisualizeTargeting::TimeElapsed' has a wrong offset!");
 
 // Class GameplayAbilities.AbilityTask_WaitAbilityActivate
 // 0x0100 (0x0180 - 0x0080)
@@ -2042,65 +2204,57 @@ static_assert(alignof(UAbilityTask_WaitAbilityCommit) == 0x000008, "Wrong alignm
 static_assert(sizeof(UAbilityTask_WaitAbilityCommit) == 0x0000F8, "Wrong size on UAbilityTask_WaitAbilityCommit");
 static_assert(offsetof(UAbilityTask_WaitAbilityCommit, OnCommit) == 0x000080, "Member 'UAbilityTask_WaitAbilityCommit::OnCommit' has a wrong offset!");
 
-// Class GameplayAbilities.AbilityTask_WaitAttributeChange
-// 0x0078 (0x00F8 - 0x0080)
-class UAbilityTask_WaitAttributeChange final : public UAbilityTask
-{
-public:
-	FMulticastInlineDelegateProperty_             OnChange;                                          // 0x0080(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_90[0x60];                                      // 0x0090(0x0060)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAbilitySystemComponent*                ExternalOwner;                                     // 0x00F0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	static class UAbilityTask_WaitAttributeChange* WaitForAttributeChange(class UGameplayAbility* OwningAbility, const struct FGameplayAttribute& Attribute, const struct FGameplayTag& WithSrcTag, const struct FGameplayTag& WithoutSrcTag, bool TriggerOnce, class AActor* OptionalExternalOwner);
-	static class UAbilityTask_WaitAttributeChange* WaitForAttributeChangeWithComparison(class UGameplayAbility* OwningAbility, const struct FGameplayAttribute& InAttribute, const struct FGameplayTag& InWithTag, const struct FGameplayTag& InWithoutTag, EWaitAttributeChangeComparison InComparisonType, float InComparisonValue, bool TriggerOnce, class AActor* OptionalExternalOwner);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"AbilityTask_WaitAttributeChange">();
-	}
-	static class UAbilityTask_WaitAttributeChange* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAbilityTask_WaitAttributeChange>();
-	}
-};
-static_assert(alignof(UAbilityTask_WaitAttributeChange) == 0x000008, "Wrong alignment on UAbilityTask_WaitAttributeChange");
-static_assert(sizeof(UAbilityTask_WaitAttributeChange) == 0x0000F8, "Wrong size on UAbilityTask_WaitAttributeChange");
-static_assert(offsetof(UAbilityTask_WaitAttributeChange, OnChange) == 0x000080, "Member 'UAbilityTask_WaitAttributeChange::OnChange' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_WaitAttributeChange, ExternalOwner) == 0x0000F0, "Member 'UAbilityTask_WaitAttributeChange::ExternalOwner' has a wrong offset!");
-
-// Class GameplayAbilities.AbilityTask_WaitConfirmCancel
-// 0x0028 (0x00A8 - 0x0080)
-class UAbilityTask_WaitConfirmCancel final : public UAbilityTask
+// Class GameplayAbilities.AbilityTask_WaitConfirm
+// 0x0020 (0x00A0 - 0x0080)
+class UAbilityTask_WaitConfirm final : public UAbilityTask
 {
 public:
 	FMulticastInlineDelegateProperty_             OnConfirm;                                         // 0x0080(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnCancel;                                          // 0x0090(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A0[0x8];                                       // 0x00A0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_90[0x10];                                      // 0x0090(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	static class UAbilityTask_WaitConfirmCancel* WaitConfirmCancel(class UGameplayAbility* OwningAbility);
+	static class UAbilityTask_WaitConfirm* WaitConfirm(class UGameplayAbility* OwningAbility);
 
-	void OnCancelCallback();
-	void OnConfirmCallback();
-	void OnLocalCancelCallback();
-	void OnLocalConfirmCallback();
+	void OnConfirmCallback(class UGameplayAbility* InAbility);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilityTask_WaitConfirmCancel">();
+		return StaticClassImpl<"AbilityTask_WaitConfirm">();
 	}
-	static class UAbilityTask_WaitConfirmCancel* GetDefaultObj()
+	static class UAbilityTask_WaitConfirm* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UAbilityTask_WaitConfirmCancel>();
+		return GetDefaultObjImpl<UAbilityTask_WaitConfirm>();
 	}
 };
-static_assert(alignof(UAbilityTask_WaitConfirmCancel) == 0x000008, "Wrong alignment on UAbilityTask_WaitConfirmCancel");
-static_assert(sizeof(UAbilityTask_WaitConfirmCancel) == 0x0000A8, "Wrong size on UAbilityTask_WaitConfirmCancel");
-static_assert(offsetof(UAbilityTask_WaitConfirmCancel, OnConfirm) == 0x000080, "Member 'UAbilityTask_WaitConfirmCancel::OnConfirm' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_WaitConfirmCancel, OnCancel) == 0x000090, "Member 'UAbilityTask_WaitConfirmCancel::OnCancel' has a wrong offset!");
+static_assert(alignof(UAbilityTask_WaitConfirm) == 0x000008, "Wrong alignment on UAbilityTask_WaitConfirm");
+static_assert(sizeof(UAbilityTask_WaitConfirm) == 0x0000A0, "Wrong size on UAbilityTask_WaitConfirm");
+static_assert(offsetof(UAbilityTask_WaitConfirm, OnConfirm) == 0x000080, "Member 'UAbilityTask_WaitConfirm::OnConfirm' has a wrong offset!");
+
+// Class GameplayAbilities.AbilityTask_WaitDelay
+// 0x0018 (0x0098 - 0x0080)
+class UAbilityTask_WaitDelay final : public UAbilityTask
+{
+public:
+	FMulticastInlineDelegateProperty_             OnFinish;                                          // 0x0080(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_90[0x8];                                       // 0x0090(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UAbilityTask_WaitDelay* WaitDelay(class UGameplayAbility* OwningAbility, float Time);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"AbilityTask_WaitDelay">();
+	}
+	static class UAbilityTask_WaitDelay* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAbilityTask_WaitDelay>();
+	}
+};
+static_assert(alignof(UAbilityTask_WaitDelay) == 0x000008, "Wrong alignment on UAbilityTask_WaitDelay");
+static_assert(sizeof(UAbilityTask_WaitDelay) == 0x000098, "Wrong size on UAbilityTask_WaitDelay");
+static_assert(offsetof(UAbilityTask_WaitDelay, OnFinish) == 0x000080, "Member 'UAbilityTask_WaitDelay::OnFinish' has a wrong offset!");
 
 // Class GameplayAbilities.AbilityTask_WaitGameplayEffectApplied
 // 0x01C8 (0x0248 - 0x0080)
@@ -2425,58 +2579,71 @@ static_assert(alignof(UAbilityTask_WaitInputPress) == 0x000008, "Wrong alignment
 static_assert(sizeof(UAbilityTask_WaitInputPress) == 0x0000A0, "Wrong size on UAbilityTask_WaitInputPress");
 static_assert(offsetof(UAbilityTask_WaitInputPress, OnPress) == 0x000080, "Member 'UAbilityTask_WaitInputPress::OnPress' has a wrong offset!");
 
-// Class GameplayAbilities.AbilityTask_WaitInputRelease
+// Class GameplayAbilities.AbilityTask_WaitMovementModeChange
 // 0x0020 (0x00A0 - 0x0080)
-class UAbilityTask_WaitInputRelease final : public UAbilityTask
+class UAbilityTask_WaitMovementModeChange final : public UAbilityTask
 {
 public:
-	FMulticastInlineDelegateProperty_             OnRelease;                                         // 0x0080(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnChange;                                          // 0x0080(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	uint8                                         Pad_90[0x10];                                      // 0x0090(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	static class UAbilityTask_WaitInputRelease* WaitInputRelease(class UGameplayAbility* OwningAbility, bool bTestAlreadyReleased);
+	static class UAbilityTask_WaitMovementModeChange* CreateWaitMovementModeChange(class UGameplayAbility* OwningAbility, EMovementMode NewMode);
 
-	void OnReleaseCallback();
+	void OnMovementModeChange(class ACharacter* Character, EMovementMode PrevMovementMode, uint8 PreviousCustomMode);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilityTask_WaitInputRelease">();
+		return StaticClassImpl<"AbilityTask_WaitMovementModeChange">();
 	}
-	static class UAbilityTask_WaitInputRelease* GetDefaultObj()
+	static class UAbilityTask_WaitMovementModeChange* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UAbilityTask_WaitInputRelease>();
+		return GetDefaultObjImpl<UAbilityTask_WaitMovementModeChange>();
 	}
 };
-static_assert(alignof(UAbilityTask_WaitInputRelease) == 0x000008, "Wrong alignment on UAbilityTask_WaitInputRelease");
-static_assert(sizeof(UAbilityTask_WaitInputRelease) == 0x0000A0, "Wrong size on UAbilityTask_WaitInputRelease");
-static_assert(offsetof(UAbilityTask_WaitInputRelease, OnRelease) == 0x000080, "Member 'UAbilityTask_WaitInputRelease::OnRelease' has a wrong offset!");
+static_assert(alignof(UAbilityTask_WaitMovementModeChange) == 0x000008, "Wrong alignment on UAbilityTask_WaitMovementModeChange");
+static_assert(sizeof(UAbilityTask_WaitMovementModeChange) == 0x0000A0, "Wrong size on UAbilityTask_WaitMovementModeChange");
+static_assert(offsetof(UAbilityTask_WaitMovementModeChange, OnChange) == 0x000080, "Member 'UAbilityTask_WaitMovementModeChange::OnChange' has a wrong offset!");
 
-// Class GameplayAbilities.AbilityTask_WaitOverlap
-// 0x0010 (0x0090 - 0x0080)
-class UAbilityTask_WaitOverlap final : public UAbilityTask
+// Class GameplayAbilities.AbilityTask_WaitTargetData
+// 0x0040 (0x00C0 - 0x0080)
+class UAbilityTask_WaitTargetData final : public UAbilityTask
 {
 public:
-	FMulticastInlineDelegateProperty_             OnOverlap;                                         // 0x0080(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             ValidData;                                         // 0x0080(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             Cancelled;                                         // 0x0090(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TSubclassOf<class AGameplayAbilityTargetActor> TargetClass;                                       // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class AGameplayAbilityTargetActor*            TargetActor;                                       // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_B0[0x10];                                      // 0x00B0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	static class UAbilityTask_WaitOverlap* WaitForOverlap(class UGameplayAbility* OwningAbility);
+	static class UAbilityTask_WaitTargetData* WaitTargetData(class UGameplayAbility* OwningAbility, class FName TaskInstanceName, EGameplayTargetingConfirmation ConfirmationType, TSubclassOf<class AGameplayAbilityTargetActor> Class_0);
+	static class UAbilityTask_WaitTargetData* WaitTargetDataUsingActor(class UGameplayAbility* OwningAbility, class FName TaskInstanceName, EGameplayTargetingConfirmation ConfirmationType, class AGameplayAbilityTargetActor* TargetActor_0);
 
-	void OnHitCallback(class UPrimitiveComponent* HitComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit);
+	bool BeginSpawningActor(class UGameplayAbility* OwningAbility, TSubclassOf<class AGameplayAbilityTargetActor> Class_0, class AGameplayAbilityTargetActor** SpawnedActor);
+	void FinishSpawningActor(class UGameplayAbility* OwningAbility, class AGameplayAbilityTargetActor* SpawnedActor);
+	void OnTargetDataCancelledCallback(const struct FGameplayAbilityTargetDataHandle& Data);
+	void OnTargetDataReadyCallback(const struct FGameplayAbilityTargetDataHandle& Data);
+	void OnTargetDataReplicatedCallback(const struct FGameplayAbilityTargetDataHandle& Data, const struct FGameplayTag& ActivationTag);
+	void OnTargetDataReplicatedCancelledCallback();
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilityTask_WaitOverlap">();
+		return StaticClassImpl<"AbilityTask_WaitTargetData">();
 	}
-	static class UAbilityTask_WaitOverlap* GetDefaultObj()
+	static class UAbilityTask_WaitTargetData* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UAbilityTask_WaitOverlap>();
+		return GetDefaultObjImpl<UAbilityTask_WaitTargetData>();
 	}
 };
-static_assert(alignof(UAbilityTask_WaitOverlap) == 0x000008, "Wrong alignment on UAbilityTask_WaitOverlap");
-static_assert(sizeof(UAbilityTask_WaitOverlap) == 0x000090, "Wrong size on UAbilityTask_WaitOverlap");
-static_assert(offsetof(UAbilityTask_WaitOverlap, OnOverlap) == 0x000080, "Member 'UAbilityTask_WaitOverlap::OnOverlap' has a wrong offset!");
+static_assert(alignof(UAbilityTask_WaitTargetData) == 0x000008, "Wrong alignment on UAbilityTask_WaitTargetData");
+static_assert(sizeof(UAbilityTask_WaitTargetData) == 0x0000C0, "Wrong size on UAbilityTask_WaitTargetData");
+static_assert(offsetof(UAbilityTask_WaitTargetData, ValidData) == 0x000080, "Member 'UAbilityTask_WaitTargetData::ValidData' has a wrong offset!");
+static_assert(offsetof(UAbilityTask_WaitTargetData, Cancelled) == 0x000090, "Member 'UAbilityTask_WaitTargetData::Cancelled' has a wrong offset!");
+static_assert(offsetof(UAbilityTask_WaitTargetData, TargetClass) == 0x0000A0, "Member 'UAbilityTask_WaitTargetData::TargetClass' has a wrong offset!");
+static_assert(offsetof(UAbilityTask_WaitTargetData, TargetActor) == 0x0000A8, "Member 'UAbilityTask_WaitTargetData::TargetActor' has a wrong offset!");
 
 // Class GameplayAbilities.AbilityTask_WaitVelocityChange
 // 0x0038 (0x00B8 - 0x0080)
@@ -2615,189 +2782,22 @@ public:
 static_assert(alignof(UAbilitySystemBlueprintLibrary) == 0x000008, "Wrong alignment on UAbilitySystemBlueprintLibrary");
 static_assert(sizeof(UAbilitySystemBlueprintLibrary) == 0x000028, "Wrong size on UAbilitySystemBlueprintLibrary");
 
-// Class GameplayAbilities.AbilitySystemComponent
-// 0x11A8 (0x12C0 - 0x0118)
-class UAbilitySystemComponent : public UGameplayTasksComponent
+// Class GameplayAbilities.AbilitySystemDebugHUDExtension
+// 0x0000 (0x0028 - 0x0028)
+class UAbilitySystemDebugHUDExtension : public UObject
 {
-public:
-	uint8                                         Pad_118[0x10];                                     // 0x0118(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FAttributeDefaults>             DefaultStartingData;                               // 0x0128(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	class FName                                   AffectedAnimInstanceTag;                           // 0x0138(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_140[0x208];                                    // 0x0140(0x0208)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         OutgoingDuration;                                  // 0x0348(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         IncomingDuration;                                  // 0x034C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_350[0x20];                                     // 0x0350(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FString>                         ClientDebugStrings;                                // 0x0370(0x0010)(Net, ZeroConstructor, RepNotify, NativeAccessSpecifierPublic)
-	TArray<class FString>                         ServerDebugStrings;                                // 0x0380(0x0010)(Net, ZeroConstructor, RepNotify, NativeAccessSpecifierPublic)
-	uint8                                         Pad_390[0x58];                                     // 0x0390(0x0058)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          UserAbilityActivationInhibited;                    // 0x03E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReplicationProxyEnabled;                           // 0x03E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSuppressGrantAbility;                             // 0x03EA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSuppressGameplayCues;                             // 0x03EB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3EC[0x4];                                      // 0x03EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class AGameplayAbilityTargetActor*>    SpawnedTargetActors;                               // 0x03F0(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
-	uint8                                         Pad_400[0x28];                                     // 0x0400(0x0028)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 OwnerActor;                                        // 0x0428(0x0008)(Net, ZeroConstructor, RepNotify, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class AActor*                                 AvatarActor;                                       // 0x0430(0x0008)(Net, ZeroConstructor, RepNotify, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_438[0x10];                                     // 0x0438(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayAbilitySpecContainer          ActivatableAbilities;                              // 0x0448(0x0120)(BlueprintVisible, BlueprintReadOnly, Net, Transient, RepNotify, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_568[0x30];                                     // 0x0568(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UGameplayAbility*>               AllReplicatedInstancedAbilities;                   // 0x0598(0x0010)(ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
-	uint8                                         Pad_5A8[0x220];                                    // 0x05A8(0x0220)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayAbilityRepAnimMontage         RepAnimMontageInfo;                                // 0x07C8(0x0040)(Net, RepNotify, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	bool                                          bCachedIsNetSimulated;                             // 0x0808(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bPendingMontageRep;                                // 0x0809(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_80A[0x6];                                      // 0x080A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayAbilityLocalAnimMontage       LocalAnimMontageInfo;                              // 0x0810(0x0028)(NoDestructor, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_838[0xA0];                                     // 0x0838(0x00A0)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FActiveGameplayEffectsContainer        ActiveGameplayEffects;                             // 0x08D8(0x0308)(Net, Protected, NativeAccessSpecifierProtected)
-	struct FActiveGameplayCueContainer            ActiveGameplayCues;                                // 0x0BE0(0x0128)(Net, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
-	struct FActiveGameplayCueContainer            MinimalReplicationGameplayCues;                    // 0x0D08(0x0128)(Net, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_E30[0x130];                                    // 0x0E30(0x0130)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<uint8>                                 BlockedAbilityBindings;                            // 0x0F60(0x0010)(Net, ZeroConstructor, Transient, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_F70[0x130];                                    // 0x0F70(0x0130)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMinimalReplicationTagCountMap         MinimalReplicationTags;                            // 0x10A0(0x0068)(Net, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
-	TArray<class UAttributeSet*>                  SpawnedAttributes;                                 // 0x1108(0x0010)(ExportObject, Net, ZeroConstructor, Transient, RepNotify, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1118[0x10];                                    // 0x1118(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMinimalReplicationTagCountMap         ReplicatedLooseTags;                               // 0x1128(0x0068)(Net, ContainsInstancedReference, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1190[0x8];                                     // 0x1190(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FReplicatedPredictionKeyMap            ReplicatedPredictionKeyMap;                        // 0x1198(0x0118)(Net, Transient, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12B0[0x10];                                    // 0x12B0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void AbilityAbilityKey__DelegateSignature(int32 InputID);
-	void AbilityConfirmOrCancel__DelegateSignature();
-	struct FActiveGameplayEffectHandle BP_ApplyGameplayEffectSpecToSelf(const struct FGameplayEffectSpecHandle& SpecHandle);
-	struct FActiveGameplayEffectHandle BP_ApplyGameplayEffectSpecToTarget(const struct FGameplayEffectSpecHandle& SpecHandle, class UAbilitySystemComponent* Target);
-	struct FActiveGameplayEffectHandle BP_ApplyGameplayEffectToSelf(TSubclassOf<class UGameplayEffect> GameplayEffectClass, float Level, const struct FGameplayEffectContextHandle& EffectContext);
-	struct FActiveGameplayEffectHandle BP_ApplyGameplayEffectToTarget(TSubclassOf<class UGameplayEffect> GameplayEffectClass, class UAbilitySystemComponent* Target, float Level, const struct FGameplayEffectContextHandle& Context);
-	void ClearAbility(const struct FGameplayAbilitySpecHandle& Handle);
-	void ClearAllAbilities();
-	void ClearAllAbilitiesWithInputID(int32 InputID);
-	void ClientActivateAbilityFailed(const struct FGameplayAbilitySpecHandle& AbilityToActivate, int16 PredictionKey);
-	void ClientActivateAbilitySucceed(const struct FGameplayAbilitySpecHandle& AbilityToActivate, const struct FPredictionKey& PredictionKey);
-	void ClientActivateAbilitySucceedWithEventData(const struct FGameplayAbilitySpecHandle& AbilityToActivate, const struct FPredictionKey& PredictionKey, const struct FGameplayEventData& TriggerEventData);
-	void ClientCancelAbility(const struct FGameplayAbilitySpecHandle& AbilityToCancel, const struct FGameplayAbilityActivationInfo& ActivationInfo);
-	void ClientEndAbility(const struct FGameplayAbilitySpecHandle& AbilityToEnd, const struct FGameplayAbilityActivationInfo& ActivationInfo);
-	void ClientPrintDebug_Response(const TArray<class FString>& Strings, int32 GameFlags);
-	void ClientSetReplicatedEvent(EAbilityGenericReplicatedEvent EventType, const struct FGameplayAbilitySpecHandle& AbilityHandle, const struct FPredictionKey& AbilityOriginalPredictionKey);
-	void ClientTryActivateAbility(const struct FGameplayAbilitySpecHandle& AbilityToActivate);
-	void GetAllAttributes(TArray<struct FGameplayAttribute>* OutAttributes);
-	void InputCancel();
-	void InputConfirm();
-	struct FGameplayAbilitySpecHandle K2_GiveAbility(TSubclassOf<class UGameplayAbility> AbilityClass, int32 Level, int32 InputID);
-	struct FGameplayAbilitySpecHandle K2_GiveAbilityAndActivateOnce(TSubclassOf<class UGameplayAbility> AbilityClass, int32 Level, int32 InputID);
-	void K2_InitStats(TSubclassOf<class UAttributeSet> Attributes, const class UDataTable* DataTable);
-	void NetMulticast_InvokeGameplayCueAdded(const struct FGameplayTag& GameplayCueTag, const struct FPredictionKey& PredictionKey, const struct FGameplayEffectContextHandle& EffectContext);
-	void NetMulticast_InvokeGameplayCueAdded_WithParams(const struct FGameplayTag& GameplayCueTag, const struct FPredictionKey& PredictionKey, const struct FGameplayCueParameters& Parameters);
-	void NetMulticast_InvokeGameplayCueAddedAndWhileActive_FromSpec(const struct FGameplayEffectSpecForRPC& Spec, const struct FPredictionKey& PredictionKey);
-	void NetMulticast_InvokeGameplayCueAddedAndWhileActive_WithParams(const struct FGameplayTag& GameplayCueTag, const struct FPredictionKey& PredictionKey, const struct FGameplayCueParameters& GameplayCueParameters);
-	void NetMulticast_InvokeGameplayCueExecuted(const struct FGameplayTag& GameplayCueTag, const struct FPredictionKey& PredictionKey, const struct FGameplayEffectContextHandle& EffectContext);
-	void NetMulticast_InvokeGameplayCueExecuted_FromSpec(const struct FGameplayEffectSpecForRPC& Spec, const struct FPredictionKey& PredictionKey);
-	void NetMulticast_InvokeGameplayCueExecuted_WithParams(const struct FGameplayTag& GameplayCueTag, const struct FPredictionKey& PredictionKey, const struct FGameplayCueParameters& GameplayCueParameters);
-	void NetMulticast_InvokeGameplayCuesAddedAndWhileActive_WithParams(const struct FGameplayTagContainer& GameplayCueTags, const struct FPredictionKey& PredictionKey, const struct FGameplayCueParameters& GameplayCueParameters);
-	void NetMulticast_InvokeGameplayCuesExecuted(const struct FGameplayTagContainer& GameplayCueTags, const struct FPredictionKey& PredictionKey, const struct FGameplayEffectContextHandle& EffectContext);
-	void NetMulticast_InvokeGameplayCuesExecuted_WithParams(const struct FGameplayTagContainer& GameplayCueTags, const struct FPredictionKey& PredictionKey, const struct FGameplayCueParameters& GameplayCueParameters);
-	void OnAvatarActorDestroyed(class AActor* InActor);
-	void OnOwnerActorDestroyed(class AActor* InActor);
-	void OnRep_ActivateAbilities();
-	void OnRep_ClientDebugString();
-	void OnRep_OwningActor();
-	void OnRep_ReplicatedAnimMontage();
-	void OnRep_ServerDebugString();
-	void OnRep_SpawnedAttributes(const TArray<class UAttributeSet*>& PreviousSpawnedAttributes);
-	void OnSpawnedAttributesEndPlayed(class AActor* InActor, EEndPlayReason EndPlayReason);
-	void PressInputID(int32 InputID);
-	void ReleaseInputID(int32 InputID);
-	int32 RemoveActiveEffectsWithAppliedTags(const struct FGameplayTagContainer& Tags);
-	int32 RemoveActiveEffectsWithGrantedTags(const struct FGameplayTagContainer& Tags);
-	int32 RemoveActiveEffectsWithSourceTags(const struct FGameplayTagContainer& Tags);
-	int32 RemoveActiveEffectsWithTags(const struct FGameplayTagContainer& Tags);
-	bool RemoveActiveGameplayEffect(const struct FActiveGameplayEffectHandle& Handle, int32 StacksToRemove);
-	void RemoveActiveGameplayEffectBySourceEffect(TSubclassOf<class UGameplayEffect> GameplayEffect, class UAbilitySystemComponent* InstigatorAbilitySystemComponent, int32 StacksToRemove);
-	void ServerAbilityRPCBatch(const struct GameplayAbilities::FServerAbilityRPCBatch& BatchInfo);
-	void ServerCancelAbility(const struct FGameplayAbilitySpecHandle& AbilityToCancel, const struct FGameplayAbilityActivationInfo& ActivationInfo);
-	void ServerCurrentMontageJumpToSectionName(class UAnimSequenceBase* ClientAnimation, class FName SectionName);
-	void ServerCurrentMontageSetNextSectionName(class UAnimSequenceBase* ClientAnimation, float ClientPosition, class FName SectionName, class FName NextSectionName);
-	void ServerCurrentMontageSetPlayRate(class UAnimSequenceBase* ClientAnimation, float InPlayRate);
-	void ServerEndAbility(const struct FGameplayAbilitySpecHandle& AbilityToEnd, const struct FGameplayAbilityActivationInfo& ActivationInfo, const struct FPredictionKey& PredictionKey);
-	void ServerPrintDebug_Request();
-	void ServerPrintDebug_RequestWithStrings(const TArray<class FString>& Strings);
-	void ServerSetInputPressed(const struct FGameplayAbilitySpecHandle& AbilityHandle);
-	void ServerSetInputReleased(const struct FGameplayAbilitySpecHandle& AbilityHandle);
-	void ServerSetReplicatedEvent(EAbilityGenericReplicatedEvent EventType, const struct FGameplayAbilitySpecHandle& AbilityHandle, const struct FPredictionKey& AbilityOriginalPredictionKey, const struct FPredictionKey& CurrentPredictionKey);
-	void ServerSetReplicatedEventWithPayload(EAbilityGenericReplicatedEvent EventType, const struct FGameplayAbilitySpecHandle& AbilityHandle, const struct FPredictionKey& AbilityOriginalPredictionKey, const struct FPredictionKey& CurrentPredictionKey, const struct FVector_NetQuantize100& VectorPayload);
-	void ServerSetReplicatedTargetData(const struct FGameplayAbilitySpecHandle& AbilityHandle, const struct FPredictionKey& AbilityOriginalPredictionKey, const struct FGameplayAbilityTargetDataHandle& ReplicatedTargetDataHandle, const struct FGameplayTag& ApplicationTag, const struct FPredictionKey& CurrentPredictionKey);
-	void ServerSetReplicatedTargetDataCancelled(const struct FGameplayAbilitySpecHandle& AbilityHandle, const struct FPredictionKey& AbilityOriginalPredictionKey, const struct FPredictionKey& CurrentPredictionKey);
-	void ServerTryActivateAbility(const struct FGameplayAbilitySpecHandle& AbilityToActivate, bool InputPressed, const struct FPredictionKey& PredictionKey);
-	void ServerTryActivateAbilityWithEventData(const struct FGameplayAbilitySpecHandle& AbilityToActivate, bool InputPressed, const struct FPredictionKey& PredictionKey, const struct FGameplayEventData& TriggerEventData);
-	void SetActiveGameplayEffectLevel(const struct FActiveGameplayEffectHandle& ActiveHandle, int32 NewLevel);
-	void SetActiveGameplayEffectLevelUsingQuery(const struct FGameplayEffectQuery& Query, int32 NewLevel);
-	void SetUserAbilityActivationInhibited(bool NewInhibit);
-	void TargetCancel();
-	void TargetConfirm();
-	bool TryActivateAbilitiesByTag(const struct FGameplayTagContainer& GameplayTagContainer, bool bAllowRemoteActivation);
-	bool TryActivateAbility(const struct FGameplayAbilitySpecHandle& AbilityToActivate, bool bAllowRemoteActivation);
-	bool TryActivateAbilityByClass(TSubclassOf<class UGameplayAbility> InAbilityToActivate, bool bAllowRemoteActivation);
-	void UpdateActiveGameplayEffectSetByCallerMagnitude(const struct FActiveGameplayEffectHandle& ActiveHandle, const struct FGameplayTag& SetByCallerTag, float NewValue);
-	void UpdateActiveGameplayEffectSetByCallerMagnitudes(const struct FActiveGameplayEffectHandle& ActiveHandle, const TMap<struct FGameplayTag, float>& NewSetByCallerValues);
-
-	void FindAllAbilitiesMatchingQuery(TArray<struct FGameplayAbilitySpecHandle>* OutAbilityHandles, const struct FGameplayTagQuery& Query) const;
-	void FindAllAbilitiesWithInputID(TArray<struct FGameplayAbilitySpecHandle>* OutAbilityHandles, int32 InputID) const;
-	void FindAllAbilitiesWithTags(TArray<struct FGameplayAbilitySpecHandle>* OutAbilityHandles, const struct FGameplayTagContainer& Tags, bool bExactMatch) const;
-	TArray<struct FActiveGameplayEffectHandle> GetActiveEffects(const struct FGameplayEffectQuery& Query) const;
-	TArray<struct FActiveGameplayEffectHandle> GetActiveEffectsWithAllTags(const struct FGameplayTagContainer& Tags) const;
-	void GetAllAbilities(TArray<struct FGameplayAbilitySpecHandle>* OutAbilityHandles) const;
-	const class UAttributeSet* GetAttributeSet(TSubclassOf<class UAttributeSet> AttributeSetClass) const;
-	float GetGameplayAttributeValue(const struct FGameplayAttribute& Attribute, bool* bFound) const;
-	int32 GetGameplayEffectCount(TSubclassOf<class UGameplayEffect> SourceGameplayEffect, class UAbilitySystemComponent* OptionalInstigatorFilterComponent, bool bEnforceOnGoingCheck) const;
-	int32 GetGameplayEffectCount_IfLoaded(TSoftClassPtr<class UClass> SoftSourceGameplayEffect, class UAbilitySystemComponent* OptionalInstigatorFilterComponent, bool bEnforceOnGoingCheck) const;
-	float GetGameplayEffectMagnitude(const struct FActiveGameplayEffectHandle& Handle, const struct FGameplayAttribute& Attribute) const;
-	int32 GetGameplayTagCount(const struct FGameplayTag& GameplayTag) const;
-	bool GetUserAbilityActivationInhibited() const;
-	bool IsGameplayCueActive(const struct FGameplayTag& GameplayCueTag) const;
-	struct FGameplayEffectContextHandle MakeEffectContext() const;
-	struct FGameplayEffectSpecHandle MakeOutgoingSpec(TSubclassOf<class UGameplayEffect> GameplayEffectClass, float Level, const struct FGameplayEffectContextHandle& Context) const;
-
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilitySystemComponent">();
+		return StaticClassImpl<"AbilitySystemDebugHUDExtension">();
 	}
-	static class UAbilitySystemComponent* GetDefaultObj()
+	static class UAbilitySystemDebugHUDExtension* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UAbilitySystemComponent>();
+		return GetDefaultObjImpl<UAbilitySystemDebugHUDExtension>();
 	}
 };
-static_assert(alignof(UAbilitySystemComponent) == 0x000008, "Wrong alignment on UAbilitySystemComponent");
-static_assert(sizeof(UAbilitySystemComponent) == 0x0012C0, "Wrong size on UAbilitySystemComponent");
-static_assert(offsetof(UAbilitySystemComponent, DefaultStartingData) == 0x000128, "Member 'UAbilitySystemComponent::DefaultStartingData' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemComponent, AffectedAnimInstanceTag) == 0x000138, "Member 'UAbilitySystemComponent::AffectedAnimInstanceTag' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemComponent, OutgoingDuration) == 0x000348, "Member 'UAbilitySystemComponent::OutgoingDuration' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemComponent, IncomingDuration) == 0x00034C, "Member 'UAbilitySystemComponent::IncomingDuration' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemComponent, ClientDebugStrings) == 0x000370, "Member 'UAbilitySystemComponent::ClientDebugStrings' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemComponent, ServerDebugStrings) == 0x000380, "Member 'UAbilitySystemComponent::ServerDebugStrings' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemComponent, UserAbilityActivationInhibited) == 0x0003E8, "Member 'UAbilitySystemComponent::UserAbilityActivationInhibited' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemComponent, ReplicationProxyEnabled) == 0x0003E9, "Member 'UAbilitySystemComponent::ReplicationProxyEnabled' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemComponent, bSuppressGrantAbility) == 0x0003EA, "Member 'UAbilitySystemComponent::bSuppressGrantAbility' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemComponent, bSuppressGameplayCues) == 0x0003EB, "Member 'UAbilitySystemComponent::bSuppressGameplayCues' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemComponent, SpawnedTargetActors) == 0x0003F0, "Member 'UAbilitySystemComponent::SpawnedTargetActors' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemComponent, OwnerActor) == 0x000428, "Member 'UAbilitySystemComponent::OwnerActor' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemComponent, AvatarActor) == 0x000430, "Member 'UAbilitySystemComponent::AvatarActor' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemComponent, ActivatableAbilities) == 0x000448, "Member 'UAbilitySystemComponent::ActivatableAbilities' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemComponent, AllReplicatedInstancedAbilities) == 0x000598, "Member 'UAbilitySystemComponent::AllReplicatedInstancedAbilities' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemComponent, RepAnimMontageInfo) == 0x0007C8, "Member 'UAbilitySystemComponent::RepAnimMontageInfo' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemComponent, bCachedIsNetSimulated) == 0x000808, "Member 'UAbilitySystemComponent::bCachedIsNetSimulated' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemComponent, bPendingMontageRep) == 0x000809, "Member 'UAbilitySystemComponent::bPendingMontageRep' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemComponent, LocalAnimMontageInfo) == 0x000810, "Member 'UAbilitySystemComponent::LocalAnimMontageInfo' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemComponent, ActiveGameplayEffects) == 0x0008D8, "Member 'UAbilitySystemComponent::ActiveGameplayEffects' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemComponent, ActiveGameplayCues) == 0x000BE0, "Member 'UAbilitySystemComponent::ActiveGameplayCues' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemComponent, MinimalReplicationGameplayCues) == 0x000D08, "Member 'UAbilitySystemComponent::MinimalReplicationGameplayCues' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemComponent, BlockedAbilityBindings) == 0x000F60, "Member 'UAbilitySystemComponent::BlockedAbilityBindings' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemComponent, MinimalReplicationTags) == 0x0010A0, "Member 'UAbilitySystemComponent::MinimalReplicationTags' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemComponent, SpawnedAttributes) == 0x001108, "Member 'UAbilitySystemComponent::SpawnedAttributes' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemComponent, ReplicatedLooseTags) == 0x001128, "Member 'UAbilitySystemComponent::ReplicatedLooseTags' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemComponent, ReplicatedPredictionKeyMap) == 0x001198, "Member 'UAbilitySystemComponent::ReplicatedPredictionKeyMap' has a wrong offset!");
+static_assert(alignof(UAbilitySystemDebugHUDExtension) == 0x000008, "Wrong alignment on UAbilitySystemDebugHUDExtension");
+static_assert(sizeof(UAbilitySystemDebugHUDExtension) == 0x000028, "Wrong size on UAbilitySystemDebugHUDExtension");
 
 // Class GameplayAbilities.AbilitySystemDebugHUDExtension_Tags
 // 0x0058 (0x0080 - 0x0028)
@@ -3310,7 +3310,7 @@ static_assert(offsetof(UGameplayCueNotify_Burst, BurstEffects) == 0x0000B8, "Mem
 
 // Class GameplayAbilities.GameplayCueNotify_BurstLatent
 // 0x0368 (0x0678 - 0x0310)
-class AGameplayCueNotify_BurstLatent final : public AGameplayCueNotify_Actor
+class AGameplayCueNotify_BurstLatent : public AGameplayCueNotify_Actor
 {
 public:
 	struct FGameplayCueNotify_SpawnCondition      DefaultSpawnCondition;                             // 0x0310(0x0038)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)

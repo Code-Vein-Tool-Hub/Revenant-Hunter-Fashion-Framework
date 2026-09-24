@@ -17,41 +17,25 @@
 namespace SDK
 {
 
-// Function WDT_Article_AttributeLoad.WDT_Article_AttributeLoad_C.ExecuteUbergraph_WDT_Article_AttributeLoad
-// (Final, UbergraphFunction)
+// Function WDT_Article_AttributeLoad.WDT_Article_AttributeLoad_C.SetValueComparison
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InCurrentValue                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InTargetValue                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    SwapComparisons                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_Article_AttributeLoad_C::ExecuteUbergraph_WDT_Article_AttributeLoad(int32 EntryPoint)
+void UWDT_Article_AttributeLoad_C::SetValueComparison(int32 InCurrentValue, int32 InTargetValue, bool SwapComparisons)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Article_AttributeLoad_C", "ExecuteUbergraph_WDT_Article_AttributeLoad");
+		Func = Class->GetFunction("WDT_Article_AttributeLoad_C", "SetValueComparison");
 
-	Params::WDT_Article_AttributeLoad_C_ExecuteUbergraph_WDT_Article_AttributeLoad Parms{};
+	Params::WDT_Article_AttributeLoad_C_SetValueComparison Parms{};
 
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_Article_AttributeLoad.WDT_Article_AttributeLoad_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_Article_AttributeLoad_C::PreConstruct(bool IsDesignTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Article_AttributeLoad_C", "PreConstruct");
-
-	Params::WDT_Article_AttributeLoad_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
+	Parms.InCurrentValue = InCurrentValue;
+	Parms.InTargetValue = InTargetValue;
+	Parms.SwapComparisons = SwapComparisons;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -77,25 +61,41 @@ void UWDT_Article_AttributeLoad_C::SetValue(int32 InValue)
 }
 
 
-// Function WDT_Article_AttributeLoad.WDT_Article_AttributeLoad_C.SetValueComparison
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function WDT_Article_AttributeLoad.WDT_Article_AttributeLoad_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// int32                                   InCurrentValue                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   InTargetValue                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    SwapComparisons                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_Article_AttributeLoad_C::SetValueComparison(int32 InCurrentValue, int32 InTargetValue, bool SwapComparisons)
+void UWDT_Article_AttributeLoad_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Article_AttributeLoad_C", "SetValueComparison");
+		Func = Class->GetFunction("WDT_Article_AttributeLoad_C", "PreConstruct");
 
-	Params::WDT_Article_AttributeLoad_C_SetValueComparison Parms{};
+	Params::WDT_Article_AttributeLoad_C_PreConstruct Parms{};
 
-	Parms.InCurrentValue = InCurrentValue;
-	Parms.InTargetValue = InTargetValue;
-	Parms.SwapComparisons = SwapComparisons;
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_Article_AttributeLoad.WDT_Article_AttributeLoad_C.ExecuteUbergraph_WDT_Article_AttributeLoad
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_Article_AttributeLoad_C::ExecuteUbergraph_WDT_Article_AttributeLoad(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_Article_AttributeLoad_C", "ExecuteUbergraph_WDT_Article_AttributeLoad");
+
+	Params::WDT_Article_AttributeLoad_C_ExecuteUbergraph_WDT_Article_AttributeLoad Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -19,36 +19,40 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GCN_Capture.GCN_Capture_C
-// 0x01B0 (0x10C8 - 0x0F18)
+// 0x01B8 (0x10E0 - 0x0F28)
 class AGCN_Capture_C final : public AGCN_StatusEffect_Looping_Base_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_GCN_Capture_C;                      // 0x0F18(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	bool                                          bEffectBegin;                                      // 0x0F20(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_F21[0x7];                                      // 0x0F21(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        EffectBegin_Time;                                  // 0x0F28(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        EffectBegin_TimeRange;                             // 0x0F30(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRuntimeFloatCurve                     EffectBegin_Curve_Weight;                          // 0x0F38(0x0088)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          bEffectEnd;                                        // 0x0FC0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_FC1[0x7];                                      // 0x0FC1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        EffectEnd_Time;                                    // 0x0FC8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        EffectEnd_TimeRange;                               // 0x0FD0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRuntimeFloatCurve                     EffectEnd_Curve_Weight;                            // 0x0FD8(0x0088)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class AAppCharacter*                          CharacterActor;                                    // 0x1060(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 CharacterMesh;                                     // 0x1068(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraComponent*                      EffectBegin;                                       // 0x1070(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraSystem*                         EffectBeginAsset;                                  // 0x1078(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<class UNiagaraComponent*>              EffectLoopArray;                                   // 0x1080(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	class UNiagaraSystem*                         EffectLoopAsset;                                   // 0x1090(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraComponent*                      EffectEnd;                                         // 0x1098(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraSystem*                         EffectEndAsset;                                    // 0x10A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<class FName>                           EffectLoopSocketNameArray;                         // 0x10A8(0x0010)(Edit, BlueprintVisible)
-	EEnemyAilmentEffectSizeType                   EffectSizeType;                                    // 0x10B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_10B9[0x7];                                     // 0x10B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        EffectSize;                                        // 0x10C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_GCN_Capture_C;                      // 0x0F28(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	bool                                          bEffectBegin;                                      // 0x0F30(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F31[0x7];                                      // 0x0F31(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        EffectBegin_Time;                                  // 0x0F38(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        EffectBegin_TimeRange;                             // 0x0F40(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRuntimeFloatCurve                     EffectBegin_Curve_Weight;                          // 0x0F48(0x0088)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          bEffectEnd;                                        // 0x0FD0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_FD1[0x7];                                      // 0x0FD1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        EffectEnd_Time;                                    // 0x0FD8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        EffectEnd_TimeRange;                               // 0x0FE0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRuntimeFloatCurve                     EffectEnd_Curve_Weight;                            // 0x0FE8(0x0088)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class AAppCharacter*                          CharacterActor;                                    // 0x1070(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 CharacterMesh;                                     // 0x1078(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraComponent*                      EffectBegin;                                       // 0x1080(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraSystem*                         EffectBeginAsset;                                  // 0x1088(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<class UNiagaraComponent*>              EffectLoopArray;                                   // 0x1090(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	class UNiagaraSystem*                         EffectLoopAsset;                                   // 0x10A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraComponent*                      EffectEnd;                                         // 0x10A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraSystem*                         EffectEndAsset;                                    // 0x10B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<class FName>                           EffectLoopSocketNameArray;                         // 0x10B8(0x0010)(Edit, BlueprintVisible)
+	EEnemyAilmentEffectSizeType                   EffectSizeType;                                    // 0x10C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_10C9[0x7];                                     // 0x10C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        EffectSize;                                        // 0x10D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bInitialize;                                       // 0x10D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bEffectLoop_Check;                                 // 0x10D9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bActiveEffect;                                     // 0x10DA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ActiveEffect(class AActor* TargetActor);
+	void CheckEffectLoop(bool* Result);
 	void CreateEffectBegin();
 	void CreateEffectEnd();
 	void CreateEffectLoop();
@@ -57,7 +61,7 @@ public:
 	void DeactiveEffectEnd();
 	void DeactiveEffectLoop();
 	void ExecuteUbergraph_GCN_Capture(int32 EntryPoint);
-	void InitializeEffect(class AActor* TargetActor);
+	void InitializeEffect(class AActor* TargetActor, bool* Result);
 	void OnApplication(class AActor* Target, const struct FGameplayCueParameters& Parameters, const struct FGameplayCueNotify_SpawnResult& SpawnResults);
 	void OnLoopingStart(class AActor* Target, const struct FGameplayCueParameters& Parameters, const struct FGameplayCueNotify_SpawnResult& SpawnResults);
 	void OnRecurring(class AActor* Target, const struct FGameplayCueParameters& Parameters, const struct FGameplayCueNotify_SpawnResult& SpawnResults);
@@ -79,27 +83,30 @@ public:
 	}
 };
 static_assert(alignof(AGCN_Capture_C) == 0x000008, "Wrong alignment on AGCN_Capture_C");
-static_assert(sizeof(AGCN_Capture_C) == 0x0010C8, "Wrong size on AGCN_Capture_C");
-static_assert(offsetof(AGCN_Capture_C, UberGraphFrame_GCN_Capture_C) == 0x000F18, "Member 'AGCN_Capture_C::UberGraphFrame_GCN_Capture_C' has a wrong offset!");
-static_assert(offsetof(AGCN_Capture_C, bEffectBegin) == 0x000F20, "Member 'AGCN_Capture_C::bEffectBegin' has a wrong offset!");
-static_assert(offsetof(AGCN_Capture_C, EffectBegin_Time) == 0x000F28, "Member 'AGCN_Capture_C::EffectBegin_Time' has a wrong offset!");
-static_assert(offsetof(AGCN_Capture_C, EffectBegin_TimeRange) == 0x000F30, "Member 'AGCN_Capture_C::EffectBegin_TimeRange' has a wrong offset!");
-static_assert(offsetof(AGCN_Capture_C, EffectBegin_Curve_Weight) == 0x000F38, "Member 'AGCN_Capture_C::EffectBegin_Curve_Weight' has a wrong offset!");
-static_assert(offsetof(AGCN_Capture_C, bEffectEnd) == 0x000FC0, "Member 'AGCN_Capture_C::bEffectEnd' has a wrong offset!");
-static_assert(offsetof(AGCN_Capture_C, EffectEnd_Time) == 0x000FC8, "Member 'AGCN_Capture_C::EffectEnd_Time' has a wrong offset!");
-static_assert(offsetof(AGCN_Capture_C, EffectEnd_TimeRange) == 0x000FD0, "Member 'AGCN_Capture_C::EffectEnd_TimeRange' has a wrong offset!");
-static_assert(offsetof(AGCN_Capture_C, EffectEnd_Curve_Weight) == 0x000FD8, "Member 'AGCN_Capture_C::EffectEnd_Curve_Weight' has a wrong offset!");
-static_assert(offsetof(AGCN_Capture_C, CharacterActor) == 0x001060, "Member 'AGCN_Capture_C::CharacterActor' has a wrong offset!");
-static_assert(offsetof(AGCN_Capture_C, CharacterMesh) == 0x001068, "Member 'AGCN_Capture_C::CharacterMesh' has a wrong offset!");
-static_assert(offsetof(AGCN_Capture_C, EffectBegin) == 0x001070, "Member 'AGCN_Capture_C::EffectBegin' has a wrong offset!");
-static_assert(offsetof(AGCN_Capture_C, EffectBeginAsset) == 0x001078, "Member 'AGCN_Capture_C::EffectBeginAsset' has a wrong offset!");
-static_assert(offsetof(AGCN_Capture_C, EffectLoopArray) == 0x001080, "Member 'AGCN_Capture_C::EffectLoopArray' has a wrong offset!");
-static_assert(offsetof(AGCN_Capture_C, EffectLoopAsset) == 0x001090, "Member 'AGCN_Capture_C::EffectLoopAsset' has a wrong offset!");
-static_assert(offsetof(AGCN_Capture_C, EffectEnd) == 0x001098, "Member 'AGCN_Capture_C::EffectEnd' has a wrong offset!");
-static_assert(offsetof(AGCN_Capture_C, EffectEndAsset) == 0x0010A0, "Member 'AGCN_Capture_C::EffectEndAsset' has a wrong offset!");
-static_assert(offsetof(AGCN_Capture_C, EffectLoopSocketNameArray) == 0x0010A8, "Member 'AGCN_Capture_C::EffectLoopSocketNameArray' has a wrong offset!");
-static_assert(offsetof(AGCN_Capture_C, EffectSizeType) == 0x0010B8, "Member 'AGCN_Capture_C::EffectSizeType' has a wrong offset!");
-static_assert(offsetof(AGCN_Capture_C, EffectSize) == 0x0010C0, "Member 'AGCN_Capture_C::EffectSize' has a wrong offset!");
+static_assert(sizeof(AGCN_Capture_C) == 0x0010E0, "Wrong size on AGCN_Capture_C");
+static_assert(offsetof(AGCN_Capture_C, UberGraphFrame_GCN_Capture_C) == 0x000F28, "Member 'AGCN_Capture_C::UberGraphFrame_GCN_Capture_C' has a wrong offset!");
+static_assert(offsetof(AGCN_Capture_C, bEffectBegin) == 0x000F30, "Member 'AGCN_Capture_C::bEffectBegin' has a wrong offset!");
+static_assert(offsetof(AGCN_Capture_C, EffectBegin_Time) == 0x000F38, "Member 'AGCN_Capture_C::EffectBegin_Time' has a wrong offset!");
+static_assert(offsetof(AGCN_Capture_C, EffectBegin_TimeRange) == 0x000F40, "Member 'AGCN_Capture_C::EffectBegin_TimeRange' has a wrong offset!");
+static_assert(offsetof(AGCN_Capture_C, EffectBegin_Curve_Weight) == 0x000F48, "Member 'AGCN_Capture_C::EffectBegin_Curve_Weight' has a wrong offset!");
+static_assert(offsetof(AGCN_Capture_C, bEffectEnd) == 0x000FD0, "Member 'AGCN_Capture_C::bEffectEnd' has a wrong offset!");
+static_assert(offsetof(AGCN_Capture_C, EffectEnd_Time) == 0x000FD8, "Member 'AGCN_Capture_C::EffectEnd_Time' has a wrong offset!");
+static_assert(offsetof(AGCN_Capture_C, EffectEnd_TimeRange) == 0x000FE0, "Member 'AGCN_Capture_C::EffectEnd_TimeRange' has a wrong offset!");
+static_assert(offsetof(AGCN_Capture_C, EffectEnd_Curve_Weight) == 0x000FE8, "Member 'AGCN_Capture_C::EffectEnd_Curve_Weight' has a wrong offset!");
+static_assert(offsetof(AGCN_Capture_C, CharacterActor) == 0x001070, "Member 'AGCN_Capture_C::CharacterActor' has a wrong offset!");
+static_assert(offsetof(AGCN_Capture_C, CharacterMesh) == 0x001078, "Member 'AGCN_Capture_C::CharacterMesh' has a wrong offset!");
+static_assert(offsetof(AGCN_Capture_C, EffectBegin) == 0x001080, "Member 'AGCN_Capture_C::EffectBegin' has a wrong offset!");
+static_assert(offsetof(AGCN_Capture_C, EffectBeginAsset) == 0x001088, "Member 'AGCN_Capture_C::EffectBeginAsset' has a wrong offset!");
+static_assert(offsetof(AGCN_Capture_C, EffectLoopArray) == 0x001090, "Member 'AGCN_Capture_C::EffectLoopArray' has a wrong offset!");
+static_assert(offsetof(AGCN_Capture_C, EffectLoopAsset) == 0x0010A0, "Member 'AGCN_Capture_C::EffectLoopAsset' has a wrong offset!");
+static_assert(offsetof(AGCN_Capture_C, EffectEnd) == 0x0010A8, "Member 'AGCN_Capture_C::EffectEnd' has a wrong offset!");
+static_assert(offsetof(AGCN_Capture_C, EffectEndAsset) == 0x0010B0, "Member 'AGCN_Capture_C::EffectEndAsset' has a wrong offset!");
+static_assert(offsetof(AGCN_Capture_C, EffectLoopSocketNameArray) == 0x0010B8, "Member 'AGCN_Capture_C::EffectLoopSocketNameArray' has a wrong offset!");
+static_assert(offsetof(AGCN_Capture_C, EffectSizeType) == 0x0010C8, "Member 'AGCN_Capture_C::EffectSizeType' has a wrong offset!");
+static_assert(offsetof(AGCN_Capture_C, EffectSize) == 0x0010D0, "Member 'AGCN_Capture_C::EffectSize' has a wrong offset!");
+static_assert(offsetof(AGCN_Capture_C, bInitialize) == 0x0010D8, "Member 'AGCN_Capture_C::bInitialize' has a wrong offset!");
+static_assert(offsetof(AGCN_Capture_C, bEffectLoop_Check) == 0x0010D9, "Member 'AGCN_Capture_C::bEffectLoop_Check' has a wrong offset!");
+static_assert(offsetof(AGCN_Capture_C, bActiveEffect) == 0x0010DA, "Member 'AGCN_Capture_C::bActiveEffect' has a wrong offset!");
 
 }
 

@@ -51,10 +51,10 @@ public:
 	struct FLinearColor                           DecreaseMeterColor;                                // 0x07C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_WDT_Status_OverLoadMeters(int32 EntryPoint);
-	void OnInitialized();
-	void SetValue(int32 InCapacityValue, int32 InLoadValue);
 	void SetValueComparison(int32 InCurrentCapacity, int32 InAfterCapacity, int32 InCurrentLoad, int32 InAfterLoad);
+	void SetValue(int32 InCapacityValue, int32 InLoadValue);
+	void OnInitialized();
+	void ExecuteUbergraph_WDT_Status_OverLoadMeters(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

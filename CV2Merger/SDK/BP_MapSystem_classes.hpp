@@ -11,30 +11,31 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "GameplayTags_structs.hpp"
 #include "Extensions_structs.hpp"
 #include "Extensions_classes.hpp"
 #include "STR_FeatureQuestList_structs.hpp"
-#include "GameplayTags_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_MapSystem.BP_MapSystem_C
-// 0x0098 (0x0870 - 0x07D8)
+// 0x00A8 (0x08E8 - 0x0840)
 class ABP_MapSystem_C final : public AMapSystem
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x07D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x07E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 TopLeftMapAreaTarget;                              // 0x07E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 TopRightMapAreaTarget;                             // 0x07F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 BottomRightMapAreaTarget;                          // 0x07F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 BottomLeftMapAreaTarget;                           // 0x0800(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          MapTargetsFound;                                   // 0x0808(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_809[0x7];                                      // 0x0809(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FFieldTargetHandle>             UserMarkerFieldTargetHandleArray;                  // 0x0810(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TMap<struct FGameplayTag, struct FSTR_FeatureQuestList> FeatureQuestMap;                                   // 0x0820(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0840(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0848(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 TopLeftMapAreaTarget;                              // 0x0850(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 TopRightMapAreaTarget;                             // 0x0858(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 BottomRightMapAreaTarget;                          // 0x0860(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 BottomLeftMapAreaTarget;                           // 0x0868(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          MapTargetsFound;                                   // 0x0870(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_871[0x7];                                      // 0x0871(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FFieldTargetHandle>             UserMarkerFieldTargetHandleArray_MapImage;         // 0x0878(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TMap<struct FGameplayTag, struct FSTR_FeatureQuestList> FeatureQuestMap;                                   // 0x0888(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<struct FFieldTargetHandle>             UserMarkerFieldTargetHandleArray_Compass;          // 0x08D8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void AddUserMarkerFieldTarget(const struct FFieldTargetInfo& InFieldTargetInfo, struct FFieldTargetHandle* OutFieldTargetHandle, bool* OutSuccessful);
@@ -55,7 +56,8 @@ public:
 	void GetPlayerPosition2D(const struct FVector2D& InMapSize2D, struct FVector2D* OutPos);
 	void GetPlayerRotation2D(double* OutRotation);
 	void GetTopLeftOffsetLocation(const struct FVector& InLocation, struct FVector2D* OutLocation);
-	void GetUserMarkerFieldTargetData(bool* bResult, TArray<struct FFieldTargetManageData>* OutFieldTargetInfo);
+	void GetUserMarkerFieldTargetData_Compass(bool* bResult, TArray<struct FFieldTargetManageData>* OutFieldTargetInfo);
+	void GetUserMarkerFieldTargetData_MapImage(bool* bResult, TArray<struct FFieldTargetManageData>* OutFieldTargetInfo);
 	void IsMapSystemReady(bool* OutReady);
 	void ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
@@ -72,16 +74,17 @@ public:
 	}
 };
 static_assert(alignof(ABP_MapSystem_C) == 0x000008, "Wrong alignment on ABP_MapSystem_C");
-static_assert(sizeof(ABP_MapSystem_C) == 0x000870, "Wrong size on ABP_MapSystem_C");
-static_assert(offsetof(ABP_MapSystem_C, UberGraphFrame) == 0x0007D8, "Member 'ABP_MapSystem_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_MapSystem_C, DefaultSceneRoot) == 0x0007E0, "Member 'ABP_MapSystem_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_MapSystem_C, TopLeftMapAreaTarget) == 0x0007E8, "Member 'ABP_MapSystem_C::TopLeftMapAreaTarget' has a wrong offset!");
-static_assert(offsetof(ABP_MapSystem_C, TopRightMapAreaTarget) == 0x0007F0, "Member 'ABP_MapSystem_C::TopRightMapAreaTarget' has a wrong offset!");
-static_assert(offsetof(ABP_MapSystem_C, BottomRightMapAreaTarget) == 0x0007F8, "Member 'ABP_MapSystem_C::BottomRightMapAreaTarget' has a wrong offset!");
-static_assert(offsetof(ABP_MapSystem_C, BottomLeftMapAreaTarget) == 0x000800, "Member 'ABP_MapSystem_C::BottomLeftMapAreaTarget' has a wrong offset!");
-static_assert(offsetof(ABP_MapSystem_C, MapTargetsFound) == 0x000808, "Member 'ABP_MapSystem_C::MapTargetsFound' has a wrong offset!");
-static_assert(offsetof(ABP_MapSystem_C, UserMarkerFieldTargetHandleArray) == 0x000810, "Member 'ABP_MapSystem_C::UserMarkerFieldTargetHandleArray' has a wrong offset!");
-static_assert(offsetof(ABP_MapSystem_C, FeatureQuestMap) == 0x000820, "Member 'ABP_MapSystem_C::FeatureQuestMap' has a wrong offset!");
+static_assert(sizeof(ABP_MapSystem_C) == 0x0008E8, "Wrong size on ABP_MapSystem_C");
+static_assert(offsetof(ABP_MapSystem_C, UberGraphFrame) == 0x000840, "Member 'ABP_MapSystem_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ABP_MapSystem_C, DefaultSceneRoot) == 0x000848, "Member 'ABP_MapSystem_C::DefaultSceneRoot' has a wrong offset!");
+static_assert(offsetof(ABP_MapSystem_C, TopLeftMapAreaTarget) == 0x000850, "Member 'ABP_MapSystem_C::TopLeftMapAreaTarget' has a wrong offset!");
+static_assert(offsetof(ABP_MapSystem_C, TopRightMapAreaTarget) == 0x000858, "Member 'ABP_MapSystem_C::TopRightMapAreaTarget' has a wrong offset!");
+static_assert(offsetof(ABP_MapSystem_C, BottomRightMapAreaTarget) == 0x000860, "Member 'ABP_MapSystem_C::BottomRightMapAreaTarget' has a wrong offset!");
+static_assert(offsetof(ABP_MapSystem_C, BottomLeftMapAreaTarget) == 0x000868, "Member 'ABP_MapSystem_C::BottomLeftMapAreaTarget' has a wrong offset!");
+static_assert(offsetof(ABP_MapSystem_C, MapTargetsFound) == 0x000870, "Member 'ABP_MapSystem_C::MapTargetsFound' has a wrong offset!");
+static_assert(offsetof(ABP_MapSystem_C, UserMarkerFieldTargetHandleArray_MapImage) == 0x000878, "Member 'ABP_MapSystem_C::UserMarkerFieldTargetHandleArray_MapImage' has a wrong offset!");
+static_assert(offsetof(ABP_MapSystem_C, FeatureQuestMap) == 0x000888, "Member 'ABP_MapSystem_C::FeatureQuestMap' has a wrong offset!");
+static_assert(offsetof(ABP_MapSystem_C, UserMarkerFieldTargetHandleArray_Compass) == 0x0008D8, "Member 'ABP_MapSystem_C::UserMarkerFieldTargetHandleArray_Compass' has a wrong offset!");
 
 }
 

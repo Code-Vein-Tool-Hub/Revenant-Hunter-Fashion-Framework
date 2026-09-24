@@ -12,13 +12,14 @@
 
 #include "Engine_structs.hpp"
 #include "WDT_ConfigPieceBase_classes.hpp"
+#include "SlateCore_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WDT_ConfigMenuInputTextPiece.WDT_ConfigMenuInputTextPiece_C
-// 0x0060 (0x0698 - 0x0638)
+// 0x0070 (0x06A8 - 0x0638)
 class UWDT_ConfigMenuInputTextPiece_C final : public UWDT_ConfigPieceBase_C
 {
 public:
@@ -28,6 +29,7 @@ public:
 	class FText                                   DefaultText;                                       // 0x0650(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TSoftObjectPtr<class UTexture2D>              ImageTexture;                                      // 0x0660(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	class FString                                 MoviePath;                                         // 0x0688(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	FMulticastInlineDelegateProperty_             OnTextCommitted;                                   // 0x0698(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	void UpdateTextStyle();
@@ -39,6 +41,7 @@ public:
 	bool Select(bool PlayAnimation_0);
 	void RefreshKeyImage();
 	void PreConstruct(bool IsDesignTime);
+	void OnTextCommitted__DelegateSignature(const class FText& InText, ETextCommit InCommitMethot);
 	void OnMouseLeaveSubPiece(class UMenuPieceBase* MenuPiece);
 	void OnMouseEnterSubPiece(class UMenuPieceBase* MenuPiece);
 	void OnDecideReleased();
@@ -49,6 +52,7 @@ public:
 	void GetLogMoviePath(class FString* OutPath, bool* OutIsSuccess);
 	void ExecuteUbergraph_WDT_ConfigMenuInputTextPiece(int32 EntryPoint);
 	bool Deselect(bool PlayAnimation_0);
+	void BndEvt__WDT_ConfigMenuInputTextPiece_WDT_ConfigTextInputElement_K2Node_ComponentBoundEvent_0_OnTextCommitted__DelegateSignature(const class FText& InText, ETextCommit InCommitMethot);
 
 public:
 	static class UClass* StaticClass()
@@ -61,13 +65,14 @@ public:
 	}
 };
 static_assert(alignof(UWDT_ConfigMenuInputTextPiece_C) == 0x000008, "Wrong alignment on UWDT_ConfigMenuInputTextPiece_C");
-static_assert(sizeof(UWDT_ConfigMenuInputTextPiece_C) == 0x000698, "Wrong size on UWDT_ConfigMenuInputTextPiece_C");
+static_assert(sizeof(UWDT_ConfigMenuInputTextPiece_C) == 0x0006A8, "Wrong size on UWDT_ConfigMenuInputTextPiece_C");
 static_assert(offsetof(UWDT_ConfigMenuInputTextPiece_C, UberGraphFrame_WDT_ConfigMenuInputTextPiece_C) == 0x000638, "Member 'UWDT_ConfigMenuInputTextPiece_C::UberGraphFrame_WDT_ConfigMenuInputTextPiece_C' has a wrong offset!");
 static_assert(offsetof(UWDT_ConfigMenuInputTextPiece_C, WDT_ConfigTextElement) == 0x000640, "Member 'UWDT_ConfigMenuInputTextPiece_C::WDT_ConfigTextElement' has a wrong offset!");
 static_assert(offsetof(UWDT_ConfigMenuInputTextPiece_C, WDT_ConfigTextInputElement) == 0x000648, "Member 'UWDT_ConfigMenuInputTextPiece_C::WDT_ConfigTextInputElement' has a wrong offset!");
 static_assert(offsetof(UWDT_ConfigMenuInputTextPiece_C, DefaultText) == 0x000650, "Member 'UWDT_ConfigMenuInputTextPiece_C::DefaultText' has a wrong offset!");
 static_assert(offsetof(UWDT_ConfigMenuInputTextPiece_C, ImageTexture) == 0x000660, "Member 'UWDT_ConfigMenuInputTextPiece_C::ImageTexture' has a wrong offset!");
 static_assert(offsetof(UWDT_ConfigMenuInputTextPiece_C, MoviePath) == 0x000688, "Member 'UWDT_ConfigMenuInputTextPiece_C::MoviePath' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigMenuInputTextPiece_C, OnTextCommitted) == 0x000698, "Member 'UWDT_ConfigMenuInputTextPiece_C::OnTextCommitted' has a wrong offset!");
 
 }
 

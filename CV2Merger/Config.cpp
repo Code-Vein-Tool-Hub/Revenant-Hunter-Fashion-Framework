@@ -4,7 +4,20 @@
 
 bool Config::Console;
 bool Config::AccessoryInfo;
+std::wstring Config::CompanionPakName;
 bool Config::CompanionPakLoaded;
+std::wstring Config::PresetModName;
+bool Config::PresetModLoaded;
+
+std::wstring StringToWString(const std::string& str)
+{
+	if (str.empty()) return std::wstring();
+
+	int sizeNeeded = MultiByteToWideChar(CP_UTF8, 0, &str[0], (int)str.size(), NULL, 0);
+	std::wstring wstr(sizeNeeded, 0);
+	MultiByteToWideChar(CP_UTF8, 0, &str[0], (int)str.size(), &wstr[0], sizeNeeded);
+	return wstr;
+}
 
 bool Config::init()
 {
@@ -32,6 +45,8 @@ bool Config::init()
 
 	Console = config["General"]["Enable_Console"].value_or(true);
 	AccessoryInfo = config["General"]["Acc_Info_Tool"].value_or(false);
+	CompanionPakName = StringToWString(config["CompanionPaks"]["RHFFCompanionPak"].value_or("z10_RHFF_P.pak"));
+	PresetModName = StringToWString(config["CompanionPaks"]["CharacterPresetMod"].value_or("z11_CharacterPreset_P.pak"));
 
 	return true;
 }

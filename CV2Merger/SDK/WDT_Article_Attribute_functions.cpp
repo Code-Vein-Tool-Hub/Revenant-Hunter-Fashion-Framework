@@ -61,8 +61,9 @@ void UWDT_Article_Attribute_C::PreConstruct(bool IsDesignTime)
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int32                                   InValue                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   ConversionType                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_Article_Attribute_C::SetValue(int32 InValue)
+void UWDT_Article_Attribute_C::SetValue(int32 InValue, int32 ConversionType)
 {
 	static class UFunction* Func = nullptr;
 
@@ -72,6 +73,7 @@ void UWDT_Article_Attribute_C::SetValue(int32 InValue)
 	Params::WDT_Article_Attribute_C_SetValue Parms{};
 
 	Parms.InValue = InValue;
+	Parms.ConversionType = ConversionType;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

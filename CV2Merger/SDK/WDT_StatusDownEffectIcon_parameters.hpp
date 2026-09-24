@@ -115,24 +115,21 @@ static_assert(offsetof(WDT_StatusDownEffectIcon_C_SetLazyTexture, LazyTexture) =
 static_assert(offsetof(WDT_StatusDownEffectIcon_C_SetLazyTexture, ReturnValue) == 0x000028, "Member 'WDT_StatusDownEffectIcon_C_SetLazyTexture::ReturnValue' has a wrong offset!");
 
 // Function WDT_StatusDownEffectIcon.WDT_StatusDownEffectIcon_C.SetStatusEffectIconInfo
-// 0x0028 (0x0028 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct WDT_StatusDownEffectIcon_C_SetStatusEffectIconInfo final
 {
 public:
 	struct FStatusEffectIconHandle                InHandle;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	EStatusDownEffectIconType                     InType;                                            // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTexture2D*                             InTexture;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UTexture2D*                             InFrame;                                           // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UTexture2D*                             InTexture;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UTexture2D*                             InFrame;                                           // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_StatusDownEffectIcon_C_SetStatusEffectIconInfo) == 0x000008, "Wrong alignment on WDT_StatusDownEffectIcon_C_SetStatusEffectIconInfo");
-static_assert(sizeof(WDT_StatusDownEffectIcon_C_SetStatusEffectIconInfo) == 0x000028, "Wrong size on WDT_StatusDownEffectIcon_C_SetStatusEffectIconInfo");
+static_assert(sizeof(WDT_StatusDownEffectIcon_C_SetStatusEffectIconInfo) == 0x000020, "Wrong size on WDT_StatusDownEffectIcon_C_SetStatusEffectIconInfo");
 static_assert(offsetof(WDT_StatusDownEffectIcon_C_SetStatusEffectIconInfo, InHandle) == 0x000000, "Member 'WDT_StatusDownEffectIcon_C_SetStatusEffectIconInfo::InHandle' has a wrong offset!");
-static_assert(offsetof(WDT_StatusDownEffectIcon_C_SetStatusEffectIconInfo, InType) == 0x000008, "Member 'WDT_StatusDownEffectIcon_C_SetStatusEffectIconInfo::InType' has a wrong offset!");
-static_assert(offsetof(WDT_StatusDownEffectIcon_C_SetStatusEffectIconInfo, InTexture) == 0x000010, "Member 'WDT_StatusDownEffectIcon_C_SetStatusEffectIconInfo::InTexture' has a wrong offset!");
-static_assert(offsetof(WDT_StatusDownEffectIcon_C_SetStatusEffectIconInfo, InFrame) == 0x000018, "Member 'WDT_StatusDownEffectIcon_C_SetStatusEffectIconInfo::InFrame' has a wrong offset!");
-static_assert(offsetof(WDT_StatusDownEffectIcon_C_SetStatusEffectIconInfo, CallFunc_IsValid_ReturnValue) == 0x000020, "Member 'WDT_StatusDownEffectIcon_C_SetStatusEffectIconInfo::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusDownEffectIcon_C_SetStatusEffectIconInfo, InTexture) == 0x000008, "Member 'WDT_StatusDownEffectIcon_C_SetStatusEffectIconInfo::InTexture' has a wrong offset!");
+static_assert(offsetof(WDT_StatusDownEffectIcon_C_SetStatusEffectIconInfo, InFrame) == 0x000010, "Member 'WDT_StatusDownEffectIcon_C_SetStatusEffectIconInfo::InFrame' has a wrong offset!");
+static_assert(offsetof(WDT_StatusDownEffectIcon_C_SetStatusEffectIconInfo, CallFunc_IsValid_ReturnValue) == 0x000018, "Member 'WDT_StatusDownEffectIcon_C_SetStatusEffectIconInfo::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
 // Function WDT_StatusDownEffectIcon.WDT_StatusDownEffectIcon_C.SetStatusTimeElapsed
 // 0x0010 (0x0010 - 0x0000)

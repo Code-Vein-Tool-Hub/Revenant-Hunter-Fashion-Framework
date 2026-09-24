@@ -11,27 +11,27 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "Extensions_structs.hpp"
 #include "GameplayTags_structs.hpp"
 #include "BP_SmallScenarioBase_classes.hpp"
-#include "Extensions_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_SmallScenario_Noah_Yadorigi.BP_SmallScenario_Noah_Yadorigi_C
-// 0x0088 (0x0450 - 0x03C8)
+// 0x0088 (0x0460 - 0x03D8)
 class ABP_SmallScenario_Noah_Yadorigi_C final : public ABP_SmallScenarioBase_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_SmallScenario_Noah_Yadorigi_C;   // 0x03C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FGameplayTag                           Buddy;                                             // 0x03D0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TMap<class FName, class UClass*>              PresentScenarioMap;                                // 0x03D8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class UDataTable*                             MainEpSelectorData;                                // 0x0428(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UDataTable*                             CharaEpSelectorData;                               // 0x0430(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UDataTable*                             GreetingSelectorData;                              // 0x0438(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UDataTable*                             PresentResponseDT;                                 // 0x0440(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UDataTable*                             FarewellSelectorData;                              // 0x0448(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_SmallScenario_Noah_Yadorigi_C;   // 0x03D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FGameplayTag                           Buddy;                                             // 0x03E0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TMap<class FName, class UClass*>              PresentScenarioMap;                                // 0x03E8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class UDataTable*                             MainEpSelectorData;                                // 0x0438(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UDataTable*                             CharaEpSelectorData;                               // 0x0440(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UDataTable*                             GreetingSelectorData;                              // 0x0448(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UDataTable*                             PresentResponseDT;                                 // 0x0450(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UDataTable*                             FarewellSelectorData;                              // 0x0458(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Abort();
@@ -52,15 +52,15 @@ public:
 	}
 };
 static_assert(alignof(ABP_SmallScenario_Noah_Yadorigi_C) == 0x000008, "Wrong alignment on ABP_SmallScenario_Noah_Yadorigi_C");
-static_assert(sizeof(ABP_SmallScenario_Noah_Yadorigi_C) == 0x000450, "Wrong size on ABP_SmallScenario_Noah_Yadorigi_C");
-static_assert(offsetof(ABP_SmallScenario_Noah_Yadorigi_C, UberGraphFrame_BP_SmallScenario_Noah_Yadorigi_C) == 0x0003C8, "Member 'ABP_SmallScenario_Noah_Yadorigi_C::UberGraphFrame_BP_SmallScenario_Noah_Yadorigi_C' has a wrong offset!");
-static_assert(offsetof(ABP_SmallScenario_Noah_Yadorigi_C, Buddy) == 0x0003D0, "Member 'ABP_SmallScenario_Noah_Yadorigi_C::Buddy' has a wrong offset!");
-static_assert(offsetof(ABP_SmallScenario_Noah_Yadorigi_C, PresentScenarioMap) == 0x0003D8, "Member 'ABP_SmallScenario_Noah_Yadorigi_C::PresentScenarioMap' has a wrong offset!");
-static_assert(offsetof(ABP_SmallScenario_Noah_Yadorigi_C, MainEpSelectorData) == 0x000428, "Member 'ABP_SmallScenario_Noah_Yadorigi_C::MainEpSelectorData' has a wrong offset!");
-static_assert(offsetof(ABP_SmallScenario_Noah_Yadorigi_C, CharaEpSelectorData) == 0x000430, "Member 'ABP_SmallScenario_Noah_Yadorigi_C::CharaEpSelectorData' has a wrong offset!");
-static_assert(offsetof(ABP_SmallScenario_Noah_Yadorigi_C, GreetingSelectorData) == 0x000438, "Member 'ABP_SmallScenario_Noah_Yadorigi_C::GreetingSelectorData' has a wrong offset!");
-static_assert(offsetof(ABP_SmallScenario_Noah_Yadorigi_C, PresentResponseDT) == 0x000440, "Member 'ABP_SmallScenario_Noah_Yadorigi_C::PresentResponseDT' has a wrong offset!");
-static_assert(offsetof(ABP_SmallScenario_Noah_Yadorigi_C, FarewellSelectorData) == 0x000448, "Member 'ABP_SmallScenario_Noah_Yadorigi_C::FarewellSelectorData' has a wrong offset!");
+static_assert(sizeof(ABP_SmallScenario_Noah_Yadorigi_C) == 0x000460, "Wrong size on ABP_SmallScenario_Noah_Yadorigi_C");
+static_assert(offsetof(ABP_SmallScenario_Noah_Yadorigi_C, UberGraphFrame_BP_SmallScenario_Noah_Yadorigi_C) == 0x0003D8, "Member 'ABP_SmallScenario_Noah_Yadorigi_C::UberGraphFrame_BP_SmallScenario_Noah_Yadorigi_C' has a wrong offset!");
+static_assert(offsetof(ABP_SmallScenario_Noah_Yadorigi_C, Buddy) == 0x0003E0, "Member 'ABP_SmallScenario_Noah_Yadorigi_C::Buddy' has a wrong offset!");
+static_assert(offsetof(ABP_SmallScenario_Noah_Yadorigi_C, PresentScenarioMap) == 0x0003E8, "Member 'ABP_SmallScenario_Noah_Yadorigi_C::PresentScenarioMap' has a wrong offset!");
+static_assert(offsetof(ABP_SmallScenario_Noah_Yadorigi_C, MainEpSelectorData) == 0x000438, "Member 'ABP_SmallScenario_Noah_Yadorigi_C::MainEpSelectorData' has a wrong offset!");
+static_assert(offsetof(ABP_SmallScenario_Noah_Yadorigi_C, CharaEpSelectorData) == 0x000440, "Member 'ABP_SmallScenario_Noah_Yadorigi_C::CharaEpSelectorData' has a wrong offset!");
+static_assert(offsetof(ABP_SmallScenario_Noah_Yadorigi_C, GreetingSelectorData) == 0x000448, "Member 'ABP_SmallScenario_Noah_Yadorigi_C::GreetingSelectorData' has a wrong offset!");
+static_assert(offsetof(ABP_SmallScenario_Noah_Yadorigi_C, PresentResponseDT) == 0x000450, "Member 'ABP_SmallScenario_Noah_Yadorigi_C::PresentResponseDT' has a wrong offset!");
+static_assert(offsetof(ABP_SmallScenario_Noah_Yadorigi_C, FarewellSelectorData) == 0x000458, "Member 'ABP_SmallScenario_Noah_Yadorigi_C::FarewellSelectorData' has a wrong offset!");
 
 }
 

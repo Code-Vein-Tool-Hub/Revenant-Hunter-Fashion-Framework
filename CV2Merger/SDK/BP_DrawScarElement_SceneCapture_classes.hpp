@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "BP_DrawScarElement_classes.hpp"
 #include "CoreUObject_structs.hpp"
+#include "BP_DrawScarElement_classes.hpp"
 
 
 namespace SDK
@@ -42,7 +42,7 @@ public:
 	void OnDying();
 	void OnInitialize();
 	void Post_Process();
-	void Pre_Process(double CaptureSize, double ScarLifetime, double OldScarLifetime, const struct FVector& CaptureLocation);
+	void Pre_Process(double CaptureSize, double ScarLifeTime, double OldScarLifeTime, const struct FVector& CaptureLocation);
 	void Process(double ScarLifeTime_Substruct, double OldScarLifeTime_Substruct);
 
 public:

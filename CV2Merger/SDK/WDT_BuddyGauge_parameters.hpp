@@ -254,23 +254,19 @@ static_assert(offsetof(WDT_BuddyGauge_C_UpdateGaugeEnabled, CallFunc_NotEqual_Do
 static_assert(offsetof(WDT_BuddyGauge_C_UpdateGaugeEnabled, CallFunc_BooleanAND_ReturnValue) == 0x000002, "Member 'WDT_BuddyGauge_C_UpdateGaugeEnabled::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
 
 // Function WDT_BuddyGauge.WDT_BuddyGauge_C.UpdateTrgGuideVisibility
-// 0x0005 (0x0005 - 0x0000)
+// 0x0003 (0x0003 - 0x0000)
 struct WDT_BuddyGauge_C_UpdateTrgGuideVisibility final
 {
 public:
-	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsVisible_ReturnValue_1;                  // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsVisible_ReturnValue_1;                  // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_BuddyGauge_C_UpdateTrgGuideVisibility) == 0x000001, "Wrong alignment on WDT_BuddyGauge_C_UpdateTrgGuideVisibility");
-static_assert(sizeof(WDT_BuddyGauge_C_UpdateTrgGuideVisibility) == 0x000005, "Wrong size on WDT_BuddyGauge_C_UpdateTrgGuideVisibility");
-static_assert(offsetof(WDT_BuddyGauge_C_UpdateTrgGuideVisibility, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000000, "Member 'WDT_BuddyGauge_C_UpdateTrgGuideVisibility::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_BuddyGauge_C_UpdateTrgGuideVisibility, CallFunc_IsVisible_ReturnValue) == 0x000001, "Member 'WDT_BuddyGauge_C_UpdateTrgGuideVisibility::CallFunc_IsVisible_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_BuddyGauge_C_UpdateTrgGuideVisibility, CallFunc_IsVisible_ReturnValue_1) == 0x000002, "Member 'WDT_BuddyGauge_C_UpdateTrgGuideVisibility::CallFunc_IsVisible_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_BuddyGauge_C_UpdateTrgGuideVisibility, CallFunc_BooleanAND_ReturnValue) == 0x000003, "Member 'WDT_BuddyGauge_C_UpdateTrgGuideVisibility::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_BuddyGauge_C_UpdateTrgGuideVisibility, CallFunc_BooleanAND_ReturnValue_1) == 0x000004, "Member 'WDT_BuddyGauge_C_UpdateTrgGuideVisibility::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
+static_assert(sizeof(WDT_BuddyGauge_C_UpdateTrgGuideVisibility) == 0x000003, "Wrong size on WDT_BuddyGauge_C_UpdateTrgGuideVisibility");
+static_assert(offsetof(WDT_BuddyGauge_C_UpdateTrgGuideVisibility, CallFunc_IsVisible_ReturnValue) == 0x000000, "Member 'WDT_BuddyGauge_C_UpdateTrgGuideVisibility::CallFunc_IsVisible_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_BuddyGauge_C_UpdateTrgGuideVisibility, CallFunc_IsVisible_ReturnValue_1) == 0x000001, "Member 'WDT_BuddyGauge_C_UpdateTrgGuideVisibility::CallFunc_IsVisible_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_BuddyGauge_C_UpdateTrgGuideVisibility, CallFunc_BooleanAND_ReturnValue) == 0x000002, "Member 'WDT_BuddyGauge_C_UpdateTrgGuideVisibility::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
 
 }
 

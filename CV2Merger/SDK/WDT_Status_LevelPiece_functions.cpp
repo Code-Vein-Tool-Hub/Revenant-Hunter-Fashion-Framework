@@ -17,17 +17,23 @@
 namespace SDK
 {
 
-// Function WDT_Status_LevelPiece.WDT_Status_LevelPiece_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function WDT_Status_LevelPiece.WDT_Status_LevelPiece_C.SetLevel
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InLevel                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_Status_LevelPiece_C::Construct()
+void UWDT_Status_LevelPiece_C::SetLevel(int32 InLevel)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Status_LevelPiece_C", "Construct");
+		Func = Class->GetFunction("WDT_Status_LevelPiece_C", "SetLevel");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::WDT_Status_LevelPiece_C_SetLevel Parms{};
+
+	Parms.InLevel = InLevel;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -51,23 +57,17 @@ void UWDT_Status_LevelPiece_C::ExecuteUbergraph_WDT_Status_LevelPiece(int32 Entr
 }
 
 
-// Function WDT_Status_LevelPiece.WDT_Status_LevelPiece_C.SetLevel
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InLevel                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function WDT_Status_LevelPiece.WDT_Status_LevelPiece_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UWDT_Status_LevelPiece_C::SetLevel(int32 InLevel)
+void UWDT_Status_LevelPiece_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Status_LevelPiece_C", "SetLevel");
+		Func = Class->GetFunction("WDT_Status_LevelPiece_C", "Construct");
 
-	Params::WDT_Status_LevelPiece_C_SetLevel Parms{};
-
-	Parms.InLevel = InLevel;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

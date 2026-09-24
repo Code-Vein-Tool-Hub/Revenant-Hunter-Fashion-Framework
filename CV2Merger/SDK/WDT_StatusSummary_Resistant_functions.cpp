@@ -17,41 +17,23 @@
 namespace SDK
 {
 
-// Function WDT_StatusSummary_Resistant.WDT_StatusSummary_Resistant_C.ExecuteUbergraph_WDT_StatusSummary_Resistant
-// (Final, UbergraphFunction)
+// Function WDT_StatusSummary_Resistant.WDT_StatusSummary_Resistant_C.SetValueComparison
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InCurrentValue                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InTargetValue                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_StatusSummary_Resistant_C::ExecuteUbergraph_WDT_StatusSummary_Resistant(int32 EntryPoint)
+void UWDT_StatusSummary_Resistant_C::SetValueComparison(int32 InCurrentValue, int32 InTargetValue)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_StatusSummary_Resistant_C", "ExecuteUbergraph_WDT_StatusSummary_Resistant");
+		Func = Class->GetFunction("WDT_StatusSummary_Resistant_C", "SetValueComparison");
 
-	Params::WDT_StatusSummary_Resistant_C_ExecuteUbergraph_WDT_StatusSummary_Resistant Parms{};
+	Params::WDT_StatusSummary_Resistant_C_SetValueComparison Parms{};
 
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_StatusSummary_Resistant.WDT_StatusSummary_Resistant_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_StatusSummary_Resistant_C::PreConstruct(bool IsDesignTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_StatusSummary_Resistant_C", "PreConstruct");
-
-	Params::WDT_StatusSummary_Resistant_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
+	Parms.InCurrentValue = InCurrentValue;
+	Parms.InTargetValue = InTargetValue;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -77,23 +59,41 @@ void UWDT_StatusSummary_Resistant_C::SetValue(int32 InValue)
 }
 
 
-// Function WDT_StatusSummary_Resistant.WDT_StatusSummary_Resistant_C.SetValueComparison
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function WDT_StatusSummary_Resistant.WDT_StatusSummary_Resistant_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// int32                                   InCurrentValue                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   InTargetValue                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_StatusSummary_Resistant_C::SetValueComparison(int32 InCurrentValue, int32 InTargetValue)
+void UWDT_StatusSummary_Resistant_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_StatusSummary_Resistant_C", "SetValueComparison");
+		Func = Class->GetFunction("WDT_StatusSummary_Resistant_C", "PreConstruct");
 
-	Params::WDT_StatusSummary_Resistant_C_SetValueComparison Parms{};
+	Params::WDT_StatusSummary_Resistant_C_PreConstruct Parms{};
 
-	Parms.InCurrentValue = InCurrentValue;
-	Parms.InTargetValue = InTargetValue;
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_StatusSummary_Resistant.WDT_StatusSummary_Resistant_C.ExecuteUbergraph_WDT_StatusSummary_Resistant
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_StatusSummary_Resistant_C::ExecuteUbergraph_WDT_StatusSummary_Resistant(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_StatusSummary_Resistant_C", "ExecuteUbergraph_WDT_StatusSummary_Resistant");
+
+	Params::WDT_StatusSummary_Resistant_C_ExecuteUbergraph_WDT_StatusSummary_Resistant Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

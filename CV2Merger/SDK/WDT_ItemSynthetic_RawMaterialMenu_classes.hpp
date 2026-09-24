@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "BasicUI_classes.hpp"
 #include "SlateCore_structs.hpp"
+#include "BasicUI_classes.hpp"
 #include "UMG_structs.hpp"
 
 

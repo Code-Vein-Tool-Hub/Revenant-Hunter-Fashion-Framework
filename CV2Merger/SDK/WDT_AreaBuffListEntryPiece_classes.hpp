@@ -12,8 +12,8 @@
 
 #include "Engine_structs.hpp"
 #include "Extensions_structs.hpp"
-#include "BasicUI_classes.hpp"
 #include "SlateCore_structs.hpp"
+#include "BasicUI_classes.hpp"
 
 
 namespace SDK

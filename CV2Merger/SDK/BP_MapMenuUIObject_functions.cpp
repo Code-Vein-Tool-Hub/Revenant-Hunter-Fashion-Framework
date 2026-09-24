@@ -37,6 +37,26 @@ bool UBP_MapMenuUIObject_C::Close()
 }
 
 
+// Function BP_MapMenuUIObject.BP_MapMenuUIObject_C.ExecuteUbergraph_BP_MapMenuUIObject
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_MapMenuUIObject_C::ExecuteUbergraph_BP_MapMenuUIObject(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MapMenuUIObject_C", "ExecuteUbergraph_BP_MapMenuUIObject");
+
+	Params::BP_MapMenuUIObject_C_ExecuteUbergraph_BP_MapMenuUIObject Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_MapMenuUIObject.BP_MapMenuUIObject_C.NotifyFastTravelProhibited
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -57,6 +77,28 @@ bool UBP_MapMenuUIObject_C::NotifyFastTravelProhibited(bool InEnabled)
 	UObject::ProcessEvent(Func, &Parms);
 
 	return Parms.ReturnValue;
+}
+
+
+// Function BP_MapMenuUIObject.BP_MapMenuUIObject_C.OnMiniMapArea
+// (Event, Protected, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FGameplayTag                     InTag                                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+// int32                                   InCount                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_MapMenuUIObject_C::OnMiniMapArea(const struct FGameplayTag& InTag, int32 InCount)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MapMenuUIObject_C", "OnMiniMapArea");
+
+	Params::BP_MapMenuUIObject_C_OnMiniMapArea Parms{};
+
+	Parms.InTag = std::move(InTag);
+	Parms.InCount = InCount;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

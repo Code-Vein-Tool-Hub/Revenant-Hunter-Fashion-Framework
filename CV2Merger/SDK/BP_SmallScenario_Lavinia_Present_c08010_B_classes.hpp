@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "Extensions_structs.hpp"
+#include "Engine_structs.hpp"
 #include "BP_SmallScenarioGainBoosterBase_classes.hpp"
 
 
@@ -19,12 +19,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_SmallScenario_Lavinia_Present_c08010_B.BP_SmallScenario_Lavinia_Present_c08010_B_C
-// 0x0018 (0x03E8 - 0x03D0)
+// 0x0018 (0x03F8 - 0x03E0)
 class ABP_SmallScenario_Lavinia_Present_c08010_B_C final : public ABP_SmallScenarioGainBoosterBase_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_SmallScenario_Lavinia_Present_c08010_B_C; // 0x03D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FArticleBulkInfo                       Article_Bulk_Info;                                 // 0x03D8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_SmallScenario_Lavinia_Present_c08010_B_C; // 0x03E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FArticleBulkInfo                       Article_Bulk_Info;                                 // 0x03E8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void Abort();
@@ -45,9 +45,9 @@ public:
 	}
 };
 static_assert(alignof(ABP_SmallScenario_Lavinia_Present_c08010_B_C) == 0x000008, "Wrong alignment on ABP_SmallScenario_Lavinia_Present_c08010_B_C");
-static_assert(sizeof(ABP_SmallScenario_Lavinia_Present_c08010_B_C) == 0x0003E8, "Wrong size on ABP_SmallScenario_Lavinia_Present_c08010_B_C");
-static_assert(offsetof(ABP_SmallScenario_Lavinia_Present_c08010_B_C, UberGraphFrame_BP_SmallScenario_Lavinia_Present_c08010_B_C) == 0x0003D0, "Member 'ABP_SmallScenario_Lavinia_Present_c08010_B_C::UberGraphFrame_BP_SmallScenario_Lavinia_Present_c08010_B_C' has a wrong offset!");
-static_assert(offsetof(ABP_SmallScenario_Lavinia_Present_c08010_B_C, Article_Bulk_Info) == 0x0003D8, "Member 'ABP_SmallScenario_Lavinia_Present_c08010_B_C::Article_Bulk_Info' has a wrong offset!");
+static_assert(sizeof(ABP_SmallScenario_Lavinia_Present_c08010_B_C) == 0x0003F8, "Wrong size on ABP_SmallScenario_Lavinia_Present_c08010_B_C");
+static_assert(offsetof(ABP_SmallScenario_Lavinia_Present_c08010_B_C, UberGraphFrame_BP_SmallScenario_Lavinia_Present_c08010_B_C) == 0x0003E0, "Member 'ABP_SmallScenario_Lavinia_Present_c08010_B_C::UberGraphFrame_BP_SmallScenario_Lavinia_Present_c08010_B_C' has a wrong offset!");
+static_assert(offsetof(ABP_SmallScenario_Lavinia_Present_c08010_B_C, Article_Bulk_Info) == 0x0003E8, "Member 'ABP_SmallScenario_Lavinia_Present_c08010_B_C::Article_Bulk_Info' has a wrong offset!");
 
 }
 

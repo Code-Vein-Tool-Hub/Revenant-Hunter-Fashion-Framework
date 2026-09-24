@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "Extensions_structs.hpp"
+#include "Engine_structs.hpp"
 #include "BP_SmallScenarioBase_classes.hpp"
 
 
@@ -19,12 +19,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_SmallScenario_Noah_Present_c01040.BP_SmallScenario_Noah_Present_c01040_C
-// 0x0098 (0x0460 - 0x03C8)
+// 0x0098 (0x0470 - 0x03D8)
 class ABP_SmallScenario_Noah_Present_c01040_C final : public ABP_SmallScenarioBase_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_SmallScenario_Noah_Present_c01040_C; // 0x03C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FSmallScenarioDialogData               NewVar;                                            // 0x03D0(0x0090)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_SmallScenario_Noah_Present_c01040_C; // 0x03D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FSmallScenarioDialogData               NewVar;                                            // 0x03E0(0x0090)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void Abort();
@@ -45,9 +45,9 @@ public:
 	}
 };
 static_assert(alignof(ABP_SmallScenario_Noah_Present_c01040_C) == 0x000008, "Wrong alignment on ABP_SmallScenario_Noah_Present_c01040_C");
-static_assert(sizeof(ABP_SmallScenario_Noah_Present_c01040_C) == 0x000460, "Wrong size on ABP_SmallScenario_Noah_Present_c01040_C");
-static_assert(offsetof(ABP_SmallScenario_Noah_Present_c01040_C, UberGraphFrame_BP_SmallScenario_Noah_Present_c01040_C) == 0x0003C8, "Member 'ABP_SmallScenario_Noah_Present_c01040_C::UberGraphFrame_BP_SmallScenario_Noah_Present_c01040_C' has a wrong offset!");
-static_assert(offsetof(ABP_SmallScenario_Noah_Present_c01040_C, NewVar) == 0x0003D0, "Member 'ABP_SmallScenario_Noah_Present_c01040_C::NewVar' has a wrong offset!");
+static_assert(sizeof(ABP_SmallScenario_Noah_Present_c01040_C) == 0x000470, "Wrong size on ABP_SmallScenario_Noah_Present_c01040_C");
+static_assert(offsetof(ABP_SmallScenario_Noah_Present_c01040_C, UberGraphFrame_BP_SmallScenario_Noah_Present_c01040_C) == 0x0003D8, "Member 'ABP_SmallScenario_Noah_Present_c01040_C::UberGraphFrame_BP_SmallScenario_Noah_Present_c01040_C' has a wrong offset!");
+static_assert(offsetof(ABP_SmallScenario_Noah_Present_c01040_C, NewVar) == 0x0003E0, "Member 'ABP_SmallScenario_Noah_Present_c01040_C::NewVar' has a wrong offset!");
 
 }
 

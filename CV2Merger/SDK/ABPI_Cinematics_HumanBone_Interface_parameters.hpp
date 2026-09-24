@@ -36,5 +36,16 @@ static_assert(alignof(ABPI_Cinematics_HumanBone_Interface_C_Get_PC_IsFemale) == 
 static_assert(sizeof(ABPI_Cinematics_HumanBone_Interface_C_Get_PC_IsFemale) == 0x000001, "Wrong size on ABPI_Cinematics_HumanBone_Interface_C_Get_PC_IsFemale");
 static_assert(offsetof(ABPI_Cinematics_HumanBone_Interface_C_Get_PC_IsFemale, ReturnValue) == 0x000000, "Member 'ABPI_Cinematics_HumanBone_Interface_C_Get_PC_IsFemale::ReturnValue' has a wrong offset!");
 
+// Function ABPI_Cinematics_HumanBone_Interface.ABPI_Cinematics_HumanBone_Interface_C.Set_PC_IsFemale
+// 0x0001 (0x0001 - 0x0000)
+struct ABPI_Cinematics_HumanBone_Interface_C_Set_PC_IsFemale final
+{
+public:
+	bool                                          Value;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(ABPI_Cinematics_HumanBone_Interface_C_Set_PC_IsFemale) == 0x000001, "Wrong alignment on ABPI_Cinematics_HumanBone_Interface_C_Set_PC_IsFemale");
+static_assert(sizeof(ABPI_Cinematics_HumanBone_Interface_C_Set_PC_IsFemale) == 0x000001, "Wrong size on ABPI_Cinematics_HumanBone_Interface_C_Set_PC_IsFemale");
+static_assert(offsetof(ABPI_Cinematics_HumanBone_Interface_C_Set_PC_IsFemale, Value) == 0x000000, "Member 'ABPI_Cinematics_HumanBone_Interface_C_Set_PC_IsFemale::Value' has a wrong offset!");
+
 }
 

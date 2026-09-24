@@ -16,60 +16,6 @@
 namespace SDK::Params
 {
 
-// Function WDT_Article_NumberAndDiff.WDT_Article_NumberAndDiff_C.ExecuteUbergraph_WDT_Article_NumberAndDiff
-// 0x0008 (0x0008 - 0x0000)
-struct WDT_Article_NumberAndDiff_C_ExecuteUbergraph_WDT_Article_NumberAndDiff final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_IsDesignTime;                         // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_Article_NumberAndDiff_C_ExecuteUbergraph_WDT_Article_NumberAndDiff) == 0x000004, "Wrong alignment on WDT_Article_NumberAndDiff_C_ExecuteUbergraph_WDT_Article_NumberAndDiff");
-static_assert(sizeof(WDT_Article_NumberAndDiff_C_ExecuteUbergraph_WDT_Article_NumberAndDiff) == 0x000008, "Wrong size on WDT_Article_NumberAndDiff_C_ExecuteUbergraph_WDT_Article_NumberAndDiff");
-static_assert(offsetof(WDT_Article_NumberAndDiff_C_ExecuteUbergraph_WDT_Article_NumberAndDiff, EntryPoint) == 0x000000, "Member 'WDT_Article_NumberAndDiff_C_ExecuteUbergraph_WDT_Article_NumberAndDiff::EntryPoint' has a wrong offset!");
-static_assert(offsetof(WDT_Article_NumberAndDiff_C_ExecuteUbergraph_WDT_Article_NumberAndDiff, K2Node_Event_IsDesignTime) == 0x000004, "Member 'WDT_Article_NumberAndDiff_C_ExecuteUbergraph_WDT_Article_NumberAndDiff::K2Node_Event_IsDesignTime' has a wrong offset!");
-
-// Function WDT_Article_NumberAndDiff.WDT_Article_NumberAndDiff_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WDT_Article_NumberAndDiff_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_Article_NumberAndDiff_C_PreConstruct) == 0x000001, "Wrong alignment on WDT_Article_NumberAndDiff_C_PreConstruct");
-static_assert(sizeof(WDT_Article_NumberAndDiff_C_PreConstruct) == 0x000001, "Wrong size on WDT_Article_NumberAndDiff_C_PreConstruct");
-static_assert(offsetof(WDT_Article_NumberAndDiff_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WDT_Article_NumberAndDiff_C_PreConstruct::IsDesignTime' has a wrong offset!");
-
-// Function WDT_Article_NumberAndDiff.WDT_Article_NumberAndDiff_C.SetValue
-// 0x0028 (0x0028 - 0x0000)
-struct WDT_Article_NumberAndDiff_C_SetValue final
-{
-public:
-	int32                                         InValue;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSlateColor                            CallFunc_GetTextColorByCompareResult_TextColor;    // 0x0004(0x0014)()
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0018(0x0010)()
-};
-static_assert(alignof(WDT_Article_NumberAndDiff_C_SetValue) == 0x000008, "Wrong alignment on WDT_Article_NumberAndDiff_C_SetValue");
-static_assert(sizeof(WDT_Article_NumberAndDiff_C_SetValue) == 0x000028, "Wrong size on WDT_Article_NumberAndDiff_C_SetValue");
-static_assert(offsetof(WDT_Article_NumberAndDiff_C_SetValue, InValue) == 0x000000, "Member 'WDT_Article_NumberAndDiff_C_SetValue::InValue' has a wrong offset!");
-static_assert(offsetof(WDT_Article_NumberAndDiff_C_SetValue, CallFunc_GetTextColorByCompareResult_TextColor) == 0x000004, "Member 'WDT_Article_NumberAndDiff_C_SetValue::CallFunc_GetTextColorByCompareResult_TextColor' has a wrong offset!");
-static_assert(offsetof(WDT_Article_NumberAndDiff_C_SetValue, CallFunc_Conv_IntToText_ReturnValue) == 0x000018, "Member 'WDT_Article_NumberAndDiff_C_SetValue::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
-
-// Function WDT_Article_NumberAndDiff.WDT_Article_NumberAndDiff_C.SetValueComparison
-// 0x000C (0x000C - 0x0000)
-struct WDT_Article_NumberAndDiff_C_SetValueComparison final
-{
-public:
-	int32                                         InCurrentValue;                                    // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         InTargetValue;                                     // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          SwapComparisons;                                   // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_Article_NumberAndDiff_C_SetValueComparison) == 0x000004, "Wrong alignment on WDT_Article_NumberAndDiff_C_SetValueComparison");
-static_assert(sizeof(WDT_Article_NumberAndDiff_C_SetValueComparison) == 0x00000C, "Wrong size on WDT_Article_NumberAndDiff_C_SetValueComparison");
-static_assert(offsetof(WDT_Article_NumberAndDiff_C_SetValueComparison, InCurrentValue) == 0x000000, "Member 'WDT_Article_NumberAndDiff_C_SetValueComparison::InCurrentValue' has a wrong offset!");
-static_assert(offsetof(WDT_Article_NumberAndDiff_C_SetValueComparison, InTargetValue) == 0x000004, "Member 'WDT_Article_NumberAndDiff_C_SetValueComparison::InTargetValue' has a wrong offset!");
-static_assert(offsetof(WDT_Article_NumberAndDiff_C_SetValueComparison, SwapComparisons) == 0x000008, "Member 'WDT_Article_NumberAndDiff_C_SetValueComparison::SwapComparisons' has a wrong offset!");
-
 // Function WDT_Article_NumberAndDiff.WDT_Article_NumberAndDiff_C.SetValueFloat
 // 0x0058 (0x0058 - 0x0000)
 struct WDT_Article_NumberAndDiff_C_SetValueFloat final
@@ -94,6 +40,60 @@ static_assert(offsetof(WDT_Article_NumberAndDiff_C_SetValueFloat, CallFunc_Conv_
 static_assert(offsetof(WDT_Article_NumberAndDiff_C_SetValueFloat, Temp_text_Variable) == 0x000020, "Member 'WDT_Article_NumberAndDiff_C_SetValueFloat::Temp_text_Variable' has a wrong offset!");
 static_assert(offsetof(WDT_Article_NumberAndDiff_C_SetValueFloat, CallFunc_GetTextColorByCompareResult_TextColor) == 0x000030, "Member 'WDT_Article_NumberAndDiff_C_SetValueFloat::CallFunc_GetTextColorByCompareResult_TextColor' has a wrong offset!");
 static_assert(offsetof(WDT_Article_NumberAndDiff_C_SetValueFloat, K2Node_Select_Default) == 0x000048, "Member 'WDT_Article_NumberAndDiff_C_SetValueFloat::K2Node_Select_Default' has a wrong offset!");
+
+// Function WDT_Article_NumberAndDiff.WDT_Article_NumberAndDiff_C.SetValueComparison
+// 0x000C (0x000C - 0x0000)
+struct WDT_Article_NumberAndDiff_C_SetValueComparison final
+{
+public:
+	int32                                         InCurrentValue;                                    // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         InTargetValue;                                     // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          SwapComparisons;                                   // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_Article_NumberAndDiff_C_SetValueComparison) == 0x000004, "Wrong alignment on WDT_Article_NumberAndDiff_C_SetValueComparison");
+static_assert(sizeof(WDT_Article_NumberAndDiff_C_SetValueComparison) == 0x00000C, "Wrong size on WDT_Article_NumberAndDiff_C_SetValueComparison");
+static_assert(offsetof(WDT_Article_NumberAndDiff_C_SetValueComparison, InCurrentValue) == 0x000000, "Member 'WDT_Article_NumberAndDiff_C_SetValueComparison::InCurrentValue' has a wrong offset!");
+static_assert(offsetof(WDT_Article_NumberAndDiff_C_SetValueComparison, InTargetValue) == 0x000004, "Member 'WDT_Article_NumberAndDiff_C_SetValueComparison::InTargetValue' has a wrong offset!");
+static_assert(offsetof(WDT_Article_NumberAndDiff_C_SetValueComparison, SwapComparisons) == 0x000008, "Member 'WDT_Article_NumberAndDiff_C_SetValueComparison::SwapComparisons' has a wrong offset!");
+
+// Function WDT_Article_NumberAndDiff.WDT_Article_NumberAndDiff_C.SetValue
+// 0x0028 (0x0028 - 0x0000)
+struct WDT_Article_NumberAndDiff_C_SetValue final
+{
+public:
+	int32                                         InValue;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSlateColor                            CallFunc_GetTextColorByCompareResult_TextColor;    // 0x0004(0x0014)()
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0018(0x0010)()
+};
+static_assert(alignof(WDT_Article_NumberAndDiff_C_SetValue) == 0x000008, "Wrong alignment on WDT_Article_NumberAndDiff_C_SetValue");
+static_assert(sizeof(WDT_Article_NumberAndDiff_C_SetValue) == 0x000028, "Wrong size on WDT_Article_NumberAndDiff_C_SetValue");
+static_assert(offsetof(WDT_Article_NumberAndDiff_C_SetValue, InValue) == 0x000000, "Member 'WDT_Article_NumberAndDiff_C_SetValue::InValue' has a wrong offset!");
+static_assert(offsetof(WDT_Article_NumberAndDiff_C_SetValue, CallFunc_GetTextColorByCompareResult_TextColor) == 0x000004, "Member 'WDT_Article_NumberAndDiff_C_SetValue::CallFunc_GetTextColorByCompareResult_TextColor' has a wrong offset!");
+static_assert(offsetof(WDT_Article_NumberAndDiff_C_SetValue, CallFunc_Conv_IntToText_ReturnValue) == 0x000018, "Member 'WDT_Article_NumberAndDiff_C_SetValue::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
+
+// Function WDT_Article_NumberAndDiff.WDT_Article_NumberAndDiff_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WDT_Article_NumberAndDiff_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_Article_NumberAndDiff_C_PreConstruct) == 0x000001, "Wrong alignment on WDT_Article_NumberAndDiff_C_PreConstruct");
+static_assert(sizeof(WDT_Article_NumberAndDiff_C_PreConstruct) == 0x000001, "Wrong size on WDT_Article_NumberAndDiff_C_PreConstruct");
+static_assert(offsetof(WDT_Article_NumberAndDiff_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WDT_Article_NumberAndDiff_C_PreConstruct::IsDesignTime' has a wrong offset!");
+
+// Function WDT_Article_NumberAndDiff.WDT_Article_NumberAndDiff_C.ExecuteUbergraph_WDT_Article_NumberAndDiff
+// 0x0008 (0x0008 - 0x0000)
+struct WDT_Article_NumberAndDiff_C_ExecuteUbergraph_WDT_Article_NumberAndDiff final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_IsDesignTime;                         // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_Article_NumberAndDiff_C_ExecuteUbergraph_WDT_Article_NumberAndDiff) == 0x000004, "Wrong alignment on WDT_Article_NumberAndDiff_C_ExecuteUbergraph_WDT_Article_NumberAndDiff");
+static_assert(sizeof(WDT_Article_NumberAndDiff_C_ExecuteUbergraph_WDT_Article_NumberAndDiff) == 0x000008, "Wrong size on WDT_Article_NumberAndDiff_C_ExecuteUbergraph_WDT_Article_NumberAndDiff");
+static_assert(offsetof(WDT_Article_NumberAndDiff_C_ExecuteUbergraph_WDT_Article_NumberAndDiff, EntryPoint) == 0x000000, "Member 'WDT_Article_NumberAndDiff_C_ExecuteUbergraph_WDT_Article_NumberAndDiff::EntryPoint' has a wrong offset!");
+static_assert(offsetof(WDT_Article_NumberAndDiff_C_ExecuteUbergraph_WDT_Article_NumberAndDiff, K2Node_Event_IsDesignTime) == 0x000004, "Member 'WDT_Article_NumberAndDiff_C_ExecuteUbergraph_WDT_Article_NumberAndDiff::K2Node_Event_IsDesignTime' has a wrong offset!");
 
 }
 

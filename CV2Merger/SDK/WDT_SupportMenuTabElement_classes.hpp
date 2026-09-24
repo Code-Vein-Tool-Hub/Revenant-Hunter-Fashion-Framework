@@ -31,13 +31,13 @@ public:
 	class FText                                   Text;                                              // 0x04F0(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn)
 
 public:
-	void SetTitleText(const class FText& Text_0);
-	void SetDiffIconVIsibility(bool InVisibility);
-	void OnListItemObjectSet(class UObject* ListItemObject);
-	void ExecuteUbergraph_WDT_SupportMenuTabElement(int32 EntryPoint);
-	void BP_OnItemSelectionChanged(bool bIsSelected);
-	void BP_OnItemExpansionChanged(bool bIsExpanded);
 	void BP_OnEntryReleased();
+	void BP_OnItemExpansionChanged(bool bIsExpanded);
+	void BP_OnItemSelectionChanged(bool bIsSelected);
+	void ExecuteUbergraph_WDT_SupportMenuTabElement(int32 EntryPoint);
+	void OnListItemObjectSet(class UObject* ListItemObject);
+	void SetDiffIconVIsibility(bool InVisibility);
+	void SetTitleText(const class FText& Text_0);
 
 public:
 	static class UClass* StaticClass()

@@ -17,6 +17,20 @@
 namespace SDK
 {
 
+// Function WDT_TitleMenu_Variationable.WDT_TitleMenu_Variationable_C.CheckNetworkAvailable
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWDT_TitleMenu_Variationable_C::CheckNetworkAvailable()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_TitleMenu_Variationable_C", "CheckNetworkAvailable");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WDT_TitleMenu_Variationable.WDT_TitleMenu_Variationable_C.DecideMenu
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -54,6 +68,78 @@ void UWDT_TitleMenu_Variationable_C::ExecuteUbergraph_WDT_TitleMenu_Variationabl
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_TitleMenu_Variationable.WDT_TitleMenu_Variationable_C.GetDLCGroupShowedFlag
+// (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// EDLCGroup                               InDLCGroup                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_TitleMenu_Variationable_C::GetDLCGroupShowedFlag(EDLCGroup InDLCGroup, bool* Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_TitleMenu_Variationable_C", "GetDLCGroupShowedFlag");
+
+	Params::WDT_TitleMenu_Variationable_C_GetDLCGroupShowedFlag Parms{};
+
+	Parms.InDLCGroup = InDLCGroup;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Result != nullptr)
+		*Result = Parms.Result;
+}
+
+
+// Function WDT_TitleMenu_Variationable.WDT_TitleMenu_Variationable_C.GetErrorDialogBodyText
+// (Private, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// ECommonUserPrivilegeResult              PrivilegeResult                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FText                             Text                                                   (Parm, OutParm)
+
+void UWDT_TitleMenu_Variationable_C::GetErrorDialogBodyText(ECommonUserPrivilegeResult PrivilegeResult, class FText* Text)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_TitleMenu_Variationable_C", "GetErrorDialogBodyText");
+
+	Params::WDT_TitleMenu_Variationable_C_GetErrorDialogBodyText Parms{};
+
+	Parms.PrivilegeResult = PrivilegeResult;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Text != nullptr)
+		*Text = std::move(Parms.Text);
+}
+
+
+// Function WDT_TitleMenu_Variationable.WDT_TitleMenu_Variationable_C.GetErrorDialogTitleText
+// (Private, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// ECommonUserPrivilegeResult              PrivilegeResult                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FText                             Text                                                   (Parm, OutParm)
+
+void UWDT_TitleMenu_Variationable_C::GetErrorDialogTitleText(ECommonUserPrivilegeResult PrivilegeResult, class FText* Text)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_TitleMenu_Variationable_C", "GetErrorDialogTitleText");
+
+	Params::WDT_TitleMenu_Variationable_C_GetErrorDialogTitleText Parms{};
+
+	Parms.PrivilegeResult = PrivilegeResult;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Text != nullptr)
+		*Text = std::move(Parms.Text);
 }
 
 
@@ -345,9 +431,9 @@ void UWDT_TitleMenu_Variationable_C::OnChangeTitleProgress(ETitleProgressType Pr
 // Function WDT_TitleMenu_Variationable.WDT_TitleMenu_Variationable_C.OnCheckNetworkAvailable
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Result                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// ECommonUserPrivilegeResult              Result                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_TitleMenu_Variationable_C::OnCheckNetworkAvailable(bool Result)
+void UWDT_TitleMenu_Variationable_C::OnCheckNetworkAvailable(ECommonUserPrivilegeResult Result)
 {
 	static class UFunction* Func = nullptr;
 
@@ -480,6 +566,26 @@ void UWDT_TitleMenu_Variationable_C::OnContinue()
 }
 
 
+// Function WDT_TitleMenu_Variationable.WDT_TitleMenu_Variationable_C.OnDecideDifficultyModeDialog
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// uint8                                   DecideOptionNumber                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_TitleMenu_Variationable_C::OnDecideDifficultyModeDialog(uint8 DecideOptionNumber)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_TitleMenu_Variationable_C", "OnDecideDifficultyModeDialog");
+
+	Params::WDT_TitleMenu_Variationable_C_OnDecideDifficultyModeDialog Parms{};
+
+	Parms.DecideOptionNumber = DecideOptionNumber;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WDT_TitleMenu_Variationable.WDT_TitleMenu_Variationable_C.OnDecidePressed
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -511,6 +617,20 @@ void UWDT_TitleMenu_Variationable_C::OnDecideStoreOpenDialog(uint8 DecideOptionN
 	Parms.DecideOptionNumber = DecideOptionNumber;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_TitleMenu_Variationable.WDT_TitleMenu_Variationable_C.OnDifficultyModeDialogClosed
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWDT_TitleMenu_Variationable_C::OnDifficultyModeDialogClosed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_TitleMenu_Variationable_C", "OnDifficultyModeDialogClosed");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -948,6 +1068,32 @@ void UWDT_TitleMenu_Variationable_C::OpenWarningDialog()
 }
 
 
+// Function WDT_TitleMenu_Variationable.WDT_TitleMenu_Variationable_C.SetDLCGroupShowedFlag
+// (Private, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FConfigurationDownloadContentsSaveDataInTarget                                               (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
+// EDLCGroup                               InDLCGroup                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    InShowed                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_TitleMenu_Variationable_C::SetDLCGroupShowedFlag(struct FConfigurationDownloadContentsSaveData& InTarget, EDLCGroup InDLCGroup, bool InShowed)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_TitleMenu_Variationable_C", "SetDLCGroupShowedFlag");
+
+	Params::WDT_TitleMenu_Variationable_C_SetDLCGroupShowedFlag Parms{};
+
+	Parms.InTarget = std::move(InTarget);
+	Parms.InDLCGroup = InDLCGroup;
+	Parms.InShowed = InShowed;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	InTarget = std::move(Parms.InTarget);
+}
+
+
 // Function WDT_TitleMenu_Variationable.WDT_TitleMenu_Variationable_C.ShowConsentSection
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -965,6 +1111,20 @@ void UWDT_TitleMenu_Variationable_C::ShowConsentSection(const struct FConfigurat
 	Parms.InTag = std::move(InTag);
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_TitleMenu_Variationable.WDT_TitleMenu_Variationable_C.ShowDifficultyModeDialog
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWDT_TitleMenu_Variationable_C::ShowDifficultyModeDialog()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_TitleMenu_Variationable_C", "ShowDifficultyModeDialog");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

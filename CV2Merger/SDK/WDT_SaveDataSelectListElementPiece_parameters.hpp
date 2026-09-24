@@ -13,7 +13,6 @@
 #include "Extensions_structs.hpp"
 #include "UMG_structs.hpp"
 #include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "SlateCore_structs.hpp"
 
 
@@ -21,105 +20,113 @@ namespace SDK::Params
 {
 
 // Function WDT_SaveDataSelectListElementPiece.WDT_SaveDataSelectListElementPiece_C.SetSaveDataInfo
-// 0x0238 (0x0238 - 0x0000)
+// 0x0218 (0x0218 - 0x0000)
 struct WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo final
 {
 public:
 	struct FUISaveDataInfo                        InSaveDataInfo;                                    // 0x0000(0x0098)(BlueprintVisible, BlueprintReadOnly, Parm)
-	bool                                          Temp_bool_Variable;                                // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable;                                // 0x0099(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9A[0x2];                                       // 0x009A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_99[0x3];                                       // 0x0099(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_SelectInt_ReturnValue;                    // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x00A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x00A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_2;                              // 0x00A2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_3;                              // 0x00A3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_2;                              // 0x00A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x00A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_4;                              // 0x00A5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_5;                              // 0x00A6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_3;                              // 0x00A7(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_2;                              // 0x00A7(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_6;                              // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_7;                              // 0x00A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_AA[0x6];                                       // 0x00AA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x00B0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_GetSlotStatusText_InvalidText;            // 0x00C0(0x0010)()
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x00D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D2[0x6];                                       // 0x00D2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_AsDateTimeWithCustomFormat_ReturnValue;   // 0x00D8(0x0010)()
-	float                                         CallFunc_GetTotalSeconds_ReturnValue;              // 0x00E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_EC[0x4];                                       // 0x00EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_FMin_ReturnValue;                         // 0x00F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTimespan                              CallFunc_FromSeconds_ReturnValue;                  // 0x00F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetDays_ReturnValue;                      // 0x0100(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Multiply_IntInt_ReturnValue;              // 0x0104(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_SelectText_ReturnValue;                   // 0x0108(0x0010)()
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_119[0x3];                                      // 0x0119(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetHours_ReturnValue;                     // 0x011C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default_1;                           // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_121[0x3];                                      // 0x0121(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0124(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0128(0x0010)()
-	int32                                         CallFunc_GetMinutes_ReturnValue;                   // 0x0138(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_13C[0x4];                                      // 0x013C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0140(0x0048)(HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue_1;             // 0x0188(0x0010)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0198(0x0048)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x01E0(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x01F0(0x0010)()
-	ESlateVisibility                              K2Node_Select_Default_2;                           // 0x0200(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default_3;                           // 0x0201(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_202[0x6];                                      // 0x0202(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue_2;             // 0x0208(0x0010)()
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0218(0x0010)()
-	double                                        CallFunc_FMin_A_ImplicitCast;                      // 0x0228(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_FromSeconds_Seconds_ImplicitCast;         // 0x0230(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_3;                              // 0x00AA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_8;                              // 0x00AB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_9;                              // 0x00AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_4;                              // 0x00AD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_10;                             // 0x00AE(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_11;                             // 0x00AF(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_5;                              // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_12;                             // 0x00B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_13;                             // 0x00B2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B3[0x5];                                       // 0x00B3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_GetSlotStatusText_InvalidText;            // 0x00B8(0x0010)()
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C9[0x7];                                       // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x00D0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_6;                              // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default_1;                           // 0x00E2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default_2;                           // 0x00E3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E4[0x4];                                       // 0x00E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_AsDateTimeWithCustomFormat_ReturnValue;   // 0x00E8(0x0010)()
+	class FText                                   CallFunc_SelectText_ReturnValue;                   // 0x00F8(0x0010)()
+	ESlateVisibility                              K2Node_Select_Default_3;                           // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0109(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default_4;                           // 0x010A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_10B[0x5];                                      // 0x010B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0110(0x0010)()
+	ESlateVisibility                              K2Node_Select_Default_5;                           // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_121[0x7];                                      // 0x0121(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0128(0x0010)()
+	ESlateVisibility                              K2Node_Select_Default_6;                           // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_139[0x3];                                      // 0x0139(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetDisplayPlayTime_OutHour;               // 0x013C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetDisplayPlayTime_OutMinute;             // 0x0140(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_144[0x4];                                      // 0x0144(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue_1;             // 0x0148(0x0010)()
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue_2;             // 0x0158(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0168(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x01B0(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x01F8(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0208(0x0010)()
 };
 static_assert(alignof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo) == 0x000008, "Wrong alignment on WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo");
-static_assert(sizeof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo) == 0x000238, "Wrong size on WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo");
+static_assert(sizeof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo) == 0x000218, "Wrong size on WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo");
 static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, InSaveDataInfo) == 0x000000, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::InSaveDataInfo' has a wrong offset!");
-static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, Temp_bool_Variable) == 0x000098, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, Temp_byte_Variable) == 0x000099, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, Temp_byte_Variable) == 0x000098, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::Temp_byte_Variable' has a wrong offset!");
 static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, CallFunc_SelectInt_ReturnValue) == 0x00009C, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::CallFunc_SelectInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, Temp_byte_Variable_1) == 0x0000A0, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, Temp_bool_Variable_1) == 0x0000A1, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::Temp_bool_Variable_1' has a wrong offset!");
+static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, Temp_bool_Variable) == 0x0000A1, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::Temp_bool_Variable' has a wrong offset!");
 static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, Temp_byte_Variable_2) == 0x0000A2, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::Temp_byte_Variable_2' has a wrong offset!");
 static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, Temp_byte_Variable_3) == 0x0000A3, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::Temp_byte_Variable_3' has a wrong offset!");
-static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, Temp_bool_Variable_2) == 0x0000A4, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::Temp_bool_Variable_2' has a wrong offset!");
+static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, Temp_bool_Variable_1) == 0x0000A4, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::Temp_bool_Variable_1' has a wrong offset!");
 static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, Temp_byte_Variable_4) == 0x0000A5, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::Temp_byte_Variable_4' has a wrong offset!");
 static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, Temp_byte_Variable_5) == 0x0000A6, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::Temp_byte_Variable_5' has a wrong offset!");
-static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, Temp_bool_Variable_3) == 0x0000A7, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::Temp_bool_Variable_3' has a wrong offset!");
+static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, Temp_bool_Variable_2) == 0x0000A7, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::Temp_bool_Variable_2' has a wrong offset!");
 static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, Temp_byte_Variable_6) == 0x0000A8, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::Temp_byte_Variable_6' has a wrong offset!");
 static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, Temp_byte_Variable_7) == 0x0000A9, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::Temp_byte_Variable_7' has a wrong offset!");
-static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, CallFunc_Conv_TextToString_ReturnValue) == 0x0000B0, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, CallFunc_GetSlotStatusText_InvalidText) == 0x0000C0, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::CallFunc_GetSlotStatusText_InvalidText' has a wrong offset!");
-static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, CallFunc_IsValid_ReturnValue) == 0x0000D0, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, K2Node_Select_Default) == 0x0000D1, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, CallFunc_AsDateTimeWithCustomFormat_ReturnValue) == 0x0000D8, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::CallFunc_AsDateTimeWithCustomFormat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, CallFunc_GetTotalSeconds_ReturnValue) == 0x0000E8, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::CallFunc_GetTotalSeconds_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, CallFunc_FMin_ReturnValue) == 0x0000F0, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::CallFunc_FMin_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, CallFunc_FromSeconds_ReturnValue) == 0x0000F8, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::CallFunc_FromSeconds_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, CallFunc_GetDays_ReturnValue) == 0x000100, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::CallFunc_GetDays_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, CallFunc_Multiply_IntInt_ReturnValue) == 0x000104, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::CallFunc_Multiply_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, CallFunc_SelectText_ReturnValue) == 0x000108, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::CallFunc_SelectText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, CallFunc_BooleanOR_ReturnValue) == 0x000118, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, CallFunc_GetHours_ReturnValue) == 0x00011C, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::CallFunc_GetHours_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, K2Node_Select_Default_1) == 0x000120, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, CallFunc_Add_IntInt_ReturnValue) == 0x000124, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, CallFunc_Conv_IntToText_ReturnValue) == 0x000128, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, CallFunc_GetMinutes_ReturnValue) == 0x000138, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::CallFunc_GetMinutes_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, K2Node_MakeStruct_FormatArgumentData) == 0x000140, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, CallFunc_Conv_IntToText_ReturnValue_1) == 0x000188, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::CallFunc_Conv_IntToText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, K2Node_MakeStruct_FormatArgumentData_1) == 0x000198, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, K2Node_MakeArray_Array) == 0x0001E0, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, CallFunc_Format_ReturnValue) == 0x0001F0, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, K2Node_Select_Default_2) == 0x000200, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::K2Node_Select_Default_2' has a wrong offset!");
-static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, K2Node_Select_Default_3) == 0x000201, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::K2Node_Select_Default_3' has a wrong offset!");
-static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, CallFunc_Conv_IntToText_ReturnValue_2) == 0x000208, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::CallFunc_Conv_IntToText_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, CallFunc_Conv_StringToText_ReturnValue) == 0x000218, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, CallFunc_FMin_A_ImplicitCast) == 0x000228, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::CallFunc_FMin_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, CallFunc_FromSeconds_Seconds_ImplicitCast) == 0x000230, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::CallFunc_FromSeconds_Seconds_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, Temp_bool_Variable_3) == 0x0000AA, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::Temp_bool_Variable_3' has a wrong offset!");
+static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, Temp_byte_Variable_8) == 0x0000AB, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::Temp_byte_Variable_8' has a wrong offset!");
+static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, Temp_byte_Variable_9) == 0x0000AC, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::Temp_byte_Variable_9' has a wrong offset!");
+static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, Temp_bool_Variable_4) == 0x0000AD, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::Temp_bool_Variable_4' has a wrong offset!");
+static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, Temp_byte_Variable_10) == 0x0000AE, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::Temp_byte_Variable_10' has a wrong offset!");
+static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, Temp_byte_Variable_11) == 0x0000AF, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::Temp_byte_Variable_11' has a wrong offset!");
+static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, Temp_bool_Variable_5) == 0x0000B0, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::Temp_bool_Variable_5' has a wrong offset!");
+static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, Temp_byte_Variable_12) == 0x0000B1, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::Temp_byte_Variable_12' has a wrong offset!");
+static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, Temp_byte_Variable_13) == 0x0000B2, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::Temp_byte_Variable_13' has a wrong offset!");
+static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, CallFunc_GetSlotStatusText_InvalidText) == 0x0000B8, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::CallFunc_GetSlotStatusText_InvalidText' has a wrong offset!");
+static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, K2Node_Select_Default) == 0x0000C8, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, CallFunc_Conv_TextToString_ReturnValue) == 0x0000D0, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, Temp_bool_Variable_6) == 0x0000E0, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::Temp_bool_Variable_6' has a wrong offset!");
+static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, CallFunc_IsValid_ReturnValue) == 0x0000E1, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, K2Node_Select_Default_1) == 0x0000E2, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::K2Node_Select_Default_1' has a wrong offset!");
+static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, K2Node_Select_Default_2) == 0x0000E3, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::K2Node_Select_Default_2' has a wrong offset!");
+static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, CallFunc_AsDateTimeWithCustomFormat_ReturnValue) == 0x0000E8, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::CallFunc_AsDateTimeWithCustomFormat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, CallFunc_SelectText_ReturnValue) == 0x0000F8, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::CallFunc_SelectText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, K2Node_Select_Default_3) == 0x000108, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::K2Node_Select_Default_3' has a wrong offset!");
+static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, CallFunc_BooleanOR_ReturnValue) == 0x000109, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, K2Node_Select_Default_4) == 0x00010A, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::K2Node_Select_Default_4' has a wrong offset!");
+static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, CallFunc_Conv_IntToText_ReturnValue) == 0x000110, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, K2Node_Select_Default_5) == 0x000120, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::K2Node_Select_Default_5' has a wrong offset!");
+static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, CallFunc_Conv_StringToText_ReturnValue) == 0x000128, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, K2Node_Select_Default_6) == 0x000138, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::K2Node_Select_Default_6' has a wrong offset!");
+static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, CallFunc_GetDisplayPlayTime_OutHour) == 0x00013C, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::CallFunc_GetDisplayPlayTime_OutHour' has a wrong offset!");
+static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, CallFunc_GetDisplayPlayTime_OutMinute) == 0x000140, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::CallFunc_GetDisplayPlayTime_OutMinute' has a wrong offset!");
+static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, CallFunc_Conv_IntToText_ReturnValue_1) == 0x000148, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::CallFunc_Conv_IntToText_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, CallFunc_Conv_IntToText_ReturnValue_2) == 0x000158, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::CallFunc_Conv_IntToText_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, K2Node_MakeStruct_FormatArgumentData) == 0x000168, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, K2Node_MakeStruct_FormatArgumentData_1) == 0x0001B0, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
+static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, K2Node_MakeArray_Array) == 0x0001F8, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo, CallFunc_Format_ReturnValue) == 0x000208, "Member 'WDT_SaveDataSelectListElementPiece_C_SetSaveDataInfo::CallFunc_Format_ReturnValue' has a wrong offset!");
 
 // Function WDT_SaveDataSelectListElementPiece.WDT_SaveDataSelectListElementPiece_C.Select
 // 0x0002 (0x0002 - 0x0000)

@@ -19,53 +19,70 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WDT_Subtitles.WDT_Subtitles_C
-// 0x00D8 (0x0690 - 0x05B8)
+// 0x0140 (0x06F8 - 0x05B8)
 class UWDT_Subtitles_C final : public UMenuBase
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x05B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UImage*                                 Arrow;                                             // 0x05C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       CommonText_Skip;                                   // 0x05C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Config_Wallpaper_Speaker;                          // 0x05D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Config_Wallpaper_Talk;                             // 0x05D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_ActionInputTrgGuide_C*             GimmickActionKeyImage;                             // 0x05E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class URichTextBlock*                         IconText_Skip;                                     // 0x05E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_HoldGauge;                                   // 0x05F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UScaleBox*                              ScaleBox_1;                                        // 0x05F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         Skip;                                              // 0x0600(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UScaleBox*                              SkipIndicatorRoot;                                 // 0x0608(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USpacer*                                Spacer_Hight;                                      // 0x0610(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               Speaker;                                           // 0x0618(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               Speaker_Overlay;                                   // 0x0620(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       SpeakerText;                                       // 0x0628(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       SpeakerText_Shadow;                                // 0x0630(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           SubtitleBox;                                       // 0x0638(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               SubtitleRoot;                                      // 0x0640(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       TalkText;                                          // 0x0648(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       TalkText_Shadow;                                   // 0x0650(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               MI_HoldGauge;                                      // 0x0658(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class USubtitlesUIObject*                     SubtitlesUIObject;                                 // 0x0660(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class FText                                   SkipText;                                          // 0x0668(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class FText                                   LeaveMultiplayText;                                // 0x0678(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          EndSkip_Delay;                                     // 0x0688(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UImage*                                 Arrow_1;                                           // 0x05C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       CommonText_Skip;                                   // 0x05D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       CommonText_Skip_Interact;                          // 0x05D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       CommonText_Skip_Interact_1;                        // 0x05E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       CommonText_Skip_Interact_2;                        // 0x05E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       CommonText_Skip_Interact_3;                        // 0x05F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Config_Wallpaper_Speaker;                          // 0x05F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Config_Wallpaper_Talk;                             // 0x0600(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_ActionInputTrgGuide_C*             GimmickActionKeyImage;                             // 0x0608(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_ActionInputTrgGuide_C*             GimmickActionKeyImage_HOLD;                        // 0x0610(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 HOLD_StartEnd;                                     // 0x0618(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class URichTextBlock*                         IconText_Skip;                                     // 0x0620(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class URichTextBlock*                         IconText_Skip_Interact;                            // 0x0628(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_HoldGauge;                                   // 0x0630(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_HoldGauge_Interact;                          // 0x0638(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UScaleBox*                              ScaleBox_1;                                        // 0x0640(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         Skip;                                              // 0x0648(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         Skip_Interact;                                     // 0x0650(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UScaleBox*                              SkipIndicatorRoot;                                 // 0x0658(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USpacer*                                Spacer_Hight;                                      // 0x0660(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               Speaker;                                           // 0x0668(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               Speaker_Overlay;                                   // 0x0670(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       SpeakerText;                                       // 0x0678(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       SpeakerText_Shadow;                                // 0x0680(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           SubtitleBox;                                       // 0x0688(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               SubtitleRoot;                                      // 0x0690(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       TalkText;                                          // 0x0698(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       TalkText_Shadow;                                   // 0x06A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetSwitcher*                        WidgetSwitcher_167;                                // 0x06A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetSwitcher*                        WidgetSwitcher_254;                                // 0x06B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               MI_HoldGauge;                                      // 0x06B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class USubtitlesUIObject*                     SubtitlesUIObject;                                 // 0x06C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class FText                                   SkipText;                                          // 0x06C8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class FText                                   LeaveMultiplayText;                                // 0x06D8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          EndSkip_Delay;                                     // 0x06E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6E9[0x7];                                      // 0x06E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               MI_HoldGauge_Interact;                             // 0x06F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void UpdateSpeakerVisibility(bool bInVisible);
-	void UpdateSkipButtonVisibility(bool InIsVisibility);
-	void SetTalkText(const class FText& InSpeakerText, const class FText& InTalkText);
-	void SetSkipIndicatorPercent(float NewPercent);
-	void SetShowSkipIndicator(bool bShowWidget);
-	void SetShowLeaveMultiplayIndicator(bool bShowWidget);
-	void SetLeaveMultiplayIndicatorPercent(float NewPercent);
-	void OnOpened();
-	void OnInputDeviceChanged();
-	void OnInitialized();
-	void OnForceClose();
-	void OnClosed();
-	void InpActEvt_IA_UI_StatementSkip_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void ExecuteUbergraph_WDT_Subtitles(int32 EntryPoint);
-	void Construct();
 	void ApplyConfiguration();
+	void Construct();
+	void ExecuteUbergraph_WDT_Subtitles(int32 EntryPoint);
+	void InpActEvt_IA_UI_StatementSkip_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void OnClosed();
+	void OnForceClose();
+	void OnInitialized();
+	void OnInputDeviceChanged();
+	void OnOpened();
+	void SetLeaveMultiplayIndicatorPercent(float NewPercent);
+	void SetShowLeaveMultiplayIndicator(bool bShowWidget);
+	void SetShowSkipIndicator(bool bShowWidget);
+	void SetShowSkipIndicator_Interact(bool bShowWidget);
+	void SetSkipIndicatorPercent(float NewPercent);
+	void SetSkipIndicatorPercent_Interact(float NewPercent);
+	void SetTalkText(const class FText& InSpeakerText, const class FText& InTalkText, bool InIsShow);
+	void UpdateHoldTextSwitcher();
+	void UpdateSkipButtonVisibility(bool InIsVisibility);
+	void UpdateSpeakerVisibility(bool bInVisible);
 
 public:
 	static class UClass* StaticClass()
@@ -78,32 +95,45 @@ public:
 	}
 };
 static_assert(alignof(UWDT_Subtitles_C) == 0x000008, "Wrong alignment on UWDT_Subtitles_C");
-static_assert(sizeof(UWDT_Subtitles_C) == 0x000690, "Wrong size on UWDT_Subtitles_C");
+static_assert(sizeof(UWDT_Subtitles_C) == 0x0006F8, "Wrong size on UWDT_Subtitles_C");
 static_assert(offsetof(UWDT_Subtitles_C, UberGraphFrame) == 0x0005B8, "Member 'UWDT_Subtitles_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UWDT_Subtitles_C, Arrow) == 0x0005C0, "Member 'UWDT_Subtitles_C::Arrow' has a wrong offset!");
-static_assert(offsetof(UWDT_Subtitles_C, CommonText_Skip) == 0x0005C8, "Member 'UWDT_Subtitles_C::CommonText_Skip' has a wrong offset!");
-static_assert(offsetof(UWDT_Subtitles_C, Config_Wallpaper_Speaker) == 0x0005D0, "Member 'UWDT_Subtitles_C::Config_Wallpaper_Speaker' has a wrong offset!");
-static_assert(offsetof(UWDT_Subtitles_C, Config_Wallpaper_Talk) == 0x0005D8, "Member 'UWDT_Subtitles_C::Config_Wallpaper_Talk' has a wrong offset!");
-static_assert(offsetof(UWDT_Subtitles_C, GimmickActionKeyImage) == 0x0005E0, "Member 'UWDT_Subtitles_C::GimmickActionKeyImage' has a wrong offset!");
-static_assert(offsetof(UWDT_Subtitles_C, IconText_Skip) == 0x0005E8, "Member 'UWDT_Subtitles_C::IconText_Skip' has a wrong offset!");
-static_assert(offsetof(UWDT_Subtitles_C, Image_HoldGauge) == 0x0005F0, "Member 'UWDT_Subtitles_C::Image_HoldGauge' has a wrong offset!");
-static_assert(offsetof(UWDT_Subtitles_C, ScaleBox_1) == 0x0005F8, "Member 'UWDT_Subtitles_C::ScaleBox_1' has a wrong offset!");
-static_assert(offsetof(UWDT_Subtitles_C, Skip) == 0x000600, "Member 'UWDT_Subtitles_C::Skip' has a wrong offset!");
-static_assert(offsetof(UWDT_Subtitles_C, SkipIndicatorRoot) == 0x000608, "Member 'UWDT_Subtitles_C::SkipIndicatorRoot' has a wrong offset!");
-static_assert(offsetof(UWDT_Subtitles_C, Spacer_Hight) == 0x000610, "Member 'UWDT_Subtitles_C::Spacer_Hight' has a wrong offset!");
-static_assert(offsetof(UWDT_Subtitles_C, Speaker) == 0x000618, "Member 'UWDT_Subtitles_C::Speaker' has a wrong offset!");
-static_assert(offsetof(UWDT_Subtitles_C, Speaker_Overlay) == 0x000620, "Member 'UWDT_Subtitles_C::Speaker_Overlay' has a wrong offset!");
-static_assert(offsetof(UWDT_Subtitles_C, SpeakerText) == 0x000628, "Member 'UWDT_Subtitles_C::SpeakerText' has a wrong offset!");
-static_assert(offsetof(UWDT_Subtitles_C, SpeakerText_Shadow) == 0x000630, "Member 'UWDT_Subtitles_C::SpeakerText_Shadow' has a wrong offset!");
-static_assert(offsetof(UWDT_Subtitles_C, SubtitleBox) == 0x000638, "Member 'UWDT_Subtitles_C::SubtitleBox' has a wrong offset!");
-static_assert(offsetof(UWDT_Subtitles_C, SubtitleRoot) == 0x000640, "Member 'UWDT_Subtitles_C::SubtitleRoot' has a wrong offset!");
-static_assert(offsetof(UWDT_Subtitles_C, TalkText) == 0x000648, "Member 'UWDT_Subtitles_C::TalkText' has a wrong offset!");
-static_assert(offsetof(UWDT_Subtitles_C, TalkText_Shadow) == 0x000650, "Member 'UWDT_Subtitles_C::TalkText_Shadow' has a wrong offset!");
-static_assert(offsetof(UWDT_Subtitles_C, MI_HoldGauge) == 0x000658, "Member 'UWDT_Subtitles_C::MI_HoldGauge' has a wrong offset!");
-static_assert(offsetof(UWDT_Subtitles_C, SubtitlesUIObject) == 0x000660, "Member 'UWDT_Subtitles_C::SubtitlesUIObject' has a wrong offset!");
-static_assert(offsetof(UWDT_Subtitles_C, SkipText) == 0x000668, "Member 'UWDT_Subtitles_C::SkipText' has a wrong offset!");
-static_assert(offsetof(UWDT_Subtitles_C, LeaveMultiplayText) == 0x000678, "Member 'UWDT_Subtitles_C::LeaveMultiplayText' has a wrong offset!");
-static_assert(offsetof(UWDT_Subtitles_C, EndSkip_Delay) == 0x000688, "Member 'UWDT_Subtitles_C::EndSkip_Delay' has a wrong offset!");
+static_assert(offsetof(UWDT_Subtitles_C, Arrow_1) == 0x0005C8, "Member 'UWDT_Subtitles_C::Arrow_1' has a wrong offset!");
+static_assert(offsetof(UWDT_Subtitles_C, CommonText_Skip) == 0x0005D0, "Member 'UWDT_Subtitles_C::CommonText_Skip' has a wrong offset!");
+static_assert(offsetof(UWDT_Subtitles_C, CommonText_Skip_Interact) == 0x0005D8, "Member 'UWDT_Subtitles_C::CommonText_Skip_Interact' has a wrong offset!");
+static_assert(offsetof(UWDT_Subtitles_C, CommonText_Skip_Interact_1) == 0x0005E0, "Member 'UWDT_Subtitles_C::CommonText_Skip_Interact_1' has a wrong offset!");
+static_assert(offsetof(UWDT_Subtitles_C, CommonText_Skip_Interact_2) == 0x0005E8, "Member 'UWDT_Subtitles_C::CommonText_Skip_Interact_2' has a wrong offset!");
+static_assert(offsetof(UWDT_Subtitles_C, CommonText_Skip_Interact_3) == 0x0005F0, "Member 'UWDT_Subtitles_C::CommonText_Skip_Interact_3' has a wrong offset!");
+static_assert(offsetof(UWDT_Subtitles_C, Config_Wallpaper_Speaker) == 0x0005F8, "Member 'UWDT_Subtitles_C::Config_Wallpaper_Speaker' has a wrong offset!");
+static_assert(offsetof(UWDT_Subtitles_C, Config_Wallpaper_Talk) == 0x000600, "Member 'UWDT_Subtitles_C::Config_Wallpaper_Talk' has a wrong offset!");
+static_assert(offsetof(UWDT_Subtitles_C, GimmickActionKeyImage) == 0x000608, "Member 'UWDT_Subtitles_C::GimmickActionKeyImage' has a wrong offset!");
+static_assert(offsetof(UWDT_Subtitles_C, GimmickActionKeyImage_HOLD) == 0x000610, "Member 'UWDT_Subtitles_C::GimmickActionKeyImage_HOLD' has a wrong offset!");
+static_assert(offsetof(UWDT_Subtitles_C, HOLD_StartEnd) == 0x000618, "Member 'UWDT_Subtitles_C::HOLD_StartEnd' has a wrong offset!");
+static_assert(offsetof(UWDT_Subtitles_C, IconText_Skip) == 0x000620, "Member 'UWDT_Subtitles_C::IconText_Skip' has a wrong offset!");
+static_assert(offsetof(UWDT_Subtitles_C, IconText_Skip_Interact) == 0x000628, "Member 'UWDT_Subtitles_C::IconText_Skip_Interact' has a wrong offset!");
+static_assert(offsetof(UWDT_Subtitles_C, Image_HoldGauge) == 0x000630, "Member 'UWDT_Subtitles_C::Image_HoldGauge' has a wrong offset!");
+static_assert(offsetof(UWDT_Subtitles_C, Image_HoldGauge_Interact) == 0x000638, "Member 'UWDT_Subtitles_C::Image_HoldGauge_Interact' has a wrong offset!");
+static_assert(offsetof(UWDT_Subtitles_C, ScaleBox_1) == 0x000640, "Member 'UWDT_Subtitles_C::ScaleBox_1' has a wrong offset!");
+static_assert(offsetof(UWDT_Subtitles_C, Skip) == 0x000648, "Member 'UWDT_Subtitles_C::Skip' has a wrong offset!");
+static_assert(offsetof(UWDT_Subtitles_C, Skip_Interact) == 0x000650, "Member 'UWDT_Subtitles_C::Skip_Interact' has a wrong offset!");
+static_assert(offsetof(UWDT_Subtitles_C, SkipIndicatorRoot) == 0x000658, "Member 'UWDT_Subtitles_C::SkipIndicatorRoot' has a wrong offset!");
+static_assert(offsetof(UWDT_Subtitles_C, Spacer_Hight) == 0x000660, "Member 'UWDT_Subtitles_C::Spacer_Hight' has a wrong offset!");
+static_assert(offsetof(UWDT_Subtitles_C, Speaker) == 0x000668, "Member 'UWDT_Subtitles_C::Speaker' has a wrong offset!");
+static_assert(offsetof(UWDT_Subtitles_C, Speaker_Overlay) == 0x000670, "Member 'UWDT_Subtitles_C::Speaker_Overlay' has a wrong offset!");
+static_assert(offsetof(UWDT_Subtitles_C, SpeakerText) == 0x000678, "Member 'UWDT_Subtitles_C::SpeakerText' has a wrong offset!");
+static_assert(offsetof(UWDT_Subtitles_C, SpeakerText_Shadow) == 0x000680, "Member 'UWDT_Subtitles_C::SpeakerText_Shadow' has a wrong offset!");
+static_assert(offsetof(UWDT_Subtitles_C, SubtitleBox) == 0x000688, "Member 'UWDT_Subtitles_C::SubtitleBox' has a wrong offset!");
+static_assert(offsetof(UWDT_Subtitles_C, SubtitleRoot) == 0x000690, "Member 'UWDT_Subtitles_C::SubtitleRoot' has a wrong offset!");
+static_assert(offsetof(UWDT_Subtitles_C, TalkText) == 0x000698, "Member 'UWDT_Subtitles_C::TalkText' has a wrong offset!");
+static_assert(offsetof(UWDT_Subtitles_C, TalkText_Shadow) == 0x0006A0, "Member 'UWDT_Subtitles_C::TalkText_Shadow' has a wrong offset!");
+static_assert(offsetof(UWDT_Subtitles_C, WidgetSwitcher_167) == 0x0006A8, "Member 'UWDT_Subtitles_C::WidgetSwitcher_167' has a wrong offset!");
+static_assert(offsetof(UWDT_Subtitles_C, WidgetSwitcher_254) == 0x0006B0, "Member 'UWDT_Subtitles_C::WidgetSwitcher_254' has a wrong offset!");
+static_assert(offsetof(UWDT_Subtitles_C, MI_HoldGauge) == 0x0006B8, "Member 'UWDT_Subtitles_C::MI_HoldGauge' has a wrong offset!");
+static_assert(offsetof(UWDT_Subtitles_C, SubtitlesUIObject) == 0x0006C0, "Member 'UWDT_Subtitles_C::SubtitlesUIObject' has a wrong offset!");
+static_assert(offsetof(UWDT_Subtitles_C, SkipText) == 0x0006C8, "Member 'UWDT_Subtitles_C::SkipText' has a wrong offset!");
+static_assert(offsetof(UWDT_Subtitles_C, LeaveMultiplayText) == 0x0006D8, "Member 'UWDT_Subtitles_C::LeaveMultiplayText' has a wrong offset!");
+static_assert(offsetof(UWDT_Subtitles_C, EndSkip_Delay) == 0x0006E8, "Member 'UWDT_Subtitles_C::EndSkip_Delay' has a wrong offset!");
+static_assert(offsetof(UWDT_Subtitles_C, MI_HoldGauge_Interact) == 0x0006F0, "Member 'UWDT_Subtitles_C::MI_HoldGauge_Interact' has a wrong offset!");
 
 }
 

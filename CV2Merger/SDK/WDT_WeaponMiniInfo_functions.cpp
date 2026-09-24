@@ -17,26 +17,148 @@
 namespace SDK
 {
 
-// Function WDT_WeaponMiniInfo.WDT_WeaponMiniInfo_C.EnumToWeaponCategoryText
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function WDT_WeaponMiniInfo.WDT_WeaponMiniInfo_C.SetWeaponLoadInfo
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// EUIWeaponCategory                       Enumerator                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FText                             ReturnValue                                            (Parm, OutParm, ReturnParm)
+// int32                                   Reilability                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Handling                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Efficiency                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Conductivity                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-class FText UWDT_WeaponMiniInfo_C::EnumToWeaponCategoryText(EUIWeaponCategory Enumerator)
+void UWDT_WeaponMiniInfo_C::SetWeaponLoadInfo(int32 Reilability, int32 Handling, int32 Efficiency, int32 Conductivity)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_WeaponMiniInfo_C", "EnumToWeaponCategoryText");
+		Func = Class->GetFunction("WDT_WeaponMiniInfo_C", "SetWeaponLoadInfo");
 
-	Params::WDT_WeaponMiniInfo_C_EnumToWeaponCategoryText Parms{};
+	Params::WDT_WeaponMiniInfo_C_SetWeaponLoadInfo Parms{};
 
-	Parms.Enumerator = Enumerator;
+	Parms.Reilability = Reilability;
+	Parms.Handling = Handling;
+	Parms.Efficiency = Efficiency;
+	Parms.Conductivity = Conductivity;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_WeaponMiniInfo.WDT_WeaponMiniInfo_C.SetWeaponInfo
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FUIWeaponInfo                    UIWeaponInfo                                           (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UWDT_WeaponMiniInfo_C::SetWeaponInfo(const struct FUIWeaponInfo& UIWeaponInfo)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_WeaponMiniInfo_C", "SetWeaponInfo");
+
+	Params::WDT_WeaponMiniInfo_C_SetWeaponInfo Parms{};
+
+	Parms.UIWeaponInfo = std::move(UIWeaponInfo);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_WeaponMiniInfo.WDT_WeaponMiniInfo_C.SetCompareIntegerBadStatus
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// int32                                   TargetValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+uint8 UWDT_WeaponMiniInfo_C::SetCompareIntegerBadStatus(int32 TargetValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_WeaponMiniInfo_C", "SetCompareIntegerBadStatus");
+
+	Params::WDT_WeaponMiniInfo_C_SetCompareIntegerBadStatus Parms{};
+
+	Parms.TargetValue = TargetValue;
 
 	UObject::ProcessEvent(Func, &Parms);
 
 	return Parms.ReturnValue;
+}
+
+
+// Function WDT_WeaponMiniInfo.WDT_WeaponMiniInfo_C.ResetWeaponLoad
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWDT_WeaponMiniInfo_C::ResetWeaponLoad()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_WeaponMiniInfo_C", "ResetWeaponLoad");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WDT_WeaponMiniInfo.WDT_WeaponMiniInfo_C.ResetWeaponColor
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWDT_WeaponMiniInfo_C::ResetWeaponColor()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_WeaponMiniInfo_C", "ResetWeaponColor");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WDT_WeaponMiniInfo.WDT_WeaponMiniInfo_C.GetTextColorByCompareResult
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// uint8                                   CompareResult                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FSlateColor                      TextColor                                              (Parm, OutParm)
+
+void UWDT_WeaponMiniInfo_C::GetTextColorByCompareResult(uint8 CompareResult, struct FSlateColor* TextColor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_WeaponMiniInfo_C", "GetTextColorByCompareResult");
+
+	Params::WDT_WeaponMiniInfo_C_GetTextColorByCompareResult Parms{};
+
+	Parms.CompareResult = CompareResult;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (TextColor != nullptr)
+		*TextColor = std::move(Parms.TextColor);
+}
+
+
+// Function WDT_WeaponMiniInfo.WDT_WeaponMiniInfo_C.GetRankTextByRankEnum
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// EUIAttributeModifierRank                RankEnum                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FText                             RankText                                               (Parm, OutParm)
+
+void UWDT_WeaponMiniInfo_C::GetRankTextByRankEnum(EUIAttributeModifierRank RankEnum, class FText* RankText)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_WeaponMiniInfo_C", "GetRankTextByRankEnum");
+
+	Params::WDT_WeaponMiniInfo_C_GetRankTextByRankEnum Parms{};
+
+	Parms.RankEnum = RankEnum;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (RankText != nullptr)
+		*RankText = std::move(Parms.RankText);
 }
 
 
@@ -68,148 +190,26 @@ void UWDT_WeaponMiniInfo_C::Get_Color(int32 NewLoad, int32 CurrentLoad, int32 Ca
 }
 
 
-// Function WDT_WeaponMiniInfo.WDT_WeaponMiniInfo_C.GetRankTextByRankEnum
+// Function WDT_WeaponMiniInfo.WDT_WeaponMiniInfo_C.EnumToWeaponCategoryText
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// EUIAttributeModifierRank                RankEnum                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FText                             RankText                                               (Parm, OutParm)
+// EUIWeaponCategory                       Enumerator                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FText                             ReturnValue                                            (Parm, OutParm, ReturnParm)
 
-void UWDT_WeaponMiniInfo_C::GetRankTextByRankEnum(EUIAttributeModifierRank RankEnum, class FText* RankText)
+class FText UWDT_WeaponMiniInfo_C::EnumToWeaponCategoryText(EUIWeaponCategory Enumerator)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_WeaponMiniInfo_C", "GetRankTextByRankEnum");
+		Func = Class->GetFunction("WDT_WeaponMiniInfo_C", "EnumToWeaponCategoryText");
 
-	Params::WDT_WeaponMiniInfo_C_GetRankTextByRankEnum Parms{};
+	Params::WDT_WeaponMiniInfo_C_EnumToWeaponCategoryText Parms{};
 
-	Parms.RankEnum = RankEnum;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (RankText != nullptr)
-		*RankText = std::move(Parms.RankText);
-}
-
-
-// Function WDT_WeaponMiniInfo.WDT_WeaponMiniInfo_C.GetTextColorByCompareResult
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// uint8                                   CompareResult                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FSlateColor                      TextColor                                              (Parm, OutParm)
-
-void UWDT_WeaponMiniInfo_C::GetTextColorByCompareResult(uint8 CompareResult, struct FSlateColor* TextColor)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_WeaponMiniInfo_C", "GetTextColorByCompareResult");
-
-	Params::WDT_WeaponMiniInfo_C_GetTextColorByCompareResult Parms{};
-
-	Parms.CompareResult = CompareResult;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (TextColor != nullptr)
-		*TextColor = std::move(Parms.TextColor);
-}
-
-
-// Function WDT_WeaponMiniInfo.WDT_WeaponMiniInfo_C.ResetWeaponColor
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UWDT_WeaponMiniInfo_C::ResetWeaponColor()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_WeaponMiniInfo_C", "ResetWeaponColor");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WDT_WeaponMiniInfo.WDT_WeaponMiniInfo_C.ResetWeaponLoad
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UWDT_WeaponMiniInfo_C::ResetWeaponLoad()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_WeaponMiniInfo_C", "ResetWeaponLoad");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WDT_WeaponMiniInfo.WDT_WeaponMiniInfo_C.SetCompareIntegerBadStatus
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// int32                                   TargetValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-uint8 UWDT_WeaponMiniInfo_C::SetCompareIntegerBadStatus(int32 TargetValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_WeaponMiniInfo_C", "SetCompareIntegerBadStatus");
-
-	Params::WDT_WeaponMiniInfo_C_SetCompareIntegerBadStatus Parms{};
-
-	Parms.TargetValue = TargetValue;
+	Parms.Enumerator = Enumerator;
 
 	UObject::ProcessEvent(Func, &Parms);
 
 	return Parms.ReturnValue;
-}
-
-
-// Function WDT_WeaponMiniInfo.WDT_WeaponMiniInfo_C.SetWeaponInfo
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FUIWeaponInfo                    UIWeaponInfo                                           (BlueprintVisible, BlueprintReadOnly, Parm)
-
-void UWDT_WeaponMiniInfo_C::SetWeaponInfo(const struct FUIWeaponInfo& UIWeaponInfo)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_WeaponMiniInfo_C", "SetWeaponInfo");
-
-	Params::WDT_WeaponMiniInfo_C_SetWeaponInfo Parms{};
-
-	Parms.UIWeaponInfo = std::move(UIWeaponInfo);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_WeaponMiniInfo.WDT_WeaponMiniInfo_C.SetWeaponLoadInfo
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   Reilability                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   Handling                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   Efficiency                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   Conductivity                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_WeaponMiniInfo_C::SetWeaponLoadInfo(int32 Reilability, int32 Handling, int32 Efficiency, int32 Conductivity)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_WeaponMiniInfo_C", "SetWeaponLoadInfo");
-
-	Params::WDT_WeaponMiniInfo_C_SetWeaponLoadInfo Parms{};
-
-	Parms.Reilability = Reilability;
-	Parms.Handling = Handling;
-	Parms.Efficiency = Efficiency;
-	Parms.Conductivity = Conductivity;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

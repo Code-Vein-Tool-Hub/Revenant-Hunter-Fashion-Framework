@@ -17,61 +17,25 @@
 namespace SDK
 {
 
-// Function WDT_Status_NumberAndDiffWithIcon.WDT_Status_NumberAndDiffWithIcon_C.ExecuteUbergraph_WDT_Status_NumberAndDiffWithIcon
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_Status_NumberAndDiffWithIcon_C::ExecuteUbergraph_WDT_Status_NumberAndDiffWithIcon(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Status_NumberAndDiffWithIcon_C", "ExecuteUbergraph_WDT_Status_NumberAndDiffWithIcon");
-
-	Params::WDT_Status_NumberAndDiffWithIcon_C_ExecuteUbergraph_WDT_Status_NumberAndDiffWithIcon Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_Status_NumberAndDiffWithIcon.WDT_Status_NumberAndDiffWithIcon_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_Status_NumberAndDiffWithIcon_C::PreConstruct(bool IsDesignTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Status_NumberAndDiffWithIcon_C", "PreConstruct");
-
-	Params::WDT_Status_NumberAndDiffWithIcon_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_Status_NumberAndDiffWithIcon.WDT_Status_NumberAndDiffWithIcon_C.SetIcon
+// Function WDT_Status_NumberAndDiffWithIcon.WDT_Status_NumberAndDiffWithIcon_C.SetNumberDiff
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UTexture2D*                       InTexture                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// int32                                   InCurrentNumber                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InNumber                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    SwapComparison                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_Status_NumberAndDiffWithIcon_C::SetIcon(class UTexture2D* InTexture)
+void UWDT_Status_NumberAndDiffWithIcon_C::SetNumberDiff(int32 InCurrentNumber, int32 InNumber, bool SwapComparison)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Status_NumberAndDiffWithIcon_C", "SetIcon");
+		Func = Class->GetFunction("WDT_Status_NumberAndDiffWithIcon_C", "SetNumberDiff");
 
-	Params::WDT_Status_NumberAndDiffWithIcon_C_SetIcon Parms{};
+	Params::WDT_Status_NumberAndDiffWithIcon_C_SetNumberDiff Parms{};
 
-	Parms.InTexture = InTexture;
+	Parms.InCurrentNumber = InCurrentNumber;
+	Parms.InNumber = InNumber;
+	Parms.SwapComparison = SwapComparison;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -97,25 +61,61 @@ void UWDT_Status_NumberAndDiffWithIcon_C::SetNumber(int32 InNumber)
 }
 
 
-// Function WDT_Status_NumberAndDiffWithIcon.WDT_Status_NumberAndDiffWithIcon_C.SetNumberDiff
+// Function WDT_Status_NumberAndDiffWithIcon.WDT_Status_NumberAndDiffWithIcon_C.SetIcon
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   InCurrentNumber                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   InNumber                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    SwapComparison                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UTexture2D*                       InTexture                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_Status_NumberAndDiffWithIcon_C::SetNumberDiff(int32 InCurrentNumber, int32 InNumber, bool SwapComparison)
+void UWDT_Status_NumberAndDiffWithIcon_C::SetIcon(class UTexture2D* InTexture)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Status_NumberAndDiffWithIcon_C", "SetNumberDiff");
+		Func = Class->GetFunction("WDT_Status_NumberAndDiffWithIcon_C", "SetIcon");
 
-	Params::WDT_Status_NumberAndDiffWithIcon_C_SetNumberDiff Parms{};
+	Params::WDT_Status_NumberAndDiffWithIcon_C_SetIcon Parms{};
 
-	Parms.InCurrentNumber = InCurrentNumber;
-	Parms.InNumber = InNumber;
-	Parms.SwapComparison = SwapComparison;
+	Parms.InTexture = InTexture;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_Status_NumberAndDiffWithIcon.WDT_Status_NumberAndDiffWithIcon_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_Status_NumberAndDiffWithIcon_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_Status_NumberAndDiffWithIcon_C", "PreConstruct");
+
+	Params::WDT_Status_NumberAndDiffWithIcon_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_Status_NumberAndDiffWithIcon.WDT_Status_NumberAndDiffWithIcon_C.ExecuteUbergraph_WDT_Status_NumberAndDiffWithIcon
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_Status_NumberAndDiffWithIcon_C::ExecuteUbergraph_WDT_Status_NumberAndDiffWithIcon(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_Status_NumberAndDiffWithIcon_C", "ExecuteUbergraph_WDT_Status_NumberAndDiffWithIcon");
+
+	Params::WDT_Status_NumberAndDiffWithIcon_C_ExecuteUbergraph_WDT_Status_NumberAndDiffWithIcon Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

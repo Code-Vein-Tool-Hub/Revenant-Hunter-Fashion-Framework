@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "BasicUI_structs.hpp"
+#include "Extensions_structs.hpp"
 #include "GameplayTags_structs.hpp"
 #include "EnhancedInput_structs.hpp"
-#include "Extensions_structs.hpp"
 
 
 namespace SDK::Params

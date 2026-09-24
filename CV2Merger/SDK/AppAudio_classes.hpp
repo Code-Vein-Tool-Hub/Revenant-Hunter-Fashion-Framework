@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
+#include "Niagara_classes.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "PhysicsCore_structs.hpp"
 #include "AppAudio_structs.hpp"
 #include "AkAudio_structs.hpp"
 #include "AkAudio_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "Niagara_classes.hpp"
-#include "PhysicsCore_structs.hpp"
 
 
 namespace SDK
@@ -1243,6 +1243,7 @@ static_assert(offsetof(UAppAudioVoiceResource, HardReferences) == 0x000030, "Mem
 class UAppAudioVoiceLibrary final : public UBlueprintFunctionLibrary
 {
 public:
+	static int32 GetActivePlayingIDFromActor(class AActor* Actor);
 	static class UAppAudioVoiceComponent* GetVoiceComponentFromActor(class AActor* Actor);
 	static class UAppAudioVoicePlayer* GetVoicePlayerFromActor(class AActor* Actor);
 	static class UAppAudioVoicePlayer* GetVoicePlayerFromComponent(class UActorComponent* Component);
@@ -1330,6 +1331,7 @@ public:
 	void StopCurrent();
 	void VoicePlayCallback(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo);
 
+	int32 GetActivePlayingID() const;
 	int32 GetPlayingID() const;
 	bool IsIncludePlayID(int32 PlayID) const;
 	bool IsPlaying() const;

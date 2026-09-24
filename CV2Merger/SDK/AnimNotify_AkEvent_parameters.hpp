@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "AkAudio_structs.hpp"
 
 
@@ -38,9 +38,9 @@ public:
 	bool                                          CallFunc_HasMatchingGameplayTag_ReturnValue;       // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue;      // 0x0080(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_99[0x3];                                       // 0x0099(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)> Temp_delegate_Variable;                            // 0x009C(0x0010)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)> Temp_delegate_Variable;                            // 0x0098(0x0010)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_BoolBool_ReturnValue;          // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A9[0x3];                                       // 0x00A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   CallFunc_Conv_StringToName_ReturnValue;            // 0x00AC(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_B4[0x4];                                       // 0x00B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAkComponent*                           CallFunc_GetAkComponentAttachPoint_ReturnValue;    // 0x00B8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
@@ -61,8 +61,8 @@ static_assert(offsetof(AnimNotify_AkEvent_C_Received_Notify, CallFunc_IsValid_Re
 static_assert(offsetof(AnimNotify_AkEvent_C_Received_Notify, CallFunc_HasMatchingGameplayTag_self_CastInput) == 0x000068, "Member 'AnimNotify_AkEvent_C_Received_Notify::CallFunc_HasMatchingGameplayTag_self_CastInput' has a wrong offset!");
 static_assert(offsetof(AnimNotify_AkEvent_C_Received_Notify, CallFunc_HasMatchingGameplayTag_ReturnValue) == 0x000078, "Member 'AnimNotify_AkEvent_C_Received_Notify::CallFunc_HasMatchingGameplayTag_ReturnValue' has a wrong offset!");
 static_assert(offsetof(AnimNotify_AkEvent_C_Received_Notify, CallFunc_K2_GetComponentLocation_ReturnValue) == 0x000080, "Member 'AnimNotify_AkEvent_C_Received_Notify::CallFunc_K2_GetComponentLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(AnimNotify_AkEvent_C_Received_Notify, CallFunc_BooleanAND_ReturnValue) == 0x000098, "Member 'AnimNotify_AkEvent_C_Received_Notify::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(AnimNotify_AkEvent_C_Received_Notify, Temp_delegate_Variable) == 0x00009C, "Member 'AnimNotify_AkEvent_C_Received_Notify::Temp_delegate_Variable' has a wrong offset!");
+static_assert(offsetof(AnimNotify_AkEvent_C_Received_Notify, Temp_delegate_Variable) == 0x000098, "Member 'AnimNotify_AkEvent_C_Received_Notify::Temp_delegate_Variable' has a wrong offset!");
+static_assert(offsetof(AnimNotify_AkEvent_C_Received_Notify, CallFunc_EqualEqual_BoolBool_ReturnValue) == 0x0000A8, "Member 'AnimNotify_AkEvent_C_Received_Notify::CallFunc_EqualEqual_BoolBool_ReturnValue' has a wrong offset!");
 static_assert(offsetof(AnimNotify_AkEvent_C_Received_Notify, CallFunc_Conv_StringToName_ReturnValue) == 0x0000AC, "Member 'AnimNotify_AkEvent_C_Received_Notify::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
 static_assert(offsetof(AnimNotify_AkEvent_C_Received_Notify, CallFunc_GetAkComponentAttachPoint_ReturnValue) == 0x0000B8, "Member 'AnimNotify_AkEvent_C_Received_Notify::CallFunc_GetAkComponentAttachPoint_ReturnValue' has a wrong offset!");
 static_assert(offsetof(AnimNotify_AkEvent_C_Received_Notify, CallFunc_PostEventAtLocation_ReturnValue) == 0x0000C0, "Member 'AnimNotify_AkEvent_C_Received_Notify::CallFunc_PostEventAtLocation_ReturnValue' has a wrong offset!");

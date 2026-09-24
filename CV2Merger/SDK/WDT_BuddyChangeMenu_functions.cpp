@@ -123,6 +123,92 @@ void UWDT_BuddyChangeMenu_C::BndEvt__WDT_BuddyChangeMenu_GridScroller_117_K2Node
 }
 
 
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.BndEvt__WDT_BuddyChangeMenu_GridScroller_384_K2Node_ComponentBoundEvent_1_OnListEntryInitializedDynamic__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UObject*                          Item                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UUserWidget*                      Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_BuddyChangeMenu_C::BndEvt__WDT_BuddyChangeMenu_GridScroller_384_K2Node_ComponentBoundEvent_1_OnListEntryInitializedDynamic__DelegateSignature(class UObject* Item, class UUserWidget* Widget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "BndEvt__WDT_BuddyChangeMenu_GridScroller_384_K2Node_ComponentBoundEvent_1_OnListEntryInitializedDynamic__DelegateSignature");
+
+	Params::WDT_BuddyChangeMenu_C_BndEvt__WDT_BuddyChangeMenu_GridScroller_384_K2Node_ComponentBoundEvent_1_OnListEntryInitializedDynamic__DelegateSignature Parms{};
+
+	Parms.Item = Item;
+	Parms.Widget = Widget;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.BndEvt__WDT_BuddyChangeMenu_GridScroller_384_K2Node_ComponentBoundEvent_5_SimpleListItemEventDynamic__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UObject*                          Item                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_BuddyChangeMenu_C::BndEvt__WDT_BuddyChangeMenu_GridScroller_384_K2Node_ComponentBoundEvent_5_SimpleListItemEventDynamic__DelegateSignature(class UObject* Item)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "BndEvt__WDT_BuddyChangeMenu_GridScroller_384_K2Node_ComponentBoundEvent_5_SimpleListItemEventDynamic__DelegateSignature");
+
+	Params::WDT_BuddyChangeMenu_C_BndEvt__WDT_BuddyChangeMenu_GridScroller_384_K2Node_ComponentBoundEvent_5_SimpleListItemEventDynamic__DelegateSignature Parms{};
+
+	Parms.Item = Item;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.BndEvt__WDT_BuddyChangeMenu_GridScroller_384_K2Node_ComponentBoundEvent_6_OnItemIsHoveredChangedDynamic__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UObject*                          Item                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsHovered                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_BuddyChangeMenu_C::BndEvt__WDT_BuddyChangeMenu_GridScroller_384_K2Node_ComponentBoundEvent_6_OnItemIsHoveredChangedDynamic__DelegateSignature(class UObject* Item, bool bIsHovered)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "BndEvt__WDT_BuddyChangeMenu_GridScroller_384_K2Node_ComponentBoundEvent_6_OnItemIsHoveredChangedDynamic__DelegateSignature");
+
+	Params::WDT_BuddyChangeMenu_C_BndEvt__WDT_BuddyChangeMenu_GridScroller_384_K2Node_ComponentBoundEvent_6_OnItemIsHoveredChangedDynamic__DelegateSignature Parms{};
+
+	Parms.Item = Item;
+	Parms.bIsHovered = bIsHovered;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.BndEvt__WDT_BuddyChangeMenu_GridScroller_384_K2Node_ComponentBoundEvent_7_OnListItemSelectionChangedDynamic__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UObject*                          Item                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsSelected                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_BuddyChangeMenu_C::BndEvt__WDT_BuddyChangeMenu_GridScroller_384_K2Node_ComponentBoundEvent_7_OnListItemSelectionChangedDynamic__DelegateSignature(class UObject* Item, bool bIsSelected)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "BndEvt__WDT_BuddyChangeMenu_GridScroller_384_K2Node_ComponentBoundEvent_7_OnListItemSelectionChangedDynamic__DelegateSignature");
+
+	Params::WDT_BuddyChangeMenu_C_BndEvt__WDT_BuddyChangeMenu_GridScroller_384_K2Node_ComponentBoundEvent_7_OnListItemSelectionChangedDynamic__DelegateSignature Parms{};
+
+	Parms.Item = Item;
+	Parms.bIsSelected = bIsSelected;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.BP_OnActivated
 // (Event, Protected, BlueprintEvent)
 
@@ -152,7 +238,7 @@ void UWDT_BuddyChangeMenu_C::BP_OnDeactivated()
 
 
 // Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.BuildRequest
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int32                                   InNumber                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -192,7 +278,7 @@ bool UWDT_BuddyChangeMenu_C::Can_Processing_Input()
 
 
 // Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.DecideInput
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWDT_BuddyChangeMenu_C::DecideInput()
 {
@@ -261,6 +347,28 @@ void UWDT_BuddyChangeMenu_C::InitGrid(class UObject* Item, class UUserWidget* In
 		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "InitGrid");
 
 	Params::WDT_BuddyChangeMenu_C_InitGrid Parms{};
+
+	Parms.Item = Item;
+	Parms.InWidget = InWidget;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.InitList
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                          Item                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UUserWidget*                      InWidget                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_BuddyChangeMenu_C::InitList(class UObject* Item, class UUserWidget* InWidget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "InitList");
+
+	Params::WDT_BuddyChangeMenu_C_InitList Parms{};
 
 	Parms.Item = Item;
 	Parms.InWidget = InWidget;
@@ -439,6 +547,52 @@ void UWDT_BuddyChangeMenu_C::InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_
 }
 
 
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.ListSelectionChanged
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                          Object                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    Condition                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_BuddyChangeMenu_C::ListSelectionChanged(class UObject* Object, bool Condition)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "ListSelectionChanged");
+
+	Params::WDT_BuddyChangeMenu_C_ListSelectionChanged Parms{};
+
+	Parms.Object = Object;
+	Parms.Condition = Condition;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.MakeListItems
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FUIBuddyVariationInfo            NewParam                                               (BlueprintVisible, BlueprintReadOnly, Parm)
+// TArray<class UObject*>                  OutItems                                               (Parm, OutParm)
+
+void UWDT_BuddyChangeMenu_C::MakeListItems(const struct FUIBuddyVariationInfo& NewParam, TArray<class UObject*>* OutItems)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_BuddyChangeMenu_C", "MakeListItems");
+
+	Params::WDT_BuddyChangeMenu_C_MakeListItems Parms{};
+
+	Parms.NewParam = std::move(NewParam);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (OutItems != nullptr)
+		*OutItems = std::move(Parms.OutItems);
+}
+
+
 // Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.MessageEnd
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -456,9 +610,9 @@ void UWDT_BuddyChangeMenu_C::MessageEnd()
 // Function WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C.NotifyChangeBuddyMenu
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   InIndex                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FUIBuddySelectInfo               InIndex                                                (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 
-void UWDT_BuddyChangeMenu_C::NotifyChangeBuddyMenu(int32 InIndex)
+void UWDT_BuddyChangeMenu_C::NotifyChangeBuddyMenu(const struct FUIBuddySelectInfo& InIndex)
 {
 	static class UFunction* Func = nullptr;
 
@@ -467,7 +621,7 @@ void UWDT_BuddyChangeMenu_C::NotifyChangeBuddyMenu(int32 InIndex)
 
 	Params::WDT_BuddyChangeMenu_C_NotifyChangeBuddyMenu Parms{};
 
-	Parms.InIndex = InIndex;
+	Parms.InIndex = std::move(InIndex);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

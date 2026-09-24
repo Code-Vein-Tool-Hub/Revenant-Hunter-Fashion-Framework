@@ -18,11 +18,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GCN_StatusEffect_Looping_Essential.GCN_StatusEffect_Looping_Essential_C
-// 0x0008 (0x0F08 - 0x0F00)
+// 0x0008 (0x0F18 - 0x0F10)
 class AGCN_StatusEffect_Looping_Essential_C : public AGCN_StatusEffect_Looping
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0F00(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0F10(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_GCN_StatusEffect_Looping_Essential(int32 EntryPoint);
@@ -41,8 +41,8 @@ public:
 	}
 };
 static_assert(alignof(AGCN_StatusEffect_Looping_Essential_C) == 0x000008, "Wrong alignment on AGCN_StatusEffect_Looping_Essential_C");
-static_assert(sizeof(AGCN_StatusEffect_Looping_Essential_C) == 0x000F08, "Wrong size on AGCN_StatusEffect_Looping_Essential_C");
-static_assert(offsetof(AGCN_StatusEffect_Looping_Essential_C, UberGraphFrame) == 0x000F00, "Member 'AGCN_StatusEffect_Looping_Essential_C::UberGraphFrame' has a wrong offset!");
+static_assert(sizeof(AGCN_StatusEffect_Looping_Essential_C) == 0x000F18, "Wrong size on AGCN_StatusEffect_Looping_Essential_C");
+static_assert(offsetof(AGCN_StatusEffect_Looping_Essential_C, UberGraphFrame) == 0x000F10, "Member 'AGCN_StatusEffect_Looping_Essential_C::UberGraphFrame' has a wrong offset!");
 
 }
 

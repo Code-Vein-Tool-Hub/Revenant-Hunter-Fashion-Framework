@@ -46,7 +46,7 @@ void UWDT_MatchingTopMenu_C::BP_OnDeactivated()
 
 
 // Function WDT_MatchingTopMenu.WDT_MatchingTopMenu_C.DecideMenu
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UMenuPieceBase*                   MenuPiece                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
@@ -85,7 +85,7 @@ void UWDT_MatchingTopMenu_C::ExecuteUbergraph_WDT_MatchingTopMenu(int32 EntryPoi
 }
 
 
-// Function WDT_MatchingTopMenu.WDT_MatchingTopMenu_C.InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_2
+// Function WDT_MatchingTopMenu.WDT_MatchingTopMenu_C.InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_3
 // (BlueprintEvent)
 // Parameters:
 // struct FInputActionValue                ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
@@ -93,14 +93,14 @@ void UWDT_MatchingTopMenu_C::ExecuteUbergraph_WDT_MatchingTopMenu(int32 EntryPoi
 // float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UInputAction*                     SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_MatchingTopMenu_C::InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_2(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+void UWDT_MatchingTopMenu_C::InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_3(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_MatchingTopMenu_C", "InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_2");
+		Func = Class->GetFunction("WDT_MatchingTopMenu_C", "InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_3");
 
-	Params::WDT_MatchingTopMenu_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_2 Parms{};
+	Params::WDT_MatchingTopMenu_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_3 Parms{};
 
 	Parms.ActionValue = std::move(ActionValue);
 	Parms.ElapsedTime = ElapsedTime;
@@ -111,7 +111,7 @@ void UWDT_MatchingTopMenu_C::InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInpu
 }
 
 
-// Function WDT_MatchingTopMenu.WDT_MatchingTopMenu_C.InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_3
+// Function WDT_MatchingTopMenu.WDT_MatchingTopMenu_C.InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_4
 // (BlueprintEvent)
 // Parameters:
 // struct FInputActionValue                ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
@@ -119,14 +119,14 @@ void UWDT_MatchingTopMenu_C::InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInpu
 // float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UInputAction*                     SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_MatchingTopMenu_C::InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_3(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+void UWDT_MatchingTopMenu_C::InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_4(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_MatchingTopMenu_C", "InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_3");
+		Func = Class->GetFunction("WDT_MatchingTopMenu_C", "InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_4");
 
-	Params::WDT_MatchingTopMenu_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_3 Parms{};
+	Params::WDT_MatchingTopMenu_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_4 Parms{};
 
 	Parms.ActionValue = std::move(ActionValue);
 	Parms.ElapsedTime = ElapsedTime;
@@ -137,7 +137,7 @@ void UWDT_MatchingTopMenu_C::InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInpu
 }
 
 
-// Function WDT_MatchingTopMenu.WDT_MatchingTopMenu_C.InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_4
+// Function WDT_MatchingTopMenu.WDT_MatchingTopMenu_C.InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_5
 // (BlueprintEvent)
 // Parameters:
 // struct FInputActionValue                ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
@@ -145,14 +145,14 @@ void UWDT_MatchingTopMenu_C::InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInpu
 // float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UInputAction*                     SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_MatchingTopMenu_C::InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_4(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+void UWDT_MatchingTopMenu_C::InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_5(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_MatchingTopMenu_C", "InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_4");
+		Func = Class->GetFunction("WDT_MatchingTopMenu_C", "InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_5");
 
-	Params::WDT_MatchingTopMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_4 Parms{};
+	Params::WDT_MatchingTopMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_5 Parms{};
 
 	Parms.ActionValue = std::move(ActionValue);
 	Parms.ElapsedTime = ElapsedTime;
@@ -163,7 +163,7 @@ void UWDT_MatchingTopMenu_C::InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEven
 }
 
 
-// Function WDT_MatchingTopMenu.WDT_MatchingTopMenu_C.InpActEvt_IA_UI_MenuSpecial1_K2Node_EnhancedInputActionEvent_0
+// Function WDT_MatchingTopMenu.WDT_MatchingTopMenu_C.InpActEvt_IA_UI_MenuSpecial1_K2Node_EnhancedInputActionEvent_1
 // (BlueprintEvent)
 // Parameters:
 // struct FInputActionValue                ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
@@ -171,14 +171,14 @@ void UWDT_MatchingTopMenu_C::InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEven
 // float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UInputAction*                     SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_MatchingTopMenu_C::InpActEvt_IA_UI_MenuSpecial1_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+void UWDT_MatchingTopMenu_C::InpActEvt_IA_UI_MenuSpecial1_K2Node_EnhancedInputActionEvent_1(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_MatchingTopMenu_C", "InpActEvt_IA_UI_MenuSpecial1_K2Node_EnhancedInputActionEvent_0");
+		Func = Class->GetFunction("WDT_MatchingTopMenu_C", "InpActEvt_IA_UI_MenuSpecial1_K2Node_EnhancedInputActionEvent_1");
 
-	Params::WDT_MatchingTopMenu_C_InpActEvt_IA_UI_MenuSpecial1_K2Node_EnhancedInputActionEvent_0 Parms{};
+	Params::WDT_MatchingTopMenu_C_InpActEvt_IA_UI_MenuSpecial1_K2Node_EnhancedInputActionEvent_1 Parms{};
 
 	Parms.ActionValue = std::move(ActionValue);
 	Parms.ElapsedTime = ElapsedTime;
@@ -189,7 +189,7 @@ void UWDT_MatchingTopMenu_C::InpActEvt_IA_UI_MenuSpecial1_K2Node_EnhancedInputAc
 }
 
 
-// Function WDT_MatchingTopMenu.WDT_MatchingTopMenu_C.InpActEvt_IA_UI_MenuSpecial2_K2Node_EnhancedInputActionEvent_1
+// Function WDT_MatchingTopMenu.WDT_MatchingTopMenu_C.InpActEvt_IA_UI_MenuSpecial2_K2Node_EnhancedInputActionEvent_2
 // (BlueprintEvent)
 // Parameters:
 // struct FInputActionValue                ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
@@ -197,14 +197,14 @@ void UWDT_MatchingTopMenu_C::InpActEvt_IA_UI_MenuSpecial1_K2Node_EnhancedInputAc
 // float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UInputAction*                     SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_MatchingTopMenu_C::InpActEvt_IA_UI_MenuSpecial2_K2Node_EnhancedInputActionEvent_1(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+void UWDT_MatchingTopMenu_C::InpActEvt_IA_UI_MenuSpecial2_K2Node_EnhancedInputActionEvent_2(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_MatchingTopMenu_C", "InpActEvt_IA_UI_MenuSpecial2_K2Node_EnhancedInputActionEvent_1");
+		Func = Class->GetFunction("WDT_MatchingTopMenu_C", "InpActEvt_IA_UI_MenuSpecial2_K2Node_EnhancedInputActionEvent_2");
 
-	Params::WDT_MatchingTopMenu_C_InpActEvt_IA_UI_MenuSpecial2_K2Node_EnhancedInputActionEvent_1 Parms{};
+	Params::WDT_MatchingTopMenu_C_InpActEvt_IA_UI_MenuSpecial2_K2Node_EnhancedInputActionEvent_2 Parms{};
 
 	Parms.ActionValue = std::move(ActionValue);
 	Parms.ElapsedTime = ElapsedTime;
@@ -215,7 +215,7 @@ void UWDT_MatchingTopMenu_C::InpActEvt_IA_UI_MenuSpecial2_K2Node_EnhancedInputAc
 }
 
 
-// Function WDT_MatchingTopMenu.WDT_MatchingTopMenu_C.InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_5
+// Function WDT_MatchingTopMenu.WDT_MatchingTopMenu_C.InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_0
 // (BlueprintEvent)
 // Parameters:
 // struct FInputActionValue                ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
@@ -223,14 +223,14 @@ void UWDT_MatchingTopMenu_C::InpActEvt_IA_UI_MenuSpecial2_K2Node_EnhancedInputAc
 // float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UInputAction*                     SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_MatchingTopMenu_C::InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_5(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+void UWDT_MatchingTopMenu_C::InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_MatchingTopMenu_C", "InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_5");
+		Func = Class->GetFunction("WDT_MatchingTopMenu_C", "InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_0");
 
-	Params::WDT_MatchingTopMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_5 Parms{};
+	Params::WDT_MatchingTopMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_0 Parms{};
 
 	Parms.ActionValue = std::move(ActionValue);
 	Parms.ElapsedTime = ElapsedTime;
@@ -269,8 +269,56 @@ void UWDT_MatchingTopMenu_C::OnClosed()
 }
 
 
-// Function WDT_MatchingTopMenu.WDT_MatchingTopMenu_C.OnDecideReleased
+// Function WDT_MatchingTopMenu.WDT_MatchingTopMenu_C.OnClosedLeaveMultiplayDialog
 // (Public, BlueprintCallable, BlueprintEvent)
+
+void UWDT_MatchingTopMenu_C::OnClosedLeaveMultiplayDialog()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_MatchingTopMenu_C", "OnClosedLeaveMultiplayDialog");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WDT_MatchingTopMenu.WDT_MatchingTopMenu_C.OnClosing
+// (Event, Protected, BlueprintEvent)
+
+void UWDT_MatchingTopMenu_C::OnClosing()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_MatchingTopMenu_C", "OnClosing");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WDT_MatchingTopMenu.WDT_MatchingTopMenu_C.OnDecideLeaveMultiplayDialog
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// uint8                                   DecideOptionNumber                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_MatchingTopMenu_C::OnDecideLeaveMultiplayDialog(uint8 DecideOptionNumber)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_MatchingTopMenu_C", "OnDecideLeaveMultiplayDialog");
+
+	Params::WDT_MatchingTopMenu_C_OnDecideLeaveMultiplayDialog Parms{};
+
+	Parms.DecideOptionNumber = DecideOptionNumber;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_MatchingTopMenu.WDT_MatchingTopMenu_C.OnDecideReleased
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWDT_MatchingTopMenu_C::OnDecideReleased()
 {
@@ -422,6 +470,20 @@ void UWDT_MatchingTopMenu_C::OnOpened()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("WDT_MatchingTopMenu_C", "OnOpened");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WDT_MatchingTopMenu.WDT_MatchingTopMenu_C.OnOpening
+// (Event, Protected, BlueprintEvent)
+
+void UWDT_MatchingTopMenu_C::OnOpening()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_MatchingTopMenu_C", "OnOpening");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

@@ -42,7 +42,9 @@ public:
 
 public:
 	void ActiveEffect();
+	void CreateAkComponent();
 	void DeactiveEffect();
+	void DestroyAkComponent();
 	void ExecuteUbergraph_GPC_ExecutionSword_Lightning(int32 EntryPoint);
 	void InitializeEffect(const struct FGameplayCueParameters& Parameters);
 	void OnApplication(class AActor* Target, const struct FGameplayCueParameters& Parameters, const struct FGameplayCueNotify_SpawnResult& SpawnResults);

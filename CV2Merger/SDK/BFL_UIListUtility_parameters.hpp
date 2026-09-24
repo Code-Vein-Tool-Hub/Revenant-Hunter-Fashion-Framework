@@ -49,39 +49,66 @@ static_assert(offsetof(BFL_UIListUtility_C_SelectByDirectionWithSE, CallFunc_Sel
 static_assert(offsetof(BFL_UIListUtility_C_SelectByDirectionWithSE, CallFunc_NotEqual_IntInt_ReturnValue) == 0x000035, "Member 'BFL_UIListUtility_C_SelectByDirectionWithSE::CallFunc_NotEqual_IntInt_ReturnValue' has a wrong offset!");
 
 // Function BFL_UIListUtility.BFL_UIListUtility_C.UncheckAllGridBoxItems
-// 0x0058 (0x0058 - 0x0000)
+// 0x00A8 (0x00A8 - 0x0000)
 struct BFL_UIListUtility_C_UncheckAllGridBoxItems final
 {
 public:
 	class UGridScroller*                          InGridBox;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TArray<class UObject*>                        L_ItemList;                                        // 0x0010(0x0010)(Edit, BlueprintVisible)
-	TArray<class UObject*>                        CallFunc_GetListItems_ReturnValue;                 // 0x0020(0x0010)(ConstParm, ReferenceParm)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                CallFunc_Array_Get_Item;                           // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UObject*>                        CallFunc_GetListItems_ReturnValue;                 // 0x0028(0x0010)(ConstParm, ReferenceParm)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBP_CheckableScrollerItem_C*            K2Node_DynamicCast_AsBP_Checkable_Scroller_Item;   // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52[0x2];                                       // 0x0052(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                CallFunc_Array_Get_Item;                           // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_CheckableScrollerItem_C*            K2Node_DynamicCast_AsBP_Checkable_Scroller_Item;   // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_62[0x6];                                       // 0x0062(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UUserWidget*>                    CallFunc_GetDisplayedEntryWidgets_ReturnValue;     // 0x0068(0x0010)(ConstParm, ReferenceParm, ContainsInstancedReference)
+	class UUserWidget*                            CallFunc_GetSelectedWidget_ReturnValue;            // 0x0078(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UUserWidget*                            CallFunc_Array_Get_Item_1;                         // 0x0080(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8C[0x4];                                       // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWDT_ArticleThumbnailPiece_C*           K2Node_DynamicCast_AsWDT_Article_Thumbnail_Piece;  // 0x0090(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_99[0x3];                                       // 0x0099(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x00A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A2[0x2];                                       // 0x00A2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x00A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BFL_UIListUtility_C_UncheckAllGridBoxItems) == 0x000008, "Wrong alignment on BFL_UIListUtility_C_UncheckAllGridBoxItems");
-static_assert(sizeof(BFL_UIListUtility_C_UncheckAllGridBoxItems) == 0x000058, "Wrong size on BFL_UIListUtility_C_UncheckAllGridBoxItems");
+static_assert(sizeof(BFL_UIListUtility_C_UncheckAllGridBoxItems) == 0x0000A8, "Wrong size on BFL_UIListUtility_C_UncheckAllGridBoxItems");
 static_assert(offsetof(BFL_UIListUtility_C_UncheckAllGridBoxItems, InGridBox) == 0x000000, "Member 'BFL_UIListUtility_C_UncheckAllGridBoxItems::InGridBox' has a wrong offset!");
 static_assert(offsetof(BFL_UIListUtility_C_UncheckAllGridBoxItems, __WorldContext) == 0x000008, "Member 'BFL_UIListUtility_C_UncheckAllGridBoxItems::__WorldContext' has a wrong offset!");
 static_assert(offsetof(BFL_UIListUtility_C_UncheckAllGridBoxItems, L_ItemList) == 0x000010, "Member 'BFL_UIListUtility_C_UncheckAllGridBoxItems::L_ItemList' has a wrong offset!");
-static_assert(offsetof(BFL_UIListUtility_C_UncheckAllGridBoxItems, CallFunc_GetListItems_ReturnValue) == 0x000020, "Member 'BFL_UIListUtility_C_UncheckAllGridBoxItems::CallFunc_GetListItems_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BFL_UIListUtility_C_UncheckAllGridBoxItems, Temp_int_Array_Index_Variable) == 0x000030, "Member 'BFL_UIListUtility_C_UncheckAllGridBoxItems::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BFL_UIListUtility_C_UncheckAllGridBoxItems, Temp_int_Loop_Counter_Variable) == 0x000034, "Member 'BFL_UIListUtility_C_UncheckAllGridBoxItems::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BFL_UIListUtility_C_UncheckAllGridBoxItems, CallFunc_Array_Get_Item) == 0x000038, "Member 'BFL_UIListUtility_C_UncheckAllGridBoxItems::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BFL_UIListUtility_C_UncheckAllGridBoxItems, CallFunc_Array_Length_ReturnValue) == 0x000040, "Member 'BFL_UIListUtility_C_UncheckAllGridBoxItems::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BFL_UIListUtility_C_UncheckAllGridBoxItems, K2Node_DynamicCast_AsBP_Checkable_Scroller_Item) == 0x000048, "Member 'BFL_UIListUtility_C_UncheckAllGridBoxItems::K2Node_DynamicCast_AsBP_Checkable_Scroller_Item' has a wrong offset!");
-static_assert(offsetof(BFL_UIListUtility_C_UncheckAllGridBoxItems, K2Node_DynamicCast_bSuccess) == 0x000050, "Member 'BFL_UIListUtility_C_UncheckAllGridBoxItems::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BFL_UIListUtility_C_UncheckAllGridBoxItems, CallFunc_Less_IntInt_ReturnValue) == 0x000051, "Member 'BFL_UIListUtility_C_UncheckAllGridBoxItems::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BFL_UIListUtility_C_UncheckAllGridBoxItems, CallFunc_Add_IntInt_ReturnValue) == 0x000054, "Member 'BFL_UIListUtility_C_UncheckAllGridBoxItems::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_UncheckAllGridBoxItems, Temp_int_Array_Index_Variable) == 0x000020, "Member 'BFL_UIListUtility_C_UncheckAllGridBoxItems::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_UncheckAllGridBoxItems, CallFunc_GetListItems_ReturnValue) == 0x000028, "Member 'BFL_UIListUtility_C_UncheckAllGridBoxItems::CallFunc_GetListItems_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_UncheckAllGridBoxItems, Temp_int_Loop_Counter_Variable) == 0x000038, "Member 'BFL_UIListUtility_C_UncheckAllGridBoxItems::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_UncheckAllGridBoxItems, CallFunc_Add_IntInt_ReturnValue) == 0x00003C, "Member 'BFL_UIListUtility_C_UncheckAllGridBoxItems::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_UncheckAllGridBoxItems, Temp_int_Array_Index_Variable_1) == 0x000040, "Member 'BFL_UIListUtility_C_UncheckAllGridBoxItems::Temp_int_Array_Index_Variable_1' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_UncheckAllGridBoxItems, CallFunc_Array_Get_Item) == 0x000048, "Member 'BFL_UIListUtility_C_UncheckAllGridBoxItems::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_UncheckAllGridBoxItems, CallFunc_Array_Length_ReturnValue) == 0x000050, "Member 'BFL_UIListUtility_C_UncheckAllGridBoxItems::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_UncheckAllGridBoxItems, K2Node_DynamicCast_AsBP_Checkable_Scroller_Item) == 0x000058, "Member 'BFL_UIListUtility_C_UncheckAllGridBoxItems::K2Node_DynamicCast_AsBP_Checkable_Scroller_Item' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_UncheckAllGridBoxItems, K2Node_DynamicCast_bSuccess) == 0x000060, "Member 'BFL_UIListUtility_C_UncheckAllGridBoxItems::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_UncheckAllGridBoxItems, CallFunc_Less_IntInt_ReturnValue) == 0x000061, "Member 'BFL_UIListUtility_C_UncheckAllGridBoxItems::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_UncheckAllGridBoxItems, CallFunc_GetDisplayedEntryWidgets_ReturnValue) == 0x000068, "Member 'BFL_UIListUtility_C_UncheckAllGridBoxItems::CallFunc_GetDisplayedEntryWidgets_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_UncheckAllGridBoxItems, CallFunc_GetSelectedWidget_ReturnValue) == 0x000078, "Member 'BFL_UIListUtility_C_UncheckAllGridBoxItems::CallFunc_GetSelectedWidget_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_UncheckAllGridBoxItems, CallFunc_Array_Get_Item_1) == 0x000080, "Member 'BFL_UIListUtility_C_UncheckAllGridBoxItems::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_UncheckAllGridBoxItems, CallFunc_Array_Length_ReturnValue_1) == 0x000088, "Member 'BFL_UIListUtility_C_UncheckAllGridBoxItems::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_UncheckAllGridBoxItems, K2Node_DynamicCast_AsWDT_Article_Thumbnail_Piece) == 0x000090, "Member 'BFL_UIListUtility_C_UncheckAllGridBoxItems::K2Node_DynamicCast_AsWDT_Article_Thumbnail_Piece' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_UncheckAllGridBoxItems, K2Node_DynamicCast_bSuccess_1) == 0x000098, "Member 'BFL_UIListUtility_C_UncheckAllGridBoxItems::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_UncheckAllGridBoxItems, Temp_int_Loop_Counter_Variable_1) == 0x00009C, "Member 'BFL_UIListUtility_C_UncheckAllGridBoxItems::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_UncheckAllGridBoxItems, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x0000A0, "Member 'BFL_UIListUtility_C_UncheckAllGridBoxItems::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_UncheckAllGridBoxItems, CallFunc_Less_IntInt_ReturnValue_1) == 0x0000A1, "Member 'BFL_UIListUtility_C_UncheckAllGridBoxItems::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_UncheckAllGridBoxItems, CallFunc_Add_IntInt_ReturnValue_1) == 0x0000A4, "Member 'BFL_UIListUtility_C_UncheckAllGridBoxItems::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
 
 // Function BFL_UIListUtility.BFL_UIListUtility_C.GetGridBoxCheckedItemIndex
 // 0x0060 (0x0060 - 0x0000)
@@ -153,7 +180,7 @@ static_assert(offsetof(BFL_UIListUtility_C_CheckGridItemWidget, CallFunc_Uncheck
 static_assert(offsetof(BFL_UIListUtility_C_CheckGridItemWidget, CallFunc_Check_ReturnValue) == 0x00004A, "Member 'BFL_UIListUtility_C_CheckGridItemWidget::CallFunc_Check_ReturnValue' has a wrong offset!");
 
 // Function BFL_UIListUtility.BFL_UIListUtility_C.CheckGridBoxItem
-// 0x0068 (0x0068 - 0x0000)
+// 0x00B8 (0x00B8 - 0x0000)
 struct BFL_UIListUtility_C_CheckGridBoxItem final
 {
 public:
@@ -162,38 +189,65 @@ public:
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TArray<class UObject*>                        L_ItemList;                                        // 0x0018(0x0010)(Edit, BlueprintVisible)
-	TArray<class UObject*>                        CallFunc_GetListItems_ReturnValue;                 // 0x0028(0x0010)(ConstParm, ReferenceParm)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                CallFunc_Array_Get_Item;                           // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UObject*>                        CallFunc_GetListItems_ReturnValue;                 // 0x0030(0x0010)(ConstParm, ReferenceParm)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBP_CheckableScrollerItem_C*            K2Node_DynamicCast_AsBP_Checkable_Scroller_Item;   // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5A[0x2];                                       // 0x005A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                CallFunc_Array_Get_Item;                           // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_CheckableScrollerItem_C*            K2Node_DynamicCast_AsBP_Checkable_Scroller_Item;   // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0069(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6A[0x6];                                       // 0x006A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UUserWidget*>                    CallFunc_GetDisplayedEntryWidgets_ReturnValue;     // 0x0070(0x0010)(ConstParm, ReferenceParm, ContainsInstancedReference)
+	class UUserWidget*                            CallFunc_GetSelectedWidget_ReturnValue;            // 0x0080(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UUserWidget*                            CallFunc_Array_Get_Item_1;                         // 0x0088(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_94[0x4];                                       // 0x0094(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWDT_ArticleThumbnailPiece_C*           K2Node_DynamicCast_AsWDT_Article_Thumbnail_Piece;  // 0x0098(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A1[0x3];                                       // 0x00A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x00A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x00A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_AA[0x2];                                       // 0x00AA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BFL_UIListUtility_C_CheckGridBoxItem) == 0x000008, "Wrong alignment on BFL_UIListUtility_C_CheckGridBoxItem");
-static_assert(sizeof(BFL_UIListUtility_C_CheckGridBoxItem) == 0x000068, "Wrong size on BFL_UIListUtility_C_CheckGridBoxItem");
+static_assert(sizeof(BFL_UIListUtility_C_CheckGridBoxItem) == 0x0000B8, "Wrong size on BFL_UIListUtility_C_CheckGridBoxItem");
 static_assert(offsetof(BFL_UIListUtility_C_CheckGridBoxItem, InGridBox) == 0x000000, "Member 'BFL_UIListUtility_C_CheckGridBoxItem::InGridBox' has a wrong offset!");
 static_assert(offsetof(BFL_UIListUtility_C_CheckGridBoxItem, InCheckIndex) == 0x000008, "Member 'BFL_UIListUtility_C_CheckGridBoxItem::InCheckIndex' has a wrong offset!");
 static_assert(offsetof(BFL_UIListUtility_C_CheckGridBoxItem, __WorldContext) == 0x000010, "Member 'BFL_UIListUtility_C_CheckGridBoxItem::__WorldContext' has a wrong offset!");
 static_assert(offsetof(BFL_UIListUtility_C_CheckGridBoxItem, L_ItemList) == 0x000018, "Member 'BFL_UIListUtility_C_CheckGridBoxItem::L_ItemList' has a wrong offset!");
-static_assert(offsetof(BFL_UIListUtility_C_CheckGridBoxItem, CallFunc_GetListItems_ReturnValue) == 0x000028, "Member 'BFL_UIListUtility_C_CheckGridBoxItem::CallFunc_GetListItems_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BFL_UIListUtility_C_CheckGridBoxItem, Temp_int_Array_Index_Variable) == 0x000038, "Member 'BFL_UIListUtility_C_CheckGridBoxItem::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BFL_UIListUtility_C_CheckGridBoxItem, Temp_int_Loop_Counter_Variable) == 0x00003C, "Member 'BFL_UIListUtility_C_CheckGridBoxItem::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BFL_UIListUtility_C_CheckGridBoxItem, CallFunc_Array_Get_Item) == 0x000040, "Member 'BFL_UIListUtility_C_CheckGridBoxItem::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BFL_UIListUtility_C_CheckGridBoxItem, CallFunc_Array_Length_ReturnValue) == 0x000048, "Member 'BFL_UIListUtility_C_CheckGridBoxItem::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BFL_UIListUtility_C_CheckGridBoxItem, K2Node_DynamicCast_AsBP_Checkable_Scroller_Item) == 0x000050, "Member 'BFL_UIListUtility_C_CheckGridBoxItem::K2Node_DynamicCast_AsBP_Checkable_Scroller_Item' has a wrong offset!");
-static_assert(offsetof(BFL_UIListUtility_C_CheckGridBoxItem, K2Node_DynamicCast_bSuccess) == 0x000058, "Member 'BFL_UIListUtility_C_CheckGridBoxItem::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BFL_UIListUtility_C_CheckGridBoxItem, CallFunc_Less_IntInt_ReturnValue) == 0x000059, "Member 'BFL_UIListUtility_C_CheckGridBoxItem::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BFL_UIListUtility_C_CheckGridBoxItem, CallFunc_Add_IntInt_ReturnValue) == 0x00005C, "Member 'BFL_UIListUtility_C_CheckGridBoxItem::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BFL_UIListUtility_C_CheckGridBoxItem, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000060, "Member 'BFL_UIListUtility_C_CheckGridBoxItem::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_CheckGridBoxItem, Temp_int_Array_Index_Variable) == 0x000028, "Member 'BFL_UIListUtility_C_CheckGridBoxItem::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_CheckGridBoxItem, CallFunc_GetListItems_ReturnValue) == 0x000030, "Member 'BFL_UIListUtility_C_CheckGridBoxItem::CallFunc_GetListItems_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_CheckGridBoxItem, Temp_int_Loop_Counter_Variable) == 0x000040, "Member 'BFL_UIListUtility_C_CheckGridBoxItem::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_CheckGridBoxItem, CallFunc_Add_IntInt_ReturnValue) == 0x000044, "Member 'BFL_UIListUtility_C_CheckGridBoxItem::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_CheckGridBoxItem, Temp_int_Array_Index_Variable_1) == 0x000048, "Member 'BFL_UIListUtility_C_CheckGridBoxItem::Temp_int_Array_Index_Variable_1' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_CheckGridBoxItem, CallFunc_Array_Get_Item) == 0x000050, "Member 'BFL_UIListUtility_C_CheckGridBoxItem::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_CheckGridBoxItem, CallFunc_Array_Length_ReturnValue) == 0x000058, "Member 'BFL_UIListUtility_C_CheckGridBoxItem::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_CheckGridBoxItem, K2Node_DynamicCast_AsBP_Checkable_Scroller_Item) == 0x000060, "Member 'BFL_UIListUtility_C_CheckGridBoxItem::K2Node_DynamicCast_AsBP_Checkable_Scroller_Item' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_CheckGridBoxItem, K2Node_DynamicCast_bSuccess) == 0x000068, "Member 'BFL_UIListUtility_C_CheckGridBoxItem::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_CheckGridBoxItem, CallFunc_Less_IntInt_ReturnValue) == 0x000069, "Member 'BFL_UIListUtility_C_CheckGridBoxItem::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_CheckGridBoxItem, CallFunc_GetDisplayedEntryWidgets_ReturnValue) == 0x000070, "Member 'BFL_UIListUtility_C_CheckGridBoxItem::CallFunc_GetDisplayedEntryWidgets_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_CheckGridBoxItem, CallFunc_GetSelectedWidget_ReturnValue) == 0x000080, "Member 'BFL_UIListUtility_C_CheckGridBoxItem::CallFunc_GetSelectedWidget_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_CheckGridBoxItem, CallFunc_Array_Get_Item_1) == 0x000088, "Member 'BFL_UIListUtility_C_CheckGridBoxItem::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_CheckGridBoxItem, CallFunc_Array_Length_ReturnValue_1) == 0x000090, "Member 'BFL_UIListUtility_C_CheckGridBoxItem::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_CheckGridBoxItem, K2Node_DynamicCast_AsWDT_Article_Thumbnail_Piece) == 0x000098, "Member 'BFL_UIListUtility_C_CheckGridBoxItem::K2Node_DynamicCast_AsWDT_Article_Thumbnail_Piece' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_CheckGridBoxItem, K2Node_DynamicCast_bSuccess_1) == 0x0000A0, "Member 'BFL_UIListUtility_C_CheckGridBoxItem::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_CheckGridBoxItem, Temp_int_Loop_Counter_Variable_1) == 0x0000A4, "Member 'BFL_UIListUtility_C_CheckGridBoxItem::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_CheckGridBoxItem, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x0000A8, "Member 'BFL_UIListUtility_C_CheckGridBoxItem::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_CheckGridBoxItem, CallFunc_Less_IntInt_ReturnValue_1) == 0x0000A9, "Member 'BFL_UIListUtility_C_CheckGridBoxItem::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_CheckGridBoxItem, CallFunc_Add_IntInt_ReturnValue_1) == 0x0000AC, "Member 'BFL_UIListUtility_C_CheckGridBoxItem::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_CheckGridBoxItem, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x0000B0, "Member 'BFL_UIListUtility_C_CheckGridBoxItem::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
 
 // Function BFL_UIListUtility.BFL_UIListUtility_C.Check Grid Box Multiple Items
-// 0x00B0 (0x00B0 - 0x0000)
+// 0x00F8 (0x00F8 - 0x0000)
 struct BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items final
 {
 public:
@@ -201,37 +255,63 @@ public:
 	TMap<int32, bool>                             InCheckIndexMap;                                   // 0x0008(0x0050)(BlueprintVisible, BlueprintReadOnly, Parm)
 	class UObject*                                __WorldContext;                                    // 0x0058(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TArray<class UObject*>                        L_ItemList;                                        // 0x0060(0x0010)(Edit, BlueprintVisible)
-	TArray<class UObject*>                        CallFunc_GetListItems_ReturnValue;                 // 0x0070(0x0010)(ConstParm, ReferenceParm)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0084(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                CallFunc_Array_Get_Item;                           // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UObject*>                        CallFunc_GetListItems_ReturnValue;                 // 0x0078(0x0010)(ConstParm, ReferenceParm)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x008C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_94[0x4];                                       // 0x0094(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBP_CheckableScrollerItem_C*            K2Node_DynamicCast_AsBP_Checkable_Scroller_Item;   // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A2[0x2];                                       // 0x00A2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_Value;                           // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x00A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                CallFunc_Array_Get_Item;                           // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A4[0x4];                                       // 0x00A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_CheckableScrollerItem_C*            K2Node_DynamicCast_AsBP_Checkable_Scroller_Item;   // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B2[0x6];                                       // 0x00B2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UUserWidget*>                    CallFunc_GetDisplayedEntryWidgets_ReturnValue;     // 0x00B8(0x0010)(ConstParm, ReferenceParm, ContainsInstancedReference)
+	class UUserWidget*                            CallFunc_GetSelectedWidget_ReturnValue;            // 0x00C8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UUserWidget*                            CallFunc_Array_Get_Item_1;                         // 0x00D0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x00D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_DC[0x4];                                       // 0x00DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWDT_ArticleThumbnailPiece_C*           K2Node_DynamicCast_AsWDT_Article_Thumbnail_Piece;  // 0x00E0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x00E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_Value;                           // 0x00EA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x00EB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x00EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F1[0x3];                                       // 0x00F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x00F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items) == 0x000008, "Wrong alignment on BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items");
-static_assert(sizeof(BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items) == 0x0000B0, "Wrong size on BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items");
+static_assert(sizeof(BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items) == 0x0000F8, "Wrong size on BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items");
 static_assert(offsetof(BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items, InGridBox) == 0x000000, "Member 'BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items::InGridBox' has a wrong offset!");
 static_assert(offsetof(BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items, InCheckIndexMap) == 0x000008, "Member 'BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items::InCheckIndexMap' has a wrong offset!");
 static_assert(offsetof(BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items, __WorldContext) == 0x000058, "Member 'BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items::__WorldContext' has a wrong offset!");
 static_assert(offsetof(BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items, L_ItemList) == 0x000060, "Member 'BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items::L_ItemList' has a wrong offset!");
-static_assert(offsetof(BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items, CallFunc_GetListItems_ReturnValue) == 0x000070, "Member 'BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items::CallFunc_GetListItems_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items, Temp_int_Array_Index_Variable) == 0x000080, "Member 'BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items, Temp_int_Loop_Counter_Variable) == 0x000084, "Member 'BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items, CallFunc_Array_Get_Item) == 0x000088, "Member 'BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items, CallFunc_Array_Length_ReturnValue) == 0x000090, "Member 'BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items, K2Node_DynamicCast_AsBP_Checkable_Scroller_Item) == 0x000098, "Member 'BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items::K2Node_DynamicCast_AsBP_Checkable_Scroller_Item' has a wrong offset!");
-static_assert(offsetof(BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items, K2Node_DynamicCast_bSuccess) == 0x0000A0, "Member 'BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items, CallFunc_Less_IntInt_ReturnValue) == 0x0000A1, "Member 'BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items, CallFunc_Add_IntInt_ReturnValue) == 0x0000A4, "Member 'BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items, CallFunc_Map_Find_Value) == 0x0000A8, "Member 'BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items, CallFunc_Map_Find_ReturnValue) == 0x0000A9, "Member 'BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items, Temp_int_Array_Index_Variable) == 0x000070, "Member 'BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items, CallFunc_GetListItems_ReturnValue) == 0x000078, "Member 'BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items::CallFunc_GetListItems_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items, Temp_int_Loop_Counter_Variable) == 0x000088, "Member 'BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items, CallFunc_Add_IntInt_ReturnValue) == 0x00008C, "Member 'BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items, Temp_int_Array_Index_Variable_1) == 0x000090, "Member 'BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items::Temp_int_Array_Index_Variable_1' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items, CallFunc_Array_Get_Item) == 0x000098, "Member 'BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items, CallFunc_Array_Length_ReturnValue) == 0x0000A0, "Member 'BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items, K2Node_DynamicCast_AsBP_Checkable_Scroller_Item) == 0x0000A8, "Member 'BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items::K2Node_DynamicCast_AsBP_Checkable_Scroller_Item' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items, K2Node_DynamicCast_bSuccess) == 0x0000B0, "Member 'BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items, CallFunc_Less_IntInt_ReturnValue) == 0x0000B1, "Member 'BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items, CallFunc_GetDisplayedEntryWidgets_ReturnValue) == 0x0000B8, "Member 'BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items::CallFunc_GetDisplayedEntryWidgets_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items, CallFunc_GetSelectedWidget_ReturnValue) == 0x0000C8, "Member 'BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items::CallFunc_GetSelectedWidget_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items, CallFunc_Array_Get_Item_1) == 0x0000D0, "Member 'BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items, CallFunc_Array_Length_ReturnValue_1) == 0x0000D8, "Member 'BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items, K2Node_DynamicCast_AsWDT_Article_Thumbnail_Piece) == 0x0000E0, "Member 'BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items::K2Node_DynamicCast_AsWDT_Article_Thumbnail_Piece' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items, K2Node_DynamicCast_bSuccess_1) == 0x0000E8, "Member 'BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x0000E9, "Member 'BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items, CallFunc_Map_Find_Value) == 0x0000EA, "Member 'BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items, CallFunc_Map_Find_ReturnValue) == 0x0000EB, "Member 'BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items, Temp_int_Loop_Counter_Variable_1) == 0x0000EC, "Member 'BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items, CallFunc_Less_IntInt_ReturnValue_1) == 0x0000F0, "Member 'BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items, CallFunc_Add_IntInt_ReturnValue_1) == 0x0000F4, "Member 'BFL_UIListUtility_C_Check_Grid_Box_Multiple_Items::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
 
 }
 

@@ -24,8 +24,8 @@ class UWDT_ConfigTopMenuPiece_C final : public UMenuPieceBase
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x05C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 ButtonBg;                                          // 0x05D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 ButtonBg_1;                                        // 0x05D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 ButtonBG;                                          // 0x05D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 ButtonBG_1;                                        // 0x05D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 ButtonBG_Small;                                    // 0x05E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 ButtonBG_Small_1;                                  // 0x05E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 IconImage;                                         // 0x05F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
@@ -68,8 +68,8 @@ public:
 static_assert(alignof(UWDT_ConfigTopMenuPiece_C) == 0x000008, "Wrong alignment on UWDT_ConfigTopMenuPiece_C");
 static_assert(sizeof(UWDT_ConfigTopMenuPiece_C) == 0x000670, "Wrong size on UWDT_ConfigTopMenuPiece_C");
 static_assert(offsetof(UWDT_ConfigTopMenuPiece_C, UberGraphFrame) == 0x0005C8, "Member 'UWDT_ConfigTopMenuPiece_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigTopMenuPiece_C, ButtonBg) == 0x0005D0, "Member 'UWDT_ConfigTopMenuPiece_C::ButtonBg' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigTopMenuPiece_C, ButtonBg_1) == 0x0005D8, "Member 'UWDT_ConfigTopMenuPiece_C::ButtonBg_1' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigTopMenuPiece_C, ButtonBG) == 0x0005D0, "Member 'UWDT_ConfigTopMenuPiece_C::ButtonBG' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigTopMenuPiece_C, ButtonBG_1) == 0x0005D8, "Member 'UWDT_ConfigTopMenuPiece_C::ButtonBG_1' has a wrong offset!");
 static_assert(offsetof(UWDT_ConfigTopMenuPiece_C, ButtonBG_Small) == 0x0005E0, "Member 'UWDT_ConfigTopMenuPiece_C::ButtonBG_Small' has a wrong offset!");
 static_assert(offsetof(UWDT_ConfigTopMenuPiece_C, ButtonBG_Small_1) == 0x0005E8, "Member 'UWDT_ConfigTopMenuPiece_C::ButtonBG_Small_1' has a wrong offset!");
 static_assert(offsetof(UWDT_ConfigTopMenuPiece_C, IconImage) == 0x0005F0, "Member 'UWDT_ConfigTopMenuPiece_C::IconImage' has a wrong offset!");

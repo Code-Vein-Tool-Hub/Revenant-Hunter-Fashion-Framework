@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function WDT_NPCClosenessInfo.WDT_NPCClosenessInfo_C.SetClosenessInfo
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FUIBuddyClosenessInfo            NewParam                                               (BlueprintVisible, BlueprintReadOnly, Parm)
-
-void UWDT_NPCClosenessInfo_C::SetClosenessInfo(const struct FUIBuddyClosenessInfo& NewParam)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_NPCClosenessInfo_C", "SetClosenessInfo");
-
-	Params::WDT_NPCClosenessInfo_C_SetClosenessInfo Parms{};
-
-	Parms.NewParam = std::move(NewParam);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WDT_NPCClosenessInfo.WDT_NPCClosenessInfo_C.GetPercent
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -61,6 +41,26 @@ class FText UWDT_NPCClosenessInfo_C::GetPercent(double A, double B, bool DiableF
 	UObject::ProcessEvent(Func, &Parms);
 
 	return Parms.ReturnValue;
+}
+
+
+// Function WDT_NPCClosenessInfo.WDT_NPCClosenessInfo_C.SetClosenessInfo
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FUIBuddyClosenessInfo            NewParam                                               (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UWDT_NPCClosenessInfo_C::SetClosenessInfo(const struct FUIBuddyClosenessInfo& NewParam)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_NPCClosenessInfo_C", "SetClosenessInfo");
+
+	Params::WDT_NPCClosenessInfo_C_SetClosenessInfo Parms{};
+
+	Parms.NewParam = std::move(NewParam);
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

@@ -97,13 +97,83 @@ enum class EQSVolatileStoryFlagIntegerCompare : uint8
 	EQSVolatileStoryFlagIntegerCompare_MAX   = 6,
 };
 
-// ScriptStruct QuestSystemStoryFlag.QSSharedMemoryEvaluationFormula
-// 0x0000 (0x0010 - 0x0010)
-struct FQSSharedMemoryEvaluationFormula final : public FSymbolEvaluationFormulaBase
+// ScriptStruct QuestSystemStoryFlag.QuestMessageFlagChange
+// 0x0001 (0x0001 - 0x0000)
+struct FQuestMessageFlagChange final : public FQSMessageParamBase
 {
+public:
+	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FQSSharedMemoryEvaluationFormula) == 0x000008, "Wrong alignment on FQSSharedMemoryEvaluationFormula");
-static_assert(sizeof(FQSSharedMemoryEvaluationFormula) == 0x000010, "Wrong size on FQSSharedMemoryEvaluationFormula");
+static_assert(alignof(FQuestMessageFlagChange) == 0x000001, "Wrong alignment on FQuestMessageFlagChange");
+static_assert(sizeof(FQuestMessageFlagChange) == 0x000001, "Wrong size on FQuestMessageFlagChange");
+
+// ScriptStruct QuestSystemStoryFlag.QuestProgressHandle
+// 0x000C (0x000C - 0x0000)
+struct FQuestProgressHandle final
+{
+public:
+	TWeakObjectPtr<class UObject>                 WeakRequestObject;                                 // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Identifier;                                        // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FQuestProgressHandle) == 0x000004, "Wrong alignment on FQuestProgressHandle");
+static_assert(sizeof(FQuestProgressHandle) == 0x00000C, "Wrong size on FQuestProgressHandle");
+static_assert(offsetof(FQuestProgressHandle, WeakRequestObject) == 0x000000, "Member 'FQuestProgressHandle::WeakRequestObject' has a wrong offset!");
+static_assert(offsetof(FQuestProgressHandle, Identifier) == 0x000008, "Member 'FQuestProgressHandle::Identifier' has a wrong offset!");
+
+// ScriptStruct QuestSystemStoryFlag.QuestProgressConditions
+// 0x0018 (0x0018 - 0x0000)
+struct FQuestProgressConditions final
+{
+public:
+	struct FStoryFlagLabel                        FlagLabel;                                         // 0x0000(0x0008)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<int32>                                 Progresses;                                        // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FQuestProgressConditions) == 0x000008, "Wrong alignment on FQuestProgressConditions");
+static_assert(sizeof(FQuestProgressConditions) == 0x000018, "Wrong size on FQuestProgressConditions");
+static_assert(offsetof(FQuestProgressConditions, FlagLabel) == 0x000000, "Member 'FQuestProgressConditions::FlagLabel' has a wrong offset!");
+static_assert(offsetof(FQuestProgressConditions, Progresses) == 0x000008, "Member 'FQuestProgressConditions::Progresses' has a wrong offset!");
+
+// ScriptStruct QuestSystemStoryFlag.QuestProgressInfo
+// 0x0018 (0x0018 - 0x0000)
+struct FQuestProgressInfo final
+{
+public:
+	class FText                                   Description;                                       // 0x0000(0x0010)(BlueprintVisible, NativeAccessSpecifierPublic)
+	int32                                         Num;                                               // 0x0010(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Max;                                               // 0x0014(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FQuestProgressInfo) == 0x000008, "Wrong alignment on FQuestProgressInfo");
+static_assert(sizeof(FQuestProgressInfo) == 0x000018, "Wrong size on FQuestProgressInfo");
+static_assert(offsetof(FQuestProgressInfo, Description) == 0x000000, "Member 'FQuestProgressInfo::Description' has a wrong offset!");
+static_assert(offsetof(FQuestProgressInfo, Num) == 0x000010, "Member 'FQuestProgressInfo::Num' has a wrong offset!");
+static_assert(offsetof(FQuestProgressInfo, Max) == 0x000014, "Member 'FQuestProgressInfo::Max' has a wrong offset!");
+
+// ScriptStruct QuestSystemStoryFlag.QuestSpawnDefinitionDataRow
+// 0x0040 (0x0048 - 0x0008)
+struct FQuestSpawnDefinitionDataRow final : public FTableRowBase
+{
+public:
+	struct FStoryFlagEvaluationFormula            StartConditions;                                   // 0x0008(0x0010)(Edit, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UQuestSystemAsset>       QuestAsset;                                        // 0x0018(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bForceQuestSpawn;                                  // 0x0040(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FQuestSpawnDefinitionDataRow) == 0x000008, "Wrong alignment on FQuestSpawnDefinitionDataRow");
+static_assert(sizeof(FQuestSpawnDefinitionDataRow) == 0x000048, "Wrong size on FQuestSpawnDefinitionDataRow");
+static_assert(offsetof(FQuestSpawnDefinitionDataRow, StartConditions) == 0x000008, "Member 'FQuestSpawnDefinitionDataRow::StartConditions' has a wrong offset!");
+static_assert(offsetof(FQuestSpawnDefinitionDataRow, QuestAsset) == 0x000018, "Member 'FQuestSpawnDefinitionDataRow::QuestAsset' has a wrong offset!");
+static_assert(offsetof(FQuestSpawnDefinitionDataRow, bForceQuestSpawn) == 0x000040, "Member 'FQuestSpawnDefinitionDataRow::bForceQuestSpawn' has a wrong offset!");
+
+// ScriptStruct QuestSystemStoryFlag.QuestSpawnConditionKeyCache
+// 0x0010 (0x0010 - 0x0000)
+struct FQuestSpawnConditionKeyCache final
+{
+public:
+	TArray<class FName>                           KeyCache;                                          // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FQuestSpawnConditionKeyCache) == 0x000008, "Wrong alignment on FQuestSpawnConditionKeyCache");
+static_assert(sizeof(FQuestSpawnConditionKeyCache) == 0x000010, "Wrong size on FQuestSpawnConditionKeyCache");
+static_assert(offsetof(FQuestSpawnConditionKeyCache, KeyCache) == 0x000000, "Member 'FQuestSpawnConditionKeyCache::KeyCache' has a wrong offset!");
 
 // ScriptStruct QuestSystemStoryFlag.QuestSpawnInfo
 // 0x0010 (0x0010 - 0x0000)
@@ -119,18 +189,25 @@ static_assert(sizeof(FQuestSpawnInfo) == 0x000010, "Wrong size on FQuestSpawnInf
 static_assert(offsetof(FQuestSpawnInfo, bRunning) == 0x000000, "Member 'FQuestSpawnInfo::bRunning' has a wrong offset!");
 static_assert(offsetof(FQuestSpawnInfo, Progressor) == 0x000008, "Member 'FQuestSpawnInfo::Progressor' has a wrong offset!");
 
-// ScriptStruct QuestSystemStoryFlag.QuestProgressHandle
-// 0x000C (0x000C - 0x0000)
-struct FQuestProgressHandle final
+// ScriptStruct QuestSystemStoryFlag.QuestSummaryInfo
+// 0x0038 (0x0038 - 0x0000)
+struct FQuestSummaryInfo final
 {
 public:
-	TWeakObjectPtr<class UObject>                 WeakRequestObject;                                 // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Identifier;                                        // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   QuestName;                                         // 0x0000(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	class FText                                   QuestDescription;                                  // 0x0010(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	TArray<class FText>                           Synopsis;                                          // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          bNew;                                              // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bClear;                                            // 0x0031(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FQuestProgressHandle) == 0x000004, "Wrong alignment on FQuestProgressHandle");
-static_assert(sizeof(FQuestProgressHandle) == 0x00000C, "Wrong size on FQuestProgressHandle");
-static_assert(offsetof(FQuestProgressHandle, WeakRequestObject) == 0x000000, "Member 'FQuestProgressHandle::WeakRequestObject' has a wrong offset!");
-static_assert(offsetof(FQuestProgressHandle, Identifier) == 0x000008, "Member 'FQuestProgressHandle::Identifier' has a wrong offset!");
+static_assert(alignof(FQuestSummaryInfo) == 0x000008, "Wrong alignment on FQuestSummaryInfo");
+static_assert(sizeof(FQuestSummaryInfo) == 0x000038, "Wrong size on FQuestSummaryInfo");
+static_assert(offsetof(FQuestSummaryInfo, QuestName) == 0x000000, "Member 'FQuestSummaryInfo::QuestName' has a wrong offset!");
+static_assert(offsetof(FQuestSummaryInfo, QuestDescription) == 0x000010, "Member 'FQuestSummaryInfo::QuestDescription' has a wrong offset!");
+static_assert(offsetof(FQuestSummaryInfo, Synopsis) == 0x000020, "Member 'FQuestSummaryInfo::Synopsis' has a wrong offset!");
+static_assert(offsetof(FQuestSummaryInfo, bNew) == 0x000030, "Member 'FQuestSummaryInfo::bNew' has a wrong offset!");
+static_assert(offsetof(FQuestSummaryInfo, bClear) == 0x000031, "Member 'FQuestSummaryInfo::bClear' has a wrong offset!");
 
 // ScriptStruct QuestSystemStoryFlag.QuestSummarySectionDetails
 // 0x0020 (0x0020 - 0x0000)
@@ -164,88 +241,6 @@ static_assert(offsetof(FQuestSummaryDefinitionDataRow, BootEvaluationFormula) ==
 static_assert(offsetof(FQuestSummaryDefinitionDataRow, ClearEvaluationFormula) == 0x000038, "Member 'FQuestSummaryDefinitionDataRow::ClearEvaluationFormula' has a wrong offset!");
 static_assert(offsetof(FQuestSummaryDefinitionDataRow, SectionInfos) == 0x000048, "Member 'FQuestSummaryDefinitionDataRow::SectionInfos' has a wrong offset!");
 
-// ScriptStruct QuestSystemStoryFlag.QuestProgressInfo
-// 0x0018 (0x0018 - 0x0000)
-struct FQuestProgressInfo final
-{
-public:
-	class FText                                   Description;                                       // 0x0000(0x0010)(BlueprintVisible, NativeAccessSpecifierPublic)
-	int32                                         Num;                                               // 0x0010(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Max;                                               // 0x0014(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FQuestProgressInfo) == 0x000008, "Wrong alignment on FQuestProgressInfo");
-static_assert(sizeof(FQuestProgressInfo) == 0x000018, "Wrong size on FQuestProgressInfo");
-static_assert(offsetof(FQuestProgressInfo, Description) == 0x000000, "Member 'FQuestProgressInfo::Description' has a wrong offset!");
-static_assert(offsetof(FQuestProgressInfo, Num) == 0x000010, "Member 'FQuestProgressInfo::Num' has a wrong offset!");
-static_assert(offsetof(FQuestProgressInfo, Max) == 0x000014, "Member 'FQuestProgressInfo::Max' has a wrong offset!");
-
-// ScriptStruct QuestSystemStoryFlag.QuestMessageFlagChange
-// 0x0001 (0x0001 - 0x0000)
-struct FQuestMessageFlagChange final : public FQSMessageParamBase
-{
-public:
-	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FQuestMessageFlagChange) == 0x000001, "Wrong alignment on FQuestMessageFlagChange");
-static_assert(sizeof(FQuestMessageFlagChange) == 0x000001, "Wrong size on FQuestMessageFlagChange");
-
-// ScriptStruct QuestSystemStoryFlag.QuestSpawnDefinitionDataRow
-// 0x0038 (0x0040 - 0x0008)
-struct FQuestSpawnDefinitionDataRow final : public FTableRowBase
-{
-public:
-	struct FStoryFlagEvaluationFormula            StartConditions;                                   // 0x0008(0x0010)(Edit, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class UQuestSystemAsset>       QuestAsset;                                        // 0x0018(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FQuestSpawnDefinitionDataRow) == 0x000008, "Wrong alignment on FQuestSpawnDefinitionDataRow");
-static_assert(sizeof(FQuestSpawnDefinitionDataRow) == 0x000040, "Wrong size on FQuestSpawnDefinitionDataRow");
-static_assert(offsetof(FQuestSpawnDefinitionDataRow, StartConditions) == 0x000008, "Member 'FQuestSpawnDefinitionDataRow::StartConditions' has a wrong offset!");
-static_assert(offsetof(FQuestSpawnDefinitionDataRow, QuestAsset) == 0x000018, "Member 'FQuestSpawnDefinitionDataRow::QuestAsset' has a wrong offset!");
-
-// ScriptStruct QuestSystemStoryFlag.QuestSpawnConditionKeyCache
-// 0x0010 (0x0010 - 0x0000)
-struct FQuestSpawnConditionKeyCache final
-{
-public:
-	TArray<class FName>                           KeyCache;                                          // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FQuestSpawnConditionKeyCache) == 0x000008, "Wrong alignment on FQuestSpawnConditionKeyCache");
-static_assert(sizeof(FQuestSpawnConditionKeyCache) == 0x000010, "Wrong size on FQuestSpawnConditionKeyCache");
-static_assert(offsetof(FQuestSpawnConditionKeyCache, KeyCache) == 0x000000, "Member 'FQuestSpawnConditionKeyCache::KeyCache' has a wrong offset!");
-
-// ScriptStruct QuestSystemStoryFlag.QuestProgressConditions
-// 0x0018 (0x0018 - 0x0000)
-struct FQuestProgressConditions final
-{
-public:
-	struct FStoryFlagLabel                        FlagLabel;                                         // 0x0000(0x0008)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<int32>                                 Progresses;                                        // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FQuestProgressConditions) == 0x000008, "Wrong alignment on FQuestProgressConditions");
-static_assert(sizeof(FQuestProgressConditions) == 0x000018, "Wrong size on FQuestProgressConditions");
-static_assert(offsetof(FQuestProgressConditions, FlagLabel) == 0x000000, "Member 'FQuestProgressConditions::FlagLabel' has a wrong offset!");
-static_assert(offsetof(FQuestProgressConditions, Progresses) == 0x000008, "Member 'FQuestProgressConditions::Progresses' has a wrong offset!");
-
-// ScriptStruct QuestSystemStoryFlag.QuestSummaryInfo
-// 0x0038 (0x0038 - 0x0000)
-struct FQuestSummaryInfo final
-{
-public:
-	class FText                                   QuestName;                                         // 0x0000(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	class FText                                   QuestDescription;                                  // 0x0010(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	TArray<class FText>                           Synopsis;                                          // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	bool                                          bNew;                                              // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bClear;                                            // 0x0031(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FQuestSummaryInfo) == 0x000008, "Wrong alignment on FQuestSummaryInfo");
-static_assert(sizeof(FQuestSummaryInfo) == 0x000038, "Wrong size on FQuestSummaryInfo");
-static_assert(offsetof(FQuestSummaryInfo, QuestName) == 0x000000, "Member 'FQuestSummaryInfo::QuestName' has a wrong offset!");
-static_assert(offsetof(FQuestSummaryInfo, QuestDescription) == 0x000010, "Member 'FQuestSummaryInfo::QuestDescription' has a wrong offset!");
-static_assert(offsetof(FQuestSummaryInfo, Synopsis) == 0x000020, "Member 'FQuestSummaryInfo::Synopsis' has a wrong offset!");
-static_assert(offsetof(FQuestSummaryInfo, bNew) == 0x000030, "Member 'FQuestSummaryInfo::bNew' has a wrong offset!");
-static_assert(offsetof(FQuestSummaryInfo, bClear) == 0x000031, "Member 'FQuestSummaryInfo::bClear' has a wrong offset!");
-
 // ScriptStruct QuestSystemStoryFlag.QSDataProviderStoryFlagLabel
 // 0x0008 (0x0020 - 0x0018)
 struct FQSDataProviderStoryFlagLabel final : public FQSDataProviderBase
@@ -267,6 +262,14 @@ public:
 static_assert(alignof(FQSDataProviderStoryFlagEvaluationFormula) == 0x000008, "Wrong alignment on FQSDataProviderStoryFlagEvaluationFormula");
 static_assert(sizeof(FQSDataProviderStoryFlagEvaluationFormula) == 0x000028, "Wrong size on FQSDataProviderStoryFlagEvaluationFormula");
 static_assert(offsetof(FQSDataProviderStoryFlagEvaluationFormula, Value) == 0x000018, "Member 'FQSDataProviderStoryFlagEvaluationFormula::Value' has a wrong offset!");
+
+// ScriptStruct QuestSystemStoryFlag.QSSharedMemoryEvaluationFormula
+// 0x0000 (0x0010 - 0x0010)
+struct FQSSharedMemoryEvaluationFormula final : public FSymbolEvaluationFormulaBase
+{
+};
+static_assert(alignof(FQSSharedMemoryEvaluationFormula) == 0x000008, "Wrong alignment on FQSSharedMemoryEvaluationFormula");
+static_assert(sizeof(FQSSharedMemoryEvaluationFormula) == 0x000010, "Wrong size on FQSSharedMemoryEvaluationFormula");
 
 }
 

@@ -41,45 +41,43 @@ static_assert(sizeof(GCN_Stone_C_DeactiveEffect) == 0x000008, "Wrong size on GCN
 static_assert(offsetof(GCN_Stone_C_DeactiveEffect, TargetActor) == 0x000000, "Member 'GCN_Stone_C_DeactiveEffect::TargetActor' has a wrong offset!");
 
 // Function GCN_Stone.GCN_Stone_C.ExecuteUbergraph_GCN_Stone
-// 0x04F8 (0x04F8 - 0x0000)
+// 0x04F0 (0x04F0 - 0x0000)
 struct GCN_Stone_C_ExecuteUbergraph_GCN_Stone final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Event_DeltaSeconds;                         // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 K2Node_Event_Target;                               // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayCueParameters                 K2Node_Event_Parameters;                           // 0x0020(0x00D8)(ConstParm, ContainsInstancedReference)
-	struct FGameplayCueNotify_SpawnResult         K2Node_Event_SpawnResults;                         // 0x00F8(0x0058)(ConstParm, ContainsInstancedReference)
-	class AActor*                                 K2Node_Event_Target_1;                             // 0x0150(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayCueParameters                 K2Node_Event_Parameters_1;                         // 0x0158(0x00D8)(ConstParm, ContainsInstancedReference)
-	struct FGameplayCueNotify_SpawnResult         K2Node_Event_SpawnResults_1;                       // 0x0230(0x0058)(ConstParm, ContainsInstancedReference)
-	class AActor*                                 K2Node_Event_Target_2;                             // 0x0288(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayCueParameters                 K2Node_Event_Parameters_2;                         // 0x0290(0x00D8)(ConstParm, ContainsInstancedReference)
-	struct FGameplayCueNotify_SpawnResult         K2Node_Event_SpawnResults_2;                       // 0x0368(0x0058)(ConstParm, ContainsInstancedReference)
-	class AActor*                                 K2Node_Event_Target_3;                             // 0x03C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayCueParameters                 K2Node_Event_Parameters_3;                         // 0x03C8(0x00D8)(ConstParm, ContainsInstancedReference)
-	struct FGameplayCueNotify_SpawnResult         K2Node_Event_SpawnResults_3;                       // 0x04A0(0x0058)(ConstParm, ContainsInstancedReference)
+	float                                         K2Node_Event_DeltaSeconds;                         // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 K2Node_Event_Target;                               // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayCueParameters                 K2Node_Event_Parameters;                           // 0x0010(0x00D8)(ConstParm, ContainsInstancedReference)
+	struct FGameplayCueNotify_SpawnResult         K2Node_Event_SpawnResults;                         // 0x00E8(0x0058)(ConstParm, ContainsInstancedReference)
+	class AActor*                                 K2Node_Event_Target_1;                             // 0x0140(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayCueParameters                 K2Node_Event_Parameters_1;                         // 0x0148(0x00D8)(ConstParm, ContainsInstancedReference)
+	struct FGameplayCueNotify_SpawnResult         K2Node_Event_SpawnResults_1;                       // 0x0220(0x0058)(ConstParm, ContainsInstancedReference)
+	class AActor*                                 K2Node_Event_Target_2;                             // 0x0278(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayCueParameters                 K2Node_Event_Parameters_2;                         // 0x0280(0x00D8)(ConstParm, ContainsInstancedReference)
+	struct FGameplayCueNotify_SpawnResult         K2Node_Event_SpawnResults_2;                       // 0x0358(0x0058)(ConstParm, ContainsInstancedReference)
+	class AActor*                                 K2Node_Event_Target_3;                             // 0x03B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayCueParameters                 K2Node_Event_Parameters_3;                         // 0x03B8(0x00D8)(ConstParm, ContainsInstancedReference)
+	struct FGameplayCueNotify_SpawnResult         K2Node_Event_SpawnResults_3;                       // 0x0490(0x0058)(ConstParm, ContainsInstancedReference)
+	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x04E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(GCN_Stone_C_ExecuteUbergraph_GCN_Stone) == 0x000008, "Wrong alignment on GCN_Stone_C_ExecuteUbergraph_GCN_Stone");
-static_assert(sizeof(GCN_Stone_C_ExecuteUbergraph_GCN_Stone) == 0x0004F8, "Wrong size on GCN_Stone_C_ExecuteUbergraph_GCN_Stone");
+static_assert(sizeof(GCN_Stone_C_ExecuteUbergraph_GCN_Stone) == 0x0004F0, "Wrong size on GCN_Stone_C_ExecuteUbergraph_GCN_Stone");
 static_assert(offsetof(GCN_Stone_C_ExecuteUbergraph_GCN_Stone, EntryPoint) == 0x000000, "Member 'GCN_Stone_C_ExecuteUbergraph_GCN_Stone::EntryPoint' has a wrong offset!");
-static_assert(offsetof(GCN_Stone_C_ExecuteUbergraph_GCN_Stone, CallFunc_GetOwner_ReturnValue) == 0x000008, "Member 'GCN_Stone_C_ExecuteUbergraph_GCN_Stone::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GCN_Stone_C_ExecuteUbergraph_GCN_Stone, K2Node_Event_DeltaSeconds) == 0x000010, "Member 'GCN_Stone_C_ExecuteUbergraph_GCN_Stone::K2Node_Event_DeltaSeconds' has a wrong offset!");
-static_assert(offsetof(GCN_Stone_C_ExecuteUbergraph_GCN_Stone, K2Node_Event_Target) == 0x000018, "Member 'GCN_Stone_C_ExecuteUbergraph_GCN_Stone::K2Node_Event_Target' has a wrong offset!");
-static_assert(offsetof(GCN_Stone_C_ExecuteUbergraph_GCN_Stone, K2Node_Event_Parameters) == 0x000020, "Member 'GCN_Stone_C_ExecuteUbergraph_GCN_Stone::K2Node_Event_Parameters' has a wrong offset!");
-static_assert(offsetof(GCN_Stone_C_ExecuteUbergraph_GCN_Stone, K2Node_Event_SpawnResults) == 0x0000F8, "Member 'GCN_Stone_C_ExecuteUbergraph_GCN_Stone::K2Node_Event_SpawnResults' has a wrong offset!");
-static_assert(offsetof(GCN_Stone_C_ExecuteUbergraph_GCN_Stone, K2Node_Event_Target_1) == 0x000150, "Member 'GCN_Stone_C_ExecuteUbergraph_GCN_Stone::K2Node_Event_Target_1' has a wrong offset!");
-static_assert(offsetof(GCN_Stone_C_ExecuteUbergraph_GCN_Stone, K2Node_Event_Parameters_1) == 0x000158, "Member 'GCN_Stone_C_ExecuteUbergraph_GCN_Stone::K2Node_Event_Parameters_1' has a wrong offset!");
-static_assert(offsetof(GCN_Stone_C_ExecuteUbergraph_GCN_Stone, K2Node_Event_SpawnResults_1) == 0x000230, "Member 'GCN_Stone_C_ExecuteUbergraph_GCN_Stone::K2Node_Event_SpawnResults_1' has a wrong offset!");
-static_assert(offsetof(GCN_Stone_C_ExecuteUbergraph_GCN_Stone, K2Node_Event_Target_2) == 0x000288, "Member 'GCN_Stone_C_ExecuteUbergraph_GCN_Stone::K2Node_Event_Target_2' has a wrong offset!");
-static_assert(offsetof(GCN_Stone_C_ExecuteUbergraph_GCN_Stone, K2Node_Event_Parameters_2) == 0x000290, "Member 'GCN_Stone_C_ExecuteUbergraph_GCN_Stone::K2Node_Event_Parameters_2' has a wrong offset!");
-static_assert(offsetof(GCN_Stone_C_ExecuteUbergraph_GCN_Stone, K2Node_Event_SpawnResults_2) == 0x000368, "Member 'GCN_Stone_C_ExecuteUbergraph_GCN_Stone::K2Node_Event_SpawnResults_2' has a wrong offset!");
-static_assert(offsetof(GCN_Stone_C_ExecuteUbergraph_GCN_Stone, K2Node_Event_Target_3) == 0x0003C0, "Member 'GCN_Stone_C_ExecuteUbergraph_GCN_Stone::K2Node_Event_Target_3' has a wrong offset!");
-static_assert(offsetof(GCN_Stone_C_ExecuteUbergraph_GCN_Stone, K2Node_Event_Parameters_3) == 0x0003C8, "Member 'GCN_Stone_C_ExecuteUbergraph_GCN_Stone::K2Node_Event_Parameters_3' has a wrong offset!");
-static_assert(offsetof(GCN_Stone_C_ExecuteUbergraph_GCN_Stone, K2Node_Event_SpawnResults_3) == 0x0004A0, "Member 'GCN_Stone_C_ExecuteUbergraph_GCN_Stone::K2Node_Event_SpawnResults_3' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_ExecuteUbergraph_GCN_Stone, K2Node_Event_DeltaSeconds) == 0x000004, "Member 'GCN_Stone_C_ExecuteUbergraph_GCN_Stone::K2Node_Event_DeltaSeconds' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_ExecuteUbergraph_GCN_Stone, K2Node_Event_Target) == 0x000008, "Member 'GCN_Stone_C_ExecuteUbergraph_GCN_Stone::K2Node_Event_Target' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_ExecuteUbergraph_GCN_Stone, K2Node_Event_Parameters) == 0x000010, "Member 'GCN_Stone_C_ExecuteUbergraph_GCN_Stone::K2Node_Event_Parameters' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_ExecuteUbergraph_GCN_Stone, K2Node_Event_SpawnResults) == 0x0000E8, "Member 'GCN_Stone_C_ExecuteUbergraph_GCN_Stone::K2Node_Event_SpawnResults' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_ExecuteUbergraph_GCN_Stone, K2Node_Event_Target_1) == 0x000140, "Member 'GCN_Stone_C_ExecuteUbergraph_GCN_Stone::K2Node_Event_Target_1' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_ExecuteUbergraph_GCN_Stone, K2Node_Event_Parameters_1) == 0x000148, "Member 'GCN_Stone_C_ExecuteUbergraph_GCN_Stone::K2Node_Event_Parameters_1' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_ExecuteUbergraph_GCN_Stone, K2Node_Event_SpawnResults_1) == 0x000220, "Member 'GCN_Stone_C_ExecuteUbergraph_GCN_Stone::K2Node_Event_SpawnResults_1' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_ExecuteUbergraph_GCN_Stone, K2Node_Event_Target_2) == 0x000278, "Member 'GCN_Stone_C_ExecuteUbergraph_GCN_Stone::K2Node_Event_Target_2' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_ExecuteUbergraph_GCN_Stone, K2Node_Event_Parameters_2) == 0x000280, "Member 'GCN_Stone_C_ExecuteUbergraph_GCN_Stone::K2Node_Event_Parameters_2' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_ExecuteUbergraph_GCN_Stone, K2Node_Event_SpawnResults_2) == 0x000358, "Member 'GCN_Stone_C_ExecuteUbergraph_GCN_Stone::K2Node_Event_SpawnResults_2' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_ExecuteUbergraph_GCN_Stone, K2Node_Event_Target_3) == 0x0003B0, "Member 'GCN_Stone_C_ExecuteUbergraph_GCN_Stone::K2Node_Event_Target_3' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_ExecuteUbergraph_GCN_Stone, K2Node_Event_Parameters_3) == 0x0003B8, "Member 'GCN_Stone_C_ExecuteUbergraph_GCN_Stone::K2Node_Event_Parameters_3' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_ExecuteUbergraph_GCN_Stone, K2Node_Event_SpawnResults_3) == 0x000490, "Member 'GCN_Stone_C_ExecuteUbergraph_GCN_Stone::K2Node_Event_SpawnResults_3' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_ExecuteUbergraph_GCN_Stone, CallFunc_GetOwner_ReturnValue) == 0x0004E8, "Member 'GCN_Stone_C_ExecuteUbergraph_GCN_Stone::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
 
 // Function GCN_Stone.GCN_Stone_C.InitializeEffect
 // 0x0258 (0x0258 - 0x0000)
@@ -346,7 +344,7 @@ static_assert(sizeof(GCN_Stone_C_ReceiveTick) == 0x000004, "Wrong size on GCN_St
 static_assert(offsetof(GCN_Stone_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'GCN_Stone_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
 
 // Function GCN_Stone.GCN_Stone_C.SetMaterialParameter
-// 0x00E0 (0x00E0 - 0x0000)
+// 0x0128 (0x0128 - 0x0000)
 struct GCN_Stone_C_SetMaterialParameter final
 {
 public:
@@ -354,91 +352,126 @@ public:
 	float                                         InActorSize;                                       // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         InWeight;                                          // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Variable;                                 // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FMaterialParameterInfo                 K2Node_MakeStruct_MaterialParameterInfo;           // 0x002C(0x0010)(NoDestructor, HasGetValueTypeHash)
-	struct FMaterialParameterInfo                 K2Node_MakeStruct_MaterialParameterInfo_1;         // 0x003C(0x0010)(NoDestructor, HasGetValueTypeHash)
-	struct FMaterialParameterInfo                 K2Node_MakeStruct_MaterialParameterInfo_2;         // 0x004C(0x0010)(NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_1;                               // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetRuntimeFloatCurveValue_ReturnValue;    // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_3;                 // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMeshComponent*                         CallFunc_Array_Get_Item;                           // 0x0068(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInterface*                     CallFunc_GetMaterial_ReturnValue;                  // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               K2Node_DynamicCast_AsMaterial_Instance_Dynamic;    // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_91[0x3];                                       // 0x0091(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetNumMaterials_ReturnValue;              // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0099(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x009A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9B[0x5];                                       // 0x009B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMeshComponent*                         CallFunc_Array_Get_Item_1;                         // 0x00A0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_AC[0x4];                                       // 0x00AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInterface*                     CallFunc_GetMaterial_ReturnValue_1;                // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B9[0x7];                                       // 0x00B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               K2Node_DynamicCast_AsMaterial_Instance_Dynamic_1;  // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C9[0x3];                                       // 0x00C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetNumMaterials_ReturnValue_1;            // 0x00CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_3;                // 0x00D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x00D2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D3[0x1];                                       // 0x00D3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetRuntimeFloatCurveValue_ReturnValue_1;  // 0x00D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetScalarParameterValueByInfo_Value_ImplicitCast; // 0x00D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_1;                               // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_3;                 // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_2;                   // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FMaterialParameterInfo                 K2Node_MakeStruct_MaterialParameterInfo;           // 0x0038(0x0010)(NoDestructor, HasGetValueTypeHash)
+	class UMeshComponent*                         CallFunc_Array_Get_Item;                           // 0x0048(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetNumMaterials_ReturnValue;              // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5A[0x2];                                       // 0x005A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMaterialParameterInfo                 K2Node_MakeStruct_MaterialParameterInfo_1;         // 0x005C(0x0010)(NoDestructor, HasGetValueTypeHash)
+	struct FMaterialParameterInfo                 K2Node_MakeStruct_MaterialParameterInfo_2;         // 0x006C(0x0010)(NoDestructor, HasGetValueTypeHash)
+	struct FMaterialParameterInfo                 K2Node_MakeStruct_MaterialParameterInfo_3;         // 0x007C(0x0010)(NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_2;                               // 0x008C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetRuntimeFloatCurveValue_ReturnValue;    // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0094(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_95[0x3];                                       // 0x0095(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInterface*                     CallFunc_GetMaterial_ReturnValue;                  // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               K2Node_DynamicCast_AsMaterial_Instance_Dynamic;    // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A9[0x3];                                       // 0x00A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_4;                 // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_2;                  // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x00B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B5[0x3];                                       // 0x00B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_5;                 // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_BC[0x4];                                       // 0x00BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMeshComponent*                         CallFunc_Array_Get_Item_1;                         // 0x00C0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UMeshComponent*                         CallFunc_Array_Get_Item_2;                         // 0x00C8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInterface*                     CallFunc_GetMaterial_ReturnValue_1;                // 0x00D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInterface*                     CallFunc_GetMaterial_ReturnValue_2;                // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               K2Node_DynamicCast_AsMaterial_Instance_Dynamic_1;  // 0x00E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E9[0x7];                                       // 0x00E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               K2Node_DynamicCast_AsMaterial_Instance_Dynamic_2;  // 0x00F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F9[0x3];                                       // 0x00F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetNumMaterials_ReturnValue_1;            // 0x00FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0101(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0102(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_103[0x1];                                      // 0x0103(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetNumMaterials_ReturnValue_2;            // 0x0104(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_3;                // 0x0109(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_5;                    // 0x010A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_10B[0x1];                                      // 0x010B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x010C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_4;                // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_111[0x3];                                      // 0x0111(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x0114(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_5;                // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_119[0x3];                                      // 0x0119(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetRuntimeFloatCurveValue_ReturnValue_1;  // 0x011C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetScalarParameterValueByInfo_Value_ImplicitCast; // 0x0120(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(GCN_Stone_C_SetMaterialParameter) == 0x000008, "Wrong alignment on GCN_Stone_C_SetMaterialParameter");
-static_assert(sizeof(GCN_Stone_C_SetMaterialParameter) == 0x0000E0, "Wrong size on GCN_Stone_C_SetMaterialParameter");
+static_assert(sizeof(GCN_Stone_C_SetMaterialParameter) == 0x000128, "Wrong size on GCN_Stone_C_SetMaterialParameter");
 static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, Weight) == 0x000000, "Member 'GCN_Stone_C_SetMaterialParameter::Weight' has a wrong offset!");
 static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, InActorSize) == 0x000004, "Member 'GCN_Stone_C_SetMaterialParameter::InActorSize' has a wrong offset!");
 static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, InWeight) == 0x000008, "Member 'GCN_Stone_C_SetMaterialParameter::InWeight' has a wrong offset!");
 static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, Temp_int_Variable) == 0x00000C, "Member 'GCN_Stone_C_SetMaterialParameter::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, Temp_int_Loop_Counter_Variable) == 0x000010, "Member 'GCN_Stone_C_SetMaterialParameter::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_Add_IntInt_ReturnValue) == 0x000014, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_Add_IntInt_ReturnValue_1) == 0x000018, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, Temp_int_Array_Index_Variable) == 0x00001C, "Member 'GCN_Stone_C_SetMaterialParameter::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, Temp_int_Loop_Counter_Variable_1) == 0x000020, "Member 'GCN_Stone_C_SetMaterialParameter::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_Add_IntInt_ReturnValue_2) == 0x000024, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, Temp_int_Array_Index_Variable_1) == 0x000028, "Member 'GCN_Stone_C_SetMaterialParameter::Temp_int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, K2Node_MakeStruct_MaterialParameterInfo) == 0x00002C, "Member 'GCN_Stone_C_SetMaterialParameter::K2Node_MakeStruct_MaterialParameterInfo' has a wrong offset!");
-static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, K2Node_MakeStruct_MaterialParameterInfo_1) == 0x00003C, "Member 'GCN_Stone_C_SetMaterialParameter::K2Node_MakeStruct_MaterialParameterInfo_1' has a wrong offset!");
-static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, K2Node_MakeStruct_MaterialParameterInfo_2) == 0x00004C, "Member 'GCN_Stone_C_SetMaterialParameter::K2Node_MakeStruct_MaterialParameterInfo_2' has a wrong offset!");
-static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, Temp_int_Variable_1) == 0x00005C, "Member 'GCN_Stone_C_SetMaterialParameter::Temp_int_Variable_1' has a wrong offset!");
-static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_GetRuntimeFloatCurveValue_ReturnValue) == 0x000060, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_GetRuntimeFloatCurveValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_Add_IntInt_ReturnValue_3) == 0x000064, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_Add_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_Array_Get_Item) == 0x000068, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_Array_Length_ReturnValue) == 0x000070, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_GetMaterial_ReturnValue) == 0x000078, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_GetMaterial_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_Less_IntInt_ReturnValue) == 0x000080, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, K2Node_DynamicCast_AsMaterial_Instance_Dynamic) == 0x000088, "Member 'GCN_Stone_C_SetMaterialParameter::K2Node_DynamicCast_AsMaterial_Instance_Dynamic' has a wrong offset!");
-static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, K2Node_DynamicCast_bSuccess) == 0x000090, "Member 'GCN_Stone_C_SetMaterialParameter::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_GetNumMaterials_ReturnValue) == 0x000094, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_GetNumMaterials_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_IsValid_ReturnValue) == 0x000098, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_Less_IntInt_ReturnValue_1) == 0x000099, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_IsValid_ReturnValue_1) == 0x00009A, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_Array_Get_Item_1) == 0x0000A0, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_Array_Length_ReturnValue_1) == 0x0000A8, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_GetMaterial_ReturnValue_1) == 0x0000B0, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_GetMaterial_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_Less_IntInt_ReturnValue_2) == 0x0000B8, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, K2Node_DynamicCast_AsMaterial_Instance_Dynamic_1) == 0x0000C0, "Member 'GCN_Stone_C_SetMaterialParameter::K2Node_DynamicCast_AsMaterial_Instance_Dynamic_1' has a wrong offset!");
-static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, K2Node_DynamicCast_bSuccess_1) == 0x0000C8, "Member 'GCN_Stone_C_SetMaterialParameter::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_GetNumMaterials_ReturnValue_1) == 0x0000CC, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_GetNumMaterials_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_IsValid_ReturnValue_2) == 0x0000D0, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_Less_IntInt_ReturnValue_3) == 0x0000D1, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_Less_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_IsValid_ReturnValue_3) == 0x0000D2, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_GetRuntimeFloatCurveValue_ReturnValue_1) == 0x0000D4, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_GetRuntimeFloatCurveValue_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_SetScalarParameterValueByInfo_Value_ImplicitCast) == 0x0000D8, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_SetScalarParameterValueByInfo_Value_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_Add_IntInt_ReturnValue) == 0x000010, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, Temp_int_Array_Index_Variable) == 0x000014, "Member 'GCN_Stone_C_SetMaterialParameter::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, Temp_int_Loop_Counter_Variable) == 0x000018, "Member 'GCN_Stone_C_SetMaterialParameter::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_Add_IntInt_ReturnValue_1) == 0x00001C, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, Temp_int_Array_Index_Variable_1) == 0x000020, "Member 'GCN_Stone_C_SetMaterialParameter::Temp_int_Array_Index_Variable_1' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, Temp_int_Variable_1) == 0x000024, "Member 'GCN_Stone_C_SetMaterialParameter::Temp_int_Variable_1' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, Temp_int_Loop_Counter_Variable_1) == 0x000028, "Member 'GCN_Stone_C_SetMaterialParameter::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_Add_IntInt_ReturnValue_2) == 0x00002C, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_Add_IntInt_ReturnValue_3) == 0x000030, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_Add_IntInt_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, Temp_int_Array_Index_Variable_2) == 0x000034, "Member 'GCN_Stone_C_SetMaterialParameter::Temp_int_Array_Index_Variable_2' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, K2Node_MakeStruct_MaterialParameterInfo) == 0x000038, "Member 'GCN_Stone_C_SetMaterialParameter::K2Node_MakeStruct_MaterialParameterInfo' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_Array_Get_Item) == 0x000048, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_Array_Length_ReturnValue) == 0x000050, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_GetNumMaterials_ReturnValue) == 0x000054, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_GetNumMaterials_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_IsValid_ReturnValue) == 0x000058, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_IsValid_ReturnValue_1) == 0x000059, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, K2Node_MakeStruct_MaterialParameterInfo_1) == 0x00005C, "Member 'GCN_Stone_C_SetMaterialParameter::K2Node_MakeStruct_MaterialParameterInfo_1' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, K2Node_MakeStruct_MaterialParameterInfo_2) == 0x00006C, "Member 'GCN_Stone_C_SetMaterialParameter::K2Node_MakeStruct_MaterialParameterInfo_2' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, K2Node_MakeStruct_MaterialParameterInfo_3) == 0x00007C, "Member 'GCN_Stone_C_SetMaterialParameter::K2Node_MakeStruct_MaterialParameterInfo_3' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, Temp_int_Variable_2) == 0x00008C, "Member 'GCN_Stone_C_SetMaterialParameter::Temp_int_Variable_2' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_GetRuntimeFloatCurveValue_ReturnValue) == 0x000090, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_GetRuntimeFloatCurveValue_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_Less_IntInt_ReturnValue) == 0x000094, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_GetMaterial_ReturnValue) == 0x000098, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_GetMaterial_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, K2Node_DynamicCast_AsMaterial_Instance_Dynamic) == 0x0000A0, "Member 'GCN_Stone_C_SetMaterialParameter::K2Node_DynamicCast_AsMaterial_Instance_Dynamic' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, K2Node_DynamicCast_bSuccess) == 0x0000A8, "Member 'GCN_Stone_C_SetMaterialParameter::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_Add_IntInt_ReturnValue_4) == 0x0000AC, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_Add_IntInt_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, Temp_int_Loop_Counter_Variable_2) == 0x0000B0, "Member 'GCN_Stone_C_SetMaterialParameter::Temp_int_Loop_Counter_Variable_2' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_Less_IntInt_ReturnValue_1) == 0x0000B4, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_Add_IntInt_ReturnValue_5) == 0x0000B8, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_Add_IntInt_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_Array_Get_Item_1) == 0x0000C0, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_Array_Get_Item_2) == 0x0000C8, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_Array_Get_Item_2' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_GetMaterial_ReturnValue_1) == 0x0000D0, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_GetMaterial_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_GetMaterial_ReturnValue_2) == 0x0000D8, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_GetMaterial_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, K2Node_DynamicCast_AsMaterial_Instance_Dynamic_1) == 0x0000E0, "Member 'GCN_Stone_C_SetMaterialParameter::K2Node_DynamicCast_AsMaterial_Instance_Dynamic_1' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, K2Node_DynamicCast_bSuccess_1) == 0x0000E8, "Member 'GCN_Stone_C_SetMaterialParameter::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, K2Node_DynamicCast_AsMaterial_Instance_Dynamic_2) == 0x0000F0, "Member 'GCN_Stone_C_SetMaterialParameter::K2Node_DynamicCast_AsMaterial_Instance_Dynamic_2' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, K2Node_DynamicCast_bSuccess_2) == 0x0000F8, "Member 'GCN_Stone_C_SetMaterialParameter::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_GetNumMaterials_ReturnValue_1) == 0x0000FC, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_GetNumMaterials_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_Less_IntInt_ReturnValue_2) == 0x000100, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_IsValid_ReturnValue_2) == 0x000101, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_IsValid_ReturnValue_3) == 0x000102, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_GetNumMaterials_ReturnValue_2) == 0x000104, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_GetNumMaterials_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_IsValid_ReturnValue_4) == 0x000108, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_Less_IntInt_ReturnValue_3) == 0x000109, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_Less_IntInt_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_IsValid_ReturnValue_5) == 0x00010A, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_IsValid_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_Array_Length_ReturnValue_1) == 0x00010C, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_Less_IntInt_ReturnValue_4) == 0x000110, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_Less_IntInt_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_Array_Length_ReturnValue_2) == 0x000114, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_Less_IntInt_ReturnValue_5) == 0x000118, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_Less_IntInt_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_GetRuntimeFloatCurveValue_ReturnValue_1) == 0x00011C, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_GetRuntimeFloatCurveValue_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(GCN_Stone_C_SetMaterialParameter, CallFunc_SetScalarParameterValueByInfo_Value_ImplicitCast) == 0x000120, "Member 'GCN_Stone_C_SetMaterialParameter::CallFunc_SetScalarParameterValueByInfo_Value_ImplicitCast' has a wrong offset!");
 
 }
 

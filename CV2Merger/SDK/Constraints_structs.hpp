@@ -28,14 +28,6 @@ enum class EHandleEvent : uint8
 	Max                                      = 4,
 };
 
-// ScriptStruct Constraints.MovieSceneConstraintChannel
-// 0x0000 (0x0120 - 0x0120)
-struct FMovieSceneConstraintChannel final : public FMovieSceneBoolChannel
-{
-};
-static_assert(alignof(FMovieSceneConstraintChannel) == 0x000008, "Wrong alignment on FMovieSceneConstraintChannel");
-static_assert(sizeof(FMovieSceneConstraintChannel) == 0x000120, "Wrong size on FMovieSceneConstraintChannel");
-
 // ScriptStruct Constraints.ConstraintsInWorld
 // 0x0028 (0x0028 - 0x0000)
 struct FConstraintsInWorld final
@@ -49,6 +41,14 @@ static_assert(alignof(FConstraintsInWorld) == 0x000008, "Wrong alignment on FCon
 static_assert(sizeof(FConstraintsInWorld) == 0x000028, "Wrong size on FConstraintsInWorld");
 static_assert(offsetof(FConstraintsInWorld, World) == 0x000000, "Member 'FConstraintsInWorld::World' has a wrong offset!");
 static_assert(offsetof(FConstraintsInWorld, Constraints) == 0x000008, "Member 'FConstraintsInWorld::Constraints' has a wrong offset!");
+
+// ScriptStruct Constraints.MovieSceneConstraintChannel
+// 0x0000 (0x0120 - 0x0120)
+struct FMovieSceneConstraintChannel final : public FMovieSceneBoolChannel
+{
+};
+static_assert(alignof(FMovieSceneConstraintChannel) == 0x000008, "Wrong alignment on FMovieSceneConstraintChannel");
+static_assert(sizeof(FMovieSceneConstraintChannel) == 0x000120, "Wrong size on FMovieSceneConstraintChannel");
 
 // ScriptStruct Constraints.ConstraintAndActiveChannel
 // 0x0128 (0x0128 - 0x0000)

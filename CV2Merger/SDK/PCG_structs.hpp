@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "Engine_structs.hpp"
 #include "StructUtils_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK
@@ -1209,6 +1209,17 @@ static_assert(alignof(FPCGAttributeExtractorTestStructDepth2) == 0x000004, "Wron
 static_assert(sizeof(FPCGAttributeExtractorTestStructDepth2) == 0x000004, "Wrong size on FPCGAttributeExtractorTestStructDepth2");
 static_assert(offsetof(FPCGAttributeExtractorTestStructDepth2, IntValue) == 0x000000, "Member 'FPCGAttributeExtractorTestStructDepth2::IntValue' has a wrong offset!");
 
+// ScriptStruct PCG.PCGPropertyAliases
+// 0x0010 (0x0010 - 0x0000)
+struct FPCGPropertyAliases final
+{
+public:
+	TArray<class FName>                           Aliases;                                           // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPCGPropertyAliases) == 0x000008, "Wrong alignment on FPCGPropertyAliases");
+static_assert(sizeof(FPCGPropertyAliases) == 0x000010, "Wrong size on FPCGPropertyAliases");
+static_assert(offsetof(FPCGPropertyAliases, Aliases) == 0x000000, "Member 'FPCGPropertyAliases::Aliases' has a wrong offset!");
+
 // ScriptStruct PCG.PCGAttributeExtractorTestStructDepth1
 // 0x0008 (0x0008 - 0x0000)
 struct FPCGAttributeExtractorTestStructDepth1 final
@@ -1645,6 +1656,20 @@ static_assert(offsetof(FPCGSplineStruct, bClosedLoop) == 0x0000EC, "Member 'FPCG
 static_assert(offsetof(FPCGSplineStruct, LocalBounds) == 0x0000F0, "Member 'FPCGSplineStruct::LocalBounds' has a wrong offset!");
 static_assert(offsetof(FPCGSplineStruct, Bounds) == 0x000128, "Member 'FPCGSplineStruct::Bounds' has a wrong offset!");
 
+// ScriptStruct PCG.PCGMeshSelectorWeightedEntry
+// 0x0288 (0x0288 - 0x0000)
+struct FPCGMeshSelectorWeightedEntry final
+{
+public:
+	struct FSoftISMComponentDescriptor            Descriptor;                                        // 0x0000(0x0280)(Edit, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Weight;                                            // 0x0280(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_284[0x4];                                      // 0x0284(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FPCGMeshSelectorWeightedEntry) == 0x000008, "Wrong alignment on FPCGMeshSelectorWeightedEntry");
+static_assert(sizeof(FPCGMeshSelectorWeightedEntry) == 0x000288, "Wrong size on FPCGMeshSelectorWeightedEntry");
+static_assert(offsetof(FPCGMeshSelectorWeightedEntry, Descriptor) == 0x000000, "Member 'FPCGMeshSelectorWeightedEntry::Descriptor' has a wrong offset!");
+static_assert(offsetof(FPCGMeshSelectorWeightedEntry, Weight) == 0x000280, "Member 'FPCGMeshSelectorWeightedEntry::Weight' has a wrong offset!");
+
 // ScriptStruct PCG.PCGWorldCommonQueryParams
 // 0x0070 (0x0070 - 0x0000)
 struct FPCGWorldCommonQueryParams
@@ -1684,6 +1709,19 @@ public:
 static_assert(alignof(FPCGWorldVolumetricQueryParams) == 0x000008, "Wrong alignment on FPCGWorldVolumetricQueryParams");
 static_assert(sizeof(FPCGWorldVolumetricQueryParams) == 0x000078, "Wrong size on FPCGWorldVolumetricQueryParams");
 static_assert(offsetof(FPCGWorldVolumetricQueryParams, bSearchForOverlap) == 0x000070, "Member 'FPCGWorldVolumetricQueryParams::bSearchForOverlap' has a wrong offset!");
+
+// ScriptStruct PCG.PCGLandscapeLayerWeight
+// 0x000C (0x000C - 0x0000)
+struct FPCGLandscapeLayerWeight final
+{
+public:
+	class FName                                   Name;                                              // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Weight;                                            // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPCGLandscapeLayerWeight) == 0x000004, "Wrong alignment on FPCGLandscapeLayerWeight");
+static_assert(sizeof(FPCGLandscapeLayerWeight) == 0x00000C, "Wrong size on FPCGLandscapeLayerWeight");
+static_assert(offsetof(FPCGLandscapeLayerWeight, Name) == 0x000000, "Member 'FPCGLandscapeLayerWeight::Name' has a wrong offset!");
+static_assert(offsetof(FPCGLandscapeLayerWeight, Weight) == 0x000008, "Member 'FPCGLandscapeLayerWeight::Weight' has a wrong offset!");
 
 // ScriptStruct PCG.PCGWorldRayHitQueryParams
 // 0x0048 (0x00B8 - 0x0070)
@@ -1789,6 +1827,37 @@ static_assert(offsetof(FPCGSelfPruningParameters, PruningType) == 0x000000, "Mem
 static_assert(offsetof(FPCGSelfPruningParameters, ComparisonSource) == 0x000008, "Member 'FPCGSelfPruningParameters::ComparisonSource' has a wrong offset!");
 static_assert(offsetof(FPCGSelfPruningParameters, RadiusSimilarityFactor) == 0x000030, "Member 'FPCGSelfPruningParameters::RadiusSimilarityFactor' has a wrong offset!");
 static_assert(offsetof(FPCGSelfPruningParameters, bRandomizedPruning) == 0x000034, "Member 'FPCGSelfPruningParameters::bRandomizedPruning' has a wrong offset!");
+
+// ScriptStruct PCG.PCGMatchAndSetWeightedEntry
+// 0x0180 (0x0180 - 0x0000)
+struct FPCGMatchAndSetWeightedEntry final
+{
+public:
+	struct FPCGMetadataTypesConstantStruct        Value;                                             // 0x0000(0x0170)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	int32                                         Weight;                                            // 0x0170(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_174[0xC];                                      // 0x0174(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FPCGMatchAndSetWeightedEntry) == 0x000010, "Wrong alignment on FPCGMatchAndSetWeightedEntry");
+static_assert(sizeof(FPCGMatchAndSetWeightedEntry) == 0x000180, "Wrong size on FPCGMatchAndSetWeightedEntry");
+static_assert(offsetof(FPCGMatchAndSetWeightedEntry, Value) == 0x000000, "Member 'FPCGMatchAndSetWeightedEntry::Value' has a wrong offset!");
+static_assert(offsetof(FPCGMatchAndSetWeightedEntry, Weight) == 0x000170, "Member 'FPCGMatchAndSetWeightedEntry::Weight' has a wrong offset!");
+
+// ScriptStruct PCG.PCGMatchAndSetWeightedByCategoryEntryList
+// 0x0190 (0x0190 - 0x0000)
+struct FPCGMatchAndSetWeightedByCategoryEntryList final
+{
+public:
+	struct FPCGMetadataTypesConstantStruct        CategoryValue;                                     // 0x0000(0x0170)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	bool                                          bIsDefault;                                        // 0x0170(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_171[0x7];                                      // 0x0171(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FPCGMatchAndSetWeightedEntry>   WeightedEntries;                                   // 0x0178(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_188[0x8];                                      // 0x0188(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FPCGMatchAndSetWeightedByCategoryEntryList) == 0x000010, "Wrong alignment on FPCGMatchAndSetWeightedByCategoryEntryList");
+static_assert(sizeof(FPCGMatchAndSetWeightedByCategoryEntryList) == 0x000190, "Wrong size on FPCGMatchAndSetWeightedByCategoryEntryList");
+static_assert(offsetof(FPCGMatchAndSetWeightedByCategoryEntryList, CategoryValue) == 0x000000, "Member 'FPCGMatchAndSetWeightedByCategoryEntryList::CategoryValue' has a wrong offset!");
+static_assert(offsetof(FPCGMatchAndSetWeightedByCategoryEntryList, bIsDefault) == 0x000170, "Member 'FPCGMatchAndSetWeightedByCategoryEntryList::bIsDefault' has a wrong offset!");
+static_assert(offsetof(FPCGMatchAndSetWeightedByCategoryEntryList, WeightedEntries) == 0x000178, "Member 'FPCGMatchAndSetWeightedByCategoryEntryList::WeightedEntries' has a wrong offset!");
 
 // ScriptStruct PCG.PCGSplineSamplerParams
 // 0x0120 (0x0120 - 0x0000)
@@ -1901,19 +1970,6 @@ public:
 static_assert(alignof(FPCGStack) == 0x000008, "Wrong alignment on FPCGStack");
 static_assert(sizeof(FPCGStack) == 0x000010, "Wrong size on FPCGStack");
 
-// ScriptStruct PCG.PCGLandscapeLayerWeight
-// 0x000C (0x000C - 0x0000)
-struct FPCGLandscapeLayerWeight final
-{
-public:
-	class FName                                   Name;                                              // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Weight;                                            // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FPCGLandscapeLayerWeight) == 0x000004, "Wrong alignment on FPCGLandscapeLayerWeight");
-static_assert(sizeof(FPCGLandscapeLayerWeight) == 0x00000C, "Wrong size on FPCGLandscapeLayerWeight");
-static_assert(offsetof(FPCGLandscapeLayerWeight, Name) == 0x000000, "Member 'FPCGLandscapeLayerWeight::Name' has a wrong offset!");
-static_assert(offsetof(FPCGLandscapeLayerWeight, Weight) == 0x000008, "Member 'FPCGLandscapeLayerWeight::Weight' has a wrong offset!");
-
 // ScriptStruct PCG.PCGPackedCustomData
 // 0x0018 (0x0018 - 0x0000)
 struct FPCGPackedCustomData final
@@ -1941,37 +1997,6 @@ static_assert(sizeof(FPCGMatchAndSetByAttributeEntry) == 0x0002E0, "Wrong size o
 static_assert(offsetof(FPCGMatchAndSetByAttributeEntry, ValueToMatch) == 0x000000, "Member 'FPCGMatchAndSetByAttributeEntry::ValueToMatch' has a wrong offset!");
 static_assert(offsetof(FPCGMatchAndSetByAttributeEntry, Value) == 0x000170, "Member 'FPCGMatchAndSetByAttributeEntry::Value' has a wrong offset!");
 
-// ScriptStruct PCG.PCGMatchAndSetWeightedEntry
-// 0x0180 (0x0180 - 0x0000)
-struct FPCGMatchAndSetWeightedEntry final
-{
-public:
-	struct FPCGMetadataTypesConstantStruct        Value;                                             // 0x0000(0x0170)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	int32                                         Weight;                                            // 0x0170(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_174[0xC];                                      // 0x0174(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FPCGMatchAndSetWeightedEntry) == 0x000010, "Wrong alignment on FPCGMatchAndSetWeightedEntry");
-static_assert(sizeof(FPCGMatchAndSetWeightedEntry) == 0x000180, "Wrong size on FPCGMatchAndSetWeightedEntry");
-static_assert(offsetof(FPCGMatchAndSetWeightedEntry, Value) == 0x000000, "Member 'FPCGMatchAndSetWeightedEntry::Value' has a wrong offset!");
-static_assert(offsetof(FPCGMatchAndSetWeightedEntry, Weight) == 0x000170, "Member 'FPCGMatchAndSetWeightedEntry::Weight' has a wrong offset!");
-
-// ScriptStruct PCG.PCGMatchAndSetWeightedByCategoryEntryList
-// 0x0190 (0x0190 - 0x0000)
-struct FPCGMatchAndSetWeightedByCategoryEntryList final
-{
-public:
-	struct FPCGMetadataTypesConstantStruct        CategoryValue;                                     // 0x0000(0x0170)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	bool                                          bIsDefault;                                        // 0x0170(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_171[0x7];                                      // 0x0171(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FPCGMatchAndSetWeightedEntry>   WeightedEntries;                                   // 0x0178(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_188[0x8];                                      // 0x0188(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FPCGMatchAndSetWeightedByCategoryEntryList) == 0x000010, "Wrong alignment on FPCGMatchAndSetWeightedByCategoryEntryList");
-static_assert(sizeof(FPCGMatchAndSetWeightedByCategoryEntryList) == 0x000190, "Wrong size on FPCGMatchAndSetWeightedByCategoryEntryList");
-static_assert(offsetof(FPCGMatchAndSetWeightedByCategoryEntryList, CategoryValue) == 0x000000, "Member 'FPCGMatchAndSetWeightedByCategoryEntryList::CategoryValue' has a wrong offset!");
-static_assert(offsetof(FPCGMatchAndSetWeightedByCategoryEntryList, bIsDefault) == 0x000170, "Member 'FPCGMatchAndSetWeightedByCategoryEntryList::bIsDefault' has a wrong offset!");
-static_assert(offsetof(FPCGMatchAndSetWeightedByCategoryEntryList, WeightedEntries) == 0x000178, "Member 'FPCGMatchAndSetWeightedByCategoryEntryList::WeightedEntries' has a wrong offset!");
-
 // ScriptStruct PCG.PCGMeshInstanceList
 // 0x02A8 (0x02A8 - 0x0000)
 struct FPCGMeshInstanceList final
@@ -1987,20 +2012,6 @@ static_assert(sizeof(FPCGMeshInstanceList) == 0x0002A8, "Wrong size on FPCGMeshI
 static_assert(offsetof(FPCGMeshInstanceList, Descriptor) == 0x000000, "Member 'FPCGMeshInstanceList::Descriptor' has a wrong offset!");
 static_assert(offsetof(FPCGMeshInstanceList, Instances) == 0x000280, "Member 'FPCGMeshInstanceList::Instances' has a wrong offset!");
 static_assert(offsetof(FPCGMeshInstanceList, InstancesMetadataEntry) == 0x000290, "Member 'FPCGMeshInstanceList::InstancesMetadataEntry' has a wrong offset!");
-
-// ScriptStruct PCG.PCGMeshSelectorWeightedEntry
-// 0x0288 (0x0288 - 0x0000)
-struct FPCGMeshSelectorWeightedEntry final
-{
-public:
-	struct FSoftISMComponentDescriptor            Descriptor;                                        // 0x0000(0x0280)(Edit, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Weight;                                            // 0x0280(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_284[0x4];                                      // 0x0284(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FPCGMeshSelectorWeightedEntry) == 0x000008, "Wrong alignment on FPCGMeshSelectorWeightedEntry");
-static_assert(sizeof(FPCGMeshSelectorWeightedEntry) == 0x000288, "Wrong size on FPCGMeshSelectorWeightedEntry");
-static_assert(offsetof(FPCGMeshSelectorWeightedEntry, Descriptor) == 0x000000, "Member 'FPCGMeshSelectorWeightedEntry::Descriptor' has a wrong offset!");
-static_assert(offsetof(FPCGMeshSelectorWeightedEntry, Weight) == 0x000280, "Member 'FPCGMeshSelectorWeightedEntry::Weight' has a wrong offset!");
 
 // ScriptStruct PCG.PCGWeightedByCategoryEntryList
 // 0x0028 (0x0028 - 0x0000)
@@ -2142,17 +2153,6 @@ static_assert(offsetof(FPCGPoint, Color) == 0x0000A0, "Member 'FPCGPoint::Color'
 static_assert(offsetof(FPCGPoint, Steepness) == 0x0000C0, "Member 'FPCGPoint::Steepness' has a wrong offset!");
 static_assert(offsetof(FPCGPoint, Seed) == 0x0000C4, "Member 'FPCGPoint::Seed' has a wrong offset!");
 static_assert(offsetof(FPCGPoint, MetadataEntry) == 0x0000C8, "Member 'FPCGPoint::MetadataEntry' has a wrong offset!");
-
-// ScriptStruct PCG.PCGPropertyAliases
-// 0x0010 (0x0010 - 0x0000)
-struct FPCGPropertyAliases final
-{
-public:
-	TArray<class FName>                           Aliases;                                           // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FPCGPropertyAliases) == 0x000008, "Wrong alignment on FPCGPropertyAliases");
-static_assert(sizeof(FPCGPropertyAliases) == 0x000010, "Wrong size on FPCGPropertyAliases");
-static_assert(offsetof(FPCGPropertyAliases, Aliases) == 0x000000, "Member 'FPCGPropertyAliases::Aliases' has a wrong offset!");
 
 // ScriptStruct PCG.PCGSettingsOverridableParam
 // 0x0088 (0x0088 - 0x0000)

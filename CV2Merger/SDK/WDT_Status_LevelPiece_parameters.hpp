@@ -14,17 +14,6 @@
 namespace SDK::Params
 {
 
-// Function WDT_Status_LevelPiece.WDT_Status_LevelPiece_C.ExecuteUbergraph_WDT_Status_LevelPiece
-// 0x0004 (0x0004 - 0x0000)
-struct WDT_Status_LevelPiece_C_ExecuteUbergraph_WDT_Status_LevelPiece final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_Status_LevelPiece_C_ExecuteUbergraph_WDT_Status_LevelPiece) == 0x000004, "Wrong alignment on WDT_Status_LevelPiece_C_ExecuteUbergraph_WDT_Status_LevelPiece");
-static_assert(sizeof(WDT_Status_LevelPiece_C_ExecuteUbergraph_WDT_Status_LevelPiece) == 0x000004, "Wrong size on WDT_Status_LevelPiece_C_ExecuteUbergraph_WDT_Status_LevelPiece");
-static_assert(offsetof(WDT_Status_LevelPiece_C_ExecuteUbergraph_WDT_Status_LevelPiece, EntryPoint) == 0x000000, "Member 'WDT_Status_LevelPiece_C_ExecuteUbergraph_WDT_Status_LevelPiece::EntryPoint' has a wrong offset!");
-
 // Function WDT_Status_LevelPiece.WDT_Status_LevelPiece_C.SetLevel
 // 0x0018 (0x0018 - 0x0000)
 struct WDT_Status_LevelPiece_C_SetLevel final
@@ -38,6 +27,17 @@ static_assert(alignof(WDT_Status_LevelPiece_C_SetLevel) == 0x000008, "Wrong alig
 static_assert(sizeof(WDT_Status_LevelPiece_C_SetLevel) == 0x000018, "Wrong size on WDT_Status_LevelPiece_C_SetLevel");
 static_assert(offsetof(WDT_Status_LevelPiece_C_SetLevel, InLevel) == 0x000000, "Member 'WDT_Status_LevelPiece_C_SetLevel::InLevel' has a wrong offset!");
 static_assert(offsetof(WDT_Status_LevelPiece_C_SetLevel, CallFunc_Conv_IntToText_ReturnValue) == 0x000008, "Member 'WDT_Status_LevelPiece_C_SetLevel::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
+
+// Function WDT_Status_LevelPiece.WDT_Status_LevelPiece_C.ExecuteUbergraph_WDT_Status_LevelPiece
+// 0x0004 (0x0004 - 0x0000)
+struct WDT_Status_LevelPiece_C_ExecuteUbergraph_WDT_Status_LevelPiece final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_Status_LevelPiece_C_ExecuteUbergraph_WDT_Status_LevelPiece) == 0x000004, "Wrong alignment on WDT_Status_LevelPiece_C_ExecuteUbergraph_WDT_Status_LevelPiece");
+static_assert(sizeof(WDT_Status_LevelPiece_C_ExecuteUbergraph_WDT_Status_LevelPiece) == 0x000004, "Wrong size on WDT_Status_LevelPiece_C_ExecuteUbergraph_WDT_Status_LevelPiece");
+static_assert(offsetof(WDT_Status_LevelPiece_C_ExecuteUbergraph_WDT_Status_LevelPiece, EntryPoint) == 0x000000, "Member 'WDT_Status_LevelPiece_C_ExecuteUbergraph_WDT_Status_LevelPiece::EntryPoint' has a wrong offset!");
 
 }
 

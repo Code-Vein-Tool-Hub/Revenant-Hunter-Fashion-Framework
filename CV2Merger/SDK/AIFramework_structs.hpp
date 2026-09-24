@@ -108,6 +108,44 @@ public:
 static_assert(alignof(FAIFwBTNodeProperty) == 0x000008, "Wrong alignment on FAIFwBTNodeProperty");
 static_assert(sizeof(FAIFwBTNodeProperty) == 0x000010, "Wrong size on FAIFwBTNodeProperty");
 
+// ScriptStruct AIFramework.AIFwBTNodePropertyBool
+// 0x0008 (0x0018 - 0x0010)
+struct FAIFwBTNodePropertyBool final : public FAIFwBTNodeProperty
+{
+public:
+	bool                                          DefaultValue;                                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FAIFwBTNodePropertyBool) == 0x000008, "Wrong alignment on FAIFwBTNodePropertyBool");
+static_assert(sizeof(FAIFwBTNodePropertyBool) == 0x000018, "Wrong size on FAIFwBTNodePropertyBool");
+static_assert(offsetof(FAIFwBTNodePropertyBool, DefaultValue) == 0x000010, "Member 'FAIFwBTNodePropertyBool::DefaultValue' has a wrong offset!");
+
+// ScriptStruct AIFramework.AIFwFactionRelationSettings
+// 0x000C (0x000C - 0x0000)
+struct FAIFwFactionRelationSettings final
+{
+public:
+	class FName                                   Name;                                              // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Value;                                             // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FAIFwFactionRelationSettings) == 0x000004, "Wrong alignment on FAIFwFactionRelationSettings");
+static_assert(sizeof(FAIFwFactionRelationSettings) == 0x00000C, "Wrong size on FAIFwFactionRelationSettings");
+static_assert(offsetof(FAIFwFactionRelationSettings, Name) == 0x000000, "Member 'FAIFwFactionRelationSettings::Name' has a wrong offset!");
+static_assert(offsetof(FAIFwFactionRelationSettings, Value) == 0x000008, "Member 'FAIFwFactionRelationSettings::Value' has a wrong offset!");
+
+// ScriptStruct AIFramework.AIFwFactionSettings
+// 0x0018 (0x0018 - 0x0000)
+struct FAIFwFactionSettings final
+{
+public:
+	class FName                                   Name;                                              // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FAIFwFactionRelationSettings>   Relations;                                         // 0x0008(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FAIFwFactionSettings) == 0x000008, "Wrong alignment on FAIFwFactionSettings");
+static_assert(sizeof(FAIFwFactionSettings) == 0x000018, "Wrong size on FAIFwFactionSettings");
+static_assert(offsetof(FAIFwFactionSettings, Name) == 0x000000, "Member 'FAIFwFactionSettings::Name' has a wrong offset!");
+static_assert(offsetof(FAIFwFactionSettings, Relations) == 0x000008, "Member 'FAIFwFactionSettings::Relations' has a wrong offset!");
+
 // ScriptStruct AIFramework.AIFwBTArgument
 // 0x0040 (0x0040 - 0x0000)
 struct FAIFwBTArgument final
@@ -147,28 +185,6 @@ static_assert(sizeof(FAIFwParameterizedBTRequest) == 0x000018, "Wrong size on FA
 static_assert(offsetof(FAIFwParameterizedBTRequest, Template) == 0x000000, "Member 'FAIFwParameterizedBTRequest::Template' has a wrong offset!");
 static_assert(offsetof(FAIFwParameterizedBTRequest, Arguments) == 0x000008, "Member 'FAIFwParameterizedBTRequest::Arguments' has a wrong offset!");
 
-// ScriptStruct AIFramework.AIFwBlackboard
-// 0x0018 (0x0018 - 0x0000)
-struct alignas(0x08) FAIFwBlackboard final
-{
-public:
-	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FAIFwBlackboard) == 0x000008, "Wrong alignment on FAIFwBlackboard");
-static_assert(sizeof(FAIFwBlackboard) == 0x000018, "Wrong size on FAIFwBlackboard");
-
-// ScriptStruct AIFramework.AIFwBTNodePropertyBool
-// 0x0008 (0x0018 - 0x0010)
-struct FAIFwBTNodePropertyBool final : public FAIFwBTNodeProperty
-{
-public:
-	bool                                          DefaultValue;                                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FAIFwBTNodePropertyBool) == 0x000008, "Wrong alignment on FAIFwBTNodePropertyBool");
-static_assert(sizeof(FAIFwBTNodePropertyBool) == 0x000018, "Wrong size on FAIFwBTNodePropertyBool");
-static_assert(offsetof(FAIFwBTNodePropertyBool, DefaultValue) == 0x000010, "Member 'FAIFwBTNodePropertyBool::DefaultValue' has a wrong offset!");
-
 // ScriptStruct AIFramework.AIFwBTNodePropertyInt
 // 0x0008 (0x0018 - 0x0010)
 struct FAIFwBTNodePropertyInt final : public FAIFwBTNodeProperty
@@ -180,6 +196,27 @@ public:
 static_assert(alignof(FAIFwBTNodePropertyInt) == 0x000008, "Wrong alignment on FAIFwBTNodePropertyInt");
 static_assert(sizeof(FAIFwBTNodePropertyInt) == 0x000018, "Wrong size on FAIFwBTNodePropertyInt");
 static_assert(offsetof(FAIFwBTNodePropertyInt, DefaultValue) == 0x000010, "Member 'FAIFwBTNodePropertyInt::DefaultValue' has a wrong offset!");
+
+// ScriptStruct AIFramework.AIFwSmartObjectUserSettings
+// 0x0008 (0x0008 - 0x0000)
+struct FAIFwSmartObjectUserSettings final
+{
+public:
+	class FName                                   Name;                                              // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FAIFwSmartObjectUserSettings) == 0x000004, "Wrong alignment on FAIFwSmartObjectUserSettings");
+static_assert(sizeof(FAIFwSmartObjectUserSettings) == 0x000008, "Wrong size on FAIFwSmartObjectUserSettings");
+static_assert(offsetof(FAIFwSmartObjectUserSettings, Name) == 0x000000, "Member 'FAIFwSmartObjectUserSettings::Name' has a wrong offset!");
+
+// ScriptStruct AIFramework.AIFwBlackboard
+// 0x0018 (0x0018 - 0x0000)
+struct alignas(0x08) FAIFwBlackboard final
+{
+public:
+	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FAIFwBlackboard) == 0x000008, "Wrong alignment on FAIFwBlackboard");
+static_assert(sizeof(FAIFwBlackboard) == 0x000018, "Wrong size on FAIFwBlackboard");
 
 // ScriptStruct AIFramework.AIFwBTNodePropertyFloat
 // 0x0008 (0x0018 - 0x0010)
@@ -347,43 +384,6 @@ public:
 };
 static_assert(alignof(FAIFwHearingActorData) == 0x000008, "Wrong alignment on FAIFwHearingActorData");
 static_assert(sizeof(FAIFwHearingActorData) == 0x000010, "Wrong size on FAIFwHearingActorData");
-
-// ScriptStruct AIFramework.AIFwFactionRelationSettings
-// 0x000C (0x000C - 0x0000)
-struct FAIFwFactionRelationSettings final
-{
-public:
-	class FName                                   Name;                                              // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Value;                                             // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FAIFwFactionRelationSettings) == 0x000004, "Wrong alignment on FAIFwFactionRelationSettings");
-static_assert(sizeof(FAIFwFactionRelationSettings) == 0x00000C, "Wrong size on FAIFwFactionRelationSettings");
-static_assert(offsetof(FAIFwFactionRelationSettings, Name) == 0x000000, "Member 'FAIFwFactionRelationSettings::Name' has a wrong offset!");
-static_assert(offsetof(FAIFwFactionRelationSettings, Value) == 0x000008, "Member 'FAIFwFactionRelationSettings::Value' has a wrong offset!");
-
-// ScriptStruct AIFramework.AIFwFactionSettings
-// 0x0018 (0x0018 - 0x0000)
-struct FAIFwFactionSettings final
-{
-public:
-	class FName                                   Name;                                              // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FAIFwFactionRelationSettings>   Relations;                                         // 0x0008(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FAIFwFactionSettings) == 0x000008, "Wrong alignment on FAIFwFactionSettings");
-static_assert(sizeof(FAIFwFactionSettings) == 0x000018, "Wrong size on FAIFwFactionSettings");
-static_assert(offsetof(FAIFwFactionSettings, Name) == 0x000000, "Member 'FAIFwFactionSettings::Name' has a wrong offset!");
-static_assert(offsetof(FAIFwFactionSettings, Relations) == 0x000008, "Member 'FAIFwFactionSettings::Relations' has a wrong offset!");
-
-// ScriptStruct AIFramework.AIFwSmartObjectUserSettings
-// 0x0008 (0x0008 - 0x0000)
-struct FAIFwSmartObjectUserSettings final
-{
-public:
-	class FName                                   Name;                                              // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FAIFwSmartObjectUserSettings) == 0x000004, "Wrong alignment on FAIFwSmartObjectUserSettings");
-static_assert(sizeof(FAIFwSmartObjectUserSettings) == 0x000008, "Wrong size on FAIFwSmartObjectUserSettings");
-static_assert(offsetof(FAIFwSmartObjectUserSettings, Name) == 0x000000, "Member 'FAIFwSmartObjectUserSettings::Name' has a wrong offset!");
 
 // ScriptStruct AIFramework.AIFwSmartObjectUserSelector
 // 0x0004 (0x0004 - 0x0000)

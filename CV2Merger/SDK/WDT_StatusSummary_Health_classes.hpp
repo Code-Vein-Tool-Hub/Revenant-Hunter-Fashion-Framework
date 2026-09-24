@@ -33,11 +33,11 @@ public:
 	class UTextBlock*                             SummaryMaxHP_DiffNum;                              // 0x0708(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void Construct();
-	void ExecuteUbergraph_WDT_StatusSummary_Health(int32 EntryPoint);
-	void SetHealth(double InHealth, double InMaxHealth);
-	void SetHealthComparison(int32 InMaxHealthCurrent, int32 InMaxHealth, int32 InMaxLPCurrent, int32 InMaxLP);
 	void SetLP(int32 InLP, int32 InMaxLP);
+	void SetHealthComparison(int32 InMaxHealthCurrent, int32 InMaxHealth, int32 InMaxLPCurrent, int32 InMaxLP);
+	void SetHealth(double InHealth, double InMaxHealth);
+	void ExecuteUbergraph_WDT_StatusSummary_Health(int32 EntryPoint);
+	void Construct();
 
 public:
 	static class UClass* StaticClass()

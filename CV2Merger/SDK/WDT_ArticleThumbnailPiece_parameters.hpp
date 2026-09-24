@@ -17,6 +17,25 @@
 namespace SDK::Params
 {
 
+// Function WDT_ArticleThumbnailPiece.WDT_ArticleThumbnailPiece_C.UpdateCheck
+// 0x0005 (0x0005 - 0x0000)
+struct WDT_ArticleThumbnailPiece_C_UpdateCheck final
+{
+public:
+	bool                                          PlayAnimation_0;                                   // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsAnotherAppearance_ReturnValue;          // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Uncheck_ReturnValue;                      // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Check_ReturnValue;                        // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsChecked_ReturnValue;                    // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_ArticleThumbnailPiece_C_UpdateCheck) == 0x000001, "Wrong alignment on WDT_ArticleThumbnailPiece_C_UpdateCheck");
+static_assert(sizeof(WDT_ArticleThumbnailPiece_C_UpdateCheck) == 0x000005, "Wrong size on WDT_ArticleThumbnailPiece_C_UpdateCheck");
+static_assert(offsetof(WDT_ArticleThumbnailPiece_C_UpdateCheck, PlayAnimation_0) == 0x000000, "Member 'WDT_ArticleThumbnailPiece_C_UpdateCheck::PlayAnimation_0' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleThumbnailPiece_C_UpdateCheck, CallFunc_IsAnotherAppearance_ReturnValue) == 0x000001, "Member 'WDT_ArticleThumbnailPiece_C_UpdateCheck::CallFunc_IsAnotherAppearance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleThumbnailPiece_C_UpdateCheck, CallFunc_Uncheck_ReturnValue) == 0x000002, "Member 'WDT_ArticleThumbnailPiece_C_UpdateCheck::CallFunc_Uncheck_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleThumbnailPiece_C_UpdateCheck, CallFunc_Check_ReturnValue) == 0x000003, "Member 'WDT_ArticleThumbnailPiece_C_UpdateCheck::CallFunc_Check_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleThumbnailPiece_C_UpdateCheck, CallFunc_IsChecked_ReturnValue) == 0x000004, "Member 'WDT_ArticleThumbnailPiece_C_UpdateCheck::CallFunc_IsChecked_ReturnValue' has a wrong offset!");
+
 // Function WDT_ArticleThumbnailPiece.WDT_ArticleThumbnailPiece_C.Unhighlight
 // 0x0002 (0x0002 - 0x0000)
 struct WDT_ArticleThumbnailPiece_C_Unhighlight final
@@ -80,7 +99,8 @@ public:
 	TSoftObjectPtr<class UTexture2D>              LazyTexture;                                       // 0x0008(0x0028)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue;   // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchName_CmpSuccess;                      // 0x0032(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue_1; // 0x0032(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchName_CmpSuccess;                      // 0x0033(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_ArticleThumbnailPiece_C_SetSubLazyTexture) == 0x000008, "Wrong alignment on WDT_ArticleThumbnailPiece_C_SetSubLazyTexture");
 static_assert(sizeof(WDT_ArticleThumbnailPiece_C_SetSubLazyTexture) == 0x000038, "Wrong size on WDT_ArticleThumbnailPiece_C_SetSubLazyTexture");
@@ -88,7 +108,8 @@ static_assert(offsetof(WDT_ArticleThumbnailPiece_C_SetSubLazyTexture, ImageId) =
 static_assert(offsetof(WDT_ArticleThumbnailPiece_C_SetSubLazyTexture, LazyTexture) == 0x000008, "Member 'WDT_ArticleThumbnailPiece_C_SetSubLazyTexture::LazyTexture' has a wrong offset!");
 static_assert(offsetof(WDT_ArticleThumbnailPiece_C_SetSubLazyTexture, ReturnValue) == 0x000030, "Member 'WDT_ArticleThumbnailPiece_C_SetSubLazyTexture::ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_ArticleThumbnailPiece_C_SetSubLazyTexture, CallFunc_IsValidSoftObjectReference_ReturnValue) == 0x000031, "Member 'WDT_ArticleThumbnailPiece_C_SetSubLazyTexture::CallFunc_IsValidSoftObjectReference_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleThumbnailPiece_C_SetSubLazyTexture, K2Node_SwitchName_CmpSuccess) == 0x000032, "Member 'WDT_ArticleThumbnailPiece_C_SetSubLazyTexture::K2Node_SwitchName_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleThumbnailPiece_C_SetSubLazyTexture, CallFunc_IsValidSoftObjectReference_ReturnValue_1) == 0x000032, "Member 'WDT_ArticleThumbnailPiece_C_SetSubLazyTexture::CallFunc_IsValidSoftObjectReference_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleThumbnailPiece_C_SetSubLazyTexture, K2Node_SwitchName_CmpSuccess) == 0x000033, "Member 'WDT_ArticleThumbnailPiece_C_SetSubLazyTexture::K2Node_SwitchName_CmpSuccess' has a wrong offset!");
 
 // Function WDT_ArticleThumbnailPiece.WDT_ArticleThumbnailPiece_C.SetScrollerItem
 // 0x0008 (0x0008 - 0x0000)
@@ -241,15 +262,36 @@ static_assert(offsetof(WDT_ArticleThumbnailPiece_C_OnFocusReceived, ReturnValue)
 static_assert(offsetof(WDT_ArticleThumbnailPiece_C_OnFocusReceived, CallFunc_Unhandled_ReturnValue) == 0x0000F8, "Member 'WDT_ArticleThumbnailPiece_C_OnFocusReceived::CallFunc_Unhandled_ReturnValue' has a wrong offset!");
 
 // Function WDT_ArticleThumbnailPiece.WDT_ArticleThumbnailPiece_C.IsChecked
-// 0x0001 (0x0001 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct WDT_ArticleThumbnailPiece_C_IsChecked final
 {
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_CheckableScrollerItem_C*            K2Node_DynamicCast_AsBP_Checkable_Scroller_Item;   // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WDT_ArticleThumbnailPiece_C_IsChecked) == 0x000001, "Wrong alignment on WDT_ArticleThumbnailPiece_C_IsChecked");
-static_assert(sizeof(WDT_ArticleThumbnailPiece_C_IsChecked) == 0x000001, "Wrong size on WDT_ArticleThumbnailPiece_C_IsChecked");
+static_assert(alignof(WDT_ArticleThumbnailPiece_C_IsChecked) == 0x000008, "Wrong alignment on WDT_ArticleThumbnailPiece_C_IsChecked");
+static_assert(sizeof(WDT_ArticleThumbnailPiece_C_IsChecked) == 0x000018, "Wrong size on WDT_ArticleThumbnailPiece_C_IsChecked");
 static_assert(offsetof(WDT_ArticleThumbnailPiece_C_IsChecked, ReturnValue) == 0x000000, "Member 'WDT_ArticleThumbnailPiece_C_IsChecked::ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleThumbnailPiece_C_IsChecked, K2Node_DynamicCast_AsBP_Checkable_Scroller_Item) == 0x000008, "Member 'WDT_ArticleThumbnailPiece_C_IsChecked::K2Node_DynamicCast_AsBP_Checkable_Scroller_Item' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleThumbnailPiece_C_IsChecked, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'WDT_ArticleThumbnailPiece_C_IsChecked::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+
+// Function WDT_ArticleThumbnailPiece.WDT_ArticleThumbnailPiece_C.IsAnotherAppearance
+// 0x0018 (0x0018 - 0x0000)
+struct WDT_ArticleThumbnailPiece_C_IsAnotherAppearance final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_CheckableScrollerItem_C*            K2Node_DynamicCast_AsBP_Checkable_Scroller_Item;   // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_ArticleThumbnailPiece_C_IsAnotherAppearance) == 0x000008, "Wrong alignment on WDT_ArticleThumbnailPiece_C_IsAnotherAppearance");
+static_assert(sizeof(WDT_ArticleThumbnailPiece_C_IsAnotherAppearance) == 0x000018, "Wrong size on WDT_ArticleThumbnailPiece_C_IsAnotherAppearance");
+static_assert(offsetof(WDT_ArticleThumbnailPiece_C_IsAnotherAppearance, ReturnValue) == 0x000000, "Member 'WDT_ArticleThumbnailPiece_C_IsAnotherAppearance::ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleThumbnailPiece_C_IsAnotherAppearance, K2Node_DynamicCast_AsBP_Checkable_Scroller_Item) == 0x000008, "Member 'WDT_ArticleThumbnailPiece_C_IsAnotherAppearance::K2Node_DynamicCast_AsBP_Checkable_Scroller_Item' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleThumbnailPiece_C_IsAnotherAppearance, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'WDT_ArticleThumbnailPiece_C_IsAnotherAppearance::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 
 // Function WDT_ArticleThumbnailPiece.WDT_ArticleThumbnailPiece_C.Highlight
 // 0x0002 (0x0002 - 0x0000)

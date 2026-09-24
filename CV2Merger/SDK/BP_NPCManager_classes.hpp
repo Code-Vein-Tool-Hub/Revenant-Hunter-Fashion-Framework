@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_NPCManager.BP_NPCManager_C
-// 0x0000 (0x00B0 - 0x00B0)
+// 0x0000 (0x0200 - 0x0200)
 class UBP_NPCManager_C final : public UNPCManager
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UBP_NPCManager_C) == 0x000008, "Wrong alignment on UBP_NPCManager_C");
-static_assert(sizeof(UBP_NPCManager_C) == 0x0000B0, "Wrong size on UBP_NPCManager_C");
+static_assert(sizeof(UBP_NPCManager_C) == 0x000200, "Wrong size on UBP_NPCManager_C");
 
 }
 

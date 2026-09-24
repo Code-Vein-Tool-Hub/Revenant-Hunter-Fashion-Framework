@@ -18,11 +18,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GCN_Stall.GCN_Stall_C
-// 0x0008 (0x0F20 - 0x0F18)
+// 0x0008 (0x0F30 - 0x0F28)
 class AGCN_Stall_C final : public AGCN_StatusEffect_Looping_Base_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_GCN_Stall_C;                        // 0x0F18(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame_GCN_Stall_C;                        // 0x0F28(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_GCN_Stall(int32 EntryPoint);
@@ -42,8 +42,8 @@ public:
 	}
 };
 static_assert(alignof(AGCN_Stall_C) == 0x000008, "Wrong alignment on AGCN_Stall_C");
-static_assert(sizeof(AGCN_Stall_C) == 0x000F20, "Wrong size on AGCN_Stall_C");
-static_assert(offsetof(AGCN_Stall_C, UberGraphFrame_GCN_Stall_C) == 0x000F18, "Member 'AGCN_Stall_C::UberGraphFrame_GCN_Stall_C' has a wrong offset!");
+static_assert(sizeof(AGCN_Stall_C) == 0x000F30, "Wrong size on AGCN_Stall_C");
+static_assert(offsetof(AGCN_Stall_C, UberGraphFrame_GCN_Stall_C) == 0x000F28, "Member 'AGCN_Stall_C::UberGraphFrame_GCN_Stall_C' has a wrong offset!");
 
 }
 

@@ -101,7 +101,7 @@ static_assert(sizeof(WDT_BloodCodeEquipmentMenu_C_BndEvt__WDT_BloodCodeEquipment
 static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_BndEvt__WDT_BloodCodeEquipmentMenu_BloodCodeGridBox_K2Node_ComponentBoundEvent_4_SimpleListItemEventDynamic__DelegateSignature, Item) == 0x000000, "Member 'WDT_BloodCodeEquipmentMenu_C_BndEvt__WDT_BloodCodeEquipmentMenu_BloodCodeGridBox_K2Node_ComponentBoundEvent_4_SimpleListItemEventDynamic__DelegateSignature::Item' has a wrong offset!");
 
 // Function WDT_BloodCodeEquipmentMenu.WDT_BloodCodeEquipmentMenu_C.ExecuteUbergraph_WDT_BloodCodeEquipmentMenu
-// 0x0918 (0x0918 - 0x0000)
+// 0x0970 (0x0970 - 0x0000)
 struct WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu final
 {
 public:
@@ -291,7 +291,9 @@ public:
 	double                                        Temp_real_Variable_19;                             // 0x0560(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_20;                             // 0x0568(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_IsDesignTime;                         // 0x0570(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_571[0x7];                                      // 0x0571(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          CallFunc_IsSelectMode_OutFlag_4;                   // 0x0571(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_4;                // 0x0572(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_573[0x5];                                      // 0x0573(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUIObjectBase*                          CallFunc_GetUIObject_ReturnValue;                  // 0x0578(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UFieldMenuUIObject*                     K2Node_DynamicCast_AsField_Menu_UIObject;          // 0x0580(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0588(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -313,74 +315,77 @@ public:
 	class UWDT_ArticleThumbnailPiece_C*           K2Node_DynamicCast_AsWDT_Article_Thumbnail_Piece;  // 0x05F8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0600(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_601[0x7];                                      // 0x0601(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBP_CheckableScrollerItem_C*            K2Node_DynamicCast_AsBP_Checkable_Scroller_Item;   // 0x0608(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x0610(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_611[0x3];                                      // 0x0611(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetElementIndex_ReturnValue;              // 0x0614(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UInputAction*                           Temp_object_Variable_9;                            // 0x0618(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FUIBloodCodeInfo                       CallFunc_GetBloodCodeInfoByIndex_OutBloodCodeInfo; // 0x0620(0x00D8)()
-	class UObject*                                K2Node_ComponentBoundEvent_Item_2;                 // 0x06F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_ComponentBoundEvent_bIsSelected;            // 0x0700(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SetLazyTexture_ReturnValue;               // 0x0701(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_702[0x6];                                      // 0x0702(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0708(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0710(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_711[0x7];                                      // 0x0711(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_1;           // 0x0718(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0720(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UBP_CheckableScrollerItem_C*            K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_1; // 0x0728(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_6;                     // 0x0730(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue;    // 0x0731(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_732[0x2];                                      // 0x0732(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetElementIndex_ReturnValue_1;            // 0x0734(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SetFlag_ReturnValue_1;                    // 0x0738(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_739[0x7];                                      // 0x0739(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUserWidget*                            K2Node_ComponentBoundEvent_Widget;                 // 0x0740(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FInputActionValue                      K2Node_EnhancedInputActionEvent_ActionValue_12;    // 0x0748(0x0020)(NoDestructor)
-	float                                         K2Node_EnhancedInputActionEvent_ElapsedTime_12;    // 0x0768(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_EnhancedInputActionEvent_TriggeredTime_12;  // 0x076C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     K2Node_EnhancedInputActionEvent_SourceAction_12;   // 0x0770(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class ISelectableInterface>  K2Node_DynamicCast_AsSelectable_Interface;         // 0x0778(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_7;                     // 0x0788(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Deselect_ReturnValue;                     // 0x0789(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_78A[0x6];                                      // 0x078A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        Temp_real_Variable_20_0;                           // 0x0790(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable_17_0;                           // 0x0798(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Conv_InputActionValueToBool_ReturnValue_11; // 0x07A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7A1[0x7];                                      // 0x07A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        K2Node_Event_InCurrentHealth;                      // 0x07A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_Event_InMaxHealth;                          // 0x07B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FUIPlayerStatusSummaryInfo             CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo; // 0x07B8(0x00B8)(NoDestructor)
-	int32                                         K2Node_Event_InCurrentStamina;                     // 0x0870(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_Event_InMaxStamina;                         // 0x0874(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_InProhibited;                         // 0x0878(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_879[0x7];                                      // 0x0879(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UInputAction*                           Temp_object_Variable_10;                           // 0x0880(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FInputActionValue                      K2Node_EnhancedInputActionEvent_ActionValue_10;    // 0x0888(0x0020)(NoDestructor)
-	float                                         K2Node_EnhancedInputActionEvent_ElapsedTime_10;    // 0x08A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_EnhancedInputActionEvent_TriggeredTime_10;  // 0x08AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     K2Node_EnhancedInputActionEvent_SourceAction_10;   // 0x08B0(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                K2Node_ComponentBoundEvent_Item_1;                 // 0x08B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_ComponentBoundEvent_bIsHovered;             // 0x08C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8C1[0x7];                                      // 0x08C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBP_CheckableScrollerItem_C*            K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_2; // 0x08C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_8;                     // 0x08D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IIF_ScrollerItemHolder_C> K2Node_DynamicCast_AsIF_Scroller_Item_Holder;      // 0x0608(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x0618(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_619[0x7];                                      // 0x0619(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_CheckableScrollerItem_C*            K2Node_DynamicCast_AsBP_Checkable_Scroller_Item;   // 0x0620(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_6;                     // 0x0628(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_629[0x3];                                      // 0x0629(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetElementIndex_ReturnValue;              // 0x062C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UInputAction*                           Temp_object_Variable_9;                            // 0x0630(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FUIBloodCodeInfo                       CallFunc_GetBloodCodeInfoByIndex_OutBloodCodeInfo; // 0x0638(0x00F8)()
+	class UObject*                                K2Node_ComponentBoundEvent_Item_2;                 // 0x0730(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_ComponentBoundEvent_bIsSelected;            // 0x0738(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SetLazyTexture_ReturnValue;               // 0x0739(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_73A[0x6];                                      // 0x073A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0740(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0748(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_749[0x7];                                      // 0x0749(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_1;           // 0x0750(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0758(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UBP_CheckableScrollerItem_C*            K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_1; // 0x0760(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_7;                     // 0x0768(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue;    // 0x0769(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_76A[0x2];                                      // 0x076A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetElementIndex_ReturnValue_1;            // 0x076C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SetFlag_ReturnValue_1;                    // 0x0770(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_771[0x7];                                      // 0x0771(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUserWidget*                            K2Node_ComponentBoundEvent_Widget;                 // 0x0778(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FInputActionValue                      K2Node_EnhancedInputActionEvent_ActionValue_12;    // 0x0780(0x0020)(NoDestructor)
+	float                                         K2Node_EnhancedInputActionEvent_ElapsedTime_12;    // 0x07A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_EnhancedInputActionEvent_TriggeredTime_12;  // 0x07A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     K2Node_EnhancedInputActionEvent_SourceAction_12;   // 0x07A8(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class ISelectableInterface>  K2Node_DynamicCast_AsSelectable_Interface;         // 0x07B0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_8;                     // 0x07C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Deselect_ReturnValue;                     // 0x07C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7C2[0x6];                                      // 0x07C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Temp_real_Variable_20_0;                           // 0x07C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_17_0;                           // 0x07D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Conv_InputActionValueToBool_ReturnValue_11; // 0x07D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7D9[0x7];                                      // 0x07D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        K2Node_Event_InCurrentHealth;                      // 0x07E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_Event_InMaxHealth;                          // 0x07E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FUIPlayerStatusSummaryInfo             CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo; // 0x07F0(0x00D8)()
+	int32                                         K2Node_Event_InCurrentStamina;                     // 0x08C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_Event_InMaxStamina;                         // 0x08CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_InProhibited;                         // 0x08D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_8D1[0x7];                                      // 0x08D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        Temp_real_Variable_19_0;                           // 0x08D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetElementIndex_ReturnValue_2;            // 0x08E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8E4[0x4];                                      // 0x08E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        Temp_real_Variable_18_0;                           // 0x08E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Conv_InputActionValueToBool_ReturnValue_12; // 0x08F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8F1[0x7];                                      // 0x08F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                K2Node_ComponentBoundEvent_Item;                   // 0x08F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetStoryFlagValueByBoolean_ReturnValue;   // 0x0900(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_10;                             // 0x0901(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_902[0x6];                                      // 0x0902(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        Temp_real_Variable_21;                             // 0x0908(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable_21_0;                           // 0x0910(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UInputAction*                           Temp_object_Variable_10;                           // 0x08D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FInputActionValue                      K2Node_EnhancedInputActionEvent_ActionValue_10;    // 0x08E0(0x0020)(NoDestructor)
+	float                                         K2Node_EnhancedInputActionEvent_ElapsedTime_10;    // 0x0900(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_EnhancedInputActionEvent_TriggeredTime_10;  // 0x0904(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     K2Node_EnhancedInputActionEvent_SourceAction_10;   // 0x0908(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                K2Node_ComponentBoundEvent_Item_1;                 // 0x0910(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_ComponentBoundEvent_bIsHovered;             // 0x0918(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_919[0x7];                                      // 0x0919(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_CheckableScrollerItem_C*            K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_2; // 0x0920(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_9;                     // 0x0928(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_929[0x7];                                      // 0x0929(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Temp_real_Variable_19_0;                           // 0x0930(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetElementIndex_ReturnValue_2;            // 0x0938(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_93C[0x4];                                      // 0x093C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Temp_real_Variable_18_0;                           // 0x0940(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Conv_InputActionValueToBool_ReturnValue_12; // 0x0948(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_949[0x7];                                      // 0x0949(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                K2Node_ComponentBoundEvent_Item;                   // 0x0950(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetStoryFlagValueByBoolean_ReturnValue;   // 0x0958(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_10;                             // 0x0959(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_95A[0x6];                                      // 0x095A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Temp_real_Variable_21;                             // 0x0960(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_21_0;                           // 0x0968(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu) == 0x000008, "Wrong alignment on WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu");
-static_assert(sizeof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu) == 0x000918, "Wrong size on WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu");
+static_assert(sizeof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu) == 0x000970, "Wrong size on WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu");
 static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, EntryPoint) == 0x000000, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::EntryPoint' has a wrong offset!");
 static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_EnhancedInputActionEvent_ActionValue_9) == 0x000008, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_EnhancedInputActionEvent_ActionValue_9' has a wrong offset!");
 static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_EnhancedInputActionEvent_ElapsedTime_9) == 0x000028, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_EnhancedInputActionEvent_ElapsedTime_9' has a wrong offset!");
@@ -538,6 +543,8 @@ static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCo
 static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, Temp_real_Variable_19) == 0x000560, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::Temp_real_Variable_19' has a wrong offset!");
 static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, Temp_real_Variable_20) == 0x000568, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::Temp_real_Variable_20' has a wrong offset!");
 static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_Event_IsDesignTime) == 0x000570, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_Event_IsDesignTime' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, CallFunc_IsSelectMode_OutFlag_4) == 0x000571, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::CallFunc_IsSelectMode_OutFlag_4' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, CallFunc_Not_PreBool_ReturnValue_4) == 0x000572, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::CallFunc_Not_PreBool_ReturnValue_4' has a wrong offset!");
 static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, CallFunc_GetUIObject_ReturnValue) == 0x000578, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::CallFunc_GetUIObject_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_DynamicCast_AsField_Menu_UIObject) == 0x000580, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_DynamicCast_AsField_Menu_UIObject' has a wrong offset!");
 static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_DynamicCast_bSuccess) == 0x000588, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_DynamicCast_bSuccess' has a wrong offset!");
@@ -553,80 +560,83 @@ static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCo
 static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, CallFunc_SetFlag_ReturnValue) == 0x0005F1, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::CallFunc_SetFlag_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_DynamicCast_AsWDT_Article_Thumbnail_Piece) == 0x0005F8, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_DynamicCast_AsWDT_Article_Thumbnail_Piece' has a wrong offset!");
 static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_DynamicCast_bSuccess_4) == 0x000600, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_DynamicCast_AsBP_Checkable_Scroller_Item) == 0x000608, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_DynamicCast_AsBP_Checkable_Scroller_Item' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_DynamicCast_bSuccess_5) == 0x000610, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_DynamicCast_bSuccess_5' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, CallFunc_GetElementIndex_ReturnValue) == 0x000614, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::CallFunc_GetElementIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, Temp_object_Variable_9) == 0x000618, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::Temp_object_Variable_9' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, CallFunc_GetBloodCodeInfoByIndex_OutBloodCodeInfo) == 0x000620, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::CallFunc_GetBloodCodeInfoByIndex_OutBloodCodeInfo' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_ComponentBoundEvent_Item_2) == 0x0006F8, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_ComponentBoundEvent_Item_2' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_ComponentBoundEvent_bIsSelected) == 0x000700, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_ComponentBoundEvent_bIsSelected' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, CallFunc_SetLazyTexture_ReturnValue) == 0x000701, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::CallFunc_SetLazyTexture_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, CallFunc_Conv_IntToDouble_ReturnValue) == 0x000708, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000710, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, CallFunc_Conv_IntToDouble_ReturnValue_1) == 0x000718, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::CallFunc_Conv_IntToDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000720, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_1) == 0x000728, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_1' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_DynamicCast_bSuccess_6) == 0x000730, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_DynamicCast_bSuccess_6' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, CallFunc_GreaterEqual_DoubleDouble_ReturnValue) == 0x000731, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::CallFunc_GreaterEqual_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, CallFunc_GetElementIndex_ReturnValue_1) == 0x000734, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::CallFunc_GetElementIndex_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, CallFunc_SetFlag_ReturnValue_1) == 0x000738, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::CallFunc_SetFlag_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_ComponentBoundEvent_Widget) == 0x000740, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_ComponentBoundEvent_Widget' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_EnhancedInputActionEvent_ActionValue_12) == 0x000748, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_EnhancedInputActionEvent_ActionValue_12' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_EnhancedInputActionEvent_ElapsedTime_12) == 0x000768, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_EnhancedInputActionEvent_ElapsedTime_12' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_EnhancedInputActionEvent_TriggeredTime_12) == 0x00076C, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_EnhancedInputActionEvent_TriggeredTime_12' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_EnhancedInputActionEvent_SourceAction_12) == 0x000770, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_EnhancedInputActionEvent_SourceAction_12' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_DynamicCast_AsSelectable_Interface) == 0x000778, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_DynamicCast_AsSelectable_Interface' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_DynamicCast_bSuccess_7) == 0x000788, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_DynamicCast_bSuccess_7' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, CallFunc_Deselect_ReturnValue) == 0x000789, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::CallFunc_Deselect_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, Temp_real_Variable_20_0) == 0x000790, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::Temp_real_Variable_20_0' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, Temp_real_Variable_17_0) == 0x000798, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::Temp_real_Variable_17_0' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, CallFunc_Conv_InputActionValueToBool_ReturnValue_11) == 0x0007A0, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::CallFunc_Conv_InputActionValueToBool_ReturnValue_11' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_Event_InCurrentHealth) == 0x0007A8, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_Event_InCurrentHealth' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_Event_InMaxHealth) == 0x0007B0, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_Event_InMaxHealth' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo) == 0x0007B8, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_Event_InCurrentStamina) == 0x000870, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_Event_InCurrentStamina' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_Event_InMaxStamina) == 0x000874, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_Event_InMaxStamina' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_Event_InProhibited) == 0x000878, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_Event_InProhibited' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, Temp_object_Variable_10) == 0x000880, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::Temp_object_Variable_10' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_EnhancedInputActionEvent_ActionValue_10) == 0x000888, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_EnhancedInputActionEvent_ActionValue_10' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_EnhancedInputActionEvent_ElapsedTime_10) == 0x0008A8, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_EnhancedInputActionEvent_ElapsedTime_10' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_EnhancedInputActionEvent_TriggeredTime_10) == 0x0008AC, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_EnhancedInputActionEvent_TriggeredTime_10' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_EnhancedInputActionEvent_SourceAction_10) == 0x0008B0, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_EnhancedInputActionEvent_SourceAction_10' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_ComponentBoundEvent_Item_1) == 0x0008B8, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_ComponentBoundEvent_Item_1' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_ComponentBoundEvent_bIsHovered) == 0x0008C0, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_ComponentBoundEvent_bIsHovered' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_2) == 0x0008C8, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_2' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_DynamicCast_bSuccess_8) == 0x0008D0, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_DynamicCast_bSuccess_8' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, Temp_real_Variable_19_0) == 0x0008D8, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::Temp_real_Variable_19_0' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, CallFunc_GetElementIndex_ReturnValue_2) == 0x0008E0, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::CallFunc_GetElementIndex_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, Temp_real_Variable_18_0) == 0x0008E8, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::Temp_real_Variable_18_0' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, CallFunc_Conv_InputActionValueToBool_ReturnValue_12) == 0x0008F0, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::CallFunc_Conv_InputActionValueToBool_ReturnValue_12' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_ComponentBoundEvent_Item) == 0x0008F8, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_ComponentBoundEvent_Item' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, CallFunc_GetStoryFlagValueByBoolean_ReturnValue) == 0x000900, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::CallFunc_GetStoryFlagValueByBoolean_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, Temp_bool_Variable_10) == 0x000901, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::Temp_bool_Variable_10' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, Temp_real_Variable_21) == 0x000908, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::Temp_real_Variable_21' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, Temp_real_Variable_21_0) == 0x000910, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::Temp_real_Variable_21_0' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_DynamicCast_AsIF_Scroller_Item_Holder) == 0x000608, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_DynamicCast_AsIF_Scroller_Item_Holder' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_DynamicCast_bSuccess_5) == 0x000618, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_DynamicCast_bSuccess_5' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_DynamicCast_AsBP_Checkable_Scroller_Item) == 0x000620, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_DynamicCast_AsBP_Checkable_Scroller_Item' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_DynamicCast_bSuccess_6) == 0x000628, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_DynamicCast_bSuccess_6' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, CallFunc_GetElementIndex_ReturnValue) == 0x00062C, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::CallFunc_GetElementIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, Temp_object_Variable_9) == 0x000630, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::Temp_object_Variable_9' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, CallFunc_GetBloodCodeInfoByIndex_OutBloodCodeInfo) == 0x000638, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::CallFunc_GetBloodCodeInfoByIndex_OutBloodCodeInfo' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_ComponentBoundEvent_Item_2) == 0x000730, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_ComponentBoundEvent_Item_2' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_ComponentBoundEvent_bIsSelected) == 0x000738, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_ComponentBoundEvent_bIsSelected' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, CallFunc_SetLazyTexture_ReturnValue) == 0x000739, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::CallFunc_SetLazyTexture_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, CallFunc_Conv_IntToDouble_ReturnValue) == 0x000740, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000748, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, CallFunc_Conv_IntToDouble_ReturnValue_1) == 0x000750, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::CallFunc_Conv_IntToDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000758, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_1) == 0x000760, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_1' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_DynamicCast_bSuccess_7) == 0x000768, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_DynamicCast_bSuccess_7' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, CallFunc_GreaterEqual_DoubleDouble_ReturnValue) == 0x000769, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::CallFunc_GreaterEqual_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, CallFunc_GetElementIndex_ReturnValue_1) == 0x00076C, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::CallFunc_GetElementIndex_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, CallFunc_SetFlag_ReturnValue_1) == 0x000770, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::CallFunc_SetFlag_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_ComponentBoundEvent_Widget) == 0x000778, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_ComponentBoundEvent_Widget' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_EnhancedInputActionEvent_ActionValue_12) == 0x000780, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_EnhancedInputActionEvent_ActionValue_12' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_EnhancedInputActionEvent_ElapsedTime_12) == 0x0007A0, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_EnhancedInputActionEvent_ElapsedTime_12' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_EnhancedInputActionEvent_TriggeredTime_12) == 0x0007A4, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_EnhancedInputActionEvent_TriggeredTime_12' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_EnhancedInputActionEvent_SourceAction_12) == 0x0007A8, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_EnhancedInputActionEvent_SourceAction_12' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_DynamicCast_AsSelectable_Interface) == 0x0007B0, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_DynamicCast_AsSelectable_Interface' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_DynamicCast_bSuccess_8) == 0x0007C0, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_DynamicCast_bSuccess_8' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, CallFunc_Deselect_ReturnValue) == 0x0007C1, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::CallFunc_Deselect_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, Temp_real_Variable_20_0) == 0x0007C8, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::Temp_real_Variable_20_0' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, Temp_real_Variable_17_0) == 0x0007D0, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::Temp_real_Variable_17_0' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, CallFunc_Conv_InputActionValueToBool_ReturnValue_11) == 0x0007D8, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::CallFunc_Conv_InputActionValueToBool_ReturnValue_11' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_Event_InCurrentHealth) == 0x0007E0, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_Event_InCurrentHealth' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_Event_InMaxHealth) == 0x0007E8, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_Event_InMaxHealth' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo) == 0x0007F0, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_Event_InCurrentStamina) == 0x0008C8, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_Event_InCurrentStamina' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_Event_InMaxStamina) == 0x0008CC, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_Event_InMaxStamina' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_Event_InProhibited) == 0x0008D0, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_Event_InProhibited' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, Temp_object_Variable_10) == 0x0008D8, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::Temp_object_Variable_10' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_EnhancedInputActionEvent_ActionValue_10) == 0x0008E0, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_EnhancedInputActionEvent_ActionValue_10' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_EnhancedInputActionEvent_ElapsedTime_10) == 0x000900, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_EnhancedInputActionEvent_ElapsedTime_10' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_EnhancedInputActionEvent_TriggeredTime_10) == 0x000904, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_EnhancedInputActionEvent_TriggeredTime_10' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_EnhancedInputActionEvent_SourceAction_10) == 0x000908, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_EnhancedInputActionEvent_SourceAction_10' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_ComponentBoundEvent_Item_1) == 0x000910, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_ComponentBoundEvent_Item_1' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_ComponentBoundEvent_bIsHovered) == 0x000918, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_ComponentBoundEvent_bIsHovered' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_2) == 0x000920, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_2' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_DynamicCast_bSuccess_9) == 0x000928, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_DynamicCast_bSuccess_9' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, Temp_real_Variable_19_0) == 0x000930, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::Temp_real_Variable_19_0' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, CallFunc_GetElementIndex_ReturnValue_2) == 0x000938, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::CallFunc_GetElementIndex_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, Temp_real_Variable_18_0) == 0x000940, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::Temp_real_Variable_18_0' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, CallFunc_Conv_InputActionValueToBool_ReturnValue_12) == 0x000948, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::CallFunc_Conv_InputActionValueToBool_ReturnValue_12' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, K2Node_ComponentBoundEvent_Item) == 0x000950, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::K2Node_ComponentBoundEvent_Item' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, CallFunc_GetStoryFlagValueByBoolean_ReturnValue) == 0x000958, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::CallFunc_GetStoryFlagValueByBoolean_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, Temp_bool_Variable_10) == 0x000959, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::Temp_bool_Variable_10' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, Temp_real_Variable_21) == 0x000960, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::Temp_real_Variable_21' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu, Temp_real_Variable_21_0) == 0x000968, "Member 'WDT_BloodCodeEquipmentMenu_C_ExecuteUbergraph_WDT_BloodCodeEquipmentMenu::Temp_real_Variable_21_0' has a wrong offset!");
 
 // Function WDT_BloodCodeEquipmentMenu.WDT_BloodCodeEquipmentMenu_C.Initialize
-// 0x0180 (0x0180 - 0x0000)
+// 0x01C8 (0x01C8 - 0x0000)
 struct WDT_BloodCodeEquipmentMenu_C_Initialize final
 {
 public:
-	struct FUIPlayerStatusSummaryInfo             CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo; // 0x0000(0x00B8)(NoDestructor)
-	int32                                         CallFunc_GetEquippedBloodCodeIndex_ReturnValue;    // 0x00B8(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FUIPlayerStatusSummaryInfo             CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo_1; // 0x00BC(0x00B8)(NoDestructor)
-	int32                                         CallFunc_GetBloodCodeNumber_ReturnValue;           // 0x0174(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_179[0x3];                                      // 0x0179(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_SelectInt_ReturnValue;                    // 0x017C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FUIPlayerStatusSummaryInfo             CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo; // 0x0000(0x00D8)()
+	int32                                         CallFunc_GetEquippedBloodCodeIndex_ReturnValue;    // 0x00D8(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_DC[0x4];                                       // 0x00DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUIPlayerStatusSummaryInfo             CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo_1; // 0x00E0(0x00D8)()
+	int32                                         CallFunc_GetBloodCodeNumber_ReturnValue;           // 0x01B8(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x01BC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1BD[0x3];                                      // 0x01BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_SelectInt_ReturnValue;                    // 0x01C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WDT_BloodCodeEquipmentMenu_C_Initialize) == 0x000004, "Wrong alignment on WDT_BloodCodeEquipmentMenu_C_Initialize");
-static_assert(sizeof(WDT_BloodCodeEquipmentMenu_C_Initialize) == 0x000180, "Wrong size on WDT_BloodCodeEquipmentMenu_C_Initialize");
+static_assert(alignof(WDT_BloodCodeEquipmentMenu_C_Initialize) == 0x000008, "Wrong alignment on WDT_BloodCodeEquipmentMenu_C_Initialize");
+static_assert(sizeof(WDT_BloodCodeEquipmentMenu_C_Initialize) == 0x0001C8, "Wrong size on WDT_BloodCodeEquipmentMenu_C_Initialize");
 static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_Initialize, CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo) == 0x000000, "Member 'WDT_BloodCodeEquipmentMenu_C_Initialize::CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_Initialize, CallFunc_GetEquippedBloodCodeIndex_ReturnValue) == 0x0000B8, "Member 'WDT_BloodCodeEquipmentMenu_C_Initialize::CallFunc_GetEquippedBloodCodeIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_Initialize, CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo_1) == 0x0000BC, "Member 'WDT_BloodCodeEquipmentMenu_C_Initialize::CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo_1' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_Initialize, CallFunc_GetBloodCodeNumber_ReturnValue) == 0x000174, "Member 'WDT_BloodCodeEquipmentMenu_C_Initialize::CallFunc_GetBloodCodeNumber_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_Initialize, CallFunc_Greater_IntInt_ReturnValue) == 0x000178, "Member 'WDT_BloodCodeEquipmentMenu_C_Initialize::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_Initialize, CallFunc_SelectInt_ReturnValue) == 0x00017C, "Member 'WDT_BloodCodeEquipmentMenu_C_Initialize::CallFunc_SelectInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_Initialize, CallFunc_GetEquippedBloodCodeIndex_ReturnValue) == 0x0000D8, "Member 'WDT_BloodCodeEquipmentMenu_C_Initialize::CallFunc_GetEquippedBloodCodeIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_Initialize, CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo_1) == 0x0000E0, "Member 'WDT_BloodCodeEquipmentMenu_C_Initialize::CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo_1' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_Initialize, CallFunc_GetBloodCodeNumber_ReturnValue) == 0x0001B8, "Member 'WDT_BloodCodeEquipmentMenu_C_Initialize::CallFunc_GetBloodCodeNumber_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_Initialize, CallFunc_Greater_IntInt_ReturnValue) == 0x0001BC, "Member 'WDT_BloodCodeEquipmentMenu_C_Initialize::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_Initialize, CallFunc_SelectInt_ReturnValue) == 0x0001C0, "Member 'WDT_BloodCodeEquipmentMenu_C_Initialize::CallFunc_SelectInt_ReturnValue' has a wrong offset!");
 
 // Function WDT_BloodCodeEquipmentMenu.WDT_BloodCodeEquipmentMenu_C.InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_11
 // 0x0030 (0x0030 - 0x0000)
@@ -882,48 +892,50 @@ static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_OnCancelReleased, CallFunc_B
 static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_OnCancelReleased, CallFunc_Close_ReturnValue) == 0x000004, "Member 'WDT_BloodCodeEquipmentMenu_C_OnCancelReleased::CallFunc_Close_ReturnValue' has a wrong offset!");
 
 // Function WDT_BloodCodeEquipmentMenu.WDT_BloodCodeEquipmentMenu_C.OnDecideReleased
-// 0x01D8 (0x01D8 - 0x0000)
+// 0x0220 (0x0220 - 0x0000)
 struct WDT_BloodCodeEquipmentMenu_C_OnDecideReleased final
 {
 public:
-	int32                                         L_TargetSlotIndex;                                 // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         L_PrevBloodCodeIndex;                              // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_TargetSlotIndex;                                 // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UWDT_FieldMenuTilePieceBase_C*          L_FieldMenuTile;                                   // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_PlayUIAudioEvent_ReturnValue;             // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUIPlayerStatusSummaryInfo             CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo; // 0x001C(0x00B8)(NoDestructor)
-	int32                                         CallFunc_GetEquippedBloodCodeIndex_ReturnValue;    // 0x00D4(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FUIBloodCodeInfo                       CallFunc_GetBloodCodeInfoByIndex_OutBloodCodeInfo; // 0x00D8(0x00D8)()
-	bool                                          CallFunc_IsEquipmentEnabled_ReturnValue;           // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsActivated_ReturnValue;                  // 0x01B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1B2[0x6];                                      // 0x01B2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                CallFunc_BP_GetSelectedItem_ReturnValue;           // 0x01B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x01C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1C1[0x7];                                      // 0x01C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBP_CheckableScrollerItem_C*            K2Node_DynamicCast_AsBP_Checkable_Scroller_Item;   // 0x01C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x01D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x01D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1D2[0x2];                                      // 0x01D2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetElementIndex_ReturnValue;              // 0x01D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUIPlayerStatusSummaryInfo             CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo; // 0x0020(0x00D8)()
+	int32                                         CallFunc_GetEquippedBloodCodeIndex_ReturnValue;    // 0x00F8(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_FC[0x4];                                       // 0x00FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUIBloodCodeInfo                       CallFunc_GetBloodCodeInfoByIndex_OutBloodCodeInfo; // 0x0100(0x00F8)()
+	bool                                          CallFunc_IsEquipmentEnabled_ReturnValue;           // 0x01F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsActivated_ReturnValue;                  // 0x01F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1FA[0x6];                                      // 0x01FA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                CallFunc_BP_GetSelectedItem_ReturnValue;           // 0x0200(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0208(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_209[0x7];                                      // 0x0209(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_CheckableScrollerItem_C*            K2Node_DynamicCast_AsBP_Checkable_Scroller_Item;   // 0x0210(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0218(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0219(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21A[0x2];                                      // 0x021A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetElementIndex_ReturnValue;              // 0x021C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_BloodCodeEquipmentMenu_C_OnDecideReleased) == 0x000008, "Wrong alignment on WDT_BloodCodeEquipmentMenu_C_OnDecideReleased");
-static_assert(sizeof(WDT_BloodCodeEquipmentMenu_C_OnDecideReleased) == 0x0001D8, "Wrong size on WDT_BloodCodeEquipmentMenu_C_OnDecideReleased");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_OnDecideReleased, L_TargetSlotIndex) == 0x000000, "Member 'WDT_BloodCodeEquipmentMenu_C_OnDecideReleased::L_TargetSlotIndex' has a wrong offset!");
+static_assert(sizeof(WDT_BloodCodeEquipmentMenu_C_OnDecideReleased) == 0x000220, "Wrong size on WDT_BloodCodeEquipmentMenu_C_OnDecideReleased");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_OnDecideReleased, L_PrevBloodCodeIndex) == 0x000000, "Member 'WDT_BloodCodeEquipmentMenu_C_OnDecideReleased::L_PrevBloodCodeIndex' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_OnDecideReleased, L_TargetSlotIndex) == 0x000004, "Member 'WDT_BloodCodeEquipmentMenu_C_OnDecideReleased::L_TargetSlotIndex' has a wrong offset!");
 static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_OnDecideReleased, L_FieldMenuTile) == 0x000008, "Member 'WDT_BloodCodeEquipmentMenu_C_OnDecideReleased::L_FieldMenuTile' has a wrong offset!");
 static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_OnDecideReleased, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000010, "Member 'WDT_BloodCodeEquipmentMenu_C_OnDecideReleased::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_OnDecideReleased, CallFunc_PlayUIAudioEvent_ReturnValue) == 0x000018, "Member 'WDT_BloodCodeEquipmentMenu_C_OnDecideReleased::CallFunc_PlayUIAudioEvent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_OnDecideReleased, CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo) == 0x00001C, "Member 'WDT_BloodCodeEquipmentMenu_C_OnDecideReleased::CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_OnDecideReleased, CallFunc_GetEquippedBloodCodeIndex_ReturnValue) == 0x0000D4, "Member 'WDT_BloodCodeEquipmentMenu_C_OnDecideReleased::CallFunc_GetEquippedBloodCodeIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_OnDecideReleased, CallFunc_GetBloodCodeInfoByIndex_OutBloodCodeInfo) == 0x0000D8, "Member 'WDT_BloodCodeEquipmentMenu_C_OnDecideReleased::CallFunc_GetBloodCodeInfoByIndex_OutBloodCodeInfo' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_OnDecideReleased, CallFunc_IsEquipmentEnabled_ReturnValue) == 0x0001B0, "Member 'WDT_BloodCodeEquipmentMenu_C_OnDecideReleased::CallFunc_IsEquipmentEnabled_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_OnDecideReleased, CallFunc_IsActivated_ReturnValue) == 0x0001B1, "Member 'WDT_BloodCodeEquipmentMenu_C_OnDecideReleased::CallFunc_IsActivated_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_OnDecideReleased, CallFunc_BP_GetSelectedItem_ReturnValue) == 0x0001B8, "Member 'WDT_BloodCodeEquipmentMenu_C_OnDecideReleased::CallFunc_BP_GetSelectedItem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_OnDecideReleased, CallFunc_IsVisible_ReturnValue) == 0x0001C0, "Member 'WDT_BloodCodeEquipmentMenu_C_OnDecideReleased::CallFunc_IsVisible_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_OnDecideReleased, K2Node_DynamicCast_AsBP_Checkable_Scroller_Item) == 0x0001C8, "Member 'WDT_BloodCodeEquipmentMenu_C_OnDecideReleased::K2Node_DynamicCast_AsBP_Checkable_Scroller_Item' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_OnDecideReleased, K2Node_DynamicCast_bSuccess) == 0x0001D0, "Member 'WDT_BloodCodeEquipmentMenu_C_OnDecideReleased::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_OnDecideReleased, CallFunc_BooleanAND_ReturnValue) == 0x0001D1, "Member 'WDT_BloodCodeEquipmentMenu_C_OnDecideReleased::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_OnDecideReleased, CallFunc_GetElementIndex_ReturnValue) == 0x0001D4, "Member 'WDT_BloodCodeEquipmentMenu_C_OnDecideReleased::CallFunc_GetElementIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_OnDecideReleased, CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo) == 0x000020, "Member 'WDT_BloodCodeEquipmentMenu_C_OnDecideReleased::CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_OnDecideReleased, CallFunc_GetEquippedBloodCodeIndex_ReturnValue) == 0x0000F8, "Member 'WDT_BloodCodeEquipmentMenu_C_OnDecideReleased::CallFunc_GetEquippedBloodCodeIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_OnDecideReleased, CallFunc_GetBloodCodeInfoByIndex_OutBloodCodeInfo) == 0x000100, "Member 'WDT_BloodCodeEquipmentMenu_C_OnDecideReleased::CallFunc_GetBloodCodeInfoByIndex_OutBloodCodeInfo' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_OnDecideReleased, CallFunc_IsEquipmentEnabled_ReturnValue) == 0x0001F8, "Member 'WDT_BloodCodeEquipmentMenu_C_OnDecideReleased::CallFunc_IsEquipmentEnabled_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_OnDecideReleased, CallFunc_IsActivated_ReturnValue) == 0x0001F9, "Member 'WDT_BloodCodeEquipmentMenu_C_OnDecideReleased::CallFunc_IsActivated_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_OnDecideReleased, CallFunc_BP_GetSelectedItem_ReturnValue) == 0x000200, "Member 'WDT_BloodCodeEquipmentMenu_C_OnDecideReleased::CallFunc_BP_GetSelectedItem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_OnDecideReleased, CallFunc_IsVisible_ReturnValue) == 0x000208, "Member 'WDT_BloodCodeEquipmentMenu_C_OnDecideReleased::CallFunc_IsVisible_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_OnDecideReleased, K2Node_DynamicCast_AsBP_Checkable_Scroller_Item) == 0x000210, "Member 'WDT_BloodCodeEquipmentMenu_C_OnDecideReleased::K2Node_DynamicCast_AsBP_Checkable_Scroller_Item' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_OnDecideReleased, K2Node_DynamicCast_bSuccess) == 0x000218, "Member 'WDT_BloodCodeEquipmentMenu_C_OnDecideReleased::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_OnDecideReleased, CallFunc_BooleanAND_ReturnValue) == 0x000219, "Member 'WDT_BloodCodeEquipmentMenu_C_OnDecideReleased::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_OnDecideReleased, CallFunc_GetElementIndex_ReturnValue) == 0x00021C, "Member 'WDT_BloodCodeEquipmentMenu_C_OnDecideReleased::CallFunc_GetElementIndex_ReturnValue' has a wrong offset!");
 
 // Function WDT_BloodCodeEquipmentMenu.WDT_BloodCodeEquipmentMenu_C.OnDownPressed
 // 0x0010 (0x0010 - 0x0000)
@@ -1196,25 +1208,27 @@ static_assert(sizeof(WDT_BloodCodeEquipmentMenu_C_SetProhibited) == 0x000001, "W
 static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_SetProhibited, InProhibited) == 0x000000, "Member 'WDT_BloodCodeEquipmentMenu_C_SetProhibited::InProhibited' has a wrong offset!");
 
 // Function WDT_BloodCodeEquipmentMenu.WDT_BloodCodeEquipmentMenu_C.UpdateArticleInfo
-// 0x0328 (0x0328 - 0x0000)
+// 0x03B0 (0x03B0 - 0x0000)
 struct WDT_BloodCodeEquipmentMenu_C_UpdateArticleInfo final
 {
 public:
 	int32                                         InBloodCodeIndex;                                  // 0x0000(0x0004)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FUIPlayerStatusSummaryInfo             CallFunc_GetPlayerStatusSummaryInfoWithBloodCode_OutSummaryInfo; // 0x0004(0x00B8)(NoDestructor)
-	struct FUIPlayerStatusSummaryInfo             CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo; // 0x00BC(0x00B8)(NoDestructor)
-	int32                                         CallFunc_GetEquippedBloodCodeIndex_ReturnValue;    // 0x0174(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FUIBloodCodeInfo                       CallFunc_GetBloodCodeInfoByIndex_OutBloodCodeInfo; // 0x0178(0x00D8)()
-	struct FUIBloodCodeInfo                       CallFunc_GetBloodCodeInfoByIndex_OutBloodCodeInfo_1; // 0x0250(0x00D8)()
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUIPlayerStatusSummaryInfo             CallFunc_GetPlayerStatusSummaryInfoWithBloodCode_OutSummaryInfo; // 0x0008(0x00D8)()
+	struct FUIPlayerStatusSummaryInfo             CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo; // 0x00E0(0x00D8)()
+	int32                                         CallFunc_GetEquippedBloodCodeIndex_ReturnValue;    // 0x01B8(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1BC[0x4];                                      // 0x01BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUIBloodCodeInfo                       CallFunc_GetBloodCodeInfoByIndex_OutBloodCodeInfo; // 0x01C0(0x00F8)()
+	struct FUIBloodCodeInfo                       CallFunc_GetBloodCodeInfoByIndex_OutBloodCodeInfo_1; // 0x02B8(0x00F8)()
 };
 static_assert(alignof(WDT_BloodCodeEquipmentMenu_C_UpdateArticleInfo) == 0x000008, "Wrong alignment on WDT_BloodCodeEquipmentMenu_C_UpdateArticleInfo");
-static_assert(sizeof(WDT_BloodCodeEquipmentMenu_C_UpdateArticleInfo) == 0x000328, "Wrong size on WDT_BloodCodeEquipmentMenu_C_UpdateArticleInfo");
+static_assert(sizeof(WDT_BloodCodeEquipmentMenu_C_UpdateArticleInfo) == 0x0003B0, "Wrong size on WDT_BloodCodeEquipmentMenu_C_UpdateArticleInfo");
 static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_UpdateArticleInfo, InBloodCodeIndex) == 0x000000, "Member 'WDT_BloodCodeEquipmentMenu_C_UpdateArticleInfo::InBloodCodeIndex' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_UpdateArticleInfo, CallFunc_GetPlayerStatusSummaryInfoWithBloodCode_OutSummaryInfo) == 0x000004, "Member 'WDT_BloodCodeEquipmentMenu_C_UpdateArticleInfo::CallFunc_GetPlayerStatusSummaryInfoWithBloodCode_OutSummaryInfo' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_UpdateArticleInfo, CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo) == 0x0000BC, "Member 'WDT_BloodCodeEquipmentMenu_C_UpdateArticleInfo::CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_UpdateArticleInfo, CallFunc_GetEquippedBloodCodeIndex_ReturnValue) == 0x000174, "Member 'WDT_BloodCodeEquipmentMenu_C_UpdateArticleInfo::CallFunc_GetEquippedBloodCodeIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_UpdateArticleInfo, CallFunc_GetBloodCodeInfoByIndex_OutBloodCodeInfo) == 0x000178, "Member 'WDT_BloodCodeEquipmentMenu_C_UpdateArticleInfo::CallFunc_GetBloodCodeInfoByIndex_OutBloodCodeInfo' has a wrong offset!");
-static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_UpdateArticleInfo, CallFunc_GetBloodCodeInfoByIndex_OutBloodCodeInfo_1) == 0x000250, "Member 'WDT_BloodCodeEquipmentMenu_C_UpdateArticleInfo::CallFunc_GetBloodCodeInfoByIndex_OutBloodCodeInfo_1' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_UpdateArticleInfo, CallFunc_GetPlayerStatusSummaryInfoWithBloodCode_OutSummaryInfo) == 0x000008, "Member 'WDT_BloodCodeEquipmentMenu_C_UpdateArticleInfo::CallFunc_GetPlayerStatusSummaryInfoWithBloodCode_OutSummaryInfo' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_UpdateArticleInfo, CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo) == 0x0000E0, "Member 'WDT_BloodCodeEquipmentMenu_C_UpdateArticleInfo::CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_UpdateArticleInfo, CallFunc_GetEquippedBloodCodeIndex_ReturnValue) == 0x0001B8, "Member 'WDT_BloodCodeEquipmentMenu_C_UpdateArticleInfo::CallFunc_GetEquippedBloodCodeIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_UpdateArticleInfo, CallFunc_GetBloodCodeInfoByIndex_OutBloodCodeInfo) == 0x0001C0, "Member 'WDT_BloodCodeEquipmentMenu_C_UpdateArticleInfo::CallFunc_GetBloodCodeInfoByIndex_OutBloodCodeInfo' has a wrong offset!");
+static_assert(offsetof(WDT_BloodCodeEquipmentMenu_C_UpdateArticleInfo, CallFunc_GetBloodCodeInfoByIndex_OutBloodCodeInfo_1) == 0x0002B8, "Member 'WDT_BloodCodeEquipmentMenu_C_UpdateArticleInfo::CallFunc_GetBloodCodeInfoByIndex_OutBloodCodeInfo_1' has a wrong offset!");
 
 // Function WDT_BloodCodeEquipmentMenu.WDT_BloodCodeEquipmentMenu_C.UpdateProhibited
 // 0x0001 (0x0001 - 0x0000)

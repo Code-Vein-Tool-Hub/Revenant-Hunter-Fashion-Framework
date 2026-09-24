@@ -140,13 +140,5 @@ static_assert(offsetof(ABP_ActionHuman_LocoExtension_BareFistEquipped::FAnimBlue
 static_assert(offsetof(ABP_ActionHuman_LocoExtension_BareFistEquipped::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LinkedInputPose) == 0x000660, "Member 'ABP_ActionHuman_LocoExtension_BareFistEquipped::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LinkedInputPose' has a wrong offset!");
 static_assert(offsetof(ABP_ActionHuman_LocoExtension_BareFistEquipped::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Root) == 0x000690, "Member 'ABP_ActionHuman_LocoExtension_BareFistEquipped::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Root' has a wrong offset!");
 
-// ScriptStruct ABP_ActionHuman_LocoExtension_BareFistEquipped.ABP_ActionHuman_LocoExtension_BareFistEquipped_C.AnimBlueprintGeneratedMutableData
-// 0x0000 (0x0001 - 0x0001)
-struct ABP_ActionHuman_LocoExtension_BareFistEquipped::FAnimBlueprintGeneratedMutableData final : public FAnimBlueprintMutableData
-{
-};
-static_assert(alignof(ABP_ActionHuman_LocoExtension_BareFistEquipped::FAnimBlueprintGeneratedMutableData) == 0x000001, "Wrong alignment on ABP_ActionHuman_LocoExtension_BareFistEquipped::FAnimBlueprintGeneratedMutableData");
-static_assert(sizeof(ABP_ActionHuman_LocoExtension_BareFistEquipped::FAnimBlueprintGeneratedMutableData) == 0x000001, "Wrong size on ABP_ActionHuman_LocoExtension_BareFistEquipped::FAnimBlueprintGeneratedMutableData");
-
 }
 

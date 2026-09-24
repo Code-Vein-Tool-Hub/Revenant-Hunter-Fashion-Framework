@@ -169,8 +169,8 @@ struct BP_DrawScarElement_C_Pre_Process final
 {
 public:
 	double                                        CaptureSize;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        ScarLifetime;                                      // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        OldScarLifetime;                                   // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ScarLifeTime;                                      // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        OldScarLifeTime;                                   // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CaptureLocation;                                   // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        InScarLifetime;                                    // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        InOldScarLifeTime;                                 // 0x0038(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -180,8 +180,8 @@ public:
 static_assert(alignof(BP_DrawScarElement_C_Pre_Process) == 0x000008, "Wrong alignment on BP_DrawScarElement_C_Pre_Process");
 static_assert(sizeof(BP_DrawScarElement_C_Pre_Process) == 0x000060, "Wrong size on BP_DrawScarElement_C_Pre_Process");
 static_assert(offsetof(BP_DrawScarElement_C_Pre_Process, CaptureSize) == 0x000000, "Member 'BP_DrawScarElement_C_Pre_Process::CaptureSize' has a wrong offset!");
-static_assert(offsetof(BP_DrawScarElement_C_Pre_Process, ScarLifetime) == 0x000008, "Member 'BP_DrawScarElement_C_Pre_Process::ScarLifetime' has a wrong offset!");
-static_assert(offsetof(BP_DrawScarElement_C_Pre_Process, OldScarLifetime) == 0x000010, "Member 'BP_DrawScarElement_C_Pre_Process::OldScarLifetime' has a wrong offset!");
+static_assert(offsetof(BP_DrawScarElement_C_Pre_Process, ScarLifeTime) == 0x000008, "Member 'BP_DrawScarElement_C_Pre_Process::ScarLifeTime' has a wrong offset!");
+static_assert(offsetof(BP_DrawScarElement_C_Pre_Process, OldScarLifeTime) == 0x000010, "Member 'BP_DrawScarElement_C_Pre_Process::OldScarLifeTime' has a wrong offset!");
 static_assert(offsetof(BP_DrawScarElement_C_Pre_Process, CaptureLocation) == 0x000018, "Member 'BP_DrawScarElement_C_Pre_Process::CaptureLocation' has a wrong offset!");
 static_assert(offsetof(BP_DrawScarElement_C_Pre_Process, InScarLifetime) == 0x000030, "Member 'BP_DrawScarElement_C_Pre_Process::InScarLifetime' has a wrong offset!");
 static_assert(offsetof(BP_DrawScarElement_C_Pre_Process, InOldScarLifeTime) == 0x000038, "Member 'BP_DrawScarElement_C_Pre_Process::InOldScarLifeTime' has a wrong offset!");

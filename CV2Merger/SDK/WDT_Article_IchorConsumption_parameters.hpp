@@ -14,20 +14,6 @@
 namespace SDK::Params
 {
 
-// Function WDT_Article_IchorConsumption.WDT_Article_IchorConsumption_C.SetValue
-// 0x0018 (0x0018 - 0x0000)
-struct WDT_Article_IchorConsumption_C_SetValue final
-{
-public:
-	int32                                         InValue;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0008(0x0010)()
-};
-static_assert(alignof(WDT_Article_IchorConsumption_C_SetValue) == 0x000008, "Wrong alignment on WDT_Article_IchorConsumption_C_SetValue");
-static_assert(sizeof(WDT_Article_IchorConsumption_C_SetValue) == 0x000018, "Wrong size on WDT_Article_IchorConsumption_C_SetValue");
-static_assert(offsetof(WDT_Article_IchorConsumption_C_SetValue, InValue) == 0x000000, "Member 'WDT_Article_IchorConsumption_C_SetValue::InValue' has a wrong offset!");
-static_assert(offsetof(WDT_Article_IchorConsumption_C_SetValue, CallFunc_Conv_IntToText_ReturnValue) == 0x000008, "Member 'WDT_Article_IchorConsumption_C_SetValue::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
-
 // Function WDT_Article_IchorConsumption.WDT_Article_IchorConsumption_C.SetValueComparison
 // 0x000C (0x000C - 0x0000)
 struct WDT_Article_IchorConsumption_C_SetValueComparison final
@@ -42,6 +28,20 @@ static_assert(sizeof(WDT_Article_IchorConsumption_C_SetValueComparison) == 0x000
 static_assert(offsetof(WDT_Article_IchorConsumption_C_SetValueComparison, InCurrentValue) == 0x000000, "Member 'WDT_Article_IchorConsumption_C_SetValueComparison::InCurrentValue' has a wrong offset!");
 static_assert(offsetof(WDT_Article_IchorConsumption_C_SetValueComparison, InTargetValue) == 0x000004, "Member 'WDT_Article_IchorConsumption_C_SetValueComparison::InTargetValue' has a wrong offset!");
 static_assert(offsetof(WDT_Article_IchorConsumption_C_SetValueComparison, SwapComparisons) == 0x000008, "Member 'WDT_Article_IchorConsumption_C_SetValueComparison::SwapComparisons' has a wrong offset!");
+
+// Function WDT_Article_IchorConsumption.WDT_Article_IchorConsumption_C.SetValue
+// 0x0018 (0x0018 - 0x0000)
+struct WDT_Article_IchorConsumption_C_SetValue final
+{
+public:
+	int32                                         InValue;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0008(0x0010)()
+};
+static_assert(alignof(WDT_Article_IchorConsumption_C_SetValue) == 0x000008, "Wrong alignment on WDT_Article_IchorConsumption_C_SetValue");
+static_assert(sizeof(WDT_Article_IchorConsumption_C_SetValue) == 0x000018, "Wrong size on WDT_Article_IchorConsumption_C_SetValue");
+static_assert(offsetof(WDT_Article_IchorConsumption_C_SetValue, InValue) == 0x000000, "Member 'WDT_Article_IchorConsumption_C_SetValue::InValue' has a wrong offset!");
+static_assert(offsetof(WDT_Article_IchorConsumption_C_SetValue, CallFunc_Conv_IntToText_ReturnValue) == 0x000008, "Member 'WDT_Article_IchorConsumption_C_SetValue::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
 
 }
 

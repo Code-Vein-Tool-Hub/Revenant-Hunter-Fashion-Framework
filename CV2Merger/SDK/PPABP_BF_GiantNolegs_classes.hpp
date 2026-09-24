@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "ControlRig_structs.hpp"
+#include "Engine_structs.hpp"
 #include "KawaiiPhysics_structs.hpp"
 #include "AppAnimGraph_structs.hpp"
-#include "Engine_structs.hpp"
-#include "ControlRig_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Extensions_classes.hpp"
 
@@ -22,39 +22,39 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass PPABP_BF_GiantNolegs.PPABP_BF_GiantNolegs_C
-// 0xA1E0 (0xA8F0 - 0x0710)
+// 0xA1E0 (0xA920 - 0x0740)
 class UPPABP_BF_GiantNolegs_C final : public UAnimDynamicsPostProcessAnimInstance
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0710(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x0718(0x0008)()
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x0720(0x0008)()
-	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0728(0x0020)()
-	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose;                     // 0x0748(0x00B8)()
-	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x0800(0x0020)()
-	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x0820(0x0020)()
-	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_18;                    // 0x0840(0x07B0)()
-	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_17;                    // 0x0FF0(0x07B0)()
-	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_16;                    // 0x17A0(0x07B0)()
-	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_15;                    // 0x1F50(0x07B0)()
-	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_14;                    // 0x2700(0x07B0)()
-	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_13;                    // 0x2EB0(0x07B0)()
-	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_12;                    // 0x3660(0x07B0)()
-	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_11;                    // 0x3E10(0x07B0)()
-	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_10;                    // 0x45C0(0x07B0)()
-	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_9;                     // 0x4D70(0x07B0)()
-	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_8;                     // 0x5520(0x07B0)()
-	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_7;                     // 0x5CD0(0x07B0)()
-	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_6;                     // 0x6480(0x07B0)()
-	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_5;                     // 0x6C30(0x07B0)()
-	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_4;                     // 0x73E0(0x07B0)()
-	struct FAnimNode_ControlRig                   AnimGraphNode_ControlRig;                          // 0x7B90(0x04D0)(ContainsInstancedReference)
-	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_3;                     // 0x8060(0x07B0)()
-	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_2;                     // 0x8810(0x07B0)()
-	struct FAppAnimNode_RigidBody                 AppAnimGraphNode_RigidBody;                        // 0x8FC0(0x09B0)()
-	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_1;                     // 0x9970(0x07B0)()
-	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics;                       // 0xA120(0x07B0)()
-	struct FVector                                Gravity_Param;                                     // 0xA8D0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0740(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x0748(0x0008)()
+	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x0750(0x0008)()
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0758(0x0020)()
+	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose;                     // 0x0778(0x00B8)()
+	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x0830(0x0020)()
+	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x0850(0x0020)()
+	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_18;                    // 0x0870(0x07B0)()
+	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_17;                    // 0x1020(0x07B0)()
+	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_16;                    // 0x17D0(0x07B0)()
+	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_15;                    // 0x1F80(0x07B0)()
+	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_14;                    // 0x2730(0x07B0)()
+	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_13;                    // 0x2EE0(0x07B0)()
+	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_12;                    // 0x3690(0x07B0)()
+	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_11;                    // 0x3E40(0x07B0)()
+	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_10;                    // 0x45F0(0x07B0)()
+	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_9;                     // 0x4DA0(0x07B0)()
+	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_8;                     // 0x5550(0x07B0)()
+	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_7;                     // 0x5D00(0x07B0)()
+	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_6;                     // 0x64B0(0x07B0)()
+	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_5;                     // 0x6C60(0x07B0)()
+	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_4;                     // 0x7410(0x07B0)()
+	struct FAnimNode_ControlRig                   AnimGraphNode_ControlRig;                          // 0x7BC0(0x04D0)(ContainsInstancedReference)
+	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_3;                     // 0x8090(0x07B0)()
+	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_2;                     // 0x8840(0x07B0)()
+	struct FAppAnimNode_RigidBody                 AppAnimGraphNode_RigidBody;                        // 0x8FF0(0x09B0)()
+	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_1;                     // 0x99A0(0x07B0)()
+	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics;                       // 0xA150(0x07B0)()
+	struct FVector                                Gravity_Param;                                     // 0xA900(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AnimGraph(const struct FPoseLink& InPose, struct FPoseLink* AnimGraph_0);
@@ -91,36 +91,36 @@ public:
 	}
 };
 static_assert(alignof(UPPABP_BF_GiantNolegs_C) == 0x000010, "Wrong alignment on UPPABP_BF_GiantNolegs_C");
-static_assert(sizeof(UPPABP_BF_GiantNolegs_C) == 0x00A8F0, "Wrong size on UPPABP_BF_GiantNolegs_C");
-static_assert(offsetof(UPPABP_BF_GiantNolegs_C, UberGraphFrame) == 0x000710, "Member 'UPPABP_BF_GiantNolegs_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UPPABP_BF_GiantNolegs_C, AnimBlueprintExtension_PropertyAccess) == 0x000718, "Member 'UPPABP_BF_GiantNolegs_C::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
-static_assert(offsetof(UPPABP_BF_GiantNolegs_C, AnimBlueprintExtension_Base) == 0x000720, "Member 'UPPABP_BF_GiantNolegs_C::AnimBlueprintExtension_Base' has a wrong offset!");
-static_assert(offsetof(UPPABP_BF_GiantNolegs_C, AnimGraphNode_Root) == 0x000728, "Member 'UPPABP_BF_GiantNolegs_C::AnimGraphNode_Root' has a wrong offset!");
-static_assert(offsetof(UPPABP_BF_GiantNolegs_C, AnimGraphNode_LinkedInputPose) == 0x000748, "Member 'UPPABP_BF_GiantNolegs_C::AnimGraphNode_LinkedInputPose' has a wrong offset!");
-static_assert(offsetof(UPPABP_BF_GiantNolegs_C, AnimGraphNode_LocalToComponentSpace) == 0x000800, "Member 'UPPABP_BF_GiantNolegs_C::AnimGraphNode_LocalToComponentSpace' has a wrong offset!");
-static_assert(offsetof(UPPABP_BF_GiantNolegs_C, AnimGraphNode_ComponentToLocalSpace) == 0x000820, "Member 'UPPABP_BF_GiantNolegs_C::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
-static_assert(offsetof(UPPABP_BF_GiantNolegs_C, AnimGraphNode_KawaiiPhysics_18) == 0x000840, "Member 'UPPABP_BF_GiantNolegs_C::AnimGraphNode_KawaiiPhysics_18' has a wrong offset!");
-static_assert(offsetof(UPPABP_BF_GiantNolegs_C, AnimGraphNode_KawaiiPhysics_17) == 0x000FF0, "Member 'UPPABP_BF_GiantNolegs_C::AnimGraphNode_KawaiiPhysics_17' has a wrong offset!");
-static_assert(offsetof(UPPABP_BF_GiantNolegs_C, AnimGraphNode_KawaiiPhysics_16) == 0x0017A0, "Member 'UPPABP_BF_GiantNolegs_C::AnimGraphNode_KawaiiPhysics_16' has a wrong offset!");
-static_assert(offsetof(UPPABP_BF_GiantNolegs_C, AnimGraphNode_KawaiiPhysics_15) == 0x001F50, "Member 'UPPABP_BF_GiantNolegs_C::AnimGraphNode_KawaiiPhysics_15' has a wrong offset!");
-static_assert(offsetof(UPPABP_BF_GiantNolegs_C, AnimGraphNode_KawaiiPhysics_14) == 0x002700, "Member 'UPPABP_BF_GiantNolegs_C::AnimGraphNode_KawaiiPhysics_14' has a wrong offset!");
-static_assert(offsetof(UPPABP_BF_GiantNolegs_C, AnimGraphNode_KawaiiPhysics_13) == 0x002EB0, "Member 'UPPABP_BF_GiantNolegs_C::AnimGraphNode_KawaiiPhysics_13' has a wrong offset!");
-static_assert(offsetof(UPPABP_BF_GiantNolegs_C, AnimGraphNode_KawaiiPhysics_12) == 0x003660, "Member 'UPPABP_BF_GiantNolegs_C::AnimGraphNode_KawaiiPhysics_12' has a wrong offset!");
-static_assert(offsetof(UPPABP_BF_GiantNolegs_C, AnimGraphNode_KawaiiPhysics_11) == 0x003E10, "Member 'UPPABP_BF_GiantNolegs_C::AnimGraphNode_KawaiiPhysics_11' has a wrong offset!");
-static_assert(offsetof(UPPABP_BF_GiantNolegs_C, AnimGraphNode_KawaiiPhysics_10) == 0x0045C0, "Member 'UPPABP_BF_GiantNolegs_C::AnimGraphNode_KawaiiPhysics_10' has a wrong offset!");
-static_assert(offsetof(UPPABP_BF_GiantNolegs_C, AnimGraphNode_KawaiiPhysics_9) == 0x004D70, "Member 'UPPABP_BF_GiantNolegs_C::AnimGraphNode_KawaiiPhysics_9' has a wrong offset!");
-static_assert(offsetof(UPPABP_BF_GiantNolegs_C, AnimGraphNode_KawaiiPhysics_8) == 0x005520, "Member 'UPPABP_BF_GiantNolegs_C::AnimGraphNode_KawaiiPhysics_8' has a wrong offset!");
-static_assert(offsetof(UPPABP_BF_GiantNolegs_C, AnimGraphNode_KawaiiPhysics_7) == 0x005CD0, "Member 'UPPABP_BF_GiantNolegs_C::AnimGraphNode_KawaiiPhysics_7' has a wrong offset!");
-static_assert(offsetof(UPPABP_BF_GiantNolegs_C, AnimGraphNode_KawaiiPhysics_6) == 0x006480, "Member 'UPPABP_BF_GiantNolegs_C::AnimGraphNode_KawaiiPhysics_6' has a wrong offset!");
-static_assert(offsetof(UPPABP_BF_GiantNolegs_C, AnimGraphNode_KawaiiPhysics_5) == 0x006C30, "Member 'UPPABP_BF_GiantNolegs_C::AnimGraphNode_KawaiiPhysics_5' has a wrong offset!");
-static_assert(offsetof(UPPABP_BF_GiantNolegs_C, AnimGraphNode_KawaiiPhysics_4) == 0x0073E0, "Member 'UPPABP_BF_GiantNolegs_C::AnimGraphNode_KawaiiPhysics_4' has a wrong offset!");
-static_assert(offsetof(UPPABP_BF_GiantNolegs_C, AnimGraphNode_ControlRig) == 0x007B90, "Member 'UPPABP_BF_GiantNolegs_C::AnimGraphNode_ControlRig' has a wrong offset!");
-static_assert(offsetof(UPPABP_BF_GiantNolegs_C, AnimGraphNode_KawaiiPhysics_3) == 0x008060, "Member 'UPPABP_BF_GiantNolegs_C::AnimGraphNode_KawaiiPhysics_3' has a wrong offset!");
-static_assert(offsetof(UPPABP_BF_GiantNolegs_C, AnimGraphNode_KawaiiPhysics_2) == 0x008810, "Member 'UPPABP_BF_GiantNolegs_C::AnimGraphNode_KawaiiPhysics_2' has a wrong offset!");
-static_assert(offsetof(UPPABP_BF_GiantNolegs_C, AppAnimGraphNode_RigidBody) == 0x008FC0, "Member 'UPPABP_BF_GiantNolegs_C::AppAnimGraphNode_RigidBody' has a wrong offset!");
-static_assert(offsetof(UPPABP_BF_GiantNolegs_C, AnimGraphNode_KawaiiPhysics_1) == 0x009970, "Member 'UPPABP_BF_GiantNolegs_C::AnimGraphNode_KawaiiPhysics_1' has a wrong offset!");
-static_assert(offsetof(UPPABP_BF_GiantNolegs_C, AnimGraphNode_KawaiiPhysics) == 0x00A120, "Member 'UPPABP_BF_GiantNolegs_C::AnimGraphNode_KawaiiPhysics' has a wrong offset!");
-static_assert(offsetof(UPPABP_BF_GiantNolegs_C, Gravity_Param) == 0x00A8D0, "Member 'UPPABP_BF_GiantNolegs_C::Gravity_Param' has a wrong offset!");
+static_assert(sizeof(UPPABP_BF_GiantNolegs_C) == 0x00A920, "Wrong size on UPPABP_BF_GiantNolegs_C");
+static_assert(offsetof(UPPABP_BF_GiantNolegs_C, UberGraphFrame) == 0x000740, "Member 'UPPABP_BF_GiantNolegs_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UPPABP_BF_GiantNolegs_C, AnimBlueprintExtension_PropertyAccess) == 0x000748, "Member 'UPPABP_BF_GiantNolegs_C::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
+static_assert(offsetof(UPPABP_BF_GiantNolegs_C, AnimBlueprintExtension_Base) == 0x000750, "Member 'UPPABP_BF_GiantNolegs_C::AnimBlueprintExtension_Base' has a wrong offset!");
+static_assert(offsetof(UPPABP_BF_GiantNolegs_C, AnimGraphNode_Root) == 0x000758, "Member 'UPPABP_BF_GiantNolegs_C::AnimGraphNode_Root' has a wrong offset!");
+static_assert(offsetof(UPPABP_BF_GiantNolegs_C, AnimGraphNode_LinkedInputPose) == 0x000778, "Member 'UPPABP_BF_GiantNolegs_C::AnimGraphNode_LinkedInputPose' has a wrong offset!");
+static_assert(offsetof(UPPABP_BF_GiantNolegs_C, AnimGraphNode_LocalToComponentSpace) == 0x000830, "Member 'UPPABP_BF_GiantNolegs_C::AnimGraphNode_LocalToComponentSpace' has a wrong offset!");
+static_assert(offsetof(UPPABP_BF_GiantNolegs_C, AnimGraphNode_ComponentToLocalSpace) == 0x000850, "Member 'UPPABP_BF_GiantNolegs_C::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
+static_assert(offsetof(UPPABP_BF_GiantNolegs_C, AnimGraphNode_KawaiiPhysics_18) == 0x000870, "Member 'UPPABP_BF_GiantNolegs_C::AnimGraphNode_KawaiiPhysics_18' has a wrong offset!");
+static_assert(offsetof(UPPABP_BF_GiantNolegs_C, AnimGraphNode_KawaiiPhysics_17) == 0x001020, "Member 'UPPABP_BF_GiantNolegs_C::AnimGraphNode_KawaiiPhysics_17' has a wrong offset!");
+static_assert(offsetof(UPPABP_BF_GiantNolegs_C, AnimGraphNode_KawaiiPhysics_16) == 0x0017D0, "Member 'UPPABP_BF_GiantNolegs_C::AnimGraphNode_KawaiiPhysics_16' has a wrong offset!");
+static_assert(offsetof(UPPABP_BF_GiantNolegs_C, AnimGraphNode_KawaiiPhysics_15) == 0x001F80, "Member 'UPPABP_BF_GiantNolegs_C::AnimGraphNode_KawaiiPhysics_15' has a wrong offset!");
+static_assert(offsetof(UPPABP_BF_GiantNolegs_C, AnimGraphNode_KawaiiPhysics_14) == 0x002730, "Member 'UPPABP_BF_GiantNolegs_C::AnimGraphNode_KawaiiPhysics_14' has a wrong offset!");
+static_assert(offsetof(UPPABP_BF_GiantNolegs_C, AnimGraphNode_KawaiiPhysics_13) == 0x002EE0, "Member 'UPPABP_BF_GiantNolegs_C::AnimGraphNode_KawaiiPhysics_13' has a wrong offset!");
+static_assert(offsetof(UPPABP_BF_GiantNolegs_C, AnimGraphNode_KawaiiPhysics_12) == 0x003690, "Member 'UPPABP_BF_GiantNolegs_C::AnimGraphNode_KawaiiPhysics_12' has a wrong offset!");
+static_assert(offsetof(UPPABP_BF_GiantNolegs_C, AnimGraphNode_KawaiiPhysics_11) == 0x003E40, "Member 'UPPABP_BF_GiantNolegs_C::AnimGraphNode_KawaiiPhysics_11' has a wrong offset!");
+static_assert(offsetof(UPPABP_BF_GiantNolegs_C, AnimGraphNode_KawaiiPhysics_10) == 0x0045F0, "Member 'UPPABP_BF_GiantNolegs_C::AnimGraphNode_KawaiiPhysics_10' has a wrong offset!");
+static_assert(offsetof(UPPABP_BF_GiantNolegs_C, AnimGraphNode_KawaiiPhysics_9) == 0x004DA0, "Member 'UPPABP_BF_GiantNolegs_C::AnimGraphNode_KawaiiPhysics_9' has a wrong offset!");
+static_assert(offsetof(UPPABP_BF_GiantNolegs_C, AnimGraphNode_KawaiiPhysics_8) == 0x005550, "Member 'UPPABP_BF_GiantNolegs_C::AnimGraphNode_KawaiiPhysics_8' has a wrong offset!");
+static_assert(offsetof(UPPABP_BF_GiantNolegs_C, AnimGraphNode_KawaiiPhysics_7) == 0x005D00, "Member 'UPPABP_BF_GiantNolegs_C::AnimGraphNode_KawaiiPhysics_7' has a wrong offset!");
+static_assert(offsetof(UPPABP_BF_GiantNolegs_C, AnimGraphNode_KawaiiPhysics_6) == 0x0064B0, "Member 'UPPABP_BF_GiantNolegs_C::AnimGraphNode_KawaiiPhysics_6' has a wrong offset!");
+static_assert(offsetof(UPPABP_BF_GiantNolegs_C, AnimGraphNode_KawaiiPhysics_5) == 0x006C60, "Member 'UPPABP_BF_GiantNolegs_C::AnimGraphNode_KawaiiPhysics_5' has a wrong offset!");
+static_assert(offsetof(UPPABP_BF_GiantNolegs_C, AnimGraphNode_KawaiiPhysics_4) == 0x007410, "Member 'UPPABP_BF_GiantNolegs_C::AnimGraphNode_KawaiiPhysics_4' has a wrong offset!");
+static_assert(offsetof(UPPABP_BF_GiantNolegs_C, AnimGraphNode_ControlRig) == 0x007BC0, "Member 'UPPABP_BF_GiantNolegs_C::AnimGraphNode_ControlRig' has a wrong offset!");
+static_assert(offsetof(UPPABP_BF_GiantNolegs_C, AnimGraphNode_KawaiiPhysics_3) == 0x008090, "Member 'UPPABP_BF_GiantNolegs_C::AnimGraphNode_KawaiiPhysics_3' has a wrong offset!");
+static_assert(offsetof(UPPABP_BF_GiantNolegs_C, AnimGraphNode_KawaiiPhysics_2) == 0x008840, "Member 'UPPABP_BF_GiantNolegs_C::AnimGraphNode_KawaiiPhysics_2' has a wrong offset!");
+static_assert(offsetof(UPPABP_BF_GiantNolegs_C, AppAnimGraphNode_RigidBody) == 0x008FF0, "Member 'UPPABP_BF_GiantNolegs_C::AppAnimGraphNode_RigidBody' has a wrong offset!");
+static_assert(offsetof(UPPABP_BF_GiantNolegs_C, AnimGraphNode_KawaiiPhysics_1) == 0x0099A0, "Member 'UPPABP_BF_GiantNolegs_C::AnimGraphNode_KawaiiPhysics_1' has a wrong offset!");
+static_assert(offsetof(UPPABP_BF_GiantNolegs_C, AnimGraphNode_KawaiiPhysics) == 0x00A150, "Member 'UPPABP_BF_GiantNolegs_C::AnimGraphNode_KawaiiPhysics' has a wrong offset!");
+static_assert(offsetof(UPPABP_BF_GiantNolegs_C, Gravity_Param) == 0x00A900, "Member 'UPPABP_BF_GiantNolegs_C::Gravity_Param' has a wrong offset!");
 
 }
 

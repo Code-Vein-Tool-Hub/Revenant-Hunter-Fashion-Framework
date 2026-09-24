@@ -11,6 +11,7 @@
 #include "Basic.hpp"
 
 #include "SlateCore_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 namespace SDK::Params
@@ -41,20 +42,36 @@ static_assert(sizeof(WDT_Article_Attribute_C_PreConstruct) == 0x000001, "Wrong s
 static_assert(offsetof(WDT_Article_Attribute_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WDT_Article_Attribute_C_PreConstruct::IsDesignTime' has a wrong offset!");
 
 // Function WDT_Article_Attribute.WDT_Article_Attribute_C.SetValue
-// 0x0030 (0x0030 - 0x0000)
+// 0x0050 (0x0050 - 0x0000)
 struct WDT_Article_Attribute_C_SetValue final
 {
 public:
 	int32                                         InValue;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0008(0x0010)()
-	struct FSlateColor                            CallFunc_GetTextColorByCompareResult_TextColor;    // 0x0018(0x0014)()
+	int32                                         ConversionType;                                    // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0010(0x0010)()
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_22[0x2];                                       // 0x0022(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateColor                            CallFunc_GetAttributeConversionColor_OutColor;     // 0x0024(0x0014)()
+	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3A[0x2];                                       // 0x003A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateColor                            CallFunc_GetTextColorByCompareResult_TextColor;    // 0x003C(0x0014)()
 };
 static_assert(alignof(WDT_Article_Attribute_C_SetValue) == 0x000008, "Wrong alignment on WDT_Article_Attribute_C_SetValue");
-static_assert(sizeof(WDT_Article_Attribute_C_SetValue) == 0x000030, "Wrong size on WDT_Article_Attribute_C_SetValue");
+static_assert(sizeof(WDT_Article_Attribute_C_SetValue) == 0x000050, "Wrong size on WDT_Article_Attribute_C_SetValue");
 static_assert(offsetof(WDT_Article_Attribute_C_SetValue, InValue) == 0x000000, "Member 'WDT_Article_Attribute_C_SetValue::InValue' has a wrong offset!");
-static_assert(offsetof(WDT_Article_Attribute_C_SetValue, CallFunc_Conv_IntToText_ReturnValue) == 0x000008, "Member 'WDT_Article_Attribute_C_SetValue::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_Article_Attribute_C_SetValue, CallFunc_GetTextColorByCompareResult_TextColor) == 0x000018, "Member 'WDT_Article_Attribute_C_SetValue::CallFunc_GetTextColorByCompareResult_TextColor' has a wrong offset!");
+static_assert(offsetof(WDT_Article_Attribute_C_SetValue, ConversionType) == 0x000004, "Member 'WDT_Article_Attribute_C_SetValue::ConversionType' has a wrong offset!");
+static_assert(offsetof(WDT_Article_Attribute_C_SetValue, Temp_bool_Variable) == 0x000008, "Member 'WDT_Article_Attribute_C_SetValue::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WDT_Article_Attribute_C_SetValue, CallFunc_Conv_IntToText_ReturnValue) == 0x000010, "Member 'WDT_Article_Attribute_C_SetValue::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_Article_Attribute_C_SetValue, Temp_byte_Variable) == 0x000020, "Member 'WDT_Article_Attribute_C_SetValue::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(WDT_Article_Attribute_C_SetValue, Temp_byte_Variable_1) == 0x000021, "Member 'WDT_Article_Attribute_C_SetValue::Temp_byte_Variable_1' has a wrong offset!");
+static_assert(offsetof(WDT_Article_Attribute_C_SetValue, CallFunc_GetAttributeConversionColor_OutColor) == 0x000024, "Member 'WDT_Article_Attribute_C_SetValue::CallFunc_GetAttributeConversionColor_OutColor' has a wrong offset!");
+static_assert(offsetof(WDT_Article_Attribute_C_SetValue, CallFunc_NotEqual_IntInt_ReturnValue) == 0x000038, "Member 'WDT_Article_Attribute_C_SetValue::CallFunc_NotEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_Article_Attribute_C_SetValue, K2Node_Select_Default) == 0x000039, "Member 'WDT_Article_Attribute_C_SetValue::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WDT_Article_Attribute_C_SetValue, CallFunc_GetTextColorByCompareResult_TextColor) == 0x00003C, "Member 'WDT_Article_Attribute_C_SetValue::CallFunc_GetTextColorByCompareResult_TextColor' has a wrong offset!");
 
 // Function WDT_Article_Attribute.WDT_Article_Attribute_C.SetValueComparison
 // 0x0020 (0x0020 - 0x0000)

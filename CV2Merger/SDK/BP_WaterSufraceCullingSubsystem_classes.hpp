@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_WaterSufraceCullingSubsystem.BP_WaterSufraceCullingSubsystem_C
-// 0x0000 (0x0080 - 0x0080)
+// 0x0000 (0x0078 - 0x0078)
 class UBP_WaterSufraceCullingSubsystem_C final : public UWaterSurfaceCullingSubsystem
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UBP_WaterSufraceCullingSubsystem_C) == 0x000008, "Wrong alignment on UBP_WaterSufraceCullingSubsystem_C");
-static_assert(sizeof(UBP_WaterSufraceCullingSubsystem_C) == 0x000080, "Wrong size on UBP_WaterSufraceCullingSubsystem_C");
+static_assert(sizeof(UBP_WaterSufraceCullingSubsystem_C) == 0x000078, "Wrong size on UBP_WaterSufraceCullingSubsystem_C");
 
 }
 

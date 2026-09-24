@@ -11,33 +11,34 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "BasicUI_classes.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WDT_MountIcon.WDT_MountIcon_C
-// 0x0058 (0x0518 - 0x04C0)
+// 0x0060 (0x0520 - 0x04C0)
 class UWDT_MountIcon_C final : public UUIElementBase
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 MountIcon;                                         // 0x04C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 MountIcon_NoEntry;                                 // 0x04D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               Overlay_Entry;                                     // 0x04D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               Overlay_MountIcon;                                 // 0x04E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               Overlay_NoEntry;                                   // 0x04E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidgetSwitcher*                        WidgetSwitcher_40;                                 // 0x04F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	struct FLinearColor                           GrayOutColor;                                      // 0x04F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           DefaultColor;                                      // 0x0508(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UInvalidationBox*                       InvalidationBox_0;                                 // 0x04C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 MountIcon;                                         // 0x04D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 MountIcon_NoEntry;                                 // 0x04D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               Overlay_Entry;                                     // 0x04E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               Overlay_MountIcon;                                 // 0x04E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               Overlay_NoEntry;                                   // 0x04F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetSwitcher*                        WidgetSwitcher_40;                                 // 0x04F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FLinearColor                           GrayOutColor;                                      // 0x0500(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           DefaultColor;                                      // 0x0510(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void SetNoMountAction(bool InIsNoMountAction);
-	void SetMountIconVisibility(bool InIsVisible);
-	void ExecuteUbergraph_WDT_MountIcon(int32 EntryPoint);
 	void Construct();
+	void ExecuteUbergraph_WDT_MountIcon(int32 EntryPoint);
+	void SetMountIconVisibility(bool InIsVisible);
+	void SetNoMountAction(bool InIsNoMountAction);
 
 public:
 	static class UClass* StaticClass()
@@ -50,16 +51,17 @@ public:
 	}
 };
 static_assert(alignof(UWDT_MountIcon_C) == 0x000008, "Wrong alignment on UWDT_MountIcon_C");
-static_assert(sizeof(UWDT_MountIcon_C) == 0x000518, "Wrong size on UWDT_MountIcon_C");
+static_assert(sizeof(UWDT_MountIcon_C) == 0x000520, "Wrong size on UWDT_MountIcon_C");
 static_assert(offsetof(UWDT_MountIcon_C, UberGraphFrame) == 0x0004C0, "Member 'UWDT_MountIcon_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWDT_MountIcon_C, MountIcon) == 0x0004C8, "Member 'UWDT_MountIcon_C::MountIcon' has a wrong offset!");
-static_assert(offsetof(UWDT_MountIcon_C, MountIcon_NoEntry) == 0x0004D0, "Member 'UWDT_MountIcon_C::MountIcon_NoEntry' has a wrong offset!");
-static_assert(offsetof(UWDT_MountIcon_C, Overlay_Entry) == 0x0004D8, "Member 'UWDT_MountIcon_C::Overlay_Entry' has a wrong offset!");
-static_assert(offsetof(UWDT_MountIcon_C, Overlay_MountIcon) == 0x0004E0, "Member 'UWDT_MountIcon_C::Overlay_MountIcon' has a wrong offset!");
-static_assert(offsetof(UWDT_MountIcon_C, Overlay_NoEntry) == 0x0004E8, "Member 'UWDT_MountIcon_C::Overlay_NoEntry' has a wrong offset!");
-static_assert(offsetof(UWDT_MountIcon_C, WidgetSwitcher_40) == 0x0004F0, "Member 'UWDT_MountIcon_C::WidgetSwitcher_40' has a wrong offset!");
-static_assert(offsetof(UWDT_MountIcon_C, GrayOutColor) == 0x0004F8, "Member 'UWDT_MountIcon_C::GrayOutColor' has a wrong offset!");
-static_assert(offsetof(UWDT_MountIcon_C, DefaultColor) == 0x000508, "Member 'UWDT_MountIcon_C::DefaultColor' has a wrong offset!");
+static_assert(offsetof(UWDT_MountIcon_C, InvalidationBox_0) == 0x0004C8, "Member 'UWDT_MountIcon_C::InvalidationBox_0' has a wrong offset!");
+static_assert(offsetof(UWDT_MountIcon_C, MountIcon) == 0x0004D0, "Member 'UWDT_MountIcon_C::MountIcon' has a wrong offset!");
+static_assert(offsetof(UWDT_MountIcon_C, MountIcon_NoEntry) == 0x0004D8, "Member 'UWDT_MountIcon_C::MountIcon_NoEntry' has a wrong offset!");
+static_assert(offsetof(UWDT_MountIcon_C, Overlay_Entry) == 0x0004E0, "Member 'UWDT_MountIcon_C::Overlay_Entry' has a wrong offset!");
+static_assert(offsetof(UWDT_MountIcon_C, Overlay_MountIcon) == 0x0004E8, "Member 'UWDT_MountIcon_C::Overlay_MountIcon' has a wrong offset!");
+static_assert(offsetof(UWDT_MountIcon_C, Overlay_NoEntry) == 0x0004F0, "Member 'UWDT_MountIcon_C::Overlay_NoEntry' has a wrong offset!");
+static_assert(offsetof(UWDT_MountIcon_C, WidgetSwitcher_40) == 0x0004F8, "Member 'UWDT_MountIcon_C::WidgetSwitcher_40' has a wrong offset!");
+static_assert(offsetof(UWDT_MountIcon_C, GrayOutColor) == 0x000500, "Member 'UWDT_MountIcon_C::GrayOutColor' has a wrong offset!");
+static_assert(offsetof(UWDT_MountIcon_C, DefaultColor) == 0x000510, "Member 'UWDT_MountIcon_C::DefaultColor' has a wrong offset!");
 
 }
 

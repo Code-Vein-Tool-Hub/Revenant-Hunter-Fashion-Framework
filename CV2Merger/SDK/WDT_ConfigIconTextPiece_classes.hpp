@@ -32,6 +32,7 @@ public:
 
 public:
 	void SetText(const class FText& SetText_0);
+	void SetIconText(const class FText& InText);
 	bool Select(bool PlayAnimation_0);
 	void RefreshKeyImage();
 	void PreConstruct(bool IsDesignTime);

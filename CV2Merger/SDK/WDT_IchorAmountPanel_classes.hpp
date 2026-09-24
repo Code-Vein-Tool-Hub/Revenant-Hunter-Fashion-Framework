@@ -19,7 +19,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WDT_IchorAmountPanel.WDT_IchorAmountPanel_C
-// 0x0048 (0x0648 - 0x0600)
+// 0x0098 (0x0698 - 0x0600)
 class UWDT_IchorAmountPanel_C final : public UHudPieceBase
 {
 public:
@@ -29,17 +29,29 @@ public:
 	class UImage*                                 IchorGauge;                                        // 0x0618(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UCommonTextBlock*                       MaxIchorAmountText;                                // 0x0620(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UOverlay*                               Overlay_2;                                         // 0x0628(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	int32                                         CurrentIchor;                                      // 0x0630(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         MaxIchor;                                          // 0x0634(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           ForcedShowTimerHandle;                             // 0x0638(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	float                                         ForcedShowTime;                                    // 0x0640(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UOverlay*                               Overlay_Panelinfinite;                             // 0x0630(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               Overlay_PanelNormal;                               // 0x0638(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               Overlay_PanelZero;                                 // 0x0640(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_IchorAmountPanelinfinite_C*        WDT_IchorAmountPanelinfinite;                      // 0x0648(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_IchorAmountPaneZero_C*             WDT_IchorAmountPaneZero;                           // 0x0650(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetSwitcher*                        WidgetSwitcher_42;                                 // 0x0658(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	int32                                         CurrentIchor;                                      // 0x0660(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         MaxIchor;                                          // 0x0664(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           ForcedShowTimerHandle;                             // 0x0668(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	float                                         ForcedShowTime;                                    // 0x0670(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_674[0x4];                                      // 0x0674(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        MaxInfiniteTime;                                   // 0x0678(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        MaxZeroPenaltyTime;                                // 0x0680(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CurrentInfiniteTime;                               // 0x0688(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CurrentZeroPenaltyTime;                            // 0x0690(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void OnForcedShowByUsageEnd();
-	void OnBattleStateChanged(bool InBattleState);
-	void NotifyIchorChanged(double InCurrentIchor, double InMaxIchor, EResourceChangeFactor InChangeFactor);
-	void HideByGadgetPanel();
 	void ForcedShowByUsage();
+	void HideByGadgetPanel();
+	void NotifyIchorChanged(double InCurrentIchor, double InMaxIchor, EResourceChangeFactor InChangeFactor);
+	void OnBattleStateChanged(bool InBattleState);
+	void OnForcedShowByUsageEnd();
+	void SetIchorInfiniteAndZeroPenaltyTime(double InInfiniteTime, double InZeroPenaltyTime);
 
 public:
 	static class UClass* StaticClass()
@@ -52,17 +64,27 @@ public:
 	}
 };
 static_assert(alignof(UWDT_IchorAmountPanel_C) == 0x000008, "Wrong alignment on UWDT_IchorAmountPanel_C");
-static_assert(sizeof(UWDT_IchorAmountPanel_C) == 0x000648, "Wrong size on UWDT_IchorAmountPanel_C");
+static_assert(sizeof(UWDT_IchorAmountPanel_C) == 0x000698, "Wrong size on UWDT_IchorAmountPanel_C");
 static_assert(offsetof(UWDT_IchorAmountPanel_C, BattleEndAnimation) == 0x000600, "Member 'UWDT_IchorAmountPanel_C::BattleEndAnimation' has a wrong offset!");
 static_assert(offsetof(UWDT_IchorAmountPanel_C, CurrentIchorAmountText) == 0x000608, "Member 'UWDT_IchorAmountPanel_C::CurrentIchorAmountText' has a wrong offset!");
 static_assert(offsetof(UWDT_IchorAmountPanel_C, CurrentIchorAmountText_Shadow) == 0x000610, "Member 'UWDT_IchorAmountPanel_C::CurrentIchorAmountText_Shadow' has a wrong offset!");
 static_assert(offsetof(UWDT_IchorAmountPanel_C, IchorGauge) == 0x000618, "Member 'UWDT_IchorAmountPanel_C::IchorGauge' has a wrong offset!");
 static_assert(offsetof(UWDT_IchorAmountPanel_C, MaxIchorAmountText) == 0x000620, "Member 'UWDT_IchorAmountPanel_C::MaxIchorAmountText' has a wrong offset!");
 static_assert(offsetof(UWDT_IchorAmountPanel_C, Overlay_2) == 0x000628, "Member 'UWDT_IchorAmountPanel_C::Overlay_2' has a wrong offset!");
-static_assert(offsetof(UWDT_IchorAmountPanel_C, CurrentIchor) == 0x000630, "Member 'UWDT_IchorAmountPanel_C::CurrentIchor' has a wrong offset!");
-static_assert(offsetof(UWDT_IchorAmountPanel_C, MaxIchor) == 0x000634, "Member 'UWDT_IchorAmountPanel_C::MaxIchor' has a wrong offset!");
-static_assert(offsetof(UWDT_IchorAmountPanel_C, ForcedShowTimerHandle) == 0x000638, "Member 'UWDT_IchorAmountPanel_C::ForcedShowTimerHandle' has a wrong offset!");
-static_assert(offsetof(UWDT_IchorAmountPanel_C, ForcedShowTime) == 0x000640, "Member 'UWDT_IchorAmountPanel_C::ForcedShowTime' has a wrong offset!");
+static_assert(offsetof(UWDT_IchorAmountPanel_C, Overlay_Panelinfinite) == 0x000630, "Member 'UWDT_IchorAmountPanel_C::Overlay_Panelinfinite' has a wrong offset!");
+static_assert(offsetof(UWDT_IchorAmountPanel_C, Overlay_PanelNormal) == 0x000638, "Member 'UWDT_IchorAmountPanel_C::Overlay_PanelNormal' has a wrong offset!");
+static_assert(offsetof(UWDT_IchorAmountPanel_C, Overlay_PanelZero) == 0x000640, "Member 'UWDT_IchorAmountPanel_C::Overlay_PanelZero' has a wrong offset!");
+static_assert(offsetof(UWDT_IchorAmountPanel_C, WDT_IchorAmountPanelinfinite) == 0x000648, "Member 'UWDT_IchorAmountPanel_C::WDT_IchorAmountPanelinfinite' has a wrong offset!");
+static_assert(offsetof(UWDT_IchorAmountPanel_C, WDT_IchorAmountPaneZero) == 0x000650, "Member 'UWDT_IchorAmountPanel_C::WDT_IchorAmountPaneZero' has a wrong offset!");
+static_assert(offsetof(UWDT_IchorAmountPanel_C, WidgetSwitcher_42) == 0x000658, "Member 'UWDT_IchorAmountPanel_C::WidgetSwitcher_42' has a wrong offset!");
+static_assert(offsetof(UWDT_IchorAmountPanel_C, CurrentIchor) == 0x000660, "Member 'UWDT_IchorAmountPanel_C::CurrentIchor' has a wrong offset!");
+static_assert(offsetof(UWDT_IchorAmountPanel_C, MaxIchor) == 0x000664, "Member 'UWDT_IchorAmountPanel_C::MaxIchor' has a wrong offset!");
+static_assert(offsetof(UWDT_IchorAmountPanel_C, ForcedShowTimerHandle) == 0x000668, "Member 'UWDT_IchorAmountPanel_C::ForcedShowTimerHandle' has a wrong offset!");
+static_assert(offsetof(UWDT_IchorAmountPanel_C, ForcedShowTime) == 0x000670, "Member 'UWDT_IchorAmountPanel_C::ForcedShowTime' has a wrong offset!");
+static_assert(offsetof(UWDT_IchorAmountPanel_C, MaxInfiniteTime) == 0x000678, "Member 'UWDT_IchorAmountPanel_C::MaxInfiniteTime' has a wrong offset!");
+static_assert(offsetof(UWDT_IchorAmountPanel_C, MaxZeroPenaltyTime) == 0x000680, "Member 'UWDT_IchorAmountPanel_C::MaxZeroPenaltyTime' has a wrong offset!");
+static_assert(offsetof(UWDT_IchorAmountPanel_C, CurrentInfiniteTime) == 0x000688, "Member 'UWDT_IchorAmountPanel_C::CurrentInfiniteTime' has a wrong offset!");
+static_assert(offsetof(UWDT_IchorAmountPanel_C, CurrentZeroPenaltyTime) == 0x000690, "Member 'UWDT_IchorAmountPanel_C::CurrentZeroPenaltyTime' has a wrong offset!");
 
 }
 

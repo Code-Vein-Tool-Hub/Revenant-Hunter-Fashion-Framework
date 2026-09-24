@@ -34,7 +34,7 @@ public:
 	class UWDT_CampOptionPiece_C*                 Return;                                            // 0x05F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UVerticalBox*                           VerticalBox_118;                                   // 0x0600(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UBP_CampMenuUIObject_C*                 CampMenuUIObject;                                  // 0x0608(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          WaitDecideAnim;                                    // 0x0610(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Resting;                                           // 0x0610(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BP_OnActivated();
@@ -83,7 +83,7 @@ static_assert(offsetof(UWDT_RestMenu_C, RestMenuCanvas) == 0x0005F0, "Member 'UW
 static_assert(offsetof(UWDT_RestMenu_C, Return) == 0x0005F8, "Member 'UWDT_RestMenu_C::Return' has a wrong offset!");
 static_assert(offsetof(UWDT_RestMenu_C, VerticalBox_118) == 0x000600, "Member 'UWDT_RestMenu_C::VerticalBox_118' has a wrong offset!");
 static_assert(offsetof(UWDT_RestMenu_C, CampMenuUIObject) == 0x000608, "Member 'UWDT_RestMenu_C::CampMenuUIObject' has a wrong offset!");
-static_assert(offsetof(UWDT_RestMenu_C, WaitDecideAnim) == 0x000610, "Member 'UWDT_RestMenu_C::WaitDecideAnim' has a wrong offset!");
+static_assert(offsetof(UWDT_RestMenu_C, Resting) == 0x000610, "Member 'UWDT_RestMenu_C::Resting' has a wrong offset!");
 
 }
 

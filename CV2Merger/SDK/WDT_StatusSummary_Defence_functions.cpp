@@ -17,45 +17,111 @@
 namespace SDK
 {
 
-// Function WDT_StatusSummary_Defence.WDT_StatusSummary_Defence_C.SetBloodDiff
+// Function WDT_StatusSummary_Defence.WDT_StatusSummary_Defence_C.SetThunderDiff
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// double                                  InBloodCurrent                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  InBlood                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  InThunderCurrent                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  InThunder                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_StatusSummary_Defence_C::SetBloodDiff(double InBloodCurrent, double InBlood)
+void UWDT_StatusSummary_Defence_C::SetThunderDiff(double InThunderCurrent, double InThunder)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_StatusSummary_Defence_C", "SetBloodDiff");
+		Func = Class->GetFunction("WDT_StatusSummary_Defence_C", "SetThunderDiff");
 
-	Params::WDT_StatusSummary_Defence_C_SetBloodDiff Parms{};
+	Params::WDT_StatusSummary_Defence_C_SetThunderDiff Parms{};
 
-	Parms.InBloodCurrent = InBloodCurrent;
-	Parms.InBlood = InBlood;
+	Parms.InThunderCurrent = InThunderCurrent;
+	Parms.InThunder = InThunder;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WDT_StatusSummary_Defence.WDT_StatusSummary_Defence_C.SetCrushDiff
+// Function WDT_StatusSummary_Defence.WDT_StatusSummary_Defence_C.SetSunderDiff
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// double                                  InCrushCurrent                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  InCrush                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  InSunderCurrent                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  InSunder                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_StatusSummary_Defence_C::SetCrushDiff(double InCrushCurrent, double InCrush)
+void UWDT_StatusSummary_Defence_C::SetSunderDiff(double InSunderCurrent, double InSunder)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_StatusSummary_Defence_C", "SetCrushDiff");
+		Func = Class->GetFunction("WDT_StatusSummary_Defence_C", "SetSunderDiff");
 
-	Params::WDT_StatusSummary_Defence_C_SetCrushDiff Parms{};
+	Params::WDT_StatusSummary_Defence_C_SetSunderDiff Parms{};
 
-	Parms.InCrushCurrent = InCrushCurrent;
-	Parms.InCrush = InCrush;
+	Parms.InSunderCurrent = InSunderCurrent;
+	Parms.InSunder = InSunder;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_StatusSummary_Defence.WDT_StatusSummary_Defence_C.SetPierceDiff
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  InPierceCurrent                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  InPierce                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_StatusSummary_Defence_C::SetPierceDiff(double InPierceCurrent, double InPierce)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_StatusSummary_Defence_C", "SetPierceDiff");
+
+	Params::WDT_StatusSummary_Defence_C_SetPierceDiff Parms{};
+
+	Parms.InPierceCurrent = InPierceCurrent;
+	Parms.InPierce = InPierce;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_StatusSummary_Defence.WDT_StatusSummary_Defence_C.SetIceDiff
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  InIceCurrent                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  InIce                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_StatusSummary_Defence_C::SetIceDiff(double InIceCurrent, double InIce)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_StatusSummary_Defence_C", "SetIceDiff");
+
+	Params::WDT_StatusSummary_Defence_C_SetIceDiff Parms{};
+
+	Parms.InIceCurrent = InIceCurrent;
+	Parms.InIce = InIce;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_StatusSummary_Defence.WDT_StatusSummary_Defence_C.SetFireDiff
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  InFireCurrent                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  InFire                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_StatusSummary_Defence_C::SetFireDiff(double InFireCurrent, double InFire)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_StatusSummary_Defence_C", "SetFireDiff");
+
+	Params::WDT_StatusSummary_Defence_C_SetFireDiff Parms{};
+
+	Parms.InFireCurrent = InFireCurrent;
+	Parms.InFire = InFire;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -93,111 +159,45 @@ void UWDT_StatusSummary_Defence_C::SetDefence(double InSunder, double InCrush, d
 }
 
 
-// Function WDT_StatusSummary_Defence.WDT_StatusSummary_Defence_C.SetFireDiff
+// Function WDT_StatusSummary_Defence.WDT_StatusSummary_Defence_C.SetCrushDiff
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// double                                  InFireCurrent                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  InFire                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  InCrushCurrent                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  InCrush                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_StatusSummary_Defence_C::SetFireDiff(double InFireCurrent, double InFire)
+void UWDT_StatusSummary_Defence_C::SetCrushDiff(double InCrushCurrent, double InCrush)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_StatusSummary_Defence_C", "SetFireDiff");
+		Func = Class->GetFunction("WDT_StatusSummary_Defence_C", "SetCrushDiff");
 
-	Params::WDT_StatusSummary_Defence_C_SetFireDiff Parms{};
+	Params::WDT_StatusSummary_Defence_C_SetCrushDiff Parms{};
 
-	Parms.InFireCurrent = InFireCurrent;
-	Parms.InFire = InFire;
+	Parms.InCrushCurrent = InCrushCurrent;
+	Parms.InCrush = InCrush;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WDT_StatusSummary_Defence.WDT_StatusSummary_Defence_C.SetIceDiff
+// Function WDT_StatusSummary_Defence.WDT_StatusSummary_Defence_C.SetBloodDiff
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// double                                  InIceCurrent                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  InIce                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  InBloodCurrent                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  InBlood                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_StatusSummary_Defence_C::SetIceDiff(double InIceCurrent, double InIce)
+void UWDT_StatusSummary_Defence_C::SetBloodDiff(double InBloodCurrent, double InBlood)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_StatusSummary_Defence_C", "SetIceDiff");
+		Func = Class->GetFunction("WDT_StatusSummary_Defence_C", "SetBloodDiff");
 
-	Params::WDT_StatusSummary_Defence_C_SetIceDiff Parms{};
+	Params::WDT_StatusSummary_Defence_C_SetBloodDiff Parms{};
 
-	Parms.InIceCurrent = InIceCurrent;
-	Parms.InIce = InIce;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_StatusSummary_Defence.WDT_StatusSummary_Defence_C.SetPierceDiff
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double                                  InPierceCurrent                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  InPierce                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_StatusSummary_Defence_C::SetPierceDiff(double InPierceCurrent, double InPierce)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_StatusSummary_Defence_C", "SetPierceDiff");
-
-	Params::WDT_StatusSummary_Defence_C_SetPierceDiff Parms{};
-
-	Parms.InPierceCurrent = InPierceCurrent;
-	Parms.InPierce = InPierce;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_StatusSummary_Defence.WDT_StatusSummary_Defence_C.SetSunderDiff
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double                                  InSunderCurrent                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  InSunder                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_StatusSummary_Defence_C::SetSunderDiff(double InSunderCurrent, double InSunder)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_StatusSummary_Defence_C", "SetSunderDiff");
-
-	Params::WDT_StatusSummary_Defence_C_SetSunderDiff Parms{};
-
-	Parms.InSunderCurrent = InSunderCurrent;
-	Parms.InSunder = InSunder;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_StatusSummary_Defence.WDT_StatusSummary_Defence_C.SetThunderDiff
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double                                  InThunderCurrent                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  InThunder                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_StatusSummary_Defence_C::SetThunderDiff(double InThunderCurrent, double InThunder)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_StatusSummary_Defence_C", "SetThunderDiff");
-
-	Params::WDT_StatusSummary_Defence_C_SetThunderDiff Parms{};
-
-	Parms.InThunderCurrent = InThunderCurrent;
-	Parms.InThunder = InThunder;
+	Parms.InBloodCurrent = InBloodCurrent;
+	Parms.InBlood = InBlood;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

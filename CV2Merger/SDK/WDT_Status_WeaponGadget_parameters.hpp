@@ -38,7 +38,7 @@ static_assert(offsetof(WDT_Status_WeaponGadget_C_SetIcon, Temp_byte_Variable_1) 
 static_assert(offsetof(WDT_Status_WeaponGadget_C_SetIcon, K2Node_Select_Default) == 0x00002C, "Member 'WDT_Status_WeaponGadget_C_SetIcon::K2Node_Select_Default' has a wrong offset!");
 
 // Function WDT_Status_WeaponGadget.WDT_Status_WeaponGadget_C.SetName
-// 0x0038 (0x0038 - 0x0000)
+// 0x0048 (0x0048 - 0x0000)
 struct WDT_Status_WeaponGadget_C_SetName final
 {
 public:
@@ -48,14 +48,16 @@ public:
 	bool                                          CallFunc_TextIsEmpty_ReturnValue;                  // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   K2Node_Select_Default;                             // 0x0028(0x0010)()
+	class FText                                   CallFunc_FormatTextWithPlayerInfo_ReturnValue;     // 0x0038(0x0010)()
 };
 static_assert(alignof(WDT_Status_WeaponGadget_C_SetName) == 0x000008, "Wrong alignment on WDT_Status_WeaponGadget_C_SetName");
-static_assert(sizeof(WDT_Status_WeaponGadget_C_SetName) == 0x000038, "Wrong size on WDT_Status_WeaponGadget_C_SetName");
+static_assert(sizeof(WDT_Status_WeaponGadget_C_SetName) == 0x000048, "Wrong size on WDT_Status_WeaponGadget_C_SetName");
 static_assert(offsetof(WDT_Status_WeaponGadget_C_SetName, InName) == 0x000000, "Member 'WDT_Status_WeaponGadget_C_SetName::InName' has a wrong offset!");
 static_assert(offsetof(WDT_Status_WeaponGadget_C_SetName, EmptyText) == 0x000010, "Member 'WDT_Status_WeaponGadget_C_SetName::EmptyText' has a wrong offset!");
 static_assert(offsetof(WDT_Status_WeaponGadget_C_SetName, Temp_bool_Variable) == 0x000020, "Member 'WDT_Status_WeaponGadget_C_SetName::Temp_bool_Variable' has a wrong offset!");
 static_assert(offsetof(WDT_Status_WeaponGadget_C_SetName, CallFunc_TextIsEmpty_ReturnValue) == 0x000021, "Member 'WDT_Status_WeaponGadget_C_SetName::CallFunc_TextIsEmpty_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_Status_WeaponGadget_C_SetName, K2Node_Select_Default) == 0x000028, "Member 'WDT_Status_WeaponGadget_C_SetName::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WDT_Status_WeaponGadget_C_SetName, CallFunc_FormatTextWithPlayerInfo_ReturnValue) == 0x000038, "Member 'WDT_Status_WeaponGadget_C_SetName::CallFunc_FormatTextWithPlayerInfo_ReturnValue' has a wrong offset!");
 
 }
 

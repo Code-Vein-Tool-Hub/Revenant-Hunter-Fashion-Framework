@@ -634,7 +634,7 @@ class AQuestCollectionActor : public AActor
 public:
 	TArray<class AActor*>                         QuestActors;                                       // 0x02A0(0x0010)(Edit, ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
 	struct FStoryFlagEvaluationFormula            CheckStoryFlag;                                    // 0x02B0(0x0010)(Edit, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bActiveQuestCollection;                            // 0x02C0(0x0001)(Edit, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bActiveQuestCollection;                            // 0x02C0(0x0001)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, RepNotify, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                          bNeedDelayInitialize;                              // 0x02C1(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_2C2[0x6];                                      // 0x02C2(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 

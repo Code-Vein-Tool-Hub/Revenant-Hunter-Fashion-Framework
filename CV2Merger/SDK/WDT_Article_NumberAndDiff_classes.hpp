@@ -33,11 +33,11 @@ public:
 	class FText                                   IndexText;                                         // 0x0708(0x0010)(Edit, BlueprintVisible)
 
 public:
-	void ExecuteUbergraph_WDT_Article_NumberAndDiff(int32 EntryPoint);
-	void PreConstruct(bool IsDesignTime);
-	void SetValue(int32 InValue);
-	void SetValueComparison(int32 InCurrentValue, int32 InTargetValue, bool SwapComparisons);
 	void SetValueFloat(double InValue);
+	void SetValueComparison(int32 InCurrentValue, int32 InTargetValue, bool SwapComparisons);
+	void SetValue(int32 InValue);
+	void PreConstruct(bool IsDesignTime);
+	void ExecuteUbergraph_WDT_Article_NumberAndDiff(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

@@ -17,19 +17,19 @@
 namespace SDK
 {
 
-// Function WDT_Status_BleedingFactor.WDT_Status_BleedingFactor_C.SetIndependentBleedingFactor
+// Function WDT_Status_BleedingFactor.WDT_Status_BleedingFactor_C.SetWeapon2BleedingFactor
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int32                                   InBleedingFactor                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_Status_BleedingFactor_C::SetIndependentBleedingFactor(int32 InBleedingFactor)
+void UWDT_Status_BleedingFactor_C::SetWeapon2BleedingFactor(int32 InBleedingFactor)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Status_BleedingFactor_C", "SetIndependentBleedingFactor");
+		Func = Class->GetFunction("WDT_Status_BleedingFactor_C", "SetWeapon2BleedingFactor");
 
-	Params::WDT_Status_BleedingFactor_C_SetIndependentBleedingFactor Parms{};
+	Params::WDT_Status_BleedingFactor_C_SetWeapon2BleedingFactor Parms{};
 
 	Parms.InBleedingFactor = InBleedingFactor;
 
@@ -57,19 +57,19 @@ void UWDT_Status_BleedingFactor_C::SetWeapon1BleedingFactor(int32 InBleedingFact
 }
 
 
-// Function WDT_Status_BleedingFactor.WDT_Status_BleedingFactor_C.SetWeapon2BleedingFactor
+// Function WDT_Status_BleedingFactor.WDT_Status_BleedingFactor_C.SetIndependentBleedingFactor
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int32                                   InBleedingFactor                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_Status_BleedingFactor_C::SetWeapon2BleedingFactor(int32 InBleedingFactor)
+void UWDT_Status_BleedingFactor_C::SetIndependentBleedingFactor(int32 InBleedingFactor)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Status_BleedingFactor_C", "SetWeapon2BleedingFactor");
+		Func = Class->GetFunction("WDT_Status_BleedingFactor_C", "SetIndependentBleedingFactor");
 
-	Params::WDT_Status_BleedingFactor_C_SetWeapon2BleedingFactor Parms{};
+	Params::WDT_Status_BleedingFactor_C_SetIndependentBleedingFactor Parms{};
 
 	Parms.InBleedingFactor = InBleedingFactor;
 

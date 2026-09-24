@@ -113,6 +113,48 @@ void UWDT_ConfigGraphicPage_C::ExecuteUbergraph_WDT_ConfigGraphicPage(int32 Entr
 }
 
 
+// Function WDT_ConfigGraphicPage.WDT_ConfigGraphicPage_C.GetCurrentUIDLSSGMode
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// EGraphicsDLSSGMode                      OutMode                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_ConfigGraphicPage_C::GetCurrentUIDLSSGMode(EGraphicsDLSSGMode* OutMode)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_ConfigGraphicPage_C", "GetCurrentUIDLSSGMode");
+
+	Params::WDT_ConfigGraphicPage_C_GetCurrentUIDLSSGMode Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (OutMode != nullptr)
+		*OutMode = Parms.OutMode;
+}
+
+
+// Function WDT_ConfigGraphicPage.WDT_ConfigGraphicPage_C.GetCurrentUIReflexMode
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// EGraphicsReflexMode                     OutMode                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_ConfigGraphicPage_C::GetCurrentUIReflexMode(EGraphicsReflexMode* OutMode)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_ConfigGraphicPage_C", "GetCurrentUIReflexMode");
+
+	Params::WDT_ConfigGraphicPage_C_GetCurrentUIReflexMode Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (OutMode != nullptr)
+		*OutMode = Parms.OutMode;
+}
+
+
 // Function WDT_ConfigGraphicPage.WDT_ConfigGraphicPage_C.GetUIPiceGraphicSettingParam
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -131,6 +173,50 @@ void UWDT_ConfigGraphicPage_C::GetUIPiceGraphicSettingParam(struct FConfiguratio
 
 	if (OutGraphicData != nullptr)
 		*OutGraphicData = std::move(Parms.OutGraphicData);
+}
+
+
+// Function WDT_ConfigGraphicPage.WDT_ConfigGraphicPage_C.InitializeDLSSGModePieceParameter
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EGraphicsDLSSGMode                      InInitializeValue                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EGraphicsDLSSGMode                      InDefaultValue                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_ConfigGraphicPage_C::InitializeDLSSGModePieceParameter(EGraphicsDLSSGMode InInitializeValue, EGraphicsDLSSGMode InDefaultValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_ConfigGraphicPage_C", "InitializeDLSSGModePieceParameter");
+
+	Params::WDT_ConfigGraphicPage_C_InitializeDLSSGModePieceParameter Parms{};
+
+	Parms.InInitializeValue = InInitializeValue;
+	Parms.InDefaultValue = InDefaultValue;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_ConfigGraphicPage.WDT_ConfigGraphicPage_C.InitializeRefrexPeceParameter
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EGraphicsReflexMode                     InInitializeValue                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EGraphicsReflexMode                     InDefaultValue                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_ConfigGraphicPage_C::InitializeRefrexPeceParameter(EGraphicsReflexMode InInitializeValue, EGraphicsReflexMode InDefaultValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_ConfigGraphicPage_C", "InitializeRefrexPeceParameter");
+
+	Params::WDT_ConfigGraphicPage_C_InitializeRefrexPeceParameter Parms{};
+
+	Parms.InInitializeValue = InInitializeValue;
+	Parms.InDefaultValue = InDefaultValue;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -799,6 +885,20 @@ void UWDT_ConfigGraphicPage_C::OnUpdateDisplay()
 }
 
 
+// Function WDT_ConfigGraphicPage.WDT_ConfigGraphicPage_C.OnUpdateDLSSG
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWDT_ConfigGraphicPage_C::OnUpdateDLSSG()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_ConfigGraphicPage_C", "OnUpdateDLSSG");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WDT_ConfigGraphicPage.WDT_ConfigGraphicPage_C.OnUpdateScreenMode
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -917,6 +1017,34 @@ void UWDT_ConfigGraphicPage_C::SetupConfigPieceList()
 }
 
 
+// Function WDT_ConfigGraphicPage.WDT_ConfigGraphicPage_C.SetupDLSSGMode
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWDT_ConfigGraphicPage_C::SetupDLSSGMode()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_ConfigGraphicPage_C", "SetupDLSSGMode");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WDT_ConfigGraphicPage.WDT_ConfigGraphicPage_C.SetupReflexMode
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWDT_ConfigGraphicPage_C::SetupReflexMode()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_ConfigGraphicPage_C", "SetupReflexMode");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WDT_ConfigGraphicPage.WDT_ConfigGraphicPage_C.SetupScreenResolution
 // (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
@@ -940,6 +1068,34 @@ void UWDT_ConfigGraphicPage_C::UpdateAntialiasingTypeGrayOut()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("WDT_ConfigGraphicPage_C", "UpdateAntialiasingTypeGrayOut");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WDT_ConfigGraphicPage.WDT_ConfigGraphicPage_C.UpdateDLSSGMode
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWDT_ConfigGraphicPage_C::UpdateDLSSGMode()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_ConfigGraphicPage_C", "UpdateDLSSGMode");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WDT_ConfigGraphicPage.WDT_ConfigGraphicPage_C.UpdateReflexMode
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWDT_ConfigGraphicPage_C::UpdateReflexMode()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_ConfigGraphicPage_C", "UpdateReflexMode");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

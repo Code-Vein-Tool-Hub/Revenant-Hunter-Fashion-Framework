@@ -11,11 +11,11 @@
 #include "Basic.hpp"
 
 #include "Engine_classes.hpp"
-#include "DeveloperSettings_classes.hpp"
-#include "OnlineSubsystem_structs.hpp"
 #include "AudioMixer_classes.hpp"
 #include "CoreUObject_classes.hpp"
+#include "OnlineSubsystem_structs.hpp"
 #include "OnlineSubsystemUtils_structs.hpp"
+#include "DeveloperSettings_classes.hpp"
 
 
 namespace SDK
@@ -700,7 +700,7 @@ static_assert(offsetof(AOnlineBeaconClient, ConnectionState) == 0x0002E0, "Membe
 
 // Class OnlineSubsystemUtils.OnlineBeaconHost
 // 0x0110 (0x03E0 - 0x02D0)
-class AOnlineBeaconHost final : public AOnlineBeacon
+class AOnlineBeaconHost : public AOnlineBeacon
 {
 public:
 	int32                                         ListenPort;                                        // 0x02D0(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)

@@ -281,6 +281,31 @@ struct FStatusEffectIconHandle UBP_StatusIndicatorUIObject_C::NotifyStatusDownEf
 }
 
 
+// Function BP_StatusIndicatorUIObject.BP_StatusIndicatorUIObject_C.NotifyStatusDownEffectAppliedEx
+// (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EStatusDownEffectIconTypeEx             InType                                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EStatusEffectFrameType                  InFrame                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FStatusEffectIconHandle          ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor)
+
+struct FStatusEffectIconHandle UBP_StatusIndicatorUIObject_C::NotifyStatusDownEffectAppliedEx(const EStatusDownEffectIconTypeEx InType, const EStatusEffectFrameType InFrame)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_StatusIndicatorUIObject_C", "NotifyStatusDownEffectAppliedEx");
+
+	Params::BP_StatusIndicatorUIObject_C_NotifyStatusDownEffectAppliedEx Parms{};
+
+	Parms.InType = InType;
+	Parms.InFrame = InFrame;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function BP_StatusIndicatorUIObject.BP_StatusIndicatorUIObject_C.NotifyStatusEffectRemoved
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -552,6 +577,20 @@ bool UBP_StatusIndicatorUIObject_C::UpdateAccumulateStateValue(const struct FAcc
 	UObject::ProcessEvent(Func, &Parms);
 
 	return Parms.ReturnValue;
+}
+
+
+// Function BP_StatusIndicatorUIObject.BP_StatusIndicatorUIObject_C.UpdateGadgetIcon
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_StatusIndicatorUIObject_C::UpdateGadgetIcon()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_StatusIndicatorUIObject_C", "UpdateGadgetIcon");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

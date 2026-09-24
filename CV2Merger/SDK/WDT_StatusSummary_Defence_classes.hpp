@@ -37,14 +37,14 @@ public:
 	class UTextBlock*                             SummaryThunderDefence;                             // 0x0730(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void SetBloodDiff(double InBloodCurrent, double InBlood);
-	void SetCrushDiff(double InCrushCurrent, double InCrush);
-	void SetDefence(double InSunder, double InCrush, double InPierce, double InBlood, double InFire, double InIce, double InThunder);
-	void SetFireDiff(double InFireCurrent, double InFire);
-	void SetIceDiff(double InIceCurrent, double InIce);
-	void SetPierceDiff(double InPierceCurrent, double InPierce);
-	void SetSunderDiff(double InSunderCurrent, double InSunder);
 	void SetThunderDiff(double InThunderCurrent, double InThunder);
+	void SetSunderDiff(double InSunderCurrent, double InSunder);
+	void SetPierceDiff(double InPierceCurrent, double InPierce);
+	void SetIceDiff(double InIceCurrent, double InIce);
+	void SetFireDiff(double InFireCurrent, double InFire);
+	void SetDefence(double InSunder, double InCrush, double InPierce, double InBlood, double InFire, double InIce, double InThunder);
+	void SetCrushDiff(double InCrushCurrent, double InCrush);
+	void SetBloodDiff(double InBloodCurrent, double InBlood);
 
 public:
 	static class UClass* StaticClass()

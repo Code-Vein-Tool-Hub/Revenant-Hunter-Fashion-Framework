@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "EN_ConfigMenuPiceType_structs.hpp"
 #include "Engine_structs.hpp"
+#include "Extensions_structs.hpp"
+#include "EN_ConfigMenuPiceType_structs.hpp"
 #include "EN_ConfigPieceEditableType_structs.hpp"
 #include "BasicUI_classes.hpp"
-#include "Extensions_structs.hpp"
 
 
 namespace SDK
@@ -31,7 +31,7 @@ public:
 	EN_ConfigPieceEditableType                    EditType;                                          // 0x05E1(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_5E2[0x6];                                      // 0x05E2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   LogTitleText;                                      // 0x05E8(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly)
-	class FText                                   LogText;                                           // 0x05F8(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly)
+	class FText                                   LogText;                                           // 0x05F8(0x0010)(Edit, BlueprintVisible)
 	bool                                          bSetValueChangeTextStyle;                          // 0x0608(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_609[0x7];                                      // 0x0609(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             OnValueChangeEvent;                                // 0x0610(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
@@ -46,6 +46,7 @@ public:
 
 public:
 	void SetTitleText(const class FText& InText, bool* Success);
+	void SetLogText(const class FText& InText);
 	void SetIsEditable(bool InFlag);
 	void SetEnableColor(bool* OutFlag);
 	void SetEditableGrayOut(bool* Flag);

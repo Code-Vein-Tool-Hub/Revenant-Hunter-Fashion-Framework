@@ -22,18 +22,23 @@ namespace SDK
 class UBFL_ArticleUtility_C final : public UBlueprintFunctionLibrary
 {
 public:
-	static void CompareFloat(double EquipValue, double TargetValue, bool SwapComparison, class UObject* __WorldContext, uint8* CompareResult);
-	static void CompareInteger(int32 EquipValue, int32 TargetValue, bool SwapComparisons, class UObject* __WorldContext, uint8* CompareResult);
-	static void EnumToWeaponGadgetCategoryText(EUIWeaponGadgetCategory InCategory, class UObject* __WorldContext, class FText* NewParam);
+	static void GetWeaponCategoryTexture(EUIWeaponCategory Category, class UObject* __WorldContext, class UTexture2D** Texture);
 	static void GetEnchantTextFromTag(const struct FGameplayTag& InEnchantTag, class UObject* __WorldContext, class FText* EnchantText);
 	static void GetTextColorByCompareResult(uint8 CompareResult, class UObject* __WorldContext, struct FSlateColor* TextColor);
-	static void GetWeaponCategoryTexture(EUIWeaponCategory Category, class UObject* __WorldContext, class UTexture2D** Texture);
-	static void SetCapacityMeter(class UWDT_Status_Capacity_C* InCapacity, class UWDT_Status_LoadMeter_C* InLoadMeter, class UWDT_Status_OverLoadMeters_C* InOverLoadMeter, int32 InCapacityValue, int32 InLoadValue, class UObject* __WorldContext);
-	static void SetCapacityMeterComparison(class UWDT_Status_Capacity_C* InCapacity, class UWDT_Status_LoadMeter_C* InLoadMeter, class UWDT_Status_OverLoadMeters_C* InOverLoadMeter, int32 InCurrentCapacity, int32 InAfterCapacity, int32 InCurrentLoad, int32 InAfterLoad, class UObject* __WorldContext);
-	static void Update_Comparison_Int_Diff_Only_Arrow(int32 CurrentParam, int32 ComparisonParam, bool SwapComparisons, class UWDT_ArticleDiffArrowElement_C* Arrow, class UObject* __WorldContext);
+	static void CompareInteger(int32 EquipValue, int32 TargetValue, bool SwapComparisons, class UObject* __WorldContext, uint8* CompareResult);
 	static void UpdateComparisonDiffArrowWithDiffNumber(int32 CurrentParam, int32 ComparisonParam, bool SwapComparisons, class UWDT_ArticleDiffArrowElement_C* Arrow, class UTextBlock* DiffNum, class UObject* __WorldContext);
-	static void UpdateComparisonDiffWithDiffNumber(int32 CurrentParam, int32 ComparisonParam, bool SwapComparisons, class UWidget* DiffRoot, class UTextBlock* Up, class UTextBlock* Down, class UTextBlock* DiffNum, class UObject* __WorldContext);
 	static void UpdateComparisonFloatDiffOnlyArrow(double InCurrentParam, double InComparisonParam, bool SwapComparisons, class UWDT_ArticleDiffArrowElement_C* Arrow, class UObject* __WorldContext);
+	static void CompareFloat(double EquipValue, double TargetValue, bool SwapComparison, class UObject* __WorldContext, uint8* CompareResult);
+	static void Update_Comparison_Int_Diff_Only_Arrow(int32 CurrentParam, int32 ComparisonParam, bool SwapComparisons, class UWDT_ArticleDiffArrowElement_C* Arrow, class UObject* __WorldContext);
+	static void UpdateComparisonDiffWithDiffNumber(int32 CurrentParam, int32 ComparisonParam, bool SwapComparisons, class UWidget* DiffRoot, class UTextBlock* Up, class UTextBlock* Down, class UTextBlock* DiffNum, class UObject* __WorldContext);
+	static void SetCapacityMeter(EUIAttributeType InAttributeType, class UWDT_Status_Capacity_C* InCapacity, class UWDT_Status_LoadMeter_C* InLoadMeter, class UWDT_Status_OverLoadMeters_C* InOverLoadMeter, int32 InCapacityValue, int32 InLoadValue, struct FUIBloodCodeAttributeConversionInfo& InAttributeConversionInfo, class UObject* __WorldContext);
+	static void SetCapacityMeterComparison(EUIAttributeType InType, class UWDT_Status_Capacity_C* InCapacity, class UWDT_Status_LoadMeter_C* InLoadMeter, class UWDT_Status_OverLoadMeters_C* InOverLoadMeter, int32 InCurrentCapacity, int32 InAfterCapacity, int32 InCurrentLoad, int32 InAfterLoad, struct FUIBloodCodeAttributeConversionInfo& InConversionInfo, class UObject* __WorldContext);
+	static void EnumToWeaponGadgetCategoryText(EUIWeaponGadgetCategory InCategory, class UObject* __WorldContext, class FText* NewParam);
+	static void Get_Attribute_Convertion_Type(EUIAttributeType InType, struct FUIBloodCodeAttributeConversionInfo& InConversionInfo, class UObject* __WorldContext, int32* ConversionType);
+	static void Get_Conversion_Param(EUIAttributeType InType, struct FUIBloodCodeAttributeConversionInfo& InConversionInfo, class UObject* __WorldContext, int32* OutConversionType, struct FUIBloodCodeAttributeConversionParam* OutConversionParam);
+	static void GetAttributeConversionColor(int32 InConversionType, class UObject* __WorldContext, struct FSlateColor* OutColor);
+	static class FText EnumToWeaponCategoryText(EUIWeaponCategory WeaponCategory, class UObject* __WorldContext);
+	static class FText EnumToDefensiveGadgetCategoryText(EUIDefensiveGadgetCategory DefensiveGadgetCategory, class UObject* __WorldContext);
 
 public:
 	static class UClass* StaticClass()

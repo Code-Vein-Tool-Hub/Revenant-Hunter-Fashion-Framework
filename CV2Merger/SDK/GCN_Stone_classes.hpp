@@ -18,24 +18,25 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GCN_Stone.GCN_Stone_C
-// 0x0160 (0x1078 - 0x0F18)
+// 0x0168 (0x1090 - 0x0F28)
 class AGCN_Stone_C final : public AGCN_StatusEffect_Looping_Base_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_GCN_Stone_C;                        // 0x0F18(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	TArray<class UMeshComponent*>                 MeshArray;                                         // 0x0F20(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	bool                                          bEffectBegin;                                      // 0x0F30(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bEffectEnd;                                        // 0x0F31(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_F32[0x6];                                      // 0x0F32(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        EffectBegin_Time;                                  // 0x0F38(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        EffectEnd_Time;                                    // 0x0F40(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        EffectBegin_TimeRange;                             // 0x0F48(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        EffectEnd_TimeRange;                               // 0x0F50(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRuntimeFloatCurve                     EffectBegin_Curve_Weight;                          // 0x0F58(0x0088)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FRuntimeFloatCurve                     EffectEnd_Curve_Weight;                            // 0x0FE0(0x0088)(Edit, BlueprintVisible, DisableEditOnInstance)
-	int32                                         MaterialLayerIndex;                                // 0x1068(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_106C[0x4];                                     // 0x106C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        ActorSize;                                         // 0x1070(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_GCN_Stone_C;                        // 0x0F28(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	TArray<class UMeshComponent*>                 MeshArray;                                         // 0x0F30(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	bool                                          bEffectBegin;                                      // 0x0F40(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bEffectEnd;                                        // 0x0F41(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F42[0x6];                                      // 0x0F42(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        EffectBegin_Time;                                  // 0x0F48(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        EffectEnd_Time;                                    // 0x0F50(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        EffectBegin_TimeRange;                             // 0x0F58(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        EffectEnd_TimeRange;                               // 0x0F60(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRuntimeFloatCurve                     EffectBegin_Curve_Weight;                          // 0x0F68(0x0088)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FRuntimeFloatCurve                     EffectEnd_Curve_Weight;                            // 0x0FF0(0x0088)(Edit, BlueprintVisible, DisableEditOnInstance)
+	int32                                         MaterialLayerIndex;                                // 0x1078(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_107C[0x4];                                     // 0x107C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        ActorSize;                                         // 0x1080(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bActiveEffect;                                     // 0x1088(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ActiveEffect(class AActor* TargetActor);
@@ -62,19 +63,20 @@ public:
 	}
 };
 static_assert(alignof(AGCN_Stone_C) == 0x000008, "Wrong alignment on AGCN_Stone_C");
-static_assert(sizeof(AGCN_Stone_C) == 0x001078, "Wrong size on AGCN_Stone_C");
-static_assert(offsetof(AGCN_Stone_C, UberGraphFrame_GCN_Stone_C) == 0x000F18, "Member 'AGCN_Stone_C::UberGraphFrame_GCN_Stone_C' has a wrong offset!");
-static_assert(offsetof(AGCN_Stone_C, MeshArray) == 0x000F20, "Member 'AGCN_Stone_C::MeshArray' has a wrong offset!");
-static_assert(offsetof(AGCN_Stone_C, bEffectBegin) == 0x000F30, "Member 'AGCN_Stone_C::bEffectBegin' has a wrong offset!");
-static_assert(offsetof(AGCN_Stone_C, bEffectEnd) == 0x000F31, "Member 'AGCN_Stone_C::bEffectEnd' has a wrong offset!");
-static_assert(offsetof(AGCN_Stone_C, EffectBegin_Time) == 0x000F38, "Member 'AGCN_Stone_C::EffectBegin_Time' has a wrong offset!");
-static_assert(offsetof(AGCN_Stone_C, EffectEnd_Time) == 0x000F40, "Member 'AGCN_Stone_C::EffectEnd_Time' has a wrong offset!");
-static_assert(offsetof(AGCN_Stone_C, EffectBegin_TimeRange) == 0x000F48, "Member 'AGCN_Stone_C::EffectBegin_TimeRange' has a wrong offset!");
-static_assert(offsetof(AGCN_Stone_C, EffectEnd_TimeRange) == 0x000F50, "Member 'AGCN_Stone_C::EffectEnd_TimeRange' has a wrong offset!");
-static_assert(offsetof(AGCN_Stone_C, EffectBegin_Curve_Weight) == 0x000F58, "Member 'AGCN_Stone_C::EffectBegin_Curve_Weight' has a wrong offset!");
-static_assert(offsetof(AGCN_Stone_C, EffectEnd_Curve_Weight) == 0x000FE0, "Member 'AGCN_Stone_C::EffectEnd_Curve_Weight' has a wrong offset!");
-static_assert(offsetof(AGCN_Stone_C, MaterialLayerIndex) == 0x001068, "Member 'AGCN_Stone_C::MaterialLayerIndex' has a wrong offset!");
-static_assert(offsetof(AGCN_Stone_C, ActorSize) == 0x001070, "Member 'AGCN_Stone_C::ActorSize' has a wrong offset!");
+static_assert(sizeof(AGCN_Stone_C) == 0x001090, "Wrong size on AGCN_Stone_C");
+static_assert(offsetof(AGCN_Stone_C, UberGraphFrame_GCN_Stone_C) == 0x000F28, "Member 'AGCN_Stone_C::UberGraphFrame_GCN_Stone_C' has a wrong offset!");
+static_assert(offsetof(AGCN_Stone_C, MeshArray) == 0x000F30, "Member 'AGCN_Stone_C::MeshArray' has a wrong offset!");
+static_assert(offsetof(AGCN_Stone_C, bEffectBegin) == 0x000F40, "Member 'AGCN_Stone_C::bEffectBegin' has a wrong offset!");
+static_assert(offsetof(AGCN_Stone_C, bEffectEnd) == 0x000F41, "Member 'AGCN_Stone_C::bEffectEnd' has a wrong offset!");
+static_assert(offsetof(AGCN_Stone_C, EffectBegin_Time) == 0x000F48, "Member 'AGCN_Stone_C::EffectBegin_Time' has a wrong offset!");
+static_assert(offsetof(AGCN_Stone_C, EffectEnd_Time) == 0x000F50, "Member 'AGCN_Stone_C::EffectEnd_Time' has a wrong offset!");
+static_assert(offsetof(AGCN_Stone_C, EffectBegin_TimeRange) == 0x000F58, "Member 'AGCN_Stone_C::EffectBegin_TimeRange' has a wrong offset!");
+static_assert(offsetof(AGCN_Stone_C, EffectEnd_TimeRange) == 0x000F60, "Member 'AGCN_Stone_C::EffectEnd_TimeRange' has a wrong offset!");
+static_assert(offsetof(AGCN_Stone_C, EffectBegin_Curve_Weight) == 0x000F68, "Member 'AGCN_Stone_C::EffectBegin_Curve_Weight' has a wrong offset!");
+static_assert(offsetof(AGCN_Stone_C, EffectEnd_Curve_Weight) == 0x000FF0, "Member 'AGCN_Stone_C::EffectEnd_Curve_Weight' has a wrong offset!");
+static_assert(offsetof(AGCN_Stone_C, MaterialLayerIndex) == 0x001078, "Member 'AGCN_Stone_C::MaterialLayerIndex' has a wrong offset!");
+static_assert(offsetof(AGCN_Stone_C, ActorSize) == 0x001080, "Member 'AGCN_Stone_C::ActorSize' has a wrong offset!");
+static_assert(offsetof(AGCN_Stone_C, bActiveEffect) == 0x001088, "Member 'AGCN_Stone_C::bActiveEffect' has a wrong offset!");
 
 }
 

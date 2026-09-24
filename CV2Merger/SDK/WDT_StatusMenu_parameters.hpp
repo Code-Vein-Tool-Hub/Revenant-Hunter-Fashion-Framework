@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "BasicUI_structs.hpp"
 #include "SlateCore_structs.hpp"
-#include "GameplayTags_structs.hpp"
+#include "BasicUI_structs.hpp"
 #include "Extensions_structs.hpp"
+#include "GameplayTags_structs.hpp"
 #include "UMG_structs.hpp"
 #include "EnhancedInput_structs.hpp"
 
@@ -147,478 +147,478 @@ static_assert(offsetof(WDT_StatusMenu_C_DownForLoadWILL, CallFunc_IsSelectable_s
 static_assert(offsetof(WDT_StatusMenu_C_DownForLoadWILL, CallFunc_IsSelectable_ReturnValue) == 0x000020, "Member 'WDT_StatusMenu_C_DownForLoadWILL::CallFunc_IsSelectable_ReturnValue' has a wrong offset!");
 
 // Function WDT_StatusMenu.WDT_StatusMenu_C.ExecuteUbergraph_WDT_StatusMenu
-// 0x1EC0 (0x1EC0 - 0x0000)
+// 0x1F00 (0x1F00 - 0x0000)
 struct WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UInputAction*                           Temp_object_Variable;                              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FUIPlayerStatusInfo                    CallFunc_GetPlayerStatusInfo_OutStatusInfo;        // 0x0010(0x0C00)()
-	double                                        Temp_real_Variable;                                // 0x0C10(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable_1;                              // 0x0C18(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0C20(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C21[0x7];                                      // 0x0C21(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FInputActionValue                      K2Node_EnhancedInputActionEvent_ActionValue_5;     // 0x0C28(0x0020)(NoDestructor)
-	float                                         K2Node_EnhancedInputActionEvent_ElapsedTime_5;     // 0x0C48(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_EnhancedInputActionEvent_TriggeredTime_5;   // 0x0C4C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     K2Node_EnhancedInputActionEvent_SourceAction_5;    // 0x0C50(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UInputAction*                           Temp_object_Variable_1;                            // 0x0C58(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Conv_InputActionValueToBool_ReturnValue;  // 0x0C60(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C61[0x7];                                      // 0x0C61(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        Temp_real_Variable_2;                              // 0x0C68(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable_3;                              // 0x0C70(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable_2_0;                            // 0x0C78(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable_3_0;                            // 0x0C80(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x0C88(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C89[0x7];                                      // 0x0C89(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FInputActionValue                      K2Node_EnhancedInputActionEvent_ActionValue_4;     // 0x0C90(0x0020)(NoDestructor)
-	float                                         K2Node_EnhancedInputActionEvent_ElapsedTime_4;     // 0x0CB0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_EnhancedInputActionEvent_TriggeredTime_4;   // 0x0CB4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     K2Node_EnhancedInputActionEvent_SourceAction_4;    // 0x0CB8(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Conv_InputActionValueToBool_ReturnValue_1; // 0x0CC0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CC1[0x7];                                      // 0x0CC1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UInputAction*                           Temp_object_Variable_2;                            // 0x0CC8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable_4;                              // 0x0CD0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable_4_0;                            // 0x0CD8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable_5;                              // 0x0CE0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_2;                              // 0x0CE8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CE9[0x7];                                      // 0x0CE9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        Temp_real_Variable_5_0;                            // 0x0CF0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0CF8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FInputActionValue                      K2Node_EnhancedInputActionEvent_ActionValue_3;     // 0x0D00(0x0020)(NoDestructor)
-	float                                         K2Node_EnhancedInputActionEvent_ElapsedTime_3;     // 0x0D20(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_EnhancedInputActionEvent_TriggeredTime_3;   // 0x0D24(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     K2Node_EnhancedInputActionEvent_SourceAction_3;    // 0x0D28(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_PlayUIAudioEvent_ReturnValue;             // 0x0D30(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Conv_InputActionValueToBool_ReturnValue_2; // 0x0D31(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D32[0x6];                                      // 0x0D32(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UInputAction*                           Temp_object_Variable_3;                            // 0x0D38(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable_6;                              // 0x0D40(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable_6_0;                            // 0x0D48(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable_7;                              // 0x0D50(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_3;                              // 0x0D58(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D59[0x7];                                      // 0x0D59(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        Temp_real_Variable_7_0;                            // 0x0D60(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FInputActionValue                      K2Node_EnhancedInputActionEvent_ActionValue_2;     // 0x0D68(0x0020)(NoDestructor)
-	float                                         K2Node_EnhancedInputActionEvent_ElapsedTime_2;     // 0x0D88(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_EnhancedInputActionEvent_TriggeredTime_2;   // 0x0D8C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     K2Node_EnhancedInputActionEvent_SourceAction_2;    // 0x0D90(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UInputAction*                           Temp_object_Variable_4;                            // 0x0D98(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Conv_InputActionValueToBool_ReturnValue_3; // 0x0DA0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_DA1[0x7];                                      // 0x0DA1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        Temp_real_Variable_8;                              // 0x0DA8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable_9;                              // 0x0DB0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable_8_0;                            // 0x0DB8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable_9_0;                            // 0x0DC0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_4;                              // 0x0DC8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_DC9[0x7];                                      // 0x0DC9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FInputActionValue                      K2Node_EnhancedInputActionEvent_ActionValue_1;     // 0x0DD0(0x0020)(NoDestructor)
-	float                                         K2Node_EnhancedInputActionEvent_ElapsedTime_1;     // 0x0DF0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_EnhancedInputActionEvent_TriggeredTime_1;   // 0x0DF4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     K2Node_EnhancedInputActionEvent_SourceAction_1;    // 0x0DF8(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Conv_InputActionValueToBool_ReturnValue_4; // 0x0E00(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E01[0x7];                                      // 0x0E01(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UInputAction*                           Temp_object_Variable_5;                            // 0x0E08(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable_10;                             // 0x0E10(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable_10_0;                           // 0x0E18(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable_11;                             // 0x0E20(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_5;                              // 0x0E28(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E29[0x7];                                      // 0x0E29(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        Temp_real_Variable_11_0;                           // 0x0E30(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue_1;   // 0x0E38(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue_2;   // 0x0E40(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_PlayUIAudioEvent_ReturnValue_1;           // 0x0E48(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_PlayUIAudioEvent_ReturnValue_2;           // 0x0E49(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E4A[0x6];                                      // 0x0E4A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue_3;   // 0x0E50(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FInputActionValue                      K2Node_EnhancedInputActionEvent_ActionValue;       // 0x0E58(0x0020)(NoDestructor)
-	float                                         K2Node_EnhancedInputActionEvent_ElapsedTime;       // 0x0E78(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_EnhancedInputActionEvent_TriggeredTime;     // 0x0E7C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     K2Node_EnhancedInputActionEvent_SourceAction;      // 0x0E80(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_PlayUIAudioEvent_ReturnValue_3;           // 0x0E88(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Conv_InputActionValueToBool_ReturnValue_5; // 0x0E89(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E8A[0x6];                                      // 0x0E8A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UInputAction*                           Temp_object_Variable_6;                            // 0x0E90(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable_12;                             // 0x0E98(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable_12_0;                           // 0x0EA0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable_13;                             // 0x0EA8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_6;                              // 0x0EB0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_EB1[0x7];                                      // 0x0EB1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        Temp_real_Variable_13_0;                           // 0x0EB8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UEnhancedInputLocalPlayerSubsystem*     CallFunc_GetLocalPlayerSubsystem_ReturnValue;      // 0x0EC0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FModifyContextOptions                  Temp_struct_Variable;                              // 0x0EC8(0x0001)(ConstParm, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0EC9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_ECA[0x6];                                      // 0x0ECA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IEnhancedInputSubsystemInterface> CallFunc_AddMappingContext_self_CastInput;         // 0x0ED0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UEnhancedInputLocalPlayerSubsystem*     CallFunc_GetLocalPlayerSubsystem_ReturnValue_1;    // 0x0EE0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FModifyContextOptions                  Temp_struct_Variable_1;                            // 0x0EE8(0x0001)(ConstParm, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0EE9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FUIPlayerStatusInfo                    CallFunc_GetPlayerStatusInfo_OutStatusInfo;        // 0x0010(0x0C20)()
+	double                                        Temp_real_Variable;                                // 0x0C30(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_1;                              // 0x0C38(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0C40(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C41[0x7];                                      // 0x0C41(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FInputActionValue                      K2Node_EnhancedInputActionEvent_ActionValue_5;     // 0x0C48(0x0020)(NoDestructor)
+	float                                         K2Node_EnhancedInputActionEvent_ElapsedTime_5;     // 0x0C68(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_EnhancedInputActionEvent_TriggeredTime_5;   // 0x0C6C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     K2Node_EnhancedInputActionEvent_SourceAction_5;    // 0x0C70(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UInputAction*                           Temp_object_Variable_1;                            // 0x0C78(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Conv_InputActionValueToBool_ReturnValue;  // 0x0C80(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C81[0x7];                                      // 0x0C81(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Temp_real_Variable_2;                              // 0x0C88(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_3;                              // 0x0C90(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_2_0;                            // 0x0C98(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_3_0;                            // 0x0CA0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x0CA8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CA9[0x7];                                      // 0x0CA9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FInputActionValue                      K2Node_EnhancedInputActionEvent_ActionValue_4;     // 0x0CB0(0x0020)(NoDestructor)
+	float                                         K2Node_EnhancedInputActionEvent_ElapsedTime_4;     // 0x0CD0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_EnhancedInputActionEvent_TriggeredTime_4;   // 0x0CD4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     K2Node_EnhancedInputActionEvent_SourceAction_4;    // 0x0CD8(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Conv_InputActionValueToBool_ReturnValue_1; // 0x0CE0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CE1[0x7];                                      // 0x0CE1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UInputAction*                           Temp_object_Variable_2;                            // 0x0CE8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_4;                              // 0x0CF0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_4_0;                            // 0x0CF8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_5;                              // 0x0D00(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_2;                              // 0x0D08(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D09[0x7];                                      // 0x0D09(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Temp_real_Variable_5_0;                            // 0x0D10(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0D18(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FInputActionValue                      K2Node_EnhancedInputActionEvent_ActionValue_3;     // 0x0D20(0x0020)(NoDestructor)
+	float                                         K2Node_EnhancedInputActionEvent_ElapsedTime_3;     // 0x0D40(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_EnhancedInputActionEvent_TriggeredTime_3;   // 0x0D44(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     K2Node_EnhancedInputActionEvent_SourceAction_3;    // 0x0D48(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_PlayUIAudioEvent_ReturnValue;             // 0x0D50(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Conv_InputActionValueToBool_ReturnValue_2; // 0x0D51(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D52[0x6];                                      // 0x0D52(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UInputAction*                           Temp_object_Variable_3;                            // 0x0D58(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_6;                              // 0x0D60(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_6_0;                            // 0x0D68(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_7;                              // 0x0D70(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_3;                              // 0x0D78(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D79[0x7];                                      // 0x0D79(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Temp_real_Variable_7_0;                            // 0x0D80(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FInputActionValue                      K2Node_EnhancedInputActionEvent_ActionValue_2;     // 0x0D88(0x0020)(NoDestructor)
+	float                                         K2Node_EnhancedInputActionEvent_ElapsedTime_2;     // 0x0DA8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_EnhancedInputActionEvent_TriggeredTime_2;   // 0x0DAC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     K2Node_EnhancedInputActionEvent_SourceAction_2;    // 0x0DB0(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UInputAction*                           Temp_object_Variable_4;                            // 0x0DB8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Conv_InputActionValueToBool_ReturnValue_3; // 0x0DC0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_DC1[0x7];                                      // 0x0DC1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Temp_real_Variable_8;                              // 0x0DC8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_9;                              // 0x0DD0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_8_0;                            // 0x0DD8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_9_0;                            // 0x0DE0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_4;                              // 0x0DE8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_DE9[0x7];                                      // 0x0DE9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FInputActionValue                      K2Node_EnhancedInputActionEvent_ActionValue_1;     // 0x0DF0(0x0020)(NoDestructor)
+	float                                         K2Node_EnhancedInputActionEvent_ElapsedTime_1;     // 0x0E10(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_EnhancedInputActionEvent_TriggeredTime_1;   // 0x0E14(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     K2Node_EnhancedInputActionEvent_SourceAction_1;    // 0x0E18(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Conv_InputActionValueToBool_ReturnValue_4; // 0x0E20(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E21[0x7];                                      // 0x0E21(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UInputAction*                           Temp_object_Variable_5;                            // 0x0E28(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_10;                             // 0x0E30(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_10_0;                           // 0x0E38(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_11;                             // 0x0E40(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_5;                              // 0x0E48(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E49[0x7];                                      // 0x0E49(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Temp_real_Variable_11_0;                           // 0x0E50(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue_1;   // 0x0E58(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue_2;   // 0x0E60(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_PlayUIAudioEvent_ReturnValue_1;           // 0x0E68(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_PlayUIAudioEvent_ReturnValue_2;           // 0x0E69(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E6A[0x6];                                      // 0x0E6A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue_3;   // 0x0E70(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FInputActionValue                      K2Node_EnhancedInputActionEvent_ActionValue;       // 0x0E78(0x0020)(NoDestructor)
+	float                                         K2Node_EnhancedInputActionEvent_ElapsedTime;       // 0x0E98(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_EnhancedInputActionEvent_TriggeredTime;     // 0x0E9C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     K2Node_EnhancedInputActionEvent_SourceAction;      // 0x0EA0(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_PlayUIAudioEvent_ReturnValue_3;           // 0x0EA8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Conv_InputActionValueToBool_ReturnValue_5; // 0x0EA9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_EAA[0x6];                                      // 0x0EAA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UInputAction*                           Temp_object_Variable_6;                            // 0x0EB0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_12;                             // 0x0EB8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_12_0;                           // 0x0EC0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_13;                             // 0x0EC8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_6;                              // 0x0ED0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_ED1[0x7];                                      // 0x0ED1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Temp_real_Variable_13_0;                           // 0x0ED8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UEnhancedInputLocalPlayerSubsystem*     CallFunc_GetLocalPlayerSubsystem_ReturnValue;      // 0x0EE0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FModifyContextOptions                  Temp_struct_Variable;                              // 0x0EE8(0x0001)(ConstParm, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0EE9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_EEA[0x6];                                      // 0x0EEA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IEnhancedInputSubsystemInterface> CallFunc_RemoveMappingContext_self_CastInput;      // 0x0EF0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue_4;   // 0x0F00(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0F08(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_PlayUIAudioEvent_ReturnValue_4;           // 0x0F0C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_F0D[0x3];                                      // 0x0F0D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FInputActionValue                      K2Node_EnhancedInputActionEvent_ActionValue_6;     // 0x0F10(0x0020)(NoDestructor)
-	float                                         K2Node_EnhancedInputActionEvent_ElapsedTime_6;     // 0x0F30(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_EnhancedInputActionEvent_TriggeredTime_6;   // 0x0F34(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     K2Node_EnhancedInputActionEvent_SourceAction_6;    // 0x0F38(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable_0;                              // 0x0F40(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable_1_0;                            // 0x0F48(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Conv_InputActionValueToBool_ReturnValue_6; // 0x0F50(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_F51[0x3];                                      // 0x0F51(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0F54(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0F58(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0F5C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0F60(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0F64(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_7;                              // 0x0F68(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_F69[0x3];                                      // 0x0F69(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable_2;                   // 0x0F6C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable_2;                  // 0x0F70(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0F74(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable_3;                   // 0x0F78(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_F7C[0x4];                                      // 0x0F7C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCanvasPanel*                           K2Node_CustomEvent_StatusMenuCanvas_1;             // 0x0F80(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_PostEventSystem_ReturnValue;              // 0x0F88(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_PostEventSystem_ReturnValue_1;            // 0x0F8C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UCanvasPanel*                           K2Node_CustomEvent_StatusMenuCanvas;               // 0x0F90(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable_14;                             // 0x0F98(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable_15;                             // 0x0FA0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UInputAction*                           Temp_object_Variable_7;                            // 0x0FA8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UMenuPieceBase*                         K2Node_Event_MenuPiece_2;                          // 0x0FB0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UMenuPieceBase*                         K2Node_Event_MenuPiece_1;                          // 0x0FB8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FInputActionValue                      K2Node_EnhancedInputActionEvent_ActionValue_9;     // 0x0FC0(0x0020)(NoDestructor)
-	float                                         K2Node_EnhancedInputActionEvent_ElapsedTime_9;     // 0x0FE0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_EnhancedInputActionEvent_TriggeredTime_9;   // 0x0FE4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     K2Node_EnhancedInputActionEvent_SourceAction_9;    // 0x0FE8(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable_15_0;                           // 0x0FF0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable_14_0;                           // 0x0FF8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Conv_InputActionValueToBool_ReturnValue_7; // 0x1000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsSelectMode_OutFlag;                     // 0x1001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsSelectMode_OutFlag_1;                   // 0x1002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x1003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x1004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsSelectMode_OutFlag_2;                   // 0x1005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1006[0x2];                                     // 0x1006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUISpecialBuffListInfo                 CallFunc_GetSpecialBuffList_OutInfo;               // 0x1008(0x0070)()
-	bool                                          CallFunc_IsActiveStatus_ReturnValue;               // 0x1078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsActiveStatus_ReturnValue_1;             // 0x1079(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsActiveStatus_ReturnValue_2;             // 0x107A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsActiveStatus_ReturnValue_3;             // 0x107B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsActiveStatus_ReturnValue_4;             // 0x107C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsActiveStatus_ReturnValue_5;             // 0x107D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsActiveStatus_ReturnValue_6;             // 0x107E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_8;                              // 0x107F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable_16;                             // 0x1080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_IsDesignTime;                         // 0x1088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1089[0x7];                                     // 0x1089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUIObjectBase*                          CallFunc_GetUIObject_ReturnValue;                  // 0x1090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UFieldMenuUIObject*                     K2Node_DynamicCast_AsField_Menu_UIObject;          // 0x1098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x10A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_10A1[0x3];                                     // 0x10A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x10A4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_10B4[0x4];                                     // 0x10B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        K2Node_Event_InCurrentHealth;                      // 0x10B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_Event_InMaxHealth;                          // 0x10C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_Event_InCurrentStamina;                     // 0x10C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_Event_InMaxStamina;                         // 0x10CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x10D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_1;           // 0x10D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FUIPlayerStatusInfo                    CallFunc_GetPlayerStatusInfo_OutStatusInfo_1;      // 0x10E0(0x0C00)()
-	bool                                          CallFunc_GetStoryFlagValueByBoolean_ReturnValue;   // 0x1CE0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1CE1[0x7];                                     // 0x1CE1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        Temp_real_Variable_17;                             // 0x1CE8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UInputAction*                           Temp_object_Variable_8;                            // 0x1CF0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	const class UMenuPieceBase*                   K2Node_Event_MenuPiece;                            // 0x1CF8(0x0008)(ConstParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWDT_Status_PieceBase_C*                K2Node_DynamicCast_AsWDT_Status_Piece_Base;        // 0x1D00(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x1D08(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1D09[0x7];                                     // 0x1D09(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWDT_Status_Buddy_C*                    K2Node_DynamicCast_AsWDT_Status_Buddy;             // 0x1D10(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x1D18(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1D19[0x7];                                     // 0x1D19(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWDT_Status_WeaponGadget_C*             K2Node_DynamicCast_AsWDT_Status_Weapon_Gadget;     // 0x1D20(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x1D28(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1D29[0x7];                                     // 0x1D29(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FInputActionValue                      K2Node_EnhancedInputActionEvent_ActionValue_7;     // 0x1D30(0x0020)(NoDestructor)
-	float                                         K2Node_EnhancedInputActionEvent_ElapsedTime_7;     // 0x1D50(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_EnhancedInputActionEvent_TriggeredTime_7;   // 0x1D54(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     K2Node_EnhancedInputActionEvent_SourceAction_7;    // 0x1D58(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable_17_0;                           // 0x1D60(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable_16_0;                           // 0x1D68(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Conv_InputActionValueToBool_ReturnValue_8; // 0x1D70(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x1D71(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue_1;    // 0x1D72(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue_2;    // 0x1D73(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue_3;    // 0x1D74(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_9;                              // 0x1D75(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1D76[0x2];                                     // 0x1D76(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        Temp_real_Variable_18;                             // 0x1D78(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable_19;                             // 0x1D80(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UInputAction*                           Temp_object_Variable_9;                            // 0x1D88(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue_4;    // 0x1D90(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue_5;    // 0x1D91(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue_6;    // 0x1D92(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue_7;    // 0x1D93(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1D94[0x4];                                     // 0x1D94(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FInputActionValue                      K2Node_EnhancedInputActionEvent_ActionValue_8;     // 0x1D98(0x0020)(NoDestructor)
-	float                                         K2Node_EnhancedInputActionEvent_ElapsedTime_8;     // 0x1DB8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_EnhancedInputActionEvent_TriggeredTime_8;   // 0x1DBC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     K2Node_EnhancedInputActionEvent_SourceAction_8;    // 0x1DC0(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable_19_0;                           // 0x1DC8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable_18_0;                           // 0x1DD0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Conv_InputActionValueToBool_ReturnValue_9; // 0x1DD8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1DD9[0x3];                                     // 0x1DD9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable_3;                  // 0x1DDC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_3;                 // 0x1DE0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1DE4[0x4];                                     // 0x1DE4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UMenuPieceBase*>                 CallFunc_GetMenuPieces_OutMenuPieces;              // 0x1DE8(0x0010)(ReferenceParm, ContainsInstancedReference)
-	TArray<class UMenuPieceBase*>                 CallFunc_GetMenuPieces_OutMenuPieces_1;            // 0x1DF8(0x0010)(ReferenceParm, ContainsInstancedReference)
-	class UMenuPieceBase*                         CallFunc_Array_Get_Item;                           // 0x1E08(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UMenuPieceBase*                         CallFunc_Array_Get_Item_1;                         // 0x1E10(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class ISelectableInterface>  CallFunc_SetSelectProhibited_self_CastInput;       // 0x1E18(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SetSelectProhibited_ReturnValue;          // 0x1E28(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1E29[0x7];                                     // 0x1E29(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class ISelectableInterface>  CallFunc_SetSelectProhibited_self_CastInput_1;     // 0x1E30(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SetSelectProhibited_ReturnValue_1;        // 0x1E40(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1E41[0x3];                                     // 0x1E41(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x1E44(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x1E48(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x1E4C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x1E4D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1E4E[0x2];                                     // 0x1E4E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UMenuPieceBase*>                 CallFunc_GetMenuPieces_OutMenuPieces_2;            // 0x1E50(0x0010)(ReferenceParm, ContainsInstancedReference)
-	class UMenuPieceBase*                         CallFunc_Array_Get_Item_2;                         // 0x1E60(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x1E68(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1E6C[0x4];                                     // 0x1E6C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class ISelectableInterface>  CallFunc_SetSelectProhibited_self_CastInput_2;     // 0x1E70(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SetSelectProhibited_ReturnValue_2;        // 0x1E80(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x1E81(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1E82[0x6];                                     // 0x1E82(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UMenuPieceBase*>                 CallFunc_GetMenuPieces_OutMenuPieces_3;            // 0x1E88(0x0010)(ReferenceParm, ContainsInstancedReference)
-	class UMenuPieceBase*                         CallFunc_Array_Get_Item_3;                         // 0x1E98(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_3;               // 0x1EA0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1EA4[0x4];                                     // 0x1EA4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class ISelectableInterface>  CallFunc_SetSelectProhibited_self_CastInput_3;     // 0x1EA8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SetSelectProhibited_ReturnValue_3;        // 0x1EB8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_3;                // 0x1EB9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IEnhancedInputSubsystemInterface> CallFunc_AddMappingContext_self_CastInput;         // 0x0EF0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UEnhancedInputLocalPlayerSubsystem*     CallFunc_GetLocalPlayerSubsystem_ReturnValue_1;    // 0x0F00(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FModifyContextOptions                  Temp_struct_Variable_1;                            // 0x0F08(0x0001)(ConstParm, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0F09(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F0A[0x6];                                      // 0x0F0A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IEnhancedInputSubsystemInterface> CallFunc_RemoveMappingContext_self_CastInput;      // 0x0F10(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue_4;   // 0x0F20(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0F28(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_PlayUIAudioEvent_ReturnValue_4;           // 0x0F2C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F2D[0x3];                                      // 0x0F2D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FInputActionValue                      K2Node_EnhancedInputActionEvent_ActionValue_6;     // 0x0F30(0x0020)(NoDestructor)
+	float                                         K2Node_EnhancedInputActionEvent_ElapsedTime_6;     // 0x0F50(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_EnhancedInputActionEvent_TriggeredTime_6;   // 0x0F54(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     K2Node_EnhancedInputActionEvent_SourceAction_6;    // 0x0F58(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_0;                              // 0x0F60(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_1_0;                            // 0x0F68(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Conv_InputActionValueToBool_ReturnValue_6; // 0x0F70(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F71[0x3];                                      // 0x0F71(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0F74(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0F78(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0F7C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0F80(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0F84(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_7;                              // 0x0F88(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F89[0x3];                                      // 0x0F89(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable_2;                   // 0x0F8C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_2;                  // 0x0F90(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0F94(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_3;                   // 0x0F98(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F9C[0x4];                                      // 0x0F9C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCanvasPanel*                           K2Node_CustomEvent_StatusMenuCanvas_1;             // 0x0FA0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_PostEventSystem_ReturnValue;              // 0x0FA8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_PostEventSystem_ReturnValue_1;            // 0x0FAC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UCanvasPanel*                           K2Node_CustomEvent_StatusMenuCanvas;               // 0x0FB0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_14;                             // 0x0FB8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_15;                             // 0x0FC0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UInputAction*                           Temp_object_Variable_7;                            // 0x0FC8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UMenuPieceBase*                         K2Node_Event_MenuPiece_2;                          // 0x0FD0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UMenuPieceBase*                         K2Node_Event_MenuPiece_1;                          // 0x0FD8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FInputActionValue                      K2Node_EnhancedInputActionEvent_ActionValue_9;     // 0x0FE0(0x0020)(NoDestructor)
+	float                                         K2Node_EnhancedInputActionEvent_ElapsedTime_9;     // 0x1000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_EnhancedInputActionEvent_TriggeredTime_9;   // 0x1004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     K2Node_EnhancedInputActionEvent_SourceAction_9;    // 0x1008(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_15_0;                           // 0x1010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_14_0;                           // 0x1018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Conv_InputActionValueToBool_ReturnValue_7; // 0x1020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsSelectMode_OutFlag;                     // 0x1021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsSelectMode_OutFlag_1;                   // 0x1022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x1023(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x1024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsSelectMode_OutFlag_2;                   // 0x1025(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1026[0x2];                                     // 0x1026(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUISpecialBuffListInfo                 CallFunc_GetSpecialBuffList_OutInfo;               // 0x1028(0x0070)()
+	bool                                          CallFunc_IsActiveStatus_ReturnValue;               // 0x1098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsActiveStatus_ReturnValue_1;             // 0x1099(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsActiveStatus_ReturnValue_2;             // 0x109A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsActiveStatus_ReturnValue_3;             // 0x109B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsActiveStatus_ReturnValue_4;             // 0x109C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsActiveStatus_ReturnValue_5;             // 0x109D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsActiveStatus_ReturnValue_6;             // 0x109E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_8;                              // 0x109F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_16;                             // 0x10A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_IsDesignTime;                         // 0x10A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_10A9[0x7];                                     // 0x10A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUIObjectBase*                          CallFunc_GetUIObject_ReturnValue;                  // 0x10B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UFieldMenuUIObject*                     K2Node_DynamicCast_AsField_Menu_UIObject;          // 0x10B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x10C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_10C1[0x3];                                     // 0x10C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x10C4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_10D4[0x4];                                     // 0x10D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        K2Node_Event_InCurrentHealth;                      // 0x10D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_Event_InMaxHealth;                          // 0x10E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_Event_InCurrentStamina;                     // 0x10E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_Event_InMaxStamina;                         // 0x10EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x10F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_1;           // 0x10F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FUIPlayerStatusInfo                    CallFunc_GetPlayerStatusInfo_OutStatusInfo_1;      // 0x1100(0x0C20)()
+	bool                                          CallFunc_GetStoryFlagValueByBoolean_ReturnValue;   // 0x1D20(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1D21[0x7];                                     // 0x1D21(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Temp_real_Variable_17;                             // 0x1D28(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UInputAction*                           Temp_object_Variable_8;                            // 0x1D30(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	const class UMenuPieceBase*                   K2Node_Event_MenuPiece;                            // 0x1D38(0x0008)(ConstParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWDT_Status_PieceBase_C*                K2Node_DynamicCast_AsWDT_Status_Piece_Base;        // 0x1D40(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x1D48(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1D49[0x7];                                     // 0x1D49(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWDT_Status_Buddy_C*                    K2Node_DynamicCast_AsWDT_Status_Buddy;             // 0x1D50(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x1D58(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1D59[0x7];                                     // 0x1D59(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWDT_Status_WeaponGadget_C*             K2Node_DynamicCast_AsWDT_Status_Weapon_Gadget;     // 0x1D60(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x1D68(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1D69[0x7];                                     // 0x1D69(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FInputActionValue                      K2Node_EnhancedInputActionEvent_ActionValue_7;     // 0x1D70(0x0020)(NoDestructor)
+	float                                         K2Node_EnhancedInputActionEvent_ElapsedTime_7;     // 0x1D90(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_EnhancedInputActionEvent_TriggeredTime_7;   // 0x1D94(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     K2Node_EnhancedInputActionEvent_SourceAction_7;    // 0x1D98(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_17_0;                           // 0x1DA0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_16_0;                           // 0x1DA8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Conv_InputActionValueToBool_ReturnValue_8; // 0x1DB0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x1DB1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue_1;    // 0x1DB2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue_2;    // 0x1DB3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue_3;    // 0x1DB4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_9;                              // 0x1DB5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1DB6[0x2];                                     // 0x1DB6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Temp_real_Variable_18;                             // 0x1DB8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_19;                             // 0x1DC0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UInputAction*                           Temp_object_Variable_9;                            // 0x1DC8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue_4;    // 0x1DD0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue_5;    // 0x1DD1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue_6;    // 0x1DD2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue_7;    // 0x1DD3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1DD4[0x4];                                     // 0x1DD4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FInputActionValue                      K2Node_EnhancedInputActionEvent_ActionValue_8;     // 0x1DD8(0x0020)(NoDestructor)
+	float                                         K2Node_EnhancedInputActionEvent_ElapsedTime_8;     // 0x1DF8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_EnhancedInputActionEvent_TriggeredTime_8;   // 0x1DFC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     K2Node_EnhancedInputActionEvent_SourceAction_8;    // 0x1E00(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_19_0;                           // 0x1E08(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_18_0;                           // 0x1E10(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Conv_InputActionValueToBool_ReturnValue_9; // 0x1E18(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1E19[0x3];                                     // 0x1E19(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable_3;                  // 0x1E1C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_3;                 // 0x1E20(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1E24[0x4];                                     // 0x1E24(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UMenuPieceBase*>                 CallFunc_GetMenuPieces_OutMenuPieces;              // 0x1E28(0x0010)(ReferenceParm, ContainsInstancedReference)
+	TArray<class UMenuPieceBase*>                 CallFunc_GetMenuPieces_OutMenuPieces_1;            // 0x1E38(0x0010)(ReferenceParm, ContainsInstancedReference)
+	class UMenuPieceBase*                         CallFunc_Array_Get_Item;                           // 0x1E48(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UMenuPieceBase*                         CallFunc_Array_Get_Item_1;                         // 0x1E50(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class ISelectableInterface>  CallFunc_SetSelectProhibited_self_CastInput;       // 0x1E58(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SetSelectProhibited_ReturnValue;          // 0x1E68(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1E69[0x7];                                     // 0x1E69(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class ISelectableInterface>  CallFunc_SetSelectProhibited_self_CastInput_1;     // 0x1E70(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SetSelectProhibited_ReturnValue_1;        // 0x1E80(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1E81[0x3];                                     // 0x1E81(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x1E84(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x1E88(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x1E8C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x1E8D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1E8E[0x2];                                     // 0x1E8E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UMenuPieceBase*>                 CallFunc_GetMenuPieces_OutMenuPieces_2;            // 0x1E90(0x0010)(ReferenceParm, ContainsInstancedReference)
+	class UMenuPieceBase*                         CallFunc_Array_Get_Item_2;                         // 0x1EA0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x1EA8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1EAC[0x4];                                     // 0x1EAC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class ISelectableInterface>  CallFunc_SetSelectProhibited_self_CastInput_2;     // 0x1EB0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SetSelectProhibited_ReturnValue_2;        // 0x1EC0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x1EC1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1EC2[0x6];                                     // 0x1EC2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UMenuPieceBase*>                 CallFunc_GetMenuPieces_OutMenuPieces_3;            // 0x1EC8(0x0010)(ReferenceParm, ContainsInstancedReference)
+	class UMenuPieceBase*                         CallFunc_Array_Get_Item_3;                         // 0x1ED8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_3;               // 0x1EE0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1EE4[0x4];                                     // 0x1EE4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class ISelectableInterface>  CallFunc_SetSelectProhibited_self_CastInput_3;     // 0x1EE8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SetSelectProhibited_ReturnValue_3;        // 0x1EF8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_3;                // 0x1EF9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu) == 0x000008, "Wrong alignment on WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu");
-static_assert(sizeof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu) == 0x001EC0, "Wrong size on WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu");
+static_assert(sizeof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu) == 0x001F00, "Wrong size on WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu");
 static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, EntryPoint) == 0x000000, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::EntryPoint' has a wrong offset!");
 static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_object_Variable) == 0x000008, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_object_Variable' has a wrong offset!");
 static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_GetPlayerStatusInfo_OutStatusInfo) == 0x000010, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_GetPlayerStatusInfo_OutStatusInfo' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable) == 0x000C10, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_1) == 0x000C18, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_1' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_bool_Variable) == 0x000C20, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_ActionValue_5) == 0x000C28, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_ActionValue_5' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_ElapsedTime_5) == 0x000C48, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_ElapsedTime_5' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_TriggeredTime_5) == 0x000C4C, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_TriggeredTime_5' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_SourceAction_5) == 0x000C50, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_SourceAction_5' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_object_Variable_1) == 0x000C58, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_object_Variable_1' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Conv_InputActionValueToBool_ReturnValue) == 0x000C60, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Conv_InputActionValueToBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_2) == 0x000C68, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_2' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_3) == 0x000C70, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_3' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_2_0) == 0x000C78, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_2_0' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_3_0) == 0x000C80, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_3_0' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_bool_Variable_1) == 0x000C88, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_ActionValue_4) == 0x000C90, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_ActionValue_4' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_ElapsedTime_4) == 0x000CB0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_ElapsedTime_4' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_TriggeredTime_4) == 0x000CB4, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_TriggeredTime_4' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_SourceAction_4) == 0x000CB8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_SourceAction_4' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Conv_InputActionValueToBool_ReturnValue_1) == 0x000CC0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Conv_InputActionValueToBool_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_object_Variable_2) == 0x000CC8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_object_Variable_2' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_4) == 0x000CD0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_4' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_4_0) == 0x000CD8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_4_0' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_5) == 0x000CE0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_5' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_bool_Variable_2) == 0x000CE8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_bool_Variable_2' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_5_0) == 0x000CF0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_5_0' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000CF8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_ActionValue_3) == 0x000D00, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_ActionValue_3' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_ElapsedTime_3) == 0x000D20, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_ElapsedTime_3' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_TriggeredTime_3) == 0x000D24, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_TriggeredTime_3' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_SourceAction_3) == 0x000D28, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_SourceAction_3' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_PlayUIAudioEvent_ReturnValue) == 0x000D30, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_PlayUIAudioEvent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Conv_InputActionValueToBool_ReturnValue_2) == 0x000D31, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Conv_InputActionValueToBool_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_object_Variable_3) == 0x000D38, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_object_Variable_3' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_6) == 0x000D40, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_6' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_6_0) == 0x000D48, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_6_0' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_7) == 0x000D50, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_7' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_bool_Variable_3) == 0x000D58, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_bool_Variable_3' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_7_0) == 0x000D60, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_7_0' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_ActionValue_2) == 0x000D68, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_ActionValue_2' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_ElapsedTime_2) == 0x000D88, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_ElapsedTime_2' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_TriggeredTime_2) == 0x000D8C, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_TriggeredTime_2' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_SourceAction_2) == 0x000D90, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_SourceAction_2' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_object_Variable_4) == 0x000D98, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_object_Variable_4' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Conv_InputActionValueToBool_ReturnValue_3) == 0x000DA0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Conv_InputActionValueToBool_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_8) == 0x000DA8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_8' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_9) == 0x000DB0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_9' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_8_0) == 0x000DB8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_8_0' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_9_0) == 0x000DC0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_9_0' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_bool_Variable_4) == 0x000DC8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_bool_Variable_4' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_ActionValue_1) == 0x000DD0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_ActionValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_ElapsedTime_1) == 0x000DF0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_ElapsedTime_1' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_TriggeredTime_1) == 0x000DF4, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_TriggeredTime_1' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_SourceAction_1) == 0x000DF8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_SourceAction_1' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Conv_InputActionValueToBool_ReturnValue_4) == 0x000E00, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Conv_InputActionValueToBool_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_object_Variable_5) == 0x000E08, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_object_Variable_5' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_10) == 0x000E10, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_10' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_10_0) == 0x000E18, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_10_0' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_11) == 0x000E20, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_11' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_bool_Variable_5) == 0x000E28, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_bool_Variable_5' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_11_0) == 0x000E30, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_11_0' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_GetGameInstanceSubsystem_ReturnValue_1) == 0x000E38, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_GetGameInstanceSubsystem_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_GetGameInstanceSubsystem_ReturnValue_2) == 0x000E40, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_GetGameInstanceSubsystem_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_PlayUIAudioEvent_ReturnValue_1) == 0x000E48, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_PlayUIAudioEvent_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_PlayUIAudioEvent_ReturnValue_2) == 0x000E49, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_PlayUIAudioEvent_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_GetGameInstanceSubsystem_ReturnValue_3) == 0x000E50, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_GetGameInstanceSubsystem_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_ActionValue) == 0x000E58, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_ActionValue' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_ElapsedTime) == 0x000E78, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_ElapsedTime' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_TriggeredTime) == 0x000E7C, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_TriggeredTime' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_SourceAction) == 0x000E80, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_SourceAction' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_PlayUIAudioEvent_ReturnValue_3) == 0x000E88, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_PlayUIAudioEvent_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Conv_InputActionValueToBool_ReturnValue_5) == 0x000E89, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Conv_InputActionValueToBool_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_object_Variable_6) == 0x000E90, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_object_Variable_6' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_12) == 0x000E98, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_12' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_12_0) == 0x000EA0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_12_0' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_13) == 0x000EA8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_13' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_bool_Variable_6) == 0x000EB0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_bool_Variable_6' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_13_0) == 0x000EB8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_13_0' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_GetLocalPlayerSubsystem_ReturnValue) == 0x000EC0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_GetLocalPlayerSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_struct_Variable) == 0x000EC8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_struct_Variable' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_IsValid_ReturnValue) == 0x000EC9, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_AddMappingContext_self_CastInput) == 0x000ED0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_AddMappingContext_self_CastInput' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_GetLocalPlayerSubsystem_ReturnValue_1) == 0x000EE0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_GetLocalPlayerSubsystem_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_struct_Variable_1) == 0x000EE8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_struct_Variable_1' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_IsValid_ReturnValue_1) == 0x000EE9, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_RemoveMappingContext_self_CastInput) == 0x000EF0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_RemoveMappingContext_self_CastInput' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_GetGameInstanceSubsystem_ReturnValue_4) == 0x000F00, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_GetGameInstanceSubsystem_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_int_Array_Index_Variable) == 0x000F08, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_PlayUIAudioEvent_ReturnValue_4) == 0x000F0C, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_PlayUIAudioEvent_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_ActionValue_6) == 0x000F10, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_ActionValue_6' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_ElapsedTime_6) == 0x000F30, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_ElapsedTime_6' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_TriggeredTime_6) == 0x000F34, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_TriggeredTime_6' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_SourceAction_6) == 0x000F38, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_SourceAction_6' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_0) == 0x000F40, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_0' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_1_0) == 0x000F48, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_1_0' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Conv_InputActionValueToBool_ReturnValue_6) == 0x000F50, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Conv_InputActionValueToBool_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_int_Loop_Counter_Variable) == 0x000F54, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Add_IntInt_ReturnValue) == 0x000F58, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_int_Array_Index_Variable_1) == 0x000F5C, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_int_Loop_Counter_Variable_1) == 0x000F60, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Add_IntInt_ReturnValue_1) == 0x000F64, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_bool_Variable_7) == 0x000F68, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_bool_Variable_7' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_int_Array_Index_Variable_2) == 0x000F6C, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_int_Array_Index_Variable_2' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_int_Loop_Counter_Variable_2) == 0x000F70, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_int_Loop_Counter_Variable_2' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Add_IntInt_ReturnValue_2) == 0x000F74, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_int_Array_Index_Variable_3) == 0x000F78, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_int_Array_Index_Variable_3' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_CustomEvent_StatusMenuCanvas_1) == 0x000F80, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_CustomEvent_StatusMenuCanvas_1' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_PostEventSystem_ReturnValue) == 0x000F88, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_PostEventSystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_PostEventSystem_ReturnValue_1) == 0x000F8C, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_PostEventSystem_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_CustomEvent_StatusMenuCanvas) == 0x000F90, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_CustomEvent_StatusMenuCanvas' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_14) == 0x000F98, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_14' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_15) == 0x000FA0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_15' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_object_Variable_7) == 0x000FA8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_object_Variable_7' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_Event_MenuPiece_2) == 0x000FB0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_Event_MenuPiece_2' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_Event_MenuPiece_1) == 0x000FB8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_Event_MenuPiece_1' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_ActionValue_9) == 0x000FC0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_ActionValue_9' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_ElapsedTime_9) == 0x000FE0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_ElapsedTime_9' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_TriggeredTime_9) == 0x000FE4, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_TriggeredTime_9' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_SourceAction_9) == 0x000FE8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_SourceAction_9' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_15_0) == 0x000FF0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_15_0' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_14_0) == 0x000FF8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_14_0' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Conv_InputActionValueToBool_ReturnValue_7) == 0x001000, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Conv_InputActionValueToBool_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_IsSelectMode_OutFlag) == 0x001001, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_IsSelectMode_OutFlag' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_IsSelectMode_OutFlag_1) == 0x001002, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_IsSelectMode_OutFlag_1' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Not_PreBool_ReturnValue) == 0x001003, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Not_PreBool_ReturnValue_1) == 0x001004, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_IsSelectMode_OutFlag_2) == 0x001005, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_IsSelectMode_OutFlag_2' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_GetSpecialBuffList_OutInfo) == 0x001008, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_GetSpecialBuffList_OutInfo' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_IsActiveStatus_ReturnValue) == 0x001078, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_IsActiveStatus_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_IsActiveStatus_ReturnValue_1) == 0x001079, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_IsActiveStatus_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_IsActiveStatus_ReturnValue_2) == 0x00107A, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_IsActiveStatus_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_IsActiveStatus_ReturnValue_3) == 0x00107B, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_IsActiveStatus_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_IsActiveStatus_ReturnValue_4) == 0x00107C, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_IsActiveStatus_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_IsActiveStatus_ReturnValue_5) == 0x00107D, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_IsActiveStatus_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_IsActiveStatus_ReturnValue_6) == 0x00107E, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_IsActiveStatus_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_bool_Variable_8) == 0x00107F, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_bool_Variable_8' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_16) == 0x001080, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_16' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_Event_IsDesignTime) == 0x001088, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_Event_IsDesignTime' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_GetUIObject_ReturnValue) == 0x001090, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_GetUIObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_DynamicCast_AsField_Menu_UIObject) == 0x001098, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_DynamicCast_AsField_Menu_UIObject' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_DynamicCast_bSuccess) == 0x0010A0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_CreateDelegate_OutputDelegate) == 0x0010A4, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_Event_InCurrentHealth) == 0x0010B8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_Event_InCurrentHealth' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_Event_InMaxHealth) == 0x0010C0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_Event_InMaxHealth' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_Event_InCurrentStamina) == 0x0010C8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_Event_InCurrentStamina' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_Event_InMaxStamina) == 0x0010CC, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_Event_InMaxStamina' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Conv_IntToDouble_ReturnValue) == 0x0010D0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Conv_IntToDouble_ReturnValue_1) == 0x0010D8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Conv_IntToDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_GetPlayerStatusInfo_OutStatusInfo_1) == 0x0010E0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_GetPlayerStatusInfo_OutStatusInfo_1' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_GetStoryFlagValueByBoolean_ReturnValue) == 0x001CE0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_GetStoryFlagValueByBoolean_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_17) == 0x001CE8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_17' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_object_Variable_8) == 0x001CF0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_object_Variable_8' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_Event_MenuPiece) == 0x001CF8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_Event_MenuPiece' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_DynamicCast_AsWDT_Status_Piece_Base) == 0x001D00, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_DynamicCast_AsWDT_Status_Piece_Base' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_DynamicCast_bSuccess_1) == 0x001D08, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_DynamicCast_AsWDT_Status_Buddy) == 0x001D10, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_DynamicCast_AsWDT_Status_Buddy' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_DynamicCast_bSuccess_2) == 0x001D18, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_DynamicCast_AsWDT_Status_Weapon_Gadget) == 0x001D20, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_DynamicCast_AsWDT_Status_Weapon_Gadget' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_DynamicCast_bSuccess_3) == 0x001D28, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_ActionValue_7) == 0x001D30, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_ActionValue_7' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_ElapsedTime_7) == 0x001D50, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_ElapsedTime_7' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_TriggeredTime_7) == 0x001D54, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_TriggeredTime_7' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_SourceAction_7) == 0x001D58, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_SourceAction_7' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_17_0) == 0x001D60, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_17_0' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_16_0) == 0x001D68, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_16_0' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Conv_InputActionValueToBool_ReturnValue_8) == 0x001D70, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Conv_InputActionValueToBool_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x001D71, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_EqualEqual_ObjectObject_ReturnValue_1) == 0x001D72, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_EqualEqual_ObjectObject_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_EqualEqual_ObjectObject_ReturnValue_2) == 0x001D73, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_EqualEqual_ObjectObject_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_EqualEqual_ObjectObject_ReturnValue_3) == 0x001D74, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_EqualEqual_ObjectObject_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_bool_Variable_9) == 0x001D75, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_bool_Variable_9' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_18) == 0x001D78, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_18' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_19) == 0x001D80, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_19' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_object_Variable_9) == 0x001D88, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_object_Variable_9' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_EqualEqual_ObjectObject_ReturnValue_4) == 0x001D90, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_EqualEqual_ObjectObject_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_EqualEqual_ObjectObject_ReturnValue_5) == 0x001D91, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_EqualEqual_ObjectObject_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_EqualEqual_ObjectObject_ReturnValue_6) == 0x001D92, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_EqualEqual_ObjectObject_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_EqualEqual_ObjectObject_ReturnValue_7) == 0x001D93, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_EqualEqual_ObjectObject_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_ActionValue_8) == 0x001D98, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_ActionValue_8' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_ElapsedTime_8) == 0x001DB8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_ElapsedTime_8' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_TriggeredTime_8) == 0x001DBC, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_TriggeredTime_8' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_SourceAction_8) == 0x001DC0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_SourceAction_8' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_19_0) == 0x001DC8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_19_0' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_18_0) == 0x001DD0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_18_0' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Conv_InputActionValueToBool_ReturnValue_9) == 0x001DD8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Conv_InputActionValueToBool_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_int_Loop_Counter_Variable_3) == 0x001DDC, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_int_Loop_Counter_Variable_3' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Add_IntInt_ReturnValue_3) == 0x001DE0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Add_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_GetMenuPieces_OutMenuPieces) == 0x001DE8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_GetMenuPieces_OutMenuPieces' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_GetMenuPieces_OutMenuPieces_1) == 0x001DF8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_GetMenuPieces_OutMenuPieces_1' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Array_Get_Item) == 0x001E08, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Array_Get_Item_1) == 0x001E10, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_SetSelectProhibited_self_CastInput) == 0x001E18, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_SetSelectProhibited_self_CastInput' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_SetSelectProhibited_ReturnValue) == 0x001E28, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_SetSelectProhibited_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_SetSelectProhibited_self_CastInput_1) == 0x001E30, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_SetSelectProhibited_self_CastInput_1' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_SetSelectProhibited_ReturnValue_1) == 0x001E40, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_SetSelectProhibited_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Array_Length_ReturnValue) == 0x001E44, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Array_Length_ReturnValue_1) == 0x001E48, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Less_IntInt_ReturnValue) == 0x001E4C, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Less_IntInt_ReturnValue_1) == 0x001E4D, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_GetMenuPieces_OutMenuPieces_2) == 0x001E50, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_GetMenuPieces_OutMenuPieces_2' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Array_Get_Item_2) == 0x001E60, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Array_Get_Item_2' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Array_Length_ReturnValue_2) == 0x001E68, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_SetSelectProhibited_self_CastInput_2) == 0x001E70, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_SetSelectProhibited_self_CastInput_2' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_SetSelectProhibited_ReturnValue_2) == 0x001E80, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_SetSelectProhibited_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Less_IntInt_ReturnValue_2) == 0x001E81, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_GetMenuPieces_OutMenuPieces_3) == 0x001E88, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_GetMenuPieces_OutMenuPieces_3' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Array_Get_Item_3) == 0x001E98, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Array_Get_Item_3' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Array_Length_ReturnValue_3) == 0x001EA0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Array_Length_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_SetSelectProhibited_self_CastInput_3) == 0x001EA8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_SetSelectProhibited_self_CastInput_3' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_SetSelectProhibited_ReturnValue_3) == 0x001EB8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_SetSelectProhibited_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Less_IntInt_ReturnValue_3) == 0x001EB9, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Less_IntInt_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable) == 0x000C30, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_1) == 0x000C38, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_1' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_bool_Variable) == 0x000C40, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_ActionValue_5) == 0x000C48, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_ActionValue_5' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_ElapsedTime_5) == 0x000C68, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_ElapsedTime_5' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_TriggeredTime_5) == 0x000C6C, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_TriggeredTime_5' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_SourceAction_5) == 0x000C70, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_SourceAction_5' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_object_Variable_1) == 0x000C78, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_object_Variable_1' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Conv_InputActionValueToBool_ReturnValue) == 0x000C80, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Conv_InputActionValueToBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_2) == 0x000C88, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_2' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_3) == 0x000C90, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_3' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_2_0) == 0x000C98, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_2_0' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_3_0) == 0x000CA0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_3_0' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_bool_Variable_1) == 0x000CA8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_bool_Variable_1' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_ActionValue_4) == 0x000CB0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_ActionValue_4' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_ElapsedTime_4) == 0x000CD0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_ElapsedTime_4' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_TriggeredTime_4) == 0x000CD4, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_TriggeredTime_4' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_SourceAction_4) == 0x000CD8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_SourceAction_4' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Conv_InputActionValueToBool_ReturnValue_1) == 0x000CE0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Conv_InputActionValueToBool_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_object_Variable_2) == 0x000CE8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_object_Variable_2' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_4) == 0x000CF0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_4' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_4_0) == 0x000CF8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_4_0' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_5) == 0x000D00, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_5' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_bool_Variable_2) == 0x000D08, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_bool_Variable_2' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_5_0) == 0x000D10, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_5_0' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000D18, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_ActionValue_3) == 0x000D20, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_ActionValue_3' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_ElapsedTime_3) == 0x000D40, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_ElapsedTime_3' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_TriggeredTime_3) == 0x000D44, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_TriggeredTime_3' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_SourceAction_3) == 0x000D48, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_SourceAction_3' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_PlayUIAudioEvent_ReturnValue) == 0x000D50, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_PlayUIAudioEvent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Conv_InputActionValueToBool_ReturnValue_2) == 0x000D51, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Conv_InputActionValueToBool_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_object_Variable_3) == 0x000D58, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_object_Variable_3' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_6) == 0x000D60, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_6' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_6_0) == 0x000D68, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_6_0' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_7) == 0x000D70, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_7' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_bool_Variable_3) == 0x000D78, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_bool_Variable_3' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_7_0) == 0x000D80, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_7_0' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_ActionValue_2) == 0x000D88, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_ActionValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_ElapsedTime_2) == 0x000DA8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_ElapsedTime_2' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_TriggeredTime_2) == 0x000DAC, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_TriggeredTime_2' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_SourceAction_2) == 0x000DB0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_SourceAction_2' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_object_Variable_4) == 0x000DB8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_object_Variable_4' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Conv_InputActionValueToBool_ReturnValue_3) == 0x000DC0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Conv_InputActionValueToBool_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_8) == 0x000DC8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_8' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_9) == 0x000DD0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_9' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_8_0) == 0x000DD8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_8_0' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_9_0) == 0x000DE0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_9_0' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_bool_Variable_4) == 0x000DE8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_bool_Variable_4' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_ActionValue_1) == 0x000DF0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_ActionValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_ElapsedTime_1) == 0x000E10, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_ElapsedTime_1' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_TriggeredTime_1) == 0x000E14, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_TriggeredTime_1' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_SourceAction_1) == 0x000E18, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_SourceAction_1' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Conv_InputActionValueToBool_ReturnValue_4) == 0x000E20, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Conv_InputActionValueToBool_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_object_Variable_5) == 0x000E28, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_object_Variable_5' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_10) == 0x000E30, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_10' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_10_0) == 0x000E38, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_10_0' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_11) == 0x000E40, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_11' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_bool_Variable_5) == 0x000E48, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_bool_Variable_5' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_11_0) == 0x000E50, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_11_0' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_GetGameInstanceSubsystem_ReturnValue_1) == 0x000E58, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_GetGameInstanceSubsystem_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_GetGameInstanceSubsystem_ReturnValue_2) == 0x000E60, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_GetGameInstanceSubsystem_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_PlayUIAudioEvent_ReturnValue_1) == 0x000E68, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_PlayUIAudioEvent_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_PlayUIAudioEvent_ReturnValue_2) == 0x000E69, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_PlayUIAudioEvent_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_GetGameInstanceSubsystem_ReturnValue_3) == 0x000E70, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_GetGameInstanceSubsystem_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_ActionValue) == 0x000E78, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_ActionValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_ElapsedTime) == 0x000E98, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_ElapsedTime' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_TriggeredTime) == 0x000E9C, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_TriggeredTime' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_SourceAction) == 0x000EA0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_SourceAction' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_PlayUIAudioEvent_ReturnValue_3) == 0x000EA8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_PlayUIAudioEvent_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Conv_InputActionValueToBool_ReturnValue_5) == 0x000EA9, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Conv_InputActionValueToBool_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_object_Variable_6) == 0x000EB0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_object_Variable_6' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_12) == 0x000EB8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_12' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_12_0) == 0x000EC0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_12_0' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_13) == 0x000EC8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_13' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_bool_Variable_6) == 0x000ED0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_bool_Variable_6' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_13_0) == 0x000ED8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_13_0' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_GetLocalPlayerSubsystem_ReturnValue) == 0x000EE0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_GetLocalPlayerSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_struct_Variable) == 0x000EE8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_struct_Variable' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_IsValid_ReturnValue) == 0x000EE9, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_AddMappingContext_self_CastInput) == 0x000EF0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_AddMappingContext_self_CastInput' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_GetLocalPlayerSubsystem_ReturnValue_1) == 0x000F00, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_GetLocalPlayerSubsystem_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_struct_Variable_1) == 0x000F08, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_struct_Variable_1' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_IsValid_ReturnValue_1) == 0x000F09, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_RemoveMappingContext_self_CastInput) == 0x000F10, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_RemoveMappingContext_self_CastInput' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_GetGameInstanceSubsystem_ReturnValue_4) == 0x000F20, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_GetGameInstanceSubsystem_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_int_Array_Index_Variable) == 0x000F28, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_PlayUIAudioEvent_ReturnValue_4) == 0x000F2C, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_PlayUIAudioEvent_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_ActionValue_6) == 0x000F30, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_ActionValue_6' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_ElapsedTime_6) == 0x000F50, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_ElapsedTime_6' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_TriggeredTime_6) == 0x000F54, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_TriggeredTime_6' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_SourceAction_6) == 0x000F58, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_SourceAction_6' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_0) == 0x000F60, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_0' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_1_0) == 0x000F68, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_1_0' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Conv_InputActionValueToBool_ReturnValue_6) == 0x000F70, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Conv_InputActionValueToBool_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_int_Loop_Counter_Variable) == 0x000F74, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Add_IntInt_ReturnValue) == 0x000F78, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_int_Array_Index_Variable_1) == 0x000F7C, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_int_Array_Index_Variable_1' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_int_Loop_Counter_Variable_1) == 0x000F80, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Add_IntInt_ReturnValue_1) == 0x000F84, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_bool_Variable_7) == 0x000F88, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_bool_Variable_7' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_int_Array_Index_Variable_2) == 0x000F8C, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_int_Array_Index_Variable_2' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_int_Loop_Counter_Variable_2) == 0x000F90, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_int_Loop_Counter_Variable_2' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Add_IntInt_ReturnValue_2) == 0x000F94, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_int_Array_Index_Variable_3) == 0x000F98, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_int_Array_Index_Variable_3' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_CustomEvent_StatusMenuCanvas_1) == 0x000FA0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_CustomEvent_StatusMenuCanvas_1' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_PostEventSystem_ReturnValue) == 0x000FA8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_PostEventSystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_PostEventSystem_ReturnValue_1) == 0x000FAC, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_PostEventSystem_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_CustomEvent_StatusMenuCanvas) == 0x000FB0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_CustomEvent_StatusMenuCanvas' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_14) == 0x000FB8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_14' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_15) == 0x000FC0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_15' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_object_Variable_7) == 0x000FC8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_object_Variable_7' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_Event_MenuPiece_2) == 0x000FD0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_Event_MenuPiece_2' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_Event_MenuPiece_1) == 0x000FD8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_Event_MenuPiece_1' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_ActionValue_9) == 0x000FE0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_ActionValue_9' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_ElapsedTime_9) == 0x001000, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_ElapsedTime_9' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_TriggeredTime_9) == 0x001004, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_TriggeredTime_9' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_SourceAction_9) == 0x001008, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_SourceAction_9' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_15_0) == 0x001010, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_15_0' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_14_0) == 0x001018, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_14_0' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Conv_InputActionValueToBool_ReturnValue_7) == 0x001020, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Conv_InputActionValueToBool_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_IsSelectMode_OutFlag) == 0x001021, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_IsSelectMode_OutFlag' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_IsSelectMode_OutFlag_1) == 0x001022, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_IsSelectMode_OutFlag_1' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Not_PreBool_ReturnValue) == 0x001023, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Not_PreBool_ReturnValue_1) == 0x001024, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_IsSelectMode_OutFlag_2) == 0x001025, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_IsSelectMode_OutFlag_2' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_GetSpecialBuffList_OutInfo) == 0x001028, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_GetSpecialBuffList_OutInfo' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_IsActiveStatus_ReturnValue) == 0x001098, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_IsActiveStatus_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_IsActiveStatus_ReturnValue_1) == 0x001099, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_IsActiveStatus_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_IsActiveStatus_ReturnValue_2) == 0x00109A, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_IsActiveStatus_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_IsActiveStatus_ReturnValue_3) == 0x00109B, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_IsActiveStatus_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_IsActiveStatus_ReturnValue_4) == 0x00109C, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_IsActiveStatus_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_IsActiveStatus_ReturnValue_5) == 0x00109D, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_IsActiveStatus_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_IsActiveStatus_ReturnValue_6) == 0x00109E, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_IsActiveStatus_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_bool_Variable_8) == 0x00109F, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_bool_Variable_8' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_16) == 0x0010A0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_16' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_Event_IsDesignTime) == 0x0010A8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_Event_IsDesignTime' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_GetUIObject_ReturnValue) == 0x0010B0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_GetUIObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_DynamicCast_AsField_Menu_UIObject) == 0x0010B8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_DynamicCast_AsField_Menu_UIObject' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_DynamicCast_bSuccess) == 0x0010C0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_CreateDelegate_OutputDelegate) == 0x0010C4, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_Event_InCurrentHealth) == 0x0010D8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_Event_InCurrentHealth' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_Event_InMaxHealth) == 0x0010E0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_Event_InMaxHealth' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_Event_InCurrentStamina) == 0x0010E8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_Event_InCurrentStamina' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_Event_InMaxStamina) == 0x0010EC, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_Event_InMaxStamina' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Conv_IntToDouble_ReturnValue) == 0x0010F0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Conv_IntToDouble_ReturnValue_1) == 0x0010F8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Conv_IntToDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_GetPlayerStatusInfo_OutStatusInfo_1) == 0x001100, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_GetPlayerStatusInfo_OutStatusInfo_1' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_GetStoryFlagValueByBoolean_ReturnValue) == 0x001D20, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_GetStoryFlagValueByBoolean_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_17) == 0x001D28, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_17' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_object_Variable_8) == 0x001D30, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_object_Variable_8' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_Event_MenuPiece) == 0x001D38, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_Event_MenuPiece' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_DynamicCast_AsWDT_Status_Piece_Base) == 0x001D40, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_DynamicCast_AsWDT_Status_Piece_Base' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_DynamicCast_bSuccess_1) == 0x001D48, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_DynamicCast_AsWDT_Status_Buddy) == 0x001D50, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_DynamicCast_AsWDT_Status_Buddy' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_DynamicCast_bSuccess_2) == 0x001D58, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_DynamicCast_AsWDT_Status_Weapon_Gadget) == 0x001D60, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_DynamicCast_AsWDT_Status_Weapon_Gadget' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_DynamicCast_bSuccess_3) == 0x001D68, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_ActionValue_7) == 0x001D70, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_ActionValue_7' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_ElapsedTime_7) == 0x001D90, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_ElapsedTime_7' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_TriggeredTime_7) == 0x001D94, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_TriggeredTime_7' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_SourceAction_7) == 0x001D98, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_SourceAction_7' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_17_0) == 0x001DA0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_17_0' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_16_0) == 0x001DA8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_16_0' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Conv_InputActionValueToBool_ReturnValue_8) == 0x001DB0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Conv_InputActionValueToBool_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x001DB1, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_EqualEqual_ObjectObject_ReturnValue_1) == 0x001DB2, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_EqualEqual_ObjectObject_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_EqualEqual_ObjectObject_ReturnValue_2) == 0x001DB3, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_EqualEqual_ObjectObject_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_EqualEqual_ObjectObject_ReturnValue_3) == 0x001DB4, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_EqualEqual_ObjectObject_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_bool_Variable_9) == 0x001DB5, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_bool_Variable_9' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_18) == 0x001DB8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_18' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_19) == 0x001DC0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_19' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_object_Variable_9) == 0x001DC8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_object_Variable_9' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_EqualEqual_ObjectObject_ReturnValue_4) == 0x001DD0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_EqualEqual_ObjectObject_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_EqualEqual_ObjectObject_ReturnValue_5) == 0x001DD1, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_EqualEqual_ObjectObject_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_EqualEqual_ObjectObject_ReturnValue_6) == 0x001DD2, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_EqualEqual_ObjectObject_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_EqualEqual_ObjectObject_ReturnValue_7) == 0x001DD3, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_EqualEqual_ObjectObject_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_ActionValue_8) == 0x001DD8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_ActionValue_8' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_ElapsedTime_8) == 0x001DF8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_ElapsedTime_8' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_TriggeredTime_8) == 0x001DFC, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_TriggeredTime_8' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, K2Node_EnhancedInputActionEvent_SourceAction_8) == 0x001E00, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::K2Node_EnhancedInputActionEvent_SourceAction_8' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_19_0) == 0x001E08, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_19_0' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_real_Variable_18_0) == 0x001E10, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_real_Variable_18_0' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Conv_InputActionValueToBool_ReturnValue_9) == 0x001E18, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Conv_InputActionValueToBool_ReturnValue_9' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, Temp_int_Loop_Counter_Variable_3) == 0x001E1C, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::Temp_int_Loop_Counter_Variable_3' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Add_IntInt_ReturnValue_3) == 0x001E20, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Add_IntInt_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_GetMenuPieces_OutMenuPieces) == 0x001E28, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_GetMenuPieces_OutMenuPieces' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_GetMenuPieces_OutMenuPieces_1) == 0x001E38, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_GetMenuPieces_OutMenuPieces_1' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Array_Get_Item) == 0x001E48, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Array_Get_Item_1) == 0x001E50, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_SetSelectProhibited_self_CastInput) == 0x001E58, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_SetSelectProhibited_self_CastInput' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_SetSelectProhibited_ReturnValue) == 0x001E68, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_SetSelectProhibited_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_SetSelectProhibited_self_CastInput_1) == 0x001E70, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_SetSelectProhibited_self_CastInput_1' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_SetSelectProhibited_ReturnValue_1) == 0x001E80, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_SetSelectProhibited_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Array_Length_ReturnValue) == 0x001E84, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Array_Length_ReturnValue_1) == 0x001E88, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Less_IntInt_ReturnValue) == 0x001E8C, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Less_IntInt_ReturnValue_1) == 0x001E8D, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_GetMenuPieces_OutMenuPieces_2) == 0x001E90, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_GetMenuPieces_OutMenuPieces_2' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Array_Get_Item_2) == 0x001EA0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Array_Get_Item_2' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Array_Length_ReturnValue_2) == 0x001EA8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_SetSelectProhibited_self_CastInput_2) == 0x001EB0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_SetSelectProhibited_self_CastInput_2' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_SetSelectProhibited_ReturnValue_2) == 0x001EC0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_SetSelectProhibited_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Less_IntInt_ReturnValue_2) == 0x001EC1, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_GetMenuPieces_OutMenuPieces_3) == 0x001EC8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_GetMenuPieces_OutMenuPieces_3' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Array_Get_Item_3) == 0x001ED8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Array_Get_Item_3' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Array_Length_ReturnValue_3) == 0x001EE0, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Array_Length_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_SetSelectProhibited_self_CastInput_3) == 0x001EE8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_SetSelectProhibited_self_CastInput_3' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_SetSelectProhibited_ReturnValue_3) == 0x001EF8, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_SetSelectProhibited_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu, CallFunc_Less_IntInt_ReturnValue_3) == 0x001EF9, "Member 'WDT_StatusMenu_C_ExecuteUbergraph_WDT_StatusMenu::CallFunc_Less_IntInt_ReturnValue_3' has a wrong offset!");
 
 // Function WDT_StatusMenu.WDT_StatusMenu_C.GetBuddyTexture
 // 0x00A0 (0x00A0 - 0x0000)
@@ -656,14 +656,14 @@ static_assert(offsetof(WDT_StatusMenu_C_GetBuddyTexture, CallFunc_GetDataTableRo
 static_assert(offsetof(WDT_StatusMenu_C_GetBuddyTexture, CallFunc_EqualEqual_GameplayTag_ReturnValue) == 0x000099, "Member 'WDT_StatusMenu_C_GetBuddyTexture::CallFunc_EqualEqual_GameplayTag_ReturnValue' has a wrong offset!");
 
 // Function WDT_StatusMenu.WDT_StatusMenu_C.Initialize
-// 0x0C00 (0x0C00 - 0x0000)
+// 0x0C20 (0x0C20 - 0x0000)
 struct WDT_StatusMenu_C_Initialize final
 {
 public:
-	struct FUIPlayerStatusInfo                    CallFunc_GetPlayerStatusInfo_OutStatusInfo;        // 0x0000(0x0C00)()
+	struct FUIPlayerStatusInfo                    CallFunc_GetPlayerStatusInfo_OutStatusInfo;        // 0x0000(0x0C20)()
 };
 static_assert(alignof(WDT_StatusMenu_C_Initialize) == 0x000008, "Wrong alignment on WDT_StatusMenu_C_Initialize");
-static_assert(sizeof(WDT_StatusMenu_C_Initialize) == 0x000C00, "Wrong size on WDT_StatusMenu_C_Initialize");
+static_assert(sizeof(WDT_StatusMenu_C_Initialize) == 0x000C20, "Wrong size on WDT_StatusMenu_C_Initialize");
 static_assert(offsetof(WDT_StatusMenu_C_Initialize, CallFunc_GetPlayerStatusInfo_OutStatusInfo) == 0x000000, "Member 'WDT_StatusMenu_C_Initialize::CallFunc_GetPlayerStatusInfo_OutStatusInfo' has a wrong offset!");
 
 // Function WDT_StatusMenu.WDT_StatusMenu_C.InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_8
@@ -1133,106 +1133,107 @@ static_assert(offsetof(WDT_StatusMenu_C_Set_Text_with_Empty_Designation, CallFun
 static_assert(offsetof(WDT_StatusMenu_C_Set_Text_with_Empty_Designation, K2Node_Select_Default) == 0x000030, "Member 'WDT_StatusMenu_C_Set_Text_with_Empty_Designation::K2Node_Select_Default' has a wrong offset!");
 
 // Function WDT_StatusMenu.WDT_StatusMenu_C.SetPlayerStatusInfo
-// 0x0D50 (0x0D50 - 0x0000)
+// 0x0D90 (0x0D90 - 0x0000)
 struct WDT_StatusMenu_C_SetPlayerStatusInfo final
 {
 public:
-	struct FUIPlayerStatusInfo                    InStatusInfo;                                      // 0x0000(0x0C00)(BlueprintVisible, BlueprintReadOnly, Parm)
-	class FText                                   LEvasion;                                          // 0x0C00(0x0010)(Edit, BlueprintVisible)
-	class FText                                   LPlayerType;                                       // 0x0C10(0x0010)(Edit, BlueprintVisible)
-	bool                                          Temp_bool_Variable;                                // 0x0C20(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C21[0x7];                                      // 0x0C21(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Temp_text_Variable;                                // 0x0C28(0x0010)()
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0C38(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x0C39(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_TextIsEmpty_ReturnValue;                  // 0x0C3A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_TextIsEmpty_ReturnValue_1;                // 0x0C3B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C3C[0x4];                                      // 0x0C3C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_Select_Default;                             // 0x0C40(0x0010)()
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0C50(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x0C54(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_2;                  // 0x0C58(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_3;                  // 0x0C5C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_4;                  // 0x0C60(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_5;                  // 0x0C64(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_6;                  // 0x0C68(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C6C[0x4];                                      // 0x0C6C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTexture2D*                             CallFunc_GetWeaponCategoryTexture_Texture;         // 0x0C70(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UTexture2D*                             CallFunc_GetWeaponCategoryTexture_Texture_1;       // 0x0C78(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0C80(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_1;           // 0x0C88(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   Temp_text_Variable_1;                              // 0x0C90(0x0010)()
-	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue;   // 0x0CA0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x0CA1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CA2[0x6];                                      // 0x0CA2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_Select_Default_1;                           // 0x0CA8(0x0010)()
-	int32                                         CallFunc_Array_Add_ReturnValue_7;                  // 0x0CB8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CBC[0x4];                                      // 0x0CBC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_SetDefence_InSunder_ImplicitCast;         // 0x0CC0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetDefence_InCrush_ImplicitCast;          // 0x0CC8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetDefence_InPierce_ImplicitCast;         // 0x0CD0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetDefence_InBlood_ImplicitCast;          // 0x0CD8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetDefence_InFire_ImplicitCast;           // 0x0CE0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetDefence_InIce_ImplicitCast;            // 0x0CE8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetDefence_InThunder_ImplicitCast;        // 0x0CF0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Set_HP_InCurrentHP_ImplicitCast;          // 0x0CF8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Set_HP_InMaxHP_ImplicitCast;              // 0x0D00(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetValue_InCurrentValue_ImplicitCast;     // 0x0D08(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetValue_InMaxValue_ImplicitCast;         // 0x0D10(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetDefence_InSunder_ImplicitCast_1;       // 0x0D18(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetDefence_InCrush_ImplicitCast_1;        // 0x0D20(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetDefence_InPierce_ImplicitCast_1;       // 0x0D28(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetDefence_InBlood_ImplicitCast_1;        // 0x0D30(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetDefence_InFire_ImplicitCast_1;         // 0x0D38(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetDefence_InIce_ImplicitCast_1;          // 0x0D40(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetDefence_InThunder_ImplicitCast_1;      // 0x0D48(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FUIPlayerStatusInfo                    InStatusInfo;                                      // 0x0000(0x0C20)(BlueprintVisible, BlueprintReadOnly, Parm)
+	class FText                                   LEvasion;                                          // 0x0C20(0x0010)(Edit, BlueprintVisible)
+	class FText                                   LPlayerType;                                       // 0x0C30(0x0010)(Edit, BlueprintVisible)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0C40(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x0C41(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_TextIsEmpty_ReturnValue;                  // 0x0C42(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_TextIsEmpty_ReturnValue_1;                // 0x0C43(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0C44(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x0C48(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_2;                  // 0x0C4C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_3;                  // 0x0C50(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_4;                  // 0x0C54(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_5;                  // 0x0C58(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_6;                  // 0x0C5C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_7;                  // 0x0C60(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C64[0x4];                                      // 0x0C64(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTexture2D*                             CallFunc_GetWeaponCategoryTexture_Texture;         // 0x0C68(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UTexture2D*                             CallFunc_GetWeaponCategoryTexture_Texture_1;       // 0x0C70(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FUIBloodCodeAttributeConversionInfo    K2Node_Copy_ReturnValue;                           // 0x0C78(0x0020)()
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0C98(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_1;           // 0x0CA0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue;   // 0x0CA8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CA9[0x7];                                      // 0x0CA9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Temp_text_Variable;                                // 0x0CB0(0x0010)()
+	bool                                          Temp_bool_Variable;                                // 0x0CC0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CC1[0x7];                                      // 0x0CC1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_Select_Default;                             // 0x0CC8(0x0010)()
+	class FText                                   Temp_text_Variable_1;                              // 0x0CD8(0x0010)()
+	bool                                          Temp_bool_Variable_1;                              // 0x0CE8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CE9[0x7];                                      // 0x0CE9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_Select_Default_1;                           // 0x0CF0(0x0010)()
+	double                                        CallFunc_SetDefence_InSunder_ImplicitCast;         // 0x0D00(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetDefence_InCrush_ImplicitCast;          // 0x0D08(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetDefence_InPierce_ImplicitCast;         // 0x0D10(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetDefence_InBlood_ImplicitCast;          // 0x0D18(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetDefence_InFire_ImplicitCast;           // 0x0D20(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetDefence_InIce_ImplicitCast;            // 0x0D28(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetDefence_InThunder_ImplicitCast;        // 0x0D30(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetDefence_InSunder_ImplicitCast_1;       // 0x0D38(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetDefence_InCrush_ImplicitCast_1;        // 0x0D40(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetDefence_InPierce_ImplicitCast_1;       // 0x0D48(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetDefence_InBlood_ImplicitCast_1;        // 0x0D50(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetDefence_InFire_ImplicitCast_1;         // 0x0D58(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetDefence_InIce_ImplicitCast_1;          // 0x0D60(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetDefence_InThunder_ImplicitCast_1;      // 0x0D68(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Set_HP_InCurrentHP_ImplicitCast;          // 0x0D70(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Set_HP_InMaxHP_ImplicitCast;              // 0x0D78(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetValue_InCurrentValue_ImplicitCast;     // 0x0D80(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetValue_InMaxValue_ImplicitCast;         // 0x0D88(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_StatusMenu_C_SetPlayerStatusInfo) == 0x000008, "Wrong alignment on WDT_StatusMenu_C_SetPlayerStatusInfo");
-static_assert(sizeof(WDT_StatusMenu_C_SetPlayerStatusInfo) == 0x000D50, "Wrong size on WDT_StatusMenu_C_SetPlayerStatusInfo");
+static_assert(sizeof(WDT_StatusMenu_C_SetPlayerStatusInfo) == 0x000D90, "Wrong size on WDT_StatusMenu_C_SetPlayerStatusInfo");
 static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, InStatusInfo) == 0x000000, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::InStatusInfo' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, LEvasion) == 0x000C00, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::LEvasion' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, LPlayerType) == 0x000C10, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::LPlayerType' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, Temp_bool_Variable) == 0x000C20, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, Temp_text_Variable) == 0x000C28, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::Temp_text_Variable' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, K2Node_SwitchEnum_CmpSuccess) == 0x000C38, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, K2Node_SwitchEnum_CmpSuccess_1) == 0x000C39, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::K2Node_SwitchEnum_CmpSuccess_1' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_TextIsEmpty_ReturnValue) == 0x000C3A, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_TextIsEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_TextIsEmpty_ReturnValue_1) == 0x000C3B, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_TextIsEmpty_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, K2Node_Select_Default) == 0x000C40, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_Array_Add_ReturnValue) == 0x000C50, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_Array_Add_ReturnValue_1) == 0x000C54, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_Array_Add_ReturnValue_2) == 0x000C58, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_Array_Add_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_Array_Add_ReturnValue_3) == 0x000C5C, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_Array_Add_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_Array_Add_ReturnValue_4) == 0x000C60, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_Array_Add_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_Array_Add_ReturnValue_5) == 0x000C64, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_Array_Add_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_Array_Add_ReturnValue_6) == 0x000C68, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_Array_Add_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_GetWeaponCategoryTexture_Texture) == 0x000C70, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_GetWeaponCategoryTexture_Texture' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_GetWeaponCategoryTexture_Texture_1) == 0x000C78, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_GetWeaponCategoryTexture_Texture_1' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_Conv_IntToDouble_ReturnValue) == 0x000C80, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_Conv_IntToDouble_ReturnValue_1) == 0x000C88, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_Conv_IntToDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, Temp_text_Variable_1) == 0x000C90, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::Temp_text_Variable_1' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_IsValidSoftObjectReference_ReturnValue) == 0x000CA0, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_IsValidSoftObjectReference_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, Temp_bool_Variable_1) == 0x000CA1, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, K2Node_Select_Default_1) == 0x000CA8, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_Array_Add_ReturnValue_7) == 0x000CB8, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_Array_Add_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_SetDefence_InSunder_ImplicitCast) == 0x000CC0, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_SetDefence_InSunder_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_SetDefence_InCrush_ImplicitCast) == 0x000CC8, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_SetDefence_InCrush_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_SetDefence_InPierce_ImplicitCast) == 0x000CD0, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_SetDefence_InPierce_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_SetDefence_InBlood_ImplicitCast) == 0x000CD8, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_SetDefence_InBlood_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_SetDefence_InFire_ImplicitCast) == 0x000CE0, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_SetDefence_InFire_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_SetDefence_InIce_ImplicitCast) == 0x000CE8, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_SetDefence_InIce_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_SetDefence_InThunder_ImplicitCast) == 0x000CF0, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_SetDefence_InThunder_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_Set_HP_InCurrentHP_ImplicitCast) == 0x000CF8, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_Set_HP_InCurrentHP_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_Set_HP_InMaxHP_ImplicitCast) == 0x000D00, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_Set_HP_InMaxHP_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_SetValue_InCurrentValue_ImplicitCast) == 0x000D08, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_SetValue_InCurrentValue_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_SetValue_InMaxValue_ImplicitCast) == 0x000D10, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_SetValue_InMaxValue_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_SetDefence_InSunder_ImplicitCast_1) == 0x000D18, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_SetDefence_InSunder_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_SetDefence_InCrush_ImplicitCast_1) == 0x000D20, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_SetDefence_InCrush_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_SetDefence_InPierce_ImplicitCast_1) == 0x000D28, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_SetDefence_InPierce_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_SetDefence_InBlood_ImplicitCast_1) == 0x000D30, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_SetDefence_InBlood_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_SetDefence_InFire_ImplicitCast_1) == 0x000D38, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_SetDefence_InFire_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_SetDefence_InIce_ImplicitCast_1) == 0x000D40, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_SetDefence_InIce_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_SetDefence_InThunder_ImplicitCast_1) == 0x000D48, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_SetDefence_InThunder_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, LEvasion) == 0x000C20, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::LEvasion' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, LPlayerType) == 0x000C30, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::LPlayerType' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, K2Node_SwitchEnum_CmpSuccess) == 0x000C40, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, K2Node_SwitchEnum_CmpSuccess_1) == 0x000C41, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::K2Node_SwitchEnum_CmpSuccess_1' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_TextIsEmpty_ReturnValue) == 0x000C42, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_TextIsEmpty_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_TextIsEmpty_ReturnValue_1) == 0x000C43, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_TextIsEmpty_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_Array_Add_ReturnValue) == 0x000C44, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_Array_Add_ReturnValue_1) == 0x000C48, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_Array_Add_ReturnValue_2) == 0x000C4C, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_Array_Add_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_Array_Add_ReturnValue_3) == 0x000C50, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_Array_Add_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_Array_Add_ReturnValue_4) == 0x000C54, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_Array_Add_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_Array_Add_ReturnValue_5) == 0x000C58, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_Array_Add_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_Array_Add_ReturnValue_6) == 0x000C5C, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_Array_Add_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_Array_Add_ReturnValue_7) == 0x000C60, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_Array_Add_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_GetWeaponCategoryTexture_Texture) == 0x000C68, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_GetWeaponCategoryTexture_Texture' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_GetWeaponCategoryTexture_Texture_1) == 0x000C70, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_GetWeaponCategoryTexture_Texture_1' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, K2Node_Copy_ReturnValue) == 0x000C78, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::K2Node_Copy_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_Conv_IntToDouble_ReturnValue) == 0x000C98, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_Conv_IntToDouble_ReturnValue_1) == 0x000CA0, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_Conv_IntToDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_IsValidSoftObjectReference_ReturnValue) == 0x000CA8, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_IsValidSoftObjectReference_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, Temp_text_Variable) == 0x000CB0, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::Temp_text_Variable' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, Temp_bool_Variable) == 0x000CC0, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, K2Node_Select_Default) == 0x000CC8, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, Temp_text_Variable_1) == 0x000CD8, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::Temp_text_Variable_1' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, Temp_bool_Variable_1) == 0x000CE8, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::Temp_bool_Variable_1' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, K2Node_Select_Default_1) == 0x000CF0, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::K2Node_Select_Default_1' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_SetDefence_InSunder_ImplicitCast) == 0x000D00, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_SetDefence_InSunder_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_SetDefence_InCrush_ImplicitCast) == 0x000D08, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_SetDefence_InCrush_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_SetDefence_InPierce_ImplicitCast) == 0x000D10, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_SetDefence_InPierce_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_SetDefence_InBlood_ImplicitCast) == 0x000D18, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_SetDefence_InBlood_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_SetDefence_InFire_ImplicitCast) == 0x000D20, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_SetDefence_InFire_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_SetDefence_InIce_ImplicitCast) == 0x000D28, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_SetDefence_InIce_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_SetDefence_InThunder_ImplicitCast) == 0x000D30, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_SetDefence_InThunder_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_SetDefence_InSunder_ImplicitCast_1) == 0x000D38, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_SetDefence_InSunder_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_SetDefence_InCrush_ImplicitCast_1) == 0x000D40, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_SetDefence_InCrush_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_SetDefence_InPierce_ImplicitCast_1) == 0x000D48, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_SetDefence_InPierce_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_SetDefence_InBlood_ImplicitCast_1) == 0x000D50, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_SetDefence_InBlood_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_SetDefence_InFire_ImplicitCast_1) == 0x000D58, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_SetDefence_InFire_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_SetDefence_InIce_ImplicitCast_1) == 0x000D60, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_SetDefence_InIce_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_SetDefence_InThunder_ImplicitCast_1) == 0x000D68, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_SetDefence_InThunder_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_Set_HP_InCurrentHP_ImplicitCast) == 0x000D70, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_Set_HP_InCurrentHP_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_Set_HP_InMaxHP_ImplicitCast) == 0x000D78, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_Set_HP_InMaxHP_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_SetValue_InCurrentValue_ImplicitCast) == 0x000D80, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_SetValue_InCurrentValue_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_StatusMenu_C_SetPlayerStatusInfo, CallFunc_SetValue_InMaxValue_ImplicitCast) == 0x000D88, "Member 'WDT_StatusMenu_C_SetPlayerStatusInfo::CallFunc_SetValue_InMaxValue_ImplicitCast' has a wrong offset!");
 
 // Function WDT_StatusMenu.WDT_StatusMenu_C.SetSelectMode
 // 0x0020 (0x0020 - 0x0000)

@@ -17,299 +17,97 @@
 namespace SDK::Params
 {
 
-// Function WDT_KeywordMenu.WDT_KeywordMenu_C.SelectUpperDescription
-// 0x0020 (0x0020 - 0x0000)
-struct WDT_KeywordMenu_C_SelectUpperDescription final
+// Function WDT_KeywordMenu.WDT_KeywordMenu_C.BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_0_OnListEntryInitializedDynamic__DelegateSignature
+// 0x0010 (0x0010 - 0x0000)
+struct WDT_KeywordMenu_C_BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_0_OnListEntryInitializedDynamic__DelegateSignature final
 {
 public:
-	int32                                         L_NewIndex;                                        // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBP_DescriptionListData_C*              L_ListItemObject;                                  // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetCurrentListIndex_OutNum;               // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                Item;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UUserWidget*                            Widget;                                            // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WDT_KeywordMenu_C_SelectUpperDescription) == 0x000008, "Wrong alignment on WDT_KeywordMenu_C_SelectUpperDescription");
-static_assert(sizeof(WDT_KeywordMenu_C_SelectUpperDescription) == 0x000020, "Wrong size on WDT_KeywordMenu_C_SelectUpperDescription");
-static_assert(offsetof(WDT_KeywordMenu_C_SelectUpperDescription, L_NewIndex) == 0x000000, "Member 'WDT_KeywordMenu_C_SelectUpperDescription::L_NewIndex' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_SelectUpperDescription, L_ListItemObject) == 0x000008, "Member 'WDT_KeywordMenu_C_SelectUpperDescription::L_ListItemObject' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_SelectUpperDescription, CallFunc_GetCurrentListIndex_OutNum) == 0x000010, "Member 'WDT_KeywordMenu_C_SelectUpperDescription::CallFunc_GetCurrentListIndex_OutNum' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_SelectUpperDescription, CallFunc_Subtract_IntInt_ReturnValue) == 0x000014, "Member 'WDT_KeywordMenu_C_SelectUpperDescription::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_SelectUpperDescription, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x000018, "Member 'WDT_KeywordMenu_C_SelectUpperDescription::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(alignof(WDT_KeywordMenu_C_BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_0_OnListEntryInitializedDynamic__DelegateSignature) == 0x000008, "Wrong alignment on WDT_KeywordMenu_C_BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_0_OnListEntryInitializedDynamic__DelegateSignature");
+static_assert(sizeof(WDT_KeywordMenu_C_BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_0_OnListEntryInitializedDynamic__DelegateSignature) == 0x000010, "Wrong size on WDT_KeywordMenu_C_BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_0_OnListEntryInitializedDynamic__DelegateSignature");
+static_assert(offsetof(WDT_KeywordMenu_C_BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_0_OnListEntryInitializedDynamic__DelegateSignature, Item) == 0x000000, "Member 'WDT_KeywordMenu_C_BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_0_OnListEntryInitializedDynamic__DelegateSignature::Item' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_0_OnListEntryInitializedDynamic__DelegateSignature, Widget) == 0x000008, "Member 'WDT_KeywordMenu_C_BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_0_OnListEntryInitializedDynamic__DelegateSignature::Widget' has a wrong offset!");
 
-// Function WDT_KeywordMenu.WDT_KeywordMenu_C.SelectLowerDescription
-// 0x0018 (0x0018 - 0x0000)
-struct WDT_KeywordMenu_C_SelectLowerDescription final
+// Function WDT_KeywordMenu.WDT_KeywordMenu_C.BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_1_OnListItemSelectionChangedDynamic__DelegateSignature
+// 0x0010 (0x0010 - 0x0000)
+struct WDT_KeywordMenu_C_BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_1_OnListItemSelectionChangedDynamic__DelegateSignature final
 {
 public:
-	int32                                         L_NewIndex;                                        // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetNumItems_ReturnValue;                  // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetCurrentListIndex_OutNum;               // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                Item;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          bIsSelected;                                       // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WDT_KeywordMenu_C_SelectLowerDescription) == 0x000004, "Wrong alignment on WDT_KeywordMenu_C_SelectLowerDescription");
-static_assert(sizeof(WDT_KeywordMenu_C_SelectLowerDescription) == 0x000018, "Wrong size on WDT_KeywordMenu_C_SelectLowerDescription");
-static_assert(offsetof(WDT_KeywordMenu_C_SelectLowerDescription, L_NewIndex) == 0x000000, "Member 'WDT_KeywordMenu_C_SelectLowerDescription::L_NewIndex' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_SelectLowerDescription, CallFunc_GetNumItems_ReturnValue) == 0x000004, "Member 'WDT_KeywordMenu_C_SelectLowerDescription::CallFunc_GetNumItems_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_SelectLowerDescription, CallFunc_Subtract_IntInt_ReturnValue) == 0x000008, "Member 'WDT_KeywordMenu_C_SelectLowerDescription::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_SelectLowerDescription, CallFunc_LessEqual_IntInt_ReturnValue) == 0x00000C, "Member 'WDT_KeywordMenu_C_SelectLowerDescription::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_SelectLowerDescription, CallFunc_GetCurrentListIndex_OutNum) == 0x000010, "Member 'WDT_KeywordMenu_C_SelectLowerDescription::CallFunc_GetCurrentListIndex_OutNum' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_SelectLowerDescription, CallFunc_Add_IntInt_ReturnValue) == 0x000014, "Member 'WDT_KeywordMenu_C_SelectLowerDescription::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(alignof(WDT_KeywordMenu_C_BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_1_OnListItemSelectionChangedDynamic__DelegateSignature) == 0x000008, "Wrong alignment on WDT_KeywordMenu_C_BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_1_OnListItemSelectionChangedDynamic__DelegateSignature");
+static_assert(sizeof(WDT_KeywordMenu_C_BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_1_OnListItemSelectionChangedDynamic__DelegateSignature) == 0x000010, "Wrong size on WDT_KeywordMenu_C_BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_1_OnListItemSelectionChangedDynamic__DelegateSignature");
+static_assert(offsetof(WDT_KeywordMenu_C_BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_1_OnListItemSelectionChangedDynamic__DelegateSignature, Item) == 0x000000, "Member 'WDT_KeywordMenu_C_BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_1_OnListItemSelectionChangedDynamic__DelegateSignature::Item' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_1_OnListItemSelectionChangedDynamic__DelegateSignature, bIsSelected) == 0x000008, "Member 'WDT_KeywordMenu_C_BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_1_OnListItemSelectionChangedDynamic__DelegateSignature::bIsSelected' has a wrong offset!");
 
-// Function WDT_KeywordMenu.WDT_KeywordMenu_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WDT_KeywordMenu_C_PreConstruct final
+// Function WDT_KeywordMenu.WDT_KeywordMenu_C.BuildKeywordList
+// 0x00D8 (0x00D8 - 0x0000)
+struct WDT_KeywordMenu_C_BuildKeywordList final
 {
 public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_KeywordListData_C*                  CallFunc_SpawnObject_ReturnValue;                  // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UBP_KeywordManager_C*                   CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UDataTable*                             CallFunc_GetKeywordTable_ReturnValue;              // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<class FName>                           CallFunc_GetDataTableRowNames_OutRowNames;         // 0x0038(0x0010)(ReferenceParm)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   CallFunc_Array_Get_Item;                           // 0x004C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FKeywordDataTableRow                   CallFunc_GetKeywordDataByID_OutKeywordData;        // 0x0058(0x0068)()
+	bool                                          CallFunc_GetKeywordDataByID_ReturnValue;           // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C1[0x3];                                       // 0x00C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x00C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x00C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x00CC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetStoryFlagValueByBoolean_ReturnValue;   // 0x00CD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CE[0x2];                                       // 0x00CE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x00D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_BoolBool_ReturnValue;          // 0x00D4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WDT_KeywordMenu_C_PreConstruct) == 0x000001, "Wrong alignment on WDT_KeywordMenu_C_PreConstruct");
-static_assert(sizeof(WDT_KeywordMenu_C_PreConstruct) == 0x000001, "Wrong size on WDT_KeywordMenu_C_PreConstruct");
-static_assert(offsetof(WDT_KeywordMenu_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WDT_KeywordMenu_C_PreConstruct::IsDesignTime' has a wrong offset!");
+static_assert(alignof(WDT_KeywordMenu_C_BuildKeywordList) == 0x000008, "Wrong alignment on WDT_KeywordMenu_C_BuildKeywordList");
+static_assert(sizeof(WDT_KeywordMenu_C_BuildKeywordList) == 0x0000D8, "Wrong size on WDT_KeywordMenu_C_BuildKeywordList");
+static_assert(offsetof(WDT_KeywordMenu_C_BuildKeywordList, Temp_int_Array_Index_Variable) == 0x000000, "Member 'WDT_KeywordMenu_C_BuildKeywordList::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_BuildKeywordList, Temp_int_Loop_Counter_Variable) == 0x000004, "Member 'WDT_KeywordMenu_C_BuildKeywordList::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_BuildKeywordList, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'WDT_KeywordMenu_C_BuildKeywordList::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_BuildKeywordList, Temp_int_Array_Index_Variable_1) == 0x00000C, "Member 'WDT_KeywordMenu_C_BuildKeywordList::Temp_int_Array_Index_Variable_1' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_BuildKeywordList, CallFunc_Array_Length_ReturnValue) == 0x000010, "Member 'WDT_KeywordMenu_C_BuildKeywordList::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_BuildKeywordList, CallFunc_SpawnObject_ReturnValue) == 0x000018, "Member 'WDT_KeywordMenu_C_BuildKeywordList::CallFunc_SpawnObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_BuildKeywordList, CallFunc_GetWorldSubsystem_ReturnValue) == 0x000020, "Member 'WDT_KeywordMenu_C_BuildKeywordList::CallFunc_GetWorldSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_BuildKeywordList, Temp_int_Loop_Counter_Variable_1) == 0x000028, "Member 'WDT_KeywordMenu_C_BuildKeywordList::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_BuildKeywordList, CallFunc_GetKeywordTable_ReturnValue) == 0x000030, "Member 'WDT_KeywordMenu_C_BuildKeywordList::CallFunc_GetKeywordTable_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_BuildKeywordList, CallFunc_GetDataTableRowNames_OutRowNames) == 0x000038, "Member 'WDT_KeywordMenu_C_BuildKeywordList::CallFunc_GetDataTableRowNames_OutRowNames' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_BuildKeywordList, CallFunc_Less_IntInt_ReturnValue) == 0x000048, "Member 'WDT_KeywordMenu_C_BuildKeywordList::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_BuildKeywordList, CallFunc_Array_Get_Item) == 0x00004C, "Member 'WDT_KeywordMenu_C_BuildKeywordList::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_BuildKeywordList, CallFunc_GetKeywordDataByID_OutKeywordData) == 0x000058, "Member 'WDT_KeywordMenu_C_BuildKeywordList::CallFunc_GetKeywordDataByID_OutKeywordData' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_BuildKeywordList, CallFunc_GetKeywordDataByID_ReturnValue) == 0x0000C0, "Member 'WDT_KeywordMenu_C_BuildKeywordList::CallFunc_GetKeywordDataByID_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_BuildKeywordList, CallFunc_Array_Length_ReturnValue_1) == 0x0000C4, "Member 'WDT_KeywordMenu_C_BuildKeywordList::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_BuildKeywordList, CallFunc_Array_Add_ReturnValue) == 0x0000C8, "Member 'WDT_KeywordMenu_C_BuildKeywordList::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_BuildKeywordList, CallFunc_Less_IntInt_ReturnValue_1) == 0x0000CC, "Member 'WDT_KeywordMenu_C_BuildKeywordList::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_BuildKeywordList, CallFunc_GetStoryFlagValueByBoolean_ReturnValue) == 0x0000CD, "Member 'WDT_KeywordMenu_C_BuildKeywordList::CallFunc_GetStoryFlagValueByBoolean_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_BuildKeywordList, CallFunc_Add_IntInt_ReturnValue_1) == 0x0000D0, "Member 'WDT_KeywordMenu_C_BuildKeywordList::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_BuildKeywordList, CallFunc_EqualEqual_BoolBool_ReturnValue) == 0x0000D4, "Member 'WDT_KeywordMenu_C_BuildKeywordList::CallFunc_EqualEqual_BoolBool_ReturnValue' has a wrong offset!");
 
-// Function WDT_KeywordMenu.WDT_KeywordMenu_C.OnUpPressed
-// 0x0003 (0x0003 - 0x0000)
-struct WDT_KeywordMenu_C_OnUpPressed final
+// Function WDT_KeywordMenu.WDT_KeywordMenu_C.Display Keyword Data
+// 0x0068 (0x0068 - 0x0000)
+struct WDT_KeywordMenu_C_Display_Keyword_Data final
 {
 public:
-	bool                                          CallFunc_IsActivated_ReturnValue;                  // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FKeywordDataTableRow                   InKeywodData;                                      // 0x0000(0x0068)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(WDT_KeywordMenu_C_OnUpPressed) == 0x000001, "Wrong alignment on WDT_KeywordMenu_C_OnUpPressed");
-static_assert(sizeof(WDT_KeywordMenu_C_OnUpPressed) == 0x000003, "Wrong size on WDT_KeywordMenu_C_OnUpPressed");
-static_assert(offsetof(WDT_KeywordMenu_C_OnUpPressed, CallFunc_IsActivated_ReturnValue) == 0x000000, "Member 'WDT_KeywordMenu_C_OnUpPressed::CallFunc_IsActivated_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_OnUpPressed, CallFunc_IsVisible_ReturnValue) == 0x000001, "Member 'WDT_KeywordMenu_C_OnUpPressed::CallFunc_IsVisible_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_OnUpPressed, CallFunc_BooleanAND_ReturnValue) == 0x000002, "Member 'WDT_KeywordMenu_C_OnUpPressed::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-
-// Function WDT_KeywordMenu.WDT_KeywordMenu_C.OnGetOpenAnimation
-// 0x0008 (0x0008 - 0x0000)
-struct WDT_KeywordMenu_C_OnGetOpenAnimation final
-{
-public:
-	class UWidgetAnimation*                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_KeywordMenu_C_OnGetOpenAnimation) == 0x000008, "Wrong alignment on WDT_KeywordMenu_C_OnGetOpenAnimation");
-static_assert(sizeof(WDT_KeywordMenu_C_OnGetOpenAnimation) == 0x000008, "Wrong size on WDT_KeywordMenu_C_OnGetOpenAnimation");
-static_assert(offsetof(WDT_KeywordMenu_C_OnGetOpenAnimation, ReturnValue) == 0x000000, "Member 'WDT_KeywordMenu_C_OnGetOpenAnimation::ReturnValue' has a wrong offset!");
-
-// Function WDT_KeywordMenu.WDT_KeywordMenu_C.OnFieldMenuCloseAnimationFinish
-// 0x0001 (0x0001 - 0x0000)
-struct WDT_KeywordMenu_C_OnFieldMenuCloseAnimationFinish final
-{
-public:
-	bool                                          CallFunc_Close_ReturnValue;                        // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_KeywordMenu_C_OnFieldMenuCloseAnimationFinish) == 0x000001, "Wrong alignment on WDT_KeywordMenu_C_OnFieldMenuCloseAnimationFinish");
-static_assert(sizeof(WDT_KeywordMenu_C_OnFieldMenuCloseAnimationFinish) == 0x000001, "Wrong size on WDT_KeywordMenu_C_OnFieldMenuCloseAnimationFinish");
-static_assert(offsetof(WDT_KeywordMenu_C_OnFieldMenuCloseAnimationFinish, CallFunc_Close_ReturnValue) == 0x000000, "Member 'WDT_KeywordMenu_C_OnFieldMenuCloseAnimationFinish::CallFunc_Close_ReturnValue' has a wrong offset!");
-
-// Function WDT_KeywordMenu.WDT_KeywordMenu_C.OnFieldMenuButton
-// 0x0030 (0x0030 - 0x0000)
-struct WDT_KeywordMenu_C_OnFieldMenuButton final
-{
-public:
-	struct FModifyContextOptions                  K2Node_MakeStruct_ModifyContextOptions;            // 0x0000(0x0001)(NoDestructor)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UEnhancedInputLocalPlayerSubsystem*     CallFunc_GetLocalPlayerSubsystem_ReturnValue;      // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IEnhancedInputSubsystemInterface> CallFunc_RemoveMappingContext_self_CastInput;      // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsActivated_ReturnValue;                  // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_KeywordMenu_C_OnFieldMenuButton) == 0x000008, "Wrong alignment on WDT_KeywordMenu_C_OnFieldMenuButton");
-static_assert(sizeof(WDT_KeywordMenu_C_OnFieldMenuButton) == 0x000030, "Wrong size on WDT_KeywordMenu_C_OnFieldMenuButton");
-static_assert(offsetof(WDT_KeywordMenu_C_OnFieldMenuButton, K2Node_MakeStruct_ModifyContextOptions) == 0x000000, "Member 'WDT_KeywordMenu_C_OnFieldMenuButton::K2Node_MakeStruct_ModifyContextOptions' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_OnFieldMenuButton, CallFunc_GetLocalPlayerSubsystem_ReturnValue) == 0x000008, "Member 'WDT_KeywordMenu_C_OnFieldMenuButton::CallFunc_GetLocalPlayerSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_OnFieldMenuButton, CallFunc_IsValid_ReturnValue) == 0x000010, "Member 'WDT_KeywordMenu_C_OnFieldMenuButton::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_OnFieldMenuButton, CallFunc_RemoveMappingContext_self_CastInput) == 0x000018, "Member 'WDT_KeywordMenu_C_OnFieldMenuButton::CallFunc_RemoveMappingContext_self_CastInput' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_OnFieldMenuButton, CallFunc_IsActivated_ReturnValue) == 0x000028, "Member 'WDT_KeywordMenu_C_OnFieldMenuButton::CallFunc_IsActivated_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_OnFieldMenuButton, CallFunc_IsVisible_ReturnValue) == 0x000029, "Member 'WDT_KeywordMenu_C_OnFieldMenuButton::CallFunc_IsVisible_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_OnFieldMenuButton, CallFunc_BooleanAND_ReturnValue) == 0x00002A, "Member 'WDT_KeywordMenu_C_OnFieldMenuButton::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-
-// Function WDT_KeywordMenu.WDT_KeywordMenu_C.OnDownPressed
-// 0x0003 (0x0003 - 0x0000)
-struct WDT_KeywordMenu_C_OnDownPressed final
-{
-public:
-	bool                                          CallFunc_IsActivated_ReturnValue;                  // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_KeywordMenu_C_OnDownPressed) == 0x000001, "Wrong alignment on WDT_KeywordMenu_C_OnDownPressed");
-static_assert(sizeof(WDT_KeywordMenu_C_OnDownPressed) == 0x000003, "Wrong size on WDT_KeywordMenu_C_OnDownPressed");
-static_assert(offsetof(WDT_KeywordMenu_C_OnDownPressed, CallFunc_IsActivated_ReturnValue) == 0x000000, "Member 'WDT_KeywordMenu_C_OnDownPressed::CallFunc_IsActivated_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_OnDownPressed, CallFunc_IsVisible_ReturnValue) == 0x000001, "Member 'WDT_KeywordMenu_C_OnDownPressed::CallFunc_IsVisible_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_OnDownPressed, CallFunc_BooleanAND_ReturnValue) == 0x000002, "Member 'WDT_KeywordMenu_C_OnDownPressed::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-
-// Function WDT_KeywordMenu.WDT_KeywordMenu_C.OnDecide
-// 0x0003 (0x0003 - 0x0000)
-struct WDT_KeywordMenu_C_OnDecide final
-{
-public:
-	bool                                          CallFunc_IsActivated_ReturnValue;                  // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_KeywordMenu_C_OnDecide) == 0x000001, "Wrong alignment on WDT_KeywordMenu_C_OnDecide");
-static_assert(sizeof(WDT_KeywordMenu_C_OnDecide) == 0x000003, "Wrong size on WDT_KeywordMenu_C_OnDecide");
-static_assert(offsetof(WDT_KeywordMenu_C_OnDecide, CallFunc_IsActivated_ReturnValue) == 0x000000, "Member 'WDT_KeywordMenu_C_OnDecide::CallFunc_IsActivated_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_OnDecide, CallFunc_IsVisible_ReturnValue) == 0x000001, "Member 'WDT_KeywordMenu_C_OnDecide::CallFunc_IsVisible_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_OnDecide, CallFunc_BooleanAND_ReturnValue) == 0x000002, "Member 'WDT_KeywordMenu_C_OnDecide::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-
-// Function WDT_KeywordMenu.WDT_KeywordMenu_C.OnCancel
-// 0x0005 (0x0005 - 0x0000)
-struct WDT_KeywordMenu_C_OnCancel final
-{
-public:
-	bool                                          CallFunc_Close_ReturnValue;                        // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsActivated_ReturnValue;                  // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_KeywordMenu_C_OnCancel) == 0x000001, "Wrong alignment on WDT_KeywordMenu_C_OnCancel");
-static_assert(sizeof(WDT_KeywordMenu_C_OnCancel) == 0x000005, "Wrong size on WDT_KeywordMenu_C_OnCancel");
-static_assert(offsetof(WDT_KeywordMenu_C_OnCancel, CallFunc_Close_ReturnValue) == 0x000000, "Member 'WDT_KeywordMenu_C_OnCancel::CallFunc_Close_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_OnCancel, CallFunc_NotEqual_ByteByte_ReturnValue) == 0x000001, "Member 'WDT_KeywordMenu_C_OnCancel::CallFunc_NotEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_OnCancel, CallFunc_IsActivated_ReturnValue) == 0x000002, "Member 'WDT_KeywordMenu_C_OnCancel::CallFunc_IsActivated_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_OnCancel, CallFunc_IsVisible_ReturnValue) == 0x000003, "Member 'WDT_KeywordMenu_C_OnCancel::CallFunc_IsVisible_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_OnCancel, CallFunc_BooleanAND_ReturnValue) == 0x000004, "Member 'WDT_KeywordMenu_C_OnCancel::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-
-// Function WDT_KeywordMenu.WDT_KeywordMenu_C.InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_2
-// 0x0030 (0x0030 - 0x0000)
-struct WDT_KeywordMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_2 final
-{
-public:
-	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_KeywordMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_2) == 0x000008, "Wrong alignment on WDT_KeywordMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_2");
-static_assert(sizeof(WDT_KeywordMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_2) == 0x000030, "Wrong size on WDT_KeywordMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_2");
-static_assert(offsetof(WDT_KeywordMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_2, ActionValue) == 0x000000, "Member 'WDT_KeywordMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_2::ActionValue' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_2, ElapsedTime) == 0x000020, "Member 'WDT_KeywordMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_2::ElapsedTime' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_2, TriggeredTime) == 0x000024, "Member 'WDT_KeywordMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_2::TriggeredTime' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_2, SourceAction) == 0x000028, "Member 'WDT_KeywordMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_2::SourceAction' has a wrong offset!");
-
-// Function WDT_KeywordMenu.WDT_KeywordMenu_C.InpActEvt_IA_UI_FieldMenu_K2Node_EnhancedInputActionEvent_0
-// 0x0030 (0x0030 - 0x0000)
-struct WDT_KeywordMenu_C_InpActEvt_IA_UI_FieldMenu_K2Node_EnhancedInputActionEvent_0 final
-{
-public:
-	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_KeywordMenu_C_InpActEvt_IA_UI_FieldMenu_K2Node_EnhancedInputActionEvent_0) == 0x000008, "Wrong alignment on WDT_KeywordMenu_C_InpActEvt_IA_UI_FieldMenu_K2Node_EnhancedInputActionEvent_0");
-static_assert(sizeof(WDT_KeywordMenu_C_InpActEvt_IA_UI_FieldMenu_K2Node_EnhancedInputActionEvent_0) == 0x000030, "Wrong size on WDT_KeywordMenu_C_InpActEvt_IA_UI_FieldMenu_K2Node_EnhancedInputActionEvent_0");
-static_assert(offsetof(WDT_KeywordMenu_C_InpActEvt_IA_UI_FieldMenu_K2Node_EnhancedInputActionEvent_0, ActionValue) == 0x000000, "Member 'WDT_KeywordMenu_C_InpActEvt_IA_UI_FieldMenu_K2Node_EnhancedInputActionEvent_0::ActionValue' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_InpActEvt_IA_UI_FieldMenu_K2Node_EnhancedInputActionEvent_0, ElapsedTime) == 0x000020, "Member 'WDT_KeywordMenu_C_InpActEvt_IA_UI_FieldMenu_K2Node_EnhancedInputActionEvent_0::ElapsedTime' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_InpActEvt_IA_UI_FieldMenu_K2Node_EnhancedInputActionEvent_0, TriggeredTime) == 0x000024, "Member 'WDT_KeywordMenu_C_InpActEvt_IA_UI_FieldMenu_K2Node_EnhancedInputActionEvent_0::TriggeredTime' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_InpActEvt_IA_UI_FieldMenu_K2Node_EnhancedInputActionEvent_0, SourceAction) == 0x000028, "Member 'WDT_KeywordMenu_C_InpActEvt_IA_UI_FieldMenu_K2Node_EnhancedInputActionEvent_0::SourceAction' has a wrong offset!");
-
-// Function WDT_KeywordMenu.WDT_KeywordMenu_C.InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_1
-// 0x0030 (0x0030 - 0x0000)
-struct WDT_KeywordMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_1 final
-{
-public:
-	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_KeywordMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_1) == 0x000008, "Wrong alignment on WDT_KeywordMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_1");
-static_assert(sizeof(WDT_KeywordMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_1) == 0x000030, "Wrong size on WDT_KeywordMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_1");
-static_assert(offsetof(WDT_KeywordMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_1, ActionValue) == 0x000000, "Member 'WDT_KeywordMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_1::ActionValue' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_1, ElapsedTime) == 0x000020, "Member 'WDT_KeywordMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_1::ElapsedTime' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_1, TriggeredTime) == 0x000024, "Member 'WDT_KeywordMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_1::TriggeredTime' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_1, SourceAction) == 0x000028, "Member 'WDT_KeywordMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_1::SourceAction' has a wrong offset!");
-
-// Function WDT_KeywordMenu.WDT_KeywordMenu_C.InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_4
-// 0x0030 (0x0030 - 0x0000)
-struct WDT_KeywordMenu_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_4 final
-{
-public:
-	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_KeywordMenu_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_4) == 0x000008, "Wrong alignment on WDT_KeywordMenu_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_4");
-static_assert(sizeof(WDT_KeywordMenu_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_4) == 0x000030, "Wrong size on WDT_KeywordMenu_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_4");
-static_assert(offsetof(WDT_KeywordMenu_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_4, ActionValue) == 0x000000, "Member 'WDT_KeywordMenu_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_4::ActionValue' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_4, ElapsedTime) == 0x000020, "Member 'WDT_KeywordMenu_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_4::ElapsedTime' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_4, TriggeredTime) == 0x000024, "Member 'WDT_KeywordMenu_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_4::TriggeredTime' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_4, SourceAction) == 0x000028, "Member 'WDT_KeywordMenu_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_4::SourceAction' has a wrong offset!");
-
-// Function WDT_KeywordMenu.WDT_KeywordMenu_C.InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_3
-// 0x0030 (0x0030 - 0x0000)
-struct WDT_KeywordMenu_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_3 final
-{
-public:
-	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_KeywordMenu_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_3) == 0x000008, "Wrong alignment on WDT_KeywordMenu_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_3");
-static_assert(sizeof(WDT_KeywordMenu_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_3) == 0x000030, "Wrong size on WDT_KeywordMenu_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_3");
-static_assert(offsetof(WDT_KeywordMenu_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_3, ActionValue) == 0x000000, "Member 'WDT_KeywordMenu_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_3::ActionValue' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_3, ElapsedTime) == 0x000020, "Member 'WDT_KeywordMenu_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_3::ElapsedTime' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_3, TriggeredTime) == 0x000024, "Member 'WDT_KeywordMenu_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_3::TriggeredTime' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_3, SourceAction) == 0x000028, "Member 'WDT_KeywordMenu_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_3::SourceAction' has a wrong offset!");
-
-// Function WDT_KeywordMenu.WDT_KeywordMenu_C.Initialize
-// 0x0008 (0x0008 - 0x0000)
-struct WDT_KeywordMenu_C_Initialize final
-{
-public:
-	int32                                         CallFunc_GetNumItems_ReturnValue;                  // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_KeywordMenu_C_Initialize) == 0x000004, "Wrong alignment on WDT_KeywordMenu_C_Initialize");
-static_assert(sizeof(WDT_KeywordMenu_C_Initialize) == 0x000008, "Wrong size on WDT_KeywordMenu_C_Initialize");
-static_assert(offsetof(WDT_KeywordMenu_C_Initialize, CallFunc_GetNumItems_ReturnValue) == 0x000000, "Member 'WDT_KeywordMenu_C_Initialize::CallFunc_GetNumItems_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_Initialize, CallFunc_Greater_IntInt_ReturnValue) == 0x000004, "Member 'WDT_KeywordMenu_C_Initialize::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-
-// Function WDT_KeywordMenu.WDT_KeywordMenu_C.Hide Keyword Data
-// 0x0001 (0x0001 - 0x0000)
-struct WDT_KeywordMenu_C_Hide_Keyword_Data final
-{
-public:
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_KeywordMenu_C_Hide_Keyword_Data) == 0x000001, "Wrong alignment on WDT_KeywordMenu_C_Hide_Keyword_Data");
-static_assert(sizeof(WDT_KeywordMenu_C_Hide_Keyword_Data) == 0x000001, "Wrong size on WDT_KeywordMenu_C_Hide_Keyword_Data");
-static_assert(offsetof(WDT_KeywordMenu_C_Hide_Keyword_Data, CallFunc_IsValid_ReturnValue) == 0x000000, "Member 'WDT_KeywordMenu_C_Hide_Keyword_Data::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-
-// Function WDT_KeywordMenu.WDT_KeywordMenu_C.GetCurrentListIndex
-// 0x0020 (0x0020 - 0x0000)
-struct WDT_KeywordMenu_C_GetCurrentListIndex final
-{
-public:
-	int32                                         OutNum;                                            // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                CallFunc_BP_GetSelectedItem_ReturnValue;           // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UBP_KeywordListData_C*                  K2Node_DynamicCast_AsBP_Keyword_List_Data;         // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetListIndex_OutIndex;                    // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_KeywordMenu_C_GetCurrentListIndex) == 0x000008, "Wrong alignment on WDT_KeywordMenu_C_GetCurrentListIndex");
-static_assert(sizeof(WDT_KeywordMenu_C_GetCurrentListIndex) == 0x000020, "Wrong size on WDT_KeywordMenu_C_GetCurrentListIndex");
-static_assert(offsetof(WDT_KeywordMenu_C_GetCurrentListIndex, OutNum) == 0x000000, "Member 'WDT_KeywordMenu_C_GetCurrentListIndex::OutNum' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_GetCurrentListIndex, CallFunc_BP_GetSelectedItem_ReturnValue) == 0x000008, "Member 'WDT_KeywordMenu_C_GetCurrentListIndex::CallFunc_BP_GetSelectedItem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_GetCurrentListIndex, K2Node_DynamicCast_AsBP_Keyword_List_Data) == 0x000010, "Member 'WDT_KeywordMenu_C_GetCurrentListIndex::K2Node_DynamicCast_AsBP_Keyword_List_Data' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_GetCurrentListIndex, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'WDT_KeywordMenu_C_GetCurrentListIndex::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_GetCurrentListIndex, CallFunc_GetListIndex_OutIndex) == 0x00001C, "Member 'WDT_KeywordMenu_C_GetCurrentListIndex::CallFunc_GetListIndex_OutIndex' has a wrong offset!");
+static_assert(alignof(WDT_KeywordMenu_C_Display_Keyword_Data) == 0x000008, "Wrong alignment on WDT_KeywordMenu_C_Display_Keyword_Data");
+static_assert(sizeof(WDT_KeywordMenu_C_Display_Keyword_Data) == 0x000068, "Wrong size on WDT_KeywordMenu_C_Display_Keyword_Data");
+static_assert(offsetof(WDT_KeywordMenu_C_Display_Keyword_Data, InKeywodData) == 0x000000, "Member 'WDT_KeywordMenu_C_Display_Keyword_Data::InKeywodData' has a wrong offset!");
 
 // Function WDT_KeywordMenu.WDT_KeywordMenu_C.ExecuteUbergraph_WDT_KeywordMenu
 // 0x0290 (0x0290 - 0x0000)
@@ -482,97 +280,299 @@ static_assert(offsetof(WDT_KeywordMenu_C_ExecuteUbergraph_WDT_KeywordMenu, CallF
 static_assert(offsetof(WDT_KeywordMenu_C_ExecuteUbergraph_WDT_KeywordMenu, CallFunc_GetListIndex_OutIndex_1) == 0x000278, "Member 'WDT_KeywordMenu_C_ExecuteUbergraph_WDT_KeywordMenu::CallFunc_GetListIndex_OutIndex_1' has a wrong offset!");
 static_assert(offsetof(WDT_KeywordMenu_C_ExecuteUbergraph_WDT_KeywordMenu, K2Node_CreateDelegate_OutputDelegate) == 0x00027C, "Member 'WDT_KeywordMenu_C_ExecuteUbergraph_WDT_KeywordMenu::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
 
-// Function WDT_KeywordMenu.WDT_KeywordMenu_C.Display Keyword Data
-// 0x0068 (0x0068 - 0x0000)
-struct WDT_KeywordMenu_C_Display_Keyword_Data final
+// Function WDT_KeywordMenu.WDT_KeywordMenu_C.GetCurrentListIndex
+// 0x0020 (0x0020 - 0x0000)
+struct WDT_KeywordMenu_C_GetCurrentListIndex final
 {
 public:
-	struct FKeywordDataTableRow                   InKeywodData;                                      // 0x0000(0x0068)(BlueprintVisible, BlueprintReadOnly, Parm)
+	int32                                         OutNum;                                            // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                CallFunc_BP_GetSelectedItem_ReturnValue;           // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UBP_KeywordListData_C*                  K2Node_DynamicCast_AsBP_Keyword_List_Data;         // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetListIndex_OutIndex;                    // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WDT_KeywordMenu_C_Display_Keyword_Data) == 0x000008, "Wrong alignment on WDT_KeywordMenu_C_Display_Keyword_Data");
-static_assert(sizeof(WDT_KeywordMenu_C_Display_Keyword_Data) == 0x000068, "Wrong size on WDT_KeywordMenu_C_Display_Keyword_Data");
-static_assert(offsetof(WDT_KeywordMenu_C_Display_Keyword_Data, InKeywodData) == 0x000000, "Member 'WDT_KeywordMenu_C_Display_Keyword_Data::InKeywodData' has a wrong offset!");
+static_assert(alignof(WDT_KeywordMenu_C_GetCurrentListIndex) == 0x000008, "Wrong alignment on WDT_KeywordMenu_C_GetCurrentListIndex");
+static_assert(sizeof(WDT_KeywordMenu_C_GetCurrentListIndex) == 0x000020, "Wrong size on WDT_KeywordMenu_C_GetCurrentListIndex");
+static_assert(offsetof(WDT_KeywordMenu_C_GetCurrentListIndex, OutNum) == 0x000000, "Member 'WDT_KeywordMenu_C_GetCurrentListIndex::OutNum' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_GetCurrentListIndex, CallFunc_BP_GetSelectedItem_ReturnValue) == 0x000008, "Member 'WDT_KeywordMenu_C_GetCurrentListIndex::CallFunc_BP_GetSelectedItem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_GetCurrentListIndex, K2Node_DynamicCast_AsBP_Keyword_List_Data) == 0x000010, "Member 'WDT_KeywordMenu_C_GetCurrentListIndex::K2Node_DynamicCast_AsBP_Keyword_List_Data' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_GetCurrentListIndex, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'WDT_KeywordMenu_C_GetCurrentListIndex::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_GetCurrentListIndex, CallFunc_GetListIndex_OutIndex) == 0x00001C, "Member 'WDT_KeywordMenu_C_GetCurrentListIndex::CallFunc_GetListIndex_OutIndex' has a wrong offset!");
 
-// Function WDT_KeywordMenu.WDT_KeywordMenu_C.BuildKeywordList
-// 0x00D8 (0x00D8 - 0x0000)
-struct WDT_KeywordMenu_C_BuildKeywordList final
+// Function WDT_KeywordMenu.WDT_KeywordMenu_C.Hide Keyword Data
+// 0x0001 (0x0001 - 0x0000)
+struct WDT_KeywordMenu_C_Hide_Keyword_Data final
 {
 public:
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBP_KeywordListData_C*                  CallFunc_SpawnObject_ReturnValue;                  // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UBP_KeywordManager_C*                   CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UDataTable*                             CallFunc_GetKeywordTable_ReturnValue;              // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<class FName>                           CallFunc_GetDataTableRowNames_OutRowNames;         // 0x0038(0x0010)(ReferenceParm)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   CallFunc_Array_Get_Item;                           // 0x004C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FKeywordDataTableRow                   CallFunc_GetKeywordDataByID_OutKeywordData;        // 0x0058(0x0068)()
-	bool                                          CallFunc_GetKeywordDataByID_ReturnValue;           // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C1[0x3];                                       // 0x00C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x00C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x00C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x00CC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetStoryFlagValueByBoolean_ReturnValue;   // 0x00CD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CE[0x2];                                       // 0x00CE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x00D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_BoolBool_ReturnValue;          // 0x00D4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WDT_KeywordMenu_C_BuildKeywordList) == 0x000008, "Wrong alignment on WDT_KeywordMenu_C_BuildKeywordList");
-static_assert(sizeof(WDT_KeywordMenu_C_BuildKeywordList) == 0x0000D8, "Wrong size on WDT_KeywordMenu_C_BuildKeywordList");
-static_assert(offsetof(WDT_KeywordMenu_C_BuildKeywordList, Temp_int_Array_Index_Variable) == 0x000000, "Member 'WDT_KeywordMenu_C_BuildKeywordList::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_BuildKeywordList, Temp_int_Loop_Counter_Variable) == 0x000004, "Member 'WDT_KeywordMenu_C_BuildKeywordList::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_BuildKeywordList, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'WDT_KeywordMenu_C_BuildKeywordList::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_BuildKeywordList, Temp_int_Array_Index_Variable_1) == 0x00000C, "Member 'WDT_KeywordMenu_C_BuildKeywordList::Temp_int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_BuildKeywordList, CallFunc_Array_Length_ReturnValue) == 0x000010, "Member 'WDT_KeywordMenu_C_BuildKeywordList::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_BuildKeywordList, CallFunc_SpawnObject_ReturnValue) == 0x000018, "Member 'WDT_KeywordMenu_C_BuildKeywordList::CallFunc_SpawnObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_BuildKeywordList, CallFunc_GetWorldSubsystem_ReturnValue) == 0x000020, "Member 'WDT_KeywordMenu_C_BuildKeywordList::CallFunc_GetWorldSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_BuildKeywordList, Temp_int_Loop_Counter_Variable_1) == 0x000028, "Member 'WDT_KeywordMenu_C_BuildKeywordList::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_BuildKeywordList, CallFunc_GetKeywordTable_ReturnValue) == 0x000030, "Member 'WDT_KeywordMenu_C_BuildKeywordList::CallFunc_GetKeywordTable_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_BuildKeywordList, CallFunc_GetDataTableRowNames_OutRowNames) == 0x000038, "Member 'WDT_KeywordMenu_C_BuildKeywordList::CallFunc_GetDataTableRowNames_OutRowNames' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_BuildKeywordList, CallFunc_Less_IntInt_ReturnValue) == 0x000048, "Member 'WDT_KeywordMenu_C_BuildKeywordList::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_BuildKeywordList, CallFunc_Array_Get_Item) == 0x00004C, "Member 'WDT_KeywordMenu_C_BuildKeywordList::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_BuildKeywordList, CallFunc_GetKeywordDataByID_OutKeywordData) == 0x000058, "Member 'WDT_KeywordMenu_C_BuildKeywordList::CallFunc_GetKeywordDataByID_OutKeywordData' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_BuildKeywordList, CallFunc_GetKeywordDataByID_ReturnValue) == 0x0000C0, "Member 'WDT_KeywordMenu_C_BuildKeywordList::CallFunc_GetKeywordDataByID_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_BuildKeywordList, CallFunc_Array_Length_ReturnValue_1) == 0x0000C4, "Member 'WDT_KeywordMenu_C_BuildKeywordList::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_BuildKeywordList, CallFunc_Array_Add_ReturnValue) == 0x0000C8, "Member 'WDT_KeywordMenu_C_BuildKeywordList::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_BuildKeywordList, CallFunc_Less_IntInt_ReturnValue_1) == 0x0000CC, "Member 'WDT_KeywordMenu_C_BuildKeywordList::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_BuildKeywordList, CallFunc_GetStoryFlagValueByBoolean_ReturnValue) == 0x0000CD, "Member 'WDT_KeywordMenu_C_BuildKeywordList::CallFunc_GetStoryFlagValueByBoolean_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_BuildKeywordList, CallFunc_Add_IntInt_ReturnValue_1) == 0x0000D0, "Member 'WDT_KeywordMenu_C_BuildKeywordList::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_BuildKeywordList, CallFunc_EqualEqual_BoolBool_ReturnValue) == 0x0000D4, "Member 'WDT_KeywordMenu_C_BuildKeywordList::CallFunc_EqualEqual_BoolBool_ReturnValue' has a wrong offset!");
+static_assert(alignof(WDT_KeywordMenu_C_Hide_Keyword_Data) == 0x000001, "Wrong alignment on WDT_KeywordMenu_C_Hide_Keyword_Data");
+static_assert(sizeof(WDT_KeywordMenu_C_Hide_Keyword_Data) == 0x000001, "Wrong size on WDT_KeywordMenu_C_Hide_Keyword_Data");
+static_assert(offsetof(WDT_KeywordMenu_C_Hide_Keyword_Data, CallFunc_IsValid_ReturnValue) == 0x000000, "Member 'WDT_KeywordMenu_C_Hide_Keyword_Data::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
-// Function WDT_KeywordMenu.WDT_KeywordMenu_C.BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_1_OnListItemSelectionChangedDynamic__DelegateSignature
-// 0x0010 (0x0010 - 0x0000)
-struct WDT_KeywordMenu_C_BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_1_OnListItemSelectionChangedDynamic__DelegateSignature final
+// Function WDT_KeywordMenu.WDT_KeywordMenu_C.Initialize
+// 0x0008 (0x0008 - 0x0000)
+struct WDT_KeywordMenu_C_Initialize final
 {
 public:
-	class UObject*                                Item;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          bIsSelected;                                       // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetNumItems_ReturnValue;                  // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WDT_KeywordMenu_C_BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_1_OnListItemSelectionChangedDynamic__DelegateSignature) == 0x000008, "Wrong alignment on WDT_KeywordMenu_C_BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_1_OnListItemSelectionChangedDynamic__DelegateSignature");
-static_assert(sizeof(WDT_KeywordMenu_C_BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_1_OnListItemSelectionChangedDynamic__DelegateSignature) == 0x000010, "Wrong size on WDT_KeywordMenu_C_BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_1_OnListItemSelectionChangedDynamic__DelegateSignature");
-static_assert(offsetof(WDT_KeywordMenu_C_BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_1_OnListItemSelectionChangedDynamic__DelegateSignature, Item) == 0x000000, "Member 'WDT_KeywordMenu_C_BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_1_OnListItemSelectionChangedDynamic__DelegateSignature::Item' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_1_OnListItemSelectionChangedDynamic__DelegateSignature, bIsSelected) == 0x000008, "Member 'WDT_KeywordMenu_C_BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_1_OnListItemSelectionChangedDynamic__DelegateSignature::bIsSelected' has a wrong offset!");
+static_assert(alignof(WDT_KeywordMenu_C_Initialize) == 0x000004, "Wrong alignment on WDT_KeywordMenu_C_Initialize");
+static_assert(sizeof(WDT_KeywordMenu_C_Initialize) == 0x000008, "Wrong size on WDT_KeywordMenu_C_Initialize");
+static_assert(offsetof(WDT_KeywordMenu_C_Initialize, CallFunc_GetNumItems_ReturnValue) == 0x000000, "Member 'WDT_KeywordMenu_C_Initialize::CallFunc_GetNumItems_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_Initialize, CallFunc_Greater_IntInt_ReturnValue) == 0x000004, "Member 'WDT_KeywordMenu_C_Initialize::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
 
-// Function WDT_KeywordMenu.WDT_KeywordMenu_C.BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_0_OnListEntryInitializedDynamic__DelegateSignature
-// 0x0010 (0x0010 - 0x0000)
-struct WDT_KeywordMenu_C_BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_0_OnListEntryInitializedDynamic__DelegateSignature final
+// Function WDT_KeywordMenu.WDT_KeywordMenu_C.InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_3
+// 0x0030 (0x0030 - 0x0000)
+struct WDT_KeywordMenu_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_3 final
 {
 public:
-	class UObject*                                Item;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UUserWidget*                            Widget;                                            // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WDT_KeywordMenu_C_BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_0_OnListEntryInitializedDynamic__DelegateSignature) == 0x000008, "Wrong alignment on WDT_KeywordMenu_C_BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_0_OnListEntryInitializedDynamic__DelegateSignature");
-static_assert(sizeof(WDT_KeywordMenu_C_BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_0_OnListEntryInitializedDynamic__DelegateSignature) == 0x000010, "Wrong size on WDT_KeywordMenu_C_BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_0_OnListEntryInitializedDynamic__DelegateSignature");
-static_assert(offsetof(WDT_KeywordMenu_C_BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_0_OnListEntryInitializedDynamic__DelegateSignature, Item) == 0x000000, "Member 'WDT_KeywordMenu_C_BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_0_OnListEntryInitializedDynamic__DelegateSignature::Item' has a wrong offset!");
-static_assert(offsetof(WDT_KeywordMenu_C_BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_0_OnListEntryInitializedDynamic__DelegateSignature, Widget) == 0x000008, "Member 'WDT_KeywordMenu_C_BndEvt__WDT_DescriptionMenu_DescriptionList_K2Node_ComponentBoundEvent_0_OnListEntryInitializedDynamic__DelegateSignature::Widget' has a wrong offset!");
+static_assert(alignof(WDT_KeywordMenu_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_3) == 0x000008, "Wrong alignment on WDT_KeywordMenu_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_3");
+static_assert(sizeof(WDT_KeywordMenu_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_3) == 0x000030, "Wrong size on WDT_KeywordMenu_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_3");
+static_assert(offsetof(WDT_KeywordMenu_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_3, ActionValue) == 0x000000, "Member 'WDT_KeywordMenu_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_3::ActionValue' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_3, ElapsedTime) == 0x000020, "Member 'WDT_KeywordMenu_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_3::ElapsedTime' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_3, TriggeredTime) == 0x000024, "Member 'WDT_KeywordMenu_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_3::TriggeredTime' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_3, SourceAction) == 0x000028, "Member 'WDT_KeywordMenu_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_3::SourceAction' has a wrong offset!");
+
+// Function WDT_KeywordMenu.WDT_KeywordMenu_C.InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_4
+// 0x0030 (0x0030 - 0x0000)
+struct WDT_KeywordMenu_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_4 final
+{
+public:
+	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_KeywordMenu_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_4) == 0x000008, "Wrong alignment on WDT_KeywordMenu_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_4");
+static_assert(sizeof(WDT_KeywordMenu_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_4) == 0x000030, "Wrong size on WDT_KeywordMenu_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_4");
+static_assert(offsetof(WDT_KeywordMenu_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_4, ActionValue) == 0x000000, "Member 'WDT_KeywordMenu_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_4::ActionValue' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_4, ElapsedTime) == 0x000020, "Member 'WDT_KeywordMenu_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_4::ElapsedTime' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_4, TriggeredTime) == 0x000024, "Member 'WDT_KeywordMenu_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_4::TriggeredTime' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_4, SourceAction) == 0x000028, "Member 'WDT_KeywordMenu_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_4::SourceAction' has a wrong offset!");
+
+// Function WDT_KeywordMenu.WDT_KeywordMenu_C.InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_1
+// 0x0030 (0x0030 - 0x0000)
+struct WDT_KeywordMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_1 final
+{
+public:
+	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_KeywordMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_1) == 0x000008, "Wrong alignment on WDT_KeywordMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_1");
+static_assert(sizeof(WDT_KeywordMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_1) == 0x000030, "Wrong size on WDT_KeywordMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_1");
+static_assert(offsetof(WDT_KeywordMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_1, ActionValue) == 0x000000, "Member 'WDT_KeywordMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_1::ActionValue' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_1, ElapsedTime) == 0x000020, "Member 'WDT_KeywordMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_1::ElapsedTime' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_1, TriggeredTime) == 0x000024, "Member 'WDT_KeywordMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_1::TriggeredTime' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_1, SourceAction) == 0x000028, "Member 'WDT_KeywordMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_1::SourceAction' has a wrong offset!");
+
+// Function WDT_KeywordMenu.WDT_KeywordMenu_C.InpActEvt_IA_UI_FieldMenu_K2Node_EnhancedInputActionEvent_0
+// 0x0030 (0x0030 - 0x0000)
+struct WDT_KeywordMenu_C_InpActEvt_IA_UI_FieldMenu_K2Node_EnhancedInputActionEvent_0 final
+{
+public:
+	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_KeywordMenu_C_InpActEvt_IA_UI_FieldMenu_K2Node_EnhancedInputActionEvent_0) == 0x000008, "Wrong alignment on WDT_KeywordMenu_C_InpActEvt_IA_UI_FieldMenu_K2Node_EnhancedInputActionEvent_0");
+static_assert(sizeof(WDT_KeywordMenu_C_InpActEvt_IA_UI_FieldMenu_K2Node_EnhancedInputActionEvent_0) == 0x000030, "Wrong size on WDT_KeywordMenu_C_InpActEvt_IA_UI_FieldMenu_K2Node_EnhancedInputActionEvent_0");
+static_assert(offsetof(WDT_KeywordMenu_C_InpActEvt_IA_UI_FieldMenu_K2Node_EnhancedInputActionEvent_0, ActionValue) == 0x000000, "Member 'WDT_KeywordMenu_C_InpActEvt_IA_UI_FieldMenu_K2Node_EnhancedInputActionEvent_0::ActionValue' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_InpActEvt_IA_UI_FieldMenu_K2Node_EnhancedInputActionEvent_0, ElapsedTime) == 0x000020, "Member 'WDT_KeywordMenu_C_InpActEvt_IA_UI_FieldMenu_K2Node_EnhancedInputActionEvent_0::ElapsedTime' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_InpActEvt_IA_UI_FieldMenu_K2Node_EnhancedInputActionEvent_0, TriggeredTime) == 0x000024, "Member 'WDT_KeywordMenu_C_InpActEvt_IA_UI_FieldMenu_K2Node_EnhancedInputActionEvent_0::TriggeredTime' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_InpActEvt_IA_UI_FieldMenu_K2Node_EnhancedInputActionEvent_0, SourceAction) == 0x000028, "Member 'WDT_KeywordMenu_C_InpActEvt_IA_UI_FieldMenu_K2Node_EnhancedInputActionEvent_0::SourceAction' has a wrong offset!");
+
+// Function WDT_KeywordMenu.WDT_KeywordMenu_C.InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_2
+// 0x0030 (0x0030 - 0x0000)
+struct WDT_KeywordMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_2 final
+{
+public:
+	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_KeywordMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_2) == 0x000008, "Wrong alignment on WDT_KeywordMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_2");
+static_assert(sizeof(WDT_KeywordMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_2) == 0x000030, "Wrong size on WDT_KeywordMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_2");
+static_assert(offsetof(WDT_KeywordMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_2, ActionValue) == 0x000000, "Member 'WDT_KeywordMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_2::ActionValue' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_2, ElapsedTime) == 0x000020, "Member 'WDT_KeywordMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_2::ElapsedTime' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_2, TriggeredTime) == 0x000024, "Member 'WDT_KeywordMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_2::TriggeredTime' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_2, SourceAction) == 0x000028, "Member 'WDT_KeywordMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_2::SourceAction' has a wrong offset!");
+
+// Function WDT_KeywordMenu.WDT_KeywordMenu_C.OnCancel
+// 0x0005 (0x0005 - 0x0000)
+struct WDT_KeywordMenu_C_OnCancel final
+{
+public:
+	bool                                          CallFunc_Close_ReturnValue;                        // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsActivated_ReturnValue;                  // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_KeywordMenu_C_OnCancel) == 0x000001, "Wrong alignment on WDT_KeywordMenu_C_OnCancel");
+static_assert(sizeof(WDT_KeywordMenu_C_OnCancel) == 0x000005, "Wrong size on WDT_KeywordMenu_C_OnCancel");
+static_assert(offsetof(WDT_KeywordMenu_C_OnCancel, CallFunc_Close_ReturnValue) == 0x000000, "Member 'WDT_KeywordMenu_C_OnCancel::CallFunc_Close_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_OnCancel, CallFunc_NotEqual_ByteByte_ReturnValue) == 0x000001, "Member 'WDT_KeywordMenu_C_OnCancel::CallFunc_NotEqual_ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_OnCancel, CallFunc_IsActivated_ReturnValue) == 0x000002, "Member 'WDT_KeywordMenu_C_OnCancel::CallFunc_IsActivated_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_OnCancel, CallFunc_IsVisible_ReturnValue) == 0x000003, "Member 'WDT_KeywordMenu_C_OnCancel::CallFunc_IsVisible_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_OnCancel, CallFunc_BooleanAND_ReturnValue) == 0x000004, "Member 'WDT_KeywordMenu_C_OnCancel::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+
+// Function WDT_KeywordMenu.WDT_KeywordMenu_C.OnDecide
+// 0x0003 (0x0003 - 0x0000)
+struct WDT_KeywordMenu_C_OnDecide final
+{
+public:
+	bool                                          CallFunc_IsActivated_ReturnValue;                  // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_KeywordMenu_C_OnDecide) == 0x000001, "Wrong alignment on WDT_KeywordMenu_C_OnDecide");
+static_assert(sizeof(WDT_KeywordMenu_C_OnDecide) == 0x000003, "Wrong size on WDT_KeywordMenu_C_OnDecide");
+static_assert(offsetof(WDT_KeywordMenu_C_OnDecide, CallFunc_IsActivated_ReturnValue) == 0x000000, "Member 'WDT_KeywordMenu_C_OnDecide::CallFunc_IsActivated_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_OnDecide, CallFunc_IsVisible_ReturnValue) == 0x000001, "Member 'WDT_KeywordMenu_C_OnDecide::CallFunc_IsVisible_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_OnDecide, CallFunc_BooleanAND_ReturnValue) == 0x000002, "Member 'WDT_KeywordMenu_C_OnDecide::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+
+// Function WDT_KeywordMenu.WDT_KeywordMenu_C.OnDownPressed
+// 0x0003 (0x0003 - 0x0000)
+struct WDT_KeywordMenu_C_OnDownPressed final
+{
+public:
+	bool                                          CallFunc_IsActivated_ReturnValue;                  // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_KeywordMenu_C_OnDownPressed) == 0x000001, "Wrong alignment on WDT_KeywordMenu_C_OnDownPressed");
+static_assert(sizeof(WDT_KeywordMenu_C_OnDownPressed) == 0x000003, "Wrong size on WDT_KeywordMenu_C_OnDownPressed");
+static_assert(offsetof(WDT_KeywordMenu_C_OnDownPressed, CallFunc_IsActivated_ReturnValue) == 0x000000, "Member 'WDT_KeywordMenu_C_OnDownPressed::CallFunc_IsActivated_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_OnDownPressed, CallFunc_IsVisible_ReturnValue) == 0x000001, "Member 'WDT_KeywordMenu_C_OnDownPressed::CallFunc_IsVisible_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_OnDownPressed, CallFunc_BooleanAND_ReturnValue) == 0x000002, "Member 'WDT_KeywordMenu_C_OnDownPressed::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+
+// Function WDT_KeywordMenu.WDT_KeywordMenu_C.OnFieldMenuButton
+// 0x0030 (0x0030 - 0x0000)
+struct WDT_KeywordMenu_C_OnFieldMenuButton final
+{
+public:
+	struct FModifyContextOptions                  K2Node_MakeStruct_ModifyContextOptions;            // 0x0000(0x0001)(NoDestructor)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UEnhancedInputLocalPlayerSubsystem*     CallFunc_GetLocalPlayerSubsystem_ReturnValue;      // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IEnhancedInputSubsystemInterface> CallFunc_RemoveMappingContext_self_CastInput;      // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsActivated_ReturnValue;                  // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_KeywordMenu_C_OnFieldMenuButton) == 0x000008, "Wrong alignment on WDT_KeywordMenu_C_OnFieldMenuButton");
+static_assert(sizeof(WDT_KeywordMenu_C_OnFieldMenuButton) == 0x000030, "Wrong size on WDT_KeywordMenu_C_OnFieldMenuButton");
+static_assert(offsetof(WDT_KeywordMenu_C_OnFieldMenuButton, K2Node_MakeStruct_ModifyContextOptions) == 0x000000, "Member 'WDT_KeywordMenu_C_OnFieldMenuButton::K2Node_MakeStruct_ModifyContextOptions' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_OnFieldMenuButton, CallFunc_GetLocalPlayerSubsystem_ReturnValue) == 0x000008, "Member 'WDT_KeywordMenu_C_OnFieldMenuButton::CallFunc_GetLocalPlayerSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_OnFieldMenuButton, CallFunc_IsValid_ReturnValue) == 0x000010, "Member 'WDT_KeywordMenu_C_OnFieldMenuButton::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_OnFieldMenuButton, CallFunc_RemoveMappingContext_self_CastInput) == 0x000018, "Member 'WDT_KeywordMenu_C_OnFieldMenuButton::CallFunc_RemoveMappingContext_self_CastInput' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_OnFieldMenuButton, CallFunc_IsActivated_ReturnValue) == 0x000028, "Member 'WDT_KeywordMenu_C_OnFieldMenuButton::CallFunc_IsActivated_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_OnFieldMenuButton, CallFunc_IsVisible_ReturnValue) == 0x000029, "Member 'WDT_KeywordMenu_C_OnFieldMenuButton::CallFunc_IsVisible_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_OnFieldMenuButton, CallFunc_BooleanAND_ReturnValue) == 0x00002A, "Member 'WDT_KeywordMenu_C_OnFieldMenuButton::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+
+// Function WDT_KeywordMenu.WDT_KeywordMenu_C.OnFieldMenuCloseAnimationFinish
+// 0x0001 (0x0001 - 0x0000)
+struct WDT_KeywordMenu_C_OnFieldMenuCloseAnimationFinish final
+{
+public:
+	bool                                          CallFunc_Close_ReturnValue;                        // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_KeywordMenu_C_OnFieldMenuCloseAnimationFinish) == 0x000001, "Wrong alignment on WDT_KeywordMenu_C_OnFieldMenuCloseAnimationFinish");
+static_assert(sizeof(WDT_KeywordMenu_C_OnFieldMenuCloseAnimationFinish) == 0x000001, "Wrong size on WDT_KeywordMenu_C_OnFieldMenuCloseAnimationFinish");
+static_assert(offsetof(WDT_KeywordMenu_C_OnFieldMenuCloseAnimationFinish, CallFunc_Close_ReturnValue) == 0x000000, "Member 'WDT_KeywordMenu_C_OnFieldMenuCloseAnimationFinish::CallFunc_Close_ReturnValue' has a wrong offset!");
+
+// Function WDT_KeywordMenu.WDT_KeywordMenu_C.OnGetOpenAnimation
+// 0x0008 (0x0008 - 0x0000)
+struct WDT_KeywordMenu_C_OnGetOpenAnimation final
+{
+public:
+	class UWidgetAnimation*                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_KeywordMenu_C_OnGetOpenAnimation) == 0x000008, "Wrong alignment on WDT_KeywordMenu_C_OnGetOpenAnimation");
+static_assert(sizeof(WDT_KeywordMenu_C_OnGetOpenAnimation) == 0x000008, "Wrong size on WDT_KeywordMenu_C_OnGetOpenAnimation");
+static_assert(offsetof(WDT_KeywordMenu_C_OnGetOpenAnimation, ReturnValue) == 0x000000, "Member 'WDT_KeywordMenu_C_OnGetOpenAnimation::ReturnValue' has a wrong offset!");
+
+// Function WDT_KeywordMenu.WDT_KeywordMenu_C.OnUpPressed
+// 0x0003 (0x0003 - 0x0000)
+struct WDT_KeywordMenu_C_OnUpPressed final
+{
+public:
+	bool                                          CallFunc_IsActivated_ReturnValue;                  // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_KeywordMenu_C_OnUpPressed) == 0x000001, "Wrong alignment on WDT_KeywordMenu_C_OnUpPressed");
+static_assert(sizeof(WDT_KeywordMenu_C_OnUpPressed) == 0x000003, "Wrong size on WDT_KeywordMenu_C_OnUpPressed");
+static_assert(offsetof(WDT_KeywordMenu_C_OnUpPressed, CallFunc_IsActivated_ReturnValue) == 0x000000, "Member 'WDT_KeywordMenu_C_OnUpPressed::CallFunc_IsActivated_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_OnUpPressed, CallFunc_IsVisible_ReturnValue) == 0x000001, "Member 'WDT_KeywordMenu_C_OnUpPressed::CallFunc_IsVisible_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_OnUpPressed, CallFunc_BooleanAND_ReturnValue) == 0x000002, "Member 'WDT_KeywordMenu_C_OnUpPressed::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+
+// Function WDT_KeywordMenu.WDT_KeywordMenu_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WDT_KeywordMenu_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_KeywordMenu_C_PreConstruct) == 0x000001, "Wrong alignment on WDT_KeywordMenu_C_PreConstruct");
+static_assert(sizeof(WDT_KeywordMenu_C_PreConstruct) == 0x000001, "Wrong size on WDT_KeywordMenu_C_PreConstruct");
+static_assert(offsetof(WDT_KeywordMenu_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WDT_KeywordMenu_C_PreConstruct::IsDesignTime' has a wrong offset!");
+
+// Function WDT_KeywordMenu.WDT_KeywordMenu_C.SelectLowerDescription
+// 0x0018 (0x0018 - 0x0000)
+struct WDT_KeywordMenu_C_SelectLowerDescription final
+{
+public:
+	int32                                         L_NewIndex;                                        // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetNumItems_ReturnValue;                  // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetCurrentListIndex_OutNum;               // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_KeywordMenu_C_SelectLowerDescription) == 0x000004, "Wrong alignment on WDT_KeywordMenu_C_SelectLowerDescription");
+static_assert(sizeof(WDT_KeywordMenu_C_SelectLowerDescription) == 0x000018, "Wrong size on WDT_KeywordMenu_C_SelectLowerDescription");
+static_assert(offsetof(WDT_KeywordMenu_C_SelectLowerDescription, L_NewIndex) == 0x000000, "Member 'WDT_KeywordMenu_C_SelectLowerDescription::L_NewIndex' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_SelectLowerDescription, CallFunc_GetNumItems_ReturnValue) == 0x000004, "Member 'WDT_KeywordMenu_C_SelectLowerDescription::CallFunc_GetNumItems_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_SelectLowerDescription, CallFunc_Subtract_IntInt_ReturnValue) == 0x000008, "Member 'WDT_KeywordMenu_C_SelectLowerDescription::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_SelectLowerDescription, CallFunc_LessEqual_IntInt_ReturnValue) == 0x00000C, "Member 'WDT_KeywordMenu_C_SelectLowerDescription::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_SelectLowerDescription, CallFunc_GetCurrentListIndex_OutNum) == 0x000010, "Member 'WDT_KeywordMenu_C_SelectLowerDescription::CallFunc_GetCurrentListIndex_OutNum' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_SelectLowerDescription, CallFunc_Add_IntInt_ReturnValue) == 0x000014, "Member 'WDT_KeywordMenu_C_SelectLowerDescription::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+
+// Function WDT_KeywordMenu.WDT_KeywordMenu_C.SelectUpperDescription
+// 0x0020 (0x0020 - 0x0000)
+struct WDT_KeywordMenu_C_SelectUpperDescription final
+{
+public:
+	int32                                         L_NewIndex;                                        // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_DescriptionListData_C*              L_ListItemObject;                                  // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetCurrentListIndex_OutNum;               // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_KeywordMenu_C_SelectUpperDescription) == 0x000008, "Wrong alignment on WDT_KeywordMenu_C_SelectUpperDescription");
+static_assert(sizeof(WDT_KeywordMenu_C_SelectUpperDescription) == 0x000020, "Wrong size on WDT_KeywordMenu_C_SelectUpperDescription");
+static_assert(offsetof(WDT_KeywordMenu_C_SelectUpperDescription, L_NewIndex) == 0x000000, "Member 'WDT_KeywordMenu_C_SelectUpperDescription::L_NewIndex' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_SelectUpperDescription, L_ListItemObject) == 0x000008, "Member 'WDT_KeywordMenu_C_SelectUpperDescription::L_ListItemObject' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_SelectUpperDescription, CallFunc_GetCurrentListIndex_OutNum) == 0x000010, "Member 'WDT_KeywordMenu_C_SelectUpperDescription::CallFunc_GetCurrentListIndex_OutNum' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_SelectUpperDescription, CallFunc_Subtract_IntInt_ReturnValue) == 0x000014, "Member 'WDT_KeywordMenu_C_SelectUpperDescription::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_KeywordMenu_C_SelectUpperDescription, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x000018, "Member 'WDT_KeywordMenu_C_SelectUpperDescription::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
 
 }
 

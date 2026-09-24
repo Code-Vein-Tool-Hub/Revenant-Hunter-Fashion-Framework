@@ -20,14 +20,14 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_SmallScenario_Josee_Past_c06080.BP_SmallScenario_Josee_Past_c06080_C
-// 0x0038 (0x0400 - 0x03C8)
+// 0x0038 (0x0410 - 0x03D8)
 class ABP_SmallScenario_Josee_Past_c06080_C final : public ABP_SmallScenarioBase_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_SmallScenario_Josee_Past_c06080_C; // 0x03C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FStoryFlagEvaluationFormula            bDiaryOfLou3;                                      // 0x03D0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	struct FStoryFlagEvaluationFormula            bDiaryOfLou4;                                      // 0x03E0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	struct FStoryFlagEvaluationFormula            Check_e20950;                                      // 0x03F0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_SmallScenario_Josee_Past_c06080_C; // 0x03D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FStoryFlagEvaluationFormula            bDiaryOfLou3;                                      // 0x03E0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FStoryFlagEvaluationFormula            bDiaryOfLou4;                                      // 0x03F0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FStoryFlagEvaluationFormula            Check_e20950;                                      // 0x0400(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
 	void Abort();
@@ -48,11 +48,11 @@ public:
 	}
 };
 static_assert(alignof(ABP_SmallScenario_Josee_Past_c06080_C) == 0x000008, "Wrong alignment on ABP_SmallScenario_Josee_Past_c06080_C");
-static_assert(sizeof(ABP_SmallScenario_Josee_Past_c06080_C) == 0x000400, "Wrong size on ABP_SmallScenario_Josee_Past_c06080_C");
-static_assert(offsetof(ABP_SmallScenario_Josee_Past_c06080_C, UberGraphFrame_BP_SmallScenario_Josee_Past_c06080_C) == 0x0003C8, "Member 'ABP_SmallScenario_Josee_Past_c06080_C::UberGraphFrame_BP_SmallScenario_Josee_Past_c06080_C' has a wrong offset!");
-static_assert(offsetof(ABP_SmallScenario_Josee_Past_c06080_C, bDiaryOfLou3) == 0x0003D0, "Member 'ABP_SmallScenario_Josee_Past_c06080_C::bDiaryOfLou3' has a wrong offset!");
-static_assert(offsetof(ABP_SmallScenario_Josee_Past_c06080_C, bDiaryOfLou4) == 0x0003E0, "Member 'ABP_SmallScenario_Josee_Past_c06080_C::bDiaryOfLou4' has a wrong offset!");
-static_assert(offsetof(ABP_SmallScenario_Josee_Past_c06080_C, Check_e20950) == 0x0003F0, "Member 'ABP_SmallScenario_Josee_Past_c06080_C::Check_e20950' has a wrong offset!");
+static_assert(sizeof(ABP_SmallScenario_Josee_Past_c06080_C) == 0x000410, "Wrong size on ABP_SmallScenario_Josee_Past_c06080_C");
+static_assert(offsetof(ABP_SmallScenario_Josee_Past_c06080_C, UberGraphFrame_BP_SmallScenario_Josee_Past_c06080_C) == 0x0003D8, "Member 'ABP_SmallScenario_Josee_Past_c06080_C::UberGraphFrame_BP_SmallScenario_Josee_Past_c06080_C' has a wrong offset!");
+static_assert(offsetof(ABP_SmallScenario_Josee_Past_c06080_C, bDiaryOfLou3) == 0x0003E0, "Member 'ABP_SmallScenario_Josee_Past_c06080_C::bDiaryOfLou3' has a wrong offset!");
+static_assert(offsetof(ABP_SmallScenario_Josee_Past_c06080_C, bDiaryOfLou4) == 0x0003F0, "Member 'ABP_SmallScenario_Josee_Past_c06080_C::bDiaryOfLou4' has a wrong offset!");
+static_assert(offsetof(ABP_SmallScenario_Josee_Past_c06080_C, Check_e20950) == 0x000400, "Member 'ABP_SmallScenario_Josee_Past_c06080_C::Check_e20950' has a wrong offset!");
 
 }
 

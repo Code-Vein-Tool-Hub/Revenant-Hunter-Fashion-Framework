@@ -17,21 +17,67 @@
 namespace SDK
 {
 
-// Function WDT_Status_Capacity.WDT_Status_Capacity_C.ExecuteUbergraph_WDT_Status_Capacity
-// (Final, UbergraphFunction)
+// Function WDT_Status_Capacity.WDT_Status_Capacity_C.SetValueComparison
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InCurrentValue                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InTargetValue                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InConversionType                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_Status_Capacity_C::ExecuteUbergraph_WDT_Status_Capacity(int32 EntryPoint)
+void UWDT_Status_Capacity_C::SetValueComparison(int32 InCurrentValue, int32 InTargetValue, int32 InConversionType)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Status_Capacity_C", "ExecuteUbergraph_WDT_Status_Capacity");
+		Func = Class->GetFunction("WDT_Status_Capacity_C", "SetValueComparison");
 
-	Params::WDT_Status_Capacity_C_ExecuteUbergraph_WDT_Status_Capacity Parms{};
+	Params::WDT_Status_Capacity_C_SetValueComparison Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.InCurrentValue = InCurrentValue;
+	Parms.InTargetValue = InTargetValue;
+	Parms.InConversionType = InConversionType;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_Status_Capacity.WDT_Status_Capacity_C.SetValue
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InValue                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InConversionType                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_Status_Capacity_C::SetValue(int32 InValue, int32 InConversionType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_Status_Capacity_C", "SetValue");
+
+	Params::WDT_Status_Capacity_C_SetValue Parms{};
+
+	Parms.InValue = InValue;
+	Parms.InConversionType = InConversionType;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_Status_Capacity.WDT_Status_Capacity_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_Status_Capacity_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_Status_Capacity_C", "PreConstruct");
+
+	Params::WDT_Status_Capacity_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -63,63 +109,21 @@ void UWDT_Status_Capacity_C::GetComparisonColorForCapacity(int32 Current, int32 
 }
 
 
-// Function WDT_Status_Capacity.WDT_Status_Capacity_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function WDT_Status_Capacity.WDT_Status_Capacity_C.ExecuteUbergraph_WDT_Status_Capacity
+// (Final, UbergraphFunction)
 // Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_Status_Capacity_C::PreConstruct(bool IsDesignTime)
+void UWDT_Status_Capacity_C::ExecuteUbergraph_WDT_Status_Capacity(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Status_Capacity_C", "PreConstruct");
+		Func = Class->GetFunction("WDT_Status_Capacity_C", "ExecuteUbergraph_WDT_Status_Capacity");
 
-	Params::WDT_Status_Capacity_C_PreConstruct Parms{};
+	Params::WDT_Status_Capacity_C_ExecuteUbergraph_WDT_Status_Capacity Parms{};
 
-	Parms.IsDesignTime = IsDesignTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_Status_Capacity.WDT_Status_Capacity_C.SetValue
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InValue                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_Status_Capacity_C::SetValue(int32 InValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Status_Capacity_C", "SetValue");
-
-	Params::WDT_Status_Capacity_C_SetValue Parms{};
-
-	Parms.InValue = InValue;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_Status_Capacity.WDT_Status_Capacity_C.SetValueComparison
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InCurrentValue                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   InTargetValue                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_Status_Capacity_C::SetValueComparison(int32 InCurrentValue, int32 InTargetValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Status_Capacity_C", "SetValueComparison");
-
-	Params::WDT_Status_Capacity_C_SetValueComparison Parms{};
-
-	Parms.InCurrentValue = InCurrentValue;
-	Parms.InTargetValue = InTargetValue;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

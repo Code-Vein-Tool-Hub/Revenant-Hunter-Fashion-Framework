@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "STR_ConfigPieceBaseList_structs.hpp"
-#include "GameplayTags_structs.hpp"
 #include "Extensions_structs.hpp"
+#include "GameplayTags_structs.hpp"
+#include "STR_ConfigPieceBaseList_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "EnhancedInput_structs.hpp"
 
@@ -32,7 +32,7 @@ static_assert(sizeof(WDT_ConfigGraphicPage_Console_C_BndEvt__WDT_ConfigCameraPag
 static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_BndEvt__WDT_ConfigCameraPage_WDT_ConfigHeader_K2Node_ComponentBoundEvent_0_OnTabItemClickedEvent__DelegateSignature, TabIndex) == 0x000000, "Member 'WDT_ConfigGraphicPage_Console_C_BndEvt__WDT_ConfigCameraPage_WDT_ConfigHeader_K2Node_ComponentBoundEvent_0_OnTabItemClickedEvent__DelegateSignature::TabIndex' has a wrong offset!");
 
 // Function WDT_ConfigGraphicPage_Console.WDT_ConfigGraphicPage_Console_C.ExecuteUbergraph_WDT_ConfigGraphicPage_Console
-// 0x0508 (0x0508 - 0x0000)
+// 0x0510 (0x0510 - 0x0000)
 struct WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console final
 {
 public:
@@ -170,39 +170,40 @@ public:
 	bool                                          CallFunc_PlayUIAudioEvent_ReturnValue_2;           // 0x0421(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_422[0x6];                                      // 0x0422(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UConfigurationManager*                  CallFunc_GetGameInstanceSubsystem_ReturnValue_3;   // 0x0428(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FConfigurationGraphicData              CallFunc_GetConfigGraphicSaveData_ReturnValue;     // 0x0430(0x0020)(ConstParm, NoDestructor)
-	double                                        Temp_real_Variable_14;                             // 0x0450(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UInputAction*                           Temp_object_Variable_7;                            // 0x0458(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FInputActionValue                      K2Node_EnhancedInputActionEvent_ActionValue_11;    // 0x0460(0x0020)(NoDestructor)
-	float                                         K2Node_EnhancedInputActionEvent_ElapsedTime_11;    // 0x0480(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_EnhancedInputActionEvent_TriggeredTime_11;  // 0x0484(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     K2Node_EnhancedInputActionEvent_SourceAction_11;   // 0x0488(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable_14_0;                           // 0x0490(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Conv_InputActionValueToBool_ReturnValue_11; // 0x0498(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_IsDesignTime;                         // 0x0499(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49A[0x6];                                      // 0x049A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMenuPieceBase*                         K2Node_Event_MenuPiece_1;                          // 0x04A0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_ComponentBoundEvent_TabIndex;               // 0x04A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsActivated_ReturnValue;                  // 0x04AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4AD[0x3];                                      // 0x04AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetActiveWidgetIndex_ReturnValue;         // 0x04B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetActiveWidgetIndex_ReturnValue_1;       // 0x04B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x04B8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UUIObjectBase*                          CallFunc_GetUIObject_ReturnValue;                  // 0x04C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UBP_ConfigurationUIObject_C*            K2Node_DynamicCast_AsBP_Configuration_UIObject;    // 0x04D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x04D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D9[0x7];                                      // 0x04D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMenuPieceBase*                         K2Node_Event_MenuPiece;                            // 0x04E0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_7;                              // 0x04E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E9[0x3];                                      // 0x04E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetActiveWidgetIndex_ReturnValue_2;       // 0x04EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x04F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F1[0x7];                                      // 0x04F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        Temp_real_Variable_15;                             // 0x04F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable_15_0;                           // 0x0500(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FConfigurationGraphicData              CallFunc_GetConfigGraphicSaveData_ReturnValue;     // 0x0430(0x0024)(ConstParm, NoDestructor)
+	uint8                                         Pad_454[0x4];                                      // 0x0454(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Temp_real_Variable_14;                             // 0x0458(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UInputAction*                           Temp_object_Variable_7;                            // 0x0460(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FInputActionValue                      K2Node_EnhancedInputActionEvent_ActionValue_11;    // 0x0468(0x0020)(NoDestructor)
+	float                                         K2Node_EnhancedInputActionEvent_ElapsedTime_11;    // 0x0488(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_EnhancedInputActionEvent_TriggeredTime_11;  // 0x048C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     K2Node_EnhancedInputActionEvent_SourceAction_11;   // 0x0490(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_14_0;                           // 0x0498(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Conv_InputActionValueToBool_ReturnValue_11; // 0x04A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_IsDesignTime;                         // 0x04A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4A2[0x6];                                      // 0x04A2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMenuPieceBase*                         K2Node_Event_MenuPiece_1;                          // 0x04A8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_ComponentBoundEvent_TabIndex;               // 0x04B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsActivated_ReturnValue;                  // 0x04B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4B5[0x3];                                      // 0x04B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetActiveWidgetIndex_ReturnValue;         // 0x04B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetActiveWidgetIndex_ReturnValue_1;       // 0x04BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x04C0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UUIObjectBase*                          CallFunc_GetUIObject_ReturnValue;                  // 0x04D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UBP_ConfigurationUIObject_C*            K2Node_DynamicCast_AsBP_Configuration_UIObject;    // 0x04D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x04E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4E1[0x7];                                      // 0x04E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMenuPieceBase*                         K2Node_Event_MenuPiece;                            // 0x04E8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_7;                              // 0x04F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4F1[0x3];                                      // 0x04F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetActiveWidgetIndex_ReturnValue_2;       // 0x04F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x04F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4F9[0x7];                                      // 0x04F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Temp_real_Variable_15;                             // 0x0500(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_15_0;                           // 0x0508(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console) == 0x000008, "Wrong alignment on WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console");
-static_assert(sizeof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console) == 0x000508, "Wrong size on WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console");
+static_assert(sizeof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console) == 0x000510, "Wrong size on WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console");
 static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console, EntryPoint) == 0x000000, "Member 'WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console::EntryPoint' has a wrong offset!");
 static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console, K2Node_EnhancedInputActionEvent_ActionValue_10) == 0x000008, "Member 'WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console::K2Node_EnhancedInputActionEvent_ActionValue_10' has a wrong offset!");
 static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console, K2Node_EnhancedInputActionEvent_ElapsedTime_10) == 0x000028, "Member 'WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console::K2Node_EnhancedInputActionEvent_ElapsedTime_10' has a wrong offset!");
@@ -317,30 +318,30 @@ static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_Conf
 static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console, CallFunc_PlayUIAudioEvent_ReturnValue_2) == 0x000421, "Member 'WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console::CallFunc_PlayUIAudioEvent_ReturnValue_2' has a wrong offset!");
 static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console, CallFunc_GetGameInstanceSubsystem_ReturnValue_3) == 0x000428, "Member 'WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console::CallFunc_GetGameInstanceSubsystem_ReturnValue_3' has a wrong offset!");
 static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console, CallFunc_GetConfigGraphicSaveData_ReturnValue) == 0x000430, "Member 'WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console::CallFunc_GetConfigGraphicSaveData_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console, Temp_real_Variable_14) == 0x000450, "Member 'WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console::Temp_real_Variable_14' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console, Temp_object_Variable_7) == 0x000458, "Member 'WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console::Temp_object_Variable_7' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console, K2Node_EnhancedInputActionEvent_ActionValue_11) == 0x000460, "Member 'WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console::K2Node_EnhancedInputActionEvent_ActionValue_11' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console, K2Node_EnhancedInputActionEvent_ElapsedTime_11) == 0x000480, "Member 'WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console::K2Node_EnhancedInputActionEvent_ElapsedTime_11' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console, K2Node_EnhancedInputActionEvent_TriggeredTime_11) == 0x000484, "Member 'WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console::K2Node_EnhancedInputActionEvent_TriggeredTime_11' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console, K2Node_EnhancedInputActionEvent_SourceAction_11) == 0x000488, "Member 'WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console::K2Node_EnhancedInputActionEvent_SourceAction_11' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console, Temp_real_Variable_14_0) == 0x000490, "Member 'WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console::Temp_real_Variable_14_0' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console, CallFunc_Conv_InputActionValueToBool_ReturnValue_11) == 0x000498, "Member 'WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console::CallFunc_Conv_InputActionValueToBool_ReturnValue_11' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console, K2Node_Event_IsDesignTime) == 0x000499, "Member 'WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console::K2Node_Event_IsDesignTime' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console, K2Node_Event_MenuPiece_1) == 0x0004A0, "Member 'WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console::K2Node_Event_MenuPiece_1' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console, K2Node_ComponentBoundEvent_TabIndex) == 0x0004A8, "Member 'WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console::K2Node_ComponentBoundEvent_TabIndex' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console, CallFunc_IsActivated_ReturnValue) == 0x0004AC, "Member 'WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console::CallFunc_IsActivated_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console, CallFunc_GetActiveWidgetIndex_ReturnValue) == 0x0004B0, "Member 'WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console::CallFunc_GetActiveWidgetIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console, CallFunc_GetActiveWidgetIndex_ReturnValue_1) == 0x0004B4, "Member 'WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console::CallFunc_GetActiveWidgetIndex_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console, K2Node_CreateDelegate_OutputDelegate) == 0x0004B8, "Member 'WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console, CallFunc_GetUIObject_ReturnValue) == 0x0004C8, "Member 'WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console::CallFunc_GetUIObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console, K2Node_DynamicCast_AsBP_Configuration_UIObject) == 0x0004D0, "Member 'WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console::K2Node_DynamicCast_AsBP_Configuration_UIObject' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console, K2Node_DynamicCast_bSuccess) == 0x0004D8, "Member 'WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console, K2Node_Event_MenuPiece) == 0x0004E0, "Member 'WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console::K2Node_Event_MenuPiece' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console, Temp_bool_Variable_7) == 0x0004E8, "Member 'WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console::Temp_bool_Variable_7' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console, CallFunc_GetActiveWidgetIndex_ReturnValue_2) == 0x0004EC, "Member 'WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console::CallFunc_GetActiveWidgetIndex_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console, CallFunc_NotEqual_IntInt_ReturnValue) == 0x0004F0, "Member 'WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console::CallFunc_NotEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console, Temp_real_Variable_15) == 0x0004F8, "Member 'WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console::Temp_real_Variable_15' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console, Temp_real_Variable_15_0) == 0x000500, "Member 'WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console::Temp_real_Variable_15_0' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console, Temp_real_Variable_14) == 0x000458, "Member 'WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console::Temp_real_Variable_14' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console, Temp_object_Variable_7) == 0x000460, "Member 'WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console::Temp_object_Variable_7' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console, K2Node_EnhancedInputActionEvent_ActionValue_11) == 0x000468, "Member 'WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console::K2Node_EnhancedInputActionEvent_ActionValue_11' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console, K2Node_EnhancedInputActionEvent_ElapsedTime_11) == 0x000488, "Member 'WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console::K2Node_EnhancedInputActionEvent_ElapsedTime_11' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console, K2Node_EnhancedInputActionEvent_TriggeredTime_11) == 0x00048C, "Member 'WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console::K2Node_EnhancedInputActionEvent_TriggeredTime_11' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console, K2Node_EnhancedInputActionEvent_SourceAction_11) == 0x000490, "Member 'WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console::K2Node_EnhancedInputActionEvent_SourceAction_11' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console, Temp_real_Variable_14_0) == 0x000498, "Member 'WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console::Temp_real_Variable_14_0' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console, CallFunc_Conv_InputActionValueToBool_ReturnValue_11) == 0x0004A0, "Member 'WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console::CallFunc_Conv_InputActionValueToBool_ReturnValue_11' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console, K2Node_Event_IsDesignTime) == 0x0004A1, "Member 'WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console::K2Node_Event_IsDesignTime' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console, K2Node_Event_MenuPiece_1) == 0x0004A8, "Member 'WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console::K2Node_Event_MenuPiece_1' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console, K2Node_ComponentBoundEvent_TabIndex) == 0x0004B0, "Member 'WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console::K2Node_ComponentBoundEvent_TabIndex' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console, CallFunc_IsActivated_ReturnValue) == 0x0004B4, "Member 'WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console::CallFunc_IsActivated_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console, CallFunc_GetActiveWidgetIndex_ReturnValue) == 0x0004B8, "Member 'WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console::CallFunc_GetActiveWidgetIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console, CallFunc_GetActiveWidgetIndex_ReturnValue_1) == 0x0004BC, "Member 'WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console::CallFunc_GetActiveWidgetIndex_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console, K2Node_CreateDelegate_OutputDelegate) == 0x0004C0, "Member 'WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console, CallFunc_GetUIObject_ReturnValue) == 0x0004D0, "Member 'WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console::CallFunc_GetUIObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console, K2Node_DynamicCast_AsBP_Configuration_UIObject) == 0x0004D8, "Member 'WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console::K2Node_DynamicCast_AsBP_Configuration_UIObject' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console, K2Node_DynamicCast_bSuccess) == 0x0004E0, "Member 'WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console, K2Node_Event_MenuPiece) == 0x0004E8, "Member 'WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console::K2Node_Event_MenuPiece' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console, Temp_bool_Variable_7) == 0x0004F0, "Member 'WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console::Temp_bool_Variable_7' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console, CallFunc_GetActiveWidgetIndex_ReturnValue_2) == 0x0004F4, "Member 'WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console::CallFunc_GetActiveWidgetIndex_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console, CallFunc_NotEqual_IntInt_ReturnValue) == 0x0004F8, "Member 'WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console::CallFunc_NotEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console, Temp_real_Variable_15) == 0x000500, "Member 'WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console::Temp_real_Variable_15' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console, Temp_real_Variable_15_0) == 0x000508, "Member 'WDT_ConfigGraphicPage_Console_C_ExecuteUbergraph_WDT_ConfigGraphicPage_Console::Temp_real_Variable_15_0' has a wrong offset!");
 
 // Function WDT_ConfigGraphicPage_Console.WDT_ConfigGraphicPage_Console_C.InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_8
 // 0x0030 (0x0030 - 0x0000)
@@ -628,41 +629,51 @@ static_assert(sizeof(WDT_ConfigGraphicPage_Console_C_OnMouseLeftClickMenuPiece) 
 static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_OnMouseLeftClickMenuPiece, MenuPiece) == 0x000000, "Member 'WDT_ConfigGraphicPage_Console_C_OnMouseLeftClickMenuPiece::MenuPiece' has a wrong offset!");
 
 // Function WDT_ConfigGraphicPage_Console.WDT_ConfigGraphicPage_Console_C.OpenGeneralYesNoDialog
-// 0x0058 (0x0058 - 0x0000)
+// 0x0060 (0x0060 - 0x0000)
 struct WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog final
 {
 public:
-	bool                                          CallFunc_Close_ReturnValue;                        // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetSelectIndex_OutIndex;                  // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_Conv_IntToByte_ReturnValue;               // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(uint8 DecideOptionNumber)>     K2Node_CreateDelegate_OutputDelegate;              // 0x000C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x0020(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UMenuBase*                              CallFunc_OpenMenu_ReturnValue;                     // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWDT_GeneralYesNoDialog_C*              K2Node_DynamicCast_AsWDT_General_Yes_No_Dialog;    // 0x0048(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetSelectIndex_OutIndex;                  // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Conv_IntToBool_ReturnValue;               // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Close_ReturnValue;                        // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_BoolBool_ReturnValue;          // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetSelectIndex_OutIndex_1;                // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_Conv_IntToByte_ReturnValue;               // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x000D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E[0x2];                                        // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(uint8 DecideOptionNumber)>     K2Node_CreateDelegate_OutputDelegate;              // 0x001C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x0030(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UMenuBase*                              CallFunc_OpenMenu_ReturnValue;                     // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWDT_GeneralYesNoDialog_C*              K2Node_DynamicCast_AsWDT_General_Yes_No_Dialog;    // 0x0050(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog) == 0x000008, "Wrong alignment on WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog");
-static_assert(sizeof(WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog) == 0x000058, "Wrong size on WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog");
-static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog, CallFunc_Close_ReturnValue) == 0x000000, "Member 'WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog::CallFunc_Close_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog, CallFunc_GetSelectIndex_OutIndex) == 0x000004, "Member 'WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog::CallFunc_GetSelectIndex_OutIndex' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog, CallFunc_Conv_IntToByte_ReturnValue) == 0x000008, "Member 'WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog::CallFunc_Conv_IntToByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000009, "Member 'WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog, K2Node_CreateDelegate_OutputDelegate) == 0x00000C, "Member 'WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog, CallFunc_Not_PreBool_ReturnValue) == 0x00001C, "Member 'WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog, K2Node_CreateDelegate_OutputDelegate_1) == 0x000020, "Member 'WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000030, "Member 'WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog, CallFunc_OpenMenu_ReturnValue) == 0x000038, "Member 'WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog::CallFunc_OpenMenu_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog, CallFunc_IsValid_ReturnValue) == 0x000040, "Member 'WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog, K2Node_DynamicCast_AsWDT_General_Yes_No_Dialog) == 0x000048, "Member 'WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog::K2Node_DynamicCast_AsWDT_General_Yes_No_Dialog' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog, K2Node_DynamicCast_bSuccess) == 0x000050, "Member 'WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(sizeof(WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog) == 0x000060, "Wrong size on WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog");
+static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog, CallFunc_GetSelectIndex_OutIndex) == 0x000000, "Member 'WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog::CallFunc_GetSelectIndex_OutIndex' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog, CallFunc_Conv_IntToBool_ReturnValue) == 0x000004, "Member 'WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog::CallFunc_Conv_IntToBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog, CallFunc_Close_ReturnValue) == 0x000005, "Member 'WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog::CallFunc_Close_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog, CallFunc_EqualEqual_BoolBool_ReturnValue) == 0x000006, "Member 'WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog::CallFunc_EqualEqual_BoolBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog, CallFunc_Not_PreBool_ReturnValue) == 0x000007, "Member 'WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog, CallFunc_GetSelectIndex_OutIndex_1) == 0x000008, "Member 'WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog::CallFunc_GetSelectIndex_OutIndex_1' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog, CallFunc_Conv_IntToByte_ReturnValue) == 0x00000C, "Member 'WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog::CallFunc_Conv_IntToByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x00000D, "Member 'WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000010, "Member 'WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog, CallFunc_Not_PreBool_ReturnValue_1) == 0x000018, "Member 'WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog, K2Node_CreateDelegate_OutputDelegate) == 0x00001C, "Member 'WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog, CallFunc_BooleanOR_ReturnValue) == 0x00002C, "Member 'WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog, K2Node_CreateDelegate_OutputDelegate_1) == 0x000030, "Member 'WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog, CallFunc_OpenMenu_ReturnValue) == 0x000040, "Member 'WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog::CallFunc_OpenMenu_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog, CallFunc_IsValid_ReturnValue) == 0x000048, "Member 'WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog, K2Node_DynamicCast_AsWDT_General_Yes_No_Dialog) == 0x000050, "Member 'WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog::K2Node_DynamicCast_AsWDT_General_Yes_No_Dialog' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog, K2Node_DynamicCast_bSuccess) == 0x000058, "Member 'WDT_ConfigGraphicPage_Console_C_OpenGeneralYesNoDialog::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 
 // Function WDT_ConfigGraphicPage_Console.WDT_ConfigGraphicPage_Console_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)
@@ -676,51 +687,60 @@ static_assert(sizeof(WDT_ConfigGraphicPage_Console_C_PreConstruct) == 0x000001, 
 static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WDT_ConfigGraphicPage_Console_C_PreConstruct::IsDesignTime' has a wrong offset!");
 
 // Function WDT_ConfigGraphicPage_Console.WDT_ConfigGraphicPage_Console_C.SaveConfigValue
-// 0x0068 (0x0068 - 0x0000)
+// 0x0080 (0x0080 - 0x0000)
 struct WDT_ConfigGraphicPage_Console_C_SaveConfigValue final
 {
 public:
 	struct FIntPoint                              SaveScreenResolution;                              // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UConfigurationManager*                  CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UConfigurationManager*                  CallFunc_GetGameInstanceSubsystem_ReturnValue_1;   // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UConfigurationManager*                  CallFunc_GetGameInstanceSubsystem_ReturnValue_2;   // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetSelectIndex_OutIndex;                  // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FConfigurationGraphicData              CallFunc_GetConfigGraphicSaveData_ReturnValue;     // 0x0024(0x0020)(ConstParm, NoDestructor)
-	uint8                                         CallFunc_Conv_IntToByte_ReturnValue;               // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_GetValidValue_ReturnValue;                // 0x0045(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_46[0x2];                                       // 0x0046(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FConfigurationGraphicData              K2Node_MakeStruct_ConfigurationGraphicData;        // 0x0048(0x0020)(NoDestructor)
+	int32                                         CallFunc_GetSelectIndex_OutIndex;                  // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetSelectIndex_OutIndex_1;                // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Conv_IntToBool_ReturnValue;               // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_Conv_IntToByte_ReturnValue;               // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UConfigurationManager*                  CallFunc_GetGameInstanceSubsystem_ReturnValue_2;   // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_GetValidValue_ReturnValue;                // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FConfigurationGraphicData              CallFunc_GetConfigGraphicSaveData_ReturnValue;     // 0x0034(0x0024)(ConstParm, NoDestructor)
+	struct FConfigurationGraphicData              K2Node_MakeStruct_ConfigurationGraphicData;        // 0x0058(0x0024)(NoDestructor)
 };
 static_assert(alignof(WDT_ConfigGraphicPage_Console_C_SaveConfigValue) == 0x000008, "Wrong alignment on WDT_ConfigGraphicPage_Console_C_SaveConfigValue");
-static_assert(sizeof(WDT_ConfigGraphicPage_Console_C_SaveConfigValue) == 0x000068, "Wrong size on WDT_ConfigGraphicPage_Console_C_SaveConfigValue");
+static_assert(sizeof(WDT_ConfigGraphicPage_Console_C_SaveConfigValue) == 0x000080, "Wrong size on WDT_ConfigGraphicPage_Console_C_SaveConfigValue");
 static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_SaveConfigValue, SaveScreenResolution) == 0x000000, "Member 'WDT_ConfigGraphicPage_Console_C_SaveConfigValue::SaveScreenResolution' has a wrong offset!");
 static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_SaveConfigValue, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000008, "Member 'WDT_ConfigGraphicPage_Console_C_SaveConfigValue::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_SaveConfigValue, CallFunc_GetGameInstanceSubsystem_ReturnValue_1) == 0x000010, "Member 'WDT_ConfigGraphicPage_Console_C_SaveConfigValue::CallFunc_GetGameInstanceSubsystem_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_SaveConfigValue, CallFunc_GetGameInstanceSubsystem_ReturnValue_2) == 0x000018, "Member 'WDT_ConfigGraphicPage_Console_C_SaveConfigValue::CallFunc_GetGameInstanceSubsystem_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_SaveConfigValue, CallFunc_GetSelectIndex_OutIndex) == 0x000020, "Member 'WDT_ConfigGraphicPage_Console_C_SaveConfigValue::CallFunc_GetSelectIndex_OutIndex' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_SaveConfigValue, CallFunc_GetConfigGraphicSaveData_ReturnValue) == 0x000024, "Member 'WDT_ConfigGraphicPage_Console_C_SaveConfigValue::CallFunc_GetConfigGraphicSaveData_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_SaveConfigValue, CallFunc_Conv_IntToByte_ReturnValue) == 0x000044, "Member 'WDT_ConfigGraphicPage_Console_C_SaveConfigValue::CallFunc_Conv_IntToByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_SaveConfigValue, CallFunc_GetValidValue_ReturnValue) == 0x000045, "Member 'WDT_ConfigGraphicPage_Console_C_SaveConfigValue::CallFunc_GetValidValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_SaveConfigValue, K2Node_MakeStruct_ConfigurationGraphicData) == 0x000048, "Member 'WDT_ConfigGraphicPage_Console_C_SaveConfigValue::K2Node_MakeStruct_ConfigurationGraphicData' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_SaveConfigValue, CallFunc_GetSelectIndex_OutIndex) == 0x000018, "Member 'WDT_ConfigGraphicPage_Console_C_SaveConfigValue::CallFunc_GetSelectIndex_OutIndex' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_SaveConfigValue, CallFunc_GetSelectIndex_OutIndex_1) == 0x00001C, "Member 'WDT_ConfigGraphicPage_Console_C_SaveConfigValue::CallFunc_GetSelectIndex_OutIndex_1' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_SaveConfigValue, CallFunc_Conv_IntToBool_ReturnValue) == 0x000020, "Member 'WDT_ConfigGraphicPage_Console_C_SaveConfigValue::CallFunc_Conv_IntToBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_SaveConfigValue, CallFunc_Conv_IntToByte_ReturnValue) == 0x000021, "Member 'WDT_ConfigGraphicPage_Console_C_SaveConfigValue::CallFunc_Conv_IntToByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_SaveConfigValue, CallFunc_GetGameInstanceSubsystem_ReturnValue_2) == 0x000028, "Member 'WDT_ConfigGraphicPage_Console_C_SaveConfigValue::CallFunc_GetGameInstanceSubsystem_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_SaveConfigValue, CallFunc_GetValidValue_ReturnValue) == 0x000030, "Member 'WDT_ConfigGraphicPage_Console_C_SaveConfigValue::CallFunc_GetValidValue_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_SaveConfigValue, CallFunc_GetConfigGraphicSaveData_ReturnValue) == 0x000034, "Member 'WDT_ConfigGraphicPage_Console_C_SaveConfigValue::CallFunc_GetConfigGraphicSaveData_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_SaveConfigValue, K2Node_MakeStruct_ConfigurationGraphicData) == 0x000058, "Member 'WDT_ConfigGraphicPage_Console_C_SaveConfigValue::K2Node_MakeStruct_ConfigurationGraphicData' has a wrong offset!");
 
 // Function WDT_ConfigGraphicPage_Console.WDT_ConfigGraphicPage_Console_C.Setup Config Piece Value
-// 0x0050 (0x0050 - 0x0000)
+// 0x0060 (0x0060 - 0x0000)
 struct WDT_ConfigGraphicPage_Console_C_Setup_Config_Piece_Value final
 {
 public:
 	class UConfigurationManager*                  CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FConfigurationGraphicData              CallFunc_GetDefaultConfigGraphicSaveData_ReturnValue; // 0x0008(0x0020)(ConstParm, NoDestructor)
-	struct FConfigurationGraphicData              CallFunc_GetConfigGraphicSaveData_ReturnValue;     // 0x0028(0x0020)(ConstParm, NoDestructor)
-	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Conv_ByteToInt_ReturnValue_1;             // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FConfigurationGraphicData              CallFunc_GetDefaultConfigGraphicSaveData_ReturnValue; // 0x0008(0x0024)(ConstParm, NoDestructor)
+	struct FConfigurationGraphicData              CallFunc_GetConfigGraphicSaveData_ReturnValue;     // 0x002C(0x0024)(ConstParm, NoDestructor)
+	int32                                         CallFunc_Conv_BoolToInt_ReturnValue;               // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Conv_BoolToInt_ReturnValue_1;             // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Conv_ByteToInt_ReturnValue_1;             // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_ConfigGraphicPage_Console_C_Setup_Config_Piece_Value) == 0x000008, "Wrong alignment on WDT_ConfigGraphicPage_Console_C_Setup_Config_Piece_Value");
-static_assert(sizeof(WDT_ConfigGraphicPage_Console_C_Setup_Config_Piece_Value) == 0x000050, "Wrong size on WDT_ConfigGraphicPage_Console_C_Setup_Config_Piece_Value");
+static_assert(sizeof(WDT_ConfigGraphicPage_Console_C_Setup_Config_Piece_Value) == 0x000060, "Wrong size on WDT_ConfigGraphicPage_Console_C_Setup_Config_Piece_Value");
 static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_Setup_Config_Piece_Value, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000000, "Member 'WDT_ConfigGraphicPage_Console_C_Setup_Config_Piece_Value::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_Setup_Config_Piece_Value, CallFunc_GetDefaultConfigGraphicSaveData_ReturnValue) == 0x000008, "Member 'WDT_ConfigGraphicPage_Console_C_Setup_Config_Piece_Value::CallFunc_GetDefaultConfigGraphicSaveData_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_Setup_Config_Piece_Value, CallFunc_GetConfigGraphicSaveData_ReturnValue) == 0x000028, "Member 'WDT_ConfigGraphicPage_Console_C_Setup_Config_Piece_Value::CallFunc_GetConfigGraphicSaveData_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_Setup_Config_Piece_Value, CallFunc_Conv_ByteToInt_ReturnValue) == 0x000048, "Member 'WDT_ConfigGraphicPage_Console_C_Setup_Config_Piece_Value::CallFunc_Conv_ByteToInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_Setup_Config_Piece_Value, CallFunc_Conv_ByteToInt_ReturnValue_1) == 0x00004C, "Member 'WDT_ConfigGraphicPage_Console_C_Setup_Config_Piece_Value::CallFunc_Conv_ByteToInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_Setup_Config_Piece_Value, CallFunc_GetConfigGraphicSaveData_ReturnValue) == 0x00002C, "Member 'WDT_ConfigGraphicPage_Console_C_Setup_Config_Piece_Value::CallFunc_GetConfigGraphicSaveData_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_Setup_Config_Piece_Value, CallFunc_Conv_BoolToInt_ReturnValue) == 0x000050, "Member 'WDT_ConfigGraphicPage_Console_C_Setup_Config_Piece_Value::CallFunc_Conv_BoolToInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_Setup_Config_Piece_Value, CallFunc_Conv_BoolToInt_ReturnValue_1) == 0x000054, "Member 'WDT_ConfigGraphicPage_Console_C_Setup_Config_Piece_Value::CallFunc_Conv_BoolToInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_Setup_Config_Piece_Value, CallFunc_Conv_ByteToInt_ReturnValue) == 0x000058, "Member 'WDT_ConfigGraphicPage_Console_C_Setup_Config_Piece_Value::CallFunc_Conv_ByteToInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigGraphicPage_Console_C_Setup_Config_Piece_Value, CallFunc_Conv_ByteToInt_ReturnValue_1) == 0x00005C, "Member 'WDT_ConfigGraphicPage_Console_C_Setup_Config_Piece_Value::CallFunc_Conv_ByteToInt_ReturnValue_1' has a wrong offset!");
 
 // Function WDT_ConfigGraphicPage_Console.WDT_ConfigGraphicPage_Console_C.SetupConfigPieceList
 // 0x0080 (0x0080 - 0x0000)

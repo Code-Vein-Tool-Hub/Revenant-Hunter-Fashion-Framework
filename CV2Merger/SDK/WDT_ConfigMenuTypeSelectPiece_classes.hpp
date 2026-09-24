@@ -51,6 +51,7 @@ public:
 	void SetEnableColor(bool* OutFlag);
 	void SetEditableGrayOut(bool* Flag);
 	void SetDisableColor(bool* OutFlag);
+	void SetDefaultSelectIndex_NoNotify(int32 InInitializeIndex, int32 InDefaultIndex);
 	void SetDefaultSelectIndex(int32 InInitializeIndex, int32 InDefaultIndex);
 	void SetButtonIconVisibility(bool InVisible);
 	bool Select(bool PlayAnimation_0);

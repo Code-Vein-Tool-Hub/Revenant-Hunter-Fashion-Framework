@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "BasicUI_classes.hpp"
 #include "SlateCore_structs.hpp"
+#include "BasicUI_classes.hpp"
 #include "Extensions_structs.hpp"
 
 
@@ -47,9 +47,9 @@ public:
 	struct FSlateColor                            InsufficientColor;                                 // 0x0584(0x0014)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
-	void RefreshKeyImage();
-	void SetResilienceUpInfo(const struct FUIResilienceUpInfo& NewParam, EUIResilienceUpType NewParam1);
 	void SetSelect(bool IsSelect);
+	void SetResilienceUpInfo(const struct FUIResilienceUpInfo& NewParam, EUIResilienceUpType NewParam1);
+	void RefreshKeyImage();
 
 public:
 	static class UClass* StaticClass()

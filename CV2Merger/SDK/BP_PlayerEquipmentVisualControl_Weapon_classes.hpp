@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "Extensions_structs.hpp"
 #include "STR_PEVC_AppearEquipment_Data_structs.hpp"
 #include "GameplayAbilities_structs.hpp"
+#include "Extensions_structs.hpp"
 #include "BP_PlayerEquipmentVisualControl_classes.hpp"
 
 
@@ -41,12 +41,14 @@ public:
 	bool                                          AppearEquipment_IsDisappear;                       // 0x04D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          AppearEquipment_SummonInitialize;                  // 0x04D1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsBuddy;                                           // 0x04D2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bInitializeVisualControl;                          // 0x04D3(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AppearEquipment(class USkeletalMeshComponent* InMesh);
 	void AppearEquipment_ActiveChildEffect(class USkeletalMeshComponent* EquipmentMesh);
 	void AppearEquipment_AddChildEffect(class UNiagaraComponent* Effect);
 	void AppearEquipment_AllMesh();
+	void AppearEquipment_CheckValid(class USkeletalMeshComponent* EquipmentMesh, bool* Result);
 	void AppearEquipment_CheckVisibility(bool Appear, class USkeletalMeshComponent* EquipmentMesh, bool* Result);
 	void AppearEquipment_DeactiveChildEffect(class USkeletalMeshComponent* EquipmentMesh);
 	void AppearEquipment_GetData(class USkeletalMeshComponent* EquipmentMesh, struct FSTR_PEVC_AppearEquipment_Data* Data, bool* bResult);
@@ -56,6 +58,7 @@ public:
 	void AppearEquipment_OnSummonInitializeEnd();
 	void AppearEquipment_OnTick(double DeltaSeconds);
 	void AppearEquipment_RemoveChildEffect(class UNiagaraComponent* Effect);
+	void AppearEquipment_VisibleChildEffect(class USkeletalMeshComponent* EquipmentMesh, bool Visibility);
 	void DisappearEquipment(class USkeletalMeshComponent* InMesh);
 	void DisappearEquipment_AllMesh();
 	void Enchant_DeactivateEffect(const class USkeletalMeshComponent*& WeaponMesh);
@@ -73,6 +76,7 @@ public:
 	void OnDestroy();
 	bool OnFinishCinematicEvent();
 	void OnInitializeVisualControl();
+	void OnInitializeVisualControl_Implement();
 	void OnSpawnEffect(class UNiagaraComponent* Effect);
 	bool OnStartCinematicEvent();
 	void OnTick(double DeltaSeconds);
@@ -108,6 +112,7 @@ static_assert(offsetof(UBP_PlayerEquipmentVisualControl_Weapon_C, Enchant_GC) ==
 static_assert(offsetof(UBP_PlayerEquipmentVisualControl_Weapon_C, AppearEquipment_IsDisappear) == 0x0004D0, "Member 'UBP_PlayerEquipmentVisualControl_Weapon_C::AppearEquipment_IsDisappear' has a wrong offset!");
 static_assert(offsetof(UBP_PlayerEquipmentVisualControl_Weapon_C, AppearEquipment_SummonInitialize) == 0x0004D1, "Member 'UBP_PlayerEquipmentVisualControl_Weapon_C::AppearEquipment_SummonInitialize' has a wrong offset!");
 static_assert(offsetof(UBP_PlayerEquipmentVisualControl_Weapon_C, IsBuddy) == 0x0004D2, "Member 'UBP_PlayerEquipmentVisualControl_Weapon_C::IsBuddy' has a wrong offset!");
+static_assert(offsetof(UBP_PlayerEquipmentVisualControl_Weapon_C, bInitializeVisualControl) == 0x0004D3, "Member 'UBP_PlayerEquipmentVisualControl_Weapon_C::bInitializeVisualControl' has a wrong offset!");
 
 }
 

@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_BoomerangBullet.BP_BoomerangBullet_C
-// 0x0000 (0x12C0 - 0x12C0)
+// 0x0000 (0x13F0 - 0x13F0)
 class ABP_BoomerangBullet_C final : public AProjectileBullet
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(ABP_BoomerangBullet_C) == 0x000010, "Wrong alignment on ABP_BoomerangBullet_C");
-static_assert(sizeof(ABP_BoomerangBullet_C) == 0x0012C0, "Wrong size on ABP_BoomerangBullet_C");
+static_assert(sizeof(ABP_BoomerangBullet_C) == 0x0013F0, "Wrong size on ABP_BoomerangBullet_C");
 
 }
 

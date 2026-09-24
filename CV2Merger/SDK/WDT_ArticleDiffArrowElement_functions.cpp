@@ -16,15 +16,15 @@
 namespace SDK
 {
 
-// Function WDT_ArticleDiffArrowElement.WDT_ArticleDiffArrowElement_C.Clear
+// Function WDT_ArticleDiffArrowElement.WDT_ArticleDiffArrowElement_C.Up
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWDT_ArticleDiffArrowElement_C::Clear()
+void UWDT_ArticleDiffArrowElement_C::Up()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_ArticleDiffArrowElement_C", "Clear");
+		Func = Class->GetFunction("WDT_ArticleDiffArrowElement_C", "Up");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -44,15 +44,15 @@ void UWDT_ArticleDiffArrowElement_C::Down()
 }
 
 
-// Function WDT_ArticleDiffArrowElement.WDT_ArticleDiffArrowElement_C.Up
+// Function WDT_ArticleDiffArrowElement.WDT_ArticleDiffArrowElement_C.Clear
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWDT_ArticleDiffArrowElement_C::Up()
+void UWDT_ArticleDiffArrowElement_C::Clear()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_ArticleDiffArrowElement_C", "Up");
+		Func = Class->GetFunction("WDT_ArticleDiffArrowElement_C", "Clear");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Extensions_structs.hpp"
-#include "EnhancedInput_structs.hpp"
 #include "Engine_structs.hpp"
+#include "EnhancedInput_structs.hpp"
 
 
 namespace SDK::Params
@@ -126,7 +126,7 @@ static_assert(offsetof(WDT_BoosterEquipmentMenu_C_BP_OnItemScrolledIntoView_Even
 static_assert(offsetof(WDT_BoosterEquipmentMenu_C_BP_OnItemScrolledIntoView_Event, Widget) == 0x000008, "Member 'WDT_BoosterEquipmentMenu_C_BP_OnItemScrolledIntoView_Event::Widget' has a wrong offset!");
 
 // Function WDT_BoosterEquipmentMenu.WDT_BoosterEquipmentMenu_C.ExecuteUbergraph_WDT_BoosterEquipmentMenu
-// 0x0A20 (0x0A20 - 0x0000)
+// 0x0A58 (0x0A58 - 0x0000)
 struct WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu final
 {
 public:
@@ -390,8 +390,10 @@ public:
 	double                                        Temp_real_Variable_0;                              // 0x07A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_1_0;                            // 0x07A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Conv_InputActionValueToBool_ReturnValue_16; // 0x07B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_IsDesignTime;                         // 0x07B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7B2[0x6];                                      // 0x07B2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          CallFunc_IsSelectMode_OutFlag_6;                   // 0x07B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_IsDesignTime;                         // 0x07B2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_6;                // 0x07B3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7B4[0x4];                                      // 0x07B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUIObjectBase*                          CallFunc_GetUIObject_ReturnValue;                  // 0x07B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UFieldMenuUIObject*                     K2Node_DynamicCast_AsField_Menu_UIObject;          // 0x07C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x07C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -403,49 +405,52 @@ public:
 	TScriptInterface<class ITextureInterface>     K2Node_DynamicCast_AsTexture_Interface;            // 0x07F0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0800(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_801[0x7];                                      // 0x0801(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBP_CheckableScrollerItem_C*            K2Node_DynamicCast_AsBP_Checkable_Scroller_Item;   // 0x0808(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0810(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_811[0x7];                                      // 0x0811(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                K2Node_ComponentBoundEvent_Item_2;                 // 0x0818(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_ComponentBoundEvent_bIsSelected;            // 0x0820(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_821[0x7];                                      // 0x0821(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBP_CheckableScrollerItem_C*            K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_1; // 0x0828(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0830(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_831[0x3];                                      // 0x0831(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetElementIndex_ReturnValue;              // 0x0834(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetElementIndex_ReturnValue_1;            // 0x0838(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FUIBoosterQueryInfo                    CallFunc_MakeSelectionQuery_NewQuery_1;            // 0x083C(0x0008)(NoDestructor)
-	uint8                                         Pad_844[0x4];                                      // 0x0844(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUIBoosterInfo                         CallFunc_GetQueryBoosterInfo_BoosterInfo;          // 0x0848(0x0098)()
-	class UUserWidget*                            K2Node_ComponentBoundEvent_Widget;                 // 0x08E0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class ISelectableInterface>  K2Node_DynamicCast_AsSelectable_Interface;         // 0x08E8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x08F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SetLazyTexture_ReturnValue;               // 0x08F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Deselect_ReturnValue;                     // 0x08FA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8FB[0x5];                                      // 0x08FB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        K2Node_Event_InCurrentHealth;                      // 0x0900(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_Event_InMaxHealth;                          // 0x0908(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FUIPlayerStatusSummaryInfo             CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo; // 0x0910(0x00B8)(NoDestructor)
-	int32                                         K2Node_Event_InCurrentStamina;                     // 0x09C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_Event_InMaxStamina;                         // 0x09CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_InProhibited;                         // 0x09D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9D1[0x7];                                      // 0x09D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                K2Node_ComponentBoundEvent_Item_1;                 // 0x09D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_ComponentBoundEvent_bIsHovered;             // 0x09E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9E1[0x7];                                      // 0x09E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBP_CheckableScrollerItem_C*            K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_2; // 0x09E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_6;                     // 0x09F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9F1[0x7];                                      // 0x09F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                K2Node_ComponentBoundEvent_Item;                   // 0x09F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetElementIndex_ReturnValue_2;            // 0x0A00(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A04[0x4];                                      // 0x0A04(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                K2Node_CustomEvent_Item;                           // 0x0A08(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UUserWidget*                            K2Node_CustomEvent_Widget;                         // 0x0A10(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetStoryFlagValueByBoolean_ReturnValue;   // 0x0A18(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_12;                             // 0x0A19(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IIF_ScrollerItemHolder_C> K2Node_DynamicCast_AsIF_Scroller_Item_Holder;      // 0x0808(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0818(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_819[0x7];                                      // 0x0819(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_CheckableScrollerItem_C*            K2Node_DynamicCast_AsBP_Checkable_Scroller_Item;   // 0x0820(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0828(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_829[0x7];                                      // 0x0829(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                K2Node_ComponentBoundEvent_Item_2;                 // 0x0830(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_ComponentBoundEvent_bIsSelected;            // 0x0838(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_839[0x7];                                      // 0x0839(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_CheckableScrollerItem_C*            K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_1; // 0x0840(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x0848(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_849[0x3];                                      // 0x0849(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetElementIndex_ReturnValue;              // 0x084C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetElementIndex_ReturnValue_1;            // 0x0850(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FUIBoosterQueryInfo                    CallFunc_MakeSelectionQuery_NewQuery_1;            // 0x0854(0x0008)(NoDestructor)
+	uint8                                         Pad_85C[0x4];                                      // 0x085C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUserWidget*                            K2Node_ComponentBoundEvent_Widget;                 // 0x0860(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FUIBoosterInfo                         CallFunc_GetQueryBoosterInfo_BoosterInfo;          // 0x0868(0x0098)()
+	TScriptInterface<class ISelectableInterface>  K2Node_DynamicCast_AsSelectable_Interface;         // 0x0900(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_6;                     // 0x0910(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Deselect_ReturnValue;                     // 0x0911(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SetLazyTexture_ReturnValue;               // 0x0912(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_913[0x5];                                      // 0x0913(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        K2Node_Event_InCurrentHealth;                      // 0x0918(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_Event_InMaxHealth;                          // 0x0920(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FUIPlayerStatusSummaryInfo             CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo; // 0x0928(0x00D8)()
+	int32                                         K2Node_Event_InCurrentStamina;                     // 0x0A00(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_Event_InMaxStamina;                         // 0x0A04(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_InProhibited;                         // 0x0A08(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A09[0x7];                                      // 0x0A09(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                K2Node_ComponentBoundEvent_Item_1;                 // 0x0A10(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_ComponentBoundEvent_bIsHovered;             // 0x0A18(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A19[0x7];                                      // 0x0A19(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_CheckableScrollerItem_C*            K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_2; // 0x0A20(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_7;                     // 0x0A28(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A29[0x7];                                      // 0x0A29(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                K2Node_ComponentBoundEvent_Item;                   // 0x0A30(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetElementIndex_ReturnValue_2;            // 0x0A38(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A3C[0x4];                                      // 0x0A3C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                K2Node_CustomEvent_Item;                           // 0x0A40(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UUserWidget*                            K2Node_CustomEvent_Widget;                         // 0x0A48(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetStoryFlagValueByBoolean_ReturnValue;   // 0x0A50(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_12;                             // 0x0A51(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu) == 0x000008, "Wrong alignment on WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu");
-static_assert(sizeof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu) == 0x000A20, "Wrong size on WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu");
+static_assert(sizeof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu) == 0x000A58, "Wrong size on WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu");
 static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, EntryPoint) == 0x000000, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::EntryPoint' has a wrong offset!");
 static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, Temp_object_Variable) == 0x000008, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::Temp_object_Variable' has a wrong offset!");
 static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, Temp_real_Variable) == 0x000010, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::Temp_real_Variable' has a wrong offset!");
@@ -669,7 +674,9 @@ static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEq
 static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, Temp_real_Variable_0) == 0x0007A0, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::Temp_real_Variable_0' has a wrong offset!");
 static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, Temp_real_Variable_1_0) == 0x0007A8, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::Temp_real_Variable_1_0' has a wrong offset!");
 static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, CallFunc_Conv_InputActionValueToBool_ReturnValue_16) == 0x0007B0, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::CallFunc_Conv_InputActionValueToBool_ReturnValue_16' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, K2Node_Event_IsDesignTime) == 0x0007B1, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::K2Node_Event_IsDesignTime' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, CallFunc_IsSelectMode_OutFlag_6) == 0x0007B1, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::CallFunc_IsSelectMode_OutFlag_6' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, K2Node_Event_IsDesignTime) == 0x0007B2, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::K2Node_Event_IsDesignTime' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, CallFunc_Not_PreBool_ReturnValue_6) == 0x0007B3, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::CallFunc_Not_PreBool_ReturnValue_6' has a wrong offset!");
 static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, CallFunc_GetUIObject_ReturnValue) == 0x0007B8, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::CallFunc_GetUIObject_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, K2Node_DynamicCast_AsField_Menu_UIObject) == 0x0007C0, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::K2Node_DynamicCast_AsField_Menu_UIObject' has a wrong offset!");
 static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, K2Node_DynamicCast_bSuccess_1) == 0x0007C8, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
@@ -678,37 +685,39 @@ static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEq
 static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, K2Node_ComponentBoundEvent_Widget_1) == 0x0007E8, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::K2Node_ComponentBoundEvent_Widget_1' has a wrong offset!");
 static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, K2Node_DynamicCast_AsTexture_Interface) == 0x0007F0, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::K2Node_DynamicCast_AsTexture_Interface' has a wrong offset!");
 static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, K2Node_DynamicCast_bSuccess_2) == 0x000800, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, K2Node_DynamicCast_AsBP_Checkable_Scroller_Item) == 0x000808, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::K2Node_DynamicCast_AsBP_Checkable_Scroller_Item' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, K2Node_DynamicCast_bSuccess_3) == 0x000810, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, K2Node_ComponentBoundEvent_Item_2) == 0x000818, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::K2Node_ComponentBoundEvent_Item_2' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, K2Node_ComponentBoundEvent_bIsSelected) == 0x000820, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::K2Node_ComponentBoundEvent_bIsSelected' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_1) == 0x000828, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_1' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, K2Node_DynamicCast_bSuccess_4) == 0x000830, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, CallFunc_GetElementIndex_ReturnValue) == 0x000834, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::CallFunc_GetElementIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, CallFunc_GetElementIndex_ReturnValue_1) == 0x000838, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::CallFunc_GetElementIndex_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, CallFunc_MakeSelectionQuery_NewQuery_1) == 0x00083C, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::CallFunc_MakeSelectionQuery_NewQuery_1' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, CallFunc_GetQueryBoosterInfo_BoosterInfo) == 0x000848, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::CallFunc_GetQueryBoosterInfo_BoosterInfo' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, K2Node_ComponentBoundEvent_Widget) == 0x0008E0, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::K2Node_ComponentBoundEvent_Widget' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, K2Node_DynamicCast_AsSelectable_Interface) == 0x0008E8, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::K2Node_DynamicCast_AsSelectable_Interface' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, K2Node_DynamicCast_bSuccess_5) == 0x0008F8, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::K2Node_DynamicCast_bSuccess_5' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, CallFunc_SetLazyTexture_ReturnValue) == 0x0008F9, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::CallFunc_SetLazyTexture_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, CallFunc_Deselect_ReturnValue) == 0x0008FA, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::CallFunc_Deselect_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, K2Node_Event_InCurrentHealth) == 0x000900, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::K2Node_Event_InCurrentHealth' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, K2Node_Event_InMaxHealth) == 0x000908, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::K2Node_Event_InMaxHealth' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo) == 0x000910, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, K2Node_Event_InCurrentStamina) == 0x0009C8, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::K2Node_Event_InCurrentStamina' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, K2Node_Event_InMaxStamina) == 0x0009CC, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::K2Node_Event_InMaxStamina' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, K2Node_Event_InProhibited) == 0x0009D0, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::K2Node_Event_InProhibited' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, K2Node_ComponentBoundEvent_Item_1) == 0x0009D8, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::K2Node_ComponentBoundEvent_Item_1' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, K2Node_ComponentBoundEvent_bIsHovered) == 0x0009E0, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::K2Node_ComponentBoundEvent_bIsHovered' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_2) == 0x0009E8, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_2' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, K2Node_DynamicCast_bSuccess_6) == 0x0009F0, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::K2Node_DynamicCast_bSuccess_6' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, K2Node_ComponentBoundEvent_Item) == 0x0009F8, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::K2Node_ComponentBoundEvent_Item' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, CallFunc_GetElementIndex_ReturnValue_2) == 0x000A00, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::CallFunc_GetElementIndex_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, K2Node_CustomEvent_Item) == 0x000A08, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::K2Node_CustomEvent_Item' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, K2Node_CustomEvent_Widget) == 0x000A10, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::K2Node_CustomEvent_Widget' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, CallFunc_GetStoryFlagValueByBoolean_ReturnValue) == 0x000A18, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::CallFunc_GetStoryFlagValueByBoolean_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, Temp_bool_Variable_12) == 0x000A19, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::Temp_bool_Variable_12' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, K2Node_DynamicCast_AsIF_Scroller_Item_Holder) == 0x000808, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::K2Node_DynamicCast_AsIF_Scroller_Item_Holder' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, K2Node_DynamicCast_bSuccess_3) == 0x000818, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, K2Node_DynamicCast_AsBP_Checkable_Scroller_Item) == 0x000820, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::K2Node_DynamicCast_AsBP_Checkable_Scroller_Item' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, K2Node_DynamicCast_bSuccess_4) == 0x000828, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, K2Node_ComponentBoundEvent_Item_2) == 0x000830, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::K2Node_ComponentBoundEvent_Item_2' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, K2Node_ComponentBoundEvent_bIsSelected) == 0x000838, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::K2Node_ComponentBoundEvent_bIsSelected' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_1) == 0x000840, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_1' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, K2Node_DynamicCast_bSuccess_5) == 0x000848, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::K2Node_DynamicCast_bSuccess_5' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, CallFunc_GetElementIndex_ReturnValue) == 0x00084C, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::CallFunc_GetElementIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, CallFunc_GetElementIndex_ReturnValue_1) == 0x000850, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::CallFunc_GetElementIndex_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, CallFunc_MakeSelectionQuery_NewQuery_1) == 0x000854, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::CallFunc_MakeSelectionQuery_NewQuery_1' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, K2Node_ComponentBoundEvent_Widget) == 0x000860, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::K2Node_ComponentBoundEvent_Widget' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, CallFunc_GetQueryBoosterInfo_BoosterInfo) == 0x000868, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::CallFunc_GetQueryBoosterInfo_BoosterInfo' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, K2Node_DynamicCast_AsSelectable_Interface) == 0x000900, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::K2Node_DynamicCast_AsSelectable_Interface' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, K2Node_DynamicCast_bSuccess_6) == 0x000910, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::K2Node_DynamicCast_bSuccess_6' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, CallFunc_Deselect_ReturnValue) == 0x000911, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::CallFunc_Deselect_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, CallFunc_SetLazyTexture_ReturnValue) == 0x000912, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::CallFunc_SetLazyTexture_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, K2Node_Event_InCurrentHealth) == 0x000918, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::K2Node_Event_InCurrentHealth' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, K2Node_Event_InMaxHealth) == 0x000920, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::K2Node_Event_InMaxHealth' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo) == 0x000928, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, K2Node_Event_InCurrentStamina) == 0x000A00, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::K2Node_Event_InCurrentStamina' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, K2Node_Event_InMaxStamina) == 0x000A04, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::K2Node_Event_InMaxStamina' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, K2Node_Event_InProhibited) == 0x000A08, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::K2Node_Event_InProhibited' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, K2Node_ComponentBoundEvent_Item_1) == 0x000A10, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::K2Node_ComponentBoundEvent_Item_1' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, K2Node_ComponentBoundEvent_bIsHovered) == 0x000A18, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::K2Node_ComponentBoundEvent_bIsHovered' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_2) == 0x000A20, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_2' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, K2Node_DynamicCast_bSuccess_7) == 0x000A28, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::K2Node_DynamicCast_bSuccess_7' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, K2Node_ComponentBoundEvent_Item) == 0x000A30, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::K2Node_ComponentBoundEvent_Item' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, CallFunc_GetElementIndex_ReturnValue_2) == 0x000A38, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::CallFunc_GetElementIndex_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, K2Node_CustomEvent_Item) == 0x000A40, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::K2Node_CustomEvent_Item' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, K2Node_CustomEvent_Widget) == 0x000A48, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::K2Node_CustomEvent_Widget' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, CallFunc_GetStoryFlagValueByBoolean_ReturnValue) == 0x000A50, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::CallFunc_GetStoryFlagValueByBoolean_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu, Temp_bool_Variable_12) == 0x000A51, "Member 'WDT_BoosterEquipmentMenu_C_ExecuteUbergraph_WDT_BoosterEquipmentMenu::Temp_bool_Variable_12' has a wrong offset!");
 
 // Function WDT_BoosterEquipmentMenu.WDT_BoosterEquipmentMenu_C.GetCategoryNumber
 // 0x0010 (0x0010 - 0x0000)
@@ -787,7 +796,7 @@ static_assert(offsetof(WDT_BoosterEquipmentMenu_C_GetQueryBoosterInfo, BoosterIn
 static_assert(offsetof(WDT_BoosterEquipmentMenu_C_GetQueryBoosterInfo, CallFunc_GetBoosterInfoByQuery_OutBoosterInfo) == 0x0000A0, "Member 'WDT_BoosterEquipmentMenu_C_GetQueryBoosterInfo::CallFunc_GetBoosterInfoByQuery_OutBoosterInfo' has a wrong offset!");
 
 // Function WDT_BoosterEquipmentMenu.WDT_BoosterEquipmentMenu_C.Initialize
-// 0x0128 (0x0128 - 0x0000)
+// 0x0148 (0x0148 - 0x0000)
 struct WDT_BoosterEquipmentMenu_C_Initialize final
 {
 public:
@@ -806,11 +815,11 @@ public:
 	uint8                                         CallFunc_GetValidValue_ReturnValue;                // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_62[0x2];                                       // 0x0062(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetEquippedIndexInCategory_IndexInCategory; // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FUIPlayerStatusSummaryInfo             CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo; // 0x0068(0x00B8)(NoDestructor)
-	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FUIPlayerStatusSummaryInfo             CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo; // 0x0068(0x00D8)()
+	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_BoosterEquipmentMenu_C_Initialize) == 0x000008, "Wrong alignment on WDT_BoosterEquipmentMenu_C_Initialize");
-static_assert(sizeof(WDT_BoosterEquipmentMenu_C_Initialize) == 0x000128, "Wrong size on WDT_BoosterEquipmentMenu_C_Initialize");
+static_assert(sizeof(WDT_BoosterEquipmentMenu_C_Initialize) == 0x000148, "Wrong size on WDT_BoosterEquipmentMenu_C_Initialize");
 static_assert(offsetof(WDT_BoosterEquipmentMenu_C_Initialize, K2Node_CreateDelegate_OutputDelegate) == 0x000000, "Member 'WDT_BoosterEquipmentMenu_C_Initialize::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
 static_assert(offsetof(WDT_BoosterEquipmentMenu_C_Initialize, CallFunc_GetSelectingIndex_ReturnValue) == 0x000010, "Member 'WDT_BoosterEquipmentMenu_C_Initialize::CallFunc_GetSelectingIndex_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_BoosterEquipmentMenu_C_Initialize, K2Node_MakeArray_Array) == 0x000018, "Member 'WDT_BoosterEquipmentMenu_C_Initialize::K2Node_MakeArray_Array' has a wrong offset!");
@@ -823,7 +832,7 @@ static_assert(offsetof(WDT_BoosterEquipmentMenu_C_Initialize, CallFunc_Conv_IntT
 static_assert(offsetof(WDT_BoosterEquipmentMenu_C_Initialize, CallFunc_GetValidValue_ReturnValue) == 0x000061, "Member 'WDT_BoosterEquipmentMenu_C_Initialize::CallFunc_GetValidValue_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_BoosterEquipmentMenu_C_Initialize, CallFunc_GetEquippedIndexInCategory_IndexInCategory) == 0x000064, "Member 'WDT_BoosterEquipmentMenu_C_Initialize::CallFunc_GetEquippedIndexInCategory_IndexInCategory' has a wrong offset!");
 static_assert(offsetof(WDT_BoosterEquipmentMenu_C_Initialize, CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo) == 0x000068, "Member 'WDT_BoosterEquipmentMenu_C_Initialize::CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_Initialize, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x000120, "Member 'WDT_BoosterEquipmentMenu_C_Initialize::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_Initialize, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x000140, "Member 'WDT_BoosterEquipmentMenu_C_Initialize::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
 
 // Function WDT_BoosterEquipmentMenu.WDT_BoosterEquipmentMenu_C.InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_15
 // 0x0030 (0x0030 - 0x0000)
@@ -1219,7 +1228,7 @@ static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnCancelReleased, CallFunc_Boo
 static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnCancelReleased, CallFunc_Close_ReturnValue) == 0x000004, "Member 'WDT_BoosterEquipmentMenu_C_OnCancelReleased::CallFunc_Close_ReturnValue' has a wrong offset!");
 
 // Function WDT_BoosterEquipmentMenu.WDT_BoosterEquipmentMenu_C.OnChangedCategoryIndex
-// 0x0158 (0x0158 - 0x0000)
+// 0x0178 (0x0178 - 0x0000)
 struct WDT_BoosterEquipmentMenu_C_OnChangedCategoryIndex final
 {
 public:
@@ -1230,20 +1239,20 @@ public:
 	int32                                         CallFunc_SelectInt_ReturnValue;                    // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0010(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FTimerHandle                           CallFunc_K2_SetTimerForNextTickDelegate_ReturnValue; // 0x0020(0x0008)(NoDestructor, HasGetValueTypeHash)
-	struct FUIPlayerStatusSummaryInfo             CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo; // 0x0028(0x00B8)(NoDestructor)
-	TScriptInterface<class IIF_FieldMenuUIObject_C> K2Node_DynamicCast_AsIF_Field_Menu_UIObject;       // 0x00E0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_F1[0x3];                                       // 0x00F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetTargetBoosterSlotIndex_OutIndex;       // 0x00F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_Conv_IntToByte_ReturnValue;               // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_GetValidValue_ReturnValue;                // 0x00F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_FA[0x2];                                       // 0x00FA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetEquippedIndexInCategory_IndexInCategory; // 0x00FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TMap<int32, bool>                             CallFunc_MakeCheckedIndexMap_OutCheckedIndexMap;   // 0x0100(0x0050)()
-	bool                                          CallFunc_InRange_IntInt_ReturnValue;               // 0x0150(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FUIPlayerStatusSummaryInfo             CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo; // 0x0028(0x00D8)()
+	TScriptInterface<class IIF_FieldMenuUIObject_C> K2Node_DynamicCast_AsIF_Field_Menu_UIObject;       // 0x0100(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_111[0x3];                                      // 0x0111(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetTargetBoosterSlotIndex_OutIndex;       // 0x0114(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_Conv_IntToByte_ReturnValue;               // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_GetValidValue_ReturnValue;                // 0x0119(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11A[0x2];                                      // 0x011A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetEquippedIndexInCategory_IndexInCategory; // 0x011C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TMap<int32, bool>                             CallFunc_MakeCheckedIndexMap_OutCheckedIndexMap;   // 0x0120(0x0050)()
+	bool                                          CallFunc_InRange_IntInt_ReturnValue;               // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_BoosterEquipmentMenu_C_OnChangedCategoryIndex) == 0x000008, "Wrong alignment on WDT_BoosterEquipmentMenu_C_OnChangedCategoryIndex");
-static_assert(sizeof(WDT_BoosterEquipmentMenu_C_OnChangedCategoryIndex) == 0x000158, "Wrong size on WDT_BoosterEquipmentMenu_C_OnChangedCategoryIndex");
+static_assert(sizeof(WDT_BoosterEquipmentMenu_C_OnChangedCategoryIndex) == 0x000178, "Wrong size on WDT_BoosterEquipmentMenu_C_OnChangedCategoryIndex");
 static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnChangedCategoryIndex, CategoryIndex) == 0x000000, "Member 'WDT_BoosterEquipmentMenu_C_OnChangedCategoryIndex::CategoryIndex' has a wrong offset!");
 static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnChangedCategoryIndex, CallFunc_GetCategoryNumber_Number) == 0x000004, "Member 'WDT_BoosterEquipmentMenu_C_OnChangedCategoryIndex::CallFunc_GetCategoryNumber_Number' has a wrong offset!");
 static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnChangedCategoryIndex, CallFunc_Greater_IntInt_ReturnValue) == 0x000008, "Member 'WDT_BoosterEquipmentMenu_C_OnChangedCategoryIndex::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
@@ -1251,17 +1260,17 @@ static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnChangedCategoryIndex, CallFu
 static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnChangedCategoryIndex, K2Node_CreateDelegate_OutputDelegate) == 0x000010, "Member 'WDT_BoosterEquipmentMenu_C_OnChangedCategoryIndex::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
 static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnChangedCategoryIndex, CallFunc_K2_SetTimerForNextTickDelegate_ReturnValue) == 0x000020, "Member 'WDT_BoosterEquipmentMenu_C_OnChangedCategoryIndex::CallFunc_K2_SetTimerForNextTickDelegate_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnChangedCategoryIndex, CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo) == 0x000028, "Member 'WDT_BoosterEquipmentMenu_C_OnChangedCategoryIndex::CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnChangedCategoryIndex, K2Node_DynamicCast_AsIF_Field_Menu_UIObject) == 0x0000E0, "Member 'WDT_BoosterEquipmentMenu_C_OnChangedCategoryIndex::K2Node_DynamicCast_AsIF_Field_Menu_UIObject' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnChangedCategoryIndex, K2Node_DynamicCast_bSuccess) == 0x0000F0, "Member 'WDT_BoosterEquipmentMenu_C_OnChangedCategoryIndex::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnChangedCategoryIndex, CallFunc_GetTargetBoosterSlotIndex_OutIndex) == 0x0000F4, "Member 'WDT_BoosterEquipmentMenu_C_OnChangedCategoryIndex::CallFunc_GetTargetBoosterSlotIndex_OutIndex' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnChangedCategoryIndex, CallFunc_Conv_IntToByte_ReturnValue) == 0x0000F8, "Member 'WDT_BoosterEquipmentMenu_C_OnChangedCategoryIndex::CallFunc_Conv_IntToByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnChangedCategoryIndex, CallFunc_GetValidValue_ReturnValue) == 0x0000F9, "Member 'WDT_BoosterEquipmentMenu_C_OnChangedCategoryIndex::CallFunc_GetValidValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnChangedCategoryIndex, CallFunc_GetEquippedIndexInCategory_IndexInCategory) == 0x0000FC, "Member 'WDT_BoosterEquipmentMenu_C_OnChangedCategoryIndex::CallFunc_GetEquippedIndexInCategory_IndexInCategory' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnChangedCategoryIndex, CallFunc_MakeCheckedIndexMap_OutCheckedIndexMap) == 0x000100, "Member 'WDT_BoosterEquipmentMenu_C_OnChangedCategoryIndex::CallFunc_MakeCheckedIndexMap_OutCheckedIndexMap' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnChangedCategoryIndex, CallFunc_InRange_IntInt_ReturnValue) == 0x000150, "Member 'WDT_BoosterEquipmentMenu_C_OnChangedCategoryIndex::CallFunc_InRange_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnChangedCategoryIndex, K2Node_DynamicCast_AsIF_Field_Menu_UIObject) == 0x000100, "Member 'WDT_BoosterEquipmentMenu_C_OnChangedCategoryIndex::K2Node_DynamicCast_AsIF_Field_Menu_UIObject' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnChangedCategoryIndex, K2Node_DynamicCast_bSuccess) == 0x000110, "Member 'WDT_BoosterEquipmentMenu_C_OnChangedCategoryIndex::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnChangedCategoryIndex, CallFunc_GetTargetBoosterSlotIndex_OutIndex) == 0x000114, "Member 'WDT_BoosterEquipmentMenu_C_OnChangedCategoryIndex::CallFunc_GetTargetBoosterSlotIndex_OutIndex' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnChangedCategoryIndex, CallFunc_Conv_IntToByte_ReturnValue) == 0x000118, "Member 'WDT_BoosterEquipmentMenu_C_OnChangedCategoryIndex::CallFunc_Conv_IntToByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnChangedCategoryIndex, CallFunc_GetValidValue_ReturnValue) == 0x000119, "Member 'WDT_BoosterEquipmentMenu_C_OnChangedCategoryIndex::CallFunc_GetValidValue_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnChangedCategoryIndex, CallFunc_GetEquippedIndexInCategory_IndexInCategory) == 0x00011C, "Member 'WDT_BoosterEquipmentMenu_C_OnChangedCategoryIndex::CallFunc_GetEquippedIndexInCategory_IndexInCategory' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnChangedCategoryIndex, CallFunc_MakeCheckedIndexMap_OutCheckedIndexMap) == 0x000120, "Member 'WDT_BoosterEquipmentMenu_C_OnChangedCategoryIndex::CallFunc_MakeCheckedIndexMap_OutCheckedIndexMap' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnChangedCategoryIndex, CallFunc_InRange_IntInt_ReturnValue) == 0x000170, "Member 'WDT_BoosterEquipmentMenu_C_OnChangedCategoryIndex::CallFunc_InRange_IntInt_ReturnValue' has a wrong offset!");
 
 // Function WDT_BoosterEquipmentMenu.WDT_BoosterEquipmentMenu_C.OnDecideReleased
-// 0x0280 (0x0280 - 0x0000)
+// 0x02A0 (0x02A0 - 0x0000)
 struct WDT_BoosterEquipmentMenu_C_OnDecideReleased final
 {
 public:
@@ -1284,38 +1293,38 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_101[0x3];                                      // 0x0101(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetTargetBoosterSlotIndex_OutIndex;       // 0x0104(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FUIPlayerStatusSummaryInfo             CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo; // 0x0108(0x00B8)(NoDestructor)
-	bool                                          CallFunc_IsEquipmentEnabled_ReturnValue;           // 0x01C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1C1[0x7];                                      // 0x01C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue_1;   // 0x01C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_PlayUIAudioEvent_ReturnValue_1;           // 0x01D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1D1[0x7];                                      // 0x01D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IIF_FieldMenuUIObject_C> K2Node_DynamicCast_AsIF_Field_Menu_UIObject_1;     // 0x01D8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x01E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1E9[0x3];                                      // 0x01E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetTargetBoosterSlotIndex_OutIndex_1;     // 0x01EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                CallFunc_BP_GetSelectedItem_ReturnValue;           // 0x01F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_Conv_IntToByte_ReturnValue;               // 0x01F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1F9[0x7];                                      // 0x01F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBP_CheckableScrollerItem_C*            K2Node_DynamicCast_AsBP_Checkable_Scroller_Item;   // 0x0200(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0208(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_GetValidValue_ReturnValue;                // 0x0209(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_20A[0x2];                                      // 0x020A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetElementIndex_ReturnValue;              // 0x020C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x0210(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_211[0x3];                                      // 0x0211(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetEquippedIndexInCategory_IndexInCategory; // 0x0214(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetEquippedIndexInCategory_IndexInCategory_1; // 0x0218(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FUIBoosterQueryInfo                    CallFunc_MakeSelectionQuery_NewQuery_1;            // 0x021C(0x0008)(NoDestructor)
-	uint8                                         Pad_224[0x4];                                      // 0x0224(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<int32, bool>                             CallFunc_MakeCheckedIndexMap_OutCheckedIndexMap;   // 0x0228(0x0050)()
-	bool                                          CallFunc_EquipBoosterByQuery_bOutIsDuplicationEquip; // 0x0278(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsActivated_ReturnValue;                  // 0x0279(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x027A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x027B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FUIPlayerStatusSummaryInfo             CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo; // 0x0108(0x00D8)()
+	bool                                          CallFunc_IsEquipmentEnabled_ReturnValue;           // 0x01E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1E1[0x7];                                      // 0x01E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue_1;   // 0x01E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_PlayUIAudioEvent_ReturnValue_1;           // 0x01F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1F1[0x7];                                      // 0x01F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IIF_FieldMenuUIObject_C> K2Node_DynamicCast_AsIF_Field_Menu_UIObject_1;     // 0x01F8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0208(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_209[0x3];                                      // 0x0209(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetTargetBoosterSlotIndex_OutIndex_1;     // 0x020C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                CallFunc_BP_GetSelectedItem_ReturnValue;           // 0x0210(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_Conv_IntToByte_ReturnValue;               // 0x0218(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_219[0x7];                                      // 0x0219(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_CheckableScrollerItem_C*            K2Node_DynamicCast_AsBP_Checkable_Scroller_Item;   // 0x0220(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0228(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_GetValidValue_ReturnValue;                // 0x0229(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_22A[0x2];                                      // 0x022A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetElementIndex_ReturnValue;              // 0x022C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x0230(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_231[0x3];                                      // 0x0231(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetEquippedIndexInCategory_IndexInCategory; // 0x0234(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetEquippedIndexInCategory_IndexInCategory_1; // 0x0238(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FUIBoosterQueryInfo                    CallFunc_MakeSelectionQuery_NewQuery_1;            // 0x023C(0x0008)(NoDestructor)
+	uint8                                         Pad_244[0x4];                                      // 0x0244(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<int32, bool>                             CallFunc_MakeCheckedIndexMap_OutCheckedIndexMap;   // 0x0248(0x0050)()
+	bool                                          CallFunc_EquipBoosterByQuery_bOutIsDuplicationEquip; // 0x0298(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsActivated_ReturnValue;                  // 0x0299(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x029A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x029B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_BoosterEquipmentMenu_C_OnDecideReleased) == 0x000008, "Wrong alignment on WDT_BoosterEquipmentMenu_C_OnDecideReleased");
-static_assert(sizeof(WDT_BoosterEquipmentMenu_C_OnDecideReleased) == 0x000280, "Wrong size on WDT_BoosterEquipmentMenu_C_OnDecideReleased");
+static_assert(sizeof(WDT_BoosterEquipmentMenu_C_OnDecideReleased) == 0x0002A0, "Wrong size on WDT_BoosterEquipmentMenu_C_OnDecideReleased");
 static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnDecideReleased, L_IsEquip) == 0x000000, "Member 'WDT_BoosterEquipmentMenu_C_OnDecideReleased::L_IsEquip' has a wrong offset!");
 static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnDecideReleased, L_EquippedIndex) == 0x000004, "Member 'WDT_BoosterEquipmentMenu_C_OnDecideReleased::L_EquippedIndex' has a wrong offset!");
 static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnDecideReleased, L_TargetSlotIndex) == 0x000008, "Member 'WDT_BoosterEquipmentMenu_C_OnDecideReleased::L_TargetSlotIndex' has a wrong offset!");
@@ -1331,27 +1340,27 @@ static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnDecideReleased, K2Node_Dynam
 static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnDecideReleased, K2Node_DynamicCast_bSuccess) == 0x000100, "Member 'WDT_BoosterEquipmentMenu_C_OnDecideReleased::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnDecideReleased, CallFunc_GetTargetBoosterSlotIndex_OutIndex) == 0x000104, "Member 'WDT_BoosterEquipmentMenu_C_OnDecideReleased::CallFunc_GetTargetBoosterSlotIndex_OutIndex' has a wrong offset!");
 static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnDecideReleased, CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo) == 0x000108, "Member 'WDT_BoosterEquipmentMenu_C_OnDecideReleased::CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnDecideReleased, CallFunc_IsEquipmentEnabled_ReturnValue) == 0x0001C0, "Member 'WDT_BoosterEquipmentMenu_C_OnDecideReleased::CallFunc_IsEquipmentEnabled_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnDecideReleased, CallFunc_GetGameInstanceSubsystem_ReturnValue_1) == 0x0001C8, "Member 'WDT_BoosterEquipmentMenu_C_OnDecideReleased::CallFunc_GetGameInstanceSubsystem_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnDecideReleased, CallFunc_PlayUIAudioEvent_ReturnValue_1) == 0x0001D0, "Member 'WDT_BoosterEquipmentMenu_C_OnDecideReleased::CallFunc_PlayUIAudioEvent_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnDecideReleased, K2Node_DynamicCast_AsIF_Field_Menu_UIObject_1) == 0x0001D8, "Member 'WDT_BoosterEquipmentMenu_C_OnDecideReleased::K2Node_DynamicCast_AsIF_Field_Menu_UIObject_1' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnDecideReleased, K2Node_DynamicCast_bSuccess_1) == 0x0001E8, "Member 'WDT_BoosterEquipmentMenu_C_OnDecideReleased::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnDecideReleased, CallFunc_GetTargetBoosterSlotIndex_OutIndex_1) == 0x0001EC, "Member 'WDT_BoosterEquipmentMenu_C_OnDecideReleased::CallFunc_GetTargetBoosterSlotIndex_OutIndex_1' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnDecideReleased, CallFunc_BP_GetSelectedItem_ReturnValue) == 0x0001F0, "Member 'WDT_BoosterEquipmentMenu_C_OnDecideReleased::CallFunc_BP_GetSelectedItem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnDecideReleased, CallFunc_Conv_IntToByte_ReturnValue) == 0x0001F8, "Member 'WDT_BoosterEquipmentMenu_C_OnDecideReleased::CallFunc_Conv_IntToByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnDecideReleased, K2Node_DynamicCast_AsBP_Checkable_Scroller_Item) == 0x000200, "Member 'WDT_BoosterEquipmentMenu_C_OnDecideReleased::K2Node_DynamicCast_AsBP_Checkable_Scroller_Item' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnDecideReleased, K2Node_DynamicCast_bSuccess_2) == 0x000208, "Member 'WDT_BoosterEquipmentMenu_C_OnDecideReleased::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnDecideReleased, CallFunc_GetValidValue_ReturnValue) == 0x000209, "Member 'WDT_BoosterEquipmentMenu_C_OnDecideReleased::CallFunc_GetValidValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnDecideReleased, CallFunc_GetElementIndex_ReturnValue) == 0x00020C, "Member 'WDT_BoosterEquipmentMenu_C_OnDecideReleased::CallFunc_GetElementIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnDecideReleased, CallFunc_NotEqual_IntInt_ReturnValue) == 0x000210, "Member 'WDT_BoosterEquipmentMenu_C_OnDecideReleased::CallFunc_NotEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnDecideReleased, CallFunc_GetEquippedIndexInCategory_IndexInCategory) == 0x000214, "Member 'WDT_BoosterEquipmentMenu_C_OnDecideReleased::CallFunc_GetEquippedIndexInCategory_IndexInCategory' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnDecideReleased, CallFunc_GetEquippedIndexInCategory_IndexInCategory_1) == 0x000218, "Member 'WDT_BoosterEquipmentMenu_C_OnDecideReleased::CallFunc_GetEquippedIndexInCategory_IndexInCategory_1' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnDecideReleased, CallFunc_MakeSelectionQuery_NewQuery_1) == 0x00021C, "Member 'WDT_BoosterEquipmentMenu_C_OnDecideReleased::CallFunc_MakeSelectionQuery_NewQuery_1' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnDecideReleased, CallFunc_MakeCheckedIndexMap_OutCheckedIndexMap) == 0x000228, "Member 'WDT_BoosterEquipmentMenu_C_OnDecideReleased::CallFunc_MakeCheckedIndexMap_OutCheckedIndexMap' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnDecideReleased, CallFunc_EquipBoosterByQuery_bOutIsDuplicationEquip) == 0x000278, "Member 'WDT_BoosterEquipmentMenu_C_OnDecideReleased::CallFunc_EquipBoosterByQuery_bOutIsDuplicationEquip' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnDecideReleased, CallFunc_IsActivated_ReturnValue) == 0x000279, "Member 'WDT_BoosterEquipmentMenu_C_OnDecideReleased::CallFunc_IsActivated_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnDecideReleased, CallFunc_IsVisible_ReturnValue) == 0x00027A, "Member 'WDT_BoosterEquipmentMenu_C_OnDecideReleased::CallFunc_IsVisible_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnDecideReleased, CallFunc_BooleanAND_ReturnValue) == 0x00027B, "Member 'WDT_BoosterEquipmentMenu_C_OnDecideReleased::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnDecideReleased, CallFunc_IsEquipmentEnabled_ReturnValue) == 0x0001E0, "Member 'WDT_BoosterEquipmentMenu_C_OnDecideReleased::CallFunc_IsEquipmentEnabled_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnDecideReleased, CallFunc_GetGameInstanceSubsystem_ReturnValue_1) == 0x0001E8, "Member 'WDT_BoosterEquipmentMenu_C_OnDecideReleased::CallFunc_GetGameInstanceSubsystem_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnDecideReleased, CallFunc_PlayUIAudioEvent_ReturnValue_1) == 0x0001F0, "Member 'WDT_BoosterEquipmentMenu_C_OnDecideReleased::CallFunc_PlayUIAudioEvent_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnDecideReleased, K2Node_DynamicCast_AsIF_Field_Menu_UIObject_1) == 0x0001F8, "Member 'WDT_BoosterEquipmentMenu_C_OnDecideReleased::K2Node_DynamicCast_AsIF_Field_Menu_UIObject_1' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnDecideReleased, K2Node_DynamicCast_bSuccess_1) == 0x000208, "Member 'WDT_BoosterEquipmentMenu_C_OnDecideReleased::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnDecideReleased, CallFunc_GetTargetBoosterSlotIndex_OutIndex_1) == 0x00020C, "Member 'WDT_BoosterEquipmentMenu_C_OnDecideReleased::CallFunc_GetTargetBoosterSlotIndex_OutIndex_1' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnDecideReleased, CallFunc_BP_GetSelectedItem_ReturnValue) == 0x000210, "Member 'WDT_BoosterEquipmentMenu_C_OnDecideReleased::CallFunc_BP_GetSelectedItem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnDecideReleased, CallFunc_Conv_IntToByte_ReturnValue) == 0x000218, "Member 'WDT_BoosterEquipmentMenu_C_OnDecideReleased::CallFunc_Conv_IntToByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnDecideReleased, K2Node_DynamicCast_AsBP_Checkable_Scroller_Item) == 0x000220, "Member 'WDT_BoosterEquipmentMenu_C_OnDecideReleased::K2Node_DynamicCast_AsBP_Checkable_Scroller_Item' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnDecideReleased, K2Node_DynamicCast_bSuccess_2) == 0x000228, "Member 'WDT_BoosterEquipmentMenu_C_OnDecideReleased::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnDecideReleased, CallFunc_GetValidValue_ReturnValue) == 0x000229, "Member 'WDT_BoosterEquipmentMenu_C_OnDecideReleased::CallFunc_GetValidValue_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnDecideReleased, CallFunc_GetElementIndex_ReturnValue) == 0x00022C, "Member 'WDT_BoosterEquipmentMenu_C_OnDecideReleased::CallFunc_GetElementIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnDecideReleased, CallFunc_NotEqual_IntInt_ReturnValue) == 0x000230, "Member 'WDT_BoosterEquipmentMenu_C_OnDecideReleased::CallFunc_NotEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnDecideReleased, CallFunc_GetEquippedIndexInCategory_IndexInCategory) == 0x000234, "Member 'WDT_BoosterEquipmentMenu_C_OnDecideReleased::CallFunc_GetEquippedIndexInCategory_IndexInCategory' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnDecideReleased, CallFunc_GetEquippedIndexInCategory_IndexInCategory_1) == 0x000238, "Member 'WDT_BoosterEquipmentMenu_C_OnDecideReleased::CallFunc_GetEquippedIndexInCategory_IndexInCategory_1' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnDecideReleased, CallFunc_MakeSelectionQuery_NewQuery_1) == 0x00023C, "Member 'WDT_BoosterEquipmentMenu_C_OnDecideReleased::CallFunc_MakeSelectionQuery_NewQuery_1' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnDecideReleased, CallFunc_MakeCheckedIndexMap_OutCheckedIndexMap) == 0x000248, "Member 'WDT_BoosterEquipmentMenu_C_OnDecideReleased::CallFunc_MakeCheckedIndexMap_OutCheckedIndexMap' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnDecideReleased, CallFunc_EquipBoosterByQuery_bOutIsDuplicationEquip) == 0x000298, "Member 'WDT_BoosterEquipmentMenu_C_OnDecideReleased::CallFunc_EquipBoosterByQuery_bOutIsDuplicationEquip' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnDecideReleased, CallFunc_IsActivated_ReturnValue) == 0x000299, "Member 'WDT_BoosterEquipmentMenu_C_OnDecideReleased::CallFunc_IsActivated_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnDecideReleased, CallFunc_IsVisible_ReturnValue) == 0x00029A, "Member 'WDT_BoosterEquipmentMenu_C_OnDecideReleased::CallFunc_IsVisible_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_OnDecideReleased, CallFunc_BooleanAND_ReturnValue) == 0x00029B, "Member 'WDT_BoosterEquipmentMenu_C_OnDecideReleased::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
 
 // Function WDT_BoosterEquipmentMenu.WDT_BoosterEquipmentMenu_C.OnDownPressed
 // 0x0010 (0x0010 - 0x0000)
@@ -1629,7 +1638,7 @@ static_assert(sizeof(WDT_BoosterEquipmentMenu_C_SetProhibited) == 0x000001, "Wro
 static_assert(offsetof(WDT_BoosterEquipmentMenu_C_SetProhibited, InProhibited) == 0x000000, "Member 'WDT_BoosterEquipmentMenu_C_SetProhibited::InProhibited' has a wrong offset!");
 
 // Function WDT_BoosterEquipmentMenu.WDT_BoosterEquipmentMenu_C.UpdateArticleInfo
-// 0x05C8 (0x05C8 - 0x0000)
+// 0x0668 (0x0668 - 0x0000)
 struct WDT_BoosterEquipmentMenu_C_UpdateArticleInfo final
 {
 public:
@@ -1638,61 +1647,60 @@ public:
 	struct FUIBoosterQueryInfo                    CallFunc_MakeSelectionQuery_NewQuery_1;            // 0x000C(0x0008)(NoDestructor)
 	EUIBoosterCategory                            CallFunc_GetCurrentCategory_ReturnValue;           // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUIPlayerStatusSummaryInfo             CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo; // 0x0018(0x00B8)(NoDestructor)
-	int32                                         CallFunc_GetSelectingIndex_ReturnValue;            // 0x00D0(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetCategoryNumber_Number;                 // 0x00D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D9[0x3];                                       // 0x00D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUIBoosterQueryInfo                    CallFunc_MakeSelectionQuery_NewQuery_2;            // 0x00DC(0x0008)(NoDestructor)
-	uint8                                         Pad_E4[0x4];                                       // 0x00E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUIBoosterInfo                         CallFunc_GetQueryBoosterInfo_BoosterInfo;          // 0x00E8(0x0098)()
-	struct FUIBoosterQueryInfo                    CallFunc_MakeSelectionQuery_NewQuery_3;            // 0x0180(0x0008)(NoDestructor)
-	struct FUIBoosterInfo                         CallFunc_GetQueryBoosterInfo_BoosterInfo_1;        // 0x0188(0x0098)()
-	struct FUIPlayerStatusSummaryInfo             CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo_1; // 0x0220(0x00B8)(NoDestructor)
-	struct FUIPlayerStatusSummaryInfo             CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo_2; // 0x02D8(0x00B8)(NoDestructor)
-	TScriptInterface<class IIF_FieldMenuUIObject_C> K2Node_DynamicCast_AsIF_Field_Menu_UIObject;       // 0x0390(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x03A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3A1[0x3];                                      // 0x03A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetTargetBoosterSlotIndex_OutIndex;       // 0x03A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_Conv_IntToByte_ReturnValue;               // 0x03A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_GetValidValue_ReturnValue;                // 0x03A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3AA[0x2];                                      // 0x03AA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUIPlayerStatusSummaryInfo             CallFunc_GetPlayerStatusSummaryInfoWithBooster_OutSummaryInfo; // 0x03AC(0x00B8)(NoDestructor)
-	int32                                         CallFunc_GetEquippedBoosterIndexByCategory_ReturnValue; // 0x0464(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0468(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_469[0x3];                                      // 0x0469(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUIBoosterQueryInfo                    K2Node_MakeStruct_UIBoosterQueryInfo;              // 0x046C(0x0008)(NoDestructor)
-	uint8                                         Pad_474[0x4];                                      // 0x0474(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUIBoosterInfo                         CallFunc_GetQueryBoosterInfo_BoosterInfo_2;        // 0x0478(0x0098)()
-	struct FUIPlayerStatusSummaryInfo             CallFunc_GetPlayerStatusSummaryInfoWithBooster_OutSummaryInfo_1; // 0x0510(0x00B8)(NoDestructor)
+	struct FUIPlayerStatusSummaryInfo             CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo; // 0x0018(0x00D8)()
+	int32                                         CallFunc_GetSelectingIndex_ReturnValue;            // 0x00F0(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetCategoryNumber_Number;                 // 0x00F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F9[0x3];                                       // 0x00F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUIBoosterQueryInfo                    CallFunc_MakeSelectionQuery_NewQuery_2;            // 0x00FC(0x0008)(NoDestructor)
+	uint8                                         Pad_104[0x4];                                      // 0x0104(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUIBoosterInfo                         CallFunc_GetQueryBoosterInfo_BoosterInfo;          // 0x0108(0x0098)()
+	struct FUIBoosterQueryInfo                    CallFunc_MakeSelectionQuery_NewQuery_3;            // 0x01A0(0x0008)(NoDestructor)
+	struct FUIBoosterInfo                         CallFunc_GetQueryBoosterInfo_BoosterInfo_1;        // 0x01A8(0x0098)()
+	struct FUIPlayerStatusSummaryInfo             CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo_1; // 0x0240(0x00D8)()
+	struct FUIPlayerStatusSummaryInfo             CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo_2; // 0x0318(0x00D8)()
+	TScriptInterface<class IIF_FieldMenuUIObject_C> K2Node_DynamicCast_AsIF_Field_Menu_UIObject;       // 0x03F0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0400(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_401[0x3];                                      // 0x0401(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetTargetBoosterSlotIndex_OutIndex;       // 0x0404(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_Conv_IntToByte_ReturnValue;               // 0x0408(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_GetValidValue_ReturnValue;                // 0x0409(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_40A[0x6];                                      // 0x040A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUIPlayerStatusSummaryInfo             CallFunc_GetPlayerStatusSummaryInfoWithBooster_OutSummaryInfo; // 0x0410(0x00D8)()
+	int32                                         CallFunc_GetEquippedBoosterIndexByCategory_ReturnValue; // 0x04E8(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x04EC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4ED[0x3];                                      // 0x04ED(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUIBoosterQueryInfo                    K2Node_MakeStruct_UIBoosterQueryInfo;              // 0x04F0(0x0008)(NoDestructor)
+	struct FUIBoosterInfo                         CallFunc_GetQueryBoosterInfo_BoosterInfo_2;        // 0x04F8(0x0098)()
+	struct FUIPlayerStatusSummaryInfo             CallFunc_GetPlayerStatusSummaryInfoWithBooster_OutSummaryInfo_1; // 0x0590(0x00D8)()
 };
 static_assert(alignof(WDT_BoosterEquipmentMenu_C_UpdateArticleInfo) == 0x000008, "Wrong alignment on WDT_BoosterEquipmentMenu_C_UpdateArticleInfo");
-static_assert(sizeof(WDT_BoosterEquipmentMenu_C_UpdateArticleInfo) == 0x0005C8, "Wrong size on WDT_BoosterEquipmentMenu_C_UpdateArticleInfo");
+static_assert(sizeof(WDT_BoosterEquipmentMenu_C_UpdateArticleInfo) == 0x000668, "Wrong size on WDT_BoosterEquipmentMenu_C_UpdateArticleInfo");
 static_assert(offsetof(WDT_BoosterEquipmentMenu_C_UpdateArticleInfo, InBoosterIndex) == 0x000000, "Member 'WDT_BoosterEquipmentMenu_C_UpdateArticleInfo::InBoosterIndex' has a wrong offset!");
 static_assert(offsetof(WDT_BoosterEquipmentMenu_C_UpdateArticleInfo, CallFunc_MakeSelectionQuery_NewQuery) == 0x000004, "Member 'WDT_BoosterEquipmentMenu_C_UpdateArticleInfo::CallFunc_MakeSelectionQuery_NewQuery' has a wrong offset!");
 static_assert(offsetof(WDT_BoosterEquipmentMenu_C_UpdateArticleInfo, CallFunc_MakeSelectionQuery_NewQuery_1) == 0x00000C, "Member 'WDT_BoosterEquipmentMenu_C_UpdateArticleInfo::CallFunc_MakeSelectionQuery_NewQuery_1' has a wrong offset!");
 static_assert(offsetof(WDT_BoosterEquipmentMenu_C_UpdateArticleInfo, CallFunc_GetCurrentCategory_ReturnValue) == 0x000014, "Member 'WDT_BoosterEquipmentMenu_C_UpdateArticleInfo::CallFunc_GetCurrentCategory_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_BoosterEquipmentMenu_C_UpdateArticleInfo, CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo) == 0x000018, "Member 'WDT_BoosterEquipmentMenu_C_UpdateArticleInfo::CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_UpdateArticleInfo, CallFunc_GetSelectingIndex_ReturnValue) == 0x0000D0, "Member 'WDT_BoosterEquipmentMenu_C_UpdateArticleInfo::CallFunc_GetSelectingIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_UpdateArticleInfo, CallFunc_GetCategoryNumber_Number) == 0x0000D4, "Member 'WDT_BoosterEquipmentMenu_C_UpdateArticleInfo::CallFunc_GetCategoryNumber_Number' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_UpdateArticleInfo, CallFunc_Greater_IntInt_ReturnValue) == 0x0000D8, "Member 'WDT_BoosterEquipmentMenu_C_UpdateArticleInfo::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_UpdateArticleInfo, CallFunc_MakeSelectionQuery_NewQuery_2) == 0x0000DC, "Member 'WDT_BoosterEquipmentMenu_C_UpdateArticleInfo::CallFunc_MakeSelectionQuery_NewQuery_2' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_UpdateArticleInfo, CallFunc_GetQueryBoosterInfo_BoosterInfo) == 0x0000E8, "Member 'WDT_BoosterEquipmentMenu_C_UpdateArticleInfo::CallFunc_GetQueryBoosterInfo_BoosterInfo' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_UpdateArticleInfo, CallFunc_MakeSelectionQuery_NewQuery_3) == 0x000180, "Member 'WDT_BoosterEquipmentMenu_C_UpdateArticleInfo::CallFunc_MakeSelectionQuery_NewQuery_3' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_UpdateArticleInfo, CallFunc_GetQueryBoosterInfo_BoosterInfo_1) == 0x000188, "Member 'WDT_BoosterEquipmentMenu_C_UpdateArticleInfo::CallFunc_GetQueryBoosterInfo_BoosterInfo_1' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_UpdateArticleInfo, CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo_1) == 0x000220, "Member 'WDT_BoosterEquipmentMenu_C_UpdateArticleInfo::CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo_1' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_UpdateArticleInfo, CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo_2) == 0x0002D8, "Member 'WDT_BoosterEquipmentMenu_C_UpdateArticleInfo::CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo_2' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_UpdateArticleInfo, K2Node_DynamicCast_AsIF_Field_Menu_UIObject) == 0x000390, "Member 'WDT_BoosterEquipmentMenu_C_UpdateArticleInfo::K2Node_DynamicCast_AsIF_Field_Menu_UIObject' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_UpdateArticleInfo, K2Node_DynamicCast_bSuccess) == 0x0003A0, "Member 'WDT_BoosterEquipmentMenu_C_UpdateArticleInfo::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_UpdateArticleInfo, CallFunc_GetTargetBoosterSlotIndex_OutIndex) == 0x0003A4, "Member 'WDT_BoosterEquipmentMenu_C_UpdateArticleInfo::CallFunc_GetTargetBoosterSlotIndex_OutIndex' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_UpdateArticleInfo, CallFunc_Conv_IntToByte_ReturnValue) == 0x0003A8, "Member 'WDT_BoosterEquipmentMenu_C_UpdateArticleInfo::CallFunc_Conv_IntToByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_UpdateArticleInfo, CallFunc_GetValidValue_ReturnValue) == 0x0003A9, "Member 'WDT_BoosterEquipmentMenu_C_UpdateArticleInfo::CallFunc_GetValidValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_UpdateArticleInfo, CallFunc_GetPlayerStatusSummaryInfoWithBooster_OutSummaryInfo) == 0x0003AC, "Member 'WDT_BoosterEquipmentMenu_C_UpdateArticleInfo::CallFunc_GetPlayerStatusSummaryInfoWithBooster_OutSummaryInfo' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_UpdateArticleInfo, CallFunc_GetEquippedBoosterIndexByCategory_ReturnValue) == 0x000464, "Member 'WDT_BoosterEquipmentMenu_C_UpdateArticleInfo::CallFunc_GetEquippedBoosterIndexByCategory_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_UpdateArticleInfo, CallFunc_Less_IntInt_ReturnValue) == 0x000468, "Member 'WDT_BoosterEquipmentMenu_C_UpdateArticleInfo::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_UpdateArticleInfo, K2Node_MakeStruct_UIBoosterQueryInfo) == 0x00046C, "Member 'WDT_BoosterEquipmentMenu_C_UpdateArticleInfo::K2Node_MakeStruct_UIBoosterQueryInfo' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_UpdateArticleInfo, CallFunc_GetQueryBoosterInfo_BoosterInfo_2) == 0x000478, "Member 'WDT_BoosterEquipmentMenu_C_UpdateArticleInfo::CallFunc_GetQueryBoosterInfo_BoosterInfo_2' has a wrong offset!");
-static_assert(offsetof(WDT_BoosterEquipmentMenu_C_UpdateArticleInfo, CallFunc_GetPlayerStatusSummaryInfoWithBooster_OutSummaryInfo_1) == 0x000510, "Member 'WDT_BoosterEquipmentMenu_C_UpdateArticleInfo::CallFunc_GetPlayerStatusSummaryInfoWithBooster_OutSummaryInfo_1' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_UpdateArticleInfo, CallFunc_GetSelectingIndex_ReturnValue) == 0x0000F0, "Member 'WDT_BoosterEquipmentMenu_C_UpdateArticleInfo::CallFunc_GetSelectingIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_UpdateArticleInfo, CallFunc_GetCategoryNumber_Number) == 0x0000F4, "Member 'WDT_BoosterEquipmentMenu_C_UpdateArticleInfo::CallFunc_GetCategoryNumber_Number' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_UpdateArticleInfo, CallFunc_Greater_IntInt_ReturnValue) == 0x0000F8, "Member 'WDT_BoosterEquipmentMenu_C_UpdateArticleInfo::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_UpdateArticleInfo, CallFunc_MakeSelectionQuery_NewQuery_2) == 0x0000FC, "Member 'WDT_BoosterEquipmentMenu_C_UpdateArticleInfo::CallFunc_MakeSelectionQuery_NewQuery_2' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_UpdateArticleInfo, CallFunc_GetQueryBoosterInfo_BoosterInfo) == 0x000108, "Member 'WDT_BoosterEquipmentMenu_C_UpdateArticleInfo::CallFunc_GetQueryBoosterInfo_BoosterInfo' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_UpdateArticleInfo, CallFunc_MakeSelectionQuery_NewQuery_3) == 0x0001A0, "Member 'WDT_BoosterEquipmentMenu_C_UpdateArticleInfo::CallFunc_MakeSelectionQuery_NewQuery_3' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_UpdateArticleInfo, CallFunc_GetQueryBoosterInfo_BoosterInfo_1) == 0x0001A8, "Member 'WDT_BoosterEquipmentMenu_C_UpdateArticleInfo::CallFunc_GetQueryBoosterInfo_BoosterInfo_1' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_UpdateArticleInfo, CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo_1) == 0x000240, "Member 'WDT_BoosterEquipmentMenu_C_UpdateArticleInfo::CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo_1' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_UpdateArticleInfo, CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo_2) == 0x000318, "Member 'WDT_BoosterEquipmentMenu_C_UpdateArticleInfo::CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo_2' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_UpdateArticleInfo, K2Node_DynamicCast_AsIF_Field_Menu_UIObject) == 0x0003F0, "Member 'WDT_BoosterEquipmentMenu_C_UpdateArticleInfo::K2Node_DynamicCast_AsIF_Field_Menu_UIObject' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_UpdateArticleInfo, K2Node_DynamicCast_bSuccess) == 0x000400, "Member 'WDT_BoosterEquipmentMenu_C_UpdateArticleInfo::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_UpdateArticleInfo, CallFunc_GetTargetBoosterSlotIndex_OutIndex) == 0x000404, "Member 'WDT_BoosterEquipmentMenu_C_UpdateArticleInfo::CallFunc_GetTargetBoosterSlotIndex_OutIndex' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_UpdateArticleInfo, CallFunc_Conv_IntToByte_ReturnValue) == 0x000408, "Member 'WDT_BoosterEquipmentMenu_C_UpdateArticleInfo::CallFunc_Conv_IntToByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_UpdateArticleInfo, CallFunc_GetValidValue_ReturnValue) == 0x000409, "Member 'WDT_BoosterEquipmentMenu_C_UpdateArticleInfo::CallFunc_GetValidValue_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_UpdateArticleInfo, CallFunc_GetPlayerStatusSummaryInfoWithBooster_OutSummaryInfo) == 0x000410, "Member 'WDT_BoosterEquipmentMenu_C_UpdateArticleInfo::CallFunc_GetPlayerStatusSummaryInfoWithBooster_OutSummaryInfo' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_UpdateArticleInfo, CallFunc_GetEquippedBoosterIndexByCategory_ReturnValue) == 0x0004E8, "Member 'WDT_BoosterEquipmentMenu_C_UpdateArticleInfo::CallFunc_GetEquippedBoosterIndexByCategory_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_UpdateArticleInfo, CallFunc_Less_IntInt_ReturnValue) == 0x0004EC, "Member 'WDT_BoosterEquipmentMenu_C_UpdateArticleInfo::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_UpdateArticleInfo, K2Node_MakeStruct_UIBoosterQueryInfo) == 0x0004F0, "Member 'WDT_BoosterEquipmentMenu_C_UpdateArticleInfo::K2Node_MakeStruct_UIBoosterQueryInfo' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_UpdateArticleInfo, CallFunc_GetQueryBoosterInfo_BoosterInfo_2) == 0x0004F8, "Member 'WDT_BoosterEquipmentMenu_C_UpdateArticleInfo::CallFunc_GetQueryBoosterInfo_BoosterInfo_2' has a wrong offset!");
+static_assert(offsetof(WDT_BoosterEquipmentMenu_C_UpdateArticleInfo, CallFunc_GetPlayerStatusSummaryInfoWithBooster_OutSummaryInfo_1) == 0x000590, "Member 'WDT_BoosterEquipmentMenu_C_UpdateArticleInfo::CallFunc_GetPlayerStatusSummaryInfoWithBooster_OutSummaryInfo_1' has a wrong offset!");
 
 // Function WDT_BoosterEquipmentMenu.WDT_BoosterEquipmentMenu_C.UpdateProhibited
 // 0x0001 (0x0001 - 0x0000)

@@ -16,46 +16,6 @@
 namespace SDK::Params
 {
 
-// Function WDT_StatusSummary_Resistant.WDT_StatusSummary_Resistant_C.ExecuteUbergraph_WDT_StatusSummary_Resistant
-// 0x0008 (0x0008 - 0x0000)
-struct WDT_StatusSummary_Resistant_C_ExecuteUbergraph_WDT_StatusSummary_Resistant final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_IsDesignTime;                         // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_StatusSummary_Resistant_C_ExecuteUbergraph_WDT_StatusSummary_Resistant) == 0x000004, "Wrong alignment on WDT_StatusSummary_Resistant_C_ExecuteUbergraph_WDT_StatusSummary_Resistant");
-static_assert(sizeof(WDT_StatusSummary_Resistant_C_ExecuteUbergraph_WDT_StatusSummary_Resistant) == 0x000008, "Wrong size on WDT_StatusSummary_Resistant_C_ExecuteUbergraph_WDT_StatusSummary_Resistant");
-static_assert(offsetof(WDT_StatusSummary_Resistant_C_ExecuteUbergraph_WDT_StatusSummary_Resistant, EntryPoint) == 0x000000, "Member 'WDT_StatusSummary_Resistant_C_ExecuteUbergraph_WDT_StatusSummary_Resistant::EntryPoint' has a wrong offset!");
-static_assert(offsetof(WDT_StatusSummary_Resistant_C_ExecuteUbergraph_WDT_StatusSummary_Resistant, K2Node_Event_IsDesignTime) == 0x000004, "Member 'WDT_StatusSummary_Resistant_C_ExecuteUbergraph_WDT_StatusSummary_Resistant::K2Node_Event_IsDesignTime' has a wrong offset!");
-
-// Function WDT_StatusSummary_Resistant.WDT_StatusSummary_Resistant_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WDT_StatusSummary_Resistant_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_StatusSummary_Resistant_C_PreConstruct) == 0x000001, "Wrong alignment on WDT_StatusSummary_Resistant_C_PreConstruct");
-static_assert(sizeof(WDT_StatusSummary_Resistant_C_PreConstruct) == 0x000001, "Wrong size on WDT_StatusSummary_Resistant_C_PreConstruct");
-static_assert(offsetof(WDT_StatusSummary_Resistant_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WDT_StatusSummary_Resistant_C_PreConstruct::IsDesignTime' has a wrong offset!");
-
-// Function WDT_StatusSummary_Resistant.WDT_StatusSummary_Resistant_C.SetValue
-// 0x0030 (0x0030 - 0x0000)
-struct WDT_StatusSummary_Resistant_C_SetValue final
-{
-public:
-	int32                                         InValue;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0008(0x0010)()
-	struct FSlateColor                            CallFunc_GetTextColorByCompareResult_TextColor;    // 0x0018(0x0014)()
-};
-static_assert(alignof(WDT_StatusSummary_Resistant_C_SetValue) == 0x000008, "Wrong alignment on WDT_StatusSummary_Resistant_C_SetValue");
-static_assert(sizeof(WDT_StatusSummary_Resistant_C_SetValue) == 0x000030, "Wrong size on WDT_StatusSummary_Resistant_C_SetValue");
-static_assert(offsetof(WDT_StatusSummary_Resistant_C_SetValue, InValue) == 0x000000, "Member 'WDT_StatusSummary_Resistant_C_SetValue::InValue' has a wrong offset!");
-static_assert(offsetof(WDT_StatusSummary_Resistant_C_SetValue, CallFunc_Conv_IntToText_ReturnValue) == 0x000008, "Member 'WDT_StatusSummary_Resistant_C_SetValue::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_StatusSummary_Resistant_C_SetValue, CallFunc_GetTextColorByCompareResult_TextColor) == 0x000018, "Member 'WDT_StatusSummary_Resistant_C_SetValue::CallFunc_GetTextColorByCompareResult_TextColor' has a wrong offset!");
-
 // Function WDT_StatusSummary_Resistant.WDT_StatusSummary_Resistant_C.SetValueComparison
 // 0x0020 (0x0020 - 0x0000)
 struct WDT_StatusSummary_Resistant_C_SetValueComparison final
@@ -73,6 +33,46 @@ static_assert(offsetof(WDT_StatusSummary_Resistant_C_SetValueComparison, InCurre
 static_assert(offsetof(WDT_StatusSummary_Resistant_C_SetValueComparison, InTargetValue) == 0x000004, "Member 'WDT_StatusSummary_Resistant_C_SetValueComparison::InTargetValue' has a wrong offset!");
 static_assert(offsetof(WDT_StatusSummary_Resistant_C_SetValueComparison, CallFunc_CompareInteger_CompareResult) == 0x000008, "Member 'WDT_StatusSummary_Resistant_C_SetValueComparison::CallFunc_CompareInteger_CompareResult' has a wrong offset!");
 static_assert(offsetof(WDT_StatusSummary_Resistant_C_SetValueComparison, CallFunc_GetTextColorByCompareResult_TextColor) == 0x00000C, "Member 'WDT_StatusSummary_Resistant_C_SetValueComparison::CallFunc_GetTextColorByCompareResult_TextColor' has a wrong offset!");
+
+// Function WDT_StatusSummary_Resistant.WDT_StatusSummary_Resistant_C.SetValue
+// 0x0030 (0x0030 - 0x0000)
+struct WDT_StatusSummary_Resistant_C_SetValue final
+{
+public:
+	int32                                         InValue;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0008(0x0010)()
+	struct FSlateColor                            CallFunc_GetTextColorByCompareResult_TextColor;    // 0x0018(0x0014)()
+};
+static_assert(alignof(WDT_StatusSummary_Resistant_C_SetValue) == 0x000008, "Wrong alignment on WDT_StatusSummary_Resistant_C_SetValue");
+static_assert(sizeof(WDT_StatusSummary_Resistant_C_SetValue) == 0x000030, "Wrong size on WDT_StatusSummary_Resistant_C_SetValue");
+static_assert(offsetof(WDT_StatusSummary_Resistant_C_SetValue, InValue) == 0x000000, "Member 'WDT_StatusSummary_Resistant_C_SetValue::InValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusSummary_Resistant_C_SetValue, CallFunc_Conv_IntToText_ReturnValue) == 0x000008, "Member 'WDT_StatusSummary_Resistant_C_SetValue::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusSummary_Resistant_C_SetValue, CallFunc_GetTextColorByCompareResult_TextColor) == 0x000018, "Member 'WDT_StatusSummary_Resistant_C_SetValue::CallFunc_GetTextColorByCompareResult_TextColor' has a wrong offset!");
+
+// Function WDT_StatusSummary_Resistant.WDT_StatusSummary_Resistant_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WDT_StatusSummary_Resistant_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_StatusSummary_Resistant_C_PreConstruct) == 0x000001, "Wrong alignment on WDT_StatusSummary_Resistant_C_PreConstruct");
+static_assert(sizeof(WDT_StatusSummary_Resistant_C_PreConstruct) == 0x000001, "Wrong size on WDT_StatusSummary_Resistant_C_PreConstruct");
+static_assert(offsetof(WDT_StatusSummary_Resistant_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WDT_StatusSummary_Resistant_C_PreConstruct::IsDesignTime' has a wrong offset!");
+
+// Function WDT_StatusSummary_Resistant.WDT_StatusSummary_Resistant_C.ExecuteUbergraph_WDT_StatusSummary_Resistant
+// 0x0008 (0x0008 - 0x0000)
+struct WDT_StatusSummary_Resistant_C_ExecuteUbergraph_WDT_StatusSummary_Resistant final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_IsDesignTime;                         // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_StatusSummary_Resistant_C_ExecuteUbergraph_WDT_StatusSummary_Resistant) == 0x000004, "Wrong alignment on WDT_StatusSummary_Resistant_C_ExecuteUbergraph_WDT_StatusSummary_Resistant");
+static_assert(sizeof(WDT_StatusSummary_Resistant_C_ExecuteUbergraph_WDT_StatusSummary_Resistant) == 0x000008, "Wrong size on WDT_StatusSummary_Resistant_C_ExecuteUbergraph_WDT_StatusSummary_Resistant");
+static_assert(offsetof(WDT_StatusSummary_Resistant_C_ExecuteUbergraph_WDT_StatusSummary_Resistant, EntryPoint) == 0x000000, "Member 'WDT_StatusSummary_Resistant_C_ExecuteUbergraph_WDT_StatusSummary_Resistant::EntryPoint' has a wrong offset!");
+static_assert(offsetof(WDT_StatusSummary_Resistant_C_ExecuteUbergraph_WDT_StatusSummary_Resistant, K2Node_Event_IsDesignTime) == 0x000004, "Member 'WDT_StatusSummary_Resistant_C_ExecuteUbergraph_WDT_StatusSummary_Resistant::K2Node_Event_IsDesignTime' has a wrong offset!");
 
 }
 

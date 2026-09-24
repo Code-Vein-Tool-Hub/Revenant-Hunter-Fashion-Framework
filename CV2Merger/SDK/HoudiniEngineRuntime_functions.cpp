@@ -103,125 +103,6 @@ void UHoudiniAssetBlueprintComponent::SetToggleValueAt(const class FString& Name
 }
 
 
-// Function HoudiniEngineRuntime.HoudiniStaticMeshComponent.GetMesh
-// (Final, Native, Public)
-// Parameters:
-// class UHoudiniStaticMesh*               ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UHoudiniStaticMesh* UHoudiniStaticMeshComponent::GetMesh()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HoudiniStaticMeshComponent", "GetMesh");
-
-	Params::HoudiniStaticMeshComponent_GetMesh Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function HoudiniEngineRuntime.HoudiniStaticMeshComponent.NotifyMeshUpdated
-// (Final, Native, Public)
-
-void UHoudiniStaticMeshComponent::NotifyMeshUpdated()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HoudiniStaticMeshComponent", "NotifyMeshUpdated");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function HoudiniEngineRuntime.HoudiniStaticMeshComponent.SetHoudiniIconVisible
-// (Final, Native, Public)
-// Parameters:
-// bool                                    bInHoudiniIconVisible                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UHoudiniStaticMeshComponent::SetHoudiniIconVisible(bool bInHoudiniIconVisible)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HoudiniStaticMeshComponent", "SetHoudiniIconVisible");
-
-	Params::HoudiniStaticMeshComponent_SetHoudiniIconVisible Parms{};
-
-	Parms.bInHoudiniIconVisible = bInHoudiniIconVisible;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function HoudiniEngineRuntime.HoudiniStaticMeshComponent.SetMesh
-// (Final, Native, Public)
-// Parameters:
-// class UHoudiniStaticMesh*               InMesh                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UHoudiniStaticMeshComponent::SetMesh(class UHoudiniStaticMesh* InMesh)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HoudiniStaticMeshComponent", "SetMesh");
-
-	Params::HoudiniStaticMeshComponent_SetMesh Parms{};
-
-	Parms.InMesh = InMesh;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function HoudiniEngineRuntime.HoudiniStaticMeshComponent.IsHoudiniIconVisible
-// (Final, Native, Public, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UHoudiniStaticMeshComponent::IsHoudiniIconVisible() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HoudiniStaticMeshComponent", "IsHoudiniIconVisible");
-
-	Params::HoudiniStaticMeshComponent_IsHoudiniIconVisible Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function HoudiniEngineRuntime.HoudiniStaticMesh.AddStaticMaterial
 // (Final, Native, Public, HasOutParams)
 // Parameters:
@@ -1310,6 +1191,125 @@ bool UHoudiniStaticMesh::IsValid(bool bInSkipVertexIndicesCheck) const
 	Params::HoudiniStaticMesh_IsValid Parms{};
 
 	Parms.bInSkipVertexIndicesCheck = bInSkipVertexIndicesCheck;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function HoudiniEngineRuntime.HoudiniStaticMeshComponent.GetMesh
+// (Final, Native, Public)
+// Parameters:
+// class UHoudiniStaticMesh*               ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UHoudiniStaticMesh* UHoudiniStaticMeshComponent::GetMesh()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("HoudiniStaticMeshComponent", "GetMesh");
+
+	Params::HoudiniStaticMeshComponent_GetMesh Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function HoudiniEngineRuntime.HoudiniStaticMeshComponent.NotifyMeshUpdated
+// (Final, Native, Public)
+
+void UHoudiniStaticMeshComponent::NotifyMeshUpdated()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("HoudiniStaticMeshComponent", "NotifyMeshUpdated");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function HoudiniEngineRuntime.HoudiniStaticMeshComponent.SetHoudiniIconVisible
+// (Final, Native, Public)
+// Parameters:
+// bool                                    bInHoudiniIconVisible                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UHoudiniStaticMeshComponent::SetHoudiniIconVisible(bool bInHoudiniIconVisible)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("HoudiniStaticMeshComponent", "SetHoudiniIconVisible");
+
+	Params::HoudiniStaticMeshComponent_SetHoudiniIconVisible Parms{};
+
+	Parms.bInHoudiniIconVisible = bInHoudiniIconVisible;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function HoudiniEngineRuntime.HoudiniStaticMeshComponent.SetMesh
+// (Final, Native, Public)
+// Parameters:
+// class UHoudiniStaticMesh*               InMesh                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UHoudiniStaticMeshComponent::SetMesh(class UHoudiniStaticMesh* InMesh)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("HoudiniStaticMeshComponent", "SetMesh");
+
+	Params::HoudiniStaticMeshComponent_SetMesh Parms{};
+
+	Parms.InMesh = InMesh;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function HoudiniEngineRuntime.HoudiniStaticMeshComponent.IsHoudiniIconVisible
+// (Final, Native, Public, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UHoudiniStaticMeshComponent::IsHoudiniIconVisible() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("HoudiniStaticMeshComponent", "IsHoudiniIconVisible");
+
+	Params::HoudiniStaticMeshComponent_IsHoudiniIconVisible Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

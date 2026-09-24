@@ -47,28 +47,28 @@ public:
 	class UBP_StatusIndicatorUIObject_C*          StatusIndicatorUIObject;                           // 0x06A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void OnChangeVisibleByBatttleState__DelegateSignature(bool InIsVisible);
-	void ActivateBarrier();
-	void Construct();
-	void DeactivateBarrier();
-	void ExecuteUbergraph_WDT_BarrierGauge(int32 EntryPoint);
-	void ForcedShow();
-	void GetResourcePercent(double* OutPercent);
-	void HideBattleState();
-	void NotifyBarrierBrokenDown();
-	void NotifyBarrierPointChanged(double InCurrentBarrier, double InMaxBarrier);
-	void NotifyCooldownUpdated(double InRemainingTime, double InTotalTime);
-	void OnAnimationFinished(const class UWidgetAnimation* Animation);
-	void OnBattleStateChanged(bool InBattleState);
-	void SetSpacingSize(double InSize);
-	void SetSummonMode(ESummonGaugeMode InMode);
 	void StartBackGauge();
-	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void TickBackGauge(double InDeltaTime);
-	void UpdateGaugeEnabled();
+	void HideBattleState();
+	void GetResourcePercent(double* OutPercent);
+	void ForcedShow();
 	void UpdateVisibilityBasedOnBattleState();
+	void DeactivateBarrier();
+	void ActivateBarrier();
+	void UpdateGaugeEnabled();
+	void SetSpacingSize(double InSize);
+	void OnBattleStateChanged(bool InBattleState);
+	void NotifyBarrierBrokenDown();
+	void NotifyCooldownUpdated(double InRemainingTime, double InTotalTime);
+	void NotifyBarrierPointChanged(double InCurrentBarrier, double InMaxBarrier);
+	void SetSummonMode(ESummonGaugeMode InMode);
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void Construct();
+	void OnAnimationFinished(const class UWidgetAnimation* Animation);
 	void WidgetAnimationEvt_BattleEndAnimation_K2Node_WidgetAnimationEvent_0();
 	void WidgetAnimationEvt_BattleEndAnimation_K2Node_WidgetAnimationEvent_1();
+	void OnChangeVisibleByBatttleState__DelegateSignature(bool InIsVisible);
+	void ExecuteUbergraph_WDT_BarrierGauge(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

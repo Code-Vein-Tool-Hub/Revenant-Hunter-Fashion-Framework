@@ -49,6 +49,30 @@ static_assert(alignof(WDT_ConfigTextInputPiece_C_SetIconDisplayEnable) == 0x0000
 static_assert(sizeof(WDT_ConfigTextInputPiece_C_SetIconDisplayEnable) == 0x000001, "Wrong size on WDT_ConfigTextInputPiece_C_SetIconDisplayEnable");
 static_assert(offsetof(WDT_ConfigTextInputPiece_C_SetIconDisplayEnable, InIsFlag) == 0x000000, "Member 'WDT_ConfigTextInputPiece_C_SetIconDisplayEnable::InIsFlag' has a wrong offset!");
 
+// Function WDT_ConfigTextInputPiece.WDT_ConfigTextInputPiece_C.OnTextCommitted__DelegateSignature
+// 0x0018 (0x0018 - 0x0000)
+struct WDT_ConfigTextInputPiece_C_OnTextCommitted__DelegateSignature final
+{
+public:
+	class FText                                   InText;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+	ETextCommit                                   InCommitMethot;                                    // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_ConfigTextInputPiece_C_OnTextCommitted__DelegateSignature) == 0x000008, "Wrong alignment on WDT_ConfigTextInputPiece_C_OnTextCommitted__DelegateSignature");
+static_assert(sizeof(WDT_ConfigTextInputPiece_C_OnTextCommitted__DelegateSignature) == 0x000018, "Wrong size on WDT_ConfigTextInputPiece_C_OnTextCommitted__DelegateSignature");
+static_assert(offsetof(WDT_ConfigTextInputPiece_C_OnTextCommitted__DelegateSignature, InText) == 0x000000, "Member 'WDT_ConfigTextInputPiece_C_OnTextCommitted__DelegateSignature::InText' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigTextInputPiece_C_OnTextCommitted__DelegateSignature, InCommitMethot) == 0x000010, "Member 'WDT_ConfigTextInputPiece_C_OnTextCommitted__DelegateSignature::InCommitMethot' has a wrong offset!");
+
+// Function WDT_ConfigTextInputPiece.WDT_ConfigTextInputPiece_C.InputModeCancel
+// 0x0010 (0x0010 - 0x0000)
+struct WDT_ConfigTextInputPiece_C_InputModeCancel final
+{
+public:
+	class FText                                   CallFunc_GetText_ReturnValue;                      // 0x0000(0x0010)()
+};
+static_assert(alignof(WDT_ConfigTextInputPiece_C_InputModeCancel) == 0x000008, "Wrong alignment on WDT_ConfigTextInputPiece_C_InputModeCancel");
+static_assert(sizeof(WDT_ConfigTextInputPiece_C_InputModeCancel) == 0x000010, "Wrong size on WDT_ConfigTextInputPiece_C_InputModeCancel");
+static_assert(offsetof(WDT_ConfigTextInputPiece_C_InputModeCancel, CallFunc_GetText_ReturnValue) == 0x000000, "Member 'WDT_ConfigTextInputPiece_C_InputModeCancel::CallFunc_GetText_ReturnValue' has a wrong offset!");
+
 // Function WDT_ConfigTextInputPiece.WDT_ConfigTextInputPiece_C.GetText
 // 0x0020 (0x0020 - 0x0000)
 struct WDT_ConfigTextInputPiece_C_GetText final

@@ -223,8 +223,8 @@ static_assert(offsetof(BP_DrawScarElement_NiagaraScar_C_Process, CallFunc_SetSca
 struct BP_DrawScarElement_NiagaraScar_C_SetNiagaraScarParameter final
 {
 public:
-	double                                        ScarLifetime;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        OldScarLifetime;                                   // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ScarLifeTime;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        OldScarLifeTime;                                   // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        ScarLifeTime_Substruct;                            // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        OldScarLifeTime_Substruct;                         // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        InOldScarLifeTime_Substruct;                       // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -240,8 +240,8 @@ public:
 };
 static_assert(alignof(BP_DrawScarElement_NiagaraScar_C_SetNiagaraScarParameter) == 0x000008, "Wrong alignment on BP_DrawScarElement_NiagaraScar_C_SetNiagaraScarParameter");
 static_assert(sizeof(BP_DrawScarElement_NiagaraScar_C_SetNiagaraScarParameter) == 0x000058, "Wrong size on BP_DrawScarElement_NiagaraScar_C_SetNiagaraScarParameter");
-static_assert(offsetof(BP_DrawScarElement_NiagaraScar_C_SetNiagaraScarParameter, ScarLifetime) == 0x000000, "Member 'BP_DrawScarElement_NiagaraScar_C_SetNiagaraScarParameter::ScarLifetime' has a wrong offset!");
-static_assert(offsetof(BP_DrawScarElement_NiagaraScar_C_SetNiagaraScarParameter, OldScarLifetime) == 0x000008, "Member 'BP_DrawScarElement_NiagaraScar_C_SetNiagaraScarParameter::OldScarLifetime' has a wrong offset!");
+static_assert(offsetof(BP_DrawScarElement_NiagaraScar_C_SetNiagaraScarParameter, ScarLifeTime) == 0x000000, "Member 'BP_DrawScarElement_NiagaraScar_C_SetNiagaraScarParameter::ScarLifeTime' has a wrong offset!");
+static_assert(offsetof(BP_DrawScarElement_NiagaraScar_C_SetNiagaraScarParameter, OldScarLifeTime) == 0x000008, "Member 'BP_DrawScarElement_NiagaraScar_C_SetNiagaraScarParameter::OldScarLifeTime' has a wrong offset!");
 static_assert(offsetof(BP_DrawScarElement_NiagaraScar_C_SetNiagaraScarParameter, ScarLifeTime_Substruct) == 0x000010, "Member 'BP_DrawScarElement_NiagaraScar_C_SetNiagaraScarParameter::ScarLifeTime_Substruct' has a wrong offset!");
 static_assert(offsetof(BP_DrawScarElement_NiagaraScar_C_SetNiagaraScarParameter, OldScarLifeTime_Substruct) == 0x000018, "Member 'BP_DrawScarElement_NiagaraScar_C_SetNiagaraScarParameter::OldScarLifeTime_Substruct' has a wrong offset!");
 static_assert(offsetof(BP_DrawScarElement_NiagaraScar_C_SetNiagaraScarParameter, InOldScarLifeTime_Substruct) == 0x000020, "Member 'BP_DrawScarElement_NiagaraScar_C_SetNiagaraScarParameter::InOldScarLifeTime_Substruct' has a wrong offset!");

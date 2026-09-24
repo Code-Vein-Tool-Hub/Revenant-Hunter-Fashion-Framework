@@ -30,10 +30,10 @@ public:
 	int32                                         PreviewNumber2;                                    // 0x06EC(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_WDT_Status_NumberAndDiff(int32 EntryPoint);
-	void PreConstruct(bool IsDesignTime);
-	void SetNumber(int32 InNumber);
 	void SetNumberDiff(int32 InCurrentNumber, int32 InNumber, bool SwapComparison);
+	void SetNumber(int32 InNumber);
+	void PreConstruct(bool IsDesignTime);
+	void ExecuteUbergraph_WDT_Status_NumberAndDiff(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

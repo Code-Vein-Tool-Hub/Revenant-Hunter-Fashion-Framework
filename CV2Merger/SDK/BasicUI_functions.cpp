@@ -17,6 +17,66 @@
 namespace SDK
 {
 
+// Function BasicUI.MultipleFlagInterface.GetFlag
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             FlagName                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool IMultipleFlagInterface::GetFlag(class FName FlagName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MultipleFlagInterface", "GetFlag");
+
+	Params::MultipleFlagInterface_GetFlag Parms{};
+
+	Parms.FlagName = FlagName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BasicUI.MultipleFlagInterface.SetFlag
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             FlagName                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    FlagValue                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bFireEvent                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool IMultipleFlagInterface::SetFlag(class FName FlagName, bool FlagValue, bool bFireEvent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MultipleFlagInterface", "SetFlag");
+
+	Params::MultipleFlagInterface_SetFlag Parms{};
+
+	Parms.FlagName = FlagName;
+	Parms.FlagValue = FlagValue;
+	Parms.bFireEvent = bFireEvent;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function BasicUI.AsyncTileMap.BuildTileMap
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -450,6 +510,89 @@ bool UUIElementBase::Show(bool bRestoreVisibility)
 	Params::UIElementBase_Show Parms{};
 
 	Parms.bRestoreVisibility = bRestoreVisibility;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BasicUI.CheckableInterface.Check
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    PlayAnimation                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    AnotherAppearance                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ICheckableInterface::Check(bool PlayAnimation, bool AnotherAppearance)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CheckableInterface", "Check");
+
+	Params::CheckableInterface_Check Parms{};
+
+	Parms.PlayAnimation = PlayAnimation;
+	Parms.AnotherAppearance = AnotherAppearance;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BasicUI.CheckableInterface.IsChecked
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ICheckableInterface::IsChecked()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CheckableInterface", "IsChecked");
+
+	Params::CheckableInterface_IsChecked Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BasicUI.CheckableInterface.Uncheck
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    PlayAnimation                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ICheckableInterface::Uncheck(bool PlayAnimation)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CheckableInterface", "Uncheck");
+
+	Params::CheckableInterface_Uncheck Parms{};
+
+	Parms.PlayAnimation = PlayAnimation;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2059,59 +2202,6 @@ const struct FDialogInfo UDialogBase::GetDialogInfo() const
 }
 
 
-// Function BasicUI.FloatHolderInterface.GetFloat
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-float IFloatHolderInterface::GetFloat()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FloatHolderInterface", "GetFloat");
-
-	Params::FloatHolderInterface_GetFloat Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BasicUI.FloatHolderInterface.SetFloat
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   Number                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool IFloatHolderInterface::SetFloat(const float Number)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FloatHolderInterface", "SetFloat");
-
-	Params::FloatHolderInterface_SetFloat Parms{};
-
-	Parms.Number = Number;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function BasicUI.EnhancedWidgetSwitcher.IsSwitchingChildWidget
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -2125,6 +2215,56 @@ bool UEnhancedWidgetSwitcher::IsSwitchingChildWidget() const
 		Func = Class->GetFunction("EnhancedWidgetSwitcher", "IsSwitchingChildWidget");
 
 	Params::EnhancedWidgetSwitcher_IsSwitchingChildWidget Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BasicUI.ButtonInterface.PressButton
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool IButtonInterface::PressButton()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ButtonInterface", "PressButton");
+
+	Params::ButtonInterface_PressButton Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BasicUI.ButtonInterface.ReleaseButton
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool IButtonInterface::ReleaseButton()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ButtonInterface", "ReleaseButton");
+
+	Params::ButtonInterface_ReleaseButton Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2464,6 +2604,31 @@ void UGridScroller::SetEnableScrollAnimation(bool bInEnableScrollAnimation)
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function BasicUI.GeneralUIExpressionInterface.Blink
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool IGeneralUIExpressionInterface::Blink()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GeneralUIExpressionInterface", "Blink");
+
+	Params::GeneralUIExpressionInterface_Blink Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
@@ -3149,6 +3314,1332 @@ class UUIObjectBase* UMenuPieceBase::GetUIObject() const
 }
 
 
+// Function BasicUI.MeterPieceBase.OnMeterValueChanged
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   MeterValueToNotify                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Percentage                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   DisplayNumber                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    PlayAnimation_0                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMeterPieceBase::OnMeterValueChanged(float MeterValueToNotify, float Percentage, float DisplayNumber, bool PlayAnimation_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MeterPieceBase", "OnMeterValueChanged");
+
+	Params::MeterPieceBase_OnMeterValueChanged Parms{};
+
+	Parms.MeterValueToNotify = MeterValueToNotify;
+	Parms.Percentage = Percentage;
+	Parms.DisplayNumber = DisplayNumber;
+	Parms.PlayAnimation_0 = PlayAnimation_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BasicUI.ScrollerItem.GetElementIndex
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UScrollerItem::GetElementIndex()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ScrollerItem", "GetElementIndex");
+
+	Params::ScrollerItem_GetElementIndex Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BasicUI.CommunicatorInterface.SendMessage
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                          AnotherUI                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           Message                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ICommunicatorInterface::SendMessage(class UObject* AnotherUI, const class FString& Message)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommunicatorInterface", "SendMessage");
+
+	Params::CommunicatorInterface_SendMessage Parms{};
+
+	Parms.AnotherUI = AnotherUI;
+	Parms.Message = std::move(Message);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BasicUI.EnableInterface.Disable
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool IEnableInterface::Disable()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EnableInterface", "Disable");
+
+	Params::EnableInterface_Disable Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BasicUI.EnableInterface.Enable
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool IEnableInterface::Enable()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EnableInterface", "Enable");
+
+	Params::EnableInterface_Enable Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BasicUI.EnableInterface.IsEnabled
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool IEnableInterface::IsEnabled()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EnableInterface", "IsEnabled");
+
+	Params::EnableInterface_IsEnabled Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BasicUI.ResetInterface.Reset
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool IResetInterface::Reset()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ResetInterface", "Reset");
+
+	Params::ResetInterface_Reset Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BasicUI.SelectableInterface.Deselect
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    PlayAnimation                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ISelectableInterface::Deselect(bool PlayAnimation)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SelectableInterface", "Deselect");
+
+	Params::SelectableInterface_Deselect Parms{};
+
+	Parms.PlayAnimation = PlayAnimation;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BasicUI.SelectableInterface.IsSelectable
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ISelectableInterface::IsSelectable()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SelectableInterface", "IsSelectable");
+
+	Params::SelectableInterface_IsSelectable Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BasicUI.SelectableInterface.IsSelected
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ISelectableInterface::IsSelected()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SelectableInterface", "IsSelected");
+
+	Params::SelectableInterface_IsSelected Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BasicUI.SelectableInterface.Select
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    PlayAnimation                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ISelectableInterface::Select(bool PlayAnimation)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SelectableInterface", "Select");
+
+	Params::SelectableInterface_Select Parms{};
+
+	Parms.PlayAnimation = PlayAnimation;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BasicUI.SelectableInterface.SetSelectProhibited
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Prohibited                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ISelectableInterface::SetSelectProhibited(bool Prohibited)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SelectableInterface", "SetSelectProhibited");
+
+	Params::SelectableInterface_SetSelectProhibited Parms{};
+
+	Parms.Prohibited = Prohibited;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BasicUI.HighlightableInterface.Highlight
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    PlayAnimation                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool IHighlightableInterface::Highlight(bool PlayAnimation)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("HighlightableInterface", "Highlight");
+
+	Params::HighlightableInterface_Highlight Parms{};
+
+	Parms.PlayAnimation = PlayAnimation;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BasicUI.HighlightableInterface.IsHighlightable
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool IHighlightableInterface::IsHighlightable()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("HighlightableInterface", "IsHighlightable");
+
+	Params::HighlightableInterface_IsHighlightable Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BasicUI.HighlightableInterface.IsHighlighted
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool IHighlightableInterface::IsHighlighted()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("HighlightableInterface", "IsHighlighted");
+
+	Params::HighlightableInterface_IsHighlighted Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BasicUI.HighlightableInterface.SetHighlightProhibited
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Prohibited                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool IHighlightableInterface::SetHighlightProhibited(bool Prohibited)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("HighlightableInterface", "SetHighlightProhibited");
+
+	Params::HighlightableInterface_SetHighlightProhibited Parms{};
+
+	Parms.Prohibited = Prohibited;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BasicUI.HighlightableInterface.Unhighlight
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    PlayAnimation                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool IHighlightableInterface::Unhighlight(bool PlayAnimation)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("HighlightableInterface", "Unhighlight");
+
+	Params::HighlightableInterface_Unhighlight Parms{};
+
+	Parms.PlayAnimation = PlayAnimation;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BasicUI.MeterInterface.DecreaseValue
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    PlayAnimation                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool IMeterInterface::DecreaseValue(bool PlayAnimation)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MeterInterface", "DecreaseValue");
+
+	Params::MeterInterface_DecreaseValue Parms{};
+
+	Parms.PlayAnimation = PlayAnimation;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BasicUI.MeterInterface.GetMeterDisplayValue
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float IMeterInterface::GetMeterDisplayValue()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MeterInterface", "GetMeterDisplayValue");
+
+	Params::MeterInterface_GetMeterDisplayValue Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BasicUI.MeterInterface.GetMeterPercentage
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float IMeterInterface::GetMeterPercentage()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MeterInterface", "GetMeterPercentage");
+
+	Params::MeterInterface_GetMeterPercentage Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BasicUI.MeterInterface.GetMeterValue
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float IMeterInterface::GetMeterValue()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MeterInterface", "GetMeterValue");
+
+	Params::MeterInterface_GetMeterValue Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BasicUI.MeterInterface.IncreaseValue
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    PlayAnimation                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool IMeterInterface::IncreaseValue(bool PlayAnimation)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MeterInterface", "IncreaseValue");
+
+	Params::MeterInterface_IncreaseValue Parms{};
+
+	Parms.PlayAnimation = PlayAnimation;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BasicUI.MeterInterface.SetMeterMaxValue
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   MeterValue                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool IMeterInterface::SetMeterMaxValue(float MeterValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MeterInterface", "SetMeterMaxValue");
+
+	Params::MeterInterface_SetMeterMaxValue Parms{};
+
+	Parms.MeterValue = MeterValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BasicUI.MeterInterface.SetMeterMinValue
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   MeterValue                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool IMeterInterface::SetMeterMinValue(float MeterValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MeterInterface", "SetMeterMinValue");
+
+	Params::MeterInterface_SetMeterMinValue Parms{};
+
+	Parms.MeterValue = MeterValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BasicUI.MeterInterface.SetMeterValue
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   MeterValue                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    PlayAnimation                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool IMeterInterface::SetMeterValue(float MeterValue, bool PlayAnimation)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MeterInterface", "SetMeterValue");
+
+	Params::MeterInterface_SetMeterValue Parms{};
+
+	Parms.MeterValue = MeterValue;
+	Parms.PlayAnimation = PlayAnimation;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BasicUI.TextureInterface.ClearSubTexture
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             ImageId                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ITextureInterface::ClearSubTexture(class FName ImageId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TextureInterface", "ClearSubTexture");
+
+	Params::TextureInterface_ClearSubTexture Parms{};
+
+	Parms.ImageId = ImageId;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BasicUI.TextureInterface.ClearTexture
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ITextureInterface::ClearTexture()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TextureInterface", "ClearTexture");
+
+	Params::TextureInterface_ClearTexture Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BasicUI.TextureInterface.FlipTexture
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    IsInverse                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ITextureInterface::FlipTexture(bool IsInverse)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TextureInterface", "FlipTexture");
+
+	Params::TextureInterface_FlipTexture Parms{};
+
+	Parms.IsInverse = IsInverse;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BasicUI.TextureInterface.SetLazyTexture
+// (Native, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TSoftObjectPtr<class UTexture2D>        LazyTexture                                            (ConstParm, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ITextureInterface::SetLazyTexture(const TSoftObjectPtr<class UTexture2D>& LazyTexture)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TextureInterface", "SetLazyTexture");
+
+	Params::TextureInterface_SetLazyTexture Parms{};
+
+	Parms.LazyTexture = LazyTexture;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BasicUI.TextureInterface.SetSubLazyTexture
+// (Native, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             ImageId                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TSoftObjectPtr<class UTexture2D>        LazyTexture                                            (ConstParm, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ITextureInterface::SetSubLazyTexture(class FName ImageId, const TSoftObjectPtr<class UTexture2D>& LazyTexture)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TextureInterface", "SetSubLazyTexture");
+
+	Params::TextureInterface_SetSubLazyTexture Parms{};
+
+	Parms.ImageId = ImageId;
+	Parms.LazyTexture = LazyTexture;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BasicUI.TextureInterface.SetSubTexture
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             ImageId                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UTexture2D*                       Texture                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ITextureInterface::SetSubTexture(class FName ImageId, class UTexture2D* Texture)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TextureInterface", "SetSubTexture");
+
+	Params::TextureInterface_SetSubTexture Parms{};
+
+	Parms.ImageId = ImageId;
+	Parms.Texture = Texture;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BasicUI.TextureInterface.SetTexture
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UTexture2D*                       Texture                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ITextureInterface::SetTexture(class UTexture2D* Texture)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TextureInterface", "SetTexture");
+
+	Params::TextureInterface_SetTexture Parms{};
+
+	Parms.Texture = Texture;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BasicUI.IntegerHolderInterface.GetInteger
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NumberID                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 IIntegerHolderInterface::GetInteger(class FName NumberID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("IntegerHolderInterface", "GetInteger");
+
+	Params::IntegerHolderInterface_GetInteger Parms{};
+
+	Parms.NumberID = NumberID;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BasicUI.IntegerHolderInterface.SetInteger
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   Number                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             NumberID                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool IIntegerHolderInterface::SetInteger(const int32 Number, class FName NumberID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("IntegerHolderInterface", "SetInteger");
+
+	Params::IntegerHolderInterface_SetInteger Parms{};
+
+	Parms.Number = Number;
+	Parms.NumberID = NumberID;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BasicUI.FloatHolderInterface.GetFloat
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float IFloatHolderInterface::GetFloat()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FloatHolderInterface", "GetFloat");
+
+	Params::FloatHolderInterface_GetFloat Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BasicUI.FloatHolderInterface.SetFloat
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   Number                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool IFloatHolderInterface::SetFloat(const float Number)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FloatHolderInterface", "SetFloat");
+
+	Params::FloatHolderInterface_SetFloat Parms{};
+
+	Parms.Number = Number;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BasicUI.TextHolderInterface.GetText
+// (Native, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FText                             LocalText                                              (Parm, OutParm, NativeAccessSpecifierPublic)
+
+void ITextHolderInterface::GetText(class FText* LocalText)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TextHolderInterface", "GetText");
+
+	Params::TextHolderInterface_GetText Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (LocalText != nullptr)
+		*LocalText = std::move(Parms.LocalText);
+}
+
+
+// Function BasicUI.TextHolderInterface.GetTexts
+// (Native, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<class FText>                     LocalTexts                                             (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+
+void ITextHolderInterface::GetTexts(TArray<class FText>* LocalTexts)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TextHolderInterface", "GetTexts");
+
+	Params::TextHolderInterface_GetTexts Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (LocalTexts != nullptr)
+		*LocalTexts = std::move(Parms.LocalTexts);
+}
+
+
+// Function BasicUI.TextHolderInterface.SetText
+// (Native, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FText                             LocalText                                              (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ITextHolderInterface::SetText(const class FText& LocalText)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TextHolderInterface", "SetText");
+
+	Params::TextHolderInterface_SetText Parms{};
+
+	Parms.LocalText = std::move(LocalText);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BasicUI.TextHolderInterface.SetTexts
+// (Native, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<class FText>                     LocalTexts                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ITextHolderInterface::SetTexts(const TArray<class FText>& LocalTexts)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TextHolderInterface", "SetTexts");
+
+	Params::TextHolderInterface_SetTexts Parms{};
+
+	Parms.LocalTexts = std::move(LocalTexts);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BasicUI.TextureListInterface.ClearHighlight
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ITextureListInterface::ClearHighlight()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TextureListInterface", "ClearHighlight");
+
+	Params::TextureListInterface_ClearHighlight Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BasicUI.TextureListInterface.ClearSelection
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ITextureListInterface::ClearSelection()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TextureListInterface", "ClearSelection");
+
+	Params::TextureListInterface_ClearSelection Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BasicUI.TextureListInterface.ClearTexture
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   Index_0                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ITextureListInterface::ClearTexture(const int32 Index_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TextureListInterface", "ClearTexture");
+
+	Params::TextureListInterface_ClearTexture Parms{};
+
+	Parms.Index_0 = Index_0;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BasicUI.TextureListInterface.GetHighlightedIndex
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const int32                             ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+const int32 ITextureListInterface::GetHighlightedIndex()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TextureListInterface", "GetHighlightedIndex");
+
+	Params::TextureListInterface_GetHighlightedIndex Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BasicUI.TextureListInterface.GetSelectedIndex
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const int32                             ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+const int32 ITextureListInterface::GetSelectedIndex()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TextureListInterface", "GetSelectedIndex");
+
+	Params::TextureListInterface_GetSelectedIndex Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BasicUI.TextureListInterface.SetHighlightedIndex
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   Index_0                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ITextureListInterface::SetHighlightedIndex(const int32 Index_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TextureListInterface", "SetHighlightedIndex");
+
+	Params::TextureListInterface_SetHighlightedIndex Parms{};
+
+	Parms.Index_0 = Index_0;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BasicUI.TextureListInterface.SetLazyTexture
+// (Native, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   Index_0                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TSoftObjectPtr<class UTexture2D>        LazyTexture                                            (ConstParm, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ITextureListInterface::SetLazyTexture(const int32 Index_0, const TSoftObjectPtr<class UTexture2D>& LazyTexture)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TextureListInterface", "SetLazyTexture");
+
+	Params::TextureListInterface_SetLazyTexture Parms{};
+
+	Parms.Index_0 = Index_0;
+	Parms.LazyTexture = LazyTexture;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BasicUI.TextureListInterface.SetSelectedIndex
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   Index_0                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ITextureListInterface::SetSelectedIndex(const int32 Index_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TextureListInterface", "SetSelectedIndex");
+
+	Params::TextureListInterface_SetSelectedIndex Parms{};
+
+	Parms.Index_0 = Index_0;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BasicUI.TextureListInterface.SetTexture
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   Index_0                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UTexture2D*                       Texture                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ITextureListInterface::SetTexture(const int32 Index_0, class UTexture2D* Texture)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TextureListInterface", "SetTexture");
+
+	Params::TextureListInterface_SetTexture Parms{};
+
+	Parms.Index_0 = Index_0;
+	Parms.Texture = Texture;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function BasicUI.UIManager.AddUIObjectBySoftClassPtr
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -3770,455 +5261,6 @@ bool UUIManager::IsMenuOpen(const class FName InMenuName) const
 }
 
 
-// Function BasicUI.MeterPieceBase.OnMeterValueChanged
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   MeterValueToNotify                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   Percentage                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   DisplayNumber                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    PlayAnimation_0                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMeterPieceBase::OnMeterValueChanged(float MeterValueToNotify, float Percentage, float DisplayNumber, bool PlayAnimation_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MeterPieceBase", "OnMeterValueChanged");
-
-	Params::MeterPieceBase_OnMeterValueChanged Parms{};
-
-	Parms.MeterValueToNotify = MeterValueToNotify;
-	Parms.Percentage = Percentage;
-	Parms.DisplayNumber = DisplayNumber;
-	Parms.PlayAnimation_0 = PlayAnimation_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BasicUI.ScrollerItem.GetElementIndex
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int32 UScrollerItem::GetElementIndex()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ScrollerItem", "GetElementIndex");
-
-	Params::ScrollerItem_GetElementIndex Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BasicUI.CommunicatorInterface.SendMessage
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UObject*                          AnotherUI                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           Message                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool ICommunicatorInterface::SendMessage(class UObject* AnotherUI, const class FString& Message)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CommunicatorInterface", "SendMessage");
-
-	Params::CommunicatorInterface_SendMessage Parms{};
-
-	Parms.AnotherUI = AnotherUI;
-	Parms.Message = std::move(Message);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BasicUI.EnableInterface.Disable
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool IEnableInterface::Disable()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("EnableInterface", "Disable");
-
-	Params::EnableInterface_Disable Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BasicUI.EnableInterface.Enable
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool IEnableInterface::Enable()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("EnableInterface", "Enable");
-
-	Params::EnableInterface_Enable Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BasicUI.EnableInterface.IsEnabled
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool IEnableInterface::IsEnabled()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("EnableInterface", "IsEnabled");
-
-	Params::EnableInterface_IsEnabled Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BasicUI.ResetInterface.Reset
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool IResetInterface::Reset()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ResetInterface", "Reset");
-
-	Params::ResetInterface_Reset Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BasicUI.SelectableInterface.Deselect
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    PlayAnimation                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool ISelectableInterface::Deselect(bool PlayAnimation)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SelectableInterface", "Deselect");
-
-	Params::SelectableInterface_Deselect Parms{};
-
-	Parms.PlayAnimation = PlayAnimation;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BasicUI.SelectableInterface.IsSelectable
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool ISelectableInterface::IsSelectable()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SelectableInterface", "IsSelectable");
-
-	Params::SelectableInterface_IsSelectable Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BasicUI.SelectableInterface.IsSelected
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool ISelectableInterface::IsSelected()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SelectableInterface", "IsSelected");
-
-	Params::SelectableInterface_IsSelected Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BasicUI.SelectableInterface.Select
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    PlayAnimation                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool ISelectableInterface::Select(bool PlayAnimation)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SelectableInterface", "Select");
-
-	Params::SelectableInterface_Select Parms{};
-
-	Parms.PlayAnimation = PlayAnimation;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BasicUI.SelectableInterface.SetSelectProhibited
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Prohibited                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool ISelectableInterface::SetSelectProhibited(bool Prohibited)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SelectableInterface", "SetSelectProhibited");
-
-	Params::SelectableInterface_SetSelectProhibited Parms{};
-
-	Parms.Prohibited = Prohibited;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BasicUI.HighlightableInterface.Highlight
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    PlayAnimation                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool IHighlightableInterface::Highlight(bool PlayAnimation)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HighlightableInterface", "Highlight");
-
-	Params::HighlightableInterface_Highlight Parms{};
-
-	Parms.PlayAnimation = PlayAnimation;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BasicUI.HighlightableInterface.IsHighlightable
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool IHighlightableInterface::IsHighlightable()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HighlightableInterface", "IsHighlightable");
-
-	Params::HighlightableInterface_IsHighlightable Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BasicUI.HighlightableInterface.IsHighlighted
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool IHighlightableInterface::IsHighlighted()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HighlightableInterface", "IsHighlighted");
-
-	Params::HighlightableInterface_IsHighlighted Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BasicUI.HighlightableInterface.SetHighlightProhibited
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Prohibited                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool IHighlightableInterface::SetHighlightProhibited(bool Prohibited)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HighlightableInterface", "SetHighlightProhibited");
-
-	Params::HighlightableInterface_SetHighlightProhibited Parms{};
-
-	Parms.Prohibited = Prohibited;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BasicUI.HighlightableInterface.Unhighlight
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    PlayAnimation                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool IHighlightableInterface::Unhighlight(bool PlayAnimation)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HighlightableInterface", "Unhighlight");
-
-	Params::HighlightableInterface_Unhighlight Parms{};
-
-	Parms.PlayAnimation = PlayAnimation;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function BasicUI.UIObjectBase.Close
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -4379,1048 +5421,6 @@ bool UUIObjectBase::IsOpen() const
 		Func = Class->GetFunction("UIObjectBase", "IsOpen");
 
 	Params::UIObjectBase_IsOpen Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BasicUI.MultipleFlagInterface.GetFlag
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             FlagName                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool IMultipleFlagInterface::GetFlag(class FName FlagName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MultipleFlagInterface", "GetFlag");
-
-	Params::MultipleFlagInterface_GetFlag Parms{};
-
-	Parms.FlagName = FlagName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BasicUI.MultipleFlagInterface.SetFlag
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             FlagName                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    FlagValue                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bFireEvent                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool IMultipleFlagInterface::SetFlag(class FName FlagName, bool FlagValue, bool bFireEvent)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MultipleFlagInterface", "SetFlag");
-
-	Params::MultipleFlagInterface_SetFlag Parms{};
-
-	Parms.FlagName = FlagName;
-	Parms.FlagValue = FlagValue;
-	Parms.bFireEvent = bFireEvent;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BasicUI.ButtonInterface.PressButton
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool IButtonInterface::PressButton()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ButtonInterface", "PressButton");
-
-	Params::ButtonInterface_PressButton Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BasicUI.ButtonInterface.ReleaseButton
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool IButtonInterface::ReleaseButton()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ButtonInterface", "ReleaseButton");
-
-	Params::ButtonInterface_ReleaseButton Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BasicUI.MeterInterface.DecreaseValue
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    PlayAnimation                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool IMeterInterface::DecreaseValue(bool PlayAnimation)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MeterInterface", "DecreaseValue");
-
-	Params::MeterInterface_DecreaseValue Parms{};
-
-	Parms.PlayAnimation = PlayAnimation;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BasicUI.MeterInterface.GetMeterDisplayValue
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-float IMeterInterface::GetMeterDisplayValue()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MeterInterface", "GetMeterDisplayValue");
-
-	Params::MeterInterface_GetMeterDisplayValue Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BasicUI.MeterInterface.GetMeterPercentage
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-float IMeterInterface::GetMeterPercentage()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MeterInterface", "GetMeterPercentage");
-
-	Params::MeterInterface_GetMeterPercentage Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BasicUI.MeterInterface.GetMeterValue
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-float IMeterInterface::GetMeterValue()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MeterInterface", "GetMeterValue");
-
-	Params::MeterInterface_GetMeterValue Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BasicUI.MeterInterface.IncreaseValue
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    PlayAnimation                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool IMeterInterface::IncreaseValue(bool PlayAnimation)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MeterInterface", "IncreaseValue");
-
-	Params::MeterInterface_IncreaseValue Parms{};
-
-	Parms.PlayAnimation = PlayAnimation;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BasicUI.MeterInterface.SetMeterMaxValue
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   MeterValue                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool IMeterInterface::SetMeterMaxValue(float MeterValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MeterInterface", "SetMeterMaxValue");
-
-	Params::MeterInterface_SetMeterMaxValue Parms{};
-
-	Parms.MeterValue = MeterValue;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BasicUI.MeterInterface.SetMeterMinValue
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   MeterValue                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool IMeterInterface::SetMeterMinValue(float MeterValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MeterInterface", "SetMeterMinValue");
-
-	Params::MeterInterface_SetMeterMinValue Parms{};
-
-	Parms.MeterValue = MeterValue;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BasicUI.MeterInterface.SetMeterValue
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   MeterValue                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    PlayAnimation                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool IMeterInterface::SetMeterValue(float MeterValue, bool PlayAnimation)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MeterInterface", "SetMeterValue");
-
-	Params::MeterInterface_SetMeterValue Parms{};
-
-	Parms.MeterValue = MeterValue;
-	Parms.PlayAnimation = PlayAnimation;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BasicUI.TextureInterface.ClearSubTexture
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             ImageId                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool ITextureInterface::ClearSubTexture(class FName ImageId)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TextureInterface", "ClearSubTexture");
-
-	Params::TextureInterface_ClearSubTexture Parms{};
-
-	Parms.ImageId = ImageId;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BasicUI.TextureInterface.ClearTexture
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool ITextureInterface::ClearTexture()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TextureInterface", "ClearTexture");
-
-	Params::TextureInterface_ClearTexture Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BasicUI.TextureInterface.FlipTexture
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    IsInverse                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool ITextureInterface::FlipTexture(bool IsInverse)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TextureInterface", "FlipTexture");
-
-	Params::TextureInterface_FlipTexture Parms{};
-
-	Parms.IsInverse = IsInverse;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BasicUI.TextureInterface.SetLazyTexture
-// (Native, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TSoftObjectPtr<class UTexture2D>        LazyTexture                                            (ConstParm, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool ITextureInterface::SetLazyTexture(const TSoftObjectPtr<class UTexture2D>& LazyTexture)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TextureInterface", "SetLazyTexture");
-
-	Params::TextureInterface_SetLazyTexture Parms{};
-
-	Parms.LazyTexture = LazyTexture;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BasicUI.TextureInterface.SetSubLazyTexture
-// (Native, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             ImageId                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TSoftObjectPtr<class UTexture2D>        LazyTexture                                            (ConstParm, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool ITextureInterface::SetSubLazyTexture(class FName ImageId, const TSoftObjectPtr<class UTexture2D>& LazyTexture)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TextureInterface", "SetSubLazyTexture");
-
-	Params::TextureInterface_SetSubLazyTexture Parms{};
-
-	Parms.ImageId = ImageId;
-	Parms.LazyTexture = LazyTexture;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BasicUI.TextureInterface.SetSubTexture
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             ImageId                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UTexture2D*                       Texture                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool ITextureInterface::SetSubTexture(class FName ImageId, class UTexture2D* Texture)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TextureInterface", "SetSubTexture");
-
-	Params::TextureInterface_SetSubTexture Parms{};
-
-	Parms.ImageId = ImageId;
-	Parms.Texture = Texture;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BasicUI.TextureInterface.SetTexture
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UTexture2D*                       Texture                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool ITextureInterface::SetTexture(class UTexture2D* Texture)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TextureInterface", "SetTexture");
-
-	Params::TextureInterface_SetTexture Parms{};
-
-	Parms.Texture = Texture;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BasicUI.CheckableInterface.Check
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    PlayAnimation                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    AnotherAppearance                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool ICheckableInterface::Check(bool PlayAnimation, bool AnotherAppearance)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CheckableInterface", "Check");
-
-	Params::CheckableInterface_Check Parms{};
-
-	Parms.PlayAnimation = PlayAnimation;
-	Parms.AnotherAppearance = AnotherAppearance;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BasicUI.CheckableInterface.IsChecked
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool ICheckableInterface::IsChecked()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CheckableInterface", "IsChecked");
-
-	Params::CheckableInterface_IsChecked Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BasicUI.CheckableInterface.Uncheck
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    PlayAnimation                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool ICheckableInterface::Uncheck(bool PlayAnimation)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CheckableInterface", "Uncheck");
-
-	Params::CheckableInterface_Uncheck Parms{};
-
-	Parms.PlayAnimation = PlayAnimation;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BasicUI.IntegerHolderInterface.GetInteger
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NumberID                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int32 IIntegerHolderInterface::GetInteger(class FName NumberID)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("IntegerHolderInterface", "GetInteger");
-
-	Params::IntegerHolderInterface_GetInteger Parms{};
-
-	Parms.NumberID = NumberID;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BasicUI.IntegerHolderInterface.SetInteger
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   Number                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             NumberID                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool IIntegerHolderInterface::SetInteger(const int32 Number, class FName NumberID)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("IntegerHolderInterface", "SetInteger");
-
-	Params::IntegerHolderInterface_SetInteger Parms{};
-
-	Parms.Number = Number;
-	Parms.NumberID = NumberID;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BasicUI.TextHolderInterface.GetText
-// (Native, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FText                             LocalText                                              (Parm, OutParm, NativeAccessSpecifierPublic)
-
-void ITextHolderInterface::GetText(class FText* LocalText)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TextHolderInterface", "GetText");
-
-	Params::TextHolderInterface_GetText Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (LocalText != nullptr)
-		*LocalText = std::move(Parms.LocalText);
-}
-
-
-// Function BasicUI.TextHolderInterface.GetTexts
-// (Native, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TArray<class FText>                     LocalTexts                                             (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-
-void ITextHolderInterface::GetTexts(TArray<class FText>* LocalTexts)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TextHolderInterface", "GetTexts");
-
-	Params::TextHolderInterface_GetTexts Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (LocalTexts != nullptr)
-		*LocalTexts = std::move(Parms.LocalTexts);
-}
-
-
-// Function BasicUI.TextHolderInterface.SetText
-// (Native, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FText                             LocalText                                              (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool ITextHolderInterface::SetText(const class FText& LocalText)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TextHolderInterface", "SetText");
-
-	Params::TextHolderInterface_SetText Parms{};
-
-	Parms.LocalText = std::move(LocalText);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BasicUI.TextHolderInterface.SetTexts
-// (Native, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TArray<class FText>                     LocalTexts                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool ITextHolderInterface::SetTexts(const TArray<class FText>& LocalTexts)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TextHolderInterface", "SetTexts");
-
-	Params::TextHolderInterface_SetTexts Parms{};
-
-	Parms.LocalTexts = std::move(LocalTexts);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BasicUI.GeneralUIExpressionInterface.Blink
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool IGeneralUIExpressionInterface::Blink()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GeneralUIExpressionInterface", "Blink");
-
-	Params::GeneralUIExpressionInterface_Blink Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BasicUI.TextureListInterface.ClearHighlight
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool ITextureListInterface::ClearHighlight()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TextureListInterface", "ClearHighlight");
-
-	Params::TextureListInterface_ClearHighlight Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BasicUI.TextureListInterface.ClearSelection
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool ITextureListInterface::ClearSelection()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TextureListInterface", "ClearSelection");
-
-	Params::TextureListInterface_ClearSelection Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BasicUI.TextureListInterface.ClearTexture
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   Index_0                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool ITextureListInterface::ClearTexture(const int32 Index_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TextureListInterface", "ClearTexture");
-
-	Params::TextureListInterface_ClearTexture Parms{};
-
-	Parms.Index_0 = Index_0;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BasicUI.TextureListInterface.GetHighlightedIndex
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const int32                             ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-const int32 ITextureListInterface::GetHighlightedIndex()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TextureListInterface", "GetHighlightedIndex");
-
-	Params::TextureListInterface_GetHighlightedIndex Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BasicUI.TextureListInterface.GetSelectedIndex
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const int32                             ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-const int32 ITextureListInterface::GetSelectedIndex()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TextureListInterface", "GetSelectedIndex");
-
-	Params::TextureListInterface_GetSelectedIndex Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BasicUI.TextureListInterface.SetHighlightedIndex
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   Index_0                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool ITextureListInterface::SetHighlightedIndex(const int32 Index_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TextureListInterface", "SetHighlightedIndex");
-
-	Params::TextureListInterface_SetHighlightedIndex Parms{};
-
-	Parms.Index_0 = Index_0;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BasicUI.TextureListInterface.SetLazyTexture
-// (Native, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   Index_0                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TSoftObjectPtr<class UTexture2D>        LazyTexture                                            (ConstParm, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool ITextureListInterface::SetLazyTexture(const int32 Index_0, const TSoftObjectPtr<class UTexture2D>& LazyTexture)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TextureListInterface", "SetLazyTexture");
-
-	Params::TextureListInterface_SetLazyTexture Parms{};
-
-	Parms.Index_0 = Index_0;
-	Parms.LazyTexture = LazyTexture;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BasicUI.TextureListInterface.SetSelectedIndex
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   Index_0                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool ITextureListInterface::SetSelectedIndex(const int32 Index_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TextureListInterface", "SetSelectedIndex");
-
-	Params::TextureListInterface_SetSelectedIndex Parms{};
-
-	Parms.Index_0 = Index_0;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BasicUI.TextureListInterface.SetTexture
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   Index_0                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UTexture2D*                       Texture                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool ITextureListInterface::SetTexture(const int32 Index_0, class UTexture2D* Texture)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TextureListInterface", "SetTexture");
-
-	Params::TextureListInterface_SetTexture Parms{};
-
-	Parms.Index_0 = Index_0;
-	Parms.Texture = Texture;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

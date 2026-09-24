@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_LocationTriggerManager.BP_LocationTriggerManager_C
-// 0x0000 (0x0180 - 0x0180)
+// 0x0000 (0x01D8 - 0x01D8)
 class UBP_LocationTriggerManager_C final : public ULocationTriggerManager
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UBP_LocationTriggerManager_C) == 0x000008, "Wrong alignment on UBP_LocationTriggerManager_C");
-static_assert(sizeof(UBP_LocationTriggerManager_C) == 0x000180, "Wrong size on UBP_LocationTriggerManager_C");
+static_assert(sizeof(UBP_LocationTriggerManager_C) == 0x0001D8, "Wrong size on UBP_LocationTriggerManager_C");
 
 }
 

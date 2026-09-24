@@ -108,6 +108,19 @@ static_assert(alignof(WDT_ConfigMenuInputTextPiece_C_PreConstruct) == 0x000001, 
 static_assert(sizeof(WDT_ConfigMenuInputTextPiece_C_PreConstruct) == 0x000001, "Wrong size on WDT_ConfigMenuInputTextPiece_C_PreConstruct");
 static_assert(offsetof(WDT_ConfigMenuInputTextPiece_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WDT_ConfigMenuInputTextPiece_C_PreConstruct::IsDesignTime' has a wrong offset!");
 
+// Function WDT_ConfigMenuInputTextPiece.WDT_ConfigMenuInputTextPiece_C.OnTextCommitted__DelegateSignature
+// 0x0018 (0x0018 - 0x0000)
+struct WDT_ConfigMenuInputTextPiece_C_OnTextCommitted__DelegateSignature final
+{
+public:
+	class FText                                   InText;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+	ETextCommit                                   InCommitMethot;                                    // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_ConfigMenuInputTextPiece_C_OnTextCommitted__DelegateSignature) == 0x000008, "Wrong alignment on WDT_ConfigMenuInputTextPiece_C_OnTextCommitted__DelegateSignature");
+static_assert(sizeof(WDT_ConfigMenuInputTextPiece_C_OnTextCommitted__DelegateSignature) == 0x000018, "Wrong size on WDT_ConfigMenuInputTextPiece_C_OnTextCommitted__DelegateSignature");
+static_assert(offsetof(WDT_ConfigMenuInputTextPiece_C_OnTextCommitted__DelegateSignature, InText) == 0x000000, "Member 'WDT_ConfigMenuInputTextPiece_C_OnTextCommitted__DelegateSignature::InText' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigMenuInputTextPiece_C_OnTextCommitted__DelegateSignature, InCommitMethot) == 0x000010, "Member 'WDT_ConfigMenuInputTextPiece_C_OnTextCommitted__DelegateSignature::InCommitMethot' has a wrong offset!");
+
 // Function WDT_ConfigMenuInputTextPiece.WDT_ConfigMenuInputTextPiece_C.OnMouseLeaveSubPiece
 // 0x0008 (0x0008 - 0x0000)
 struct WDT_ConfigMenuInputTextPiece_C_OnMouseLeaveSubPiece final
@@ -174,7 +187,7 @@ static_assert(offsetof(WDT_ConfigMenuInputTextPiece_C_GetLogMoviePath, OutIsSucc
 static_assert(offsetof(WDT_ConfigMenuInputTextPiece_C_GetLogMoviePath, CallFunc_NotEqual_StrStr_ReturnValue) == 0x000011, "Member 'WDT_ConfigMenuInputTextPiece_C_GetLogMoviePath::CallFunc_NotEqual_StrStr_ReturnValue' has a wrong offset!");
 
 // Function WDT_ConfigMenuInputTextPiece.WDT_ConfigMenuInputTextPiece_C.ExecuteUbergraph_WDT_ConfigMenuInputTextPiece
-// 0x0028 (0x0028 - 0x0000)
+// 0x0040 (0x0040 - 0x0000)
 struct WDT_ConfigMenuInputTextPiece_C_ExecuteUbergraph_WDT_ConfigMenuInputTextPiece final
 {
 public:
@@ -185,15 +198,20 @@ public:
 	class UMenuPieceBase*                         K2Node_Event_MenuPiece;                            // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UWDT_ConfigTextInputPiece_C*            K2Node_DynamicCast_AsWDT_Config_Text_Input_Piece;  // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_ComponentBoundEvent_InText;                 // 0x0028(0x0010)()
+	ETextCommit                                   K2Node_ComponentBoundEvent_InCommitMethot;         // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_ConfigMenuInputTextPiece_C_ExecuteUbergraph_WDT_ConfigMenuInputTextPiece) == 0x000008, "Wrong alignment on WDT_ConfigMenuInputTextPiece_C_ExecuteUbergraph_WDT_ConfigMenuInputTextPiece");
-static_assert(sizeof(WDT_ConfigMenuInputTextPiece_C_ExecuteUbergraph_WDT_ConfigMenuInputTextPiece) == 0x000028, "Wrong size on WDT_ConfigMenuInputTextPiece_C_ExecuteUbergraph_WDT_ConfigMenuInputTextPiece");
+static_assert(sizeof(WDT_ConfigMenuInputTextPiece_C_ExecuteUbergraph_WDT_ConfigMenuInputTextPiece) == 0x000040, "Wrong size on WDT_ConfigMenuInputTextPiece_C_ExecuteUbergraph_WDT_ConfigMenuInputTextPiece");
 static_assert(offsetof(WDT_ConfigMenuInputTextPiece_C_ExecuteUbergraph_WDT_ConfigMenuInputTextPiece, EntryPoint) == 0x000000, "Member 'WDT_ConfigMenuInputTextPiece_C_ExecuteUbergraph_WDT_ConfigMenuInputTextPiece::EntryPoint' has a wrong offset!");
 static_assert(offsetof(WDT_ConfigMenuInputTextPiece_C_ExecuteUbergraph_WDT_ConfigMenuInputTextPiece, K2Node_Event_IsDesignTime) == 0x000004, "Member 'WDT_ConfigMenuInputTextPiece_C_ExecuteUbergraph_WDT_ConfigMenuInputTextPiece::K2Node_Event_IsDesignTime' has a wrong offset!");
 static_assert(offsetof(WDT_ConfigMenuInputTextPiece_C_ExecuteUbergraph_WDT_ConfigMenuInputTextPiece, K2Node_Event_MenuPiece_1) == 0x000008, "Member 'WDT_ConfigMenuInputTextPiece_C_ExecuteUbergraph_WDT_ConfigMenuInputTextPiece::K2Node_Event_MenuPiece_1' has a wrong offset!");
 static_assert(offsetof(WDT_ConfigMenuInputTextPiece_C_ExecuteUbergraph_WDT_ConfigMenuInputTextPiece, K2Node_Event_MenuPiece) == 0x000010, "Member 'WDT_ConfigMenuInputTextPiece_C_ExecuteUbergraph_WDT_ConfigMenuInputTextPiece::K2Node_Event_MenuPiece' has a wrong offset!");
 static_assert(offsetof(WDT_ConfigMenuInputTextPiece_C_ExecuteUbergraph_WDT_ConfigMenuInputTextPiece, K2Node_DynamicCast_AsWDT_Config_Text_Input_Piece) == 0x000018, "Member 'WDT_ConfigMenuInputTextPiece_C_ExecuteUbergraph_WDT_ConfigMenuInputTextPiece::K2Node_DynamicCast_AsWDT_Config_Text_Input_Piece' has a wrong offset!");
 static_assert(offsetof(WDT_ConfigMenuInputTextPiece_C_ExecuteUbergraph_WDT_ConfigMenuInputTextPiece, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'WDT_ConfigMenuInputTextPiece_C_ExecuteUbergraph_WDT_ConfigMenuInputTextPiece::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigMenuInputTextPiece_C_ExecuteUbergraph_WDT_ConfigMenuInputTextPiece, K2Node_ComponentBoundEvent_InText) == 0x000028, "Member 'WDT_ConfigMenuInputTextPiece_C_ExecuteUbergraph_WDT_ConfigMenuInputTextPiece::K2Node_ComponentBoundEvent_InText' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigMenuInputTextPiece_C_ExecuteUbergraph_WDT_ConfigMenuInputTextPiece, K2Node_ComponentBoundEvent_InCommitMethot) == 0x000038, "Member 'WDT_ConfigMenuInputTextPiece_C_ExecuteUbergraph_WDT_ConfigMenuInputTextPiece::K2Node_ComponentBoundEvent_InCommitMethot' has a wrong offset!");
 
 // Function WDT_ConfigMenuInputTextPiece.WDT_ConfigMenuInputTextPiece_C.Deselect
 // 0x0002 (0x0002 - 0x0000)
@@ -207,6 +225,19 @@ static_assert(alignof(WDT_ConfigMenuInputTextPiece_C_Deselect) == 0x000001, "Wro
 static_assert(sizeof(WDT_ConfigMenuInputTextPiece_C_Deselect) == 0x000002, "Wrong size on WDT_ConfigMenuInputTextPiece_C_Deselect");
 static_assert(offsetof(WDT_ConfigMenuInputTextPiece_C_Deselect, PlayAnimation_0) == 0x000000, "Member 'WDT_ConfigMenuInputTextPiece_C_Deselect::PlayAnimation_0' has a wrong offset!");
 static_assert(offsetof(WDT_ConfigMenuInputTextPiece_C_Deselect, ReturnValue) == 0x000001, "Member 'WDT_ConfigMenuInputTextPiece_C_Deselect::ReturnValue' has a wrong offset!");
+
+// Function WDT_ConfigMenuInputTextPiece.WDT_ConfigMenuInputTextPiece_C.BndEvt__WDT_ConfigMenuInputTextPiece_WDT_ConfigTextInputElement_K2Node_ComponentBoundEvent_0_OnTextCommitted__DelegateSignature
+// 0x0018 (0x0018 - 0x0000)
+struct WDT_ConfigMenuInputTextPiece_C_BndEvt__WDT_ConfigMenuInputTextPiece_WDT_ConfigTextInputElement_K2Node_ComponentBoundEvent_0_OnTextCommitted__DelegateSignature final
+{
+public:
+	class FText                                   InText;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+	ETextCommit                                   InCommitMethot;                                    // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_ConfigMenuInputTextPiece_C_BndEvt__WDT_ConfigMenuInputTextPiece_WDT_ConfigTextInputElement_K2Node_ComponentBoundEvent_0_OnTextCommitted__DelegateSignature) == 0x000008, "Wrong alignment on WDT_ConfigMenuInputTextPiece_C_BndEvt__WDT_ConfigMenuInputTextPiece_WDT_ConfigTextInputElement_K2Node_ComponentBoundEvent_0_OnTextCommitted__DelegateSignature");
+static_assert(sizeof(WDT_ConfigMenuInputTextPiece_C_BndEvt__WDT_ConfigMenuInputTextPiece_WDT_ConfigTextInputElement_K2Node_ComponentBoundEvent_0_OnTextCommitted__DelegateSignature) == 0x000018, "Wrong size on WDT_ConfigMenuInputTextPiece_C_BndEvt__WDT_ConfigMenuInputTextPiece_WDT_ConfigTextInputElement_K2Node_ComponentBoundEvent_0_OnTextCommitted__DelegateSignature");
+static_assert(offsetof(WDT_ConfigMenuInputTextPiece_C_BndEvt__WDT_ConfigMenuInputTextPiece_WDT_ConfigTextInputElement_K2Node_ComponentBoundEvent_0_OnTextCommitted__DelegateSignature, InText) == 0x000000, "Member 'WDT_ConfigMenuInputTextPiece_C_BndEvt__WDT_ConfigMenuInputTextPiece_WDT_ConfigTextInputElement_K2Node_ComponentBoundEvent_0_OnTextCommitted__DelegateSignature::InText' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigMenuInputTextPiece_C_BndEvt__WDT_ConfigMenuInputTextPiece_WDT_ConfigTextInputElement_K2Node_ComponentBoundEvent_0_OnTextCommitted__DelegateSignature, InCommitMethot) == 0x000010, "Member 'WDT_ConfigMenuInputTextPiece_C_BndEvt__WDT_ConfigMenuInputTextPiece_WDT_ConfigTextInputElement_K2Node_ComponentBoundEvent_0_OnTextCommitted__DelegateSignature::InCommitMethot' has a wrong offset!");
 
 }
 

@@ -17,81 +17,35 @@
 namespace SDK
 {
 
-// Function WDT_SupportMenuTabElement.WDT_SupportMenuTabElement_C.SetTitleText
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FText                             Text_0                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
+// Function WDT_SupportMenuTabElement.WDT_SupportMenuTabElement_C.BP_OnEntryReleased
+// (Event, Protected, BlueprintEvent)
 
-void UWDT_SupportMenuTabElement_C::SetTitleText(const class FText& Text_0)
+void UWDT_SupportMenuTabElement_C::BP_OnEntryReleased()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_SupportMenuTabElement_C", "SetTitleText");
+		Func = Class->GetFunction("WDT_SupportMenuTabElement_C", "BP_OnEntryReleased");
 
-	Params::WDT_SupportMenuTabElement_C_SetTitleText Parms{};
-
-	Parms.Text_0 = std::move(Text_0);
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WDT_SupportMenuTabElement.WDT_SupportMenuTabElement_C.SetDiffIconVIsibility
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    InVisibility                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_SupportMenuTabElement_C::SetDiffIconVIsibility(bool InVisibility)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_SupportMenuTabElement_C", "SetDiffIconVIsibility");
-
-	Params::WDT_SupportMenuTabElement_C_SetDiffIconVIsibility Parms{};
-
-	Parms.InVisibility = InVisibility;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_SupportMenuTabElement.WDT_SupportMenuTabElement_C.OnListItemObjectSet
+// Function WDT_SupportMenuTabElement.WDT_SupportMenuTabElement_C.BP_OnItemExpansionChanged
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class UObject*                          ListItemObject                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsExpanded                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_SupportMenuTabElement_C::OnListItemObjectSet(class UObject* ListItemObject)
+void UWDT_SupportMenuTabElement_C::BP_OnItemExpansionChanged(bool bIsExpanded)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_SupportMenuTabElement_C", "OnListItemObjectSet");
+		Func = Class->GetFunction("WDT_SupportMenuTabElement_C", "BP_OnItemExpansionChanged");
 
-	Params::WDT_SupportMenuTabElement_C_OnListItemObjectSet Parms{};
+	Params::WDT_SupportMenuTabElement_C_BP_OnItemExpansionChanged Parms{};
 
-	Parms.ListItemObject = ListItemObject;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_SupportMenuTabElement.WDT_SupportMenuTabElement_C.ExecuteUbergraph_WDT_SupportMenuTabElement
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_SupportMenuTabElement_C::ExecuteUbergraph_WDT_SupportMenuTabElement(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_SupportMenuTabElement_C", "ExecuteUbergraph_WDT_SupportMenuTabElement");
-
-	Params::WDT_SupportMenuTabElement_C_ExecuteUbergraph_WDT_SupportMenuTabElement Parms{};
-
-	Parms.EntryPoint = EntryPoint;
+	Parms.bIsExpanded = bIsExpanded;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -117,37 +71,83 @@ void UWDT_SupportMenuTabElement_C::BP_OnItemSelectionChanged(bool bIsSelected)
 }
 
 
-// Function WDT_SupportMenuTabElement.WDT_SupportMenuTabElement_C.BP_OnItemExpansionChanged
-// (Event, Protected, BlueprintEvent)
+// Function WDT_SupportMenuTabElement.WDT_SupportMenuTabElement_C.ExecuteUbergraph_WDT_SupportMenuTabElement
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// bool                                    bIsExpanded                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_SupportMenuTabElement_C::BP_OnItemExpansionChanged(bool bIsExpanded)
+void UWDT_SupportMenuTabElement_C::ExecuteUbergraph_WDT_SupportMenuTabElement(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_SupportMenuTabElement_C", "BP_OnItemExpansionChanged");
+		Func = Class->GetFunction("WDT_SupportMenuTabElement_C", "ExecuteUbergraph_WDT_SupportMenuTabElement");
 
-	Params::WDT_SupportMenuTabElement_C_BP_OnItemExpansionChanged Parms{};
+	Params::WDT_SupportMenuTabElement_C_ExecuteUbergraph_WDT_SupportMenuTabElement Parms{};
 
-	Parms.bIsExpanded = bIsExpanded;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WDT_SupportMenuTabElement.WDT_SupportMenuTabElement_C.BP_OnEntryReleased
+// Function WDT_SupportMenuTabElement.WDT_SupportMenuTabElement_C.OnListItemObjectSet
 // (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UObject*                          ListItemObject                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_SupportMenuTabElement_C::BP_OnEntryReleased()
+void UWDT_SupportMenuTabElement_C::OnListItemObjectSet(class UObject* ListItemObject)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_SupportMenuTabElement_C", "BP_OnEntryReleased");
+		Func = Class->GetFunction("WDT_SupportMenuTabElement_C", "OnListItemObjectSet");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::WDT_SupportMenuTabElement_C_OnListItemObjectSet Parms{};
+
+	Parms.ListItemObject = ListItemObject;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_SupportMenuTabElement.WDT_SupportMenuTabElement_C.SetDiffIconVIsibility
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    InVisibility                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_SupportMenuTabElement_C::SetDiffIconVIsibility(bool InVisibility)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_SupportMenuTabElement_C", "SetDiffIconVIsibility");
+
+	Params::WDT_SupportMenuTabElement_C_SetDiffIconVIsibility Parms{};
+
+	Parms.InVisibility = InVisibility;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_SupportMenuTabElement.WDT_SupportMenuTabElement_C.SetTitleText
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FText                             Text_0                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UWDT_SupportMenuTabElement_C::SetTitleText(const class FText& Text_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_SupportMenuTabElement_C", "SetTitleText");
+
+	Params::WDT_SupportMenuTabElement_C_SetTitleText Parms{};
+
+	Parms.Text_0 = std::move(Text_0);
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

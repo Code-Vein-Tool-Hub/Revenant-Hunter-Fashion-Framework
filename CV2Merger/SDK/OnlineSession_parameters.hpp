@@ -32,6 +32,17 @@ static_assert(sizeof(OnlineSessionBPLibrary_OnlineSessionSampleFunction) == 0x00
 static_assert(offsetof(OnlineSessionBPLibrary_OnlineSessionSampleFunction, Param) == 0x000000, "Member 'OnlineSessionBPLibrary_OnlineSessionSampleFunction::Param' has a wrong offset!");
 static_assert(offsetof(OnlineSessionBPLibrary_OnlineSessionSampleFunction, ReturnValue) == 0x000004, "Member 'OnlineSessionBPLibrary_OnlineSessionSampleFunction::ReturnValue' has a wrong offset!");
 
+// Function OnlineSession.OnlineSessionSubsystem.AdvertiseSession
+// 0x0001 (0x0001 - 0x0000)
+struct OnlineSessionSubsystem_AdvertiseSession final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineSessionSubsystem_AdvertiseSession) == 0x000001, "Wrong alignment on OnlineSessionSubsystem_AdvertiseSession");
+static_assert(sizeof(OnlineSessionSubsystem_AdvertiseSession) == 0x000001, "Wrong size on OnlineSessionSubsystem_AdvertiseSession");
+static_assert(offsetof(OnlineSessionSubsystem_AdvertiseSession, ReturnValue) == 0x000000, "Member 'OnlineSessionSubsystem_AdvertiseSession::ReturnValue' has a wrong offset!");
+
 // Function OnlineSession.OnlineSessionSubsystem.CreateSession
 // 0x0001 (0x0001 - 0x0000)
 struct OnlineSessionSubsystem_CreateSession final
@@ -144,6 +155,17 @@ public:
 static_assert(alignof(OnlineSessionSubsystem_IsWorldHostPlayer) == 0x000001, "Wrong alignment on OnlineSessionSubsystem_IsWorldHostPlayer");
 static_assert(sizeof(OnlineSessionSubsystem_IsWorldHostPlayer) == 0x000001, "Wrong size on OnlineSessionSubsystem_IsWorldHostPlayer");
 static_assert(offsetof(OnlineSessionSubsystem_IsWorldHostPlayer, ReturnValue) == 0x000000, "Member 'OnlineSessionSubsystem_IsWorldHostPlayer::ReturnValue' has a wrong offset!");
+
+// Function OnlineSession.OnlineSessionSubsystem.KeepSessionPrivate
+// 0x0001 (0x0001 - 0x0000)
+struct OnlineSessionSubsystem_KeepSessionPrivate final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineSessionSubsystem_KeepSessionPrivate) == 0x000001, "Wrong alignment on OnlineSessionSubsystem_KeepSessionPrivate");
+static_assert(sizeof(OnlineSessionSubsystem_KeepSessionPrivate) == 0x000001, "Wrong size on OnlineSessionSubsystem_KeepSessionPrivate");
+static_assert(offsetof(OnlineSessionSubsystem_KeepSessionPrivate, ReturnValue) == 0x000000, "Member 'OnlineSessionSubsystem_KeepSessionPrivate::ReturnValue' has a wrong offset!");
 
 // Function OnlineSession.OnlineSessionSubsystem.SetLANMatch
 // 0x0001 (0x0001 - 0x0000)

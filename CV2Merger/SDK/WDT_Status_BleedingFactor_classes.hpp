@@ -26,9 +26,9 @@ public:
 	class UCommonTextBlock*                       CommonText_Weapon2BleedingFactor;                  // 0x06D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void SetIndependentBleedingFactor(int32 InBleedingFactor);
-	void SetWeapon1BleedingFactor(int32 InBleedingFactor);
 	void SetWeapon2BleedingFactor(int32 InBleedingFactor);
+	void SetWeapon1BleedingFactor(int32 InBleedingFactor);
+	void SetIndependentBleedingFactor(int32 InBleedingFactor);
 
 public:
 	static class UClass* StaticClass()

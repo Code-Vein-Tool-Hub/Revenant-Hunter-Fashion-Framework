@@ -19,22 +19,24 @@ namespace SDK::Params
 {
 
 // Function GPC_SE_RTPC.GPC_SE_RTPC_C.ActiveEffect
-// 0x0010 (0x0010 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct GPC_SE_RTPC_C_ActiveEffect final
 {
 public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_K2_AttachToComponent_ReturnValue;         // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3[0x5];                                        // 0x0003(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAkComponent*                           CallFunc_AddComponentByClass_ReturnValue;          // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UAkComponent*                           CallFunc_AddComponentByClass_ReturnValue;          // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(GPC_SE_RTPC_C_ActiveEffect) == 0x000008, "Wrong alignment on GPC_SE_RTPC_C_ActiveEffect");
-static_assert(sizeof(GPC_SE_RTPC_C_ActiveEffect) == 0x000010, "Wrong size on GPC_SE_RTPC_C_ActiveEffect");
+static_assert(sizeof(GPC_SE_RTPC_C_ActiveEffect) == 0x000020, "Wrong size on GPC_SE_RTPC_C_ActiveEffect");
 static_assert(offsetof(GPC_SE_RTPC_C_ActiveEffect, CallFunc_IsValid_ReturnValue) == 0x000000, "Member 'GPC_SE_RTPC_C_ActiveEffect::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 static_assert(offsetof(GPC_SE_RTPC_C_ActiveEffect, CallFunc_K2_AttachToComponent_ReturnValue) == 0x000001, "Member 'GPC_SE_RTPC_C_ActiveEffect::CallFunc_K2_AttachToComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GPC_SE_RTPC_C_ActiveEffect, CallFunc_IsValid_ReturnValue_1) == 0x000002, "Member 'GPC_SE_RTPC_C_ActiveEffect::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(GPC_SE_RTPC_C_ActiveEffect, CallFunc_AddComponentByClass_ReturnValue) == 0x000008, "Member 'GPC_SE_RTPC_C_ActiveEffect::CallFunc_AddComponentByClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GPC_SE_RTPC_C_ActiveEffect, CallFunc_GetOwner_ReturnValue) == 0x000008, "Member 'GPC_SE_RTPC_C_ActiveEffect::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GPC_SE_RTPC_C_ActiveEffect, CallFunc_AddComponentByClass_ReturnValue) == 0x000010, "Member 'GPC_SE_RTPC_C_ActiveEffect::CallFunc_AddComponentByClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GPC_SE_RTPC_C_ActiveEffect, CallFunc_IsValid_ReturnValue_1) == 0x000018, "Member 'GPC_SE_RTPC_C_ActiveEffect::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
 
 // Function GPC_SE_RTPC.GPC_SE_RTPC_C.DeactiveEffect
 // 0x0001 (0x0001 - 0x0000)

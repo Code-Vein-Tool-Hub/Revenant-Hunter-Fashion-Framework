@@ -31,8 +31,8 @@ public:
 	class UImage*                                 Image_294;                                         // 0x05F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void SetClosenessInfo(const struct FUIBuddyClosenessInfo& NewParam);
 	class FText GetPercent(double A, double B, bool DiableFloat);
+	void SetClosenessInfo(const struct FUIBuddyClosenessInfo& NewParam);
 
 public:
 	static class UClass* StaticClass()

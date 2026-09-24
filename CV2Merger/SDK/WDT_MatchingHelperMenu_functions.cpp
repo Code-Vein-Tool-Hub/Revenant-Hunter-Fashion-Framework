@@ -46,7 +46,7 @@ void UWDT_MatchingHelperMenu_C::BP_OnDeactivated()
 
 
 // Function WDT_MatchingHelperMenu.WDT_MatchingHelperMenu_C.DecideMenu
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UMenuPieceBase*                   MenuPiece                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
@@ -309,6 +309,20 @@ void UWDT_MatchingHelperMenu_C::OnCancelReleased()
 }
 
 
+// Function WDT_MatchingHelperMenu.WDT_MatchingHelperMenu_C.OnClosing
+// (Event, Protected, BlueprintEvent)
+
+void UWDT_MatchingHelperMenu_C::OnClosing()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_MatchingHelperMenu_C", "OnClosing");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WDT_MatchingHelperMenu.WDT_MatchingHelperMenu_C.OnDecideReleased
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -436,6 +450,20 @@ void UWDT_MatchingHelperMenu_C::OnMouseLeftClickMenuPiece(class UMenuPieceBase* 
 	Parms.MenuPiece = MenuPiece;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_MatchingHelperMenu.WDT_MatchingHelperMenu_C.OnOpening
+// (Event, Protected, BlueprintEvent)
+
+void UWDT_MatchingHelperMenu_C::OnOpening()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_MatchingHelperMenu_C", "OnOpening");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

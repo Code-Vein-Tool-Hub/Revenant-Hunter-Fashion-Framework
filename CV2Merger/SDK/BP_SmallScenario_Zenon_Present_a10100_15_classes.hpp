@@ -18,11 +18,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_SmallScenario_Zenon_Present_a10100_15.BP_SmallScenario_Zenon_Present_a10100_15_C
-// 0x0008 (0x03D0 - 0x03C8)
+// 0x0008 (0x03E0 - 0x03D8)
 class ABP_SmallScenario_Zenon_Present_a10100_15_C final : public ABP_SmallScenarioBase_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_SmallScenario_Zenon_Present_a10100_15_C; // 0x03C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_SmallScenario_Zenon_Present_a10100_15_C; // 0x03D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void Abort();
@@ -43,8 +43,8 @@ public:
 	}
 };
 static_assert(alignof(ABP_SmallScenario_Zenon_Present_a10100_15_C) == 0x000008, "Wrong alignment on ABP_SmallScenario_Zenon_Present_a10100_15_C");
-static_assert(sizeof(ABP_SmallScenario_Zenon_Present_a10100_15_C) == 0x0003D0, "Wrong size on ABP_SmallScenario_Zenon_Present_a10100_15_C");
-static_assert(offsetof(ABP_SmallScenario_Zenon_Present_a10100_15_C, UberGraphFrame_BP_SmallScenario_Zenon_Present_a10100_15_C) == 0x0003C8, "Member 'ABP_SmallScenario_Zenon_Present_a10100_15_C::UberGraphFrame_BP_SmallScenario_Zenon_Present_a10100_15_C' has a wrong offset!");
+static_assert(sizeof(ABP_SmallScenario_Zenon_Present_a10100_15_C) == 0x0003E0, "Wrong size on ABP_SmallScenario_Zenon_Present_a10100_15_C");
+static_assert(offsetof(ABP_SmallScenario_Zenon_Present_a10100_15_C, UberGraphFrame_BP_SmallScenario_Zenon_Present_a10100_15_C) == 0x0003D8, "Member 'ABP_SmallScenario_Zenon_Present_a10100_15_C::UberGraphFrame_BP_SmallScenario_Zenon_Present_a10100_15_C' has a wrong offset!");
 
 }
 

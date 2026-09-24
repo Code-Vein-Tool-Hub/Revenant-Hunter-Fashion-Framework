@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Extensions_structs.hpp"
-#include "EnhancedInput_structs.hpp"
 #include "Engine_structs.hpp"
+#include "EnhancedInput_structs.hpp"
 
 
 namespace SDK::Params
@@ -104,13 +104,12 @@ static_assert(offsetof(WDT_ItemShortcutMenu_C_BP_OnItemScrolledIntoView_Event, I
 static_assert(offsetof(WDT_ItemShortcutMenu_C_BP_OnItemScrolledIntoView_Event, Widget) == 0x000008, "Member 'WDT_ItemShortcutMenu_C_BP_OnItemScrolledIntoView_Event::Widget' has a wrong offset!");
 
 // Function WDT_ItemShortcutMenu.WDT_ItemShortcutMenu_C.ExecuteUbergraph_WDT_ItemShortcutMenu
-// 0x0AE0 (0x0AE0 - 0x0000)
+// 0x0B20 (0x0B20 - 0x0000)
 struct WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FInputActionValue                      K2Node_EnhancedInputActionEvent_ActionValue_13;    // 0x0008(0x0020)(NoDestructor)
 	float                                         K2Node_EnhancedInputActionEvent_ElapsedTime_13;    // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_EnhancedInputActionEvent_TriggeredTime_13;  // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -122,7 +121,7 @@ public:
 	double                                        Temp_real_Variable_1;                              // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_0;                              // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_1_0;                            // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FInputActionValue                      K2Node_EnhancedInputActionEvent_ActionValue_12;    // 0x0070(0x0020)(NoDestructor)
 	float                                         K2Node_EnhancedInputActionEvent_ElapsedTime_12;    // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -143,7 +142,7 @@ public:
 	double                                        Temp_real_Variable_3_0;                            // 0x0100(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_3_1;                            // 0x0108(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_2_1;                            // 0x0110(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_2;                              // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_119[0x7];                                      // 0x0119(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FInputActionValue                      K2Node_EnhancedInputActionEvent_ActionValue_10;    // 0x0120(0x0020)(NoDestructor)
 	float                                         K2Node_EnhancedInputActionEvent_ElapsedTime_10;    // 0x0140(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -164,7 +163,7 @@ public:
 	double                                        Temp_real_Variable_5_0;                            // 0x01B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_5_1;                            // 0x01B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_4_1;                            // 0x01C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_3;                              // 0x01C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_2;                              // 0x01C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1C9[0x7];                                      // 0x01C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FInputActionValue                      K2Node_EnhancedInputActionEvent_ActionValue_8;     // 0x01D0(0x0020)(NoDestructor)
 	float                                         K2Node_EnhancedInputActionEvent_ElapsedTime_8;     // 0x01F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -176,7 +175,7 @@ public:
 	double                                        Temp_real_Variable_6;                              // 0x0210(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_6_0;                            // 0x0218(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_7;                              // 0x0220(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_4;                              // 0x0228(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_3;                              // 0x0228(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_229[0x7];                                      // 0x0229(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        Temp_real_Variable_7_0;                            // 0x0230(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FInputActionValue                      K2Node_EnhancedInputActionEvent_ActionValue_7;     // 0x0238(0x0020)(NoDestructor)
@@ -190,7 +189,7 @@ public:
 	double                                        Temp_real_Variable_9;                              // 0x0280(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_8_0;                            // 0x0288(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_9_0;                            // 0x0290(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_5;                              // 0x0298(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_4;                              // 0x0298(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_299[0x7];                                      // 0x0299(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FInputActionValue                      K2Node_EnhancedInputActionEvent_ActionValue_6;     // 0x02A0(0x0020)(NoDestructor)
 	float                                         K2Node_EnhancedInputActionEvent_ElapsedTime_6;     // 0x02C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -211,7 +210,7 @@ public:
 	double                                        Temp_real_Variable_11_0;                           // 0x0330(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_11_1;                           // 0x0338(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_10_1;                           // 0x0340(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_6;                              // 0x0348(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_5;                              // 0x0348(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_349[0x7];                                      // 0x0349(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FInputActionValue                      K2Node_EnhancedInputActionEvent_ActionValue_4;     // 0x0350(0x0020)(NoDestructor)
 	float                                         K2Node_EnhancedInputActionEvent_ElapsedTime_4;     // 0x0370(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -232,7 +231,7 @@ public:
 	double                                        Temp_real_Variable_13_0;                           // 0x03E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_13_1;                           // 0x03E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_12_1;                           // 0x03F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_7;                              // 0x03F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_6;                              // 0x03F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_3F9[0x7];                                      // 0x03F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FInputActionValue                      K2Node_EnhancedInputActionEvent_ActionValue_2;     // 0x0400(0x0020)(NoDestructor)
 	float                                         K2Node_EnhancedInputActionEvent_ElapsedTime_2;     // 0x0420(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -244,7 +243,7 @@ public:
 	double                                        Temp_real_Variable_14;                             // 0x0440(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_14_0;                           // 0x0448(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_15;                             // 0x0450(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_8;                              // 0x0458(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_7;                              // 0x0458(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_459[0x7];                                      // 0x0459(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        Temp_real_Variable_15_0;                           // 0x0460(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FInputActionValue                      K2Node_EnhancedInputActionEvent_ActionValue_1;     // 0x0468(0x0020)(NoDestructor)
@@ -258,7 +257,7 @@ public:
 	double                                        Temp_real_Variable_17;                             // 0x04B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_16_0;                           // 0x04B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_17_0;                           // 0x04C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_9;                              // 0x04C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_8;                              // 0x04C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4C9[0x7];                                      // 0x04C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FInputActionValue                      K2Node_EnhancedInputActionEvent_ActionValue;       // 0x04D0(0x0020)(NoDestructor)
 	float                                         K2Node_EnhancedInputActionEvent_ElapsedTime;       // 0x04F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -270,7 +269,7 @@ public:
 	double                                        Temp_real_Variable_18;                             // 0x0510(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_18_0;                           // 0x0518(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_19;                             // 0x0520(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_10;                             // 0x0528(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_9;                              // 0x0528(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_529[0x7];                                      // 0x0529(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        Temp_real_Variable_19_0;                           // 0x0530(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0538(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -299,7 +298,7 @@ public:
 	int32                                         CallFunc_PostEventSystem_ReturnValue;              // 0x05C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_PostEventSystem_ReturnValue_1;            // 0x05CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UCanvasPanel*                           K2Node_CustomEvent_ItemShortcutMenuCanvas;         // 0x05D0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_11;                             // 0x05D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_10;                             // 0x05D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_5D9[0x7];                                      // 0x05D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        Temp_real_Variable_20;                             // 0x05E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_21;                             // 0x05E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -311,7 +310,7 @@ public:
 	double                                        Temp_real_Variable_21_0;                           // 0x0628(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_20_0;                           // 0x0630(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Conv_InputActionValueToBool_ReturnValue_14; // 0x0638(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_12;                             // 0x0639(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_11;                             // 0x0639(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_63A[0x6];                                      // 0x063A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        Temp_real_Variable_22;                             // 0x0640(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsSelectMode_OutFlag;                     // 0x0648(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -332,8 +331,9 @@ public:
 	bool                                          CallFunc_IsShowSpecialBuffList_ReturnValue;        // 0x0668(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_669[0x7];                                      // 0x0669(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUISpecialBuffListInfo                 CallFunc_GetSpecialBuffList_OutInfo;               // 0x0670(0x0070)()
-	double                                        Temp_real_Variable_24;                             // 0x06E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable_25;                             // 0x06E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_12;                             // 0x06E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6E1[0x7];                                      // 0x06E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Temp_real_Variable_24;                             // 0x06E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsShowSpecialBuffList_ReturnValue_1;      // 0x06F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsShowSpecialBuffList_ReturnValue_2;      // 0x06F1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsShowSpecialBuffList_ReturnValue_3;      // 0x06F2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -345,9 +345,11 @@ public:
 	bool                                          CallFunc_IsShowSpecialBuffList_ReturnValue_9;      // 0x06F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsShowSpecialBuffList_ReturnValue_10;     // 0x06F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_6FA[0x6];                                      // 0x06FA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UInputAction*                           Temp_object_Variable_12;                           // 0x0700(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_25;                             // 0x0700(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_IsDesignTime;                         // 0x0708(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_709[0x7];                                      // 0x0709(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          CallFunc_IsSelectMode_OutFlag_6;                   // 0x0709(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_6;                // 0x070A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_70B[0x5];                                      // 0x070B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUIObjectBase*                          CallFunc_GetUIObject_ReturnValue;                  // 0x0710(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                K2Node_ComponentBoundEvent_Item_3;                 // 0x0718(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UUserWidget*                            K2Node_ComponentBoundEvent_Widget_1;               // 0x0720(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
@@ -364,67 +366,71 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0778(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SetInteger_ReturnValue;                   // 0x0779(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_77A[0x6];                                      // 0x077A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBP_CheckableScrollerItem_C*            K2Node_DynamicCast_AsBP_Checkable_Scroller_Item;   // 0x0780(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0788(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_789[0x3];                                      // 0x0789(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetElementIndex_ReturnValue;              // 0x078C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FInputActionValue                      K2Node_EnhancedInputActionEvent_ActionValue_16;    // 0x0790(0x0020)(NoDestructor)
-	float                                         K2Node_EnhancedInputActionEvent_ElapsedTime_16;    // 0x07B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_EnhancedInputActionEvent_TriggeredTime_16;  // 0x07B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     K2Node_EnhancedInputActionEvent_SourceAction_16;   // 0x07B8(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FUIItemInfo                            CallFunc_GetQueryExpendableItemInfo_OutItemInfo;   // 0x07C0(0x00A8)()
-	double                                        Temp_real_Variable_23_0;                           // 0x0868(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SetLazyTexture_ReturnValue;               // 0x0870(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SetInteger_ReturnValue_1;                 // 0x0871(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_872[0x6];                                      // 0x0872(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        Temp_real_Variable_22_0;                           // 0x0878(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Conv_InputActionValueToBool_ReturnValue_15; // 0x0880(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_881[0x7];                                      // 0x0881(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                K2Node_ComponentBoundEvent_Item_2;                 // 0x0888(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_ComponentBoundEvent_bIsSelected;            // 0x0890(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_891[0x7];                                      // 0x0891(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBP_CheckableScrollerItem_C*            K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_1; // 0x0898(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x08A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8A1[0x3];                                      // 0x08A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetElementIndex_ReturnValue_1;            // 0x08A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FUIItemInfo                            CallFunc_GetQueryExpendableItemInfo_OutItemInfo_1; // 0x08A8(0x00A8)()
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x0950(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_Event_InCurrentHealth;                      // 0x0960(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_Event_InMaxHealth;                          // 0x0968(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FUIPlayerStatusSummaryInfo             CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo; // 0x0970(0x00B8)(NoDestructor)
-	int32                                         K2Node_Event_InCurrentStamina;                     // 0x0A28(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_Event_InMaxStamina;                         // 0x0A2C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UUserWidget*                            K2Node_ComponentBoundEvent_Widget;                 // 0x0A30(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class ISelectableInterface>  K2Node_DynamicCast_AsSelectable_Interface;         // 0x0A38(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_6;                     // 0x0A48(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_InProhibited;                         // 0x0A49(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Deselect_ReturnValue;                     // 0x0A4A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A4B[0x5];                                      // 0x0A4B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FInputActionValue                      K2Node_EnhancedInputActionEvent_ActionValue_14;    // 0x0A50(0x0020)(NoDestructor)
-	float                                         K2Node_EnhancedInputActionEvent_ElapsedTime_14;    // 0x0A70(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_EnhancedInputActionEvent_TriggeredTime_14;  // 0x0A74(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     K2Node_EnhancedInputActionEvent_SourceAction_14;   // 0x0A78(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable_25_0;                           // 0x0A80(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable_24_0;                           // 0x0A88(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Conv_InputActionValueToBool_ReturnValue_16; // 0x0A90(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A91[0x7];                                      // 0x0A91(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                K2Node_ComponentBoundEvent_Item_1;                 // 0x0A98(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_ComponentBoundEvent_bIsHovered;             // 0x0AA0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_AA1[0x7];                                      // 0x0AA1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBP_CheckableScrollerItem_C*            K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_2; // 0x0AA8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_7;                     // 0x0AB0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_AB1[0x7];                                      // 0x0AB1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                K2Node_ComponentBoundEvent_Item;                   // 0x0AB8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetElementIndex_ReturnValue_2;            // 0x0AC0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_AC4[0x4];                                      // 0x0AC4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                K2Node_CustomEvent_Item;                           // 0x0AC8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UUserWidget*                            K2Node_CustomEvent_Widget;                         // 0x0AD0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetStoryFlagValueByBoolean_ReturnValue;   // 0x0AD8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IIF_ScrollerItemHolder_C> K2Node_DynamicCast_AsIF_Scroller_Item_Holder;      // 0x0780(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0790(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_791[0x7];                                      // 0x0791(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_CheckableScrollerItem_C*            K2Node_DynamicCast_AsBP_Checkable_Scroller_Item;   // 0x0798(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x07A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7A1[0x7];                                      // 0x07A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FInputActionValue                      K2Node_EnhancedInputActionEvent_ActionValue_16;    // 0x07A8(0x0020)(NoDestructor)
+	float                                         K2Node_EnhancedInputActionEvent_ElapsedTime_16;    // 0x07C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_EnhancedInputActionEvent_TriggeredTime_16;  // 0x07CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     K2Node_EnhancedInputActionEvent_SourceAction_16;   // 0x07D0(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_23_0;                           // 0x07D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_22_0;                           // 0x07E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Conv_InputActionValueToBool_ReturnValue_15; // 0x07E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7E9[0x3];                                      // 0x07E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetElementIndex_ReturnValue;              // 0x07EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                K2Node_ComponentBoundEvent_Item_2;                 // 0x07F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_ComponentBoundEvent_bIsSelected;            // 0x07F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7F9[0x7];                                      // 0x07F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUIItemInfo                            CallFunc_GetQueryExpendableItemInfo_OutItemInfo;   // 0x0800(0x00A8)()
+	class UBP_CheckableScrollerItem_C*            K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_1; // 0x08A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_6;                     // 0x08B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SetLazyTexture_ReturnValue;               // 0x08B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8B2[0x2];                                      // 0x08B2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetElementIndex_ReturnValue_1;            // 0x08B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FUIItemInfo                            CallFunc_GetQueryExpendableItemInfo_OutItemInfo_1; // 0x08B8(0x00A8)()
+	bool                                          CallFunc_SetInteger_ReturnValue_1;                 // 0x0960(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_961[0x3];                                      // 0x0961(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x0964(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_974[0x4];                                      // 0x0974(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        K2Node_Event_InCurrentHealth;                      // 0x0978(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_Event_InMaxHealth;                          // 0x0980(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FUIPlayerStatusSummaryInfo             CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo; // 0x0988(0x00D8)()
+	int32                                         K2Node_Event_InCurrentStamina;                     // 0x0A60(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_Event_InMaxStamina;                         // 0x0A64(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UUserWidget*                            K2Node_ComponentBoundEvent_Widget;                 // 0x0A68(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class ISelectableInterface>  K2Node_DynamicCast_AsSelectable_Interface;         // 0x0A70(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_7;                     // 0x0A80(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_InProhibited;                         // 0x0A81(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Deselect_ReturnValue;                     // 0x0A82(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A83[0x5];                                      // 0x0A83(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UInputAction*                           Temp_object_Variable_12;                           // 0x0A88(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FInputActionValue                      K2Node_EnhancedInputActionEvent_ActionValue_14;    // 0x0A90(0x0020)(NoDestructor)
+	float                                         K2Node_EnhancedInputActionEvent_ElapsedTime_14;    // 0x0AB0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_EnhancedInputActionEvent_TriggeredTime_14;  // 0x0AB4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     K2Node_EnhancedInputActionEvent_SourceAction_14;   // 0x0AB8(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_25_0;                           // 0x0AC0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_24_0;                           // 0x0AC8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Conv_InputActionValueToBool_ReturnValue_16; // 0x0AD0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_AD1[0x7];                                      // 0x0AD1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                K2Node_ComponentBoundEvent_Item_1;                 // 0x0AD8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_ComponentBoundEvent_bIsHovered;             // 0x0AE0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_AE1[0x7];                                      // 0x0AE1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_CheckableScrollerItem_C*            K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_2; // 0x0AE8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_8;                     // 0x0AF0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_AF1[0x7];                                      // 0x0AF1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                K2Node_ComponentBoundEvent_Item;                   // 0x0AF8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetElementIndex_ReturnValue_2;            // 0x0B00(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B04[0x4];                                      // 0x0B04(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                K2Node_CustomEvent_Item;                           // 0x0B08(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UUserWidget*                            K2Node_CustomEvent_Widget;                         // 0x0B10(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetStoryFlagValueByBoolean_ReturnValue;   // 0x0B18(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu) == 0x000008, "Wrong alignment on WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu");
-static_assert(sizeof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu) == 0x000AE0, "Wrong size on WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu");
+static_assert(sizeof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu) == 0x000B20, "Wrong size on WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, EntryPoint) == 0x000000, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::EntryPoint' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_bool_Variable) == 0x000004, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_bool_Variable' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_EnhancedInputActionEvent_ActionValue_13) == 0x000008, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_EnhancedInputActionEvent_ActionValue_13' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_EnhancedInputActionEvent_ElapsedTime_13) == 0x000028, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_EnhancedInputActionEvent_ElapsedTime_13' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_EnhancedInputActionEvent_TriggeredTime_13) == 0x00002C, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_EnhancedInputActionEvent_TriggeredTime_13' has a wrong offset!");
@@ -435,7 +441,7 @@ static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutM
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_real_Variable_1) == 0x000050, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_real_Variable_1' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_real_Variable_0) == 0x000058, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_real_Variable_0' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_real_Variable_1_0) == 0x000060, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_real_Variable_1_0' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_bool_Variable_1) == 0x000068, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_bool_Variable_1' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_bool_Variable) == 0x000068, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_bool_Variable' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_EnhancedInputActionEvent_ActionValue_12) == 0x000070, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_EnhancedInputActionEvent_ActionValue_12' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_EnhancedInputActionEvent_ElapsedTime_12) == 0x000090, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_EnhancedInputActionEvent_ElapsedTime_12' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_EnhancedInputActionEvent_TriggeredTime_12) == 0x000094, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_EnhancedInputActionEvent_TriggeredTime_12' has a wrong offset!");
@@ -453,7 +459,7 @@ static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutM
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_real_Variable_3_0) == 0x000100, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_real_Variable_3_0' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_real_Variable_3_1) == 0x000108, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_real_Variable_3_1' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_real_Variable_2_1) == 0x000110, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_real_Variable_2_1' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_bool_Variable_2) == 0x000118, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_bool_Variable_2' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_bool_Variable_1) == 0x000118, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_bool_Variable_1' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_EnhancedInputActionEvent_ActionValue_10) == 0x000120, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_EnhancedInputActionEvent_ActionValue_10' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_EnhancedInputActionEvent_ElapsedTime_10) == 0x000140, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_EnhancedInputActionEvent_ElapsedTime_10' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_EnhancedInputActionEvent_TriggeredTime_10) == 0x000144, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_EnhancedInputActionEvent_TriggeredTime_10' has a wrong offset!");
@@ -471,7 +477,7 @@ static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutM
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_real_Variable_5_0) == 0x0001B0, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_real_Variable_5_0' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_real_Variable_5_1) == 0x0001B8, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_real_Variable_5_1' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_real_Variable_4_1) == 0x0001C0, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_real_Variable_4_1' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_bool_Variable_3) == 0x0001C8, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_bool_Variable_3' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_bool_Variable_2) == 0x0001C8, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_bool_Variable_2' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_EnhancedInputActionEvent_ActionValue_8) == 0x0001D0, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_EnhancedInputActionEvent_ActionValue_8' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_EnhancedInputActionEvent_ElapsedTime_8) == 0x0001F0, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_EnhancedInputActionEvent_ElapsedTime_8' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_EnhancedInputActionEvent_TriggeredTime_8) == 0x0001F4, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_EnhancedInputActionEvent_TriggeredTime_8' has a wrong offset!");
@@ -481,7 +487,7 @@ static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutM
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_real_Variable_6) == 0x000210, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_real_Variable_6' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_real_Variable_6_0) == 0x000218, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_real_Variable_6_0' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_real_Variable_7) == 0x000220, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_real_Variable_7' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_bool_Variable_4) == 0x000228, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_bool_Variable_4' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_bool_Variable_3) == 0x000228, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_bool_Variable_3' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_real_Variable_7_0) == 0x000230, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_real_Variable_7_0' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_EnhancedInputActionEvent_ActionValue_7) == 0x000238, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_EnhancedInputActionEvent_ActionValue_7' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_EnhancedInputActionEvent_ElapsedTime_7) == 0x000258, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_EnhancedInputActionEvent_ElapsedTime_7' has a wrong offset!");
@@ -493,7 +499,7 @@ static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutM
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_real_Variable_9) == 0x000280, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_real_Variable_9' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_real_Variable_8_0) == 0x000288, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_real_Variable_8_0' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_real_Variable_9_0) == 0x000290, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_real_Variable_9_0' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_bool_Variable_5) == 0x000298, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_bool_Variable_5' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_bool_Variable_4) == 0x000298, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_bool_Variable_4' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_EnhancedInputActionEvent_ActionValue_6) == 0x0002A0, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_EnhancedInputActionEvent_ActionValue_6' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_EnhancedInputActionEvent_ElapsedTime_6) == 0x0002C0, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_EnhancedInputActionEvent_ElapsedTime_6' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_EnhancedInputActionEvent_TriggeredTime_6) == 0x0002C4, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_EnhancedInputActionEvent_TriggeredTime_6' has a wrong offset!");
@@ -511,7 +517,7 @@ static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutM
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_real_Variable_11_0) == 0x000330, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_real_Variable_11_0' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_real_Variable_11_1) == 0x000338, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_real_Variable_11_1' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_real_Variable_10_1) == 0x000340, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_real_Variable_10_1' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_bool_Variable_6) == 0x000348, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_bool_Variable_6' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_bool_Variable_5) == 0x000348, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_bool_Variable_5' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_EnhancedInputActionEvent_ActionValue_4) == 0x000350, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_EnhancedInputActionEvent_ActionValue_4' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_EnhancedInputActionEvent_ElapsedTime_4) == 0x000370, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_EnhancedInputActionEvent_ElapsedTime_4' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_EnhancedInputActionEvent_TriggeredTime_4) == 0x000374, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_EnhancedInputActionEvent_TriggeredTime_4' has a wrong offset!");
@@ -529,7 +535,7 @@ static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutM
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_real_Variable_13_0) == 0x0003E0, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_real_Variable_13_0' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_real_Variable_13_1) == 0x0003E8, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_real_Variable_13_1' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_real_Variable_12_1) == 0x0003F0, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_real_Variable_12_1' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_bool_Variable_7) == 0x0003F8, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_bool_Variable_7' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_bool_Variable_6) == 0x0003F8, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_bool_Variable_6' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_EnhancedInputActionEvent_ActionValue_2) == 0x000400, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_EnhancedInputActionEvent_ActionValue_2' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_EnhancedInputActionEvent_ElapsedTime_2) == 0x000420, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_EnhancedInputActionEvent_ElapsedTime_2' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_EnhancedInputActionEvent_TriggeredTime_2) == 0x000424, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_EnhancedInputActionEvent_TriggeredTime_2' has a wrong offset!");
@@ -539,7 +545,7 @@ static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutM
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_real_Variable_14) == 0x000440, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_real_Variable_14' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_real_Variable_14_0) == 0x000448, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_real_Variable_14_0' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_real_Variable_15) == 0x000450, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_real_Variable_15' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_bool_Variable_8) == 0x000458, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_bool_Variable_8' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_bool_Variable_7) == 0x000458, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_bool_Variable_7' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_real_Variable_15_0) == 0x000460, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_real_Variable_15_0' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_EnhancedInputActionEvent_ActionValue_1) == 0x000468, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_EnhancedInputActionEvent_ActionValue_1' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_EnhancedInputActionEvent_ElapsedTime_1) == 0x000488, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_EnhancedInputActionEvent_ElapsedTime_1' has a wrong offset!");
@@ -551,7 +557,7 @@ static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutM
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_real_Variable_17) == 0x0004B0, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_real_Variable_17' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_real_Variable_16_0) == 0x0004B8, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_real_Variable_16_0' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_real_Variable_17_0) == 0x0004C0, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_real_Variable_17_0' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_bool_Variable_9) == 0x0004C8, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_bool_Variable_9' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_bool_Variable_8) == 0x0004C8, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_bool_Variable_8' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_EnhancedInputActionEvent_ActionValue) == 0x0004D0, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_EnhancedInputActionEvent_ActionValue' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_EnhancedInputActionEvent_ElapsedTime) == 0x0004F0, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_EnhancedInputActionEvent_ElapsedTime' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_EnhancedInputActionEvent_TriggeredTime) == 0x0004F4, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_EnhancedInputActionEvent_TriggeredTime' has a wrong offset!");
@@ -561,7 +567,7 @@ static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutM
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_real_Variable_18) == 0x000510, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_real_Variable_18' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_real_Variable_18_0) == 0x000518, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_real_Variable_18_0' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_real_Variable_19) == 0x000520, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_real_Variable_19' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_bool_Variable_10) == 0x000528, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_bool_Variable_10' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_bool_Variable_9) == 0x000528, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_bool_Variable_9' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_real_Variable_19_0) == 0x000530, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_real_Variable_19_0' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000538, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, CallFunc_GetGameInstanceSubsystem_ReturnValue_1) == 0x000540, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::CallFunc_GetGameInstanceSubsystem_ReturnValue_1' has a wrong offset!");
@@ -584,7 +590,7 @@ static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutM
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, CallFunc_PostEventSystem_ReturnValue) == 0x0005C8, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::CallFunc_PostEventSystem_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, CallFunc_PostEventSystem_ReturnValue_1) == 0x0005CC, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::CallFunc_PostEventSystem_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_CustomEvent_ItemShortcutMenuCanvas) == 0x0005D0, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_CustomEvent_ItemShortcutMenuCanvas' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_bool_Variable_11) == 0x0005D8, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_bool_Variable_11' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_bool_Variable_10) == 0x0005D8, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_bool_Variable_10' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_real_Variable_20) == 0x0005E0, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_real_Variable_20' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_real_Variable_21) == 0x0005E8, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_real_Variable_21' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_object_Variable_10) == 0x0005F0, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_object_Variable_10' has a wrong offset!");
@@ -595,7 +601,7 @@ static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutM
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_real_Variable_21_0) == 0x000628, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_real_Variable_21_0' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_real_Variable_20_0) == 0x000630, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_real_Variable_20_0' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, CallFunc_Conv_InputActionValueToBool_ReturnValue_14) == 0x000638, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::CallFunc_Conv_InputActionValueToBool_ReturnValue_14' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_bool_Variable_12) == 0x000639, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_bool_Variable_12' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_bool_Variable_11) == 0x000639, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_bool_Variable_11' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_real_Variable_22) == 0x000640, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_real_Variable_22' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, CallFunc_IsSelectMode_OutFlag) == 0x000648, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::CallFunc_IsSelectMode_OutFlag' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, CallFunc_Not_PreBool_ReturnValue) == 0x000649, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
@@ -613,8 +619,8 @@ static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutM
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_object_Variable_11) == 0x000660, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_object_Variable_11' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, CallFunc_IsShowSpecialBuffList_ReturnValue) == 0x000668, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::CallFunc_IsShowSpecialBuffList_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, CallFunc_GetSpecialBuffList_OutInfo) == 0x000670, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::CallFunc_GetSpecialBuffList_OutInfo' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_real_Variable_24) == 0x0006E0, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_real_Variable_24' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_real_Variable_25) == 0x0006E8, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_real_Variable_25' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_bool_Variable_12) == 0x0006E0, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_bool_Variable_12' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_real_Variable_24) == 0x0006E8, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_real_Variable_24' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, CallFunc_IsShowSpecialBuffList_ReturnValue_1) == 0x0006F0, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::CallFunc_IsShowSpecialBuffList_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, CallFunc_IsShowSpecialBuffList_ReturnValue_2) == 0x0006F1, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::CallFunc_IsShowSpecialBuffList_ReturnValue_2' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, CallFunc_IsShowSpecialBuffList_ReturnValue_3) == 0x0006F2, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::CallFunc_IsShowSpecialBuffList_ReturnValue_3' has a wrong offset!");
@@ -625,8 +631,10 @@ static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutM
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, CallFunc_IsShowSpecialBuffList_ReturnValue_8) == 0x0006F7, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::CallFunc_IsShowSpecialBuffList_ReturnValue_8' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, CallFunc_IsShowSpecialBuffList_ReturnValue_9) == 0x0006F8, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::CallFunc_IsShowSpecialBuffList_ReturnValue_9' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, CallFunc_IsShowSpecialBuffList_ReturnValue_10) == 0x0006F9, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::CallFunc_IsShowSpecialBuffList_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_object_Variable_12) == 0x000700, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_object_Variable_12' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_real_Variable_25) == 0x000700, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_real_Variable_25' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_Event_IsDesignTime) == 0x000708, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_Event_IsDesignTime' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, CallFunc_IsSelectMode_OutFlag_6) == 0x000709, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::CallFunc_IsSelectMode_OutFlag_6' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, CallFunc_Not_PreBool_ReturnValue_6) == 0x00070A, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::CallFunc_Not_PreBool_ReturnValue_6' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, CallFunc_GetUIObject_ReturnValue) == 0x000710, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::CallFunc_GetUIObject_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_ComponentBoundEvent_Item_3) == 0x000718, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_ComponentBoundEvent_Item_3' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_ComponentBoundEvent_Widget_1) == 0x000720, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_ComponentBoundEvent_Widget_1' has a wrong offset!");
@@ -639,52 +647,55 @@ static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutM
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_DynamicCast_AsInteger_Holder_Interface_1) == 0x000768, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_DynamicCast_AsInteger_Holder_Interface_1' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_DynamicCast_bSuccess_3) == 0x000778, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, CallFunc_SetInteger_ReturnValue) == 0x000779, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::CallFunc_SetInteger_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_DynamicCast_AsBP_Checkable_Scroller_Item) == 0x000780, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_DynamicCast_AsBP_Checkable_Scroller_Item' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_DynamicCast_bSuccess_4) == 0x000788, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, CallFunc_GetElementIndex_ReturnValue) == 0x00078C, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::CallFunc_GetElementIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_EnhancedInputActionEvent_ActionValue_16) == 0x000790, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_EnhancedInputActionEvent_ActionValue_16' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_EnhancedInputActionEvent_ElapsedTime_16) == 0x0007B0, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_EnhancedInputActionEvent_ElapsedTime_16' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_EnhancedInputActionEvent_TriggeredTime_16) == 0x0007B4, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_EnhancedInputActionEvent_TriggeredTime_16' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_EnhancedInputActionEvent_SourceAction_16) == 0x0007B8, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_EnhancedInputActionEvent_SourceAction_16' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, CallFunc_GetQueryExpendableItemInfo_OutItemInfo) == 0x0007C0, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::CallFunc_GetQueryExpendableItemInfo_OutItemInfo' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_real_Variable_23_0) == 0x000868, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_real_Variable_23_0' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, CallFunc_SetLazyTexture_ReturnValue) == 0x000870, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::CallFunc_SetLazyTexture_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, CallFunc_SetInteger_ReturnValue_1) == 0x000871, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::CallFunc_SetInteger_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_real_Variable_22_0) == 0x000878, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_real_Variable_22_0' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, CallFunc_Conv_InputActionValueToBool_ReturnValue_15) == 0x000880, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::CallFunc_Conv_InputActionValueToBool_ReturnValue_15' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_ComponentBoundEvent_Item_2) == 0x000888, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_ComponentBoundEvent_Item_2' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_ComponentBoundEvent_bIsSelected) == 0x000890, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_ComponentBoundEvent_bIsSelected' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_1) == 0x000898, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_1' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_DynamicCast_bSuccess_5) == 0x0008A0, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_DynamicCast_bSuccess_5' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, CallFunc_GetElementIndex_ReturnValue_1) == 0x0008A4, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::CallFunc_GetElementIndex_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, CallFunc_GetQueryExpendableItemInfo_OutItemInfo_1) == 0x0008A8, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::CallFunc_GetQueryExpendableItemInfo_OutItemInfo_1' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_CreateDelegate_OutputDelegate_1) == 0x000950, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_Event_InCurrentHealth) == 0x000960, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_Event_InCurrentHealth' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_Event_InMaxHealth) == 0x000968, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_Event_InMaxHealth' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo) == 0x000970, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_Event_InCurrentStamina) == 0x000A28, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_Event_InCurrentStamina' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_Event_InMaxStamina) == 0x000A2C, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_Event_InMaxStamina' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_ComponentBoundEvent_Widget) == 0x000A30, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_ComponentBoundEvent_Widget' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_DynamicCast_AsSelectable_Interface) == 0x000A38, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_DynamicCast_AsSelectable_Interface' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_DynamicCast_bSuccess_6) == 0x000A48, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_DynamicCast_bSuccess_6' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_Event_InProhibited) == 0x000A49, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_Event_InProhibited' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, CallFunc_Deselect_ReturnValue) == 0x000A4A, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::CallFunc_Deselect_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_EnhancedInputActionEvent_ActionValue_14) == 0x000A50, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_EnhancedInputActionEvent_ActionValue_14' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_EnhancedInputActionEvent_ElapsedTime_14) == 0x000A70, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_EnhancedInputActionEvent_ElapsedTime_14' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_EnhancedInputActionEvent_TriggeredTime_14) == 0x000A74, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_EnhancedInputActionEvent_TriggeredTime_14' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_EnhancedInputActionEvent_SourceAction_14) == 0x000A78, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_EnhancedInputActionEvent_SourceAction_14' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_real_Variable_25_0) == 0x000A80, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_real_Variable_25_0' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_real_Variable_24_0) == 0x000A88, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_real_Variable_24_0' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, CallFunc_Conv_InputActionValueToBool_ReturnValue_16) == 0x000A90, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::CallFunc_Conv_InputActionValueToBool_ReturnValue_16' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_ComponentBoundEvent_Item_1) == 0x000A98, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_ComponentBoundEvent_Item_1' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_ComponentBoundEvent_bIsHovered) == 0x000AA0, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_ComponentBoundEvent_bIsHovered' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_2) == 0x000AA8, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_2' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_DynamicCast_bSuccess_7) == 0x000AB0, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_DynamicCast_bSuccess_7' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_ComponentBoundEvent_Item) == 0x000AB8, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_ComponentBoundEvent_Item' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, CallFunc_GetElementIndex_ReturnValue_2) == 0x000AC0, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::CallFunc_GetElementIndex_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_CustomEvent_Item) == 0x000AC8, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_CustomEvent_Item' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_CustomEvent_Widget) == 0x000AD0, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_CustomEvent_Widget' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, CallFunc_GetStoryFlagValueByBoolean_ReturnValue) == 0x000AD8, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::CallFunc_GetStoryFlagValueByBoolean_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_DynamicCast_AsIF_Scroller_Item_Holder) == 0x000780, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_DynamicCast_AsIF_Scroller_Item_Holder' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_DynamicCast_bSuccess_4) == 0x000790, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_DynamicCast_AsBP_Checkable_Scroller_Item) == 0x000798, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_DynamicCast_AsBP_Checkable_Scroller_Item' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_DynamicCast_bSuccess_5) == 0x0007A0, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_DynamicCast_bSuccess_5' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_EnhancedInputActionEvent_ActionValue_16) == 0x0007A8, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_EnhancedInputActionEvent_ActionValue_16' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_EnhancedInputActionEvent_ElapsedTime_16) == 0x0007C8, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_EnhancedInputActionEvent_ElapsedTime_16' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_EnhancedInputActionEvent_TriggeredTime_16) == 0x0007CC, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_EnhancedInputActionEvent_TriggeredTime_16' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_EnhancedInputActionEvent_SourceAction_16) == 0x0007D0, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_EnhancedInputActionEvent_SourceAction_16' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_real_Variable_23_0) == 0x0007D8, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_real_Variable_23_0' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_real_Variable_22_0) == 0x0007E0, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_real_Variable_22_0' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, CallFunc_Conv_InputActionValueToBool_ReturnValue_15) == 0x0007E8, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::CallFunc_Conv_InputActionValueToBool_ReturnValue_15' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, CallFunc_GetElementIndex_ReturnValue) == 0x0007EC, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::CallFunc_GetElementIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_ComponentBoundEvent_Item_2) == 0x0007F0, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_ComponentBoundEvent_Item_2' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_ComponentBoundEvent_bIsSelected) == 0x0007F8, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_ComponentBoundEvent_bIsSelected' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, CallFunc_GetQueryExpendableItemInfo_OutItemInfo) == 0x000800, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::CallFunc_GetQueryExpendableItemInfo_OutItemInfo' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_1) == 0x0008A8, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_1' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_DynamicCast_bSuccess_6) == 0x0008B0, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_DynamicCast_bSuccess_6' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, CallFunc_SetLazyTexture_ReturnValue) == 0x0008B1, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::CallFunc_SetLazyTexture_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, CallFunc_GetElementIndex_ReturnValue_1) == 0x0008B4, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::CallFunc_GetElementIndex_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, CallFunc_GetQueryExpendableItemInfo_OutItemInfo_1) == 0x0008B8, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::CallFunc_GetQueryExpendableItemInfo_OutItemInfo_1' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, CallFunc_SetInteger_ReturnValue_1) == 0x000960, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::CallFunc_SetInteger_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_CreateDelegate_OutputDelegate_1) == 0x000964, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_Event_InCurrentHealth) == 0x000978, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_Event_InCurrentHealth' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_Event_InMaxHealth) == 0x000980, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_Event_InMaxHealth' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo) == 0x000988, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_Event_InCurrentStamina) == 0x000A60, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_Event_InCurrentStamina' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_Event_InMaxStamina) == 0x000A64, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_Event_InMaxStamina' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_ComponentBoundEvent_Widget) == 0x000A68, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_ComponentBoundEvent_Widget' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_DynamicCast_AsSelectable_Interface) == 0x000A70, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_DynamicCast_AsSelectable_Interface' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_DynamicCast_bSuccess_7) == 0x000A80, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_DynamicCast_bSuccess_7' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_Event_InProhibited) == 0x000A81, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_Event_InProhibited' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, CallFunc_Deselect_ReturnValue) == 0x000A82, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::CallFunc_Deselect_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_object_Variable_12) == 0x000A88, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_object_Variable_12' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_EnhancedInputActionEvent_ActionValue_14) == 0x000A90, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_EnhancedInputActionEvent_ActionValue_14' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_EnhancedInputActionEvent_ElapsedTime_14) == 0x000AB0, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_EnhancedInputActionEvent_ElapsedTime_14' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_EnhancedInputActionEvent_TriggeredTime_14) == 0x000AB4, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_EnhancedInputActionEvent_TriggeredTime_14' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_EnhancedInputActionEvent_SourceAction_14) == 0x000AB8, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_EnhancedInputActionEvent_SourceAction_14' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_real_Variable_25_0) == 0x000AC0, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_real_Variable_25_0' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, Temp_real_Variable_24_0) == 0x000AC8, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::Temp_real_Variable_24_0' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, CallFunc_Conv_InputActionValueToBool_ReturnValue_16) == 0x000AD0, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::CallFunc_Conv_InputActionValueToBool_ReturnValue_16' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_ComponentBoundEvent_Item_1) == 0x000AD8, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_ComponentBoundEvent_Item_1' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_ComponentBoundEvent_bIsHovered) == 0x000AE0, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_ComponentBoundEvent_bIsHovered' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_2) == 0x000AE8, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_2' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_DynamicCast_bSuccess_8) == 0x000AF0, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_DynamicCast_bSuccess_8' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_ComponentBoundEvent_Item) == 0x000AF8, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_ComponentBoundEvent_Item' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, CallFunc_GetElementIndex_ReturnValue_2) == 0x000B00, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::CallFunc_GetElementIndex_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_CustomEvent_Item) == 0x000B08, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_CustomEvent_Item' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, K2Node_CustomEvent_Widget) == 0x000B10, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::K2Node_CustomEvent_Widget' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu, CallFunc_GetStoryFlagValueByBoolean_ReturnValue) == 0x000B18, "Member 'WDT_ItemShortcutMenu_C_ExecuteUbergraph_WDT_ItemShortcutMenu::CallFunc_GetStoryFlagValueByBoolean_ReturnValue' has a wrong offset!");
 
 // Function WDT_ItemShortcutMenu.WDT_ItemShortcutMenu_C.GetCategoryNumber
 // 0x0010 (0x0010 - 0x0000)
@@ -755,7 +766,7 @@ static_assert(offsetof(WDT_ItemShortcutMenu_C_GetQueryExpendableItemInfo, K2Node
 static_assert(offsetof(WDT_ItemShortcutMenu_C_GetQueryExpendableItemInfo, CallFunc_GetEquippableItemInfoByQuery_OutItemInfo) == 0x0000C0, "Member 'WDT_ItemShortcutMenu_C_GetQueryExpendableItemInfo::CallFunc_GetEquippableItemInfoByQuery_OutItemInfo' has a wrong offset!");
 
 // Function WDT_ItemShortcutMenu.WDT_ItemShortcutMenu_C.Initialize
-// 0x0170 (0x0170 - 0x0000)
+// 0x0190 (0x0190 - 0x0000)
 struct WDT_ItemShortcutMenu_C_Initialize final
 {
 public:
@@ -768,16 +779,16 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_51[0x3];                                       // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetTargetItemShortcutSlotIndex_OutIndex;  // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FUIPlayerStatusSummaryInfo             CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo; // 0x0058(0x00B8)(NoDestructor)
-	uint8                                         CallFunc_Conv_IntToByte_ReturnValue;               // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_GetValidValue_ReturnValue;                // 0x0111(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_112[0x2];                                      // 0x0112(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetEquippedIndexInCategory_IndexInCategory; // 0x0114(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TMap<int32, bool>                             CallFunc_MakeCheckedIndexMap_OutCheckedIndexMap;   // 0x0118(0x0050)()
-	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FUIPlayerStatusSummaryInfo             CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo; // 0x0058(0x00D8)()
+	uint8                                         CallFunc_Conv_IntToByte_ReturnValue;               // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_GetValidValue_ReturnValue;                // 0x0131(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_132[0x2];                                      // 0x0132(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetEquippedIndexInCategory_IndexInCategory; // 0x0134(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TMap<int32, bool>                             CallFunc_MakeCheckedIndexMap_OutCheckedIndexMap;   // 0x0138(0x0050)()
+	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_ItemShortcutMenu_C_Initialize) == 0x000008, "Wrong alignment on WDT_ItemShortcutMenu_C_Initialize");
-static_assert(sizeof(WDT_ItemShortcutMenu_C_Initialize) == 0x000170, "Wrong size on WDT_ItemShortcutMenu_C_Initialize");
+static_assert(sizeof(WDT_ItemShortcutMenu_C_Initialize) == 0x000190, "Wrong size on WDT_ItemShortcutMenu_C_Initialize");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_Initialize, CallFunc_GetCategoryNumber_Number) == 0x000000, "Member 'WDT_ItemShortcutMenu_C_Initialize::CallFunc_GetCategoryNumber_Number' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_Initialize, K2Node_CreateDelegate_OutputDelegate) == 0x000004, "Member 'WDT_ItemShortcutMenu_C_Initialize::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_Initialize, K2Node_MakeArray_Array) == 0x000018, "Member 'WDT_ItemShortcutMenu_C_Initialize::K2Node_MakeArray_Array' has a wrong offset!");
@@ -786,11 +797,11 @@ static_assert(offsetof(WDT_ItemShortcutMenu_C_Initialize, K2Node_DynamicCast_AsI
 static_assert(offsetof(WDT_ItemShortcutMenu_C_Initialize, K2Node_DynamicCast_bSuccess) == 0x000050, "Member 'WDT_ItemShortcutMenu_C_Initialize::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_Initialize, CallFunc_GetTargetItemShortcutSlotIndex_OutIndex) == 0x000054, "Member 'WDT_ItemShortcutMenu_C_Initialize::CallFunc_GetTargetItemShortcutSlotIndex_OutIndex' has a wrong offset!");
 static_assert(offsetof(WDT_ItemShortcutMenu_C_Initialize, CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo) == 0x000058, "Member 'WDT_ItemShortcutMenu_C_Initialize::CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_Initialize, CallFunc_Conv_IntToByte_ReturnValue) == 0x000110, "Member 'WDT_ItemShortcutMenu_C_Initialize::CallFunc_Conv_IntToByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_Initialize, CallFunc_GetValidValue_ReturnValue) == 0x000111, "Member 'WDT_ItemShortcutMenu_C_Initialize::CallFunc_GetValidValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_Initialize, CallFunc_GetEquippedIndexInCategory_IndexInCategory) == 0x000114, "Member 'WDT_ItemShortcutMenu_C_Initialize::CallFunc_GetEquippedIndexInCategory_IndexInCategory' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_Initialize, CallFunc_MakeCheckedIndexMap_OutCheckedIndexMap) == 0x000118, "Member 'WDT_ItemShortcutMenu_C_Initialize::CallFunc_MakeCheckedIndexMap_OutCheckedIndexMap' has a wrong offset!");
-static_assert(offsetof(WDT_ItemShortcutMenu_C_Initialize, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x000168, "Member 'WDT_ItemShortcutMenu_C_Initialize::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_Initialize, CallFunc_Conv_IntToByte_ReturnValue) == 0x000130, "Member 'WDT_ItemShortcutMenu_C_Initialize::CallFunc_Conv_IntToByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_Initialize, CallFunc_GetValidValue_ReturnValue) == 0x000131, "Member 'WDT_ItemShortcutMenu_C_Initialize::CallFunc_GetValidValue_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_Initialize, CallFunc_GetEquippedIndexInCategory_IndexInCategory) == 0x000134, "Member 'WDT_ItemShortcutMenu_C_Initialize::CallFunc_GetEquippedIndexInCategory_IndexInCategory' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_Initialize, CallFunc_MakeCheckedIndexMap_OutCheckedIndexMap) == 0x000138, "Member 'WDT_ItemShortcutMenu_C_Initialize::CallFunc_MakeCheckedIndexMap_OutCheckedIndexMap' has a wrong offset!");
+static_assert(offsetof(WDT_ItemShortcutMenu_C_Initialize, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x000188, "Member 'WDT_ItemShortcutMenu_C_Initialize::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
 
 // Function WDT_ItemShortcutMenu.WDT_ItemShortcutMenu_C.InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_15
 // 0x0030 (0x0030 - 0x0000)

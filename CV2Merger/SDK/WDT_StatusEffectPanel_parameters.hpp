@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "Extensions_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "Extensions_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function WDT_StatusEffectPanel.WDT_StatusEffectPanel_C.CreateStatusDownEffectIcon
-// 0x0050 (0x0050 - 0x0000)
+// 0x0068 (0x0068 - 0x0000)
 struct WDT_StatusEffectPanel_C_CreateStatusDownEffectIcon final
 {
 public:
@@ -27,28 +27,81 @@ public:
 	EStatusEffectFrameType                        InFrame;                                           // 0x0009(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWDT_StatusDownEffectIcon_C*            L_NewIcon;                                         // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UHorizontalBoxSlot*                     CallFunc_AddChildToHorizontalBox_ReturnValue;      // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FMargin                                K2Node_MakeStruct_Margin;                          // 0x0020(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UWDT_StatusDownEffectIcon_C*            CallFunc_Create_ReturnValue;                       // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UTexture2D*                             CallFunc_GetStatusDownEffectIcon_ReturnValue;      // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UBP_StatusIndicatorUIObject_C*          CallFunc_GetStausIndicatorUIObject_OutUIObject;    // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsWorldTearingDown_ReturnValue;           // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_23[0x5];                                       // 0x0023(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UHorizontalBoxSlot*                     CallFunc_AddChildToHorizontalBox_ReturnValue;      // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FMargin                                K2Node_MakeStruct_Margin;                          // 0x0030(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UWDT_StatusDownEffectIcon_C*            CallFunc_Create_ReturnValue;                       // 0x0048(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UTexture2D*                             CallFunc_GetStatusEffectFrame_ReturnValue;         // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UTexture2D*                             CallFunc_GetStatusDownEffectIcon_ReturnValue;      // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_StatusEffectPanel_C_CreateStatusDownEffectIcon) == 0x000008, "Wrong alignment on WDT_StatusEffectPanel_C_CreateStatusDownEffectIcon");
-static_assert(sizeof(WDT_StatusEffectPanel_C_CreateStatusDownEffectIcon) == 0x000050, "Wrong size on WDT_StatusEffectPanel_C_CreateStatusDownEffectIcon");
+static_assert(sizeof(WDT_StatusEffectPanel_C_CreateStatusDownEffectIcon) == 0x000068, "Wrong size on WDT_StatusEffectPanel_C_CreateStatusDownEffectIcon");
 static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusDownEffectIcon, InHandle) == 0x000000, "Member 'WDT_StatusEffectPanel_C_CreateStatusDownEffectIcon::InHandle' has a wrong offset!");
 static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusDownEffectIcon, InIconType) == 0x000008, "Member 'WDT_StatusEffectPanel_C_CreateStatusDownEffectIcon::InIconType' has a wrong offset!");
 static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusDownEffectIcon, InFrame) == 0x000009, "Member 'WDT_StatusEffectPanel_C_CreateStatusDownEffectIcon::InFrame' has a wrong offset!");
 static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusDownEffectIcon, L_NewIcon) == 0x000010, "Member 'WDT_StatusEffectPanel_C_CreateStatusDownEffectIcon::L_NewIcon' has a wrong offset!");
-static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusDownEffectIcon, CallFunc_AddChildToHorizontalBox_ReturnValue) == 0x000018, "Member 'WDT_StatusEffectPanel_C_CreateStatusDownEffectIcon::CallFunc_AddChildToHorizontalBox_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusDownEffectIcon, K2Node_MakeStruct_Margin) == 0x000020, "Member 'WDT_StatusEffectPanel_C_CreateStatusDownEffectIcon::K2Node_MakeStruct_Margin' has a wrong offset!");
-static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusDownEffectIcon, CallFunc_GetPlayerController_ReturnValue) == 0x000030, "Member 'WDT_StatusEffectPanel_C_CreateStatusDownEffectIcon::CallFunc_GetPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusDownEffectIcon, CallFunc_Create_ReturnValue) == 0x000038, "Member 'WDT_StatusEffectPanel_C_CreateStatusDownEffectIcon::CallFunc_Create_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusDownEffectIcon, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000040, "Member 'WDT_StatusEffectPanel_C_CreateStatusDownEffectIcon::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusDownEffectIcon, CallFunc_GetStatusDownEffectIcon_ReturnValue) == 0x000048, "Member 'WDT_StatusEffectPanel_C_CreateStatusDownEffectIcon::CallFunc_GetStatusDownEffectIcon_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusDownEffectIcon, CallFunc_GetStausIndicatorUIObject_OutUIObject) == 0x000018, "Member 'WDT_StatusEffectPanel_C_CreateStatusDownEffectIcon::CallFunc_GetStausIndicatorUIObject_OutUIObject' has a wrong offset!");
+static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusDownEffectIcon, CallFunc_IsValid_ReturnValue) == 0x000020, "Member 'WDT_StatusEffectPanel_C_CreateStatusDownEffectIcon::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusDownEffectIcon, CallFunc_IsWorldTearingDown_ReturnValue) == 0x000021, "Member 'WDT_StatusEffectPanel_C_CreateStatusDownEffectIcon::CallFunc_IsWorldTearingDown_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusDownEffectIcon, CallFunc_Not_PreBool_ReturnValue) == 0x000022, "Member 'WDT_StatusEffectPanel_C_CreateStatusDownEffectIcon::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusDownEffectIcon, CallFunc_AddChildToHorizontalBox_ReturnValue) == 0x000028, "Member 'WDT_StatusEffectPanel_C_CreateStatusDownEffectIcon::CallFunc_AddChildToHorizontalBox_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusDownEffectIcon, K2Node_MakeStruct_Margin) == 0x000030, "Member 'WDT_StatusEffectPanel_C_CreateStatusDownEffectIcon::K2Node_MakeStruct_Margin' has a wrong offset!");
+static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusDownEffectIcon, CallFunc_GetPlayerController_ReturnValue) == 0x000040, "Member 'WDT_StatusEffectPanel_C_CreateStatusDownEffectIcon::CallFunc_GetPlayerController_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusDownEffectIcon, CallFunc_Create_ReturnValue) == 0x000048, "Member 'WDT_StatusEffectPanel_C_CreateStatusDownEffectIcon::CallFunc_Create_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusDownEffectIcon, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000050, "Member 'WDT_StatusEffectPanel_C_CreateStatusDownEffectIcon::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusDownEffectIcon, CallFunc_GetStatusEffectFrame_ReturnValue) == 0x000058, "Member 'WDT_StatusEffectPanel_C_CreateStatusDownEffectIcon::CallFunc_GetStatusEffectFrame_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusDownEffectIcon, CallFunc_GetStatusDownEffectIcon_ReturnValue) == 0x000060, "Member 'WDT_StatusEffectPanel_C_CreateStatusDownEffectIcon::CallFunc_GetStatusDownEffectIcon_ReturnValue' has a wrong offset!");
+
+// Function WDT_StatusEffectPanel.WDT_StatusEffectPanel_C.CreateStatusDownEffectIconEx
+// 0x0068 (0x0068 - 0x0000)
+struct WDT_StatusEffectPanel_C_CreateStatusDownEffectIconEx final
+{
+public:
+	struct FStatusEffectIconHandle                InHandle;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	EStatusDownEffectIconTypeEx                   InIconType;                                        // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EStatusEffectFrameType                        InFrame;                                           // 0x0009(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWDT_StatusDownEffectIcon_C*            L_NewIcon;                                         // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UBP_StatusIndicatorUIObject_C*          CallFunc_GetStausIndicatorUIObject_OutUIObject;    // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsWorldTearingDown_ReturnValue;           // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_23[0x1];                                       // 0x0023(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMargin                                K2Node_MakeStruct_Margin;                          // 0x0024(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UHorizontalBoxSlot*                     CallFunc_AddChildToHorizontalBox_ReturnValue;      // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWDT_StatusDownEffectIcon_C*            CallFunc_Create_ReturnValue;                       // 0x0048(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UTexture2D*                             CallFunc_GetStatusDownEffectIconEx_ReturnValue;    // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UTexture2D*                             CallFunc_GetStatusEffectFrame_ReturnValue;         // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_StatusEffectPanel_C_CreateStatusDownEffectIconEx) == 0x000008, "Wrong alignment on WDT_StatusEffectPanel_C_CreateStatusDownEffectIconEx");
+static_assert(sizeof(WDT_StatusEffectPanel_C_CreateStatusDownEffectIconEx) == 0x000068, "Wrong size on WDT_StatusEffectPanel_C_CreateStatusDownEffectIconEx");
+static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusDownEffectIconEx, InHandle) == 0x000000, "Member 'WDT_StatusEffectPanel_C_CreateStatusDownEffectIconEx::InHandle' has a wrong offset!");
+static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusDownEffectIconEx, InIconType) == 0x000008, "Member 'WDT_StatusEffectPanel_C_CreateStatusDownEffectIconEx::InIconType' has a wrong offset!");
+static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusDownEffectIconEx, InFrame) == 0x000009, "Member 'WDT_StatusEffectPanel_C_CreateStatusDownEffectIconEx::InFrame' has a wrong offset!");
+static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusDownEffectIconEx, L_NewIcon) == 0x000010, "Member 'WDT_StatusEffectPanel_C_CreateStatusDownEffectIconEx::L_NewIcon' has a wrong offset!");
+static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusDownEffectIconEx, CallFunc_GetStausIndicatorUIObject_OutUIObject) == 0x000018, "Member 'WDT_StatusEffectPanel_C_CreateStatusDownEffectIconEx::CallFunc_GetStausIndicatorUIObject_OutUIObject' has a wrong offset!");
+static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusDownEffectIconEx, CallFunc_IsValid_ReturnValue) == 0x000020, "Member 'WDT_StatusEffectPanel_C_CreateStatusDownEffectIconEx::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusDownEffectIconEx, CallFunc_IsWorldTearingDown_ReturnValue) == 0x000021, "Member 'WDT_StatusEffectPanel_C_CreateStatusDownEffectIconEx::CallFunc_IsWorldTearingDown_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusDownEffectIconEx, CallFunc_Not_PreBool_ReturnValue) == 0x000022, "Member 'WDT_StatusEffectPanel_C_CreateStatusDownEffectIconEx::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusDownEffectIconEx, K2Node_MakeStruct_Margin) == 0x000024, "Member 'WDT_StatusEffectPanel_C_CreateStatusDownEffectIconEx::K2Node_MakeStruct_Margin' has a wrong offset!");
+static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusDownEffectIconEx, CallFunc_GetPlayerController_ReturnValue) == 0x000038, "Member 'WDT_StatusEffectPanel_C_CreateStatusDownEffectIconEx::CallFunc_GetPlayerController_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusDownEffectIconEx, CallFunc_AddChildToHorizontalBox_ReturnValue) == 0x000040, "Member 'WDT_StatusEffectPanel_C_CreateStatusDownEffectIconEx::CallFunc_AddChildToHorizontalBox_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusDownEffectIconEx, CallFunc_Create_ReturnValue) == 0x000048, "Member 'WDT_StatusEffectPanel_C_CreateStatusDownEffectIconEx::CallFunc_Create_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusDownEffectIconEx, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000050, "Member 'WDT_StatusEffectPanel_C_CreateStatusDownEffectIconEx::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusDownEffectIconEx, CallFunc_GetStatusDownEffectIconEx_ReturnValue) == 0x000058, "Member 'WDT_StatusEffectPanel_C_CreateStatusDownEffectIconEx::CallFunc_GetStatusDownEffectIconEx_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusDownEffectIconEx, CallFunc_GetStatusEffectFrame_ReturnValue) == 0x000060, "Member 'WDT_StatusEffectPanel_C_CreateStatusDownEffectIconEx::CallFunc_GetStatusEffectFrame_ReturnValue' has a wrong offset!");
 
 // Function WDT_StatusEffectPanel.WDT_StatusEffectPanel_C.CreateStatusUpEffectIcon
-// 0x0058 (0x0058 - 0x0000)
+// 0x0068 (0x0068 - 0x0000)
 struct WDT_StatusEffectPanel_C_CreateStatusUpEffectIcon final
 {
 public:
@@ -57,30 +110,40 @@ public:
 	EStatusEffectFrameType                        InFrame;                                           // 0x0009(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWDT_StatusUpEffectIcon_C*              L_NewIcon;                                         // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FMargin                                K2Node_MakeStruct_Margin;                          // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UHorizontalBoxSlot*                     CallFunc_AddChildToHorizontalBox_ReturnValue;      // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWDT_StatusUpEffectIcon_C*              CallFunc_Create_ReturnValue;                       // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UTexture2D*                             CallFunc_GetStatusEffectFrame_ReturnValue;         // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UTexture2D*                             CallFunc_GetStatusUpEffectIcon_ReturnValue;        // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UBP_StatusIndicatorUIObject_C*          CallFunc_GetStausIndicatorUIObject_OutUIObject;    // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsWorldTearingDown_ReturnValue;           // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_23[0x1];                                       // 0x0023(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMargin                                K2Node_MakeStruct_Margin;                          // 0x0024(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UHorizontalBoxSlot*                     CallFunc_AddChildToHorizontalBox_ReturnValue;      // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWDT_StatusUpEffectIcon_C*              CallFunc_Create_ReturnValue;                       // 0x0048(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UTexture2D*                             CallFunc_GetStatusEffectFrame_ReturnValue;         // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UTexture2D*                             CallFunc_GetStatusUpEffectIcon_ReturnValue;        // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_StatusEffectPanel_C_CreateStatusUpEffectIcon) == 0x000008, "Wrong alignment on WDT_StatusEffectPanel_C_CreateStatusUpEffectIcon");
-static_assert(sizeof(WDT_StatusEffectPanel_C_CreateStatusUpEffectIcon) == 0x000058, "Wrong size on WDT_StatusEffectPanel_C_CreateStatusUpEffectIcon");
+static_assert(sizeof(WDT_StatusEffectPanel_C_CreateStatusUpEffectIcon) == 0x000068, "Wrong size on WDT_StatusEffectPanel_C_CreateStatusUpEffectIcon");
 static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusUpEffectIcon, InHandle) == 0x000000, "Member 'WDT_StatusEffectPanel_C_CreateStatusUpEffectIcon::InHandle' has a wrong offset!");
 static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusUpEffectIcon, InIconType) == 0x000008, "Member 'WDT_StatusEffectPanel_C_CreateStatusUpEffectIcon::InIconType' has a wrong offset!");
 static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusUpEffectIcon, InFrame) == 0x000009, "Member 'WDT_StatusEffectPanel_C_CreateStatusUpEffectIcon::InFrame' has a wrong offset!");
 static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusUpEffectIcon, L_NewIcon) == 0x000010, "Member 'WDT_StatusEffectPanel_C_CreateStatusUpEffectIcon::L_NewIcon' has a wrong offset!");
-static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusUpEffectIcon, K2Node_MakeStruct_Margin) == 0x000018, "Member 'WDT_StatusEffectPanel_C_CreateStatusUpEffectIcon::K2Node_MakeStruct_Margin' has a wrong offset!");
-static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusUpEffectIcon, CallFunc_GetPlayerController_ReturnValue) == 0x000028, "Member 'WDT_StatusEffectPanel_C_CreateStatusUpEffectIcon::CallFunc_GetPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusUpEffectIcon, CallFunc_AddChildToHorizontalBox_ReturnValue) == 0x000030, "Member 'WDT_StatusEffectPanel_C_CreateStatusUpEffectIcon::CallFunc_AddChildToHorizontalBox_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusUpEffectIcon, CallFunc_Create_ReturnValue) == 0x000038, "Member 'WDT_StatusEffectPanel_C_CreateStatusUpEffectIcon::CallFunc_Create_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusUpEffectIcon, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000040, "Member 'WDT_StatusEffectPanel_C_CreateStatusUpEffectIcon::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusUpEffectIcon, CallFunc_GetStatusEffectFrame_ReturnValue) == 0x000048, "Member 'WDT_StatusEffectPanel_C_CreateStatusUpEffectIcon::CallFunc_GetStatusEffectFrame_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusUpEffectIcon, CallFunc_GetStatusUpEffectIcon_ReturnValue) == 0x000050, "Member 'WDT_StatusEffectPanel_C_CreateStatusUpEffectIcon::CallFunc_GetStatusUpEffectIcon_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusUpEffectIcon, CallFunc_GetStausIndicatorUIObject_OutUIObject) == 0x000018, "Member 'WDT_StatusEffectPanel_C_CreateStatusUpEffectIcon::CallFunc_GetStausIndicatorUIObject_OutUIObject' has a wrong offset!");
+static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusUpEffectIcon, CallFunc_IsValid_ReturnValue) == 0x000020, "Member 'WDT_StatusEffectPanel_C_CreateStatusUpEffectIcon::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusUpEffectIcon, CallFunc_IsWorldTearingDown_ReturnValue) == 0x000021, "Member 'WDT_StatusEffectPanel_C_CreateStatusUpEffectIcon::CallFunc_IsWorldTearingDown_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusUpEffectIcon, CallFunc_Not_PreBool_ReturnValue) == 0x000022, "Member 'WDT_StatusEffectPanel_C_CreateStatusUpEffectIcon::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusUpEffectIcon, K2Node_MakeStruct_Margin) == 0x000024, "Member 'WDT_StatusEffectPanel_C_CreateStatusUpEffectIcon::K2Node_MakeStruct_Margin' has a wrong offset!");
+static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusUpEffectIcon, CallFunc_GetPlayerController_ReturnValue) == 0x000038, "Member 'WDT_StatusEffectPanel_C_CreateStatusUpEffectIcon::CallFunc_GetPlayerController_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusUpEffectIcon, CallFunc_AddChildToHorizontalBox_ReturnValue) == 0x000040, "Member 'WDT_StatusEffectPanel_C_CreateStatusUpEffectIcon::CallFunc_AddChildToHorizontalBox_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusUpEffectIcon, CallFunc_Create_ReturnValue) == 0x000048, "Member 'WDT_StatusEffectPanel_C_CreateStatusUpEffectIcon::CallFunc_Create_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusUpEffectIcon, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000050, "Member 'WDT_StatusEffectPanel_C_CreateStatusUpEffectIcon::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusUpEffectIcon, CallFunc_GetStatusEffectFrame_ReturnValue) == 0x000058, "Member 'WDT_StatusEffectPanel_C_CreateStatusUpEffectIcon::CallFunc_GetStatusEffectFrame_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusUpEffectIcon, CallFunc_GetStatusUpEffectIcon_ReturnValue) == 0x000060, "Member 'WDT_StatusEffectPanel_C_CreateStatusUpEffectIcon::CallFunc_GetStatusUpEffectIcon_ReturnValue' has a wrong offset!");
 
 // Function WDT_StatusEffectPanel.WDT_StatusEffectPanel_C.CreateStatusUpEffectIconEx
-// 0x0058 (0x0058 - 0x0000)
+// 0x0068 (0x0068 - 0x0000)
 struct WDT_StatusEffectPanel_C_CreateStatusUpEffectIconEx final
 {
 public:
@@ -89,27 +152,37 @@ public:
 	EStatusEffectFrameType                        InFrame;                                           // 0x0009(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWDT_StatusUpEffectIcon_C*              L_NewIcon;                                         // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FMargin                                K2Node_MakeStruct_Margin;                          // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UHorizontalBoxSlot*                     CallFunc_AddChildToHorizontalBox_ReturnValue;      // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWDT_StatusUpEffectIcon_C*              CallFunc_Create_ReturnValue;                       // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UTexture2D*                             CallFunc_GetStatusUpEffectIconEx_ReturnValue;      // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UTexture2D*                             CallFunc_GetStatusEffectFrame_ReturnValue;         // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UBP_StatusIndicatorUIObject_C*          CallFunc_GetStausIndicatorUIObject_OutUIObject;    // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsWorldTearingDown_ReturnValue;           // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_23[0x1];                                       // 0x0023(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMargin                                K2Node_MakeStruct_Margin;                          // 0x0024(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UHorizontalBoxSlot*                     CallFunc_AddChildToHorizontalBox_ReturnValue;      // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWDT_StatusUpEffectIcon_C*              CallFunc_Create_ReturnValue;                       // 0x0048(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UTexture2D*                             CallFunc_GetStatusUpEffectIconEx_ReturnValue;      // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UTexture2D*                             CallFunc_GetStatusEffectFrame_ReturnValue;         // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_StatusEffectPanel_C_CreateStatusUpEffectIconEx) == 0x000008, "Wrong alignment on WDT_StatusEffectPanel_C_CreateStatusUpEffectIconEx");
-static_assert(sizeof(WDT_StatusEffectPanel_C_CreateStatusUpEffectIconEx) == 0x000058, "Wrong size on WDT_StatusEffectPanel_C_CreateStatusUpEffectIconEx");
+static_assert(sizeof(WDT_StatusEffectPanel_C_CreateStatusUpEffectIconEx) == 0x000068, "Wrong size on WDT_StatusEffectPanel_C_CreateStatusUpEffectIconEx");
 static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusUpEffectIconEx, InHandle) == 0x000000, "Member 'WDT_StatusEffectPanel_C_CreateStatusUpEffectIconEx::InHandle' has a wrong offset!");
 static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusUpEffectIconEx, InIconType) == 0x000008, "Member 'WDT_StatusEffectPanel_C_CreateStatusUpEffectIconEx::InIconType' has a wrong offset!");
 static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusUpEffectIconEx, InFrame) == 0x000009, "Member 'WDT_StatusEffectPanel_C_CreateStatusUpEffectIconEx::InFrame' has a wrong offset!");
 static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusUpEffectIconEx, L_NewIcon) == 0x000010, "Member 'WDT_StatusEffectPanel_C_CreateStatusUpEffectIconEx::L_NewIcon' has a wrong offset!");
-static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusUpEffectIconEx, K2Node_MakeStruct_Margin) == 0x000018, "Member 'WDT_StatusEffectPanel_C_CreateStatusUpEffectIconEx::K2Node_MakeStruct_Margin' has a wrong offset!");
-static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusUpEffectIconEx, CallFunc_GetPlayerController_ReturnValue) == 0x000028, "Member 'WDT_StatusEffectPanel_C_CreateStatusUpEffectIconEx::CallFunc_GetPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusUpEffectIconEx, CallFunc_AddChildToHorizontalBox_ReturnValue) == 0x000030, "Member 'WDT_StatusEffectPanel_C_CreateStatusUpEffectIconEx::CallFunc_AddChildToHorizontalBox_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusUpEffectIconEx, CallFunc_Create_ReturnValue) == 0x000038, "Member 'WDT_StatusEffectPanel_C_CreateStatusUpEffectIconEx::CallFunc_Create_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusUpEffectIconEx, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000040, "Member 'WDT_StatusEffectPanel_C_CreateStatusUpEffectIconEx::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusUpEffectIconEx, CallFunc_GetStatusUpEffectIconEx_ReturnValue) == 0x000048, "Member 'WDT_StatusEffectPanel_C_CreateStatusUpEffectIconEx::CallFunc_GetStatusUpEffectIconEx_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusUpEffectIconEx, CallFunc_GetStatusEffectFrame_ReturnValue) == 0x000050, "Member 'WDT_StatusEffectPanel_C_CreateStatusUpEffectIconEx::CallFunc_GetStatusEffectFrame_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusUpEffectIconEx, CallFunc_GetStausIndicatorUIObject_OutUIObject) == 0x000018, "Member 'WDT_StatusEffectPanel_C_CreateStatusUpEffectIconEx::CallFunc_GetStausIndicatorUIObject_OutUIObject' has a wrong offset!");
+static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusUpEffectIconEx, CallFunc_IsValid_ReturnValue) == 0x000020, "Member 'WDT_StatusEffectPanel_C_CreateStatusUpEffectIconEx::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusUpEffectIconEx, CallFunc_IsWorldTearingDown_ReturnValue) == 0x000021, "Member 'WDT_StatusEffectPanel_C_CreateStatusUpEffectIconEx::CallFunc_IsWorldTearingDown_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusUpEffectIconEx, CallFunc_Not_PreBool_ReturnValue) == 0x000022, "Member 'WDT_StatusEffectPanel_C_CreateStatusUpEffectIconEx::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusUpEffectIconEx, K2Node_MakeStruct_Margin) == 0x000024, "Member 'WDT_StatusEffectPanel_C_CreateStatusUpEffectIconEx::K2Node_MakeStruct_Margin' has a wrong offset!");
+static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusUpEffectIconEx, CallFunc_GetPlayerController_ReturnValue) == 0x000038, "Member 'WDT_StatusEffectPanel_C_CreateStatusUpEffectIconEx::CallFunc_GetPlayerController_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusUpEffectIconEx, CallFunc_AddChildToHorizontalBox_ReturnValue) == 0x000040, "Member 'WDT_StatusEffectPanel_C_CreateStatusUpEffectIconEx::CallFunc_AddChildToHorizontalBox_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusUpEffectIconEx, CallFunc_Create_ReturnValue) == 0x000048, "Member 'WDT_StatusEffectPanel_C_CreateStatusUpEffectIconEx::CallFunc_Create_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusUpEffectIconEx, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000050, "Member 'WDT_StatusEffectPanel_C_CreateStatusUpEffectIconEx::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusUpEffectIconEx, CallFunc_GetStatusUpEffectIconEx_ReturnValue) == 0x000058, "Member 'WDT_StatusEffectPanel_C_CreateStatusUpEffectIconEx::CallFunc_GetStatusUpEffectIconEx_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusEffectPanel_C_CreateStatusUpEffectIconEx, CallFunc_GetStatusEffectFrame_ReturnValue) == 0x000060, "Member 'WDT_StatusEffectPanel_C_CreateStatusUpEffectIconEx::CallFunc_GetStatusEffectFrame_ReturnValue' has a wrong offset!");
 
 // Function WDT_StatusEffectPanel.WDT_StatusEffectPanel_C.GetStatusEffectIcon
 // 0x0098 (0x0098 - 0x0000)
@@ -169,6 +242,26 @@ static_assert(offsetof(WDT_StatusEffectPanel_C_GetStatusEffectIcon, CallFunc_Les
 static_assert(offsetof(WDT_StatusEffectPanel_C_GetStatusEffectIcon, K2Node_DynamicCast_AsWDT_Status_Up_Effect_Icon) == 0x000088, "Member 'WDT_StatusEffectPanel_C_GetStatusEffectIcon::K2Node_DynamicCast_AsWDT_Status_Up_Effect_Icon' has a wrong offset!");
 static_assert(offsetof(WDT_StatusEffectPanel_C_GetStatusEffectIcon, K2Node_DynamicCast_bSuccess_1) == 0x000090, "Member 'WDT_StatusEffectPanel_C_GetStatusEffectIcon::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
 static_assert(offsetof(WDT_StatusEffectPanel_C_GetStatusEffectIcon, CallFunc_IsSameStatusEffectIconHandle_ReturnValue_1) == 0x000091, "Member 'WDT_StatusEffectPanel_C_GetStatusEffectIcon::CallFunc_IsSameStatusEffectIconHandle_ReturnValue_1' has a wrong offset!");
+
+// Function WDT_StatusEffectPanel.WDT_StatusEffectPanel_C.GetStausIndicatorUIObject
+// 0x0028 (0x0028 - 0x0000)
+struct WDT_StatusEffectPanel_C_GetStausIndicatorUIObject final
+{
+public:
+	class UBP_StatusIndicatorUIObject_C*          OutUIObject;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUIObjectBase*                          CallFunc_GetUIObjectByClass_ReturnValue;           // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UBP_StatusIndicatorUIObject_C*          K2Node_DynamicCast_AsBP_Status_Indicator_UIObject; // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_StatusEffectPanel_C_GetStausIndicatorUIObject) == 0x000008, "Wrong alignment on WDT_StatusEffectPanel_C_GetStausIndicatorUIObject");
+static_assert(sizeof(WDT_StatusEffectPanel_C_GetStausIndicatorUIObject) == 0x000028, "Wrong size on WDT_StatusEffectPanel_C_GetStausIndicatorUIObject");
+static_assert(offsetof(WDT_StatusEffectPanel_C_GetStausIndicatorUIObject, OutUIObject) == 0x000000, "Member 'WDT_StatusEffectPanel_C_GetStausIndicatorUIObject::OutUIObject' has a wrong offset!");
+static_assert(offsetof(WDT_StatusEffectPanel_C_GetStausIndicatorUIObject, CallFunc_IsValid_ReturnValue) == 0x000008, "Member 'WDT_StatusEffectPanel_C_GetStausIndicatorUIObject::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusEffectPanel_C_GetStausIndicatorUIObject, CallFunc_GetUIObjectByClass_ReturnValue) == 0x000010, "Member 'WDT_StatusEffectPanel_C_GetStausIndicatorUIObject::CallFunc_GetUIObjectByClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusEffectPanel_C_GetStausIndicatorUIObject, K2Node_DynamicCast_AsBP_Status_Indicator_UIObject) == 0x000018, "Member 'WDT_StatusEffectPanel_C_GetStausIndicatorUIObject::K2Node_DynamicCast_AsBP_Status_Indicator_UIObject' has a wrong offset!");
+static_assert(offsetof(WDT_StatusEffectPanel_C_GetStausIndicatorUIObject, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'WDT_StatusEffectPanel_C_GetStausIndicatorUIObject::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 
 // Function WDT_StatusEffectPanel.WDT_StatusEffectPanel_C.HideAllIcons
 // 0x0068 (0x0068 - 0x0000)
@@ -240,6 +333,22 @@ static_assert(alignof(WDT_StatusEffectPanel_C_NotifyStatusDownEffectApplied) == 
 static_assert(sizeof(WDT_StatusEffectPanel_C_NotifyStatusDownEffectApplied) == 0x000010, "Wrong size on WDT_StatusEffectPanel_C_NotifyStatusDownEffectApplied");
 static_assert(offsetof(WDT_StatusEffectPanel_C_NotifyStatusDownEffectApplied, InStatusEffect) == 0x000000, "Member 'WDT_StatusEffectPanel_C_NotifyStatusDownEffectApplied::InStatusEffect' has a wrong offset!");
 static_assert(offsetof(WDT_StatusEffectPanel_C_NotifyStatusDownEffectApplied, InStatusEffectIconHandle) == 0x000008, "Member 'WDT_StatusEffectPanel_C_NotifyStatusDownEffectApplied::InStatusEffectIconHandle' has a wrong offset!");
+
+// Function WDT_StatusEffectPanel.WDT_StatusEffectPanel_C.NotifyStatusDownEffectAppliedExWithFrame
+// 0x0018 (0x0018 - 0x0000)
+struct WDT_StatusEffectPanel_C_NotifyStatusDownEffectAppliedExWithFrame final
+{
+public:
+	EStatusDownEffectIconTypeEx                   InStatusEffect;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FStatusEffectIconHandle                InStatusEffectIconHandle;                          // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	EStatusEffectFrameType                        InFrame;                                           // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_StatusEffectPanel_C_NotifyStatusDownEffectAppliedExWithFrame) == 0x000008, "Wrong alignment on WDT_StatusEffectPanel_C_NotifyStatusDownEffectAppliedExWithFrame");
+static_assert(sizeof(WDT_StatusEffectPanel_C_NotifyStatusDownEffectAppliedExWithFrame) == 0x000018, "Wrong size on WDT_StatusEffectPanel_C_NotifyStatusDownEffectAppliedExWithFrame");
+static_assert(offsetof(WDT_StatusEffectPanel_C_NotifyStatusDownEffectAppliedExWithFrame, InStatusEffect) == 0x000000, "Member 'WDT_StatusEffectPanel_C_NotifyStatusDownEffectAppliedExWithFrame::InStatusEffect' has a wrong offset!");
+static_assert(offsetof(WDT_StatusEffectPanel_C_NotifyStatusDownEffectAppliedExWithFrame, InStatusEffectIconHandle) == 0x000008, "Member 'WDT_StatusEffectPanel_C_NotifyStatusDownEffectAppliedExWithFrame::InStatusEffectIconHandle' has a wrong offset!");
+static_assert(offsetof(WDT_StatusEffectPanel_C_NotifyStatusDownEffectAppliedExWithFrame, InFrame) == 0x000010, "Member 'WDT_StatusEffectPanel_C_NotifyStatusDownEffectAppliedExWithFrame::InFrame' has a wrong offset!");
 
 // Function WDT_StatusEffectPanel.WDT_StatusEffectPanel_C.NotifyStatusDownEffectAppliedWithFrame
 // 0x0018 (0x0018 - 0x0000)

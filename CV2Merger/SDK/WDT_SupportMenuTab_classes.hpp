@@ -35,18 +35,18 @@ public:
 	FMulticastInlineDelegateProperty_             OnEntryInitialized;                                // 0x0528(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void SetTabIndex(int32 InIndex);
-	void Set_New_Flag(int32 InIndex, bool InFlag);
-	void RefreshKeyImage();
-	void PreConstruct(bool IsDesignTime);
-	void OnTabItemCliked__DelegateSignature(int32 InIndex);
-	void OnEntryInitialized__DelegateSignature(int32 InInitializedIndex);
-	void MoveTabIndex(int32 InIncrement);
-	void Initialize();
-	void ExecuteUbergraph_WDT_SupportMenuTab(int32 EntryPoint);
-	void BndEvt__WDT_SupportMenuTab_TabList_K2Node_ComponentBoundEvent_2_OnItemIsHoveredChangedDynamic__DelegateSignature(class UObject* Item, bool bIsHovered);
-	void BndEvt__WDT_SupportMenuTab_TabList_K2Node_ComponentBoundEvent_1_OnListEntryInitializedDynamic__DelegateSignature(class UObject* Item, class UUserWidget* Widget);
 	void BndEvt__WDT_SupportMenuTab_TabList_K2Node_ComponentBoundEvent_0_SimpleListItemEventDynamic__DelegateSignature(class UObject* Item);
+	void BndEvt__WDT_SupportMenuTab_TabList_K2Node_ComponentBoundEvent_1_OnListEntryInitializedDynamic__DelegateSignature(class UObject* Item, class UUserWidget* Widget);
+	void BndEvt__WDT_SupportMenuTab_TabList_K2Node_ComponentBoundEvent_2_OnItemIsHoveredChangedDynamic__DelegateSignature(class UObject* Item, bool bIsHovered);
+	void ExecuteUbergraph_WDT_SupportMenuTab(int32 EntryPoint);
+	void Initialize();
+	void MoveTabIndex(int32 InIncrement);
+	void OnEntryInitialized__DelegateSignature(int32 InInitializedIndex);
+	void OnTabItemCliked__DelegateSignature(int32 InIndex);
+	void PreConstruct(bool IsDesignTime);
+	void RefreshKeyImage();
+	void Set_New_Flag(int32 InIndex, bool InFlag);
+	void SetTabIndex(int32 InIndex);
 
 public:
 	static class UClass* StaticClass()

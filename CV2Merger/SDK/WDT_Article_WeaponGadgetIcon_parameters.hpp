@@ -16,23 +16,6 @@
 namespace SDK::Params
 {
 
-// Function WDT_Article_WeaponGadgetIcon.WDT_Article_WeaponGadgetIcon_C.SetSoftTextureWithEmptyTexture
-// 0x0040 (0x0040 - 0x0000)
-struct WDT_Article_WeaponGadgetIcon_C_SetSoftTextureWithEmptyTexture final
-{
-public:
-	TSoftObjectPtr<class UTexture2D>              SoftObjectReference;                               // 0x0000(0x0028)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash)
-	class UImage*                                 TargetImage;                                       // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UTexture2D*                             EmptyTexture;                                      // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue;   // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_Article_WeaponGadgetIcon_C_SetSoftTextureWithEmptyTexture) == 0x000008, "Wrong alignment on WDT_Article_WeaponGadgetIcon_C_SetSoftTextureWithEmptyTexture");
-static_assert(sizeof(WDT_Article_WeaponGadgetIcon_C_SetSoftTextureWithEmptyTexture) == 0x000040, "Wrong size on WDT_Article_WeaponGadgetIcon_C_SetSoftTextureWithEmptyTexture");
-static_assert(offsetof(WDT_Article_WeaponGadgetIcon_C_SetSoftTextureWithEmptyTexture, SoftObjectReference) == 0x000000, "Member 'WDT_Article_WeaponGadgetIcon_C_SetSoftTextureWithEmptyTexture::SoftObjectReference' has a wrong offset!");
-static_assert(offsetof(WDT_Article_WeaponGadgetIcon_C_SetSoftTextureWithEmptyTexture, TargetImage) == 0x000028, "Member 'WDT_Article_WeaponGadgetIcon_C_SetSoftTextureWithEmptyTexture::TargetImage' has a wrong offset!");
-static_assert(offsetof(WDT_Article_WeaponGadgetIcon_C_SetSoftTextureWithEmptyTexture, EmptyTexture) == 0x000030, "Member 'WDT_Article_WeaponGadgetIcon_C_SetSoftTextureWithEmptyTexture::EmptyTexture' has a wrong offset!");
-static_assert(offsetof(WDT_Article_WeaponGadgetIcon_C_SetSoftTextureWithEmptyTexture, CallFunc_IsValidSoftObjectReference_ReturnValue) == 0x000038, "Member 'WDT_Article_WeaponGadgetIcon_C_SetSoftTextureWithEmptyTexture::CallFunc_IsValidSoftObjectReference_ReturnValue' has a wrong offset!");
-
 // Function WDT_Article_WeaponGadgetIcon.WDT_Article_WeaponGadgetIcon_C.SetValue
 // 0x0050 (0x0050 - 0x0000)
 struct WDT_Article_WeaponGadgetIcon_C_SetValue final
@@ -59,6 +42,23 @@ static_assert(offsetof(WDT_Article_WeaponGadgetIcon_C_SetValue, Temp_byte_Variab
 static_assert(offsetof(WDT_Article_WeaponGadgetIcon_C_SetValue, Temp_byte_Variable_1) == 0x000037, "Member 'WDT_Article_WeaponGadgetIcon_C_SetValue::Temp_byte_Variable_1' has a wrong offset!");
 static_assert(offsetof(WDT_Article_WeaponGadgetIcon_C_SetValue, CallFunc_Conv_IntToText_ReturnValue) == 0x000038, "Member 'WDT_Article_WeaponGadgetIcon_C_SetValue::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_Article_WeaponGadgetIcon_C_SetValue, K2Node_Select_Default) == 0x000048, "Member 'WDT_Article_WeaponGadgetIcon_C_SetValue::K2Node_Select_Default' has a wrong offset!");
+
+// Function WDT_Article_WeaponGadgetIcon.WDT_Article_WeaponGadgetIcon_C.SetSoftTextureWithEmptyTexture
+// 0x0040 (0x0040 - 0x0000)
+struct WDT_Article_WeaponGadgetIcon_C_SetSoftTextureWithEmptyTexture final
+{
+public:
+	TSoftObjectPtr<class UTexture2D>              SoftObjectReference;                               // 0x0000(0x0028)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash)
+	class UImage*                                 TargetImage;                                       // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UTexture2D*                             EmptyTexture;                                      // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue;   // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_Article_WeaponGadgetIcon_C_SetSoftTextureWithEmptyTexture) == 0x000008, "Wrong alignment on WDT_Article_WeaponGadgetIcon_C_SetSoftTextureWithEmptyTexture");
+static_assert(sizeof(WDT_Article_WeaponGadgetIcon_C_SetSoftTextureWithEmptyTexture) == 0x000040, "Wrong size on WDT_Article_WeaponGadgetIcon_C_SetSoftTextureWithEmptyTexture");
+static_assert(offsetof(WDT_Article_WeaponGadgetIcon_C_SetSoftTextureWithEmptyTexture, SoftObjectReference) == 0x000000, "Member 'WDT_Article_WeaponGadgetIcon_C_SetSoftTextureWithEmptyTexture::SoftObjectReference' has a wrong offset!");
+static_assert(offsetof(WDT_Article_WeaponGadgetIcon_C_SetSoftTextureWithEmptyTexture, TargetImage) == 0x000028, "Member 'WDT_Article_WeaponGadgetIcon_C_SetSoftTextureWithEmptyTexture::TargetImage' has a wrong offset!");
+static_assert(offsetof(WDT_Article_WeaponGadgetIcon_C_SetSoftTextureWithEmptyTexture, EmptyTexture) == 0x000030, "Member 'WDT_Article_WeaponGadgetIcon_C_SetSoftTextureWithEmptyTexture::EmptyTexture' has a wrong offset!");
+static_assert(offsetof(WDT_Article_WeaponGadgetIcon_C_SetSoftTextureWithEmptyTexture, CallFunc_IsValidSoftObjectReference_ReturnValue) == 0x000038, "Member 'WDT_Article_WeaponGadgetIcon_C_SetSoftTextureWithEmptyTexture::CallFunc_IsValidSoftObjectReference_ReturnValue' has a wrong offset!");
 
 }
 

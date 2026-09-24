@@ -47,7 +47,7 @@ public:
 	void OnDestroyResource();
 	void OnDying();
 	void Post_Process();
-	void Pre_Process(double CaptureSize, double ScarLifetime, double OldScarLifetime, const struct FVector& CaptureLocation);
+	void Pre_Process(double CaptureSize, double ScarLifeTime, double OldScarLifeTime, const struct FVector& CaptureLocation);
 	void Process(double ScarLifeTime_Substruct, double OldScarLifeTime_Substruct);
 	void SpawnSplashEffect();
 

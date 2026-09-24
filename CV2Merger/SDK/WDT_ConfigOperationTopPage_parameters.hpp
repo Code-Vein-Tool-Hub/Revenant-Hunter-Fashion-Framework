@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "STR_ConfigPieceBaseList_structs.hpp"
-#include "GameplayTags_structs.hpp"
 #include "Extensions_structs.hpp"
+#include "GameplayTags_structs.hpp"
+#include "STR_ConfigPieceBaseList_structs.hpp"
 #include "EnhancedInput_structs.hpp"
 
 
@@ -199,8 +199,9 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0418(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_419[0x7];                                      // 0x0419(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMenuPieceBase*                         K2Node_Event_MenuPiece;                            // 0x0420(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_7;                              // 0x0428(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_429[0x7];                                      // 0x0429(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          K2Node_SwitchName_CmpSuccess;                      // 0x0428(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_7;                              // 0x0429(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_42A[0x6];                                      // 0x042A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        Temp_real_Variable_15;                             // 0x0430(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_15_0;                           // 0x0438(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -322,7 +323,8 @@ static_assert(offsetof(WDT_ConfigOperationTopPage_C_ExecuteUbergraph_WDT_ConfigO
 static_assert(offsetof(WDT_ConfigOperationTopPage_C_ExecuteUbergraph_WDT_ConfigOperationTopPage, K2Node_DynamicCast_AsBP_Configuration_UIObject) == 0x000410, "Member 'WDT_ConfigOperationTopPage_C_ExecuteUbergraph_WDT_ConfigOperationTopPage::K2Node_DynamicCast_AsBP_Configuration_UIObject' has a wrong offset!");
 static_assert(offsetof(WDT_ConfigOperationTopPage_C_ExecuteUbergraph_WDT_ConfigOperationTopPage, K2Node_DynamicCast_bSuccess_1) == 0x000418, "Member 'WDT_ConfigOperationTopPage_C_ExecuteUbergraph_WDT_ConfigOperationTopPage::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
 static_assert(offsetof(WDT_ConfigOperationTopPage_C_ExecuteUbergraph_WDT_ConfigOperationTopPage, K2Node_Event_MenuPiece) == 0x000420, "Member 'WDT_ConfigOperationTopPage_C_ExecuteUbergraph_WDT_ConfigOperationTopPage::K2Node_Event_MenuPiece' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigOperationTopPage_C_ExecuteUbergraph_WDT_ConfigOperationTopPage, Temp_bool_Variable_7) == 0x000428, "Member 'WDT_ConfigOperationTopPage_C_ExecuteUbergraph_WDT_ConfigOperationTopPage::Temp_bool_Variable_7' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigOperationTopPage_C_ExecuteUbergraph_WDT_ConfigOperationTopPage, K2Node_SwitchName_CmpSuccess) == 0x000428, "Member 'WDT_ConfigOperationTopPage_C_ExecuteUbergraph_WDT_ConfigOperationTopPage::K2Node_SwitchName_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigOperationTopPage_C_ExecuteUbergraph_WDT_ConfigOperationTopPage, Temp_bool_Variable_7) == 0x000429, "Member 'WDT_ConfigOperationTopPage_C_ExecuteUbergraph_WDT_ConfigOperationTopPage::Temp_bool_Variable_7' has a wrong offset!");
 static_assert(offsetof(WDT_ConfigOperationTopPage_C_ExecuteUbergraph_WDT_ConfigOperationTopPage, Temp_real_Variable_15) == 0x000430, "Member 'WDT_ConfigOperationTopPage_C_ExecuteUbergraph_WDT_ConfigOperationTopPage::Temp_real_Variable_15' has a wrong offset!");
 static_assert(offsetof(WDT_ConfigOperationTopPage_C_ExecuteUbergraph_WDT_ConfigOperationTopPage, Temp_real_Variable_15_0) == 0x000438, "Member 'WDT_ConfigOperationTopPage_C_ExecuteUbergraph_WDT_ConfigOperationTopPage::Temp_real_Variable_15_0' has a wrong offset!");
 

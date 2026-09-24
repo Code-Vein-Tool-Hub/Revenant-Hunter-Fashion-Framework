@@ -12,13 +12,14 @@
 
 #include "Engine_structs.hpp"
 #include "WDT_Status_PieceBase_classes.hpp"
+#include "UMG_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WDT_Status_Capacity.WDT_Status_Capacity_C
-// 0x0040 (0x0708 - 0x06C8)
+// 0x0048 (0x0710 - 0x06C8)
 class UWDT_Status_Capacity_C final : public UWDT_Status_PieceBase_C
 {
 public:
@@ -26,15 +27,16 @@ public:
 	class UTextBlock*                             AttrValue;                                         // 0x06D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UCommonTextBlock*                       CommonTextBlock;                                   // 0x06D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UCommonTextBlock*                       CommonTextBlock_1;                                 // 0x06E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class FText                                   TitleText;                                         // 0x06E8(0x0010)(Edit, BlueprintVisible)
-	class FText                                   IconText;                                          // 0x06F8(0x0010)(Edit, BlueprintVisible)
+	class UImage*                                 T_UI_ArrowStatusChange;                            // 0x06E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class FText                                   TitleText;                                         // 0x06F0(0x0010)(Edit, BlueprintVisible)
+	class FText                                   IconText;                                          // 0x0700(0x0010)(Edit, BlueprintVisible)
 
 public:
-	void ExecuteUbergraph_WDT_Status_Capacity(int32 EntryPoint);
-	void GetComparisonColorForCapacity(int32 Current, int32 After, struct FSlateColor* SlateColor);
+	void SetValueComparison(int32 InCurrentValue, int32 InTargetValue, int32 InConversionType);
+	void SetValue(int32 InValue, int32 InConversionType);
 	void PreConstruct(bool IsDesignTime);
-	void SetValue(int32 InValue);
-	void SetValueComparison(int32 InCurrentValue, int32 InTargetValue);
+	void GetComparisonColorForCapacity(int32 Current, int32 After, struct FSlateColor* SlateColor);
+	void ExecuteUbergraph_WDT_Status_Capacity(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -47,13 +49,14 @@ public:
 	}
 };
 static_assert(alignof(UWDT_Status_Capacity_C) == 0x000008, "Wrong alignment on UWDT_Status_Capacity_C");
-static_assert(sizeof(UWDT_Status_Capacity_C) == 0x000708, "Wrong size on UWDT_Status_Capacity_C");
+static_assert(sizeof(UWDT_Status_Capacity_C) == 0x000710, "Wrong size on UWDT_Status_Capacity_C");
 static_assert(offsetof(UWDT_Status_Capacity_C, UberGraphFrame_WDT_Status_Capacity_C) == 0x0006C8, "Member 'UWDT_Status_Capacity_C::UberGraphFrame_WDT_Status_Capacity_C' has a wrong offset!");
 static_assert(offsetof(UWDT_Status_Capacity_C, AttrValue) == 0x0006D0, "Member 'UWDT_Status_Capacity_C::AttrValue' has a wrong offset!");
 static_assert(offsetof(UWDT_Status_Capacity_C, CommonTextBlock) == 0x0006D8, "Member 'UWDT_Status_Capacity_C::CommonTextBlock' has a wrong offset!");
 static_assert(offsetof(UWDT_Status_Capacity_C, CommonTextBlock_1) == 0x0006E0, "Member 'UWDT_Status_Capacity_C::CommonTextBlock_1' has a wrong offset!");
-static_assert(offsetof(UWDT_Status_Capacity_C, TitleText) == 0x0006E8, "Member 'UWDT_Status_Capacity_C::TitleText' has a wrong offset!");
-static_assert(offsetof(UWDT_Status_Capacity_C, IconText) == 0x0006F8, "Member 'UWDT_Status_Capacity_C::IconText' has a wrong offset!");
+static_assert(offsetof(UWDT_Status_Capacity_C, T_UI_ArrowStatusChange) == 0x0006E8, "Member 'UWDT_Status_Capacity_C::T_UI_ArrowStatusChange' has a wrong offset!");
+static_assert(offsetof(UWDT_Status_Capacity_C, TitleText) == 0x0006F0, "Member 'UWDT_Status_Capacity_C::TitleText' has a wrong offset!");
+static_assert(offsetof(UWDT_Status_Capacity_C, IconText) == 0x000700, "Member 'UWDT_Status_Capacity_C::IconText' has a wrong offset!");
 
 }
 

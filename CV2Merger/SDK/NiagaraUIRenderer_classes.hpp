@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "UMG_classes.hpp"
-#include "Engine_classes.hpp"
 #include "Niagara_classes.hpp"
+#include "Engine_classes.hpp"
 
 
 namespace SDK

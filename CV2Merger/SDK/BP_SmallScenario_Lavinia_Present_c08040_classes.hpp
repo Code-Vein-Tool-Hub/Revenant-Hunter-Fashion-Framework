@@ -19,12 +19,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_SmallScenario_Lavinia_Present_c08040.BP_SmallScenario_Lavinia_Present_c08040_C
-// 0x0010 (0x03D8 - 0x03C8)
+// 0x0010 (0x03E8 - 0x03D8)
 class ABP_SmallScenario_Lavinia_Present_c08040_C final : public ABP_SmallScenarioBase_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_SmallScenario_Lavinia_Present_c08040_C; // 0x03C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UDataTable*                             BoosterSmallScenarioDataTable;                     // 0x03D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_SmallScenario_Lavinia_Present_c08040_C; // 0x03D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UDataTable*                             BoosterSmallScenarioDataTable;                     // 0x03E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Abort();
@@ -48,9 +48,9 @@ public:
 	}
 };
 static_assert(alignof(ABP_SmallScenario_Lavinia_Present_c08040_C) == 0x000008, "Wrong alignment on ABP_SmallScenario_Lavinia_Present_c08040_C");
-static_assert(sizeof(ABP_SmallScenario_Lavinia_Present_c08040_C) == 0x0003D8, "Wrong size on ABP_SmallScenario_Lavinia_Present_c08040_C");
-static_assert(offsetof(ABP_SmallScenario_Lavinia_Present_c08040_C, UberGraphFrame_BP_SmallScenario_Lavinia_Present_c08040_C) == 0x0003C8, "Member 'ABP_SmallScenario_Lavinia_Present_c08040_C::UberGraphFrame_BP_SmallScenario_Lavinia_Present_c08040_C' has a wrong offset!");
-static_assert(offsetof(ABP_SmallScenario_Lavinia_Present_c08040_C, BoosterSmallScenarioDataTable) == 0x0003D0, "Member 'ABP_SmallScenario_Lavinia_Present_c08040_C::BoosterSmallScenarioDataTable' has a wrong offset!");
+static_assert(sizeof(ABP_SmallScenario_Lavinia_Present_c08040_C) == 0x0003E8, "Wrong size on ABP_SmallScenario_Lavinia_Present_c08040_C");
+static_assert(offsetof(ABP_SmallScenario_Lavinia_Present_c08040_C, UberGraphFrame_BP_SmallScenario_Lavinia_Present_c08040_C) == 0x0003D8, "Member 'ABP_SmallScenario_Lavinia_Present_c08040_C::UberGraphFrame_BP_SmallScenario_Lavinia_Present_c08040_C' has a wrong offset!");
+static_assert(offsetof(ABP_SmallScenario_Lavinia_Present_c08040_C, BoosterSmallScenarioDataTable) == 0x0003E0, "Member 'ABP_SmallScenario_Lavinia_Present_c08040_C::BoosterSmallScenarioDataTable' has a wrong offset!");
 
 }
 

@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "STR_FeatureQuestList_structs.hpp"
 #include "GameplayTags_structs.hpp"
 #include "Extensions_structs.hpp"
+#include "STR_FeatureQuestList_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 
@@ -31,6 +31,7 @@ public:
 	int32                                         L_UserIndex;                                       // 0x0044(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FFieldTargetHandle                     CallFunc_AddFieldTarget_ReturnValue;               // 0x0048(0x0008)(NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_MapSystem_C_AddUserMarkerFieldTarget) == 0x000008, "Wrong alignment on BP_MapSystem_C_AddUserMarkerFieldTarget");
 static_assert(sizeof(BP_MapSystem_C_AddUserMarkerFieldTarget) == 0x000058, "Wrong size on BP_MapSystem_C_AddUserMarkerFieldTarget");
@@ -40,6 +41,7 @@ static_assert(offsetof(BP_MapSystem_C_AddUserMarkerFieldTarget, OutSuccessful) =
 static_assert(offsetof(BP_MapSystem_C_AddUserMarkerFieldTarget, L_UserIndex) == 0x000044, "Member 'BP_MapSystem_C_AddUserMarkerFieldTarget::L_UserIndex' has a wrong offset!");
 static_assert(offsetof(BP_MapSystem_C_AddUserMarkerFieldTarget, CallFunc_AddFieldTarget_ReturnValue) == 0x000048, "Member 'BP_MapSystem_C_AddUserMarkerFieldTarget::CallFunc_AddFieldTarget_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_MapSystem_C_AddUserMarkerFieldTarget, CallFunc_Array_Add_ReturnValue) == 0x000050, "Member 'BP_MapSystem_C_AddUserMarkerFieldTarget::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapSystem_C_AddUserMarkerFieldTarget, CallFunc_Array_Add_ReturnValue_1) == 0x000054, "Member 'BP_MapSystem_C_AddUserMarkerFieldTarget::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
 
 // Function BP_MapSystem.BP_MapSystem_C.BuildFeatureLouDiaryMapData
 // 0x0188 (0x0188 - 0x0000)
@@ -607,9 +609,9 @@ static_assert(offsetof(BP_MapSystem_C_GetTopLeftOffsetLocation, CallFunc_Subtrac
 static_assert(offsetof(BP_MapSystem_C_GetTopLeftOffsetLocation, CallFunc_Subtract_DoubleDouble_ReturnValue_1) == 0x000058, "Member 'BP_MapSystem_C_GetTopLeftOffsetLocation::CallFunc_Subtract_DoubleDouble_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(BP_MapSystem_C_GetTopLeftOffsetLocation, CallFunc_MakeVector2D_ReturnValue) == 0x000060, "Member 'BP_MapSystem_C_GetTopLeftOffsetLocation::CallFunc_MakeVector2D_ReturnValue' has a wrong offset!");
 
-// Function BP_MapSystem.BP_MapSystem_C.GetUserMarkerFieldTargetData
+// Function BP_MapSystem.BP_MapSystem_C.GetUserMarkerFieldTargetData_Compass
 // 0x00F0 (0x00F0 - 0x0000)
-struct BP_MapSystem_C_GetUserMarkerFieldTargetData final
+struct BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass final
 {
 public:
 	bool                                          bResult;                                           // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -646,33 +648,100 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x00E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x00EC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_MapSystem_C_GetUserMarkerFieldTargetData) == 0x000008, "Wrong alignment on BP_MapSystem_C_GetUserMarkerFieldTargetData");
-static_assert(sizeof(BP_MapSystem_C_GetUserMarkerFieldTargetData) == 0x0000F0, "Wrong size on BP_MapSystem_C_GetUserMarkerFieldTargetData");
-static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData, bResult) == 0x000000, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData::bResult' has a wrong offset!");
-static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData, OutFieldTargetInfo) == 0x000008, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData::OutFieldTargetInfo' has a wrong offset!");
-static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData, L_FieldTargetManageArray) == 0x000018, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData::L_FieldTargetManageArray' has a wrong offset!");
-static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData, Temp_int_Loop_Counter_Variable) == 0x000028, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData, CallFunc_Add_IntInt_ReturnValue) == 0x00002C, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData, Temp_int_Array_Index_Variable) == 0x000030, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData, CallFunc_Array_IsEmpty_ReturnValue) == 0x000034, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData::CallFunc_Array_IsEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData, Temp_int_Array_Index_Variable_1) == 0x000038, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData::Temp_int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData, K2Node_MakeArray_Array) == 0x000040, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData, Temp_int_Loop_Counter_Variable_1) == 0x000050, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData, CallFunc_Array_Get_Item) == 0x000054, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData, CallFunc_GetFieldTargetHandle_OutHandle) == 0x000060, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData::CallFunc_GetFieldTargetHandle_OutHandle' has a wrong offset!");
-static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData, CallFunc_GetFieldTargetHandle_ReturnValue) == 0x000068, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData::CallFunc_GetFieldTargetHandle_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData, CallFunc_Add_IntInt_ReturnValue_1) == 0x00006C, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData, CallFunc_Array_Add_ReturnValue) == 0x000070, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData, CallFunc_Array_Length_ReturnValue) == 0x000074, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData, CallFunc_Less_IntInt_ReturnValue) == 0x000078, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData, CallFunc_Array_IsEmpty_ReturnValue_1) == 0x000079, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData::CallFunc_Array_IsEmpty_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData, CallFunc_Array_Get_Item_1) == 0x000080, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData, CallFunc_Not_PreBool_ReturnValue) == 0x000088, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData, CallFunc_GetFieldTargetData_OutTargetInfo) == 0x000090, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData::CallFunc_GetFieldTargetData_OutTargetInfo' has a wrong offset!");
-static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData, CallFunc_GetFieldTargetData_ReturnValue) == 0x0000E0, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData::CallFunc_GetFieldTargetData_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData, CallFunc_Array_Add_ReturnValue_1) == 0x0000E4, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData, CallFunc_Array_Length_ReturnValue_1) == 0x0000E8, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData, CallFunc_Less_IntInt_ReturnValue_1) == 0x0000EC, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(alignof(BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass) == 0x000008, "Wrong alignment on BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass");
+static_assert(sizeof(BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass) == 0x0000F0, "Wrong size on BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass");
+static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass, bResult) == 0x000000, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass::bResult' has a wrong offset!");
+static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass, OutFieldTargetInfo) == 0x000008, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass::OutFieldTargetInfo' has a wrong offset!");
+static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass, L_FieldTargetManageArray) == 0x000018, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass::L_FieldTargetManageArray' has a wrong offset!");
+static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass, Temp_int_Loop_Counter_Variable) == 0x000028, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass, CallFunc_Add_IntInt_ReturnValue) == 0x00002C, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass, Temp_int_Array_Index_Variable) == 0x000030, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass, CallFunc_Array_IsEmpty_ReturnValue) == 0x000034, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass::CallFunc_Array_IsEmpty_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass, Temp_int_Array_Index_Variable_1) == 0x000038, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass::Temp_int_Array_Index_Variable_1' has a wrong offset!");
+static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass, K2Node_MakeArray_Array) == 0x000040, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass, Temp_int_Loop_Counter_Variable_1) == 0x000050, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
+static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass, CallFunc_Array_Get_Item) == 0x000054, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass, CallFunc_GetFieldTargetHandle_OutHandle) == 0x000060, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass::CallFunc_GetFieldTargetHandle_OutHandle' has a wrong offset!");
+static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass, CallFunc_GetFieldTargetHandle_ReturnValue) == 0x000068, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass::CallFunc_GetFieldTargetHandle_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass, CallFunc_Add_IntInt_ReturnValue_1) == 0x00006C, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass, CallFunc_Array_Add_ReturnValue) == 0x000070, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass, CallFunc_Array_Length_ReturnValue) == 0x000074, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass, CallFunc_Less_IntInt_ReturnValue) == 0x000078, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass, CallFunc_Array_IsEmpty_ReturnValue_1) == 0x000079, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass::CallFunc_Array_IsEmpty_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass, CallFunc_Array_Get_Item_1) == 0x000080, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass, CallFunc_Not_PreBool_ReturnValue) == 0x000088, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass, CallFunc_GetFieldTargetData_OutTargetInfo) == 0x000090, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass::CallFunc_GetFieldTargetData_OutTargetInfo' has a wrong offset!");
+static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass, CallFunc_GetFieldTargetData_ReturnValue) == 0x0000E0, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass::CallFunc_GetFieldTargetData_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass, CallFunc_Array_Add_ReturnValue_1) == 0x0000E4, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass, CallFunc_Array_Length_ReturnValue_1) == 0x0000E8, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass, CallFunc_Less_IntInt_ReturnValue_1) == 0x0000EC, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+
+// Function BP_MapSystem.BP_MapSystem_C.GetUserMarkerFieldTargetData_MapImage
+// 0x00F0 (0x00F0 - 0x0000)
+struct BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage final
+{
+public:
+	bool                                          bResult;                                           // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FFieldTargetManageData>         OutFieldTargetInfo;                                // 0x0008(0x0010)(Parm, OutParm, ContainsInstancedReference)
+	TArray<struct FFieldTargetManageData>         L_FieldTargetManageArray;                          // 0x0018(0x0010)(Edit, BlueprintVisible, ContainsInstancedReference)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsEmpty_ReturnValue;                // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FGameplayTag>                   K2Node_MakeArray_Array;                            // 0x0040(0x0010)(ReferenceParm)
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           CallFunc_Array_Get_Item;                           // 0x0054(0x0008)(NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFieldTargetHandle                     CallFunc_GetFieldTargetHandle_OutHandle;           // 0x0060(0x0008)(NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetFieldTargetHandle_ReturnValue;         // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_69[0x3];                                       // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsEmpty_ReturnValue_1;              // 0x0079(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7A[0x6];                                       // 0x007A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFieldTargetHandle                     CallFunc_Array_Get_Item_1;                         // 0x0080(0x0008)(NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFieldTargetManageData                 CallFunc_GetFieldTargetData_OutTargetInfo;         // 0x0090(0x0050)(NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_GetFieldTargetData_ReturnValue;           // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E1[0x3];                                       // 0x00E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x00E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x00E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x00EC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage) == 0x000008, "Wrong alignment on BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage");
+static_assert(sizeof(BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage) == 0x0000F0, "Wrong size on BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage");
+static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage, bResult) == 0x000000, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage::bResult' has a wrong offset!");
+static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage, OutFieldTargetInfo) == 0x000008, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage::OutFieldTargetInfo' has a wrong offset!");
+static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage, L_FieldTargetManageArray) == 0x000018, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage::L_FieldTargetManageArray' has a wrong offset!");
+static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage, Temp_int_Loop_Counter_Variable) == 0x000028, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage, CallFunc_Add_IntInt_ReturnValue) == 0x00002C, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage, Temp_int_Array_Index_Variable) == 0x000030, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage, CallFunc_Array_IsEmpty_ReturnValue) == 0x000034, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage::CallFunc_Array_IsEmpty_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage, Temp_int_Array_Index_Variable_1) == 0x000038, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage::Temp_int_Array_Index_Variable_1' has a wrong offset!");
+static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage, K2Node_MakeArray_Array) == 0x000040, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage, Temp_int_Loop_Counter_Variable_1) == 0x000050, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
+static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage, CallFunc_Array_Get_Item) == 0x000054, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage, CallFunc_GetFieldTargetHandle_OutHandle) == 0x000060, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage::CallFunc_GetFieldTargetHandle_OutHandle' has a wrong offset!");
+static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage, CallFunc_GetFieldTargetHandle_ReturnValue) == 0x000068, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage::CallFunc_GetFieldTargetHandle_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage, CallFunc_Add_IntInt_ReturnValue_1) == 0x00006C, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage, CallFunc_Array_Add_ReturnValue) == 0x000070, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage, CallFunc_Array_Length_ReturnValue) == 0x000074, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage, CallFunc_Less_IntInt_ReturnValue) == 0x000078, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage, CallFunc_Array_IsEmpty_ReturnValue_1) == 0x000079, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage::CallFunc_Array_IsEmpty_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage, CallFunc_Array_Get_Item_1) == 0x000080, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage, CallFunc_Not_PreBool_ReturnValue) == 0x000088, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage, CallFunc_GetFieldTargetData_OutTargetInfo) == 0x000090, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage::CallFunc_GetFieldTargetData_OutTargetInfo' has a wrong offset!");
+static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage, CallFunc_GetFieldTargetData_ReturnValue) == 0x0000E0, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage::CallFunc_GetFieldTargetData_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage, CallFunc_Array_Add_ReturnValue_1) == 0x0000E4, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage, CallFunc_Array_Length_ReturnValue_1) == 0x0000E8, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage, CallFunc_Less_IntInt_ReturnValue_1) == 0x0000EC, "Member 'BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
 
 // Function BP_MapSystem.BP_MapSystem_C.IsMapSystemReady
 // 0x0001 (0x0001 - 0x0000)

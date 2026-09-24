@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "BP_DrawScarElement_classes.hpp"
 #include "CoreUObject_structs.hpp"
+#include "BP_DrawScarElement_classes.hpp"
 
 
 namespace SDK
@@ -42,7 +42,7 @@ public:
 	void OnDying();
 	void OnInitialize();
 	void Process(double ScarLifeTime_Substruct, double OldScarLifeTime_Substruct);
-	void SetNiagaraScarParameter(double ScarLifetime, double OldScarLifetime, double ScarLifeTime_Substruct, double OldScarLifeTime_Substruct);
+	void SetNiagaraScarParameter(double ScarLifeTime, double OldScarLifeTime, double ScarLifeTime_Substruct, double OldScarLifeTime_Substruct);
 	void SpawnNiagaraScarEffect();
 
 public:

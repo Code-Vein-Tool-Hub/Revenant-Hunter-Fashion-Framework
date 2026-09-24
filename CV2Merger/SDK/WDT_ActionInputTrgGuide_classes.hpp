@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "Extensions_structs.hpp"
 #include "Extensions_classes.hpp"
 #include "InputCore_structs.hpp"
+#include "Engine_structs.hpp"
 #include "SlateCore_structs.hpp"
 
 
@@ -45,18 +45,18 @@ public:
 	class UTexture2D*                             AltGrTexture;                                      // 0x07A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void UpdateTrgImage(TArray<struct FKey>& InKeys);
-	void UpdateInputActionTrgImage();
-	void SetKeys(TArray<struct FKey>& InKeys);
-	void SetHideKey(const struct FKey& InHideKey);
-	void SetBrushImageSize(const struct FVector2D& InSize);
-	void SetAllIconImageBrushTintColor(const struct FSlateColor& InTintColor);
-	void RefreshKeyImage();
-	void PreConstruct(bool IsDesignTime);
-	void OnUpdateKeyAssign();
-	void InitializeTag(const struct FInputActionTag& InInputActionTag);
-	void GetAssignKey(TArray<struct FKey>* OutAssignKey);
 	void ExecuteUbergraph_WDT_ActionInputTrgGuide(int32 EntryPoint);
+	void GetAssignKey(TArray<struct FKey>* OutAssignKey);
+	void InitializeTag(const struct FInputActionTag& InInputActionTag);
+	void OnUpdateKeyAssign();
+	void PreConstruct(bool IsDesignTime);
+	void RefreshKeyImage();
+	void SetAllIconImageBrushTintColor(const struct FSlateColor& InTintColor);
+	void SetBrushImageSize(const struct FVector2D& InSize);
+	void SetHideKey(const struct FKey& InHideKey);
+	void SetKeys(TArray<struct FKey>& InKeys);
+	void UpdateInputActionTrgImage();
+	void UpdateTrgImage(TArray<struct FKey>& InKeys);
 
 public:
 	static class UClass* StaticClass()

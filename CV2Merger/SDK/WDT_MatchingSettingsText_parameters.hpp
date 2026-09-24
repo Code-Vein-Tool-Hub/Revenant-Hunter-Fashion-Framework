@@ -17,46 +17,51 @@ namespace SDK::Params
 {
 
 // Function WDT_MatchingSettingsText.WDT_MatchingSettingsText_C.Update
-// 0x00E0 (0x00E0 - 0x0000)
+// 0x00E8 (0x00E8 - 0x0000)
 struct WDT_MatchingSettingsText_C_Update final
 {
 public:
 	class UConfigurationManager*                  CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FConfigurationNetworkUserSaveData      CallFunc_GetConfigNetworkUserSaveData_ReturnValue; // 0x0008(0x0020)(ConstParm)
-	struct FConfigurationNetworkSaveData          CallFunc_GetConfigNetworkSaveData_ReturnValue;     // 0x0028(0x0020)(ConstParm)
-	class FText                                   CallFunc_GetGestureName_ReturnValue;               // 0x0048(0x0010)()
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0058(0x0010)()
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x0068(0x0010)()
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Map_Find_Value;                           // 0x0080(0x0010)()
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Map_Find_Value_1;                         // 0x0098(0x0010)()
-	bool                                          CallFunc_Map_Find_ReturnValue_1;                   // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UOnlineUserSubsystem*                   CallFunc_GetGameInstanceSubsystem_ReturnValue_1;   // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	const class UCommonUserInfo*                  CallFunc_GetUserInfoForLocalPlayerIndex_ReturnValue; // 0x00B8(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_GetNickname_ReturnValue;                  // 0x00C0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue_2;          // 0x00D0(0x0010)()
+	struct FConfigurationNetworkUserSaveData      CallFunc_GetConfigNetworkUserSaveData_ReturnValue; // 0x0008(0x000C)(ConstParm, NoDestructor)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FConfigurationNetworkSaveData          CallFunc_GetConfigNetworkSaveData_ReturnValue;     // 0x0018(0x0020)(ConstParm)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0040(0x0010)()
+	class FText                                   CallFunc_GetGestureName_ReturnValue;               // 0x0050(0x0010)()
+	class UDigestDataManager*                     CallFunc_GetGameInstanceSubsystem_ReturnValue_1;   // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetCodeName_ReturnValue;                  // 0x0068(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Map_Find_Value;                           // 0x0078(0x0010)()
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x0090(0x0010)()
+	class FText                                   CallFunc_Map_Find_Value_1;                         // 0x00A0(0x0010)()
+	bool                                          CallFunc_Map_Find_ReturnValue_1;                   // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UOnlineUserSubsystem*                   CallFunc_GetGameInstanceSubsystem_ReturnValue_2;   // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	const class UCommonUserInfo*                  CallFunc_GetUserInfoForLocalPlayerIndex_ReturnValue; // 0x00C0(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetNickname_ReturnValue;                  // 0x00C8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue_2;          // 0x00D8(0x0010)()
 };
 static_assert(alignof(WDT_MatchingSettingsText_C_Update) == 0x000008, "Wrong alignment on WDT_MatchingSettingsText_C_Update");
-static_assert(sizeof(WDT_MatchingSettingsText_C_Update) == 0x0000E0, "Wrong size on WDT_MatchingSettingsText_C_Update");
+static_assert(sizeof(WDT_MatchingSettingsText_C_Update) == 0x0000E8, "Wrong size on WDT_MatchingSettingsText_C_Update");
 static_assert(offsetof(WDT_MatchingSettingsText_C_Update, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000000, "Member 'WDT_MatchingSettingsText_C_Update::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_MatchingSettingsText_C_Update, CallFunc_GetConfigNetworkUserSaveData_ReturnValue) == 0x000008, "Member 'WDT_MatchingSettingsText_C_Update::CallFunc_GetConfigNetworkUserSaveData_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MatchingSettingsText_C_Update, CallFunc_GetConfigNetworkSaveData_ReturnValue) == 0x000028, "Member 'WDT_MatchingSettingsText_C_Update::CallFunc_GetConfigNetworkSaveData_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MatchingSettingsText_C_Update, CallFunc_GetGestureName_ReturnValue) == 0x000048, "Member 'WDT_MatchingSettingsText_C_Update::CallFunc_GetGestureName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MatchingSettingsText_C_Update, CallFunc_Conv_StringToText_ReturnValue) == 0x000058, "Member 'WDT_MatchingSettingsText_C_Update::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MatchingSettingsText_C_Update, CallFunc_Conv_StringToText_ReturnValue_1) == 0x000068, "Member 'WDT_MatchingSettingsText_C_Update::CallFunc_Conv_StringToText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_MatchingSettingsText_C_Update, K2Node_SwitchEnum_CmpSuccess) == 0x000078, "Member 'WDT_MatchingSettingsText_C_Update::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(WDT_MatchingSettingsText_C_Update, CallFunc_Map_Find_Value) == 0x000080, "Member 'WDT_MatchingSettingsText_C_Update::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(WDT_MatchingSettingsText_C_Update, CallFunc_Map_Find_ReturnValue) == 0x000090, "Member 'WDT_MatchingSettingsText_C_Update::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MatchingSettingsText_C_Update, CallFunc_Map_Find_Value_1) == 0x000098, "Member 'WDT_MatchingSettingsText_C_Update::CallFunc_Map_Find_Value_1' has a wrong offset!");
-static_assert(offsetof(WDT_MatchingSettingsText_C_Update, CallFunc_Map_Find_ReturnValue_1) == 0x0000A8, "Member 'WDT_MatchingSettingsText_C_Update::CallFunc_Map_Find_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_MatchingSettingsText_C_Update, CallFunc_GetGameInstanceSubsystem_ReturnValue_1) == 0x0000B0, "Member 'WDT_MatchingSettingsText_C_Update::CallFunc_GetGameInstanceSubsystem_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_MatchingSettingsText_C_Update, CallFunc_GetUserInfoForLocalPlayerIndex_ReturnValue) == 0x0000B8, "Member 'WDT_MatchingSettingsText_C_Update::CallFunc_GetUserInfoForLocalPlayerIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MatchingSettingsText_C_Update, CallFunc_GetNickname_ReturnValue) == 0x0000C0, "Member 'WDT_MatchingSettingsText_C_Update::CallFunc_GetNickname_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MatchingSettingsText_C_Update, CallFunc_Conv_StringToText_ReturnValue_2) == 0x0000D0, "Member 'WDT_MatchingSettingsText_C_Update::CallFunc_Conv_StringToText_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_MatchingSettingsText_C_Update, CallFunc_GetConfigNetworkSaveData_ReturnValue) == 0x000018, "Member 'WDT_MatchingSettingsText_C_Update::CallFunc_GetConfigNetworkSaveData_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MatchingSettingsText_C_Update, K2Node_SwitchEnum_CmpSuccess) == 0x000038, "Member 'WDT_MatchingSettingsText_C_Update::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(WDT_MatchingSettingsText_C_Update, CallFunc_Conv_StringToText_ReturnValue) == 0x000040, "Member 'WDT_MatchingSettingsText_C_Update::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MatchingSettingsText_C_Update, CallFunc_GetGestureName_ReturnValue) == 0x000050, "Member 'WDT_MatchingSettingsText_C_Update::CallFunc_GetGestureName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MatchingSettingsText_C_Update, CallFunc_GetGameInstanceSubsystem_ReturnValue_1) == 0x000060, "Member 'WDT_MatchingSettingsText_C_Update::CallFunc_GetGameInstanceSubsystem_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MatchingSettingsText_C_Update, CallFunc_GetCodeName_ReturnValue) == 0x000068, "Member 'WDT_MatchingSettingsText_C_Update::CallFunc_GetCodeName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MatchingSettingsText_C_Update, CallFunc_Map_Find_Value) == 0x000078, "Member 'WDT_MatchingSettingsText_C_Update::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(WDT_MatchingSettingsText_C_Update, CallFunc_Map_Find_ReturnValue) == 0x000088, "Member 'WDT_MatchingSettingsText_C_Update::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MatchingSettingsText_C_Update, CallFunc_Conv_StringToText_ReturnValue_1) == 0x000090, "Member 'WDT_MatchingSettingsText_C_Update::CallFunc_Conv_StringToText_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MatchingSettingsText_C_Update, CallFunc_Map_Find_Value_1) == 0x0000A0, "Member 'WDT_MatchingSettingsText_C_Update::CallFunc_Map_Find_Value_1' has a wrong offset!");
+static_assert(offsetof(WDT_MatchingSettingsText_C_Update, CallFunc_Map_Find_ReturnValue_1) == 0x0000B0, "Member 'WDT_MatchingSettingsText_C_Update::CallFunc_Map_Find_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MatchingSettingsText_C_Update, CallFunc_GetGameInstanceSubsystem_ReturnValue_2) == 0x0000B8, "Member 'WDT_MatchingSettingsText_C_Update::CallFunc_GetGameInstanceSubsystem_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_MatchingSettingsText_C_Update, CallFunc_GetUserInfoForLocalPlayerIndex_ReturnValue) == 0x0000C0, "Member 'WDT_MatchingSettingsText_C_Update::CallFunc_GetUserInfoForLocalPlayerIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MatchingSettingsText_C_Update, CallFunc_GetNickname_ReturnValue) == 0x0000C8, "Member 'WDT_MatchingSettingsText_C_Update::CallFunc_GetNickname_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MatchingSettingsText_C_Update, CallFunc_Conv_StringToText_ReturnValue_2) == 0x0000D8, "Member 'WDT_MatchingSettingsText_C_Update::CallFunc_Conv_StringToText_ReturnValue_2' has a wrong offset!");
 
 // Function WDT_MatchingSettingsText.WDT_MatchingSettingsText_C.ExecuteUbergraph_WDT_MatchingSettingsText
 // 0x0028 (0x0028 - 0x0000)

@@ -66,12 +66,14 @@ struct BP_SupportMenuLouDiarydItemData_C_GetDescriptionTextFinished final
 {
 public:
 	class FText                                   OutText;                                           // 0x0000(0x0010)(Parm, OutParm)
-	bool                                          CallFunc_GetIsQuestDeactivate_bOutIsQuestDisable;  // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetIsQuestClear_IsEnable;                 // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetIsQuestDeactivate_bOutIsQuestDisable;  // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_SupportMenuLouDiarydItemData_C_GetDescriptionTextFinished) == 0x000008, "Wrong alignment on BP_SupportMenuLouDiarydItemData_C_GetDescriptionTextFinished");
 static_assert(sizeof(BP_SupportMenuLouDiarydItemData_C_GetDescriptionTextFinished) == 0x000018, "Wrong size on BP_SupportMenuLouDiarydItemData_C_GetDescriptionTextFinished");
 static_assert(offsetof(BP_SupportMenuLouDiarydItemData_C_GetDescriptionTextFinished, OutText) == 0x000000, "Member 'BP_SupportMenuLouDiarydItemData_C_GetDescriptionTextFinished::OutText' has a wrong offset!");
-static_assert(offsetof(BP_SupportMenuLouDiarydItemData_C_GetDescriptionTextFinished, CallFunc_GetIsQuestDeactivate_bOutIsQuestDisable) == 0x000010, "Member 'BP_SupportMenuLouDiarydItemData_C_GetDescriptionTextFinished::CallFunc_GetIsQuestDeactivate_bOutIsQuestDisable' has a wrong offset!");
+static_assert(offsetof(BP_SupportMenuLouDiarydItemData_C_GetDescriptionTextFinished, CallFunc_GetIsQuestClear_IsEnable) == 0x000010, "Member 'BP_SupportMenuLouDiarydItemData_C_GetDescriptionTextFinished::CallFunc_GetIsQuestClear_IsEnable' has a wrong offset!");
+static_assert(offsetof(BP_SupportMenuLouDiarydItemData_C_GetDescriptionTextFinished, CallFunc_GetIsQuestDeactivate_bOutIsQuestDisable) == 0x000011, "Member 'BP_SupportMenuLouDiarydItemData_C_GetDescriptionTextFinished::CallFunc_GetIsQuestDeactivate_bOutIsQuestDisable' has a wrong offset!");
 
 // Function BP_SupportMenuLouDiarydItemData.BP_SupportMenuLouDiarydItemData_C.GetDescriptionText
 // 0x0010 (0x0010 - 0x0000)

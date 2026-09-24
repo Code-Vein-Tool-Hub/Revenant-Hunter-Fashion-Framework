@@ -14,6 +14,19 @@
 namespace SDK::Params
 {
 
+// Function WDT_Article_Characteristic.WDT_Article_Characteristic_C.SetValue
+// 0x0020 (0x0020 - 0x0000)
+struct WDT_Article_Characteristic_C_SetValue final
+{
+public:
+	class FText                                   InValue;                                           // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+	class FText                                   CallFunc_GetTextWithEmptyNone_ReturnValue;         // 0x0010(0x0010)()
+};
+static_assert(alignof(WDT_Article_Characteristic_C_SetValue) == 0x000008, "Wrong alignment on WDT_Article_Characteristic_C_SetValue");
+static_assert(sizeof(WDT_Article_Characteristic_C_SetValue) == 0x000020, "Wrong size on WDT_Article_Characteristic_C_SetValue");
+static_assert(offsetof(WDT_Article_Characteristic_C_SetValue, InValue) == 0x000000, "Member 'WDT_Article_Characteristic_C_SetValue::InValue' has a wrong offset!");
+static_assert(offsetof(WDT_Article_Characteristic_C_SetValue, CallFunc_GetTextWithEmptyNone_ReturnValue) == 0x000010, "Member 'WDT_Article_Characteristic_C_SetValue::CallFunc_GetTextWithEmptyNone_ReturnValue' has a wrong offset!");
+
 // Function WDT_Article_Characteristic.WDT_Article_Characteristic_C.GetTextWithEmptyNone
 // 0x0048 (0x0048 - 0x0000)
 struct WDT_Article_Characteristic_C_GetTextWithEmptyNone final
@@ -35,19 +48,6 @@ static_assert(offsetof(WDT_Article_Characteristic_C_GetTextWithEmptyNone, Temp_b
 static_assert(offsetof(WDT_Article_Characteristic_C_GetTextWithEmptyNone, CallFunc_TextIsEmpty_ReturnValue) == 0x000021, "Member 'WDT_Article_Characteristic_C_GetTextWithEmptyNone::CallFunc_TextIsEmpty_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_Article_Characteristic_C_GetTextWithEmptyNone, Temp_text_Variable) == 0x000028, "Member 'WDT_Article_Characteristic_C_GetTextWithEmptyNone::Temp_text_Variable' has a wrong offset!");
 static_assert(offsetof(WDT_Article_Characteristic_C_GetTextWithEmptyNone, K2Node_Select_Default) == 0x000038, "Member 'WDT_Article_Characteristic_C_GetTextWithEmptyNone::K2Node_Select_Default' has a wrong offset!");
-
-// Function WDT_Article_Characteristic.WDT_Article_Characteristic_C.SetValue
-// 0x0020 (0x0020 - 0x0000)
-struct WDT_Article_Characteristic_C_SetValue final
-{
-public:
-	class FText                                   InValue;                                           // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
-	class FText                                   CallFunc_GetTextWithEmptyNone_ReturnValue;         // 0x0010(0x0010)()
-};
-static_assert(alignof(WDT_Article_Characteristic_C_SetValue) == 0x000008, "Wrong alignment on WDT_Article_Characteristic_C_SetValue");
-static_assert(sizeof(WDT_Article_Characteristic_C_SetValue) == 0x000020, "Wrong size on WDT_Article_Characteristic_C_SetValue");
-static_assert(offsetof(WDT_Article_Characteristic_C_SetValue, InValue) == 0x000000, "Member 'WDT_Article_Characteristic_C_SetValue::InValue' has a wrong offset!");
-static_assert(offsetof(WDT_Article_Characteristic_C_SetValue, CallFunc_GetTextWithEmptyNone_ReturnValue) == 0x000010, "Member 'WDT_Article_Characteristic_C_SetValue::CallFunc_GetTextWithEmptyNone_ReturnValue' has a wrong offset!");
 
 }
 

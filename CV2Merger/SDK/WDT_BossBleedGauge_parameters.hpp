@@ -11,30 +11,26 @@
 #include "Basic.hpp"
 
 #include "Extensions_structs.hpp"
-#include "SlateCore_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function WDT_BossBleedGauge.WDT_BossBleedGauge_C.ExecuteUbergraph_WDT_BossBleedGauge
-// 0x0050 (0x0050 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct WDT_BossBleedGauge_C_ExecuteUbergraph_WDT_BossBleedGauge final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0004(0x0038)(IsPlainOldData, NoDestructor)
-	float                                         K2Node_Event_InDeltaTime;                          // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UWidgetAnimation*                 K2Node_Event_Animation;                            // 0x0040(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	const class UWidgetAnimation*                 K2Node_Event_Animation;                            // 0x0008(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_BossBleedGauge_C_ExecuteUbergraph_WDT_BossBleedGauge) == 0x000008, "Wrong alignment on WDT_BossBleedGauge_C_ExecuteUbergraph_WDT_BossBleedGauge");
-static_assert(sizeof(WDT_BossBleedGauge_C_ExecuteUbergraph_WDT_BossBleedGauge) == 0x000050, "Wrong size on WDT_BossBleedGauge_C_ExecuteUbergraph_WDT_BossBleedGauge");
+static_assert(sizeof(WDT_BossBleedGauge_C_ExecuteUbergraph_WDT_BossBleedGauge) == 0x000018, "Wrong size on WDT_BossBleedGauge_C_ExecuteUbergraph_WDT_BossBleedGauge");
 static_assert(offsetof(WDT_BossBleedGauge_C_ExecuteUbergraph_WDT_BossBleedGauge, EntryPoint) == 0x000000, "Member 'WDT_BossBleedGauge_C_ExecuteUbergraph_WDT_BossBleedGauge::EntryPoint' has a wrong offset!");
-static_assert(offsetof(WDT_BossBleedGauge_C_ExecuteUbergraph_WDT_BossBleedGauge, K2Node_Event_MyGeometry) == 0x000004, "Member 'WDT_BossBleedGauge_C_ExecuteUbergraph_WDT_BossBleedGauge::K2Node_Event_MyGeometry' has a wrong offset!");
-static_assert(offsetof(WDT_BossBleedGauge_C_ExecuteUbergraph_WDT_BossBleedGauge, K2Node_Event_InDeltaTime) == 0x00003C, "Member 'WDT_BossBleedGauge_C_ExecuteUbergraph_WDT_BossBleedGauge::K2Node_Event_InDeltaTime' has a wrong offset!");
-static_assert(offsetof(WDT_BossBleedGauge_C_ExecuteUbergraph_WDT_BossBleedGauge, K2Node_Event_Animation) == 0x000040, "Member 'WDT_BossBleedGauge_C_ExecuteUbergraph_WDT_BossBleedGauge::K2Node_Event_Animation' has a wrong offset!");
-static_assert(offsetof(WDT_BossBleedGauge_C_ExecuteUbergraph_WDT_BossBleedGauge, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000048, "Member 'WDT_BossBleedGauge_C_ExecuteUbergraph_WDT_BossBleedGauge::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_BossBleedGauge_C_ExecuteUbergraph_WDT_BossBleedGauge, K2Node_Event_Animation) == 0x000008, "Member 'WDT_BossBleedGauge_C_ExecuteUbergraph_WDT_BossBleedGauge::K2Node_Event_Animation' has a wrong offset!");
+static_assert(offsetof(WDT_BossBleedGauge_C_ExecuteUbergraph_WDT_BossBleedGauge, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000010, "Member 'WDT_BossBleedGauge_C_ExecuteUbergraph_WDT_BossBleedGauge::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
 
 // Function WDT_BossBleedGauge.WDT_BossBleedGauge_C.OnAnimationFinished
 // 0x0008 (0x0008 - 0x0000)
@@ -80,19 +76,6 @@ static_assert(offsetof(WDT_BossBleedGauge_C_SetBleedAmount, CallFunc_LessEqual_D
 static_assert(offsetof(WDT_BossBleedGauge_C_SetBleedAmount, CallFunc_IsAnimationPlaying_ReturnValue) == 0x000012, "Member 'WDT_BossBleedGauge_C_SetBleedAmount::CallFunc_IsAnimationPlaying_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_BossBleedGauge_C_SetBleedAmount, CallFunc_Not_PreBool_ReturnValue) == 0x000013, "Member 'WDT_BossBleedGauge_C_SetBleedAmount::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_BossBleedGauge_C_SetBleedAmount, CallFunc_BooleanAND_ReturnValue) == 0x000014, "Member 'WDT_BossBleedGauge_C_SetBleedAmount::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-
-// Function WDT_BossBleedGauge.WDT_BossBleedGauge_C.Tick
-// 0x003C (0x003C - 0x0000)
-struct WDT_BossBleedGauge_C_Tick final
-{
-public:
-	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_BossBleedGauge_C_Tick) == 0x000004, "Wrong alignment on WDT_BossBleedGauge_C_Tick");
-static_assert(sizeof(WDT_BossBleedGauge_C_Tick) == 0x00003C, "Wrong size on WDT_BossBleedGauge_C_Tick");
-static_assert(offsetof(WDT_BossBleedGauge_C_Tick, MyGeometry) == 0x000000, "Member 'WDT_BossBleedGauge_C_Tick::MyGeometry' has a wrong offset!");
-static_assert(offsetof(WDT_BossBleedGauge_C_Tick, InDeltaTime) == 0x000038, "Member 'WDT_BossBleedGauge_C_Tick::InDeltaTime' has a wrong offset!");
 
 }
 

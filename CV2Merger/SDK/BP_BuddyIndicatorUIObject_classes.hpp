@@ -19,11 +19,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_BuddyIndicatorUIObject.BP_BuddyIndicatorUIObject_C
-// 0x0008 (0x0088 - 0x0080)
+// 0x0008 (0x0098 - 0x0090)
 class UBP_BuddyIndicatorUIObject_C final : public UBuddyIndicatorUIObject
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0080(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0090(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_BP_BuddyIndicatorUIObject(int32 EntryPoint);
@@ -43,6 +43,7 @@ public:
 	void OnNotifyHealthGaugeLengthChanged(double InLength);
 	bool SetBarrierGaugeVisible(bool InVisible);
 	bool SetBuddyIcon(class UMaterialInstance* InBuddyIcon, const struct FGameplayTag& InBuddyType);
+	bool SetSubBuddyIcon(class UMaterialInstance* InBuddyIcon);
 	bool SetSummonEmpowerEnabled(bool InEnabled);
 	bool SetSummonGaugeEnabled(bool InEnabled);
 	bool SetSummonMaterializeEnabled(bool InEnabled);
@@ -60,8 +61,8 @@ public:
 	}
 };
 static_assert(alignof(UBP_BuddyIndicatorUIObject_C) == 0x000008, "Wrong alignment on UBP_BuddyIndicatorUIObject_C");
-static_assert(sizeof(UBP_BuddyIndicatorUIObject_C) == 0x000088, "Wrong size on UBP_BuddyIndicatorUIObject_C");
-static_assert(offsetof(UBP_BuddyIndicatorUIObject_C, UberGraphFrame) == 0x000080, "Member 'UBP_BuddyIndicatorUIObject_C::UberGraphFrame' has a wrong offset!");
+static_assert(sizeof(UBP_BuddyIndicatorUIObject_C) == 0x000098, "Wrong size on UBP_BuddyIndicatorUIObject_C");
+static_assert(offsetof(UBP_BuddyIndicatorUIObject_C, UberGraphFrame) == 0x000090, "Member 'UBP_BuddyIndicatorUIObject_C::UberGraphFrame' has a wrong offset!");
 
 }
 

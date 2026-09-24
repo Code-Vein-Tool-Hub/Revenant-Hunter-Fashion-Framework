@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "GameplayTags_structs.hpp"
+#include "Extensions_structs.hpp"
 #include "Engine_structs.hpp"
 #include "StoryFlagSystem_structs.hpp"
-#include "Extensions_structs.hpp"
-#include "GameplayTags_structs.hpp"
 #include "BP_SmallScenarioBase_classes.hpp"
 
 
@@ -21,16 +21,16 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_SmallScenarioGainBloodCodeBase.BP_SmallScenarioGainBloodCodeBase_C
-// 0x0038 (0x0400 - 0x03C8)
+// 0x0038 (0x0410 - 0x03D8)
 class ABP_SmallScenarioGainBloodCodeBase_C : public ABP_SmallScenarioBase_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_SmallScenarioGainBloodCodeBase_C; // 0x03C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FArticleBulkInfo                       ArticleBulkInfo;                                   // 0x03D0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FStoryFlagLabel                        FlagLabel;                                         // 0x03E0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           FlagValueBeforeGain;                               // 0x03E8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           FlagValueAfterGain;                                // 0x03F0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FStoryFlagLabel                        FlagAfterLabelOverride;                            // 0x03F8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_SmallScenarioGainBloodCodeBase_C; // 0x03D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FArticleBulkInfo                       ArticleBulkInfo;                                   // 0x03E0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FStoryFlagLabel                        FlagLabel;                                         // 0x03F0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           FlagValueBeforeGain;                               // 0x03F8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           FlagValueAfterGain;                                // 0x0400(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FStoryFlagLabel                        FlagAfterLabelOverride;                            // 0x0408(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_SmallScenarioGainBloodCodeBase(int32 EntryPoint);
@@ -47,13 +47,13 @@ public:
 	}
 };
 static_assert(alignof(ABP_SmallScenarioGainBloodCodeBase_C) == 0x000008, "Wrong alignment on ABP_SmallScenarioGainBloodCodeBase_C");
-static_assert(sizeof(ABP_SmallScenarioGainBloodCodeBase_C) == 0x000400, "Wrong size on ABP_SmallScenarioGainBloodCodeBase_C");
-static_assert(offsetof(ABP_SmallScenarioGainBloodCodeBase_C, UberGraphFrame_BP_SmallScenarioGainBloodCodeBase_C) == 0x0003C8, "Member 'ABP_SmallScenarioGainBloodCodeBase_C::UberGraphFrame_BP_SmallScenarioGainBloodCodeBase_C' has a wrong offset!");
-static_assert(offsetof(ABP_SmallScenarioGainBloodCodeBase_C, ArticleBulkInfo) == 0x0003D0, "Member 'ABP_SmallScenarioGainBloodCodeBase_C::ArticleBulkInfo' has a wrong offset!");
-static_assert(offsetof(ABP_SmallScenarioGainBloodCodeBase_C, FlagLabel) == 0x0003E0, "Member 'ABP_SmallScenarioGainBloodCodeBase_C::FlagLabel' has a wrong offset!");
-static_assert(offsetof(ABP_SmallScenarioGainBloodCodeBase_C, FlagValueBeforeGain) == 0x0003E8, "Member 'ABP_SmallScenarioGainBloodCodeBase_C::FlagValueBeforeGain' has a wrong offset!");
-static_assert(offsetof(ABP_SmallScenarioGainBloodCodeBase_C, FlagValueAfterGain) == 0x0003F0, "Member 'ABP_SmallScenarioGainBloodCodeBase_C::FlagValueAfterGain' has a wrong offset!");
-static_assert(offsetof(ABP_SmallScenarioGainBloodCodeBase_C, FlagAfterLabelOverride) == 0x0003F8, "Member 'ABP_SmallScenarioGainBloodCodeBase_C::FlagAfterLabelOverride' has a wrong offset!");
+static_assert(sizeof(ABP_SmallScenarioGainBloodCodeBase_C) == 0x000410, "Wrong size on ABP_SmallScenarioGainBloodCodeBase_C");
+static_assert(offsetof(ABP_SmallScenarioGainBloodCodeBase_C, UberGraphFrame_BP_SmallScenarioGainBloodCodeBase_C) == 0x0003D8, "Member 'ABP_SmallScenarioGainBloodCodeBase_C::UberGraphFrame_BP_SmallScenarioGainBloodCodeBase_C' has a wrong offset!");
+static_assert(offsetof(ABP_SmallScenarioGainBloodCodeBase_C, ArticleBulkInfo) == 0x0003E0, "Member 'ABP_SmallScenarioGainBloodCodeBase_C::ArticleBulkInfo' has a wrong offset!");
+static_assert(offsetof(ABP_SmallScenarioGainBloodCodeBase_C, FlagLabel) == 0x0003F0, "Member 'ABP_SmallScenarioGainBloodCodeBase_C::FlagLabel' has a wrong offset!");
+static_assert(offsetof(ABP_SmallScenarioGainBloodCodeBase_C, FlagValueBeforeGain) == 0x0003F8, "Member 'ABP_SmallScenarioGainBloodCodeBase_C::FlagValueBeforeGain' has a wrong offset!");
+static_assert(offsetof(ABP_SmallScenarioGainBloodCodeBase_C, FlagValueAfterGain) == 0x000400, "Member 'ABP_SmallScenarioGainBloodCodeBase_C::FlagValueAfterGain' has a wrong offset!");
+static_assert(offsetof(ABP_SmallScenarioGainBloodCodeBase_C, FlagAfterLabelOverride) == 0x000408, "Member 'ABP_SmallScenarioGainBloodCodeBase_C::FlagAfterLabelOverride' has a wrong offset!");
 
 }
 

@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_BulletManager.BP_BulletManager_C
-// 0x0000 (0x0310 - 0x0310)
+// 0x0000 (0x0330 - 0x0330)
 class UBP_BulletManager_C final : public UBulletManager
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UBP_BulletManager_C) == 0x000008, "Wrong alignment on UBP_BulletManager_C");
-static_assert(sizeof(UBP_BulletManager_C) == 0x000310, "Wrong size on UBP_BulletManager_C");
+static_assert(sizeof(UBP_BulletManager_C) == 0x000330, "Wrong size on UBP_BulletManager_C");
 
 }
 

@@ -17,97 +17,49 @@
 namespace SDK
 {
 
-// Function WDT_BarrierGauge.WDT_BarrierGauge_C.OnChangeVisibleByBatttleState__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    InIsVisible                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function WDT_BarrierGauge.WDT_BarrierGauge_C.StartBackGauge
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UWDT_BarrierGauge_C::OnChangeVisibleByBatttleState__DelegateSignature(bool InIsVisible)
+void UWDT_BarrierGauge_C::StartBackGauge()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_BarrierGauge_C", "OnChangeVisibleByBatttleState__DelegateSignature");
+		Func = Class->GetFunction("WDT_BarrierGauge_C", "StartBackGauge");
 
-	Params::WDT_BarrierGauge_C_OnChangeVisibleByBatttleState__DelegateSignature Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.InIsVisible = InIsVisible;
+
+// Function WDT_BarrierGauge.WDT_BarrierGauge_C.TickBackGauge
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_BarrierGauge_C::TickBackGauge(double InDeltaTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_BarrierGauge_C", "TickBackGauge");
+
+	Params::WDT_BarrierGauge_C_TickBackGauge Parms{};
+
+	Parms.InDeltaTime = InDeltaTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WDT_BarrierGauge.WDT_BarrierGauge_C.ActivateBarrier
+// Function WDT_BarrierGauge.WDT_BarrierGauge_C.HideBattleState
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWDT_BarrierGauge_C::ActivateBarrier()
+void UWDT_BarrierGauge_C::HideBattleState()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_BarrierGauge_C", "ActivateBarrier");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WDT_BarrierGauge.WDT_BarrierGauge_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWDT_BarrierGauge_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_BarrierGauge_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WDT_BarrierGauge.WDT_BarrierGauge_C.DeactivateBarrier
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWDT_BarrierGauge_C::DeactivateBarrier()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_BarrierGauge_C", "DeactivateBarrier");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WDT_BarrierGauge.WDT_BarrierGauge_C.ExecuteUbergraph_WDT_BarrierGauge
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_BarrierGauge_C::ExecuteUbergraph_WDT_BarrierGauge(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_BarrierGauge_C", "ExecuteUbergraph_WDT_BarrierGauge");
-
-	Params::WDT_BarrierGauge_C_ExecuteUbergraph_WDT_BarrierGauge Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_BarrierGauge.WDT_BarrierGauge_C.ForcedShow
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWDT_BarrierGauge_C::ForcedShow()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_BarrierGauge_C", "ForcedShow");
+		Func = Class->GetFunction("WDT_BarrierGauge_C", "HideBattleState");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -134,93 +86,91 @@ void UWDT_BarrierGauge_C::GetResourcePercent(double* OutPercent)
 }
 
 
-// Function WDT_BarrierGauge.WDT_BarrierGauge_C.HideBattleState
+// Function WDT_BarrierGauge.WDT_BarrierGauge_C.ForcedShow
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWDT_BarrierGauge_C::HideBattleState()
+void UWDT_BarrierGauge_C::ForcedShow()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_BarrierGauge_C", "HideBattleState");
+		Func = Class->GetFunction("WDT_BarrierGauge_C", "ForcedShow");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WDT_BarrierGauge.WDT_BarrierGauge_C.NotifyBarrierBrokenDown
+// Function WDT_BarrierGauge.WDT_BarrierGauge_C.UpdateVisibilityBasedOnBattleState
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWDT_BarrierGauge_C::NotifyBarrierBrokenDown()
+void UWDT_BarrierGauge_C::UpdateVisibilityBasedOnBattleState()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_BarrierGauge_C", "NotifyBarrierBrokenDown");
+		Func = Class->GetFunction("WDT_BarrierGauge_C", "UpdateVisibilityBasedOnBattleState");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WDT_BarrierGauge.WDT_BarrierGauge_C.NotifyBarrierPointChanged
+// Function WDT_BarrierGauge.WDT_BarrierGauge_C.DeactivateBarrier
 // (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double                                  InCurrentBarrier                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  InMaxBarrier                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_BarrierGauge_C::NotifyBarrierPointChanged(double InCurrentBarrier, double InMaxBarrier)
+void UWDT_BarrierGauge_C::DeactivateBarrier()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_BarrierGauge_C", "NotifyBarrierPointChanged");
+		Func = Class->GetFunction("WDT_BarrierGauge_C", "DeactivateBarrier");
 
-	Params::WDT_BarrierGauge_C_NotifyBarrierPointChanged Parms{};
-
-	Parms.InCurrentBarrier = InCurrentBarrier;
-	Parms.InMaxBarrier = InMaxBarrier;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WDT_BarrierGauge.WDT_BarrierGauge_C.NotifyCooldownUpdated
+// Function WDT_BarrierGauge.WDT_BarrierGauge_C.ActivateBarrier
 // (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double                                  InRemainingTime                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  InTotalTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_BarrierGauge_C::NotifyCooldownUpdated(double InRemainingTime, double InTotalTime)
+void UWDT_BarrierGauge_C::ActivateBarrier()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_BarrierGauge_C", "NotifyCooldownUpdated");
+		Func = Class->GetFunction("WDT_BarrierGauge_C", "ActivateBarrier");
 
-	Params::WDT_BarrierGauge_C_NotifyCooldownUpdated Parms{};
-
-	Parms.InRemainingTime = InRemainingTime;
-	Parms.InTotalTime = InTotalTime;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WDT_BarrierGauge.WDT_BarrierGauge_C.OnAnimationFinished
-// (BlueprintCosmetic, Event, Protected, BlueprintEvent)
-// Parameters:
-// class UWidgetAnimation*                 Animation                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// Function WDT_BarrierGauge.WDT_BarrierGauge_C.UpdateGaugeEnabled
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UWDT_BarrierGauge_C::OnAnimationFinished(const class UWidgetAnimation* Animation)
+void UWDT_BarrierGauge_C::UpdateGaugeEnabled()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_BarrierGauge_C", "OnAnimationFinished");
+		Func = Class->GetFunction("WDT_BarrierGauge_C", "UpdateGaugeEnabled");
 
-	Params::WDT_BarrierGauge_C_OnAnimationFinished Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.Animation = Animation;
+
+// Function WDT_BarrierGauge.WDT_BarrierGauge_C.SetSpacingSize
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  InSize                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_BarrierGauge_C::SetSpacingSize(double InSize)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_BarrierGauge_C", "SetSpacingSize");
+
+	Params::WDT_BarrierGauge_C_SetSpacingSize Parms{};
+
+	Parms.InSize = InSize;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -246,21 +196,59 @@ void UWDT_BarrierGauge_C::OnBattleStateChanged(bool InBattleState)
 }
 
 
-// Function WDT_BarrierGauge.WDT_BarrierGauge_C.SetSpacingSize
+// Function WDT_BarrierGauge.WDT_BarrierGauge_C.NotifyBarrierBrokenDown
 // (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double                                  InSize                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_BarrierGauge_C::SetSpacingSize(double InSize)
+void UWDT_BarrierGauge_C::NotifyBarrierBrokenDown()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_BarrierGauge_C", "SetSpacingSize");
+		Func = Class->GetFunction("WDT_BarrierGauge_C", "NotifyBarrierBrokenDown");
 
-	Params::WDT_BarrierGauge_C_SetSpacingSize Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.InSize = InSize;
+
+// Function WDT_BarrierGauge.WDT_BarrierGauge_C.NotifyCooldownUpdated
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  InRemainingTime                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  InTotalTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_BarrierGauge_C::NotifyCooldownUpdated(double InRemainingTime, double InTotalTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_BarrierGauge_C", "NotifyCooldownUpdated");
+
+	Params::WDT_BarrierGauge_C_NotifyCooldownUpdated Parms{};
+
+	Parms.InRemainingTime = InRemainingTime;
+	Parms.InTotalTime = InTotalTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_BarrierGauge.WDT_BarrierGauge_C.NotifyBarrierPointChanged
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  InCurrentBarrier                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  InMaxBarrier                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_BarrierGauge_C::NotifyBarrierPointChanged(double InCurrentBarrier, double InMaxBarrier)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_BarrierGauge_C", "NotifyBarrierPointChanged");
+
+	Params::WDT_BarrierGauge_C_NotifyBarrierPointChanged Parms{};
+
+	Parms.InCurrentBarrier = InCurrentBarrier;
+	Parms.InMaxBarrier = InMaxBarrier;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -286,20 +274,6 @@ void UWDT_BarrierGauge_C::SetSummonMode(ESummonGaugeMode InMode)
 }
 
 
-// Function WDT_BarrierGauge.WDT_BarrierGauge_C.StartBackGauge
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWDT_BarrierGauge_C::StartBackGauge()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_BarrierGauge_C", "StartBackGauge");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function WDT_BarrierGauge.WDT_BarrierGauge_C.Tick
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
@@ -322,51 +296,37 @@ void UWDT_BarrierGauge_C::Tick(const struct FGeometry& MyGeometry, float InDelta
 }
 
 
-// Function WDT_BarrierGauge.WDT_BarrierGauge_C.TickBackGauge
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double                                  InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function WDT_BarrierGauge.WDT_BarrierGauge_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UWDT_BarrierGauge_C::TickBackGauge(double InDeltaTime)
+void UWDT_BarrierGauge_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_BarrierGauge_C", "TickBackGauge");
+		Func = Class->GetFunction("WDT_BarrierGauge_C", "Construct");
 
-	Params::WDT_BarrierGauge_C_TickBackGauge Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.InDeltaTime = InDeltaTime;
+
+// Function WDT_BarrierGauge.WDT_BarrierGauge_C.OnAnimationFinished
+// (BlueprintCosmetic, Event, Protected, BlueprintEvent)
+// Parameters:
+// class UWidgetAnimation*                 Animation                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_BarrierGauge_C::OnAnimationFinished(const class UWidgetAnimation* Animation)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_BarrierGauge_C", "OnAnimationFinished");
+
+	Params::WDT_BarrierGauge_C_OnAnimationFinished Parms{};
+
+	Parms.Animation = Animation;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_BarrierGauge.WDT_BarrierGauge_C.UpdateGaugeEnabled
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWDT_BarrierGauge_C::UpdateGaugeEnabled()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_BarrierGauge_C", "UpdateGaugeEnabled");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WDT_BarrierGauge.WDT_BarrierGauge_C.UpdateVisibilityBasedOnBattleState
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWDT_BarrierGauge_C::UpdateVisibilityBasedOnBattleState()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_BarrierGauge_C", "UpdateVisibilityBasedOnBattleState");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -395,6 +355,46 @@ void UWDT_BarrierGauge_C::WidgetAnimationEvt_BattleEndAnimation_K2Node_WidgetAni
 		Func = Class->GetFunction("WDT_BarrierGauge_C", "WidgetAnimationEvt_BattleEndAnimation_K2Node_WidgetAnimationEvent_1");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WDT_BarrierGauge.WDT_BarrierGauge_C.OnChangeVisibleByBatttleState__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    InIsVisible                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_BarrierGauge_C::OnChangeVisibleByBatttleState__DelegateSignature(bool InIsVisible)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_BarrierGauge_C", "OnChangeVisibleByBatttleState__DelegateSignature");
+
+	Params::WDT_BarrierGauge_C_OnChangeVisibleByBatttleState__DelegateSignature Parms{};
+
+	Parms.InIsVisible = InIsVisible;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_BarrierGauge.WDT_BarrierGauge_C.ExecuteUbergraph_WDT_BarrierGauge
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_BarrierGauge_C::ExecuteUbergraph_WDT_BarrierGauge(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_BarrierGauge_C", "ExecuteUbergraph_WDT_BarrierGauge");
+
+	Params::WDT_BarrierGauge_C_ExecuteUbergraph_WDT_BarrierGauge Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

@@ -265,6 +265,34 @@ static_assert(offsetof(StoryFlagFunctionLibrary_GetStoryFlagLabelsByCategory, In
 static_assert(offsetof(StoryFlagFunctionLibrary_GetStoryFlagLabelsByCategory, Category) == 0x000008, "Member 'StoryFlagFunctionLibrary_GetStoryFlagLabelsByCategory::Category' has a wrong offset!");
 static_assert(offsetof(StoryFlagFunctionLibrary_GetStoryFlagLabelsByCategory, ReturnValue) == 0x000010, "Member 'StoryFlagFunctionLibrary_GetStoryFlagLabelsByCategory::ReturnValue' has a wrong offset!");
 
+// Function StoryFlagSystem.StoryFlagFunctionLibrary.GetStoryFlagPresetAllCategory
+// 0x0018 (0x0018 - 0x0000)
+struct StoryFlagFunctionLibrary_GetStoryFlagPresetAllCategory final
+{
+public:
+	const class UObject*                          InWorldContext;                                    // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FName>                           ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(StoryFlagFunctionLibrary_GetStoryFlagPresetAllCategory) == 0x000008, "Wrong alignment on StoryFlagFunctionLibrary_GetStoryFlagPresetAllCategory");
+static_assert(sizeof(StoryFlagFunctionLibrary_GetStoryFlagPresetAllCategory) == 0x000018, "Wrong size on StoryFlagFunctionLibrary_GetStoryFlagPresetAllCategory");
+static_assert(offsetof(StoryFlagFunctionLibrary_GetStoryFlagPresetAllCategory, InWorldContext) == 0x000000, "Member 'StoryFlagFunctionLibrary_GetStoryFlagPresetAllCategory::InWorldContext' has a wrong offset!");
+static_assert(offsetof(StoryFlagFunctionLibrary_GetStoryFlagPresetAllCategory, ReturnValue) == 0x000008, "Member 'StoryFlagFunctionLibrary_GetStoryFlagPresetAllCategory::ReturnValue' has a wrong offset!");
+
+// Function StoryFlagSystem.StoryFlagFunctionLibrary.GetStoryFlagPresetLabelsByCategory
+// 0x0020 (0x0020 - 0x0000)
+struct StoryFlagFunctionLibrary_GetStoryFlagPresetLabelsByCategory final
+{
+public:
+	const class UObject*                          InWorldContext;                                    // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Category;                                          // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FStoryFlagPresetLabel>          ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(StoryFlagFunctionLibrary_GetStoryFlagPresetLabelsByCategory) == 0x000008, "Wrong alignment on StoryFlagFunctionLibrary_GetStoryFlagPresetLabelsByCategory");
+static_assert(sizeof(StoryFlagFunctionLibrary_GetStoryFlagPresetLabelsByCategory) == 0x000020, "Wrong size on StoryFlagFunctionLibrary_GetStoryFlagPresetLabelsByCategory");
+static_assert(offsetof(StoryFlagFunctionLibrary_GetStoryFlagPresetLabelsByCategory, InWorldContext) == 0x000000, "Member 'StoryFlagFunctionLibrary_GetStoryFlagPresetLabelsByCategory::InWorldContext' has a wrong offset!");
+static_assert(offsetof(StoryFlagFunctionLibrary_GetStoryFlagPresetLabelsByCategory, Category) == 0x000008, "Member 'StoryFlagFunctionLibrary_GetStoryFlagPresetLabelsByCategory::Category' has a wrong offset!");
+static_assert(offsetof(StoryFlagFunctionLibrary_GetStoryFlagPresetLabelsByCategory, ReturnValue) == 0x000010, "Member 'StoryFlagFunctionLibrary_GetStoryFlagPresetLabelsByCategory::ReturnValue' has a wrong offset!");
+
 // Function StoryFlagSystem.StoryFlagFunctionLibrary.GetStoryFlagString
 // 0x0018 (0x0018 - 0x0000)
 struct StoryFlagFunctionLibrary_GetStoryFlagString final

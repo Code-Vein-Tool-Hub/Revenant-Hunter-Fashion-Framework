@@ -41,6 +41,7 @@ public:
 	bool NotifyHealthChanged(const float InCurrentHealth, const float InMaxHealth, const EResourceChangeFactor InChangeFactor);
 	bool NotifyStaminaChanged(const float InCurrentStamina, const float InMaxStamina, const EResourceChangeFactor InChangeFactor);
 	struct FStatusEffectIconHandle NotifyStatusDownEffectApplied(const EStatusDownEffectIconType InType, const EStatusEffectFrameType InFrame);
+	struct FStatusEffectIconHandle NotifyStatusDownEffectAppliedEx(const EStatusDownEffectIconTypeEx InType, const EStatusEffectFrameType InFrame);
 	bool NotifyStatusEffectRemoved(const struct FStatusEffectIconHandle& InHandle);
 	bool NotifyStatusEffectTimeElapsed(const struct FStatusEffectIconHandle& InHandle, const float InRemainingTime, const float InTotalTime);
 	struct FStatusEffectIconHandle NotifyStatusUpEffectApplied(const EStatusUpEffectIconType InType, const EStatusEffectFrameType InFrame);
@@ -54,6 +55,7 @@ public:
 	void StartBackGaugeMoving();
 	void StopBackGaugeMoving();
 	bool UpdateAccumulateStateValue(const struct FAccumulateGaugeInfo& InGaugeInfo, const struct FAccumulateAttributeUIInfo& InAttributeInfo);
+	void UpdateGadgetIcon();
 
 public:
 	static class UClass* StaticClass()

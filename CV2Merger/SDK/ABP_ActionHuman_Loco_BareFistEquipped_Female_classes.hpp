@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass ABP_ActionHuman_Loco_BareFistEquipped_Female.ABP_ActionHuman_Loco_BareFistEquipped_Female_C
-// 0x0000 (0x78A0 - 0x78A0)
+// 0x0000 (0x7AF0 - 0x7AF0)
 class UABP_ActionHuman_Loco_BareFistEquipped_Female_C : public UABP_ActionHuman_Loco_BareFistEquipped_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UABP_ActionHuman_Loco_BareFistEquipped_Female_C) == 0x000010, "Wrong alignment on UABP_ActionHuman_Loco_BareFistEquipped_Female_C");
-static_assert(sizeof(UABP_ActionHuman_Loco_BareFistEquipped_Female_C) == 0x0078A0, "Wrong size on UABP_ActionHuman_Loco_BareFistEquipped_Female_C");
+static_assert(sizeof(UABP_ActionHuman_Loco_BareFistEquipped_Female_C) == 0x007AF0, "Wrong size on UABP_ActionHuman_Loco_BareFistEquipped_Female_C");
 
 }
 

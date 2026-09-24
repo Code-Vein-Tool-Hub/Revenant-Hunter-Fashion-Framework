@@ -35,21 +35,21 @@ public:
 	class UTextBlock*                             GadgeLoad_Reliability;                             // 0x0720(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void SetConductivityValue(int32 InCapacityValue, int32 InLoadValue);
-	void SetConductivityValueComparison(int32 InCapacityCurrentValue, int32 InCapacityValue, int32 InLoadCurrentValue, int32 InLoadValue, bool CapacitySwapComparisons, bool LoadSwapComparisons);
-	void SetConductivityValueComparisonLoadOnly(int32 InLoadCurrentValue, int32 InLoadValue, bool LoadSwapComparisons);
-	void SetEfficiencyValue(int32 InCapacityValue, int32 InLoadValue);
-	void SetEfficiencyValueComparison(int32 InCapacityCurrentValue, int32 InCapacityValue, int32 InLoadCurrentValue, int32 InLoadValue, bool CapacitySwapComparisons, bool LoadSwapComparisons);
-	void SetEfficiencyValueComparisonLoadOnly(int32 InLoadCurrentValue, int32 InLoadValue, bool LoadSwapComparisons);
-	void SetHandlingValue(int32 InCapacityValue, int32 InLoadValue);
-	void SetHandlingValueComparison(int32 InCapacityCurrentValue, int32 InCapacityValue, int32 InLoadCurrentValue, int32 InLoadValue, bool CapacitySwapComparisons, bool LoadSwapComparisons);
-	void SetHandlingValueComparisonLoadOnly(int32 InLoadCurrentValue, int32 InLoadValue, bool LoadSwapComparisons);
-	void SetReliabilityValue(int32 InCapacityValue, int32 InLoadValue);
-	void SetReliabilityValueComparison(int32 InCapacityCurrentValue, int32 InCapacityValue, int32 InLoadCurrentValue, int32 InLoadValue, bool CapacitySwapComparisons, bool LoadSwapComparisons);
-	void SetReliabilityValueComparisonLoadOnly(int32 InLoadCurrentValue, int32 InLoadValue, bool LoadSwapComparisons);
-	void SetValue(int32 InCapacityValue, int32 InLoadValue, class UTextBlock* CapacityText, class UTextBlock* LoadText);
-	void SetValueComparison(int32 InCapacityCurrentValue, int32 InCapacityValue, int32 InLoadCurrentValue, int32 InLoadValue, class UTextBlock* CapacityText, class UTextBlock* LoadText, class UWDT_ArticleDiffArrowElement_C* Allow, bool CapacitySwapComparisons, bool LoadSwapComparisons);
 	void SetValueComparisonLoadOnly(int32 InLoadCurrentValue, int32 InLoadValue, class UTextBlock* LoadText, bool LoadSwapComparisons);
+	void SetValueComparison(int32 InCapacityCurrentValue, int32 InCapacityValue, int32 InLoadCurrentValue, int32 InLoadValue, class UTextBlock* CapacityText, class UTextBlock* LoadText, class UWDT_ArticleDiffArrowElement_C* Allow, bool CapacitySwapComparisons, bool LoadSwapComparisons);
+	void SetValue(int32 InCapacityValue, int32 InLoadValue, class UTextBlock* CapacityText, class UTextBlock* LoadText);
+	void SetReliabilityValueComparisonLoadOnly(int32 InLoadCurrentValue, int32 InLoadValue, bool LoadSwapComparisons);
+	void SetReliabilityValueComparison(int32 InCapacityCurrentValue, int32 InCapacityValue, int32 InLoadCurrentValue, int32 InLoadValue, bool CapacitySwapComparisons, bool LoadSwapComparisons);
+	void SetReliabilityValue(int32 InCapacityValue, int32 InLoadValue);
+	void SetHandlingValueComparisonLoadOnly(int32 InLoadCurrentValue, int32 InLoadValue, bool LoadSwapComparisons);
+	void SetHandlingValueComparison(int32 InCapacityCurrentValue, int32 InCapacityValue, int32 InLoadCurrentValue, int32 InLoadValue, bool CapacitySwapComparisons, bool LoadSwapComparisons);
+	void SetHandlingValue(int32 InCapacityValue, int32 InLoadValue);
+	void SetEfficiencyValueComparisonLoadOnly(int32 InLoadCurrentValue, int32 InLoadValue, bool LoadSwapComparisons);
+	void SetEfficiencyValueComparison(int32 InCapacityCurrentValue, int32 InCapacityValue, int32 InLoadCurrentValue, int32 InLoadValue, bool CapacitySwapComparisons, bool LoadSwapComparisons);
+	void SetEfficiencyValue(int32 InCapacityValue, int32 InLoadValue);
+	void SetConductivityValueComparisonLoadOnly(int32 InLoadCurrentValue, int32 InLoadValue, bool LoadSwapComparisons);
+	void SetConductivityValueComparison(int32 InCapacityCurrentValue, int32 InCapacityValue, int32 InLoadCurrentValue, int32 InLoadValue, bool CapacitySwapComparisons, bool LoadSwapComparisons);
+	void SetConductivityValue(int32 InCapacityValue, int32 InLoadValue);
 
 public:
 	static class UClass* StaticClass()

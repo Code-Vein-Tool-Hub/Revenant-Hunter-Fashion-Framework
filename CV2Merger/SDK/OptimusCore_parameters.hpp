@@ -10,12 +10,237 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "OptimusCore_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params
 {
+
+// Function OptimusCore.OptimusNode.SetGraphPosition
+// 0x0018 (0x0018 - 0x0000)
+struct OptimusNode_SetGraphPosition final
+{
+public:
+	struct FVector2D                              InPosition;                                        // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(OptimusNode_SetGraphPosition) == 0x000008, "Wrong alignment on OptimusNode_SetGraphPosition");
+static_assert(sizeof(OptimusNode_SetGraphPosition) == 0x000018, "Wrong size on OptimusNode_SetGraphPosition");
+static_assert(offsetof(OptimusNode_SetGraphPosition, InPosition) == 0x000000, "Member 'OptimusNode_SetGraphPosition::InPosition' has a wrong offset!");
+static_assert(offsetof(OptimusNode_SetGraphPosition, ReturnValue) == 0x000010, "Member 'OptimusNode_SetGraphPosition::ReturnValue' has a wrong offset!");
+
+// Function OptimusCore.OptimusNode.GetDisplayName
+// 0x0010 (0x0010 - 0x0000)
+struct OptimusNode_GetDisplayName final
+{
+public:
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OptimusNode_GetDisplayName) == 0x000008, "Wrong alignment on OptimusNode_GetDisplayName");
+static_assert(sizeof(OptimusNode_GetDisplayName) == 0x000010, "Wrong size on OptimusNode_GetDisplayName");
+static_assert(offsetof(OptimusNode_GetDisplayName, ReturnValue) == 0x000000, "Member 'OptimusNode_GetDisplayName::ReturnValue' has a wrong offset!");
+
+// Function OptimusCore.OptimusNode.GetGraphPosition
+// 0x0010 (0x0010 - 0x0000)
+struct OptimusNode_GetGraphPosition final
+{
+public:
+	struct FVector2D                              ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OptimusNode_GetGraphPosition) == 0x000008, "Wrong alignment on OptimusNode_GetGraphPosition");
+static_assert(sizeof(OptimusNode_GetGraphPosition) == 0x000010, "Wrong size on OptimusNode_GetGraphPosition");
+static_assert(offsetof(OptimusNode_GetGraphPosition, ReturnValue) == 0x000000, "Member 'OptimusNode_GetGraphPosition::ReturnValue' has a wrong offset!");
+
+// Function OptimusCore.OptimusNode.GetNodeCategory
+// 0x0008 (0x0008 - 0x0000)
+struct OptimusNode_GetNodeCategory final
+{
+public:
+	class FName                                   ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OptimusNode_GetNodeCategory) == 0x000004, "Wrong alignment on OptimusNode_GetNodeCategory");
+static_assert(sizeof(OptimusNode_GetNodeCategory) == 0x000008, "Wrong size on OptimusNode_GetNodeCategory");
+static_assert(offsetof(OptimusNode_GetNodeCategory, ReturnValue) == 0x000000, "Member 'OptimusNode_GetNodeCategory::ReturnValue' has a wrong offset!");
+
+// Function OptimusCore.OptimusNode.GetNodeName
+// 0x0008 (0x0008 - 0x0000)
+struct OptimusNode_GetNodeName final
+{
+public:
+	class FName                                   ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OptimusNode_GetNodeName) == 0x000004, "Wrong alignment on OptimusNode_GetNodeName");
+static_assert(sizeof(OptimusNode_GetNodeName) == 0x000008, "Wrong size on OptimusNode_GetNodeName");
+static_assert(offsetof(OptimusNode_GetNodeName, ReturnValue) == 0x000000, "Member 'OptimusNode_GetNodeName::ReturnValue' has a wrong offset!");
+
+// Function OptimusCore.OptimusDeformer.GetComponentBindings
+// 0x0010 (0x0010 - 0x0000)
+struct OptimusDeformer_GetComponentBindings final
+{
+public:
+	TArray<class UOptimusComponentSourceBinding*> ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OptimusDeformer_GetComponentBindings) == 0x000008, "Wrong alignment on OptimusDeformer_GetComponentBindings");
+static_assert(sizeof(OptimusDeformer_GetComponentBindings) == 0x000010, "Wrong size on OptimusDeformer_GetComponentBindings");
+static_assert(offsetof(OptimusDeformer_GetComponentBindings, ReturnValue) == 0x000000, "Member 'OptimusDeformer_GetComponentBindings::ReturnValue' has a wrong offset!");
+
+// Function OptimusCore.OptimusDeformer.GetPrimaryComponentBinding
+// 0x0008 (0x0008 - 0x0000)
+struct OptimusDeformer_GetPrimaryComponentBinding final
+{
+public:
+	class UOptimusComponentSourceBinding*         ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OptimusDeformer_GetPrimaryComponentBinding) == 0x000008, "Wrong alignment on OptimusDeformer_GetPrimaryComponentBinding");
+static_assert(sizeof(OptimusDeformer_GetPrimaryComponentBinding) == 0x000008, "Wrong size on OptimusDeformer_GetPrimaryComponentBinding");
+static_assert(offsetof(OptimusDeformer_GetPrimaryComponentBinding, ReturnValue) == 0x000000, "Member 'OptimusDeformer_GetPrimaryComponentBinding::ReturnValue' has a wrong offset!");
+
+// Function OptimusCore.OptimusDeformer.GetResources
+// 0x0010 (0x0010 - 0x0000)
+struct OptimusDeformer_GetResources final
+{
+public:
+	TArray<class UOptimusResourceDescription*>    ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OptimusDeformer_GetResources) == 0x000008, "Wrong alignment on OptimusDeformer_GetResources");
+static_assert(sizeof(OptimusDeformer_GetResources) == 0x000010, "Wrong size on OptimusDeformer_GetResources");
+static_assert(offsetof(OptimusDeformer_GetResources, ReturnValue) == 0x000000, "Member 'OptimusDeformer_GetResources::ReturnValue' has a wrong offset!");
+
+// Function OptimusCore.OptimusDeformer.GetVariables
+// 0x0010 (0x0010 - 0x0000)
+struct OptimusDeformer_GetVariables final
+{
+public:
+	TArray<class UOptimusVariableDescription*>    ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OptimusDeformer_GetVariables) == 0x000008, "Wrong alignment on OptimusDeformer_GetVariables");
+static_assert(sizeof(OptimusDeformer_GetVariables) == 0x000010, "Wrong size on OptimusDeformer_GetVariables");
+static_assert(offsetof(OptimusDeformer_GetVariables, ReturnValue) == 0x000000, "Member 'OptimusDeformer_GetVariables::ReturnValue' has a wrong offset!");
+
+// Function OptimusCore.OptimusDeformerInstance.EnqueueTriggerGraph
+// 0x000C (0x000C - 0x0000)
+struct OptimusDeformerInstance_EnqueueTriggerGraph final
+{
+public:
+	class FName                                   InTriggerGraphName;                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(OptimusDeformerInstance_EnqueueTriggerGraph) == 0x000004, "Wrong alignment on OptimusDeformerInstance_EnqueueTriggerGraph");
+static_assert(sizeof(OptimusDeformerInstance_EnqueueTriggerGraph) == 0x00000C, "Wrong size on OptimusDeformerInstance_EnqueueTriggerGraph");
+static_assert(offsetof(OptimusDeformerInstance_EnqueueTriggerGraph, InTriggerGraphName) == 0x000000, "Member 'OptimusDeformerInstance_EnqueueTriggerGraph::InTriggerGraphName' has a wrong offset!");
+static_assert(offsetof(OptimusDeformerInstance_EnqueueTriggerGraph, ReturnValue) == 0x000008, "Member 'OptimusDeformerInstance_EnqueueTriggerGraph::ReturnValue' has a wrong offset!");
+
+// Function OptimusCore.OptimusDeformerInstance.SetBoolVariable
+// 0x000C (0x000C - 0x0000)
+struct OptimusDeformerInstance_SetBoolVariable final
+{
+public:
+	class FName                                   InVariableName;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          InValue;                                           // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(OptimusDeformerInstance_SetBoolVariable) == 0x000004, "Wrong alignment on OptimusDeformerInstance_SetBoolVariable");
+static_assert(sizeof(OptimusDeformerInstance_SetBoolVariable) == 0x00000C, "Wrong size on OptimusDeformerInstance_SetBoolVariable");
+static_assert(offsetof(OptimusDeformerInstance_SetBoolVariable, InVariableName) == 0x000000, "Member 'OptimusDeformerInstance_SetBoolVariable::InVariableName' has a wrong offset!");
+static_assert(offsetof(OptimusDeformerInstance_SetBoolVariable, InValue) == 0x000008, "Member 'OptimusDeformerInstance_SetBoolVariable::InValue' has a wrong offset!");
+static_assert(offsetof(OptimusDeformerInstance_SetBoolVariable, ReturnValue) == 0x000009, "Member 'OptimusDeformerInstance_SetBoolVariable::ReturnValue' has a wrong offset!");
+
+// Function OptimusCore.OptimusDeformerInstance.SetFloatVariable
+// 0x0018 (0x0018 - 0x0000)
+struct OptimusDeformerInstance_SetFloatVariable final
+{
+public:
+	class FName                                   InVariableName;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        InValue;                                           // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(OptimusDeformerInstance_SetFloatVariable) == 0x000008, "Wrong alignment on OptimusDeformerInstance_SetFloatVariable");
+static_assert(sizeof(OptimusDeformerInstance_SetFloatVariable) == 0x000018, "Wrong size on OptimusDeformerInstance_SetFloatVariable");
+static_assert(offsetof(OptimusDeformerInstance_SetFloatVariable, InVariableName) == 0x000000, "Member 'OptimusDeformerInstance_SetFloatVariable::InVariableName' has a wrong offset!");
+static_assert(offsetof(OptimusDeformerInstance_SetFloatVariable, InValue) == 0x000008, "Member 'OptimusDeformerInstance_SetFloatVariable::InValue' has a wrong offset!");
+static_assert(offsetof(OptimusDeformerInstance_SetFloatVariable, ReturnValue) == 0x000010, "Member 'OptimusDeformerInstance_SetFloatVariable::ReturnValue' has a wrong offset!");
+
+// Function OptimusCore.OptimusDeformerInstance.SetIntVariable
+// 0x0010 (0x0010 - 0x0000)
+struct OptimusDeformerInstance_SetIntVariable final
+{
+public:
+	class FName                                   InVariableName;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         InValue;                                           // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(OptimusDeformerInstance_SetIntVariable) == 0x000004, "Wrong alignment on OptimusDeformerInstance_SetIntVariable");
+static_assert(sizeof(OptimusDeformerInstance_SetIntVariable) == 0x000010, "Wrong size on OptimusDeformerInstance_SetIntVariable");
+static_assert(offsetof(OptimusDeformerInstance_SetIntVariable, InVariableName) == 0x000000, "Member 'OptimusDeformerInstance_SetIntVariable::InVariableName' has a wrong offset!");
+static_assert(offsetof(OptimusDeformerInstance_SetIntVariable, InValue) == 0x000008, "Member 'OptimusDeformerInstance_SetIntVariable::InValue' has a wrong offset!");
+static_assert(offsetof(OptimusDeformerInstance_SetIntVariable, ReturnValue) == 0x00000C, "Member 'OptimusDeformerInstance_SetIntVariable::ReturnValue' has a wrong offset!");
+
+// Function OptimusCore.OptimusDeformerInstance.SetTransformVariable
+// 0x0080 (0x0080 - 0x0000)
+struct OptimusDeformerInstance_SetTransformVariable final
+{
+public:
+	class FName                                   InVariableName;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             InValue;                                           // 0x0010(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0070(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_71[0xF];                                       // 0x0071(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(OptimusDeformerInstance_SetTransformVariable) == 0x000010, "Wrong alignment on OptimusDeformerInstance_SetTransformVariable");
+static_assert(sizeof(OptimusDeformerInstance_SetTransformVariable) == 0x000080, "Wrong size on OptimusDeformerInstance_SetTransformVariable");
+static_assert(offsetof(OptimusDeformerInstance_SetTransformVariable, InVariableName) == 0x000000, "Member 'OptimusDeformerInstance_SetTransformVariable::InVariableName' has a wrong offset!");
+static_assert(offsetof(OptimusDeformerInstance_SetTransformVariable, InValue) == 0x000010, "Member 'OptimusDeformerInstance_SetTransformVariable::InValue' has a wrong offset!");
+static_assert(offsetof(OptimusDeformerInstance_SetTransformVariable, ReturnValue) == 0x000070, "Member 'OptimusDeformerInstance_SetTransformVariable::ReturnValue' has a wrong offset!");
+
+// Function OptimusCore.OptimusDeformerInstance.SetVector4Variable
+// 0x0040 (0x0040 - 0x0000)
+struct OptimusDeformerInstance_SetVector4Variable final
+{
+public:
+	class FName                                   InVariableName;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector4                               InValue;                                           // 0x0010(0x0020)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0xF];                                       // 0x0031(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(OptimusDeformerInstance_SetVector4Variable) == 0x000010, "Wrong alignment on OptimusDeformerInstance_SetVector4Variable");
+static_assert(sizeof(OptimusDeformerInstance_SetVector4Variable) == 0x000040, "Wrong size on OptimusDeformerInstance_SetVector4Variable");
+static_assert(offsetof(OptimusDeformerInstance_SetVector4Variable, InVariableName) == 0x000000, "Member 'OptimusDeformerInstance_SetVector4Variable::InVariableName' has a wrong offset!");
+static_assert(offsetof(OptimusDeformerInstance_SetVector4Variable, InValue) == 0x000010, "Member 'OptimusDeformerInstance_SetVector4Variable::InValue' has a wrong offset!");
+static_assert(offsetof(OptimusDeformerInstance_SetVector4Variable, ReturnValue) == 0x000030, "Member 'OptimusDeformerInstance_SetVector4Variable::ReturnValue' has a wrong offset!");
+
+// Function OptimusCore.OptimusDeformerInstance.SetVectorVariable
+// 0x0028 (0x0028 - 0x0000)
+struct OptimusDeformerInstance_SetVectorVariable final
+{
+public:
+	class FName                                   InVariableName;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                InValue;                                           // 0x0008(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(OptimusDeformerInstance_SetVectorVariable) == 0x000008, "Wrong alignment on OptimusDeformerInstance_SetVectorVariable");
+static_assert(sizeof(OptimusDeformerInstance_SetVectorVariable) == 0x000028, "Wrong size on OptimusDeformerInstance_SetVectorVariable");
+static_assert(offsetof(OptimusDeformerInstance_SetVectorVariable, InVariableName) == 0x000000, "Member 'OptimusDeformerInstance_SetVectorVariable::InVariableName' has a wrong offset!");
+static_assert(offsetof(OptimusDeformerInstance_SetVectorVariable, InValue) == 0x000008, "Member 'OptimusDeformerInstance_SetVectorVariable::InValue' has a wrong offset!");
+static_assert(offsetof(OptimusDeformerInstance_SetVectorVariable, ReturnValue) == 0x000020, "Member 'OptimusDeformerInstance_SetVectorVariable::ReturnValue' has a wrong offset!");
+
+// Function OptimusCore.OptimusDeformerInstance.GetVariables
+// 0x0010 (0x0010 - 0x0000)
+struct OptimusDeformerInstance_GetVariables final
+{
+public:
+	TArray<class UOptimusVariableDescription*>    ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OptimusDeformerInstance_GetVariables) == 0x000008, "Wrong alignment on OptimusDeformerInstance_GetVariables");
+static_assert(sizeof(OptimusDeformerInstance_GetVariables) == 0x000010, "Wrong size on OptimusDeformerInstance_GetVariables");
+static_assert(offsetof(OptimusDeformerInstance_GetVariables, ReturnValue) == 0x000000, "Member 'OptimusDeformerInstance_GetVariables::ReturnValue' has a wrong offset!");
 
 // Function OptimusCore.OptimusNodeGraph.AddComponentBindingGetNode
 // 0x0020 (0x0020 - 0x0000)
@@ -532,231 +757,6 @@ public:
 static_assert(alignof(OptimusFunctionNodeGraph_GetAccessSpecifierOptions) == 0x000008, "Wrong alignment on OptimusFunctionNodeGraph_GetAccessSpecifierOptions");
 static_assert(sizeof(OptimusFunctionNodeGraph_GetAccessSpecifierOptions) == 0x000010, "Wrong size on OptimusFunctionNodeGraph_GetAccessSpecifierOptions");
 static_assert(offsetof(OptimusFunctionNodeGraph_GetAccessSpecifierOptions, ReturnValue) == 0x000000, "Member 'OptimusFunctionNodeGraph_GetAccessSpecifierOptions::ReturnValue' has a wrong offset!");
-
-// Function OptimusCore.OptimusNode.SetGraphPosition
-// 0x0018 (0x0018 - 0x0000)
-struct OptimusNode_SetGraphPosition final
-{
-public:
-	struct FVector2D                              InPosition;                                        // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(OptimusNode_SetGraphPosition) == 0x000008, "Wrong alignment on OptimusNode_SetGraphPosition");
-static_assert(sizeof(OptimusNode_SetGraphPosition) == 0x000018, "Wrong size on OptimusNode_SetGraphPosition");
-static_assert(offsetof(OptimusNode_SetGraphPosition, InPosition) == 0x000000, "Member 'OptimusNode_SetGraphPosition::InPosition' has a wrong offset!");
-static_assert(offsetof(OptimusNode_SetGraphPosition, ReturnValue) == 0x000010, "Member 'OptimusNode_SetGraphPosition::ReturnValue' has a wrong offset!");
-
-// Function OptimusCore.OptimusNode.GetDisplayName
-// 0x0010 (0x0010 - 0x0000)
-struct OptimusNode_GetDisplayName final
-{
-public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OptimusNode_GetDisplayName) == 0x000008, "Wrong alignment on OptimusNode_GetDisplayName");
-static_assert(sizeof(OptimusNode_GetDisplayName) == 0x000010, "Wrong size on OptimusNode_GetDisplayName");
-static_assert(offsetof(OptimusNode_GetDisplayName, ReturnValue) == 0x000000, "Member 'OptimusNode_GetDisplayName::ReturnValue' has a wrong offset!");
-
-// Function OptimusCore.OptimusNode.GetGraphPosition
-// 0x0010 (0x0010 - 0x0000)
-struct OptimusNode_GetGraphPosition final
-{
-public:
-	struct FVector2D                              ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OptimusNode_GetGraphPosition) == 0x000008, "Wrong alignment on OptimusNode_GetGraphPosition");
-static_assert(sizeof(OptimusNode_GetGraphPosition) == 0x000010, "Wrong size on OptimusNode_GetGraphPosition");
-static_assert(offsetof(OptimusNode_GetGraphPosition, ReturnValue) == 0x000000, "Member 'OptimusNode_GetGraphPosition::ReturnValue' has a wrong offset!");
-
-// Function OptimusCore.OptimusNode.GetNodeCategory
-// 0x0008 (0x0008 - 0x0000)
-struct OptimusNode_GetNodeCategory final
-{
-public:
-	class FName                                   ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OptimusNode_GetNodeCategory) == 0x000004, "Wrong alignment on OptimusNode_GetNodeCategory");
-static_assert(sizeof(OptimusNode_GetNodeCategory) == 0x000008, "Wrong size on OptimusNode_GetNodeCategory");
-static_assert(offsetof(OptimusNode_GetNodeCategory, ReturnValue) == 0x000000, "Member 'OptimusNode_GetNodeCategory::ReturnValue' has a wrong offset!");
-
-// Function OptimusCore.OptimusNode.GetNodeName
-// 0x0008 (0x0008 - 0x0000)
-struct OptimusNode_GetNodeName final
-{
-public:
-	class FName                                   ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OptimusNode_GetNodeName) == 0x000004, "Wrong alignment on OptimusNode_GetNodeName");
-static_assert(sizeof(OptimusNode_GetNodeName) == 0x000008, "Wrong size on OptimusNode_GetNodeName");
-static_assert(offsetof(OptimusNode_GetNodeName, ReturnValue) == 0x000000, "Member 'OptimusNode_GetNodeName::ReturnValue' has a wrong offset!");
-
-// Function OptimusCore.OptimusDeformer.GetComponentBindings
-// 0x0010 (0x0010 - 0x0000)
-struct OptimusDeformer_GetComponentBindings final
-{
-public:
-	TArray<class UOptimusComponentSourceBinding*> ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OptimusDeformer_GetComponentBindings) == 0x000008, "Wrong alignment on OptimusDeformer_GetComponentBindings");
-static_assert(sizeof(OptimusDeformer_GetComponentBindings) == 0x000010, "Wrong size on OptimusDeformer_GetComponentBindings");
-static_assert(offsetof(OptimusDeformer_GetComponentBindings, ReturnValue) == 0x000000, "Member 'OptimusDeformer_GetComponentBindings::ReturnValue' has a wrong offset!");
-
-// Function OptimusCore.OptimusDeformer.GetPrimaryComponentBinding
-// 0x0008 (0x0008 - 0x0000)
-struct OptimusDeformer_GetPrimaryComponentBinding final
-{
-public:
-	class UOptimusComponentSourceBinding*         ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OptimusDeformer_GetPrimaryComponentBinding) == 0x000008, "Wrong alignment on OptimusDeformer_GetPrimaryComponentBinding");
-static_assert(sizeof(OptimusDeformer_GetPrimaryComponentBinding) == 0x000008, "Wrong size on OptimusDeformer_GetPrimaryComponentBinding");
-static_assert(offsetof(OptimusDeformer_GetPrimaryComponentBinding, ReturnValue) == 0x000000, "Member 'OptimusDeformer_GetPrimaryComponentBinding::ReturnValue' has a wrong offset!");
-
-// Function OptimusCore.OptimusDeformer.GetResources
-// 0x0010 (0x0010 - 0x0000)
-struct OptimusDeformer_GetResources final
-{
-public:
-	TArray<class UOptimusResourceDescription*>    ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OptimusDeformer_GetResources) == 0x000008, "Wrong alignment on OptimusDeformer_GetResources");
-static_assert(sizeof(OptimusDeformer_GetResources) == 0x000010, "Wrong size on OptimusDeformer_GetResources");
-static_assert(offsetof(OptimusDeformer_GetResources, ReturnValue) == 0x000000, "Member 'OptimusDeformer_GetResources::ReturnValue' has a wrong offset!");
-
-// Function OptimusCore.OptimusDeformer.GetVariables
-// 0x0010 (0x0010 - 0x0000)
-struct OptimusDeformer_GetVariables final
-{
-public:
-	TArray<class UOptimusVariableDescription*>    ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OptimusDeformer_GetVariables) == 0x000008, "Wrong alignment on OptimusDeformer_GetVariables");
-static_assert(sizeof(OptimusDeformer_GetVariables) == 0x000010, "Wrong size on OptimusDeformer_GetVariables");
-static_assert(offsetof(OptimusDeformer_GetVariables, ReturnValue) == 0x000000, "Member 'OptimusDeformer_GetVariables::ReturnValue' has a wrong offset!");
-
-// Function OptimusCore.OptimusDeformerInstance.EnqueueTriggerGraph
-// 0x000C (0x000C - 0x0000)
-struct OptimusDeformerInstance_EnqueueTriggerGraph final
-{
-public:
-	class FName                                   InTriggerGraphName;                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(OptimusDeformerInstance_EnqueueTriggerGraph) == 0x000004, "Wrong alignment on OptimusDeformerInstance_EnqueueTriggerGraph");
-static_assert(sizeof(OptimusDeformerInstance_EnqueueTriggerGraph) == 0x00000C, "Wrong size on OptimusDeformerInstance_EnqueueTriggerGraph");
-static_assert(offsetof(OptimusDeformerInstance_EnqueueTriggerGraph, InTriggerGraphName) == 0x000000, "Member 'OptimusDeformerInstance_EnqueueTriggerGraph::InTriggerGraphName' has a wrong offset!");
-static_assert(offsetof(OptimusDeformerInstance_EnqueueTriggerGraph, ReturnValue) == 0x000008, "Member 'OptimusDeformerInstance_EnqueueTriggerGraph::ReturnValue' has a wrong offset!");
-
-// Function OptimusCore.OptimusDeformerInstance.SetBoolVariable
-// 0x000C (0x000C - 0x0000)
-struct OptimusDeformerInstance_SetBoolVariable final
-{
-public:
-	class FName                                   InVariableName;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          InValue;                                           // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(OptimusDeformerInstance_SetBoolVariable) == 0x000004, "Wrong alignment on OptimusDeformerInstance_SetBoolVariable");
-static_assert(sizeof(OptimusDeformerInstance_SetBoolVariable) == 0x00000C, "Wrong size on OptimusDeformerInstance_SetBoolVariable");
-static_assert(offsetof(OptimusDeformerInstance_SetBoolVariable, InVariableName) == 0x000000, "Member 'OptimusDeformerInstance_SetBoolVariable::InVariableName' has a wrong offset!");
-static_assert(offsetof(OptimusDeformerInstance_SetBoolVariable, InValue) == 0x000008, "Member 'OptimusDeformerInstance_SetBoolVariable::InValue' has a wrong offset!");
-static_assert(offsetof(OptimusDeformerInstance_SetBoolVariable, ReturnValue) == 0x000009, "Member 'OptimusDeformerInstance_SetBoolVariable::ReturnValue' has a wrong offset!");
-
-// Function OptimusCore.OptimusDeformerInstance.SetFloatVariable
-// 0x0018 (0x0018 - 0x0000)
-struct OptimusDeformerInstance_SetFloatVariable final
-{
-public:
-	class FName                                   InVariableName;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        InValue;                                           // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(OptimusDeformerInstance_SetFloatVariable) == 0x000008, "Wrong alignment on OptimusDeformerInstance_SetFloatVariable");
-static_assert(sizeof(OptimusDeformerInstance_SetFloatVariable) == 0x000018, "Wrong size on OptimusDeformerInstance_SetFloatVariable");
-static_assert(offsetof(OptimusDeformerInstance_SetFloatVariable, InVariableName) == 0x000000, "Member 'OptimusDeformerInstance_SetFloatVariable::InVariableName' has a wrong offset!");
-static_assert(offsetof(OptimusDeformerInstance_SetFloatVariable, InValue) == 0x000008, "Member 'OptimusDeformerInstance_SetFloatVariable::InValue' has a wrong offset!");
-static_assert(offsetof(OptimusDeformerInstance_SetFloatVariable, ReturnValue) == 0x000010, "Member 'OptimusDeformerInstance_SetFloatVariable::ReturnValue' has a wrong offset!");
-
-// Function OptimusCore.OptimusDeformerInstance.SetIntVariable
-// 0x0010 (0x0010 - 0x0000)
-struct OptimusDeformerInstance_SetIntVariable final
-{
-public:
-	class FName                                   InVariableName;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         InValue;                                           // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(OptimusDeformerInstance_SetIntVariable) == 0x000004, "Wrong alignment on OptimusDeformerInstance_SetIntVariable");
-static_assert(sizeof(OptimusDeformerInstance_SetIntVariable) == 0x000010, "Wrong size on OptimusDeformerInstance_SetIntVariable");
-static_assert(offsetof(OptimusDeformerInstance_SetIntVariable, InVariableName) == 0x000000, "Member 'OptimusDeformerInstance_SetIntVariable::InVariableName' has a wrong offset!");
-static_assert(offsetof(OptimusDeformerInstance_SetIntVariable, InValue) == 0x000008, "Member 'OptimusDeformerInstance_SetIntVariable::InValue' has a wrong offset!");
-static_assert(offsetof(OptimusDeformerInstance_SetIntVariable, ReturnValue) == 0x00000C, "Member 'OptimusDeformerInstance_SetIntVariable::ReturnValue' has a wrong offset!");
-
-// Function OptimusCore.OptimusDeformerInstance.SetTransformVariable
-// 0x0080 (0x0080 - 0x0000)
-struct OptimusDeformerInstance_SetTransformVariable final
-{
-public:
-	class FName                                   InVariableName;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             InValue;                                           // 0x0010(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0070(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_71[0xF];                                       // 0x0071(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(OptimusDeformerInstance_SetTransformVariable) == 0x000010, "Wrong alignment on OptimusDeformerInstance_SetTransformVariable");
-static_assert(sizeof(OptimusDeformerInstance_SetTransformVariable) == 0x000080, "Wrong size on OptimusDeformerInstance_SetTransformVariable");
-static_assert(offsetof(OptimusDeformerInstance_SetTransformVariable, InVariableName) == 0x000000, "Member 'OptimusDeformerInstance_SetTransformVariable::InVariableName' has a wrong offset!");
-static_assert(offsetof(OptimusDeformerInstance_SetTransformVariable, InValue) == 0x000010, "Member 'OptimusDeformerInstance_SetTransformVariable::InValue' has a wrong offset!");
-static_assert(offsetof(OptimusDeformerInstance_SetTransformVariable, ReturnValue) == 0x000070, "Member 'OptimusDeformerInstance_SetTransformVariable::ReturnValue' has a wrong offset!");
-
-// Function OptimusCore.OptimusDeformerInstance.SetVector4Variable
-// 0x0040 (0x0040 - 0x0000)
-struct OptimusDeformerInstance_SetVector4Variable final
-{
-public:
-	class FName                                   InVariableName;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector4                               InValue;                                           // 0x0010(0x0020)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0xF];                                       // 0x0031(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(OptimusDeformerInstance_SetVector4Variable) == 0x000010, "Wrong alignment on OptimusDeformerInstance_SetVector4Variable");
-static_assert(sizeof(OptimusDeformerInstance_SetVector4Variable) == 0x000040, "Wrong size on OptimusDeformerInstance_SetVector4Variable");
-static_assert(offsetof(OptimusDeformerInstance_SetVector4Variable, InVariableName) == 0x000000, "Member 'OptimusDeformerInstance_SetVector4Variable::InVariableName' has a wrong offset!");
-static_assert(offsetof(OptimusDeformerInstance_SetVector4Variable, InValue) == 0x000010, "Member 'OptimusDeformerInstance_SetVector4Variable::InValue' has a wrong offset!");
-static_assert(offsetof(OptimusDeformerInstance_SetVector4Variable, ReturnValue) == 0x000030, "Member 'OptimusDeformerInstance_SetVector4Variable::ReturnValue' has a wrong offset!");
-
-// Function OptimusCore.OptimusDeformerInstance.SetVectorVariable
-// 0x0028 (0x0028 - 0x0000)
-struct OptimusDeformerInstance_SetVectorVariable final
-{
-public:
-	class FName                                   InVariableName;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                InValue;                                           // 0x0008(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(OptimusDeformerInstance_SetVectorVariable) == 0x000008, "Wrong alignment on OptimusDeformerInstance_SetVectorVariable");
-static_assert(sizeof(OptimusDeformerInstance_SetVectorVariable) == 0x000028, "Wrong size on OptimusDeformerInstance_SetVectorVariable");
-static_assert(offsetof(OptimusDeformerInstance_SetVectorVariable, InVariableName) == 0x000000, "Member 'OptimusDeformerInstance_SetVectorVariable::InVariableName' has a wrong offset!");
-static_assert(offsetof(OptimusDeformerInstance_SetVectorVariable, InValue) == 0x000008, "Member 'OptimusDeformerInstance_SetVectorVariable::InValue' has a wrong offset!");
-static_assert(offsetof(OptimusDeformerInstance_SetVectorVariable, ReturnValue) == 0x000020, "Member 'OptimusDeformerInstance_SetVectorVariable::ReturnValue' has a wrong offset!");
-
-// Function OptimusCore.OptimusDeformerInstance.GetVariables
-// 0x0010 (0x0010 - 0x0000)
-struct OptimusDeformerInstance_GetVariables final
-{
-public:
-	TArray<class UOptimusVariableDescription*>    ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OptimusDeformerInstance_GetVariables) == 0x000008, "Wrong alignment on OptimusDeformerInstance_GetVariables");
-static_assert(sizeof(OptimusDeformerInstance_GetVariables) == 0x000010, "Wrong size on OptimusDeformerInstance_GetVariables");
-static_assert(offsetof(OptimusDeformerInstance_GetVariables, ReturnValue) == 0x000000, "Member 'OptimusDeformerInstance_GetVariables::ReturnValue' has a wrong offset!");
 
 }
 

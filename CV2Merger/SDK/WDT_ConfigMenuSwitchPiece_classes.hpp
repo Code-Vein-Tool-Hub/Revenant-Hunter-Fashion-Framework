@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "Extensions_structs.hpp"
+#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "WDT_ConfigPieceBase_classes.hpp"
 
@@ -41,6 +41,7 @@ public:
 public:
 	void UpdateTextStyle();
 	void SetIsEditable(bool InFlag);
+	void SetEditableGrayOut(bool* Flag);
 	void SetDefaultOnOff(bool InInitializeValue, bool InDefaultValue);
 	void Set_on_Off(bool IsOn);
 	bool Select(bool PlayAnimation_0);

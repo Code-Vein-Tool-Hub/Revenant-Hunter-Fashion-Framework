@@ -10,8 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "Extensions_structs.hpp"
 #include "Extensions_classes.hpp"
 
 
@@ -19,19 +17,9 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_GameSystemManager.BP_GameSystemManager_C
-// 0x0060 (0x0138 - 0x00D8)
+// 0x0000 (0x00D8 - 0x00D8)
 class UBP_GameSystemManager_C final : public UGameSystemManager
 {
-public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	TMap<ECharacterCustomizeFinger, bool>         Finger_Expose_Map;                                 // 0x00E0(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	ECharacterCustomizeFinger                     Key;                                               // 0x0130(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Value;                                             // 0x0131(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-public:
-	void CustomEvent();
-	void ExecuteUbergraph_BP_GameSystemManager(int32 EntryPoint);
-
 public:
 	static class UClass* StaticClass()
 	{
@@ -43,11 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UBP_GameSystemManager_C) == 0x000008, "Wrong alignment on UBP_GameSystemManager_C");
-static_assert(sizeof(UBP_GameSystemManager_C) == 0x000138, "Wrong size on UBP_GameSystemManager_C");
-static_assert(offsetof(UBP_GameSystemManager_C, UberGraphFrame) == 0x0000D8, "Member 'UBP_GameSystemManager_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_GameSystemManager_C, Finger_Expose_Map) == 0x0000E0, "Member 'UBP_GameSystemManager_C::Finger_Expose_Map' has a wrong offset!");
-static_assert(offsetof(UBP_GameSystemManager_C, Key) == 0x000130, "Member 'UBP_GameSystemManager_C::Key' has a wrong offset!");
-static_assert(offsetof(UBP_GameSystemManager_C, Value) == 0x000131, "Member 'UBP_GameSystemManager_C::Value' has a wrong offset!");
+static_assert(sizeof(UBP_GameSystemManager_C) == 0x0000D8, "Wrong size on UBP_GameSystemManager_C");
 
 }
 

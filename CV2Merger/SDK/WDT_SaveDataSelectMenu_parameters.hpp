@@ -12,13 +12,24 @@
 
 #include "Extensions_structs.hpp"
 #include "BasicUI_structs.hpp"
-#include "EnhancedInput_structs.hpp"
 #include "Engine_structs.hpp"
+#include "EnhancedInput_structs.hpp"
 #include "UMG_structs.hpp"
 
 
 namespace SDK::Params
 {
+
+// Function WDT_SaveDataSelectMenu.WDT_SaveDataSelectMenu_C.OnSaveDataSelectEvent__DelegateSignature
+// 0x0004 (0x0004 - 0x0000)
+struct WDT_SaveDataSelectMenu_C_OnSaveDataSelectEvent__DelegateSignature final
+{
+public:
+	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_SaveDataSelectMenu_C_OnSaveDataSelectEvent__DelegateSignature) == 0x000004, "Wrong alignment on WDT_SaveDataSelectMenu_C_OnSaveDataSelectEvent__DelegateSignature");
+static_assert(sizeof(WDT_SaveDataSelectMenu_C_OnSaveDataSelectEvent__DelegateSignature) == 0x000004, "Wrong size on WDT_SaveDataSelectMenu_C_OnSaveDataSelectEvent__DelegateSignature");
+static_assert(offsetof(WDT_SaveDataSelectMenu_C_OnSaveDataSelectEvent__DelegateSignature, Index_0) == 0x000000, "Member 'WDT_SaveDataSelectMenu_C_OnSaveDataSelectEvent__DelegateSignature::Index_0' has a wrong offset!");
 
 // Function WDT_SaveDataSelectMenu.WDT_SaveDataSelectMenu_C.BndEvt__WDT_SaveDataSelectMenu_SaveDataList_K2Node_ComponentBoundEvent_0_OnItemIsHoveredChangedDynamic__DelegateSignature
 // 0x0010 (0x0010 - 0x0000)
@@ -747,17 +758,6 @@ public:
 static_assert(alignof(WDT_SaveDataSelectMenu_C_OnMouseLeftClickMenuPiece) == 0x000008, "Wrong alignment on WDT_SaveDataSelectMenu_C_OnMouseLeftClickMenuPiece");
 static_assert(sizeof(WDT_SaveDataSelectMenu_C_OnMouseLeftClickMenuPiece) == 0x000008, "Wrong size on WDT_SaveDataSelectMenu_C_OnMouseLeftClickMenuPiece");
 static_assert(offsetof(WDT_SaveDataSelectMenu_C_OnMouseLeftClickMenuPiece, MenuPiece) == 0x000000, "Member 'WDT_SaveDataSelectMenu_C_OnMouseLeftClickMenuPiece::MenuPiece' has a wrong offset!");
-
-// Function WDT_SaveDataSelectMenu.WDT_SaveDataSelectMenu_C.OnSaveDataSelectEvent__DelegateSignature
-// 0x0004 (0x0004 - 0x0000)
-struct WDT_SaveDataSelectMenu_C_OnSaveDataSelectEvent__DelegateSignature final
-{
-public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_SaveDataSelectMenu_C_OnSaveDataSelectEvent__DelegateSignature) == 0x000004, "Wrong alignment on WDT_SaveDataSelectMenu_C_OnSaveDataSelectEvent__DelegateSignature");
-static_assert(sizeof(WDT_SaveDataSelectMenu_C_OnSaveDataSelectEvent__DelegateSignature) == 0x000004, "Wrong size on WDT_SaveDataSelectMenu_C_OnSaveDataSelectEvent__DelegateSignature");
-static_assert(offsetof(WDT_SaveDataSelectMenu_C_OnSaveDataSelectEvent__DelegateSignature, Index_0) == 0x000000, "Member 'WDT_SaveDataSelectMenu_C_OnSaveDataSelectEvent__DelegateSignature::Index_0' has a wrong offset!");
 
 // Function WDT_SaveDataSelectMenu.WDT_SaveDataSelectMenu_C.OpenInvalidSlotDialog
 // 0x00B0 (0x00B0 - 0x0000)

@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "InputCore_structs.hpp"
-#include "BasicUI_classes.hpp"
 #include "Extensions_structs.hpp"
+#include "InputCore_structs.hpp"
+#include "Engine_structs.hpp"
+#include "BasicUI_classes.hpp"
 
 
 namespace SDK

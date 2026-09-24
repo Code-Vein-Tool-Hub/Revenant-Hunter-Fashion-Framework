@@ -17,89 +17,29 @@
 namespace SDK
 {
 
-// Function BFL_ArticleUtility.BFL_ArticleUtility_C.CompareFloat
-// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function BFL_ArticleUtility.BFL_ArticleUtility_C.GetWeaponCategoryTexture
+// (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// double                                  EquipValue                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  TargetValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    SwapComparison                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EUIWeaponCategory                       Category                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// uint8                                   CompareResult                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UTexture2D*                       Texture                                                (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UBFL_ArticleUtility_C::CompareFloat(double EquipValue, double TargetValue, bool SwapComparison, class UObject* __WorldContext, uint8* CompareResult)
+void UBFL_ArticleUtility_C::GetWeaponCategoryTexture(EUIWeaponCategory Category, class UObject* __WorldContext, class UTexture2D** Texture)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BFL_ArticleUtility_C", "CompareFloat");
+		Func = StaticClass()->GetFunction("BFL_ArticleUtility_C", "GetWeaponCategoryTexture");
 
-	Params::BFL_ArticleUtility_C_CompareFloat Parms{};
+	Params::BFL_ArticleUtility_C_GetWeaponCategoryTexture Parms{};
 
-	Parms.EquipValue = EquipValue;
-	Parms.TargetValue = TargetValue;
-	Parms.SwapComparison = SwapComparison;
+	Parms.Category = Category;
 	Parms.__WorldContext = __WorldContext;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
-	if (CompareResult != nullptr)
-		*CompareResult = Parms.CompareResult;
-}
-
-
-// Function BFL_ArticleUtility.BFL_ArticleUtility_C.CompareInteger
-// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// int32                                   EquipValue                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   TargetValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    SwapComparisons                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// uint8                                   CompareResult                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBFL_ArticleUtility_C::CompareInteger(int32 EquipValue, int32 TargetValue, bool SwapComparisons, class UObject* __WorldContext, uint8* CompareResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BFL_ArticleUtility_C", "CompareInteger");
-
-	Params::BFL_ArticleUtility_C_CompareInteger Parms{};
-
-	Parms.EquipValue = EquipValue;
-	Parms.TargetValue = TargetValue;
-	Parms.SwapComparisons = SwapComparisons;
-	Parms.__WorldContext = __WorldContext;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	if (CompareResult != nullptr)
-		*CompareResult = Parms.CompareResult;
-}
-
-
-// Function BFL_ArticleUtility.BFL_ArticleUtility_C.EnumToWeaponGadgetCategoryText
-// (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// EUIWeaponGadgetCategory                 InCategory                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class FText                             NewParam                                               (Parm, OutParm)
-
-void UBFL_ArticleUtility_C::EnumToWeaponGadgetCategoryText(EUIWeaponGadgetCategory InCategory, class UObject* __WorldContext, class FText* NewParam)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BFL_ArticleUtility_C", "EnumToWeaponGadgetCategoryText");
-
-	Params::BFL_ArticleUtility_C_EnumToWeaponGadgetCategoryText Parms{};
-
-	Parms.InCategory = InCategory;
-	Parms.__WorldContext = __WorldContext;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	if (NewParam != nullptr)
-		*NewParam = std::move(Parms.NewParam);
+	if (Texture != nullptr)
+		*Texture = Parms.Texture;
 }
 
 
@@ -155,121 +95,33 @@ void UBFL_ArticleUtility_C::GetTextColorByCompareResult(uint8 CompareResult, cla
 }
 
 
-// Function BFL_ArticleUtility.BFL_ArticleUtility_C.GetWeaponCategoryTexture
-// (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function BFL_ArticleUtility.BFL_ArticleUtility_C.CompareInteger
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// EUIWeaponCategory                       Category                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UTexture2D*                       Texture                                                (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UBFL_ArticleUtility_C::GetWeaponCategoryTexture(EUIWeaponCategory Category, class UObject* __WorldContext, class UTexture2D** Texture)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BFL_ArticleUtility_C", "GetWeaponCategoryTexture");
-
-	Params::BFL_ArticleUtility_C_GetWeaponCategoryTexture Parms{};
-
-	Parms.Category = Category;
-	Parms.__WorldContext = __WorldContext;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	if (Texture != nullptr)
-		*Texture = Parms.Texture;
-}
-
-
-// Function BFL_ArticleUtility.BFL_ArticleUtility_C.SetCapacityMeter
-// (Static, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UWDT_Status_Capacity_C*           InCapacity                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// class UWDT_Status_LoadMeter_C*          InLoadMeter                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// class UWDT_Status_OverLoadMeters_C*     InOverLoadMeter                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// int32                                   InCapacityValue                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   InLoadValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UBFL_ArticleUtility_C::SetCapacityMeter(class UWDT_Status_Capacity_C* InCapacity, class UWDT_Status_LoadMeter_C* InLoadMeter, class UWDT_Status_OverLoadMeters_C* InOverLoadMeter, int32 InCapacityValue, int32 InLoadValue, class UObject* __WorldContext)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BFL_ArticleUtility_C", "SetCapacityMeter");
-
-	Params::BFL_ArticleUtility_C_SetCapacityMeter Parms{};
-
-	Parms.InCapacity = InCapacity;
-	Parms.InLoadMeter = InLoadMeter;
-	Parms.InOverLoadMeter = InOverLoadMeter;
-	Parms.InCapacityValue = InCapacityValue;
-	Parms.InLoadValue = InLoadValue;
-	Parms.__WorldContext = __WorldContext;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-}
-
-
-// Function BFL_ArticleUtility.BFL_ArticleUtility_C.SetCapacityMeterComparison
-// (Static, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UWDT_Status_Capacity_C*           InCapacity                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// class UWDT_Status_LoadMeter_C*          InLoadMeter                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// class UWDT_Status_OverLoadMeters_C*     InOverLoadMeter                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// int32                                   InCurrentCapacity                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   InAfterCapacity                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   InCurrentLoad                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   InAfterLoad                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UBFL_ArticleUtility_C::SetCapacityMeterComparison(class UWDT_Status_Capacity_C* InCapacity, class UWDT_Status_LoadMeter_C* InLoadMeter, class UWDT_Status_OverLoadMeters_C* InOverLoadMeter, int32 InCurrentCapacity, int32 InAfterCapacity, int32 InCurrentLoad, int32 InAfterLoad, class UObject* __WorldContext)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BFL_ArticleUtility_C", "SetCapacityMeterComparison");
-
-	Params::BFL_ArticleUtility_C_SetCapacityMeterComparison Parms{};
-
-	Parms.InCapacity = InCapacity;
-	Parms.InLoadMeter = InLoadMeter;
-	Parms.InOverLoadMeter = InOverLoadMeter;
-	Parms.InCurrentCapacity = InCurrentCapacity;
-	Parms.InAfterCapacity = InAfterCapacity;
-	Parms.InCurrentLoad = InCurrentLoad;
-	Parms.InAfterLoad = InAfterLoad;
-	Parms.__WorldContext = __WorldContext;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-}
-
-
-// Function BFL_ArticleUtility.BFL_ArticleUtility_C.Update Comparison Int Diff Only Arrow
-// (Static, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   CurrentParam                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   ComparisonParam                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EquipValue                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   TargetValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    SwapComparisons                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UWDT_ArticleDiffArrowElement_C*   Arrow                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// uint8                                   CompareResult                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBFL_ArticleUtility_C::Update_Comparison_Int_Diff_Only_Arrow(int32 CurrentParam, int32 ComparisonParam, bool SwapComparisons, class UWDT_ArticleDiffArrowElement_C* Arrow, class UObject* __WorldContext)
+void UBFL_ArticleUtility_C::CompareInteger(int32 EquipValue, int32 TargetValue, bool SwapComparisons, class UObject* __WorldContext, uint8* CompareResult)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BFL_ArticleUtility_C", "Update Comparison Int Diff Only Arrow");
+		Func = StaticClass()->GetFunction("BFL_ArticleUtility_C", "CompareInteger");
 
-	Params::BFL_ArticleUtility_C_Update_Comparison_Int_Diff_Only_Arrow Parms{};
+	Params::BFL_ArticleUtility_C_CompareInteger Parms{};
 
-	Parms.CurrentParam = CurrentParam;
-	Parms.ComparisonParam = ComparisonParam;
+	Parms.EquipValue = EquipValue;
+	Parms.TargetValue = TargetValue;
 	Parms.SwapComparisons = SwapComparisons;
-	Parms.Arrow = Arrow;
 	Parms.__WorldContext = __WorldContext;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	if (CompareResult != nullptr)
+		*CompareResult = Parms.CompareResult;
 }
 
 
@@ -297,6 +149,92 @@ void UBFL_ArticleUtility_C::UpdateComparisonDiffArrowWithDiffNumber(int32 Curren
 	Parms.SwapComparisons = SwapComparisons;
 	Parms.Arrow = Arrow;
 	Parms.DiffNum = DiffNum;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+}
+
+
+// Function BFL_ArticleUtility.BFL_ArticleUtility_C.UpdateComparisonFloatDiffOnlyArrow
+// (Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  InCurrentParam                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  InComparisonParam                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    SwapComparisons                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UWDT_ArticleDiffArrowElement_C*   Arrow                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UBFL_ArticleUtility_C::UpdateComparisonFloatDiffOnlyArrow(double InCurrentParam, double InComparisonParam, bool SwapComparisons, class UWDT_ArticleDiffArrowElement_C* Arrow, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BFL_ArticleUtility_C", "UpdateComparisonFloatDiffOnlyArrow");
+
+	Params::BFL_ArticleUtility_C_UpdateComparisonFloatDiffOnlyArrow Parms{};
+
+	Parms.InCurrentParam = InCurrentParam;
+	Parms.InComparisonParam = InComparisonParam;
+	Parms.SwapComparisons = SwapComparisons;
+	Parms.Arrow = Arrow;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+}
+
+
+// Function BFL_ArticleUtility.BFL_ArticleUtility_C.CompareFloat
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// double                                  EquipValue                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  TargetValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    SwapComparison                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// uint8                                   CompareResult                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBFL_ArticleUtility_C::CompareFloat(double EquipValue, double TargetValue, bool SwapComparison, class UObject* __WorldContext, uint8* CompareResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BFL_ArticleUtility_C", "CompareFloat");
+
+	Params::BFL_ArticleUtility_C_CompareFloat Parms{};
+
+	Parms.EquipValue = EquipValue;
+	Parms.TargetValue = TargetValue;
+	Parms.SwapComparison = SwapComparison;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	if (CompareResult != nullptr)
+		*CompareResult = Parms.CompareResult;
+}
+
+
+// Function BFL_ArticleUtility.BFL_ArticleUtility_C.Update Comparison Int Diff Only Arrow
+// (Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   CurrentParam                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   ComparisonParam                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    SwapComparisons                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UWDT_ArticleDiffArrowElement_C*   Arrow                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UBFL_ArticleUtility_C::Update_Comparison_Int_Diff_Only_Arrow(int32 CurrentParam, int32 ComparisonParam, bool SwapComparisons, class UWDT_ArticleDiffArrowElement_C* Arrow, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BFL_ArticleUtility_C", "Update Comparison Int Diff Only Arrow");
+
+	Params::BFL_ArticleUtility_C_Update_Comparison_Int_Diff_Only_Arrow Parms{};
+
+	Parms.CurrentParam = CurrentParam;
+	Parms.ComparisonParam = ComparisonParam;
+	Parms.SwapComparisons = SwapComparisons;
+	Parms.Arrow = Arrow;
 	Parms.__WorldContext = __WorldContext;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
@@ -337,31 +275,245 @@ void UBFL_ArticleUtility_C::UpdateComparisonDiffWithDiffNumber(int32 CurrentPara
 }
 
 
-// Function BFL_ArticleUtility.BFL_ArticleUtility_C.UpdateComparisonFloatDiffOnlyArrow
-// (Static, Public, BlueprintCallable, BlueprintEvent)
+// Function BFL_ArticleUtility.BFL_ArticleUtility_C.SetCapacityMeter
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// double                                  InCurrentParam                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  InComparisonParam                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    SwapComparisons                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UWDT_ArticleDiffArrowElement_C*   Arrow                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// EUIAttributeType                        InAttributeType                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UWDT_Status_Capacity_C*           InCapacity                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UWDT_Status_LoadMeter_C*          InLoadMeter                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UWDT_Status_OverLoadMeters_C*     InOverLoadMeter                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// int32                                   InCapacityValue                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InLoadValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FUIBloodCodeAttributeConversionInfoInAttributeConversionInfo                              (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UBFL_ArticleUtility_C::UpdateComparisonFloatDiffOnlyArrow(double InCurrentParam, double InComparisonParam, bool SwapComparisons, class UWDT_ArticleDiffArrowElement_C* Arrow, class UObject* __WorldContext)
+void UBFL_ArticleUtility_C::SetCapacityMeter(EUIAttributeType InAttributeType, class UWDT_Status_Capacity_C* InCapacity, class UWDT_Status_LoadMeter_C* InLoadMeter, class UWDT_Status_OverLoadMeters_C* InOverLoadMeter, int32 InCapacityValue, int32 InLoadValue, struct FUIBloodCodeAttributeConversionInfo& InAttributeConversionInfo, class UObject* __WorldContext)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BFL_ArticleUtility_C", "UpdateComparisonFloatDiffOnlyArrow");
+		Func = StaticClass()->GetFunction("BFL_ArticleUtility_C", "SetCapacityMeter");
 
-	Params::BFL_ArticleUtility_C_UpdateComparisonFloatDiffOnlyArrow Parms{};
+	Params::BFL_ArticleUtility_C_SetCapacityMeter Parms{};
 
-	Parms.InCurrentParam = InCurrentParam;
-	Parms.InComparisonParam = InComparisonParam;
-	Parms.SwapComparisons = SwapComparisons;
-	Parms.Arrow = Arrow;
+	Parms.InAttributeType = InAttributeType;
+	Parms.InCapacity = InCapacity;
+	Parms.InLoadMeter = InLoadMeter;
+	Parms.InOverLoadMeter = InOverLoadMeter;
+	Parms.InCapacityValue = InCapacityValue;
+	Parms.InLoadValue = InLoadValue;
+	Parms.InAttributeConversionInfo = std::move(InAttributeConversionInfo);
 	Parms.__WorldContext = __WorldContext;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	InAttributeConversionInfo = std::move(Parms.InAttributeConversionInfo);
+}
+
+
+// Function BFL_ArticleUtility.BFL_ArticleUtility_C.SetCapacityMeterComparison
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EUIAttributeType                        InType                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UWDT_Status_Capacity_C*           InCapacity                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UWDT_Status_LoadMeter_C*          InLoadMeter                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UWDT_Status_OverLoadMeters_C*     InOverLoadMeter                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// int32                                   InCurrentCapacity                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InAfterCapacity                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InCurrentLoad                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InAfterLoad                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FUIBloodCodeAttributeConversionInfoInConversionInfo                                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UBFL_ArticleUtility_C::SetCapacityMeterComparison(EUIAttributeType InType, class UWDT_Status_Capacity_C* InCapacity, class UWDT_Status_LoadMeter_C* InLoadMeter, class UWDT_Status_OverLoadMeters_C* InOverLoadMeter, int32 InCurrentCapacity, int32 InAfterCapacity, int32 InCurrentLoad, int32 InAfterLoad, struct FUIBloodCodeAttributeConversionInfo& InConversionInfo, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BFL_ArticleUtility_C", "SetCapacityMeterComparison");
+
+	Params::BFL_ArticleUtility_C_SetCapacityMeterComparison Parms{};
+
+	Parms.InType = InType;
+	Parms.InCapacity = InCapacity;
+	Parms.InLoadMeter = InLoadMeter;
+	Parms.InOverLoadMeter = InOverLoadMeter;
+	Parms.InCurrentCapacity = InCurrentCapacity;
+	Parms.InAfterCapacity = InAfterCapacity;
+	Parms.InCurrentLoad = InCurrentLoad;
+	Parms.InAfterLoad = InAfterLoad;
+	Parms.InConversionInfo = std::move(InConversionInfo);
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	InConversionInfo = std::move(Parms.InConversionInfo);
+}
+
+
+// Function BFL_ArticleUtility.BFL_ArticleUtility_C.EnumToWeaponGadgetCategoryText
+// (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// EUIWeaponGadgetCategory                 InCategory                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class FText                             NewParam                                               (Parm, OutParm)
+
+void UBFL_ArticleUtility_C::EnumToWeaponGadgetCategoryText(EUIWeaponGadgetCategory InCategory, class UObject* __WorldContext, class FText* NewParam)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BFL_ArticleUtility_C", "EnumToWeaponGadgetCategoryText");
+
+	Params::BFL_ArticleUtility_C_EnumToWeaponGadgetCategoryText Parms{};
+
+	Parms.InCategory = InCategory;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	if (NewParam != nullptr)
+		*NewParam = std::move(Parms.NewParam);
+}
+
+
+// Function BFL_ArticleUtility.BFL_ArticleUtility_C.Get Attribute Convertion Type
+// (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// EUIAttributeType                        InType                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FUIBloodCodeAttributeConversionInfoInConversionInfo                                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// int32                                   ConversionType                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBFL_ArticleUtility_C::Get_Attribute_Convertion_Type(EUIAttributeType InType, struct FUIBloodCodeAttributeConversionInfo& InConversionInfo, class UObject* __WorldContext, int32* ConversionType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BFL_ArticleUtility_C", "Get Attribute Convertion Type");
+
+	Params::BFL_ArticleUtility_C_Get_Attribute_Convertion_Type Parms{};
+
+	Parms.InType = InType;
+	Parms.InConversionInfo = std::move(InConversionInfo);
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	InConversionInfo = std::move(Parms.InConversionInfo);
+
+	if (ConversionType != nullptr)
+		*ConversionType = Parms.ConversionType;
+}
+
+
+// Function BFL_ArticleUtility.BFL_ArticleUtility_C.Get Conversion Param
+// (Static, Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EUIAttributeType                        InType                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FUIBloodCodeAttributeConversionInfoInConversionInfo                                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// int32                                   OutConversionType                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FUIBloodCodeAttributeConversionParamOutConversionParam                                     (Parm, OutParm, NoDestructor)
+
+void UBFL_ArticleUtility_C::Get_Conversion_Param(EUIAttributeType InType, struct FUIBloodCodeAttributeConversionInfo& InConversionInfo, class UObject* __WorldContext, int32* OutConversionType, struct FUIBloodCodeAttributeConversionParam* OutConversionParam)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BFL_ArticleUtility_C", "Get Conversion Param");
+
+	Params::BFL_ArticleUtility_C_Get_Conversion_Param Parms{};
+
+	Parms.InType = InType;
+	Parms.InConversionInfo = std::move(InConversionInfo);
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	InConversionInfo = std::move(Parms.InConversionInfo);
+
+	if (OutConversionType != nullptr)
+		*OutConversionType = Parms.OutConversionType;
+
+	if (OutConversionParam != nullptr)
+		*OutConversionParam = std::move(Parms.OutConversionParam);
+}
+
+
+// Function BFL_ArticleUtility.BFL_ArticleUtility_C.GetAttributeConversionColor
+// (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// int32                                   InConversionType                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// struct FSlateColor                      OutColor                                               (Parm, OutParm)
+
+void UBFL_ArticleUtility_C::GetAttributeConversionColor(int32 InConversionType, class UObject* __WorldContext, struct FSlateColor* OutColor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BFL_ArticleUtility_C", "GetAttributeConversionColor");
+
+	Params::BFL_ArticleUtility_C_GetAttributeConversionColor Parms{};
+
+	Parms.InConversionType = InConversionType;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	if (OutColor != nullptr)
+		*OutColor = std::move(Parms.OutColor);
+}
+
+
+// Function BFL_ArticleUtility.BFL_ArticleUtility_C.EnumToWeaponCategoryText
+// (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// EUIWeaponCategory                       WeaponCategory                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class FText                             ReturnValue                                            (Parm, OutParm, ReturnParm)
+
+class FText UBFL_ArticleUtility_C::EnumToWeaponCategoryText(EUIWeaponCategory WeaponCategory, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BFL_ArticleUtility_C", "EnumToWeaponCategoryText");
+
+	Params::BFL_ArticleUtility_C_EnumToWeaponCategoryText Parms{};
+
+	Parms.WeaponCategory = WeaponCategory;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BFL_ArticleUtility.BFL_ArticleUtility_C.EnumToDefensiveGadgetCategoryText
+// (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// EUIDefensiveGadgetCategory              DefensiveGadgetCategory                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class FText                             ReturnValue                                            (Parm, OutParm, ReturnParm)
+
+class FText UBFL_ArticleUtility_C::EnumToDefensiveGadgetCategoryText(EUIDefensiveGadgetCategory DefensiveGadgetCategory, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BFL_ArticleUtility_C", "EnumToDefensiveGadgetCategoryText");
+
+	Params::BFL_ArticleUtility_C_EnumToDefensiveGadgetCategoryText Parms{};
+
+	Parms.DefensiveGadgetCategory = DefensiveGadgetCategory;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 }

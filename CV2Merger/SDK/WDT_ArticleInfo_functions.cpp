@@ -1066,7 +1066,7 @@ void UWDT_ArticleInfo_C::SetMaterialEnemyImages(TArray<TSoftObjectPtr<class UTex
 // Function WDT_ArticleInfo.WDT_ArticleInfo_C.SetPlayerStatusSummary
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FUIPlayerStatusSummaryInfo       InCurrentSummaryInfo                                   (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// struct FUIPlayerStatusSummaryInfo       InCurrentSummaryInfo                                   (BlueprintVisible, BlueprintReadOnly, Parm)
 
 void UWDT_ArticleInfo_C::SetPlayerStatusSummary(const struct FUIPlayerStatusSummaryInfo& InCurrentSummaryInfo)
 {
@@ -1086,8 +1086,8 @@ void UWDT_ArticleInfo_C::SetPlayerStatusSummary(const struct FUIPlayerStatusSumm
 // Function WDT_ArticleInfo.WDT_ArticleInfo_C.SetPlayerStatusSummaryForComparison
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FUIPlayerStatusSummaryInfo       InCurrentSummaryInfo                                   (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// struct FUIPlayerStatusSummaryInfo       InEstimatedSummaryInfo                                 (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// struct FUIPlayerStatusSummaryInfo       InCurrentSummaryInfo                                   (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FUIPlayerStatusSummaryInfo       InEstimatedSummaryInfo                                 (BlueprintVisible, BlueprintReadOnly, Parm)
 
 void UWDT_ArticleInfo_C::SetPlayerStatusSummaryForComparison(const struct FUIPlayerStatusSummaryInfo& InCurrentSummaryInfo, const struct FUIPlayerStatusSummaryInfo& InEstimatedSummaryInfo)
 {
@@ -1174,7 +1174,7 @@ void UWDT_ArticleInfo_C::SetStamina(int32 InCurrentStamina, int32 InMaxStamina)
 
 
 // Function WDT_ArticleInfo.WDT_ArticleInfo_C.SetSuckingBloodInfo
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FUISuckingBloodInfo              InSuckingBloodInfo                                     (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -1231,7 +1231,7 @@ void UWDT_ArticleInfo_C::SetUnreleased()
 
 
 // Function WDT_ArticleInfo.WDT_ArticleInfo_C.SetWeaponGadget
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UTextBlock*                       GadgetNameText                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 // class FText                             GadgetName                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)

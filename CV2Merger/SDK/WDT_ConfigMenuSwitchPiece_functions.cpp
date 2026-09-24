@@ -51,6 +51,27 @@ void UWDT_ConfigMenuSwitchPiece_C::SetIsEditable(bool InFlag)
 }
 
 
+// Function WDT_ConfigMenuSwitchPiece.WDT_ConfigMenuSwitchPiece_C.SetEditableGrayOut
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Flag                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_ConfigMenuSwitchPiece_C::SetEditableGrayOut(bool* Flag)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_ConfigMenuSwitchPiece_C", "SetEditableGrayOut");
+
+	Params::WDT_ConfigMenuSwitchPiece_C_SetEditableGrayOut Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Flag != nullptr)
+		*Flag = Parms.Flag;
+}
+
+
 // Function WDT_ConfigMenuSwitchPiece.WDT_ConfigMenuSwitchPiece_C.SetDefaultOnOff
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:

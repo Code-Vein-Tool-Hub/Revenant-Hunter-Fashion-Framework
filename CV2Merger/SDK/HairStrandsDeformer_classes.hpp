@@ -103,23 +103,6 @@ static_assert(sizeof(UOptimusGroomExecDataProvider) == 0x000038, "Wrong size on 
 static_assert(offsetof(UOptimusGroomExecDataProvider, GroomComponent) == 0x000028, "Member 'UOptimusGroomExecDataProvider::GroomComponent' has a wrong offset!");
 static_assert(offsetof(UOptimusGroomExecDataProvider, Domain) == 0x000030, "Member 'UOptimusGroomExecDataProvider::Domain' has a wrong offset!");
 
-// Class HairStrandsDeformer.OptimusGroomGuideDataInterface
-// 0x0000 (0x0028 - 0x0028)
-class UOptimusGroomGuideDataInterface final : public UOptimusComputeDataInterface
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"OptimusGroomGuideDataInterface">();
-	}
-	static class UOptimusGroomGuideDataInterface* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOptimusGroomGuideDataInterface>();
-	}
-};
-static_assert(alignof(UOptimusGroomGuideDataInterface) == 0x000008, "Wrong alignment on UOptimusGroomGuideDataInterface");
-static_assert(sizeof(UOptimusGroomGuideDataInterface) == 0x000028, "Wrong size on UOptimusGroomGuideDataInterface");
-
 // Class HairStrandsDeformer.OptimusGroomGuideDataProvider
 // 0x0008 (0x0030 - 0x0028)
 class UOptimusGroomGuideDataProvider final : public UComputeDataProvider
@@ -140,6 +123,23 @@ public:
 static_assert(alignof(UOptimusGroomGuideDataProvider) == 0x000008, "Wrong alignment on UOptimusGroomGuideDataProvider");
 static_assert(sizeof(UOptimusGroomGuideDataProvider) == 0x000030, "Wrong size on UOptimusGroomGuideDataProvider");
 static_assert(offsetof(UOptimusGroomGuideDataProvider, Groom) == 0x000028, "Member 'UOptimusGroomGuideDataProvider::Groom' has a wrong offset!");
+
+// Class HairStrandsDeformer.OptimusGroomGuideDataInterface
+// 0x0000 (0x0028 - 0x0028)
+class UOptimusGroomGuideDataInterface final : public UOptimusComputeDataInterface
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"OptimusGroomGuideDataInterface">();
+	}
+	static class UOptimusGroomGuideDataInterface* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOptimusGroomGuideDataInterface>();
+	}
+};
+static_assert(alignof(UOptimusGroomGuideDataInterface) == 0x000008, "Wrong alignment on UOptimusGroomGuideDataInterface");
+static_assert(sizeof(UOptimusGroomGuideDataInterface) == 0x000028, "Wrong size on UOptimusGroomGuideDataInterface");
 
 // Class HairStrandsDeformer.OptimusGroomWriteDataInterface
 // 0x0000 (0x0028 - 0x0028)

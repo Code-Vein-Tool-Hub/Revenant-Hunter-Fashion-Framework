@@ -18,23 +18,23 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GCN_Vanish.GCN_Vanish_C
-// 0x0258 (0x1170 - 0x0F18)
+// 0x0258 (0x1180 - 0x0F28)
 class AGCN_Vanish_C final : public AGCN_StatusEffect_Looping_Base_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_GCN_Vanish_C;                       // 0x0F18(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UMeshComponent*                         InnerMesh;                                         // 0x0F20(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          bEffectBegin;                                      // 0x0F28(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bEffectEnd;                                        // 0x0F29(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_F2A[0x6];                                      // 0x0F2A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        EffectBegin_Time;                                  // 0x0F30(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        EffectBegin_TimeRange;                             // 0x0F38(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRuntimeFloatCurve                     EffectBegin_Curve_Emissive;                        // 0x0F40(0x0088)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FRuntimeFloatCurve                     EffectBegin_Curve_BaseColor;                       // 0x0FC8(0x0088)(Edit, BlueprintVisible, DisableEditOnInstance)
-	double                                        EffectEnd_Time;                                    // 0x1050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        EffectEnd_TimeRange;                               // 0x1058(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRuntimeFloatCurve                     EffectEnd_Curve_Emissive;                          // 0x1060(0x0088)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FRuntimeFloatCurve                     EffectEnd_Curve_BaseColor;                         // 0x10E8(0x0088)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame_GCN_Vanish_C;                       // 0x0F28(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UMeshComponent*                         InnerMesh;                                         // 0x0F30(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          bEffectBegin;                                      // 0x0F38(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bEffectEnd;                                        // 0x0F39(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F3A[0x6];                                      // 0x0F3A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        EffectBegin_Time;                                  // 0x0F40(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        EffectBegin_TimeRange;                             // 0x0F48(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRuntimeFloatCurve                     EffectBegin_Curve_Emissive;                        // 0x0F50(0x0088)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FRuntimeFloatCurve                     EffectBegin_Curve_BaseColor;                       // 0x0FD8(0x0088)(Edit, BlueprintVisible, DisableEditOnInstance)
+	double                                        EffectEnd_Time;                                    // 0x1060(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        EffectEnd_TimeRange;                               // 0x1068(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRuntimeFloatCurve                     EffectEnd_Curve_Emissive;                          // 0x1070(0x0088)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FRuntimeFloatCurve                     EffectEnd_Curve_BaseColor;                         // 0x10F8(0x0088)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void ActiveEffect(class AActor* TargetActor);
@@ -60,19 +60,19 @@ public:
 	}
 };
 static_assert(alignof(AGCN_Vanish_C) == 0x000008, "Wrong alignment on AGCN_Vanish_C");
-static_assert(sizeof(AGCN_Vanish_C) == 0x001170, "Wrong size on AGCN_Vanish_C");
-static_assert(offsetof(AGCN_Vanish_C, UberGraphFrame_GCN_Vanish_C) == 0x000F18, "Member 'AGCN_Vanish_C::UberGraphFrame_GCN_Vanish_C' has a wrong offset!");
-static_assert(offsetof(AGCN_Vanish_C, InnerMesh) == 0x000F20, "Member 'AGCN_Vanish_C::InnerMesh' has a wrong offset!");
-static_assert(offsetof(AGCN_Vanish_C, bEffectBegin) == 0x000F28, "Member 'AGCN_Vanish_C::bEffectBegin' has a wrong offset!");
-static_assert(offsetof(AGCN_Vanish_C, bEffectEnd) == 0x000F29, "Member 'AGCN_Vanish_C::bEffectEnd' has a wrong offset!");
-static_assert(offsetof(AGCN_Vanish_C, EffectBegin_Time) == 0x000F30, "Member 'AGCN_Vanish_C::EffectBegin_Time' has a wrong offset!");
-static_assert(offsetof(AGCN_Vanish_C, EffectBegin_TimeRange) == 0x000F38, "Member 'AGCN_Vanish_C::EffectBegin_TimeRange' has a wrong offset!");
-static_assert(offsetof(AGCN_Vanish_C, EffectBegin_Curve_Emissive) == 0x000F40, "Member 'AGCN_Vanish_C::EffectBegin_Curve_Emissive' has a wrong offset!");
-static_assert(offsetof(AGCN_Vanish_C, EffectBegin_Curve_BaseColor) == 0x000FC8, "Member 'AGCN_Vanish_C::EffectBegin_Curve_BaseColor' has a wrong offset!");
-static_assert(offsetof(AGCN_Vanish_C, EffectEnd_Time) == 0x001050, "Member 'AGCN_Vanish_C::EffectEnd_Time' has a wrong offset!");
-static_assert(offsetof(AGCN_Vanish_C, EffectEnd_TimeRange) == 0x001058, "Member 'AGCN_Vanish_C::EffectEnd_TimeRange' has a wrong offset!");
-static_assert(offsetof(AGCN_Vanish_C, EffectEnd_Curve_Emissive) == 0x001060, "Member 'AGCN_Vanish_C::EffectEnd_Curve_Emissive' has a wrong offset!");
-static_assert(offsetof(AGCN_Vanish_C, EffectEnd_Curve_BaseColor) == 0x0010E8, "Member 'AGCN_Vanish_C::EffectEnd_Curve_BaseColor' has a wrong offset!");
+static_assert(sizeof(AGCN_Vanish_C) == 0x001180, "Wrong size on AGCN_Vanish_C");
+static_assert(offsetof(AGCN_Vanish_C, UberGraphFrame_GCN_Vanish_C) == 0x000F28, "Member 'AGCN_Vanish_C::UberGraphFrame_GCN_Vanish_C' has a wrong offset!");
+static_assert(offsetof(AGCN_Vanish_C, InnerMesh) == 0x000F30, "Member 'AGCN_Vanish_C::InnerMesh' has a wrong offset!");
+static_assert(offsetof(AGCN_Vanish_C, bEffectBegin) == 0x000F38, "Member 'AGCN_Vanish_C::bEffectBegin' has a wrong offset!");
+static_assert(offsetof(AGCN_Vanish_C, bEffectEnd) == 0x000F39, "Member 'AGCN_Vanish_C::bEffectEnd' has a wrong offset!");
+static_assert(offsetof(AGCN_Vanish_C, EffectBegin_Time) == 0x000F40, "Member 'AGCN_Vanish_C::EffectBegin_Time' has a wrong offset!");
+static_assert(offsetof(AGCN_Vanish_C, EffectBegin_TimeRange) == 0x000F48, "Member 'AGCN_Vanish_C::EffectBegin_TimeRange' has a wrong offset!");
+static_assert(offsetof(AGCN_Vanish_C, EffectBegin_Curve_Emissive) == 0x000F50, "Member 'AGCN_Vanish_C::EffectBegin_Curve_Emissive' has a wrong offset!");
+static_assert(offsetof(AGCN_Vanish_C, EffectBegin_Curve_BaseColor) == 0x000FD8, "Member 'AGCN_Vanish_C::EffectBegin_Curve_BaseColor' has a wrong offset!");
+static_assert(offsetof(AGCN_Vanish_C, EffectEnd_Time) == 0x001060, "Member 'AGCN_Vanish_C::EffectEnd_Time' has a wrong offset!");
+static_assert(offsetof(AGCN_Vanish_C, EffectEnd_TimeRange) == 0x001068, "Member 'AGCN_Vanish_C::EffectEnd_TimeRange' has a wrong offset!");
+static_assert(offsetof(AGCN_Vanish_C, EffectEnd_Curve_Emissive) == 0x001070, "Member 'AGCN_Vanish_C::EffectEnd_Curve_Emissive' has a wrong offset!");
+static_assert(offsetof(AGCN_Vanish_C, EffectEnd_Curve_BaseColor) == 0x0010F8, "Member 'AGCN_Vanish_C::EffectEnd_Curve_BaseColor' has a wrong offset!");
 
 }
 

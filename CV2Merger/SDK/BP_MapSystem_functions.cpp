@@ -417,20 +417,45 @@ void ABP_MapSystem_C::GetTopLeftOffsetLocation(const struct FVector& InLocation,
 }
 
 
-// Function BP_MapSystem.BP_MapSystem_C.GetUserMarkerFieldTargetData
+// Function BP_MapSystem.BP_MapSystem_C.GetUserMarkerFieldTargetData_Compass
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                                    bResult                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // TArray<struct FFieldTargetManageData>   OutFieldTargetInfo                                     (Parm, OutParm, ContainsInstancedReference)
 
-void ABP_MapSystem_C::GetUserMarkerFieldTargetData(bool* bResult, TArray<struct FFieldTargetManageData>* OutFieldTargetInfo)
+void ABP_MapSystem_C::GetUserMarkerFieldTargetData_Compass(bool* bResult, TArray<struct FFieldTargetManageData>* OutFieldTargetInfo)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MapSystem_C", "GetUserMarkerFieldTargetData");
+		Func = Class->GetFunction("BP_MapSystem_C", "GetUserMarkerFieldTargetData_Compass");
 
-	Params::BP_MapSystem_C_GetUserMarkerFieldTargetData Parms{};
+	Params::BP_MapSystem_C_GetUserMarkerFieldTargetData_Compass Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (bResult != nullptr)
+		*bResult = Parms.bResult;
+
+	if (OutFieldTargetInfo != nullptr)
+		*OutFieldTargetInfo = std::move(Parms.OutFieldTargetInfo);
+}
+
+
+// Function BP_MapSystem.BP_MapSystem_C.GetUserMarkerFieldTargetData_MapImage
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool                                    bResult                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TArray<struct FFieldTargetManageData>   OutFieldTargetInfo                                     (Parm, OutParm, ContainsInstancedReference)
+
+void ABP_MapSystem_C::GetUserMarkerFieldTargetData_MapImage(bool* bResult, TArray<struct FFieldTargetManageData>* OutFieldTargetInfo)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MapSystem_C", "GetUserMarkerFieldTargetData_MapImage");
+
+	Params::BP_MapSystem_C_GetUserMarkerFieldTargetData_MapImage Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 

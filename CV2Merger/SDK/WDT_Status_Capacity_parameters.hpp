@@ -11,23 +11,88 @@
 #include "Basic.hpp"
 
 #include "SlateCore_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 namespace SDK::Params
 {
 
-// Function WDT_Status_Capacity.WDT_Status_Capacity_C.ExecuteUbergraph_WDT_Status_Capacity
-// 0x0008 (0x0008 - 0x0000)
-struct WDT_Status_Capacity_C_ExecuteUbergraph_WDT_Status_Capacity final
+// Function WDT_Status_Capacity.WDT_Status_Capacity_C.SetValueComparison
+// 0x0058 (0x0058 - 0x0000)
+struct WDT_Status_Capacity_C_SetValueComparison final
 {
 public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_IsDesignTime;                         // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         InCurrentValue;                                    // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         InTargetValue;                                     // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         InConversionType;                                  // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateColor                            CallFunc_GetComparisonColorForCapacity_SlateColor; // 0x0010(0x0014)()
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0028(0x0010)()
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3A[0x2];                                       // 0x003A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateColor                            CallFunc_GetAttributeConversionColor_OutColor;     // 0x003C(0x0014)()
+	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WDT_Status_Capacity_C_ExecuteUbergraph_WDT_Status_Capacity) == 0x000004, "Wrong alignment on WDT_Status_Capacity_C_ExecuteUbergraph_WDT_Status_Capacity");
-static_assert(sizeof(WDT_Status_Capacity_C_ExecuteUbergraph_WDT_Status_Capacity) == 0x000008, "Wrong size on WDT_Status_Capacity_C_ExecuteUbergraph_WDT_Status_Capacity");
-static_assert(offsetof(WDT_Status_Capacity_C_ExecuteUbergraph_WDT_Status_Capacity, EntryPoint) == 0x000000, "Member 'WDT_Status_Capacity_C_ExecuteUbergraph_WDT_Status_Capacity::EntryPoint' has a wrong offset!");
-static_assert(offsetof(WDT_Status_Capacity_C_ExecuteUbergraph_WDT_Status_Capacity, K2Node_Event_IsDesignTime) == 0x000004, "Member 'WDT_Status_Capacity_C_ExecuteUbergraph_WDT_Status_Capacity::K2Node_Event_IsDesignTime' has a wrong offset!");
+static_assert(alignof(WDT_Status_Capacity_C_SetValueComparison) == 0x000008, "Wrong alignment on WDT_Status_Capacity_C_SetValueComparison");
+static_assert(sizeof(WDT_Status_Capacity_C_SetValueComparison) == 0x000058, "Wrong size on WDT_Status_Capacity_C_SetValueComparison");
+static_assert(offsetof(WDT_Status_Capacity_C_SetValueComparison, InCurrentValue) == 0x000000, "Member 'WDT_Status_Capacity_C_SetValueComparison::InCurrentValue' has a wrong offset!");
+static_assert(offsetof(WDT_Status_Capacity_C_SetValueComparison, InTargetValue) == 0x000004, "Member 'WDT_Status_Capacity_C_SetValueComparison::InTargetValue' has a wrong offset!");
+static_assert(offsetof(WDT_Status_Capacity_C_SetValueComparison, InConversionType) == 0x000008, "Member 'WDT_Status_Capacity_C_SetValueComparison::InConversionType' has a wrong offset!");
+static_assert(offsetof(WDT_Status_Capacity_C_SetValueComparison, Temp_bool_Variable) == 0x00000C, "Member 'WDT_Status_Capacity_C_SetValueComparison::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WDT_Status_Capacity_C_SetValueComparison, CallFunc_GetComparisonColorForCapacity_SlateColor) == 0x000010, "Member 'WDT_Status_Capacity_C_SetValueComparison::CallFunc_GetComparisonColorForCapacity_SlateColor' has a wrong offset!");
+static_assert(offsetof(WDT_Status_Capacity_C_SetValueComparison, CallFunc_Conv_IntToText_ReturnValue) == 0x000028, "Member 'WDT_Status_Capacity_C_SetValueComparison::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_Status_Capacity_C_SetValueComparison, Temp_byte_Variable) == 0x000038, "Member 'WDT_Status_Capacity_C_SetValueComparison::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(WDT_Status_Capacity_C_SetValueComparison, Temp_byte_Variable_1) == 0x000039, "Member 'WDT_Status_Capacity_C_SetValueComparison::Temp_byte_Variable_1' has a wrong offset!");
+static_assert(offsetof(WDT_Status_Capacity_C_SetValueComparison, CallFunc_GetAttributeConversionColor_OutColor) == 0x00003C, "Member 'WDT_Status_Capacity_C_SetValueComparison::CallFunc_GetAttributeConversionColor_OutColor' has a wrong offset!");
+static_assert(offsetof(WDT_Status_Capacity_C_SetValueComparison, CallFunc_NotEqual_IntInt_ReturnValue) == 0x000050, "Member 'WDT_Status_Capacity_C_SetValueComparison::CallFunc_NotEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_Status_Capacity_C_SetValueComparison, K2Node_Select_Default) == 0x000051, "Member 'WDT_Status_Capacity_C_SetValueComparison::K2Node_Select_Default' has a wrong offset!");
+
+// Function WDT_Status_Capacity.WDT_Status_Capacity_C.SetValue
+// 0x0050 (0x0050 - 0x0000)
+struct WDT_Status_Capacity_C_SetValue final
+{
+public:
+	int32                                         InValue;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         InConversionType;                                  // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0010(0x0010)()
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_22[0x2];                                       // 0x0022(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateColor                            CallFunc_GetAttributeConversionColor_OutColor;     // 0x0024(0x0014)()
+	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3A[0x2];                                       // 0x003A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateColor                            CallFunc_GetComparisonColorForCapacity_SlateColor; // 0x003C(0x0014)()
+};
+static_assert(alignof(WDT_Status_Capacity_C_SetValue) == 0x000008, "Wrong alignment on WDT_Status_Capacity_C_SetValue");
+static_assert(sizeof(WDT_Status_Capacity_C_SetValue) == 0x000050, "Wrong size on WDT_Status_Capacity_C_SetValue");
+static_assert(offsetof(WDT_Status_Capacity_C_SetValue, InValue) == 0x000000, "Member 'WDT_Status_Capacity_C_SetValue::InValue' has a wrong offset!");
+static_assert(offsetof(WDT_Status_Capacity_C_SetValue, InConversionType) == 0x000004, "Member 'WDT_Status_Capacity_C_SetValue::InConversionType' has a wrong offset!");
+static_assert(offsetof(WDT_Status_Capacity_C_SetValue, Temp_bool_Variable) == 0x000008, "Member 'WDT_Status_Capacity_C_SetValue::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WDT_Status_Capacity_C_SetValue, CallFunc_Conv_IntToText_ReturnValue) == 0x000010, "Member 'WDT_Status_Capacity_C_SetValue::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_Status_Capacity_C_SetValue, Temp_byte_Variable) == 0x000020, "Member 'WDT_Status_Capacity_C_SetValue::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(WDT_Status_Capacity_C_SetValue, Temp_byte_Variable_1) == 0x000021, "Member 'WDT_Status_Capacity_C_SetValue::Temp_byte_Variable_1' has a wrong offset!");
+static_assert(offsetof(WDT_Status_Capacity_C_SetValue, CallFunc_GetAttributeConversionColor_OutColor) == 0x000024, "Member 'WDT_Status_Capacity_C_SetValue::CallFunc_GetAttributeConversionColor_OutColor' has a wrong offset!");
+static_assert(offsetof(WDT_Status_Capacity_C_SetValue, CallFunc_NotEqual_IntInt_ReturnValue) == 0x000038, "Member 'WDT_Status_Capacity_C_SetValue::CallFunc_NotEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_Status_Capacity_C_SetValue, K2Node_Select_Default) == 0x000039, "Member 'WDT_Status_Capacity_C_SetValue::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WDT_Status_Capacity_C_SetValue, CallFunc_GetComparisonColorForCapacity_SlateColor) == 0x00003C, "Member 'WDT_Status_Capacity_C_SetValue::CallFunc_GetComparisonColorForCapacity_SlateColor' has a wrong offset!");
+
+// Function WDT_Status_Capacity.WDT_Status_Capacity_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WDT_Status_Capacity_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_Status_Capacity_C_PreConstruct) == 0x000001, "Wrong alignment on WDT_Status_Capacity_C_PreConstruct");
+static_assert(sizeof(WDT_Status_Capacity_C_PreConstruct) == 0x000001, "Wrong size on WDT_Status_Capacity_C_PreConstruct");
+static_assert(offsetof(WDT_Status_Capacity_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WDT_Status_Capacity_C_PreConstruct::IsDesignTime' has a wrong offset!");
 
 // Function WDT_Status_Capacity.WDT_Status_Capacity_C.GetComparisonColorForCapacity
 // 0x005C (0x005C - 0x0000)
@@ -55,50 +120,18 @@ static_assert(offsetof(WDT_Status_Capacity_C_GetComparisonColorForCapacity, Call
 static_assert(offsetof(WDT_Status_Capacity_C_GetComparisonColorForCapacity, K2Node_MakeStruct_SlateColor_1) == 0x000034, "Member 'WDT_Status_Capacity_C_GetComparisonColorForCapacity::K2Node_MakeStruct_SlateColor_1' has a wrong offset!");
 static_assert(offsetof(WDT_Status_Capacity_C_GetComparisonColorForCapacity, K2Node_MakeStruct_SlateColor_2) == 0x000048, "Member 'WDT_Status_Capacity_C_GetComparisonColorForCapacity::K2Node_MakeStruct_SlateColor_2' has a wrong offset!");
 
-// Function WDT_Status_Capacity.WDT_Status_Capacity_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WDT_Status_Capacity_C_PreConstruct final
+// Function WDT_Status_Capacity.WDT_Status_Capacity_C.ExecuteUbergraph_WDT_Status_Capacity
+// 0x0008 (0x0008 - 0x0000)
+struct WDT_Status_Capacity_C_ExecuteUbergraph_WDT_Status_Capacity final
 {
 public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_IsDesignTime;                         // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WDT_Status_Capacity_C_PreConstruct) == 0x000001, "Wrong alignment on WDT_Status_Capacity_C_PreConstruct");
-static_assert(sizeof(WDT_Status_Capacity_C_PreConstruct) == 0x000001, "Wrong size on WDT_Status_Capacity_C_PreConstruct");
-static_assert(offsetof(WDT_Status_Capacity_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WDT_Status_Capacity_C_PreConstruct::IsDesignTime' has a wrong offset!");
-
-// Function WDT_Status_Capacity.WDT_Status_Capacity_C.SetValue
-// 0x0030 (0x0030 - 0x0000)
-struct WDT_Status_Capacity_C_SetValue final
-{
-public:
-	int32                                         InValue;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0008(0x0010)()
-	struct FSlateColor                            CallFunc_GetComparisonColorForCapacity_SlateColor; // 0x0018(0x0014)()
-};
-static_assert(alignof(WDT_Status_Capacity_C_SetValue) == 0x000008, "Wrong alignment on WDT_Status_Capacity_C_SetValue");
-static_assert(sizeof(WDT_Status_Capacity_C_SetValue) == 0x000030, "Wrong size on WDT_Status_Capacity_C_SetValue");
-static_assert(offsetof(WDT_Status_Capacity_C_SetValue, InValue) == 0x000000, "Member 'WDT_Status_Capacity_C_SetValue::InValue' has a wrong offset!");
-static_assert(offsetof(WDT_Status_Capacity_C_SetValue, CallFunc_Conv_IntToText_ReturnValue) == 0x000008, "Member 'WDT_Status_Capacity_C_SetValue::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_Status_Capacity_C_SetValue, CallFunc_GetComparisonColorForCapacity_SlateColor) == 0x000018, "Member 'WDT_Status_Capacity_C_SetValue::CallFunc_GetComparisonColorForCapacity_SlateColor' has a wrong offset!");
-
-// Function WDT_Status_Capacity.WDT_Status_Capacity_C.SetValueComparison
-// 0x0030 (0x0030 - 0x0000)
-struct WDT_Status_Capacity_C_SetValueComparison final
-{
-public:
-	int32                                         InCurrentValue;                                    // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         InTargetValue;                                     // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSlateColor                            CallFunc_GetComparisonColorForCapacity_SlateColor; // 0x0008(0x0014)()
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0020(0x0010)()
-};
-static_assert(alignof(WDT_Status_Capacity_C_SetValueComparison) == 0x000008, "Wrong alignment on WDT_Status_Capacity_C_SetValueComparison");
-static_assert(sizeof(WDT_Status_Capacity_C_SetValueComparison) == 0x000030, "Wrong size on WDT_Status_Capacity_C_SetValueComparison");
-static_assert(offsetof(WDT_Status_Capacity_C_SetValueComparison, InCurrentValue) == 0x000000, "Member 'WDT_Status_Capacity_C_SetValueComparison::InCurrentValue' has a wrong offset!");
-static_assert(offsetof(WDT_Status_Capacity_C_SetValueComparison, InTargetValue) == 0x000004, "Member 'WDT_Status_Capacity_C_SetValueComparison::InTargetValue' has a wrong offset!");
-static_assert(offsetof(WDT_Status_Capacity_C_SetValueComparison, CallFunc_GetComparisonColorForCapacity_SlateColor) == 0x000008, "Member 'WDT_Status_Capacity_C_SetValueComparison::CallFunc_GetComparisonColorForCapacity_SlateColor' has a wrong offset!");
-static_assert(offsetof(WDT_Status_Capacity_C_SetValueComparison, CallFunc_Conv_IntToText_ReturnValue) == 0x000020, "Member 'WDT_Status_Capacity_C_SetValueComparison::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
+static_assert(alignof(WDT_Status_Capacity_C_ExecuteUbergraph_WDT_Status_Capacity) == 0x000004, "Wrong alignment on WDT_Status_Capacity_C_ExecuteUbergraph_WDT_Status_Capacity");
+static_assert(sizeof(WDT_Status_Capacity_C_ExecuteUbergraph_WDT_Status_Capacity) == 0x000008, "Wrong size on WDT_Status_Capacity_C_ExecuteUbergraph_WDT_Status_Capacity");
+static_assert(offsetof(WDT_Status_Capacity_C_ExecuteUbergraph_WDT_Status_Capacity, EntryPoint) == 0x000000, "Member 'WDT_Status_Capacity_C_ExecuteUbergraph_WDT_Status_Capacity::EntryPoint' has a wrong offset!");
+static_assert(offsetof(WDT_Status_Capacity_C_ExecuteUbergraph_WDT_Status_Capacity, K2Node_Event_IsDesignTime) == 0x000004, "Member 'WDT_Status_Capacity_C_ExecuteUbergraph_WDT_Status_Capacity::K2Node_Event_IsDesignTime' has a wrong offset!");
 
 }
 

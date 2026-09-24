@@ -14,29 +14,52 @@
 namespace SDK::Params
 {
 
-// Function WDT_Status_Fraction.WDT_Status_Fraction_C.ExecuteUbergraph_WDT_Status_Fraction
+// Function WDT_Status_Fraction.WDT_Status_Fraction_C.SetValueIntComparison
 // 0x0008 (0x0008 - 0x0000)
-struct WDT_Status_Fraction_C_ExecuteUbergraph_WDT_Status_Fraction final
+struct WDT_Status_Fraction_C_SetValueIntComparison final
 {
 public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_IsDesignTime;                         // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         InMaxStaminaCurrent;                               // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         InMaxStamina;                                      // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WDT_Status_Fraction_C_ExecuteUbergraph_WDT_Status_Fraction) == 0x000004, "Wrong alignment on WDT_Status_Fraction_C_ExecuteUbergraph_WDT_Status_Fraction");
-static_assert(sizeof(WDT_Status_Fraction_C_ExecuteUbergraph_WDT_Status_Fraction) == 0x000008, "Wrong size on WDT_Status_Fraction_C_ExecuteUbergraph_WDT_Status_Fraction");
-static_assert(offsetof(WDT_Status_Fraction_C_ExecuteUbergraph_WDT_Status_Fraction, EntryPoint) == 0x000000, "Member 'WDT_Status_Fraction_C_ExecuteUbergraph_WDT_Status_Fraction::EntryPoint' has a wrong offset!");
-static_assert(offsetof(WDT_Status_Fraction_C_ExecuteUbergraph_WDT_Status_Fraction, K2Node_Event_IsDesignTime) == 0x000004, "Member 'WDT_Status_Fraction_C_ExecuteUbergraph_WDT_Status_Fraction::K2Node_Event_IsDesignTime' has a wrong offset!");
+static_assert(alignof(WDT_Status_Fraction_C_SetValueIntComparison) == 0x000004, "Wrong alignment on WDT_Status_Fraction_C_SetValueIntComparison");
+static_assert(sizeof(WDT_Status_Fraction_C_SetValueIntComparison) == 0x000008, "Wrong size on WDT_Status_Fraction_C_SetValueIntComparison");
+static_assert(offsetof(WDT_Status_Fraction_C_SetValueIntComparison, InMaxStaminaCurrent) == 0x000000, "Member 'WDT_Status_Fraction_C_SetValueIntComparison::InMaxStaminaCurrent' has a wrong offset!");
+static_assert(offsetof(WDT_Status_Fraction_C_SetValueIntComparison, InMaxStamina) == 0x000004, "Member 'WDT_Status_Fraction_C_SetValueIntComparison::InMaxStamina' has a wrong offset!");
 
-// Function WDT_Status_Fraction.WDT_Status_Fraction_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WDT_Status_Fraction_C_PreConstruct final
+// Function WDT_Status_Fraction.WDT_Status_Fraction_C.SetValueInt
+// 0x0028 (0x0028 - 0x0000)
+struct WDT_Status_Fraction_C_SetValueInt final
 {
 public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         InStamina;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         InMaxStamina;                                      // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0008(0x0010)()
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue_1;             // 0x0018(0x0010)()
 };
-static_assert(alignof(WDT_Status_Fraction_C_PreConstruct) == 0x000001, "Wrong alignment on WDT_Status_Fraction_C_PreConstruct");
-static_assert(sizeof(WDT_Status_Fraction_C_PreConstruct) == 0x000001, "Wrong size on WDT_Status_Fraction_C_PreConstruct");
-static_assert(offsetof(WDT_Status_Fraction_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WDT_Status_Fraction_C_PreConstruct::IsDesignTime' has a wrong offset!");
+static_assert(alignof(WDT_Status_Fraction_C_SetValueInt) == 0x000008, "Wrong alignment on WDT_Status_Fraction_C_SetValueInt");
+static_assert(sizeof(WDT_Status_Fraction_C_SetValueInt) == 0x000028, "Wrong size on WDT_Status_Fraction_C_SetValueInt");
+static_assert(offsetof(WDT_Status_Fraction_C_SetValueInt, InStamina) == 0x000000, "Member 'WDT_Status_Fraction_C_SetValueInt::InStamina' has a wrong offset!");
+static_assert(offsetof(WDT_Status_Fraction_C_SetValueInt, InMaxStamina) == 0x000004, "Member 'WDT_Status_Fraction_C_SetValueInt::InMaxStamina' has a wrong offset!");
+static_assert(offsetof(WDT_Status_Fraction_C_SetValueInt, CallFunc_Conv_IntToText_ReturnValue) == 0x000008, "Member 'WDT_Status_Fraction_C_SetValueInt::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_Status_Fraction_C_SetValueInt, CallFunc_Conv_IntToText_ReturnValue_1) == 0x000018, "Member 'WDT_Status_Fraction_C_SetValueInt::CallFunc_Conv_IntToText_ReturnValue_1' has a wrong offset!");
+
+// Function WDT_Status_Fraction.WDT_Status_Fraction_C.SetValueFloatComparison
+// 0x0018 (0x0018 - 0x0000)
+struct WDT_Status_Fraction_C_SetValueFloatComparison final
+{
+public:
+	double                                        InMaxIchorCurrent;                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        InMaxIchor;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_FTrunc_ReturnValue;                       // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_FTrunc_ReturnValue_1;                     // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_Status_Fraction_C_SetValueFloatComparison) == 0x000008, "Wrong alignment on WDT_Status_Fraction_C_SetValueFloatComparison");
+static_assert(sizeof(WDT_Status_Fraction_C_SetValueFloatComparison) == 0x000018, "Wrong size on WDT_Status_Fraction_C_SetValueFloatComparison");
+static_assert(offsetof(WDT_Status_Fraction_C_SetValueFloatComparison, InMaxIchorCurrent) == 0x000000, "Member 'WDT_Status_Fraction_C_SetValueFloatComparison::InMaxIchorCurrent' has a wrong offset!");
+static_assert(offsetof(WDT_Status_Fraction_C_SetValueFloatComparison, InMaxIchor) == 0x000008, "Member 'WDT_Status_Fraction_C_SetValueFloatComparison::InMaxIchor' has a wrong offset!");
+static_assert(offsetof(WDT_Status_Fraction_C_SetValueFloatComparison, CallFunc_FTrunc_ReturnValue) == 0x000010, "Member 'WDT_Status_Fraction_C_SetValueFloatComparison::CallFunc_FTrunc_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_Status_Fraction_C_SetValueFloatComparison, CallFunc_FTrunc_ReturnValue_1) == 0x000014, "Member 'WDT_Status_Fraction_C_SetValueFloatComparison::CallFunc_FTrunc_ReturnValue_1' has a wrong offset!");
 
 // Function WDT_Status_Fraction.WDT_Status_Fraction_C.SetValueFloat
 // 0x0058 (0x0058 - 0x0000)
@@ -66,52 +89,29 @@ static_assert(offsetof(WDT_Status_Fraction_C_SetValueFloat, CallFunc_Conv_IntToD
 static_assert(offsetof(WDT_Status_Fraction_C_SetValueFloat, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000040, "Member 'WDT_Status_Fraction_C_SetValueFloat::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_Status_Fraction_C_SetValueFloat, CallFunc_Conv_DoubleToText_ReturnValue_1) == 0x000048, "Member 'WDT_Status_Fraction_C_SetValueFloat::CallFunc_Conv_DoubleToText_ReturnValue_1' has a wrong offset!");
 
-// Function WDT_Status_Fraction.WDT_Status_Fraction_C.SetValueFloatComparison
-// 0x0018 (0x0018 - 0x0000)
-struct WDT_Status_Fraction_C_SetValueFloatComparison final
+// Function WDT_Status_Fraction.WDT_Status_Fraction_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WDT_Status_Fraction_C_PreConstruct final
 {
 public:
-	double                                        InMaxIchorCurrent;                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        InMaxIchor;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_FTrunc_ReturnValue;                       // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_FTrunc_ReturnValue_1;                     // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WDT_Status_Fraction_C_SetValueFloatComparison) == 0x000008, "Wrong alignment on WDT_Status_Fraction_C_SetValueFloatComparison");
-static_assert(sizeof(WDT_Status_Fraction_C_SetValueFloatComparison) == 0x000018, "Wrong size on WDT_Status_Fraction_C_SetValueFloatComparison");
-static_assert(offsetof(WDT_Status_Fraction_C_SetValueFloatComparison, InMaxIchorCurrent) == 0x000000, "Member 'WDT_Status_Fraction_C_SetValueFloatComparison::InMaxIchorCurrent' has a wrong offset!");
-static_assert(offsetof(WDT_Status_Fraction_C_SetValueFloatComparison, InMaxIchor) == 0x000008, "Member 'WDT_Status_Fraction_C_SetValueFloatComparison::InMaxIchor' has a wrong offset!");
-static_assert(offsetof(WDT_Status_Fraction_C_SetValueFloatComparison, CallFunc_FTrunc_ReturnValue) == 0x000010, "Member 'WDT_Status_Fraction_C_SetValueFloatComparison::CallFunc_FTrunc_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_Status_Fraction_C_SetValueFloatComparison, CallFunc_FTrunc_ReturnValue_1) == 0x000014, "Member 'WDT_Status_Fraction_C_SetValueFloatComparison::CallFunc_FTrunc_ReturnValue_1' has a wrong offset!");
+static_assert(alignof(WDT_Status_Fraction_C_PreConstruct) == 0x000001, "Wrong alignment on WDT_Status_Fraction_C_PreConstruct");
+static_assert(sizeof(WDT_Status_Fraction_C_PreConstruct) == 0x000001, "Wrong size on WDT_Status_Fraction_C_PreConstruct");
+static_assert(offsetof(WDT_Status_Fraction_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WDT_Status_Fraction_C_PreConstruct::IsDesignTime' has a wrong offset!");
 
-// Function WDT_Status_Fraction.WDT_Status_Fraction_C.SetValueInt
-// 0x0028 (0x0028 - 0x0000)
-struct WDT_Status_Fraction_C_SetValueInt final
-{
-public:
-	int32                                         InStamina;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         InMaxStamina;                                      // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0008(0x0010)()
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue_1;             // 0x0018(0x0010)()
-};
-static_assert(alignof(WDT_Status_Fraction_C_SetValueInt) == 0x000008, "Wrong alignment on WDT_Status_Fraction_C_SetValueInt");
-static_assert(sizeof(WDT_Status_Fraction_C_SetValueInt) == 0x000028, "Wrong size on WDT_Status_Fraction_C_SetValueInt");
-static_assert(offsetof(WDT_Status_Fraction_C_SetValueInt, InStamina) == 0x000000, "Member 'WDT_Status_Fraction_C_SetValueInt::InStamina' has a wrong offset!");
-static_assert(offsetof(WDT_Status_Fraction_C_SetValueInt, InMaxStamina) == 0x000004, "Member 'WDT_Status_Fraction_C_SetValueInt::InMaxStamina' has a wrong offset!");
-static_assert(offsetof(WDT_Status_Fraction_C_SetValueInt, CallFunc_Conv_IntToText_ReturnValue) == 0x000008, "Member 'WDT_Status_Fraction_C_SetValueInt::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_Status_Fraction_C_SetValueInt, CallFunc_Conv_IntToText_ReturnValue_1) == 0x000018, "Member 'WDT_Status_Fraction_C_SetValueInt::CallFunc_Conv_IntToText_ReturnValue_1' has a wrong offset!");
-
-// Function WDT_Status_Fraction.WDT_Status_Fraction_C.SetValueIntComparison
+// Function WDT_Status_Fraction.WDT_Status_Fraction_C.ExecuteUbergraph_WDT_Status_Fraction
 // 0x0008 (0x0008 - 0x0000)
-struct WDT_Status_Fraction_C_SetValueIntComparison final
+struct WDT_Status_Fraction_C_ExecuteUbergraph_WDT_Status_Fraction final
 {
 public:
-	int32                                         InMaxStaminaCurrent;                               // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         InMaxStamina;                                      // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_IsDesignTime;                         // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WDT_Status_Fraction_C_SetValueIntComparison) == 0x000004, "Wrong alignment on WDT_Status_Fraction_C_SetValueIntComparison");
-static_assert(sizeof(WDT_Status_Fraction_C_SetValueIntComparison) == 0x000008, "Wrong size on WDT_Status_Fraction_C_SetValueIntComparison");
-static_assert(offsetof(WDT_Status_Fraction_C_SetValueIntComparison, InMaxStaminaCurrent) == 0x000000, "Member 'WDT_Status_Fraction_C_SetValueIntComparison::InMaxStaminaCurrent' has a wrong offset!");
-static_assert(offsetof(WDT_Status_Fraction_C_SetValueIntComparison, InMaxStamina) == 0x000004, "Member 'WDT_Status_Fraction_C_SetValueIntComparison::InMaxStamina' has a wrong offset!");
+static_assert(alignof(WDT_Status_Fraction_C_ExecuteUbergraph_WDT_Status_Fraction) == 0x000004, "Wrong alignment on WDT_Status_Fraction_C_ExecuteUbergraph_WDT_Status_Fraction");
+static_assert(sizeof(WDT_Status_Fraction_C_ExecuteUbergraph_WDT_Status_Fraction) == 0x000008, "Wrong size on WDT_Status_Fraction_C_ExecuteUbergraph_WDT_Status_Fraction");
+static_assert(offsetof(WDT_Status_Fraction_C_ExecuteUbergraph_WDT_Status_Fraction, EntryPoint) == 0x000000, "Member 'WDT_Status_Fraction_C_ExecuteUbergraph_WDT_Status_Fraction::EntryPoint' has a wrong offset!");
+static_assert(offsetof(WDT_Status_Fraction_C_ExecuteUbergraph_WDT_Status_Fraction, K2Node_Event_IsDesignTime) == 0x000004, "Member 'WDT_Status_Fraction_C_ExecuteUbergraph_WDT_Status_Fraction::K2Node_Event_IsDesignTime' has a wrong offset!");
 
 }
 

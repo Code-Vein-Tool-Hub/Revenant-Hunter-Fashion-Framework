@@ -31,6 +31,20 @@ void AGPC_ExecutionSword_Lightning_C::ActiveEffect()
 }
 
 
+// Function GPC_ExecutionSword_Lightning.GPC_ExecutionSword_Lightning_C.CreateAkComponent
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AGPC_ExecutionSword_Lightning_C::CreateAkComponent()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GPC_ExecutionSword_Lightning_C", "CreateAkComponent");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function GPC_ExecutionSword_Lightning.GPC_ExecutionSword_Lightning_C.DeactiveEffect
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -40,6 +54,20 @@ void AGPC_ExecutionSword_Lightning_C::DeactiveEffect()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("GPC_ExecutionSword_Lightning_C", "DeactiveEffect");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GPC_ExecutionSword_Lightning.GPC_ExecutionSword_Lightning_C.DestroyAkComponent
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AGPC_ExecutionSword_Lightning_C::DestroyAkComponent()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GPC_ExecutionSword_Lightning_C", "DestroyAkComponent");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

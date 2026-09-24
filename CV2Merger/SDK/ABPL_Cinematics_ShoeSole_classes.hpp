@@ -19,20 +19,20 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass ABPL_Cinematics_ShoeSole.ABPL_Cinematics_ShoeSole_C
-// 0x05F0 (0x0C30 - 0x0640)
+// 0x05F0 (0x0C40 - 0x0650)
 class UABPL_Cinematics_ShoeSole_C final : public UPermanentShoeSoleAnimInstance
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0640(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x0648(0x0008)()
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x0650(0x0008)()
-	struct FAnimNode_Root                         AnimGraphNode_Root_1;                              // 0x0658(0x0020)()
-	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose;                     // 0x0678(0x00B8)()
-	struct FAppAnimNode_ShoeSole                  AppAnimGraphNode_ShoeSole;                         // 0x0730(0x0330)()
-	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x0A60(0x0020)()
-	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x0A80(0x0020)()
-	struct FAppAnimNode_FABRIK                    AppAnimGraphNode_FABRIK;                           // 0x0AA0(0x0170)()
-	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0C10(0x0020)()
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0650(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x0658(0x0008)()
+	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x0660(0x0008)()
+	struct FAnimNode_Root                         AnimGraphNode_Root_1;                              // 0x0668(0x0020)()
+	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose;                     // 0x0688(0x00B8)()
+	struct FAppAnimNode_ShoeSole                  AppAnimGraphNode_ShoeSole;                         // 0x0740(0x0330)()
+	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x0A70(0x0020)()
+	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x0A90(0x0020)()
+	struct FAppAnimNode_FABRIK                    AppAnimGraphNode_FABRIK;                           // 0x0AB0(0x0170)()
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0C20(0x0020)()
 
 public:
 	void AnimGraph(struct FPoseLink* AnimGraph_0);
@@ -50,17 +50,17 @@ public:
 	}
 };
 static_assert(alignof(UABPL_Cinematics_ShoeSole_C) == 0x000010, "Wrong alignment on UABPL_Cinematics_ShoeSole_C");
-static_assert(sizeof(UABPL_Cinematics_ShoeSole_C) == 0x000C30, "Wrong size on UABPL_Cinematics_ShoeSole_C");
-static_assert(offsetof(UABPL_Cinematics_ShoeSole_C, UberGraphFrame) == 0x000640, "Member 'UABPL_Cinematics_ShoeSole_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UABPL_Cinematics_ShoeSole_C, AnimBlueprintExtension_PropertyAccess) == 0x000648, "Member 'UABPL_Cinematics_ShoeSole_C::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
-static_assert(offsetof(UABPL_Cinematics_ShoeSole_C, AnimBlueprintExtension_Base) == 0x000650, "Member 'UABPL_Cinematics_ShoeSole_C::AnimBlueprintExtension_Base' has a wrong offset!");
-static_assert(offsetof(UABPL_Cinematics_ShoeSole_C, AnimGraphNode_Root_1) == 0x000658, "Member 'UABPL_Cinematics_ShoeSole_C::AnimGraphNode_Root_1' has a wrong offset!");
-static_assert(offsetof(UABPL_Cinematics_ShoeSole_C, AnimGraphNode_LinkedInputPose) == 0x000678, "Member 'UABPL_Cinematics_ShoeSole_C::AnimGraphNode_LinkedInputPose' has a wrong offset!");
-static_assert(offsetof(UABPL_Cinematics_ShoeSole_C, AppAnimGraphNode_ShoeSole) == 0x000730, "Member 'UABPL_Cinematics_ShoeSole_C::AppAnimGraphNode_ShoeSole' has a wrong offset!");
-static_assert(offsetof(UABPL_Cinematics_ShoeSole_C, AnimGraphNode_LocalToComponentSpace) == 0x000A60, "Member 'UABPL_Cinematics_ShoeSole_C::AnimGraphNode_LocalToComponentSpace' has a wrong offset!");
-static_assert(offsetof(UABPL_Cinematics_ShoeSole_C, AnimGraphNode_ComponentToLocalSpace) == 0x000A80, "Member 'UABPL_Cinematics_ShoeSole_C::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
-static_assert(offsetof(UABPL_Cinematics_ShoeSole_C, AppAnimGraphNode_FABRIK) == 0x000AA0, "Member 'UABPL_Cinematics_ShoeSole_C::AppAnimGraphNode_FABRIK' has a wrong offset!");
-static_assert(offsetof(UABPL_Cinematics_ShoeSole_C, AnimGraphNode_Root) == 0x000C10, "Member 'UABPL_Cinematics_ShoeSole_C::AnimGraphNode_Root' has a wrong offset!");
+static_assert(sizeof(UABPL_Cinematics_ShoeSole_C) == 0x000C40, "Wrong size on UABPL_Cinematics_ShoeSole_C");
+static_assert(offsetof(UABPL_Cinematics_ShoeSole_C, UberGraphFrame) == 0x000650, "Member 'UABPL_Cinematics_ShoeSole_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UABPL_Cinematics_ShoeSole_C, AnimBlueprintExtension_PropertyAccess) == 0x000658, "Member 'UABPL_Cinematics_ShoeSole_C::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
+static_assert(offsetof(UABPL_Cinematics_ShoeSole_C, AnimBlueprintExtension_Base) == 0x000660, "Member 'UABPL_Cinematics_ShoeSole_C::AnimBlueprintExtension_Base' has a wrong offset!");
+static_assert(offsetof(UABPL_Cinematics_ShoeSole_C, AnimGraphNode_Root_1) == 0x000668, "Member 'UABPL_Cinematics_ShoeSole_C::AnimGraphNode_Root_1' has a wrong offset!");
+static_assert(offsetof(UABPL_Cinematics_ShoeSole_C, AnimGraphNode_LinkedInputPose) == 0x000688, "Member 'UABPL_Cinematics_ShoeSole_C::AnimGraphNode_LinkedInputPose' has a wrong offset!");
+static_assert(offsetof(UABPL_Cinematics_ShoeSole_C, AppAnimGraphNode_ShoeSole) == 0x000740, "Member 'UABPL_Cinematics_ShoeSole_C::AppAnimGraphNode_ShoeSole' has a wrong offset!");
+static_assert(offsetof(UABPL_Cinematics_ShoeSole_C, AnimGraphNode_LocalToComponentSpace) == 0x000A70, "Member 'UABPL_Cinematics_ShoeSole_C::AnimGraphNode_LocalToComponentSpace' has a wrong offset!");
+static_assert(offsetof(UABPL_Cinematics_ShoeSole_C, AnimGraphNode_ComponentToLocalSpace) == 0x000A90, "Member 'UABPL_Cinematics_ShoeSole_C::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
+static_assert(offsetof(UABPL_Cinematics_ShoeSole_C, AppAnimGraphNode_FABRIK) == 0x000AB0, "Member 'UABPL_Cinematics_ShoeSole_C::AppAnimGraphNode_FABRIK' has a wrong offset!");
+static_assert(offsetof(UABPL_Cinematics_ShoeSole_C, AnimGraphNode_Root) == 0x000C20, "Member 'UABPL_Cinematics_ShoeSole_C::AnimGraphNode_Root' has a wrong offset!");
 
 }
 

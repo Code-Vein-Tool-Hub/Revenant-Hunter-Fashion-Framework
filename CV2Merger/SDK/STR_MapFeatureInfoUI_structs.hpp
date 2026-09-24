@@ -10,24 +10,24 @@
 
 #include "Basic.hpp"
 
-#include "GameplayTags_structs.hpp"
 #include "Extensions_structs.hpp"
+#include "GameplayTags_structs.hpp"
 
 
 namespace SDK
 {
 
 // UserDefinedStruct STR_MapFeatureInfoUI.STR_MapFeatureInfoUI
-// 0x00F0 (0x00F0 - 0x0000)
+// 0x0108 (0x0108 - 0x0000)
 struct FSTR_MapFeatureInfoUI final
 {
 public:
 	struct FGameplayTag                           TargetId_6_3A048F074B6B43343E3112A15DDF2CC5;       // 0x0000(0x0008)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash)
 	class UMenuPieceBase*                         TargetMenuPiece_8_EA0D9BFF4C371ADD96BCC8960B593454; // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FMapFeatureInfo                        TargetFeatureInfo_10_430DB0104F4BD2D5DA80E6A3BAC8029C; // 0x0010(0x00E0)(Edit, BlueprintVisible)
+	struct FMapFeatureInfo                        TargetFeatureInfo_10_430DB0104F4BD2D5DA80E6A3BAC8029C; // 0x0010(0x00F8)(Edit, BlueprintVisible)
 };
 static_assert(alignof(FSTR_MapFeatureInfoUI) == 0x000008, "Wrong alignment on FSTR_MapFeatureInfoUI");
-static_assert(sizeof(FSTR_MapFeatureInfoUI) == 0x0000F0, "Wrong size on FSTR_MapFeatureInfoUI");
+static_assert(sizeof(FSTR_MapFeatureInfoUI) == 0x000108, "Wrong size on FSTR_MapFeatureInfoUI");
 static_assert(offsetof(FSTR_MapFeatureInfoUI, TargetId_6_3A048F074B6B43343E3112A15DDF2CC5) == 0x000000, "Member 'FSTR_MapFeatureInfoUI::TargetId_6_3A048F074B6B43343E3112A15DDF2CC5' has a wrong offset!");
 static_assert(offsetof(FSTR_MapFeatureInfoUI, TargetMenuPiece_8_EA0D9BFF4C371ADD96BCC8960B593454) == 0x000008, "Member 'FSTR_MapFeatureInfoUI::TargetMenuPiece_8_EA0D9BFF4C371ADD96BCC8960B593454' has a wrong offset!");
 static_assert(offsetof(FSTR_MapFeatureInfoUI, TargetFeatureInfo_10_430DB0104F4BD2D5DA80E6A3BAC8029C) == 0x000010, "Member 'FSTR_MapFeatureInfoUI::TargetFeatureInfo_10_430DB0104F4BD2D5DA80E6A3BAC8029C' has a wrong offset!");

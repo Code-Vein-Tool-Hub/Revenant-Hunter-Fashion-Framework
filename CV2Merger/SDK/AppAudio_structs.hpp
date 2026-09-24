@@ -209,6 +209,22 @@ enum class ENiagaraAppAudioParamType : uint8
 	ENiagaraAppAudioParamType_MAX            = 2,
 };
 
+// ScriptStruct AppAudio.AppAudioNavAreaAmbientData
+// 0x0018 (0x0018 - 0x0000)
+struct FAppAudioNavAreaAmbientData final
+{
+public:
+	class UAkAudioEvent*                          AkAudioEvent;                                      // 0x0000(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAkRtpc*                                AkRtpcDistance;                                    // 0x0008(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         EmitterMax;                                        // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FAppAudioNavAreaAmbientData) == 0x000008, "Wrong alignment on FAppAudioNavAreaAmbientData");
+static_assert(sizeof(FAppAudioNavAreaAmbientData) == 0x000018, "Wrong size on FAppAudioNavAreaAmbientData");
+static_assert(offsetof(FAppAudioNavAreaAmbientData, AkAudioEvent) == 0x000000, "Member 'FAppAudioNavAreaAmbientData::AkAudioEvent' has a wrong offset!");
+static_assert(offsetof(FAppAudioNavAreaAmbientData, AkRtpcDistance) == 0x000008, "Member 'FAppAudioNavAreaAmbientData::AkRtpcDistance' has a wrong offset!");
+static_assert(offsetof(FAppAudioNavAreaAmbientData, EmitterMax) == 0x000010, "Member 'FAppAudioNavAreaAmbientData::EmitterMax' has a wrong offset!");
+
 // ScriptStruct AppAudio.OnAppAudioVoicePlayParam
 // 0x0020 (0x0020 - 0x0000)
 struct alignas(0x04) FOnAppAudioVoicePlayParam final
@@ -218,6 +234,46 @@ public:
 };
 static_assert(alignof(FOnAppAudioVoicePlayParam) == 0x000004, "Wrong alignment on FOnAppAudioVoicePlayParam");
 static_assert(sizeof(FOnAppAudioVoicePlayParam) == 0x000020, "Wrong size on FOnAppAudioVoicePlayParam");
+
+// ScriptStruct AppAudio.AppAudioAnimFoleyState
+// 0x0038 (0x0038 - 0x0000)
+struct alignas(0x08) FAppAudioAnimFoleyState final
+{
+public:
+	uint8                                         Pad_0[0x38];                                       // 0x0000(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FAppAudioAnimFoleyState) == 0x000008, "Wrong alignment on FAppAudioAnimFoleyState");
+static_assert(sizeof(FAppAudioAnimFoleyState) == 0x000038, "Wrong size on FAppAudioAnimFoleyState");
+
+// ScriptStruct AppAudio.AppAudioRequestComponentSetting
+// 0x000C (0x000C - 0x0000)
+struct FAppAudioRequestComponentSetting final
+{
+public:
+	class FName                                   AttachName;                                        // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bFollow;                                           // 0x0008(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOcclusion;                                        // 0x0009(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FAppAudioRequestComponentSetting) == 0x000004, "Wrong alignment on FAppAudioRequestComponentSetting");
+static_assert(sizeof(FAppAudioRequestComponentSetting) == 0x00000C, "Wrong size on FAppAudioRequestComponentSetting");
+static_assert(offsetof(FAppAudioRequestComponentSetting, AttachName) == 0x000000, "Member 'FAppAudioRequestComponentSetting::AttachName' has a wrong offset!");
+static_assert(offsetof(FAppAudioRequestComponentSetting, bFollow) == 0x000008, "Member 'FAppAudioRequestComponentSetting::bFollow' has a wrong offset!");
+static_assert(offsetof(FAppAudioRequestComponentSetting, bOcclusion) == 0x000009, "Member 'FAppAudioRequestComponentSetting::bOcclusion' has a wrong offset!");
+
+// ScriptStruct AppAudio.AppAudioVoicePlayerDelegateInfo
+// 0x0008 (0x0008 - 0x0000)
+struct FAppAudioVoicePlayerDelegateInfo final
+{
+public:
+	int32                                         PlayID;                                            // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAppAudioVoicePlayerDelegateType              DelegateType;                                      // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FAppAudioVoicePlayerDelegateInfo) == 0x000004, "Wrong alignment on FAppAudioVoicePlayerDelegateInfo");
+static_assert(sizeof(FAppAudioVoicePlayerDelegateInfo) == 0x000008, "Wrong size on FAppAudioVoicePlayerDelegateInfo");
+static_assert(offsetof(FAppAudioVoicePlayerDelegateInfo, PlayID) == 0x000000, "Member 'FAppAudioVoicePlayerDelegateInfo::PlayID' has a wrong offset!");
+static_assert(offsetof(FAppAudioVoicePlayerDelegateInfo, DelegateType) == 0x000004, "Member 'FAppAudioVoicePlayerDelegateInfo::DelegateType' has a wrong offset!");
 
 // ScriptStruct AppAudio.AppAudioCircleAmbientPoints
 // 0x0010 (0x0010 - 0x0000)
@@ -229,6 +285,16 @@ public:
 static_assert(alignof(FAppAudioCircleAmbientPoints) == 0x000008, "Wrong alignment on FAppAudioCircleAmbientPoints");
 static_assert(sizeof(FAppAudioCircleAmbientPoints) == 0x000010, "Wrong size on FAppAudioCircleAmbientPoints");
 static_assert(offsetof(FAppAudioCircleAmbientPoints, Points) == 0x000000, "Member 'FAppAudioCircleAmbientPoints::Points' has a wrong offset!");
+
+// ScriptStruct AppAudio.AppAudioAnimFoleyCondExp
+// 0x0038 (0x0038 - 0x0000)
+struct alignas(0x08) FAppAudioAnimFoleyCondExp final
+{
+public:
+	uint8                                         Pad_0[0x38];                                       // 0x0000(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FAppAudioAnimFoleyCondExp) == 0x000008, "Wrong alignment on FAppAudioAnimFoleyCondExp");
+static_assert(sizeof(FAppAudioAnimFoleyCondExp) == 0x000038, "Wrong size on FAppAudioAnimFoleyCondExp");
 
 // ScriptStruct AppAudio.AppAudioAnimFoleyThresholdData
 // 0x0024 (0x0024 - 0x0000)
@@ -254,40 +320,6 @@ static_assert(offsetof(FAppAudioAnimFoleyThresholdData, OriginSocketName) == 0x0
 static_assert(offsetof(FAppAudioAnimFoleyThresholdData, bReverseThreshold) == 0x00001C, "Member 'FAppAudioAnimFoleyThresholdData::bReverseThreshold' has a wrong offset!");
 static_assert(offsetof(FAppAudioAnimFoleyThresholdData, bFixedThreshold) == 0x00001D, "Member 'FAppAudioAnimFoleyThresholdData::bFixedThreshold' has a wrong offset!");
 static_assert(offsetof(FAppAudioAnimFoleyThresholdData, ThresholdValue) == 0x000020, "Member 'FAppAudioAnimFoleyThresholdData::ThresholdValue' has a wrong offset!");
-
-// ScriptStruct AppAudio.AppAudioVoicePlayerDelegateInfo
-// 0x0008 (0x0008 - 0x0000)
-struct FAppAudioVoicePlayerDelegateInfo final
-{
-public:
-	int32                                         PlayID;                                            // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EAppAudioVoicePlayerDelegateType              DelegateType;                                      // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FAppAudioVoicePlayerDelegateInfo) == 0x000004, "Wrong alignment on FAppAudioVoicePlayerDelegateInfo");
-static_assert(sizeof(FAppAudioVoicePlayerDelegateInfo) == 0x000008, "Wrong size on FAppAudioVoicePlayerDelegateInfo");
-static_assert(offsetof(FAppAudioVoicePlayerDelegateInfo, PlayID) == 0x000000, "Member 'FAppAudioVoicePlayerDelegateInfo::PlayID' has a wrong offset!");
-static_assert(offsetof(FAppAudioVoicePlayerDelegateInfo, DelegateType) == 0x000004, "Member 'FAppAudioVoicePlayerDelegateInfo::DelegateType' has a wrong offset!");
-
-// ScriptStruct AppAudio.AppAudioAnimFoleyState
-// 0x0038 (0x0038 - 0x0000)
-struct alignas(0x08) FAppAudioAnimFoleyState final
-{
-public:
-	uint8                                         Pad_0[0x38];                                       // 0x0000(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FAppAudioAnimFoleyState) == 0x000008, "Wrong alignment on FAppAudioAnimFoleyState");
-static_assert(sizeof(FAppAudioAnimFoleyState) == 0x000038, "Wrong size on FAppAudioAnimFoleyState");
-
-// ScriptStruct AppAudio.AppAudioAnimFoleyCondExp
-// 0x0038 (0x0038 - 0x0000)
-struct alignas(0x08) FAppAudioAnimFoleyCondExp final
-{
-public:
-	uint8                                         Pad_0[0x38];                                       // 0x0000(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FAppAudioAnimFoleyCondExp) == 0x000008, "Wrong alignment on FAppAudioAnimFoleyCondExp");
-static_assert(sizeof(FAppAudioAnimFoleyCondExp) == 0x000038, "Wrong size on FAppAudioAnimFoleyCondExp");
 
 // ScriptStruct AppAudio.AppAudioAnimFoleyConditionData
 // 0x0050 (0x0050 - 0x0000)
@@ -506,22 +538,6 @@ static_assert(alignof(FAppAudioNavAreaPlayInfo) == 0x000008, "Wrong alignment on
 static_assert(sizeof(FAppAudioNavAreaPlayInfo) == 0x000028, "Wrong size on FAppAudioNavAreaPlayInfo");
 static_assert(offsetof(FAppAudioNavAreaPlayInfo, AkComponent) == 0x000000, "Member 'FAppAudioNavAreaPlayInfo::AkComponent' has a wrong offset!");
 
-// ScriptStruct AppAudio.AppAudioNavAreaAmbientData
-// 0x0018 (0x0018 - 0x0000)
-struct FAppAudioNavAreaAmbientData final
-{
-public:
-	class UAkAudioEvent*                          AkAudioEvent;                                      // 0x0000(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UAkRtpc*                                AkRtpcDistance;                                    // 0x0008(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         EmitterMax;                                        // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FAppAudioNavAreaAmbientData) == 0x000008, "Wrong alignment on FAppAudioNavAreaAmbientData");
-static_assert(sizeof(FAppAudioNavAreaAmbientData) == 0x000018, "Wrong size on FAppAudioNavAreaAmbientData");
-static_assert(offsetof(FAppAudioNavAreaAmbientData, AkAudioEvent) == 0x000000, "Member 'FAppAudioNavAreaAmbientData::AkAudioEvent' has a wrong offset!");
-static_assert(offsetof(FAppAudioNavAreaAmbientData, AkRtpcDistance) == 0x000008, "Member 'FAppAudioNavAreaAmbientData::AkRtpcDistance' has a wrong offset!");
-static_assert(offsetof(FAppAudioNavAreaAmbientData, EmitterMax) == 0x000010, "Member 'FAppAudioNavAreaAmbientData::EmitterMax' has a wrong offset!");
-
 // ScriptStruct AppAudio.AppAudioPaintAreaAmbientEventColorToParamValue
 // 0x0020 (0x0020 - 0x0000)
 struct FAppAudioPaintAreaAmbientEventColorToParamValue final
@@ -569,22 +585,6 @@ static_assert(offsetof(FAppAudioRandomAmbientSetting, EmitPercent) == 0x000020, 
 static_assert(offsetof(FAppAudioRandomAmbientSetting, EmitSleepTime) == 0x000024, "Member 'FAppAudioRandomAmbientSetting::EmitSleepTime' has a wrong offset!");
 static_assert(offsetof(FAppAudioRandomAmbientSetting, EmitCondWindMin) == 0x000028, "Member 'FAppAudioRandomAmbientSetting::EmitCondWindMin' has a wrong offset!");
 static_assert(offsetof(FAppAudioRandomAmbientSetting, EmitCondWindMax) == 0x00002C, "Member 'FAppAudioRandomAmbientSetting::EmitCondWindMax' has a wrong offset!");
-
-// ScriptStruct AppAudio.AppAudioRequestComponentSetting
-// 0x000C (0x000C - 0x0000)
-struct FAppAudioRequestComponentSetting final
-{
-public:
-	class FName                                   AttachName;                                        // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bFollow;                                           // 0x0008(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bOcclusion;                                        // 0x0009(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FAppAudioRequestComponentSetting) == 0x000004, "Wrong alignment on FAppAudioRequestComponentSetting");
-static_assert(sizeof(FAppAudioRequestComponentSetting) == 0x00000C, "Wrong size on FAppAudioRequestComponentSetting");
-static_assert(offsetof(FAppAudioRequestComponentSetting, AttachName) == 0x000000, "Member 'FAppAudioRequestComponentSetting::AttachName' has a wrong offset!");
-static_assert(offsetof(FAppAudioRequestComponentSetting, bFollow) == 0x000008, "Member 'FAppAudioRequestComponentSetting::bFollow' has a wrong offset!");
-static_assert(offsetof(FAppAudioRequestComponentSetting, bOcclusion) == 0x000009, "Member 'FAppAudioRequestComponentSetting::bOcclusion' has a wrong offset!");
 
 // ScriptStruct AppAudio.AppAudioRequestEventTarget
 // 0x0038 (0x0038 - 0x0000)

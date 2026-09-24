@@ -17,6 +17,26 @@
 namespace SDK
 {
 
+// Function WDT_MatchingSelectableTextPiece.WDT_MatchingSelectableTextPiece_C.SetText
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FText                             Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UWDT_MatchingSelectableTextPiece_C::SetText(const class FText& Text)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_MatchingSelectableTextPiece_C", "SetText");
+
+	Params::WDT_MatchingSelectableTextPiece_C_SetText Parms{};
+
+	Parms.Text = std::move(Text);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WDT_MatchingSelectableTextPiece.WDT_MatchingSelectableTextPiece_C.Select
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:

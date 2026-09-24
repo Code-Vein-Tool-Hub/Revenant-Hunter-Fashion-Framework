@@ -17,79 +17,19 @@
 namespace SDK
 {
 
-// Function WDT_Status_Attack.WDT_Status_Attack_C.SetIndependentAttack
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InAttack                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_Status_Attack_C::SetIndependentAttack(int32 InAttack)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Status_Attack_C", "SetIndependentAttack");
-
-	Params::WDT_Status_Attack_C_SetIndependentAttack Parms{};
-
-	Parms.InAttack = InAttack;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_Status_Attack.WDT_Status_Attack_C.SetJailAttack
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InAttack                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_Status_Attack_C::SetJailAttack(int32 InAttack)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Status_Attack_C", "SetJailAttack");
-
-	Params::WDT_Status_Attack_C_SetJailAttack Parms{};
-
-	Parms.InAttack = InAttack;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_Status_Attack.WDT_Status_Attack_C.SetWeapon1Attack
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InAttack                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_Status_Attack_C::SetWeapon1Attack(int32 InAttack)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Status_Attack_C", "SetWeapon1Attack");
-
-	Params::WDT_Status_Attack_C_SetWeapon1Attack Parms{};
-
-	Parms.InAttack = InAttack;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_Status_Attack.WDT_Status_Attack_C.SetWeapon1Icon
+// Function WDT_Status_Attack.WDT_Status_Attack_C.SetWeapon2Icon
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UTexture2D*                       InIcon                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_Status_Attack_C::SetWeapon1Icon(class UTexture2D* InIcon)
+void UWDT_Status_Attack_C::SetWeapon2Icon(class UTexture2D* InIcon)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Status_Attack_C", "SetWeapon1Icon");
+		Func = Class->GetFunction("WDT_Status_Attack_C", "SetWeapon2Icon");
 
-	Params::WDT_Status_Attack_C_SetWeapon1Icon Parms{};
+	Params::WDT_Status_Attack_C_SetWeapon2Icon Parms{};
 
 	Parms.InIcon = InIcon;
 
@@ -117,21 +57,81 @@ void UWDT_Status_Attack_C::SetWeapon2Attack(int32 InAttack)
 }
 
 
-// Function WDT_Status_Attack.WDT_Status_Attack_C.SetWeapon2Icon
+// Function WDT_Status_Attack.WDT_Status_Attack_C.SetWeapon1Icon
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UTexture2D*                       InIcon                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_Status_Attack_C::SetWeapon2Icon(class UTexture2D* InIcon)
+void UWDT_Status_Attack_C::SetWeapon1Icon(class UTexture2D* InIcon)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Status_Attack_C", "SetWeapon2Icon");
+		Func = Class->GetFunction("WDT_Status_Attack_C", "SetWeapon1Icon");
 
-	Params::WDT_Status_Attack_C_SetWeapon2Icon Parms{};
+	Params::WDT_Status_Attack_C_SetWeapon1Icon Parms{};
 
 	Parms.InIcon = InIcon;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_Status_Attack.WDT_Status_Attack_C.SetWeapon1Attack
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InAttack                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_Status_Attack_C::SetWeapon1Attack(int32 InAttack)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_Status_Attack_C", "SetWeapon1Attack");
+
+	Params::WDT_Status_Attack_C_SetWeapon1Attack Parms{};
+
+	Parms.InAttack = InAttack;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_Status_Attack.WDT_Status_Attack_C.SetJailAttack
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InAttack                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_Status_Attack_C::SetJailAttack(int32 InAttack)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_Status_Attack_C", "SetJailAttack");
+
+	Params::WDT_Status_Attack_C_SetJailAttack Parms{};
+
+	Parms.InAttack = InAttack;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_Status_Attack.WDT_Status_Attack_C.SetIndependentAttack
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InAttack                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_Status_Attack_C::SetIndependentAttack(int32 InAttack)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_Status_Attack_C", "SetIndependentAttack");
+
+	Params::WDT_Status_Attack_C_SetIndependentAttack Parms{};
+
+	Parms.InAttack = InAttack;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

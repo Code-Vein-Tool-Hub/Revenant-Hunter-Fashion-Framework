@@ -14,6 +14,17 @@
 namespace SDK::Params
 {
 
+// Function WDT_MatchingSelectableTextPiece.WDT_MatchingSelectableTextPiece_C.SetText
+// 0x0010 (0x0010 - 0x0000)
+struct WDT_MatchingSelectableTextPiece_C_SetText final
+{
+public:
+	class FText                                   Text;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+};
+static_assert(alignof(WDT_MatchingSelectableTextPiece_C_SetText) == 0x000008, "Wrong alignment on WDT_MatchingSelectableTextPiece_C_SetText");
+static_assert(sizeof(WDT_MatchingSelectableTextPiece_C_SetText) == 0x000010, "Wrong size on WDT_MatchingSelectableTextPiece_C_SetText");
+static_assert(offsetof(WDT_MatchingSelectableTextPiece_C_SetText, Text) == 0x000000, "Member 'WDT_MatchingSelectableTextPiece_C_SetText::Text' has a wrong offset!");
+
 // Function WDT_MatchingSelectableTextPiece.WDT_MatchingSelectableTextPiece_C.Select
 // 0x0002 (0x0002 - 0x0000)
 struct WDT_MatchingSelectableTextPiece_C_Select final

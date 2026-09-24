@@ -377,7 +377,7 @@ static_assert(offsetof(WDT_NPCIndicator_C_UpdateAccumulateStateValue, InAttribut
 static_assert(offsetof(WDT_NPCIndicator_C_UpdateAccumulateStateValue, ReturnValue) == 0x0000F0, "Member 'WDT_NPCIndicator_C_UpdateAccumulateStateValue::ReturnValue' has a wrong offset!");
 
 // Function WDT_NPCIndicator.WDT_NPCIndicator_C.UpdateDamageNumber
-// 0x0048 (0x0048 - 0x0000)
+// 0x0050 (0x0050 - 0x0000)
 struct WDT_NPCIndicator_C_UpdateDamageNumber final
 {
 public:
@@ -386,21 +386,22 @@ public:
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UConfigurationManager*                  CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FConfigurationGameSaveData             CallFunc_GetConfigGameSaveData_ReturnValue;        // 0x0018(0x0010)(ConstParm, NoDestructor)
-	struct FTimerHandle                           CallFunc_K2_SetTimer_ReturnValue;                  // 0x0028(0x0008)(NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0030(0x0010)()
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FConfigurationGameSaveData             CallFunc_GetConfigGameSaveData_ReturnValue;        // 0x0018(0x0014)(ConstParm, NoDestructor)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimerHandle                           CallFunc_K2_SetTimer_ReturnValue;                  // 0x0030(0x0008)(NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0038(0x0010)()
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_NPCIndicator_C_UpdateDamageNumber) == 0x000008, "Wrong alignment on WDT_NPCIndicator_C_UpdateDamageNumber");
-static_assert(sizeof(WDT_NPCIndicator_C_UpdateDamageNumber) == 0x000048, "Wrong size on WDT_NPCIndicator_C_UpdateDamageNumber");
+static_assert(sizeof(WDT_NPCIndicator_C_UpdateDamageNumber) == 0x000050, "Wrong size on WDT_NPCIndicator_C_UpdateDamageNumber");
 static_assert(offsetof(WDT_NPCIndicator_C_UpdateDamageNumber, InDamage) == 0x000000, "Member 'WDT_NPCIndicator_C_UpdateDamageNumber::InDamage' has a wrong offset!");
 static_assert(offsetof(WDT_NPCIndicator_C_UpdateDamageNumber, CallFunc_Round_ReturnValue) == 0x000008, "Member 'WDT_NPCIndicator_C_UpdateDamageNumber::CallFunc_Round_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_NPCIndicator_C_UpdateDamageNumber, CallFunc_Greater_IntInt_ReturnValue) == 0x00000C, "Member 'WDT_NPCIndicator_C_UpdateDamageNumber::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_NPCIndicator_C_UpdateDamageNumber, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000010, "Member 'WDT_NPCIndicator_C_UpdateDamageNumber::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_NPCIndicator_C_UpdateDamageNumber, CallFunc_GetConfigGameSaveData_ReturnValue) == 0x000018, "Member 'WDT_NPCIndicator_C_UpdateDamageNumber::CallFunc_GetConfigGameSaveData_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_NPCIndicator_C_UpdateDamageNumber, CallFunc_K2_SetTimer_ReturnValue) == 0x000028, "Member 'WDT_NPCIndicator_C_UpdateDamageNumber::CallFunc_K2_SetTimer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_NPCIndicator_C_UpdateDamageNumber, CallFunc_Conv_IntToText_ReturnValue) == 0x000030, "Member 'WDT_NPCIndicator_C_UpdateDamageNumber::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_NPCIndicator_C_UpdateDamageNumber, CallFunc_Add_IntInt_ReturnValue) == 0x000040, "Member 'WDT_NPCIndicator_C_UpdateDamageNumber::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_NPCIndicator_C_UpdateDamageNumber, CallFunc_K2_SetTimer_ReturnValue) == 0x000030, "Member 'WDT_NPCIndicator_C_UpdateDamageNumber::CallFunc_K2_SetTimer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_NPCIndicator_C_UpdateDamageNumber, CallFunc_Conv_IntToText_ReturnValue) == 0x000038, "Member 'WDT_NPCIndicator_C_UpdateDamageNumber::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_NPCIndicator_C_UpdateDamageNumber, CallFunc_Add_IntInt_ReturnValue) == 0x000048, "Member 'WDT_NPCIndicator_C_UpdateDamageNumber::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
 
 // Function WDT_NPCIndicator.WDT_NPCIndicator_C.UpdateOffsetFromEdge
 // 0x0001 (0x0001 - 0x0000)

@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_PhotoModeCameraActor.BP_PhotoModeCameraActor_C
-// 0x0010 (0x0B50 - 0x0B40)
+// 0x0010 (0x0B80 - 0x0B70)
 class ABP_PhotoModeCameraActor_C final : public APhotoModeCameraActor
 {
 public:
-	class UBP_PhotoModeVisualControl_C*           BP_PhotoModeVisualControl;                         // 0x0B40(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBP_PhotoModeVisualControl_C*           BP_PhotoModeVisualControl;                         // 0x0B70(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -34,8 +34,8 @@ public:
 	}
 };
 static_assert(alignof(ABP_PhotoModeCameraActor_C) == 0x000010, "Wrong alignment on ABP_PhotoModeCameraActor_C");
-static_assert(sizeof(ABP_PhotoModeCameraActor_C) == 0x000B50, "Wrong size on ABP_PhotoModeCameraActor_C");
-static_assert(offsetof(ABP_PhotoModeCameraActor_C, BP_PhotoModeVisualControl) == 0x000B40, "Member 'ABP_PhotoModeCameraActor_C::BP_PhotoModeVisualControl' has a wrong offset!");
+static_assert(sizeof(ABP_PhotoModeCameraActor_C) == 0x000B80, "Wrong size on ABP_PhotoModeCameraActor_C");
+static_assert(offsetof(ABP_PhotoModeCameraActor_C, BP_PhotoModeVisualControl) == 0x000B70, "Member 'ABP_PhotoModeCameraActor_C::BP_PhotoModeVisualControl' has a wrong offset!");
 
 }
 

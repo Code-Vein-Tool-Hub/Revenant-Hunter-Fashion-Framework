@@ -19,7 +19,7 @@ namespace SDK
 
 // BlueprintGeneratedClass BP_Buddy.BP_Buddy_C
 // 0x0010 (0x1940 - 0x1930)
-class ABP_Buddy_C final : public ABuddyCharacter
+class ABP_Buddy_C : public ABuddyCharacter
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1930(0x0008)(ZeroConstructor, Transient, DuplicateTransient)

@@ -17,21 +17,21 @@
 namespace SDK
 {
 
-// Function WDT_Status_Resistant.WDT_Status_Resistant_C.ExecuteUbergraph_WDT_Status_Resistant
-// (Final, UbergraphFunction)
+// Function WDT_Status_Resistant.WDT_Status_Resistant_C.SetResistantValue
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InValue                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_Status_Resistant_C::ExecuteUbergraph_WDT_Status_Resistant(int32 EntryPoint)
+void UWDT_Status_Resistant_C::SetResistantValue(int32 InValue)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Status_Resistant_C", "ExecuteUbergraph_WDT_Status_Resistant");
+		Func = Class->GetFunction("WDT_Status_Resistant_C", "SetResistantValue");
 
-	Params::WDT_Status_Resistant_C_ExecuteUbergraph_WDT_Status_Resistant Parms{};
+	Params::WDT_Status_Resistant_C_SetResistantValue Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.InValue = InValue;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -57,21 +57,21 @@ void UWDT_Status_Resistant_C::PreConstruct(bool IsDesignTime)
 }
 
 
-// Function WDT_Status_Resistant.WDT_Status_Resistant_C.SetResistantValue
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function WDT_Status_Resistant.WDT_Status_Resistant_C.ExecuteUbergraph_WDT_Status_Resistant
+// (Final, UbergraphFunction)
 // Parameters:
-// int32                                   InValue                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_Status_Resistant_C::SetResistantValue(int32 InValue)
+void UWDT_Status_Resistant_C::ExecuteUbergraph_WDT_Status_Resistant(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Status_Resistant_C", "SetResistantValue");
+		Func = Class->GetFunction("WDT_Status_Resistant_C", "ExecuteUbergraph_WDT_Status_Resistant");
 
-	Params::WDT_Status_Resistant_C_SetResistantValue Parms{};
+	Params::WDT_Status_Resistant_C_ExecuteUbergraph_WDT_Status_Resistant Parms{};
 
-	Parms.InValue = InValue;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

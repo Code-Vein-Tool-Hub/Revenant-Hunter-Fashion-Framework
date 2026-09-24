@@ -19,12 +19,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GCN_StatusEffect_Looping_Base.GCN_StatusEffect_Looping_Base_C
-// 0x0010 (0x0F18 - 0x0F08)
+// 0x0010 (0x0F28 - 0x0F18)
 class AGCN_StatusEffect_Looping_Base_C : public AGCN_StatusEffect_Looping_Essential_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_GCN_StatusEffect_Looping_Base_C;    // 0x0F08(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	EEnemyAilmentEffectSizeType                   Effect_Size_Type;                                  // 0x0F10(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_GCN_StatusEffect_Looping_Base_C;    // 0x0F18(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	EEnemyAilmentEffectSizeType                   Effect_Size_Type;                                  // 0x0F20(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_GCN_StatusEffect_Looping_Base(int32 EntryPoint);
@@ -48,9 +48,9 @@ public:
 	}
 };
 static_assert(alignof(AGCN_StatusEffect_Looping_Base_C) == 0x000008, "Wrong alignment on AGCN_StatusEffect_Looping_Base_C");
-static_assert(sizeof(AGCN_StatusEffect_Looping_Base_C) == 0x000F18, "Wrong size on AGCN_StatusEffect_Looping_Base_C");
-static_assert(offsetof(AGCN_StatusEffect_Looping_Base_C, UberGraphFrame_GCN_StatusEffect_Looping_Base_C) == 0x000F08, "Member 'AGCN_StatusEffect_Looping_Base_C::UberGraphFrame_GCN_StatusEffect_Looping_Base_C' has a wrong offset!");
-static_assert(offsetof(AGCN_StatusEffect_Looping_Base_C, Effect_Size_Type) == 0x000F10, "Member 'AGCN_StatusEffect_Looping_Base_C::Effect_Size_Type' has a wrong offset!");
+static_assert(sizeof(AGCN_StatusEffect_Looping_Base_C) == 0x000F28, "Wrong size on AGCN_StatusEffect_Looping_Base_C");
+static_assert(offsetof(AGCN_StatusEffect_Looping_Base_C, UberGraphFrame_GCN_StatusEffect_Looping_Base_C) == 0x000F18, "Member 'AGCN_StatusEffect_Looping_Base_C::UberGraphFrame_GCN_StatusEffect_Looping_Base_C' has a wrong offset!");
+static_assert(offsetof(AGCN_StatusEffect_Looping_Base_C, Effect_Size_Type) == 0x000F20, "Member 'AGCN_StatusEffect_Looping_Base_C::Effect_Size_Type' has a wrong offset!");
 
 }
 

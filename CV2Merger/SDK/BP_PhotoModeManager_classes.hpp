@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_PhotoModeManager.BP_PhotoModeManager_C
-// 0x0000 (0x07C0 - 0x07C0)
+// 0x0000 (0x0A98 - 0x0A98)
 class UBP_PhotoModeManager_C final : public UPhotoModeManager
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UBP_PhotoModeManager_C) == 0x000008, "Wrong alignment on UBP_PhotoModeManager_C");
-static_assert(sizeof(UBP_PhotoModeManager_C) == 0x0007C0, "Wrong size on UBP_PhotoModeManager_C");
+static_assert(sizeof(UBP_PhotoModeManager_C) == 0x000A98, "Wrong size on UBP_PhotoModeManager_C");
 
 }
 

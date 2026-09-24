@@ -75,6 +75,16 @@ static_assert(alignof(FGameplayTag) == 0x000004, "Wrong alignment on FGameplayTa
 static_assert(sizeof(FGameplayTag) == 0x000008, "Wrong size on FGameplayTag");
 static_assert(offsetof(FGameplayTag, TagName) == 0x000000, "Member 'FGameplayTag::TagName' has a wrong offset!");
 
+// ScriptStruct GameplayTags.GameplayTagCreationWidgetHelper
+// 0x0001 (0x0001 - 0x0000)
+struct FGameplayTagCreationWidgetHelper final
+{
+public:
+	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FGameplayTagCreationWidgetHelper) == 0x000001, "Wrong alignment on FGameplayTagCreationWidgetHelper");
+static_assert(sizeof(FGameplayTagCreationWidgetHelper) == 0x000001, "Wrong size on FGameplayTagCreationWidgetHelper");
+
 // ScriptStruct GameplayTags.GameplayTagContainer
 // 0x0020 (0x0020 - 0x0000)
 struct FGameplayTagContainer final
@@ -87,6 +97,19 @@ static_assert(alignof(FGameplayTagContainer) == 0x000008, "Wrong alignment on FG
 static_assert(sizeof(FGameplayTagContainer) == 0x000020, "Wrong size on FGameplayTagContainer");
 static_assert(offsetof(FGameplayTagContainer, GameplayTags) == 0x000000, "Member 'FGameplayTagContainer::GameplayTags' has a wrong offset!");
 static_assert(offsetof(FGameplayTagContainer, ParentTags) == 0x000010, "Member 'FGameplayTagContainer::ParentTags' has a wrong offset!");
+
+// ScriptStruct GameplayTags.GameplayTagRedirect
+// 0x0010 (0x0010 - 0x0000)
+struct FGameplayTagRedirect final
+{
+public:
+	class FName                                   OldTagName;                                        // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   NewTagName;                                        // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FGameplayTagRedirect) == 0x000004, "Wrong alignment on FGameplayTagRedirect");
+static_assert(sizeof(FGameplayTagRedirect) == 0x000010, "Wrong size on FGameplayTagRedirect");
+static_assert(offsetof(FGameplayTagRedirect, OldTagName) == 0x000000, "Member 'FGameplayTagRedirect::OldTagName' has a wrong offset!");
+static_assert(offsetof(FGameplayTagRedirect, NewTagName) == 0x000008, "Member 'FGameplayTagRedirect::NewTagName' has a wrong offset!");
 
 // ScriptStruct GameplayTags.GameplayTagQuery
 // 0x0048 (0x0048 - 0x0000)
@@ -107,16 +130,6 @@ static_assert(offsetof(FGameplayTagQuery, TagDictionary) == 0x000008, "Member 'F
 static_assert(offsetof(FGameplayTagQuery, QueryTokenStream) == 0x000018, "Member 'FGameplayTagQuery::QueryTokenStream' has a wrong offset!");
 static_assert(offsetof(FGameplayTagQuery, UserDescription) == 0x000028, "Member 'FGameplayTagQuery::UserDescription' has a wrong offset!");
 static_assert(offsetof(FGameplayTagQuery, AutoDescription) == 0x000038, "Member 'FGameplayTagQuery::AutoDescription' has a wrong offset!");
-
-// ScriptStruct GameplayTags.GameplayTagCreationWidgetHelper
-// 0x0001 (0x0001 - 0x0000)
-struct FGameplayTagCreationWidgetHelper final
-{
-public:
-	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FGameplayTagCreationWidgetHelper) == 0x000001, "Wrong alignment on FGameplayTagCreationWidgetHelper");
-static_assert(sizeof(FGameplayTagCreationWidgetHelper) == 0x000001, "Wrong size on FGameplayTagCreationWidgetHelper");
 
 // ScriptStruct GameplayTags.GameplayTagContainerNetSerializerSerializationHelper
 // 0x0010 (0x0010 - 0x0000)
@@ -144,19 +157,6 @@ struct FGameplayTagNetSerializerConfig final : public FNetSerializerConfig
 };
 static_assert(alignof(FGameplayTagNetSerializerConfig) == 0x000008, "Wrong alignment on FGameplayTagNetSerializerConfig");
 static_assert(sizeof(FGameplayTagNetSerializerConfig) == 0x000010, "Wrong size on FGameplayTagNetSerializerConfig");
-
-// ScriptStruct GameplayTags.GameplayTagRedirect
-// 0x0010 (0x0010 - 0x0000)
-struct FGameplayTagRedirect final
-{
-public:
-	class FName                                   OldTagName;                                        // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   NewTagName;                                        // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FGameplayTagRedirect) == 0x000004, "Wrong alignment on FGameplayTagRedirect");
-static_assert(sizeof(FGameplayTagRedirect) == 0x000010, "Wrong size on FGameplayTagRedirect");
-static_assert(offsetof(FGameplayTagRedirect, OldTagName) == 0x000000, "Member 'FGameplayTagRedirect::OldTagName' has a wrong offset!");
-static_assert(offsetof(FGameplayTagRedirect, NewTagName) == 0x000008, "Member 'FGameplayTagRedirect::NewTagName' has a wrong offset!");
 
 // ScriptStruct GameplayTags.GameplayTagTableRow
 // 0x0018 (0x0020 - 0x0008)

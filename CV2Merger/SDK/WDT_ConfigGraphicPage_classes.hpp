@@ -10,18 +10,20 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
-#include "BasicUI_structs.hpp"
+#include "EN_ConfigDLSSGTextType_structs.hpp"
 #include "Extensions_structs.hpp"
 #include "WDT_ConfigStandardPageBase_classes.hpp"
+#include "CoreUObject_structs.hpp"
+#include "BasicUI_structs.hpp"
+#include "StreamlineBlueprint_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WDT_ConfigGraphicPage.WDT_ConfigGraphicPage_C
-// 0x01C0 (0x0798 - 0x05D8)
+// 0x02E0 (0x08B8 - 0x05D8)
 class UWDT_ConfigGraphicPage_C final : public UWDT_ConfigStandardPageBase_C
 {
 public:
@@ -29,40 +31,58 @@ public:
 	class UWDT_ConfigMenuTypeSelectPiece_C*       AntialiasingQuality;                               // 0x05E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWDT_ConfigMenuTypeSelectPiece_C*       AntialiasingType;                                  // 0x05E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 Back;                                              // 0x05F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_ConfigMenuTextPiece_C*             ConfigBrightness;                                  // 0x05F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_ConfigMenuTypeSelectPiece_C*       DepthOfFieldQuality;                               // 0x0600(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_ConfigMenuTypeSelectPiece_C*       DLSSMode;                                          // 0x0608(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_ConfigMenuTypeSelectPiece_C*       DrawDistance;                                      // 0x0610(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_ConfigMenuTypeSelectPiece_C*       EffectQuality;                                     // 0x0618(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           FieldMenuCanvas;                                   // 0x0620(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_FieldMenuCloser_C*                 FieldMenuCloser;                                   // 0x0628(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         HorizontalBox_193;                                 // 0x0630(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image;                                             // 0x0638(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_ConfigMenuTypeSelectPiece_C*       LumenSurfaceCache;                                 // 0x0640(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_ConfigMenuTypeSelectPiece_C*       MaterialQuality;                                   // 0x0648(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_ConfigMenuTypeSelectPiece_C*       MaxFrameRate;                                      // 0x0650(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_ConfigMenuTypeSelectPiece_C*       PostProcessQuality;                                // 0x0658(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_ConfigMenuTypeSelectPiece_C*       Resolution;                                        // 0x0660(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_ConfigMenuTypeSelectPiece_C*       ScreenMode;                                        // 0x0668(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_ConfigMenuMeterPiece_C*            ScreenPercentage;                                  // 0x0670(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_ConfigMenuTypeSelectPiece_C*       ShadowQuality;                                     // 0x0678(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_ConfigMenuTypeSelectPiece_C*       SkeletalMeshLODBias;                               // 0x0680(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_ConfigMenuTypeSelectPiece_C*       TextureQuality;                                    // 0x0688(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_ConfigMenuTypeSelectPiece_C*       VSync;                                             // 0x0690(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_ConfigHeader_C*                    WDT_ConfigHeader;                                  // 0x0698(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_ConfigLog_C*                       WDT_ConfigurationLog;                              // 0x06A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidgetSwitcher*                        WidgetSwitcher_74;                                 // 0x06A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TArray<struct FIntPoint>                      ScreenResolution;                                  // 0x06B0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class UBP_ConfigurationUIObject_C*            ConfigurationUIObject;                             // 0x06C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FDialogInfo                            GeneralYesNoDialogInfo;                            // 0x06C8(0x0058)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FMenuContext                           GeneralYesNoDialogContext;                         // 0x0720(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	class UDialogBase*                            DialogBase;                                        // 0x0758(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsPressStart;                                      // 0x0760(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_761[0x3];                                      // 0x0761(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FConfigurationGraphicData              OldGraphicStting;                                  // 0x0764(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	uint8                                         Pad_784[0x4];                                      // 0x0784(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        MinScreenPercentage_DLSS;                          // 0x0788(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FIntPoint                              CurrentScreenResolution;                           // 0x0790(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWDT_ConfigMenuTypeSelectPiece_C*       CharacterShaderType;                               // 0x05F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_ConfigMenuTextPiece_C*             ConfigBrightness;                                  // 0x0600(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_ConfigMenuTypeSelectPiece_C*       DepthOfFieldQuality;                               // 0x0608(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_ConfigMenuTypeSelectPiece_C*       DLSSGMode;                                         // 0x0610(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_ConfigMenuTypeSelectPiece_C*       DLSSMode;                                          // 0x0618(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_ConfigMenuTypeSelectPiece_C*       DrawDistance;                                      // 0x0620(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_ConfigMenuTypeSelectPiece_C*       EffectQuality;                                     // 0x0628(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           FieldMenuCanvas;                                   // 0x0630(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_FieldMenuCloser_C*                 FieldMenuCloser;                                   // 0x0638(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         HorizontalBox_193;                                 // 0x0640(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image;                                             // 0x0648(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_ConfigMenuTypeSelectPiece_C*       LumenSurfaceCache;                                 // 0x0650(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_ConfigMenuTypeSelectPiece_C*       MaterialQuality;                                   // 0x0658(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_ConfigMenuTypeSelectPiece_C*       MaxFrameRate;                                      // 0x0660(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UMenuPieceBase*                         NavigationDummyPiece;                              // 0x0668(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_ConfigMenuTypeSelectPiece_C*       PostProcessQuality;                                // 0x0670(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_ConfigMenuTypeSelectPiece_C*       ReflexMode;                                        // 0x0678(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_ConfigMenuTypeSelectPiece_C*       Resolution;                                        // 0x0680(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_ConfigMenuTypeSelectPiece_C*       ScreenMode;                                        // 0x0688(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_ConfigMenuMeterPiece_C*            ScreenPercentage;                                  // 0x0690(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_ConfigMenuTypeSelectPiece_C*       ShadowQuality;                                     // 0x0698(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_ConfigMenuTypeSelectPiece_C*       SkeletalMeshLODBias;                               // 0x06A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_ConfigMenuTypeSelectPiece_C*       TextureQuality;                                    // 0x06A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_ConfigMenuTypeSelectPiece_C*       VSync;                                             // 0x06B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_ConfigHeader_C*                    WDT_ConfigHeader;                                  // 0x06B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_ConfigLog_C*                       WDT_ConfigurationLog;                              // 0x06C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetSwitcher*                        WidgetSwitcher_74;                                 // 0x06C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TArray<struct FIntPoint>                      ScreenResolution;                                  // 0x06D0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class UBP_ConfigurationUIObject_C*            ConfigurationUIObject;                             // 0x06E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FDialogInfo                            GeneralYesNoDialogInfo;                            // 0x06E8(0x0058)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FMenuContext                           GeneralYesNoDialogContext;                         // 0x0740(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	class UDialogBase*                            DialogBase;                                        // 0x0778(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsPressStart;                                      // 0x0780(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_781[0x3];                                      // 0x0781(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FConfigurationGraphicData              OldGraphicStting;                                  // 0x0784(0x0024)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	double                                        MinScreenPercentage_DLSS;                          // 0x07A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FIntPoint                              CurrentScreenResolution;                           // 0x07B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<EGraphicsDLSSGMode>                    SupportedDLSSGModes;                               // 0x07B8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<class FText>                           DLSSGModeTexts_RTX50;                              // 0x07C8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TMap<EN_ConfigDLSSGTextType, class FText>     DLSSGHelpTextMap;                                  // 0x07D8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<class FText>                           DLSSGModeText_RTX40;                               // 0x0828(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class FText                                   DLSSGHelpText_Disable;                             // 0x0838(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<EGraphicsReflexMode>                   SupportedReflexMode;                               // 0x0848(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<EGraphicsReflexMode>                   SupportedReflexMode_EnableOnly;                    // 0x0858(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<class FText>                           RefrexModeText_ALL;                                // 0x0868(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<class FText>                           RefrexModeText_EnableOnly;                         // 0x0878(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	EN_ConfigDLSSGTextType                        DLSSGTextType;                                     // 0x0888(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_889[0x7];                                      // 0x0889(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<EGraphicsDLSSGMode>                    ConvArray_DLSSGMode;                               // 0x0890(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          bIsReflexSupported;                                // 0x08A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8A1[0x7];                                      // 0x08A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FText>                           DLSSGModeText_OffOnly;                             // 0x08A8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void BndEvt__WDT_ConfigCameraPage_WDT_ConfigHeader_K2Node_ComponentBoundEvent_0_OnTabItemClickedEvent__DelegateSignature(int32 TabIndex);
@@ -71,7 +91,11 @@ public:
 	void BP_OnActivated();
 	void BP_OnDeactivated();
 	void ExecuteUbergraph_WDT_ConfigGraphicPage(int32 EntryPoint);
+	void GetCurrentUIDLSSGMode(EGraphicsDLSSGMode* OutMode);
+	void GetCurrentUIReflexMode(EGraphicsReflexMode* OutMode);
 	void GetUIPiceGraphicSettingParam(struct FConfigurationGraphicData* OutGraphicData);
+	void InitializeDLSSGModePieceParameter(EGraphicsDLSSGMode InInitializeValue, EGraphicsDLSSGMode InDefaultValue);
+	void InitializeRefrexPeceParameter(EGraphicsReflexMode InInitializeValue, EGraphicsReflexMode InDefaultValue);
 	void InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_12(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
 	void InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_13(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
 	void InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_6(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
@@ -104,6 +128,7 @@ public:
 	void OnOpening();
 	void OnUpdateAntialiasingType();
 	void OnUpdateDisplay();
+	void OnUpdateDLSSG();
 	void OnUpdateScreenMode();
 	void OnUpdateScreenPercentage();
 	void OnUpdateScreenResolution();
@@ -112,8 +137,12 @@ public:
 	void SaveConfigValue();
 	void Setup_Config_Piece_Value();
 	void SetupConfigPieceList();
+	void SetupDLSSGMode();
+	void SetupReflexMode();
 	void SetupScreenResolution();
 	void UpdateAntialiasingTypeGrayOut();
+	void UpdateDLSSGMode();
+	void UpdateReflexMode();
 	void UpdateScreenPercentageVisibility();
 	void UpdateScreenSresolutionEditable();
 
@@ -128,43 +157,60 @@ public:
 	}
 };
 static_assert(alignof(UWDT_ConfigGraphicPage_C) == 0x000008, "Wrong alignment on UWDT_ConfigGraphicPage_C");
-static_assert(sizeof(UWDT_ConfigGraphicPage_C) == 0x000798, "Wrong size on UWDT_ConfigGraphicPage_C");
+static_assert(sizeof(UWDT_ConfigGraphicPage_C) == 0x0008B8, "Wrong size on UWDT_ConfigGraphicPage_C");
 static_assert(offsetof(UWDT_ConfigGraphicPage_C, UberGraphFrame) == 0x0005D8, "Member 'UWDT_ConfigGraphicPage_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UWDT_ConfigGraphicPage_C, AntialiasingQuality) == 0x0005E0, "Member 'UWDT_ConfigGraphicPage_C::AntialiasingQuality' has a wrong offset!");
 static_assert(offsetof(UWDT_ConfigGraphicPage_C, AntialiasingType) == 0x0005E8, "Member 'UWDT_ConfigGraphicPage_C::AntialiasingType' has a wrong offset!");
 static_assert(offsetof(UWDT_ConfigGraphicPage_C, Back) == 0x0005F0, "Member 'UWDT_ConfigGraphicPage_C::Back' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGraphicPage_C, ConfigBrightness) == 0x0005F8, "Member 'UWDT_ConfigGraphicPage_C::ConfigBrightness' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGraphicPage_C, DepthOfFieldQuality) == 0x000600, "Member 'UWDT_ConfigGraphicPage_C::DepthOfFieldQuality' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGraphicPage_C, DLSSMode) == 0x000608, "Member 'UWDT_ConfigGraphicPage_C::DLSSMode' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGraphicPage_C, DrawDistance) == 0x000610, "Member 'UWDT_ConfigGraphicPage_C::DrawDistance' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGraphicPage_C, EffectQuality) == 0x000618, "Member 'UWDT_ConfigGraphicPage_C::EffectQuality' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGraphicPage_C, FieldMenuCanvas) == 0x000620, "Member 'UWDT_ConfigGraphicPage_C::FieldMenuCanvas' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGraphicPage_C, FieldMenuCloser) == 0x000628, "Member 'UWDT_ConfigGraphicPage_C::FieldMenuCloser' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGraphicPage_C, HorizontalBox_193) == 0x000630, "Member 'UWDT_ConfigGraphicPage_C::HorizontalBox_193' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGraphicPage_C, Image) == 0x000638, "Member 'UWDT_ConfigGraphicPage_C::Image' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGraphicPage_C, LumenSurfaceCache) == 0x000640, "Member 'UWDT_ConfigGraphicPage_C::LumenSurfaceCache' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGraphicPage_C, MaterialQuality) == 0x000648, "Member 'UWDT_ConfigGraphicPage_C::MaterialQuality' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGraphicPage_C, MaxFrameRate) == 0x000650, "Member 'UWDT_ConfigGraphicPage_C::MaxFrameRate' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGraphicPage_C, PostProcessQuality) == 0x000658, "Member 'UWDT_ConfigGraphicPage_C::PostProcessQuality' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGraphicPage_C, Resolution) == 0x000660, "Member 'UWDT_ConfigGraphicPage_C::Resolution' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGraphicPage_C, ScreenMode) == 0x000668, "Member 'UWDT_ConfigGraphicPage_C::ScreenMode' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGraphicPage_C, ScreenPercentage) == 0x000670, "Member 'UWDT_ConfigGraphicPage_C::ScreenPercentage' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGraphicPage_C, ShadowQuality) == 0x000678, "Member 'UWDT_ConfigGraphicPage_C::ShadowQuality' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGraphicPage_C, SkeletalMeshLODBias) == 0x000680, "Member 'UWDT_ConfigGraphicPage_C::SkeletalMeshLODBias' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGraphicPage_C, TextureQuality) == 0x000688, "Member 'UWDT_ConfigGraphicPage_C::TextureQuality' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGraphicPage_C, VSync) == 0x000690, "Member 'UWDT_ConfigGraphicPage_C::VSync' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGraphicPage_C, WDT_ConfigHeader) == 0x000698, "Member 'UWDT_ConfigGraphicPage_C::WDT_ConfigHeader' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGraphicPage_C, WDT_ConfigurationLog) == 0x0006A0, "Member 'UWDT_ConfigGraphicPage_C::WDT_ConfigurationLog' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGraphicPage_C, WidgetSwitcher_74) == 0x0006A8, "Member 'UWDT_ConfigGraphicPage_C::WidgetSwitcher_74' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGraphicPage_C, ScreenResolution) == 0x0006B0, "Member 'UWDT_ConfigGraphicPage_C::ScreenResolution' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGraphicPage_C, ConfigurationUIObject) == 0x0006C0, "Member 'UWDT_ConfigGraphicPage_C::ConfigurationUIObject' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGraphicPage_C, GeneralYesNoDialogInfo) == 0x0006C8, "Member 'UWDT_ConfigGraphicPage_C::GeneralYesNoDialogInfo' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGraphicPage_C, GeneralYesNoDialogContext) == 0x000720, "Member 'UWDT_ConfigGraphicPage_C::GeneralYesNoDialogContext' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGraphicPage_C, DialogBase) == 0x000758, "Member 'UWDT_ConfigGraphicPage_C::DialogBase' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGraphicPage_C, IsPressStart) == 0x000760, "Member 'UWDT_ConfigGraphicPage_C::IsPressStart' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGraphicPage_C, OldGraphicStting) == 0x000764, "Member 'UWDT_ConfigGraphicPage_C::OldGraphicStting' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGraphicPage_C, MinScreenPercentage_DLSS) == 0x000788, "Member 'UWDT_ConfigGraphicPage_C::MinScreenPercentage_DLSS' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGraphicPage_C, CurrentScreenResolution) == 0x000790, "Member 'UWDT_ConfigGraphicPage_C::CurrentScreenResolution' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_C, CharacterShaderType) == 0x0005F8, "Member 'UWDT_ConfigGraphicPage_C::CharacterShaderType' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_C, ConfigBrightness) == 0x000600, "Member 'UWDT_ConfigGraphicPage_C::ConfigBrightness' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_C, DepthOfFieldQuality) == 0x000608, "Member 'UWDT_ConfigGraphicPage_C::DepthOfFieldQuality' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_C, DLSSGMode) == 0x000610, "Member 'UWDT_ConfigGraphicPage_C::DLSSGMode' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_C, DLSSMode) == 0x000618, "Member 'UWDT_ConfigGraphicPage_C::DLSSMode' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_C, DrawDistance) == 0x000620, "Member 'UWDT_ConfigGraphicPage_C::DrawDistance' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_C, EffectQuality) == 0x000628, "Member 'UWDT_ConfigGraphicPage_C::EffectQuality' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_C, FieldMenuCanvas) == 0x000630, "Member 'UWDT_ConfigGraphicPage_C::FieldMenuCanvas' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_C, FieldMenuCloser) == 0x000638, "Member 'UWDT_ConfigGraphicPage_C::FieldMenuCloser' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_C, HorizontalBox_193) == 0x000640, "Member 'UWDT_ConfigGraphicPage_C::HorizontalBox_193' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_C, Image) == 0x000648, "Member 'UWDT_ConfigGraphicPage_C::Image' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_C, LumenSurfaceCache) == 0x000650, "Member 'UWDT_ConfigGraphicPage_C::LumenSurfaceCache' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_C, MaterialQuality) == 0x000658, "Member 'UWDT_ConfigGraphicPage_C::MaterialQuality' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_C, MaxFrameRate) == 0x000660, "Member 'UWDT_ConfigGraphicPage_C::MaxFrameRate' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_C, NavigationDummyPiece) == 0x000668, "Member 'UWDT_ConfigGraphicPage_C::NavigationDummyPiece' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_C, PostProcessQuality) == 0x000670, "Member 'UWDT_ConfigGraphicPage_C::PostProcessQuality' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_C, ReflexMode) == 0x000678, "Member 'UWDT_ConfigGraphicPage_C::ReflexMode' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_C, Resolution) == 0x000680, "Member 'UWDT_ConfigGraphicPage_C::Resolution' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_C, ScreenMode) == 0x000688, "Member 'UWDT_ConfigGraphicPage_C::ScreenMode' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_C, ScreenPercentage) == 0x000690, "Member 'UWDT_ConfigGraphicPage_C::ScreenPercentage' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_C, ShadowQuality) == 0x000698, "Member 'UWDT_ConfigGraphicPage_C::ShadowQuality' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_C, SkeletalMeshLODBias) == 0x0006A0, "Member 'UWDT_ConfigGraphicPage_C::SkeletalMeshLODBias' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_C, TextureQuality) == 0x0006A8, "Member 'UWDT_ConfigGraphicPage_C::TextureQuality' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_C, VSync) == 0x0006B0, "Member 'UWDT_ConfigGraphicPage_C::VSync' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_C, WDT_ConfigHeader) == 0x0006B8, "Member 'UWDT_ConfigGraphicPage_C::WDT_ConfigHeader' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_C, WDT_ConfigurationLog) == 0x0006C0, "Member 'UWDT_ConfigGraphicPage_C::WDT_ConfigurationLog' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_C, WidgetSwitcher_74) == 0x0006C8, "Member 'UWDT_ConfigGraphicPage_C::WidgetSwitcher_74' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_C, ScreenResolution) == 0x0006D0, "Member 'UWDT_ConfigGraphicPage_C::ScreenResolution' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_C, ConfigurationUIObject) == 0x0006E0, "Member 'UWDT_ConfigGraphicPage_C::ConfigurationUIObject' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_C, GeneralYesNoDialogInfo) == 0x0006E8, "Member 'UWDT_ConfigGraphicPage_C::GeneralYesNoDialogInfo' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_C, GeneralYesNoDialogContext) == 0x000740, "Member 'UWDT_ConfigGraphicPage_C::GeneralYesNoDialogContext' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_C, DialogBase) == 0x000778, "Member 'UWDT_ConfigGraphicPage_C::DialogBase' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_C, IsPressStart) == 0x000780, "Member 'UWDT_ConfigGraphicPage_C::IsPressStart' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_C, OldGraphicStting) == 0x000784, "Member 'UWDT_ConfigGraphicPage_C::OldGraphicStting' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_C, MinScreenPercentage_DLSS) == 0x0007A8, "Member 'UWDT_ConfigGraphicPage_C::MinScreenPercentage_DLSS' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_C, CurrentScreenResolution) == 0x0007B0, "Member 'UWDT_ConfigGraphicPage_C::CurrentScreenResolution' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_C, SupportedDLSSGModes) == 0x0007B8, "Member 'UWDT_ConfigGraphicPage_C::SupportedDLSSGModes' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_C, DLSSGModeTexts_RTX50) == 0x0007C8, "Member 'UWDT_ConfigGraphicPage_C::DLSSGModeTexts_RTX50' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_C, DLSSGHelpTextMap) == 0x0007D8, "Member 'UWDT_ConfigGraphicPage_C::DLSSGHelpTextMap' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_C, DLSSGModeText_RTX40) == 0x000828, "Member 'UWDT_ConfigGraphicPage_C::DLSSGModeText_RTX40' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_C, DLSSGHelpText_Disable) == 0x000838, "Member 'UWDT_ConfigGraphicPage_C::DLSSGHelpText_Disable' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_C, SupportedReflexMode) == 0x000848, "Member 'UWDT_ConfigGraphicPage_C::SupportedReflexMode' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_C, SupportedReflexMode_EnableOnly) == 0x000858, "Member 'UWDT_ConfigGraphicPage_C::SupportedReflexMode_EnableOnly' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_C, RefrexModeText_ALL) == 0x000868, "Member 'UWDT_ConfigGraphicPage_C::RefrexModeText_ALL' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_C, RefrexModeText_EnableOnly) == 0x000878, "Member 'UWDT_ConfigGraphicPage_C::RefrexModeText_EnableOnly' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_C, DLSSGTextType) == 0x000888, "Member 'UWDT_ConfigGraphicPage_C::DLSSGTextType' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_C, ConvArray_DLSSGMode) == 0x000890, "Member 'UWDT_ConfigGraphicPage_C::ConvArray_DLSSGMode' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_C, bIsReflexSupported) == 0x0008A0, "Member 'UWDT_ConfigGraphicPage_C::bIsReflexSupported' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_C, DLSSGModeText_OffOnly) == 0x0008A8, "Member 'UWDT_ConfigGraphicPage_C::DLSSGModeText_OffOnly' has a wrong offset!");
 
 }
 

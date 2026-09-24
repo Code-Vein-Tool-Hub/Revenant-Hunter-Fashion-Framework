@@ -489,6 +489,64 @@ TArray<struct FStoryFlagLabel> UStoryFlagFunctionLibrary::GetStoryFlagLabelsByCa
 }
 
 
+// Function StoryFlagSystem.StoryFlagFunctionLibrary.GetStoryFlagPresetAllCategory
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          InWorldContext                                         (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<class FName>                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<class FName> UStoryFlagFunctionLibrary::GetStoryFlagPresetAllCategory(const class UObject* InWorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("StoryFlagFunctionLibrary", "GetStoryFlagPresetAllCategory");
+
+	Params::StoryFlagFunctionLibrary_GetStoryFlagPresetAllCategory Parms{};
+
+	Parms.InWorldContext = InWorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function StoryFlagSystem.StoryFlagFunctionLibrary.GetStoryFlagPresetLabelsByCategory
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          InWorldContext                                         (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             Category                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FStoryFlagPresetLabel>    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<struct FStoryFlagPresetLabel> UStoryFlagFunctionLibrary::GetStoryFlagPresetLabelsByCategory(const class UObject* InWorldContext, class FName Category)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("StoryFlagFunctionLibrary", "GetStoryFlagPresetLabelsByCategory");
+
+	Params::StoryFlagFunctionLibrary_GetStoryFlagPresetLabelsByCategory Parms{};
+
+	Parms.InWorldContext = InWorldContext;
+	Parms.Category = Category;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function StoryFlagSystem.StoryFlagFunctionLibrary.GetStoryFlagString
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:

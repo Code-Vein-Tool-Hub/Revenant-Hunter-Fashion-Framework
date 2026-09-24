@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "BasicUI_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "BasicUI_structs.hpp"
 #include "Extensions_classes.hpp"
 
 
@@ -20,35 +20,39 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_CampMenuUIObject.BP_CampMenuUIObject_C
-// 0x01C8 (0x0658 - 0x0490)
+// 0x0238 (0x0758 - 0x0520)
 class UBP_CampMenuUIObject_C final : public UCampMenuUIObject
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0490(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FMenuContext                           LevelUpMenuContext;                                // 0x0498(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	struct FMenuContext                           RestMenuContext;                                   // 0x04D0(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	bool                                          TalkingToLouFlag;                                  // 0x0508(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_509[0x7];                                      // 0x0509(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                PlayerLocation;                                    // 0x0510(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               PlayerRotation;                                    // 0x0528(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	struct FMenuContext                           ResilienceUpMenuContext;                           // 0x0540(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	struct FMenuContext                           StorageMenuContext;                                // 0x0578(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	struct FMenuContext                           WeaponGadgetChangeMenuContext;                     // 0x05B0(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	struct FMenuContext                           GadgetDuplicationMenu;                             // 0x05E8(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	struct FMenuContext                           ChangeBuddyMenu;                                   // 0x0620(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0520(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FMenuContext                           LevelUpMenuContext;                                // 0x0528(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	struct FMenuContext                           RestMenuContext;                                   // 0x0560(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	bool                                          TalkingToLouFlag;                                  // 0x0598(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_599[0x7];                                      // 0x0599(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                PlayerLocation;                                    // 0x05A0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               PlayerRotation;                                    // 0x05B8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FMenuContext                           ResilienceUpMenuContext;                           // 0x05D0(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	struct FMenuContext                           StorageMenuContext;                                // 0x0608(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	struct FMenuContext                           WeaponGadgetChangeMenuContext;                     // 0x0640(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	struct FMenuContext                           GadgetDuplicationMenu;                             // 0x0678(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	struct FMenuContext                           ChangeBuddyMenu;                                   // 0x06B0(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	struct FMenuContext                           PresetMenuContext;                                 // 0x06E8(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	struct FMenuContext                           PresetSelectMenuContext;                           // 0x0720(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
 
 public:
 	void ExecuteUbergraph_BP_CampMenuUIObject(int32 EntryPoint);
 	void GetChangeBuddyMenu(class UWDT_BuddyChangeMenu_C** AsWDT_Buddy_Change_Menu);
 	void GetRestMenu(class UWDT_RestMenu_C** OutRestMenu);
 	void IsTalkingToLou(bool* OutResult);
-	void NotifyBuddyChanged(const int32 InListIndex);
+	void NotifyBuddyChanged(const struct FUIBuddySelectInfo& InSelectInfo);
 	void NotifyCampRestEnded();
 	void OnChangeBuddyMenuClosed();
 	void OnFinishTalkToLouCinematicBP();
 	void OnGadgetDuplicationMenuClosed();
 	void OnLevelUpMenuClosed();
 	void OnMapMenuClosed();
+	void OnPresetMenuClosed();
+	void OnPresetSelectMenuClosed();
 	void OnResilienceUpMenuClosed();
 	void OnRestMenuClosed();
 	void OnStartTalkToLouCinematicBP();
@@ -59,6 +63,8 @@ public:
 	void OpenGadgetDuplicationMenu();
 	void OpenLevelUpMenu();
 	void OpenMapMenu();
+	void OpenPresetMenu();
+	void OpenPresetSelectMenu();
 	void OpenResilienceUpMenu();
 	void OpenRestMenu();
 	void OpenStorageMenu();
@@ -76,18 +82,20 @@ public:
 	}
 };
 static_assert(alignof(UBP_CampMenuUIObject_C) == 0x000008, "Wrong alignment on UBP_CampMenuUIObject_C");
-static_assert(sizeof(UBP_CampMenuUIObject_C) == 0x000658, "Wrong size on UBP_CampMenuUIObject_C");
-static_assert(offsetof(UBP_CampMenuUIObject_C, UberGraphFrame) == 0x000490, "Member 'UBP_CampMenuUIObject_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_CampMenuUIObject_C, LevelUpMenuContext) == 0x000498, "Member 'UBP_CampMenuUIObject_C::LevelUpMenuContext' has a wrong offset!");
-static_assert(offsetof(UBP_CampMenuUIObject_C, RestMenuContext) == 0x0004D0, "Member 'UBP_CampMenuUIObject_C::RestMenuContext' has a wrong offset!");
-static_assert(offsetof(UBP_CampMenuUIObject_C, TalkingToLouFlag) == 0x000508, "Member 'UBP_CampMenuUIObject_C::TalkingToLouFlag' has a wrong offset!");
-static_assert(offsetof(UBP_CampMenuUIObject_C, PlayerLocation) == 0x000510, "Member 'UBP_CampMenuUIObject_C::PlayerLocation' has a wrong offset!");
-static_assert(offsetof(UBP_CampMenuUIObject_C, PlayerRotation) == 0x000528, "Member 'UBP_CampMenuUIObject_C::PlayerRotation' has a wrong offset!");
-static_assert(offsetof(UBP_CampMenuUIObject_C, ResilienceUpMenuContext) == 0x000540, "Member 'UBP_CampMenuUIObject_C::ResilienceUpMenuContext' has a wrong offset!");
-static_assert(offsetof(UBP_CampMenuUIObject_C, StorageMenuContext) == 0x000578, "Member 'UBP_CampMenuUIObject_C::StorageMenuContext' has a wrong offset!");
-static_assert(offsetof(UBP_CampMenuUIObject_C, WeaponGadgetChangeMenuContext) == 0x0005B0, "Member 'UBP_CampMenuUIObject_C::WeaponGadgetChangeMenuContext' has a wrong offset!");
-static_assert(offsetof(UBP_CampMenuUIObject_C, GadgetDuplicationMenu) == 0x0005E8, "Member 'UBP_CampMenuUIObject_C::GadgetDuplicationMenu' has a wrong offset!");
-static_assert(offsetof(UBP_CampMenuUIObject_C, ChangeBuddyMenu) == 0x000620, "Member 'UBP_CampMenuUIObject_C::ChangeBuddyMenu' has a wrong offset!");
+static_assert(sizeof(UBP_CampMenuUIObject_C) == 0x000758, "Wrong size on UBP_CampMenuUIObject_C");
+static_assert(offsetof(UBP_CampMenuUIObject_C, UberGraphFrame) == 0x000520, "Member 'UBP_CampMenuUIObject_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UBP_CampMenuUIObject_C, LevelUpMenuContext) == 0x000528, "Member 'UBP_CampMenuUIObject_C::LevelUpMenuContext' has a wrong offset!");
+static_assert(offsetof(UBP_CampMenuUIObject_C, RestMenuContext) == 0x000560, "Member 'UBP_CampMenuUIObject_C::RestMenuContext' has a wrong offset!");
+static_assert(offsetof(UBP_CampMenuUIObject_C, TalkingToLouFlag) == 0x000598, "Member 'UBP_CampMenuUIObject_C::TalkingToLouFlag' has a wrong offset!");
+static_assert(offsetof(UBP_CampMenuUIObject_C, PlayerLocation) == 0x0005A0, "Member 'UBP_CampMenuUIObject_C::PlayerLocation' has a wrong offset!");
+static_assert(offsetof(UBP_CampMenuUIObject_C, PlayerRotation) == 0x0005B8, "Member 'UBP_CampMenuUIObject_C::PlayerRotation' has a wrong offset!");
+static_assert(offsetof(UBP_CampMenuUIObject_C, ResilienceUpMenuContext) == 0x0005D0, "Member 'UBP_CampMenuUIObject_C::ResilienceUpMenuContext' has a wrong offset!");
+static_assert(offsetof(UBP_CampMenuUIObject_C, StorageMenuContext) == 0x000608, "Member 'UBP_CampMenuUIObject_C::StorageMenuContext' has a wrong offset!");
+static_assert(offsetof(UBP_CampMenuUIObject_C, WeaponGadgetChangeMenuContext) == 0x000640, "Member 'UBP_CampMenuUIObject_C::WeaponGadgetChangeMenuContext' has a wrong offset!");
+static_assert(offsetof(UBP_CampMenuUIObject_C, GadgetDuplicationMenu) == 0x000678, "Member 'UBP_CampMenuUIObject_C::GadgetDuplicationMenu' has a wrong offset!");
+static_assert(offsetof(UBP_CampMenuUIObject_C, ChangeBuddyMenu) == 0x0006B0, "Member 'UBP_CampMenuUIObject_C::ChangeBuddyMenu' has a wrong offset!");
+static_assert(offsetof(UBP_CampMenuUIObject_C, PresetMenuContext) == 0x0006E8, "Member 'UBP_CampMenuUIObject_C::PresetMenuContext' has a wrong offset!");
+static_assert(offsetof(UBP_CampMenuUIObject_C, PresetSelectMenuContext) == 0x000720, "Member 'UBP_CampMenuUIObject_C::PresetSelectMenuContext' has a wrong offset!");
 
 }
 

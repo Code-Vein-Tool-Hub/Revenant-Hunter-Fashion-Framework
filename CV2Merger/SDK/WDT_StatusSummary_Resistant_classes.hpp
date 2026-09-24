@@ -29,10 +29,10 @@ public:
 	class UTexture2D*                             IconTexture;                                       // 0x06E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_WDT_StatusSummary_Resistant(int32 EntryPoint);
-	void PreConstruct(bool IsDesignTime);
-	void SetValue(int32 InValue);
 	void SetValueComparison(int32 InCurrentValue, int32 InTargetValue);
+	void SetValue(int32 InValue);
+	void PreConstruct(bool IsDesignTime);
+	void ExecuteUbergraph_WDT_StatusSummary_Resistant(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

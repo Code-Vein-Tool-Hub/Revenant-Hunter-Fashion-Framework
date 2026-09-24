@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "WDT_FieldMenuTilePieceBase_classes.hpp"
 #include "Engine_structs.hpp"
+#include "WDT_FieldMenuTilePieceBase_classes.hpp"
 
 
 namespace SDK
@@ -33,28 +33,28 @@ public:
 	class UImage*                                 VFX_CursorSelectMove;                              // 0x0610(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void WidgetAnimationEvt_SelectMoveAnimation_K2Node_WidgetAnimationEvent_0();
-	bool Unhighlight(bool PlayAnimation_0);
-	bool SetTexture(class UTexture2D* Texture);
-	bool SetSubTexture(class FName ImageId, class UTexture2D* Texture);
-	bool SetSubLazyTexture(class FName ImageId, const TSoftObjectPtr<class UTexture2D>& LazyTexture);
-	bool SetLazyTexture(const TSoftObjectPtr<class UTexture2D>& LazyTexture);
-	bool Select(bool PlayAnimation_0);
-	bool Reset();
-	void PlayDecideAnimation();
-	void OnListItemObjectSet(class UObject* ListItemObject);
-	bool Highlight(bool PlayAnimation_0);
-	bool FlipTexture(bool IsInverse);
-	void ExecuteUbergraph_WDT_FieldMenuTileBC(int32 EntryPoint);
-	bool Enable();
-	bool Disable();
-	bool Deselect(bool PlayAnimation_0);
-	bool ClearTexture();
-	bool ClearSubTexture(class FName ImageId);
-	void BP_OnItemSelectionChanged(bool bIsSelected);
-	void BP_OnItemExpansionChanged(bool bIsExpanded);
-	void BP_OnEntryReleased();
 	bool Blink();
+	void BP_OnEntryReleased();
+	void BP_OnItemExpansionChanged(bool bIsExpanded);
+	void BP_OnItemSelectionChanged(bool bIsSelected);
+	bool ClearSubTexture(class FName ImageId);
+	bool ClearTexture();
+	bool Deselect(bool PlayAnimation_0);
+	bool Disable();
+	bool Enable();
+	void ExecuteUbergraph_WDT_FieldMenuTileBC(int32 EntryPoint);
+	bool FlipTexture(bool IsInverse);
+	bool Highlight(bool PlayAnimation_0);
+	void OnListItemObjectSet(class UObject* ListItemObject);
+	void PlayDecideAnimation();
+	bool Reset();
+	bool Select(bool PlayAnimation_0);
+	bool SetLazyTexture(const TSoftObjectPtr<class UTexture2D>& LazyTexture);
+	bool SetSubLazyTexture(class FName ImageId, const TSoftObjectPtr<class UTexture2D>& LazyTexture);
+	bool SetSubTexture(class FName ImageId, class UTexture2D* Texture);
+	bool SetTexture(class UTexture2D* Texture);
+	bool Unhighlight(bool PlayAnimation_0);
+	void WidgetAnimationEvt_SelectMoveAnimation_K2Node_WidgetAnimationEvent_0();
 
 public:
 	static class UClass* StaticClass()

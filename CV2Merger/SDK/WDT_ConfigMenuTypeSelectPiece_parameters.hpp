@@ -105,6 +105,21 @@ static_assert(sizeof(WDT_ConfigMenuTypeSelectPiece_C_SetDisableColor) == 0x00001
 static_assert(offsetof(WDT_ConfigMenuTypeSelectPiece_C_SetDisableColor, OutFlag) == 0x000000, "Member 'WDT_ConfigMenuTypeSelectPiece_C_SetDisableColor::OutFlag' has a wrong offset!");
 static_assert(offsetof(WDT_ConfigMenuTypeSelectPiece_C_SetDisableColor, K2Node_MakeStruct_SlateColor) == 0x000004, "Member 'WDT_ConfigMenuTypeSelectPiece_C_SetDisableColor::K2Node_MakeStruct_SlateColor' has a wrong offset!");
 
+// Function WDT_ConfigMenuTypeSelectPiece.WDT_ConfigMenuTypeSelectPiece_C.SetDefaultSelectIndex_NoNotify
+// 0x000C (0x000C - 0x0000)
+struct WDT_ConfigMenuTypeSelectPiece_C_SetDefaultSelectIndex_NoNotify final
+{
+public:
+	int32                                         InInitializeIndex;                                 // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         InDefaultIndex;                                    // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetIsEditable_OutFlag;                    // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_ConfigMenuTypeSelectPiece_C_SetDefaultSelectIndex_NoNotify) == 0x000004, "Wrong alignment on WDT_ConfigMenuTypeSelectPiece_C_SetDefaultSelectIndex_NoNotify");
+static_assert(sizeof(WDT_ConfigMenuTypeSelectPiece_C_SetDefaultSelectIndex_NoNotify) == 0x00000C, "Wrong size on WDT_ConfigMenuTypeSelectPiece_C_SetDefaultSelectIndex_NoNotify");
+static_assert(offsetof(WDT_ConfigMenuTypeSelectPiece_C_SetDefaultSelectIndex_NoNotify, InInitializeIndex) == 0x000000, "Member 'WDT_ConfigMenuTypeSelectPiece_C_SetDefaultSelectIndex_NoNotify::InInitializeIndex' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigMenuTypeSelectPiece_C_SetDefaultSelectIndex_NoNotify, InDefaultIndex) == 0x000004, "Member 'WDT_ConfigMenuTypeSelectPiece_C_SetDefaultSelectIndex_NoNotify::InDefaultIndex' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigMenuTypeSelectPiece_C_SetDefaultSelectIndex_NoNotify, CallFunc_GetIsEditable_OutFlag) == 0x000008, "Member 'WDT_ConfigMenuTypeSelectPiece_C_SetDefaultSelectIndex_NoNotify::CallFunc_GetIsEditable_OutFlag' has a wrong offset!");
+
 // Function WDT_ConfigMenuTypeSelectPiece.WDT_ConfigMenuTypeSelectPiece_C.SetDefaultSelectIndex
 // 0x000C (0x000C - 0x0000)
 struct WDT_ConfigMenuTypeSelectPiece_C_SetDefaultSelectIndex final

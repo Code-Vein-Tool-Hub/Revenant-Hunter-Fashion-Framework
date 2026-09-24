@@ -17,35 +17,21 @@
 namespace SDK
 {
 
-// Function WDT_ParameterHelp.WDT_ParameterHelp_C.RefreshKeyImage
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWDT_ParameterHelp_C::RefreshKeyImage()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_ParameterHelp_C", "RefreshKeyImage");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WDT_ParameterHelp.WDT_ParameterHelp_C.SetBuddyInfo
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function WDT_ParameterHelp.WDT_ParameterHelp_C.SetWeaponGadgetInfo
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FUIBuddyInfo                     InBuddyInfo                                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FUIWeaponGadgetInfo              InGadgetInfo                                           (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWDT_ParameterHelp_C::SetBuddyInfo(const struct FUIBuddyInfo& InBuddyInfo)
+void UWDT_ParameterHelp_C::SetWeaponGadgetInfo(const struct FUIWeaponGadgetInfo& InGadgetInfo)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_ParameterHelp_C", "SetBuddyInfo");
+		Func = Class->GetFunction("WDT_ParameterHelp_C", "SetWeaponGadgetInfo");
 
-	Params::WDT_ParameterHelp_C_SetBuddyInfo Parms{};
+	Params::WDT_ParameterHelp_C_SetWeaponGadgetInfo Parms{};
 
-	Parms.InBuddyInfo = std::move(InBuddyInfo);
+	Parms.InGadgetInfo = std::move(InGadgetInfo);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -73,23 +59,37 @@ void UWDT_ParameterHelp_C::SetHelpText(const class FText& InHelpTItleText, const
 }
 
 
-// Function WDT_ParameterHelp.WDT_ParameterHelp_C.SetWeaponGadgetInfo
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function WDT_ParameterHelp.WDT_ParameterHelp_C.SetBuddyInfo
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FUIWeaponGadgetInfo              InGadgetInfo                                           (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FUIBuddyInfo                     InBuddyInfo                                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWDT_ParameterHelp_C::SetWeaponGadgetInfo(const struct FUIWeaponGadgetInfo& InGadgetInfo)
+void UWDT_ParameterHelp_C::SetBuddyInfo(const struct FUIBuddyInfo& InBuddyInfo)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_ParameterHelp_C", "SetWeaponGadgetInfo");
+		Func = Class->GetFunction("WDT_ParameterHelp_C", "SetBuddyInfo");
 
-	Params::WDT_ParameterHelp_C_SetWeaponGadgetInfo Parms{};
+	Params::WDT_ParameterHelp_C_SetBuddyInfo Parms{};
 
-	Parms.InGadgetInfo = std::move(InGadgetInfo);
+	Parms.InBuddyInfo = std::move(InBuddyInfo);
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_ParameterHelp.WDT_ParameterHelp_C.RefreshKeyImage
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWDT_ParameterHelp_C::RefreshKeyImage()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_ParameterHelp_C", "RefreshKeyImage");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_AreaBuffManager.BP_AreaBuffManager_C
-// 0x0000 (0x0130 - 0x0130)
+// 0x0000 (0x0158 - 0x0158)
 class UBP_AreaBuffManager_C final : public UAreaBuffManager
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UBP_AreaBuffManager_C) == 0x000008, "Wrong alignment on UBP_AreaBuffManager_C");
-static_assert(sizeof(UBP_AreaBuffManager_C) == 0x000130, "Wrong size on UBP_AreaBuffManager_C");
+static_assert(sizeof(UBP_AreaBuffManager_C) == 0x000158, "Wrong size on UBP_AreaBuffManager_C");
 
 }
 

@@ -17,29 +17,7 @@
 namespace SDK
 {
 
-// Function WDT_Article_AttackDetail.WDT_Article_AttackDetail_C.SetBloodValue
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InValue                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   InModValue                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_Article_AttackDetail_C::SetBloodValue(int32 InValue, int32 InModValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Article_AttackDetail_C", "SetBloodValue");
-
-	Params::WDT_Article_AttackDetail_C_SetBloodValue Parms{};
-
-	Parms.InValue = InValue;
-	Parms.InModValue = InModValue;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_Article_AttackDetail.WDT_Article_AttackDetail_C.SetBloodValueComparison
+// Function WDT_Article_AttackDetail.WDT_Article_AttackDetail_C.SetThunderValueComparison
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int32                                   InCurrentValue                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -48,14 +26,14 @@ void UWDT_Article_AttackDetail_C::SetBloodValue(int32 InValue, int32 InModValue)
 // int32                                   InTargetModValue                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    SwapComparisons                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_Article_AttackDetail_C::SetBloodValueComparison(int32 InCurrentValue, int32 InTargetValue, int32 InCurrentModValue, int32 InTargetModValue, bool SwapComparisons)
+void UWDT_Article_AttackDetail_C::SetThunderValueComparison(int32 InCurrentValue, int32 InTargetValue, int32 InCurrentModValue, int32 InTargetModValue, bool SwapComparisons)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Article_AttackDetail_C", "SetBloodValueComparison");
+		Func = Class->GetFunction("WDT_Article_AttackDetail_C", "SetThunderValueComparison");
 
-	Params::WDT_Article_AttackDetail_C_SetBloodValueComparison Parms{};
+	Params::WDT_Article_AttackDetail_C_SetThunderValueComparison Parms{};
 
 	Parms.InCurrentValue = InCurrentValue;
 	Parms.InTargetValue = InTargetValue;
@@ -67,20 +45,20 @@ void UWDT_Article_AttackDetail_C::SetBloodValueComparison(int32 InCurrentValue, 
 }
 
 
-// Function WDT_Article_AttackDetail.WDT_Article_AttackDetail_C.SetFireValue
+// Function WDT_Article_AttackDetail.WDT_Article_AttackDetail_C.SetThunderValue
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int32                                   InValue                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   InModValue                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_Article_AttackDetail_C::SetFireValue(int32 InValue, int32 InModValue)
+void UWDT_Article_AttackDetail_C::SetThunderValue(int32 InValue, int32 InModValue)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Article_AttackDetail_C", "SetFireValue");
+		Func = Class->GetFunction("WDT_Article_AttackDetail_C", "SetThunderValue");
 
-	Params::WDT_Article_AttackDetail_C_SetFireValue Parms{};
+	Params::WDT_Article_AttackDetail_C_SetThunderValue Parms{};
 
 	Parms.InValue = InValue;
 	Parms.InModValue = InModValue;
@@ -89,7 +67,7 @@ void UWDT_Article_AttackDetail_C::SetFireValue(int32 InValue, int32 InModValue)
 }
 
 
-// Function WDT_Article_AttackDetail.WDT_Article_AttackDetail_C.SetFireValueComparison
+// Function WDT_Article_AttackDetail.WDT_Article_AttackDetail_C.SetPhysicalValueComparison
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int32                                   InCurrentValue                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -98,64 +76,14 @@ void UWDT_Article_AttackDetail_C::SetFireValue(int32 InValue, int32 InModValue)
 // int32                                   InTargetModValue                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    SwapComparisons                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_Article_AttackDetail_C::SetFireValueComparison(int32 InCurrentValue, int32 InTargetValue, int32 InCurrentModValue, int32 InTargetModValue, bool SwapComparisons)
+void UWDT_Article_AttackDetail_C::SetPhysicalValueComparison(int32 InCurrentValue, int32 InTargetValue, int32 InCurrentModValue, int32 InTargetModValue, bool SwapComparisons)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Article_AttackDetail_C", "SetFireValueComparison");
+		Func = Class->GetFunction("WDT_Article_AttackDetail_C", "SetPhysicalValueComparison");
 
-	Params::WDT_Article_AttackDetail_C_SetFireValueComparison Parms{};
-
-	Parms.InCurrentValue = InCurrentValue;
-	Parms.InTargetValue = InTargetValue;
-	Parms.InCurrentModValue = InCurrentModValue;
-	Parms.InTargetModValue = InTargetModValue;
-	Parms.SwapComparisons = SwapComparisons;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_Article_AttackDetail.WDT_Article_AttackDetail_C.SetIceValue
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InValue                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   InModValue                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_Article_AttackDetail_C::SetIceValue(int32 InValue, int32 InModValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Article_AttackDetail_C", "SetIceValue");
-
-	Params::WDT_Article_AttackDetail_C_SetIceValue Parms{};
-
-	Parms.InValue = InValue;
-	Parms.InModValue = InModValue;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_Article_AttackDetail.WDT_Article_AttackDetail_C.SetIceValueComparison
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InCurrentValue                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   InTargetValue                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   InCurrentModValue                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   InTargetModValue                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    SwapComparisons                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_Article_AttackDetail_C::SetIceValueComparison(int32 InCurrentValue, int32 InTargetValue, int32 InCurrentModValue, int32 InTargetModValue, bool SwapComparisons)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Article_AttackDetail_C", "SetIceValueComparison");
-
-	Params::WDT_Article_AttackDetail_C_SetIceValueComparison Parms{};
+	Params::WDT_Article_AttackDetail_C_SetPhysicalValueComparison Parms{};
 
 	Parms.InCurrentValue = InCurrentValue;
 	Parms.InTargetValue = InTargetValue;
@@ -195,7 +123,7 @@ void UWDT_Article_AttackDetail_C::SetPhysicalValue(int32 InValue, int32 InModVal
 }
 
 
-// Function WDT_Article_AttackDetail.WDT_Article_AttackDetail_C.SetPhysicalValueComparison
+// Function WDT_Article_AttackDetail.WDT_Article_AttackDetail_C.SetIceValueComparison
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int32                                   InCurrentValue                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -204,14 +132,14 @@ void UWDT_Article_AttackDetail_C::SetPhysicalValue(int32 InValue, int32 InModVal
 // int32                                   InTargetModValue                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    SwapComparisons                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_Article_AttackDetail_C::SetPhysicalValueComparison(int32 InCurrentValue, int32 InTargetValue, int32 InCurrentModValue, int32 InTargetModValue, bool SwapComparisons)
+void UWDT_Article_AttackDetail_C::SetIceValueComparison(int32 InCurrentValue, int32 InTargetValue, int32 InCurrentModValue, int32 InTargetModValue, bool SwapComparisons)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Article_AttackDetail_C", "SetPhysicalValueComparison");
+		Func = Class->GetFunction("WDT_Article_AttackDetail_C", "SetIceValueComparison");
 
-	Params::WDT_Article_AttackDetail_C_SetPhysicalValueComparison Parms{};
+	Params::WDT_Article_AttackDetail_C_SetIceValueComparison Parms{};
 
 	Parms.InCurrentValue = InCurrentValue;
 	Parms.InTargetValue = InTargetValue;
@@ -223,20 +151,20 @@ void UWDT_Article_AttackDetail_C::SetPhysicalValueComparison(int32 InCurrentValu
 }
 
 
-// Function WDT_Article_AttackDetail.WDT_Article_AttackDetail_C.SetThunderValue
+// Function WDT_Article_AttackDetail.WDT_Article_AttackDetail_C.SetIceValue
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int32                                   InValue                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   InModValue                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_Article_AttackDetail_C::SetThunderValue(int32 InValue, int32 InModValue)
+void UWDT_Article_AttackDetail_C::SetIceValue(int32 InValue, int32 InModValue)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Article_AttackDetail_C", "SetThunderValue");
+		Func = Class->GetFunction("WDT_Article_AttackDetail_C", "SetIceValue");
 
-	Params::WDT_Article_AttackDetail_C_SetThunderValue Parms{};
+	Params::WDT_Article_AttackDetail_C_SetIceValue Parms{};
 
 	Parms.InValue = InValue;
 	Parms.InModValue = InModValue;
@@ -245,7 +173,7 @@ void UWDT_Article_AttackDetail_C::SetThunderValue(int32 InValue, int32 InModValu
 }
 
 
-// Function WDT_Article_AttackDetail.WDT_Article_AttackDetail_C.SetThunderValueComparison
+// Function WDT_Article_AttackDetail.WDT_Article_AttackDetail_C.SetFireValueComparison
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int32                                   InCurrentValue                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -254,20 +182,92 @@ void UWDT_Article_AttackDetail_C::SetThunderValue(int32 InValue, int32 InModValu
 // int32                                   InTargetModValue                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    SwapComparisons                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_Article_AttackDetail_C::SetThunderValueComparison(int32 InCurrentValue, int32 InTargetValue, int32 InCurrentModValue, int32 InTargetModValue, bool SwapComparisons)
+void UWDT_Article_AttackDetail_C::SetFireValueComparison(int32 InCurrentValue, int32 InTargetValue, int32 InCurrentModValue, int32 InTargetModValue, bool SwapComparisons)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Article_AttackDetail_C", "SetThunderValueComparison");
+		Func = Class->GetFunction("WDT_Article_AttackDetail_C", "SetFireValueComparison");
 
-	Params::WDT_Article_AttackDetail_C_SetThunderValueComparison Parms{};
+	Params::WDT_Article_AttackDetail_C_SetFireValueComparison Parms{};
 
 	Parms.InCurrentValue = InCurrentValue;
 	Parms.InTargetValue = InTargetValue;
 	Parms.InCurrentModValue = InCurrentModValue;
 	Parms.InTargetModValue = InTargetModValue;
 	Parms.SwapComparisons = SwapComparisons;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_Article_AttackDetail.WDT_Article_AttackDetail_C.SetFireValue
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InValue                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InModValue                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_Article_AttackDetail_C::SetFireValue(int32 InValue, int32 InModValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_Article_AttackDetail_C", "SetFireValue");
+
+	Params::WDT_Article_AttackDetail_C_SetFireValue Parms{};
+
+	Parms.InValue = InValue;
+	Parms.InModValue = InModValue;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_Article_AttackDetail.WDT_Article_AttackDetail_C.SetBloodValueComparison
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InCurrentValue                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InTargetValue                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InCurrentModValue                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InTargetModValue                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    SwapComparisons                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_Article_AttackDetail_C::SetBloodValueComparison(int32 InCurrentValue, int32 InTargetValue, int32 InCurrentModValue, int32 InTargetModValue, bool SwapComparisons)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_Article_AttackDetail_C", "SetBloodValueComparison");
+
+	Params::WDT_Article_AttackDetail_C_SetBloodValueComparison Parms{};
+
+	Parms.InCurrentValue = InCurrentValue;
+	Parms.InTargetValue = InTargetValue;
+	Parms.InCurrentModValue = InCurrentModValue;
+	Parms.InTargetModValue = InTargetModValue;
+	Parms.SwapComparisons = SwapComparisons;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_Article_AttackDetail.WDT_Article_AttackDetail_C.SetBloodValue
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InValue                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InModValue                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_Article_AttackDetail_C::SetBloodValue(int32 InValue, int32 InModValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_Article_AttackDetail_C", "SetBloodValue");
+
+	Params::WDT_Article_AttackDetail_C_SetBloodValue Parms{};
+
+	Parms.InValue = InValue;
+	Parms.InModValue = InModValue;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

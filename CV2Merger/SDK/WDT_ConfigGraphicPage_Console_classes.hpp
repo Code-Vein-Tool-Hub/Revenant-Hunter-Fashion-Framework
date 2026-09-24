@@ -10,38 +10,40 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
-#include "BasicUI_structs.hpp"
 #include "WDT_ConfigStandardPageBase_classes.hpp"
+#include "CoreUObject_structs.hpp"
+#include "BasicUI_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WDT_ConfigGraphicPage_Console.WDT_ConfigGraphicPage_Console_C
-// 0x0110 (0x06E8 - 0x05D8)
+// 0x0118 (0x06F0 - 0x05D8)
 class UWDT_ConfigGraphicPage_Console_C final : public UWDT_ConfigStandardPageBase_C
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x05D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UImage*                                 Back;                                              // 0x05E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_ConfigMenuTextPiece_C*             ConfigBrightness;                                  // 0x05E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           FieldMenuCanvas;                                   // 0x05F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_FieldMenuCloser_C*                 FieldMenuCloser;                                   // 0x05F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_ConfigMenuTypeSelectPiece_C*       GameMode;                                          // 0x0600(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         HorizontalBox_193;                                 // 0x0608(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image;                                             // 0x0610(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_ConfigHeader_C*                    WDT_ConfigHeader;                                  // 0x0618(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_ConfigLog_C*                       WDT_ConfigurationLog;                              // 0x0620(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidgetSwitcher*                        WidgetSwitcher_74;                                 // 0x0628(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TArray<struct FIntPoint>                      ScreenResolution;                                  // 0x0630(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class UBP_ConfigurationUIObject_C*            ConfigurationUIObject;                             // 0x0640(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FDialogInfo                            GeneralYesNoDialogInfo;                            // 0x0648(0x0058)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FMenuContext                           GeneralYesNoDialogContext;                         // 0x06A0(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	class UDialogBase*                            DialogBase;                                        // 0x06D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsPressStart;                                      // 0x06E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         OldGameMode;                                       // 0x06E1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWDT_ConfigMenuTypeSelectPiece_C*       CharacterShaderType;                               // 0x05E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_ConfigMenuTextPiece_C*             ConfigBrightness;                                  // 0x05F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           FieldMenuCanvas;                                   // 0x05F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_FieldMenuCloser_C*                 FieldMenuCloser;                                   // 0x0600(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_ConfigMenuTypeSelectPiece_C*       GameMode;                                          // 0x0608(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         HorizontalBox_193;                                 // 0x0610(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image;                                             // 0x0618(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_ConfigHeader_C*                    WDT_ConfigHeader;                                  // 0x0620(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_ConfigLog_C*                       WDT_ConfigurationLog;                              // 0x0628(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetSwitcher*                        WidgetSwitcher_74;                                 // 0x0630(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TArray<struct FIntPoint>                      ScreenResolution;                                  // 0x0638(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class UBP_ConfigurationUIObject_C*            ConfigurationUIObject;                             // 0x0648(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FDialogInfo                            GeneralYesNoDialogInfo;                            // 0x0650(0x0058)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FMenuContext                           GeneralYesNoDialogContext;                         // 0x06A8(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	class UDialogBase*                            DialogBase;                                        // 0x06E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsPressStart;                                      // 0x06E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         OldGameMode;                                       // 0x06E9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          OldCharacterShaderType;                            // 0x06EA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BndEvt__WDT_ConfigCameraPage_WDT_ConfigHeader_K2Node_ComponentBoundEvent_0_OnTabItemClickedEvent__DelegateSignature(int32 TabIndex);
@@ -90,25 +92,27 @@ public:
 	}
 };
 static_assert(alignof(UWDT_ConfigGraphicPage_Console_C) == 0x000008, "Wrong alignment on UWDT_ConfigGraphicPage_Console_C");
-static_assert(sizeof(UWDT_ConfigGraphicPage_Console_C) == 0x0006E8, "Wrong size on UWDT_ConfigGraphicPage_Console_C");
+static_assert(sizeof(UWDT_ConfigGraphicPage_Console_C) == 0x0006F0, "Wrong size on UWDT_ConfigGraphicPage_Console_C");
 static_assert(offsetof(UWDT_ConfigGraphicPage_Console_C, UberGraphFrame) == 0x0005D8, "Member 'UWDT_ConfigGraphicPage_Console_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UWDT_ConfigGraphicPage_Console_C, Back) == 0x0005E0, "Member 'UWDT_ConfigGraphicPage_Console_C::Back' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGraphicPage_Console_C, ConfigBrightness) == 0x0005E8, "Member 'UWDT_ConfigGraphicPage_Console_C::ConfigBrightness' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGraphicPage_Console_C, FieldMenuCanvas) == 0x0005F0, "Member 'UWDT_ConfigGraphicPage_Console_C::FieldMenuCanvas' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGraphicPage_Console_C, FieldMenuCloser) == 0x0005F8, "Member 'UWDT_ConfigGraphicPage_Console_C::FieldMenuCloser' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGraphicPage_Console_C, GameMode) == 0x000600, "Member 'UWDT_ConfigGraphicPage_Console_C::GameMode' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGraphicPage_Console_C, HorizontalBox_193) == 0x000608, "Member 'UWDT_ConfigGraphicPage_Console_C::HorizontalBox_193' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGraphicPage_Console_C, Image) == 0x000610, "Member 'UWDT_ConfigGraphicPage_Console_C::Image' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGraphicPage_Console_C, WDT_ConfigHeader) == 0x000618, "Member 'UWDT_ConfigGraphicPage_Console_C::WDT_ConfigHeader' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGraphicPage_Console_C, WDT_ConfigurationLog) == 0x000620, "Member 'UWDT_ConfigGraphicPage_Console_C::WDT_ConfigurationLog' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGraphicPage_Console_C, WidgetSwitcher_74) == 0x000628, "Member 'UWDT_ConfigGraphicPage_Console_C::WidgetSwitcher_74' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGraphicPage_Console_C, ScreenResolution) == 0x000630, "Member 'UWDT_ConfigGraphicPage_Console_C::ScreenResolution' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGraphicPage_Console_C, ConfigurationUIObject) == 0x000640, "Member 'UWDT_ConfigGraphicPage_Console_C::ConfigurationUIObject' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGraphicPage_Console_C, GeneralYesNoDialogInfo) == 0x000648, "Member 'UWDT_ConfigGraphicPage_Console_C::GeneralYesNoDialogInfo' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGraphicPage_Console_C, GeneralYesNoDialogContext) == 0x0006A0, "Member 'UWDT_ConfigGraphicPage_Console_C::GeneralYesNoDialogContext' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGraphicPage_Console_C, DialogBase) == 0x0006D8, "Member 'UWDT_ConfigGraphicPage_Console_C::DialogBase' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGraphicPage_Console_C, IsPressStart) == 0x0006E0, "Member 'UWDT_ConfigGraphicPage_Console_C::IsPressStart' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGraphicPage_Console_C, OldGameMode) == 0x0006E1, "Member 'UWDT_ConfigGraphicPage_Console_C::OldGameMode' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_Console_C, CharacterShaderType) == 0x0005E8, "Member 'UWDT_ConfigGraphicPage_Console_C::CharacterShaderType' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_Console_C, ConfigBrightness) == 0x0005F0, "Member 'UWDT_ConfigGraphicPage_Console_C::ConfigBrightness' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_Console_C, FieldMenuCanvas) == 0x0005F8, "Member 'UWDT_ConfigGraphicPage_Console_C::FieldMenuCanvas' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_Console_C, FieldMenuCloser) == 0x000600, "Member 'UWDT_ConfigGraphicPage_Console_C::FieldMenuCloser' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_Console_C, GameMode) == 0x000608, "Member 'UWDT_ConfigGraphicPage_Console_C::GameMode' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_Console_C, HorizontalBox_193) == 0x000610, "Member 'UWDT_ConfigGraphicPage_Console_C::HorizontalBox_193' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_Console_C, Image) == 0x000618, "Member 'UWDT_ConfigGraphicPage_Console_C::Image' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_Console_C, WDT_ConfigHeader) == 0x000620, "Member 'UWDT_ConfigGraphicPage_Console_C::WDT_ConfigHeader' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_Console_C, WDT_ConfigurationLog) == 0x000628, "Member 'UWDT_ConfigGraphicPage_Console_C::WDT_ConfigurationLog' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_Console_C, WidgetSwitcher_74) == 0x000630, "Member 'UWDT_ConfigGraphicPage_Console_C::WidgetSwitcher_74' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_Console_C, ScreenResolution) == 0x000638, "Member 'UWDT_ConfigGraphicPage_Console_C::ScreenResolution' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_Console_C, ConfigurationUIObject) == 0x000648, "Member 'UWDT_ConfigGraphicPage_Console_C::ConfigurationUIObject' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_Console_C, GeneralYesNoDialogInfo) == 0x000650, "Member 'UWDT_ConfigGraphicPage_Console_C::GeneralYesNoDialogInfo' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_Console_C, GeneralYesNoDialogContext) == 0x0006A8, "Member 'UWDT_ConfigGraphicPage_Console_C::GeneralYesNoDialogContext' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_Console_C, DialogBase) == 0x0006E0, "Member 'UWDT_ConfigGraphicPage_Console_C::DialogBase' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_Console_C, IsPressStart) == 0x0006E8, "Member 'UWDT_ConfigGraphicPage_Console_C::IsPressStart' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_Console_C, OldGameMode) == 0x0006E9, "Member 'UWDT_ConfigGraphicPage_Console_C::OldGameMode' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGraphicPage_Console_C, OldCharacterShaderType) == 0x0006EA, "Member 'UWDT_ConfigGraphicPage_Console_C::OldCharacterShaderType' has a wrong offset!");
 
 }
 

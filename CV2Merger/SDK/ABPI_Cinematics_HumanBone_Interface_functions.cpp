@@ -56,5 +56,25 @@ bool IABPI_Cinematics_HumanBone_Interface_C::Get_PC_IsFemale()
 	return Parms.ReturnValue;
 }
 
+
+// Function ABPI_Cinematics_HumanBone_Interface.ABPI_Cinematics_HumanBone_Interface_C.Set_PC_IsFemale
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void IABPI_Cinematics_HumanBone_Interface_C::Set_PC_IsFemale(bool Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABPI_Cinematics_HumanBone_Interface_C", "Set_PC_IsFemale");
+
+	Params::ABPI_Cinematics_HumanBone_Interface_C_Set_PC_IsFemale Parms{};
+
+	Parms.Value = Value;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
 }
 

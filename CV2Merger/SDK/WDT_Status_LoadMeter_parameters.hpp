@@ -18,104 +18,6 @@
 namespace SDK::Params
 {
 
-// Function WDT_Status_LoadMeter.WDT_Status_LoadMeter_C.GetComparisonColorForCapacity
-// 0x005C (0x005C - 0x0000)
-struct WDT_Status_LoadMeter_C_GetComparisonColorForCapacity final
-{
-public:
-	int32                                         Current;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         After;                                             // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSlateColor                            SlateColor;                                        // 0x0008(0x0014)(Parm, OutParm)
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x001C(0x0014)()
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_32[0x2];                                       // 0x0032(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor_1;                    // 0x0034(0x0014)()
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor_2;                    // 0x0048(0x0014)()
-};
-static_assert(alignof(WDT_Status_LoadMeter_C_GetComparisonColorForCapacity) == 0x000004, "Wrong alignment on WDT_Status_LoadMeter_C_GetComparisonColorForCapacity");
-static_assert(sizeof(WDT_Status_LoadMeter_C_GetComparisonColorForCapacity) == 0x00005C, "Wrong size on WDT_Status_LoadMeter_C_GetComparisonColorForCapacity");
-static_assert(offsetof(WDT_Status_LoadMeter_C_GetComparisonColorForCapacity, Current) == 0x000000, "Member 'WDT_Status_LoadMeter_C_GetComparisonColorForCapacity::Current' has a wrong offset!");
-static_assert(offsetof(WDT_Status_LoadMeter_C_GetComparisonColorForCapacity, After) == 0x000004, "Member 'WDT_Status_LoadMeter_C_GetComparisonColorForCapacity::After' has a wrong offset!");
-static_assert(offsetof(WDT_Status_LoadMeter_C_GetComparisonColorForCapacity, SlateColor) == 0x000008, "Member 'WDT_Status_LoadMeter_C_GetComparisonColorForCapacity::SlateColor' has a wrong offset!");
-static_assert(offsetof(WDT_Status_LoadMeter_C_GetComparisonColorForCapacity, K2Node_MakeStruct_SlateColor) == 0x00001C, "Member 'WDT_Status_LoadMeter_C_GetComparisonColorForCapacity::K2Node_MakeStruct_SlateColor' has a wrong offset!");
-static_assert(offsetof(WDT_Status_LoadMeter_C_GetComparisonColorForCapacity, CallFunc_Greater_IntInt_ReturnValue) == 0x000030, "Member 'WDT_Status_LoadMeter_C_GetComparisonColorForCapacity::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_Status_LoadMeter_C_GetComparisonColorForCapacity, CallFunc_Less_IntInt_ReturnValue) == 0x000031, "Member 'WDT_Status_LoadMeter_C_GetComparisonColorForCapacity::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_Status_LoadMeter_C_GetComparisonColorForCapacity, K2Node_MakeStruct_SlateColor_1) == 0x000034, "Member 'WDT_Status_LoadMeter_C_GetComparisonColorForCapacity::K2Node_MakeStruct_SlateColor_1' has a wrong offset!");
-static_assert(offsetof(WDT_Status_LoadMeter_C_GetComparisonColorForCapacity, K2Node_MakeStruct_SlateColor_2) == 0x000048, "Member 'WDT_Status_LoadMeter_C_GetComparisonColorForCapacity::K2Node_MakeStruct_SlateColor_2' has a wrong offset!");
-
-// Function WDT_Status_LoadMeter.WDT_Status_LoadMeter_C.GetComparisonColorForLoad
-// 0x005C (0x005C - 0x0000)
-struct WDT_Status_LoadMeter_C_GetComparisonColorForLoad final
-{
-public:
-	int32                                         Current;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         After;                                             // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSlateColor                            SlateColor;                                        // 0x0008(0x0014)(Parm, OutParm)
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x001C(0x0014)()
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_32[0x2];                                       // 0x0032(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor_1;                    // 0x0034(0x0014)()
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor_2;                    // 0x0048(0x0014)()
-};
-static_assert(alignof(WDT_Status_LoadMeter_C_GetComparisonColorForLoad) == 0x000004, "Wrong alignment on WDT_Status_LoadMeter_C_GetComparisonColorForLoad");
-static_assert(sizeof(WDT_Status_LoadMeter_C_GetComparisonColorForLoad) == 0x00005C, "Wrong size on WDT_Status_LoadMeter_C_GetComparisonColorForLoad");
-static_assert(offsetof(WDT_Status_LoadMeter_C_GetComparisonColorForLoad, Current) == 0x000000, "Member 'WDT_Status_LoadMeter_C_GetComparisonColorForLoad::Current' has a wrong offset!");
-static_assert(offsetof(WDT_Status_LoadMeter_C_GetComparisonColorForLoad, After) == 0x000004, "Member 'WDT_Status_LoadMeter_C_GetComparisonColorForLoad::After' has a wrong offset!");
-static_assert(offsetof(WDT_Status_LoadMeter_C_GetComparisonColorForLoad, SlateColor) == 0x000008, "Member 'WDT_Status_LoadMeter_C_GetComparisonColorForLoad::SlateColor' has a wrong offset!");
-static_assert(offsetof(WDT_Status_LoadMeter_C_GetComparisonColorForLoad, K2Node_MakeStruct_SlateColor) == 0x00001C, "Member 'WDT_Status_LoadMeter_C_GetComparisonColorForLoad::K2Node_MakeStruct_SlateColor' has a wrong offset!");
-static_assert(offsetof(WDT_Status_LoadMeter_C_GetComparisonColorForLoad, CallFunc_Greater_IntInt_ReturnValue) == 0x000030, "Member 'WDT_Status_LoadMeter_C_GetComparisonColorForLoad::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_Status_LoadMeter_C_GetComparisonColorForLoad, CallFunc_Less_IntInt_ReturnValue) == 0x000031, "Member 'WDT_Status_LoadMeter_C_GetComparisonColorForLoad::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_Status_LoadMeter_C_GetComparisonColorForLoad, K2Node_MakeStruct_SlateColor_1) == 0x000034, "Member 'WDT_Status_LoadMeter_C_GetComparisonColorForLoad::K2Node_MakeStruct_SlateColor_1' has a wrong offset!");
-static_assert(offsetof(WDT_Status_LoadMeter_C_GetComparisonColorForLoad, K2Node_MakeStruct_SlateColor_2) == 0x000048, "Member 'WDT_Status_LoadMeter_C_GetComparisonColorForLoad::K2Node_MakeStruct_SlateColor_2' has a wrong offset!");
-
-// Function WDT_Status_LoadMeter.WDT_Status_LoadMeter_C.SetValue
-// 0x0060 (0x0060 - 0x0000)
-struct WDT_Status_LoadMeter_C_SetValue final
-{
-public:
-	int32                                         InCapacityValue;                                   // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         InLoadValue;                                       // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable;                                // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B[0x5];                                        // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0010(0x0010)()
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0023(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_1;           // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue;       // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_42[0x2];                                       // 0x0042(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateColor                            CallFunc_GetComparisonColorForCapacity_SlateColor; // 0x0044(0x0014)()
-	float                                         CallFunc_SetPercent_InPercent_ImplicitCast;        // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_Status_LoadMeter_C_SetValue) == 0x000008, "Wrong alignment on WDT_Status_LoadMeter_C_SetValue");
-static_assert(sizeof(WDT_Status_LoadMeter_C_SetValue) == 0x000060, "Wrong size on WDT_Status_LoadMeter_C_SetValue");
-static_assert(offsetof(WDT_Status_LoadMeter_C_SetValue, InCapacityValue) == 0x000000, "Member 'WDT_Status_LoadMeter_C_SetValue::InCapacityValue' has a wrong offset!");
-static_assert(offsetof(WDT_Status_LoadMeter_C_SetValue, InLoadValue) == 0x000004, "Member 'WDT_Status_LoadMeter_C_SetValue::InLoadValue' has a wrong offset!");
-static_assert(offsetof(WDT_Status_LoadMeter_C_SetValue, Temp_bool_Variable) == 0x000008, "Member 'WDT_Status_LoadMeter_C_SetValue::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WDT_Status_LoadMeter_C_SetValue, Temp_byte_Variable) == 0x000009, "Member 'WDT_Status_LoadMeter_C_SetValue::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(WDT_Status_LoadMeter_C_SetValue, Temp_byte_Variable_1) == 0x00000A, "Member 'WDT_Status_LoadMeter_C_SetValue::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(WDT_Status_LoadMeter_C_SetValue, CallFunc_Conv_IntToText_ReturnValue) == 0x000010, "Member 'WDT_Status_LoadMeter_C_SetValue::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_Status_LoadMeter_C_SetValue, CallFunc_Greater_IntInt_ReturnValue) == 0x000020, "Member 'WDT_Status_LoadMeter_C_SetValue::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_Status_LoadMeter_C_SetValue, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000021, "Member 'WDT_Status_LoadMeter_C_SetValue::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_Status_LoadMeter_C_SetValue, CallFunc_BooleanAND_ReturnValue) == 0x000022, "Member 'WDT_Status_LoadMeter_C_SetValue::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_Status_LoadMeter_C_SetValue, CallFunc_Not_PreBool_ReturnValue) == 0x000023, "Member 'WDT_Status_LoadMeter_C_SetValue::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_Status_LoadMeter_C_SetValue, CallFunc_Conv_IntToDouble_ReturnValue) == 0x000028, "Member 'WDT_Status_LoadMeter_C_SetValue::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_Status_LoadMeter_C_SetValue, CallFunc_Conv_IntToDouble_ReturnValue_1) == 0x000030, "Member 'WDT_Status_LoadMeter_C_SetValue::CallFunc_Conv_IntToDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_Status_LoadMeter_C_SetValue, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000038, "Member 'WDT_Status_LoadMeter_C_SetValue::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_Status_LoadMeter_C_SetValue, CallFunc_LessEqual_DoubleDouble_ReturnValue) == 0x000040, "Member 'WDT_Status_LoadMeter_C_SetValue::CallFunc_LessEqual_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_Status_LoadMeter_C_SetValue, K2Node_Select_Default) == 0x000041, "Member 'WDT_Status_LoadMeter_C_SetValue::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WDT_Status_LoadMeter_C_SetValue, CallFunc_GetComparisonColorForCapacity_SlateColor) == 0x000044, "Member 'WDT_Status_LoadMeter_C_SetValue::CallFunc_GetComparisonColorForCapacity_SlateColor' has a wrong offset!");
-static_assert(offsetof(WDT_Status_LoadMeter_C_SetValue, CallFunc_SetPercent_InPercent_ImplicitCast) == 0x000058, "Member 'WDT_Status_LoadMeter_C_SetValue::CallFunc_SetPercent_InPercent_ImplicitCast' has a wrong offset!");
-
 // Function WDT_Status_LoadMeter.WDT_Status_LoadMeter_C.SetValueComparison
 // 0x00D0 (0x00D0 - 0x0000)
 struct WDT_Status_LoadMeter_C_SetValueComparison final
@@ -181,6 +83,104 @@ static_assert(offsetof(WDT_Status_LoadMeter_C_SetValueComparison, CallFunc_Divid
 static_assert(offsetof(WDT_Status_LoadMeter_C_SetValueComparison, CallFunc_SelectColor_ReturnValue) == 0x0000B8, "Member 'WDT_Status_LoadMeter_C_SetValueComparison::CallFunc_SelectColor_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_Status_LoadMeter_C_SetValueComparison, CallFunc_SetPercent_InPercent_ImplicitCast) == 0x0000C8, "Member 'WDT_Status_LoadMeter_C_SetValueComparison::CallFunc_SetPercent_InPercent_ImplicitCast' has a wrong offset!");
 static_assert(offsetof(WDT_Status_LoadMeter_C_SetValueComparison, CallFunc_SetPercent_InPercent_ImplicitCast_1) == 0x0000CC, "Member 'WDT_Status_LoadMeter_C_SetValueComparison::CallFunc_SetPercent_InPercent_ImplicitCast_1' has a wrong offset!");
+
+// Function WDT_Status_LoadMeter.WDT_Status_LoadMeter_C.SetValue
+// 0x0060 (0x0060 - 0x0000)
+struct WDT_Status_LoadMeter_C_SetValue final
+{
+public:
+	int32                                         InCapacityValue;                                   // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         InLoadValue;                                       // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B[0x5];                                        // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0010(0x0010)()
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0023(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_1;           // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue;       // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_42[0x2];                                       // 0x0042(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateColor                            CallFunc_GetComparisonColorForCapacity_SlateColor; // 0x0044(0x0014)()
+	float                                         CallFunc_SetPercent_InPercent_ImplicitCast;        // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_Status_LoadMeter_C_SetValue) == 0x000008, "Wrong alignment on WDT_Status_LoadMeter_C_SetValue");
+static_assert(sizeof(WDT_Status_LoadMeter_C_SetValue) == 0x000060, "Wrong size on WDT_Status_LoadMeter_C_SetValue");
+static_assert(offsetof(WDT_Status_LoadMeter_C_SetValue, InCapacityValue) == 0x000000, "Member 'WDT_Status_LoadMeter_C_SetValue::InCapacityValue' has a wrong offset!");
+static_assert(offsetof(WDT_Status_LoadMeter_C_SetValue, InLoadValue) == 0x000004, "Member 'WDT_Status_LoadMeter_C_SetValue::InLoadValue' has a wrong offset!");
+static_assert(offsetof(WDT_Status_LoadMeter_C_SetValue, Temp_bool_Variable) == 0x000008, "Member 'WDT_Status_LoadMeter_C_SetValue::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WDT_Status_LoadMeter_C_SetValue, Temp_byte_Variable) == 0x000009, "Member 'WDT_Status_LoadMeter_C_SetValue::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(WDT_Status_LoadMeter_C_SetValue, Temp_byte_Variable_1) == 0x00000A, "Member 'WDT_Status_LoadMeter_C_SetValue::Temp_byte_Variable_1' has a wrong offset!");
+static_assert(offsetof(WDT_Status_LoadMeter_C_SetValue, CallFunc_Conv_IntToText_ReturnValue) == 0x000010, "Member 'WDT_Status_LoadMeter_C_SetValue::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_Status_LoadMeter_C_SetValue, CallFunc_Greater_IntInt_ReturnValue) == 0x000020, "Member 'WDT_Status_LoadMeter_C_SetValue::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_Status_LoadMeter_C_SetValue, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000021, "Member 'WDT_Status_LoadMeter_C_SetValue::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_Status_LoadMeter_C_SetValue, CallFunc_BooleanAND_ReturnValue) == 0x000022, "Member 'WDT_Status_LoadMeter_C_SetValue::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_Status_LoadMeter_C_SetValue, CallFunc_Not_PreBool_ReturnValue) == 0x000023, "Member 'WDT_Status_LoadMeter_C_SetValue::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_Status_LoadMeter_C_SetValue, CallFunc_Conv_IntToDouble_ReturnValue) == 0x000028, "Member 'WDT_Status_LoadMeter_C_SetValue::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_Status_LoadMeter_C_SetValue, CallFunc_Conv_IntToDouble_ReturnValue_1) == 0x000030, "Member 'WDT_Status_LoadMeter_C_SetValue::CallFunc_Conv_IntToDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_Status_LoadMeter_C_SetValue, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000038, "Member 'WDT_Status_LoadMeter_C_SetValue::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_Status_LoadMeter_C_SetValue, CallFunc_LessEqual_DoubleDouble_ReturnValue) == 0x000040, "Member 'WDT_Status_LoadMeter_C_SetValue::CallFunc_LessEqual_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_Status_LoadMeter_C_SetValue, K2Node_Select_Default) == 0x000041, "Member 'WDT_Status_LoadMeter_C_SetValue::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WDT_Status_LoadMeter_C_SetValue, CallFunc_GetComparisonColorForCapacity_SlateColor) == 0x000044, "Member 'WDT_Status_LoadMeter_C_SetValue::CallFunc_GetComparisonColorForCapacity_SlateColor' has a wrong offset!");
+static_assert(offsetof(WDT_Status_LoadMeter_C_SetValue, CallFunc_SetPercent_InPercent_ImplicitCast) == 0x000058, "Member 'WDT_Status_LoadMeter_C_SetValue::CallFunc_SetPercent_InPercent_ImplicitCast' has a wrong offset!");
+
+// Function WDT_Status_LoadMeter.WDT_Status_LoadMeter_C.GetComparisonColorForLoad
+// 0x005C (0x005C - 0x0000)
+struct WDT_Status_LoadMeter_C_GetComparisonColorForLoad final
+{
+public:
+	int32                                         Current;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         After;                                             // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSlateColor                            SlateColor;                                        // 0x0008(0x0014)(Parm, OutParm)
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x001C(0x0014)()
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_32[0x2];                                       // 0x0032(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor_1;                    // 0x0034(0x0014)()
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor_2;                    // 0x0048(0x0014)()
+};
+static_assert(alignof(WDT_Status_LoadMeter_C_GetComparisonColorForLoad) == 0x000004, "Wrong alignment on WDT_Status_LoadMeter_C_GetComparisonColorForLoad");
+static_assert(sizeof(WDT_Status_LoadMeter_C_GetComparisonColorForLoad) == 0x00005C, "Wrong size on WDT_Status_LoadMeter_C_GetComparisonColorForLoad");
+static_assert(offsetof(WDT_Status_LoadMeter_C_GetComparisonColorForLoad, Current) == 0x000000, "Member 'WDT_Status_LoadMeter_C_GetComparisonColorForLoad::Current' has a wrong offset!");
+static_assert(offsetof(WDT_Status_LoadMeter_C_GetComparisonColorForLoad, After) == 0x000004, "Member 'WDT_Status_LoadMeter_C_GetComparisonColorForLoad::After' has a wrong offset!");
+static_assert(offsetof(WDT_Status_LoadMeter_C_GetComparisonColorForLoad, SlateColor) == 0x000008, "Member 'WDT_Status_LoadMeter_C_GetComparisonColorForLoad::SlateColor' has a wrong offset!");
+static_assert(offsetof(WDT_Status_LoadMeter_C_GetComparisonColorForLoad, K2Node_MakeStruct_SlateColor) == 0x00001C, "Member 'WDT_Status_LoadMeter_C_GetComparisonColorForLoad::K2Node_MakeStruct_SlateColor' has a wrong offset!");
+static_assert(offsetof(WDT_Status_LoadMeter_C_GetComparisonColorForLoad, CallFunc_Greater_IntInt_ReturnValue) == 0x000030, "Member 'WDT_Status_LoadMeter_C_GetComparisonColorForLoad::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_Status_LoadMeter_C_GetComparisonColorForLoad, CallFunc_Less_IntInt_ReturnValue) == 0x000031, "Member 'WDT_Status_LoadMeter_C_GetComparisonColorForLoad::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_Status_LoadMeter_C_GetComparisonColorForLoad, K2Node_MakeStruct_SlateColor_1) == 0x000034, "Member 'WDT_Status_LoadMeter_C_GetComparisonColorForLoad::K2Node_MakeStruct_SlateColor_1' has a wrong offset!");
+static_assert(offsetof(WDT_Status_LoadMeter_C_GetComparisonColorForLoad, K2Node_MakeStruct_SlateColor_2) == 0x000048, "Member 'WDT_Status_LoadMeter_C_GetComparisonColorForLoad::K2Node_MakeStruct_SlateColor_2' has a wrong offset!");
+
+// Function WDT_Status_LoadMeter.WDT_Status_LoadMeter_C.GetComparisonColorForCapacity
+// 0x005C (0x005C - 0x0000)
+struct WDT_Status_LoadMeter_C_GetComparisonColorForCapacity final
+{
+public:
+	int32                                         Current;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         After;                                             // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSlateColor                            SlateColor;                                        // 0x0008(0x0014)(Parm, OutParm)
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x001C(0x0014)()
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_32[0x2];                                       // 0x0032(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor_1;                    // 0x0034(0x0014)()
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor_2;                    // 0x0048(0x0014)()
+};
+static_assert(alignof(WDT_Status_LoadMeter_C_GetComparisonColorForCapacity) == 0x000004, "Wrong alignment on WDT_Status_LoadMeter_C_GetComparisonColorForCapacity");
+static_assert(sizeof(WDT_Status_LoadMeter_C_GetComparisonColorForCapacity) == 0x00005C, "Wrong size on WDT_Status_LoadMeter_C_GetComparisonColorForCapacity");
+static_assert(offsetof(WDT_Status_LoadMeter_C_GetComparisonColorForCapacity, Current) == 0x000000, "Member 'WDT_Status_LoadMeter_C_GetComparisonColorForCapacity::Current' has a wrong offset!");
+static_assert(offsetof(WDT_Status_LoadMeter_C_GetComparisonColorForCapacity, After) == 0x000004, "Member 'WDT_Status_LoadMeter_C_GetComparisonColorForCapacity::After' has a wrong offset!");
+static_assert(offsetof(WDT_Status_LoadMeter_C_GetComparisonColorForCapacity, SlateColor) == 0x000008, "Member 'WDT_Status_LoadMeter_C_GetComparisonColorForCapacity::SlateColor' has a wrong offset!");
+static_assert(offsetof(WDT_Status_LoadMeter_C_GetComparisonColorForCapacity, K2Node_MakeStruct_SlateColor) == 0x00001C, "Member 'WDT_Status_LoadMeter_C_GetComparisonColorForCapacity::K2Node_MakeStruct_SlateColor' has a wrong offset!");
+static_assert(offsetof(WDT_Status_LoadMeter_C_GetComparisonColorForCapacity, CallFunc_Greater_IntInt_ReturnValue) == 0x000030, "Member 'WDT_Status_LoadMeter_C_GetComparisonColorForCapacity::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_Status_LoadMeter_C_GetComparisonColorForCapacity, CallFunc_Less_IntInt_ReturnValue) == 0x000031, "Member 'WDT_Status_LoadMeter_C_GetComparisonColorForCapacity::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_Status_LoadMeter_C_GetComparisonColorForCapacity, K2Node_MakeStruct_SlateColor_1) == 0x000034, "Member 'WDT_Status_LoadMeter_C_GetComparisonColorForCapacity::K2Node_MakeStruct_SlateColor_1' has a wrong offset!");
+static_assert(offsetof(WDT_Status_LoadMeter_C_GetComparisonColorForCapacity, K2Node_MakeStruct_SlateColor_2) == 0x000048, "Member 'WDT_Status_LoadMeter_C_GetComparisonColorForCapacity::K2Node_MakeStruct_SlateColor_2' has a wrong offset!");
 
 }
 

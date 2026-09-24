@@ -17,331 +17,27 @@
 namespace SDK
 {
 
-// Function WDT_Article_GadgetCapacity.WDT_Article_GadgetCapacity_C.SetConductivityValue
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InCapacityValue                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   InLoadValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_Article_GadgetCapacity_C::SetConductivityValue(int32 InCapacityValue, int32 InLoadValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Article_GadgetCapacity_C", "SetConductivityValue");
-
-	Params::WDT_Article_GadgetCapacity_C_SetConductivityValue Parms{};
-
-	Parms.InCapacityValue = InCapacityValue;
-	Parms.InLoadValue = InLoadValue;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_Article_GadgetCapacity.WDT_Article_GadgetCapacity_C.SetConductivityValueComparison
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InCapacityCurrentValue                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   InCapacityValue                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   InLoadCurrentValue                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   InLoadValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CapacitySwapComparisons                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    LoadSwapComparisons                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_Article_GadgetCapacity_C::SetConductivityValueComparison(int32 InCapacityCurrentValue, int32 InCapacityValue, int32 InLoadCurrentValue, int32 InLoadValue, bool CapacitySwapComparisons, bool LoadSwapComparisons)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Article_GadgetCapacity_C", "SetConductivityValueComparison");
-
-	Params::WDT_Article_GadgetCapacity_C_SetConductivityValueComparison Parms{};
-
-	Parms.InCapacityCurrentValue = InCapacityCurrentValue;
-	Parms.InCapacityValue = InCapacityValue;
-	Parms.InLoadCurrentValue = InLoadCurrentValue;
-	Parms.InLoadValue = InLoadValue;
-	Parms.CapacitySwapComparisons = CapacitySwapComparisons;
-	Parms.LoadSwapComparisons = LoadSwapComparisons;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_Article_GadgetCapacity.WDT_Article_GadgetCapacity_C.SetConductivityValueComparisonLoadOnly
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InLoadCurrentValue                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   InLoadValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    LoadSwapComparisons                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_Article_GadgetCapacity_C::SetConductivityValueComparisonLoadOnly(int32 InLoadCurrentValue, int32 InLoadValue, bool LoadSwapComparisons)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Article_GadgetCapacity_C", "SetConductivityValueComparisonLoadOnly");
-
-	Params::WDT_Article_GadgetCapacity_C_SetConductivityValueComparisonLoadOnly Parms{};
-
-	Parms.InLoadCurrentValue = InLoadCurrentValue;
-	Parms.InLoadValue = InLoadValue;
-	Parms.LoadSwapComparisons = LoadSwapComparisons;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_Article_GadgetCapacity.WDT_Article_GadgetCapacity_C.SetEfficiencyValue
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InCapacityValue                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   InLoadValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_Article_GadgetCapacity_C::SetEfficiencyValue(int32 InCapacityValue, int32 InLoadValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Article_GadgetCapacity_C", "SetEfficiencyValue");
-
-	Params::WDT_Article_GadgetCapacity_C_SetEfficiencyValue Parms{};
-
-	Parms.InCapacityValue = InCapacityValue;
-	Parms.InLoadValue = InLoadValue;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_Article_GadgetCapacity.WDT_Article_GadgetCapacity_C.SetEfficiencyValueComparison
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InCapacityCurrentValue                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   InCapacityValue                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   InLoadCurrentValue                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   InLoadValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CapacitySwapComparisons                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    LoadSwapComparisons                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_Article_GadgetCapacity_C::SetEfficiencyValueComparison(int32 InCapacityCurrentValue, int32 InCapacityValue, int32 InLoadCurrentValue, int32 InLoadValue, bool CapacitySwapComparisons, bool LoadSwapComparisons)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Article_GadgetCapacity_C", "SetEfficiencyValueComparison");
-
-	Params::WDT_Article_GadgetCapacity_C_SetEfficiencyValueComparison Parms{};
-
-	Parms.InCapacityCurrentValue = InCapacityCurrentValue;
-	Parms.InCapacityValue = InCapacityValue;
-	Parms.InLoadCurrentValue = InLoadCurrentValue;
-	Parms.InLoadValue = InLoadValue;
-	Parms.CapacitySwapComparisons = CapacitySwapComparisons;
-	Parms.LoadSwapComparisons = LoadSwapComparisons;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_Article_GadgetCapacity.WDT_Article_GadgetCapacity_C.SetEfficiencyValueComparisonLoadOnly
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InLoadCurrentValue                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   InLoadValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    LoadSwapComparisons                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_Article_GadgetCapacity_C::SetEfficiencyValueComparisonLoadOnly(int32 InLoadCurrentValue, int32 InLoadValue, bool LoadSwapComparisons)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Article_GadgetCapacity_C", "SetEfficiencyValueComparisonLoadOnly");
-
-	Params::WDT_Article_GadgetCapacity_C_SetEfficiencyValueComparisonLoadOnly Parms{};
-
-	Parms.InLoadCurrentValue = InLoadCurrentValue;
-	Parms.InLoadValue = InLoadValue;
-	Parms.LoadSwapComparisons = LoadSwapComparisons;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_Article_GadgetCapacity.WDT_Article_GadgetCapacity_C.SetHandlingValue
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InCapacityValue                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   InLoadValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_Article_GadgetCapacity_C::SetHandlingValue(int32 InCapacityValue, int32 InLoadValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Article_GadgetCapacity_C", "SetHandlingValue");
-
-	Params::WDT_Article_GadgetCapacity_C_SetHandlingValue Parms{};
-
-	Parms.InCapacityValue = InCapacityValue;
-	Parms.InLoadValue = InLoadValue;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_Article_GadgetCapacity.WDT_Article_GadgetCapacity_C.SetHandlingValueComparison
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InCapacityCurrentValue                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   InCapacityValue                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   InLoadCurrentValue                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   InLoadValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CapacitySwapComparisons                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    LoadSwapComparisons                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_Article_GadgetCapacity_C::SetHandlingValueComparison(int32 InCapacityCurrentValue, int32 InCapacityValue, int32 InLoadCurrentValue, int32 InLoadValue, bool CapacitySwapComparisons, bool LoadSwapComparisons)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Article_GadgetCapacity_C", "SetHandlingValueComparison");
-
-	Params::WDT_Article_GadgetCapacity_C_SetHandlingValueComparison Parms{};
-
-	Parms.InCapacityCurrentValue = InCapacityCurrentValue;
-	Parms.InCapacityValue = InCapacityValue;
-	Parms.InLoadCurrentValue = InLoadCurrentValue;
-	Parms.InLoadValue = InLoadValue;
-	Parms.CapacitySwapComparisons = CapacitySwapComparisons;
-	Parms.LoadSwapComparisons = LoadSwapComparisons;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_Article_GadgetCapacity.WDT_Article_GadgetCapacity_C.SetHandlingValueComparisonLoadOnly
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InLoadCurrentValue                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   InLoadValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    LoadSwapComparisons                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_Article_GadgetCapacity_C::SetHandlingValueComparisonLoadOnly(int32 InLoadCurrentValue, int32 InLoadValue, bool LoadSwapComparisons)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Article_GadgetCapacity_C", "SetHandlingValueComparisonLoadOnly");
-
-	Params::WDT_Article_GadgetCapacity_C_SetHandlingValueComparisonLoadOnly Parms{};
-
-	Parms.InLoadCurrentValue = InLoadCurrentValue;
-	Parms.InLoadValue = InLoadValue;
-	Parms.LoadSwapComparisons = LoadSwapComparisons;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_Article_GadgetCapacity.WDT_Article_GadgetCapacity_C.SetReliabilityValue
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InCapacityValue                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   InLoadValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_Article_GadgetCapacity_C::SetReliabilityValue(int32 InCapacityValue, int32 InLoadValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Article_GadgetCapacity_C", "SetReliabilityValue");
-
-	Params::WDT_Article_GadgetCapacity_C_SetReliabilityValue Parms{};
-
-	Parms.InCapacityValue = InCapacityValue;
-	Parms.InLoadValue = InLoadValue;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_Article_GadgetCapacity.WDT_Article_GadgetCapacity_C.SetReliabilityValueComparison
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InCapacityCurrentValue                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   InCapacityValue                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   InLoadCurrentValue                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   InLoadValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CapacitySwapComparisons                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    LoadSwapComparisons                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_Article_GadgetCapacity_C::SetReliabilityValueComparison(int32 InCapacityCurrentValue, int32 InCapacityValue, int32 InLoadCurrentValue, int32 InLoadValue, bool CapacitySwapComparisons, bool LoadSwapComparisons)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Article_GadgetCapacity_C", "SetReliabilityValueComparison");
-
-	Params::WDT_Article_GadgetCapacity_C_SetReliabilityValueComparison Parms{};
-
-	Parms.InCapacityCurrentValue = InCapacityCurrentValue;
-	Parms.InCapacityValue = InCapacityValue;
-	Parms.InLoadCurrentValue = InLoadCurrentValue;
-	Parms.InLoadValue = InLoadValue;
-	Parms.CapacitySwapComparisons = CapacitySwapComparisons;
-	Parms.LoadSwapComparisons = LoadSwapComparisons;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_Article_GadgetCapacity.WDT_Article_GadgetCapacity_C.SetReliabilityValueComparisonLoadOnly
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InLoadCurrentValue                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   InLoadValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    LoadSwapComparisons                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_Article_GadgetCapacity_C::SetReliabilityValueComparisonLoadOnly(int32 InLoadCurrentValue, int32 InLoadValue, bool LoadSwapComparisons)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Article_GadgetCapacity_C", "SetReliabilityValueComparisonLoadOnly");
-
-	Params::WDT_Article_GadgetCapacity_C_SetReliabilityValueComparisonLoadOnly Parms{};
-
-	Parms.InLoadCurrentValue = InLoadCurrentValue;
-	Parms.InLoadValue = InLoadValue;
-	Parms.LoadSwapComparisons = LoadSwapComparisons;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_Article_GadgetCapacity.WDT_Article_GadgetCapacity_C.SetValue
+// Function WDT_Article_GadgetCapacity.WDT_Article_GadgetCapacity_C.SetValueComparisonLoadOnly
 // (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   InCapacityValue                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InLoadCurrentValue                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   InLoadValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UTextBlock*                       CapacityText                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 // class UTextBlock*                       LoadText                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// bool                                    LoadSwapComparisons                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_Article_GadgetCapacity_C::SetValue(int32 InCapacityValue, int32 InLoadValue, class UTextBlock* CapacityText, class UTextBlock* LoadText)
+void UWDT_Article_GadgetCapacity_C::SetValueComparisonLoadOnly(int32 InLoadCurrentValue, int32 InLoadValue, class UTextBlock* LoadText, bool LoadSwapComparisons)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Article_GadgetCapacity_C", "SetValue");
+		Func = Class->GetFunction("WDT_Article_GadgetCapacity_C", "SetValueComparisonLoadOnly");
 
-	Params::WDT_Article_GadgetCapacity_C_SetValue Parms{};
+	Params::WDT_Article_GadgetCapacity_C_SetValueComparisonLoadOnly Parms{};
 
-	Parms.InCapacityValue = InCapacityValue;
+	Parms.InLoadCurrentValue = InLoadCurrentValue;
 	Parms.InLoadValue = InLoadValue;
-	Parms.CapacityText = CapacityText;
 	Parms.LoadText = LoadText;
+	Parms.LoadSwapComparisons = LoadSwapComparisons;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -383,27 +79,331 @@ void UWDT_Article_GadgetCapacity_C::SetValueComparison(int32 InCapacityCurrentVa
 }
 
 
-// Function WDT_Article_GadgetCapacity.WDT_Article_GadgetCapacity_C.SetValueComparisonLoadOnly
+// Function WDT_Article_GadgetCapacity.WDT_Article_GadgetCapacity_C.SetValue
 // (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   InLoadCurrentValue                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InCapacityValue                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   InLoadValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UTextBlock*                       CapacityText                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 // class UTextBlock*                       LoadText                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// bool                                    LoadSwapComparisons                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_Article_GadgetCapacity_C::SetValueComparisonLoadOnly(int32 InLoadCurrentValue, int32 InLoadValue, class UTextBlock* LoadText, bool LoadSwapComparisons)
+void UWDT_Article_GadgetCapacity_C::SetValue(int32 InCapacityValue, int32 InLoadValue, class UTextBlock* CapacityText, class UTextBlock* LoadText)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Article_GadgetCapacity_C", "SetValueComparisonLoadOnly");
+		Func = Class->GetFunction("WDT_Article_GadgetCapacity_C", "SetValue");
 
-	Params::WDT_Article_GadgetCapacity_C_SetValueComparisonLoadOnly Parms{};
+	Params::WDT_Article_GadgetCapacity_C_SetValue Parms{};
+
+	Parms.InCapacityValue = InCapacityValue;
+	Parms.InLoadValue = InLoadValue;
+	Parms.CapacityText = CapacityText;
+	Parms.LoadText = LoadText;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_Article_GadgetCapacity.WDT_Article_GadgetCapacity_C.SetReliabilityValueComparisonLoadOnly
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InLoadCurrentValue                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InLoadValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    LoadSwapComparisons                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_Article_GadgetCapacity_C::SetReliabilityValueComparisonLoadOnly(int32 InLoadCurrentValue, int32 InLoadValue, bool LoadSwapComparisons)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_Article_GadgetCapacity_C", "SetReliabilityValueComparisonLoadOnly");
+
+	Params::WDT_Article_GadgetCapacity_C_SetReliabilityValueComparisonLoadOnly Parms{};
 
 	Parms.InLoadCurrentValue = InLoadCurrentValue;
 	Parms.InLoadValue = InLoadValue;
-	Parms.LoadText = LoadText;
 	Parms.LoadSwapComparisons = LoadSwapComparisons;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_Article_GadgetCapacity.WDT_Article_GadgetCapacity_C.SetReliabilityValueComparison
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InCapacityCurrentValue                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InCapacityValue                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InLoadCurrentValue                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InLoadValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CapacitySwapComparisons                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    LoadSwapComparisons                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_Article_GadgetCapacity_C::SetReliabilityValueComparison(int32 InCapacityCurrentValue, int32 InCapacityValue, int32 InLoadCurrentValue, int32 InLoadValue, bool CapacitySwapComparisons, bool LoadSwapComparisons)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_Article_GadgetCapacity_C", "SetReliabilityValueComparison");
+
+	Params::WDT_Article_GadgetCapacity_C_SetReliabilityValueComparison Parms{};
+
+	Parms.InCapacityCurrentValue = InCapacityCurrentValue;
+	Parms.InCapacityValue = InCapacityValue;
+	Parms.InLoadCurrentValue = InLoadCurrentValue;
+	Parms.InLoadValue = InLoadValue;
+	Parms.CapacitySwapComparisons = CapacitySwapComparisons;
+	Parms.LoadSwapComparisons = LoadSwapComparisons;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_Article_GadgetCapacity.WDT_Article_GadgetCapacity_C.SetReliabilityValue
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InCapacityValue                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InLoadValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_Article_GadgetCapacity_C::SetReliabilityValue(int32 InCapacityValue, int32 InLoadValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_Article_GadgetCapacity_C", "SetReliabilityValue");
+
+	Params::WDT_Article_GadgetCapacity_C_SetReliabilityValue Parms{};
+
+	Parms.InCapacityValue = InCapacityValue;
+	Parms.InLoadValue = InLoadValue;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_Article_GadgetCapacity.WDT_Article_GadgetCapacity_C.SetHandlingValueComparisonLoadOnly
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InLoadCurrentValue                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InLoadValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    LoadSwapComparisons                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_Article_GadgetCapacity_C::SetHandlingValueComparisonLoadOnly(int32 InLoadCurrentValue, int32 InLoadValue, bool LoadSwapComparisons)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_Article_GadgetCapacity_C", "SetHandlingValueComparisonLoadOnly");
+
+	Params::WDT_Article_GadgetCapacity_C_SetHandlingValueComparisonLoadOnly Parms{};
+
+	Parms.InLoadCurrentValue = InLoadCurrentValue;
+	Parms.InLoadValue = InLoadValue;
+	Parms.LoadSwapComparisons = LoadSwapComparisons;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_Article_GadgetCapacity.WDT_Article_GadgetCapacity_C.SetHandlingValueComparison
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InCapacityCurrentValue                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InCapacityValue                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InLoadCurrentValue                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InLoadValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CapacitySwapComparisons                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    LoadSwapComparisons                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_Article_GadgetCapacity_C::SetHandlingValueComparison(int32 InCapacityCurrentValue, int32 InCapacityValue, int32 InLoadCurrentValue, int32 InLoadValue, bool CapacitySwapComparisons, bool LoadSwapComparisons)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_Article_GadgetCapacity_C", "SetHandlingValueComparison");
+
+	Params::WDT_Article_GadgetCapacity_C_SetHandlingValueComparison Parms{};
+
+	Parms.InCapacityCurrentValue = InCapacityCurrentValue;
+	Parms.InCapacityValue = InCapacityValue;
+	Parms.InLoadCurrentValue = InLoadCurrentValue;
+	Parms.InLoadValue = InLoadValue;
+	Parms.CapacitySwapComparisons = CapacitySwapComparisons;
+	Parms.LoadSwapComparisons = LoadSwapComparisons;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_Article_GadgetCapacity.WDT_Article_GadgetCapacity_C.SetHandlingValue
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InCapacityValue                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InLoadValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_Article_GadgetCapacity_C::SetHandlingValue(int32 InCapacityValue, int32 InLoadValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_Article_GadgetCapacity_C", "SetHandlingValue");
+
+	Params::WDT_Article_GadgetCapacity_C_SetHandlingValue Parms{};
+
+	Parms.InCapacityValue = InCapacityValue;
+	Parms.InLoadValue = InLoadValue;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_Article_GadgetCapacity.WDT_Article_GadgetCapacity_C.SetEfficiencyValueComparisonLoadOnly
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InLoadCurrentValue                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InLoadValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    LoadSwapComparisons                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_Article_GadgetCapacity_C::SetEfficiencyValueComparisonLoadOnly(int32 InLoadCurrentValue, int32 InLoadValue, bool LoadSwapComparisons)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_Article_GadgetCapacity_C", "SetEfficiencyValueComparisonLoadOnly");
+
+	Params::WDT_Article_GadgetCapacity_C_SetEfficiencyValueComparisonLoadOnly Parms{};
+
+	Parms.InLoadCurrentValue = InLoadCurrentValue;
+	Parms.InLoadValue = InLoadValue;
+	Parms.LoadSwapComparisons = LoadSwapComparisons;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_Article_GadgetCapacity.WDT_Article_GadgetCapacity_C.SetEfficiencyValueComparison
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InCapacityCurrentValue                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InCapacityValue                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InLoadCurrentValue                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InLoadValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CapacitySwapComparisons                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    LoadSwapComparisons                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_Article_GadgetCapacity_C::SetEfficiencyValueComparison(int32 InCapacityCurrentValue, int32 InCapacityValue, int32 InLoadCurrentValue, int32 InLoadValue, bool CapacitySwapComparisons, bool LoadSwapComparisons)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_Article_GadgetCapacity_C", "SetEfficiencyValueComparison");
+
+	Params::WDT_Article_GadgetCapacity_C_SetEfficiencyValueComparison Parms{};
+
+	Parms.InCapacityCurrentValue = InCapacityCurrentValue;
+	Parms.InCapacityValue = InCapacityValue;
+	Parms.InLoadCurrentValue = InLoadCurrentValue;
+	Parms.InLoadValue = InLoadValue;
+	Parms.CapacitySwapComparisons = CapacitySwapComparisons;
+	Parms.LoadSwapComparisons = LoadSwapComparisons;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_Article_GadgetCapacity.WDT_Article_GadgetCapacity_C.SetEfficiencyValue
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InCapacityValue                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InLoadValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_Article_GadgetCapacity_C::SetEfficiencyValue(int32 InCapacityValue, int32 InLoadValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_Article_GadgetCapacity_C", "SetEfficiencyValue");
+
+	Params::WDT_Article_GadgetCapacity_C_SetEfficiencyValue Parms{};
+
+	Parms.InCapacityValue = InCapacityValue;
+	Parms.InLoadValue = InLoadValue;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_Article_GadgetCapacity.WDT_Article_GadgetCapacity_C.SetConductivityValueComparisonLoadOnly
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InLoadCurrentValue                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InLoadValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    LoadSwapComparisons                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_Article_GadgetCapacity_C::SetConductivityValueComparisonLoadOnly(int32 InLoadCurrentValue, int32 InLoadValue, bool LoadSwapComparisons)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_Article_GadgetCapacity_C", "SetConductivityValueComparisonLoadOnly");
+
+	Params::WDT_Article_GadgetCapacity_C_SetConductivityValueComparisonLoadOnly Parms{};
+
+	Parms.InLoadCurrentValue = InLoadCurrentValue;
+	Parms.InLoadValue = InLoadValue;
+	Parms.LoadSwapComparisons = LoadSwapComparisons;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_Article_GadgetCapacity.WDT_Article_GadgetCapacity_C.SetConductivityValueComparison
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InCapacityCurrentValue                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InCapacityValue                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InLoadCurrentValue                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InLoadValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CapacitySwapComparisons                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    LoadSwapComparisons                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_Article_GadgetCapacity_C::SetConductivityValueComparison(int32 InCapacityCurrentValue, int32 InCapacityValue, int32 InLoadCurrentValue, int32 InLoadValue, bool CapacitySwapComparisons, bool LoadSwapComparisons)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_Article_GadgetCapacity_C", "SetConductivityValueComparison");
+
+	Params::WDT_Article_GadgetCapacity_C_SetConductivityValueComparison Parms{};
+
+	Parms.InCapacityCurrentValue = InCapacityCurrentValue;
+	Parms.InCapacityValue = InCapacityValue;
+	Parms.InLoadCurrentValue = InLoadCurrentValue;
+	Parms.InLoadValue = InLoadValue;
+	Parms.CapacitySwapComparisons = CapacitySwapComparisons;
+	Parms.LoadSwapComparisons = LoadSwapComparisons;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_Article_GadgetCapacity.WDT_Article_GadgetCapacity_C.SetConductivityValue
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InCapacityValue                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InLoadValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_Article_GadgetCapacity_C::SetConductivityValue(int32 InCapacityValue, int32 InLoadValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_Article_GadgetCapacity_C", "SetConductivityValue");
+
+	Params::WDT_Article_GadgetCapacity_C_SetConductivityValue Parms{};
+
+	Parms.InCapacityValue = InCapacityValue;
+	Parms.InLoadValue = InLoadValue;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

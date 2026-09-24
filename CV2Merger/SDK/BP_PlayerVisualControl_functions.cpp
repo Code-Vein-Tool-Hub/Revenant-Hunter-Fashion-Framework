@@ -277,6 +277,38 @@ void UBP_PlayerVisualControl_C::BodyTrailEffect_SetMaxCount(const class UANS_Bod
 }
 
 
+// Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.BodyTrailEffect_SetParameter
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   MaxCount                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   FrameStep                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Lifetime                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bUseColor                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FLinearColor                     EmissiveColorBegin                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FLinearColor                     EmissiveColorEnd                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  EmissiveScale                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_PlayerVisualControl_C::BodyTrailEffect_SetParameter(int32 MaxCount, int32 FrameStep, double Lifetime, bool bUseColor, const struct FLinearColor& EmissiveColorBegin, const struct FLinearColor& EmissiveColorEnd, double EmissiveScale)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerVisualControl_C", "BodyTrailEffect_SetParameter");
+
+	Params::BP_PlayerVisualControl_C_BodyTrailEffect_SetParameter Parms{};
+
+	Parms.MaxCount = MaxCount;
+	Parms.FrameStep = FrameStep;
+	Parms.Lifetime = Lifetime;
+	Parms.bUseColor = bUseColor;
+	Parms.EmissiveColorBegin = std::move(EmissiveColorBegin);
+	Parms.EmissiveColorEnd = std::move(EmissiveColorEnd);
+	Parms.EmissiveScale = EmissiveScale;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.ClearAllOtherMesh
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 
@@ -581,6 +613,26 @@ void UBP_PlayerVisualControl_C::ExecuteUbergraph_BP_PlayerVisualControl(int32 En
 }
 
 
+// Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.FootStepChanged_Tick
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_PlayerVisualControl_C::FootStepChanged_Tick(double DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerVisualControl_C", "FootStepChanged_Tick");
+
+	Params::BP_PlayerVisualControl_C_FootStepChanged_Tick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.GetAllOtherMesh
 // (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -601,8 +653,36 @@ TArray<class UMeshComponent*> UBP_PlayerVisualControl_C::GetAllOtherMesh()
 }
 
 
-// Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.HideAccessory
+// Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.GuestWaitingState_DeactivateEffect
 // (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_PlayerVisualControl_C::GuestWaitingState_DeactivateEffect()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerVisualControl_C", "GuestWaitingState_DeactivateEffect");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.GuestWaitingState_SpawnEffect
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_PlayerVisualControl_C::GuestWaitingState_SpawnEffect()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerVisualControl_C", "GuestWaitingState_SpawnEffect");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.HideAccessory
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                                    bHide                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -616,6 +696,26 @@ void UBP_PlayerVisualControl_C::HideAccessory(bool bHide)
 	Params::BP_PlayerVisualControl_C_HideAccessory Parms{};
 
 	Parms.bHide = bHide;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.HideCharacter
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bBegin                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_PlayerVisualControl_C::HideCharacter(bool bBegin)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerVisualControl_C", "HideCharacter");
+
+	Params::BP_PlayerVisualControl_C_HideCharacter Parms{};
+
+	Parms.bBegin = bBegin;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -682,6 +782,27 @@ void UBP_PlayerVisualControl_C::IsCurveExists(class USkeletalMeshComponent* Mesh
 }
 
 
+// Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.IsFootStepChanged
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool                                    Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_PlayerVisualControl_C::IsFootStepChanged(bool* Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerVisualControl_C", "IsFootStepChanged");
+
+	Params::BP_PlayerVisualControl_C_IsFootStepChanged Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Result != nullptr)
+		*Result = Parms.Result;
+}
+
+
 // Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.IsGuestState
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -702,6 +823,46 @@ bool UBP_PlayerVisualControl_C::IsGuestState()
 }
 
 
+// Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.IsGuestWaitingState
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool UBP_PlayerVisualControl_C::IsGuestWaitingState()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerVisualControl_C", "IsGuestWaitingState");
+
+	Params::BP_PlayerVisualControl_C_IsGuestWaitingState Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.IsMatchingDecisionState
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool UBP_PlayerVisualControl_C::IsMatchingDecisionState()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerVisualControl_C", "IsMatchingDecisionState");
+
+	Params::BP_PlayerVisualControl_C_IsMatchingDecisionState Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.IsMatchingState
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -715,6 +876,26 @@ bool UBP_PlayerVisualControl_C::IsMatchingState()
 		Func = Class->GetFunction("BP_PlayerVisualControl_C", "IsMatchingState");
 
 	Params::BP_PlayerVisualControl_C_IsMatchingState Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.IsTeleportationForma
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool UBP_PlayerVisualControl_C::IsTeleportationForma()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerVisualControl_C", "IsTeleportationForma");
+
+	Params::BP_PlayerVisualControl_C_IsTeleportationForma Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -1099,6 +1280,26 @@ bool UBP_PlayerVisualControl_C::OnFinishPhotoModeEvent()
 }
 
 
+// Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.OnFootStepChanged
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EFootType                               FootType                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_PlayerVisualControl_C::OnFootStepChanged(EFootType FootType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerVisualControl_C", "OnFootStepChanged");
+
+	Params::BP_PlayerVisualControl_C_OnFootStepChanged Parms{};
+
+	Parms.FootType = FootType;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.OnGiftHealAppliedEvent
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 
@@ -1255,6 +1456,20 @@ bool UBP_PlayerVisualControl_C::OnSimpleAnimNotify_Tick(class UObject* InAnimNot
 }
 
 
+// Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.OnSpecialHealEvent
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_PlayerVisualControl_C::OnSpecialHealEvent()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerVisualControl_C", "OnSpecialHealEvent");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.OnStartCinematicEvent
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -1396,7 +1611,7 @@ void UBP_PlayerVisualControl_C::OnVanishMesh_Weapon_SetParameter(class UMaterial
 
 
 // Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.OnVanishMeshBegin
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UAnimSequenceBase*                InAnimSequence                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // struct FVanishMesh_Parameter            InParameter                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
@@ -1579,6 +1794,20 @@ void UBP_PlayerVisualControl_C::ReceiveTick(float DeltaSeconds)
 }
 
 
+// Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.RemoveOnFootStepChangedDelegate
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_PlayerVisualControl_C::RemoveOnFootStepChangedDelegate()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerVisualControl_C", "RemoveOnFootStepChangedDelegate");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.ResetAppearBody
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 
@@ -1725,32 +1954,8 @@ void UBP_PlayerVisualControl_C::ResetVanishWeapon_Implement(bool bReverse, int32
 }
 
 
-// Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.SeeThrough_SetCustomDepth
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UMeshComponent*                   Mesh                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-// bool                                    bEnable                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    DrawMainPass                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_PlayerVisualControl_C::SeeThrough_SetCustomDepth(class UMeshComponent* Mesh, bool bEnable, bool DrawMainPass)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PlayerVisualControl_C", "SeeThrough_SetCustomDepth");
-
-	Params::BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth Parms{};
-
-	Parms.Mesh = Mesh;
-	Parms.bEnable = bEnable;
-	Parms.DrawMainPass = DrawMainPass;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.SeeThrough_SetCustomDepth_All
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                                    NearCamera                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -1766,40 +1971,6 @@ void UBP_PlayerVisualControl_C::SeeThrough_SetCustomDepth_All(bool NearCamera)
 	Parms.NearCamera = NearCamera;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.SeeThrough_SetSeeThroughDistance
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double                                  SeeThroughDistance_0                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_PlayerVisualControl_C::SeeThrough_SetSeeThroughDistance(double SeeThroughDistance_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PlayerVisualControl_C", "SeeThrough_SetSeeThroughDistance");
-
-	Params::BP_PlayerVisualControl_C_SeeThrough_SetSeeThroughDistance Parms{};
-
-	Parms.SeeThroughDistance_0 = SeeThroughDistance_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.SeeThroughNearCamera
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UBP_PlayerVisualControl_C::SeeThroughNearCamera()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PlayerVisualControl_C", "SeeThroughNearCamera");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -1843,6 +2014,46 @@ void UBP_PlayerVisualControl_C::SetGuestState(bool bInEnable)
 }
 
 
+// Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.SetGuestWaitingState
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bInEnable                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_PlayerVisualControl_C::SetGuestWaitingState(bool bInEnable)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerVisualControl_C", "SetGuestWaitingState");
+
+	Params::BP_PlayerVisualControl_C_SetGuestWaitingState Parms{};
+
+	Parms.bInEnable = bInEnable;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.SetMatchingDecisionState
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bInEnable                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_PlayerVisualControl_C::SetMatchingDecisionState(bool bInEnable)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerVisualControl_C", "SetMatchingDecisionState");
+
+	Params::BP_PlayerVisualControl_C_SetMatchingDecisionState Parms{};
+
+	Parms.bInEnable = bInEnable;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.SetMatchingState
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -1863,6 +2074,20 @@ void UBP_PlayerVisualControl_C::SetMatchingState(bool bInEnable)
 }
 
 
+// Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.SetOnFootStepChangedDelegate
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_PlayerVisualControl_C::SetOnFootStepChangedDelegate()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerVisualControl_C", "SetOnFootStepChangedDelegate");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.SetPlayerCustomStencil
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
@@ -1874,6 +2099,26 @@ void UBP_PlayerVisualControl_C::SetPlayerCustomStencil()
 		Func = Class->GetFunction("BP_PlayerVisualControl_C", "SetPlayerCustomStencil");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.SetSeeThroughCustomDepthAll
+// (Event, Protected, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bNearCamera                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_PlayerVisualControl_C::SetSeeThroughCustomDepthAll(bool bNearCamera)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerVisualControl_C", "SetSeeThroughCustomDepthAll");
+
+	Params::BP_PlayerVisualControl_C_SetSeeThroughCustomDepthAll Parms{};
+
+	Parms.bNearCamera = bNearCamera;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -1897,8 +2142,28 @@ void UBP_PlayerVisualControl_C::SetStatusEffect_Rinne(bool bEnable)
 }
 
 
+// Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.SetTeleportationForma
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bInEnable                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_PlayerVisualControl_C::SetTeleportationForma(bool bInEnable)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerVisualControl_C", "SetTeleportationForma");
+
+	Params::BP_PlayerVisualControl_C_SetTeleportationForma Parms{};
+
+	Parms.bInEnable = bInEnable;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.SetVisibilityMesh
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                                    bVisibility                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    bCharacter                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

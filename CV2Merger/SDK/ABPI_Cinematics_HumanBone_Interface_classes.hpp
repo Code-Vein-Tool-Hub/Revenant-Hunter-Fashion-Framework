@@ -23,6 +23,7 @@ class IABPI_Cinematics_HumanBone_Interface_C final : public IInterface
 public:
 	double Get_PC_Height_Normalize_Value();
 	bool Get_PC_IsFemale();
+	void Set_PC_IsFemale(bool Value);
 
 public:
 	static class UClass* StaticClass()

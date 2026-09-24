@@ -12,13 +12,15 @@
 
 #include "Engine_structs.hpp"
 #include "WDT_ConfigStandardPageBase_classes.hpp"
+#include "BasicUI_structs.hpp"
+#include "SlateCore_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WDT_ConfigNetworkPage.WDT_ConfigNetworkPage_C
-// 0x00B8 (0x0690 - 0x05D8)
+// 0x0148 (0x0720 - 0x05D8)
 class UWDT_ConfigNetworkPage_C final : public UWDT_ConfigStandardPageBase_C
 {
 public:
@@ -31,21 +33,25 @@ public:
 	class UWDT_ConfigMenuTypeSelectPiece_C*       MatchingAreaType;                                  // 0x0608(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWDT_ConfigMenuTypeSelectPiece_C*       MatchingPose;                                      // 0x0610(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWDT_ConfigMenuTypeSelectPiece_C*       MatchingRegion;                                    // 0x0618(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_ConfigMenuTypeSelectPiece_C*       MatchingSameAreaOnly;                              // 0x0620(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_ConfigTextInputPiece_C*            Passward;                                          // 0x0628(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_ConfigMenuSwitchPiece_C*           PasswardEnebaled;                                  // 0x0630(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_ConfigMenuTypeSelectPiece_C*       PlayerIdDisplayType;                               // 0x0638(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_ConfigMenuTypeSelectPiece_C*       StartupNetworkType;                                // 0x0640(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_ConfigHeader_C*                    WDT_ConfigHeader;                                  // 0x0648(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_ConfigLog_C*                       WDT_ConfigurationLog;                              // 0x0650(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class FText                                   HeaderBackMatchingMenuText;                        // 0x0658(0x0010)(Edit, BlueprintVisible)
-	class UBP_ConfigurationUIObject_C*            ConfigurationUIObject;                             // 0x0668(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TArray<class FName>                           EmotionRowNameArray;                               // 0x0670(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<class FText>                           EmotionTextArray;                                  // 0x0680(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class UWDT_ConfigMenuInputTextPiece_C*        Passward;                                          // 0x0620(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_ConfigMenuSwitchPiece_C*           PasswardEnebaled;                                  // 0x0628(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_ConfigMenuTypeSelectPiece_C*       PlayerIdDisplayType;                               // 0x0630(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_ConfigMenuTypeSelectPiece_C*       StartupNetworkType;                                // 0x0638(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_ConfigHeader_C*                    WDT_ConfigHeader;                                  // 0x0640(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_ConfigLog_C*                       WDT_ConfigurationLog;                              // 0x0648(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class FText                                   HeaderBackMatchingMenuText;                        // 0x0650(0x0010)(Edit, BlueprintVisible)
+	class UBP_ConfigurationUIObject_C*            ConfigurationUIObject;                             // 0x0660(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TArray<class FName>                           EmotionRowNameArray;                               // 0x0668(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<class FText>                           EmotionTextArray;                                  // 0x0678(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FDialogInfo                            SanitizeDialogInfo;                                // 0x0688(0x0058)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class UWDT_GeneralOKDialog_C*                 SanitizeDialogInstance;                            // 0x06E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FMenuContext                           SanitizeDialogContext;                             // 0x06E8(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
 
 public:
 	void BndEvt__WDT_ConfigGamePage_WDT_ConfigHeader_K2Node_ComponentBoundEvent_1_OnInitializeClickedEvent__DelegateSignature();
 	void BndEvt__WDT_ConfigGamePage_WDT_ConfigHeader_K2Node_ComponentBoundEvent_2_OnBackClickedEvent__DelegateSignature();
+	void BndEvt__WDT_ConfigNetworkPage_CodeName_K2Node_ComponentBoundEvent_0_OnTextCommitted__DelegateSignature(const class FText& InText, ETextCommit InCommitMethot);
+	void BndEvt__WDT_ConfigNetworkPage_Passward_K2Node_ComponentBoundEvent_3_OnTextCommitted__DelegateSignature(const class FText& InText, ETextCommit InCommitMethot);
 	void ExecuteUbergraph_WDT_ConfigNetworkPage(int32 EntryPoint);
 	void GetSelectEmotionRowName(class FName* OutName);
 	void InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_7(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
@@ -60,13 +66,19 @@ public:
 	void InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_9(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
 	void OnChangeTransitType();
 	void OnClosed();
+	void OnCloseSanitizeDialog();
+	void OnClosing();
+	void OnCodeNameSanitizeFInished(bool Result, const class FString& CodeName_0);
 	void OnFieldMenuCloseAnimationFinish();
 	void OnInputDeviceChanged();
+	void OnMatchingMenuClosed();
 	void OnMenuInitialized();
 	void OnMenuScecial4();
 	void OnMouseEnterMenuPiece(class UMenuPieceBase* MenuPiece);
 	void OnMouseLeaveMenuPiece(class UMenuPieceBase* MenuPiece);
 	void OnOpened();
+	void OnPasswardSanitizeFinished(bool Result, const class FString& CodeName_0);
+	void OpenSanitizeDialog();
 	void PreConstruct(bool IsDesignTime);
 	void SaveConfigValue();
 	void SetEmotionRowNameToSelectIndex(class FName InName);
@@ -87,7 +99,7 @@ public:
 	}
 };
 static_assert(alignof(UWDT_ConfigNetworkPage_C) == 0x000008, "Wrong alignment on UWDT_ConfigNetworkPage_C");
-static_assert(sizeof(UWDT_ConfigNetworkPage_C) == 0x000690, "Wrong size on UWDT_ConfigNetworkPage_C");
+static_assert(sizeof(UWDT_ConfigNetworkPage_C) == 0x000720, "Wrong size on UWDT_ConfigNetworkPage_C");
 static_assert(offsetof(UWDT_ConfigNetworkPage_C, UberGraphFrame) == 0x0005D8, "Member 'UWDT_ConfigNetworkPage_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UWDT_ConfigNetworkPage_C, BG) == 0x0005E0, "Member 'UWDT_ConfigNetworkPage_C::BG' has a wrong offset!");
 static_assert(offsetof(UWDT_ConfigNetworkPage_C, CodeName) == 0x0005E8, "Member 'UWDT_ConfigNetworkPage_C::CodeName' has a wrong offset!");
@@ -97,17 +109,19 @@ static_assert(offsetof(UWDT_ConfigNetworkPage_C, HorizontalBox_193) == 0x000600,
 static_assert(offsetof(UWDT_ConfigNetworkPage_C, MatchingAreaType) == 0x000608, "Member 'UWDT_ConfigNetworkPage_C::MatchingAreaType' has a wrong offset!");
 static_assert(offsetof(UWDT_ConfigNetworkPage_C, MatchingPose) == 0x000610, "Member 'UWDT_ConfigNetworkPage_C::MatchingPose' has a wrong offset!");
 static_assert(offsetof(UWDT_ConfigNetworkPage_C, MatchingRegion) == 0x000618, "Member 'UWDT_ConfigNetworkPage_C::MatchingRegion' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigNetworkPage_C, MatchingSameAreaOnly) == 0x000620, "Member 'UWDT_ConfigNetworkPage_C::MatchingSameAreaOnly' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigNetworkPage_C, Passward) == 0x000628, "Member 'UWDT_ConfigNetworkPage_C::Passward' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigNetworkPage_C, PasswardEnebaled) == 0x000630, "Member 'UWDT_ConfigNetworkPage_C::PasswardEnebaled' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigNetworkPage_C, PlayerIdDisplayType) == 0x000638, "Member 'UWDT_ConfigNetworkPage_C::PlayerIdDisplayType' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigNetworkPage_C, StartupNetworkType) == 0x000640, "Member 'UWDT_ConfigNetworkPage_C::StartupNetworkType' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigNetworkPage_C, WDT_ConfigHeader) == 0x000648, "Member 'UWDT_ConfigNetworkPage_C::WDT_ConfigHeader' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigNetworkPage_C, WDT_ConfigurationLog) == 0x000650, "Member 'UWDT_ConfigNetworkPage_C::WDT_ConfigurationLog' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigNetworkPage_C, HeaderBackMatchingMenuText) == 0x000658, "Member 'UWDT_ConfigNetworkPage_C::HeaderBackMatchingMenuText' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigNetworkPage_C, ConfigurationUIObject) == 0x000668, "Member 'UWDT_ConfigNetworkPage_C::ConfigurationUIObject' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigNetworkPage_C, EmotionRowNameArray) == 0x000670, "Member 'UWDT_ConfigNetworkPage_C::EmotionRowNameArray' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigNetworkPage_C, EmotionTextArray) == 0x000680, "Member 'UWDT_ConfigNetworkPage_C::EmotionTextArray' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigNetworkPage_C, Passward) == 0x000620, "Member 'UWDT_ConfigNetworkPage_C::Passward' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigNetworkPage_C, PasswardEnebaled) == 0x000628, "Member 'UWDT_ConfigNetworkPage_C::PasswardEnebaled' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigNetworkPage_C, PlayerIdDisplayType) == 0x000630, "Member 'UWDT_ConfigNetworkPage_C::PlayerIdDisplayType' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigNetworkPage_C, StartupNetworkType) == 0x000638, "Member 'UWDT_ConfigNetworkPage_C::StartupNetworkType' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigNetworkPage_C, WDT_ConfigHeader) == 0x000640, "Member 'UWDT_ConfigNetworkPage_C::WDT_ConfigHeader' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigNetworkPage_C, WDT_ConfigurationLog) == 0x000648, "Member 'UWDT_ConfigNetworkPage_C::WDT_ConfigurationLog' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigNetworkPage_C, HeaderBackMatchingMenuText) == 0x000650, "Member 'UWDT_ConfigNetworkPage_C::HeaderBackMatchingMenuText' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigNetworkPage_C, ConfigurationUIObject) == 0x000660, "Member 'UWDT_ConfigNetworkPage_C::ConfigurationUIObject' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigNetworkPage_C, EmotionRowNameArray) == 0x000668, "Member 'UWDT_ConfigNetworkPage_C::EmotionRowNameArray' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigNetworkPage_C, EmotionTextArray) == 0x000678, "Member 'UWDT_ConfigNetworkPage_C::EmotionTextArray' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigNetworkPage_C, SanitizeDialogInfo) == 0x000688, "Member 'UWDT_ConfigNetworkPage_C::SanitizeDialogInfo' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigNetworkPage_C, SanitizeDialogInstance) == 0x0006E0, "Member 'UWDT_ConfigNetworkPage_C::SanitizeDialogInstance' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigNetworkPage_C, SanitizeDialogContext) == 0x0006E8, "Member 'UWDT_ConfigNetworkPage_C::SanitizeDialogContext' has a wrong offset!");
 
 }
 

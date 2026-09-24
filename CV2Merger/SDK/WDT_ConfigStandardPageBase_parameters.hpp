@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "STR_ConfigPieceBaseList_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "STR_ConfigPieceBaseList_structs.hpp"
 
 
 namespace SDK::Params
@@ -537,68 +537,93 @@ static_assert(offsetof(WDT_ConfigStandardPageBase_C_OnPageDecideReleased, K2Node
 static_assert(offsetof(WDT_ConfigStandardPageBase_C_OnPageDecideReleased, K2Node_DynamicCast_bSuccess_2) == 0x000040, "Member 'WDT_ConfigStandardPageBase_C_OnPageDecideReleased::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
 
 // Function WDT_ConfigStandardPageBase.WDT_ConfigStandardPageBase_C.OnPageDownPressed
-// 0x0040 (0x0040 - 0x0000)
+// 0x0068 (0x0068 - 0x0000)
 struct WDT_ConfigStandardPageBase_C_OnPageDownPressed final
 {
 public:
 	class UWDT_ConfigLog_C*                       ConfigLog;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          bInIsPressStarted;                                 // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UMenuPieceBase*                         L_CurrentPiece;                                    // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_PlayUIAudioEvent_ReturnValue;             // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMenuPieceBase*                         CallFunc_GetSelectedMenuPiece_ReturnValue;         // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsActivated_ReturnValue;                  // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWDT_ConfigPieceBase_C*                 K2Node_DynamicCast_AsWDT_Config_Piece_Base;        // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SelectNextPieceByDirection_bOutIsNextSelectionSuccessful; // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMenuPieceBase*                         CallFunc_GetSelectedMenuPiece_ReturnValue_1;       // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UMenuPieceBase*                         CallFunc_GetSelectedMenuPiece_ReturnValue_2;       // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_ObjectObject_ReturnValue;        // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x003A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3B[0x5];                                       // 0x003B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UMenuPieceBase*                         CallFunc_GetSelectedMenuPiece_ReturnValue_3;       // 0x0048(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_PlayUIAudioEvent_ReturnValue;             // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWDT_ConfigPieceBase_C*                 K2Node_DynamicCast_AsWDT_Config_Piece_Base;        // 0x0058(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsActivated_ReturnValue;                  // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SelectNextPieceByDirection_bOutIsNextSelectionSuccessful; // 0x0062(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0063(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_ConfigStandardPageBase_C_OnPageDownPressed) == 0x000008, "Wrong alignment on WDT_ConfigStandardPageBase_C_OnPageDownPressed");
-static_assert(sizeof(WDT_ConfigStandardPageBase_C_OnPageDownPressed) == 0x000040, "Wrong size on WDT_ConfigStandardPageBase_C_OnPageDownPressed");
+static_assert(sizeof(WDT_ConfigStandardPageBase_C_OnPageDownPressed) == 0x000068, "Wrong size on WDT_ConfigStandardPageBase_C_OnPageDownPressed");
 static_assert(offsetof(WDT_ConfigStandardPageBase_C_OnPageDownPressed, ConfigLog) == 0x000000, "Member 'WDT_ConfigStandardPageBase_C_OnPageDownPressed::ConfigLog' has a wrong offset!");
 static_assert(offsetof(WDT_ConfigStandardPageBase_C_OnPageDownPressed, bInIsPressStarted) == 0x000008, "Member 'WDT_ConfigStandardPageBase_C_OnPageDownPressed::bInIsPressStarted' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigStandardPageBase_C_OnPageDownPressed, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000010, "Member 'WDT_ConfigStandardPageBase_C_OnPageDownPressed::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigStandardPageBase_C_OnPageDownPressed, L_CurrentPiece) == 0x000010, "Member 'WDT_ConfigStandardPageBase_C_OnPageDownPressed::L_CurrentPiece' has a wrong offset!");
 static_assert(offsetof(WDT_ConfigStandardPageBase_C_OnPageDownPressed, CallFunc_IsValid_ReturnValue) == 0x000018, "Member 'WDT_ConfigStandardPageBase_C_OnPageDownPressed::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigStandardPageBase_C_OnPageDownPressed, CallFunc_PlayUIAudioEvent_ReturnValue) == 0x000019, "Member 'WDT_ConfigStandardPageBase_C_OnPageDownPressed::CallFunc_PlayUIAudioEvent_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_ConfigStandardPageBase_C_OnPageDownPressed, CallFunc_GetSelectedMenuPiece_ReturnValue) == 0x000020, "Member 'WDT_ConfigStandardPageBase_C_OnPageDownPressed::CallFunc_GetSelectedMenuPiece_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigStandardPageBase_C_OnPageDownPressed, CallFunc_IsActivated_ReturnValue) == 0x000028, "Member 'WDT_ConfigStandardPageBase_C_OnPageDownPressed::CallFunc_IsActivated_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigStandardPageBase_C_OnPageDownPressed, K2Node_DynamicCast_AsWDT_Config_Piece_Base) == 0x000030, "Member 'WDT_ConfigStandardPageBase_C_OnPageDownPressed::K2Node_DynamicCast_AsWDT_Config_Piece_Base' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigStandardPageBase_C_OnPageDownPressed, K2Node_DynamicCast_bSuccess) == 0x000038, "Member 'WDT_ConfigStandardPageBase_C_OnPageDownPressed::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigStandardPageBase_C_OnPageDownPressed, CallFunc_SelectNextPieceByDirection_bOutIsNextSelectionSuccessful) == 0x000039, "Member 'WDT_ConfigStandardPageBase_C_OnPageDownPressed::CallFunc_SelectNextPieceByDirection_bOutIsNextSelectionSuccessful' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigStandardPageBase_C_OnPageDownPressed, CallFunc_GetSelectedMenuPiece_ReturnValue_1) == 0x000028, "Member 'WDT_ConfigStandardPageBase_C_OnPageDownPressed::CallFunc_GetSelectedMenuPiece_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigStandardPageBase_C_OnPageDownPressed, CallFunc_GetSelectedMenuPiece_ReturnValue_2) == 0x000030, "Member 'WDT_ConfigStandardPageBase_C_OnPageDownPressed::CallFunc_GetSelectedMenuPiece_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigStandardPageBase_C_OnPageDownPressed, CallFunc_NotEqual_ObjectObject_ReturnValue) == 0x000038, "Member 'WDT_ConfigStandardPageBase_C_OnPageDownPressed::CallFunc_NotEqual_ObjectObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigStandardPageBase_C_OnPageDownPressed, CallFunc_EqualEqual_NameName_ReturnValue) == 0x000039, "Member 'WDT_ConfigStandardPageBase_C_OnPageDownPressed::CallFunc_EqualEqual_NameName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigStandardPageBase_C_OnPageDownPressed, CallFunc_Not_PreBool_ReturnValue) == 0x00003A, "Member 'WDT_ConfigStandardPageBase_C_OnPageDownPressed::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigStandardPageBase_C_OnPageDownPressed, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000040, "Member 'WDT_ConfigStandardPageBase_C_OnPageDownPressed::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigStandardPageBase_C_OnPageDownPressed, CallFunc_GetSelectedMenuPiece_ReturnValue_3) == 0x000048, "Member 'WDT_ConfigStandardPageBase_C_OnPageDownPressed::CallFunc_GetSelectedMenuPiece_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigStandardPageBase_C_OnPageDownPressed, CallFunc_PlayUIAudioEvent_ReturnValue) == 0x000050, "Member 'WDT_ConfigStandardPageBase_C_OnPageDownPressed::CallFunc_PlayUIAudioEvent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigStandardPageBase_C_OnPageDownPressed, K2Node_DynamicCast_AsWDT_Config_Piece_Base) == 0x000058, "Member 'WDT_ConfigStandardPageBase_C_OnPageDownPressed::K2Node_DynamicCast_AsWDT_Config_Piece_Base' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigStandardPageBase_C_OnPageDownPressed, K2Node_DynamicCast_bSuccess) == 0x000060, "Member 'WDT_ConfigStandardPageBase_C_OnPageDownPressed::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigStandardPageBase_C_OnPageDownPressed, CallFunc_IsActivated_ReturnValue) == 0x000061, "Member 'WDT_ConfigStandardPageBase_C_OnPageDownPressed::CallFunc_IsActivated_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigStandardPageBase_C_OnPageDownPressed, CallFunc_SelectNextPieceByDirection_bOutIsNextSelectionSuccessful) == 0x000062, "Member 'WDT_ConfigStandardPageBase_C_OnPageDownPressed::CallFunc_SelectNextPieceByDirection_bOutIsNextSelectionSuccessful' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigStandardPageBase_C_OnPageDownPressed, CallFunc_BooleanAND_ReturnValue) == 0x000063, "Member 'WDT_ConfigStandardPageBase_C_OnPageDownPressed::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
 
 // Function WDT_ConfigStandardPageBase.WDT_ConfigStandardPageBase_C.OnPageUpPressed
-// 0x0040 (0x0040 - 0x0000)
+// 0x0058 (0x0058 - 0x0000)
 struct WDT_ConfigStandardPageBase_C_OnPageUpPressed final
 {
 public:
 	class UWDT_ConfigLog_C*                       ConfigLog;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          bInIsPressStarted;                                 // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_PlayUIAudioEvent_ReturnValue;             // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMenuPieceBase*                         CallFunc_GetSelectedMenuPiece_ReturnValue;         // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsActivated_ReturnValue;                  // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWDT_ConfigPieceBase_C*                 K2Node_DynamicCast_AsWDT_Config_Piece_Base;        // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SelectNextPieceByDirection_bOutIsNextSelectionSuccessful; // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMenuPieceBase*                         L_CurrentPiece;                                    // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UMenuPieceBase*                         CallFunc_GetSelectedMenuPiece_ReturnValue;         // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_ObjectObject_ReturnValue;        // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMenuPieceBase*                         CallFunc_GetSelectedMenuPiece_ReturnValue_1;       // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UMenuPieceBase*                         CallFunc_GetSelectedMenuPiece_ReturnValue_2;       // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_PlayUIAudioEvent_ReturnValue;             // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWDT_ConfigPieceBase_C*                 K2Node_DynamicCast_AsWDT_Config_Piece_Base;        // 0x0048(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsActivated_ReturnValue;                  // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SelectNextPieceByDirection_bOutIsNextSelectionSuccessful; // 0x0052(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_ConfigStandardPageBase_C_OnPageUpPressed) == 0x000008, "Wrong alignment on WDT_ConfigStandardPageBase_C_OnPageUpPressed");
-static_assert(sizeof(WDT_ConfigStandardPageBase_C_OnPageUpPressed) == 0x000040, "Wrong size on WDT_ConfigStandardPageBase_C_OnPageUpPressed");
+static_assert(sizeof(WDT_ConfigStandardPageBase_C_OnPageUpPressed) == 0x000058, "Wrong size on WDT_ConfigStandardPageBase_C_OnPageUpPressed");
 static_assert(offsetof(WDT_ConfigStandardPageBase_C_OnPageUpPressed, ConfigLog) == 0x000000, "Member 'WDT_ConfigStandardPageBase_C_OnPageUpPressed::ConfigLog' has a wrong offset!");
 static_assert(offsetof(WDT_ConfigStandardPageBase_C_OnPageUpPressed, bInIsPressStarted) == 0x000008, "Member 'WDT_ConfigStandardPageBase_C_OnPageUpPressed::bInIsPressStarted' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigStandardPageBase_C_OnPageUpPressed, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000010, "Member 'WDT_ConfigStandardPageBase_C_OnPageUpPressed::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigStandardPageBase_C_OnPageUpPressed, CallFunc_IsValid_ReturnValue) == 0x000018, "Member 'WDT_ConfigStandardPageBase_C_OnPageUpPressed::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigStandardPageBase_C_OnPageUpPressed, CallFunc_PlayUIAudioEvent_ReturnValue) == 0x000019, "Member 'WDT_ConfigStandardPageBase_C_OnPageUpPressed::CallFunc_PlayUIAudioEvent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigStandardPageBase_C_OnPageUpPressed, CallFunc_GetSelectedMenuPiece_ReturnValue) == 0x000020, "Member 'WDT_ConfigStandardPageBase_C_OnPageUpPressed::CallFunc_GetSelectedMenuPiece_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigStandardPageBase_C_OnPageUpPressed, CallFunc_IsActivated_ReturnValue) == 0x000028, "Member 'WDT_ConfigStandardPageBase_C_OnPageUpPressed::CallFunc_IsActivated_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigStandardPageBase_C_OnPageUpPressed, K2Node_DynamicCast_AsWDT_Config_Piece_Base) == 0x000030, "Member 'WDT_ConfigStandardPageBase_C_OnPageUpPressed::K2Node_DynamicCast_AsWDT_Config_Piece_Base' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigStandardPageBase_C_OnPageUpPressed, K2Node_DynamicCast_bSuccess) == 0x000038, "Member 'WDT_ConfigStandardPageBase_C_OnPageUpPressed::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WDT_ConfigStandardPageBase_C_OnPageUpPressed, CallFunc_SelectNextPieceByDirection_bOutIsNextSelectionSuccessful) == 0x000039, "Member 'WDT_ConfigStandardPageBase_C_OnPageUpPressed::CallFunc_SelectNextPieceByDirection_bOutIsNextSelectionSuccessful' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigStandardPageBase_C_OnPageUpPressed, L_CurrentPiece) == 0x000010, "Member 'WDT_ConfigStandardPageBase_C_OnPageUpPressed::L_CurrentPiece' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigStandardPageBase_C_OnPageUpPressed, CallFunc_GetSelectedMenuPiece_ReturnValue) == 0x000018, "Member 'WDT_ConfigStandardPageBase_C_OnPageUpPressed::CallFunc_GetSelectedMenuPiece_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigStandardPageBase_C_OnPageUpPressed, CallFunc_IsValid_ReturnValue) == 0x000020, "Member 'WDT_ConfigStandardPageBase_C_OnPageUpPressed::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigStandardPageBase_C_OnPageUpPressed, CallFunc_NotEqual_ObjectObject_ReturnValue) == 0x000021, "Member 'WDT_ConfigStandardPageBase_C_OnPageUpPressed::CallFunc_NotEqual_ObjectObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigStandardPageBase_C_OnPageUpPressed, CallFunc_GetSelectedMenuPiece_ReturnValue_1) == 0x000028, "Member 'WDT_ConfigStandardPageBase_C_OnPageUpPressed::CallFunc_GetSelectedMenuPiece_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigStandardPageBase_C_OnPageUpPressed, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000030, "Member 'WDT_ConfigStandardPageBase_C_OnPageUpPressed::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigStandardPageBase_C_OnPageUpPressed, CallFunc_GetSelectedMenuPiece_ReturnValue_2) == 0x000038, "Member 'WDT_ConfigStandardPageBase_C_OnPageUpPressed::CallFunc_GetSelectedMenuPiece_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigStandardPageBase_C_OnPageUpPressed, CallFunc_PlayUIAudioEvent_ReturnValue) == 0x000040, "Member 'WDT_ConfigStandardPageBase_C_OnPageUpPressed::CallFunc_PlayUIAudioEvent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigStandardPageBase_C_OnPageUpPressed, K2Node_DynamicCast_AsWDT_Config_Piece_Base) == 0x000048, "Member 'WDT_ConfigStandardPageBase_C_OnPageUpPressed::K2Node_DynamicCast_AsWDT_Config_Piece_Base' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigStandardPageBase_C_OnPageUpPressed, K2Node_DynamicCast_bSuccess) == 0x000050, "Member 'WDT_ConfigStandardPageBase_C_OnPageUpPressed::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigStandardPageBase_C_OnPageUpPressed, CallFunc_IsActivated_ReturnValue) == 0x000051, "Member 'WDT_ConfigStandardPageBase_C_OnPageUpPressed::CallFunc_IsActivated_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigStandardPageBase_C_OnPageUpPressed, CallFunc_SelectNextPieceByDirection_bOutIsNextSelectionSuccessful) == 0x000052, "Member 'WDT_ConfigStandardPageBase_C_OnPageUpPressed::CallFunc_SelectNextPieceByDirection_bOutIsNextSelectionSuccessful' has a wrong offset!");
 
 }
 

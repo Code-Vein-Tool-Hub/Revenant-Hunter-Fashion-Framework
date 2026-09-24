@@ -626,7 +626,7 @@ void UWDT_JailEquipmentMenu_C::OnClosed()
 
 
 // Function WDT_JailEquipmentMenu.WDT_JailEquipmentMenu_C.OnDecideReleased
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWDT_JailEquipmentMenu_C::OnDecideReleased()
 {

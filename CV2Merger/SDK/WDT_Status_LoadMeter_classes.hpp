@@ -35,10 +35,10 @@ public:
 	struct FLinearColor                           DecreaseMeterColor;                                // 0x0720(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void GetComparisonColorForCapacity(int32 Current, int32 After, struct FSlateColor* SlateColor);
-	void GetComparisonColorForLoad(int32 Current, int32 After, struct FSlateColor* SlateColor);
-	void SetValue(int32 InCapacityValue, int32 InLoadValue);
 	void SetValueComparison(int32 InCurrentCapacity, int32 InAfterCapacity, int32 InCurrentLoad, int32 InAfterLoad);
+	void SetValue(int32 InCapacityValue, int32 InLoadValue);
+	void GetComparisonColorForLoad(int32 Current, int32 After, struct FSlateColor* SlateColor);
+	void GetComparisonColorForCapacity(int32 Current, int32 After, struct FSlateColor* SlateColor);
 
 public:
 	static class UClass* StaticClass()

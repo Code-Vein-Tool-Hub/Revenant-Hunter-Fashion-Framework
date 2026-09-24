@@ -18,12 +18,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_SmallScenarioBase.BP_SmallScenarioBase_C
-// 0x0010 (0x03C8 - 0x03B8)
+// 0x0010 (0x03D8 - 0x03C8)
 class ABP_SmallScenarioBase_C : public ASmallScenarioBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USphereComponent*                       Sphere;                                            // 0x03C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USphereComponent*                       Sphere;                                            // 0x03D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Abort();
@@ -44,9 +44,9 @@ public:
 	}
 };
 static_assert(alignof(ABP_SmallScenarioBase_C) == 0x000008, "Wrong alignment on ABP_SmallScenarioBase_C");
-static_assert(sizeof(ABP_SmallScenarioBase_C) == 0x0003C8, "Wrong size on ABP_SmallScenarioBase_C");
-static_assert(offsetof(ABP_SmallScenarioBase_C, UberGraphFrame) == 0x0003B8, "Member 'ABP_SmallScenarioBase_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_SmallScenarioBase_C, Sphere) == 0x0003C0, "Member 'ABP_SmallScenarioBase_C::Sphere' has a wrong offset!");
+static_assert(sizeof(ABP_SmallScenarioBase_C) == 0x0003D8, "Wrong size on ABP_SmallScenarioBase_C");
+static_assert(offsetof(ABP_SmallScenarioBase_C, UberGraphFrame) == 0x0003C8, "Member 'ABP_SmallScenarioBase_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ABP_SmallScenarioBase_C, Sphere) == 0x0003D0, "Member 'ABP_SmallScenarioBase_C::Sphere' has a wrong offset!");
 
 }
 

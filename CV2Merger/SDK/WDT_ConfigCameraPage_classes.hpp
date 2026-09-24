@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WDT_ConfigCameraPage.WDT_ConfigCameraPage_C
-// 0x01E8 (0x07C0 - 0x05D8)
+// 0x01F0 (0x07C8 - 0x05D8)
 class UWDT_ConfigCameraPage_C final : public UWDT_ConfigStandardPageBase_C
 {
 public:
@@ -82,6 +82,7 @@ public:
 	class UWidgetSwitcher*                        WidgetSwitcher_74;                                 // 0x07A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class FText                                   HeaderBackPhotoModeText;                           // 0x07A8(0x0010)(Edit, BlueprintVisible)
 	class UBP_ConfigurationUIObject_C*            ConfigurationUIObject;                             // 0x07B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsPhotoModeOpen;                                   // 0x07C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ApplyConfigData();
@@ -90,21 +91,27 @@ public:
 	void BndEvt__WDT_ConfigGamePage_WDT_ConfigHeader_K2Node_ComponentBoundEvent_2_OnBackClickedEvent__DelegateSignature();
 	void ExecuteUbergraph_WDT_ConfigCameraPage(int32 EntryPoint);
 	void HasPhotoModeInputMappingContext(bool* NewParam);
-	void InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_12(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_7(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_13(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent_8(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent_9(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_UI_MenuSpecial1_K2Node_EnhancedInputActionEvent_6(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_UI_MenuSpecial4_K2Node_EnhancedInputActionEvent_5(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_UI_PhotoMode_Decide_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEvent_10(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEvent_11(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_UI_SwitchLeft_K2Node_EnhancedInputActionEvent_3(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_UI_SwitchLeft_K2Node_EnhancedInputActionEvent_4(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_UI_SwitchRight_K2Node_EnhancedInputActionEvent_1(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_UI_SwitchRight_K2Node_EnhancedInputActionEvent_2(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_14(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_18(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_13(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_19(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent_14(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent_15(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_UI_MenuSpecial1_K2Node_EnhancedInputActionEvent_12(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_UI_MenuSpecial4_K2Node_EnhancedInputActionEvent_11(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_UI_PhotoMode_Decide_K2Node_EnhancedInputActionEvent_2(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_UI_PhotoModeDown_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_UI_PhotoModeSwitchLeft_K2Node_EnhancedInputActionEvent_3(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_UI_PhotoModeSwitchLeft_K2Node_EnhancedInputActionEvent_4(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_UI_PhotoModeSwitchRight_K2Node_EnhancedInputActionEvent_5(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_UI_PhotoModeSwitchRight_K2Node_EnhancedInputActionEvent_6(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_UI_PhotoModeUp_K2Node_EnhancedInputActionEvent_1(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEvent_16(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEvent_17(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_UI_SwitchLeft_K2Node_EnhancedInputActionEvent_10(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_UI_SwitchLeft_K2Node_EnhancedInputActionEvent_9(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_UI_SwitchRight_K2Node_EnhancedInputActionEvent_7(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_UI_SwitchRight_K2Node_EnhancedInputActionEvent_8(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_20(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
 	void OnChangeTransitType();
 	void OnClosed();
 	void OnFieldMenuCloseAnimationFinish();
@@ -129,7 +136,7 @@ public:
 	}
 };
 static_assert(alignof(UWDT_ConfigCameraPage_C) == 0x000008, "Wrong alignment on UWDT_ConfigCameraPage_C");
-static_assert(sizeof(UWDT_ConfigCameraPage_C) == 0x0007C0, "Wrong size on UWDT_ConfigCameraPage_C");
+static_assert(sizeof(UWDT_ConfigCameraPage_C) == 0x0007C8, "Wrong size on UWDT_ConfigCameraPage_C");
 static_assert(offsetof(UWDT_ConfigCameraPage_C, UberGraphFrame) == 0x0005D8, "Member 'UWDT_ConfigCameraPage_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UWDT_ConfigCameraPage_C, AutoCamera_Mount) == 0x0005E0, "Member 'UWDT_ConfigCameraPage_C::AutoCamera_Mount' has a wrong offset!");
 static_assert(offsetof(UWDT_ConfigCameraPage_C, BG) == 0x0005E8, "Member 'UWDT_ConfigCameraPage_C::BG' has a wrong offset!");
@@ -190,6 +197,7 @@ static_assert(offsetof(UWDT_ConfigCameraPage_C, WDT_ConfigurationLog) == 0x00079
 static_assert(offsetof(UWDT_ConfigCameraPage_C, WidgetSwitcher_74) == 0x0007A0, "Member 'UWDT_ConfigCameraPage_C::WidgetSwitcher_74' has a wrong offset!");
 static_assert(offsetof(UWDT_ConfigCameraPage_C, HeaderBackPhotoModeText) == 0x0007A8, "Member 'UWDT_ConfigCameraPage_C::HeaderBackPhotoModeText' has a wrong offset!");
 static_assert(offsetof(UWDT_ConfigCameraPage_C, ConfigurationUIObject) == 0x0007B8, "Member 'UWDT_ConfigCameraPage_C::ConfigurationUIObject' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigCameraPage_C, IsPhotoModeOpen) == 0x0007C0, "Member 'UWDT_ConfigCameraPage_C::IsPhotoModeOpen' has a wrong offset!");
 
 }
 

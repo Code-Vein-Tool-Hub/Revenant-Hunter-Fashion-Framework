@@ -17,29 +17,51 @@
 namespace SDK
 {
 
-// Function WDT_Status_LoadMeter.WDT_Status_LoadMeter_C.GetComparisonColorForCapacity
-// (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function WDT_Status_LoadMeter.WDT_Status_LoadMeter_C.SetValueComparison
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   Current                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   After                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FSlateColor                      SlateColor                                             (Parm, OutParm)
+// int32                                   InCurrentCapacity                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InAfterCapacity                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InCurrentLoad                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InAfterLoad                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_Status_LoadMeter_C::GetComparisonColorForCapacity(int32 Current, int32 After, struct FSlateColor* SlateColor)
+void UWDT_Status_LoadMeter_C::SetValueComparison(int32 InCurrentCapacity, int32 InAfterCapacity, int32 InCurrentLoad, int32 InAfterLoad)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Status_LoadMeter_C", "GetComparisonColorForCapacity");
+		Func = Class->GetFunction("WDT_Status_LoadMeter_C", "SetValueComparison");
 
-	Params::WDT_Status_LoadMeter_C_GetComparisonColorForCapacity Parms{};
+	Params::WDT_Status_LoadMeter_C_SetValueComparison Parms{};
 
-	Parms.Current = Current;
-	Parms.After = After;
+	Parms.InCurrentCapacity = InCurrentCapacity;
+	Parms.InAfterCapacity = InAfterCapacity;
+	Parms.InCurrentLoad = InCurrentLoad;
+	Parms.InAfterLoad = InAfterLoad;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
 
-	if (SlateColor != nullptr)
-		*SlateColor = std::move(Parms.SlateColor);
+
+// Function WDT_Status_LoadMeter.WDT_Status_LoadMeter_C.SetValue
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InCapacityValue                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InLoadValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_Status_LoadMeter_C::SetValue(int32 InCapacityValue, int32 InLoadValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_Status_LoadMeter_C", "SetValue");
+
+	Params::WDT_Status_LoadMeter_C_SetValue Parms{};
+
+	Parms.InCapacityValue = InCapacityValue;
+	Parms.InLoadValue = InLoadValue;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -69,51 +91,29 @@ void UWDT_Status_LoadMeter_C::GetComparisonColorForLoad(int32 Current, int32 Aft
 }
 
 
-// Function WDT_Status_LoadMeter.WDT_Status_LoadMeter_C.SetValue
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function WDT_Status_LoadMeter.WDT_Status_LoadMeter_C.GetComparisonColorForCapacity
+// (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   InCapacityValue                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   InLoadValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Current                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   After                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FSlateColor                      SlateColor                                             (Parm, OutParm)
 
-void UWDT_Status_LoadMeter_C::SetValue(int32 InCapacityValue, int32 InLoadValue)
+void UWDT_Status_LoadMeter_C::GetComparisonColorForCapacity(int32 Current, int32 After, struct FSlateColor* SlateColor)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Status_LoadMeter_C", "SetValue");
+		Func = Class->GetFunction("WDT_Status_LoadMeter_C", "GetComparisonColorForCapacity");
 
-	Params::WDT_Status_LoadMeter_C_SetValue Parms{};
+	Params::WDT_Status_LoadMeter_C_GetComparisonColorForCapacity Parms{};
 
-	Parms.InCapacityValue = InCapacityValue;
-	Parms.InLoadValue = InLoadValue;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_Status_LoadMeter.WDT_Status_LoadMeter_C.SetValueComparison
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InCurrentCapacity                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   InAfterCapacity                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   InCurrentLoad                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   InAfterLoad                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_Status_LoadMeter_C::SetValueComparison(int32 InCurrentCapacity, int32 InAfterCapacity, int32 InCurrentLoad, int32 InAfterLoad)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Status_LoadMeter_C", "SetValueComparison");
-
-	Params::WDT_Status_LoadMeter_C_SetValueComparison Parms{};
-
-	Parms.InCurrentCapacity = InCurrentCapacity;
-	Parms.InAfterCapacity = InAfterCapacity;
-	Parms.InCurrentLoad = InCurrentLoad;
-	Parms.InAfterLoad = InAfterLoad;
+	Parms.Current = Current;
+	Parms.After = After;
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (SlateColor != nullptr)
+		*SlateColor = std::move(Parms.SlateColor);
 }
 
 }

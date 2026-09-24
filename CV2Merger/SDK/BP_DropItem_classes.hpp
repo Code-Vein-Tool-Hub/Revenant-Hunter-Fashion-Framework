@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_DropItem.BP_DropItem_C
-// 0x0000 (0x0530 - 0x0530)
+// 0x0000 (0x0540 - 0x0540)
 class ABP_DropItem_C final : public ABP_PickupItem_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(ABP_DropItem_C) == 0x000008, "Wrong alignment on ABP_DropItem_C");
-static_assert(sizeof(ABP_DropItem_C) == 0x000530, "Wrong size on ABP_DropItem_C");
+static_assert(sizeof(ABP_DropItem_C) == 0x000540, "Wrong size on ABP_DropItem_C");
 
 }
 

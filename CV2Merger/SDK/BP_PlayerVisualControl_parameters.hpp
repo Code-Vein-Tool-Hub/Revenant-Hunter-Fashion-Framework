@@ -11,10 +11,10 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "Niagara_structs.hpp"
-#include "Extensions_structs.hpp"
 #include "E_CharacterVisualControl_CharacterMode_structs.hpp"
+#include "Extensions_structs.hpp"
 #include "Engine_structs.hpp"
+#include "Niagara_structs.hpp"
 
 
 namespace SDK::Params
@@ -268,6 +268,35 @@ static_assert(offsetof(BP_PlayerVisualControl_C_BodyTrailEffect_SetMaxCount, Bod
 static_assert(offsetof(BP_PlayerVisualControl_C_BodyTrailEffect_SetMaxCount, InMesh) == 0x000008, "Member 'BP_PlayerVisualControl_C_BodyTrailEffect_SetMaxCount::InMesh' has a wrong offset!");
 static_assert(offsetof(BP_PlayerVisualControl_C_BodyTrailEffect_SetMaxCount, CallFunc_IsValid_ReturnValue) == 0x000010, "Member 'BP_PlayerVisualControl_C_BodyTrailEffect_SetMaxCount::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
+// Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.BodyTrailEffect_SetParameter
+// 0x0050 (0x0050 - 0x0000)
+struct BP_PlayerVisualControl_C_BodyTrailEffect_SetParameter final
+{
+public:
+	int32                                         MaxCount;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         FrameStep;                                         // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Lifetime;                                          // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bUseColor;                                         // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           EmissiveColorBegin;                                // 0x0014(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           EmissiveColorEnd;                                  // 0x0024(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        EmissiveScale;                                     // 0x0038(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMeshComponent*                         InMesh;                                            // 0x0040(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_PlayerVisualControl_C_BodyTrailEffect_SetParameter) == 0x000008, "Wrong alignment on BP_PlayerVisualControl_C_BodyTrailEffect_SetParameter");
+static_assert(sizeof(BP_PlayerVisualControl_C_BodyTrailEffect_SetParameter) == 0x000050, "Wrong size on BP_PlayerVisualControl_C_BodyTrailEffect_SetParameter");
+static_assert(offsetof(BP_PlayerVisualControl_C_BodyTrailEffect_SetParameter, MaxCount) == 0x000000, "Member 'BP_PlayerVisualControl_C_BodyTrailEffect_SetParameter::MaxCount' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_BodyTrailEffect_SetParameter, FrameStep) == 0x000004, "Member 'BP_PlayerVisualControl_C_BodyTrailEffect_SetParameter::FrameStep' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_BodyTrailEffect_SetParameter, Lifetime) == 0x000008, "Member 'BP_PlayerVisualControl_C_BodyTrailEffect_SetParameter::Lifetime' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_BodyTrailEffect_SetParameter, bUseColor) == 0x000010, "Member 'BP_PlayerVisualControl_C_BodyTrailEffect_SetParameter::bUseColor' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_BodyTrailEffect_SetParameter, EmissiveColorBegin) == 0x000014, "Member 'BP_PlayerVisualControl_C_BodyTrailEffect_SetParameter::EmissiveColorBegin' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_BodyTrailEffect_SetParameter, EmissiveColorEnd) == 0x000024, "Member 'BP_PlayerVisualControl_C_BodyTrailEffect_SetParameter::EmissiveColorEnd' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_BodyTrailEffect_SetParameter, EmissiveScale) == 0x000038, "Member 'BP_PlayerVisualControl_C_BodyTrailEffect_SetParameter::EmissiveScale' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_BodyTrailEffect_SetParameter, InMesh) == 0x000040, "Member 'BP_PlayerVisualControl_C_BodyTrailEffect_SetParameter::InMesh' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_BodyTrailEffect_SetParameter, CallFunc_IsValid_ReturnValue) == 0x000048, "Member 'BP_PlayerVisualControl_C_BodyTrailEffect_SetParameter::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+
 // Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.ClearAllOtherMesh
 // 0x0001 (0x0001 - 0x0000)
 struct BP_PlayerVisualControl_C_ClearAllOtherMesh final
@@ -479,7 +508,8 @@ public:
 	bool                                          K2Node_Event_bReverse;                             // 0x0084(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_85[0x3];                                       // 0x0085(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         K2Node_Event_InWeaponIndex;                        // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8C[0x4];                                       // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          K2Node_Event_bNearCamera;                          // 0x008C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8D[0x3];                                       // 0x008D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_TickProcess_DeltaSeconds_ImplicitCast;    // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_VanishBody_Implement_TotalDuration_ImplicitCast; // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_AppearBody_Implement_TotalDuration_ImplicitCast; // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -509,10 +539,28 @@ static_assert(offsetof(BP_PlayerVisualControl_C_ExecuteUbergraph_BP_PlayerVisual
 static_assert(offsetof(BP_PlayerVisualControl_C_ExecuteUbergraph_BP_PlayerVisualControl, K2Node_Event_InWeaponIndex_1) == 0x000080, "Member 'BP_PlayerVisualControl_C_ExecuteUbergraph_BP_PlayerVisualControl::K2Node_Event_InWeaponIndex_1' has a wrong offset!");
 static_assert(offsetof(BP_PlayerVisualControl_C_ExecuteUbergraph_BP_PlayerVisualControl, K2Node_Event_bReverse) == 0x000084, "Member 'BP_PlayerVisualControl_C_ExecuteUbergraph_BP_PlayerVisualControl::K2Node_Event_bReverse' has a wrong offset!");
 static_assert(offsetof(BP_PlayerVisualControl_C_ExecuteUbergraph_BP_PlayerVisualControl, K2Node_Event_InWeaponIndex) == 0x000088, "Member 'BP_PlayerVisualControl_C_ExecuteUbergraph_BP_PlayerVisualControl::K2Node_Event_InWeaponIndex' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_ExecuteUbergraph_BP_PlayerVisualControl, K2Node_Event_bNearCamera) == 0x00008C, "Member 'BP_PlayerVisualControl_C_ExecuteUbergraph_BP_PlayerVisualControl::K2Node_Event_bNearCamera' has a wrong offset!");
 static_assert(offsetof(BP_PlayerVisualControl_C_ExecuteUbergraph_BP_PlayerVisualControl, CallFunc_TickProcess_DeltaSeconds_ImplicitCast) == 0x000090, "Member 'BP_PlayerVisualControl_C_ExecuteUbergraph_BP_PlayerVisualControl::CallFunc_TickProcess_DeltaSeconds_ImplicitCast' has a wrong offset!");
 static_assert(offsetof(BP_PlayerVisualControl_C_ExecuteUbergraph_BP_PlayerVisualControl, CallFunc_VanishBody_Implement_TotalDuration_ImplicitCast) == 0x000098, "Member 'BP_PlayerVisualControl_C_ExecuteUbergraph_BP_PlayerVisualControl::CallFunc_VanishBody_Implement_TotalDuration_ImplicitCast' has a wrong offset!");
 static_assert(offsetof(BP_PlayerVisualControl_C_ExecuteUbergraph_BP_PlayerVisualControl, CallFunc_AppearBody_Implement_TotalDuration_ImplicitCast) == 0x0000A0, "Member 'BP_PlayerVisualControl_C_ExecuteUbergraph_BP_PlayerVisualControl::CallFunc_AppearBody_Implement_TotalDuration_ImplicitCast' has a wrong offset!");
 static_assert(offsetof(BP_PlayerVisualControl_C_ExecuteUbergraph_BP_PlayerVisualControl, CallFunc_VanishWeapon_Implement_Duration_ImplicitCast) == 0x0000A8, "Member 'BP_PlayerVisualControl_C_ExecuteUbergraph_BP_PlayerVisualControl::CallFunc_VanishWeapon_Implement_Duration_ImplicitCast' has a wrong offset!");
+
+// Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.FootStepChanged_Tick
+// 0x0020 (0x0020 - 0x0000)
+struct BP_PlayerVisualControl_C_FootStepChanged_Tick final
+{
+public:
+	double                                        DeltaSeconds;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        InDeltaSeconds;                                    // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue;    // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_PlayerVisualControl_C_FootStepChanged_Tick) == 0x000008, "Wrong alignment on BP_PlayerVisualControl_C_FootStepChanged_Tick");
+static_assert(sizeof(BP_PlayerVisualControl_C_FootStepChanged_Tick) == 0x000020, "Wrong size on BP_PlayerVisualControl_C_FootStepChanged_Tick");
+static_assert(offsetof(BP_PlayerVisualControl_C_FootStepChanged_Tick, DeltaSeconds) == 0x000000, "Member 'BP_PlayerVisualControl_C_FootStepChanged_Tick::DeltaSeconds' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_FootStepChanged_Tick, InDeltaSeconds) == 0x000008, "Member 'BP_PlayerVisualControl_C_FootStepChanged_Tick::InDeltaSeconds' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_FootStepChanged_Tick, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000010, "Member 'BP_PlayerVisualControl_C_FootStepChanged_Tick::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_FootStepChanged_Tick, CallFunc_GreaterEqual_DoubleDouble_ReturnValue) == 0x000018, "Member 'BP_PlayerVisualControl_C_FootStepChanged_Tick::CallFunc_GreaterEqual_DoubleDouble_ReturnValue' has a wrong offset!");
 
 // Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.GetAllOtherMesh
 // 0x0028 (0x0028 - 0x0000)
@@ -529,8 +577,50 @@ static_assert(offsetof(BP_PlayerVisualControl_C_GetAllOtherMesh, ReturnValue) ==
 static_assert(offsetof(BP_PlayerVisualControl_C_GetAllOtherMesh, CallFunc_GetAllOtherMesh_Result) == 0x000010, "Member 'BP_PlayerVisualControl_C_GetAllOtherMesh::CallFunc_GetAllOtherMesh_Result' has a wrong offset!");
 static_assert(offsetof(BP_PlayerVisualControl_C_GetAllOtherMesh, CallFunc_IsValid_ReturnValue) == 0x000020, "Member 'BP_PlayerVisualControl_C_GetAllOtherMesh::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
+// Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.GuestWaitingState_DeactivateEffect
+// 0x0001 (0x0001 - 0x0000)
+struct BP_PlayerVisualControl_C_GuestWaitingState_DeactivateEffect final
+{
+public:
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_PlayerVisualControl_C_GuestWaitingState_DeactivateEffect) == 0x000001, "Wrong alignment on BP_PlayerVisualControl_C_GuestWaitingState_DeactivateEffect");
+static_assert(sizeof(BP_PlayerVisualControl_C_GuestWaitingState_DeactivateEffect) == 0x000001, "Wrong size on BP_PlayerVisualControl_C_GuestWaitingState_DeactivateEffect");
+static_assert(offsetof(BP_PlayerVisualControl_C_GuestWaitingState_DeactivateEffect, CallFunc_IsValid_ReturnValue) == 0x000000, "Member 'BP_PlayerVisualControl_C_GuestWaitingState_DeactivateEffect::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+
+// Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.GuestWaitingState_SpawnEffect
+// 0x0070 (0x0070 - 0x0000)
+struct BP_PlayerVisualControl_C_GuestWaitingState_SpawnEffect final
+{
+public:
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMeshComponent*                 CallFunc_GetCharacterMesh_ReturnValue;             // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue;      // 0x0018(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_X;                            // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Y;                            // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Z;                            // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x0050(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraComponent*                      CallFunc_SpawnSystemAtLocation_ReturnValue;        // 0x0068(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_PlayerVisualControl_C_GuestWaitingState_SpawnEffect) == 0x000008, "Wrong alignment on BP_PlayerVisualControl_C_GuestWaitingState_SpawnEffect");
+static_assert(sizeof(BP_PlayerVisualControl_C_GuestWaitingState_SpawnEffect) == 0x000070, "Wrong size on BP_PlayerVisualControl_C_GuestWaitingState_SpawnEffect");
+static_assert(offsetof(BP_PlayerVisualControl_C_GuestWaitingState_SpawnEffect, CallFunc_IsValid_ReturnValue) == 0x000000, "Member 'BP_PlayerVisualControl_C_GuestWaitingState_SpawnEffect::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_GuestWaitingState_SpawnEffect, CallFunc_GetCharacterMesh_ReturnValue) == 0x000008, "Member 'BP_PlayerVisualControl_C_GuestWaitingState_SpawnEffect::CallFunc_GetCharacterMesh_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_GuestWaitingState_SpawnEffect, CallFunc_IsValid_ReturnValue_1) == 0x000010, "Member 'BP_PlayerVisualControl_C_GuestWaitingState_SpawnEffect::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_GuestWaitingState_SpawnEffect, CallFunc_K2_GetComponentLocation_ReturnValue) == 0x000018, "Member 'BP_PlayerVisualControl_C_GuestWaitingState_SpawnEffect::CallFunc_K2_GetComponentLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_GuestWaitingState_SpawnEffect, CallFunc_BreakVector_X) == 0x000030, "Member 'BP_PlayerVisualControl_C_GuestWaitingState_SpawnEffect::CallFunc_BreakVector_X' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_GuestWaitingState_SpawnEffect, CallFunc_BreakVector_Y) == 0x000038, "Member 'BP_PlayerVisualControl_C_GuestWaitingState_SpawnEffect::CallFunc_BreakVector_Y' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_GuestWaitingState_SpawnEffect, CallFunc_BreakVector_Z) == 0x000040, "Member 'BP_PlayerVisualControl_C_GuestWaitingState_SpawnEffect::CallFunc_BreakVector_Z' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_GuestWaitingState_SpawnEffect, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000048, "Member 'BP_PlayerVisualControl_C_GuestWaitingState_SpawnEffect::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_GuestWaitingState_SpawnEffect, CallFunc_MakeVector_ReturnValue) == 0x000050, "Member 'BP_PlayerVisualControl_C_GuestWaitingState_SpawnEffect::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_GuestWaitingState_SpawnEffect, CallFunc_SpawnSystemAtLocation_ReturnValue) == 0x000068, "Member 'BP_PlayerVisualControl_C_GuestWaitingState_SpawnEffect::CallFunc_SpawnSystemAtLocation_ReturnValue' has a wrong offset!");
+
 // Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.HideAccessory
-// 0x0004 (0x0004 - 0x0000)
+// 0x0058 (0x0058 - 0x0000)
 struct BP_PlayerVisualControl_C_HideAccessory final
 {
 public:
@@ -538,48 +628,81 @@ public:
 	bool                                          InVisibility;                                      // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class UMeshComponent*, bool>             CallFunc_SetVisibilityMesh_VisibilityMap;          // 0x0008(0x0050)(ContainsInstancedReference)
 };
-static_assert(alignof(BP_PlayerVisualControl_C_HideAccessory) == 0x000001, "Wrong alignment on BP_PlayerVisualControl_C_HideAccessory");
-static_assert(sizeof(BP_PlayerVisualControl_C_HideAccessory) == 0x000004, "Wrong size on BP_PlayerVisualControl_C_HideAccessory");
+static_assert(alignof(BP_PlayerVisualControl_C_HideAccessory) == 0x000008, "Wrong alignment on BP_PlayerVisualControl_C_HideAccessory");
+static_assert(sizeof(BP_PlayerVisualControl_C_HideAccessory) == 0x000058, "Wrong size on BP_PlayerVisualControl_C_HideAccessory");
 static_assert(offsetof(BP_PlayerVisualControl_C_HideAccessory, bHide) == 0x000000, "Member 'BP_PlayerVisualControl_C_HideAccessory::bHide' has a wrong offset!");
 static_assert(offsetof(BP_PlayerVisualControl_C_HideAccessory, InVisibility) == 0x000001, "Member 'BP_PlayerVisualControl_C_HideAccessory::InVisibility' has a wrong offset!");
 static_assert(offsetof(BP_PlayerVisualControl_C_HideAccessory, CallFunc_Not_PreBool_ReturnValue) == 0x000002, "Member 'BP_PlayerVisualControl_C_HideAccessory::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_PlayerVisualControl_C_HideAccessory, CallFunc_IsValid_ReturnValue) == 0x000003, "Member 'BP_PlayerVisualControl_C_HideAccessory::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_HideAccessory, CallFunc_SetVisibilityMesh_VisibilityMap) == 0x000008, "Member 'BP_PlayerVisualControl_C_HideAccessory::CallFunc_SetVisibilityMesh_VisibilityMap' has a wrong offset!");
+
+// Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.HideCharacter
+// 0x00A0 (0x00A0 - 0x0000)
+struct BP_PlayerVisualControl_C_HideCharacter final
+{
+public:
+	bool                                          bBegin;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMeshComponent*                         InMesh;                                            // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          InVisibility;                                      // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_Value;                           // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_23[0x5];                                       // 0x0023(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UMeshComponent*>                 CallFunc_Map_Keys_Keys;                            // 0x0028(0x0010)(ReferenceParm, ContainsInstancedReference)
+	class UMeshComponent*                         CallFunc_Array_Get_Item;                           // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_45[0x3];                                       // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class UMeshComponent*, bool>             CallFunc_SetVisibilityMesh_VisibilityMap;          // 0x0048(0x0050)(ContainsInstancedReference)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_PlayerVisualControl_C_HideCharacter) == 0x000008, "Wrong alignment on BP_PlayerVisualControl_C_HideCharacter");
+static_assert(sizeof(BP_PlayerVisualControl_C_HideCharacter) == 0x0000A0, "Wrong size on BP_PlayerVisualControl_C_HideCharacter");
+static_assert(offsetof(BP_PlayerVisualControl_C_HideCharacter, bBegin) == 0x000000, "Member 'BP_PlayerVisualControl_C_HideCharacter::bBegin' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_HideCharacter, InMesh) == 0x000008, "Member 'BP_PlayerVisualControl_C_HideCharacter::InMesh' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_HideCharacter, InVisibility) == 0x000010, "Member 'BP_PlayerVisualControl_C_HideCharacter::InVisibility' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_HideCharacter, Temp_int_Array_Index_Variable) == 0x000014, "Member 'BP_PlayerVisualControl_C_HideCharacter::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_HideCharacter, Temp_int_Loop_Counter_Variable) == 0x000018, "Member 'BP_PlayerVisualControl_C_HideCharacter::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_HideCharacter, CallFunc_Add_IntInt_ReturnValue) == 0x00001C, "Member 'BP_PlayerVisualControl_C_HideCharacter::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_HideCharacter, CallFunc_IsValid_ReturnValue) == 0x000020, "Member 'BP_PlayerVisualControl_C_HideCharacter::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_HideCharacter, CallFunc_Map_Find_Value) == 0x000021, "Member 'BP_PlayerVisualControl_C_HideCharacter::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_HideCharacter, CallFunc_Map_Find_ReturnValue) == 0x000022, "Member 'BP_PlayerVisualControl_C_HideCharacter::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_HideCharacter, CallFunc_Map_Keys_Keys) == 0x000028, "Member 'BP_PlayerVisualControl_C_HideCharacter::CallFunc_Map_Keys_Keys' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_HideCharacter, CallFunc_Array_Get_Item) == 0x000038, "Member 'BP_PlayerVisualControl_C_HideCharacter::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_HideCharacter, CallFunc_Array_Length_ReturnValue) == 0x000040, "Member 'BP_PlayerVisualControl_C_HideCharacter::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_HideCharacter, CallFunc_Less_IntInt_ReturnValue) == 0x000044, "Member 'BP_PlayerVisualControl_C_HideCharacter::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_HideCharacter, CallFunc_SetVisibilityMesh_VisibilityMap) == 0x000048, "Member 'BP_PlayerVisualControl_C_HideCharacter::CallFunc_SetVisibilityMesh_VisibilityMap' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_HideCharacter, CallFunc_IsValid_ReturnValue_1) == 0x000098, "Member 'BP_PlayerVisualControl_C_HideCharacter::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
 
 // Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.Initialize
-// 0x0060 (0x0060 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct BP_PlayerVisualControl_C_Initialize final
 {
 public:
 	TArray<class USkeletalMeshComponent*>         InMeshes;                                          // 0x0000(0x0010)(Edit, BlueprintVisible, ContainsInstancedReference)
 	class USkeletalMeshComponent*                 InPlayer;                                          // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 CallFunc_GetCharacterMesh_ReturnValue;             // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UBP_CharacterVisualControl_Implement_C* CallFunc_SpawnObject_ReturnValue;                  // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ACharacter*                             CallFunc_GetCharacterActor_ReturnValue;            // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 CallFunc_GetCharacterMesh_ReturnValue;             // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_Buddy_C*                            K2Node_DynamicCast_AsBP_Buddy;                     // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABuddyCharacter*                        K2Node_DynamicCast_AsBuddy_Character;              // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBP_CharacterVisualControl_Implement_C* CallFunc_SpawnObject_ReturnValue;                  // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_PlayerVisualControl_C_Initialize) == 0x000008, "Wrong alignment on BP_PlayerVisualControl_C_Initialize");
-static_assert(sizeof(BP_PlayerVisualControl_C_Initialize) == 0x000060, "Wrong size on BP_PlayerVisualControl_C_Initialize");
+static_assert(sizeof(BP_PlayerVisualControl_C_Initialize) == 0x000038, "Wrong size on BP_PlayerVisualControl_C_Initialize");
 static_assert(offsetof(BP_PlayerVisualControl_C_Initialize, InMeshes) == 0x000000, "Member 'BP_PlayerVisualControl_C_Initialize::InMeshes' has a wrong offset!");
 static_assert(offsetof(BP_PlayerVisualControl_C_Initialize, InPlayer) == 0x000010, "Member 'BP_PlayerVisualControl_C_Initialize::InPlayer' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_Initialize, CallFunc_GetCharacterMesh_ReturnValue) == 0x000018, "Member 'BP_PlayerVisualControl_C_Initialize::CallFunc_GetCharacterMesh_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_Initialize, CallFunc_SpawnObject_ReturnValue) == 0x000018, "Member 'BP_PlayerVisualControl_C_Initialize::CallFunc_SpawnObject_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_PlayerVisualControl_C_Initialize, CallFunc_IsValid_ReturnValue) == 0x000020, "Member 'BP_PlayerVisualControl_C_Initialize::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_Initialize, CallFunc_GetCharacterActor_ReturnValue) == 0x000028, "Member 'BP_PlayerVisualControl_C_Initialize::CallFunc_GetCharacterActor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_Initialize, CallFunc_GetCharacterMesh_ReturnValue) == 0x000028, "Member 'BP_PlayerVisualControl_C_Initialize::CallFunc_GetCharacterMesh_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_PlayerVisualControl_C_Initialize, CallFunc_IsValid_ReturnValue_1) == 0x000030, "Member 'BP_PlayerVisualControl_C_Initialize::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_Initialize, K2Node_DynamicCast_AsBP_Buddy) == 0x000038, "Member 'BP_PlayerVisualControl_C_Initialize::K2Node_DynamicCast_AsBP_Buddy' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_Initialize, K2Node_DynamicCast_bSuccess) == 0x000040, "Member 'BP_PlayerVisualControl_C_Initialize::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_Initialize, K2Node_DynamicCast_AsBuddy_Character) == 0x000048, "Member 'BP_PlayerVisualControl_C_Initialize::K2Node_DynamicCast_AsBuddy_Character' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_Initialize, K2Node_DynamicCast_bSuccess_1) == 0x000050, "Member 'BP_PlayerVisualControl_C_Initialize::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_Initialize, CallFunc_SpawnObject_ReturnValue) == 0x000058, "Member 'BP_PlayerVisualControl_C_Initialize::CallFunc_SpawnObject_ReturnValue' has a wrong offset!");
 
 // Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.IsActiveDisplayMoveHistory3D
 // 0x0018 (0x0018 - 0x0000)
@@ -640,6 +763,20 @@ static_assert(offsetof(BP_PlayerVisualControl_C_IsCurveExists, Temp_int_Loop_Cou
 static_assert(offsetof(BP_PlayerVisualControl_C_IsCurveExists, CallFunc_Less_IntInt_ReturnValue) == 0x00005C, "Member 'BP_PlayerVisualControl_C_IsCurveExists::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_PlayerVisualControl_C_IsCurveExists, CallFunc_Add_IntInt_ReturnValue) == 0x000060, "Member 'BP_PlayerVisualControl_C_IsCurveExists::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
 
+// Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.IsFootStepChanged
+// 0x0010 (0x0010 - 0x0000)
+struct BP_PlayerVisualControl_C_IsFootStepChanged final
+{
+public:
+	bool                                          Result;                                            // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        InDeltaSeconds;                                    // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_PlayerVisualControl_C_IsFootStepChanged) == 0x000008, "Wrong alignment on BP_PlayerVisualControl_C_IsFootStepChanged");
+static_assert(sizeof(BP_PlayerVisualControl_C_IsFootStepChanged) == 0x000010, "Wrong size on BP_PlayerVisualControl_C_IsFootStepChanged");
+static_assert(offsetof(BP_PlayerVisualControl_C_IsFootStepChanged, Result) == 0x000000, "Member 'BP_PlayerVisualControl_C_IsFootStepChanged::Result' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_IsFootStepChanged, InDeltaSeconds) == 0x000008, "Member 'BP_PlayerVisualControl_C_IsFootStepChanged::InDeltaSeconds' has a wrong offset!");
+
 // Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.IsGuestState
 // 0x0001 (0x0001 - 0x0000)
 struct BP_PlayerVisualControl_C_IsGuestState final
@@ -651,6 +788,28 @@ static_assert(alignof(BP_PlayerVisualControl_C_IsGuestState) == 0x000001, "Wrong
 static_assert(sizeof(BP_PlayerVisualControl_C_IsGuestState) == 0x000001, "Wrong size on BP_PlayerVisualControl_C_IsGuestState");
 static_assert(offsetof(BP_PlayerVisualControl_C_IsGuestState, ReturnValue) == 0x000000, "Member 'BP_PlayerVisualControl_C_IsGuestState::ReturnValue' has a wrong offset!");
 
+// Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.IsGuestWaitingState
+// 0x0001 (0x0001 - 0x0000)
+struct BP_PlayerVisualControl_C_IsGuestWaitingState final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_PlayerVisualControl_C_IsGuestWaitingState) == 0x000001, "Wrong alignment on BP_PlayerVisualControl_C_IsGuestWaitingState");
+static_assert(sizeof(BP_PlayerVisualControl_C_IsGuestWaitingState) == 0x000001, "Wrong size on BP_PlayerVisualControl_C_IsGuestWaitingState");
+static_assert(offsetof(BP_PlayerVisualControl_C_IsGuestWaitingState, ReturnValue) == 0x000000, "Member 'BP_PlayerVisualControl_C_IsGuestWaitingState::ReturnValue' has a wrong offset!");
+
+// Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.IsMatchingDecisionState
+// 0x0001 (0x0001 - 0x0000)
+struct BP_PlayerVisualControl_C_IsMatchingDecisionState final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_PlayerVisualControl_C_IsMatchingDecisionState) == 0x000001, "Wrong alignment on BP_PlayerVisualControl_C_IsMatchingDecisionState");
+static_assert(sizeof(BP_PlayerVisualControl_C_IsMatchingDecisionState) == 0x000001, "Wrong size on BP_PlayerVisualControl_C_IsMatchingDecisionState");
+static_assert(offsetof(BP_PlayerVisualControl_C_IsMatchingDecisionState, ReturnValue) == 0x000000, "Member 'BP_PlayerVisualControl_C_IsMatchingDecisionState::ReturnValue' has a wrong offset!");
+
 // Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.IsMatchingState
 // 0x0001 (0x0001 - 0x0000)
 struct BP_PlayerVisualControl_C_IsMatchingState final
@@ -661,6 +820,17 @@ public:
 static_assert(alignof(BP_PlayerVisualControl_C_IsMatchingState) == 0x000001, "Wrong alignment on BP_PlayerVisualControl_C_IsMatchingState");
 static_assert(sizeof(BP_PlayerVisualControl_C_IsMatchingState) == 0x000001, "Wrong size on BP_PlayerVisualControl_C_IsMatchingState");
 static_assert(offsetof(BP_PlayerVisualControl_C_IsMatchingState, ReturnValue) == 0x000000, "Member 'BP_PlayerVisualControl_C_IsMatchingState::ReturnValue' has a wrong offset!");
+
+// Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.IsTeleportationForma
+// 0x0001 (0x0001 - 0x0000)
+struct BP_PlayerVisualControl_C_IsTeleportationForma final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_PlayerVisualControl_C_IsTeleportationForma) == 0x000001, "Wrong alignment on BP_PlayerVisualControl_C_IsTeleportationForma");
+static_assert(sizeof(BP_PlayerVisualControl_C_IsTeleportationForma) == 0x000001, "Wrong size on BP_PlayerVisualControl_C_IsTeleportationForma");
+static_assert(offsetof(BP_PlayerVisualControl_C_IsTeleportationForma, ReturnValue) == 0x000000, "Member 'BP_PlayerVisualControl_C_IsTeleportationForma::ReturnValue' has a wrong offset!");
 
 // Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.MoveHistory3D_IsActive
 // 0x0002 (0x0002 - 0x0000)
@@ -973,6 +1143,17 @@ static_assert(sizeof(BP_PlayerVisualControl_C_OnFinishPhotoModeEvent) == 0x00000
 static_assert(offsetof(BP_PlayerVisualControl_C_OnFinishPhotoModeEvent, ReturnValue) == 0x000000, "Member 'BP_PlayerVisualControl_C_OnFinishPhotoModeEvent::ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_PlayerVisualControl_C_OnFinishPhotoModeEvent, CallFunc_OnFinishPhotoModeEvent_ReturnValue) == 0x000001, "Member 'BP_PlayerVisualControl_C_OnFinishPhotoModeEvent::CallFunc_OnFinishPhotoModeEvent_ReturnValue' has a wrong offset!");
 
+// Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.OnFootStepChanged
+// 0x0001 (0x0001 - 0x0000)
+struct BP_PlayerVisualControl_C_OnFootStepChanged final
+{
+public:
+	EFootType                                     FootType;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_PlayerVisualControl_C_OnFootStepChanged) == 0x000001, "Wrong alignment on BP_PlayerVisualControl_C_OnFootStepChanged");
+static_assert(sizeof(BP_PlayerVisualControl_C_OnFootStepChanged) == 0x000001, "Wrong size on BP_PlayerVisualControl_C_OnFootStepChanged");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnFootStepChanged, FootType) == 0x000000, "Member 'BP_PlayerVisualControl_C_OnFootStepChanged::FootType' has a wrong offset!");
+
 // Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.OnResetCurveValueEnd
 // 0x0158 (0x0158 - 0x0000)
 struct BP_PlayerVisualControl_C_OnResetCurveValueEnd final
@@ -1120,7 +1301,7 @@ static_assert(offsetof(BP_PlayerVisualControl_C_OnResetCurveValueEnd, CallFunc_A
 static_assert(offsetof(BP_PlayerVisualControl_C_OnResetCurveValueEnd, CallFunc_GetMaterials_ReturnValue_2) == 0x000148, "Member 'BP_PlayerVisualControl_C_OnResetCurveValueEnd::CallFunc_GetMaterials_ReturnValue_2' has a wrong offset!");
 
 // Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.OnSimpleAnimNotify_Begin
-// 0x0050 (0x0050 - 0x0000)
+// 0x0070 (0x0070 - 0x0000)
 struct BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin final
 {
 public:
@@ -1133,17 +1314,24 @@ public:
 	class UANS_BodyTrailEffect_C*                 InBodyTrailEffect;                                 // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_OnSimpleAnimNotify_Begin_ReturnValue;     // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	const class UANS_HideAccessory_C*             K2Node_DynamicCast_AsANS_Hide_Accessory;           // 0x0030(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	const class UANS_HideCharacter_C*             K2Node_DynamicCast_AsANS_Hide_Character;           // 0x0030(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	const class UANS_BodyTrailEffect_C*           K2Node_DynamicCast_AsANS_Body_Trail_Effect;        // 0x0040(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	const class UANS_HideAccessory_C*             K2Node_DynamicCast_AsANS_Hide_Accessory;           // 0x0040(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_OnSimpleAnimNotify_Begin_ReturnValue_1;   // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x004A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchName_CmpSuccess;                      // 0x004B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	const class UANS_TeleportationFormaEffect_C*  K2Node_DynamicCast_AsANS_Teleportation_Forma_Effect; // 0x0050(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	const class UANS_BodyTrailEffect_C*           K2Node_DynamicCast_AsANS_Body_Trail_Effect;        // 0x0060(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_OnSimpleAnimNotify_Begin_ReturnValue_1;   // 0x0069(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x006A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchName_CmpSuccess;                      // 0x006B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_VariableSet_TeleportationForma_VanishTime_ImplicitCast; // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin) == 0x000008, "Wrong alignment on BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin");
-static_assert(sizeof(BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin) == 0x000050, "Wrong size on BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin");
+static_assert(sizeof(BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin) == 0x000070, "Wrong size on BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin");
 static_assert(offsetof(BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin, InAnimNotifyObject) == 0x000000, "Member 'BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin::InAnimNotifyObject' has a wrong offset!");
 static_assert(offsetof(BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin, InAnimSequence) == 0x000008, "Member 'BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin::InAnimSequence' has a wrong offset!");
 static_assert(offsetof(BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin, InMessage) == 0x000010, "Member 'BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin::InMessage' has a wrong offset!");
@@ -1151,16 +1339,21 @@ static_assert(offsetof(BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin, InTota
 static_assert(offsetof(BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin, ReturnValue) == 0x00001C, "Member 'BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin::ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin, InBodyTrailEffect) == 0x000020, "Member 'BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin::InBodyTrailEffect' has a wrong offset!");
 static_assert(offsetof(BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin, CallFunc_OnSimpleAnimNotify_Begin_ReturnValue) == 0x000028, "Member 'BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin::CallFunc_OnSimpleAnimNotify_Begin_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin, K2Node_DynamicCast_AsANS_Hide_Accessory) == 0x000030, "Member 'BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin::K2Node_DynamicCast_AsANS_Hide_Accessory' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin, K2Node_DynamicCast_AsANS_Hide_Character) == 0x000030, "Member 'BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin::K2Node_DynamicCast_AsANS_Hide_Character' has a wrong offset!");
 static_assert(offsetof(BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin, K2Node_DynamicCast_bSuccess) == 0x000038, "Member 'BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin, K2Node_DynamicCast_AsANS_Body_Trail_Effect) == 0x000040, "Member 'BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin::K2Node_DynamicCast_AsANS_Body_Trail_Effect' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin, K2Node_DynamicCast_AsANS_Hide_Accessory) == 0x000040, "Member 'BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin::K2Node_DynamicCast_AsANS_Hide_Accessory' has a wrong offset!");
 static_assert(offsetof(BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin, K2Node_DynamicCast_bSuccess_1) == 0x000048, "Member 'BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin, CallFunc_OnSimpleAnimNotify_Begin_ReturnValue_1) == 0x000049, "Member 'BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin::CallFunc_OnSimpleAnimNotify_Begin_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin, CallFunc_IsValid_ReturnValue) == 0x00004A, "Member 'BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin, K2Node_SwitchName_CmpSuccess) == 0x00004B, "Member 'BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin::K2Node_SwitchName_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin, K2Node_DynamicCast_AsANS_Teleportation_Forma_Effect) == 0x000050, "Member 'BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin::K2Node_DynamicCast_AsANS_Teleportation_Forma_Effect' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin, K2Node_DynamicCast_bSuccess_2) == 0x000058, "Member 'BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin, K2Node_DynamicCast_AsANS_Body_Trail_Effect) == 0x000060, "Member 'BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin::K2Node_DynamicCast_AsANS_Body_Trail_Effect' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin, K2Node_DynamicCast_bSuccess_3) == 0x000068, "Member 'BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin, CallFunc_OnSimpleAnimNotify_Begin_ReturnValue_1) == 0x000069, "Member 'BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin::CallFunc_OnSimpleAnimNotify_Begin_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin, CallFunc_IsValid_ReturnValue) == 0x00006A, "Member 'BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin, K2Node_SwitchName_CmpSuccess) == 0x00006B, "Member 'BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin::K2Node_SwitchName_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin, K2Node_VariableSet_TeleportationForma_VanishTime_ImplicitCast) == 0x00006C, "Member 'BP_PlayerVisualControl_C_OnSimpleAnimNotify_Begin::K2Node_VariableSet_TeleportationForma_VanishTime_ImplicitCast' has a wrong offset!");
 
 // Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.OnSimpleAnimNotify_End
-// 0x0040 (0x0040 - 0x0000)
+// 0x0060 (0x0060 - 0x0000)
 struct BP_PlayerVisualControl_C_OnSimpleAnimNotify_End final
 {
 public:
@@ -1173,13 +1366,21 @@ public:
 	const class UANS_HideAccessory_C*             K2Node_DynamicCast_AsANS_Hide_Accessory;           // 0x0020(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	const class UANS_BodyTrailEffect_C*           K2Node_DynamicCast_AsANS_Body_Trail_Effect;        // 0x0030(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	const class UANS_HideCharacter_C*             K2Node_DynamicCast_AsANS_Hide_Character;           // 0x0030(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_OnSimpleAnimNotify_End_ReturnValue_1;     // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x003A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	const class UANS_TeleportationFormaEffect_C*  K2Node_DynamicCast_AsANS_Teleportation_Forma_Effect; // 0x0040(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	const class UANS_BodyTrailEffect_C*           K2Node_DynamicCast_AsANS_Body_Trail_Effect;        // 0x0050(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_OnSimpleAnimNotify_End_ReturnValue_1;     // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x005A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5B[0x1];                                       // 0x005B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         K2Node_VariableSet_TeleportationForma_AppearTime_ImplicitCast; // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_PlayerVisualControl_C_OnSimpleAnimNotify_End) == 0x000008, "Wrong alignment on BP_PlayerVisualControl_C_OnSimpleAnimNotify_End");
-static_assert(sizeof(BP_PlayerVisualControl_C_OnSimpleAnimNotify_End) == 0x000040, "Wrong size on BP_PlayerVisualControl_C_OnSimpleAnimNotify_End");
+static_assert(sizeof(BP_PlayerVisualControl_C_OnSimpleAnimNotify_End) == 0x000060, "Wrong size on BP_PlayerVisualControl_C_OnSimpleAnimNotify_End");
 static_assert(offsetof(BP_PlayerVisualControl_C_OnSimpleAnimNotify_End, InAnimNotifyObject) == 0x000000, "Member 'BP_PlayerVisualControl_C_OnSimpleAnimNotify_End::InAnimNotifyObject' has a wrong offset!");
 static_assert(offsetof(BP_PlayerVisualControl_C_OnSimpleAnimNotify_End, InAnimSequence) == 0x000008, "Member 'BP_PlayerVisualControl_C_OnSimpleAnimNotify_End::InAnimSequence' has a wrong offset!");
 static_assert(offsetof(BP_PlayerVisualControl_C_OnSimpleAnimNotify_End, InMessage) == 0x000010, "Member 'BP_PlayerVisualControl_C_OnSimpleAnimNotify_End::InMessage' has a wrong offset!");
@@ -1187,10 +1388,15 @@ static_assert(offsetof(BP_PlayerVisualControl_C_OnSimpleAnimNotify_End, ReturnVa
 static_assert(offsetof(BP_PlayerVisualControl_C_OnSimpleAnimNotify_End, CallFunc_OnSimpleAnimNotify_End_ReturnValue) == 0x000019, "Member 'BP_PlayerVisualControl_C_OnSimpleAnimNotify_End::CallFunc_OnSimpleAnimNotify_End_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_PlayerVisualControl_C_OnSimpleAnimNotify_End, K2Node_DynamicCast_AsANS_Hide_Accessory) == 0x000020, "Member 'BP_PlayerVisualControl_C_OnSimpleAnimNotify_End::K2Node_DynamicCast_AsANS_Hide_Accessory' has a wrong offset!");
 static_assert(offsetof(BP_PlayerVisualControl_C_OnSimpleAnimNotify_End, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'BP_PlayerVisualControl_C_OnSimpleAnimNotify_End::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnSimpleAnimNotify_End, K2Node_DynamicCast_AsANS_Body_Trail_Effect) == 0x000030, "Member 'BP_PlayerVisualControl_C_OnSimpleAnimNotify_End::K2Node_DynamicCast_AsANS_Body_Trail_Effect' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnSimpleAnimNotify_End, K2Node_DynamicCast_AsANS_Hide_Character) == 0x000030, "Member 'BP_PlayerVisualControl_C_OnSimpleAnimNotify_End::K2Node_DynamicCast_AsANS_Hide_Character' has a wrong offset!");
 static_assert(offsetof(BP_PlayerVisualControl_C_OnSimpleAnimNotify_End, K2Node_DynamicCast_bSuccess_1) == 0x000038, "Member 'BP_PlayerVisualControl_C_OnSimpleAnimNotify_End::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnSimpleAnimNotify_End, CallFunc_OnSimpleAnimNotify_End_ReturnValue_1) == 0x000039, "Member 'BP_PlayerVisualControl_C_OnSimpleAnimNotify_End::CallFunc_OnSimpleAnimNotify_End_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnSimpleAnimNotify_End, CallFunc_IsValid_ReturnValue) == 0x00003A, "Member 'BP_PlayerVisualControl_C_OnSimpleAnimNotify_End::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnSimpleAnimNotify_End, K2Node_DynamicCast_AsANS_Teleportation_Forma_Effect) == 0x000040, "Member 'BP_PlayerVisualControl_C_OnSimpleAnimNotify_End::K2Node_DynamicCast_AsANS_Teleportation_Forma_Effect' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnSimpleAnimNotify_End, K2Node_DynamicCast_bSuccess_2) == 0x000048, "Member 'BP_PlayerVisualControl_C_OnSimpleAnimNotify_End::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnSimpleAnimNotify_End, K2Node_DynamicCast_AsANS_Body_Trail_Effect) == 0x000050, "Member 'BP_PlayerVisualControl_C_OnSimpleAnimNotify_End::K2Node_DynamicCast_AsANS_Body_Trail_Effect' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnSimpleAnimNotify_End, K2Node_DynamicCast_bSuccess_3) == 0x000058, "Member 'BP_PlayerVisualControl_C_OnSimpleAnimNotify_End::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnSimpleAnimNotify_End, CallFunc_OnSimpleAnimNotify_End_ReturnValue_1) == 0x000059, "Member 'BP_PlayerVisualControl_C_OnSimpleAnimNotify_End::CallFunc_OnSimpleAnimNotify_End_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnSimpleAnimNotify_End, CallFunc_IsValid_ReturnValue) == 0x00005A, "Member 'BP_PlayerVisualControl_C_OnSimpleAnimNotify_End::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnSimpleAnimNotify_End, K2Node_VariableSet_TeleportationForma_AppearTime_ImplicitCast) == 0x00005C, "Member 'BP_PlayerVisualControl_C_OnSimpleAnimNotify_End::K2Node_VariableSet_TeleportationForma_AppearTime_ImplicitCast' has a wrong offset!");
 
 // Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.OnSimpleAnimNotify_Tick
 // 0x0020 (0x0020 - 0x0000)
@@ -1216,6 +1422,53 @@ static_assert(offsetof(BP_PlayerVisualControl_C_OnSimpleAnimNotify_Tick, ReturnV
 static_assert(offsetof(BP_PlayerVisualControl_C_OnSimpleAnimNotify_Tick, CallFunc_OnSimpleAnimNotify_Tick_ReturnValue) == 0x00001D, "Member 'BP_PlayerVisualControl_C_OnSimpleAnimNotify_Tick::CallFunc_OnSimpleAnimNotify_Tick_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_PlayerVisualControl_C_OnSimpleAnimNotify_Tick, CallFunc_OnSimpleAnimNotify_Tick_ReturnValue_1) == 0x00001E, "Member 'BP_PlayerVisualControl_C_OnSimpleAnimNotify_Tick::CallFunc_OnSimpleAnimNotify_Tick_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(BP_PlayerVisualControl_C_OnSimpleAnimNotify_Tick, CallFunc_IsValid_ReturnValue) == 0x00001F, "Member 'BP_PlayerVisualControl_C_OnSimpleAnimNotify_Tick::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+
+// Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.OnSpecialHealEvent
+// 0x0068 (0x0068 - 0x0000)
+struct BP_PlayerVisualControl_C_OnSpecialHealEvent final
+{
+public:
+	class UNiagaraSystem*                         InEffectAsset;                                     // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UEffectData*                            InEffectData;                                      // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 CallFunc_GetCharacterMesh_ReturnValue;             // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class ACharacter*                             CallFunc_GetCharacterActor_ReturnValue;            // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	const class UEffectData*                      CallFunc_VCF_GetEffectData_ReturnValue;            // 0x0028(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraComponent*                      CallFunc_SpawnSystemAttached_ReturnValue;          // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3A[0x2];                                       // 0x003A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   CallFunc_MakeLiteralName_ReturnValue;              // 0x003C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UNiagaraSystem*                         CallFunc_VCF_GetEffectInfo_SystemTemplate;         // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_VCF_GetEffectInfo_bAutoActivate;          // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_VCF_GetEffectInfo_bAutoDestroy;           // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_52[0x6];                                       // 0x0052(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAkAudioEvent*                          CallFunc_VCF_GetEffectInfo_Sound;                  // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_VCF_GetEffectInfo_ReturnValue;            // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_PlayerVisualControl_C_OnSpecialHealEvent) == 0x000008, "Wrong alignment on BP_PlayerVisualControl_C_OnSpecialHealEvent");
+static_assert(sizeof(BP_PlayerVisualControl_C_OnSpecialHealEvent) == 0x000068, "Wrong size on BP_PlayerVisualControl_C_OnSpecialHealEvent");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnSpecialHealEvent, InEffectAsset) == 0x000000, "Member 'BP_PlayerVisualControl_C_OnSpecialHealEvent::InEffectAsset' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnSpecialHealEvent, InEffectData) == 0x000008, "Member 'BP_PlayerVisualControl_C_OnSpecialHealEvent::InEffectData' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnSpecialHealEvent, CallFunc_GetCharacterMesh_ReturnValue) == 0x000010, "Member 'BP_PlayerVisualControl_C_OnSpecialHealEvent::CallFunc_GetCharacterMesh_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnSpecialHealEvent, CallFunc_GetCharacterActor_ReturnValue) == 0x000018, "Member 'BP_PlayerVisualControl_C_OnSpecialHealEvent::CallFunc_GetCharacterActor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnSpecialHealEvent, CallFunc_IsValid_ReturnValue) == 0x000020, "Member 'BP_PlayerVisualControl_C_OnSpecialHealEvent::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnSpecialHealEvent, CallFunc_IsValid_ReturnValue_1) == 0x000021, "Member 'BP_PlayerVisualControl_C_OnSpecialHealEvent::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnSpecialHealEvent, CallFunc_VCF_GetEffectData_ReturnValue) == 0x000028, "Member 'BP_PlayerVisualControl_C_OnSpecialHealEvent::CallFunc_VCF_GetEffectData_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnSpecialHealEvent, CallFunc_SpawnSystemAttached_ReturnValue) == 0x000030, "Member 'BP_PlayerVisualControl_C_OnSpecialHealEvent::CallFunc_SpawnSystemAttached_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnSpecialHealEvent, CallFunc_IsValid_ReturnValue_2) == 0x000038, "Member 'BP_PlayerVisualControl_C_OnSpecialHealEvent::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnSpecialHealEvent, CallFunc_IsValid_ReturnValue_3) == 0x000039, "Member 'BP_PlayerVisualControl_C_OnSpecialHealEvent::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnSpecialHealEvent, CallFunc_MakeLiteralName_ReturnValue) == 0x00003C, "Member 'BP_PlayerVisualControl_C_OnSpecialHealEvent::CallFunc_MakeLiteralName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnSpecialHealEvent, CallFunc_VCF_GetEffectInfo_SystemTemplate) == 0x000048, "Member 'BP_PlayerVisualControl_C_OnSpecialHealEvent::CallFunc_VCF_GetEffectInfo_SystemTemplate' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnSpecialHealEvent, CallFunc_VCF_GetEffectInfo_bAutoActivate) == 0x000050, "Member 'BP_PlayerVisualControl_C_OnSpecialHealEvent::CallFunc_VCF_GetEffectInfo_bAutoActivate' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnSpecialHealEvent, CallFunc_VCF_GetEffectInfo_bAutoDestroy) == 0x000051, "Member 'BP_PlayerVisualControl_C_OnSpecialHealEvent::CallFunc_VCF_GetEffectInfo_bAutoDestroy' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnSpecialHealEvent, CallFunc_VCF_GetEffectInfo_Sound) == 0x000058, "Member 'BP_PlayerVisualControl_C_OnSpecialHealEvent::CallFunc_VCF_GetEffectInfo_Sound' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnSpecialHealEvent, CallFunc_VCF_GetEffectInfo_ReturnValue) == 0x000060, "Member 'BP_PlayerVisualControl_C_OnSpecialHealEvent::CallFunc_VCF_GetEffectInfo_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnSpecialHealEvent, CallFunc_IsValid_ReturnValue_4) == 0x000061, "Member 'BP_PlayerVisualControl_C_OnSpecialHealEvent::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
 
 // Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.OnStartCinematicEvent
 // 0x0004 (0x0004 - 0x0000)
@@ -1331,7 +1584,7 @@ static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMesh_Weapon_SetParameter
 static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMesh_Weapon_SetParameter, CallFunc_Conv_VectorToLinearColor_ReturnValue) == 0x000038, "Member 'BP_PlayerVisualControl_C_OnVanishMesh_Weapon_SetParameter::CallFunc_Conv_VectorToLinearColor_ReturnValue' has a wrong offset!");
 
 // Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.OnVanishMeshBegin
-// 0x0028 (0x0028 - 0x0000)
+// 0x00B8 (0x00B8 - 0x0000)
 struct BP_PlayerVisualControl_C_OnVanishMeshBegin final
 {
 public:
@@ -1339,26 +1592,63 @@ public:
 	struct FVanishMesh_Parameter                  InParameter;                                       // 0x0008(0x0014)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
 	float                                         InTotalDuration;                                   // 0x001C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          InWeapon;                                          // 0x0021(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          InCharacter;                                       // 0x0022(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_OnVanishMeshBegin_ReturnValue;            // 0x0023(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0025(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class USkeletalMeshComponent*>         InMeshArray;                                       // 0x0028(0x0010)(Edit, BlueprintVisible, ContainsInstancedReference)
+	bool                                          InWeapon;                                          // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          InCharacter;                                       // 0x0039(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3A[0x2];                                       // 0x003A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_OnVanishMeshBegin_ReturnValue;            // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_42[0x6];                                       // 0x0042(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMeshComponent*                 CallFunc_Array_Get_Item;                           // 0x0048(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class ACharacter*                             CallFunc_GetCharacterActor_ReturnValue;            // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActionHumanEquipment_Weapon*           CallFunc_VCF_GetWeaponActor_ReturnValue;           // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IEquipmentVisualControlInterface> CallFunc_K2_GetEquipmentVisualControl_self_CastInput; // 0x0070(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UEquipmentVisualControlComponent* CallFunc_K2_GetEquipmentVisualControl_ReturnValue; // 0x0080(0x0008)(ConstParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UBP_PlayerEquipmentVisualControl_Weapon_C* K2Node_DynamicCast_AsBP_Player_Equipment_Visual_Control_Weapon; // 0x0088(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class USkeletalMeshComponent*>         CallFunc_GetEquipmentMeshAll_OutMeshArray;         // 0x0098(0x0010)(ReferenceParm, ContainsInstancedReference)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x00AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00AD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_AE[0x2];                                       // 0x00AE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_PlayerVisualControl_C_OnVanishMeshBegin) == 0x000008, "Wrong alignment on BP_PlayerVisualControl_C_OnVanishMeshBegin");
-static_assert(sizeof(BP_PlayerVisualControl_C_OnVanishMeshBegin) == 0x000028, "Wrong size on BP_PlayerVisualControl_C_OnVanishMeshBegin");
+static_assert(sizeof(BP_PlayerVisualControl_C_OnVanishMeshBegin) == 0x0000B8, "Wrong size on BP_PlayerVisualControl_C_OnVanishMeshBegin");
 static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshBegin, InAnimSequence) == 0x000000, "Member 'BP_PlayerVisualControl_C_OnVanishMeshBegin::InAnimSequence' has a wrong offset!");
 static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshBegin, InParameter) == 0x000008, "Member 'BP_PlayerVisualControl_C_OnVanishMeshBegin::InParameter' has a wrong offset!");
 static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshBegin, InTotalDuration) == 0x00001C, "Member 'BP_PlayerVisualControl_C_OnVanishMeshBegin::InTotalDuration' has a wrong offset!");
 static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshBegin, ReturnValue) == 0x000020, "Member 'BP_PlayerVisualControl_C_OnVanishMeshBegin::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshBegin, InWeapon) == 0x000021, "Member 'BP_PlayerVisualControl_C_OnVanishMeshBegin::InWeapon' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshBegin, InCharacter) == 0x000022, "Member 'BP_PlayerVisualControl_C_OnVanishMeshBegin::InCharacter' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshBegin, CallFunc_OnVanishMeshBegin_ReturnValue) == 0x000023, "Member 'BP_PlayerVisualControl_C_OnVanishMeshBegin::CallFunc_OnVanishMeshBegin_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshBegin, K2Node_SwitchEnum_CmpSuccess) == 0x000024, "Member 'BP_PlayerVisualControl_C_OnVanishMeshBegin::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshBegin, CallFunc_IsValid_ReturnValue) == 0x000025, "Member 'BP_PlayerVisualControl_C_OnVanishMeshBegin::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshBegin, InMeshArray) == 0x000028, "Member 'BP_PlayerVisualControl_C_OnVanishMeshBegin::InMeshArray' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshBegin, InWeapon) == 0x000038, "Member 'BP_PlayerVisualControl_C_OnVanishMeshBegin::InWeapon' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshBegin, InCharacter) == 0x000039, "Member 'BP_PlayerVisualControl_C_OnVanishMeshBegin::InCharacter' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshBegin, Temp_int_Array_Index_Variable) == 0x00003C, "Member 'BP_PlayerVisualControl_C_OnVanishMeshBegin::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshBegin, CallFunc_OnVanishMeshBegin_ReturnValue) == 0x000040, "Member 'BP_PlayerVisualControl_C_OnVanishMeshBegin::CallFunc_OnVanishMeshBegin_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshBegin, K2Node_SwitchEnum_CmpSuccess) == 0x000041, "Member 'BP_PlayerVisualControl_C_OnVanishMeshBegin::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshBegin, CallFunc_Array_Get_Item) == 0x000048, "Member 'BP_PlayerVisualControl_C_OnVanishMeshBegin::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshBegin, CallFunc_Array_Length_ReturnValue) == 0x000050, "Member 'BP_PlayerVisualControl_C_OnVanishMeshBegin::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshBegin, CallFunc_GetCharacterActor_ReturnValue) == 0x000058, "Member 'BP_PlayerVisualControl_C_OnVanishMeshBegin::CallFunc_GetCharacterActor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshBegin, CallFunc_IsValid_ReturnValue) == 0x000060, "Member 'BP_PlayerVisualControl_C_OnVanishMeshBegin::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshBegin, CallFunc_VCF_GetWeaponActor_ReturnValue) == 0x000068, "Member 'BP_PlayerVisualControl_C_OnVanishMeshBegin::CallFunc_VCF_GetWeaponActor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshBegin, CallFunc_K2_GetEquipmentVisualControl_self_CastInput) == 0x000070, "Member 'BP_PlayerVisualControl_C_OnVanishMeshBegin::CallFunc_K2_GetEquipmentVisualControl_self_CastInput' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshBegin, CallFunc_K2_GetEquipmentVisualControl_ReturnValue) == 0x000080, "Member 'BP_PlayerVisualControl_C_OnVanishMeshBegin::CallFunc_K2_GetEquipmentVisualControl_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshBegin, K2Node_DynamicCast_AsBP_Player_Equipment_Visual_Control_Weapon) == 0x000088, "Member 'BP_PlayerVisualControl_C_OnVanishMeshBegin::K2Node_DynamicCast_AsBP_Player_Equipment_Visual_Control_Weapon' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshBegin, K2Node_DynamicCast_bSuccess) == 0x000090, "Member 'BP_PlayerVisualControl_C_OnVanishMeshBegin::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshBegin, CallFunc_GetEquipmentMeshAll_OutMeshArray) == 0x000098, "Member 'BP_PlayerVisualControl_C_OnVanishMeshBegin::CallFunc_GetEquipmentMeshAll_OutMeshArray' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshBegin, Temp_int_Loop_Counter_Variable) == 0x0000A8, "Member 'BP_PlayerVisualControl_C_OnVanishMeshBegin::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshBegin, CallFunc_IsValid_ReturnValue_1) == 0x0000AC, "Member 'BP_PlayerVisualControl_C_OnVanishMeshBegin::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshBegin, CallFunc_Less_IntInt_ReturnValue) == 0x0000AD, "Member 'BP_PlayerVisualControl_C_OnVanishMeshBegin::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshBegin, CallFunc_Add_IntInt_ReturnValue) == 0x0000B0, "Member 'BP_PlayerVisualControl_C_OnVanishMeshBegin::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
 
 // Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.OnVanishMeshEnd
-// 0x0170 (0x0170 - 0x0000)
+// 0x0200 (0x0200 - 0x0000)
 struct BP_PlayerVisualControl_C_OnVanishMeshEnd final
 {
 public:
@@ -1366,142 +1656,179 @@ public:
 	struct FVanishMesh_Parameter                  InParameter;                                       // 0x0008(0x0014)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
 	bool                                          ReturnValue;                                       // 0x001C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         InWeaponIndex_;                                    // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable;                                 // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 CallFunc_GetWeaponMesh_ReturnValue;                // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UMaterialInterface*>             CallFunc_GetMaterials_ReturnValue;                 // 0x0038(0x0010)(ReferenceParm)
-	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_OnVanishMeshEnd_ReturnValue;              // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_51[0x3];                                       // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInterface*                     CallFunc_Array_Get_Item;                           // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               K2Node_DynamicCast_AsMaterial_Instance_Dynamic;    // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0089(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8A[0x2];                                       // 0x008A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable_2;                   // 0x008C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable_2;                  // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_3;                 // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInterface*                     CallFunc_Array_Get_Item_1;                         // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInterface*                     CallFunc_Array_Get_Item_2;                         // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               K2Node_DynamicCast_AsMaterial_Instance_Dynamic_1;  // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               K2Node_DynamicCast_AsMaterial_Instance_Dynamic_2;  // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C1[0x3];                                       // 0x00C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x00C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x00C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x00CC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x00CD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CE[0x2];                                       // 0x00CE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UMeshComponent*>                 CallFunc_GetAllOtherMesh_Result;                   // 0x00D0(0x0010)(ReferenceParm, ContainsInstancedReference)
-	int32                                         CallFunc_Array_Length_ReturnValue_3;               // 0x00E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetWeaponMeshCount_ReturnValue;           // 0x00E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_3;                // 0x00E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_EA[0x2];                                       // 0x00EA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable_3;                  // 0x00EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 CallFunc_GetCharacterMesh_ReturnValue;             // 0x00F0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_F9[0x7];                                       // 0x00F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UMaterialInterface*>             CallFunc_GetMaterials_ReturnValue_1;               // 0x0100(0x0010)(ReferenceParm)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_4;                // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_111[0x3];                                      // 0x0111(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_4;                 // 0x0114(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable_3;                   // 0x0118(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11C[0x4];                                      // 0x011C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMeshComponent*                         CallFunc_Array_Get_Item_3;                         // 0x0120(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TArray<class UMaterialInterface*>             CallFunc_GetMaterials_ReturnValue_2;               // 0x0128(0x0010)(ReferenceParm)
-	int32                                         Temp_int_Variable_1;                               // 0x0138(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_13C[0x4];                                      // 0x013C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class USkeletalMeshComponent*                 CallFunc_GetWeaponMesh_ReturnValue_1;              // 0x0140(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_5;                 // 0x0148(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_14C[0x4];                                      // 0x014C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInterface*                     CallFunc_GetMaterial_ReturnValue;                  // 0x0150(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               K2Node_DynamicCast_AsMaterial_Instance_Dynamic_3;  // 0x0158(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_161[0x3];                                      // 0x0161(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetNumMaterials_ReturnValue;              // 0x0164(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_5;                // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0169(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x016A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class USkeletalMeshComponent*>         InMeshArray;                                       // 0x0020(0x0010)(Edit, BlueprintVisible, ContainsInstancedReference)
+	int32                                         InWeaponIndex_;                                    // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_OnVanishMeshEnd_ReturnValue;              // 0x003A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3B[0x1];                                       // 0x003B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_2;                   // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_2;                  // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMeshComponent*                 CallFunc_Array_Get_Item;                           // 0x0060(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x006C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6D[0x3];                                       // 0x006D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInterface*                     CallFunc_Array_Get_Item_1;                         // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               K2Node_DynamicCast_AsMaterial_Instance_Dynamic;    // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_81[0x3];                                       // 0x0081(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0084(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_89[0x3];                                       // 0x0089(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable_3;                   // 0x008C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_3;                  // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_99[0x3];                                       // 0x0099(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_3;                 // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_4;                  // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A5[0x3];                                       // 0x00A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UMeshComponent*>                 CallFunc_GetAllOtherMesh_Result;                   // 0x00A8(0x0010)(ReferenceParm, ContainsInstancedReference)
+	class UMeshComponent*                         CallFunc_Array_Get_Item_2;                         // 0x00B8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_3;               // 0x00C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C4[0x4];                                       // 0x00C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UMaterialInterface*>             CallFunc_GetMaterials_ReturnValue;                 // 0x00C8(0x0010)(ReferenceParm)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_3;                // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D9[0x3];                                       // 0x00D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_4;                 // 0x00DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetWeaponMeshCount_ReturnValue;           // 0x00E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E4[0x4];                                       // 0x00E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInterface*                     CallFunc_Array_Get_Item_3;                         // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_4;               // 0x00F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F4[0x4];                                       // 0x00F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               K2Node_DynamicCast_AsMaterial_Instance_Dynamic_1;  // 0x00F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_4;                // 0x0101(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_102[0x2];                                      // 0x0102(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Variable;                                 // 0x0104(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_5;                // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_109[0x7];                                      // 0x0109(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMeshComponent*                 CallFunc_GetWeaponMesh_ReturnValue;                // 0x0110(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_119[0x7];                                      // 0x0119(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UMaterialInterface*>             CallFunc_GetMaterials_ReturnValue_1;               // 0x0120(0x0010)(ReferenceParm)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_5;                 // 0x0130(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_134[0x4];                                      // 0x0134(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMeshComponent*                 CallFunc_GetCharacterMesh_ReturnValue;             // 0x0138(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_141[0x7];                                      // 0x0141(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UMaterialInterface*>             CallFunc_GetMaterials_ReturnValue_2;               // 0x0148(0x0010)(ReferenceParm)
+	int32                                         Temp_int_Array_Index_Variable_4;                   // 0x0158(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_15C[0x4];                                      // 0x015C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class ACharacter*                             CallFunc_GetCharacterActor_ReturnValue;            // 0x0160(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInterface*                     CallFunc_Array_Get_Item_4;                         // 0x0168(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_171[0x7];                                      // 0x0171(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               K2Node_DynamicCast_AsMaterial_Instance_Dynamic_2;  // 0x0178(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0180(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_181[0x7];                                      // 0x0181(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActionHumanEquipment_Weapon*           CallFunc_VCF_GetWeaponActor_ReturnValue;           // 0x0188(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IEquipmentVisualControlInterface> CallFunc_K2_GetEquipmentVisualControl_self_CastInput; // 0x0190(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UEquipmentVisualControlComponent* CallFunc_K2_GetEquipmentVisualControl_ReturnValue; // 0x01A0(0x0008)(ConstParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UBP_PlayerEquipmentVisualControl_Weapon_C* K2Node_DynamicCast_AsBP_Player_Equipment_Visual_Control_Weapon; // 0x01A8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1B1[0x7];                                      // 0x01B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class USkeletalMeshComponent*>         CallFunc_GetEquipmentMeshAll_OutMeshArray;         // 0x01B8(0x0010)(ReferenceParm, ContainsInstancedReference)
+	int32                                         Temp_int_Variable_1;                               // 0x01C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1CC[0x4];                                      // 0x01CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMeshComponent*                 CallFunc_GetWeaponMesh_ReturnValue_1;              // 0x01D0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_6;                 // 0x01D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1DC[0x4];                                      // 0x01DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInterface*                     CallFunc_GetMaterial_ReturnValue;                  // 0x01E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               K2Node_DynamicCast_AsMaterial_Instance_Dynamic_3;  // 0x01E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x01F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1F1[0x3];                                      // 0x01F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetNumMaterials_ReturnValue;              // 0x01F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_6;                // 0x01F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x01F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_5;                    // 0x01FA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_PlayerVisualControl_C_OnVanishMeshEnd) == 0x000008, "Wrong alignment on BP_PlayerVisualControl_C_OnVanishMeshEnd");
-static_assert(sizeof(BP_PlayerVisualControl_C_OnVanishMeshEnd) == 0x000170, "Wrong size on BP_PlayerVisualControl_C_OnVanishMeshEnd");
+static_assert(sizeof(BP_PlayerVisualControl_C_OnVanishMeshEnd) == 0x000200, "Wrong size on BP_PlayerVisualControl_C_OnVanishMeshEnd");
 static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, InAnimSequence) == 0x000000, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::InAnimSequence' has a wrong offset!");
 static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, InParameter) == 0x000008, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::InParameter' has a wrong offset!");
 static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, ReturnValue) == 0x00001C, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, InWeaponIndex_) == 0x000020, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::InWeaponIndex_' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, Temp_int_Variable) == 0x000024, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_GetWeaponMesh_ReturnValue) == 0x000028, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_GetWeaponMesh_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, K2Node_SwitchEnum_CmpSuccess) == 0x000030, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_IsValid_ReturnValue) == 0x000031, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_GetMaterials_ReturnValue) == 0x000038, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_GetMaterials_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, K2Node_SwitchEnum_CmpSuccess_1) == 0x000048, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::K2Node_SwitchEnum_CmpSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_Add_IntInt_ReturnValue) == 0x00004C, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_OnVanishMeshEnd_ReturnValue) == 0x000050, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_OnVanishMeshEnd_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, Temp_int_Loop_Counter_Variable) == 0x000054, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, Temp_int_Array_Index_Variable) == 0x000058, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_Add_IntInt_ReturnValue_1) == 0x00005C, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, Temp_int_Loop_Counter_Variable_1) == 0x000060, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_Add_IntInt_ReturnValue_2) == 0x000064, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, Temp_int_Array_Index_Variable_1) == 0x000068, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::Temp_int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_Array_Get_Item) == 0x000070, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_Array_Length_ReturnValue) == 0x000078, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, K2Node_DynamicCast_AsMaterial_Instance_Dynamic) == 0x000080, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::K2Node_DynamicCast_AsMaterial_Instance_Dynamic' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, K2Node_DynamicCast_bSuccess) == 0x000088, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_Less_IntInt_ReturnValue) == 0x000089, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, Temp_int_Array_Index_Variable_2) == 0x00008C, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::Temp_int_Array_Index_Variable_2' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, Temp_int_Loop_Counter_Variable_2) == 0x000090, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::Temp_int_Loop_Counter_Variable_2' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_Add_IntInt_ReturnValue_3) == 0x000094, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_Add_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_Array_Get_Item_1) == 0x000098, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_Array_Get_Item_2) == 0x0000A0, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_Array_Get_Item_2' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, K2Node_DynamicCast_AsMaterial_Instance_Dynamic_1) == 0x0000A8, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::K2Node_DynamicCast_AsMaterial_Instance_Dynamic_1' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, K2Node_DynamicCast_bSuccess_1) == 0x0000B0, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, K2Node_DynamicCast_AsMaterial_Instance_Dynamic_2) == 0x0000B8, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::K2Node_DynamicCast_AsMaterial_Instance_Dynamic_2' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, K2Node_DynamicCast_bSuccess_2) == 0x0000C0, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_Array_Length_ReturnValue_1) == 0x0000C4, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_Array_Length_ReturnValue_2) == 0x0000C8, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_Less_IntInt_ReturnValue_1) == 0x0000CC, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_IsValid_ReturnValue_1) == 0x0000CD, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_GetAllOtherMesh_Result) == 0x0000D0, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_GetAllOtherMesh_Result' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_Array_Length_ReturnValue_3) == 0x0000E0, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_Array_Length_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_GetWeaponMeshCount_ReturnValue) == 0x0000E4, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_GetWeaponMeshCount_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_Less_IntInt_ReturnValue_2) == 0x0000E8, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_Less_IntInt_ReturnValue_3) == 0x0000E9, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_Less_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, Temp_int_Loop_Counter_Variable_3) == 0x0000EC, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::Temp_int_Loop_Counter_Variable_3' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_GetCharacterMesh_ReturnValue) == 0x0000F0, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_GetCharacterMesh_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_IsValid_ReturnValue_2) == 0x0000F8, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_GetMaterials_ReturnValue_1) == 0x000100, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_GetMaterials_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_Less_IntInt_ReturnValue_4) == 0x000110, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_Less_IntInt_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_Add_IntInt_ReturnValue_4) == 0x000114, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_Add_IntInt_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, Temp_int_Array_Index_Variable_3) == 0x000118, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::Temp_int_Array_Index_Variable_3' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_Array_Get_Item_3) == 0x000120, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_Array_Get_Item_3' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_GetMaterials_ReturnValue_2) == 0x000128, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_GetMaterials_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, Temp_int_Variable_1) == 0x000138, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::Temp_int_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_GetWeaponMesh_ReturnValue_1) == 0x000140, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_GetWeaponMesh_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_Add_IntInt_ReturnValue_5) == 0x000148, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_Add_IntInt_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_GetMaterial_ReturnValue) == 0x000150, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_GetMaterial_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, K2Node_DynamicCast_AsMaterial_Instance_Dynamic_3) == 0x000158, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::K2Node_DynamicCast_AsMaterial_Instance_Dynamic_3' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, K2Node_DynamicCast_bSuccess_3) == 0x000160, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_GetNumMaterials_ReturnValue) == 0x000164, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_GetNumMaterials_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_Less_IntInt_ReturnValue_5) == 0x000168, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_Less_IntInt_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_IsValid_ReturnValue_3) == 0x000169, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_IsValid_ReturnValue_4) == 0x00016A, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, InMeshArray) == 0x000020, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::InMeshArray' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, InWeaponIndex_) == 0x000030, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::InWeaponIndex_' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, Temp_int_Array_Index_Variable) == 0x000034, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, K2Node_SwitchEnum_CmpSuccess) == 0x000038, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, K2Node_SwitchEnum_CmpSuccess_1) == 0x000039, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::K2Node_SwitchEnum_CmpSuccess_1' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_OnVanishMeshEnd_ReturnValue) == 0x00003A, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_OnVanishMeshEnd_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, Temp_int_Loop_Counter_Variable) == 0x00003C, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_Add_IntInt_ReturnValue) == 0x000040, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, Temp_int_Array_Index_Variable_1) == 0x000044, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::Temp_int_Array_Index_Variable_1' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, Temp_int_Loop_Counter_Variable_1) == 0x000048, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_Add_IntInt_ReturnValue_1) == 0x00004C, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, Temp_int_Array_Index_Variable_2) == 0x000050, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::Temp_int_Array_Index_Variable_2' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, Temp_int_Loop_Counter_Variable_2) == 0x000054, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::Temp_int_Loop_Counter_Variable_2' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_Add_IntInt_ReturnValue_2) == 0x000058, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_Array_Get_Item) == 0x000060, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_Array_Length_ReturnValue) == 0x000068, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_Less_IntInt_ReturnValue) == 0x00006C, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_Array_Get_Item_1) == 0x000070, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, K2Node_DynamicCast_AsMaterial_Instance_Dynamic) == 0x000078, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::K2Node_DynamicCast_AsMaterial_Instance_Dynamic' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, K2Node_DynamicCast_bSuccess) == 0x000080, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_Array_Length_ReturnValue_1) == 0x000084, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_Less_IntInt_ReturnValue_1) == 0x000088, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, Temp_int_Array_Index_Variable_3) == 0x00008C, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::Temp_int_Array_Index_Variable_3' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, Temp_int_Loop_Counter_Variable_3) == 0x000090, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::Temp_int_Loop_Counter_Variable_3' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_Array_Length_ReturnValue_2) == 0x000094, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_Less_IntInt_ReturnValue_2) == 0x000098, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_Add_IntInt_ReturnValue_3) == 0x00009C, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_Add_IntInt_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, Temp_int_Loop_Counter_Variable_4) == 0x0000A0, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::Temp_int_Loop_Counter_Variable_4' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_IsValid_ReturnValue) == 0x0000A4, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_GetAllOtherMesh_Result) == 0x0000A8, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_GetAllOtherMesh_Result' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_Array_Get_Item_2) == 0x0000B8, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_Array_Get_Item_2' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_Array_Length_ReturnValue_3) == 0x0000C0, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_Array_Length_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_GetMaterials_ReturnValue) == 0x0000C8, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_GetMaterials_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_Less_IntInt_ReturnValue_3) == 0x0000D8, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_Less_IntInt_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_Add_IntInt_ReturnValue_4) == 0x0000DC, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_Add_IntInt_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_GetWeaponMeshCount_ReturnValue) == 0x0000E0, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_GetWeaponMeshCount_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_Array_Get_Item_3) == 0x0000E8, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_Array_Get_Item_3' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_Array_Length_ReturnValue_4) == 0x0000F0, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_Array_Length_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, K2Node_DynamicCast_AsMaterial_Instance_Dynamic_1) == 0x0000F8, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::K2Node_DynamicCast_AsMaterial_Instance_Dynamic_1' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, K2Node_DynamicCast_bSuccess_1) == 0x000100, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_Less_IntInt_ReturnValue_4) == 0x000101, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_Less_IntInt_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, Temp_int_Variable) == 0x000104, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::Temp_int_Variable' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_Less_IntInt_ReturnValue_5) == 0x000108, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_Less_IntInt_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_GetWeaponMesh_ReturnValue) == 0x000110, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_GetWeaponMesh_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_IsValid_ReturnValue_1) == 0x000118, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_GetMaterials_ReturnValue_1) == 0x000120, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_GetMaterials_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_Add_IntInt_ReturnValue_5) == 0x000130, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_Add_IntInt_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_GetCharacterMesh_ReturnValue) == 0x000138, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_GetCharacterMesh_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_IsValid_ReturnValue_2) == 0x000140, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_GetMaterials_ReturnValue_2) == 0x000148, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_GetMaterials_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, Temp_int_Array_Index_Variable_4) == 0x000158, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::Temp_int_Array_Index_Variable_4' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_GetCharacterActor_ReturnValue) == 0x000160, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_GetCharacterActor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_Array_Get_Item_4) == 0x000168, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_Array_Get_Item_4' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_IsValid_ReturnValue_3) == 0x000170, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, K2Node_DynamicCast_AsMaterial_Instance_Dynamic_2) == 0x000178, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::K2Node_DynamicCast_AsMaterial_Instance_Dynamic_2' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, K2Node_DynamicCast_bSuccess_2) == 0x000180, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_VCF_GetWeaponActor_ReturnValue) == 0x000188, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_VCF_GetWeaponActor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_K2_GetEquipmentVisualControl_self_CastInput) == 0x000190, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_K2_GetEquipmentVisualControl_self_CastInput' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_K2_GetEquipmentVisualControl_ReturnValue) == 0x0001A0, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_K2_GetEquipmentVisualControl_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, K2Node_DynamicCast_AsBP_Player_Equipment_Visual_Control_Weapon) == 0x0001A8, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::K2Node_DynamicCast_AsBP_Player_Equipment_Visual_Control_Weapon' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, K2Node_DynamicCast_bSuccess_3) == 0x0001B0, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_GetEquipmentMeshAll_OutMeshArray) == 0x0001B8, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_GetEquipmentMeshAll_OutMeshArray' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, Temp_int_Variable_1) == 0x0001C8, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::Temp_int_Variable_1' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_GetWeaponMesh_ReturnValue_1) == 0x0001D0, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_GetWeaponMesh_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_Add_IntInt_ReturnValue_6) == 0x0001D8, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_Add_IntInt_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_GetMaterial_ReturnValue) == 0x0001E0, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_GetMaterial_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, K2Node_DynamicCast_AsMaterial_Instance_Dynamic_3) == 0x0001E8, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::K2Node_DynamicCast_AsMaterial_Instance_Dynamic_3' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, K2Node_DynamicCast_bSuccess_4) == 0x0001F0, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_GetNumMaterials_ReturnValue) == 0x0001F4, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_GetNumMaterials_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_Less_IntInt_ReturnValue_6) == 0x0001F8, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_Less_IntInt_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_IsValid_ReturnValue_4) == 0x0001F9, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_OnVanishMeshEnd, CallFunc_IsValid_ReturnValue_5) == 0x0001FA, "Member 'BP_PlayerVisualControl_C_OnVanishMeshEnd::CallFunc_IsValid_ReturnValue_5' has a wrong offset!");
 
 // Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.OnVanishMeshTick
 // 0x01A0 (0x01A0 - 0x0000)
@@ -1734,6 +2061,26 @@ static_assert(alignof(BP_PlayerVisualControl_C_ReceiveTick) == 0x000004, "Wrong 
 static_assert(sizeof(BP_PlayerVisualControl_C_ReceiveTick) == 0x000004, "Wrong size on BP_PlayerVisualControl_C_ReceiveTick");
 static_assert(offsetof(BP_PlayerVisualControl_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_PlayerVisualControl_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
 
+// Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.RemoveOnFootStepChangedDelegate
+// 0x0028 (0x0028 - 0x0000)
+struct BP_PlayerVisualControl_C_RemoveOnFootStepChangedDelegate final
+{
+public:
+	class USkeletalMeshComponent*                 CallFunc_GetCharacterMesh_ReturnValue;             // 0x0000(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UAnimInstance*                          CallFunc_GetAnimInstance_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UActionAnimInstance*                    K2Node_DynamicCast_AsAction_Anim_Instance;         // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_PlayerVisualControl_C_RemoveOnFootStepChangedDelegate) == 0x000008, "Wrong alignment on BP_PlayerVisualControl_C_RemoveOnFootStepChangedDelegate");
+static_assert(sizeof(BP_PlayerVisualControl_C_RemoveOnFootStepChangedDelegate) == 0x000028, "Wrong size on BP_PlayerVisualControl_C_RemoveOnFootStepChangedDelegate");
+static_assert(offsetof(BP_PlayerVisualControl_C_RemoveOnFootStepChangedDelegate, CallFunc_GetCharacterMesh_ReturnValue) == 0x000000, "Member 'BP_PlayerVisualControl_C_RemoveOnFootStepChangedDelegate::CallFunc_GetCharacterMesh_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_RemoveOnFootStepChangedDelegate, CallFunc_GetAnimInstance_ReturnValue) == 0x000008, "Member 'BP_PlayerVisualControl_C_RemoveOnFootStepChangedDelegate::CallFunc_GetAnimInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_RemoveOnFootStepChangedDelegate, CallFunc_IsValid_ReturnValue) == 0x000010, "Member 'BP_PlayerVisualControl_C_RemoveOnFootStepChangedDelegate::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_RemoveOnFootStepChangedDelegate, K2Node_DynamicCast_AsAction_Anim_Instance) == 0x000018, "Member 'BP_PlayerVisualControl_C_RemoveOnFootStepChangedDelegate::K2Node_DynamicCast_AsAction_Anim_Instance' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_RemoveOnFootStepChangedDelegate, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'BP_PlayerVisualControl_C_RemoveOnFootStepChangedDelegate::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+
 // Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.ResetAppearBody_Implement
 // 0x0002 (0x0002 - 0x0000)
 struct BP_PlayerVisualControl_C_ResetAppearBody_Implement final
@@ -1812,191 +2159,16 @@ static_assert(offsetof(BP_PlayerVisualControl_C_ResetVanishWeapon_Implement, bRe
 static_assert(offsetof(BP_PlayerVisualControl_C_ResetVanishWeapon_Implement, WeaponIndex) == 0x000004, "Member 'BP_PlayerVisualControl_C_ResetVanishWeapon_Implement::WeaponIndex' has a wrong offset!");
 static_assert(offsetof(BP_PlayerVisualControl_C_ResetVanishWeapon_Implement, CallFunc_IsValid_ReturnValue) == 0x000008, "Member 'BP_PlayerVisualControl_C_ResetVanishWeapon_Implement::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
-// Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.SeeThrough_SetCustomDepth
-// 0x0030 (0x0030 - 0x0000)
-struct BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth final
-{
-public:
-	class UMeshComponent*                         Mesh;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	bool                                          bEnable;                                           // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          DrawMainPass;                                      // 0x0009(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          InDrawMainPass;                                    // 0x000A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          InEnable;                                          // 0x000B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMeshComponent*                         InMesh;                                            // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BreakCustomStencilValue_OutBit1;          // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BreakCustomStencilValue_OutBit2;          // 0x001B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BreakCustomStencilValue_OutBit3;          // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_BreakCustomStencilValue_OutIntValue;      // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_MakeCustomStencilValue_ReturnValue;       // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth) == 0x000008, "Wrong alignment on BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth");
-static_assert(sizeof(BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth) == 0x000030, "Wrong size on BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth, Mesh) == 0x000000, "Member 'BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth::Mesh' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth, bEnable) == 0x000008, "Member 'BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth::bEnable' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth, DrawMainPass) == 0x000009, "Member 'BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth::DrawMainPass' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth, InDrawMainPass) == 0x00000A, "Member 'BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth::InDrawMainPass' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth, InEnable) == 0x00000B, "Member 'BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth::InEnable' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth, InMesh) == 0x000010, "Member 'BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth::InMesh' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth, CallFunc_Not_PreBool_ReturnValue) == 0x000018, "Member 'BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth, CallFunc_IsValid_ReturnValue) == 0x000019, "Member 'BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth, CallFunc_BreakCustomStencilValue_OutBit1) == 0x00001A, "Member 'BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth::CallFunc_BreakCustomStencilValue_OutBit1' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth, CallFunc_BreakCustomStencilValue_OutBit2) == 0x00001B, "Member 'BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth::CallFunc_BreakCustomStencilValue_OutBit2' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth, CallFunc_BreakCustomStencilValue_OutBit3) == 0x00001C, "Member 'BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth::CallFunc_BreakCustomStencilValue_OutBit3' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth, CallFunc_BreakCustomStencilValue_OutIntValue) == 0x000020, "Member 'BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth::CallFunc_BreakCustomStencilValue_OutIntValue' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth, CallFunc_MakeCustomStencilValue_ReturnValue) == 0x000024, "Member 'BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth::CallFunc_MakeCustomStencilValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth, CallFunc_Not_PreBool_ReturnValue_1) == 0x000028, "Member 'BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
-
 // Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.SeeThrough_SetCustomDepth_All
-// 0x0098 (0x0098 - 0x0000)
+// 0x0001 (0x0001 - 0x0000)
 struct BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All final
 {
 public:
 	bool                                          NearCamera;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          InNearCamera;                                      // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class USkeletalMeshComponent*                 InPlayer;                                          // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable_2;                  // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable_2;                   // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class USkeletalMeshComponent*                 CallFunc_Array_Get_Item;                           // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x004D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E[0x2];                                       // 0x004E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UMeshComponent*>                 CallFunc_GetAllOtherMesh_ReturnValue;              // 0x0050(0x0010)(ReferenceParm, ContainsInstancedReference)
-	class UMeshComponent*                         CallFunc_Array_Get_Item_1;                         // 0x0060(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x006C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x006D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6E[0x2];                                       // 0x006E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class USkeletalMeshComponent*                 CallFunc_Array_Get_Item_2;                         // 0x0070(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_79[0x3];                                       // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USkeletalMeshComponent*                 CallFunc_GetCharacterMesh_ReturnValue;             // 0x0088(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All) == 0x000008, "Wrong alignment on BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All");
-static_assert(sizeof(BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All) == 0x000098, "Wrong size on BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All");
+static_assert(alignof(BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All) == 0x000001, "Wrong alignment on BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All");
+static_assert(sizeof(BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All) == 0x000001, "Wrong size on BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All");
 static_assert(offsetof(BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All, NearCamera) == 0x000000, "Member 'BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All::NearCamera' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All, InNearCamera) == 0x000001, "Member 'BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All::InNearCamera' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All, InPlayer) == 0x000008, "Member 'BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All::InPlayer' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All, Temp_int_Array_Index_Variable) == 0x000010, "Member 'BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All, Temp_int_Loop_Counter_Variable) == 0x000014, "Member 'BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All, CallFunc_Add_IntInt_ReturnValue) == 0x000018, "Member 'BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All, Temp_int_Array_Index_Variable_1) == 0x00001C, "Member 'BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All::Temp_int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All, Temp_int_Loop_Counter_Variable_1) == 0x000020, "Member 'BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All, CallFunc_Not_PreBool_ReturnValue) == 0x000024, "Member 'BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All, CallFunc_Add_IntInt_ReturnValue_1) == 0x000028, "Member 'BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All, Temp_int_Loop_Counter_Variable_2) == 0x00002C, "Member 'BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All::Temp_int_Loop_Counter_Variable_2' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All, CallFunc_IsValid_ReturnValue) == 0x000030, "Member 'BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All, CallFunc_Add_IntInt_ReturnValue_2) == 0x000034, "Member 'BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All, Temp_int_Array_Index_Variable_2) == 0x000038, "Member 'BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All::Temp_int_Array_Index_Variable_2' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All, CallFunc_Array_Get_Item) == 0x000040, "Member 'BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All, CallFunc_Array_Length_ReturnValue) == 0x000048, "Member 'BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All, CallFunc_Less_IntInt_ReturnValue) == 0x00004C, "Member 'BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All, CallFunc_IsValid_ReturnValue_1) == 0x00004D, "Member 'BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All, CallFunc_GetAllOtherMesh_ReturnValue) == 0x000050, "Member 'BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All::CallFunc_GetAllOtherMesh_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All, CallFunc_Array_Get_Item_1) == 0x000060, "Member 'BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All, CallFunc_Array_Length_ReturnValue_1) == 0x000068, "Member 'BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All, CallFunc_Less_IntInt_ReturnValue_1) == 0x00006C, "Member 'BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All, CallFunc_IsValid_ReturnValue_2) == 0x00006D, "Member 'BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All, CallFunc_Array_Get_Item_2) == 0x000070, "Member 'BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All::CallFunc_Array_Get_Item_2' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All, CallFunc_IsValid_ReturnValue_3) == 0x000078, "Member 'BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All, CallFunc_Array_Length_ReturnValue_2) == 0x00007C, "Member 'BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All, CallFunc_Less_IntInt_ReturnValue_2) == 0x000080, "Member 'BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All, CallFunc_GetCharacterMesh_ReturnValue) == 0x000088, "Member 'BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All::CallFunc_GetCharacterMesh_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All, CallFunc_IsValid_ReturnValue_4) == 0x000090, "Member 'BP_PlayerVisualControl_C_SeeThrough_SetCustomDepth_All::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
-
-// Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.SeeThrough_SetSeeThroughDistance
-// 0x0018 (0x0018 - 0x0000)
-struct BP_PlayerVisualControl_C_SeeThrough_SetSeeThroughDistance final
-{
-public:
-	double                                        SeeThroughDistance_0;                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          InDrawMainPass;                                    // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          InEnable;                                          // 0x0009(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMeshComponent*                         InMesh;                                            // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_PlayerVisualControl_C_SeeThrough_SetSeeThroughDistance) == 0x000008, "Wrong alignment on BP_PlayerVisualControl_C_SeeThrough_SetSeeThroughDistance");
-static_assert(sizeof(BP_PlayerVisualControl_C_SeeThrough_SetSeeThroughDistance) == 0x000018, "Wrong size on BP_PlayerVisualControl_C_SeeThrough_SetSeeThroughDistance");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThrough_SetSeeThroughDistance, SeeThroughDistance_0) == 0x000000, "Member 'BP_PlayerVisualControl_C_SeeThrough_SetSeeThroughDistance::SeeThroughDistance_0' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThrough_SetSeeThroughDistance, InDrawMainPass) == 0x000008, "Member 'BP_PlayerVisualControl_C_SeeThrough_SetSeeThroughDistance::InDrawMainPass' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThrough_SetSeeThroughDistance, InEnable) == 0x000009, "Member 'BP_PlayerVisualControl_C_SeeThrough_SetSeeThroughDistance::InEnable' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThrough_SetSeeThroughDistance, InMesh) == 0x000010, "Member 'BP_PlayerVisualControl_C_SeeThrough_SetSeeThroughDistance::InMesh' has a wrong offset!");
-
-// Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.SeeThroughNearCamera
-// 0x00A0 (0x00A0 - 0x0000)
-struct BP_PlayerVisualControl_C_SeeThroughNearCamera final
-{
-public:
-	double                                        InSeeThroughDistance;                              // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          InNearCamera;                                      // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USkeletalMeshComponent*                 InPlayer;                                          // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	bool                                          CallFunc_GetInSpecialBloodSuck_ReturnValue;        // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetInPhotoMode_ReturnValue;               // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x001B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetInCinematic_ReturnValue;               // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x001D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1E[0x2];                                       // 0x001E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetScalarParameterValue_ReturnValue;      // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerCameraManager*                   CallFunc_GetPlayerCameraManager_ReturnValue;       // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetCameraLocation_ReturnValue;            // 0x0030(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 CallFunc_GetCharacterMesh_ReturnValue;             // 0x0048(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetSocketLocation_ReturnValue;            // 0x0050(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_GetSocketLocation_ReturnValue_1;          // 0x0070(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetPointDistanceToSegment_ReturnValue;    // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x008C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D[0x3];                                       // 0x008D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        K2Node_VariableSet_InSeeThroughDistance_ImplicitCast; // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Less_DoubleDouble_A_ImplicitCast;         // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_PlayerVisualControl_C_SeeThroughNearCamera) == 0x000008, "Wrong alignment on BP_PlayerVisualControl_C_SeeThroughNearCamera");
-static_assert(sizeof(BP_PlayerVisualControl_C_SeeThroughNearCamera) == 0x0000A0, "Wrong size on BP_PlayerVisualControl_C_SeeThroughNearCamera");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThroughNearCamera, InSeeThroughDistance) == 0x000000, "Member 'BP_PlayerVisualControl_C_SeeThroughNearCamera::InSeeThroughDistance' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThroughNearCamera, InNearCamera) == 0x000008, "Member 'BP_PlayerVisualControl_C_SeeThroughNearCamera::InNearCamera' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThroughNearCamera, InPlayer) == 0x000010, "Member 'BP_PlayerVisualControl_C_SeeThroughNearCamera::InPlayer' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThroughNearCamera, CallFunc_GetInSpecialBloodSuck_ReturnValue) == 0x000018, "Member 'BP_PlayerVisualControl_C_SeeThroughNearCamera::CallFunc_GetInSpecialBloodSuck_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThroughNearCamera, CallFunc_Not_PreBool_ReturnValue) == 0x000019, "Member 'BP_PlayerVisualControl_C_SeeThroughNearCamera::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThroughNearCamera, CallFunc_GetInPhotoMode_ReturnValue) == 0x00001A, "Member 'BP_PlayerVisualControl_C_SeeThroughNearCamera::CallFunc_GetInPhotoMode_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThroughNearCamera, CallFunc_Not_PreBool_ReturnValue_1) == 0x00001B, "Member 'BP_PlayerVisualControl_C_SeeThroughNearCamera::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThroughNearCamera, CallFunc_GetInCinematic_ReturnValue) == 0x00001C, "Member 'BP_PlayerVisualControl_C_SeeThroughNearCamera::CallFunc_GetInCinematic_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThroughNearCamera, CallFunc_Not_PreBool_ReturnValue_2) == 0x00001D, "Member 'BP_PlayerVisualControl_C_SeeThroughNearCamera::CallFunc_Not_PreBool_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThroughNearCamera, CallFunc_GetScalarParameterValue_ReturnValue) == 0x000020, "Member 'BP_PlayerVisualControl_C_SeeThroughNearCamera::CallFunc_GetScalarParameterValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThroughNearCamera, CallFunc_GetPlayerCameraManager_ReturnValue) == 0x000028, "Member 'BP_PlayerVisualControl_C_SeeThroughNearCamera::CallFunc_GetPlayerCameraManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThroughNearCamera, CallFunc_GetCameraLocation_ReturnValue) == 0x000030, "Member 'BP_PlayerVisualControl_C_SeeThroughNearCamera::CallFunc_GetCameraLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThroughNearCamera, CallFunc_GetCharacterMesh_ReturnValue) == 0x000048, "Member 'BP_PlayerVisualControl_C_SeeThroughNearCamera::CallFunc_GetCharacterMesh_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThroughNearCamera, CallFunc_GetSocketLocation_ReturnValue) == 0x000050, "Member 'BP_PlayerVisualControl_C_SeeThroughNearCamera::CallFunc_GetSocketLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThroughNearCamera, CallFunc_IsValid_ReturnValue) == 0x000068, "Member 'BP_PlayerVisualControl_C_SeeThroughNearCamera::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThroughNearCamera, CallFunc_GetSocketLocation_ReturnValue_1) == 0x000070, "Member 'BP_PlayerVisualControl_C_SeeThroughNearCamera::CallFunc_GetSocketLocation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThroughNearCamera, CallFunc_GetPointDistanceToSegment_ReturnValue) == 0x000088, "Member 'BP_PlayerVisualControl_C_SeeThroughNearCamera::CallFunc_GetPointDistanceToSegment_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThroughNearCamera, CallFunc_Less_DoubleDouble_ReturnValue) == 0x00008C, "Member 'BP_PlayerVisualControl_C_SeeThroughNearCamera::CallFunc_Less_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThroughNearCamera, K2Node_VariableSet_InSeeThroughDistance_ImplicitCast) == 0x000090, "Member 'BP_PlayerVisualControl_C_SeeThroughNearCamera::K2Node_VariableSet_InSeeThroughDistance_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SeeThroughNearCamera, CallFunc_Less_DoubleDouble_A_ImplicitCast) == 0x000098, "Member 'BP_PlayerVisualControl_C_SeeThroughNearCamera::CallFunc_Less_DoubleDouble_A_ImplicitCast' has a wrong offset!");
 
 // Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.Set Super Armer Hit Effect Scale
 // 0x00D0 (0x00D0 - 0x0000)
@@ -2095,6 +2267,28 @@ static_assert(offsetof(BP_PlayerVisualControl_C_SetGuestState, bInEnable) == 0x0
 static_assert(offsetof(BP_PlayerVisualControl_C_SetGuestState, GuestStateWeight) == 0x000004, "Member 'BP_PlayerVisualControl_C_SetGuestState::GuestStateWeight' has a wrong offset!");
 static_assert(offsetof(BP_PlayerVisualControl_C_SetGuestState, CallFunc_IsValid_ReturnValue) == 0x000008, "Member 'BP_PlayerVisualControl_C_SetGuestState::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
+// Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.SetGuestWaitingState
+// 0x0001 (0x0001 - 0x0000)
+struct BP_PlayerVisualControl_C_SetGuestWaitingState final
+{
+public:
+	bool                                          bInEnable;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_PlayerVisualControl_C_SetGuestWaitingState) == 0x000001, "Wrong alignment on BP_PlayerVisualControl_C_SetGuestWaitingState");
+static_assert(sizeof(BP_PlayerVisualControl_C_SetGuestWaitingState) == 0x000001, "Wrong size on BP_PlayerVisualControl_C_SetGuestWaitingState");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetGuestWaitingState, bInEnable) == 0x000000, "Member 'BP_PlayerVisualControl_C_SetGuestWaitingState::bInEnable' has a wrong offset!");
+
+// Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.SetMatchingDecisionState
+// 0x0001 (0x0001 - 0x0000)
+struct BP_PlayerVisualControl_C_SetMatchingDecisionState final
+{
+public:
+	bool                                          bInEnable;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_PlayerVisualControl_C_SetMatchingDecisionState) == 0x000001, "Wrong alignment on BP_PlayerVisualControl_C_SetMatchingDecisionState");
+static_assert(sizeof(BP_PlayerVisualControl_C_SetMatchingDecisionState) == 0x000001, "Wrong size on BP_PlayerVisualControl_C_SetMatchingDecisionState");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetMatchingDecisionState, bInEnable) == 0x000000, "Member 'BP_PlayerVisualControl_C_SetMatchingDecisionState::bInEnable' has a wrong offset!");
+
 // Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.SetMatchingState
 // 0x0002 (0x0002 - 0x0000)
 struct BP_PlayerVisualControl_C_SetMatchingState final
@@ -2108,8 +2302,30 @@ static_assert(sizeof(BP_PlayerVisualControl_C_SetMatchingState) == 0x000002, "Wr
 static_assert(offsetof(BP_PlayerVisualControl_C_SetMatchingState, bInEnable) == 0x000000, "Member 'BP_PlayerVisualControl_C_SetMatchingState::bInEnable' has a wrong offset!");
 static_assert(offsetof(BP_PlayerVisualControl_C_SetMatchingState, CallFunc_IsValid_ReturnValue) == 0x000001, "Member 'BP_PlayerVisualControl_C_SetMatchingState::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
+// Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.SetOnFootStepChangedDelegate
+// 0x0038 (0x0038 - 0x0000)
+struct BP_PlayerVisualControl_C_SetOnFootStepChangedDelegate final
+{
+public:
+	TDelegate<void(EFootType FootType)>           K2Node_CreateDelegate_OutputDelegate;              // 0x0000(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 CallFunc_GetCharacterMesh_ReturnValue;             // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UAnimInstance*                          CallFunc_GetAnimInstance_ReturnValue;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UActionAnimInstance*                    K2Node_DynamicCast_AsAction_Anim_Instance;         // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_PlayerVisualControl_C_SetOnFootStepChangedDelegate) == 0x000008, "Wrong alignment on BP_PlayerVisualControl_C_SetOnFootStepChangedDelegate");
+static_assert(sizeof(BP_PlayerVisualControl_C_SetOnFootStepChangedDelegate) == 0x000038, "Wrong size on BP_PlayerVisualControl_C_SetOnFootStepChangedDelegate");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetOnFootStepChangedDelegate, K2Node_CreateDelegate_OutputDelegate) == 0x000000, "Member 'BP_PlayerVisualControl_C_SetOnFootStepChangedDelegate::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetOnFootStepChangedDelegate, CallFunc_GetCharacterMesh_ReturnValue) == 0x000010, "Member 'BP_PlayerVisualControl_C_SetOnFootStepChangedDelegate::CallFunc_GetCharacterMesh_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetOnFootStepChangedDelegate, CallFunc_GetAnimInstance_ReturnValue) == 0x000018, "Member 'BP_PlayerVisualControl_C_SetOnFootStepChangedDelegate::CallFunc_GetAnimInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetOnFootStepChangedDelegate, CallFunc_IsValid_ReturnValue) == 0x000020, "Member 'BP_PlayerVisualControl_C_SetOnFootStepChangedDelegate::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetOnFootStepChangedDelegate, K2Node_DynamicCast_AsAction_Anim_Instance) == 0x000028, "Member 'BP_PlayerVisualControl_C_SetOnFootStepChangedDelegate::K2Node_DynamicCast_AsAction_Anim_Instance' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetOnFootStepChangedDelegate, K2Node_DynamicCast_bSuccess) == 0x000030, "Member 'BP_PlayerVisualControl_C_SetOnFootStepChangedDelegate::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+
 // Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.SetPlayerCustomStencil
-// 0x0090 (0x0090 - 0x0000)
+// 0x00A0 (0x00A0 - 0x0000)
 struct BP_PlayerVisualControl_C_SetPlayerCustomStencil final
 {
 public:
@@ -2123,29 +2339,32 @@ public:
 	int32                                         Temp_int_Array_Index_Variable_2;                   // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class USkeletalMeshComponent*                 CallFunc_Array_Get_Item;                           // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0035(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0036(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_37[0x1];                                       // 0x0037(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class USkeletalMeshComponent*>         CallFunc_GetCustomizeShadowMeshes_OutShadowMeshes; // 0x0038(0x0010)(ReferenceParm, ContainsInstancedReference)
-	int32                                         Temp_int_Loop_Counter_Variable_2;                  // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class UMeshComponent*>                 CallFunc_GetAllOtherMesh_ReturnValue;              // 0x0050(0x0010)(ReferenceParm, ContainsInstancedReference)
-	class UMeshComponent*                         CallFunc_Array_Get_Item_1;                         // 0x0060(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 CallFunc_Array_Get_Item_2;                         // 0x0068(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_71[0x3];                                       // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x007C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x007D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7E[0x2];                                       // 0x007E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class USkeletalMeshComponent*                 CallFunc_GetCharacterMesh_ReturnValue;             // 0x0080(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 CallFunc_Array_Get_Item_1;                         // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3A[0x2];                                       // 0x003A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class USkeletalMeshComponent*>         CallFunc_GetCustomizeShadowMeshes_OutShadowMeshes; // 0x0050(0x0010)(ReferenceParm, ContainsInstancedReference)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_61[0x3];                                       // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable_2;                  // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UMeshComponent*>                 CallFunc_GetAllOtherMesh_ReturnValue;              // 0x0070(0x0010)(ReferenceParm, ContainsInstancedReference)
+	class UMeshComponent*                         CallFunc_Array_Get_Item_2;                         // 0x0080(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x008C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8D[0x3];                                       // 0x008D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMeshComponent*                 CallFunc_GetCharacterMesh_ReturnValue;             // 0x0090(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_PlayerVisualControl_C_SetPlayerCustomStencil) == 0x000008, "Wrong alignment on BP_PlayerVisualControl_C_SetPlayerCustomStencil");
-static_assert(sizeof(BP_PlayerVisualControl_C_SetPlayerCustomStencil) == 0x000090, "Wrong size on BP_PlayerVisualControl_C_SetPlayerCustomStencil");
+static_assert(sizeof(BP_PlayerVisualControl_C_SetPlayerCustomStencil) == 0x0000A0, "Wrong size on BP_PlayerVisualControl_C_SetPlayerCustomStencil");
 static_assert(offsetof(BP_PlayerVisualControl_C_SetPlayerCustomStencil, InPlayer) == 0x000000, "Member 'BP_PlayerVisualControl_C_SetPlayerCustomStencil::InPlayer' has a wrong offset!");
 static_assert(offsetof(BP_PlayerVisualControl_C_SetPlayerCustomStencil, Temp_int_Array_Index_Variable) == 0x000008, "Member 'BP_PlayerVisualControl_C_SetPlayerCustomStencil::Temp_int_Array_Index_Variable' has a wrong offset!");
 static_assert(offsetof(BP_PlayerVisualControl_C_SetPlayerCustomStencil, Temp_int_Loop_Counter_Variable) == 0x00000C, "Member 'BP_PlayerVisualControl_C_SetPlayerCustomStencil::Temp_int_Loop_Counter_Variable' has a wrong offset!");
@@ -2155,23 +2374,34 @@ static_assert(offsetof(BP_PlayerVisualControl_C_SetPlayerCustomStencil, CallFunc
 static_assert(offsetof(BP_PlayerVisualControl_C_SetPlayerCustomStencil, Temp_int_Array_Index_Variable_1) == 0x00001C, "Member 'BP_PlayerVisualControl_C_SetPlayerCustomStencil::Temp_int_Array_Index_Variable_1' has a wrong offset!");
 static_assert(offsetof(BP_PlayerVisualControl_C_SetPlayerCustomStencil, Temp_int_Array_Index_Variable_2) == 0x000020, "Member 'BP_PlayerVisualControl_C_SetPlayerCustomStencil::Temp_int_Array_Index_Variable_2' has a wrong offset!");
 static_assert(offsetof(BP_PlayerVisualControl_C_SetPlayerCustomStencil, CallFunc_Array_Get_Item) == 0x000028, "Member 'BP_PlayerVisualControl_C_SetPlayerCustomStencil::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SetPlayerCustomStencil, CallFunc_Array_Length_ReturnValue) == 0x000030, "Member 'BP_PlayerVisualControl_C_SetPlayerCustomStencil::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SetPlayerCustomStencil, CallFunc_Less_IntInt_ReturnValue) == 0x000034, "Member 'BP_PlayerVisualControl_C_SetPlayerCustomStencil::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SetPlayerCustomStencil, CallFunc_IsValid_ReturnValue) == 0x000035, "Member 'BP_PlayerVisualControl_C_SetPlayerCustomStencil::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SetPlayerCustomStencil, CallFunc_IsValid_ReturnValue_1) == 0x000036, "Member 'BP_PlayerVisualControl_C_SetPlayerCustomStencil::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SetPlayerCustomStencil, CallFunc_GetCustomizeShadowMeshes_OutShadowMeshes) == 0x000038, "Member 'BP_PlayerVisualControl_C_SetPlayerCustomStencil::CallFunc_GetCustomizeShadowMeshes_OutShadowMeshes' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SetPlayerCustomStencil, Temp_int_Loop_Counter_Variable_2) == 0x000048, "Member 'BP_PlayerVisualControl_C_SetPlayerCustomStencil::Temp_int_Loop_Counter_Variable_2' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SetPlayerCustomStencil, CallFunc_Add_IntInt_ReturnValue_2) == 0x00004C, "Member 'BP_PlayerVisualControl_C_SetPlayerCustomStencil::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SetPlayerCustomStencil, CallFunc_GetAllOtherMesh_ReturnValue) == 0x000050, "Member 'BP_PlayerVisualControl_C_SetPlayerCustomStencil::CallFunc_GetAllOtherMesh_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SetPlayerCustomStencil, CallFunc_Array_Get_Item_1) == 0x000060, "Member 'BP_PlayerVisualControl_C_SetPlayerCustomStencil::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SetPlayerCustomStencil, CallFunc_Array_Get_Item_2) == 0x000068, "Member 'BP_PlayerVisualControl_C_SetPlayerCustomStencil::CallFunc_Array_Get_Item_2' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SetPlayerCustomStencil, CallFunc_IsValid_ReturnValue_2) == 0x000070, "Member 'BP_PlayerVisualControl_C_SetPlayerCustomStencil::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SetPlayerCustomStencil, CallFunc_Array_Length_ReturnValue_1) == 0x000074, "Member 'BP_PlayerVisualControl_C_SetPlayerCustomStencil::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SetPlayerCustomStencil, CallFunc_Array_Length_ReturnValue_2) == 0x000078, "Member 'BP_PlayerVisualControl_C_SetPlayerCustomStencil::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SetPlayerCustomStencil, CallFunc_Less_IntInt_ReturnValue_1) == 0x00007C, "Member 'BP_PlayerVisualControl_C_SetPlayerCustomStencil::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SetPlayerCustomStencil, CallFunc_Less_IntInt_ReturnValue_2) == 0x00007D, "Member 'BP_PlayerVisualControl_C_SetPlayerCustomStencil::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SetPlayerCustomStencil, CallFunc_GetCharacterMesh_ReturnValue) == 0x000080, "Member 'BP_PlayerVisualControl_C_SetPlayerCustomStencil::CallFunc_GetCharacterMesh_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SetPlayerCustomStencil, CallFunc_IsValid_ReturnValue_3) == 0x000088, "Member 'BP_PlayerVisualControl_C_SetPlayerCustomStencil::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetPlayerCustomStencil, CallFunc_Array_Get_Item_1) == 0x000030, "Member 'BP_PlayerVisualControl_C_SetPlayerCustomStencil::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetPlayerCustomStencil, CallFunc_IsValid_ReturnValue) == 0x000038, "Member 'BP_PlayerVisualControl_C_SetPlayerCustomStencil::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetPlayerCustomStencil, CallFunc_IsValid_ReturnValue_1) == 0x000039, "Member 'BP_PlayerVisualControl_C_SetPlayerCustomStencil::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetPlayerCustomStencil, CallFunc_Array_Length_ReturnValue) == 0x00003C, "Member 'BP_PlayerVisualControl_C_SetPlayerCustomStencil::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetPlayerCustomStencil, CallFunc_Less_IntInt_ReturnValue) == 0x000040, "Member 'BP_PlayerVisualControl_C_SetPlayerCustomStencil::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetPlayerCustomStencil, CallFunc_Array_Length_ReturnValue_1) == 0x000044, "Member 'BP_PlayerVisualControl_C_SetPlayerCustomStencil::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetPlayerCustomStencil, CallFunc_Less_IntInt_ReturnValue_1) == 0x000048, "Member 'BP_PlayerVisualControl_C_SetPlayerCustomStencil::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetPlayerCustomStencil, CallFunc_GetCustomizeShadowMeshes_OutShadowMeshes) == 0x000050, "Member 'BP_PlayerVisualControl_C_SetPlayerCustomStencil::CallFunc_GetCustomizeShadowMeshes_OutShadowMeshes' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetPlayerCustomStencil, CallFunc_IsValid_ReturnValue_2) == 0x000060, "Member 'BP_PlayerVisualControl_C_SetPlayerCustomStencil::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetPlayerCustomStencil, Temp_int_Loop_Counter_Variable_2) == 0x000064, "Member 'BP_PlayerVisualControl_C_SetPlayerCustomStencil::Temp_int_Loop_Counter_Variable_2' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetPlayerCustomStencil, CallFunc_Add_IntInt_ReturnValue_2) == 0x000068, "Member 'BP_PlayerVisualControl_C_SetPlayerCustomStencil::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetPlayerCustomStencil, CallFunc_GetAllOtherMesh_ReturnValue) == 0x000070, "Member 'BP_PlayerVisualControl_C_SetPlayerCustomStencil::CallFunc_GetAllOtherMesh_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetPlayerCustomStencil, CallFunc_Array_Get_Item_2) == 0x000080, "Member 'BP_PlayerVisualControl_C_SetPlayerCustomStencil::CallFunc_Array_Get_Item_2' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetPlayerCustomStencil, CallFunc_Array_Length_ReturnValue_2) == 0x000088, "Member 'BP_PlayerVisualControl_C_SetPlayerCustomStencil::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetPlayerCustomStencil, CallFunc_Less_IntInt_ReturnValue_2) == 0x00008C, "Member 'BP_PlayerVisualControl_C_SetPlayerCustomStencil::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetPlayerCustomStencil, CallFunc_GetCharacterMesh_ReturnValue) == 0x000090, "Member 'BP_PlayerVisualControl_C_SetPlayerCustomStencil::CallFunc_GetCharacterMesh_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetPlayerCustomStencil, CallFunc_IsValid_ReturnValue_3) == 0x000098, "Member 'BP_PlayerVisualControl_C_SetPlayerCustomStencil::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
+
+// Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.SetSeeThroughCustomDepthAll
+// 0x0001 (0x0001 - 0x0000)
+struct BP_PlayerVisualControl_C_SetSeeThroughCustomDepthAll final
+{
+public:
+	bool                                          bNearCamera;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_PlayerVisualControl_C_SetSeeThroughCustomDepthAll) == 0x000001, "Wrong alignment on BP_PlayerVisualControl_C_SetSeeThroughCustomDepthAll");
+static_assert(sizeof(BP_PlayerVisualControl_C_SetSeeThroughCustomDepthAll) == 0x000001, "Wrong size on BP_PlayerVisualControl_C_SetSeeThroughCustomDepthAll");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetSeeThroughCustomDepthAll, bNearCamera) == 0x000000, "Member 'BP_PlayerVisualControl_C_SetSeeThroughCustomDepthAll::bNearCamera' has a wrong offset!");
 
 // Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.SetStatusEffect_Rinne
 // 0x0028 (0x0028 - 0x0000)
@@ -2198,8 +2428,88 @@ static_assert(offsetof(BP_PlayerVisualControl_C_SetStatusEffect_Rinne, CallFunc_
 static_assert(offsetof(BP_PlayerVisualControl_C_SetStatusEffect_Rinne, CallFunc_SpawnObject_ReturnValue) == 0x000018, "Member 'BP_PlayerVisualControl_C_SetStatusEffect_Rinne::CallFunc_SpawnObject_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_PlayerVisualControl_C_SetStatusEffect_Rinne, CallFunc_IsValid_ReturnValue_3) == 0x000020, "Member 'BP_PlayerVisualControl_C_SetStatusEffect_Rinne::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
 
+// Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.SetTeleportationForma
+// 0x00E8 (0x00E8 - 0x0000)
+struct BP_PlayerVisualControl_C_SetTeleportationForma final
+{
+public:
+	bool                                          bInEnable;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ACharacter*                             CallFunc_GetCharacterActor_ReturnValue;            // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActionHumanEquipment_Weapon*           CallFunc_VCF_GetWeaponActor_ReturnValue;           // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IEquipmentVisualControlInterface> CallFunc_K2_GetEquipmentVisualControl_self_CastInput; // 0x0028(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UEquipmentVisualControlComponent* CallFunc_K2_GetEquipmentVisualControl_ReturnValue; // 0x0038(0x0008)(ConstParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UBP_PlayerEquipmentVisualControl_Weapon_C* K2Node_DynamicCast_AsBP_Player_Equipment_Visual_Control_Weapon; // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ACharacter*                             CallFunc_GetCharacterActor_ReturnValue_1;          // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActionHumanEquipment_Weapon*           CallFunc_VCF_GetWeaponActor_ReturnValue_1;         // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IEquipmentVisualControlInterface> CallFunc_K2_GetEquipmentVisualControl_self_CastInput_1; // 0x0070(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UEquipmentVisualControlComponent* CallFunc_K2_GetEquipmentVisualControl_ReturnValue_1; // 0x0080(0x0008)(ConstParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UBP_PlayerEquipmentVisualControl_Weapon_C* K2Node_DynamicCast_AsBP_Player_Equipment_Visual_Control_Weapon_1; // 0x0088(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsHideWeapon_ReturnValue;                 // 0x0091(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0092(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsHideWeapon_ReturnValue_1;               // 0x0093(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0094(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_95[0x3];                                       // 0x0095(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMeshComponent*                 CallFunc_GetCharacterMesh_ReturnValue;             // 0x0098(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 CallFunc_GetCharacterMesh_ReturnValue_1;           // 0x00A0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraComponent*                      CallFunc_SpawnSystemAttached_ReturnValue;          // 0x00A8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraComponent*                      CallFunc_SpawnSystemAttached_ReturnValue_1;        // 0x00B0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraComponent*                      CallFunc_SpawnSystemAttached_ReturnValue_2;        // 0x00B8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C1[0x7];                                       // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UNiagaraComponent*                      CallFunc_SpawnSystemAttached_ReturnValue_3;        // 0x00C8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_5;                    // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D1[0x7];                                       // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_AppearBody_Implement_TotalDuration_ImplicitCast; // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_VanishBody_Implement_TotalDuration_ImplicitCast; // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_PlayerVisualControl_C_SetTeleportationForma) == 0x000008, "Wrong alignment on BP_PlayerVisualControl_C_SetTeleportationForma");
+static_assert(sizeof(BP_PlayerVisualControl_C_SetTeleportationForma) == 0x0000E8, "Wrong size on BP_PlayerVisualControl_C_SetTeleportationForma");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetTeleportationForma, bInEnable) == 0x000000, "Member 'BP_PlayerVisualControl_C_SetTeleportationForma::bInEnable' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetTeleportationForma, CallFunc_GetCharacterActor_ReturnValue) == 0x000008, "Member 'BP_PlayerVisualControl_C_SetTeleportationForma::CallFunc_GetCharacterActor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetTeleportationForma, CallFunc_IsValid_ReturnValue) == 0x000010, "Member 'BP_PlayerVisualControl_C_SetTeleportationForma::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetTeleportationForma, CallFunc_VCF_GetWeaponActor_ReturnValue) == 0x000018, "Member 'BP_PlayerVisualControl_C_SetTeleportationForma::CallFunc_VCF_GetWeaponActor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetTeleportationForma, CallFunc_IsValid_ReturnValue_1) == 0x000020, "Member 'BP_PlayerVisualControl_C_SetTeleportationForma::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetTeleportationForma, CallFunc_K2_GetEquipmentVisualControl_self_CastInput) == 0x000028, "Member 'BP_PlayerVisualControl_C_SetTeleportationForma::CallFunc_K2_GetEquipmentVisualControl_self_CastInput' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetTeleportationForma, CallFunc_K2_GetEquipmentVisualControl_ReturnValue) == 0x000038, "Member 'BP_PlayerVisualControl_C_SetTeleportationForma::CallFunc_K2_GetEquipmentVisualControl_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetTeleportationForma, K2Node_DynamicCast_AsBP_Player_Equipment_Visual_Control_Weapon) == 0x000040, "Member 'BP_PlayerVisualControl_C_SetTeleportationForma::K2Node_DynamicCast_AsBP_Player_Equipment_Visual_Control_Weapon' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetTeleportationForma, K2Node_DynamicCast_bSuccess) == 0x000048, "Member 'BP_PlayerVisualControl_C_SetTeleportationForma::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetTeleportationForma, CallFunc_GetCharacterActor_ReturnValue_1) == 0x000050, "Member 'BP_PlayerVisualControl_C_SetTeleportationForma::CallFunc_GetCharacterActor_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetTeleportationForma, CallFunc_IsValid_ReturnValue_2) == 0x000058, "Member 'BP_PlayerVisualControl_C_SetTeleportationForma::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetTeleportationForma, CallFunc_VCF_GetWeaponActor_ReturnValue_1) == 0x000060, "Member 'BP_PlayerVisualControl_C_SetTeleportationForma::CallFunc_VCF_GetWeaponActor_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetTeleportationForma, CallFunc_IsValid_ReturnValue_3) == 0x000068, "Member 'BP_PlayerVisualControl_C_SetTeleportationForma::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetTeleportationForma, CallFunc_K2_GetEquipmentVisualControl_self_CastInput_1) == 0x000070, "Member 'BP_PlayerVisualControl_C_SetTeleportationForma::CallFunc_K2_GetEquipmentVisualControl_self_CastInput_1' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetTeleportationForma, CallFunc_K2_GetEquipmentVisualControl_ReturnValue_1) == 0x000080, "Member 'BP_PlayerVisualControl_C_SetTeleportationForma::CallFunc_K2_GetEquipmentVisualControl_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetTeleportationForma, K2Node_DynamicCast_AsBP_Player_Equipment_Visual_Control_Weapon_1) == 0x000088, "Member 'BP_PlayerVisualControl_C_SetTeleportationForma::K2Node_DynamicCast_AsBP_Player_Equipment_Visual_Control_Weapon_1' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetTeleportationForma, K2Node_DynamicCast_bSuccess_1) == 0x000090, "Member 'BP_PlayerVisualControl_C_SetTeleportationForma::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetTeleportationForma, CallFunc_IsHideWeapon_ReturnValue) == 0x000091, "Member 'BP_PlayerVisualControl_C_SetTeleportationForma::CallFunc_IsHideWeapon_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetTeleportationForma, CallFunc_Not_PreBool_ReturnValue) == 0x000092, "Member 'BP_PlayerVisualControl_C_SetTeleportationForma::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetTeleportationForma, CallFunc_IsHideWeapon_ReturnValue_1) == 0x000093, "Member 'BP_PlayerVisualControl_C_SetTeleportationForma::CallFunc_IsHideWeapon_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetTeleportationForma, CallFunc_Not_PreBool_ReturnValue_1) == 0x000094, "Member 'BP_PlayerVisualControl_C_SetTeleportationForma::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetTeleportationForma, CallFunc_GetCharacterMesh_ReturnValue) == 0x000098, "Member 'BP_PlayerVisualControl_C_SetTeleportationForma::CallFunc_GetCharacterMesh_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetTeleportationForma, CallFunc_GetCharacterMesh_ReturnValue_1) == 0x0000A0, "Member 'BP_PlayerVisualControl_C_SetTeleportationForma::CallFunc_GetCharacterMesh_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetTeleportationForma, CallFunc_SpawnSystemAttached_ReturnValue) == 0x0000A8, "Member 'BP_PlayerVisualControl_C_SetTeleportationForma::CallFunc_SpawnSystemAttached_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetTeleportationForma, CallFunc_SpawnSystemAttached_ReturnValue_1) == 0x0000B0, "Member 'BP_PlayerVisualControl_C_SetTeleportationForma::CallFunc_SpawnSystemAttached_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetTeleportationForma, CallFunc_SpawnSystemAttached_ReturnValue_2) == 0x0000B8, "Member 'BP_PlayerVisualControl_C_SetTeleportationForma::CallFunc_SpawnSystemAttached_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetTeleportationForma, CallFunc_IsValid_ReturnValue_4) == 0x0000C0, "Member 'BP_PlayerVisualControl_C_SetTeleportationForma::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetTeleportationForma, CallFunc_SpawnSystemAttached_ReturnValue_3) == 0x0000C8, "Member 'BP_PlayerVisualControl_C_SetTeleportationForma::CallFunc_SpawnSystemAttached_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetTeleportationForma, CallFunc_IsValid_ReturnValue_5) == 0x0000D0, "Member 'BP_PlayerVisualControl_C_SetTeleportationForma::CallFunc_IsValid_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetTeleportationForma, CallFunc_AppearBody_Implement_TotalDuration_ImplicitCast) == 0x0000D8, "Member 'BP_PlayerVisualControl_C_SetTeleportationForma::CallFunc_AppearBody_Implement_TotalDuration_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetTeleportationForma, CallFunc_VanishBody_Implement_TotalDuration_ImplicitCast) == 0x0000E0, "Member 'BP_PlayerVisualControl_C_SetTeleportationForma::CallFunc_VanishBody_Implement_TotalDuration_ImplicitCast' has a wrong offset!");
+
 // Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.SetVisibilityMesh
-// 0x0006 (0x0006 - 0x0000)
+// 0x0060 (0x0060 - 0x0000)
 struct BP_PlayerVisualControl_C_SetVisibilityMesh final
 {
 public:
@@ -2208,16 +2518,19 @@ public:
 	bool                                          bWeapon;                                           // 0x0002(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bOther;                                            // 0x0003(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          InVisibility;                                      // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class UMeshComponent*, bool>             CallFunc_SetVisibilityMesh_VisibilityMap;          // 0x0008(0x0050)(ContainsInstancedReference)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_PlayerVisualControl_C_SetVisibilityMesh) == 0x000001, "Wrong alignment on BP_PlayerVisualControl_C_SetVisibilityMesh");
-static_assert(sizeof(BP_PlayerVisualControl_C_SetVisibilityMesh) == 0x000006, "Wrong size on BP_PlayerVisualControl_C_SetVisibilityMesh");
+static_assert(alignof(BP_PlayerVisualControl_C_SetVisibilityMesh) == 0x000008, "Wrong alignment on BP_PlayerVisualControl_C_SetVisibilityMesh");
+static_assert(sizeof(BP_PlayerVisualControl_C_SetVisibilityMesh) == 0x000060, "Wrong size on BP_PlayerVisualControl_C_SetVisibilityMesh");
 static_assert(offsetof(BP_PlayerVisualControl_C_SetVisibilityMesh, bVisibility) == 0x000000, "Member 'BP_PlayerVisualControl_C_SetVisibilityMesh::bVisibility' has a wrong offset!");
 static_assert(offsetof(BP_PlayerVisualControl_C_SetVisibilityMesh, bCharacter) == 0x000001, "Member 'BP_PlayerVisualControl_C_SetVisibilityMesh::bCharacter' has a wrong offset!");
 static_assert(offsetof(BP_PlayerVisualControl_C_SetVisibilityMesh, bWeapon) == 0x000002, "Member 'BP_PlayerVisualControl_C_SetVisibilityMesh::bWeapon' has a wrong offset!");
 static_assert(offsetof(BP_PlayerVisualControl_C_SetVisibilityMesh, bOther) == 0x000003, "Member 'BP_PlayerVisualControl_C_SetVisibilityMesh::bOther' has a wrong offset!");
 static_assert(offsetof(BP_PlayerVisualControl_C_SetVisibilityMesh, InVisibility) == 0x000004, "Member 'BP_PlayerVisualControl_C_SetVisibilityMesh::InVisibility' has a wrong offset!");
-static_assert(offsetof(BP_PlayerVisualControl_C_SetVisibilityMesh, CallFunc_IsValid_ReturnValue) == 0x000005, "Member 'BP_PlayerVisualControl_C_SetVisibilityMesh::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetVisibilityMesh, CallFunc_SetVisibilityMesh_VisibilityMap) == 0x000008, "Member 'BP_PlayerVisualControl_C_SetVisibilityMesh::CallFunc_SetVisibilityMesh_VisibilityMap' has a wrong offset!");
+static_assert(offsetof(BP_PlayerVisualControl_C_SetVisibilityMesh, CallFunc_IsValid_ReturnValue) == 0x000058, "Member 'BP_PlayerVisualControl_C_SetVisibilityMesh::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
 // Function BP_PlayerVisualControl.BP_PlayerVisualControl_C.SlowEffect_Begin
 // 0x0010 (0x0010 - 0x0000)

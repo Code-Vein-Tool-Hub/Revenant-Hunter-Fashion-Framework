@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_AppOnlineSessionManager.BP_AppOnlineSessionManager_C
-// 0x0000 (0x0470 - 0x0470)
+// 0x0000 (0x0698 - 0x0698)
 class UBP_AppOnlineSessionManager_C final : public UAppOnlineSessionManager
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UBP_AppOnlineSessionManager_C) == 0x000008, "Wrong alignment on UBP_AppOnlineSessionManager_C");
-static_assert(sizeof(UBP_AppOnlineSessionManager_C) == 0x000470, "Wrong size on UBP_AppOnlineSessionManager_C");
+static_assert(sizeof(UBP_AppOnlineSessionManager_C) == 0x000698, "Wrong size on UBP_AppOnlineSessionManager_C");
 
 }
 

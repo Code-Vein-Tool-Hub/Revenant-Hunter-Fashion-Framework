@@ -10,6 +10,8 @@
 
 #include "Basic.hpp"
 
+#include "UMG_structs.hpp"
+
 
 namespace SDK::Params
 {
@@ -38,27 +40,40 @@ static_assert(offsetof(WDT_Status_ItemCount_C_SetItemCount, CallFunc_Concat_StrS
 static_assert(offsetof(WDT_Status_ItemCount_C_SetItemCount, CallFunc_Conv_StringToText_ReturnValue) == 0x000048, "Member 'WDT_Status_ItemCount_C_SetItemCount::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
 
 // Function WDT_Status_ItemCount.WDT_Status_ItemCount_C.SetStorageCount
-// 0x0058 (0x0058 - 0x0000)
+// 0x0078 (0x0078 - 0x0000)
 struct WDT_Status_ItemCount_C_SetStorageCount final
 {
 public:
 	int32                                         InStorageCount;                                    // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         InMaxStorageCount;                                 // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_IntToString_ReturnValue_1;           // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0048(0x0010)()
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_IntToString_ReturnValue_1;           // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0060(0x0010)()
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_Status_ItemCount_C_SetStorageCount) == 0x000008, "Wrong alignment on WDT_Status_ItemCount_C_SetStorageCount");
-static_assert(sizeof(WDT_Status_ItemCount_C_SetStorageCount) == 0x000058, "Wrong size on WDT_Status_ItemCount_C_SetStorageCount");
+static_assert(sizeof(WDT_Status_ItemCount_C_SetStorageCount) == 0x000078, "Wrong size on WDT_Status_ItemCount_C_SetStorageCount");
 static_assert(offsetof(WDT_Status_ItemCount_C_SetStorageCount, InStorageCount) == 0x000000, "Member 'WDT_Status_ItemCount_C_SetStorageCount::InStorageCount' has a wrong offset!");
 static_assert(offsetof(WDT_Status_ItemCount_C_SetStorageCount, InMaxStorageCount) == 0x000004, "Member 'WDT_Status_ItemCount_C_SetStorageCount::InMaxStorageCount' has a wrong offset!");
-static_assert(offsetof(WDT_Status_ItemCount_C_SetStorageCount, CallFunc_Conv_IntToString_ReturnValue) == 0x000008, "Member 'WDT_Status_ItemCount_C_SetStorageCount::CallFunc_Conv_IntToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_Status_ItemCount_C_SetStorageCount, CallFunc_Conv_IntToString_ReturnValue_1) == 0x000018, "Member 'WDT_Status_ItemCount_C_SetStorageCount::CallFunc_Conv_IntToString_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_Status_ItemCount_C_SetStorageCount, CallFunc_Concat_StrStr_ReturnValue) == 0x000028, "Member 'WDT_Status_ItemCount_C_SetStorageCount::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_Status_ItemCount_C_SetStorageCount, CallFunc_Concat_StrStr_ReturnValue_1) == 0x000038, "Member 'WDT_Status_ItemCount_C_SetStorageCount::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_Status_ItemCount_C_SetStorageCount, CallFunc_Conv_StringToText_ReturnValue) == 0x000048, "Member 'WDT_Status_ItemCount_C_SetStorageCount::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_Status_ItemCount_C_SetStorageCount, Temp_byte_Variable) == 0x000008, "Member 'WDT_Status_ItemCount_C_SetStorageCount::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(WDT_Status_ItemCount_C_SetStorageCount, CallFunc_Greater_IntInt_ReturnValue) == 0x000009, "Member 'WDT_Status_ItemCount_C_SetStorageCount::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_Status_ItemCount_C_SetStorageCount, CallFunc_Conv_IntToString_ReturnValue) == 0x000010, "Member 'WDT_Status_ItemCount_C_SetStorageCount::CallFunc_Conv_IntToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_Status_ItemCount_C_SetStorageCount, CallFunc_Conv_IntToString_ReturnValue_1) == 0x000020, "Member 'WDT_Status_ItemCount_C_SetStorageCount::CallFunc_Conv_IntToString_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_Status_ItemCount_C_SetStorageCount, Temp_byte_Variable_1) == 0x000030, "Member 'WDT_Status_ItemCount_C_SetStorageCount::Temp_byte_Variable_1' has a wrong offset!");
+static_assert(offsetof(WDT_Status_ItemCount_C_SetStorageCount, CallFunc_Concat_StrStr_ReturnValue) == 0x000038, "Member 'WDT_Status_ItemCount_C_SetStorageCount::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_Status_ItemCount_C_SetStorageCount, CallFunc_Concat_StrStr_ReturnValue_1) == 0x000048, "Member 'WDT_Status_ItemCount_C_SetStorageCount::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_Status_ItemCount_C_SetStorageCount, Temp_bool_Variable) == 0x000058, "Member 'WDT_Status_ItemCount_C_SetStorageCount::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WDT_Status_ItemCount_C_SetStorageCount, CallFunc_Conv_StringToText_ReturnValue) == 0x000060, "Member 'WDT_Status_ItemCount_C_SetStorageCount::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_Status_ItemCount_C_SetStorageCount, K2Node_Select_Default) == 0x000070, "Member 'WDT_Status_ItemCount_C_SetStorageCount::K2Node_Select_Default' has a wrong offset!");
 
 }
 

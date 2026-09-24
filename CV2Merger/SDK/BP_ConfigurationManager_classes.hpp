@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "Extensions_classes.hpp"
 
 
@@ -17,9 +18,18 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_ConfigurationManager.BP_ConfigurationManager_C
-// 0x0000 (0x0538 - 0x0538)
+// 0x0008 (0x0648 - 0x0640)
 class UBP_ConfigurationManager_C final : public UConfigurationManager
 {
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0640(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void ExecuteUbergraph_BP_ConfigurationManager(int32 EntryPoint);
+	void ForceCV1Look_BP(bool bInEnable, class ALightController* InLightController);
+	void ForceFrontLight_BP(bool bInEnable, class ALightController* InLightControlle);
+	void StylizedReflection_BP(bool bInEnable, class ALightController* InLightControlle);
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -31,7 +41,8 @@ public:
 	}
 };
 static_assert(alignof(UBP_ConfigurationManager_C) == 0x000008, "Wrong alignment on UBP_ConfigurationManager_C");
-static_assert(sizeof(UBP_ConfigurationManager_C) == 0x000538, "Wrong size on UBP_ConfigurationManager_C");
+static_assert(sizeof(UBP_ConfigurationManager_C) == 0x000648, "Wrong size on UBP_ConfigurationManager_C");
+static_assert(offsetof(UBP_ConfigurationManager_C, UberGraphFrame) == 0x000640, "Member 'UBP_ConfigurationManager_C::UberGraphFrame' has a wrong offset!");
 
 }
 

@@ -16,6 +16,17 @@
 namespace SDK::Params
 {
 
+// Function WDT_ResilienceUpInfo.WDT_ResilienceUpInfo_C.SetSelect
+// 0x0001 (0x0001 - 0x0000)
+struct WDT_ResilienceUpInfo_C_SetSelect final
+{
+public:
+	bool                                          IsSelect;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_ResilienceUpInfo_C_SetSelect) == 0x000001, "Wrong alignment on WDT_ResilienceUpInfo_C_SetSelect");
+static_assert(sizeof(WDT_ResilienceUpInfo_C_SetSelect) == 0x000001, "Wrong size on WDT_ResilienceUpInfo_C_SetSelect");
+static_assert(offsetof(WDT_ResilienceUpInfo_C_SetSelect, IsSelect) == 0x000000, "Member 'WDT_ResilienceUpInfo_C_SetSelect::IsSelect' has a wrong offset!");
+
 // Function WDT_ResilienceUpInfo.WDT_ResilienceUpInfo_C.SetResilienceUpInfo
 // 0x00F0 (0x00F0 - 0x0000)
 struct WDT_ResilienceUpInfo_C_SetResilienceUpInfo final
@@ -49,17 +60,6 @@ static_assert(offsetof(WDT_ResilienceUpInfo_C_SetResilienceUpInfo, CallFunc_Conv
 static_assert(offsetof(WDT_ResilienceUpInfo_C_SetResilienceUpInfo, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x0000C8, "Member 'WDT_ResilienceUpInfo_C_SetResilienceUpInfo::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_ResilienceUpInfo_C_SetResilienceUpInfo, CallFunc_Conv_IntToText_ReturnValue_1) == 0x0000D0, "Member 'WDT_ResilienceUpInfo_C_SetResilienceUpInfo::CallFunc_Conv_IntToText_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(WDT_ResilienceUpInfo_C_SetResilienceUpInfo, CallFunc_Conv_IntToText_ReturnValue_2) == 0x0000E0, "Member 'WDT_ResilienceUpInfo_C_SetResilienceUpInfo::CallFunc_Conv_IntToText_ReturnValue_2' has a wrong offset!");
-
-// Function WDT_ResilienceUpInfo.WDT_ResilienceUpInfo_C.SetSelect
-// 0x0001 (0x0001 - 0x0000)
-struct WDT_ResilienceUpInfo_C_SetSelect final
-{
-public:
-	bool                                          IsSelect;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_ResilienceUpInfo_C_SetSelect) == 0x000001, "Wrong alignment on WDT_ResilienceUpInfo_C_SetSelect");
-static_assert(sizeof(WDT_ResilienceUpInfo_C_SetSelect) == 0x000001, "Wrong size on WDT_ResilienceUpInfo_C_SetSelect");
-static_assert(offsetof(WDT_ResilienceUpInfo_C_SetSelect, IsSelect) == 0x000000, "Member 'WDT_ResilienceUpInfo_C_SetSelect::IsSelect' has a wrong offset!");
 
 }
 

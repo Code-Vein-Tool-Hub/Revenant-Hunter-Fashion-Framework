@@ -11,16 +11,16 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "UMG_structs.hpp"
 #include "StoryFlagSystem_structs.hpp"
 #include "Extensions_classes.hpp"
-#include "UMG_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WDT_BuddyChangeMenu.WDT_BuddyChangeMenu_C
-// 0x00E8 (0x06A0 - 0x05B8)
+// 0x0108 (0x06C0 - 0x05B8)
 class UWDT_BuddyChangeMenu_C final : public UAppMenuBase
 {
 public:
@@ -37,23 +37,29 @@ public:
 	class UCommonTextBlock*                       MessageText;                                       // 0x0608(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UBorder*                                SelectionFilter;                                   // 0x0610(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UTextBlock*                             TextBlock;                                         // 0x0618(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_BuddyInfo_C*                       WDT_BuddyInfo;                                     // 0x0620(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_NPCClosenessInfo_C*                WDT_NPCClosenessInfo;                              // 0x0628(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          bPlayingAnimation;                                 // 0x0630(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_631[0x7];                                      // 0x0631(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCampMenuUIObject*                      CampMenuUIObject;                                  // 0x0638(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           CantLevelUpMessegeTimerHandle;                     // 0x0640(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CantSummonText;                                    // 0x0648(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class FText                                   NoOneRespondsText;                                 // 0x0658(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          bNoOneResponds;                                    // 0x0668(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_669[0x7];                                      // 0x0669(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   ForceSettingText;                                  // 0x0670(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          Is_Force;                                          // 0x0680(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_681[0x3];                                      // 0x0681(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FStoryFlagLabel                        FirstOpen_BuddyChange;                             // 0x0684(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_68C[0x4];                                      // 0x068C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUserWidget*                            CheckingWidget;                                    // 0x0690(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CurrentBuddyIndex;                                 // 0x0698(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UGridScroller*                          VariationGrid;                                     // 0x0620(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 VariationIcon;                                     // 0x0628(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         VariationTips;                                     // 0x0630(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_BuddyInfo_C*                       WDT_BuddyInfo;                                     // 0x0638(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_NPCClosenessInfo_C*                WDT_NPCClosenessInfo;                              // 0x0640(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	bool                                          bPlayingAnimation;                                 // 0x0648(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_649[0x7];                                      // 0x0649(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCampMenuUIObject*                      CampMenuUIObject;                                  // 0x0650(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           CantLevelUpMessegeTimerHandle;                     // 0x0658(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CantSummonText;                                    // 0x0660(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class FText                                   NoOneRespondsText;                                 // 0x0670(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          bNoOneResponds;                                    // 0x0680(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_681[0x7];                                      // 0x0681(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   ForceSettingText;                                  // 0x0688(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          Is_Force;                                          // 0x0698(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_699[0x3];                                      // 0x0699(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FStoryFlagLabel                        FirstOpen_BuddyChange;                             // 0x069C(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6A4[0x4];                                      // 0x06A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUserWidget*                            CheckingWidget;                                    // 0x06A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CurrentBuddyIndex;                                 // 0x06B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CurrentBuddyVariation;                             // 0x06B4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CurrentIndexHasVariation;                          // 0x06B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          SelectingVariation;                                // 0x06B9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BigenMessage(const class FText& MessageText_0);
@@ -61,6 +67,10 @@ public:
 	void BndEvt__WDT_BuddyChangeMenu_BudyGridScroller_K2Node_ComponentBoundEvent_2_SimpleListItemEventDynamic__DelegateSignature(class UObject* Item);
 	void BndEvt__WDT_BuddyChangeMenu_GridScroller_117_K2Node_ComponentBoundEvent_0_OnListEntryInitializedDynamic__DelegateSignature(class UObject* Item, class UUserWidget* Widget);
 	void BndEvt__WDT_BuddyChangeMenu_GridScroller_117_K2Node_ComponentBoundEvent_1_OnListItemSelectionChangedDynamic__DelegateSignature(class UObject* Item, bool bIsSelected);
+	void BndEvt__WDT_BuddyChangeMenu_GridScroller_384_K2Node_ComponentBoundEvent_1_OnListEntryInitializedDynamic__DelegateSignature(class UObject* Item, class UUserWidget* Widget);
+	void BndEvt__WDT_BuddyChangeMenu_GridScroller_384_K2Node_ComponentBoundEvent_5_SimpleListItemEventDynamic__DelegateSignature(class UObject* Item);
+	void BndEvt__WDT_BuddyChangeMenu_GridScroller_384_K2Node_ComponentBoundEvent_6_OnItemIsHoveredChangedDynamic__DelegateSignature(class UObject* Item, bool bIsHovered);
+	void BndEvt__WDT_BuddyChangeMenu_GridScroller_384_K2Node_ComponentBoundEvent_7_OnListItemSelectionChangedDynamic__DelegateSignature(class UObject* Item, bool bIsSelected);
 	void BP_OnActivated();
 	void BP_OnDeactivated();
 	void BuildRequest(int32 InNumber);
@@ -69,6 +79,7 @@ public:
 	void ExecuteUbergraph_WDT_BuddyChangeMenu(int32 EntryPoint);
 	void GridSelectionChanged(class UObject* Object, bool Condition);
 	void InitGrid(class UObject* Item, class UUserWidget* InWidget);
+	void InitList(class UObject* Item, class UUserWidget* InWidget);
 	void InitMenu();
 	void InpActEvt_IA_UI_Cancel_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
 	void InpActEvt_IA_UI_Decide_K2Node_EnhancedInputActionEvent_1(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
@@ -76,8 +87,10 @@ public:
 	void InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent_4(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
 	void InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEvent_5(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
 	void InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void ListSelectionChanged(class UObject* Object, bool Condition);
+	void MakeListItems(const struct FUIBuddyVariationInfo& NewParam, TArray<class UObject*>* OutItems);
 	void MessageEnd();
-	void NotifyChangeBuddyMenu(int32 InIndex);
+	void NotifyChangeBuddyMenu(const struct FUIBuddySelectInfo& InIndex);
 	void OnClosing();
 	class UWidgetAnimation* OnGetCloseAnimation();
 	class UWidgetAnimation* OnGetOpenAnimation();
@@ -97,7 +110,7 @@ public:
 	}
 };
 static_assert(alignof(UWDT_BuddyChangeMenu_C) == 0x000008, "Wrong alignment on UWDT_BuddyChangeMenu_C");
-static_assert(sizeof(UWDT_BuddyChangeMenu_C) == 0x0006A0, "Wrong size on UWDT_BuddyChangeMenu_C");
+static_assert(sizeof(UWDT_BuddyChangeMenu_C) == 0x0006C0, "Wrong size on UWDT_BuddyChangeMenu_C");
 static_assert(offsetof(UWDT_BuddyChangeMenu_C, UberGraphFrame) == 0x0005B8, "Member 'UWDT_BuddyChangeMenu_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UWDT_BuddyChangeMenu_C, BuddyChangeMenu_CloseAnim) == 0x0005C0, "Member 'UWDT_BuddyChangeMenu_C::BuddyChangeMenu_CloseAnim' has a wrong offset!");
 static_assert(offsetof(UWDT_BuddyChangeMenu_C, BuddyChangeMenu_OpenAnim) == 0x0005C8, "Member 'UWDT_BuddyChangeMenu_C::BuddyChangeMenu_OpenAnim' has a wrong offset!");
@@ -111,19 +124,25 @@ static_assert(offsetof(UWDT_BuddyChangeMenu_C, MessageDialog) == 0x000600, "Memb
 static_assert(offsetof(UWDT_BuddyChangeMenu_C, MessageText) == 0x000608, "Member 'UWDT_BuddyChangeMenu_C::MessageText' has a wrong offset!");
 static_assert(offsetof(UWDT_BuddyChangeMenu_C, SelectionFilter) == 0x000610, "Member 'UWDT_BuddyChangeMenu_C::SelectionFilter' has a wrong offset!");
 static_assert(offsetof(UWDT_BuddyChangeMenu_C, TextBlock) == 0x000618, "Member 'UWDT_BuddyChangeMenu_C::TextBlock' has a wrong offset!");
-static_assert(offsetof(UWDT_BuddyChangeMenu_C, WDT_BuddyInfo) == 0x000620, "Member 'UWDT_BuddyChangeMenu_C::WDT_BuddyInfo' has a wrong offset!");
-static_assert(offsetof(UWDT_BuddyChangeMenu_C, WDT_NPCClosenessInfo) == 0x000628, "Member 'UWDT_BuddyChangeMenu_C::WDT_NPCClosenessInfo' has a wrong offset!");
-static_assert(offsetof(UWDT_BuddyChangeMenu_C, bPlayingAnimation) == 0x000630, "Member 'UWDT_BuddyChangeMenu_C::bPlayingAnimation' has a wrong offset!");
-static_assert(offsetof(UWDT_BuddyChangeMenu_C, CampMenuUIObject) == 0x000638, "Member 'UWDT_BuddyChangeMenu_C::CampMenuUIObject' has a wrong offset!");
-static_assert(offsetof(UWDT_BuddyChangeMenu_C, CantLevelUpMessegeTimerHandle) == 0x000640, "Member 'UWDT_BuddyChangeMenu_C::CantLevelUpMessegeTimerHandle' has a wrong offset!");
-static_assert(offsetof(UWDT_BuddyChangeMenu_C, CantSummonText) == 0x000648, "Member 'UWDT_BuddyChangeMenu_C::CantSummonText' has a wrong offset!");
-static_assert(offsetof(UWDT_BuddyChangeMenu_C, NoOneRespondsText) == 0x000658, "Member 'UWDT_BuddyChangeMenu_C::NoOneRespondsText' has a wrong offset!");
-static_assert(offsetof(UWDT_BuddyChangeMenu_C, bNoOneResponds) == 0x000668, "Member 'UWDT_BuddyChangeMenu_C::bNoOneResponds' has a wrong offset!");
-static_assert(offsetof(UWDT_BuddyChangeMenu_C, ForceSettingText) == 0x000670, "Member 'UWDT_BuddyChangeMenu_C::ForceSettingText' has a wrong offset!");
-static_assert(offsetof(UWDT_BuddyChangeMenu_C, Is_Force) == 0x000680, "Member 'UWDT_BuddyChangeMenu_C::Is_Force' has a wrong offset!");
-static_assert(offsetof(UWDT_BuddyChangeMenu_C, FirstOpen_BuddyChange) == 0x000684, "Member 'UWDT_BuddyChangeMenu_C::FirstOpen_BuddyChange' has a wrong offset!");
-static_assert(offsetof(UWDT_BuddyChangeMenu_C, CheckingWidget) == 0x000690, "Member 'UWDT_BuddyChangeMenu_C::CheckingWidget' has a wrong offset!");
-static_assert(offsetof(UWDT_BuddyChangeMenu_C, CurrentBuddyIndex) == 0x000698, "Member 'UWDT_BuddyChangeMenu_C::CurrentBuddyIndex' has a wrong offset!");
+static_assert(offsetof(UWDT_BuddyChangeMenu_C, VariationGrid) == 0x000620, "Member 'UWDT_BuddyChangeMenu_C::VariationGrid' has a wrong offset!");
+static_assert(offsetof(UWDT_BuddyChangeMenu_C, VariationIcon) == 0x000628, "Member 'UWDT_BuddyChangeMenu_C::VariationIcon' has a wrong offset!");
+static_assert(offsetof(UWDT_BuddyChangeMenu_C, VariationTips) == 0x000630, "Member 'UWDT_BuddyChangeMenu_C::VariationTips' has a wrong offset!");
+static_assert(offsetof(UWDT_BuddyChangeMenu_C, WDT_BuddyInfo) == 0x000638, "Member 'UWDT_BuddyChangeMenu_C::WDT_BuddyInfo' has a wrong offset!");
+static_assert(offsetof(UWDT_BuddyChangeMenu_C, WDT_NPCClosenessInfo) == 0x000640, "Member 'UWDT_BuddyChangeMenu_C::WDT_NPCClosenessInfo' has a wrong offset!");
+static_assert(offsetof(UWDT_BuddyChangeMenu_C, bPlayingAnimation) == 0x000648, "Member 'UWDT_BuddyChangeMenu_C::bPlayingAnimation' has a wrong offset!");
+static_assert(offsetof(UWDT_BuddyChangeMenu_C, CampMenuUIObject) == 0x000650, "Member 'UWDT_BuddyChangeMenu_C::CampMenuUIObject' has a wrong offset!");
+static_assert(offsetof(UWDT_BuddyChangeMenu_C, CantLevelUpMessegeTimerHandle) == 0x000658, "Member 'UWDT_BuddyChangeMenu_C::CantLevelUpMessegeTimerHandle' has a wrong offset!");
+static_assert(offsetof(UWDT_BuddyChangeMenu_C, CantSummonText) == 0x000660, "Member 'UWDT_BuddyChangeMenu_C::CantSummonText' has a wrong offset!");
+static_assert(offsetof(UWDT_BuddyChangeMenu_C, NoOneRespondsText) == 0x000670, "Member 'UWDT_BuddyChangeMenu_C::NoOneRespondsText' has a wrong offset!");
+static_assert(offsetof(UWDT_BuddyChangeMenu_C, bNoOneResponds) == 0x000680, "Member 'UWDT_BuddyChangeMenu_C::bNoOneResponds' has a wrong offset!");
+static_assert(offsetof(UWDT_BuddyChangeMenu_C, ForceSettingText) == 0x000688, "Member 'UWDT_BuddyChangeMenu_C::ForceSettingText' has a wrong offset!");
+static_assert(offsetof(UWDT_BuddyChangeMenu_C, Is_Force) == 0x000698, "Member 'UWDT_BuddyChangeMenu_C::Is_Force' has a wrong offset!");
+static_assert(offsetof(UWDT_BuddyChangeMenu_C, FirstOpen_BuddyChange) == 0x00069C, "Member 'UWDT_BuddyChangeMenu_C::FirstOpen_BuddyChange' has a wrong offset!");
+static_assert(offsetof(UWDT_BuddyChangeMenu_C, CheckingWidget) == 0x0006A8, "Member 'UWDT_BuddyChangeMenu_C::CheckingWidget' has a wrong offset!");
+static_assert(offsetof(UWDT_BuddyChangeMenu_C, CurrentBuddyIndex) == 0x0006B0, "Member 'UWDT_BuddyChangeMenu_C::CurrentBuddyIndex' has a wrong offset!");
+static_assert(offsetof(UWDT_BuddyChangeMenu_C, CurrentBuddyVariation) == 0x0006B4, "Member 'UWDT_BuddyChangeMenu_C::CurrentBuddyVariation' has a wrong offset!");
+static_assert(offsetof(UWDT_BuddyChangeMenu_C, CurrentIndexHasVariation) == 0x0006B8, "Member 'UWDT_BuddyChangeMenu_C::CurrentIndexHasVariation' has a wrong offset!");
+static_assert(offsetof(UWDT_BuddyChangeMenu_C, SelectingVariation) == 0x0006B9, "Member 'UWDT_BuddyChangeMenu_C::SelectingVariation' has a wrong offset!");
 
 }
 

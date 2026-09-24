@@ -14,30 +14,6 @@
 namespace SDK::Params
 {
 
-// Function WDT_Status_Resistant.WDT_Status_Resistant_C.ExecuteUbergraph_WDT_Status_Resistant
-// 0x0008 (0x0008 - 0x0000)
-struct WDT_Status_Resistant_C_ExecuteUbergraph_WDT_Status_Resistant final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_IsDesignTime;                         // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_Status_Resistant_C_ExecuteUbergraph_WDT_Status_Resistant) == 0x000004, "Wrong alignment on WDT_Status_Resistant_C_ExecuteUbergraph_WDT_Status_Resistant");
-static_assert(sizeof(WDT_Status_Resistant_C_ExecuteUbergraph_WDT_Status_Resistant) == 0x000008, "Wrong size on WDT_Status_Resistant_C_ExecuteUbergraph_WDT_Status_Resistant");
-static_assert(offsetof(WDT_Status_Resistant_C_ExecuteUbergraph_WDT_Status_Resistant, EntryPoint) == 0x000000, "Member 'WDT_Status_Resistant_C_ExecuteUbergraph_WDT_Status_Resistant::EntryPoint' has a wrong offset!");
-static_assert(offsetof(WDT_Status_Resistant_C_ExecuteUbergraph_WDT_Status_Resistant, K2Node_Event_IsDesignTime) == 0x000004, "Member 'WDT_Status_Resistant_C_ExecuteUbergraph_WDT_Status_Resistant::K2Node_Event_IsDesignTime' has a wrong offset!");
-
-// Function WDT_Status_Resistant.WDT_Status_Resistant_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WDT_Status_Resistant_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_Status_Resistant_C_PreConstruct) == 0x000001, "Wrong alignment on WDT_Status_Resistant_C_PreConstruct");
-static_assert(sizeof(WDT_Status_Resistant_C_PreConstruct) == 0x000001, "Wrong size on WDT_Status_Resistant_C_PreConstruct");
-static_assert(offsetof(WDT_Status_Resistant_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WDT_Status_Resistant_C_PreConstruct::IsDesignTime' has a wrong offset!");
-
 // Function WDT_Status_Resistant.WDT_Status_Resistant_C.SetResistantValue
 // 0x0018 (0x0018 - 0x0000)
 struct WDT_Status_Resistant_C_SetResistantValue final
@@ -51,6 +27,30 @@ static_assert(alignof(WDT_Status_Resistant_C_SetResistantValue) == 0x000008, "Wr
 static_assert(sizeof(WDT_Status_Resistant_C_SetResistantValue) == 0x000018, "Wrong size on WDT_Status_Resistant_C_SetResistantValue");
 static_assert(offsetof(WDT_Status_Resistant_C_SetResistantValue, InValue) == 0x000000, "Member 'WDT_Status_Resistant_C_SetResistantValue::InValue' has a wrong offset!");
 static_assert(offsetof(WDT_Status_Resistant_C_SetResistantValue, CallFunc_Conv_IntToText_ReturnValue) == 0x000008, "Member 'WDT_Status_Resistant_C_SetResistantValue::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
+
+// Function WDT_Status_Resistant.WDT_Status_Resistant_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WDT_Status_Resistant_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_Status_Resistant_C_PreConstruct) == 0x000001, "Wrong alignment on WDT_Status_Resistant_C_PreConstruct");
+static_assert(sizeof(WDT_Status_Resistant_C_PreConstruct) == 0x000001, "Wrong size on WDT_Status_Resistant_C_PreConstruct");
+static_assert(offsetof(WDT_Status_Resistant_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WDT_Status_Resistant_C_PreConstruct::IsDesignTime' has a wrong offset!");
+
+// Function WDT_Status_Resistant.WDT_Status_Resistant_C.ExecuteUbergraph_WDT_Status_Resistant
+// 0x0008 (0x0008 - 0x0000)
+struct WDT_Status_Resistant_C_ExecuteUbergraph_WDT_Status_Resistant final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_IsDesignTime;                         // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_Status_Resistant_C_ExecuteUbergraph_WDT_Status_Resistant) == 0x000004, "Wrong alignment on WDT_Status_Resistant_C_ExecuteUbergraph_WDT_Status_Resistant");
+static_assert(sizeof(WDT_Status_Resistant_C_ExecuteUbergraph_WDT_Status_Resistant) == 0x000008, "Wrong size on WDT_Status_Resistant_C_ExecuteUbergraph_WDT_Status_Resistant");
+static_assert(offsetof(WDT_Status_Resistant_C_ExecuteUbergraph_WDT_Status_Resistant, EntryPoint) == 0x000000, "Member 'WDT_Status_Resistant_C_ExecuteUbergraph_WDT_Status_Resistant::EntryPoint' has a wrong offset!");
+static_assert(offsetof(WDT_Status_Resistant_C_ExecuteUbergraph_WDT_Status_Resistant, K2Node_Event_IsDesignTime) == 0x000004, "Member 'WDT_Status_Resistant_C_ExecuteUbergraph_WDT_Status_Resistant::K2Node_Event_IsDesignTime' has a wrong offset!");
 
 }
 

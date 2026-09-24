@@ -17,17 +17,25 @@
 namespace SDK
 {
 
-// Function WDT_Article_EquipmentRequirements.WDT_Article_EquipmentRequirements_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function WDT_Article_EquipmentRequirements.WDT_Article_EquipmentRequirements_C.SetValue
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<EUIWeaponCategory>               InValue                                                (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UWDT_Article_EquipmentRequirements_C::Construct()
+void UWDT_Article_EquipmentRequirements_C::SetValue(TArray<EUIWeaponCategory>& InValue)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Article_EquipmentRequirements_C", "Construct");
+		Func = Class->GetFunction("WDT_Article_EquipmentRequirements_C", "SetValue");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::WDT_Article_EquipmentRequirements_C_SetValue Parms{};
+
+	Parms.InValue = std::move(InValue);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	InValue = std::move(Parms.InValue);
 }
 
 
@@ -51,25 +59,17 @@ void UWDT_Article_EquipmentRequirements_C::ExecuteUbergraph_WDT_Article_Equipmen
 }
 
 
-// Function WDT_Article_EquipmentRequirements.WDT_Article_EquipmentRequirements_C.SetValue
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TArray<EUIWeaponCategory>               InValue                                                (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// Function WDT_Article_EquipmentRequirements.WDT_Article_EquipmentRequirements_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UWDT_Article_EquipmentRequirements_C::SetValue(TArray<EUIWeaponCategory>& InValue)
+void UWDT_Article_EquipmentRequirements_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Article_EquipmentRequirements_C", "SetValue");
+		Func = Class->GetFunction("WDT_Article_EquipmentRequirements_C", "Construct");
 
-	Params::WDT_Article_EquipmentRequirements_C_SetValue Parms{};
-
-	Parms.InValue = std::move(InValue);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	InValue = std::move(Parms.InValue);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

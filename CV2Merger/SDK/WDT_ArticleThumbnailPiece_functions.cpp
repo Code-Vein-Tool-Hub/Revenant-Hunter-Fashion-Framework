@@ -31,6 +31,26 @@ void UWDT_ArticleThumbnailPiece_C::WidgetAnimationEvt_SelectMoveAnimation_K2Node
 }
 
 
+// Function WDT_ArticleThumbnailPiece.WDT_ArticleThumbnailPiece_C.UpdateCheck
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    PlayAnimation_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_ArticleThumbnailPiece_C::UpdateCheck(bool PlayAnimation_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_ArticleThumbnailPiece_C", "UpdateCheck");
+
+	Params::WDT_ArticleThumbnailPiece_C_UpdateCheck Parms{};
+
+	Parms.PlayAnimation_0 = PlayAnimation_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WDT_ArticleThumbnailPiece.WDT_ArticleThumbnailPiece_C.Unhighlight
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -360,6 +380,26 @@ bool UWDT_ArticleThumbnailPiece_C::IsChecked()
 		Func = Class->GetFunction("WDT_ArticleThumbnailPiece_C", "IsChecked");
 
 	Params::WDT_ArticleThumbnailPiece_C_IsChecked Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function WDT_ArticleThumbnailPiece.WDT_ArticleThumbnailPiece_C.IsAnotherAppearance
+// (Private, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool UWDT_ArticleThumbnailPiece_C::IsAnotherAppearance()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_ArticleThumbnailPiece_C", "IsAnotherAppearance");
+
+	Params::WDT_ArticleThumbnailPiece_C_IsAnotherAppearance Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 

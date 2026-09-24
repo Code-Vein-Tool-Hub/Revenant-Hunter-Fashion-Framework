@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "Extensions_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "WDT_Status_PieceBase_classes.hpp"
 #include "UMG_structs.hpp"
 
@@ -42,11 +42,11 @@ public:
 	bool                                          IsVisibleCondition;                                // 0x0790(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_WDT_EvasionInfo(int32 EntryPoint);
-	void OnInitialized();
-	void PreConstruct(bool IsDesignTime);
-	void SetEvasionType(EUIEvasionType EvasionType);
 	void SetEvasionTypeForComparison(EUIEvasionType CurrentEvasionType, EUIEvasionType EvasionType);
+	void SetEvasionType(EUIEvasionType EvasionType);
+	void PreConstruct(bool IsDesignTime);
+	void OnInitialized();
+	void ExecuteUbergraph_WDT_EvasionInfo(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

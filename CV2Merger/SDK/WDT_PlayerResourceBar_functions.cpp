@@ -17,6 +17,40 @@
 namespace SDK
 {
 
+// Function WDT_PlayerResourceBar.WDT_PlayerResourceBar_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWDT_PlayerResourceBar_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_PlayerResourceBar_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WDT_PlayerResourceBar.WDT_PlayerResourceBar_C.ExecuteUbergraph_WDT_PlayerResourceBar
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_PlayerResourceBar_C::ExecuteUbergraph_WDT_PlayerResourceBar(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_PlayerResourceBar_C", "ExecuteUbergraph_WDT_PlayerResourceBar");
+
+	Params::WDT_PlayerResourceBar_C_ExecuteUbergraph_WDT_PlayerResourceBar Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WDT_PlayerResourceBar.WDT_PlayerResourceBar_C.GetFlag
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -61,20 +95,6 @@ void UWDT_PlayerResourceBar_C::GetResourcePercent(double* OutPercent)
 }
 
 
-// Function WDT_PlayerResourceBar.WDT_PlayerResourceBar_C.StopAttention
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWDT_PlayerResourceBar_C::StopAttention()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_PlayerResourceBar_C", "StopAttention");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function WDT_PlayerResourceBar.WDT_PlayerResourceBar_C.PlayAttention
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -86,6 +106,26 @@ void UWDT_PlayerResourceBar_C::PlayAttention()
 		Func = Class->GetFunction("WDT_PlayerResourceBar_C", "PlayAttention");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WDT_PlayerResourceBar.WDT_PlayerResourceBar_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_PlayerResourceBar_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_PlayerResourceBar_C", "PreConstruct");
+
+	Params::WDT_PlayerResourceBar_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -104,104 +144,6 @@ void UWDT_PlayerResourceBar_C::ResetBackGaugeResource(bool InIsHeal)
 	Params::WDT_PlayerResourceBar_C_ResetBackGaugeResource Parms{};
 
 	Parms.InIsHeal = InIsHeal;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_PlayerResourceBar.WDT_PlayerResourceBar_C.TickBackGauge
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double                                  InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_PlayerResourceBar_C::TickBackGauge(double InDeltaTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_PlayerResourceBar_C", "TickBackGauge");
-
-	Params::WDT_PlayerResourceBar_C_TickBackGauge Parms{};
-
-	Parms.InDeltaTime = InDeltaTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_PlayerResourceBar.WDT_PlayerResourceBar_C.StartBackGauge
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWDT_PlayerResourceBar_C::StartBackGauge()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_PlayerResourceBar_C", "StartBackGauge");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WDT_PlayerResourceBar.WDT_PlayerResourceBar_C.UpdateResource
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double                                  InCurrentResource                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  InMaxResource                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  InRecoverabeResource                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_PlayerResourceBar_C::UpdateResource(double InCurrentResource, double InMaxResource, double InRecoverabeResource)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_PlayerResourceBar_C", "UpdateResource");
-
-	Params::WDT_PlayerResourceBar_C_UpdateResource Parms{};
-
-	Parms.InCurrentResource = InCurrentResource;
-	Parms.InMaxResource = InMaxResource;
-	Parms.InRecoverabeResource = InRecoverabeResource;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_PlayerResourceBar.WDT_PlayerResourceBar_C.Update Gauges
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    InIsHeal                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_PlayerResourceBar_C::Update_Gauges(bool InIsHeal)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_PlayerResourceBar_C", "Update Gauges");
-
-	Params::WDT_PlayerResourceBar_C_Update_Gauges Parms{};
-
-	Parms.InIsHeal = InIsHeal;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_PlayerResourceBar.WDT_PlayerResourceBar_C.SetRecoverableResource
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double                                  InResource                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_PlayerResourceBar_C::SetRecoverableResource(double InResource)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_PlayerResourceBar_C", "SetRecoverableResource");
-
-	Params::WDT_PlayerResourceBar_C_SetRecoverableResource Parms{};
-
-	Parms.InResource = InResource;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -227,6 +169,26 @@ void UWDT_PlayerResourceBar_C::SetMaxResource(double MaxResource_0)
 }
 
 
+// Function WDT_PlayerResourceBar.WDT_PlayerResourceBar_C.SetRecoverableResource
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  InResource                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_PlayerResourceBar_C::SetRecoverableResource(double InResource)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_PlayerResourceBar_C", "SetRecoverableResource");
+
+	Params::WDT_PlayerResourceBar_C_SetRecoverableResource Parms{};
+
+	Parms.InResource = InResource;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WDT_PlayerResourceBar.WDT_PlayerResourceBar_C.SetResource
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -247,35 +209,29 @@ void UWDT_PlayerResourceBar_C::SetResource(double CurrentResource_0)
 }
 
 
-// Function WDT_PlayerResourceBar.WDT_PlayerResourceBar_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function WDT_PlayerResourceBar.WDT_PlayerResourceBar_C.StartBackGauge
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UWDT_PlayerResourceBar_C::PreConstruct(bool IsDesignTime)
+void UWDT_PlayerResourceBar_C::StartBackGauge()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_PlayerResourceBar_C", "PreConstruct");
+		Func = Class->GetFunction("WDT_PlayerResourceBar_C", "StartBackGauge");
 
-	Params::WDT_PlayerResourceBar_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WDT_PlayerResourceBar.WDT_PlayerResourceBar_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function WDT_PlayerResourceBar.WDT_PlayerResourceBar_C.StopAttention
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UWDT_PlayerResourceBar_C::Construct()
+void UWDT_PlayerResourceBar_C::StopAttention()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_PlayerResourceBar_C", "Construct");
+		Func = Class->GetFunction("WDT_PlayerResourceBar_C", "StopAttention");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -303,21 +259,65 @@ void UWDT_PlayerResourceBar_C::Tick(const struct FGeometry& MyGeometry, float In
 }
 
 
-// Function WDT_PlayerResourceBar.WDT_PlayerResourceBar_C.ExecuteUbergraph_WDT_PlayerResourceBar
-// (Final, UbergraphFunction, HasDefaults)
+// Function WDT_PlayerResourceBar.WDT_PlayerResourceBar_C.TickBackGauge
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_PlayerResourceBar_C::ExecuteUbergraph_WDT_PlayerResourceBar(int32 EntryPoint)
+void UWDT_PlayerResourceBar_C::TickBackGauge(double InDeltaTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_PlayerResourceBar_C", "ExecuteUbergraph_WDT_PlayerResourceBar");
+		Func = Class->GetFunction("WDT_PlayerResourceBar_C", "TickBackGauge");
 
-	Params::WDT_PlayerResourceBar_C_ExecuteUbergraph_WDT_PlayerResourceBar Parms{};
+	Params::WDT_PlayerResourceBar_C_TickBackGauge Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.InDeltaTime = InDeltaTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_PlayerResourceBar.WDT_PlayerResourceBar_C.Update Gauges
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    InIsHeal                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_PlayerResourceBar_C::Update_Gauges(bool InIsHeal)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_PlayerResourceBar_C", "Update Gauges");
+
+	Params::WDT_PlayerResourceBar_C_Update_Gauges Parms{};
+
+	Parms.InIsHeal = InIsHeal;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_PlayerResourceBar.WDT_PlayerResourceBar_C.UpdateResource
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  InCurrentResource                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  InMaxResource                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  InRecoverabeResource                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_PlayerResourceBar_C::UpdateResource(double InCurrentResource, double InMaxResource, double InRecoverabeResource)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_PlayerResourceBar_C", "UpdateResource");
+
+	Params::WDT_PlayerResourceBar_C_UpdateResource Parms{};
+
+	Parms.InCurrentResource = InCurrentResource;
+	Parms.InMaxResource = InMaxResource;
+	Parms.InRecoverabeResource = InRecoverabeResource;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

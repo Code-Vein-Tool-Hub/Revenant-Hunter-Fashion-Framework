@@ -12,35 +12,35 @@
 
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "Extensions_classes.hpp"
 #include "E_CharacterVisualControl_CharacterMode_structs.hpp"
+#include "Extensions_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_CharacterCustomizeComponent.BP_CharacterCustomizeComponent_C
-// 0x0160 (0x2DA0 - 0x2C40)
+// 0x0160 (0x2DD0 - 0x2C70)
 class UBP_CharacterCustomizeComponent_C final : public UCharacterCustomizeComponent
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x2C40(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	TArray<class USkeletalMeshComponent*>         VanishProcess_MeshArray;                           // 0x2C48(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	double                                        VanishProcess_CurrentTime;                         // 0x2C58(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          VanishProcess_Wait;                                // 0x2C60(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2C61[0x7];                                     // 0x2C61(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        VanishProcess_WaitTimeRange;                       // 0x2C68(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          VanishProcess_Vanish;                              // 0x2C70(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2C71[0x7];                                     // 0x2C71(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        VanishProcess_VanishTimeRange;                     // 0x2C78(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                VanishProcess_VanishCenter;                        // 0x2C80(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRuntimeFloatCurve                     VanishProcess_Curve;                               // 0x2C98(0x0088)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class UNiagaraSystem*                         VanishBodyEffect_Asset;                            // 0x2D20(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraSystem*                         VanishDeathEffect_Asset;                           // 0x2D28(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TMap<class USkeletalMeshComponent*, class UBP_VanishBodyEffect_C*> VanishBodyEffect_Map;                              // 0x2D30(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	bool                                          Vanish_Death;                                      // 0x2D80(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2D81[0x7];                                     // 0x2D81(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FName>                           IgnoreEffectMeshNameArray;                         // 0x2D88(0x0010)(Edit, BlueprintVisible)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x2C70(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	TArray<class USkeletalMeshComponent*>         VanishProcess_MeshArray;                           // 0x2C78(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	double                                        VanishProcess_CurrentTime;                         // 0x2C88(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          VanishProcess_Wait;                                // 0x2C90(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2C91[0x7];                                     // 0x2C91(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        VanishProcess_WaitTimeRange;                       // 0x2C98(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          VanishProcess_Vanish;                              // 0x2CA0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2CA1[0x7];                                     // 0x2CA1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        VanishProcess_VanishTimeRange;                     // 0x2CA8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                VanishProcess_VanishCenter;                        // 0x2CB0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRuntimeFloatCurve                     VanishProcess_Curve;                               // 0x2CC8(0x0088)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class UNiagaraSystem*                         VanishBodyEffect_Asset;                            // 0x2D50(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraSystem*                         VanishDeathEffect_Asset;                           // 0x2D58(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TMap<class USkeletalMeshComponent*, class UBP_VanishBodyEffect_C*> VanishBodyEffect_Map;                              // 0x2D60(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	bool                                          Vanish_Death;                                      // 0x2DB0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2DB1[0x7];                                     // 0x2DB1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FName>                           IgnoreEffectMeshNameArray;                         // 0x2DB8(0x0010)(Edit, BlueprintVisible)
 
 public:
 	void ExecuteUbergraph_BP_CharacterCustomizeComponent(int32 EntryPoint);
@@ -73,21 +73,21 @@ public:
 	}
 };
 static_assert(alignof(UBP_CharacterCustomizeComponent_C) == 0x000010, "Wrong alignment on UBP_CharacterCustomizeComponent_C");
-static_assert(sizeof(UBP_CharacterCustomizeComponent_C) == 0x002DA0, "Wrong size on UBP_CharacterCustomizeComponent_C");
-static_assert(offsetof(UBP_CharacterCustomizeComponent_C, UberGraphFrame) == 0x002C40, "Member 'UBP_CharacterCustomizeComponent_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_CharacterCustomizeComponent_C, VanishProcess_MeshArray) == 0x002C48, "Member 'UBP_CharacterCustomizeComponent_C::VanishProcess_MeshArray' has a wrong offset!");
-static_assert(offsetof(UBP_CharacterCustomizeComponent_C, VanishProcess_CurrentTime) == 0x002C58, "Member 'UBP_CharacterCustomizeComponent_C::VanishProcess_CurrentTime' has a wrong offset!");
-static_assert(offsetof(UBP_CharacterCustomizeComponent_C, VanishProcess_Wait) == 0x002C60, "Member 'UBP_CharacterCustomizeComponent_C::VanishProcess_Wait' has a wrong offset!");
-static_assert(offsetof(UBP_CharacterCustomizeComponent_C, VanishProcess_WaitTimeRange) == 0x002C68, "Member 'UBP_CharacterCustomizeComponent_C::VanishProcess_WaitTimeRange' has a wrong offset!");
-static_assert(offsetof(UBP_CharacterCustomizeComponent_C, VanishProcess_Vanish) == 0x002C70, "Member 'UBP_CharacterCustomizeComponent_C::VanishProcess_Vanish' has a wrong offset!");
-static_assert(offsetof(UBP_CharacterCustomizeComponent_C, VanishProcess_VanishTimeRange) == 0x002C78, "Member 'UBP_CharacterCustomizeComponent_C::VanishProcess_VanishTimeRange' has a wrong offset!");
-static_assert(offsetof(UBP_CharacterCustomizeComponent_C, VanishProcess_VanishCenter) == 0x002C80, "Member 'UBP_CharacterCustomizeComponent_C::VanishProcess_VanishCenter' has a wrong offset!");
-static_assert(offsetof(UBP_CharacterCustomizeComponent_C, VanishProcess_Curve) == 0x002C98, "Member 'UBP_CharacterCustomizeComponent_C::VanishProcess_Curve' has a wrong offset!");
-static_assert(offsetof(UBP_CharacterCustomizeComponent_C, VanishBodyEffect_Asset) == 0x002D20, "Member 'UBP_CharacterCustomizeComponent_C::VanishBodyEffect_Asset' has a wrong offset!");
-static_assert(offsetof(UBP_CharacterCustomizeComponent_C, VanishDeathEffect_Asset) == 0x002D28, "Member 'UBP_CharacterCustomizeComponent_C::VanishDeathEffect_Asset' has a wrong offset!");
-static_assert(offsetof(UBP_CharacterCustomizeComponent_C, VanishBodyEffect_Map) == 0x002D30, "Member 'UBP_CharacterCustomizeComponent_C::VanishBodyEffect_Map' has a wrong offset!");
-static_assert(offsetof(UBP_CharacterCustomizeComponent_C, Vanish_Death) == 0x002D80, "Member 'UBP_CharacterCustomizeComponent_C::Vanish_Death' has a wrong offset!");
-static_assert(offsetof(UBP_CharacterCustomizeComponent_C, IgnoreEffectMeshNameArray) == 0x002D88, "Member 'UBP_CharacterCustomizeComponent_C::IgnoreEffectMeshNameArray' has a wrong offset!");
+static_assert(sizeof(UBP_CharacterCustomizeComponent_C) == 0x002DD0, "Wrong size on UBP_CharacterCustomizeComponent_C");
+static_assert(offsetof(UBP_CharacterCustomizeComponent_C, UberGraphFrame) == 0x002C70, "Member 'UBP_CharacterCustomizeComponent_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UBP_CharacterCustomizeComponent_C, VanishProcess_MeshArray) == 0x002C78, "Member 'UBP_CharacterCustomizeComponent_C::VanishProcess_MeshArray' has a wrong offset!");
+static_assert(offsetof(UBP_CharacterCustomizeComponent_C, VanishProcess_CurrentTime) == 0x002C88, "Member 'UBP_CharacterCustomizeComponent_C::VanishProcess_CurrentTime' has a wrong offset!");
+static_assert(offsetof(UBP_CharacterCustomizeComponent_C, VanishProcess_Wait) == 0x002C90, "Member 'UBP_CharacterCustomizeComponent_C::VanishProcess_Wait' has a wrong offset!");
+static_assert(offsetof(UBP_CharacterCustomizeComponent_C, VanishProcess_WaitTimeRange) == 0x002C98, "Member 'UBP_CharacterCustomizeComponent_C::VanishProcess_WaitTimeRange' has a wrong offset!");
+static_assert(offsetof(UBP_CharacterCustomizeComponent_C, VanishProcess_Vanish) == 0x002CA0, "Member 'UBP_CharacterCustomizeComponent_C::VanishProcess_Vanish' has a wrong offset!");
+static_assert(offsetof(UBP_CharacterCustomizeComponent_C, VanishProcess_VanishTimeRange) == 0x002CA8, "Member 'UBP_CharacterCustomizeComponent_C::VanishProcess_VanishTimeRange' has a wrong offset!");
+static_assert(offsetof(UBP_CharacterCustomizeComponent_C, VanishProcess_VanishCenter) == 0x002CB0, "Member 'UBP_CharacterCustomizeComponent_C::VanishProcess_VanishCenter' has a wrong offset!");
+static_assert(offsetof(UBP_CharacterCustomizeComponent_C, VanishProcess_Curve) == 0x002CC8, "Member 'UBP_CharacterCustomizeComponent_C::VanishProcess_Curve' has a wrong offset!");
+static_assert(offsetof(UBP_CharacterCustomizeComponent_C, VanishBodyEffect_Asset) == 0x002D50, "Member 'UBP_CharacterCustomizeComponent_C::VanishBodyEffect_Asset' has a wrong offset!");
+static_assert(offsetof(UBP_CharacterCustomizeComponent_C, VanishDeathEffect_Asset) == 0x002D58, "Member 'UBP_CharacterCustomizeComponent_C::VanishDeathEffect_Asset' has a wrong offset!");
+static_assert(offsetof(UBP_CharacterCustomizeComponent_C, VanishBodyEffect_Map) == 0x002D60, "Member 'UBP_CharacterCustomizeComponent_C::VanishBodyEffect_Map' has a wrong offset!");
+static_assert(offsetof(UBP_CharacterCustomizeComponent_C, Vanish_Death) == 0x002DB0, "Member 'UBP_CharacterCustomizeComponent_C::Vanish_Death' has a wrong offset!");
+static_assert(offsetof(UBP_CharacterCustomizeComponent_C, IgnoreEffectMeshNameArray) == 0x002DB8, "Member 'UBP_CharacterCustomizeComponent_C::IgnoreEffectMeshNameArray' has a wrong offset!");
 
 }
 

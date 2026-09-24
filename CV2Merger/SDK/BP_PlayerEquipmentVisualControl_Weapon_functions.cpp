@@ -91,6 +91,30 @@ void UBP_PlayerEquipmentVisualControl_Weapon_C::AppearEquipment_AllMesh()
 }
 
 
+// Function BP_PlayerEquipmentVisualControl_Weapon.BP_PlayerEquipmentVisualControl_Weapon_C.AppearEquipment_CheckValid
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class USkeletalMeshComponent*           EquipmentMesh                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// bool                                    Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_PlayerEquipmentVisualControl_Weapon_C::AppearEquipment_CheckValid(class USkeletalMeshComponent* EquipmentMesh, bool* Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerEquipmentVisualControl_Weapon_C", "AppearEquipment_CheckValid");
+
+	Params::BP_PlayerEquipmentVisualControl_Weapon_C_AppearEquipment_CheckValid Parms{};
+
+	Parms.EquipmentMesh = EquipmentMesh;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Result != nullptr)
+		*Result = Parms.Result;
+}
+
+
 // Function BP_PlayerEquipmentVisualControl_Weapon.BP_PlayerEquipmentVisualControl_Weapon_C.AppearEquipment_CheckVisibility
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -276,6 +300,28 @@ void UBP_PlayerEquipmentVisualControl_Weapon_C::AppearEquipment_RemoveChildEffec
 	Params::BP_PlayerEquipmentVisualControl_Weapon_C_AppearEquipment_RemoveChildEffect Parms{};
 
 	Parms.Effect = Effect;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_PlayerEquipmentVisualControl_Weapon.BP_PlayerEquipmentVisualControl_Weapon_C.AppearEquipment_VisibleChildEffect
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class USkeletalMeshComponent*           EquipmentMesh                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// bool                                    Visibility                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_PlayerEquipmentVisualControl_Weapon_C::AppearEquipment_VisibleChildEffect(class USkeletalMeshComponent* EquipmentMesh, bool Visibility)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerEquipmentVisualControl_Weapon_C", "AppearEquipment_VisibleChildEffect");
+
+	Params::BP_PlayerEquipmentVisualControl_Weapon_C_AppearEquipment_VisibleChildEffect Parms{};
+
+	Parms.EquipmentMesh = EquipmentMesh;
+	Parms.Visibility = Visibility;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -635,7 +681,7 @@ bool UBP_PlayerEquipmentVisualControl_Weapon_C::OnFinishCinematicEvent()
 
 
 // Function BP_PlayerEquipmentVisualControl_Weapon.BP_PlayerEquipmentVisualControl_Weapon_C.OnInitializeVisualControl
-// (Event, Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Event, Protected, BlueprintCallable, BlueprintEvent)
 
 void UBP_PlayerEquipmentVisualControl_Weapon_C::OnInitializeVisualControl()
 {
@@ -643,6 +689,20 @@ void UBP_PlayerEquipmentVisualControl_Weapon_C::OnInitializeVisualControl()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BP_PlayerEquipmentVisualControl_Weapon_C", "OnInitializeVisualControl");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_PlayerEquipmentVisualControl_Weapon.BP_PlayerEquipmentVisualControl_Weapon_C.OnInitializeVisualControl_Implement
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UBP_PlayerEquipmentVisualControl_Weapon_C::OnInitializeVisualControl_Implement()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerEquipmentVisualControl_Weapon_C", "OnInitializeVisualControl_Implement");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

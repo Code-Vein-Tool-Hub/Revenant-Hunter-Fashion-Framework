@@ -11,6 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "StoryFlagSystem_structs.hpp"
+#include "Extensions_structs.hpp"
 #include "WDT_ConfigStandardPageBase_classes.hpp"
 
 
@@ -18,7 +20,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WDT_ConfigGamePage.WDT_ConfigGamePage_C
-// 0x00C8 (0x06A0 - 0x05D8)
+// 0x00F8 (0x06D0 - 0x05D8)
 class UWDT_ConfigGamePage_C final : public UWDT_ConfigStandardPageBase_C
 {
 public:
@@ -30,23 +32,29 @@ public:
 	class UVerticalBox*                           ConfigMenuBox;                                     // 0x0600(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UVerticalBox*                           ConfigMenuBox_PhotoMode;                           // 0x0608(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWDT_ConfigMenuSwitchPiece_C*           DamageScore;                                       // 0x0610(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_FieldMenuCloser_C*                 FieldMenuCloser;                                   // 0x0618(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_ConfigMenuSwitchPiece_C*           HomingAttack;                                      // 0x0620(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         HorizontalBox_193;                                 // 0x0628(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_ConfigMenuSwitchPiece_C*           LaunchStillMode;                                   // 0x0630(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_ConfigMenuSwitchPiece_C*           LockonMarker;                                      // 0x0638(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_ConfigMenuSwitchPiece_C*           NewGamePlusParamEnable;                            // 0x0640(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_ConfigMenuSwitchPiece_C*           SequenceCameraPlay;                                // 0x0648(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_ConfigMenuSwitchPiece_C*           ShortcutEnable;                                    // 0x0650(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_ConfigMenuTypeSelectPiece_C*       ShortcutOperation;                                 // 0x0658(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_ConfigMenuMeterPiece_C*            Vibration;                                         // 0x0660(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_ConfigHeader_C*                    WDT_ConfigHeader;                                  // 0x0668(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_ConfigLog_C*                       WDT_ConfigurationLog;                              // 0x0670(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidgetSwitcher*                        WidgetSwitcher_111;                                // 0x0678(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          IsTextInputMode_0;                                 // 0x0680(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_681[0x7];                                      // 0x0681(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   HeaderBackPhotoModeText;                           // 0x0688(0x0010)(Edit, BlueprintVisible)
-	class UBP_ConfigurationUIObject_C*            ConfigurationUIObject;                             // 0x0698(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UWDT_ConfigMenuTypeSelectPiece_C*       Difficulty;                                        // 0x0618(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_FieldMenuCloser_C*                 FieldMenuCloser;                                   // 0x0620(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_ConfigMenuSwitchPiece_C*           HomingAttack;                                      // 0x0628(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         HorizontalBox_193;                                 // 0x0630(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_ConfigMenuSwitchPiece_C*           IdrisMaskEnabled;                                  // 0x0638(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_ConfigMenuSwitchPiece_C*           LaunchStillMode;                                   // 0x0640(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_ConfigMenuSwitchPiece_C*           LockonMarker;                                      // 0x0648(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UMenuPieceBase*                         NavigationDummyPiece;                              // 0x0650(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_ConfigMenuSwitchPiece_C*           NewGamePlusParamEnable;                            // 0x0658(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_ConfigMenuSwitchPiece_C*           SequenceCameraPlay;                                // 0x0660(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_ConfigMenuSwitchPiece_C*           ShortcutEnable;                                    // 0x0668(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_ConfigMenuTypeSelectPiece_C*       ShortcutOperation;                                 // 0x0670(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_ConfigMenuMeterPiece_C*            Vibration;                                         // 0x0678(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_ConfigHeader_C*                    WDT_ConfigHeader;                                  // 0x0680(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_ConfigLog_C*                       WDT_ConfigurationLog;                              // 0x0688(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetSwitcher*                        WidgetSwitcher_111;                                // 0x0690(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	bool                                          IsTextInputMode_0;                                 // 0x0698(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_699[0x7];                                      // 0x0699(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   HeaderBackPhotoModeText;                           // 0x06A0(0x0010)(Edit, BlueprintVisible)
+	class UBP_ConfigurationUIObject_C*            ConfigurationUIObject;                             // 0x06B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FStoryFlagEvaluationFormula            ShowIdrisMaskEnableSetting;                        // 0x06B8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	EDifficultyType                               OldDifficultyType;                                 // 0x06C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsPhotoModeOpen;                                   // 0x06C9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ApplyConfigData();
@@ -55,21 +63,27 @@ public:
 	void BndEvt__WDT_ConfigGamePage_WDT_ConfigHeader_K2Node_ComponentBoundEvent_2_OnBackClickedEvent__DelegateSignature();
 	void ExecuteUbergraph_WDT_ConfigGamePage(int32 EntryPoint);
 	void HasPhotoModeInputMappingContext(bool* NewParam);
-	void InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_12(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_7(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_13(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent_8(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent_9(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_UI_MenuSpecial1_K2Node_EnhancedInputActionEvent_6(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_UI_MenuSpecial4_K2Node_EnhancedInputActionEvent_1(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_UI_PhotoMode_Decide_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEvent_10(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEvent_11(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_UI_SwitchLeft_K2Node_EnhancedInputActionEvent_4(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_UI_SwitchLeft_K2Node_EnhancedInputActionEvent_5(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_UI_SwitchRight_K2Node_EnhancedInputActionEvent_2(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_UI_SwitchRight_K2Node_EnhancedInputActionEvent_3(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_14(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_18(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_13(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_19(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent_14(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent_15(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_UI_MenuSpecial1_K2Node_EnhancedInputActionEvent_12(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_UI_MenuSpecial4_K2Node_EnhancedInputActionEvent_7(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_UI_PhotoMode_Decide_K2Node_EnhancedInputActionEvent_6(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_UI_PhotoModeDown_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_UI_PhotoModeSwitchLeft_K2Node_EnhancedInputActionEvent_4(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_UI_PhotoModeSwitchLeft_K2Node_EnhancedInputActionEvent_5(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_UI_PhotoModeSwitchRight_K2Node_EnhancedInputActionEvent_2(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_UI_PhotoModeSwitchRight_K2Node_EnhancedInputActionEvent_3(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_UI_PhotoModeUp_K2Node_EnhancedInputActionEvent_1(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEvent_16(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEvent_17(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_UI_SwitchLeft_K2Node_EnhancedInputActionEvent_10(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_UI_SwitchLeft_K2Node_EnhancedInputActionEvent_11(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_UI_SwitchRight_K2Node_EnhancedInputActionEvent_8(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_UI_SwitchRight_K2Node_EnhancedInputActionEvent_9(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_20(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
 	void OnChangeTransitType();
 	void OnClosed();
 	void OnFieldMenuCloseAnimationFinish();
@@ -78,10 +92,13 @@ public:
 	void OnMenuScecial4();
 	void OnMouseEnterMenuPiece(class UMenuPieceBase* MenuPiece);
 	void OnOpened();
+	void OnOpening();
 	void PreConstruct(bool IsDesignTime);
 	void SaveConfigValue();
 	void SetupConfigPieceList();
 	void SetupConfigPieceValue();
+	void UpdateDifficultyTypeEditable();
+	void UpdateIdrisMaskEnableSettingVisibility();
 
 public:
 	static class UClass* StaticClass()
@@ -94,7 +111,7 @@ public:
 	}
 };
 static_assert(alignof(UWDT_ConfigGamePage_C) == 0x000008, "Wrong alignment on UWDT_ConfigGamePage_C");
-static_assert(sizeof(UWDT_ConfigGamePage_C) == 0x0006A0, "Wrong size on UWDT_ConfigGamePage_C");
+static_assert(sizeof(UWDT_ConfigGamePage_C) == 0x0006D0, "Wrong size on UWDT_ConfigGamePage_C");
 static_assert(offsetof(UWDT_ConfigGamePage_C, UberGraphFrame) == 0x0005D8, "Member 'UWDT_ConfigGamePage_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UWDT_ConfigGamePage_C, AutoLockon) == 0x0005E0, "Member 'UWDT_ConfigGamePage_C::AutoLockon' has a wrong offset!");
 static_assert(offsetof(UWDT_ConfigGamePage_C, AutoPickupEnable) == 0x0005E8, "Member 'UWDT_ConfigGamePage_C::AutoPickupEnable' has a wrong offset!");
@@ -103,22 +120,28 @@ static_assert(offsetof(UWDT_ConfigGamePage_C, BuddyConversation) == 0x0005F8, "M
 static_assert(offsetof(UWDT_ConfigGamePage_C, ConfigMenuBox) == 0x000600, "Member 'UWDT_ConfigGamePage_C::ConfigMenuBox' has a wrong offset!");
 static_assert(offsetof(UWDT_ConfigGamePage_C, ConfigMenuBox_PhotoMode) == 0x000608, "Member 'UWDT_ConfigGamePage_C::ConfigMenuBox_PhotoMode' has a wrong offset!");
 static_assert(offsetof(UWDT_ConfigGamePage_C, DamageScore) == 0x000610, "Member 'UWDT_ConfigGamePage_C::DamageScore' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGamePage_C, FieldMenuCloser) == 0x000618, "Member 'UWDT_ConfigGamePage_C::FieldMenuCloser' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGamePage_C, HomingAttack) == 0x000620, "Member 'UWDT_ConfigGamePage_C::HomingAttack' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGamePage_C, HorizontalBox_193) == 0x000628, "Member 'UWDT_ConfigGamePage_C::HorizontalBox_193' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGamePage_C, LaunchStillMode) == 0x000630, "Member 'UWDT_ConfigGamePage_C::LaunchStillMode' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGamePage_C, LockonMarker) == 0x000638, "Member 'UWDT_ConfigGamePage_C::LockonMarker' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGamePage_C, NewGamePlusParamEnable) == 0x000640, "Member 'UWDT_ConfigGamePage_C::NewGamePlusParamEnable' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGamePage_C, SequenceCameraPlay) == 0x000648, "Member 'UWDT_ConfigGamePage_C::SequenceCameraPlay' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGamePage_C, ShortcutEnable) == 0x000650, "Member 'UWDT_ConfigGamePage_C::ShortcutEnable' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGamePage_C, ShortcutOperation) == 0x000658, "Member 'UWDT_ConfigGamePage_C::ShortcutOperation' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGamePage_C, Vibration) == 0x000660, "Member 'UWDT_ConfigGamePage_C::Vibration' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGamePage_C, WDT_ConfigHeader) == 0x000668, "Member 'UWDT_ConfigGamePage_C::WDT_ConfigHeader' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGamePage_C, WDT_ConfigurationLog) == 0x000670, "Member 'UWDT_ConfigGamePage_C::WDT_ConfigurationLog' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGamePage_C, WidgetSwitcher_111) == 0x000678, "Member 'UWDT_ConfigGamePage_C::WidgetSwitcher_111' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGamePage_C, IsTextInputMode_0) == 0x000680, "Member 'UWDT_ConfigGamePage_C::IsTextInputMode_0' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGamePage_C, HeaderBackPhotoModeText) == 0x000688, "Member 'UWDT_ConfigGamePage_C::HeaderBackPhotoModeText' has a wrong offset!");
-static_assert(offsetof(UWDT_ConfigGamePage_C, ConfigurationUIObject) == 0x000698, "Member 'UWDT_ConfigGamePage_C::ConfigurationUIObject' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGamePage_C, Difficulty) == 0x000618, "Member 'UWDT_ConfigGamePage_C::Difficulty' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGamePage_C, FieldMenuCloser) == 0x000620, "Member 'UWDT_ConfigGamePage_C::FieldMenuCloser' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGamePage_C, HomingAttack) == 0x000628, "Member 'UWDT_ConfigGamePage_C::HomingAttack' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGamePage_C, HorizontalBox_193) == 0x000630, "Member 'UWDT_ConfigGamePage_C::HorizontalBox_193' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGamePage_C, IdrisMaskEnabled) == 0x000638, "Member 'UWDT_ConfigGamePage_C::IdrisMaskEnabled' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGamePage_C, LaunchStillMode) == 0x000640, "Member 'UWDT_ConfigGamePage_C::LaunchStillMode' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGamePage_C, LockonMarker) == 0x000648, "Member 'UWDT_ConfigGamePage_C::LockonMarker' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGamePage_C, NavigationDummyPiece) == 0x000650, "Member 'UWDT_ConfigGamePage_C::NavigationDummyPiece' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGamePage_C, NewGamePlusParamEnable) == 0x000658, "Member 'UWDT_ConfigGamePage_C::NewGamePlusParamEnable' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGamePage_C, SequenceCameraPlay) == 0x000660, "Member 'UWDT_ConfigGamePage_C::SequenceCameraPlay' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGamePage_C, ShortcutEnable) == 0x000668, "Member 'UWDT_ConfigGamePage_C::ShortcutEnable' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGamePage_C, ShortcutOperation) == 0x000670, "Member 'UWDT_ConfigGamePage_C::ShortcutOperation' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGamePage_C, Vibration) == 0x000678, "Member 'UWDT_ConfigGamePage_C::Vibration' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGamePage_C, WDT_ConfigHeader) == 0x000680, "Member 'UWDT_ConfigGamePage_C::WDT_ConfigHeader' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGamePage_C, WDT_ConfigurationLog) == 0x000688, "Member 'UWDT_ConfigGamePage_C::WDT_ConfigurationLog' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGamePage_C, WidgetSwitcher_111) == 0x000690, "Member 'UWDT_ConfigGamePage_C::WidgetSwitcher_111' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGamePage_C, IsTextInputMode_0) == 0x000698, "Member 'UWDT_ConfigGamePage_C::IsTextInputMode_0' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGamePage_C, HeaderBackPhotoModeText) == 0x0006A0, "Member 'UWDT_ConfigGamePage_C::HeaderBackPhotoModeText' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGamePage_C, ConfigurationUIObject) == 0x0006B0, "Member 'UWDT_ConfigGamePage_C::ConfigurationUIObject' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGamePage_C, ShowIdrisMaskEnableSetting) == 0x0006B8, "Member 'UWDT_ConfigGamePage_C::ShowIdrisMaskEnableSetting' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGamePage_C, OldDifficultyType) == 0x0006C8, "Member 'UWDT_ConfigGamePage_C::OldDifficultyType' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigGamePage_C, IsPhotoModeOpen) == 0x0006C9, "Member 'UWDT_ConfigGamePage_C::IsPhotoModeOpen' has a wrong offset!");
 
 }
 

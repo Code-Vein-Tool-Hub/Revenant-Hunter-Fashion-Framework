@@ -74,7 +74,7 @@ static_assert(offsetof(WDT_WeaponGadgetPiece_C_SetLazyTexture, LazyTexture) == 0
 static_assert(offsetof(WDT_WeaponGadgetPiece_C_SetLazyTexture, ReturnValue) == 0x000028, "Member 'WDT_WeaponGadgetPiece_C_SetLazyTexture::ReturnValue' has a wrong offset!");
 
 // Function WDT_WeaponGadgetPiece.WDT_WeaponGadgetPiece_C.SetGadgetParam
-// 0x0120 (0x0120 - 0x0000)
+// 0x0130 (0x0130 - 0x0000)
 struct WDT_WeaponGadgetPiece_C_SetGadgetParam final
 {
 public:
@@ -82,28 +82,30 @@ public:
 	bool                                          IsValid;                                           // 0x00D0(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x00D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_D2[0x6];                                       // 0x00D2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x00D8(0x0010)()
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue_1;             // 0x00E8(0x0010)()
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue_2;             // 0x00F8(0x0010)()
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue_3;             // 0x0108(0x0010)()
-	ESlateVisibility                              Temp_byte_Variable;                                // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0119(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x011A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Deselect_ReturnValue;                     // 0x011B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_FormatTextWithPlayerInfo_ReturnValue;     // 0x00D8(0x0010)()
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x00E8(0x0010)()
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue_1;             // 0x00F8(0x0010)()
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue_2;             // 0x0108(0x0010)()
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue_3;             // 0x0118(0x0010)()
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x0128(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0129(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x012A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Deselect_ReturnValue;                     // 0x012B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_WeaponGadgetPiece_C_SetGadgetParam) == 0x000008, "Wrong alignment on WDT_WeaponGadgetPiece_C_SetGadgetParam");
-static_assert(sizeof(WDT_WeaponGadgetPiece_C_SetGadgetParam) == 0x000120, "Wrong size on WDT_WeaponGadgetPiece_C_SetGadgetParam");
+static_assert(sizeof(WDT_WeaponGadgetPiece_C_SetGadgetParam) == 0x000130, "Wrong size on WDT_WeaponGadgetPiece_C_SetGadgetParam");
 static_assert(offsetof(WDT_WeaponGadgetPiece_C_SetGadgetParam, GadgetInfo) == 0x000000, "Member 'WDT_WeaponGadgetPiece_C_SetGadgetParam::GadgetInfo' has a wrong offset!");
 static_assert(offsetof(WDT_WeaponGadgetPiece_C_SetGadgetParam, IsValid) == 0x0000D0, "Member 'WDT_WeaponGadgetPiece_C_SetGadgetParam::IsValid' has a wrong offset!");
 static_assert(offsetof(WDT_WeaponGadgetPiece_C_SetGadgetParam, Temp_bool_Variable) == 0x0000D1, "Member 'WDT_WeaponGadgetPiece_C_SetGadgetParam::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WDT_WeaponGadgetPiece_C_SetGadgetParam, CallFunc_Conv_IntToText_ReturnValue) == 0x0000D8, "Member 'WDT_WeaponGadgetPiece_C_SetGadgetParam::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_WeaponGadgetPiece_C_SetGadgetParam, CallFunc_Conv_IntToText_ReturnValue_1) == 0x0000E8, "Member 'WDT_WeaponGadgetPiece_C_SetGadgetParam::CallFunc_Conv_IntToText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_WeaponGadgetPiece_C_SetGadgetParam, CallFunc_Conv_IntToText_ReturnValue_2) == 0x0000F8, "Member 'WDT_WeaponGadgetPiece_C_SetGadgetParam::CallFunc_Conv_IntToText_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WDT_WeaponGadgetPiece_C_SetGadgetParam, CallFunc_Conv_IntToText_ReturnValue_3) == 0x000108, "Member 'WDT_WeaponGadgetPiece_C_SetGadgetParam::CallFunc_Conv_IntToText_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WDT_WeaponGadgetPiece_C_SetGadgetParam, Temp_byte_Variable) == 0x000118, "Member 'WDT_WeaponGadgetPiece_C_SetGadgetParam::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(WDT_WeaponGadgetPiece_C_SetGadgetParam, Temp_byte_Variable_1) == 0x000119, "Member 'WDT_WeaponGadgetPiece_C_SetGadgetParam::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(WDT_WeaponGadgetPiece_C_SetGadgetParam, K2Node_Select_Default) == 0x00011A, "Member 'WDT_WeaponGadgetPiece_C_SetGadgetParam::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WDT_WeaponGadgetPiece_C_SetGadgetParam, CallFunc_Deselect_ReturnValue) == 0x00011B, "Member 'WDT_WeaponGadgetPiece_C_SetGadgetParam::CallFunc_Deselect_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_WeaponGadgetPiece_C_SetGadgetParam, CallFunc_FormatTextWithPlayerInfo_ReturnValue) == 0x0000D8, "Member 'WDT_WeaponGadgetPiece_C_SetGadgetParam::CallFunc_FormatTextWithPlayerInfo_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_WeaponGadgetPiece_C_SetGadgetParam, CallFunc_Conv_IntToText_ReturnValue) == 0x0000E8, "Member 'WDT_WeaponGadgetPiece_C_SetGadgetParam::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_WeaponGadgetPiece_C_SetGadgetParam, CallFunc_Conv_IntToText_ReturnValue_1) == 0x0000F8, "Member 'WDT_WeaponGadgetPiece_C_SetGadgetParam::CallFunc_Conv_IntToText_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_WeaponGadgetPiece_C_SetGadgetParam, CallFunc_Conv_IntToText_ReturnValue_2) == 0x000108, "Member 'WDT_WeaponGadgetPiece_C_SetGadgetParam::CallFunc_Conv_IntToText_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_WeaponGadgetPiece_C_SetGadgetParam, CallFunc_Conv_IntToText_ReturnValue_3) == 0x000118, "Member 'WDT_WeaponGadgetPiece_C_SetGadgetParam::CallFunc_Conv_IntToText_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WDT_WeaponGadgetPiece_C_SetGadgetParam, Temp_byte_Variable) == 0x000128, "Member 'WDT_WeaponGadgetPiece_C_SetGadgetParam::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(WDT_WeaponGadgetPiece_C_SetGadgetParam, Temp_byte_Variable_1) == 0x000129, "Member 'WDT_WeaponGadgetPiece_C_SetGadgetParam::Temp_byte_Variable_1' has a wrong offset!");
+static_assert(offsetof(WDT_WeaponGadgetPiece_C_SetGadgetParam, K2Node_Select_Default) == 0x00012A, "Member 'WDT_WeaponGadgetPiece_C_SetGadgetParam::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WDT_WeaponGadgetPiece_C_SetGadgetParam, CallFunc_Deselect_ReturnValue) == 0x00012B, "Member 'WDT_WeaponGadgetPiece_C_SetGadgetParam::CallFunc_Deselect_ReturnValue' has a wrong offset!");
 
 // Function WDT_WeaponGadgetPiece.WDT_WeaponGadgetPiece_C.Select
 // 0x0002 (0x0002 - 0x0000)

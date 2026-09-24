@@ -139,6 +139,20 @@ static_assert(offsetof(FSimulationStageMetaData, GpuDispatchType) == 0x000094, "
 static_assert(offsetof(FSimulationStageMetaData, GpuDirectDispatchElementType) == 0x000095, "Member 'FSimulationStageMetaData::GpuDirectDispatchElementType' has a wrong offset!");
 static_assert(offsetof(FSimulationStageMetaData, GpuDispatchNumThreads) == 0x000098, "Member 'FSimulationStageMetaData::GpuDispatchNumThreads' has a wrong offset!");
 
+// ScriptStruct NiagaraShader.NiagaraDataInterfaceGeneratedFunction
+// 0x0050 (0x0050 - 0x0000)
+struct FNiagaraDataInterfaceGeneratedFunction final
+{
+public:
+	uint8                                         Pad_0[0x30];                                       // 0x0000(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FNiagaraVariableCommonReference> VariadicInputs;                                    // 0x0030(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FNiagaraVariableCommonReference> VariadicOutputs;                                   // 0x0040(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FNiagaraDataInterfaceGeneratedFunction) == 0x000008, "Wrong alignment on FNiagaraDataInterfaceGeneratedFunction");
+static_assert(sizeof(FNiagaraDataInterfaceGeneratedFunction) == 0x000050, "Wrong size on FNiagaraDataInterfaceGeneratedFunction");
+static_assert(offsetof(FNiagaraDataInterfaceGeneratedFunction, VariadicInputs) == 0x000030, "Member 'FNiagaraDataInterfaceGeneratedFunction::VariadicInputs' has a wrong offset!");
+static_assert(offsetof(FNiagaraDataInterfaceGeneratedFunction, VariadicOutputs) == 0x000040, "Member 'FNiagaraDataInterfaceGeneratedFunction::VariadicOutputs' has a wrong offset!");
+
 // ScriptStruct NiagaraShader.NiagaraCompileEvent
 // 0x0060 (0x0060 - 0x0000)
 struct FNiagaraCompileEvent final
@@ -163,20 +177,6 @@ static_assert(offsetof(FNiagaraCompileEvent, NodeGuid) == 0x000028, "Member 'FNi
 static_assert(offsetof(FNiagaraCompileEvent, PinGuid) == 0x000038, "Member 'FNiagaraCompileEvent::PinGuid' has a wrong offset!");
 static_assert(offsetof(FNiagaraCompileEvent, StackGuids) == 0x000048, "Member 'FNiagaraCompileEvent::StackGuids' has a wrong offset!");
 static_assert(offsetof(FNiagaraCompileEvent, Source) == 0x000058, "Member 'FNiagaraCompileEvent::Source' has a wrong offset!");
-
-// ScriptStruct NiagaraShader.NiagaraDataInterfaceGeneratedFunction
-// 0x0050 (0x0050 - 0x0000)
-struct FNiagaraDataInterfaceGeneratedFunction final
-{
-public:
-	uint8                                         Pad_0[0x30];                                       // 0x0000(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FNiagaraVariableCommonReference> VariadicInputs;                                    // 0x0030(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FNiagaraVariableCommonReference> VariadicOutputs;                                   // 0x0040(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FNiagaraDataInterfaceGeneratedFunction) == 0x000008, "Wrong alignment on FNiagaraDataInterfaceGeneratedFunction");
-static_assert(sizeof(FNiagaraDataInterfaceGeneratedFunction) == 0x000050, "Wrong size on FNiagaraDataInterfaceGeneratedFunction");
-static_assert(offsetof(FNiagaraDataInterfaceGeneratedFunction, VariadicInputs) == 0x000030, "Member 'FNiagaraDataInterfaceGeneratedFunction::VariadicInputs' has a wrong offset!");
-static_assert(offsetof(FNiagaraDataInterfaceGeneratedFunction, VariadicOutputs) == 0x000040, "Member 'FNiagaraDataInterfaceGeneratedFunction::VariadicOutputs' has a wrong offset!");
 
 // ScriptStruct NiagaraShader.NiagaraDataInterfaceGPUParamInfo
 // 0x0038 (0x0038 - 0x0000)

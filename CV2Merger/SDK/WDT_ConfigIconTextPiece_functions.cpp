@@ -37,6 +37,26 @@ void UWDT_ConfigIconTextPiece_C::SetText(const class FText& SetText_0)
 }
 
 
+// Function WDT_ConfigIconTextPiece.WDT_ConfigIconTextPiece_C.SetIconText
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FText                             InText                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UWDT_ConfigIconTextPiece_C::SetIconText(const class FText& InText)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_ConfigIconTextPiece_C", "SetIconText");
+
+	Params::WDT_ConfigIconTextPiece_C_SetIconText Parms{};
+
+	Parms.InText = std::move(InText);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WDT_ConfigIconTextPiece.WDT_ConfigIconTextPiece_C.Select
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:

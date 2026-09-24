@@ -18,55 +18,57 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WDT_LevelUpMenu.WDT_LevelUpMenu_C
-// 0x0148 (0x0700 - 0x05B8)
+// 0x0158 (0x0710 - 0x05B8)
 class UWDT_LevelUpMenu_C final : public UAppMenuBase
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x05B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UWidgetAnimation*                       LevelUpMenuClose;                                  // 0x05C0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
 	class UWidgetAnimation*                       LevelUpMenuOpen;                                   // 0x05C8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UCommonTextBlock*                       EmptyText;                                         // 0x05D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       EmptyText2;                                        // 0x05D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       ExpNumberText;                                     // 0x05E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       ExpToLevelUpNumberText;                            // 0x05E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       HealthNumberText;                                  // 0x05F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       HealthNumberText_1;                                // 0x05F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       HealthNumberText_Current;                          // 0x0600(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_ArrowAttack1;                                // 0x0608(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_ArrowAttack2;                                // 0x0610(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_ArrowHP;                                     // 0x0618(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_ArrowIndependent;                            // 0x0620(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_ArrowST;                                     // 0x0628(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_ArrowSuckAttack;                             // 0x0630(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       IndependentAttackNumber;                           // 0x0638(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       IndependentAttackNumber_Current;                   // 0x0640(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       LevelNumberText;                                   // 0x0648(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       LevelNumberTextCurrent;                            // 0x0650(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonVisibilitySwitcher*              LevelSwitcher_AS;                                  // 0x0658(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonVisibilitySwitcher*              LevelSwitcher_Exp;                                 // 0x0660(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonVisibilitySwitcher*              LevelSwitcher_HP;                                  // 0x0668(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonVisibilitySwitcher*              LevelSwitcher_Num;                                 // 0x0670(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonVisibilitySwitcher*              LevelSwitcher_SA;                                  // 0x0678(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonVisibilitySwitcher*              LevelSwitcher_Stamina;                             // 0x0680(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonVisibilitySwitcher*              LevelSwitcher_Weapon1;                             // 0x0688(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonVisibilitySwitcher*              LevelSwitcher_Weapon2;                             // 0x0690(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       PhysicalDiffenceNumberText_1;                      // 0x0698(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       StaminaNumberText;                                 // 0x06A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       StaminaNumberText_Current;                         // 0x06A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       SuckAttackText_Current;                            // 0x06B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_Piece_TrgText_C*                   TrgText_DirectionX;                                // 0x06B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_Piece_TrgText_C*                   TrgText_LvUp;                                      // 0x06C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Weapon1AttackNumberText;                           // 0x06C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Weapon1AttackNumberText_Current;                   // 0x06D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Weapon2AttackNumberText;                           // 0x06D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Weapon2AttackNumberText_Current;                   // 0x06E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBP_CampMenuUIObject_C*                 CampMenuUIObject;                                  // 0x06E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          bCloseAnimPlaying;                                 // 0x06F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bIsOverExp;                                        // 0x06F1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6F2[0x2];                                      // 0x06F2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         MaxLevel;                                          // 0x06F4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         RequestLevelUp;                                    // 0x06F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CurrentLevel;                                      // 0x06FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UHorizontalBox*                         ButtonGuide;                                       // 0x05D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonVisibilitySwitcher*              ButtonSwitcher;                                    // 0x05D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       EmptyText;                                         // 0x05E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       EmptyText2;                                        // 0x05E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       ExpNumberText;                                     // 0x05F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       ExpToLevelUpNumberText;                            // 0x05F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       HealthNumberText;                                  // 0x0600(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       HealthNumberText_1;                                // 0x0608(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       HealthNumberText_Current;                          // 0x0610(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_ArrowAttack1;                                // 0x0618(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_ArrowAttack2;                                // 0x0620(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_ArrowHP;                                     // 0x0628(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_ArrowIndependent;                            // 0x0630(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_ArrowST;                                     // 0x0638(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_ArrowSuckAttack;                             // 0x0640(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       IndependentAttackNumber;                           // 0x0648(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       IndependentAttackNumber_Current;                   // 0x0650(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       LevelNumberText;                                   // 0x0658(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       LevelNumberTextCurrent;                            // 0x0660(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonVisibilitySwitcher*              LevelSwitcher_AS;                                  // 0x0668(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonVisibilitySwitcher*              LevelSwitcher_Exp;                                 // 0x0670(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonVisibilitySwitcher*              LevelSwitcher_HP;                                  // 0x0678(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonVisibilitySwitcher*              LevelSwitcher_Num;                                 // 0x0680(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonVisibilitySwitcher*              LevelSwitcher_SA;                                  // 0x0688(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonVisibilitySwitcher*              LevelSwitcher_Stamina;                             // 0x0690(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonVisibilitySwitcher*              LevelSwitcher_Weapon1;                             // 0x0698(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonVisibilitySwitcher*              LevelSwitcher_Weapon2;                             // 0x06A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       PhysicalDiffenceNumberText_1;                      // 0x06A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       StaminaNumberText;                                 // 0x06B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       StaminaNumberText_Current;                         // 0x06B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       SuckAttackText_Current;                            // 0x06C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_Piece_TrgText_C*                   TrgText_DirectionX;                                // 0x06C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_Piece_TrgText_C*                   TrgText_LvUp;                                      // 0x06D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Weapon1AttackNumberText;                           // 0x06D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Weapon1AttackNumberText_Current;                   // 0x06E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Weapon2AttackNumberText;                           // 0x06E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Weapon2AttackNumberText_Current;                   // 0x06F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBP_CampMenuUIObject_C*                 CampMenuUIObject;                                  // 0x06F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          bCloseAnimPlaying;                                 // 0x0700(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bIsOverExp;                                        // 0x0701(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_702[0x2];                                      // 0x0702(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         MaxLevel;                                          // 0x0704(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         RequestLevelUp;                                    // 0x0708(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CurrentLevel;                                      // 0x070C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BP_OnActivated();
@@ -111,51 +113,53 @@ public:
 	}
 };
 static_assert(alignof(UWDT_LevelUpMenu_C) == 0x000008, "Wrong alignment on UWDT_LevelUpMenu_C");
-static_assert(sizeof(UWDT_LevelUpMenu_C) == 0x000700, "Wrong size on UWDT_LevelUpMenu_C");
+static_assert(sizeof(UWDT_LevelUpMenu_C) == 0x000710, "Wrong size on UWDT_LevelUpMenu_C");
 static_assert(offsetof(UWDT_LevelUpMenu_C, UberGraphFrame) == 0x0005B8, "Member 'UWDT_LevelUpMenu_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UWDT_LevelUpMenu_C, LevelUpMenuClose) == 0x0005C0, "Member 'UWDT_LevelUpMenu_C::LevelUpMenuClose' has a wrong offset!");
 static_assert(offsetof(UWDT_LevelUpMenu_C, LevelUpMenuOpen) == 0x0005C8, "Member 'UWDT_LevelUpMenu_C::LevelUpMenuOpen' has a wrong offset!");
-static_assert(offsetof(UWDT_LevelUpMenu_C, EmptyText) == 0x0005D0, "Member 'UWDT_LevelUpMenu_C::EmptyText' has a wrong offset!");
-static_assert(offsetof(UWDT_LevelUpMenu_C, EmptyText2) == 0x0005D8, "Member 'UWDT_LevelUpMenu_C::EmptyText2' has a wrong offset!");
-static_assert(offsetof(UWDT_LevelUpMenu_C, ExpNumberText) == 0x0005E0, "Member 'UWDT_LevelUpMenu_C::ExpNumberText' has a wrong offset!");
-static_assert(offsetof(UWDT_LevelUpMenu_C, ExpToLevelUpNumberText) == 0x0005E8, "Member 'UWDT_LevelUpMenu_C::ExpToLevelUpNumberText' has a wrong offset!");
-static_assert(offsetof(UWDT_LevelUpMenu_C, HealthNumberText) == 0x0005F0, "Member 'UWDT_LevelUpMenu_C::HealthNumberText' has a wrong offset!");
-static_assert(offsetof(UWDT_LevelUpMenu_C, HealthNumberText_1) == 0x0005F8, "Member 'UWDT_LevelUpMenu_C::HealthNumberText_1' has a wrong offset!");
-static_assert(offsetof(UWDT_LevelUpMenu_C, HealthNumberText_Current) == 0x000600, "Member 'UWDT_LevelUpMenu_C::HealthNumberText_Current' has a wrong offset!");
-static_assert(offsetof(UWDT_LevelUpMenu_C, Image_ArrowAttack1) == 0x000608, "Member 'UWDT_LevelUpMenu_C::Image_ArrowAttack1' has a wrong offset!");
-static_assert(offsetof(UWDT_LevelUpMenu_C, Image_ArrowAttack2) == 0x000610, "Member 'UWDT_LevelUpMenu_C::Image_ArrowAttack2' has a wrong offset!");
-static_assert(offsetof(UWDT_LevelUpMenu_C, Image_ArrowHP) == 0x000618, "Member 'UWDT_LevelUpMenu_C::Image_ArrowHP' has a wrong offset!");
-static_assert(offsetof(UWDT_LevelUpMenu_C, Image_ArrowIndependent) == 0x000620, "Member 'UWDT_LevelUpMenu_C::Image_ArrowIndependent' has a wrong offset!");
-static_assert(offsetof(UWDT_LevelUpMenu_C, Image_ArrowST) == 0x000628, "Member 'UWDT_LevelUpMenu_C::Image_ArrowST' has a wrong offset!");
-static_assert(offsetof(UWDT_LevelUpMenu_C, Image_ArrowSuckAttack) == 0x000630, "Member 'UWDT_LevelUpMenu_C::Image_ArrowSuckAttack' has a wrong offset!");
-static_assert(offsetof(UWDT_LevelUpMenu_C, IndependentAttackNumber) == 0x000638, "Member 'UWDT_LevelUpMenu_C::IndependentAttackNumber' has a wrong offset!");
-static_assert(offsetof(UWDT_LevelUpMenu_C, IndependentAttackNumber_Current) == 0x000640, "Member 'UWDT_LevelUpMenu_C::IndependentAttackNumber_Current' has a wrong offset!");
-static_assert(offsetof(UWDT_LevelUpMenu_C, LevelNumberText) == 0x000648, "Member 'UWDT_LevelUpMenu_C::LevelNumberText' has a wrong offset!");
-static_assert(offsetof(UWDT_LevelUpMenu_C, LevelNumberTextCurrent) == 0x000650, "Member 'UWDT_LevelUpMenu_C::LevelNumberTextCurrent' has a wrong offset!");
-static_assert(offsetof(UWDT_LevelUpMenu_C, LevelSwitcher_AS) == 0x000658, "Member 'UWDT_LevelUpMenu_C::LevelSwitcher_AS' has a wrong offset!");
-static_assert(offsetof(UWDT_LevelUpMenu_C, LevelSwitcher_Exp) == 0x000660, "Member 'UWDT_LevelUpMenu_C::LevelSwitcher_Exp' has a wrong offset!");
-static_assert(offsetof(UWDT_LevelUpMenu_C, LevelSwitcher_HP) == 0x000668, "Member 'UWDT_LevelUpMenu_C::LevelSwitcher_HP' has a wrong offset!");
-static_assert(offsetof(UWDT_LevelUpMenu_C, LevelSwitcher_Num) == 0x000670, "Member 'UWDT_LevelUpMenu_C::LevelSwitcher_Num' has a wrong offset!");
-static_assert(offsetof(UWDT_LevelUpMenu_C, LevelSwitcher_SA) == 0x000678, "Member 'UWDT_LevelUpMenu_C::LevelSwitcher_SA' has a wrong offset!");
-static_assert(offsetof(UWDT_LevelUpMenu_C, LevelSwitcher_Stamina) == 0x000680, "Member 'UWDT_LevelUpMenu_C::LevelSwitcher_Stamina' has a wrong offset!");
-static_assert(offsetof(UWDT_LevelUpMenu_C, LevelSwitcher_Weapon1) == 0x000688, "Member 'UWDT_LevelUpMenu_C::LevelSwitcher_Weapon1' has a wrong offset!");
-static_assert(offsetof(UWDT_LevelUpMenu_C, LevelSwitcher_Weapon2) == 0x000690, "Member 'UWDT_LevelUpMenu_C::LevelSwitcher_Weapon2' has a wrong offset!");
-static_assert(offsetof(UWDT_LevelUpMenu_C, PhysicalDiffenceNumberText_1) == 0x000698, "Member 'UWDT_LevelUpMenu_C::PhysicalDiffenceNumberText_1' has a wrong offset!");
-static_assert(offsetof(UWDT_LevelUpMenu_C, StaminaNumberText) == 0x0006A0, "Member 'UWDT_LevelUpMenu_C::StaminaNumberText' has a wrong offset!");
-static_assert(offsetof(UWDT_LevelUpMenu_C, StaminaNumberText_Current) == 0x0006A8, "Member 'UWDT_LevelUpMenu_C::StaminaNumberText_Current' has a wrong offset!");
-static_assert(offsetof(UWDT_LevelUpMenu_C, SuckAttackText_Current) == 0x0006B0, "Member 'UWDT_LevelUpMenu_C::SuckAttackText_Current' has a wrong offset!");
-static_assert(offsetof(UWDT_LevelUpMenu_C, TrgText_DirectionX) == 0x0006B8, "Member 'UWDT_LevelUpMenu_C::TrgText_DirectionX' has a wrong offset!");
-static_assert(offsetof(UWDT_LevelUpMenu_C, TrgText_LvUp) == 0x0006C0, "Member 'UWDT_LevelUpMenu_C::TrgText_LvUp' has a wrong offset!");
-static_assert(offsetof(UWDT_LevelUpMenu_C, Weapon1AttackNumberText) == 0x0006C8, "Member 'UWDT_LevelUpMenu_C::Weapon1AttackNumberText' has a wrong offset!");
-static_assert(offsetof(UWDT_LevelUpMenu_C, Weapon1AttackNumberText_Current) == 0x0006D0, "Member 'UWDT_LevelUpMenu_C::Weapon1AttackNumberText_Current' has a wrong offset!");
-static_assert(offsetof(UWDT_LevelUpMenu_C, Weapon2AttackNumberText) == 0x0006D8, "Member 'UWDT_LevelUpMenu_C::Weapon2AttackNumberText' has a wrong offset!");
-static_assert(offsetof(UWDT_LevelUpMenu_C, Weapon2AttackNumberText_Current) == 0x0006E0, "Member 'UWDT_LevelUpMenu_C::Weapon2AttackNumberText_Current' has a wrong offset!");
-static_assert(offsetof(UWDT_LevelUpMenu_C, CampMenuUIObject) == 0x0006E8, "Member 'UWDT_LevelUpMenu_C::CampMenuUIObject' has a wrong offset!");
-static_assert(offsetof(UWDT_LevelUpMenu_C, bCloseAnimPlaying) == 0x0006F0, "Member 'UWDT_LevelUpMenu_C::bCloseAnimPlaying' has a wrong offset!");
-static_assert(offsetof(UWDT_LevelUpMenu_C, bIsOverExp) == 0x0006F1, "Member 'UWDT_LevelUpMenu_C::bIsOverExp' has a wrong offset!");
-static_assert(offsetof(UWDT_LevelUpMenu_C, MaxLevel) == 0x0006F4, "Member 'UWDT_LevelUpMenu_C::MaxLevel' has a wrong offset!");
-static_assert(offsetof(UWDT_LevelUpMenu_C, RequestLevelUp) == 0x0006F8, "Member 'UWDT_LevelUpMenu_C::RequestLevelUp' has a wrong offset!");
-static_assert(offsetof(UWDT_LevelUpMenu_C, CurrentLevel) == 0x0006FC, "Member 'UWDT_LevelUpMenu_C::CurrentLevel' has a wrong offset!");
+static_assert(offsetof(UWDT_LevelUpMenu_C, ButtonGuide) == 0x0005D0, "Member 'UWDT_LevelUpMenu_C::ButtonGuide' has a wrong offset!");
+static_assert(offsetof(UWDT_LevelUpMenu_C, ButtonSwitcher) == 0x0005D8, "Member 'UWDT_LevelUpMenu_C::ButtonSwitcher' has a wrong offset!");
+static_assert(offsetof(UWDT_LevelUpMenu_C, EmptyText) == 0x0005E0, "Member 'UWDT_LevelUpMenu_C::EmptyText' has a wrong offset!");
+static_assert(offsetof(UWDT_LevelUpMenu_C, EmptyText2) == 0x0005E8, "Member 'UWDT_LevelUpMenu_C::EmptyText2' has a wrong offset!");
+static_assert(offsetof(UWDT_LevelUpMenu_C, ExpNumberText) == 0x0005F0, "Member 'UWDT_LevelUpMenu_C::ExpNumberText' has a wrong offset!");
+static_assert(offsetof(UWDT_LevelUpMenu_C, ExpToLevelUpNumberText) == 0x0005F8, "Member 'UWDT_LevelUpMenu_C::ExpToLevelUpNumberText' has a wrong offset!");
+static_assert(offsetof(UWDT_LevelUpMenu_C, HealthNumberText) == 0x000600, "Member 'UWDT_LevelUpMenu_C::HealthNumberText' has a wrong offset!");
+static_assert(offsetof(UWDT_LevelUpMenu_C, HealthNumberText_1) == 0x000608, "Member 'UWDT_LevelUpMenu_C::HealthNumberText_1' has a wrong offset!");
+static_assert(offsetof(UWDT_LevelUpMenu_C, HealthNumberText_Current) == 0x000610, "Member 'UWDT_LevelUpMenu_C::HealthNumberText_Current' has a wrong offset!");
+static_assert(offsetof(UWDT_LevelUpMenu_C, Image_ArrowAttack1) == 0x000618, "Member 'UWDT_LevelUpMenu_C::Image_ArrowAttack1' has a wrong offset!");
+static_assert(offsetof(UWDT_LevelUpMenu_C, Image_ArrowAttack2) == 0x000620, "Member 'UWDT_LevelUpMenu_C::Image_ArrowAttack2' has a wrong offset!");
+static_assert(offsetof(UWDT_LevelUpMenu_C, Image_ArrowHP) == 0x000628, "Member 'UWDT_LevelUpMenu_C::Image_ArrowHP' has a wrong offset!");
+static_assert(offsetof(UWDT_LevelUpMenu_C, Image_ArrowIndependent) == 0x000630, "Member 'UWDT_LevelUpMenu_C::Image_ArrowIndependent' has a wrong offset!");
+static_assert(offsetof(UWDT_LevelUpMenu_C, Image_ArrowST) == 0x000638, "Member 'UWDT_LevelUpMenu_C::Image_ArrowST' has a wrong offset!");
+static_assert(offsetof(UWDT_LevelUpMenu_C, Image_ArrowSuckAttack) == 0x000640, "Member 'UWDT_LevelUpMenu_C::Image_ArrowSuckAttack' has a wrong offset!");
+static_assert(offsetof(UWDT_LevelUpMenu_C, IndependentAttackNumber) == 0x000648, "Member 'UWDT_LevelUpMenu_C::IndependentAttackNumber' has a wrong offset!");
+static_assert(offsetof(UWDT_LevelUpMenu_C, IndependentAttackNumber_Current) == 0x000650, "Member 'UWDT_LevelUpMenu_C::IndependentAttackNumber_Current' has a wrong offset!");
+static_assert(offsetof(UWDT_LevelUpMenu_C, LevelNumberText) == 0x000658, "Member 'UWDT_LevelUpMenu_C::LevelNumberText' has a wrong offset!");
+static_assert(offsetof(UWDT_LevelUpMenu_C, LevelNumberTextCurrent) == 0x000660, "Member 'UWDT_LevelUpMenu_C::LevelNumberTextCurrent' has a wrong offset!");
+static_assert(offsetof(UWDT_LevelUpMenu_C, LevelSwitcher_AS) == 0x000668, "Member 'UWDT_LevelUpMenu_C::LevelSwitcher_AS' has a wrong offset!");
+static_assert(offsetof(UWDT_LevelUpMenu_C, LevelSwitcher_Exp) == 0x000670, "Member 'UWDT_LevelUpMenu_C::LevelSwitcher_Exp' has a wrong offset!");
+static_assert(offsetof(UWDT_LevelUpMenu_C, LevelSwitcher_HP) == 0x000678, "Member 'UWDT_LevelUpMenu_C::LevelSwitcher_HP' has a wrong offset!");
+static_assert(offsetof(UWDT_LevelUpMenu_C, LevelSwitcher_Num) == 0x000680, "Member 'UWDT_LevelUpMenu_C::LevelSwitcher_Num' has a wrong offset!");
+static_assert(offsetof(UWDT_LevelUpMenu_C, LevelSwitcher_SA) == 0x000688, "Member 'UWDT_LevelUpMenu_C::LevelSwitcher_SA' has a wrong offset!");
+static_assert(offsetof(UWDT_LevelUpMenu_C, LevelSwitcher_Stamina) == 0x000690, "Member 'UWDT_LevelUpMenu_C::LevelSwitcher_Stamina' has a wrong offset!");
+static_assert(offsetof(UWDT_LevelUpMenu_C, LevelSwitcher_Weapon1) == 0x000698, "Member 'UWDT_LevelUpMenu_C::LevelSwitcher_Weapon1' has a wrong offset!");
+static_assert(offsetof(UWDT_LevelUpMenu_C, LevelSwitcher_Weapon2) == 0x0006A0, "Member 'UWDT_LevelUpMenu_C::LevelSwitcher_Weapon2' has a wrong offset!");
+static_assert(offsetof(UWDT_LevelUpMenu_C, PhysicalDiffenceNumberText_1) == 0x0006A8, "Member 'UWDT_LevelUpMenu_C::PhysicalDiffenceNumberText_1' has a wrong offset!");
+static_assert(offsetof(UWDT_LevelUpMenu_C, StaminaNumberText) == 0x0006B0, "Member 'UWDT_LevelUpMenu_C::StaminaNumberText' has a wrong offset!");
+static_assert(offsetof(UWDT_LevelUpMenu_C, StaminaNumberText_Current) == 0x0006B8, "Member 'UWDT_LevelUpMenu_C::StaminaNumberText_Current' has a wrong offset!");
+static_assert(offsetof(UWDT_LevelUpMenu_C, SuckAttackText_Current) == 0x0006C0, "Member 'UWDT_LevelUpMenu_C::SuckAttackText_Current' has a wrong offset!");
+static_assert(offsetof(UWDT_LevelUpMenu_C, TrgText_DirectionX) == 0x0006C8, "Member 'UWDT_LevelUpMenu_C::TrgText_DirectionX' has a wrong offset!");
+static_assert(offsetof(UWDT_LevelUpMenu_C, TrgText_LvUp) == 0x0006D0, "Member 'UWDT_LevelUpMenu_C::TrgText_LvUp' has a wrong offset!");
+static_assert(offsetof(UWDT_LevelUpMenu_C, Weapon1AttackNumberText) == 0x0006D8, "Member 'UWDT_LevelUpMenu_C::Weapon1AttackNumberText' has a wrong offset!");
+static_assert(offsetof(UWDT_LevelUpMenu_C, Weapon1AttackNumberText_Current) == 0x0006E0, "Member 'UWDT_LevelUpMenu_C::Weapon1AttackNumberText_Current' has a wrong offset!");
+static_assert(offsetof(UWDT_LevelUpMenu_C, Weapon2AttackNumberText) == 0x0006E8, "Member 'UWDT_LevelUpMenu_C::Weapon2AttackNumberText' has a wrong offset!");
+static_assert(offsetof(UWDT_LevelUpMenu_C, Weapon2AttackNumberText_Current) == 0x0006F0, "Member 'UWDT_LevelUpMenu_C::Weapon2AttackNumberText_Current' has a wrong offset!");
+static_assert(offsetof(UWDT_LevelUpMenu_C, CampMenuUIObject) == 0x0006F8, "Member 'UWDT_LevelUpMenu_C::CampMenuUIObject' has a wrong offset!");
+static_assert(offsetof(UWDT_LevelUpMenu_C, bCloseAnimPlaying) == 0x000700, "Member 'UWDT_LevelUpMenu_C::bCloseAnimPlaying' has a wrong offset!");
+static_assert(offsetof(UWDT_LevelUpMenu_C, bIsOverExp) == 0x000701, "Member 'UWDT_LevelUpMenu_C::bIsOverExp' has a wrong offset!");
+static_assert(offsetof(UWDT_LevelUpMenu_C, MaxLevel) == 0x000704, "Member 'UWDT_LevelUpMenu_C::MaxLevel' has a wrong offset!");
+static_assert(offsetof(UWDT_LevelUpMenu_C, RequestLevelUp) == 0x000708, "Member 'UWDT_LevelUpMenu_C::RequestLevelUp' has a wrong offset!");
+static_assert(offsetof(UWDT_LevelUpMenu_C, CurrentLevel) == 0x00070C, "Member 'UWDT_LevelUpMenu_C::CurrentLevel' has a wrong offset!");
 
 }
 

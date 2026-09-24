@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Extensions_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "Extensions_structs.hpp"
 
 
 namespace SDK
@@ -37,6 +37,7 @@ public:
 	uint8                                         Pad_81[0x3];                                       // 0x0081(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGameplayTag                           CharacterType_47_16742E5F41F56ECCACBF8A8937D245F9; // 0x0084(0x0008)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash)
 	bool                                          DisplayOnScreenMask_49_3396C0F6482F07721526B281CE9F506D; // 0x008C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          DoNotSync_51_B2B038384215AFD7B33DA799220E5B41;     // 0x008D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(FSTR_SmallScenario_Record) == 0x000008, "Wrong alignment on FSTR_SmallScenario_Record");
 static_assert(sizeof(FSTR_SmallScenario_Record) == 0x000090, "Wrong size on FSTR_SmallScenario_Record");
@@ -52,6 +53,7 @@ static_assert(offsetof(FSTR_SmallScenario_Record, FacialAnimation_42_06CE2415422
 static_assert(offsetof(FSTR_SmallScenario_Record, UseSkipDelay_44_E46526BF4E1770CA3D252A90BF5F62A7) == 0x000080, "Member 'FSTR_SmallScenario_Record::UseSkipDelay_44_E46526BF4E1770CA3D252A90BF5F62A7' has a wrong offset!");
 static_assert(offsetof(FSTR_SmallScenario_Record, CharacterType_47_16742E5F41F56ECCACBF8A8937D245F9) == 0x000084, "Member 'FSTR_SmallScenario_Record::CharacterType_47_16742E5F41F56ECCACBF8A8937D245F9' has a wrong offset!");
 static_assert(offsetof(FSTR_SmallScenario_Record, DisplayOnScreenMask_49_3396C0F6482F07721526B281CE9F506D) == 0x00008C, "Member 'FSTR_SmallScenario_Record::DisplayOnScreenMask_49_3396C0F6482F07721526B281CE9F506D' has a wrong offset!");
+static_assert(offsetof(FSTR_SmallScenario_Record, DoNotSync_51_B2B038384215AFD7B33DA799220E5B41) == 0x00008D, "Member 'FSTR_SmallScenario_Record::DoNotSync_51_B2B038384215AFD7B33DA799220E5B41' has a wrong offset!");
 
 }
 

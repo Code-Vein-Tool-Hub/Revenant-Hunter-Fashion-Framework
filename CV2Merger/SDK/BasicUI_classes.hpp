@@ -10,19 +10,40 @@
 
 #include "Basic.hpp"
 
+#include "BasicUI_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "CommonUI_classes.hpp"
-#include "BasicUI_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
 #include "Engine_classes.hpp"
 #include "GameplayTags_structs.hpp"
+#include "CommonUI_classes.hpp"
 
 
 namespace SDK
 {
+
+// Class BasicUI.MultipleFlagInterface
+// 0x0000 (0x0028 - 0x0028)
+class IMultipleFlagInterface final : public IInterface
+{
+public:
+	bool GetFlag(class FName FlagName);
+	bool SetFlag(class FName FlagName, bool FlagValue, bool bFireEvent);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"MultipleFlagInterface">();
+	}
+	static class IMultipleFlagInterface* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<IMultipleFlagInterface>();
+	}
+};
+static_assert(alignof(IMultipleFlagInterface) == 0x000008, "Wrong alignment on IMultipleFlagInterface");
+static_assert(sizeof(IMultipleFlagInterface) == 0x000028, "Wrong size on IMultipleFlagInterface");
 
 // Class BasicUI.AsyncTileHandler
 // 0x0138 (0x0160 - 0x0028)
@@ -175,6 +196,28 @@ static_assert(offsetof(UUIElementBase, bEnableMouseEvent) == 0x0004A0, "Member '
 static_assert(offsetof(UUIElementBase, ShowAnimation) == 0x0004A8, "Member 'UUIElementBase::ShowAnimation' has a wrong offset!");
 static_assert(offsetof(UUIElementBase, HideAnimation) == 0x0004B0, "Member 'UUIElementBase::HideAnimation' has a wrong offset!");
 
+// Class BasicUI.CheckableInterface
+// 0x0000 (0x0028 - 0x0028)
+class ICheckableInterface final : public IInterface
+{
+public:
+	bool Check(bool PlayAnimation, bool AnotherAppearance);
+	bool IsChecked();
+	bool Uncheck(bool PlayAnimation);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"CheckableInterface">();
+	}
+	static class ICheckableInterface* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ICheckableInterface>();
+	}
+};
+static_assert(alignof(ICheckableInterface) == 0x000008, "Wrong alignment on ICheckableInterface");
+static_assert(sizeof(ICheckableInterface) == 0x000028, "Wrong size on ICheckableInterface");
+
 // Class BasicUI.MenuBase
 // 0x00F8 (0x05B8 - 0x04C0)
 class UMenuBase : public UUIElementBase
@@ -324,27 +367,6 @@ static_assert(sizeof(UDialogBase) == 0x000620, "Wrong size on UDialogBase");
 static_assert(offsetof(UDialogBase, DecideDelegate) == 0x0005B8, "Member 'UDialogBase::DecideDelegate' has a wrong offset!");
 static_assert(offsetof(UDialogBase, DialogInfo) == 0x0005C8, "Member 'UDialogBase::DialogInfo' has a wrong offset!");
 
-// Class BasicUI.FloatHolderInterface
-// 0x0000 (0x0028 - 0x0028)
-class IFloatHolderInterface final : public IInterface
-{
-public:
-	float GetFloat();
-	bool SetFloat(const float Number);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"FloatHolderInterface">();
-	}
-	static class IFloatHolderInterface* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<IFloatHolderInterface>();
-	}
-};
-static_assert(alignof(IFloatHolderInterface) == 0x000008, "Wrong alignment on IFloatHolderInterface");
-static_assert(sizeof(IFloatHolderInterface) == 0x000028, "Wrong size on IFloatHolderInterface");
-
 // Class BasicUI.EnhancedWidgetSwitcher
 // 0x0028 (0x0280 - 0x0258)
 class UEnhancedWidgetSwitcher final : public UCommonActivatableWidgetSwitcher
@@ -378,6 +400,27 @@ static_assert(offsetof(UEnhancedWidgetSwitcher, bControlActivation) == 0x000259,
 static_assert(offsetof(UEnhancedWidgetSwitcher, OnChildWidgetDisappearEvent) == 0x00025C, "Member 'UEnhancedWidgetSwitcher::OnChildWidgetDisappearEvent' has a wrong offset!");
 static_assert(offsetof(UEnhancedWidgetSwitcher, OnChildWidgetAppearEvent) == 0x00026C, "Member 'UEnhancedWidgetSwitcher::OnChildWidgetAppearEvent' has a wrong offset!");
 static_assert(offsetof(UEnhancedWidgetSwitcher, bSwitchingChild) == 0x00027C, "Member 'UEnhancedWidgetSwitcher::bSwitchingChild' has a wrong offset!");
+
+// Class BasicUI.ButtonInterface
+// 0x0000 (0x0028 - 0x0028)
+class IButtonInterface final : public IInterface
+{
+public:
+	bool PressButton();
+	bool ReleaseButton();
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"ButtonInterface">();
+	}
+	static class IButtonInterface* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<IButtonInterface>();
+	}
+};
+static_assert(alignof(IButtonInterface) == 0x000008, "Wrong alignment on IButtonInterface");
+static_assert(sizeof(IButtonInterface) == 0x000028, "Wrong size on IButtonInterface");
 
 // Class BasicUI.GridScroller
 // 0x0020 (0x0D20 - 0x0D00)
@@ -420,6 +463,26 @@ static_assert(sizeof(UGridScroller) == 0x000D20, "Wrong size on UGridScroller");
 static_assert(offsetof(UGridScroller, ScrollerItemClass) == 0x000CF8, "Member 'UGridScroller::ScrollerItemClass' has a wrong offset!");
 static_assert(offsetof(UGridScroller, OnPopulateScrollerItemEvent) == 0x000D00, "Member 'UGridScroller::OnPopulateScrollerItemEvent' has a wrong offset!");
 static_assert(offsetof(UGridScroller, bAllowBuiltinNavigation) == 0x000D10, "Member 'UGridScroller::bAllowBuiltinNavigation' has a wrong offset!");
+
+// Class BasicUI.GeneralUIExpressionInterface
+// 0x0000 (0x0028 - 0x0028)
+class IGeneralUIExpressionInterface final : public IInterface
+{
+public:
+	bool Blink();
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"GeneralUIExpressionInterface">();
+	}
+	static class IGeneralUIExpressionInterface* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<IGeneralUIExpressionInterface>();
+	}
+};
+static_assert(alignof(IGeneralUIExpressionInterface) == 0x000008, "Wrong alignment on IGeneralUIExpressionInterface");
+static_assert(sizeof(IGeneralUIExpressionInterface) == 0x000028, "Wrong size on IGeneralUIExpressionInterface");
 
 // Class BasicUI.ListScroller
 // 0x0030 (0x0D00 - 0x0CD0)
@@ -519,60 +582,6 @@ static_assert(offsetof(UMenuPieceBase, bIsSelectableByMouseHover) == 0x0005BF, "
 static_assert(offsetof(UMenuPieceBase, bMouseEventNotifyMenu) == 0x0005C0, "Member 'UMenuPieceBase::bMouseEventNotifyMenu' has a wrong offset!");
 static_assert(offsetof(UMenuPieceBase, bMouseEventNotifyContainer) == 0x0005C1, "Member 'UMenuPieceBase::bMouseEventNotifyContainer' has a wrong offset!");
 static_assert(offsetof(UMenuPieceBase, bConsumeMouseEvent) == 0x0005C2, "Member 'UMenuPieceBase::bConsumeMouseEvent' has a wrong offset!");
-
-// Class BasicUI.UIManager
-// 0x0100 (0x0130 - 0x0030)
-class UUIManager : public UGameInstanceSubsystem
-{
-public:
-	uint8                                         Pad_30[0xB0];                                      // 0x0030(0x00B0)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UUIObjectBase*>                  UIObjectList;                                      // 0x00E0(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	struct FGameplayTagContainer                  DisplayFlags;                                      // 0x00F0(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-	FMulticastInlineDelegateProperty_             UIObjectCreateEventDelegate;                       // 0x0110(0x0010)(ZeroConstructor, InstancedReference, Protected, NativeAccessSpecifierProtected)
-	FMulticastInlineDelegateProperty_             UIObjectRemoveEventDelegate;                       // 0x0120(0x0010)(ZeroConstructor, InstancedReference, Protected, NativeAccessSpecifierProtected)
-
-public:
-	static class UUIObjectBase* AddUIObjectBySoftClassPtr(const class UObject* InWorldContextObject, TSoftClassPtr<class UClass> InClassPtr, bool bOpenInstantly);
-	static const struct FGameplayTagContainer GetDisplayFlags(const class UObject* InWorldContextObject);
-	static void GetMenuLayerPriority(const EMenuLayer Layer, int32* BasePriority, int32* Range);
-	static class UUIObjectBase* GetUIObjectByClass(const class UObject* InWorldContextObject, TSubclassOf<class UUIObjectBase> ComponentClass);
-	static class UUIObjectBase* GetUIObjectBySoftClassPtr(const class UObject* InWorldContextObject, TSoftClassPtr<class UClass> InClassPtr);
-	static bool RemoveUIObjectBySoftClassPtr(const class UObject* InWorldContextObject, TSoftClassPtr<class UClass> InClassPtr);
-	static void SetDisplayFlags(const class UObject* InWorldContextObject, const struct FGameplayTagContainer& InDisplayFlags, bool bPlayAnimation, bool bForced);
-
-	void BindUIObjectCreateEvent(TDelegate<void(TSoftClassPtr<class UClass> UIObjectClass)> InDelegate);
-	void BindUIObjectRemoveEvent(TDelegate<void(TSoftClassPtr<class UClass> UIObjectClass)> InDelegate);
-	void CloseAllMenus(bool InExcludeIndicators);
-	bool CloseMenu(const class FName InMenuName);
-	class UMenuBase* CreateMenu(const struct FMenuContext& InMenuContext);
-	bool FinishMenu(const class FName InGroupName, const class FName InMenuName);
-	bool FinishMenuGroup(const class FName InGroupName);
-	TArray<class UMenuBase*> GetAllMenus(const EMenuLayer InMenuLayer);
-	TArray<class UMenuBase*> GetMenuGroup(const class FName InGroupName);
-	class UMenuBase* OpenMenu(const struct FMenuContext& InMenuContext);
-	void UnbindUIObjectCreateEvent(TDelegate<void(TSoftClassPtr<class UClass> UIObjectClass)> InDelegate);
-	void UnbindUIObjectRemoveEvent(TDelegate<void(TSoftClassPtr<class UClass> UIObjectClass)> InDelegate);
-
-	class UMenuBase* GetMenu(const class FName TargetMenuName) const;
-	bool IsMenuClosed(const class FName InMenuName) const;
-	bool IsMenuOpen(const class FName InMenuName) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"UIManager">();
-	}
-	static class UUIManager* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UUIManager>();
-	}
-};
-static_assert(alignof(UUIManager) == 0x000008, "Wrong alignment on UUIManager");
-static_assert(sizeof(UUIManager) == 0x000130, "Wrong size on UUIManager");
-static_assert(offsetof(UUIManager, UIObjectList) == 0x0000E0, "Member 'UUIManager::UIObjectList' has a wrong offset!");
-static_assert(offsetof(UUIManager, DisplayFlags) == 0x0000F0, "Member 'UUIManager::DisplayFlags' has a wrong offset!");
-static_assert(offsetof(UUIManager, UIObjectCreateEventDelegate) == 0x000110, "Member 'UUIManager::UIObjectCreateEventDelegate' has a wrong offset!");
-static_assert(offsetof(UUIManager, UIObjectRemoveEventDelegate) == 0x000120, "Member 'UUIManager::UIObjectRemoveEventDelegate' has a wrong offset!");
 
 // Class BasicUI.MeterPieceBase
 // 0x0020 (0x05E8 - 0x05C8)
@@ -742,79 +751,6 @@ public:
 static_assert(alignof(IHighlightableInterface) == 0x000008, "Wrong alignment on IHighlightableInterface");
 static_assert(sizeof(IHighlightableInterface) == 0x000028, "Wrong size on IHighlightableInterface");
 
-// Class BasicUI.UIObjectBase
-// 0x0038 (0x0060 - 0x0028)
-class UUIObjectBase : public UObject
-{
-public:
-	struct FMenuContext                           TopMenuContext;                                    // 0x0028(0x0038)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NoDestructor, Protected, NativeAccessSpecifierProtected)
-
-public:
-	bool Close();
-	void Finish();
-	bool Open();
-	bool OpenWithMenu(const struct FMenuContext& InContext);
-
-	class UMenuBase* GetTopMenu() const;
-	bool IsClosed() const;
-	bool IsOpen() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"UIObjectBase">();
-	}
-	static class UUIObjectBase* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UUIObjectBase>();
-	}
-};
-static_assert(alignof(UUIObjectBase) == 0x000008, "Wrong alignment on UUIObjectBase");
-static_assert(sizeof(UUIObjectBase) == 0x000060, "Wrong size on UUIObjectBase");
-static_assert(offsetof(UUIObjectBase, TopMenuContext) == 0x000028, "Member 'UUIObjectBase::TopMenuContext' has a wrong offset!");
-
-// Class BasicUI.MultipleFlagInterface
-// 0x0000 (0x0028 - 0x0028)
-class IMultipleFlagInterface final : public IInterface
-{
-public:
-	bool GetFlag(class FName FlagName);
-	bool SetFlag(class FName FlagName, bool FlagValue, bool bFireEvent);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"MultipleFlagInterface">();
-	}
-	static class IMultipleFlagInterface* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<IMultipleFlagInterface>();
-	}
-};
-static_assert(alignof(IMultipleFlagInterface) == 0x000008, "Wrong alignment on IMultipleFlagInterface");
-static_assert(sizeof(IMultipleFlagInterface) == 0x000028, "Wrong size on IMultipleFlagInterface");
-
-// Class BasicUI.ButtonInterface
-// 0x0000 (0x0028 - 0x0028)
-class IButtonInterface final : public IInterface
-{
-public:
-	bool PressButton();
-	bool ReleaseButton();
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"ButtonInterface">();
-	}
-	static class IButtonInterface* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<IButtonInterface>();
-	}
-};
-static_assert(alignof(IButtonInterface) == 0x000008, "Wrong alignment on IButtonInterface");
-static_assert(sizeof(IButtonInterface) == 0x000028, "Wrong size on IButtonInterface");
-
 // Class BasicUI.MeterInterface
 // 0x0000 (0x0028 - 0x0028)
 class IMeterInterface final : public IInterface
@@ -868,28 +804,6 @@ public:
 static_assert(alignof(ITextureInterface) == 0x000008, "Wrong alignment on ITextureInterface");
 static_assert(sizeof(ITextureInterface) == 0x000028, "Wrong size on ITextureInterface");
 
-// Class BasicUI.CheckableInterface
-// 0x0000 (0x0028 - 0x0028)
-class ICheckableInterface final : public IInterface
-{
-public:
-	bool Check(bool PlayAnimation, bool AnotherAppearance);
-	bool IsChecked();
-	bool Uncheck(bool PlayAnimation);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"CheckableInterface">();
-	}
-	static class ICheckableInterface* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ICheckableInterface>();
-	}
-};
-static_assert(alignof(ICheckableInterface) == 0x000008, "Wrong alignment on ICheckableInterface");
-static_assert(sizeof(ICheckableInterface) == 0x000028, "Wrong size on ICheckableInterface");
-
 // Class BasicUI.IntegerHolderInterface
 // 0x0000 (0x0028 - 0x0028)
 class IIntegerHolderInterface final : public IInterface
@@ -910,6 +824,27 @@ public:
 };
 static_assert(alignof(IIntegerHolderInterface) == 0x000008, "Wrong alignment on IIntegerHolderInterface");
 static_assert(sizeof(IIntegerHolderInterface) == 0x000028, "Wrong size on IIntegerHolderInterface");
+
+// Class BasicUI.FloatHolderInterface
+// 0x0000 (0x0028 - 0x0028)
+class IFloatHolderInterface final : public IInterface
+{
+public:
+	float GetFloat();
+	bool SetFloat(const float Number);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"FloatHolderInterface">();
+	}
+	static class IFloatHolderInterface* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<IFloatHolderInterface>();
+	}
+};
+static_assert(alignof(IFloatHolderInterface) == 0x000008, "Wrong alignment on IFloatHolderInterface");
+static_assert(sizeof(IFloatHolderInterface) == 0x000028, "Wrong size on IFloatHolderInterface");
 
 // Class BasicUI.TextHolderInterface
 // 0x0000 (0x0028 - 0x0028)
@@ -933,26 +868,6 @@ public:
 };
 static_assert(alignof(ITextHolderInterface) == 0x000008, "Wrong alignment on ITextHolderInterface");
 static_assert(sizeof(ITextHolderInterface) == 0x000028, "Wrong size on ITextHolderInterface");
-
-// Class BasicUI.GeneralUIExpressionInterface
-// 0x0000 (0x0028 - 0x0028)
-class IGeneralUIExpressionInterface final : public IInterface
-{
-public:
-	bool Blink();
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"GeneralUIExpressionInterface">();
-	}
-	static class IGeneralUIExpressionInterface* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<IGeneralUIExpressionInterface>();
-	}
-};
-static_assert(alignof(IGeneralUIExpressionInterface) == 0x000008, "Wrong alignment on IGeneralUIExpressionInterface");
-static_assert(sizeof(IGeneralUIExpressionInterface) == 0x000028, "Wrong size on IGeneralUIExpressionInterface");
 
 // Class BasicUI.TextureListInterface
 // 0x0000 (0x0028 - 0x0028)
@@ -981,6 +896,91 @@ public:
 };
 static_assert(alignof(ITextureListInterface) == 0x000008, "Wrong alignment on ITextureListInterface");
 static_assert(sizeof(ITextureListInterface) == 0x000028, "Wrong size on ITextureListInterface");
+
+// Class BasicUI.UIManager
+// 0x0100 (0x0130 - 0x0030)
+class UUIManager : public UGameInstanceSubsystem
+{
+public:
+	uint8                                         Pad_30[0xB0];                                      // 0x0030(0x00B0)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UUIObjectBase*>                  UIObjectList;                                      // 0x00E0(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	struct FGameplayTagContainer                  DisplayFlags;                                      // 0x00F0(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+	FMulticastInlineDelegateProperty_             UIObjectCreateEventDelegate;                       // 0x0110(0x0010)(ZeroConstructor, InstancedReference, Protected, NativeAccessSpecifierProtected)
+	FMulticastInlineDelegateProperty_             UIObjectRemoveEventDelegate;                       // 0x0120(0x0010)(ZeroConstructor, InstancedReference, Protected, NativeAccessSpecifierProtected)
+
+public:
+	static class UUIObjectBase* AddUIObjectBySoftClassPtr(const class UObject* InWorldContextObject, TSoftClassPtr<class UClass> InClassPtr, bool bOpenInstantly);
+	static const struct FGameplayTagContainer GetDisplayFlags(const class UObject* InWorldContextObject);
+	static void GetMenuLayerPriority(const EMenuLayer Layer, int32* BasePriority, int32* Range);
+	static class UUIObjectBase* GetUIObjectByClass(const class UObject* InWorldContextObject, TSubclassOf<class UUIObjectBase> ComponentClass);
+	static class UUIObjectBase* GetUIObjectBySoftClassPtr(const class UObject* InWorldContextObject, TSoftClassPtr<class UClass> InClassPtr);
+	static bool RemoveUIObjectBySoftClassPtr(const class UObject* InWorldContextObject, TSoftClassPtr<class UClass> InClassPtr);
+	static void SetDisplayFlags(const class UObject* InWorldContextObject, const struct FGameplayTagContainer& InDisplayFlags, bool bPlayAnimation, bool bForced);
+
+	void BindUIObjectCreateEvent(TDelegate<void(TSoftClassPtr<class UClass> UIObjectClass)> InDelegate);
+	void BindUIObjectRemoveEvent(TDelegate<void(TSoftClassPtr<class UClass> UIObjectClass)> InDelegate);
+	void CloseAllMenus(bool InExcludeIndicators);
+	bool CloseMenu(const class FName InMenuName);
+	class UMenuBase* CreateMenu(const struct FMenuContext& InMenuContext);
+	bool FinishMenu(const class FName InGroupName, const class FName InMenuName);
+	bool FinishMenuGroup(const class FName InGroupName);
+	TArray<class UMenuBase*> GetAllMenus(const EMenuLayer InMenuLayer);
+	TArray<class UMenuBase*> GetMenuGroup(const class FName InGroupName);
+	class UMenuBase* OpenMenu(const struct FMenuContext& InMenuContext);
+	void UnbindUIObjectCreateEvent(TDelegate<void(TSoftClassPtr<class UClass> UIObjectClass)> InDelegate);
+	void UnbindUIObjectRemoveEvent(TDelegate<void(TSoftClassPtr<class UClass> UIObjectClass)> InDelegate);
+
+	class UMenuBase* GetMenu(const class FName TargetMenuName) const;
+	bool IsMenuClosed(const class FName InMenuName) const;
+	bool IsMenuOpen(const class FName InMenuName) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"UIManager">();
+	}
+	static class UUIManager* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UUIManager>();
+	}
+};
+static_assert(alignof(UUIManager) == 0x000008, "Wrong alignment on UUIManager");
+static_assert(sizeof(UUIManager) == 0x000130, "Wrong size on UUIManager");
+static_assert(offsetof(UUIManager, UIObjectList) == 0x0000E0, "Member 'UUIManager::UIObjectList' has a wrong offset!");
+static_assert(offsetof(UUIManager, DisplayFlags) == 0x0000F0, "Member 'UUIManager::DisplayFlags' has a wrong offset!");
+static_assert(offsetof(UUIManager, UIObjectCreateEventDelegate) == 0x000110, "Member 'UUIManager::UIObjectCreateEventDelegate' has a wrong offset!");
+static_assert(offsetof(UUIManager, UIObjectRemoveEventDelegate) == 0x000120, "Member 'UUIManager::UIObjectRemoveEventDelegate' has a wrong offset!");
+
+// Class BasicUI.UIObjectBase
+// 0x0038 (0x0060 - 0x0028)
+class UUIObjectBase : public UObject
+{
+public:
+	struct FMenuContext                           TopMenuContext;                                    // 0x0028(0x0038)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NoDestructor, Protected, NativeAccessSpecifierProtected)
+
+public:
+	bool Close();
+	void Finish();
+	bool Open();
+	bool OpenWithMenu(const struct FMenuContext& InContext);
+
+	class UMenuBase* GetTopMenu() const;
+	bool IsClosed() const;
+	bool IsOpen() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"UIObjectBase">();
+	}
+	static class UUIObjectBase* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UUIObjectBase>();
+	}
+};
+static_assert(alignof(UUIObjectBase) == 0x000008, "Wrong alignment on UUIObjectBase");
+static_assert(sizeof(UUIObjectBase) == 0x000060, "Wrong size on UUIObjectBase");
+static_assert(offsetof(UUIObjectBase, TopMenuContext) == 0x000028, "Member 'UUIObjectBase::TopMenuContext' has a wrong offset!");
 
 }
 

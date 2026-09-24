@@ -17,17 +17,23 @@
 namespace SDK
 {
 
-// Function WDT_ResilienceUpInfo.WDT_ResilienceUpInfo_C.RefreshKeyImage
+// Function WDT_ResilienceUpInfo.WDT_ResilienceUpInfo_C.SetSelect
 // (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    IsSelect                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_ResilienceUpInfo_C::RefreshKeyImage()
+void UWDT_ResilienceUpInfo_C::SetSelect(bool IsSelect)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_ResilienceUpInfo_C", "RefreshKeyImage");
+		Func = Class->GetFunction("WDT_ResilienceUpInfo_C", "SetSelect");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::WDT_ResilienceUpInfo_C_SetSelect Parms{};
+
+	Parms.IsSelect = IsSelect;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -53,23 +59,17 @@ void UWDT_ResilienceUpInfo_C::SetResilienceUpInfo(const struct FUIResilienceUpIn
 }
 
 
-// Function WDT_ResilienceUpInfo.WDT_ResilienceUpInfo_C.SetSelect
+// Function WDT_ResilienceUpInfo.WDT_ResilienceUpInfo_C.RefreshKeyImage
 // (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    IsSelect                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_ResilienceUpInfo_C::SetSelect(bool IsSelect)
+void UWDT_ResilienceUpInfo_C::RefreshKeyImage()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_ResilienceUpInfo_C", "SetSelect");
+		Func = Class->GetFunction("WDT_ResilienceUpInfo_C", "RefreshKeyImage");
 
-	Params::WDT_ResilienceUpInfo_C_SetSelect Parms{};
-
-	Parms.IsSelect = IsSelect;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

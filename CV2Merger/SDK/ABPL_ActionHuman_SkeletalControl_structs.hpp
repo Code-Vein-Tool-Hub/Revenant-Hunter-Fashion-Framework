@@ -179,13 +179,5 @@ static_assert(offsetof(ABPL_ActionHuman_SkeletalControl::FAnimBlueprintGenerated
 static_assert(offsetof(ABPL_ActionHuman_SkeletalControl::FAnimBlueprintGeneratedConstantData, AppAnimGraphNode_InteractionIK) == 0x000C80, "Member 'ABPL_ActionHuman_SkeletalControl::FAnimBlueprintGeneratedConstantData::AppAnimGraphNode_InteractionIK' has a wrong offset!");
 static_assert(offsetof(ABPL_ActionHuman_SkeletalControl::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Root) == 0x000CB0, "Member 'ABPL_ActionHuman_SkeletalControl::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Root' has a wrong offset!");
 
-// ScriptStruct ABPL_ActionHuman_SkeletalControl.ABPL_ActionHuman_SkeletalControl_C.AnimBlueprintGeneratedMutableData
-// 0x0000 (0x0001 - 0x0001)
-struct ABPL_ActionHuman_SkeletalControl::FAnimBlueprintGeneratedMutableData final : public FAnimBlueprintMutableData
-{
-};
-static_assert(alignof(ABPL_ActionHuman_SkeletalControl::FAnimBlueprintGeneratedMutableData) == 0x000001, "Wrong alignment on ABPL_ActionHuman_SkeletalControl::FAnimBlueprintGeneratedMutableData");
-static_assert(sizeof(ABPL_ActionHuman_SkeletalControl::FAnimBlueprintGeneratedMutableData) == 0x000001, "Wrong size on ABPL_ActionHuman_SkeletalControl::FAnimBlueprintGeneratedMutableData");
-
 }
 

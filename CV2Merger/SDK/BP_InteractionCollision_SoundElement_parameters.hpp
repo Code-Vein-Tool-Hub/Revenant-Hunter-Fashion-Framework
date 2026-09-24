@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "STR_InteractionCollision_Sound_structs.hpp"
 #include "AkAudio_structs.hpp"
+#include "STR_InteractionCollision_Sound_structs.hpp"
 
 
 namespace SDK::Params

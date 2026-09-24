@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "STR_BodyTrailEffectData_structs.hpp"
-#include "E_CharacterVisualControl_CharacterMode_structs.hpp"
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "STR_BodyTrailEffectData_structs.hpp"
 #include "Extensions_structs.hpp"
 #include "Extensions_classes.hpp"
+#include "E_CharacterVisualControl_CharacterMode_structs.hpp"
 
 
 namespace SDK
@@ -117,6 +117,7 @@ public:
 	void BodyTrailEffect_SetANSParameter(const class UANS_BodyTrailEffect_C* BodyTrailEffect);
 	void BodyTrailEffect_SetEffect(class UNiagaraSystem* BodyTrailAsset);
 	void BodyTrailEffect_SetMaterialParameter(const struct FSTR_BodyTrailEffectData& BodyTrailEffectData, double Value);
+	void BodyTrailEffect_SetParameter(int32 MaxCount, int32 FrameStep, double Lifetime, bool bUseColor, const struct FLinearColor& EmissiveColorBegin, const struct FLinearColor& EmissiveColorEnd, double EmissiveScale);
 	void CheckOtherMesh(class UMeshComponent* Mesh, bool* Result);
 	void CheckValidEffectMesh(bool* bResult);
 	void ClearAllOtherMesh();
@@ -171,7 +172,7 @@ public:
 	void SetSoulBodyEffect_Mesh(class UMeshComponent* Mesh, float Weight, E_CharacterVisualControl_CharacterMode Mode);
 	void SetUseEyeLight_Off(bool bUseEyeLight_Off_0);
 	void SetVanishBodyMode(class UBP_VanishBodyEffect_C*& BodyEffect, E_CharacterVisualControl_CharacterMode Mode, bool bVanishDeath, bool EnableEffect);
-	void SetVisibilityMesh(bool bVisibility, bool bCharacter, bool bWeapon, bool bOther);
+	void SetVisibilityMesh(bool bVisibility, bool bCharacter, bool bWeapon, bool bOther, TMap<class UMeshComponent*, bool>* VisibilityMap);
 	void SetVisiblityMaterialElement(class USkinnedMeshComponent* Meah, class FName MaterialElementName, bool bVisible);
 	void SlowEffect_SetMaterialParameter(float Weight);
 	void SoulBody_Begin(double TotalDuration, E_CharacterVisualControl_CharacterMode CharacterMode);

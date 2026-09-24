@@ -18,7 +18,7 @@ namespace SDK::Params
 {
 
 // Function BP_CampMenuUIObject.BP_CampMenuUIObject_C.ExecuteUbergraph_BP_CampMenuUIObject
-// 0x01F0 (0x01F0 - 0x0000)
+// 0x0200 (0x0200 - 0x0000)
 struct BP_CampMenuUIObject_C_ExecuteUbergraph_BP_CampMenuUIObject final
 {
 public:
@@ -27,25 +27,25 @@ public:
 	class UWDT_BuddyChangeMenu_C*                 CallFunc_GetChangeBuddyMenu_AsWDT_Buddy_Change_Menu; // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_11[0xF];                                       // 0x0011(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTalkToLouTableRow                     K2Node_Event_InTalkInfo;                           // 0x0020(0x01B0)(ConstParm)
-	class UWDT_RestMenu_C*                        CallFunc_GetRestMenu_OutRestMenu;                  // 0x01D0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_PostEventSystem_ReturnValue;              // 0x01D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x01DC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1DD[0x3];                                      // 0x01DD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_PostEventSystem_ReturnValue_1;            // 0x01E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_Event_InListIndex;                          // 0x01E4(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTalkToLouTableRow                     K2Node_Event_InTalkInfo;                           // 0x0020(0x01C0)(ConstParm)
+	class UWDT_RestMenu_C*                        CallFunc_GetRestMenu_OutRestMenu;                  // 0x01E0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_PostEventSystem_ReturnValue;              // 0x01E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x01EC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1ED[0x3];                                      // 0x01ED(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_PostEventSystem_ReturnValue_1;            // 0x01F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FUIBuddySelectInfo                     K2Node_Event_InSelectInfo;                         // 0x01F4(0x0008)(ConstParm, NoDestructor)
 };
 static_assert(alignof(BP_CampMenuUIObject_C_ExecuteUbergraph_BP_CampMenuUIObject) == 0x000010, "Wrong alignment on BP_CampMenuUIObject_C_ExecuteUbergraph_BP_CampMenuUIObject");
-static_assert(sizeof(BP_CampMenuUIObject_C_ExecuteUbergraph_BP_CampMenuUIObject) == 0x0001F0, "Wrong size on BP_CampMenuUIObject_C_ExecuteUbergraph_BP_CampMenuUIObject");
+static_assert(sizeof(BP_CampMenuUIObject_C_ExecuteUbergraph_BP_CampMenuUIObject) == 0x000200, "Wrong size on BP_CampMenuUIObject_C_ExecuteUbergraph_BP_CampMenuUIObject");
 static_assert(offsetof(BP_CampMenuUIObject_C_ExecuteUbergraph_BP_CampMenuUIObject, EntryPoint) == 0x000000, "Member 'BP_CampMenuUIObject_C_ExecuteUbergraph_BP_CampMenuUIObject::EntryPoint' has a wrong offset!");
 static_assert(offsetof(BP_CampMenuUIObject_C_ExecuteUbergraph_BP_CampMenuUIObject, CallFunc_GetChangeBuddyMenu_AsWDT_Buddy_Change_Menu) == 0x000008, "Member 'BP_CampMenuUIObject_C_ExecuteUbergraph_BP_CampMenuUIObject::CallFunc_GetChangeBuddyMenu_AsWDT_Buddy_Change_Menu' has a wrong offset!");
 static_assert(offsetof(BP_CampMenuUIObject_C_ExecuteUbergraph_BP_CampMenuUIObject, CallFunc_IsValid_ReturnValue) == 0x000010, "Member 'BP_CampMenuUIObject_C_ExecuteUbergraph_BP_CampMenuUIObject::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_CampMenuUIObject_C_ExecuteUbergraph_BP_CampMenuUIObject, K2Node_Event_InTalkInfo) == 0x000020, "Member 'BP_CampMenuUIObject_C_ExecuteUbergraph_BP_CampMenuUIObject::K2Node_Event_InTalkInfo' has a wrong offset!");
-static_assert(offsetof(BP_CampMenuUIObject_C_ExecuteUbergraph_BP_CampMenuUIObject, CallFunc_GetRestMenu_OutRestMenu) == 0x0001D0, "Member 'BP_CampMenuUIObject_C_ExecuteUbergraph_BP_CampMenuUIObject::CallFunc_GetRestMenu_OutRestMenu' has a wrong offset!");
-static_assert(offsetof(BP_CampMenuUIObject_C_ExecuteUbergraph_BP_CampMenuUIObject, CallFunc_PostEventSystem_ReturnValue) == 0x0001D8, "Member 'BP_CampMenuUIObject_C_ExecuteUbergraph_BP_CampMenuUIObject::CallFunc_PostEventSystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CampMenuUIObject_C_ExecuteUbergraph_BP_CampMenuUIObject, CallFunc_IsValid_ReturnValue_1) == 0x0001DC, "Member 'BP_CampMenuUIObject_C_ExecuteUbergraph_BP_CampMenuUIObject::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_CampMenuUIObject_C_ExecuteUbergraph_BP_CampMenuUIObject, CallFunc_PostEventSystem_ReturnValue_1) == 0x0001E0, "Member 'BP_CampMenuUIObject_C_ExecuteUbergraph_BP_CampMenuUIObject::CallFunc_PostEventSystem_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_CampMenuUIObject_C_ExecuteUbergraph_BP_CampMenuUIObject, K2Node_Event_InListIndex) == 0x0001E4, "Member 'BP_CampMenuUIObject_C_ExecuteUbergraph_BP_CampMenuUIObject::K2Node_Event_InListIndex' has a wrong offset!");
+static_assert(offsetof(BP_CampMenuUIObject_C_ExecuteUbergraph_BP_CampMenuUIObject, CallFunc_GetRestMenu_OutRestMenu) == 0x0001E0, "Member 'BP_CampMenuUIObject_C_ExecuteUbergraph_BP_CampMenuUIObject::CallFunc_GetRestMenu_OutRestMenu' has a wrong offset!");
+static_assert(offsetof(BP_CampMenuUIObject_C_ExecuteUbergraph_BP_CampMenuUIObject, CallFunc_PostEventSystem_ReturnValue) == 0x0001E8, "Member 'BP_CampMenuUIObject_C_ExecuteUbergraph_BP_CampMenuUIObject::CallFunc_PostEventSystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CampMenuUIObject_C_ExecuteUbergraph_BP_CampMenuUIObject, CallFunc_IsValid_ReturnValue_1) == 0x0001EC, "Member 'BP_CampMenuUIObject_C_ExecuteUbergraph_BP_CampMenuUIObject::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_CampMenuUIObject_C_ExecuteUbergraph_BP_CampMenuUIObject, CallFunc_PostEventSystem_ReturnValue_1) == 0x0001F0, "Member 'BP_CampMenuUIObject_C_ExecuteUbergraph_BP_CampMenuUIObject::CallFunc_PostEventSystem_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_CampMenuUIObject_C_ExecuteUbergraph_BP_CampMenuUIObject, K2Node_Event_InSelectInfo) == 0x0001F4, "Member 'BP_CampMenuUIObject_C_ExecuteUbergraph_BP_CampMenuUIObject::K2Node_Event_InSelectInfo' has a wrong offset!");
 
 // Function BP_CampMenuUIObject.BP_CampMenuUIObject_C.GetChangeBuddyMenu
 // 0x0028 (0x0028 - 0x0000)
@@ -101,15 +101,15 @@ static_assert(sizeof(BP_CampMenuUIObject_C_IsTalkingToLou) == 0x000001, "Wrong s
 static_assert(offsetof(BP_CampMenuUIObject_C_IsTalkingToLou, OutResult) == 0x000000, "Member 'BP_CampMenuUIObject_C_IsTalkingToLou::OutResult' has a wrong offset!");
 
 // Function BP_CampMenuUIObject.BP_CampMenuUIObject_C.NotifyBuddyChanged
-// 0x0004 (0x0004 - 0x0000)
+// 0x0008 (0x0008 - 0x0000)
 struct BP_CampMenuUIObject_C_NotifyBuddyChanged final
 {
 public:
-	int32                                         InListIndex;                                       // 0x0000(0x0004)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FUIBuddySelectInfo                     InSelectInfo;                                      // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 };
 static_assert(alignof(BP_CampMenuUIObject_C_NotifyBuddyChanged) == 0x000004, "Wrong alignment on BP_CampMenuUIObject_C_NotifyBuddyChanged");
-static_assert(sizeof(BP_CampMenuUIObject_C_NotifyBuddyChanged) == 0x000004, "Wrong size on BP_CampMenuUIObject_C_NotifyBuddyChanged");
-static_assert(offsetof(BP_CampMenuUIObject_C_NotifyBuddyChanged, InListIndex) == 0x000000, "Member 'BP_CampMenuUIObject_C_NotifyBuddyChanged::InListIndex' has a wrong offset!");
+static_assert(sizeof(BP_CampMenuUIObject_C_NotifyBuddyChanged) == 0x000008, "Wrong size on BP_CampMenuUIObject_C_NotifyBuddyChanged");
+static_assert(offsetof(BP_CampMenuUIObject_C_NotifyBuddyChanged, InSelectInfo) == 0x000000, "Member 'BP_CampMenuUIObject_C_NotifyBuddyChanged::InSelectInfo' has a wrong offset!");
 
 // Function BP_CampMenuUIObject.BP_CampMenuUIObject_C.OnChangeBuddyMenuClosed
 // 0x0038 (0x0038 - 0x0000)
@@ -204,6 +204,48 @@ static_assert(offsetof(BP_CampMenuUIObject_C_OnMapMenuClosed, K2Node_DynamicCast
 static_assert(offsetof(BP_CampMenuUIObject_C_OnMapMenuClosed, CallFunc_IsOpenSupportMenu_IsOpen) == 0x000041, "Member 'BP_CampMenuUIObject_C_OnMapMenuClosed::CallFunc_IsOpenSupportMenu_IsOpen' has a wrong offset!");
 static_assert(offsetof(BP_CampMenuUIObject_C_OnMapMenuClosed, CallFunc_Not_PreBool_ReturnValue) == 0x000042, "Member 'BP_CampMenuUIObject_C_OnMapMenuClosed::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
 
+// Function BP_CampMenuUIObject.BP_CampMenuUIObject_C.OnPresetMenuClosed
+// 0x0038 (0x0038 - 0x0000)
+struct BP_CampMenuUIObject_C_OnPresetMenuClosed final
+{
+public:
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0000(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue_1;   // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UMenuBase*                              CallFunc_GetMenu_ReturnValue;                      // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UMenuBase*                              CallFunc_GetMenu_ReturnValue_1;                    // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_CampMenuUIObject_C_OnPresetMenuClosed) == 0x000008, "Wrong alignment on BP_CampMenuUIObject_C_OnPresetMenuClosed");
+static_assert(sizeof(BP_CampMenuUIObject_C_OnPresetMenuClosed) == 0x000038, "Wrong size on BP_CampMenuUIObject_C_OnPresetMenuClosed");
+static_assert(offsetof(BP_CampMenuUIObject_C_OnPresetMenuClosed, K2Node_CreateDelegate_OutputDelegate) == 0x000000, "Member 'BP_CampMenuUIObject_C_OnPresetMenuClosed::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(BP_CampMenuUIObject_C_OnPresetMenuClosed, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000010, "Member 'BP_CampMenuUIObject_C_OnPresetMenuClosed::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CampMenuUIObject_C_OnPresetMenuClosed, CallFunc_GetGameInstanceSubsystem_ReturnValue_1) == 0x000018, "Member 'BP_CampMenuUIObject_C_OnPresetMenuClosed::CallFunc_GetGameInstanceSubsystem_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_CampMenuUIObject_C_OnPresetMenuClosed, CallFunc_GetMenu_ReturnValue) == 0x000020, "Member 'BP_CampMenuUIObject_C_OnPresetMenuClosed::CallFunc_GetMenu_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CampMenuUIObject_C_OnPresetMenuClosed, CallFunc_GetMenu_ReturnValue_1) == 0x000028, "Member 'BP_CampMenuUIObject_C_OnPresetMenuClosed::CallFunc_GetMenu_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_CampMenuUIObject_C_OnPresetMenuClosed, CallFunc_IsValid_ReturnValue) == 0x000030, "Member 'BP_CampMenuUIObject_C_OnPresetMenuClosed::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+
+// Function BP_CampMenuUIObject.BP_CampMenuUIObject_C.OnPresetSelectMenuClosed
+// 0x0038 (0x0038 - 0x0000)
+struct BP_CampMenuUIObject_C_OnPresetSelectMenuClosed final
+{
+public:
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0000(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue_1;   // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UMenuBase*                              CallFunc_GetMenu_ReturnValue;                      // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UMenuBase*                              CallFunc_GetMenu_ReturnValue_1;                    // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_CampMenuUIObject_C_OnPresetSelectMenuClosed) == 0x000008, "Wrong alignment on BP_CampMenuUIObject_C_OnPresetSelectMenuClosed");
+static_assert(sizeof(BP_CampMenuUIObject_C_OnPresetSelectMenuClosed) == 0x000038, "Wrong size on BP_CampMenuUIObject_C_OnPresetSelectMenuClosed");
+static_assert(offsetof(BP_CampMenuUIObject_C_OnPresetSelectMenuClosed, K2Node_CreateDelegate_OutputDelegate) == 0x000000, "Member 'BP_CampMenuUIObject_C_OnPresetSelectMenuClosed::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(BP_CampMenuUIObject_C_OnPresetSelectMenuClosed, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000010, "Member 'BP_CampMenuUIObject_C_OnPresetSelectMenuClosed::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CampMenuUIObject_C_OnPresetSelectMenuClosed, CallFunc_GetGameInstanceSubsystem_ReturnValue_1) == 0x000018, "Member 'BP_CampMenuUIObject_C_OnPresetSelectMenuClosed::CallFunc_GetGameInstanceSubsystem_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_CampMenuUIObject_C_OnPresetSelectMenuClosed, CallFunc_GetMenu_ReturnValue) == 0x000020, "Member 'BP_CampMenuUIObject_C_OnPresetSelectMenuClosed::CallFunc_GetMenu_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CampMenuUIObject_C_OnPresetSelectMenuClosed, CallFunc_GetMenu_ReturnValue_1) == 0x000028, "Member 'BP_CampMenuUIObject_C_OnPresetSelectMenuClosed::CallFunc_GetMenu_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_CampMenuUIObject_C_OnPresetSelectMenuClosed, CallFunc_IsValid_ReturnValue) == 0x000030, "Member 'BP_CampMenuUIObject_C_OnPresetSelectMenuClosed::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+
 // Function BP_CampMenuUIObject.BP_CampMenuUIObject_C.OnResilienceUpMenuClosed
 // 0x0038 (0x0038 - 0x0000)
 struct BP_CampMenuUIObject_C_OnResilienceUpMenuClosed final
@@ -289,7 +331,7 @@ static_assert(offsetof(BP_CampMenuUIObject_C_OnWeaponGadgetChangeMenuClosed, Cal
 static_assert(offsetof(BP_CampMenuUIObject_C_OnWeaponGadgetChangeMenuClosed, CallFunc_IsValid_ReturnValue) == 0x000030, "Member 'BP_CampMenuUIObject_C_OnWeaponGadgetChangeMenuClosed::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
 // Function BP_CampMenuUIObject.BP_CampMenuUIObject_C.Open
-// 0x01D0 (0x01D0 - 0x0000)
+// 0x01E0 (0x01E0 - 0x0000)
 struct BP_CampMenuUIObject_C_Open final
 {
 public:
@@ -297,18 +339,18 @@ public:
 	bool                                          CallFunc_Open_ReturnValue;                         // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_3[0xD];                                        // 0x0003(0x000D)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTalkToLouTableRow                     CallFunc_GetAvailableTalkToLouInfoBP_OutInfo;      // 0x0010(0x01B0)()
-	bool                                          CallFunc_GetAvailableTalkToLouInfoBP_ReturnValue;  // 0x01C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Open_ReturnValue_1;                       // 0x01C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTalkToLouTableRow                     CallFunc_GetAvailableTalkToLouInfoBP_OutInfo;      // 0x0010(0x01C0)()
+	bool                                          CallFunc_GetAvailableTalkToLouInfoBP_ReturnValue;  // 0x01D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Open_ReturnValue_1;                       // 0x01D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_CampMenuUIObject_C_Open) == 0x000010, "Wrong alignment on BP_CampMenuUIObject_C_Open");
-static_assert(sizeof(BP_CampMenuUIObject_C_Open) == 0x0001D0, "Wrong size on BP_CampMenuUIObject_C_Open");
+static_assert(sizeof(BP_CampMenuUIObject_C_Open) == 0x0001E0, "Wrong size on BP_CampMenuUIObject_C_Open");
 static_assert(offsetof(BP_CampMenuUIObject_C_Open, ReturnValue) == 0x000000, "Member 'BP_CampMenuUIObject_C_Open::ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_CampMenuUIObject_C_Open, CallFunc_Open_ReturnValue) == 0x000001, "Member 'BP_CampMenuUIObject_C_Open::CallFunc_Open_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_CampMenuUIObject_C_Open, CallFunc_Not_PreBool_ReturnValue) == 0x000002, "Member 'BP_CampMenuUIObject_C_Open::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_CampMenuUIObject_C_Open, CallFunc_GetAvailableTalkToLouInfoBP_OutInfo) == 0x000010, "Member 'BP_CampMenuUIObject_C_Open::CallFunc_GetAvailableTalkToLouInfoBP_OutInfo' has a wrong offset!");
-static_assert(offsetof(BP_CampMenuUIObject_C_Open, CallFunc_GetAvailableTalkToLouInfoBP_ReturnValue) == 0x0001C0, "Member 'BP_CampMenuUIObject_C_Open::CallFunc_GetAvailableTalkToLouInfoBP_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CampMenuUIObject_C_Open, CallFunc_Open_ReturnValue_1) == 0x0001C1, "Member 'BP_CampMenuUIObject_C_Open::CallFunc_Open_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_CampMenuUIObject_C_Open, CallFunc_GetAvailableTalkToLouInfoBP_ReturnValue) == 0x0001D0, "Member 'BP_CampMenuUIObject_C_Open::CallFunc_GetAvailableTalkToLouInfoBP_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CampMenuUIObject_C_Open, CallFunc_Open_ReturnValue_1) == 0x0001D1, "Member 'BP_CampMenuUIObject_C_Open::CallFunc_Open_ReturnValue_1' has a wrong offset!");
 
 // Function BP_CampMenuUIObject.BP_CampMenuUIObject_C.OpenChangeBuddyMenu
 // 0x0068 (0x0068 - 0x0000)
@@ -491,14 +533,14 @@ static_assert(offsetof(BP_CampMenuUIObject_C_OpenWeaponGadgetChangeMenu, CallFun
 static_assert(offsetof(BP_CampMenuUIObject_C_OpenWeaponGadgetChangeMenu, K2Node_CreateDelegate_OutputDelegate) == 0x000054, "Member 'BP_CampMenuUIObject_C_OpenWeaponGadgetChangeMenu::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
 
 // Function BP_CampMenuUIObject.BP_CampMenuUIObject_C.TalkToLouBP
-// 0x01B0 (0x01B0 - 0x0000)
+// 0x01C0 (0x01C0 - 0x0000)
 struct BP_CampMenuUIObject_C_TalkToLouBP final
 {
 public:
-	struct FTalkToLouTableRow                     InTalkInfo;                                        // 0x0000(0x01B0)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FTalkToLouTableRow                     InTalkInfo;                                        // 0x0000(0x01C0)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
 static_assert(alignof(BP_CampMenuUIObject_C_TalkToLouBP) == 0x000010, "Wrong alignment on BP_CampMenuUIObject_C_TalkToLouBP");
-static_assert(sizeof(BP_CampMenuUIObject_C_TalkToLouBP) == 0x0001B0, "Wrong size on BP_CampMenuUIObject_C_TalkToLouBP");
+static_assert(sizeof(BP_CampMenuUIObject_C_TalkToLouBP) == 0x0001C0, "Wrong size on BP_CampMenuUIObject_C_TalkToLouBP");
 static_assert(offsetof(BP_CampMenuUIObject_C_TalkToLouBP, InTalkInfo) == 0x000000, "Member 'BP_CampMenuUIObject_C_TalkToLouBP::InTalkInfo' has a wrong offset!");
 
 }

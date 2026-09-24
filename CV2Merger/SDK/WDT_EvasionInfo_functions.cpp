@@ -17,55 +17,23 @@
 namespace SDK
 {
 
-// Function WDT_EvasionInfo.WDT_EvasionInfo_C.ExecuteUbergraph_WDT_EvasionInfo
-// (Final, UbergraphFunction)
+// Function WDT_EvasionInfo.WDT_EvasionInfo_C.SetEvasionTypeForComparison
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EUIEvasionType                          CurrentEvasionType                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EUIEvasionType                          EvasionType                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_EvasionInfo_C::ExecuteUbergraph_WDT_EvasionInfo(int32 EntryPoint)
+void UWDT_EvasionInfo_C::SetEvasionTypeForComparison(EUIEvasionType CurrentEvasionType, EUIEvasionType EvasionType)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_EvasionInfo_C", "ExecuteUbergraph_WDT_EvasionInfo");
+		Func = Class->GetFunction("WDT_EvasionInfo_C", "SetEvasionTypeForComparison");
 
-	Params::WDT_EvasionInfo_C_ExecuteUbergraph_WDT_EvasionInfo Parms{};
+	Params::WDT_EvasionInfo_C_SetEvasionTypeForComparison Parms{};
 
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_EvasionInfo.WDT_EvasionInfo_C.OnInitialized
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWDT_EvasionInfo_C::OnInitialized()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_EvasionInfo_C", "OnInitialized");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WDT_EvasionInfo.WDT_EvasionInfo_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_EvasionInfo_C::PreConstruct(bool IsDesignTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_EvasionInfo_C", "PreConstruct");
-
-	Params::WDT_EvasionInfo_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
+	Parms.CurrentEvasionType = CurrentEvasionType;
+	Parms.EvasionType = EvasionType;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -91,23 +59,55 @@ void UWDT_EvasionInfo_C::SetEvasionType(EUIEvasionType EvasionType)
 }
 
 
-// Function WDT_EvasionInfo.WDT_EvasionInfo_C.SetEvasionTypeForComparison
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function WDT_EvasionInfo.WDT_EvasionInfo_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// EUIEvasionType                          CurrentEvasionType                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EUIEvasionType                          EvasionType                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_EvasionInfo_C::SetEvasionTypeForComparison(EUIEvasionType CurrentEvasionType, EUIEvasionType EvasionType)
+void UWDT_EvasionInfo_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_EvasionInfo_C", "SetEvasionTypeForComparison");
+		Func = Class->GetFunction("WDT_EvasionInfo_C", "PreConstruct");
 
-	Params::WDT_EvasionInfo_C_SetEvasionTypeForComparison Parms{};
+	Params::WDT_EvasionInfo_C_PreConstruct Parms{};
 
-	Parms.CurrentEvasionType = CurrentEvasionType;
-	Parms.EvasionType = EvasionType;
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_EvasionInfo.WDT_EvasionInfo_C.OnInitialized
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWDT_EvasionInfo_C::OnInitialized()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_EvasionInfo_C", "OnInitialized");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WDT_EvasionInfo.WDT_EvasionInfo_C.ExecuteUbergraph_WDT_EvasionInfo
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_EvasionInfo_C::ExecuteUbergraph_WDT_EvasionInfo(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_EvasionInfo_C", "ExecuteUbergraph_WDT_EvasionInfo");
+
+	Params::WDT_EvasionInfo_C_ExecuteUbergraph_WDT_EvasionInfo Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

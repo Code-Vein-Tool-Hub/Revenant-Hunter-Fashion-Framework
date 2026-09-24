@@ -19,16 +19,17 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_MatchingUIObject.BP_MatchingUIObject_C
-// 0x0050 (0x0180 - 0x0130)
+// 0x0050 (0x01D0 - 0x0180)
 class UBP_MatchingUIObject_C final : public UMatchingUIObject
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0130(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FMenuContext                           HelperMenuContext;                                 // 0x0138(0x0038)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NoDestructor)
-	class UMenuBase*                              CurrentMenu;                                       // 0x0170(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UAppMenuBase*                           PrevMenu;                                          // 0x0178(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0180(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FMenuContext                           HelperMenuContext;                                 // 0x0188(0x0038)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NoDestructor)
+	class UMenuBase*                              CurrentMenu;                                       // 0x01C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UAppMenuBase*                           PrevMenu;                                          // 0x01C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
+	bool Close();
 	void ExecuteUbergraph_BP_MatchingUIObject(int32 EntryPoint);
 	void OnConfigurationNetworkMenuClosed();
 	void OnHelperMenuClosed();
@@ -46,11 +47,11 @@ public:
 	}
 };
 static_assert(alignof(UBP_MatchingUIObject_C) == 0x000008, "Wrong alignment on UBP_MatchingUIObject_C");
-static_assert(sizeof(UBP_MatchingUIObject_C) == 0x000180, "Wrong size on UBP_MatchingUIObject_C");
-static_assert(offsetof(UBP_MatchingUIObject_C, UberGraphFrame) == 0x000130, "Member 'UBP_MatchingUIObject_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_MatchingUIObject_C, HelperMenuContext) == 0x000138, "Member 'UBP_MatchingUIObject_C::HelperMenuContext' has a wrong offset!");
-static_assert(offsetof(UBP_MatchingUIObject_C, CurrentMenu) == 0x000170, "Member 'UBP_MatchingUIObject_C::CurrentMenu' has a wrong offset!");
-static_assert(offsetof(UBP_MatchingUIObject_C, PrevMenu) == 0x000178, "Member 'UBP_MatchingUIObject_C::PrevMenu' has a wrong offset!");
+static_assert(sizeof(UBP_MatchingUIObject_C) == 0x0001D0, "Wrong size on UBP_MatchingUIObject_C");
+static_assert(offsetof(UBP_MatchingUIObject_C, UberGraphFrame) == 0x000180, "Member 'UBP_MatchingUIObject_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UBP_MatchingUIObject_C, HelperMenuContext) == 0x000188, "Member 'UBP_MatchingUIObject_C::HelperMenuContext' has a wrong offset!");
+static_assert(offsetof(UBP_MatchingUIObject_C, CurrentMenu) == 0x0001C0, "Member 'UBP_MatchingUIObject_C::CurrentMenu' has a wrong offset!");
+static_assert(offsetof(UBP_MatchingUIObject_C, PrevMenu) == 0x0001C8, "Member 'UBP_MatchingUIObject_C::PrevMenu' has a wrong offset!");
 
 }
 

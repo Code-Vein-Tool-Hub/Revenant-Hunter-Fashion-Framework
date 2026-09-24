@@ -15,42 +15,22 @@ namespace SDK::Params
 {
 
 // Function BP_PickupItem.BP_PickupItem_C.ExecuteUbergraph_BP_PickupItem
-// 0x0060 (0x0060 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct BP_PickupItem_C_ExecuteUbergraph_BP_PickupItem final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_bShouldHide;                          // 0x0010(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USceneComponent*                        CallFunc_K2_GetRootComponent_ReturnValue;          // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 K2Node_Event_InActor;                              // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<class USceneComponent*>                CallFunc_GetChildrenComponents_Children;           // 0x0028(0x0010)(ReferenceParm, ContainsInstancedReference)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class USceneComponent*                        CallFunc_Array_Get_Item;                           // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UNiagaraComponent*                      K2Node_DynamicCast_AsNiagara_Particle_System_Component; // 0x0050(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_bShouldHide;                          // 0x0004(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_bShouldHide_1;                        // 0x0005(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 K2Node_Event_InActor;                              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_PickupItem_C_ExecuteUbergraph_BP_PickupItem) == 0x000008, "Wrong alignment on BP_PickupItem_C_ExecuteUbergraph_BP_PickupItem");
-static_assert(sizeof(BP_PickupItem_C_ExecuteUbergraph_BP_PickupItem) == 0x000060, "Wrong size on BP_PickupItem_C_ExecuteUbergraph_BP_PickupItem");
+static_assert(sizeof(BP_PickupItem_C_ExecuteUbergraph_BP_PickupItem) == 0x000010, "Wrong size on BP_PickupItem_C_ExecuteUbergraph_BP_PickupItem");
 static_assert(offsetof(BP_PickupItem_C_ExecuteUbergraph_BP_PickupItem, EntryPoint) == 0x000000, "Member 'BP_PickupItem_C_ExecuteUbergraph_BP_PickupItem::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_PickupItem_C_ExecuteUbergraph_BP_PickupItem, Temp_int_Array_Index_Variable) == 0x000004, "Member 'BP_PickupItem_C_ExecuteUbergraph_BP_PickupItem::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_PickupItem_C_ExecuteUbergraph_BP_PickupItem, Temp_int_Loop_Counter_Variable) == 0x000008, "Member 'BP_PickupItem_C_ExecuteUbergraph_BP_PickupItem::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_PickupItem_C_ExecuteUbergraph_BP_PickupItem, CallFunc_Add_IntInt_ReturnValue) == 0x00000C, "Member 'BP_PickupItem_C_ExecuteUbergraph_BP_PickupItem::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PickupItem_C_ExecuteUbergraph_BP_PickupItem, K2Node_Event_bShouldHide) == 0x000010, "Member 'BP_PickupItem_C_ExecuteUbergraph_BP_PickupItem::K2Node_Event_bShouldHide' has a wrong offset!");
-static_assert(offsetof(BP_PickupItem_C_ExecuteUbergraph_BP_PickupItem, CallFunc_K2_GetRootComponent_ReturnValue) == 0x000018, "Member 'BP_PickupItem_C_ExecuteUbergraph_BP_PickupItem::CallFunc_K2_GetRootComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PickupItem_C_ExecuteUbergraph_BP_PickupItem, K2Node_Event_InActor) == 0x000020, "Member 'BP_PickupItem_C_ExecuteUbergraph_BP_PickupItem::K2Node_Event_InActor' has a wrong offset!");
-static_assert(offsetof(BP_PickupItem_C_ExecuteUbergraph_BP_PickupItem, CallFunc_GetChildrenComponents_Children) == 0x000028, "Member 'BP_PickupItem_C_ExecuteUbergraph_BP_PickupItem::CallFunc_GetChildrenComponents_Children' has a wrong offset!");
-static_assert(offsetof(BP_PickupItem_C_ExecuteUbergraph_BP_PickupItem, CallFunc_Array_Length_ReturnValue) == 0x000038, "Member 'BP_PickupItem_C_ExecuteUbergraph_BP_PickupItem::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PickupItem_C_ExecuteUbergraph_BP_PickupItem, CallFunc_Array_Get_Item) == 0x000040, "Member 'BP_PickupItem_C_ExecuteUbergraph_BP_PickupItem::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_PickupItem_C_ExecuteUbergraph_BP_PickupItem, CallFunc_Less_IntInt_ReturnValue) == 0x000048, "Member 'BP_PickupItem_C_ExecuteUbergraph_BP_PickupItem::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PickupItem_C_ExecuteUbergraph_BP_PickupItem, K2Node_DynamicCast_AsNiagara_Particle_System_Component) == 0x000050, "Member 'BP_PickupItem_C_ExecuteUbergraph_BP_PickupItem::K2Node_DynamicCast_AsNiagara_Particle_System_Component' has a wrong offset!");
-static_assert(offsetof(BP_PickupItem_C_ExecuteUbergraph_BP_PickupItem, K2Node_DynamicCast_bSuccess) == 0x000058, "Member 'BP_PickupItem_C_ExecuteUbergraph_BP_PickupItem::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BP_PickupItem_C_ExecuteUbergraph_BP_PickupItem, K2Node_Event_bShouldHide) == 0x000004, "Member 'BP_PickupItem_C_ExecuteUbergraph_BP_PickupItem::K2Node_Event_bShouldHide' has a wrong offset!");
+static_assert(offsetof(BP_PickupItem_C_ExecuteUbergraph_BP_PickupItem, K2Node_Event_bShouldHide_1) == 0x000005, "Member 'BP_PickupItem_C_ExecuteUbergraph_BP_PickupItem::K2Node_Event_bShouldHide_1' has a wrong offset!");
+static_assert(offsetof(BP_PickupItem_C_ExecuteUbergraph_BP_PickupItem, K2Node_Event_InActor) == 0x000008, "Member 'BP_PickupItem_C_ExecuteUbergraph_BP_PickupItem::K2Node_Event_InActor' has a wrong offset!");
 
 // Function BP_PickupItem.BP_PickupItem_C.OnInteractionEnd_BP
 // 0x0008 (0x0008 - 0x0000)
@@ -63,6 +43,40 @@ static_assert(alignof(BP_PickupItem_C_OnInteractionEnd_BP) == 0x000008, "Wrong a
 static_assert(sizeof(BP_PickupItem_C_OnInteractionEnd_BP) == 0x000008, "Wrong size on BP_PickupItem_C_OnInteractionEnd_BP");
 static_assert(offsetof(BP_PickupItem_C_OnInteractionEnd_BP, InActor) == 0x000000, "Member 'BP_PickupItem_C_OnInteractionEnd_BP::InActor' has a wrong offset!");
 
+// Function BP_PickupItem.BP_PickupItem_C.SetEffectHidden
+// 0x0050 (0x0050 - 0x0000)
+struct BP_PickupItem_C_SetEffectHidden final
+{
+public:
+	bool                                          InputPin;                                          // 0x0000(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        CallFunc_K2_GetRootComponent_ReturnValue;          // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TArray<class USceneComponent*>                CallFunc_GetChildrenComponents_Children;           // 0x0018(0x0010)(ReferenceParm, ContainsInstancedReference)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USceneComponent*                        CallFunc_Array_Get_Item;                           // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UNiagaraComponent*                      K2Node_DynamicCast_AsNiagara_Particle_System_Component; // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_PickupItem_C_SetEffectHidden) == 0x000008, "Wrong alignment on BP_PickupItem_C_SetEffectHidden");
+static_assert(sizeof(BP_PickupItem_C_SetEffectHidden) == 0x000050, "Wrong size on BP_PickupItem_C_SetEffectHidden");
+static_assert(offsetof(BP_PickupItem_C_SetEffectHidden, InputPin) == 0x000000, "Member 'BP_PickupItem_C_SetEffectHidden::InputPin' has a wrong offset!");
+static_assert(offsetof(BP_PickupItem_C_SetEffectHidden, Temp_int_Array_Index_Variable) == 0x000004, "Member 'BP_PickupItem_C_SetEffectHidden::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(BP_PickupItem_C_SetEffectHidden, Temp_int_Loop_Counter_Variable) == 0x000008, "Member 'BP_PickupItem_C_SetEffectHidden::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(BP_PickupItem_C_SetEffectHidden, CallFunc_Add_IntInt_ReturnValue) == 0x00000C, "Member 'BP_PickupItem_C_SetEffectHidden::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PickupItem_C_SetEffectHidden, CallFunc_K2_GetRootComponent_ReturnValue) == 0x000010, "Member 'BP_PickupItem_C_SetEffectHidden::CallFunc_K2_GetRootComponent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PickupItem_C_SetEffectHidden, CallFunc_GetChildrenComponents_Children) == 0x000018, "Member 'BP_PickupItem_C_SetEffectHidden::CallFunc_GetChildrenComponents_Children' has a wrong offset!");
+static_assert(offsetof(BP_PickupItem_C_SetEffectHidden, CallFunc_Array_Length_ReturnValue) == 0x000028, "Member 'BP_PickupItem_C_SetEffectHidden::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PickupItem_C_SetEffectHidden, CallFunc_Array_Get_Item) == 0x000030, "Member 'BP_PickupItem_C_SetEffectHidden::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BP_PickupItem_C_SetEffectHidden, CallFunc_Less_IntInt_ReturnValue) == 0x000038, "Member 'BP_PickupItem_C_SetEffectHidden::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PickupItem_C_SetEffectHidden, K2Node_DynamicCast_AsNiagara_Particle_System_Component) == 0x000040, "Member 'BP_PickupItem_C_SetEffectHidden::K2Node_DynamicCast_AsNiagara_Particle_System_Component' has a wrong offset!");
+static_assert(offsetof(BP_PickupItem_C_SetEffectHidden, K2Node_DynamicCast_bSuccess) == 0x000048, "Member 'BP_PickupItem_C_SetEffectHidden::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+
 // Function BP_PickupItem.BP_PickupItem_C.UpdateHiddenByGameFlag_BP
 // 0x0001 (0x0001 - 0x0000)
 struct BP_PickupItem_C_UpdateHiddenByGameFlag_BP final
@@ -73,6 +87,17 @@ public:
 static_assert(alignof(BP_PickupItem_C_UpdateHiddenByGameFlag_BP) == 0x000001, "Wrong alignment on BP_PickupItem_C_UpdateHiddenByGameFlag_BP");
 static_assert(sizeof(BP_PickupItem_C_UpdateHiddenByGameFlag_BP) == 0x000001, "Wrong size on BP_PickupItem_C_UpdateHiddenByGameFlag_BP");
 static_assert(offsetof(BP_PickupItem_C_UpdateHiddenByGameFlag_BP, bShouldHide) == 0x000000, "Member 'BP_PickupItem_C_UpdateHiddenByGameFlag_BP::bShouldHide' has a wrong offset!");
+
+// Function BP_PickupItem.BP_PickupItem_C.UpdateHiddenByRecipient_BP
+// 0x0001 (0x0001 - 0x0000)
+struct BP_PickupItem_C_UpdateHiddenByRecipient_BP final
+{
+public:
+	bool                                          bShouldHide;                                       // 0x0000(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_PickupItem_C_UpdateHiddenByRecipient_BP) == 0x000001, "Wrong alignment on BP_PickupItem_C_UpdateHiddenByRecipient_BP");
+static_assert(sizeof(BP_PickupItem_C_UpdateHiddenByRecipient_BP) == 0x000001, "Wrong size on BP_PickupItem_C_UpdateHiddenByRecipient_BP");
+static_assert(offsetof(BP_PickupItem_C_UpdateHiddenByRecipient_BP, bShouldHide) == 0x000000, "Member 'BP_PickupItem_C_UpdateHiddenByRecipient_BP::bShouldHide' has a wrong offset!");
 
 }
 

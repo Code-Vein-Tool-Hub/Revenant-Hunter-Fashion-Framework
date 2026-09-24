@@ -11,6 +11,7 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "Extensions_structs.hpp"
 #include "Extensions_classes.hpp"
 
 
@@ -18,20 +19,21 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WDT_MatchingHelperMenu.WDT_MatchingHelperMenu_C
-// 0x0050 (0x0608 - 0x05B8)
+// 0x0058 (0x0610 - 0x05B8)
 class UWDT_MatchingHelperMenu_C final : public UAppMenuBase
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x05B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UWidgetAnimation*                       HideMatchingHelperMenuAnimation;                   // 0x05C0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
 	class UWidgetAnimation*                       ShowMatchingHelperMenuAnimation;                   // 0x05C8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UCanvasPanel*                           CanvasPanel_26;                                    // 0x05D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_MatchingSelectableTextPiece_C*     FarObject;                                         // 0x05D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_MatchingSelectableTextPiece_C*     NearObject;                                        // 0x05E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_MatchingSelectableTextPiece_C*     OnlyThisObject;                                    // 0x05E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_MatchingSelectableTextPiece_C*     FarObject;                                         // 0x05D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_MatchingSelectableTextPiece_C*     NearObject;                                        // 0x05D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_MatchingSelectableTextPiece_C*     OnlyThisObject;                                    // 0x05E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               Overlay;                                           // 0x05E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UVerticalBox*                           VerticalBox_66;                                    // 0x05F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWDT_MatchingSettingsText_C*            WDT_NetworkSettingsText;                           // 0x05F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBP_MatchingUIObject_C*                 MatchingUIObject;                                  // 0x0600(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UWDT_Piece_TrgText_C*                   WDT_Piece_TrgText;                                 // 0x0600(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBP_MatchingUIObject_C*                 MatchingUIObject;                                  // 0x0608(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BP_OnActivated();
@@ -48,6 +50,7 @@ public:
 	bool IsInStandbyPreparation();
 	bool IsValidInput();
 	void OnCancelReleased();
+	void OnClosing();
 	void OnDecideReleased();
 	void OnDownPressed();
 	class UWidgetAnimation* OnGetCloseAnimation();
@@ -56,6 +59,7 @@ public:
 	void OnMenuInitialized();
 	void OnMenuSpecial2Pressed();
 	void OnMouseLeftClickMenuPiece(class UMenuPieceBase* MenuPiece);
+	void OnOpening();
 	void OnUpPressed();
 
 public:
@@ -69,17 +73,18 @@ public:
 	}
 };
 static_assert(alignof(UWDT_MatchingHelperMenu_C) == 0x000008, "Wrong alignment on UWDT_MatchingHelperMenu_C");
-static_assert(sizeof(UWDT_MatchingHelperMenu_C) == 0x000608, "Wrong size on UWDT_MatchingHelperMenu_C");
+static_assert(sizeof(UWDT_MatchingHelperMenu_C) == 0x000610, "Wrong size on UWDT_MatchingHelperMenu_C");
 static_assert(offsetof(UWDT_MatchingHelperMenu_C, UberGraphFrame) == 0x0005B8, "Member 'UWDT_MatchingHelperMenu_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UWDT_MatchingHelperMenu_C, HideMatchingHelperMenuAnimation) == 0x0005C0, "Member 'UWDT_MatchingHelperMenu_C::HideMatchingHelperMenuAnimation' has a wrong offset!");
 static_assert(offsetof(UWDT_MatchingHelperMenu_C, ShowMatchingHelperMenuAnimation) == 0x0005C8, "Member 'UWDT_MatchingHelperMenu_C::ShowMatchingHelperMenuAnimation' has a wrong offset!");
-static_assert(offsetof(UWDT_MatchingHelperMenu_C, CanvasPanel_26) == 0x0005D0, "Member 'UWDT_MatchingHelperMenu_C::CanvasPanel_26' has a wrong offset!");
-static_assert(offsetof(UWDT_MatchingHelperMenu_C, FarObject) == 0x0005D8, "Member 'UWDT_MatchingHelperMenu_C::FarObject' has a wrong offset!");
-static_assert(offsetof(UWDT_MatchingHelperMenu_C, NearObject) == 0x0005E0, "Member 'UWDT_MatchingHelperMenu_C::NearObject' has a wrong offset!");
-static_assert(offsetof(UWDT_MatchingHelperMenu_C, OnlyThisObject) == 0x0005E8, "Member 'UWDT_MatchingHelperMenu_C::OnlyThisObject' has a wrong offset!");
+static_assert(offsetof(UWDT_MatchingHelperMenu_C, FarObject) == 0x0005D0, "Member 'UWDT_MatchingHelperMenu_C::FarObject' has a wrong offset!");
+static_assert(offsetof(UWDT_MatchingHelperMenu_C, NearObject) == 0x0005D8, "Member 'UWDT_MatchingHelperMenu_C::NearObject' has a wrong offset!");
+static_assert(offsetof(UWDT_MatchingHelperMenu_C, OnlyThisObject) == 0x0005E0, "Member 'UWDT_MatchingHelperMenu_C::OnlyThisObject' has a wrong offset!");
+static_assert(offsetof(UWDT_MatchingHelperMenu_C, Overlay) == 0x0005E8, "Member 'UWDT_MatchingHelperMenu_C::Overlay' has a wrong offset!");
 static_assert(offsetof(UWDT_MatchingHelperMenu_C, VerticalBox_66) == 0x0005F0, "Member 'UWDT_MatchingHelperMenu_C::VerticalBox_66' has a wrong offset!");
 static_assert(offsetof(UWDT_MatchingHelperMenu_C, WDT_NetworkSettingsText) == 0x0005F8, "Member 'UWDT_MatchingHelperMenu_C::WDT_NetworkSettingsText' has a wrong offset!");
-static_assert(offsetof(UWDT_MatchingHelperMenu_C, MatchingUIObject) == 0x000600, "Member 'UWDT_MatchingHelperMenu_C::MatchingUIObject' has a wrong offset!");
+static_assert(offsetof(UWDT_MatchingHelperMenu_C, WDT_Piece_TrgText) == 0x000600, "Member 'UWDT_MatchingHelperMenu_C::WDT_Piece_TrgText' has a wrong offset!");
+static_assert(offsetof(UWDT_MatchingHelperMenu_C, MatchingUIObject) == 0x000608, "Member 'UWDT_MatchingHelperMenu_C::MatchingUIObject' has a wrong offset!");
 
 }
 

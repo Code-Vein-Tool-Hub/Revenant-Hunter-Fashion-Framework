@@ -1397,6 +1397,26 @@ void UABP_ActionHuman_Loco_BareFistEquipped_C::GetElapsedTimeRate(double KeyTime
 }
 
 
+// Function ABP_ActionHuman_Loco_BareFistEquipped.ABP_ActionHuman_Loco_BareFistEquipped_C.GetIsCrouched
+// (Private, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool UABP_ActionHuman_Loco_BareFistEquipped_C::GetIsCrouched() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABP_ActionHuman_Loco_BareFistEquipped_C", "GetIsCrouched");
+
+	Params::ABP_ActionHuman_Loco_BareFistEquipped_C_GetIsCrouched Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function ABP_ActionHuman_Loco_BareFistEquipped.ABP_ActionHuman_Loco_BareFistEquipped_C.GetMainABP
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
@@ -1410,6 +1430,46 @@ class UABP_ActionHuman_C* UABP_ActionHuman_Loco_BareFistEquipped_C::GetMainABP()
 		Func = Class->GetFunction("ABP_ActionHuman_Loco_BareFistEquipped_C", "GetMainABP");
 
 	Params::ABP_ActionHuman_Loco_BareFistEquipped_C_GetMainABP Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ABP_ActionHuman_Loco_BareFistEquipped.ABP_ActionHuman_Loco_BareFistEquipped_C.GetMaxSpeed
+// (Private, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// double                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+double UABP_ActionHuman_Loco_BareFistEquipped_C::GetMaxSpeed() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABP_ActionHuman_Loco_BareFistEquipped_C", "GetMaxSpeed");
+
+	Params::ABP_ActionHuman_Loco_BareFistEquipped_C_GetMaxSpeed Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ABP_ActionHuman_Loco_BareFistEquipped.ABP_ActionHuman_Loco_BareFistEquipped_C.GetMaxSpeedWithoutOverride
+// (Private, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// double                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+double UABP_ActionHuman_Loco_BareFistEquipped_C::GetMaxSpeedWithoutOverride() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABP_ActionHuman_Loco_BareFistEquipped_C", "GetMaxSpeedWithoutOverride");
+
+	Params::ABP_ActionHuman_Loco_BareFistEquipped_C_GetMaxSpeedWithoutOverride Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 

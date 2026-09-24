@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "Extensions_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "Extensions_structs.hpp"
 #include "UMG_structs.hpp"
 #include "EN_InventoryMenuDialogType_structs.hpp"
-#include "EnhancedInput_structs.hpp"
 #include "Engine_structs.hpp"
 #include "BasicUI_structs.hpp"
 #include "STR_InventoryCategoryPalletInfo_structs.hpp"
+#include "EnhancedInput_structs.hpp"
 
 
 namespace SDK::Params
@@ -98,7 +98,7 @@ static_assert(offsetof(WDT_InventoryMenu_C_BP_OnItemScrolledIntoView_Event, Item
 static_assert(offsetof(WDT_InventoryMenu_C_BP_OnItemScrolledIntoView_Event, Widget) == 0x000008, "Member 'WDT_InventoryMenu_C_BP_OnItemScrolledIntoView_Event::Widget' has a wrong offset!");
 
 // Function WDT_InventoryMenu.WDT_InventoryMenu_C.ExecuteUbergraph_WDT_InventoryMenu
-// 0x09B0 (0x09B0 - 0x0000)
+// 0x09D0 (0x09D0 - 0x0000)
 struct WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu final
 {
 public:
@@ -370,7 +370,9 @@ public:
 	bool                                          CallFunc_IsShowSpecialBuffList_ReturnValue_10;     // 0x07DA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable_13;                             // 0x07DB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_IsDesignTime;                         // 0x07DC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7DD[0x3];                                      // 0x07DD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          CallFunc_IsSelectMode_OutFlag_6;                   // 0x07DD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_6;                // 0x07DE(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7DF[0x1];                                      // 0x07DF(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUIObjectBase*                          CallFunc_GetUIObject_ReturnValue;                  // 0x07E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                K2Node_ComponentBoundEvent_Item_3;                 // 0x07E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UUserWidget*                            K2Node_ComponentBoundEvent_Widget;                 // 0x07F0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
@@ -391,40 +393,40 @@ public:
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x0838(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	double                                        K2Node_Event_InCurrentHealth;                      // 0x0848(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        K2Node_Event_InMaxHealth;                          // 0x0850(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FUIPlayerStatusSummaryInfo             CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo; // 0x0858(0x00B8)(NoDestructor)
-	int32                                         K2Node_Event_InCurrentStamina;                     // 0x0910(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_Event_InMaxStamina;                         // 0x0914(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_InProhibited;                         // 0x0918(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_919[0x7];                                      // 0x0919(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        Temp_real_Variable_24;                             // 0x0920(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable_25;                             // 0x0928(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable_24_0;                           // 0x0930(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable_25_0;                           // 0x0938(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                K2Node_ComponentBoundEvent_Item_1;                 // 0x0940(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_ComponentBoundEvent_bIsHovered;             // 0x0948(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_949[0x7];                                      // 0x0949(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBP_CheckableScrollerItem_C*            K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_2; // 0x0950(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0958(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_959[0x7];                                      // 0x0959(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                K2Node_ComponentBoundEvent_Item;                   // 0x0960(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetElementIndex_ReturnValue_2;            // 0x0968(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_96C[0x4];                                      // 0x096C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                K2Node_CustomEvent_Item;                           // 0x0970(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UUserWidget*                            K2Node_CustomEvent_Widget;                         // 0x0978(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetStoryFlagValueByBoolean_ReturnValue;   // 0x0980(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_981[0x3];                                      // 0x0981(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetSelectingIndex_ReturnValue_3;          // 0x0984(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetSelectionIndex_ReturnValue;            // 0x0988(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsVisibleSubMenuGuide_IsVisible;          // 0x098C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_98D[0x3];                                      // 0x098D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_GetSubMenuGuideText_GuideText;            // 0x0990(0x0010)()
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x09A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FUIPlayerStatusSummaryInfo             CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo; // 0x0858(0x00D8)()
+	int32                                         K2Node_Event_InCurrentStamina;                     // 0x0930(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_Event_InMaxStamina;                         // 0x0934(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_InProhibited;                         // 0x0938(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_939[0x7];                                      // 0x0939(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Temp_real_Variable_24;                             // 0x0940(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_25;                             // 0x0948(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_24_0;                           // 0x0950(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_25_0;                           // 0x0958(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                K2Node_ComponentBoundEvent_Item_1;                 // 0x0960(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_ComponentBoundEvent_bIsHovered;             // 0x0968(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_969[0x7];                                      // 0x0969(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_CheckableScrollerItem_C*            K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_2; // 0x0970(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0978(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_979[0x7];                                      // 0x0979(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                K2Node_ComponentBoundEvent_Item;                   // 0x0980(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetElementIndex_ReturnValue_2;            // 0x0988(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_98C[0x4];                                      // 0x098C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                K2Node_CustomEvent_Item;                           // 0x0990(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UUserWidget*                            K2Node_CustomEvent_Widget;                         // 0x0998(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetStoryFlagValueByBoolean_ReturnValue;   // 0x09A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_9A1[0x3];                                      // 0x09A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetSelectingIndex_ReturnValue_4;          // 0x09A4(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UInputAction*                           Temp_object_Variable_12;                           // 0x09A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetSelectingIndex_ReturnValue_3;          // 0x09A4(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetSelectionIndex_ReturnValue;            // 0x09A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsVisibleSubMenuGuide_IsVisible;          // 0x09AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9AD[0x3];                                      // 0x09AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_GetSubMenuGuideText_GuideText;            // 0x09B0(0x0010)()
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x09C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9C1[0x3];                                      // 0x09C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetSelectingIndex_ReturnValue_4;          // 0x09C4(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UInputAction*                           Temp_object_Variable_12;                           // 0x09C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu) == 0x000008, "Wrong alignment on WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu");
-static_assert(sizeof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu) == 0x0009B0, "Wrong size on WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu");
+static_assert(sizeof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu) == 0x0009D0, "Wrong size on WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu");
 static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, EntryPoint) == 0x000000, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::EntryPoint' has a wrong offset!");
 static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, K2Node_EnhancedInputActionEvent_ActionValue_16) == 0x000008, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::K2Node_EnhancedInputActionEvent_ActionValue_16' has a wrong offset!");
 static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, K2Node_EnhancedInputActionEvent_ElapsedTime_16) == 0x000028, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::K2Node_EnhancedInputActionEvent_ElapsedTime_16' has a wrong offset!");
@@ -660,6 +662,8 @@ static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, C
 static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, CallFunc_IsShowSpecialBuffList_ReturnValue_10) == 0x0007DA, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::CallFunc_IsShowSpecialBuffList_ReturnValue_10' has a wrong offset!");
 static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, Temp_bool_Variable_13) == 0x0007DB, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::Temp_bool_Variable_13' has a wrong offset!");
 static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, K2Node_Event_IsDesignTime) == 0x0007DC, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::K2Node_Event_IsDesignTime' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, CallFunc_IsSelectMode_OutFlag_6) == 0x0007DD, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::CallFunc_IsSelectMode_OutFlag_6' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, CallFunc_Not_PreBool_ReturnValue_6) == 0x0007DE, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::CallFunc_Not_PreBool_ReturnValue_6' has a wrong offset!");
 static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, CallFunc_GetUIObject_ReturnValue) == 0x0007E0, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::CallFunc_GetUIObject_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, K2Node_ComponentBoundEvent_Item_3) == 0x0007E8, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::K2Node_ComponentBoundEvent_Item_3' has a wrong offset!");
 static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, K2Node_ComponentBoundEvent_Widget) == 0x0007F0, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::K2Node_ComponentBoundEvent_Widget' has a wrong offset!");
@@ -677,29 +681,29 @@ static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, K
 static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, K2Node_Event_InCurrentHealth) == 0x000848, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::K2Node_Event_InCurrentHealth' has a wrong offset!");
 static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, K2Node_Event_InMaxHealth) == 0x000850, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::K2Node_Event_InMaxHealth' has a wrong offset!");
 static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo) == 0x000858, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, K2Node_Event_InCurrentStamina) == 0x000910, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::K2Node_Event_InCurrentStamina' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, K2Node_Event_InMaxStamina) == 0x000914, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::K2Node_Event_InMaxStamina' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, K2Node_Event_InProhibited) == 0x000918, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::K2Node_Event_InProhibited' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, Temp_real_Variable_24) == 0x000920, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::Temp_real_Variable_24' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, Temp_real_Variable_25) == 0x000928, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::Temp_real_Variable_25' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, Temp_real_Variable_24_0) == 0x000930, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::Temp_real_Variable_24_0' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, Temp_real_Variable_25_0) == 0x000938, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::Temp_real_Variable_25_0' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, K2Node_ComponentBoundEvent_Item_1) == 0x000940, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::K2Node_ComponentBoundEvent_Item_1' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, K2Node_ComponentBoundEvent_bIsHovered) == 0x000948, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::K2Node_ComponentBoundEvent_bIsHovered' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_2) == 0x000950, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_2' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, K2Node_DynamicCast_bSuccess_3) == 0x000958, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, K2Node_ComponentBoundEvent_Item) == 0x000960, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::K2Node_ComponentBoundEvent_Item' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, CallFunc_GetElementIndex_ReturnValue_2) == 0x000968, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::CallFunc_GetElementIndex_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, K2Node_CustomEvent_Item) == 0x000970, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::K2Node_CustomEvent_Item' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, K2Node_CustomEvent_Widget) == 0x000978, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::K2Node_CustomEvent_Widget' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, CallFunc_GetStoryFlagValueByBoolean_ReturnValue) == 0x000980, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::CallFunc_GetStoryFlagValueByBoolean_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, CallFunc_GetSelectingIndex_ReturnValue_3) == 0x000984, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::CallFunc_GetSelectingIndex_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, CallFunc_GetSelectionIndex_ReturnValue) == 0x000988, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::CallFunc_GetSelectionIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, CallFunc_IsVisibleSubMenuGuide_IsVisible) == 0x00098C, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::CallFunc_IsVisibleSubMenuGuide_IsVisible' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, CallFunc_GetSubMenuGuideText_GuideText) == 0x000990, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::CallFunc_GetSubMenuGuideText_GuideText' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, K2Node_Select_Default) == 0x0009A0, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, CallFunc_GetSelectingIndex_ReturnValue_4) == 0x0009A4, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::CallFunc_GetSelectingIndex_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, Temp_object_Variable_12) == 0x0009A8, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::Temp_object_Variable_12' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, K2Node_Event_InCurrentStamina) == 0x000930, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::K2Node_Event_InCurrentStamina' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, K2Node_Event_InMaxStamina) == 0x000934, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::K2Node_Event_InMaxStamina' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, K2Node_Event_InProhibited) == 0x000938, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::K2Node_Event_InProhibited' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, Temp_real_Variable_24) == 0x000940, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::Temp_real_Variable_24' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, Temp_real_Variable_25) == 0x000948, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::Temp_real_Variable_25' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, Temp_real_Variable_24_0) == 0x000950, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::Temp_real_Variable_24_0' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, Temp_real_Variable_25_0) == 0x000958, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::Temp_real_Variable_25_0' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, K2Node_ComponentBoundEvent_Item_1) == 0x000960, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::K2Node_ComponentBoundEvent_Item_1' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, K2Node_ComponentBoundEvent_bIsHovered) == 0x000968, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::K2Node_ComponentBoundEvent_bIsHovered' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_2) == 0x000970, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::K2Node_DynamicCast_AsBP_Checkable_Scroller_Item_2' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, K2Node_DynamicCast_bSuccess_3) == 0x000978, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, K2Node_ComponentBoundEvent_Item) == 0x000980, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::K2Node_ComponentBoundEvent_Item' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, CallFunc_GetElementIndex_ReturnValue_2) == 0x000988, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::CallFunc_GetElementIndex_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, K2Node_CustomEvent_Item) == 0x000990, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::K2Node_CustomEvent_Item' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, K2Node_CustomEvent_Widget) == 0x000998, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::K2Node_CustomEvent_Widget' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, CallFunc_GetStoryFlagValueByBoolean_ReturnValue) == 0x0009A0, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::CallFunc_GetStoryFlagValueByBoolean_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, CallFunc_GetSelectingIndex_ReturnValue_3) == 0x0009A4, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::CallFunc_GetSelectingIndex_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, CallFunc_GetSelectionIndex_ReturnValue) == 0x0009A8, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::CallFunc_GetSelectionIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, CallFunc_IsVisibleSubMenuGuide_IsVisible) == 0x0009AC, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::CallFunc_IsVisibleSubMenuGuide_IsVisible' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, CallFunc_GetSubMenuGuideText_GuideText) == 0x0009B0, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::CallFunc_GetSubMenuGuideText_GuideText' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, K2Node_Select_Default) == 0x0009C0, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, CallFunc_GetSelectingIndex_ReturnValue_4) == 0x0009C4, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::CallFunc_GetSelectingIndex_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu, Temp_object_Variable_12) == 0x0009C8, "Member 'WDT_InventoryMenu_C_ExecuteUbergraph_WDT_InventoryMenu::Temp_object_Variable_12' has a wrong offset!");
 
 // Function WDT_InventoryMenu.WDT_InventoryMenu_C.GetArticleCategory
 // 0x0008 (0x0008 - 0x0000)
@@ -719,7 +723,7 @@ static_assert(offsetof(WDT_InventoryMenu_C_GetArticleCategory, ArticleCategory) 
 static_assert(offsetof(WDT_InventoryMenu_C_GetArticleCategory, ItemCategory) == 0x000006, "Member 'WDT_InventoryMenu_C_GetArticleCategory::ItemCategory' has a wrong offset!");
 
 // Function WDT_InventoryMenu.WDT_InventoryMenu_C.GetArticleName
-// 0x0C38 (0x0C38 - 0x0000)
+// 0x0C58 (0x0C58 - 0x0000)
 struct WDT_InventoryMenu_C_GetArticleName final
 {
 public:
@@ -743,16 +747,16 @@ public:
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0131(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_132[0x6];                                      // 0x0132(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUIBloodCodeInfo                       CallFunc_GetBloodCodeInfoByIndex_OutBloodCodeInfo; // 0x0138(0x00D8)()
-	struct FUIIndependentGadgetInfo               CallFunc_GetIndependentGadgetInfoByIndex_OutIndependentGadgetInfo; // 0x0210(0x00F0)()
-	struct FUIDefensiveGadgetInfo                 CallFunc_GetDefensiveGadgetInfoByIndex_OutDefensiveGadgetInfo; // 0x0300(0x00F8)()
-	struct FUIBoosterInfo                         CallFunc_GetBoosterInfoByQuery_OutBoosterInfo;     // 0x03F8(0x0098)()
-	struct FUIJailInfo                            CallFunc_GetJailInfoByIndex_OutJailInfo;           // 0x0490(0x0148)()
-	struct FUIWeaponInfo                          CallFunc_GetWeaponInfoByQuery_OutWeaponInfo;       // 0x05D8(0x05B8)()
-	struct FUIItemInfo                            CallFunc_GetItemInfoByQuery_OutItemInfo;           // 0x0B90(0x00A8)()
+	struct FUIBloodCodeInfo                       CallFunc_GetBloodCodeInfoByIndex_OutBloodCodeInfo; // 0x0138(0x00F8)()
+	struct FUIIndependentGadgetInfo               CallFunc_GetIndependentGadgetInfoByIndex_OutIndependentGadgetInfo; // 0x0230(0x00F0)()
+	struct FUIDefensiveGadgetInfo                 CallFunc_GetDefensiveGadgetInfoByIndex_OutDefensiveGadgetInfo; // 0x0320(0x00F8)()
+	struct FUIBoosterInfo                         CallFunc_GetBoosterInfoByQuery_OutBoosterInfo;     // 0x0418(0x0098)()
+	struct FUIJailInfo                            CallFunc_GetJailInfoByIndex_OutJailInfo;           // 0x04B0(0x0148)()
+	struct FUIWeaponInfo                          CallFunc_GetWeaponInfoByQuery_OutWeaponInfo;       // 0x05F8(0x05B8)()
+	struct FUIItemInfo                            CallFunc_GetItemInfoByQuery_OutItemInfo;           // 0x0BB0(0x00A8)()
 };
 static_assert(alignof(WDT_InventoryMenu_C_GetArticleName) == 0x000008, "Wrong alignment on WDT_InventoryMenu_C_GetArticleName");
-static_assert(sizeof(WDT_InventoryMenu_C_GetArticleName) == 0x000C38, "Wrong size on WDT_InventoryMenu_C_GetArticleName");
+static_assert(sizeof(WDT_InventoryMenu_C_GetArticleName) == 0x000C58, "Wrong size on WDT_InventoryMenu_C_GetArticleName");
 static_assert(offsetof(WDT_InventoryMenu_C_GetArticleName, InIndex) == 0x000000, "Member 'WDT_InventoryMenu_C_GetArticleName::InIndex' has a wrong offset!");
 static_assert(offsetof(WDT_InventoryMenu_C_GetArticleName, Name_0) == 0x000008, "Member 'WDT_InventoryMenu_C_GetArticleName::Name_0' has a wrong offset!");
 static_assert(offsetof(WDT_InventoryMenu_C_GetArticleName, CallFunc_GetArticleNameForRecentlyObtained_OutName) == 0x000018, "Member 'WDT_InventoryMenu_C_GetArticleName::CallFunc_GetArticleNameForRecentlyObtained_OutName' has a wrong offset!");
@@ -771,15 +775,15 @@ static_assert(offsetof(WDT_InventoryMenu_C_GetArticleName, K2Node_MakeStruct_UII
 static_assert(offsetof(WDT_InventoryMenu_C_GetArticleName, K2Node_SwitchEnum_CmpSuccess) == 0x000130, "Member 'WDT_InventoryMenu_C_GetArticleName::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
 static_assert(offsetof(WDT_InventoryMenu_C_GetArticleName, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000131, "Member 'WDT_InventoryMenu_C_GetArticleName::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_InventoryMenu_C_GetArticleName, CallFunc_GetBloodCodeInfoByIndex_OutBloodCodeInfo) == 0x000138, "Member 'WDT_InventoryMenu_C_GetArticleName::CallFunc_GetBloodCodeInfoByIndex_OutBloodCodeInfo' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_GetArticleName, CallFunc_GetIndependentGadgetInfoByIndex_OutIndependentGadgetInfo) == 0x000210, "Member 'WDT_InventoryMenu_C_GetArticleName::CallFunc_GetIndependentGadgetInfoByIndex_OutIndependentGadgetInfo' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_GetArticleName, CallFunc_GetDefensiveGadgetInfoByIndex_OutDefensiveGadgetInfo) == 0x000300, "Member 'WDT_InventoryMenu_C_GetArticleName::CallFunc_GetDefensiveGadgetInfoByIndex_OutDefensiveGadgetInfo' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_GetArticleName, CallFunc_GetBoosterInfoByQuery_OutBoosterInfo) == 0x0003F8, "Member 'WDT_InventoryMenu_C_GetArticleName::CallFunc_GetBoosterInfoByQuery_OutBoosterInfo' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_GetArticleName, CallFunc_GetJailInfoByIndex_OutJailInfo) == 0x000490, "Member 'WDT_InventoryMenu_C_GetArticleName::CallFunc_GetJailInfoByIndex_OutJailInfo' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_GetArticleName, CallFunc_GetWeaponInfoByQuery_OutWeaponInfo) == 0x0005D8, "Member 'WDT_InventoryMenu_C_GetArticleName::CallFunc_GetWeaponInfoByQuery_OutWeaponInfo' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_GetArticleName, CallFunc_GetItemInfoByQuery_OutItemInfo) == 0x000B90, "Member 'WDT_InventoryMenu_C_GetArticleName::CallFunc_GetItemInfoByQuery_OutItemInfo' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_GetArticleName, CallFunc_GetIndependentGadgetInfoByIndex_OutIndependentGadgetInfo) == 0x000230, "Member 'WDT_InventoryMenu_C_GetArticleName::CallFunc_GetIndependentGadgetInfoByIndex_OutIndependentGadgetInfo' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_GetArticleName, CallFunc_GetDefensiveGadgetInfoByIndex_OutDefensiveGadgetInfo) == 0x000320, "Member 'WDT_InventoryMenu_C_GetArticleName::CallFunc_GetDefensiveGadgetInfoByIndex_OutDefensiveGadgetInfo' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_GetArticleName, CallFunc_GetBoosterInfoByQuery_OutBoosterInfo) == 0x000418, "Member 'WDT_InventoryMenu_C_GetArticleName::CallFunc_GetBoosterInfoByQuery_OutBoosterInfo' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_GetArticleName, CallFunc_GetJailInfoByIndex_OutJailInfo) == 0x0004B0, "Member 'WDT_InventoryMenu_C_GetArticleName::CallFunc_GetJailInfoByIndex_OutJailInfo' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_GetArticleName, CallFunc_GetWeaponInfoByQuery_OutWeaponInfo) == 0x0005F8, "Member 'WDT_InventoryMenu_C_GetArticleName::CallFunc_GetWeaponInfoByQuery_OutWeaponInfo' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_GetArticleName, CallFunc_GetItemInfoByQuery_OutItemInfo) == 0x000BB0, "Member 'WDT_InventoryMenu_C_GetArticleName::CallFunc_GetItemInfoByQuery_OutItemInfo' has a wrong offset!");
 
 // Function WDT_InventoryMenu.WDT_InventoryMenu_C.GetArticleNameForRecentlyObtained
-// 0x0C18 (0x0C18 - 0x0000)
+// 0x0C38 (0x0C38 - 0x0000)
 struct WDT_InventoryMenu_C_GetArticleNameForRecentlyObtained final
 {
 public:
@@ -796,18 +800,18 @@ public:
 	struct FUIRecentlyObtainedQueryInfo           K2Node_MakeStruct_UIRecentlyObtainedQueryInfo_6;   // 0x0038(0x0004)(NoDestructor)
 	struct FUIRecentlyObtainedQueryInfo           K2Node_MakeStruct_UIRecentlyObtainedQueryInfo_7;   // 0x003C(0x0004)(NoDestructor)
 	struct FUIWeaponGadgetInfo                    CallFunc_GetRecentlyObtainedWeaponGadgetInfoByQuery_OutInfo; // 0x0040(0x00D0)()
-	struct FUIBloodCodeInfo                       CallFunc_GetRecentlyObtainedBloodCodeInfoByQuery_OutInfo; // 0x0110(0x00D8)()
-	struct FUIIndependentGadgetInfo               CallFunc_GetRecentlyObtainedIndependentGadgetInfoByQuery_OutInfo; // 0x01E8(0x00F0)()
-	struct FUIDefensiveGadgetInfo                 CallFunc_GetRecentlyObtainedDefensiveGadgetInfoByQuery_OutInfo; // 0x02D8(0x00F8)()
-	struct FUIBoosterInfo                         CallFunc_GetRecentlyObtainedBoosterInfoByQuery_OutInfo; // 0x03D0(0x0098)()
-	struct FUIJailInfo                            CallFunc_GetRecentlyObtainedJailInfoByQuery_OutInfo; // 0x0468(0x0148)()
-	struct FUIWeaponInfo                          CallFunc_GetRecentlyObtainedWeaponInfoByQuery_OutInfo; // 0x05B0(0x05B8)()
-	struct FUIItemInfo                            CallFunc_GetRecentlyObtainedItemInfoByQuery_OutInfo; // 0x0B68(0x00A8)()
-	struct FUIRecentlyObtainedInfo                CallFunc_GetRecentlyObtainedInfoByQuery_OutInfo;   // 0x0C10(0x0001)(NoDestructor)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0C11(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FUIBloodCodeInfo                       CallFunc_GetRecentlyObtainedBloodCodeInfoByQuery_OutInfo; // 0x0110(0x00F8)()
+	struct FUIIndependentGadgetInfo               CallFunc_GetRecentlyObtainedIndependentGadgetInfoByQuery_OutInfo; // 0x0208(0x00F0)()
+	struct FUIDefensiveGadgetInfo                 CallFunc_GetRecentlyObtainedDefensiveGadgetInfoByQuery_OutInfo; // 0x02F8(0x00F8)()
+	struct FUIBoosterInfo                         CallFunc_GetRecentlyObtainedBoosterInfoByQuery_OutInfo; // 0x03F0(0x0098)()
+	struct FUIJailInfo                            CallFunc_GetRecentlyObtainedJailInfoByQuery_OutInfo; // 0x0488(0x0148)()
+	struct FUIWeaponInfo                          CallFunc_GetRecentlyObtainedWeaponInfoByQuery_OutInfo; // 0x05D0(0x05B8)()
+	struct FUIItemInfo                            CallFunc_GetRecentlyObtainedItemInfoByQuery_OutInfo; // 0x0B88(0x00A8)()
+	struct FUIRecentlyObtainedInfo                CallFunc_GetRecentlyObtainedInfoByQuery_OutInfo;   // 0x0C30(0x0001)(NoDestructor)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0C31(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_InventoryMenu_C_GetArticleNameForRecentlyObtained) == 0x000008, "Wrong alignment on WDT_InventoryMenu_C_GetArticleNameForRecentlyObtained");
-static_assert(sizeof(WDT_InventoryMenu_C_GetArticleNameForRecentlyObtained) == 0x000C18, "Wrong size on WDT_InventoryMenu_C_GetArticleNameForRecentlyObtained");
+static_assert(sizeof(WDT_InventoryMenu_C_GetArticleNameForRecentlyObtained) == 0x000C38, "Wrong size on WDT_InventoryMenu_C_GetArticleNameForRecentlyObtained");
 static_assert(offsetof(WDT_InventoryMenu_C_GetArticleNameForRecentlyObtained, InIndex) == 0x000000, "Member 'WDT_InventoryMenu_C_GetArticleNameForRecentlyObtained::InIndex' has a wrong offset!");
 static_assert(offsetof(WDT_InventoryMenu_C_GetArticleNameForRecentlyObtained, OutName) == 0x000008, "Member 'WDT_InventoryMenu_C_GetArticleNameForRecentlyObtained::OutName' has a wrong offset!");
 static_assert(offsetof(WDT_InventoryMenu_C_GetArticleNameForRecentlyObtained, K2Node_MakeStruct_UIArticleQueryInfo) == 0x000018, "Member 'WDT_InventoryMenu_C_GetArticleNameForRecentlyObtained::K2Node_MakeStruct_UIArticleQueryInfo' has a wrong offset!");
@@ -821,14 +825,14 @@ static_assert(offsetof(WDT_InventoryMenu_C_GetArticleNameForRecentlyObtained, K2
 static_assert(offsetof(WDT_InventoryMenu_C_GetArticleNameForRecentlyObtained, K2Node_MakeStruct_UIRecentlyObtainedQueryInfo_7) == 0x00003C, "Member 'WDT_InventoryMenu_C_GetArticleNameForRecentlyObtained::K2Node_MakeStruct_UIRecentlyObtainedQueryInfo_7' has a wrong offset!");
 static_assert(offsetof(WDT_InventoryMenu_C_GetArticleNameForRecentlyObtained, CallFunc_GetRecentlyObtainedWeaponGadgetInfoByQuery_OutInfo) == 0x000040, "Member 'WDT_InventoryMenu_C_GetArticleNameForRecentlyObtained::CallFunc_GetRecentlyObtainedWeaponGadgetInfoByQuery_OutInfo' has a wrong offset!");
 static_assert(offsetof(WDT_InventoryMenu_C_GetArticleNameForRecentlyObtained, CallFunc_GetRecentlyObtainedBloodCodeInfoByQuery_OutInfo) == 0x000110, "Member 'WDT_InventoryMenu_C_GetArticleNameForRecentlyObtained::CallFunc_GetRecentlyObtainedBloodCodeInfoByQuery_OutInfo' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_GetArticleNameForRecentlyObtained, CallFunc_GetRecentlyObtainedIndependentGadgetInfoByQuery_OutInfo) == 0x0001E8, "Member 'WDT_InventoryMenu_C_GetArticleNameForRecentlyObtained::CallFunc_GetRecentlyObtainedIndependentGadgetInfoByQuery_OutInfo' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_GetArticleNameForRecentlyObtained, CallFunc_GetRecentlyObtainedDefensiveGadgetInfoByQuery_OutInfo) == 0x0002D8, "Member 'WDT_InventoryMenu_C_GetArticleNameForRecentlyObtained::CallFunc_GetRecentlyObtainedDefensiveGadgetInfoByQuery_OutInfo' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_GetArticleNameForRecentlyObtained, CallFunc_GetRecentlyObtainedBoosterInfoByQuery_OutInfo) == 0x0003D0, "Member 'WDT_InventoryMenu_C_GetArticleNameForRecentlyObtained::CallFunc_GetRecentlyObtainedBoosterInfoByQuery_OutInfo' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_GetArticleNameForRecentlyObtained, CallFunc_GetRecentlyObtainedJailInfoByQuery_OutInfo) == 0x000468, "Member 'WDT_InventoryMenu_C_GetArticleNameForRecentlyObtained::CallFunc_GetRecentlyObtainedJailInfoByQuery_OutInfo' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_GetArticleNameForRecentlyObtained, CallFunc_GetRecentlyObtainedWeaponInfoByQuery_OutInfo) == 0x0005B0, "Member 'WDT_InventoryMenu_C_GetArticleNameForRecentlyObtained::CallFunc_GetRecentlyObtainedWeaponInfoByQuery_OutInfo' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_GetArticleNameForRecentlyObtained, CallFunc_GetRecentlyObtainedItemInfoByQuery_OutInfo) == 0x000B68, "Member 'WDT_InventoryMenu_C_GetArticleNameForRecentlyObtained::CallFunc_GetRecentlyObtainedItemInfoByQuery_OutInfo' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_GetArticleNameForRecentlyObtained, CallFunc_GetRecentlyObtainedInfoByQuery_OutInfo) == 0x000C10, "Member 'WDT_InventoryMenu_C_GetArticleNameForRecentlyObtained::CallFunc_GetRecentlyObtainedInfoByQuery_OutInfo' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_GetArticleNameForRecentlyObtained, K2Node_SwitchEnum_CmpSuccess) == 0x000C11, "Member 'WDT_InventoryMenu_C_GetArticleNameForRecentlyObtained::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_GetArticleNameForRecentlyObtained, CallFunc_GetRecentlyObtainedIndependentGadgetInfoByQuery_OutInfo) == 0x000208, "Member 'WDT_InventoryMenu_C_GetArticleNameForRecentlyObtained::CallFunc_GetRecentlyObtainedIndependentGadgetInfoByQuery_OutInfo' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_GetArticleNameForRecentlyObtained, CallFunc_GetRecentlyObtainedDefensiveGadgetInfoByQuery_OutInfo) == 0x0002F8, "Member 'WDT_InventoryMenu_C_GetArticleNameForRecentlyObtained::CallFunc_GetRecentlyObtainedDefensiveGadgetInfoByQuery_OutInfo' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_GetArticleNameForRecentlyObtained, CallFunc_GetRecentlyObtainedBoosterInfoByQuery_OutInfo) == 0x0003F0, "Member 'WDT_InventoryMenu_C_GetArticleNameForRecentlyObtained::CallFunc_GetRecentlyObtainedBoosterInfoByQuery_OutInfo' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_GetArticleNameForRecentlyObtained, CallFunc_GetRecentlyObtainedJailInfoByQuery_OutInfo) == 0x000488, "Member 'WDT_InventoryMenu_C_GetArticleNameForRecentlyObtained::CallFunc_GetRecentlyObtainedJailInfoByQuery_OutInfo' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_GetArticleNameForRecentlyObtained, CallFunc_GetRecentlyObtainedWeaponInfoByQuery_OutInfo) == 0x0005D0, "Member 'WDT_InventoryMenu_C_GetArticleNameForRecentlyObtained::CallFunc_GetRecentlyObtainedWeaponInfoByQuery_OutInfo' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_GetArticleNameForRecentlyObtained, CallFunc_GetRecentlyObtainedItemInfoByQuery_OutInfo) == 0x000B88, "Member 'WDT_InventoryMenu_C_GetArticleNameForRecentlyObtained::CallFunc_GetRecentlyObtainedItemInfoByQuery_OutInfo' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_GetArticleNameForRecentlyObtained, CallFunc_GetRecentlyObtainedInfoByQuery_OutInfo) == 0x000C30, "Member 'WDT_InventoryMenu_C_GetArticleNameForRecentlyObtained::CallFunc_GetRecentlyObtainedInfoByQuery_OutInfo' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_GetArticleNameForRecentlyObtained, K2Node_SwitchEnum_CmpSuccess) == 0x000C31, "Member 'WDT_InventoryMenu_C_GetArticleNameForRecentlyObtained::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
 
 // Function WDT_InventoryMenu.WDT_InventoryMenu_C.GetCategoryNumber
 // 0x003C (0x003C - 0x0000)
@@ -1012,7 +1016,7 @@ static_assert(offsetof(WDT_InventoryMenu_C_In_Item_Usable, CallFunc_BooleanOR_Re
 static_assert(offsetof(WDT_InventoryMenu_C_In_Item_Usable, CallFunc_Not_PreBool_ReturnValue_1) == 0x000033, "Member 'WDT_InventoryMenu_C_In_Item_Usable::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
 
 // Function WDT_InventoryMenu.WDT_InventoryMenu_C.Initialize
-// 0x0140 (0x0140 - 0x0000)
+// 0x0160 (0x0160 - 0x0000)
 struct WDT_InventoryMenu_C_Initialize final
 {
 public:
@@ -1028,10 +1032,11 @@ public:
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x007C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_7D[0x3];                                       // 0x007D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FUIPlayerStatusSummaryInfo             CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo; // 0x0084(0x00B8)(NoDestructor)
+	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUIPlayerStatusSummaryInfo             CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo; // 0x0088(0x00D8)()
 };
 static_assert(alignof(WDT_InventoryMenu_C_Initialize) == 0x000008, "Wrong alignment on WDT_InventoryMenu_C_Initialize");
-static_assert(sizeof(WDT_InventoryMenu_C_Initialize) == 0x000140, "Wrong size on WDT_InventoryMenu_C_Initialize");
+static_assert(sizeof(WDT_InventoryMenu_C_Initialize) == 0x000160, "Wrong size on WDT_InventoryMenu_C_Initialize");
 static_assert(offsetof(WDT_InventoryMenu_C_Initialize, SlotIcons) == 0x000000, "Member 'WDT_InventoryMenu_C_Initialize::SlotIcons' has a wrong offset!");
 static_assert(offsetof(WDT_InventoryMenu_C_Initialize, Temp_int_Array_Index_Variable) == 0x000010, "Member 'WDT_InventoryMenu_C_Initialize::Temp_int_Array_Index_Variable' has a wrong offset!");
 static_assert(offsetof(WDT_InventoryMenu_C_Initialize, Temp_int_Loop_Counter_Variable) == 0x000014, "Member 'WDT_InventoryMenu_C_Initialize::Temp_int_Loop_Counter_Variable' has a wrong offset!");
@@ -1042,7 +1047,7 @@ static_assert(offsetof(WDT_InventoryMenu_C_Initialize, CallFunc_Array_Get_Item) 
 static_assert(offsetof(WDT_InventoryMenu_C_Initialize, CallFunc_Array_Length_ReturnValue) == 0x000078, "Member 'WDT_InventoryMenu_C_Initialize::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_InventoryMenu_C_Initialize, CallFunc_Less_IntInt_ReturnValue) == 0x00007C, "Member 'WDT_InventoryMenu_C_Initialize::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_InventoryMenu_C_Initialize, CallFunc_Array_Add_ReturnValue) == 0x000080, "Member 'WDT_InventoryMenu_C_Initialize::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_Initialize, CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo) == 0x000084, "Member 'WDT_InventoryMenu_C_Initialize::CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_Initialize, CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo) == 0x000088, "Member 'WDT_InventoryMenu_C_Initialize::CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo' has a wrong offset!");
 
 // Function WDT_InventoryMenu.WDT_InventoryMenu_C.InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_17
 // 0x0030 (0x0030 - 0x0000)
@@ -2150,27 +2155,28 @@ static_assert(offsetof(WDT_InventoryMenu_C_OnRightPressed, CallFunc_Not_PreBool_
 static_assert(offsetof(WDT_InventoryMenu_C_OnRightPressed, CallFunc_BooleanAND_ReturnValue) == 0x000016, "Member 'WDT_InventoryMenu_C_OnRightPressed::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
 
 // Function WDT_InventoryMenu.WDT_InventoryMenu_C.OnUpdateDisplayImplement
-// 0x00D0 (0x00D0 - 0x0000)
+// 0x00F8 (0x00F8 - 0x0000)
 struct WDT_InventoryMenu_C_OnUpdateDisplayImplement final
 {
 public:
 	int32                                         L_PrevIndex;                                       // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FUIPlayerStatusSummaryInfo             CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo; // 0x0004(0x00B8)(NoDestructor)
-	int32                                         CallFunc_GetCategoryNumber_ReturnValue;            // 0x00BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetSelectionIndex_ReturnValue;            // 0x00C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x00C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Clamp_ReturnValue;                        // 0x00C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetSelectionIndex_ReturnValue_1;          // 0x00CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUIPlayerStatusSummaryInfo             CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo; // 0x0008(0x00D8)()
+	int32                                         CallFunc_GetCategoryNumber_ReturnValue;            // 0x00E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetSelectionIndex_ReturnValue;            // 0x00E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x00E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Clamp_ReturnValue;                        // 0x00EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetSelectionIndex_ReturnValue_1;          // 0x00F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WDT_InventoryMenu_C_OnUpdateDisplayImplement) == 0x000004, "Wrong alignment on WDT_InventoryMenu_C_OnUpdateDisplayImplement");
-static_assert(sizeof(WDT_InventoryMenu_C_OnUpdateDisplayImplement) == 0x0000D0, "Wrong size on WDT_InventoryMenu_C_OnUpdateDisplayImplement");
+static_assert(alignof(WDT_InventoryMenu_C_OnUpdateDisplayImplement) == 0x000008, "Wrong alignment on WDT_InventoryMenu_C_OnUpdateDisplayImplement");
+static_assert(sizeof(WDT_InventoryMenu_C_OnUpdateDisplayImplement) == 0x0000F8, "Wrong size on WDT_InventoryMenu_C_OnUpdateDisplayImplement");
 static_assert(offsetof(WDT_InventoryMenu_C_OnUpdateDisplayImplement, L_PrevIndex) == 0x000000, "Member 'WDT_InventoryMenu_C_OnUpdateDisplayImplement::L_PrevIndex' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_OnUpdateDisplayImplement, CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo) == 0x000004, "Member 'WDT_InventoryMenu_C_OnUpdateDisplayImplement::CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_OnUpdateDisplayImplement, CallFunc_GetCategoryNumber_ReturnValue) == 0x0000BC, "Member 'WDT_InventoryMenu_C_OnUpdateDisplayImplement::CallFunc_GetCategoryNumber_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_OnUpdateDisplayImplement, CallFunc_GetSelectionIndex_ReturnValue) == 0x0000C0, "Member 'WDT_InventoryMenu_C_OnUpdateDisplayImplement::CallFunc_GetSelectionIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_OnUpdateDisplayImplement, CallFunc_Subtract_IntInt_ReturnValue) == 0x0000C4, "Member 'WDT_InventoryMenu_C_OnUpdateDisplayImplement::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_OnUpdateDisplayImplement, CallFunc_Clamp_ReturnValue) == 0x0000C8, "Member 'WDT_InventoryMenu_C_OnUpdateDisplayImplement::CallFunc_Clamp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_OnUpdateDisplayImplement, CallFunc_GetSelectionIndex_ReturnValue_1) == 0x0000CC, "Member 'WDT_InventoryMenu_C_OnUpdateDisplayImplement::CallFunc_GetSelectionIndex_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_OnUpdateDisplayImplement, CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo) == 0x000008, "Member 'WDT_InventoryMenu_C_OnUpdateDisplayImplement::CallFunc_GetPlayerStatusSummaryInfo_OutSummaryInfo' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_OnUpdateDisplayImplement, CallFunc_GetCategoryNumber_ReturnValue) == 0x0000E0, "Member 'WDT_InventoryMenu_C_OnUpdateDisplayImplement::CallFunc_GetCategoryNumber_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_OnUpdateDisplayImplement, CallFunc_GetSelectionIndex_ReturnValue) == 0x0000E4, "Member 'WDT_InventoryMenu_C_OnUpdateDisplayImplement::CallFunc_GetSelectionIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_OnUpdateDisplayImplement, CallFunc_Subtract_IntInt_ReturnValue) == 0x0000E8, "Member 'WDT_InventoryMenu_C_OnUpdateDisplayImplement::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_OnUpdateDisplayImplement, CallFunc_Clamp_ReturnValue) == 0x0000EC, "Member 'WDT_InventoryMenu_C_OnUpdateDisplayImplement::CallFunc_Clamp_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_OnUpdateDisplayImplement, CallFunc_GetSelectionIndex_ReturnValue_1) == 0x0000F0, "Member 'WDT_InventoryMenu_C_OnUpdateDisplayImplement::CallFunc_GetSelectionIndex_ReturnValue_1' has a wrong offset!");
 
 // Function WDT_InventoryMenu.WDT_InventoryMenu_C.OnUpPressed
 // 0x0018 (0x0018 - 0x0000)
@@ -2324,7 +2330,7 @@ static_assert(sizeof(WDT_InventoryMenu_C_SequenceEvent__ENTRYPOINTWDT_InventoryM
 static_assert(offsetof(WDT_InventoryMenu_C_SequenceEvent__ENTRYPOINTWDT_InventoryMenu_0, InventoryMenuCanvas) == 0x000000, "Member 'WDT_InventoryMenu_C_SequenceEvent__ENTRYPOINTWDT_InventoryMenu_0::InventoryMenuCanvas' has a wrong offset!");
 
 // Function WDT_InventoryMenu.WDT_InventoryMenu_C.SetArticleInfo
-// 0x0C10 (0x0C10 - 0x0000)
+// 0x0C30 (0x0C30 - 0x0000)
 struct WDT_InventoryMenu_C_SetArticleInfo final
 {
 public:
@@ -2343,19 +2349,19 @@ public:
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0026(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_27[0x1];                                       // 0x0027(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUIWeaponGadgetInfo                    CallFunc_GetWeaponGadgetInfoByQuery_OutWeaponGadgetInfo; // 0x0028(0x00D0)()
-	struct FUIBloodCodeInfo                       CallFunc_GetBloodCodeInfoByIndex_OutBloodCodeInfo; // 0x00F8(0x00D8)()
-	struct FUIIndependentGadgetInfo               CallFunc_GetIndependentGadgetInfoByIndex_OutIndependentGadgetInfo; // 0x01D0(0x00F0)()
-	struct FUIDefensiveGadgetInfo                 CallFunc_GetDefensiveGadgetInfoByIndex_OutDefensiveGadgetInfo; // 0x02C0(0x00F8)()
-	struct FUIBoosterQueryInfo                    K2Node_MakeStruct_UIBoosterQueryInfo;              // 0x03B8(0x0008)(NoDestructor)
-	struct FUIBoosterInfo                         CallFunc_GetBoosterInfoByQuery_OutBoosterInfo;     // 0x03C0(0x0098)()
-	struct FUIWeaponQueryInfo                     K2Node_MakeStruct_UIWeaponQueryInfo;               // 0x0458(0x0008)(NoDestructor)
-	struct FUIJailInfo                            CallFunc_GetJailInfoByIndex_OutJailInfo;           // 0x0460(0x0148)()
-	struct FUIItemQueryInfo                       K2Node_MakeStruct_UIItemQueryInfo;                 // 0x05A8(0x0008)(NoDestructor)
-	struct FUIWeaponInfo                          CallFunc_GetWeaponInfoByQuery_OutWeaponInfo;       // 0x05B0(0x05B8)()
-	struct FUIItemInfo                            CallFunc_GetItemInfoByQuery_OutItemInfo;           // 0x0B68(0x00A8)()
+	struct FUIBloodCodeInfo                       CallFunc_GetBloodCodeInfoByIndex_OutBloodCodeInfo; // 0x00F8(0x00F8)()
+	struct FUIIndependentGadgetInfo               CallFunc_GetIndependentGadgetInfoByIndex_OutIndependentGadgetInfo; // 0x01F0(0x00F0)()
+	struct FUIDefensiveGadgetInfo                 CallFunc_GetDefensiveGadgetInfoByIndex_OutDefensiveGadgetInfo; // 0x02E0(0x00F8)()
+	struct FUIBoosterQueryInfo                    K2Node_MakeStruct_UIBoosterQueryInfo;              // 0x03D8(0x0008)(NoDestructor)
+	struct FUIBoosterInfo                         CallFunc_GetBoosterInfoByQuery_OutBoosterInfo;     // 0x03E0(0x0098)()
+	struct FUIWeaponQueryInfo                     K2Node_MakeStruct_UIWeaponQueryInfo;               // 0x0478(0x0008)(NoDestructor)
+	struct FUIJailInfo                            CallFunc_GetJailInfoByIndex_OutJailInfo;           // 0x0480(0x0148)()
+	struct FUIItemQueryInfo                       K2Node_MakeStruct_UIItemQueryInfo;                 // 0x05C8(0x0008)(NoDestructor)
+	struct FUIWeaponInfo                          CallFunc_GetWeaponInfoByQuery_OutWeaponInfo;       // 0x05D0(0x05B8)()
+	struct FUIItemInfo                            CallFunc_GetItemInfoByQuery_OutItemInfo;           // 0x0B88(0x00A8)()
 };
 static_assert(alignof(WDT_InventoryMenu_C_SetArticleInfo) == 0x000008, "Wrong alignment on WDT_InventoryMenu_C_SetArticleInfo");
-static_assert(sizeof(WDT_InventoryMenu_C_SetArticleInfo) == 0x000C10, "Wrong size on WDT_InventoryMenu_C_SetArticleInfo");
+static_assert(sizeof(WDT_InventoryMenu_C_SetArticleInfo) == 0x000C30, "Wrong size on WDT_InventoryMenu_C_SetArticleInfo");
 static_assert(offsetof(WDT_InventoryMenu_C_SetArticleInfo, InIndex) == 0x000000, "Member 'WDT_InventoryMenu_C_SetArticleInfo::InIndex' has a wrong offset!");
 static_assert(offsetof(WDT_InventoryMenu_C_SetArticleInfo, CallFunc_GetCategoryNumber_ReturnValue) == 0x000004, "Member 'WDT_InventoryMenu_C_SetArticleInfo::CallFunc_GetCategoryNumber_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_InventoryMenu_C_SetArticleInfo, CallFunc_Greater_IntInt_ReturnValue) == 0x000008, "Member 'WDT_InventoryMenu_C_SetArticleInfo::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
@@ -2369,18 +2375,18 @@ static_assert(offsetof(WDT_InventoryMenu_C_SetArticleInfo, K2Node_SwitchEnum_Cmp
 static_assert(offsetof(WDT_InventoryMenu_C_SetArticleInfo, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000026, "Member 'WDT_InventoryMenu_C_SetArticleInfo::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_InventoryMenu_C_SetArticleInfo, CallFunc_GetWeaponGadgetInfoByQuery_OutWeaponGadgetInfo) == 0x000028, "Member 'WDT_InventoryMenu_C_SetArticleInfo::CallFunc_GetWeaponGadgetInfoByQuery_OutWeaponGadgetInfo' has a wrong offset!");
 static_assert(offsetof(WDT_InventoryMenu_C_SetArticleInfo, CallFunc_GetBloodCodeInfoByIndex_OutBloodCodeInfo) == 0x0000F8, "Member 'WDT_InventoryMenu_C_SetArticleInfo::CallFunc_GetBloodCodeInfoByIndex_OutBloodCodeInfo' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_SetArticleInfo, CallFunc_GetIndependentGadgetInfoByIndex_OutIndependentGadgetInfo) == 0x0001D0, "Member 'WDT_InventoryMenu_C_SetArticleInfo::CallFunc_GetIndependentGadgetInfoByIndex_OutIndependentGadgetInfo' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_SetArticleInfo, CallFunc_GetDefensiveGadgetInfoByIndex_OutDefensiveGadgetInfo) == 0x0002C0, "Member 'WDT_InventoryMenu_C_SetArticleInfo::CallFunc_GetDefensiveGadgetInfoByIndex_OutDefensiveGadgetInfo' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_SetArticleInfo, K2Node_MakeStruct_UIBoosterQueryInfo) == 0x0003B8, "Member 'WDT_InventoryMenu_C_SetArticleInfo::K2Node_MakeStruct_UIBoosterQueryInfo' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_SetArticleInfo, CallFunc_GetBoosterInfoByQuery_OutBoosterInfo) == 0x0003C0, "Member 'WDT_InventoryMenu_C_SetArticleInfo::CallFunc_GetBoosterInfoByQuery_OutBoosterInfo' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_SetArticleInfo, K2Node_MakeStruct_UIWeaponQueryInfo) == 0x000458, "Member 'WDT_InventoryMenu_C_SetArticleInfo::K2Node_MakeStruct_UIWeaponQueryInfo' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_SetArticleInfo, CallFunc_GetJailInfoByIndex_OutJailInfo) == 0x000460, "Member 'WDT_InventoryMenu_C_SetArticleInfo::CallFunc_GetJailInfoByIndex_OutJailInfo' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_SetArticleInfo, K2Node_MakeStruct_UIItemQueryInfo) == 0x0005A8, "Member 'WDT_InventoryMenu_C_SetArticleInfo::K2Node_MakeStruct_UIItemQueryInfo' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_SetArticleInfo, CallFunc_GetWeaponInfoByQuery_OutWeaponInfo) == 0x0005B0, "Member 'WDT_InventoryMenu_C_SetArticleInfo::CallFunc_GetWeaponInfoByQuery_OutWeaponInfo' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_SetArticleInfo, CallFunc_GetItemInfoByQuery_OutItemInfo) == 0x000B68, "Member 'WDT_InventoryMenu_C_SetArticleInfo::CallFunc_GetItemInfoByQuery_OutItemInfo' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_SetArticleInfo, CallFunc_GetIndependentGadgetInfoByIndex_OutIndependentGadgetInfo) == 0x0001F0, "Member 'WDT_InventoryMenu_C_SetArticleInfo::CallFunc_GetIndependentGadgetInfoByIndex_OutIndependentGadgetInfo' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_SetArticleInfo, CallFunc_GetDefensiveGadgetInfoByIndex_OutDefensiveGadgetInfo) == 0x0002E0, "Member 'WDT_InventoryMenu_C_SetArticleInfo::CallFunc_GetDefensiveGadgetInfoByIndex_OutDefensiveGadgetInfo' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_SetArticleInfo, K2Node_MakeStruct_UIBoosterQueryInfo) == 0x0003D8, "Member 'WDT_InventoryMenu_C_SetArticleInfo::K2Node_MakeStruct_UIBoosterQueryInfo' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_SetArticleInfo, CallFunc_GetBoosterInfoByQuery_OutBoosterInfo) == 0x0003E0, "Member 'WDT_InventoryMenu_C_SetArticleInfo::CallFunc_GetBoosterInfoByQuery_OutBoosterInfo' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_SetArticleInfo, K2Node_MakeStruct_UIWeaponQueryInfo) == 0x000478, "Member 'WDT_InventoryMenu_C_SetArticleInfo::K2Node_MakeStruct_UIWeaponQueryInfo' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_SetArticleInfo, CallFunc_GetJailInfoByIndex_OutJailInfo) == 0x000480, "Member 'WDT_InventoryMenu_C_SetArticleInfo::CallFunc_GetJailInfoByIndex_OutJailInfo' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_SetArticleInfo, K2Node_MakeStruct_UIItemQueryInfo) == 0x0005C8, "Member 'WDT_InventoryMenu_C_SetArticleInfo::K2Node_MakeStruct_UIItemQueryInfo' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_SetArticleInfo, CallFunc_GetWeaponInfoByQuery_OutWeaponInfo) == 0x0005D0, "Member 'WDT_InventoryMenu_C_SetArticleInfo::CallFunc_GetWeaponInfoByQuery_OutWeaponInfo' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_SetArticleInfo, CallFunc_GetItemInfoByQuery_OutItemInfo) == 0x000B88, "Member 'WDT_InventoryMenu_C_SetArticleInfo::CallFunc_GetItemInfoByQuery_OutItemInfo' has a wrong offset!");
 
 // Function WDT_InventoryMenu.WDT_InventoryMenu_C.SetArticleInfoForRecentlyObtained
-// 0x0C10 (0x0C10 - 0x0000)
+// 0x0C30 (0x0C30 - 0x0000)
 struct WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained final
 {
 public:
@@ -2395,21 +2401,21 @@ public:
 	struct FUIRecentlyObtainedQueryInfo           K2Node_MakeStruct_UIRecentlyObtainedQueryInfo_4;   // 0x0118(0x0004)(NoDestructor)
 	uint8                                         Pad_11C[0x4];                                      // 0x011C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUIWeaponGadgetInfo                    CallFunc_GetRecentlyObtainedWeaponGadgetInfoByQuery_OutInfo; // 0x0120(0x00D0)()
-	struct FUIBloodCodeInfo                       CallFunc_GetRecentlyObtainedBloodCodeInfoByQuery_OutInfo; // 0x01F0(0x00D8)()
-	struct FUIIndependentGadgetInfo               CallFunc_GetRecentlyObtainedIndependentGadgetInfoByQuery_OutInfo; // 0x02C8(0x00F0)()
-	struct FUIBoosterInfo                         CallFunc_GetRecentlyObtainedBoosterInfoByQuery_OutInfo; // 0x03B8(0x0098)()
-	struct FUIRecentlyObtainedQueryInfo           K2Node_MakeStruct_UIRecentlyObtainedQueryInfo_5;   // 0x0450(0x0004)(NoDestructor)
-	struct FUIRecentlyObtainedQueryInfo           K2Node_MakeStruct_UIRecentlyObtainedQueryInfo_6;   // 0x0454(0x0004)(NoDestructor)
-	struct FUIJailInfo                            CallFunc_GetRecentlyObtainedJailInfoByQuery_OutInfo; // 0x0458(0x0148)()
-	struct FUIRecentlyObtainedQueryInfo           K2Node_MakeStruct_UIRecentlyObtainedQueryInfo_7;   // 0x05A0(0x0004)(NoDestructor)
-	uint8                                         Pad_5A4[0x4];                                      // 0x05A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUIWeaponInfo                          CallFunc_GetRecentlyObtainedWeaponInfoByQuery_OutInfo; // 0x05A8(0x05B8)()
-	struct FUIItemInfo                            CallFunc_GetRecentlyObtainedItemInfoByQuery_OutInfo; // 0x0B60(0x00A8)()
-	struct FUIRecentlyObtainedInfo                CallFunc_GetRecentlyObtainedInfoByQuery_OutInfo;   // 0x0C08(0x0001)(NoDestructor)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0C09(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FUIBloodCodeInfo                       CallFunc_GetRecentlyObtainedBloodCodeInfoByQuery_OutInfo; // 0x01F0(0x00F8)()
+	struct FUIIndependentGadgetInfo               CallFunc_GetRecentlyObtainedIndependentGadgetInfoByQuery_OutInfo; // 0x02E8(0x00F0)()
+	struct FUIBoosterInfo                         CallFunc_GetRecentlyObtainedBoosterInfoByQuery_OutInfo; // 0x03D8(0x0098)()
+	struct FUIRecentlyObtainedQueryInfo           K2Node_MakeStruct_UIRecentlyObtainedQueryInfo_5;   // 0x0470(0x0004)(NoDestructor)
+	struct FUIRecentlyObtainedQueryInfo           K2Node_MakeStruct_UIRecentlyObtainedQueryInfo_6;   // 0x0474(0x0004)(NoDestructor)
+	struct FUIJailInfo                            CallFunc_GetRecentlyObtainedJailInfoByQuery_OutInfo; // 0x0478(0x0148)()
+	struct FUIRecentlyObtainedQueryInfo           K2Node_MakeStruct_UIRecentlyObtainedQueryInfo_7;   // 0x05C0(0x0004)(NoDestructor)
+	uint8                                         Pad_5C4[0x4];                                      // 0x05C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUIWeaponInfo                          CallFunc_GetRecentlyObtainedWeaponInfoByQuery_OutInfo; // 0x05C8(0x05B8)()
+	struct FUIItemInfo                            CallFunc_GetRecentlyObtainedItemInfoByQuery_OutInfo; // 0x0B80(0x00A8)()
+	struct FUIRecentlyObtainedInfo                CallFunc_GetRecentlyObtainedInfoByQuery_OutInfo;   // 0x0C28(0x0001)(NoDestructor)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0C29(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained) == 0x000008, "Wrong alignment on WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained");
-static_assert(sizeof(WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained) == 0x000C10, "Wrong size on WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained");
+static_assert(sizeof(WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained) == 0x000C30, "Wrong size on WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained");
 static_assert(offsetof(WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained, InIndex) == 0x000000, "Member 'WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained::InIndex' has a wrong offset!");
 static_assert(offsetof(WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained, K2Node_MakeStruct_UIArticleQueryInfo) == 0x000004, "Member 'WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained::K2Node_MakeStruct_UIArticleQueryInfo' has a wrong offset!");
 static_assert(offsetof(WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained, K2Node_MakeStruct_UIRecentlyObtainedQueryInfo) == 0x00000C, "Member 'WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained::K2Node_MakeStruct_UIRecentlyObtainedQueryInfo' has a wrong offset!");
@@ -2420,16 +2426,16 @@ static_assert(offsetof(WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained, K2
 static_assert(offsetof(WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained, K2Node_MakeStruct_UIRecentlyObtainedQueryInfo_4) == 0x000118, "Member 'WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained::K2Node_MakeStruct_UIRecentlyObtainedQueryInfo_4' has a wrong offset!");
 static_assert(offsetof(WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained, CallFunc_GetRecentlyObtainedWeaponGadgetInfoByQuery_OutInfo) == 0x000120, "Member 'WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained::CallFunc_GetRecentlyObtainedWeaponGadgetInfoByQuery_OutInfo' has a wrong offset!");
 static_assert(offsetof(WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained, CallFunc_GetRecentlyObtainedBloodCodeInfoByQuery_OutInfo) == 0x0001F0, "Member 'WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained::CallFunc_GetRecentlyObtainedBloodCodeInfoByQuery_OutInfo' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained, CallFunc_GetRecentlyObtainedIndependentGadgetInfoByQuery_OutInfo) == 0x0002C8, "Member 'WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained::CallFunc_GetRecentlyObtainedIndependentGadgetInfoByQuery_OutInfo' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained, CallFunc_GetRecentlyObtainedBoosterInfoByQuery_OutInfo) == 0x0003B8, "Member 'WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained::CallFunc_GetRecentlyObtainedBoosterInfoByQuery_OutInfo' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained, K2Node_MakeStruct_UIRecentlyObtainedQueryInfo_5) == 0x000450, "Member 'WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained::K2Node_MakeStruct_UIRecentlyObtainedQueryInfo_5' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained, K2Node_MakeStruct_UIRecentlyObtainedQueryInfo_6) == 0x000454, "Member 'WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained::K2Node_MakeStruct_UIRecentlyObtainedQueryInfo_6' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained, CallFunc_GetRecentlyObtainedJailInfoByQuery_OutInfo) == 0x000458, "Member 'WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained::CallFunc_GetRecentlyObtainedJailInfoByQuery_OutInfo' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained, K2Node_MakeStruct_UIRecentlyObtainedQueryInfo_7) == 0x0005A0, "Member 'WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained::K2Node_MakeStruct_UIRecentlyObtainedQueryInfo_7' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained, CallFunc_GetRecentlyObtainedWeaponInfoByQuery_OutInfo) == 0x0005A8, "Member 'WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained::CallFunc_GetRecentlyObtainedWeaponInfoByQuery_OutInfo' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained, CallFunc_GetRecentlyObtainedItemInfoByQuery_OutInfo) == 0x000B60, "Member 'WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained::CallFunc_GetRecentlyObtainedItemInfoByQuery_OutInfo' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained, CallFunc_GetRecentlyObtainedInfoByQuery_OutInfo) == 0x000C08, "Member 'WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained::CallFunc_GetRecentlyObtainedInfoByQuery_OutInfo' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained, K2Node_SwitchEnum_CmpSuccess) == 0x000C09, "Member 'WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained, CallFunc_GetRecentlyObtainedIndependentGadgetInfoByQuery_OutInfo) == 0x0002E8, "Member 'WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained::CallFunc_GetRecentlyObtainedIndependentGadgetInfoByQuery_OutInfo' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained, CallFunc_GetRecentlyObtainedBoosterInfoByQuery_OutInfo) == 0x0003D8, "Member 'WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained::CallFunc_GetRecentlyObtainedBoosterInfoByQuery_OutInfo' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained, K2Node_MakeStruct_UIRecentlyObtainedQueryInfo_5) == 0x000470, "Member 'WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained::K2Node_MakeStruct_UIRecentlyObtainedQueryInfo_5' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained, K2Node_MakeStruct_UIRecentlyObtainedQueryInfo_6) == 0x000474, "Member 'WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained::K2Node_MakeStruct_UIRecentlyObtainedQueryInfo_6' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained, CallFunc_GetRecentlyObtainedJailInfoByQuery_OutInfo) == 0x000478, "Member 'WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained::CallFunc_GetRecentlyObtainedJailInfoByQuery_OutInfo' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained, K2Node_MakeStruct_UIRecentlyObtainedQueryInfo_7) == 0x0005C0, "Member 'WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained::K2Node_MakeStruct_UIRecentlyObtainedQueryInfo_7' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained, CallFunc_GetRecentlyObtainedWeaponInfoByQuery_OutInfo) == 0x0005C8, "Member 'WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained::CallFunc_GetRecentlyObtainedWeaponInfoByQuery_OutInfo' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained, CallFunc_GetRecentlyObtainedItemInfoByQuery_OutInfo) == 0x000B80, "Member 'WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained::CallFunc_GetRecentlyObtainedItemInfoByQuery_OutInfo' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained, CallFunc_GetRecentlyObtainedInfoByQuery_OutInfo) == 0x000C28, "Member 'WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained::CallFunc_GetRecentlyObtainedInfoByQuery_OutInfo' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained, K2Node_SwitchEnum_CmpSuccess) == 0x000C29, "Member 'WDT_InventoryMenu_C_SetArticleInfoForRecentlyObtained::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
 
 // Function WDT_InventoryMenu.WDT_InventoryMenu_C.SetProhibited
 // 0x0001 (0x0001 - 0x0000)
@@ -2443,7 +2449,7 @@ static_assert(sizeof(WDT_InventoryMenu_C_SetProhibited) == 0x000001, "Wrong size
 static_assert(offsetof(WDT_InventoryMenu_C_SetProhibited, InProhibited) == 0x000000, "Member 'WDT_InventoryMenu_C_SetProhibited::InProhibited' has a wrong offset!");
 
 // Function WDT_InventoryMenu.WDT_InventoryMenu_C.Update List Thumbnail for Recentrly Obtained
-// 0x0D48 (0x0D48 - 0x0000)
+// 0x0D68 (0x0D68 - 0x0000)
 struct WDT_InventoryMenu_C_Update_List_Thumbnail_for_Recentrly_Obtained final
 {
 public:
@@ -2521,13 +2527,13 @@ public:
 	bool                                          CallFunc_SetLazyTexture_ReturnValue_5;             // 0x0B91(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SetSubLazyTexture_ReturnValue_1;          // 0x0B92(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_B93[0x5];                                      // 0x0B93(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUIBloodCodeInfo                       CallFunc_GetRecentlyObtainedBloodCodeInfoByQuery_OutInfo; // 0x0B98(0x00D8)()
-	struct FUIWeaponGadgetInfo                    CallFunc_GetRecentlyObtainedWeaponGadgetInfoByQuery_OutInfo; // 0x0C70(0x00D0)()
-	bool                                          CallFunc_SetLazyTexture_ReturnValue_6;             // 0x0D40(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SetLazyTexture_ReturnValue_7;             // 0x0D41(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FUIBloodCodeInfo                       CallFunc_GetRecentlyObtainedBloodCodeInfoByQuery_OutInfo; // 0x0B98(0x00F8)()
+	struct FUIWeaponGadgetInfo                    CallFunc_GetRecentlyObtainedWeaponGadgetInfoByQuery_OutInfo; // 0x0C90(0x00D0)()
+	bool                                          CallFunc_SetLazyTexture_ReturnValue_6;             // 0x0D60(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SetLazyTexture_ReturnValue_7;             // 0x0D61(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_InventoryMenu_C_Update_List_Thumbnail_for_Recentrly_Obtained) == 0x000008, "Wrong alignment on WDT_InventoryMenu_C_Update_List_Thumbnail_for_Recentrly_Obtained");
-static_assert(sizeof(WDT_InventoryMenu_C_Update_List_Thumbnail_for_Recentrly_Obtained) == 0x000D48, "Wrong size on WDT_InventoryMenu_C_Update_List_Thumbnail_for_Recentrly_Obtained");
+static_assert(sizeof(WDT_InventoryMenu_C_Update_List_Thumbnail_for_Recentrly_Obtained) == 0x000D68, "Wrong size on WDT_InventoryMenu_C_Update_List_Thumbnail_for_Recentrly_Obtained");
 static_assert(offsetof(WDT_InventoryMenu_C_Update_List_Thumbnail_for_Recentrly_Obtained, InTarget) == 0x000000, "Member 'WDT_InventoryMenu_C_Update_List_Thumbnail_for_Recentrly_Obtained::InTarget' has a wrong offset!");
 static_assert(offsetof(WDT_InventoryMenu_C_Update_List_Thumbnail_for_Recentrly_Obtained, InIndex) == 0x000008, "Member 'WDT_InventoryMenu_C_Update_List_Thumbnail_for_Recentrly_Obtained::InIndex' has a wrong offset!");
 static_assert(offsetof(WDT_InventoryMenu_C_Update_List_Thumbnail_for_Recentrly_Obtained, K2Node_MakeStruct_UIArticleQueryInfo) == 0x00000C, "Member 'WDT_InventoryMenu_C_Update_List_Thumbnail_for_Recentrly_Obtained::K2Node_MakeStruct_UIArticleQueryInfo' has a wrong offset!");
@@ -2584,12 +2590,12 @@ static_assert(offsetof(WDT_InventoryMenu_C_Update_List_Thumbnail_for_Recentrly_O
 static_assert(offsetof(WDT_InventoryMenu_C_Update_List_Thumbnail_for_Recentrly_Obtained, CallFunc_SetLazyTexture_ReturnValue_5) == 0x000B91, "Member 'WDT_InventoryMenu_C_Update_List_Thumbnail_for_Recentrly_Obtained::CallFunc_SetLazyTexture_ReturnValue_5' has a wrong offset!");
 static_assert(offsetof(WDT_InventoryMenu_C_Update_List_Thumbnail_for_Recentrly_Obtained, CallFunc_SetSubLazyTexture_ReturnValue_1) == 0x000B92, "Member 'WDT_InventoryMenu_C_Update_List_Thumbnail_for_Recentrly_Obtained::CallFunc_SetSubLazyTexture_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(WDT_InventoryMenu_C_Update_List_Thumbnail_for_Recentrly_Obtained, CallFunc_GetRecentlyObtainedBloodCodeInfoByQuery_OutInfo) == 0x000B98, "Member 'WDT_InventoryMenu_C_Update_List_Thumbnail_for_Recentrly_Obtained::CallFunc_GetRecentlyObtainedBloodCodeInfoByQuery_OutInfo' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_Update_List_Thumbnail_for_Recentrly_Obtained, CallFunc_GetRecentlyObtainedWeaponGadgetInfoByQuery_OutInfo) == 0x000C70, "Member 'WDT_InventoryMenu_C_Update_List_Thumbnail_for_Recentrly_Obtained::CallFunc_GetRecentlyObtainedWeaponGadgetInfoByQuery_OutInfo' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_Update_List_Thumbnail_for_Recentrly_Obtained, CallFunc_SetLazyTexture_ReturnValue_6) == 0x000D40, "Member 'WDT_InventoryMenu_C_Update_List_Thumbnail_for_Recentrly_Obtained::CallFunc_SetLazyTexture_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_Update_List_Thumbnail_for_Recentrly_Obtained, CallFunc_SetLazyTexture_ReturnValue_7) == 0x000D41, "Member 'WDT_InventoryMenu_C_Update_List_Thumbnail_for_Recentrly_Obtained::CallFunc_SetLazyTexture_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_Update_List_Thumbnail_for_Recentrly_Obtained, CallFunc_GetRecentlyObtainedWeaponGadgetInfoByQuery_OutInfo) == 0x000C90, "Member 'WDT_InventoryMenu_C_Update_List_Thumbnail_for_Recentrly_Obtained::CallFunc_GetRecentlyObtainedWeaponGadgetInfoByQuery_OutInfo' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_Update_List_Thumbnail_for_Recentrly_Obtained, CallFunc_SetLazyTexture_ReturnValue_6) == 0x000D60, "Member 'WDT_InventoryMenu_C_Update_List_Thumbnail_for_Recentrly_Obtained::CallFunc_SetLazyTexture_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_Update_List_Thumbnail_for_Recentrly_Obtained, CallFunc_SetLazyTexture_ReturnValue_7) == 0x000D61, "Member 'WDT_InventoryMenu_C_Update_List_Thumbnail_for_Recentrly_Obtained::CallFunc_SetLazyTexture_ReturnValue_7' has a wrong offset!");
 
 // Function WDT_InventoryMenu.WDT_InventoryMenu_C.UpdateListThumbnail
-// 0x0D48 (0x0D48 - 0x0000)
+// 0x0D68 (0x0D68 - 0x0000)
 struct WDT_InventoryMenu_C_UpdateListThumbnail final
 {
 public:
@@ -2623,57 +2629,57 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SetLazyTexture_ReturnValue;               // 0x0161(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_162[0x6];                                      // 0x0162(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUIBloodCodeInfo                       CallFunc_GetBloodCodeInfoByIndex_OutBloodCodeInfo; // 0x0168(0x00D8)()
-	TScriptInterface<class ITextureInterface>     K2Node_DynamicCast_AsTexture_Interface_2;          // 0x0240(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x0250(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SetLazyTexture_ReturnValue_1;             // 0x0251(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_252[0x6];                                      // 0x0252(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUIIndependentGadgetInfo               CallFunc_GetIndependentGadgetInfoByIndex_OutIndependentGadgetInfo; // 0x0258(0x00F0)()
-	TScriptInterface<class ITextureInterface>     K2Node_DynamicCast_AsTexture_Interface_3;          // 0x0348(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_6;                     // 0x0358(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_359[0x7];                                      // 0x0359(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class ITextureInterface>     K2Node_DynamicCast_AsTexture_Interface_4;          // 0x0360(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_7;                     // 0x0370(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SetLazyTexture_ReturnValue_2;             // 0x0371(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_372[0x6];                                      // 0x0372(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUIDefensiveGadgetInfo                 CallFunc_GetDefensiveGadgetInfoByIndex_OutDefensiveGadgetInfo; // 0x0378(0x00F8)()
-	TScriptInterface<class ITextureInterface>     K2Node_DynamicCast_AsTexture_Interface_5;          // 0x0470(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_8;                     // 0x0480(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SetLazyTexture_ReturnValue_3;             // 0x0481(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_482[0x2];                                      // 0x0482(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUIBoosterQueryInfo                    K2Node_MakeStruct_UIBoosterQueryInfo;              // 0x0484(0x0008)(NoDestructor)
-	bool                                          CallFunc_SetSubLazyTexture_ReturnValue;            // 0x048C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_48D[0x3];                                      // 0x048D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUIBoosterInfo                         CallFunc_GetBoosterInfoByQuery_OutBoosterInfo;     // 0x0490(0x0098)()
-	TScriptInterface<class ITextureInterface>     K2Node_DynamicCast_AsTexture_Interface_6;          // 0x0528(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_9;                     // 0x0538(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SetLazyTexture_ReturnValue_4;             // 0x0539(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_53A[0x2];                                      // 0x053A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUIItemQueryInfo                       K2Node_MakeStruct_UIItemQueryInfo;                 // 0x053C(0x0008)(NoDestructor)
-	struct FUIWeaponQueryInfo                     K2Node_MakeStruct_UIWeaponQueryInfo;               // 0x0544(0x0008)(NoDestructor)
-	uint8                                         Pad_54C[0x4];                                      // 0x054C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUIJailInfo                            CallFunc_GetJailInfoByIndex_OutJailInfo;           // 0x0550(0x0148)()
-	TScriptInterface<class ITextureInterface>     K2Node_DynamicCast_AsTexture_Interface_7;          // 0x0698(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_10;                    // 0x06A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SetLazyTexture_ReturnValue_5;             // 0x06A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6AA[0x6];                                      // 0x06AA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class ITextureInterface>     K2Node_DynamicCast_AsTexture_Interface_8;          // 0x06B0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_11;                    // 0x06C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6C1[0x7];                                      // 0x06C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class ITextureInterface>     K2Node_DynamicCast_AsTexture_Interface_9;          // 0x06C8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_12;                    // 0x06D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6D9[0x7];                                      // 0x06D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUIWeaponInfo                          CallFunc_GetWeaponInfoByQuery_OutWeaponInfo;       // 0x06E0(0x05B8)()
-	struct FUIItemInfo                            CallFunc_GetItemInfoByQuery_OutItemInfo;           // 0x0C98(0x00A8)()
-	bool                                          CallFunc_SetLazyTexture_ReturnValue_6;             // 0x0D40(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SetLazyTexture_ReturnValue_7;             // 0x0D41(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SetInteger_ReturnValue_1;                 // 0x0D42(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x0D43(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0D44(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SetSubLazyTexture_ReturnValue_1;          // 0x0D45(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FUIBloodCodeInfo                       CallFunc_GetBloodCodeInfoByIndex_OutBloodCodeInfo; // 0x0168(0x00F8)()
+	TScriptInterface<class ITextureInterface>     K2Node_DynamicCast_AsTexture_Interface_2;          // 0x0260(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x0270(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SetLazyTexture_ReturnValue_1;             // 0x0271(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_272[0x6];                                      // 0x0272(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUIIndependentGadgetInfo               CallFunc_GetIndependentGadgetInfoByIndex_OutIndependentGadgetInfo; // 0x0278(0x00F0)()
+	TScriptInterface<class ITextureInterface>     K2Node_DynamicCast_AsTexture_Interface_3;          // 0x0368(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_6;                     // 0x0378(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_379[0x7];                                      // 0x0379(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class ITextureInterface>     K2Node_DynamicCast_AsTexture_Interface_4;          // 0x0380(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_7;                     // 0x0390(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SetLazyTexture_ReturnValue_2;             // 0x0391(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_392[0x6];                                      // 0x0392(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUIDefensiveGadgetInfo                 CallFunc_GetDefensiveGadgetInfoByIndex_OutDefensiveGadgetInfo; // 0x0398(0x00F8)()
+	TScriptInterface<class ITextureInterface>     K2Node_DynamicCast_AsTexture_Interface_5;          // 0x0490(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_8;                     // 0x04A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SetLazyTexture_ReturnValue_3;             // 0x04A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4A2[0x2];                                      // 0x04A2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUIBoosterQueryInfo                    K2Node_MakeStruct_UIBoosterQueryInfo;              // 0x04A4(0x0008)(NoDestructor)
+	bool                                          CallFunc_SetSubLazyTexture_ReturnValue;            // 0x04AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4AD[0x3];                                      // 0x04AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUIBoosterInfo                         CallFunc_GetBoosterInfoByQuery_OutBoosterInfo;     // 0x04B0(0x0098)()
+	TScriptInterface<class ITextureInterface>     K2Node_DynamicCast_AsTexture_Interface_6;          // 0x0548(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_9;                     // 0x0558(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SetLazyTexture_ReturnValue_4;             // 0x0559(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_55A[0x2];                                      // 0x055A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUIItemQueryInfo                       K2Node_MakeStruct_UIItemQueryInfo;                 // 0x055C(0x0008)(NoDestructor)
+	struct FUIWeaponQueryInfo                     K2Node_MakeStruct_UIWeaponQueryInfo;               // 0x0564(0x0008)(NoDestructor)
+	uint8                                         Pad_56C[0x4];                                      // 0x056C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUIJailInfo                            CallFunc_GetJailInfoByIndex_OutJailInfo;           // 0x0570(0x0148)()
+	TScriptInterface<class ITextureInterface>     K2Node_DynamicCast_AsTexture_Interface_7;          // 0x06B8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_10;                    // 0x06C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SetLazyTexture_ReturnValue_5;             // 0x06C9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6CA[0x6];                                      // 0x06CA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class ITextureInterface>     K2Node_DynamicCast_AsTexture_Interface_8;          // 0x06D0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_11;                    // 0x06E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6E1[0x7];                                      // 0x06E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class ITextureInterface>     K2Node_DynamicCast_AsTexture_Interface_9;          // 0x06E8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_12;                    // 0x06F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6F9[0x7];                                      // 0x06F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUIWeaponInfo                          CallFunc_GetWeaponInfoByQuery_OutWeaponInfo;       // 0x0700(0x05B8)()
+	struct FUIItemInfo                            CallFunc_GetItemInfoByQuery_OutItemInfo;           // 0x0CB8(0x00A8)()
+	bool                                          CallFunc_SetLazyTexture_ReturnValue_6;             // 0x0D60(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SetLazyTexture_ReturnValue_7;             // 0x0D61(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SetInteger_ReturnValue_1;                 // 0x0D62(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x0D63(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0D64(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SetSubLazyTexture_ReturnValue_1;          // 0x0D65(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_InventoryMenu_C_UpdateListThumbnail) == 0x000008, "Wrong alignment on WDT_InventoryMenu_C_UpdateListThumbnail");
-static_assert(sizeof(WDT_InventoryMenu_C_UpdateListThumbnail) == 0x000D48, "Wrong size on WDT_InventoryMenu_C_UpdateListThumbnail");
+static_assert(sizeof(WDT_InventoryMenu_C_UpdateListThumbnail) == 0x000D68, "Wrong size on WDT_InventoryMenu_C_UpdateListThumbnail");
 static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, InTarget) == 0x000000, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::InTarget' has a wrong offset!");
 static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, InIndex) == 0x000008, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::InIndex' has a wrong offset!");
 static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, K2Node_DynamicCast_AsReset_Interface) == 0x000010, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::K2Node_DynamicCast_AsReset_Interface' has a wrong offset!");
@@ -2699,43 +2705,43 @@ static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, K2Node_DynamicCa
 static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, K2Node_DynamicCast_bSuccess_4) == 0x000160, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
 static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, CallFunc_SetLazyTexture_ReturnValue) == 0x000161, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::CallFunc_SetLazyTexture_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, CallFunc_GetBloodCodeInfoByIndex_OutBloodCodeInfo) == 0x000168, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::CallFunc_GetBloodCodeInfoByIndex_OutBloodCodeInfo' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, K2Node_DynamicCast_AsTexture_Interface_2) == 0x000240, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::K2Node_DynamicCast_AsTexture_Interface_2' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, K2Node_DynamicCast_bSuccess_5) == 0x000250, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::K2Node_DynamicCast_bSuccess_5' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, CallFunc_SetLazyTexture_ReturnValue_1) == 0x000251, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::CallFunc_SetLazyTexture_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, CallFunc_GetIndependentGadgetInfoByIndex_OutIndependentGadgetInfo) == 0x000258, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::CallFunc_GetIndependentGadgetInfoByIndex_OutIndependentGadgetInfo' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, K2Node_DynamicCast_AsTexture_Interface_3) == 0x000348, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::K2Node_DynamicCast_AsTexture_Interface_3' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, K2Node_DynamicCast_bSuccess_6) == 0x000358, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::K2Node_DynamicCast_bSuccess_6' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, K2Node_DynamicCast_AsTexture_Interface_4) == 0x000360, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::K2Node_DynamicCast_AsTexture_Interface_4' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, K2Node_DynamicCast_bSuccess_7) == 0x000370, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::K2Node_DynamicCast_bSuccess_7' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, CallFunc_SetLazyTexture_ReturnValue_2) == 0x000371, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::CallFunc_SetLazyTexture_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, CallFunc_GetDefensiveGadgetInfoByIndex_OutDefensiveGadgetInfo) == 0x000378, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::CallFunc_GetDefensiveGadgetInfoByIndex_OutDefensiveGadgetInfo' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, K2Node_DynamicCast_AsTexture_Interface_5) == 0x000470, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::K2Node_DynamicCast_AsTexture_Interface_5' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, K2Node_DynamicCast_bSuccess_8) == 0x000480, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::K2Node_DynamicCast_bSuccess_8' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, CallFunc_SetLazyTexture_ReturnValue_3) == 0x000481, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::CallFunc_SetLazyTexture_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, K2Node_MakeStruct_UIBoosterQueryInfo) == 0x000484, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::K2Node_MakeStruct_UIBoosterQueryInfo' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, CallFunc_SetSubLazyTexture_ReturnValue) == 0x00048C, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::CallFunc_SetSubLazyTexture_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, CallFunc_GetBoosterInfoByQuery_OutBoosterInfo) == 0x000490, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::CallFunc_GetBoosterInfoByQuery_OutBoosterInfo' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, K2Node_DynamicCast_AsTexture_Interface_6) == 0x000528, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::K2Node_DynamicCast_AsTexture_Interface_6' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, K2Node_DynamicCast_bSuccess_9) == 0x000538, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::K2Node_DynamicCast_bSuccess_9' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, CallFunc_SetLazyTexture_ReturnValue_4) == 0x000539, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::CallFunc_SetLazyTexture_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, K2Node_MakeStruct_UIItemQueryInfo) == 0x00053C, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::K2Node_MakeStruct_UIItemQueryInfo' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, K2Node_MakeStruct_UIWeaponQueryInfo) == 0x000544, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::K2Node_MakeStruct_UIWeaponQueryInfo' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, CallFunc_GetJailInfoByIndex_OutJailInfo) == 0x000550, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::CallFunc_GetJailInfoByIndex_OutJailInfo' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, K2Node_DynamicCast_AsTexture_Interface_7) == 0x000698, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::K2Node_DynamicCast_AsTexture_Interface_7' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, K2Node_DynamicCast_bSuccess_10) == 0x0006A8, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::K2Node_DynamicCast_bSuccess_10' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, CallFunc_SetLazyTexture_ReturnValue_5) == 0x0006A9, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::CallFunc_SetLazyTexture_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, K2Node_DynamicCast_AsTexture_Interface_8) == 0x0006B0, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::K2Node_DynamicCast_AsTexture_Interface_8' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, K2Node_DynamicCast_bSuccess_11) == 0x0006C0, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::K2Node_DynamicCast_bSuccess_11' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, K2Node_DynamicCast_AsTexture_Interface_9) == 0x0006C8, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::K2Node_DynamicCast_AsTexture_Interface_9' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, K2Node_DynamicCast_bSuccess_12) == 0x0006D8, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::K2Node_DynamicCast_bSuccess_12' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, CallFunc_GetWeaponInfoByQuery_OutWeaponInfo) == 0x0006E0, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::CallFunc_GetWeaponInfoByQuery_OutWeaponInfo' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, CallFunc_GetItemInfoByQuery_OutItemInfo) == 0x000C98, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::CallFunc_GetItemInfoByQuery_OutItemInfo' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, CallFunc_SetLazyTexture_ReturnValue_6) == 0x000D40, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::CallFunc_SetLazyTexture_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, CallFunc_SetLazyTexture_ReturnValue_7) == 0x000D41, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::CallFunc_SetLazyTexture_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, CallFunc_SetInteger_ReturnValue_1) == 0x000D42, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::CallFunc_SetInteger_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, CallFunc_EqualEqual_ByteByte_ReturnValue_1) == 0x000D43, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::CallFunc_EqualEqual_ByteByte_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, CallFunc_BooleanOR_ReturnValue) == 0x000D44, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, CallFunc_SetSubLazyTexture_ReturnValue_1) == 0x000D45, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::CallFunc_SetSubLazyTexture_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, K2Node_DynamicCast_AsTexture_Interface_2) == 0x000260, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::K2Node_DynamicCast_AsTexture_Interface_2' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, K2Node_DynamicCast_bSuccess_5) == 0x000270, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::K2Node_DynamicCast_bSuccess_5' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, CallFunc_SetLazyTexture_ReturnValue_1) == 0x000271, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::CallFunc_SetLazyTexture_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, CallFunc_GetIndependentGadgetInfoByIndex_OutIndependentGadgetInfo) == 0x000278, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::CallFunc_GetIndependentGadgetInfoByIndex_OutIndependentGadgetInfo' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, K2Node_DynamicCast_AsTexture_Interface_3) == 0x000368, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::K2Node_DynamicCast_AsTexture_Interface_3' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, K2Node_DynamicCast_bSuccess_6) == 0x000378, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::K2Node_DynamicCast_bSuccess_6' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, K2Node_DynamicCast_AsTexture_Interface_4) == 0x000380, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::K2Node_DynamicCast_AsTexture_Interface_4' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, K2Node_DynamicCast_bSuccess_7) == 0x000390, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::K2Node_DynamicCast_bSuccess_7' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, CallFunc_SetLazyTexture_ReturnValue_2) == 0x000391, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::CallFunc_SetLazyTexture_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, CallFunc_GetDefensiveGadgetInfoByIndex_OutDefensiveGadgetInfo) == 0x000398, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::CallFunc_GetDefensiveGadgetInfoByIndex_OutDefensiveGadgetInfo' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, K2Node_DynamicCast_AsTexture_Interface_5) == 0x000490, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::K2Node_DynamicCast_AsTexture_Interface_5' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, K2Node_DynamicCast_bSuccess_8) == 0x0004A0, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::K2Node_DynamicCast_bSuccess_8' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, CallFunc_SetLazyTexture_ReturnValue_3) == 0x0004A1, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::CallFunc_SetLazyTexture_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, K2Node_MakeStruct_UIBoosterQueryInfo) == 0x0004A4, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::K2Node_MakeStruct_UIBoosterQueryInfo' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, CallFunc_SetSubLazyTexture_ReturnValue) == 0x0004AC, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::CallFunc_SetSubLazyTexture_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, CallFunc_GetBoosterInfoByQuery_OutBoosterInfo) == 0x0004B0, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::CallFunc_GetBoosterInfoByQuery_OutBoosterInfo' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, K2Node_DynamicCast_AsTexture_Interface_6) == 0x000548, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::K2Node_DynamicCast_AsTexture_Interface_6' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, K2Node_DynamicCast_bSuccess_9) == 0x000558, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::K2Node_DynamicCast_bSuccess_9' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, CallFunc_SetLazyTexture_ReturnValue_4) == 0x000559, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::CallFunc_SetLazyTexture_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, K2Node_MakeStruct_UIItemQueryInfo) == 0x00055C, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::K2Node_MakeStruct_UIItemQueryInfo' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, K2Node_MakeStruct_UIWeaponQueryInfo) == 0x000564, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::K2Node_MakeStruct_UIWeaponQueryInfo' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, CallFunc_GetJailInfoByIndex_OutJailInfo) == 0x000570, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::CallFunc_GetJailInfoByIndex_OutJailInfo' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, K2Node_DynamicCast_AsTexture_Interface_7) == 0x0006B8, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::K2Node_DynamicCast_AsTexture_Interface_7' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, K2Node_DynamicCast_bSuccess_10) == 0x0006C8, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::K2Node_DynamicCast_bSuccess_10' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, CallFunc_SetLazyTexture_ReturnValue_5) == 0x0006C9, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::CallFunc_SetLazyTexture_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, K2Node_DynamicCast_AsTexture_Interface_8) == 0x0006D0, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::K2Node_DynamicCast_AsTexture_Interface_8' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, K2Node_DynamicCast_bSuccess_11) == 0x0006E0, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::K2Node_DynamicCast_bSuccess_11' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, K2Node_DynamicCast_AsTexture_Interface_9) == 0x0006E8, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::K2Node_DynamicCast_AsTexture_Interface_9' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, K2Node_DynamicCast_bSuccess_12) == 0x0006F8, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::K2Node_DynamicCast_bSuccess_12' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, CallFunc_GetWeaponInfoByQuery_OutWeaponInfo) == 0x000700, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::CallFunc_GetWeaponInfoByQuery_OutWeaponInfo' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, CallFunc_GetItemInfoByQuery_OutItemInfo) == 0x000CB8, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::CallFunc_GetItemInfoByQuery_OutItemInfo' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, CallFunc_SetLazyTexture_ReturnValue_6) == 0x000D60, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::CallFunc_SetLazyTexture_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, CallFunc_SetLazyTexture_ReturnValue_7) == 0x000D61, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::CallFunc_SetLazyTexture_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, CallFunc_SetInteger_ReturnValue_1) == 0x000D62, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::CallFunc_SetInteger_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, CallFunc_EqualEqual_ByteByte_ReturnValue_1) == 0x000D63, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::CallFunc_EqualEqual_ByteByte_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, CallFunc_BooleanOR_ReturnValue) == 0x000D64, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenu_C_UpdateListThumbnail, CallFunc_SetSubLazyTexture_ReturnValue_1) == 0x000D65, "Member 'WDT_InventoryMenu_C_UpdateListThumbnail::CallFunc_SetSubLazyTexture_ReturnValue_1' has a wrong offset!");
 
 // Function WDT_InventoryMenu.WDT_InventoryMenu_C.UpdateProhibited
 // 0x0001 (0x0001 - 0x0000)

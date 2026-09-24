@@ -16,90 +16,6 @@
 namespace SDK::Params
 {
 
-// Function WDT_LicenseDisplayMenu.WDT_LicenseDisplayMenu_C.OnMouseLeftClickMenuPiece
-// 0x0008 (0x0008 - 0x0000)
-struct WDT_LicenseDisplayMenu_C_OnMouseLeftClickMenuPiece final
-{
-public:
-	class UMenuPieceBase*                         MenuPiece;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_LicenseDisplayMenu_C_OnMouseLeftClickMenuPiece) == 0x000008, "Wrong alignment on WDT_LicenseDisplayMenu_C_OnMouseLeftClickMenuPiece");
-static_assert(sizeof(WDT_LicenseDisplayMenu_C_OnMouseLeftClickMenuPiece) == 0x000008, "Wrong size on WDT_LicenseDisplayMenu_C_OnMouseLeftClickMenuPiece");
-static_assert(offsetof(WDT_LicenseDisplayMenu_C_OnMouseLeftClickMenuPiece, MenuPiece) == 0x000000, "Member 'WDT_LicenseDisplayMenu_C_OnMouseLeftClickMenuPiece::MenuPiece' has a wrong offset!");
-
-// Function WDT_LicenseDisplayMenu.WDT_LicenseDisplayMenu_C.OnMouseLeaveMenuPiece
-// 0x0008 (0x0008 - 0x0000)
-struct WDT_LicenseDisplayMenu_C_OnMouseLeaveMenuPiece final
-{
-public:
-	class UMenuPieceBase*                         MenuPiece;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_LicenseDisplayMenu_C_OnMouseLeaveMenuPiece) == 0x000008, "Wrong alignment on WDT_LicenseDisplayMenu_C_OnMouseLeaveMenuPiece");
-static_assert(sizeof(WDT_LicenseDisplayMenu_C_OnMouseLeaveMenuPiece) == 0x000008, "Wrong size on WDT_LicenseDisplayMenu_C_OnMouseLeaveMenuPiece");
-static_assert(offsetof(WDT_LicenseDisplayMenu_C_OnMouseLeaveMenuPiece, MenuPiece) == 0x000000, "Member 'WDT_LicenseDisplayMenu_C_OnMouseLeaveMenuPiece::MenuPiece' has a wrong offset!");
-
-// Function WDT_LicenseDisplayMenu.WDT_LicenseDisplayMenu_C.OnMouseEnterMenuPiece
-// 0x0008 (0x0008 - 0x0000)
-struct WDT_LicenseDisplayMenu_C_OnMouseEnterMenuPiece final
-{
-public:
-	class UMenuPieceBase*                         MenuPiece;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_LicenseDisplayMenu_C_OnMouseEnterMenuPiece) == 0x000008, "Wrong alignment on WDT_LicenseDisplayMenu_C_OnMouseEnterMenuPiece");
-static_assert(sizeof(WDT_LicenseDisplayMenu_C_OnMouseEnterMenuPiece) == 0x000008, "Wrong size on WDT_LicenseDisplayMenu_C_OnMouseEnterMenuPiece");
-static_assert(offsetof(WDT_LicenseDisplayMenu_C_OnMouseEnterMenuPiece, MenuPiece) == 0x000000, "Member 'WDT_LicenseDisplayMenu_C_OnMouseEnterMenuPiece::MenuPiece' has a wrong offset!");
-
-// Function WDT_LicenseDisplayMenu.WDT_LicenseDisplayMenu_C.InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_1
-// 0x0030 (0x0030 - 0x0000)
-struct WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_1 final
-{
-public:
-	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_1) == 0x000008, "Wrong alignment on WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_1");
-static_assert(sizeof(WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_1) == 0x000030, "Wrong size on WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_1");
-static_assert(offsetof(WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_1, ActionValue) == 0x000000, "Member 'WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_1::ActionValue' has a wrong offset!");
-static_assert(offsetof(WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_1, ElapsedTime) == 0x000020, "Member 'WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_1::ElapsedTime' has a wrong offset!");
-static_assert(offsetof(WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_1, TriggeredTime) == 0x000024, "Member 'WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_1::TriggeredTime' has a wrong offset!");
-static_assert(offsetof(WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_1, SourceAction) == 0x000028, "Member 'WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_1::SourceAction' has a wrong offset!");
-
-// Function WDT_LicenseDisplayMenu.WDT_LicenseDisplayMenu_C.InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2
-// 0x0030 (0x0030 - 0x0000)
-struct WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2 final
-{
-public:
-	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2) == 0x000008, "Wrong alignment on WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2");
-static_assert(sizeof(WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2) == 0x000030, "Wrong size on WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2");
-static_assert(offsetof(WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2, ActionValue) == 0x000000, "Member 'WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2::ActionValue' has a wrong offset!");
-static_assert(offsetof(WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2, ElapsedTime) == 0x000020, "Member 'WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2::ElapsedTime' has a wrong offset!");
-static_assert(offsetof(WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2, TriggeredTime) == 0x000024, "Member 'WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2::TriggeredTime' has a wrong offset!");
-static_assert(offsetof(WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2, SourceAction) == 0x000028, "Member 'WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2::SourceAction' has a wrong offset!");
-
-// Function WDT_LicenseDisplayMenu.WDT_LicenseDisplayMenu_C.InpActEvt_IA_UI_Cancel_K2Node_EnhancedInputActionEvent_0
-// 0x0030 (0x0030 - 0x0000)
-struct WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Cancel_K2Node_EnhancedInputActionEvent_0 final
-{
-public:
-	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Cancel_K2Node_EnhancedInputActionEvent_0) == 0x000008, "Wrong alignment on WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Cancel_K2Node_EnhancedInputActionEvent_0");
-static_assert(sizeof(WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Cancel_K2Node_EnhancedInputActionEvent_0) == 0x000030, "Wrong size on WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Cancel_K2Node_EnhancedInputActionEvent_0");
-static_assert(offsetof(WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Cancel_K2Node_EnhancedInputActionEvent_0, ActionValue) == 0x000000, "Member 'WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Cancel_K2Node_EnhancedInputActionEvent_0::ActionValue' has a wrong offset!");
-static_assert(offsetof(WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Cancel_K2Node_EnhancedInputActionEvent_0, ElapsedTime) == 0x000020, "Member 'WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Cancel_K2Node_EnhancedInputActionEvent_0::ElapsedTime' has a wrong offset!");
-static_assert(offsetof(WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Cancel_K2Node_EnhancedInputActionEvent_0, TriggeredTime) == 0x000024, "Member 'WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Cancel_K2Node_EnhancedInputActionEvent_0::TriggeredTime' has a wrong offset!");
-static_assert(offsetof(WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Cancel_K2Node_EnhancedInputActionEvent_0, SourceAction) == 0x000028, "Member 'WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Cancel_K2Node_EnhancedInputActionEvent_0::SourceAction' has a wrong offset!");
-
 // Function WDT_LicenseDisplayMenu.WDT_LicenseDisplayMenu_C.ExecuteUbergraph_WDT_LicenseDisplayMenu
 // 0x0258 (0x0258 - 0x0000)
 struct WDT_LicenseDisplayMenu_C_ExecuteUbergraph_WDT_LicenseDisplayMenu final
@@ -265,6 +181,90 @@ static_assert(offsetof(WDT_LicenseDisplayMenu_C_ExecuteUbergraph_WDT_LicenseDisp
 static_assert(offsetof(WDT_LicenseDisplayMenu_C_ExecuteUbergraph_WDT_LicenseDisplayMenu, CallFunc_Subtract_DoubleDouble_B_ImplicitCast) == 0x000248, "Member 'WDT_LicenseDisplayMenu_C_ExecuteUbergraph_WDT_LicenseDisplayMenu::CallFunc_Subtract_DoubleDouble_B_ImplicitCast' has a wrong offset!");
 static_assert(offsetof(WDT_LicenseDisplayMenu_C_ExecuteUbergraph_WDT_LicenseDisplayMenu, CallFunc_SetScrollOffset_NewScrollOffset_ImplicitCast) == 0x000250, "Member 'WDT_LicenseDisplayMenu_C_ExecuteUbergraph_WDT_LicenseDisplayMenu::CallFunc_SetScrollOffset_NewScrollOffset_ImplicitCast' has a wrong offset!");
 static_assert(offsetof(WDT_LicenseDisplayMenu_C_ExecuteUbergraph_WDT_LicenseDisplayMenu, CallFunc_SetScrollOffset_NewScrollOffset_ImplicitCast_1) == 0x000254, "Member 'WDT_LicenseDisplayMenu_C_ExecuteUbergraph_WDT_LicenseDisplayMenu::CallFunc_SetScrollOffset_NewScrollOffset_ImplicitCast_1' has a wrong offset!");
+
+// Function WDT_LicenseDisplayMenu.WDT_LicenseDisplayMenu_C.InpActEvt_IA_UI_Cancel_K2Node_EnhancedInputActionEvent_0
+// 0x0030 (0x0030 - 0x0000)
+struct WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Cancel_K2Node_EnhancedInputActionEvent_0 final
+{
+public:
+	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Cancel_K2Node_EnhancedInputActionEvent_0) == 0x000008, "Wrong alignment on WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Cancel_K2Node_EnhancedInputActionEvent_0");
+static_assert(sizeof(WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Cancel_K2Node_EnhancedInputActionEvent_0) == 0x000030, "Wrong size on WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Cancel_K2Node_EnhancedInputActionEvent_0");
+static_assert(offsetof(WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Cancel_K2Node_EnhancedInputActionEvent_0, ActionValue) == 0x000000, "Member 'WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Cancel_K2Node_EnhancedInputActionEvent_0::ActionValue' has a wrong offset!");
+static_assert(offsetof(WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Cancel_K2Node_EnhancedInputActionEvent_0, ElapsedTime) == 0x000020, "Member 'WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Cancel_K2Node_EnhancedInputActionEvent_0::ElapsedTime' has a wrong offset!");
+static_assert(offsetof(WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Cancel_K2Node_EnhancedInputActionEvent_0, TriggeredTime) == 0x000024, "Member 'WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Cancel_K2Node_EnhancedInputActionEvent_0::TriggeredTime' has a wrong offset!");
+static_assert(offsetof(WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Cancel_K2Node_EnhancedInputActionEvent_0, SourceAction) == 0x000028, "Member 'WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Cancel_K2Node_EnhancedInputActionEvent_0::SourceAction' has a wrong offset!");
+
+// Function WDT_LicenseDisplayMenu.WDT_LicenseDisplayMenu_C.InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2
+// 0x0030 (0x0030 - 0x0000)
+struct WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2 final
+{
+public:
+	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2) == 0x000008, "Wrong alignment on WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2");
+static_assert(sizeof(WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2) == 0x000030, "Wrong size on WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2");
+static_assert(offsetof(WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2, ActionValue) == 0x000000, "Member 'WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2::ActionValue' has a wrong offset!");
+static_assert(offsetof(WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2, ElapsedTime) == 0x000020, "Member 'WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2::ElapsedTime' has a wrong offset!");
+static_assert(offsetof(WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2, TriggeredTime) == 0x000024, "Member 'WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2::TriggeredTime' has a wrong offset!");
+static_assert(offsetof(WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2, SourceAction) == 0x000028, "Member 'WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2::SourceAction' has a wrong offset!");
+
+// Function WDT_LicenseDisplayMenu.WDT_LicenseDisplayMenu_C.InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_1
+// 0x0030 (0x0030 - 0x0000)
+struct WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_1 final
+{
+public:
+	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_1) == 0x000008, "Wrong alignment on WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_1");
+static_assert(sizeof(WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_1) == 0x000030, "Wrong size on WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_1");
+static_assert(offsetof(WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_1, ActionValue) == 0x000000, "Member 'WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_1::ActionValue' has a wrong offset!");
+static_assert(offsetof(WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_1, ElapsedTime) == 0x000020, "Member 'WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_1::ElapsedTime' has a wrong offset!");
+static_assert(offsetof(WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_1, TriggeredTime) == 0x000024, "Member 'WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_1::TriggeredTime' has a wrong offset!");
+static_assert(offsetof(WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_1, SourceAction) == 0x000028, "Member 'WDT_LicenseDisplayMenu_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_1::SourceAction' has a wrong offset!");
+
+// Function WDT_LicenseDisplayMenu.WDT_LicenseDisplayMenu_C.OnMouseEnterMenuPiece
+// 0x0008 (0x0008 - 0x0000)
+struct WDT_LicenseDisplayMenu_C_OnMouseEnterMenuPiece final
+{
+public:
+	class UMenuPieceBase*                         MenuPiece;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_LicenseDisplayMenu_C_OnMouseEnterMenuPiece) == 0x000008, "Wrong alignment on WDT_LicenseDisplayMenu_C_OnMouseEnterMenuPiece");
+static_assert(sizeof(WDT_LicenseDisplayMenu_C_OnMouseEnterMenuPiece) == 0x000008, "Wrong size on WDT_LicenseDisplayMenu_C_OnMouseEnterMenuPiece");
+static_assert(offsetof(WDT_LicenseDisplayMenu_C_OnMouseEnterMenuPiece, MenuPiece) == 0x000000, "Member 'WDT_LicenseDisplayMenu_C_OnMouseEnterMenuPiece::MenuPiece' has a wrong offset!");
+
+// Function WDT_LicenseDisplayMenu.WDT_LicenseDisplayMenu_C.OnMouseLeaveMenuPiece
+// 0x0008 (0x0008 - 0x0000)
+struct WDT_LicenseDisplayMenu_C_OnMouseLeaveMenuPiece final
+{
+public:
+	class UMenuPieceBase*                         MenuPiece;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_LicenseDisplayMenu_C_OnMouseLeaveMenuPiece) == 0x000008, "Wrong alignment on WDT_LicenseDisplayMenu_C_OnMouseLeaveMenuPiece");
+static_assert(sizeof(WDT_LicenseDisplayMenu_C_OnMouseLeaveMenuPiece) == 0x000008, "Wrong size on WDT_LicenseDisplayMenu_C_OnMouseLeaveMenuPiece");
+static_assert(offsetof(WDT_LicenseDisplayMenu_C_OnMouseLeaveMenuPiece, MenuPiece) == 0x000000, "Member 'WDT_LicenseDisplayMenu_C_OnMouseLeaveMenuPiece::MenuPiece' has a wrong offset!");
+
+// Function WDT_LicenseDisplayMenu.WDT_LicenseDisplayMenu_C.OnMouseLeftClickMenuPiece
+// 0x0008 (0x0008 - 0x0000)
+struct WDT_LicenseDisplayMenu_C_OnMouseLeftClickMenuPiece final
+{
+public:
+	class UMenuPieceBase*                         MenuPiece;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_LicenseDisplayMenu_C_OnMouseLeftClickMenuPiece) == 0x000008, "Wrong alignment on WDT_LicenseDisplayMenu_C_OnMouseLeftClickMenuPiece");
+static_assert(sizeof(WDT_LicenseDisplayMenu_C_OnMouseLeftClickMenuPiece) == 0x000008, "Wrong size on WDT_LicenseDisplayMenu_C_OnMouseLeftClickMenuPiece");
+static_assert(offsetof(WDT_LicenseDisplayMenu_C_OnMouseLeftClickMenuPiece, MenuPiece) == 0x000000, "Member 'WDT_LicenseDisplayMenu_C_OnMouseLeftClickMenuPiece::MenuPiece' has a wrong offset!");
 
 }
 

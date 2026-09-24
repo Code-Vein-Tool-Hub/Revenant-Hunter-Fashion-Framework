@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // Function BP_PickupItem.BP_PickupItem_C.ExecuteUbergraph_BP_PickupItem
-// (Final, UbergraphFunction, HasDefaults)
+// (Final, UbergraphFunction)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -57,6 +57,26 @@ void ABP_PickupItem_C::OnInteractionEnd_BP(class AActor* InActor)
 }
 
 
+// Function BP_PickupItem.BP_PickupItem_C.SetEffectHidden
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    InputPin                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_PickupItem_C::SetEffectHidden(const bool InputPin)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PickupItem_C", "SetEffectHidden");
+
+	Params::BP_PickupItem_C_SetEffectHidden Parms{};
+
+	Parms.InputPin = InputPin;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_PickupItem.BP_PickupItem_C.UpdateHiddenByGameFlag_BP
 // (Event, Protected, BlueprintEvent)
 // Parameters:
@@ -70,6 +90,26 @@ void ABP_PickupItem_C::UpdateHiddenByGameFlag_BP(const bool bShouldHide)
 		Func = Class->GetFunction("BP_PickupItem_C", "UpdateHiddenByGameFlag_BP");
 
 	Params::BP_PickupItem_C_UpdateHiddenByGameFlag_BP Parms{};
+
+	Parms.bShouldHide = bShouldHide;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_PickupItem.BP_PickupItem_C.UpdateHiddenByRecipient_BP
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bShouldHide                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_PickupItem_C::UpdateHiddenByRecipient_BP(const bool bShouldHide)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PickupItem_C", "UpdateHiddenByRecipient_BP");
+
+	Params::BP_PickupItem_C_UpdateHiddenByRecipient_BP Parms{};
 
 	Parms.bShouldHide = bShouldHide;
 

@@ -17,259 +17,107 @@
 namespace SDK
 {
 
-// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.SetSelectDialogIndex
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_InventoryMenuDialog_C::SetSelectDialogIndex(int32 Index_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_InventoryMenuDialog_C", "SetSelectDialogIndex");
-
-	Params::WDT_InventoryMenuDialog_C_SetSelectDialogIndex Parms{};
-
-	Parms.Index_0 = Index_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.SetCaptionText
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FText                             InCaptionText                                          (BlueprintVisible, BlueprintReadOnly, Parm)
-
-void UWDT_InventoryMenuDialog_C::SetCaptionText(const class FText& InCaptionText)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_InventoryMenuDialog_C", "SetCaptionText");
-
-	Params::WDT_InventoryMenuDialog_C_SetCaptionText Parms{};
-
-	Parms.InCaptionText = std::move(InCaptionText);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.OnUpPressed
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWDT_InventoryMenuDialog_C::OnUpPressed()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_InventoryMenuDialog_C", "OnUpPressed");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.OnSetDialogInfo
-// (Event, Protected, HasOutParams, BlueprintEvent)
-// Parameters:
-// struct FDialogInfo                      InDialogInfo                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UWDT_InventoryMenuDialog_C::OnSetDialogInfo(const struct FDialogInfo& InDialogInfo)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_InventoryMenuDialog_C", "OnSetDialogInfo");
-
-	Params::WDT_InventoryMenuDialog_C_OnSetDialogInfo Parms{};
-
-	Parms.InDialogInfo = std::move(InDialogInfo);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.OnOpening
+// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.BP_OnActivated
 // (Event, Protected, BlueprintEvent)
 
-void UWDT_InventoryMenuDialog_C::OnOpening()
+void UWDT_InventoryMenuDialog_C::BP_OnActivated()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_InventoryMenuDialog_C", "OnOpening");
+		Func = Class->GetFunction("WDT_InventoryMenuDialog_C", "BP_OnActivated");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.OnOpened
+// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.BP_OnDeactivated
 // (Event, Protected, BlueprintEvent)
 
-void UWDT_InventoryMenuDialog_C::OnOpened()
+void UWDT_InventoryMenuDialog_C::BP_OnDeactivated()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_InventoryMenuDialog_C", "OnOpened");
+		Func = Class->GetFunction("WDT_InventoryMenuDialog_C", "BP_OnDeactivated");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.OnMouseLeftClickMenuPiece
-// (Event, Protected, BlueprintEvent)
+// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWDT_InventoryMenuDialog_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_InventoryMenuDialog_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.ExecuteUbergraph_WDT_InventoryMenuDialog
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// class UMenuPieceBase*                   MenuPiece                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_InventoryMenuDialog_C::OnMouseLeftClickMenuPiece(class UMenuPieceBase* MenuPiece)
+void UWDT_InventoryMenuDialog_C::ExecuteUbergraph_WDT_InventoryMenuDialog(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_InventoryMenuDialog_C", "OnMouseLeftClickMenuPiece");
+		Func = Class->GetFunction("WDT_InventoryMenuDialog_C", "ExecuteUbergraph_WDT_InventoryMenuDialog");
 
-	Params::WDT_InventoryMenuDialog_C_OnMouseLeftClickMenuPiece Parms{};
+	Params::WDT_InventoryMenuDialog_C_ExecuteUbergraph_WDT_InventoryMenuDialog Parms{};
 
-	Parms.MenuPiece = MenuPiece;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.OnMouseEnterMenuPiece
-// (Event, Protected, BlueprintEvent)
+// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.GetSelectedPieceIndex
+// (Private, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class UMenuPieceBase*                   MenuPiece                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UMenuPieceBase*                   SelectedPiece                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// int32                                   Index_0                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_InventoryMenuDialog_C::OnMouseEnterMenuPiece(class UMenuPieceBase* MenuPiece)
+void UWDT_InventoryMenuDialog_C::GetSelectedPieceIndex(class UMenuPieceBase* SelectedPiece, int32* Index_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_InventoryMenuDialog_C", "OnMouseEnterMenuPiece");
+		Func = Class->GetFunction("WDT_InventoryMenuDialog_C", "GetSelectedPieceIndex");
 
-	Params::WDT_InventoryMenuDialog_C_OnMouseEnterMenuPiece Parms{};
+	Params::WDT_InventoryMenuDialog_C_GetSelectedPieceIndex Parms{};
 
-	Parms.MenuPiece = MenuPiece;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.OnMenuInitialized
-// (Event, Protected, BlueprintEvent)
-
-void UWDT_InventoryMenuDialog_C::OnMenuInitialized()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_InventoryMenuDialog_C", "OnMenuInitialized");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.OnGetOpenAnimation
-// (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UWidgetAnimation*                 ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
-
-class UWidgetAnimation* UWDT_InventoryMenuDialog_C::OnGetOpenAnimation()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_InventoryMenuDialog_C", "OnGetOpenAnimation");
-
-	Params::WDT_InventoryMenuDialog_C_OnGetOpenAnimation Parms{};
+	Parms.SelectedPiece = SelectedPiece;
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	return Parms.ReturnValue;
+	if (Index_0 != nullptr)
+		*Index_0 = Parms.Index_0;
 }
 
 
-// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.OnGetCloseAnimation
-// (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UWidgetAnimation*                 ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
+// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.Initialize
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-class UWidgetAnimation* UWDT_InventoryMenuDialog_C::OnGetCloseAnimation()
+void UWDT_InventoryMenuDialog_C::Initialize()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_InventoryMenuDialog_C", "OnGetCloseAnimation");
-
-	Params::WDT_InventoryMenuDialog_C_OnGetCloseAnimation Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.OnDownPressed
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWDT_InventoryMenuDialog_C::OnDownPressed()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_InventoryMenuDialog_C", "OnDownPressed");
+		Func = Class->GetFunction("WDT_InventoryMenuDialog_C", "Initialize");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.OnDecidePressed
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWDT_InventoryMenuDialog_C::OnDecidePressed()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_InventoryMenuDialog_C", "OnDecidePressed");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.OnClosed
-// (Event, Protected, BlueprintEvent)
-
-void UWDT_InventoryMenuDialog_C::OnClosed()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_InventoryMenuDialog_C", "OnClosed");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.OnCancelPressed
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWDT_InventoryMenuDialog_C::OnCancelPressed()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_InventoryMenuDialog_C", "OnCancelPressed");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3
+// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_0
 // (BlueprintEvent)
 // Parameters:
 // struct FInputActionValue                ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
@@ -277,40 +125,14 @@ void UWDT_InventoryMenuDialog_C::OnCancelPressed()
 // float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UInputAction*                     SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_InventoryMenuDialog_C::InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+void UWDT_InventoryMenuDialog_C::InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_InventoryMenuDialog_C", "InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3");
+		Func = Class->GetFunction("WDT_InventoryMenuDialog_C", "InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_0");
 
-	Params::WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3 Parms{};
-
-	Parms.ActionValue = std::move(ActionValue);
-	Parms.ElapsedTime = ElapsedTime;
-	Parms.TriggeredTime = TriggeredTime;
-	Parms.SourceAction = SourceAction;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2
-// (BlueprintEvent)
-// Parameters:
-// struct FInputActionValue                ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// float                                   ElapsedTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UInputAction*                     SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_InventoryMenuDialog_C::InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_InventoryMenuDialog_C", "InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2");
-
-	Params::WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2 Parms{};
+	Params::WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_0 Parms{};
 
 	Parms.ActionValue = std::move(ActionValue);
 	Parms.ElapsedTime = ElapsedTime;
@@ -347,7 +169,7 @@ void UWDT_InventoryMenuDialog_C::InpActEvt_IA_UI_DecideOnRelease_K2Node_Enhanced
 }
 
 
-// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_0
+// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2
 // (BlueprintEvent)
 // Parameters:
 // struct FInputActionValue                ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
@@ -355,14 +177,14 @@ void UWDT_InventoryMenuDialog_C::InpActEvt_IA_UI_DecideOnRelease_K2Node_Enhanced
 // float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UInputAction*                     SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_InventoryMenuDialog_C::InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+void UWDT_InventoryMenuDialog_C::InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_InventoryMenuDialog_C", "InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_0");
+		Func = Class->GetFunction("WDT_InventoryMenuDialog_C", "InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2");
 
-	Params::WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_0 Parms{};
+	Params::WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2 Parms{};
 
 	Parms.ActionValue = std::move(ActionValue);
 	Parms.ElapsedTime = ElapsedTime;
@@ -373,103 +195,281 @@ void UWDT_InventoryMenuDialog_C::InpActEvt_IA_UI_CancelOnRelease_K2Node_Enhanced
 }
 
 
-// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.Initialize
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UWDT_InventoryMenuDialog_C::Initialize()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_InventoryMenuDialog_C", "Initialize");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.GetSelectedPieceIndex
-// (Private, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3
+// (BlueprintEvent)
 // Parameters:
-// class UMenuPieceBase*                   SelectedPiece                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// int32                                   Index_0                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FInputActionValue                ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// float                                   ElapsedTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UInputAction*                     SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_InventoryMenuDialog_C::GetSelectedPieceIndex(class UMenuPieceBase* SelectedPiece, int32* Index_0)
+void UWDT_InventoryMenuDialog_C::InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_InventoryMenuDialog_C", "GetSelectedPieceIndex");
+		Func = Class->GetFunction("WDT_InventoryMenuDialog_C", "InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3");
 
-	Params::WDT_InventoryMenuDialog_C_GetSelectedPieceIndex Parms{};
+	Params::WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3 Parms{};
 
-	Parms.SelectedPiece = SelectedPiece;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Index_0 != nullptr)
-		*Index_0 = Parms.Index_0;
-}
-
-
-// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.ExecuteUbergraph_WDT_InventoryMenuDialog
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_InventoryMenuDialog_C::ExecuteUbergraph_WDT_InventoryMenuDialog(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_InventoryMenuDialog_C", "ExecuteUbergraph_WDT_InventoryMenuDialog");
-
-	Params::WDT_InventoryMenuDialog_C_ExecuteUbergraph_WDT_InventoryMenuDialog Parms{};
-
-	Parms.EntryPoint = EntryPoint;
+	Parms.ActionValue = std::move(ActionValue);
+	Parms.ElapsedTime = ElapsedTime;
+	Parms.TriggeredTime = TriggeredTime;
+	Parms.SourceAction = SourceAction;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.OnCancelPressed
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UWDT_InventoryMenuDialog_C::Construct()
+void UWDT_InventoryMenuDialog_C::OnCancelPressed()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_InventoryMenuDialog_C", "Construct");
+		Func = Class->GetFunction("WDT_InventoryMenuDialog_C", "OnCancelPressed");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.BP_OnDeactivated
+// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.OnClosed
 // (Event, Protected, BlueprintEvent)
 
-void UWDT_InventoryMenuDialog_C::BP_OnDeactivated()
+void UWDT_InventoryMenuDialog_C::OnClosed()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_InventoryMenuDialog_C", "BP_OnDeactivated");
+		Func = Class->GetFunction("WDT_InventoryMenuDialog_C", "OnClosed");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.BP_OnActivated
-// (Event, Protected, BlueprintEvent)
+// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.OnDecidePressed
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UWDT_InventoryMenuDialog_C::BP_OnActivated()
+void UWDT_InventoryMenuDialog_C::OnDecidePressed()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_InventoryMenuDialog_C", "BP_OnActivated");
+		Func = Class->GetFunction("WDT_InventoryMenuDialog_C", "OnDecidePressed");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.OnDownPressed
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWDT_InventoryMenuDialog_C::OnDownPressed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_InventoryMenuDialog_C", "OnDownPressed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.OnGetCloseAnimation
+// (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UWidgetAnimation*                 ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
+
+class UWidgetAnimation* UWDT_InventoryMenuDialog_C::OnGetCloseAnimation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_InventoryMenuDialog_C", "OnGetCloseAnimation");
+
+	Params::WDT_InventoryMenuDialog_C_OnGetCloseAnimation Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.OnGetOpenAnimation
+// (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UWidgetAnimation*                 ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
+
+class UWidgetAnimation* UWDT_InventoryMenuDialog_C::OnGetOpenAnimation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_InventoryMenuDialog_C", "OnGetOpenAnimation");
+
+	Params::WDT_InventoryMenuDialog_C_OnGetOpenAnimation Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.OnMenuInitialized
+// (Event, Protected, BlueprintEvent)
+
+void UWDT_InventoryMenuDialog_C::OnMenuInitialized()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_InventoryMenuDialog_C", "OnMenuInitialized");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.OnMouseEnterMenuPiece
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UMenuPieceBase*                   MenuPiece                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_InventoryMenuDialog_C::OnMouseEnterMenuPiece(class UMenuPieceBase* MenuPiece)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_InventoryMenuDialog_C", "OnMouseEnterMenuPiece");
+
+	Params::WDT_InventoryMenuDialog_C_OnMouseEnterMenuPiece Parms{};
+
+	Parms.MenuPiece = MenuPiece;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.OnMouseLeftClickMenuPiece
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UMenuPieceBase*                   MenuPiece                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_InventoryMenuDialog_C::OnMouseLeftClickMenuPiece(class UMenuPieceBase* MenuPiece)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_InventoryMenuDialog_C", "OnMouseLeftClickMenuPiece");
+
+	Params::WDT_InventoryMenuDialog_C_OnMouseLeftClickMenuPiece Parms{};
+
+	Parms.MenuPiece = MenuPiece;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.OnOpened
+// (Event, Protected, BlueprintEvent)
+
+void UWDT_InventoryMenuDialog_C::OnOpened()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_InventoryMenuDialog_C", "OnOpened");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.OnOpening
+// (Event, Protected, BlueprintEvent)
+
+void UWDT_InventoryMenuDialog_C::OnOpening()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_InventoryMenuDialog_C", "OnOpening");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.OnSetDialogInfo
+// (Event, Protected, HasOutParams, BlueprintEvent)
+// Parameters:
+// struct FDialogInfo                      InDialogInfo                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UWDT_InventoryMenuDialog_C::OnSetDialogInfo(const struct FDialogInfo& InDialogInfo)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_InventoryMenuDialog_C", "OnSetDialogInfo");
+
+	Params::WDT_InventoryMenuDialog_C_OnSetDialogInfo Parms{};
+
+	Parms.InDialogInfo = std::move(InDialogInfo);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.OnUpPressed
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWDT_InventoryMenuDialog_C::OnUpPressed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_InventoryMenuDialog_C", "OnUpPressed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.SetCaptionText
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FText                             InCaptionText                                          (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UWDT_InventoryMenuDialog_C::SetCaptionText(const class FText& InCaptionText)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_InventoryMenuDialog_C", "SetCaptionText");
+
+	Params::WDT_InventoryMenuDialog_C_SetCaptionText Parms{};
+
+	Parms.InCaptionText = std::move(InCaptionText);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.SetSelectDialogIndex
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_InventoryMenuDialog_C::SetSelectDialogIndex(int32 Index_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_InventoryMenuDialog_C", "SetSelectDialogIndex");
+
+	Params::WDT_InventoryMenuDialog_C_SetSelectDialogIndex Parms{};
+
+	Parms.Index_0 = Index_0;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

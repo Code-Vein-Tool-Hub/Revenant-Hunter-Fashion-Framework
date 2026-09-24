@@ -885,6 +885,26 @@ void UABP_Cinematics_HumanBone_C::OnLoaded_031E9AA44AB0FE8A562CEF9BFFCEE252(clas
 }
 
 
+// Function ABP_Cinematics_HumanBone.ABP_Cinematics_HumanBone_C.Set_PC_IsFemale
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UABP_Cinematics_HumanBone_C::Set_PC_IsFemale(bool Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABP_Cinematics_HumanBone_C", "Set_PC_IsFemale");
+
+	Params::ABP_Cinematics_HumanBone_C_Set_PC_IsFemale Parms{};
+
+	Parms.Value = Value;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function ABP_Cinematics_HumanBone.ABP_Cinematics_HumanBone_C.SetHeightOffsetBlend
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -1036,6 +1056,46 @@ bool UABP_Cinematics_HumanBone_C::GetGenderFemale() const
 		Func = Class->GetFunction("ABP_Cinematics_HumanBone_C", "GetGenderFemale");
 
 	Params::ABP_Cinematics_HumanBone_C_GetGenderFemale Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ABP_Cinematics_HumanBone.ABP_Cinematics_HumanBone_C.GetHandIK_Rotation_Weight_L
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// double                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+double UABP_Cinematics_HumanBone_C::GetHandIK_Rotation_Weight_L() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABP_Cinematics_HumanBone_C", "GetHandIK_Rotation_Weight_L");
+
+	Params::ABP_Cinematics_HumanBone_C_GetHandIK_Rotation_Weight_L Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ABP_Cinematics_HumanBone.ABP_Cinematics_HumanBone_C.GetHandIK_Rotation_Weight_R
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// double                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+double UABP_Cinematics_HumanBone_C::GetHandIK_Rotation_Weight_R() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABP_Cinematics_HumanBone_C", "GetHandIK_Rotation_Weight_R");
+
+	Params::ABP_Cinematics_HumanBone_C_GetHandIK_Rotation_Weight_R Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 

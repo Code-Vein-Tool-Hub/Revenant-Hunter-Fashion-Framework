@@ -17,193 +17,21 @@
 namespace SDK
 {
 
-// Function WDT_SupportMenuTab.WDT_SupportMenuTab_C.SetTabIndex
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InIndex                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_SupportMenuTab_C::SetTabIndex(int32 InIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_SupportMenuTab_C", "SetTabIndex");
-
-	Params::WDT_SupportMenuTab_C_SetTabIndex Parms{};
-
-	Parms.InIndex = InIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_SupportMenuTab.WDT_SupportMenuTab_C.Set New Flag
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InIndex                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    InFlag                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_SupportMenuTab_C::Set_New_Flag(int32 InIndex, bool InFlag)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_SupportMenuTab_C", "Set New Flag");
-
-	Params::WDT_SupportMenuTab_C_Set_New_Flag Parms{};
-
-	Parms.InIndex = InIndex;
-	Parms.InFlag = InFlag;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_SupportMenuTab.WDT_SupportMenuTab_C.RefreshKeyImage
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWDT_SupportMenuTab_C::RefreshKeyImage()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_SupportMenuTab_C", "RefreshKeyImage");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WDT_SupportMenuTab.WDT_SupportMenuTab_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_SupportMenuTab_C::PreConstruct(bool IsDesignTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_SupportMenuTab_C", "PreConstruct");
-
-	Params::WDT_SupportMenuTab_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_SupportMenuTab.WDT_SupportMenuTab_C.OnTabItemCliked__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InIndex                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_SupportMenuTab_C::OnTabItemCliked__DelegateSignature(int32 InIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_SupportMenuTab_C", "OnTabItemCliked__DelegateSignature");
-
-	Params::WDT_SupportMenuTab_C_OnTabItemCliked__DelegateSignature Parms{};
-
-	Parms.InIndex = InIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_SupportMenuTab.WDT_SupportMenuTab_C.OnEntryInitialized__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InInitializedIndex                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_SupportMenuTab_C::OnEntryInitialized__DelegateSignature(int32 InInitializedIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_SupportMenuTab_C", "OnEntryInitialized__DelegateSignature");
-
-	Params::WDT_SupportMenuTab_C_OnEntryInitialized__DelegateSignature Parms{};
-
-	Parms.InInitializedIndex = InInitializedIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_SupportMenuTab.WDT_SupportMenuTab_C.MoveTabIndex
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InIncrement                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_SupportMenuTab_C::MoveTabIndex(int32 InIncrement)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_SupportMenuTab_C", "MoveTabIndex");
-
-	Params::WDT_SupportMenuTab_C_MoveTabIndex Parms{};
-
-	Parms.InIncrement = InIncrement;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_SupportMenuTab.WDT_SupportMenuTab_C.Initialize
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWDT_SupportMenuTab_C::Initialize()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_SupportMenuTab_C", "Initialize");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WDT_SupportMenuTab.WDT_SupportMenuTab_C.ExecuteUbergraph_WDT_SupportMenuTab
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_SupportMenuTab_C::ExecuteUbergraph_WDT_SupportMenuTab(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_SupportMenuTab_C", "ExecuteUbergraph_WDT_SupportMenuTab");
-
-	Params::WDT_SupportMenuTab_C_ExecuteUbergraph_WDT_SupportMenuTab Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_SupportMenuTab.WDT_SupportMenuTab_C.BndEvt__WDT_SupportMenuTab_TabList_K2Node_ComponentBoundEvent_2_OnItemIsHoveredChangedDynamic__DelegateSignature
+// Function WDT_SupportMenuTab.WDT_SupportMenuTab_C.BndEvt__WDT_SupportMenuTab_TabList_K2Node_ComponentBoundEvent_0_SimpleListItemEventDynamic__DelegateSignature
 // (BlueprintEvent)
 // Parameters:
 // class UObject*                          Item                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool                                    bIsHovered                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_SupportMenuTab_C::BndEvt__WDT_SupportMenuTab_TabList_K2Node_ComponentBoundEvent_2_OnItemIsHoveredChangedDynamic__DelegateSignature(class UObject* Item, bool bIsHovered)
+void UWDT_SupportMenuTab_C::BndEvt__WDT_SupportMenuTab_TabList_K2Node_ComponentBoundEvent_0_SimpleListItemEventDynamic__DelegateSignature(class UObject* Item)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_SupportMenuTab_C", "BndEvt__WDT_SupportMenuTab_TabList_K2Node_ComponentBoundEvent_2_OnItemIsHoveredChangedDynamic__DelegateSignature");
+		Func = Class->GetFunction("WDT_SupportMenuTab_C", "BndEvt__WDT_SupportMenuTab_TabList_K2Node_ComponentBoundEvent_0_SimpleListItemEventDynamic__DelegateSignature");
 
-	Params::WDT_SupportMenuTab_C_BndEvt__WDT_SupportMenuTab_TabList_K2Node_ComponentBoundEvent_2_OnItemIsHoveredChangedDynamic__DelegateSignature Parms{};
+	Params::WDT_SupportMenuTab_C_BndEvt__WDT_SupportMenuTab_TabList_K2Node_ComponentBoundEvent_0_SimpleListItemEventDynamic__DelegateSignature Parms{};
 
 	Parms.Item = Item;
-	Parms.bIsHovered = bIsHovered;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -231,21 +59,193 @@ void UWDT_SupportMenuTab_C::BndEvt__WDT_SupportMenuTab_TabList_K2Node_ComponentB
 }
 
 
-// Function WDT_SupportMenuTab.WDT_SupportMenuTab_C.BndEvt__WDT_SupportMenuTab_TabList_K2Node_ComponentBoundEvent_0_SimpleListItemEventDynamic__DelegateSignature
+// Function WDT_SupportMenuTab.WDT_SupportMenuTab_C.BndEvt__WDT_SupportMenuTab_TabList_K2Node_ComponentBoundEvent_2_OnItemIsHoveredChangedDynamic__DelegateSignature
 // (BlueprintEvent)
 // Parameters:
 // class UObject*                          Item                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsHovered                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_SupportMenuTab_C::BndEvt__WDT_SupportMenuTab_TabList_K2Node_ComponentBoundEvent_0_SimpleListItemEventDynamic__DelegateSignature(class UObject* Item)
+void UWDT_SupportMenuTab_C::BndEvt__WDT_SupportMenuTab_TabList_K2Node_ComponentBoundEvent_2_OnItemIsHoveredChangedDynamic__DelegateSignature(class UObject* Item, bool bIsHovered)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_SupportMenuTab_C", "BndEvt__WDT_SupportMenuTab_TabList_K2Node_ComponentBoundEvent_0_SimpleListItemEventDynamic__DelegateSignature");
+		Func = Class->GetFunction("WDT_SupportMenuTab_C", "BndEvt__WDT_SupportMenuTab_TabList_K2Node_ComponentBoundEvent_2_OnItemIsHoveredChangedDynamic__DelegateSignature");
 
-	Params::WDT_SupportMenuTab_C_BndEvt__WDT_SupportMenuTab_TabList_K2Node_ComponentBoundEvent_0_SimpleListItemEventDynamic__DelegateSignature Parms{};
+	Params::WDT_SupportMenuTab_C_BndEvt__WDT_SupportMenuTab_TabList_K2Node_ComponentBoundEvent_2_OnItemIsHoveredChangedDynamic__DelegateSignature Parms{};
 
 	Parms.Item = Item;
+	Parms.bIsHovered = bIsHovered;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_SupportMenuTab.WDT_SupportMenuTab_C.ExecuteUbergraph_WDT_SupportMenuTab
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_SupportMenuTab_C::ExecuteUbergraph_WDT_SupportMenuTab(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_SupportMenuTab_C", "ExecuteUbergraph_WDT_SupportMenuTab");
+
+	Params::WDT_SupportMenuTab_C_ExecuteUbergraph_WDT_SupportMenuTab Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_SupportMenuTab.WDT_SupportMenuTab_C.Initialize
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWDT_SupportMenuTab_C::Initialize()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_SupportMenuTab_C", "Initialize");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WDT_SupportMenuTab.WDT_SupportMenuTab_C.MoveTabIndex
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InIncrement                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_SupportMenuTab_C::MoveTabIndex(int32 InIncrement)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_SupportMenuTab_C", "MoveTabIndex");
+
+	Params::WDT_SupportMenuTab_C_MoveTabIndex Parms{};
+
+	Parms.InIncrement = InIncrement;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_SupportMenuTab.WDT_SupportMenuTab_C.OnEntryInitialized__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InInitializedIndex                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_SupportMenuTab_C::OnEntryInitialized__DelegateSignature(int32 InInitializedIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_SupportMenuTab_C", "OnEntryInitialized__DelegateSignature");
+
+	Params::WDT_SupportMenuTab_C_OnEntryInitialized__DelegateSignature Parms{};
+
+	Parms.InInitializedIndex = InInitializedIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_SupportMenuTab.WDT_SupportMenuTab_C.OnTabItemCliked__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InIndex                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_SupportMenuTab_C::OnTabItemCliked__DelegateSignature(int32 InIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_SupportMenuTab_C", "OnTabItemCliked__DelegateSignature");
+
+	Params::WDT_SupportMenuTab_C_OnTabItemCliked__DelegateSignature Parms{};
+
+	Parms.InIndex = InIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_SupportMenuTab.WDT_SupportMenuTab_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_SupportMenuTab_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_SupportMenuTab_C", "PreConstruct");
+
+	Params::WDT_SupportMenuTab_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_SupportMenuTab.WDT_SupportMenuTab_C.RefreshKeyImage
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWDT_SupportMenuTab_C::RefreshKeyImage()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_SupportMenuTab_C", "RefreshKeyImage");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WDT_SupportMenuTab.WDT_SupportMenuTab_C.Set New Flag
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InIndex                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    InFlag                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_SupportMenuTab_C::Set_New_Flag(int32 InIndex, bool InFlag)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_SupportMenuTab_C", "Set New Flag");
+
+	Params::WDT_SupportMenuTab_C_Set_New_Flag Parms{};
+
+	Parms.InIndex = InIndex;
+	Parms.InFlag = InFlag;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_SupportMenuTab.WDT_SupportMenuTab_C.SetTabIndex
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InIndex                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_SupportMenuTab_C::SetTabIndex(int32 InIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_SupportMenuTab_C", "SetTabIndex");
+
+	Params::WDT_SupportMenuTab_C_SetTabIndex Parms{};
+
+	Parms.InIndex = InIndex;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

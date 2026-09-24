@@ -17,100 +17,86 @@
 namespace SDK
 {
 
-// Function WDT_Status_PieceBase.WDT_Status_PieceBase_C.GetActualAnchor
-// (Private, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function WDT_Status_PieceBase.WDT_Status_PieceBase_C.ExecuteUbergraph_WDT_Status_PieceBase
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// EN_Anchor                               InDefaultAnchor                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UClass*                           InParentMenuClass                                      (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
-// TMap<class UClass*, EN_Anchor>          InOverrideAnchorMap                                    (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// EN_Anchor                               OutAnchor                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_Status_PieceBase_C::GetActualAnchor(EN_Anchor InDefaultAnchor, class UClass*& InParentMenuClass, TMap<class UClass*, EN_Anchor>& InOverrideAnchorMap, EN_Anchor* OutAnchor)
+void UWDT_Status_PieceBase_C::ExecuteUbergraph_WDT_Status_PieceBase(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Status_PieceBase_C", "GetActualAnchor");
+		Func = Class->GetFunction("WDT_Status_PieceBase_C", "ExecuteUbergraph_WDT_Status_PieceBase");
 
-	Params::WDT_Status_PieceBase_C_GetActualAnchor Parms{};
+	Params::WDT_Status_PieceBase_C_ExecuteUbergraph_WDT_Status_PieceBase Parms{};
 
-	Parms.InDefaultAnchor = InDefaultAnchor;
-	Parms.InParentMenuClass = InParentMenuClass;
-	Parms.InOverrideAnchorMap = std::move(InOverrideAnchorMap);
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	InParentMenuClass = Parms.InParentMenuClass;
-	InOverrideAnchorMap = std::move(Parms.InOverrideAnchorMap);
-
-	if (OutAnchor != nullptr)
-		*OutAnchor = Parms.OutAnchor;
 }
 
 
-// Function WDT_Status_PieceBase.WDT_Status_PieceBase_C.MakeAlignment
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function WDT_Status_PieceBase.WDT_Status_PieceBase_C.SetHelpWindowPosition_Preset
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// EN_Anchor                               InAnchor                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector2D                        Alignment                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UWDT_ParameterHelp_Preset_C*      NewParam                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UClass*                           InParentClass                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_Status_PieceBase_C::MakeAlignment(EN_Anchor InAnchor, struct FVector2D* Alignment)
+void UWDT_Status_PieceBase_C::SetHelpWindowPosition_Preset(class UWDT_ParameterHelp_Preset_C* NewParam, class UClass* InParentClass)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Status_PieceBase_C", "MakeAlignment");
+		Func = Class->GetFunction("WDT_Status_PieceBase_C", "SetHelpWindowPosition_Preset");
 
-	Params::WDT_Status_PieceBase_C_MakeAlignment Parms{};
+	Params::WDT_Status_PieceBase_C_SetHelpWindowPosition_Preset Parms{};
 
-	Parms.InAnchor = InAnchor;
+	Parms.NewParam = NewParam;
+	Parms.InParentClass = InParentClass;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (Alignment != nullptr)
-		*Alignment = std::move(Parms.Alignment);
 }
 
 
-// Function WDT_Status_PieceBase.WDT_Status_PieceBase_C.MakeCoordinate
-// (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function WDT_Status_PieceBase.WDT_Status_PieceBase_C.SetHelpWindowPosition
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget*                          Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// EN_Anchor                               Anchor                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector2D                        Coordinate                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UWDT_ParameterHelp_C*             InHelpWindow                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UClass*                           InParentClass                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_Status_PieceBase_C::MakeCoordinate(class UWidget* Widget, EN_Anchor Anchor, struct FVector2D* Coordinate)
+void UWDT_Status_PieceBase_C::SetHelpWindowPosition(class UWDT_ParameterHelp_C* InHelpWindow, class UClass* InParentClass)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Status_PieceBase_C", "MakeCoordinate");
+		Func = Class->GetFunction("WDT_Status_PieceBase_C", "SetHelpWindowPosition");
 
-	Params::WDT_Status_PieceBase_C_MakeCoordinate Parms{};
+	Params::WDT_Status_PieceBase_C_SetHelpWindowPosition Parms{};
 
-	Parms.Widget = Widget;
-	Parms.Anchor = Anchor;
+	Parms.InHelpWindow = InHelpWindow;
+	Parms.InParentClass = InParentClass;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (Coordinate != nullptr)
-		*Coordinate = std::move(Parms.Coordinate);
 }
 
 
-// Function WDT_Status_PieceBase.WDT_Status_PieceBase_C.IsSelectable
+// Function WDT_Status_PieceBase.WDT_Status_PieceBase_C.Select
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
+// bool                                    PlayAnimation_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-bool UWDT_Status_PieceBase_C::IsSelectable()
+bool UWDT_Status_PieceBase_C::Select(bool PlayAnimation_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Status_PieceBase_C", "IsSelectable");
+		Func = Class->GetFunction("WDT_Status_PieceBase_C", "Select");
 
-	Params::WDT_Status_PieceBase_C_IsSelectable Parms{};
+	Params::WDT_Status_PieceBase_C_Select Parms{};
+
+	Parms.PlayAnimation_0 = PlayAnimation_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -141,22 +127,19 @@ bool UWDT_Status_PieceBase_C::Deselect(bool PlayAnimation_0)
 }
 
 
-// Function WDT_Status_PieceBase.WDT_Status_PieceBase_C.Select
+// Function WDT_Status_PieceBase.WDT_Status_PieceBase_C.IsSelectable
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    PlayAnimation_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-bool UWDT_Status_PieceBase_C::Select(bool PlayAnimation_0)
+bool UWDT_Status_PieceBase_C::IsSelectable()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Status_PieceBase_C", "Select");
+		Func = Class->GetFunction("WDT_Status_PieceBase_C", "IsSelectable");
 
-	Params::WDT_Status_PieceBase_C_Select Parms{};
-
-	Parms.PlayAnimation_0 = PlayAnimation_0;
+	Params::WDT_Status_PieceBase_C_IsSelectable Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -164,45 +147,84 @@ bool UWDT_Status_PieceBase_C::Select(bool PlayAnimation_0)
 }
 
 
-// Function WDT_Status_PieceBase.WDT_Status_PieceBase_C.SetHelpWindowPosition
-// (BlueprintCallable, BlueprintEvent)
+// Function WDT_Status_PieceBase.WDT_Status_PieceBase_C.MakeCoordinate
+// (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class UWDT_ParameterHelp_C*             InHelpWindow                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// class UClass*                           InParentClass                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UWidget*                          Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// EN_Anchor                               Anchor                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector2D                        Coordinate                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_Status_PieceBase_C::SetHelpWindowPosition(class UWDT_ParameterHelp_C* InHelpWindow, class UClass* InParentClass)
+void UWDT_Status_PieceBase_C::MakeCoordinate(class UWidget* Widget, EN_Anchor Anchor, struct FVector2D* Coordinate)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Status_PieceBase_C", "SetHelpWindowPosition");
+		Func = Class->GetFunction("WDT_Status_PieceBase_C", "MakeCoordinate");
 
-	Params::WDT_Status_PieceBase_C_SetHelpWindowPosition Parms{};
+	Params::WDT_Status_PieceBase_C_MakeCoordinate Parms{};
 
-	Parms.InHelpWindow = InHelpWindow;
-	Parms.InParentClass = InParentClass;
+	Parms.Widget = Widget;
+	Parms.Anchor = Anchor;
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (Coordinate != nullptr)
+		*Coordinate = std::move(Parms.Coordinate);
 }
 
 
-// Function WDT_Status_PieceBase.WDT_Status_PieceBase_C.ExecuteUbergraph_WDT_Status_PieceBase
-// (Final, UbergraphFunction, HasDefaults)
+// Function WDT_Status_PieceBase.WDT_Status_PieceBase_C.MakeAlignment
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EN_Anchor                               InAnchor                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector2D                        Alignment                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_Status_PieceBase_C::ExecuteUbergraph_WDT_Status_PieceBase(int32 EntryPoint)
+void UWDT_Status_PieceBase_C::MakeAlignment(EN_Anchor InAnchor, struct FVector2D* Alignment)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Status_PieceBase_C", "ExecuteUbergraph_WDT_Status_PieceBase");
+		Func = Class->GetFunction("WDT_Status_PieceBase_C", "MakeAlignment");
 
-	Params::WDT_Status_PieceBase_C_ExecuteUbergraph_WDT_Status_PieceBase Parms{};
+	Params::WDT_Status_PieceBase_C_MakeAlignment Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.InAnchor = InAnchor;
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (Alignment != nullptr)
+		*Alignment = std::move(Parms.Alignment);
+}
+
+
+// Function WDT_Status_PieceBase.WDT_Status_PieceBase_C.GetActualAnchor
+// (Private, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// EN_Anchor                               InDefaultAnchor                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UClass*                           InParentMenuClass                                      (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
+// TMap<class UClass*, EN_Anchor>          InOverrideAnchorMap                                    (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// EN_Anchor                               OutAnchor                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_Status_PieceBase_C::GetActualAnchor(EN_Anchor InDefaultAnchor, class UClass*& InParentMenuClass, TMap<class UClass*, EN_Anchor>& InOverrideAnchorMap, EN_Anchor* OutAnchor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_Status_PieceBase_C", "GetActualAnchor");
+
+	Params::WDT_Status_PieceBase_C_GetActualAnchor Parms{};
+
+	Parms.InDefaultAnchor = InDefaultAnchor;
+	Parms.InParentMenuClass = InParentMenuClass;
+	Parms.InOverrideAnchorMap = std::move(InOverrideAnchorMap);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	InParentMenuClass = Parms.InParentMenuClass;
+	InOverrideAnchorMap = std::move(Parms.InOverrideAnchorMap);
+
+	if (OutAnchor != nullptr)
+		*OutAnchor = Parms.OutAnchor;
 }
 
 }

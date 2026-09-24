@@ -282,6 +282,20 @@ void UABP_ActionHuman_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ActionH
 }
 
 
+// Function ABP_ActionHuman.ABP_ActionHuman_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ActionHuman_AnimGraphNode_BlendListByBool_257FC1AC4068E5269B9E509EE6D90C38
+// (BlueprintEvent)
+
+void UABP_ActionHuman_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ActionHuman_AnimGraphNode_BlendListByBool_257FC1AC4068E5269B9E509EE6D90C38()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABP_ActionHuman_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ActionHuman_AnimGraphNode_BlendListByBool_257FC1AC4068E5269B9E509EE6D90C38");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function ABP_ActionHuman.ABP_ActionHuman_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ActionHuman_AnimGraphNode_BlendListByBool_4EA71E544A51FC343BEA9C8C2C27F76A
 // (BlueprintEvent)
 
@@ -394,6 +408,20 @@ void UABP_ActionHuman_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ActionH
 }
 
 
+// Function ABP_ActionHuman.ABP_ActionHuman_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ActionHuman_AnimGraphNode_BlendListByEnum_0247E8A141F118294EFAA0B58B6A94EA
+// (BlueprintEvent)
+
+void UABP_ActionHuman_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ActionHuman_AnimGraphNode_BlendListByEnum_0247E8A141F118294EFAA0B58B6A94EA()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABP_ActionHuman_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ActionHuman_AnimGraphNode_BlendListByEnum_0247E8A141F118294EFAA0B58B6A94EA");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function ABP_ActionHuman.ABP_ActionHuman_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ActionHuman_AnimGraphNode_BlendListByEnum_1628F4694189BD2187B2C5ADBB51C8CB
 // (BlueprintEvent)
 
@@ -417,6 +445,20 @@ void UABP_ActionHuman_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ActionH
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("ABP_ActionHuman_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ActionHuman_AnimGraphNode_BlendListByEnum_250173CE4395F3327111FB8B05647630");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ABP_ActionHuman.ABP_ActionHuman_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ActionHuman_AnimGraphNode_BlendListByEnum_26206777441E3F634BB485B0CB11A590
+// (BlueprintEvent)
+
+void UABP_ActionHuman_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ActionHuman_AnimGraphNode_BlendListByEnum_26206777441E3F634BB485B0CB11A590()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABP_ActionHuman_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ActionHuman_AnimGraphNode_BlendListByEnum_26206777441E3F634BB485B0CB11A590");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -450,20 +492,6 @@ void UABP_ActionHuman_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ActionH
 }
 
 
-// Function ABP_ActionHuman.ABP_ActionHuman_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ActionHuman_AnimGraphNode_BlendListByEnum_3CE572D04146F2DA3EF28FAA1081B88E
-// (BlueprintEvent)
-
-void UABP_ActionHuman_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ActionHuman_AnimGraphNode_BlendListByEnum_3CE572D04146F2DA3EF28FAA1081B88E()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_ActionHuman_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ActionHuman_AnimGraphNode_BlendListByEnum_3CE572D04146F2DA3EF28FAA1081B88E");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function ABP_ActionHuman.ABP_ActionHuman_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ActionHuman_AnimGraphNode_BlendListByEnum_587C2BC349B470D1A2AB1592EF044B74
 // (BlueprintEvent)
 
@@ -487,20 +515,6 @@ void UABP_ActionHuman_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ActionH
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("ABP_ActionHuman_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ActionHuman_AnimGraphNode_BlendListByEnum_879210E141470C49C23150B07C5BE1E7");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ABP_ActionHuman.ABP_ActionHuman_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ActionHuman_AnimGraphNode_BlendListByEnum_9B038609478BE342DBC149846A896256
-// (BlueprintEvent)
-
-void UABP_ActionHuman_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ActionHuman_AnimGraphNode_BlendListByEnum_9B038609478BE342DBC149846A896256()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_ActionHuman_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ActionHuman_AnimGraphNode_BlendListByEnum_9B038609478BE342DBC149846A896256");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1565,6 +1579,30 @@ void UABP_ActionHuman_C::MountItem_LeftShoulder(const struct FPoseLink& InPoseMo
 
 	if (MountItem_LeftShoulder_0 != nullptr)
 		*MountItem_LeftShoulder_0 = std::move(Parms.MountItem_LeftShoulder_0);
+}
+
+
+// Function ABP_ActionHuman.ABP_ActionHuman_C.MountRiderPitch
+// (HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FPoseLink                        InPose_MountRiderPitch                                 (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// struct FPoseLink                        MountRiderPitch_0                                      (Parm, OutParm, NoDestructor)
+
+void UABP_ActionHuman_C::MountRiderPitch(const struct FPoseLink& InPose_MountRiderPitch, struct FPoseLink* MountRiderPitch_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABP_ActionHuman_C", "MountRiderPitch");
+
+	Params::ABP_ActionHuman_C_MountRiderPitch Parms{};
+
+	Parms.InPose_MountRiderPitch = std::move(InPose_MountRiderPitch);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (MountRiderPitch_0 != nullptr)
+		*MountRiderPitch_0 = std::move(Parms.MountRiderPitch_0);
 }
 
 

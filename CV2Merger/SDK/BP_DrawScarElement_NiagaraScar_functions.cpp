@@ -206,12 +206,12 @@ void UBP_DrawScarElement_NiagaraScar_C::Process(double ScarLifeTime_Substruct, d
 // Function BP_DrawScarElement_NiagaraScar.BP_DrawScarElement_NiagaraScar_C.SetNiagaraScarParameter
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// double                                  ScarLifetime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  OldScarLifetime                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  ScarLifeTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  OldScarLifeTime                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double                                  ScarLifeTime_Substruct                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double                                  OldScarLifeTime_Substruct                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_DrawScarElement_NiagaraScar_C::SetNiagaraScarParameter(double ScarLifetime, double OldScarLifetime, double ScarLifeTime_Substruct, double OldScarLifeTime_Substruct)
+void UBP_DrawScarElement_NiagaraScar_C::SetNiagaraScarParameter(double ScarLifeTime, double OldScarLifeTime, double ScarLifeTime_Substruct, double OldScarLifeTime_Substruct)
 {
 	static class UFunction* Func = nullptr;
 
@@ -220,8 +220,8 @@ void UBP_DrawScarElement_NiagaraScar_C::SetNiagaraScarParameter(double ScarLifet
 
 	Params::BP_DrawScarElement_NiagaraScar_C_SetNiagaraScarParameter Parms{};
 
-	Parms.ScarLifetime = ScarLifetime;
-	Parms.OldScarLifetime = OldScarLifetime;
+	Parms.ScarLifeTime = ScarLifeTime;
+	Parms.OldScarLifeTime = OldScarLifeTime;
 	Parms.ScarLifeTime_Substruct = ScarLifeTime_Substruct;
 	Parms.OldScarLifeTime_Substruct = OldScarLifeTime_Substruct;
 

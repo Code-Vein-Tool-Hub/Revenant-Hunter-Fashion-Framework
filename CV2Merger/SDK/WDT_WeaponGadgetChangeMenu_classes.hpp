@@ -11,12 +11,12 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "BasicUI_structs.hpp"
 #include "EN_WeapnGadgetSelectState_structs.hpp"
 #include "Extensions_structs.hpp"
 #include "Extensions_classes.hpp"
-#include "StoryFlagSystem_structs.hpp"
+#include "BasicUI_structs.hpp"
 #include "UMG_structs.hpp"
+#include "StoryFlagSystem_structs.hpp"
 
 
 namespace SDK
@@ -148,7 +148,7 @@ public:
 	void DesideWeapon(EUIWeaponGadgetSlot InSelectSlot);
 	void DesideWeaponSlot();
 	void ExecuteUbergraph_WDT_WeaponGadgetChangeMenu(int32 EntryPoint);
-	void Find_Key_from_Equiped_Gadget_Indexes(int32 InValue, bool* HasValue, EUIWeaponGadgetSlot* Key);
+	void Find_Key_from_Equiped_Gadget_Indexes(int32 InValue, EUIWeaponGadgetSlot ExclusionSlot, bool* HasValue, EUIWeaponGadgetSlot* Key);
 	void GetFlagKey(EUIWeaponGadgetSlot NewParam1, class FName* NewParam);
 	void GetGadgetQueryInfo(int32 WeaponGadgetIndex, struct FUIWeaponGadgetQueryInfo* UIWeaponGadgetQueryInfo);
 	void GetGadgetSlotPiece(EUIWeaponGadgetSlot Selection, class UWDT_WeaponGadgetPiece_C** WDT_WeaponGadgetPiece_0);
@@ -198,6 +198,7 @@ public:
 	void SetMenuState(EN_WeapnGadgetSelectState NewParam);
 	void SetSoftTextureWithEmptyDesignation(class UImage* Self2, TSoftObjectPtr<class UTexture2D> SoftTexture);
 	void ShowMessage(const class FText& Message);
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void UpdateEquipGadgetIndex(const EUIWeaponGadgetCategory InCategory);
 	void UpdateWeaponSlotInfo(const EUIWeaponGadgetSlot InGadgetSlot);
 	void WDT_WeaponGadgetChangeMenu_GadgetGrid(class UObject* Item, class UUserWidget* Widget);

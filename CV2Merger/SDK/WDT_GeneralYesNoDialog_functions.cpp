@@ -469,20 +469,6 @@ void UWDT_GeneralYesNoDialog_C::ExecuteUbergraph_WDT_GeneralYesNoDialog(int32 En
 }
 
 
-// Function WDT_GeneralYesNoDialog.WDT_GeneralYesNoDialog_C.BP_OnDeactivated
-// (Event, Protected, BlueprintEvent)
-
-void UWDT_GeneralYesNoDialog_C::BP_OnDeactivated()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_GeneralYesNoDialog_C", "BP_OnDeactivated");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function WDT_GeneralYesNoDialog.WDT_GeneralYesNoDialog_C.BP_OnActivated
 // (Event, Protected, BlueprintEvent)
 
@@ -492,6 +478,20 @@ void UWDT_GeneralYesNoDialog_C::BP_OnActivated()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("WDT_GeneralYesNoDialog_C", "BP_OnActivated");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WDT_GeneralYesNoDialog.WDT_GeneralYesNoDialog_C.BP_OnDeactivated
+// (Event, Protected, BlueprintEvent)
+
+void UWDT_GeneralYesNoDialog_C::BP_OnDeactivated()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_GeneralYesNoDialog_C", "BP_OnDeactivated");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

@@ -14,6 +14,57 @@
 namespace SDK::Params
 {
 
+// Function WDT_Status_NumberAndDiffWithIcon.WDT_Status_NumberAndDiffWithIcon_C.SetNumberDiff
+// 0x000C (0x000C - 0x0000)
+struct WDT_Status_NumberAndDiffWithIcon_C_SetNumberDiff final
+{
+public:
+	int32                                         InCurrentNumber;                                   // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         InNumber;                                          // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          SwapComparison;                                    // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_Status_NumberAndDiffWithIcon_C_SetNumberDiff) == 0x000004, "Wrong alignment on WDT_Status_NumberAndDiffWithIcon_C_SetNumberDiff");
+static_assert(sizeof(WDT_Status_NumberAndDiffWithIcon_C_SetNumberDiff) == 0x00000C, "Wrong size on WDT_Status_NumberAndDiffWithIcon_C_SetNumberDiff");
+static_assert(offsetof(WDT_Status_NumberAndDiffWithIcon_C_SetNumberDiff, InCurrentNumber) == 0x000000, "Member 'WDT_Status_NumberAndDiffWithIcon_C_SetNumberDiff::InCurrentNumber' has a wrong offset!");
+static_assert(offsetof(WDT_Status_NumberAndDiffWithIcon_C_SetNumberDiff, InNumber) == 0x000004, "Member 'WDT_Status_NumberAndDiffWithIcon_C_SetNumberDiff::InNumber' has a wrong offset!");
+static_assert(offsetof(WDT_Status_NumberAndDiffWithIcon_C_SetNumberDiff, SwapComparison) == 0x000008, "Member 'WDT_Status_NumberAndDiffWithIcon_C_SetNumberDiff::SwapComparison' has a wrong offset!");
+
+// Function WDT_Status_NumberAndDiffWithIcon.WDT_Status_NumberAndDiffWithIcon_C.SetNumber
+// 0x0018 (0x0018 - 0x0000)
+struct WDT_Status_NumberAndDiffWithIcon_C_SetNumber final
+{
+public:
+	int32                                         InNumber;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0008(0x0010)()
+};
+static_assert(alignof(WDT_Status_NumberAndDiffWithIcon_C_SetNumber) == 0x000008, "Wrong alignment on WDT_Status_NumberAndDiffWithIcon_C_SetNumber");
+static_assert(sizeof(WDT_Status_NumberAndDiffWithIcon_C_SetNumber) == 0x000018, "Wrong size on WDT_Status_NumberAndDiffWithIcon_C_SetNumber");
+static_assert(offsetof(WDT_Status_NumberAndDiffWithIcon_C_SetNumber, InNumber) == 0x000000, "Member 'WDT_Status_NumberAndDiffWithIcon_C_SetNumber::InNumber' has a wrong offset!");
+static_assert(offsetof(WDT_Status_NumberAndDiffWithIcon_C_SetNumber, CallFunc_Conv_IntToText_ReturnValue) == 0x000008, "Member 'WDT_Status_NumberAndDiffWithIcon_C_SetNumber::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
+
+// Function WDT_Status_NumberAndDiffWithIcon.WDT_Status_NumberAndDiffWithIcon_C.SetIcon
+// 0x0008 (0x0008 - 0x0000)
+struct WDT_Status_NumberAndDiffWithIcon_C_SetIcon final
+{
+public:
+	class UTexture2D*                             InTexture;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_Status_NumberAndDiffWithIcon_C_SetIcon) == 0x000008, "Wrong alignment on WDT_Status_NumberAndDiffWithIcon_C_SetIcon");
+static_assert(sizeof(WDT_Status_NumberAndDiffWithIcon_C_SetIcon) == 0x000008, "Wrong size on WDT_Status_NumberAndDiffWithIcon_C_SetIcon");
+static_assert(offsetof(WDT_Status_NumberAndDiffWithIcon_C_SetIcon, InTexture) == 0x000000, "Member 'WDT_Status_NumberAndDiffWithIcon_C_SetIcon::InTexture' has a wrong offset!");
+
+// Function WDT_Status_NumberAndDiffWithIcon.WDT_Status_NumberAndDiffWithIcon_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WDT_Status_NumberAndDiffWithIcon_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_Status_NumberAndDiffWithIcon_C_PreConstruct) == 0x000001, "Wrong alignment on WDT_Status_NumberAndDiffWithIcon_C_PreConstruct");
+static_assert(sizeof(WDT_Status_NumberAndDiffWithIcon_C_PreConstruct) == 0x000001, "Wrong size on WDT_Status_NumberAndDiffWithIcon_C_PreConstruct");
+static_assert(offsetof(WDT_Status_NumberAndDiffWithIcon_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WDT_Status_NumberAndDiffWithIcon_C_PreConstruct::IsDesignTime' has a wrong offset!");
+
 // Function WDT_Status_NumberAndDiffWithIcon.WDT_Status_NumberAndDiffWithIcon_C.ExecuteUbergraph_WDT_Status_NumberAndDiffWithIcon
 // 0x0028 (0x0028 - 0x0000)
 struct WDT_Status_NumberAndDiffWithIcon_C_ExecuteUbergraph_WDT_Status_NumberAndDiffWithIcon final
@@ -31,57 +82,6 @@ static_assert(offsetof(WDT_Status_NumberAndDiffWithIcon_C_ExecuteUbergraph_WDT_S
 static_assert(offsetof(WDT_Status_NumberAndDiffWithIcon_C_ExecuteUbergraph_WDT_Status_NumberAndDiffWithIcon, K2Node_Event_IsDesignTime) == 0x000004, "Member 'WDT_Status_NumberAndDiffWithIcon_C_ExecuteUbergraph_WDT_Status_NumberAndDiffWithIcon::K2Node_Event_IsDesignTime' has a wrong offset!");
 static_assert(offsetof(WDT_Status_NumberAndDiffWithIcon_C_ExecuteUbergraph_WDT_Status_NumberAndDiffWithIcon, CallFunc_Conv_IntToText_ReturnValue) == 0x000008, "Member 'WDT_Status_NumberAndDiffWithIcon_C_ExecuteUbergraph_WDT_Status_NumberAndDiffWithIcon::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_Status_NumberAndDiffWithIcon_C_ExecuteUbergraph_WDT_Status_NumberAndDiffWithIcon, CallFunc_Conv_IntToText_ReturnValue_1) == 0x000018, "Member 'WDT_Status_NumberAndDiffWithIcon_C_ExecuteUbergraph_WDT_Status_NumberAndDiffWithIcon::CallFunc_Conv_IntToText_ReturnValue_1' has a wrong offset!");
-
-// Function WDT_Status_NumberAndDiffWithIcon.WDT_Status_NumberAndDiffWithIcon_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WDT_Status_NumberAndDiffWithIcon_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_Status_NumberAndDiffWithIcon_C_PreConstruct) == 0x000001, "Wrong alignment on WDT_Status_NumberAndDiffWithIcon_C_PreConstruct");
-static_assert(sizeof(WDT_Status_NumberAndDiffWithIcon_C_PreConstruct) == 0x000001, "Wrong size on WDT_Status_NumberAndDiffWithIcon_C_PreConstruct");
-static_assert(offsetof(WDT_Status_NumberAndDiffWithIcon_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WDT_Status_NumberAndDiffWithIcon_C_PreConstruct::IsDesignTime' has a wrong offset!");
-
-// Function WDT_Status_NumberAndDiffWithIcon.WDT_Status_NumberAndDiffWithIcon_C.SetIcon
-// 0x0008 (0x0008 - 0x0000)
-struct WDT_Status_NumberAndDiffWithIcon_C_SetIcon final
-{
-public:
-	class UTexture2D*                             InTexture;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_Status_NumberAndDiffWithIcon_C_SetIcon) == 0x000008, "Wrong alignment on WDT_Status_NumberAndDiffWithIcon_C_SetIcon");
-static_assert(sizeof(WDT_Status_NumberAndDiffWithIcon_C_SetIcon) == 0x000008, "Wrong size on WDT_Status_NumberAndDiffWithIcon_C_SetIcon");
-static_assert(offsetof(WDT_Status_NumberAndDiffWithIcon_C_SetIcon, InTexture) == 0x000000, "Member 'WDT_Status_NumberAndDiffWithIcon_C_SetIcon::InTexture' has a wrong offset!");
-
-// Function WDT_Status_NumberAndDiffWithIcon.WDT_Status_NumberAndDiffWithIcon_C.SetNumber
-// 0x0018 (0x0018 - 0x0000)
-struct WDT_Status_NumberAndDiffWithIcon_C_SetNumber final
-{
-public:
-	int32                                         InNumber;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0008(0x0010)()
-};
-static_assert(alignof(WDT_Status_NumberAndDiffWithIcon_C_SetNumber) == 0x000008, "Wrong alignment on WDT_Status_NumberAndDiffWithIcon_C_SetNumber");
-static_assert(sizeof(WDT_Status_NumberAndDiffWithIcon_C_SetNumber) == 0x000018, "Wrong size on WDT_Status_NumberAndDiffWithIcon_C_SetNumber");
-static_assert(offsetof(WDT_Status_NumberAndDiffWithIcon_C_SetNumber, InNumber) == 0x000000, "Member 'WDT_Status_NumberAndDiffWithIcon_C_SetNumber::InNumber' has a wrong offset!");
-static_assert(offsetof(WDT_Status_NumberAndDiffWithIcon_C_SetNumber, CallFunc_Conv_IntToText_ReturnValue) == 0x000008, "Member 'WDT_Status_NumberAndDiffWithIcon_C_SetNumber::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
-
-// Function WDT_Status_NumberAndDiffWithIcon.WDT_Status_NumberAndDiffWithIcon_C.SetNumberDiff
-// 0x000C (0x000C - 0x0000)
-struct WDT_Status_NumberAndDiffWithIcon_C_SetNumberDiff final
-{
-public:
-	int32                                         InCurrentNumber;                                   // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         InNumber;                                          // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          SwapComparison;                                    // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_Status_NumberAndDiffWithIcon_C_SetNumberDiff) == 0x000004, "Wrong alignment on WDT_Status_NumberAndDiffWithIcon_C_SetNumberDiff");
-static_assert(sizeof(WDT_Status_NumberAndDiffWithIcon_C_SetNumberDiff) == 0x00000C, "Wrong size on WDT_Status_NumberAndDiffWithIcon_C_SetNumberDiff");
-static_assert(offsetof(WDT_Status_NumberAndDiffWithIcon_C_SetNumberDiff, InCurrentNumber) == 0x000000, "Member 'WDT_Status_NumberAndDiffWithIcon_C_SetNumberDiff::InCurrentNumber' has a wrong offset!");
-static_assert(offsetof(WDT_Status_NumberAndDiffWithIcon_C_SetNumberDiff, InNumber) == 0x000004, "Member 'WDT_Status_NumberAndDiffWithIcon_C_SetNumberDiff::InNumber' has a wrong offset!");
-static_assert(offsetof(WDT_Status_NumberAndDiffWithIcon_C_SetNumberDiff, SwapComparison) == 0x000008, "Member 'WDT_Status_NumberAndDiffWithIcon_C_SetNumberDiff::SwapComparison' has a wrong offset!");
 
 }
 

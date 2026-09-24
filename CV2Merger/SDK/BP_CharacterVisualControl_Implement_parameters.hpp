@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "Extensions_structs.hpp"
+#include "STR_BodyTrailEffectData_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "GameplayTags_structs.hpp"
 #include "E_CharacterVisualControl_CharacterMode_structs.hpp"
-#include "STR_BodyTrailEffectData_structs.hpp"
+#include "Extensions_structs.hpp"
 #include "Engine_structs.hpp"
 
 
@@ -489,6 +489,40 @@ static_assert(offsetof(BP_CharacterVisualControl_Implement_C_BodyTrailEffect_Set
 static_assert(offsetof(BP_CharacterVisualControl_Implement_C_BodyTrailEffect_SetMaterialParameter, CallFunc_Add_IntInt_ReturnValue_1) == 0x0000A4, "Member 'BP_CharacterVisualControl_Implement_C_BodyTrailEffect_SetMaterialParameter::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(BP_CharacterVisualControl_Implement_C_BodyTrailEffect_SetMaterialParameter, K2Node_VariableSet_InValue_ImplicitCast) == 0x0000A8, "Member 'BP_CharacterVisualControl_Implement_C_BodyTrailEffect_SetMaterialParameter::K2Node_VariableSet_InValue_ImplicitCast' has a wrong offset!");
 static_assert(offsetof(BP_CharacterVisualControl_Implement_C_BodyTrailEffect_SetMaterialParameter, CallFunc_SetScalarParameterValue_Value_ImplicitCast) == 0x0000AC, "Member 'BP_CharacterVisualControl_Implement_C_BodyTrailEffect_SetMaterialParameter::CallFunc_SetScalarParameterValue_Value_ImplicitCast' has a wrong offset!");
+
+// Function BP_CharacterVisualControl_Implement.BP_CharacterVisualControl_Implement_C.BodyTrailEffect_SetParameter
+// 0x0060 (0x0060 - 0x0000)
+struct BP_CharacterVisualControl_Implement_C_BodyTrailEffect_SetParameter final
+{
+public:
+	int32                                         MaxCount;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         FrameStep;                                         // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Lifetime;                                          // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bUseColor;                                         // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           EmissiveColorBegin;                                // 0x0014(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           EmissiveColorEnd;                                  // 0x0024(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        EmissiveScale;                                     // 0x0038(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMeshComponent*                         InMesh;                                            // 0x0040(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Clamp_ReturnValue;                        // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_FClamp_ReturnValue;                       // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Clamp_ReturnValue_1;                      // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_CharacterVisualControl_Implement_C_BodyTrailEffect_SetParameter) == 0x000008, "Wrong alignment on BP_CharacterVisualControl_Implement_C_BodyTrailEffect_SetParameter");
+static_assert(sizeof(BP_CharacterVisualControl_Implement_C_BodyTrailEffect_SetParameter) == 0x000060, "Wrong size on BP_CharacterVisualControl_Implement_C_BodyTrailEffect_SetParameter");
+static_assert(offsetof(BP_CharacterVisualControl_Implement_C_BodyTrailEffect_SetParameter, MaxCount) == 0x000000, "Member 'BP_CharacterVisualControl_Implement_C_BodyTrailEffect_SetParameter::MaxCount' has a wrong offset!");
+static_assert(offsetof(BP_CharacterVisualControl_Implement_C_BodyTrailEffect_SetParameter, FrameStep) == 0x000004, "Member 'BP_CharacterVisualControl_Implement_C_BodyTrailEffect_SetParameter::FrameStep' has a wrong offset!");
+static_assert(offsetof(BP_CharacterVisualControl_Implement_C_BodyTrailEffect_SetParameter, Lifetime) == 0x000008, "Member 'BP_CharacterVisualControl_Implement_C_BodyTrailEffect_SetParameter::Lifetime' has a wrong offset!");
+static_assert(offsetof(BP_CharacterVisualControl_Implement_C_BodyTrailEffect_SetParameter, bUseColor) == 0x000010, "Member 'BP_CharacterVisualControl_Implement_C_BodyTrailEffect_SetParameter::bUseColor' has a wrong offset!");
+static_assert(offsetof(BP_CharacterVisualControl_Implement_C_BodyTrailEffect_SetParameter, EmissiveColorBegin) == 0x000014, "Member 'BP_CharacterVisualControl_Implement_C_BodyTrailEffect_SetParameter::EmissiveColorBegin' has a wrong offset!");
+static_assert(offsetof(BP_CharacterVisualControl_Implement_C_BodyTrailEffect_SetParameter, EmissiveColorEnd) == 0x000024, "Member 'BP_CharacterVisualControl_Implement_C_BodyTrailEffect_SetParameter::EmissiveColorEnd' has a wrong offset!");
+static_assert(offsetof(BP_CharacterVisualControl_Implement_C_BodyTrailEffect_SetParameter, EmissiveScale) == 0x000038, "Member 'BP_CharacterVisualControl_Implement_C_BodyTrailEffect_SetParameter::EmissiveScale' has a wrong offset!");
+static_assert(offsetof(BP_CharacterVisualControl_Implement_C_BodyTrailEffect_SetParameter, InMesh) == 0x000040, "Member 'BP_CharacterVisualControl_Implement_C_BodyTrailEffect_SetParameter::InMesh' has a wrong offset!");
+static_assert(offsetof(BP_CharacterVisualControl_Implement_C_BodyTrailEffect_SetParameter, CallFunc_Clamp_ReturnValue) == 0x000048, "Member 'BP_CharacterVisualControl_Implement_C_BodyTrailEffect_SetParameter::CallFunc_Clamp_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CharacterVisualControl_Implement_C_BodyTrailEffect_SetParameter, CallFunc_FClamp_ReturnValue) == 0x000050, "Member 'BP_CharacterVisualControl_Implement_C_BodyTrailEffect_SetParameter::CallFunc_FClamp_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CharacterVisualControl_Implement_C_BodyTrailEffect_SetParameter, CallFunc_Clamp_ReturnValue_1) == 0x000058, "Member 'BP_CharacterVisualControl_Implement_C_BodyTrailEffect_SetParameter::CallFunc_Clamp_ReturnValue_1' has a wrong offset!");
 
 // Function BP_CharacterVisualControl_Implement.BP_CharacterVisualControl_Implement_C.CheckOtherMesh
 // 0x0050 (0x0050 - 0x0000)
@@ -2259,7 +2293,7 @@ static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVanishBodyMode, 
 static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVanishBodyMode, CallFunc_IsValid_ReturnValue) == 0x00001A, "Member 'BP_CharacterVisualControl_Implement_C_SetVanishBodyMode::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
 // Function BP_CharacterVisualControl_Implement.BP_CharacterVisualControl_Implement_C.SetVisibilityMesh
-// 0x0068 (0x0068 - 0x0000)
+// 0x0110 (0x0110 - 0x0000)
 struct BP_CharacterVisualControl_Implement_C_SetVisibilityMesh final
 {
 public:
@@ -2267,78 +2301,98 @@ public:
 	bool                                          bCharacter;                                        // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bWeapon;                                           // 0x0002(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bOther;                                            // 0x0003(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          InVisibility;                                      // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Variable;                                 // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UMeshComponent*>                 CallFunc_Map_Values_Values;                        // 0x0020(0x0010)(ReferenceParm, ContainsInstancedReference)
-	class UMeshComponent*                         CallFunc_Array_Get_Item;                           // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x003D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3E[0x2];                                       // 0x003E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetWeaponMeshCount_ReturnValue;           // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class USkeletalMeshComponent*                 CallFunc_GetCharacterMesh_ReturnValue;             // 0x0048(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0052(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_53[0x5];                                       // 0x0053(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class USkeletalMeshComponent*                 CallFunc_GetWeaponMesh_ReturnValue;                // 0x0058(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class UMeshComponent*, bool>             VisibilityMap;                                     // 0x0008(0x0050)(Parm, OutParm, ContainsInstancedReference)
+	TMap<class UMeshComponent*, bool>             InVisibilityMap;                                   // 0x0058(0x0050)(Edit, BlueprintVisible, ContainsInstancedReference)
+	bool                                          InVisibility;                                      // 0x00A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A9[0x3];                                       // 0x00A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Variable;                                 // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x00B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x00BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C1[0x7];                                       // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UMeshComponent*>                 CallFunc_Map_Values_Values;                        // 0x00C8(0x0010)(ReferenceParm, ContainsInstancedReference)
+	class UMeshComponent*                         CallFunc_Array_Get_Item;                           // 0x00D8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00E4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x00E5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x00E6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E7[0x1];                                       // 0x00E7(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetWeaponMeshCount_ReturnValue;           // 0x00E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x00EC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_ED[0x3];                                       // 0x00ED(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMeshComponent*                 CallFunc_GetCharacterMesh_ReturnValue;             // 0x00F0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsVisible_ReturnValue_1;                  // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x00F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x00FA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_FB[0x5];                                       // 0x00FB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMeshComponent*                 CallFunc_GetWeaponMesh_ReturnValue;                // 0x0100(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsVisible_ReturnValue_2;                  // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x0109(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_CharacterVisualControl_Implement_C_SetVisibilityMesh) == 0x000008, "Wrong alignment on BP_CharacterVisualControl_Implement_C_SetVisibilityMesh");
-static_assert(sizeof(BP_CharacterVisualControl_Implement_C_SetVisibilityMesh) == 0x000068, "Wrong size on BP_CharacterVisualControl_Implement_C_SetVisibilityMesh");
+static_assert(sizeof(BP_CharacterVisualControl_Implement_C_SetVisibilityMesh) == 0x000110, "Wrong size on BP_CharacterVisualControl_Implement_C_SetVisibilityMesh");
 static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisibilityMesh, bVisibility) == 0x000000, "Member 'BP_CharacterVisualControl_Implement_C_SetVisibilityMesh::bVisibility' has a wrong offset!");
 static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisibilityMesh, bCharacter) == 0x000001, "Member 'BP_CharacterVisualControl_Implement_C_SetVisibilityMesh::bCharacter' has a wrong offset!");
 static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisibilityMesh, bWeapon) == 0x000002, "Member 'BP_CharacterVisualControl_Implement_C_SetVisibilityMesh::bWeapon' has a wrong offset!");
 static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisibilityMesh, bOther) == 0x000003, "Member 'BP_CharacterVisualControl_Implement_C_SetVisibilityMesh::bOther' has a wrong offset!");
-static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisibilityMesh, InVisibility) == 0x000004, "Member 'BP_CharacterVisualControl_Implement_C_SetVisibilityMesh::InVisibility' has a wrong offset!");
-static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisibilityMesh, Temp_int_Variable) == 0x000008, "Member 'BP_CharacterVisualControl_Implement_C_SetVisibilityMesh::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisibilityMesh, CallFunc_Add_IntInt_ReturnValue) == 0x00000C, "Member 'BP_CharacterVisualControl_Implement_C_SetVisibilityMesh::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisibilityMesh, Temp_int_Array_Index_Variable) == 0x000010, "Member 'BP_CharacterVisualControl_Implement_C_SetVisibilityMesh::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisibilityMesh, Temp_int_Loop_Counter_Variable) == 0x000014, "Member 'BP_CharacterVisualControl_Implement_C_SetVisibilityMesh::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisibilityMesh, CallFunc_Add_IntInt_ReturnValue_1) == 0x000018, "Member 'BP_CharacterVisualControl_Implement_C_SetVisibilityMesh::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisibilityMesh, CallFunc_IsValid_ReturnValue) == 0x00001C, "Member 'BP_CharacterVisualControl_Implement_C_SetVisibilityMesh::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisibilityMesh, CallFunc_Map_Values_Values) == 0x000020, "Member 'BP_CharacterVisualControl_Implement_C_SetVisibilityMesh::CallFunc_Map_Values_Values' has a wrong offset!");
-static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisibilityMesh, CallFunc_Array_Get_Item) == 0x000030, "Member 'BP_CharacterVisualControl_Implement_C_SetVisibilityMesh::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisibilityMesh, CallFunc_Array_Length_ReturnValue) == 0x000038, "Member 'BP_CharacterVisualControl_Implement_C_SetVisibilityMesh::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisibilityMesh, CallFunc_Less_IntInt_ReturnValue) == 0x00003C, "Member 'BP_CharacterVisualControl_Implement_C_SetVisibilityMesh::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisibilityMesh, CallFunc_IsValid_ReturnValue_1) == 0x00003D, "Member 'BP_CharacterVisualControl_Implement_C_SetVisibilityMesh::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisibilityMesh, CallFunc_GetWeaponMeshCount_ReturnValue) == 0x000040, "Member 'BP_CharacterVisualControl_Implement_C_SetVisibilityMesh::CallFunc_GetWeaponMeshCount_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisibilityMesh, CallFunc_GetCharacterMesh_ReturnValue) == 0x000048, "Member 'BP_CharacterVisualControl_Implement_C_SetVisibilityMesh::CallFunc_GetCharacterMesh_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisibilityMesh, CallFunc_Less_IntInt_ReturnValue_1) == 0x000050, "Member 'BP_CharacterVisualControl_Implement_C_SetVisibilityMesh::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisibilityMesh, CallFunc_IsValid_ReturnValue_2) == 0x000051, "Member 'BP_CharacterVisualControl_Implement_C_SetVisibilityMesh::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisibilityMesh, CallFunc_IsValid_ReturnValue_3) == 0x000052, "Member 'BP_CharacterVisualControl_Implement_C_SetVisibilityMesh::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisibilityMesh, CallFunc_GetWeaponMesh_ReturnValue) == 0x000058, "Member 'BP_CharacterVisualControl_Implement_C_SetVisibilityMesh::CallFunc_GetWeaponMesh_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisibilityMesh, CallFunc_IsValid_ReturnValue_4) == 0x000060, "Member 'BP_CharacterVisualControl_Implement_C_SetVisibilityMesh::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisibilityMesh, VisibilityMap) == 0x000008, "Member 'BP_CharacterVisualControl_Implement_C_SetVisibilityMesh::VisibilityMap' has a wrong offset!");
+static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisibilityMesh, InVisibilityMap) == 0x000058, "Member 'BP_CharacterVisualControl_Implement_C_SetVisibilityMesh::InVisibilityMap' has a wrong offset!");
+static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisibilityMesh, InVisibility) == 0x0000A8, "Member 'BP_CharacterVisualControl_Implement_C_SetVisibilityMesh::InVisibility' has a wrong offset!");
+static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisibilityMesh, Temp_int_Variable) == 0x0000AC, "Member 'BP_CharacterVisualControl_Implement_C_SetVisibilityMesh::Temp_int_Variable' has a wrong offset!");
+static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisibilityMesh, CallFunc_Add_IntInt_ReturnValue) == 0x0000B0, "Member 'BP_CharacterVisualControl_Implement_C_SetVisibilityMesh::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisibilityMesh, Temp_int_Loop_Counter_Variable) == 0x0000B4, "Member 'BP_CharacterVisualControl_Implement_C_SetVisibilityMesh::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisibilityMesh, CallFunc_Add_IntInt_ReturnValue_1) == 0x0000B8, "Member 'BP_CharacterVisualControl_Implement_C_SetVisibilityMesh::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisibilityMesh, Temp_int_Array_Index_Variable) == 0x0000BC, "Member 'BP_CharacterVisualControl_Implement_C_SetVisibilityMesh::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisibilityMesh, CallFunc_IsValid_ReturnValue) == 0x0000C0, "Member 'BP_CharacterVisualControl_Implement_C_SetVisibilityMesh::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisibilityMesh, CallFunc_Map_Values_Values) == 0x0000C8, "Member 'BP_CharacterVisualControl_Implement_C_SetVisibilityMesh::CallFunc_Map_Values_Values' has a wrong offset!");
+static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisibilityMesh, CallFunc_Array_Get_Item) == 0x0000D8, "Member 'BP_CharacterVisualControl_Implement_C_SetVisibilityMesh::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisibilityMesh, CallFunc_Array_Length_ReturnValue) == 0x0000E0, "Member 'BP_CharacterVisualControl_Implement_C_SetVisibilityMesh::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisibilityMesh, CallFunc_Less_IntInt_ReturnValue) == 0x0000E4, "Member 'BP_CharacterVisualControl_Implement_C_SetVisibilityMesh::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisibilityMesh, CallFunc_IsVisible_ReturnValue) == 0x0000E5, "Member 'BP_CharacterVisualControl_Implement_C_SetVisibilityMesh::CallFunc_IsVisible_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisibilityMesh, CallFunc_IsValid_ReturnValue_1) == 0x0000E6, "Member 'BP_CharacterVisualControl_Implement_C_SetVisibilityMesh::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisibilityMesh, CallFunc_GetWeaponMeshCount_ReturnValue) == 0x0000E8, "Member 'BP_CharacterVisualControl_Implement_C_SetVisibilityMesh::CallFunc_GetWeaponMeshCount_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisibilityMesh, CallFunc_Less_IntInt_ReturnValue_1) == 0x0000EC, "Member 'BP_CharacterVisualControl_Implement_C_SetVisibilityMesh::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisibilityMesh, CallFunc_GetCharacterMesh_ReturnValue) == 0x0000F0, "Member 'BP_CharacterVisualControl_Implement_C_SetVisibilityMesh::CallFunc_GetCharacterMesh_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisibilityMesh, CallFunc_IsVisible_ReturnValue_1) == 0x0000F8, "Member 'BP_CharacterVisualControl_Implement_C_SetVisibilityMesh::CallFunc_IsVisible_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisibilityMesh, CallFunc_IsValid_ReturnValue_2) == 0x0000F9, "Member 'BP_CharacterVisualControl_Implement_C_SetVisibilityMesh::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisibilityMesh, CallFunc_IsValid_ReturnValue_3) == 0x0000FA, "Member 'BP_CharacterVisualControl_Implement_C_SetVisibilityMesh::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisibilityMesh, CallFunc_GetWeaponMesh_ReturnValue) == 0x000100, "Member 'BP_CharacterVisualControl_Implement_C_SetVisibilityMesh::CallFunc_GetWeaponMesh_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisibilityMesh, CallFunc_IsVisible_ReturnValue_2) == 0x000108, "Member 'BP_CharacterVisualControl_Implement_C_SetVisibilityMesh::CallFunc_IsVisible_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisibilityMesh, CallFunc_IsValid_ReturnValue_4) == 0x000109, "Member 'BP_CharacterVisualControl_Implement_C_SetVisibilityMesh::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
 
 // Function BP_CharacterVisualControl_Implement.BP_CharacterVisualControl_Implement_C.SetVisiblityMaterialElement
-// 0x0020 (0x0020 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct BP_CharacterVisualControl_Implement_C_SetVisiblityMaterialElement final
 {
 public:
 	class USkinnedMeshComponent*                  Meah;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class FName                                   MaterialElementName;                               // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bVisible;                                          // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_12[0x2];                                       // 0x0012(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetMaterialIndex_ReturnValue;             // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsMaterialSlotNameValid_ReturnValue;      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Variable;                                 // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetMaterialIndex_ReturnValue;             // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsMaterialSlotNameValid_ReturnValue;      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetNumLODs_ReturnValue;                   // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_CharacterVisualControl_Implement_C_SetVisiblityMaterialElement) == 0x000008, "Wrong alignment on BP_CharacterVisualControl_Implement_C_SetVisiblityMaterialElement");
-static_assert(sizeof(BP_CharacterVisualControl_Implement_C_SetVisiblityMaterialElement) == 0x000020, "Wrong size on BP_CharacterVisualControl_Implement_C_SetVisiblityMaterialElement");
+static_assert(sizeof(BP_CharacterVisualControl_Implement_C_SetVisiblityMaterialElement) == 0x000030, "Wrong size on BP_CharacterVisualControl_Implement_C_SetVisiblityMaterialElement");
 static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisiblityMaterialElement, Meah) == 0x000000, "Member 'BP_CharacterVisualControl_Implement_C_SetVisiblityMaterialElement::Meah' has a wrong offset!");
 static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisiblityMaterialElement, MaterialElementName) == 0x000008, "Member 'BP_CharacterVisualControl_Implement_C_SetVisiblityMaterialElement::MaterialElementName' has a wrong offset!");
 static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisiblityMaterialElement, bVisible) == 0x000010, "Member 'BP_CharacterVisualControl_Implement_C_SetVisiblityMaterialElement::bVisible' has a wrong offset!");
-static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisiblityMaterialElement, CallFunc_IsValid_ReturnValue) == 0x000011, "Member 'BP_CharacterVisualControl_Implement_C_SetVisiblityMaterialElement::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisiblityMaterialElement, CallFunc_GetMaterialIndex_ReturnValue) == 0x000014, "Member 'BP_CharacterVisualControl_Implement_C_SetVisiblityMaterialElement::CallFunc_GetMaterialIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisiblityMaterialElement, CallFunc_IsMaterialSlotNameValid_ReturnValue) == 0x000018, "Member 'BP_CharacterVisualControl_Implement_C_SetVisiblityMaterialElement::CallFunc_IsMaterialSlotNameValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisiblityMaterialElement, Temp_int_Variable) == 0x000014, "Member 'BP_CharacterVisualControl_Implement_C_SetVisiblityMaterialElement::Temp_int_Variable' has a wrong offset!");
+static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisiblityMaterialElement, CallFunc_GetMaterialIndex_ReturnValue) == 0x000018, "Member 'BP_CharacterVisualControl_Implement_C_SetVisiblityMaterialElement::CallFunc_GetMaterialIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisiblityMaterialElement, CallFunc_Add_IntInt_ReturnValue) == 0x00001C, "Member 'BP_CharacterVisualControl_Implement_C_SetVisiblityMaterialElement::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisiblityMaterialElement, CallFunc_IsMaterialSlotNameValid_ReturnValue) == 0x000020, "Member 'BP_CharacterVisualControl_Implement_C_SetVisiblityMaterialElement::CallFunc_IsMaterialSlotNameValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisiblityMaterialElement, CallFunc_GetNumLODs_ReturnValue) == 0x000024, "Member 'BP_CharacterVisualControl_Implement_C_SetVisiblityMaterialElement::CallFunc_GetNumLODs_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisiblityMaterialElement, CallFunc_IsValid_ReturnValue) == 0x000028, "Member 'BP_CharacterVisualControl_Implement_C_SetVisiblityMaterialElement::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CharacterVisualControl_Implement_C_SetVisiblityMaterialElement, CallFunc_Less_IntInt_ReturnValue) == 0x000029, "Member 'BP_CharacterVisualControl_Implement_C_SetVisiblityMaterialElement::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
 
 // Function BP_CharacterVisualControl_Implement.BP_CharacterVisualControl_Implement_C.SlowEffect_SetMaterialParameter
 // 0x00E8 (0x00E8 - 0x0000)

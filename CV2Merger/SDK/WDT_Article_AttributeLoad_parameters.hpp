@@ -16,29 +16,25 @@
 namespace SDK::Params
 {
 
-// Function WDT_Article_AttributeLoad.WDT_Article_AttributeLoad_C.ExecuteUbergraph_WDT_Article_AttributeLoad
-// 0x0008 (0x0008 - 0x0000)
-struct WDT_Article_AttributeLoad_C_ExecuteUbergraph_WDT_Article_AttributeLoad final
+// Function WDT_Article_AttributeLoad.WDT_Article_AttributeLoad_C.SetValueComparison
+// 0x0020 (0x0020 - 0x0000)
+struct WDT_Article_AttributeLoad_C_SetValueComparison final
 {
 public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_IsDesignTime;                         // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         InCurrentValue;                                    // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         InTargetValue;                                     // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          SwapComparisons;                                   // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_CompareInteger_CompareResult;             // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateColor                            CallFunc_GetTextColorByCompareResult_TextColor;    // 0x000C(0x0014)()
 };
-static_assert(alignof(WDT_Article_AttributeLoad_C_ExecuteUbergraph_WDT_Article_AttributeLoad) == 0x000004, "Wrong alignment on WDT_Article_AttributeLoad_C_ExecuteUbergraph_WDT_Article_AttributeLoad");
-static_assert(sizeof(WDT_Article_AttributeLoad_C_ExecuteUbergraph_WDT_Article_AttributeLoad) == 0x000008, "Wrong size on WDT_Article_AttributeLoad_C_ExecuteUbergraph_WDT_Article_AttributeLoad");
-static_assert(offsetof(WDT_Article_AttributeLoad_C_ExecuteUbergraph_WDT_Article_AttributeLoad, EntryPoint) == 0x000000, "Member 'WDT_Article_AttributeLoad_C_ExecuteUbergraph_WDT_Article_AttributeLoad::EntryPoint' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttributeLoad_C_ExecuteUbergraph_WDT_Article_AttributeLoad, K2Node_Event_IsDesignTime) == 0x000004, "Member 'WDT_Article_AttributeLoad_C_ExecuteUbergraph_WDT_Article_AttributeLoad::K2Node_Event_IsDesignTime' has a wrong offset!");
-
-// Function WDT_Article_AttributeLoad.WDT_Article_AttributeLoad_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WDT_Article_AttributeLoad_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_Article_AttributeLoad_C_PreConstruct) == 0x000001, "Wrong alignment on WDT_Article_AttributeLoad_C_PreConstruct");
-static_assert(sizeof(WDT_Article_AttributeLoad_C_PreConstruct) == 0x000001, "Wrong size on WDT_Article_AttributeLoad_C_PreConstruct");
-static_assert(offsetof(WDT_Article_AttributeLoad_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WDT_Article_AttributeLoad_C_PreConstruct::IsDesignTime' has a wrong offset!");
+static_assert(alignof(WDT_Article_AttributeLoad_C_SetValueComparison) == 0x000004, "Wrong alignment on WDT_Article_AttributeLoad_C_SetValueComparison");
+static_assert(sizeof(WDT_Article_AttributeLoad_C_SetValueComparison) == 0x000020, "Wrong size on WDT_Article_AttributeLoad_C_SetValueComparison");
+static_assert(offsetof(WDT_Article_AttributeLoad_C_SetValueComparison, InCurrentValue) == 0x000000, "Member 'WDT_Article_AttributeLoad_C_SetValueComparison::InCurrentValue' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttributeLoad_C_SetValueComparison, InTargetValue) == 0x000004, "Member 'WDT_Article_AttributeLoad_C_SetValueComparison::InTargetValue' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttributeLoad_C_SetValueComparison, SwapComparisons) == 0x000008, "Member 'WDT_Article_AttributeLoad_C_SetValueComparison::SwapComparisons' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttributeLoad_C_SetValueComparison, CallFunc_CompareInteger_CompareResult) == 0x000009, "Member 'WDT_Article_AttributeLoad_C_SetValueComparison::CallFunc_CompareInteger_CompareResult' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttributeLoad_C_SetValueComparison, CallFunc_GetTextColorByCompareResult_TextColor) == 0x00000C, "Member 'WDT_Article_AttributeLoad_C_SetValueComparison::CallFunc_GetTextColorByCompareResult_TextColor' has a wrong offset!");
 
 // Function WDT_Article_AttributeLoad.WDT_Article_AttributeLoad_C.SetValue
 // 0x0050 (0x0050 - 0x0000)
@@ -64,25 +60,29 @@ static_assert(offsetof(WDT_Article_AttributeLoad_C_SetValue, Temp_text_Variable)
 static_assert(offsetof(WDT_Article_AttributeLoad_C_SetValue, K2Node_Select_Default) == 0x000028, "Member 'WDT_Article_AttributeLoad_C_SetValue::K2Node_Select_Default' has a wrong offset!");
 static_assert(offsetof(WDT_Article_AttributeLoad_C_SetValue, CallFunc_GetTextColorByCompareResult_TextColor) == 0x000038, "Member 'WDT_Article_AttributeLoad_C_SetValue::CallFunc_GetTextColorByCompareResult_TextColor' has a wrong offset!");
 
-// Function WDT_Article_AttributeLoad.WDT_Article_AttributeLoad_C.SetValueComparison
-// 0x0020 (0x0020 - 0x0000)
-struct WDT_Article_AttributeLoad_C_SetValueComparison final
+// Function WDT_Article_AttributeLoad.WDT_Article_AttributeLoad_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WDT_Article_AttributeLoad_C_PreConstruct final
 {
 public:
-	int32                                         InCurrentValue;                                    // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         InTargetValue;                                     // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          SwapComparisons;                                   // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_CompareInteger_CompareResult;             // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateColor                            CallFunc_GetTextColorByCompareResult_TextColor;    // 0x000C(0x0014)()
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WDT_Article_AttributeLoad_C_SetValueComparison) == 0x000004, "Wrong alignment on WDT_Article_AttributeLoad_C_SetValueComparison");
-static_assert(sizeof(WDT_Article_AttributeLoad_C_SetValueComparison) == 0x000020, "Wrong size on WDT_Article_AttributeLoad_C_SetValueComparison");
-static_assert(offsetof(WDT_Article_AttributeLoad_C_SetValueComparison, InCurrentValue) == 0x000000, "Member 'WDT_Article_AttributeLoad_C_SetValueComparison::InCurrentValue' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttributeLoad_C_SetValueComparison, InTargetValue) == 0x000004, "Member 'WDT_Article_AttributeLoad_C_SetValueComparison::InTargetValue' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttributeLoad_C_SetValueComparison, SwapComparisons) == 0x000008, "Member 'WDT_Article_AttributeLoad_C_SetValueComparison::SwapComparisons' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttributeLoad_C_SetValueComparison, CallFunc_CompareInteger_CompareResult) == 0x000009, "Member 'WDT_Article_AttributeLoad_C_SetValueComparison::CallFunc_CompareInteger_CompareResult' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttributeLoad_C_SetValueComparison, CallFunc_GetTextColorByCompareResult_TextColor) == 0x00000C, "Member 'WDT_Article_AttributeLoad_C_SetValueComparison::CallFunc_GetTextColorByCompareResult_TextColor' has a wrong offset!");
+static_assert(alignof(WDT_Article_AttributeLoad_C_PreConstruct) == 0x000001, "Wrong alignment on WDT_Article_AttributeLoad_C_PreConstruct");
+static_assert(sizeof(WDT_Article_AttributeLoad_C_PreConstruct) == 0x000001, "Wrong size on WDT_Article_AttributeLoad_C_PreConstruct");
+static_assert(offsetof(WDT_Article_AttributeLoad_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WDT_Article_AttributeLoad_C_PreConstruct::IsDesignTime' has a wrong offset!");
+
+// Function WDT_Article_AttributeLoad.WDT_Article_AttributeLoad_C.ExecuteUbergraph_WDT_Article_AttributeLoad
+// 0x0008 (0x0008 - 0x0000)
+struct WDT_Article_AttributeLoad_C_ExecuteUbergraph_WDT_Article_AttributeLoad final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_IsDesignTime;                         // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_Article_AttributeLoad_C_ExecuteUbergraph_WDT_Article_AttributeLoad) == 0x000004, "Wrong alignment on WDT_Article_AttributeLoad_C_ExecuteUbergraph_WDT_Article_AttributeLoad");
+static_assert(sizeof(WDT_Article_AttributeLoad_C_ExecuteUbergraph_WDT_Article_AttributeLoad) == 0x000008, "Wrong size on WDT_Article_AttributeLoad_C_ExecuteUbergraph_WDT_Article_AttributeLoad");
+static_assert(offsetof(WDT_Article_AttributeLoad_C_ExecuteUbergraph_WDT_Article_AttributeLoad, EntryPoint) == 0x000000, "Member 'WDT_Article_AttributeLoad_C_ExecuteUbergraph_WDT_Article_AttributeLoad::EntryPoint' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttributeLoad_C_ExecuteUbergraph_WDT_Article_AttributeLoad, K2Node_Event_IsDesignTime) == 0x000004, "Member 'WDT_Article_AttributeLoad_C_ExecuteUbergraph_WDT_Article_AttributeLoad::K2Node_Event_IsDesignTime' has a wrong offset!");
 
 }
 

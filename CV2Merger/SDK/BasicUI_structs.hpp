@@ -69,6 +69,23 @@ enum class EDirectionKey : uint8
 	EDirectionKey_MAX                        = 4,
 };
 
+// ScriptStruct BasicUI.DialogInfo
+// 0x0058 (0x0058 - 0x0000)
+struct FDialogInfo final
+{
+public:
+	class FText                                   DialogTitleText;                                   // 0x0000(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	class FText                                   DialogBodyText;                                    // 0x0010(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UTexture2D>              DialogImage;                                       // 0x0020(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FText>                           OptionTextArray;                                   // 0x0048(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FDialogInfo) == 0x000008, "Wrong alignment on FDialogInfo");
+static_assert(sizeof(FDialogInfo) == 0x000058, "Wrong size on FDialogInfo");
+static_assert(offsetof(FDialogInfo, DialogTitleText) == 0x000000, "Member 'FDialogInfo::DialogTitleText' has a wrong offset!");
+static_assert(offsetof(FDialogInfo, DialogBodyText) == 0x000010, "Member 'FDialogInfo::DialogBodyText' has a wrong offset!");
+static_assert(offsetof(FDialogInfo, DialogImage) == 0x000020, "Member 'FDialogInfo::DialogImage' has a wrong offset!");
+static_assert(offsetof(FDialogInfo, OptionTextArray) == 0x000048, "Member 'FDialogInfo::OptionTextArray' has a wrong offset!");
+
 // ScriptStruct BasicUI.AsyncTileRow
 // 0x0010 (0x0010 - 0x0000)
 struct FAsyncTileRow final
@@ -121,23 +138,6 @@ static_assert(offsetof(FMenuContext, bExclusiveFlag) == 0x000020, "Member 'FMenu
 static_assert(offsetof(FMenuContext, bRestrictiveFlag) == 0x000021, "Member 'FMenuContext::bRestrictiveFlag' has a wrong offset!");
 static_assert(offsetof(FMenuContext, Caller) == 0x000028, "Member 'FMenuContext::Caller' has a wrong offset!");
 static_assert(offsetof(FMenuContext, UIObject) == 0x000030, "Member 'FMenuContext::UIObject' has a wrong offset!");
-
-// ScriptStruct BasicUI.DialogInfo
-// 0x0058 (0x0058 - 0x0000)
-struct FDialogInfo final
-{
-public:
-	class FText                                   DialogTitleText;                                   // 0x0000(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	class FText                                   DialogBodyText;                                    // 0x0010(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class UTexture2D>              DialogImage;                                       // 0x0020(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class FText>                           OptionTextArray;                                   // 0x0048(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FDialogInfo) == 0x000008, "Wrong alignment on FDialogInfo");
-static_assert(sizeof(FDialogInfo) == 0x000058, "Wrong size on FDialogInfo");
-static_assert(offsetof(FDialogInfo, DialogTitleText) == 0x000000, "Member 'FDialogInfo::DialogTitleText' has a wrong offset!");
-static_assert(offsetof(FDialogInfo, DialogBodyText) == 0x000010, "Member 'FDialogInfo::DialogBodyText' has a wrong offset!");
-static_assert(offsetof(FDialogInfo, DialogImage) == 0x000020, "Member 'FDialogInfo::DialogImage' has a wrong offset!");
-static_assert(offsetof(FDialogInfo, OptionTextArray) == 0x000048, "Member 'FDialogInfo::OptionTextArray' has a wrong offset!");
 
 }
 

@@ -103,9 +103,9 @@ void UBP_CampMenuUIObject_C::IsTalkingToLou(bool* OutResult)
 // Function BP_CampMenuUIObject.BP_CampMenuUIObject_C.NotifyBuddyChanged
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// int32                                   InListIndex                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FUIBuddySelectInfo               InSelectInfo                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 
-void UBP_CampMenuUIObject_C::NotifyBuddyChanged(const int32 InListIndex)
+void UBP_CampMenuUIObject_C::NotifyBuddyChanged(const struct FUIBuddySelectInfo& InSelectInfo)
 {
 	static class UFunction* Func = nullptr;
 
@@ -114,7 +114,7 @@ void UBP_CampMenuUIObject_C::NotifyBuddyChanged(const int32 InListIndex)
 
 	Params::BP_CampMenuUIObject_C_NotifyBuddyChanged Parms{};
 
-	Parms.InListIndex = InListIndex;
+	Parms.InSelectInfo = std::move(InSelectInfo);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -199,6 +199,34 @@ void UBP_CampMenuUIObject_C::OnMapMenuClosed()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BP_CampMenuUIObject_C", "OnMapMenuClosed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_CampMenuUIObject.BP_CampMenuUIObject_C.OnPresetMenuClosed
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_CampMenuUIObject_C::OnPresetMenuClosed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CampMenuUIObject_C", "OnPresetMenuClosed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_CampMenuUIObject.BP_CampMenuUIObject_C.OnPresetSelectMenuClosed
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_CampMenuUIObject_C::OnPresetSelectMenuClosed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CampMenuUIObject_C", "OnPresetSelectMenuClosed");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -345,6 +373,34 @@ void UBP_CampMenuUIObject_C::OpenMapMenu()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BP_CampMenuUIObject_C", "OpenMapMenu");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_CampMenuUIObject.BP_CampMenuUIObject_C.OpenPresetMenu
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_CampMenuUIObject_C::OpenPresetMenu()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CampMenuUIObject_C", "OpenPresetMenu");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_CampMenuUIObject.BP_CampMenuUIObject_C.OpenPresetSelectMenu
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_CampMenuUIObject_C::OpenPresetSelectMenu()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CampMenuUIObject_C", "OpenPresetSelectMenu");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

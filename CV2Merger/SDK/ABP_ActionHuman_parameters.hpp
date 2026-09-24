@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "Extensions_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "Extensions_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "AnimGraphRuntime_structs.hpp"
 
@@ -135,377 +135,381 @@ static_assert(offsetof(ABP_ActionHuman_C_CinematicRootMotionAdjust, InPose_PreCi
 static_assert(offsetof(ABP_ActionHuman_C_CinematicRootMotionAdjust, CinematicRootMotionAdjust_0) == 0x000010, "Member 'ABP_ActionHuman_C_CinematicRootMotionAdjust::CinematicRootMotionAdjust_0' has a wrong offset!");
 
 // Function ABP_ActionHuman.ABP_ActionHuman_C.ExecuteUbergraph_ABP_ActionHuman
-// 0x1C60 (0x1C60 - 0x0000)
+// 0x26E0 (0x26E0 - 0x0000)
 struct ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetCurveValue_ReturnValue;                // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B[0x1];                                        // 0x000B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetRelevantAnimTimeFraction_ReturnValue;  // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue_1;       // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTagContainer                  CallFunc_GetOwnerOwnedGameplayTags_ReturnValue;    // 0x0018(0x0020)(ConstParm)
-	bool                                          CallFunc_HasTag_ReturnValue;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x003C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_2;                              // 0x004D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E[0x2];                                       // 0x004E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetHeadScale_ReturnValue;                 // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue;          // 0x0058(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EWeaponCategory                               CallFunc_GetSelectedWeaponCategory_ReturnValue;    // 0x0071(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_72[0x6];                                       // 0x0072(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTagContainer                  CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_1;  // 0x0078(0x0020)(ConstParm)
-	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue_1;          // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0099(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9A[0x2];                                       // 0x009A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetCachedCurveValueWithDefaultValue_ReturnValue; // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x00A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A2[0x6];                                       // 0x00A2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTagContainer                  CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_2;  // 0x00A8(0x0020)(ConstParm)
-	bool                                          CallFunc_BooleanOR_ReturnValue_2;                  // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasTag_ReturnValue_1;                     // 0x00C9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CA[0x6];                                       // 0x00CA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTagContainer                  CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_3;  // 0x00D0(0x0020)(ConstParm)
-	float                                         CallFunc_GetCachedCurveValueWithDefaultValue_ReturnValue_1; // 0x00F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasTag_ReturnValue_2;                     // 0x00F4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_F5[0x3];                                       // 0x00F5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPlayerAnimParameter                   CallFunc_GetPlayerAnimParameter_ReturnValue;       // 0x00F8(0x0168)(ConstParm)
-	EWeaponCategory                               CallFunc_GetSelectedWeaponCategory_ReturnValue_1;  // 0x0260(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Vector_IsNearlyZero_ReturnValue;          // 0x0261(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EWeaponCategory                               CallFunc_GetSelectedWeaponCategory_ReturnValue_2;  // 0x0262(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0263(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_264[0x4];                                      // 0x0264(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTagContainer                  CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_4;  // 0x0268(0x0020)(ConstParm)
-	bool                                          CallFunc_HasTag_ReturnValue_3;                     // 0x0288(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue_2;          // 0x0289(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue_3;          // 0x028A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x028B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue_3;                  // 0x028C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_28D[0x3];                                      // 0x028D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTagContainer                  CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_5;  // 0x0290(0x0020)(ConstParm)
-	bool                                          CallFunc_HasTag_ReturnValue_4;                     // 0x02B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Get_IsCLF_ReturnValue;                    // 0x02B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2B2[0x2];                                      // 0x02B2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetCurveValue_ReturnValue_1;              // 0x02B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x02B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetCachedCurveValueWithDefaultValue_ReturnValue_2; // 0x02C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2C4[0x4];                                      // 0x02C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTagContainer                  CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_6;  // 0x02C8(0x0020)(ConstParm)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x02E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasTag_ReturnValue_5;                     // 0x02E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x02EA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2EB[0x5];                                      // 0x02EB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPlayerAnimParameter                   CallFunc_GetPlayerAnimParameter_ReturnValue_1;     // 0x02F0(0x0168)(ConstParm)
-	EWeaponCategory                               CallFunc_GetSelectedWeaponCategory_ReturnValue_3;  // 0x0458(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EWeaponCategory                               CallFunc_GetSelectedWeaponCategory_ReturnValue_4;  // 0x0459(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_45A[0x6];                                      // 0x045A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPlayerAnimParameter                   CallFunc_GetPlayerAnimParameter_ReturnValue_2;     // 0x0460(0x0168)(ConstParm)
-	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue_4;          // 0x05C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_3;                 // 0x05C9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5CA[0x6];                                      // 0x05CA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Conv_BoolToDouble_ReturnValue;            // 0x05D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Vector_IsNearlyZero_ReturnValue_1;        // 0x05D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_3;                // 0x05D9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EWeaponCategory                               CallFunc_GetSelectedWeaponCategory_ReturnValue_5;  // 0x05DA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x05DB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue_5;          // 0x05DC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_4;                 // 0x05DD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_4;                // 0x05DE(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_5;                 // 0x05DF(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EWeaponCategory                               CallFunc_GetSelectedWeaponCategory_ReturnValue_6;  // 0x05E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5E1[0x7];                                      // 0x05E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTagContainer                  CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_7;  // 0x05E8(0x0020)(ConstParm)
-	bool                                          CallFunc_HasTag_ReturnValue_6;                     // 0x0608(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_609[0x7];                                      // 0x0609(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTagContainer                  CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_8;  // 0x0610(0x0020)(ConstParm)
-	float                                         CallFunc_GetRelevantAnimTime_ReturnValue;          // 0x0630(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasTag_ReturnValue_7;                     // 0x0634(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue_2;       // 0x0635(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_636[0x2];                                      // 0x0636(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_VSizeXY_ReturnValue;                      // 0x0638(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetCurveValue_ReturnValue_2;              // 0x0640(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_644[0x4];                                      // 0x0644(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0648(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FClamp_ReturnValue;                       // 0x0650(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0658(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_5;                // 0x0660(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EWeaponCategory                               CallFunc_GetSelectedWeaponCategory_ReturnValue_7;  // 0x0661(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_662[0x6];                                      // 0x0662(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTagContainer                  CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_9;  // 0x0668(0x0020)(ConstParm)
-	bool                                          CallFunc_HasTag_ReturnValue_8;                     // 0x0688(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_BoolBool_ReturnValue;            // 0x0689(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_68A[0x6];                                      // 0x068A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x0690(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EWeaponCategory                               CallFunc_GetSelectedWeaponCategory_ReturnValue_8;  // 0x06A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6A9[0x3];                                      // 0x06A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_FindAngleBetweenAbout_ReturnValue;        // 0x06AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_RadiansToDegrees_ReturnValue;             // 0x06B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_RotateAngleAxis_ReturnValue;              // 0x06B8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FCharacterAnimParameter                CallFunc_GetCharacterAnimParameter_ReturnValue;    // 0x06D0(0x0680)(ConstParm)
-	float                                         CallFunc_GetCachedCurveValueWithDefaultValue_ReturnValue_3; // 0x0D50(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D54[0x4];                                      // 0x0D54(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTagContainer                  CallFunc_MakeLiteralGameplayTagContainer_ReturnValue; // 0x0D58(0x0020)()
-	struct FGameplayTagContainer                  CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_10; // 0x0D78(0x0020)(ConstParm)
-	bool                                          CallFunc_HasAllTags_ReturnValue;                   // 0x0D98(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasTag_ReturnValue_9;                     // 0x0D99(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_6;                 // 0x0D9A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_7;                 // 0x0D9B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue_4;                  // 0x0D9C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D9D[0x3];                                      // 0x0D9D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FCharacterAnimParameter                CallFunc_GetCharacterAnimParameter_ReturnValue_1;  // 0x0DA0(0x0680)(ConstParm)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x1420(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_WasAnimNotifyStateActiveInSourceState_ReturnValue; // 0x1421(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1422[0xE];                                     // 0x1422(0x000E)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FCharacterAnimParameter                CallFunc_GetCharacterAnimParameter_ReturnValue_2;  // 0x1430(0x0680)(ConstParm)
-	EWeaponCategory                               CallFunc_GetSelectedWeaponCategory_ReturnValue_9;  // 0x1AB0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue_6;          // 0x1AB1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1AB2[0x6];                                     // 0x1AB2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_SafeDivide_ReturnValue;                   // 0x1AB8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetCurveValue_ReturnValue_3;              // 0x1AC0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1AC4[0x4];                                     // 0x1AC4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_FClamp_ReturnValue_1;                     // 0x1AC8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetCachedCurveValueWithDefaultValue_ReturnValue_4; // 0x1AD0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetCachedCurveValueWithDefaultValue_ReturnValue_5; // 0x1AD4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetCurveValue_ReturnValue_4;              // 0x1AD8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue_7;          // 0x1ADC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1ADD[0x3];                                     // 0x1ADD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTagContainer                  CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_11; // 0x1AE0(0x0020)(ConstParm)
-	bool                                          CallFunc_HasTag_ReturnValue_10;                    // 0x1B00(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_3;                              // 0x1B01(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Select_Default;                             // 0x1B02(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue_8;          // 0x1B03(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_8;                 // 0x1B04(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1B05[0x3];                                     // 0x1B05(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         K2Node_Event_DeltaTimeX;                           // 0x1B08(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue_5;                  // 0x1B0C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue_6;                  // 0x1B0D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue_7;                  // 0x1B0E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1B0F[0x1];                                     // 0x1B0F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActionHumanCharacter*                  CallFunc_GetAppCharacter_ReturnValue;              // 0x1B10(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue_8;                  // 0x1B18(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1B19[0x7];                                     // 0x1B19(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActionHumanCharacter*                  CallFunc_GetAppCharacter_ReturnValue_1;            // 0x1B20(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Get_IsCLF_ReturnValue_1;                  // 0x1B28(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_6;                // 0x1B29(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1B2A[0x6];                                     // 0x1B2A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_GetOwningActor_ReturnValue;               // 0x1B30(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetCachedCurveValueWithDefaultValue_ReturnValue_6; // 0x1B38(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1B3C[0x4];                                     // 0x1B3C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAnimationControlComponent*             CallFunc_GetAnimationControlComponent_BP_ReturnValue; // 0x1B40(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x1B48(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1B49[0x3];                                     // 0x1B49(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetCachedCurveValueWithDefaultValue_ReturnValue_7; // 0x1B4C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTagContainer                  CallFunc_MakeLiteralGameplayTagContainer_ReturnValue_1; // 0x1B50(0x0020)()
-	class APawn*                                  CallFunc_TryGetPawnOwner_ReturnValue;              // 0x1B70(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class IGameplayTagAssetInterface> K2Node_DynamicCast_AsGameplay_Tag_Asset_Interface; // 0x1B78(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x1B88(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasAnyMatchingGameplayTags_ReturnValue;   // 0x1B89(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1B8A[0x6];                                     // 0x1B8A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class APawn*                                  CallFunc_TryGetPawnOwner_ReturnValue_1;            // 0x1B90(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AActionHumanCharacter*                  K2Node_DynamicCast_AsAction_Human_Character;       // 0x1B98(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x1BA0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1BA1[0x7];                                     // 0x1BA1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTagContainer                  CallFunc_GetGameFlags_ReturnValue;                 // 0x1BA8(0x0020)(ConstParm)
-	class APawn*                                  CallFunc_TryGetPawnOwner_ReturnValue_2;            // 0x1BC8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasTag_ReturnValue_11;                    // 0x1BD0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsLocallyControlled_ReturnValue;          // 0x1BD1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsPlayer_ReturnValue;                     // 0x1BD2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_9;                 // 0x1BD3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_10;                // 0x1BD4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1BD5[0x3];                                     // 0x1BD5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Greater_DoubleDouble_A_ImplicitCast;      // 0x1BD8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Greater_DoubleDouble_B_ImplicitCast;      // 0x1BE0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Less_DoubleDouble_A_ImplicitCast;         // 0x1BE8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Greater_DoubleDouble_A_ImplicitCast_1;    // 0x1BF0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_DoubleToVector_InDouble_ImplicitCast; // 0x1BF8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_B_ImplicitCast;     // 0x1C00(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_StructMemberSet_Alpha_ImplicitCast;         // 0x1C08(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_StructMemberSet_Alpha_ImplicitCast_1;       // 0x1C0C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Greater_DoubleDouble_A_ImplicitCast_2;    // 0x1C10(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_StructMemberSet_Alpha_ImplicitCast_2;       // 0x1C18(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1C1C[0x4];                                     // 0x1C1C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Add_DoubleDouble_A_ImplicitCast;          // 0x1C20(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_RadiansToDegrees_A_ImplicitCast;          // 0x1C28(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_RotateAngleAxis_AngleDeg_ImplicitCast;    // 0x1C30(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1C34[0x4];                                     // 0x1C34(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_SafeDivide_B_ImplicitCast;                // 0x1C38(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_StructMemberSet_StrideScale_ImplicitCast;   // 0x1C40(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1C44[0x4];                                     // 0x1C44(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_FClamp_Value_ImplicitCast;                // 0x1C48(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Array_Set_Item_ImplicitCast;              // 0x1C50(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Get_IsCLF_ReturnValue;                    // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetCurveValue_ReturnValue;                // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x000D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x000E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F[0x1];                                        // 0x000F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagContainer                  CallFunc_GetOwnerOwnedGameplayTags_ReturnValue;    // 0x0010(0x0020)(ConstParm)
+	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasTag_ReturnValue;                       // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_32[0x2];                                       // 0x0032(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetRelevantAnimTimeFraction_ReturnValue;  // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue_1;       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3A[0x6];                                       // 0x003A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagContainer                  CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_1;  // 0x0040(0x0020)(ConstParm)
+	bool                                          CallFunc_HasTag_ReturnValue_1;                     // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_61[0x3];                                       // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0064(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0074(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_2;                              // 0x0075(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_76[0x2];                                       // 0x0076(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetHeadScale_ReturnValue;                 // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue_1;          // 0x007C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7D[0x3];                                       // 0x007D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue;          // 0x0080(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0099(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x009A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue_2;                  // 0x009B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x009C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9D[0x3];                                       // 0x009D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagContainer                  CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_2;  // 0x00A0(0x0020)(ConstParm)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EWeaponCategory                               CallFunc_GetSelectedWeaponCategory_ReturnValue;    // 0x00C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Vector_IsNearlyZero_ReturnValue;          // 0x00C2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C3[0x1];                                       // 0x00C3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetCurveValue_ReturnValue_1;              // 0x00C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C9[0x7];                                       // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPlayerAnimParameter                   CallFunc_GetPlayerAnimParameter_ReturnValue;       // 0x00D8(0x0168)(ConstParm)
+	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue_2;          // 0x0240(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x0241(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_242[0x2];                                      // 0x0242(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetCachedCurveValueWithDefaultValue_ReturnValue; // 0x0244(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_3;                // 0x0248(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0249(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_3;                 // 0x024A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EWeaponCategory                               CallFunc_GetSelectedWeaponCategory_ReturnValue_1;  // 0x024B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_24C[0x4];                                      // 0x024C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagContainer                  CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_3;  // 0x0250(0x0020)(ConstParm)
+	bool                                          CallFunc_HasTag_ReturnValue_2;                     // 0x0270(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EWeaponCategory                               CallFunc_GetSelectedWeaponCategory_ReturnValue_2;  // 0x0271(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_272[0x6];                                      // 0x0272(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagContainer                  CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_4;  // 0x0278(0x0020)(ConstParm)
+	bool                                          CallFunc_HasTag_ReturnValue_3;                     // 0x0298(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue_3;          // 0x0299(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue_3;                  // 0x029A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29B[0x1];                                      // 0x029B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetRelevantAnimTime_ReturnValue;          // 0x029C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue_2;       // 0x02A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EIdleAnimationBlendWeaponCategory             CallFunc_GetIdleAnimationBlendWeaponCategory_ReturnValue; // 0x02A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_4;                // 0x02A2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_BoolBool_ReturnValue;            // 0x02A3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2A4[0x4];                                      // 0x02A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPlayerAnimParameter                   CallFunc_GetPlayerAnimParameter_ReturnValue_1;     // 0x02A8(0x0168)(ConstParm)
+	struct FPlayerAnimParameter                   CallFunc_GetPlayerAnimParameter_ReturnValue_2;     // 0x0410(0x0168)(ConstParm)
+	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue_4;          // 0x0578(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_4;                 // 0x0579(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_57A[0x6];                                      // 0x057A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagContainer                  CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_5;  // 0x0580(0x0020)(ConstParm)
+	double                                        CallFunc_Conv_BoolToDouble_ReturnValue;            // 0x05A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasTag_ReturnValue_4;                     // 0x05A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EIdleAnimationBlendWeaponCategory             CallFunc_GetIdleAnimationBlendWeaponCategory_ReturnValue_1; // 0x05A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5AA[0x6];                                      // 0x05AA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagContainer                  CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_6;  // 0x05B0(0x0020)(ConstParm)
+	bool                                          CallFunc_HasTag_ReturnValue_5;                     // 0x05D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_5;                 // 0x05D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EWeaponCategory                               CallFunc_GetSelectedWeaponCategory_ReturnValue_3;  // 0x05D2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_6;                 // 0x05D3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue_4;                  // 0x05D4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_WasAnimNotifyStateActiveInSourceState_ReturnValue; // 0x05D5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x05D6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EWeaponCategory                               CallFunc_GetSelectedWeaponCategory_ReturnValue_4;  // 0x05D7(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue_5;          // 0x05D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EWeaponCategory                               CallFunc_GetSelectedWeaponCategory_ReturnValue_5;  // 0x05D9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5DA[0x6];                                      // 0x05DA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagContainer                  CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_7;  // 0x05E0(0x0020)(ConstParm)
+	bool                                          CallFunc_HasTag_ReturnValue_6;                     // 0x0600(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_601[0x7];                                      // 0x0601(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_VSizeXY_ReturnValue;                      // 0x0608(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetCachedCurveValueWithDefaultValue_ReturnValue_1; // 0x0610(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_614[0x4];                                      // 0x0614(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0618(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FClamp_ReturnValue;                       // 0x0620(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0628(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetCachedCurveValueWithDefaultValue_ReturnValue_2; // 0x0630(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetCachedCurveValueWithDefaultValue_ReturnValue_3; // 0x0634(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EWeaponCategory                               CallFunc_GetSelectedWeaponCategory_ReturnValue_6;  // 0x0638(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_639[0x7];                                      // 0x0639(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagContainer                  CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_8;  // 0x0640(0x0020)(ConstParm)
+	bool                                          CallFunc_HasTag_ReturnValue_7;                     // 0x0660(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_661[0x3];                                      // 0x0661(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetCurveValue_ReturnValue_2;              // 0x0664(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FClamp_ReturnValue_1;                     // 0x0668(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTagContainer                  CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_9;  // 0x0670(0x0020)(ConstParm)
+	bool                                          CallFunc_HasTag_ReturnValue_8;                     // 0x0690(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EWeaponCategory                               CallFunc_GetSelectedWeaponCategory_ReturnValue_7;  // 0x0691(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_692[0x2];                                      // 0x0692(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetCachedCurveValueWithDefaultValue_ReturnValue_4; // 0x0694(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_698[0x8];                                      // 0x0698(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FCharacterAnimParameter                CallFunc_GetCharacterAnimParameter_ReturnValue;    // 0x06A0(0x0780)(ConstParm)
+	struct FCharacterAnimParameter                CallFunc_GetCharacterAnimParameter_ReturnValue_1;  // 0x0E20(0x0780)(ConstParm)
+	struct FGameplayTagContainer                  CallFunc_MakeLiteralGameplayTagContainer_ReturnValue; // 0x15A0(0x0020)()
+	bool                                          CallFunc_HasAllTags_ReturnValue;                   // 0x15C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue_6;          // 0x15C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_15C2[0x6];                                     // 0x15C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagContainer                  CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_10; // 0x15C8(0x0020)(ConstParm)
+	bool                                          CallFunc_HasTag_ReturnValue_9;                     // 0x15E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_15E9[0x3];                                     // 0x15E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetCachedCurveValueWithDefaultValue_ReturnValue_5; // 0x15EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetCurveValue_ReturnValue_3;              // 0x15F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_15F4[0xC];                                     // 0x15F4(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FCharacterAnimParameter                CallFunc_GetCharacterAnimParameter_ReturnValue_2;  // 0x1600(0x0780)(ConstParm)
+	struct FCharacterAnimParameter                CallFunc_GetCharacterAnimParameter_ReturnValue_3;  // 0x1D80(0x0780)(ConstParm)
+	double                                        CallFunc_SafeDivide_ReturnValue;                   // 0x2500(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue_7;          // 0x2508(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_7;                 // 0x2509(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue_5;                  // 0x250A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue_6;                  // 0x250B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue_7;                  // 0x250C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_250D[0x3];                                     // 0x250D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagContainer                  CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_11; // 0x2510(0x0020)(ConstParm)
+	bool                                          CallFunc_BooleanOR_ReturnValue_8;                  // 0x2530(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasTag_ReturnValue_10;                    // 0x2531(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2532[0x6];                                     // 0x2532(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x2538(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_FindAngleBetweenAbout_ReturnValue;        // 0x2550(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2554[0x4];                                     // 0x2554(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_RadiansToDegrees_ReturnValue;             // 0x2558(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_RotateAngleAxis_ReturnValue;              // 0x2560(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetCurveValue_ReturnValue_4;              // 0x2578(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_3;                              // 0x257C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Select_Default;                             // 0x257D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_257E[0x2];                                     // 0x257E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         K2Node_Event_DeltaTimeX;                           // 0x2580(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2584[0x4];                                     // 0x2584(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActionHumanCharacter*                  CallFunc_GetAppCharacter_ReturnValue;              // 0x2588(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActionHumanCharacter*                  CallFunc_GetAppCharacter_ReturnValue_1;            // 0x2590(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Get_IsCLF_ReturnValue_1;                  // 0x2598(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_5;                // 0x2599(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_259A[0x6];                                     // 0x259A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_GetOwningActor_ReturnValue;               // 0x25A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetCachedCurveValueWithDefaultValue_ReturnValue_6; // 0x25A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_25AC[0x4];                                     // 0x25AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAnimationControlComponent*             CallFunc_GetAnimationControlComponent_BP_ReturnValue; // 0x25B0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x25B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_25B9[0x3];                                     // 0x25B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetCachedCurveValueWithDefaultValue_ReturnValue_7; // 0x25BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Vector_IsNearlyZero_ReturnValue_1;        // 0x25C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_6;                // 0x25C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_25C2[0x6];                                     // 0x25C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagContainer                  CallFunc_MakeLiteralGameplayTagContainer_ReturnValue_1; // 0x25C8(0x0020)()
+	class APawn*                                  CallFunc_TryGetPawnOwner_ReturnValue;              // 0x25E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IGameplayTagAssetInterface> K2Node_DynamicCast_AsGameplay_Tag_Asset_Interface; // 0x25F0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x2600(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasAnyMatchingGameplayTags_ReturnValue;   // 0x2601(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue_8;          // 0x2602(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_8;                 // 0x2603(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2604[0x4];                                     // 0x2604(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class APawn*                                  CallFunc_TryGetPawnOwner_ReturnValue_1;            // 0x2608(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActionHumanCharacter*                  K2Node_DynamicCast_AsAction_Human_Character;       // 0x2610(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x2618(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2619[0x7];                                     // 0x2619(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagContainer                  CallFunc_GetGameFlags_ReturnValue;                 // 0x2620(0x0020)(ConstParm)
+	class APawn*                                  CallFunc_TryGetPawnOwner_ReturnValue_2;            // 0x2640(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasTag_ReturnValue_11;                    // 0x2648(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsLocallyControlled_ReturnValue;          // 0x2649(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsPlayer_ReturnValue;                     // 0x264A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_9;                 // 0x264B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_10;                // 0x264C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_264D[0x3];                                     // 0x264D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Greater_DoubleDouble_A_ImplicitCast;      // 0x2650(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Greater_DoubleDouble_B_ImplicitCast;      // 0x2658(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Less_DoubleDouble_A_ImplicitCast;         // 0x2660(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Greater_DoubleDouble_A_ImplicitCast_1;    // 0x2668(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_DoubleToVector_InDouble_ImplicitCast; // 0x2670(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_B_ImplicitCast;     // 0x2678(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_StructMemberSet_Alpha_ImplicitCast;         // 0x2680(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2684[0x4];                                     // 0x2684(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Greater_DoubleDouble_A_ImplicitCast_2;    // 0x2688(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_StructMemberSet_Alpha_ImplicitCast_1;       // 0x2690(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2694[0x4];                                     // 0x2694(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Add_DoubleDouble_A_ImplicitCast;          // 0x2698(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_StructMemberSet_Alpha_ImplicitCast_2;       // 0x26A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_26A4[0x4];                                     // 0x26A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_FClamp_Value_ImplicitCast;                // 0x26A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Array_Set_Item_ImplicitCast;              // 0x26B0(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_26B4[0x4];                                     // 0x26B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_SafeDivide_B_ImplicitCast;                // 0x26B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_StructMemberSet_StrideScale_ImplicitCast;   // 0x26C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_26C4[0x4];                                     // 0x26C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_RadiansToDegrees_A_ImplicitCast;          // 0x26C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_RotateAngleAxis_AngleDeg_ImplicitCast;    // 0x26D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman) == 0x000010, "Wrong alignment on ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman");
-static_assert(sizeof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman) == 0x001C60, "Wrong size on ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman");
+static_assert(sizeof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman) == 0x0026E0, "Wrong size on ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman");
 static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, EntryPoint) == 0x000000, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::EntryPoint' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetCurveValue_ReturnValue) == 0x000004, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetCurveValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000008, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, Temp_bool_Variable) == 0x000009, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, Temp_bool_Variable_1) == 0x00000A, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetRelevantAnimTimeFraction_ReturnValue) == 0x00000C, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetRelevantAnimTimeFraction_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Less_DoubleDouble_ReturnValue) == 0x000010, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Less_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Greater_DoubleDouble_ReturnValue_1) == 0x000011, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Greater_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetOwnerOwnedGameplayTags_ReturnValue) == 0x000018, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetOwnerOwnedGameplayTags_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_HasTag_ReturnValue) == 0x000038, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_HasTag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, K2Node_CreateDelegate_OutputDelegate) == 0x00003C, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Not_PreBool_ReturnValue) == 0x00004C, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, Temp_bool_Variable_2) == 0x00004D, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::Temp_bool_Variable_2' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetHeadScale_ReturnValue) == 0x000050, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetHeadScale_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Conv_DoubleToVector_ReturnValue) == 0x000058, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Conv_DoubleToVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_NotEqual_ByteByte_ReturnValue) == 0x000070, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_NotEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetSelectedWeaponCategory_ReturnValue) == 0x000071, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetSelectedWeaponCategory_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_1) == 0x000078, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_NotEqual_ByteByte_ReturnValue_1) == 0x000098, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_NotEqual_ByteByte_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_BooleanAND_ReturnValue) == 0x000099, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetCachedCurveValueWithDefaultValue_ReturnValue) == 0x00009C, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetCachedCurveValueWithDefaultValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_BooleanOR_ReturnValue) == 0x0000A0, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_BooleanOR_ReturnValue_1) == 0x0000A1, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_2) == 0x0000A8, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_BooleanOR_ReturnValue_2) == 0x0000C8, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_BooleanOR_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_HasTag_ReturnValue_1) == 0x0000C9, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_HasTag_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_3) == 0x0000D0, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetCachedCurveValueWithDefaultValue_ReturnValue_1) == 0x0000F0, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetCachedCurveValueWithDefaultValue_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_HasTag_ReturnValue_2) == 0x0000F4, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_HasTag_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetPlayerAnimParameter_ReturnValue) == 0x0000F8, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetPlayerAnimParameter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetSelectedWeaponCategory_ReturnValue_1) == 0x000260, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetSelectedWeaponCategory_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Vector_IsNearlyZero_ReturnValue) == 0x000261, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Vector_IsNearlyZero_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetSelectedWeaponCategory_ReturnValue_2) == 0x000262, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetSelectedWeaponCategory_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Not_PreBool_ReturnValue_1) == 0x000263, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_4) == 0x000268, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_HasTag_ReturnValue_3) == 0x000288, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_HasTag_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_NotEqual_ByteByte_ReturnValue_2) == 0x000289, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_NotEqual_ByteByte_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_NotEqual_ByteByte_ReturnValue_3) == 0x00028A, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_NotEqual_ByteByte_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_BooleanAND_ReturnValue_1) == 0x00028B, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_BooleanOR_ReturnValue_3) == 0x00028C, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_BooleanOR_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_5) == 0x000290, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_HasTag_ReturnValue_4) == 0x0002B0, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_HasTag_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Get_IsCLF_ReturnValue) == 0x0002B1, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Get_IsCLF_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetCurveValue_ReturnValue_1) == 0x0002B4, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetCurveValue_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x0002B8, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetCachedCurveValueWithDefaultValue_ReturnValue_2) == 0x0002C0, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetCachedCurveValueWithDefaultValue_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_6) == 0x0002C8, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Not_PreBool_ReturnValue_2) == 0x0002E8, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Not_PreBool_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_HasTag_ReturnValue_5) == 0x0002E9, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_HasTag_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_BooleanAND_ReturnValue_2) == 0x0002EA, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetPlayerAnimParameter_ReturnValue_1) == 0x0002F0, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetPlayerAnimParameter_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetSelectedWeaponCategory_ReturnValue_3) == 0x000458, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetSelectedWeaponCategory_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetSelectedWeaponCategory_ReturnValue_4) == 0x000459, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetSelectedWeaponCategory_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetPlayerAnimParameter_ReturnValue_2) == 0x000460, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetPlayerAnimParameter_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_NotEqual_ByteByte_ReturnValue_4) == 0x0005C8, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_NotEqual_ByteByte_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_BooleanAND_ReturnValue_3) == 0x0005C9, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_BooleanAND_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Conv_BoolToDouble_ReturnValue) == 0x0005D0, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Conv_BoolToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Vector_IsNearlyZero_ReturnValue_1) == 0x0005D8, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Vector_IsNearlyZero_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Not_PreBool_ReturnValue_3) == 0x0005D9, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Not_PreBool_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetSelectedWeaponCategory_ReturnValue_5) == 0x0005DA, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetSelectedWeaponCategory_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x0005DB, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_NotEqual_ByteByte_ReturnValue_5) == 0x0005DC, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_NotEqual_ByteByte_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_BooleanAND_ReturnValue_4) == 0x0005DD, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_BooleanAND_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Not_PreBool_ReturnValue_4) == 0x0005DE, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Not_PreBool_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_BooleanAND_ReturnValue_5) == 0x0005DF, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_BooleanAND_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetSelectedWeaponCategory_ReturnValue_6) == 0x0005E0, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetSelectedWeaponCategory_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_7) == 0x0005E8, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_HasTag_ReturnValue_6) == 0x000608, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_HasTag_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_8) == 0x000610, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetRelevantAnimTime_ReturnValue) == 0x000630, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetRelevantAnimTime_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_HasTag_ReturnValue_7) == 0x000634, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_HasTag_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Greater_DoubleDouble_ReturnValue_2) == 0x000635, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Greater_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_VSizeXY_ReturnValue) == 0x000638, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_VSizeXY_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetCurveValue_ReturnValue_2) == 0x000640, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetCurveValue_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000648, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_FClamp_ReturnValue) == 0x000650, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_FClamp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000658, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Not_PreBool_ReturnValue_5) == 0x000660, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Not_PreBool_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetSelectedWeaponCategory_ReturnValue_7) == 0x000661, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetSelectedWeaponCategory_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_9) == 0x000668, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_HasTag_ReturnValue_8) == 0x000688, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_HasTag_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_NotEqual_BoolBool_ReturnValue) == 0x000689, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_NotEqual_BoolBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_MakeVector_ReturnValue) == 0x000690, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetSelectedWeaponCategory_ReturnValue_8) == 0x0006A8, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetSelectedWeaponCategory_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_FindAngleBetweenAbout_ReturnValue) == 0x0006AC, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_FindAngleBetweenAbout_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_RadiansToDegrees_ReturnValue) == 0x0006B0, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_RadiansToDegrees_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_RotateAngleAxis_ReturnValue) == 0x0006B8, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_RotateAngleAxis_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetCharacterAnimParameter_ReturnValue) == 0x0006D0, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetCharacterAnimParameter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetCachedCurveValueWithDefaultValue_ReturnValue_3) == 0x000D50, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetCachedCurveValueWithDefaultValue_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_MakeLiteralGameplayTagContainer_ReturnValue) == 0x000D58, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_MakeLiteralGameplayTagContainer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_10) == 0x000D78, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_HasAllTags_ReturnValue) == 0x000D98, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_HasAllTags_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_HasTag_ReturnValue_9) == 0x000D99, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_HasTag_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_BooleanAND_ReturnValue_6) == 0x000D9A, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_BooleanAND_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_BooleanAND_ReturnValue_7) == 0x000D9B, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_BooleanAND_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_BooleanOR_ReturnValue_4) == 0x000D9C, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_BooleanOR_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetCharacterAnimParameter_ReturnValue_1) == 0x000DA0, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetCharacterAnimParameter_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_EqualEqual_ByteByte_ReturnValue_1) == 0x001420, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_EqualEqual_ByteByte_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_WasAnimNotifyStateActiveInSourceState_ReturnValue) == 0x001421, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_WasAnimNotifyStateActiveInSourceState_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetCharacterAnimParameter_ReturnValue_2) == 0x001430, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetCharacterAnimParameter_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetSelectedWeaponCategory_ReturnValue_9) == 0x001AB0, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetSelectedWeaponCategory_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_NotEqual_ByteByte_ReturnValue_6) == 0x001AB1, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_NotEqual_ByteByte_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_SafeDivide_ReturnValue) == 0x001AB8, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_SafeDivide_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetCurveValue_ReturnValue_3) == 0x001AC0, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetCurveValue_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_FClamp_ReturnValue_1) == 0x001AC8, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_FClamp_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetCachedCurveValueWithDefaultValue_ReturnValue_4) == 0x001AD0, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetCachedCurveValueWithDefaultValue_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetCachedCurveValueWithDefaultValue_ReturnValue_5) == 0x001AD4, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetCachedCurveValueWithDefaultValue_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetCurveValue_ReturnValue_4) == 0x001AD8, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetCurveValue_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_NotEqual_ByteByte_ReturnValue_7) == 0x001ADC, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_NotEqual_ByteByte_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_11) == 0x001AE0, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_11' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_HasTag_ReturnValue_10) == 0x001B00, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_HasTag_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, Temp_bool_Variable_3) == 0x001B01, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::Temp_bool_Variable_3' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, K2Node_Select_Default) == 0x001B02, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_NotEqual_ByteByte_ReturnValue_8) == 0x001B03, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_NotEqual_ByteByte_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_BooleanAND_ReturnValue_8) == 0x001B04, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_BooleanAND_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, K2Node_Event_DeltaTimeX) == 0x001B08, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::K2Node_Event_DeltaTimeX' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_BooleanOR_ReturnValue_5) == 0x001B0C, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_BooleanOR_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_BooleanOR_ReturnValue_6) == 0x001B0D, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_BooleanOR_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_BooleanOR_ReturnValue_7) == 0x001B0E, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_BooleanOR_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetAppCharacter_ReturnValue) == 0x001B10, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetAppCharacter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_BooleanOR_ReturnValue_8) == 0x001B18, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_BooleanOR_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetAppCharacter_ReturnValue_1) == 0x001B20, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetAppCharacter_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Get_IsCLF_ReturnValue_1) == 0x001B28, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Get_IsCLF_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Not_PreBool_ReturnValue_6) == 0x001B29, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Not_PreBool_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetOwningActor_ReturnValue) == 0x001B30, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetOwningActor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetCachedCurveValueWithDefaultValue_ReturnValue_6) == 0x001B38, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetCachedCurveValueWithDefaultValue_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetAnimationControlComponent_BP_ReturnValue) == 0x001B40, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetAnimationControlComponent_BP_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_IsValid_ReturnValue) == 0x001B48, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetCachedCurveValueWithDefaultValue_ReturnValue_7) == 0x001B4C, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetCachedCurveValueWithDefaultValue_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_MakeLiteralGameplayTagContainer_ReturnValue_1) == 0x001B50, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_MakeLiteralGameplayTagContainer_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_TryGetPawnOwner_ReturnValue) == 0x001B70, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_TryGetPawnOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, K2Node_DynamicCast_AsGameplay_Tag_Asset_Interface) == 0x001B78, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::K2Node_DynamicCast_AsGameplay_Tag_Asset_Interface' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, K2Node_DynamicCast_bSuccess) == 0x001B88, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_HasAnyMatchingGameplayTags_ReturnValue) == 0x001B89, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_HasAnyMatchingGameplayTags_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_TryGetPawnOwner_ReturnValue_1) == 0x001B90, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_TryGetPawnOwner_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, K2Node_DynamicCast_AsAction_Human_Character) == 0x001B98, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::K2Node_DynamicCast_AsAction_Human_Character' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, K2Node_DynamicCast_bSuccess_1) == 0x001BA0, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetGameFlags_ReturnValue) == 0x001BA8, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetGameFlags_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_TryGetPawnOwner_ReturnValue_2) == 0x001BC8, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_TryGetPawnOwner_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_HasTag_ReturnValue_11) == 0x001BD0, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_HasTag_ReturnValue_11' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_IsLocallyControlled_ReturnValue) == 0x001BD1, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_IsLocallyControlled_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_IsPlayer_ReturnValue) == 0x001BD2, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_IsPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_BooleanAND_ReturnValue_9) == 0x001BD3, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_BooleanAND_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_BooleanAND_ReturnValue_10) == 0x001BD4, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_BooleanAND_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Greater_DoubleDouble_A_ImplicitCast) == 0x001BD8, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Greater_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Greater_DoubleDouble_B_ImplicitCast) == 0x001BE0, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Greater_DoubleDouble_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Less_DoubleDouble_A_ImplicitCast) == 0x001BE8, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Less_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Greater_DoubleDouble_A_ImplicitCast_1) == 0x001BF0, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Greater_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Conv_DoubleToVector_InDouble_ImplicitCast) == 0x001BF8, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Conv_DoubleToVector_InDouble_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Subtract_DoubleDouble_B_ImplicitCast) == 0x001C00, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Subtract_DoubleDouble_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, K2Node_StructMemberSet_Alpha_ImplicitCast) == 0x001C08, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::K2Node_StructMemberSet_Alpha_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, K2Node_StructMemberSet_Alpha_ImplicitCast_1) == 0x001C0C, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::K2Node_StructMemberSet_Alpha_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Greater_DoubleDouble_A_ImplicitCast_2) == 0x001C10, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Greater_DoubleDouble_A_ImplicitCast_2' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, K2Node_StructMemberSet_Alpha_ImplicitCast_2) == 0x001C18, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::K2Node_StructMemberSet_Alpha_ImplicitCast_2' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Add_DoubleDouble_A_ImplicitCast) == 0x001C20, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Add_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_RadiansToDegrees_A_ImplicitCast) == 0x001C28, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_RadiansToDegrees_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_RotateAngleAxis_AngleDeg_ImplicitCast) == 0x001C30, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_RotateAngleAxis_AngleDeg_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_SafeDivide_B_ImplicitCast) == 0x001C38, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_SafeDivide_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, K2Node_StructMemberSet_StrideScale_ImplicitCast) == 0x001C40, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::K2Node_StructMemberSet_StrideScale_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_FClamp_Value_ImplicitCast) == 0x001C48, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_FClamp_Value_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Array_Set_Item_ImplicitCast) == 0x001C50, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Array_Set_Item_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Get_IsCLF_ReturnValue) == 0x000004, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Get_IsCLF_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetCurveValue_ReturnValue) == 0x000008, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetCurveValue_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x00000C, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, Temp_bool_Variable) == 0x00000D, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, Temp_bool_Variable_1) == 0x00000E, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::Temp_bool_Variable_1' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetOwnerOwnedGameplayTags_ReturnValue) == 0x000010, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetOwnerOwnedGameplayTags_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Less_DoubleDouble_ReturnValue) == 0x000030, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Less_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_HasTag_ReturnValue) == 0x000031, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_HasTag_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetRelevantAnimTimeFraction_ReturnValue) == 0x000034, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetRelevantAnimTimeFraction_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Greater_DoubleDouble_ReturnValue_1) == 0x000038, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Greater_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_NotEqual_ByteByte_ReturnValue) == 0x000039, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_NotEqual_ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_1) == 0x000040, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_HasTag_ReturnValue_1) == 0x000060, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_HasTag_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, K2Node_CreateDelegate_OutputDelegate) == 0x000064, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Not_PreBool_ReturnValue) == 0x000074, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, Temp_bool_Variable_2) == 0x000075, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::Temp_bool_Variable_2' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetHeadScale_ReturnValue) == 0x000078, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetHeadScale_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_NotEqual_ByteByte_ReturnValue_1) == 0x00007C, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_NotEqual_ByteByte_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Conv_DoubleToVector_ReturnValue) == 0x000080, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Conv_DoubleToVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_BooleanAND_ReturnValue) == 0x000098, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_BooleanOR_ReturnValue) == 0x000099, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_BooleanOR_ReturnValue_1) == 0x00009A, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_BooleanOR_ReturnValue_2) == 0x00009B, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_BooleanOR_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Not_PreBool_ReturnValue_1) == 0x00009C, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_2) == 0x0000A0, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_BooleanAND_ReturnValue_1) == 0x0000C0, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetSelectedWeaponCategory_ReturnValue) == 0x0000C1, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetSelectedWeaponCategory_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Vector_IsNearlyZero_ReturnValue) == 0x0000C2, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Vector_IsNearlyZero_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetCurveValue_ReturnValue_1) == 0x0000C4, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetCurveValue_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Not_PreBool_ReturnValue_2) == 0x0000C8, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Not_PreBool_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x0000D0, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetPlayerAnimParameter_ReturnValue) == 0x0000D8, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetPlayerAnimParameter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_NotEqual_ByteByte_ReturnValue_2) == 0x000240, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_NotEqual_ByteByte_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_BooleanAND_ReturnValue_2) == 0x000241, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetCachedCurveValueWithDefaultValue_ReturnValue) == 0x000244, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetCachedCurveValueWithDefaultValue_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Not_PreBool_ReturnValue_3) == 0x000248, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Not_PreBool_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000249, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_BooleanAND_ReturnValue_3) == 0x00024A, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_BooleanAND_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetSelectedWeaponCategory_ReturnValue_1) == 0x00024B, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetSelectedWeaponCategory_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_3) == 0x000250, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_HasTag_ReturnValue_2) == 0x000270, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_HasTag_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetSelectedWeaponCategory_ReturnValue_2) == 0x000271, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetSelectedWeaponCategory_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_4) == 0x000278, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_HasTag_ReturnValue_3) == 0x000298, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_HasTag_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_NotEqual_ByteByte_ReturnValue_3) == 0x000299, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_NotEqual_ByteByte_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_BooleanOR_ReturnValue_3) == 0x00029A, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_BooleanOR_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetRelevantAnimTime_ReturnValue) == 0x00029C, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetRelevantAnimTime_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Greater_DoubleDouble_ReturnValue_2) == 0x0002A0, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Greater_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetIdleAnimationBlendWeaponCategory_ReturnValue) == 0x0002A1, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetIdleAnimationBlendWeaponCategory_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Not_PreBool_ReturnValue_4) == 0x0002A2, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Not_PreBool_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_NotEqual_BoolBool_ReturnValue) == 0x0002A3, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_NotEqual_BoolBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetPlayerAnimParameter_ReturnValue_1) == 0x0002A8, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetPlayerAnimParameter_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetPlayerAnimParameter_ReturnValue_2) == 0x000410, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetPlayerAnimParameter_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_NotEqual_ByteByte_ReturnValue_4) == 0x000578, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_NotEqual_ByteByte_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_BooleanAND_ReturnValue_4) == 0x000579, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_BooleanAND_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_5) == 0x000580, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Conv_BoolToDouble_ReturnValue) == 0x0005A0, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Conv_BoolToDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_HasTag_ReturnValue_4) == 0x0005A8, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_HasTag_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetIdleAnimationBlendWeaponCategory_ReturnValue_1) == 0x0005A9, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetIdleAnimationBlendWeaponCategory_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_6) == 0x0005B0, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_HasTag_ReturnValue_5) == 0x0005D0, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_HasTag_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_BooleanAND_ReturnValue_5) == 0x0005D1, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_BooleanAND_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetSelectedWeaponCategory_ReturnValue_3) == 0x0005D2, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetSelectedWeaponCategory_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_BooleanAND_ReturnValue_6) == 0x0005D3, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_BooleanAND_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_BooleanOR_ReturnValue_4) == 0x0005D4, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_BooleanOR_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_WasAnimNotifyStateActiveInSourceState_ReturnValue) == 0x0005D5, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_WasAnimNotifyStateActiveInSourceState_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_EqualEqual_ByteByte_ReturnValue_1) == 0x0005D6, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_EqualEqual_ByteByte_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetSelectedWeaponCategory_ReturnValue_4) == 0x0005D7, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetSelectedWeaponCategory_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_NotEqual_ByteByte_ReturnValue_5) == 0x0005D8, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_NotEqual_ByteByte_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetSelectedWeaponCategory_ReturnValue_5) == 0x0005D9, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetSelectedWeaponCategory_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_7) == 0x0005E0, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_HasTag_ReturnValue_6) == 0x000600, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_HasTag_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_VSizeXY_ReturnValue) == 0x000608, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_VSizeXY_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetCachedCurveValueWithDefaultValue_ReturnValue_1) == 0x000610, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetCachedCurveValueWithDefaultValue_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000618, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_FClamp_ReturnValue) == 0x000620, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_FClamp_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000628, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetCachedCurveValueWithDefaultValue_ReturnValue_2) == 0x000630, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetCachedCurveValueWithDefaultValue_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetCachedCurveValueWithDefaultValue_ReturnValue_3) == 0x000634, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetCachedCurveValueWithDefaultValue_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetSelectedWeaponCategory_ReturnValue_6) == 0x000638, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetSelectedWeaponCategory_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_8) == 0x000640, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_HasTag_ReturnValue_7) == 0x000660, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_HasTag_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetCurveValue_ReturnValue_2) == 0x000664, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetCurveValue_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_FClamp_ReturnValue_1) == 0x000668, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_FClamp_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_9) == 0x000670, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_9' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_HasTag_ReturnValue_8) == 0x000690, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_HasTag_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetSelectedWeaponCategory_ReturnValue_7) == 0x000691, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetSelectedWeaponCategory_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetCachedCurveValueWithDefaultValue_ReturnValue_4) == 0x000694, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetCachedCurveValueWithDefaultValue_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetCharacterAnimParameter_ReturnValue) == 0x0006A0, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetCharacterAnimParameter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetCharacterAnimParameter_ReturnValue_1) == 0x000E20, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetCharacterAnimParameter_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_MakeLiteralGameplayTagContainer_ReturnValue) == 0x0015A0, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_MakeLiteralGameplayTagContainer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_HasAllTags_ReturnValue) == 0x0015C0, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_HasAllTags_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_NotEqual_ByteByte_ReturnValue_6) == 0x0015C1, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_NotEqual_ByteByte_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_10) == 0x0015C8, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_10' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_HasTag_ReturnValue_9) == 0x0015E8, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_HasTag_ReturnValue_9' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetCachedCurveValueWithDefaultValue_ReturnValue_5) == 0x0015EC, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetCachedCurveValueWithDefaultValue_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetCurveValue_ReturnValue_3) == 0x0015F0, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetCurveValue_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetCharacterAnimParameter_ReturnValue_2) == 0x001600, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetCharacterAnimParameter_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetCharacterAnimParameter_ReturnValue_3) == 0x001D80, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetCharacterAnimParameter_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_SafeDivide_ReturnValue) == 0x002500, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_SafeDivide_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_NotEqual_ByteByte_ReturnValue_7) == 0x002508, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_NotEqual_ByteByte_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_BooleanAND_ReturnValue_7) == 0x002509, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_BooleanAND_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_BooleanOR_ReturnValue_5) == 0x00250A, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_BooleanOR_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_BooleanOR_ReturnValue_6) == 0x00250B, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_BooleanOR_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_BooleanOR_ReturnValue_7) == 0x00250C, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_BooleanOR_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_11) == 0x002510, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetOwnerOwnedGameplayTags_ReturnValue_11' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_BooleanOR_ReturnValue_8) == 0x002530, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_BooleanOR_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_HasTag_ReturnValue_10) == 0x002531, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_HasTag_ReturnValue_10' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_MakeVector_ReturnValue) == 0x002538, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_FindAngleBetweenAbout_ReturnValue) == 0x002550, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_FindAngleBetweenAbout_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_RadiansToDegrees_ReturnValue) == 0x002558, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_RadiansToDegrees_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_RotateAngleAxis_ReturnValue) == 0x002560, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_RotateAngleAxis_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetCurveValue_ReturnValue_4) == 0x002578, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetCurveValue_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, Temp_bool_Variable_3) == 0x00257C, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::Temp_bool_Variable_3' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, K2Node_Select_Default) == 0x00257D, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, K2Node_Event_DeltaTimeX) == 0x002580, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::K2Node_Event_DeltaTimeX' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetAppCharacter_ReturnValue) == 0x002588, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetAppCharacter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetAppCharacter_ReturnValue_1) == 0x002590, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetAppCharacter_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Get_IsCLF_ReturnValue_1) == 0x002598, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Get_IsCLF_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Not_PreBool_ReturnValue_5) == 0x002599, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Not_PreBool_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetOwningActor_ReturnValue) == 0x0025A0, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetOwningActor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetCachedCurveValueWithDefaultValue_ReturnValue_6) == 0x0025A8, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetCachedCurveValueWithDefaultValue_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetAnimationControlComponent_BP_ReturnValue) == 0x0025B0, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetAnimationControlComponent_BP_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_IsValid_ReturnValue) == 0x0025B8, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetCachedCurveValueWithDefaultValue_ReturnValue_7) == 0x0025BC, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetCachedCurveValueWithDefaultValue_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Vector_IsNearlyZero_ReturnValue_1) == 0x0025C0, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Vector_IsNearlyZero_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Not_PreBool_ReturnValue_6) == 0x0025C1, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Not_PreBool_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_MakeLiteralGameplayTagContainer_ReturnValue_1) == 0x0025C8, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_MakeLiteralGameplayTagContainer_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_TryGetPawnOwner_ReturnValue) == 0x0025E8, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_TryGetPawnOwner_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, K2Node_DynamicCast_AsGameplay_Tag_Asset_Interface) == 0x0025F0, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::K2Node_DynamicCast_AsGameplay_Tag_Asset_Interface' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, K2Node_DynamicCast_bSuccess) == 0x002600, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_HasAnyMatchingGameplayTags_ReturnValue) == 0x002601, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_HasAnyMatchingGameplayTags_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_NotEqual_ByteByte_ReturnValue_8) == 0x002602, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_NotEqual_ByteByte_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_BooleanAND_ReturnValue_8) == 0x002603, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_BooleanAND_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_TryGetPawnOwner_ReturnValue_1) == 0x002608, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_TryGetPawnOwner_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, K2Node_DynamicCast_AsAction_Human_Character) == 0x002610, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::K2Node_DynamicCast_AsAction_Human_Character' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, K2Node_DynamicCast_bSuccess_1) == 0x002618, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_GetGameFlags_ReturnValue) == 0x002620, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_GetGameFlags_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_TryGetPawnOwner_ReturnValue_2) == 0x002640, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_TryGetPawnOwner_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_HasTag_ReturnValue_11) == 0x002648, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_HasTag_ReturnValue_11' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_IsLocallyControlled_ReturnValue) == 0x002649, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_IsLocallyControlled_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_IsPlayer_ReturnValue) == 0x00264A, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_IsPlayer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_BooleanAND_ReturnValue_9) == 0x00264B, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_BooleanAND_ReturnValue_9' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_BooleanAND_ReturnValue_10) == 0x00264C, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_BooleanAND_ReturnValue_10' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Greater_DoubleDouble_A_ImplicitCast) == 0x002650, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Greater_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Greater_DoubleDouble_B_ImplicitCast) == 0x002658, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Greater_DoubleDouble_B_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Less_DoubleDouble_A_ImplicitCast) == 0x002660, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Less_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Greater_DoubleDouble_A_ImplicitCast_1) == 0x002668, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Greater_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Conv_DoubleToVector_InDouble_ImplicitCast) == 0x002670, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Conv_DoubleToVector_InDouble_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Subtract_DoubleDouble_B_ImplicitCast) == 0x002678, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Subtract_DoubleDouble_B_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, K2Node_StructMemberSet_Alpha_ImplicitCast) == 0x002680, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::K2Node_StructMemberSet_Alpha_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Greater_DoubleDouble_A_ImplicitCast_2) == 0x002688, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Greater_DoubleDouble_A_ImplicitCast_2' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, K2Node_StructMemberSet_Alpha_ImplicitCast_1) == 0x002690, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::K2Node_StructMemberSet_Alpha_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Add_DoubleDouble_A_ImplicitCast) == 0x002698, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Add_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, K2Node_StructMemberSet_Alpha_ImplicitCast_2) == 0x0026A0, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::K2Node_StructMemberSet_Alpha_ImplicitCast_2' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_FClamp_Value_ImplicitCast) == 0x0026A8, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_FClamp_Value_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_Array_Set_Item_ImplicitCast) == 0x0026B0, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_Array_Set_Item_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_SafeDivide_B_ImplicitCast) == 0x0026B8, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_SafeDivide_B_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, K2Node_StructMemberSet_StrideScale_ImplicitCast) == 0x0026C0, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::K2Node_StructMemberSet_StrideScale_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_RadiansToDegrees_A_ImplicitCast) == 0x0026C8, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_RadiansToDegrees_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman, CallFunc_RotateAngleAxis_AngleDeg_ImplicitCast) == 0x0026D0, "Member 'ABP_ActionHuman_C_ExecuteUbergraph_ABP_ActionHuman::CallFunc_RotateAngleAxis_AngleDeg_ImplicitCast' has a wrong offset!");
 
 // Function ABP_ActionHuman.ABP_ActionHuman_C.Eyes
 // 0x0020 (0x0020 - 0x0000)
@@ -935,6 +939,19 @@ static_assert(sizeof(ABP_ActionHuman_C_MountItem_LeftShoulder) == 0x000020, "Wro
 static_assert(offsetof(ABP_ActionHuman_C_MountItem_LeftShoulder, InPoseMountItem) == 0x000000, "Member 'ABP_ActionHuman_C_MountItem_LeftShoulder::InPoseMountItem' has a wrong offset!");
 static_assert(offsetof(ABP_ActionHuman_C_MountItem_LeftShoulder, MountItem_LeftShoulder_0) == 0x000010, "Member 'ABP_ActionHuman_C_MountItem_LeftShoulder::MountItem_LeftShoulder_0' has a wrong offset!");
 
+// Function ABP_ActionHuman.ABP_ActionHuman_C.MountRiderPitch
+// 0x0020 (0x0020 - 0x0000)
+struct ABP_ActionHuman_C_MountRiderPitch final
+{
+public:
+	struct FPoseLink                              InPose_MountRiderPitch;                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	struct FPoseLink                              MountRiderPitch_0;                                 // 0x0010(0x0010)(Parm, OutParm, NoDestructor)
+};
+static_assert(alignof(ABP_ActionHuman_C_MountRiderPitch) == 0x000008, "Wrong alignment on ABP_ActionHuman_C_MountRiderPitch");
+static_assert(sizeof(ABP_ActionHuman_C_MountRiderPitch) == 0x000020, "Wrong size on ABP_ActionHuman_C_MountRiderPitch");
+static_assert(offsetof(ABP_ActionHuman_C_MountRiderPitch, InPose_MountRiderPitch) == 0x000000, "Member 'ABP_ActionHuman_C_MountRiderPitch::InPose_MountRiderPitch' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_MountRiderPitch, MountRiderPitch_0) == 0x000010, "Member 'ABP_ActionHuman_C_MountRiderPitch::MountRiderPitch_0' has a wrong offset!");
+
 // Function ABP_ActionHuman.ABP_ActionHuman_C.OnFullBodyCutTurnStateBecomeRelevant
 // 0x0040 (0x0040 - 0x0000)
 struct ABP_ActionHuman_C_OnFullBodyCutTurnStateBecomeRelevant final
@@ -1050,7 +1067,7 @@ static_assert(offsetof(ABP_ActionHuman_C_OnLocomotionSMBecomeRelevant, Context) 
 static_assert(offsetof(ABP_ActionHuman_C_OnLocomotionSMBecomeRelevant, Node) == 0x000010, "Member 'ABP_ActionHuman_C_OnLocomotionSMBecomeRelevant::Node' has a wrong offset!");
 
 // Function ABP_ActionHuman.ABP_ActionHuman_C.OnLocomotionSMUpdate
-// 0x0780 (0x0780 - 0x0000)
+// 0x0880 (0x0880 - 0x0000)
 struct ABP_ActionHuman_C_OnLocomotionSMUpdate final
 {
 public:
@@ -1086,29 +1103,29 @@ public:
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Array_Contains_ReturnValue_2;             // 0x00AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_AD[0x3];                                       // 0x00AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FCharacterAnimParameter                CallFunc_GetCharacterAnimParameter_ReturnValue;    // 0x00B0(0x0680)(ConstParm)
-	bool                                          CallFunc_EqualEqual_BoolBool_ReturnValue;          // 0x0730(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_731[0x3];                                      // 0x0731(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0734(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_BoolBool_ReturnValue_1;        // 0x0738(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_739[0x7];                                      // 0x0739(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UClass*                                 CallFunc_Array_Get_Item_1;                         // 0x0740(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x0748(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_Contains_ReturnValue_3;             // 0x074C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_74D[0x3];                                      // 0x074D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	const class UClass*                           Temp_class_Variable_2;                             // 0x0750(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	const class UClass*                           Temp_class_Variable_3;                             // 0x0758(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_Contains_ReturnValue_4;             // 0x0760(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_Contains_ReturnValue_5;             // 0x0761(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x0762(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue_2;                  // 0x0763(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_764[0x4];                                      // 0x0764(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        K2Node_VariableSet_MoveDirection_Deg_Latest_ImplicitCast; // 0x0768(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_VariableSet_TurnPlayRate_ImplicitCast;      // 0x0770(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_VariableSet_TurnAngle_ImplicitCast;         // 0x0778(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FCharacterAnimParameter                CallFunc_GetCharacterAnimParameter_ReturnValue;    // 0x00B0(0x0780)(ConstParm)
+	bool                                          CallFunc_EqualEqual_BoolBool_ReturnValue;          // 0x0830(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_831[0x3];                                      // 0x0831(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0834(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_BoolBool_ReturnValue_1;        // 0x0838(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_839[0x7];                                      // 0x0839(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 CallFunc_Array_Get_Item_1;                         // 0x0840(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x0848(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_Contains_ReturnValue_3;             // 0x084C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_84D[0x3];                                      // 0x084D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	const class UClass*                           Temp_class_Variable_2;                             // 0x0850(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	const class UClass*                           Temp_class_Variable_3;                             // 0x0858(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_Contains_ReturnValue_4;             // 0x0860(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_Contains_ReturnValue_5;             // 0x0861(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x0862(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue_2;                  // 0x0863(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_864[0x4];                                      // 0x0864(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        K2Node_VariableSet_MoveDirection_Deg_Latest_ImplicitCast; // 0x0868(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_VariableSet_TurnPlayRate_ImplicitCast;      // 0x0870(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_VariableSet_TurnAngle_ImplicitCast;         // 0x0878(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(ABP_ActionHuman_C_OnLocomotionSMUpdate) == 0x000010, "Wrong alignment on ABP_ActionHuman_C_OnLocomotionSMUpdate");
-static_assert(sizeof(ABP_ActionHuman_C_OnLocomotionSMUpdate) == 0x000780, "Wrong size on ABP_ActionHuman_C_OnLocomotionSMUpdate");
+static_assert(sizeof(ABP_ActionHuman_C_OnLocomotionSMUpdate) == 0x000880, "Wrong size on ABP_ActionHuman_C_OnLocomotionSMUpdate");
 static_assert(offsetof(ABP_ActionHuman_C_OnLocomotionSMUpdate, Context) == 0x000000, "Member 'ABP_ActionHuman_C_OnLocomotionSMUpdate::Context' has a wrong offset!");
 static_assert(offsetof(ABP_ActionHuman_C_OnLocomotionSMUpdate, Node) == 0x000010, "Member 'ABP_ActionHuman_C_OnLocomotionSMUpdate::Node' has a wrong offset!");
 static_assert(offsetof(ABP_ActionHuman_C_OnLocomotionSMUpdate, RemovedLinkedAnimInstance) == 0x000020, "Member 'ABP_ActionHuman_C_OnLocomotionSMUpdate::RemovedLinkedAnimInstance' has a wrong offset!");
@@ -1136,21 +1153,21 @@ static_assert(offsetof(ABP_ActionHuman_C_OnLocomotionSMUpdate, CallFunc_Array_Ge
 static_assert(offsetof(ABP_ActionHuman_C_OnLocomotionSMUpdate, CallFunc_Array_Add_ReturnValue) == 0x0000A8, "Member 'ABP_ActionHuman_C_OnLocomotionSMUpdate::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
 static_assert(offsetof(ABP_ActionHuman_C_OnLocomotionSMUpdate, CallFunc_Array_Contains_ReturnValue_2) == 0x0000AC, "Member 'ABP_ActionHuman_C_OnLocomotionSMUpdate::CallFunc_Array_Contains_ReturnValue_2' has a wrong offset!");
 static_assert(offsetof(ABP_ActionHuman_C_OnLocomotionSMUpdate, CallFunc_GetCharacterAnimParameter_ReturnValue) == 0x0000B0, "Member 'ABP_ActionHuman_C_OnLocomotionSMUpdate::CallFunc_GetCharacterAnimParameter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_OnLocomotionSMUpdate, CallFunc_EqualEqual_BoolBool_ReturnValue) == 0x000730, "Member 'ABP_ActionHuman_C_OnLocomotionSMUpdate::CallFunc_EqualEqual_BoolBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_OnLocomotionSMUpdate, Temp_int_Array_Index_Variable_1) == 0x000734, "Member 'ABP_ActionHuman_C_OnLocomotionSMUpdate::Temp_int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_OnLocomotionSMUpdate, CallFunc_EqualEqual_BoolBool_ReturnValue_1) == 0x000738, "Member 'ABP_ActionHuman_C_OnLocomotionSMUpdate::CallFunc_EqualEqual_BoolBool_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_OnLocomotionSMUpdate, CallFunc_Array_Get_Item_1) == 0x000740, "Member 'ABP_ActionHuman_C_OnLocomotionSMUpdate::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_OnLocomotionSMUpdate, CallFunc_Array_Add_ReturnValue_1) == 0x000748, "Member 'ABP_ActionHuman_C_OnLocomotionSMUpdate::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_OnLocomotionSMUpdate, CallFunc_Array_Contains_ReturnValue_3) == 0x00074C, "Member 'ABP_ActionHuman_C_OnLocomotionSMUpdate::CallFunc_Array_Contains_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_OnLocomotionSMUpdate, Temp_class_Variable_2) == 0x000750, "Member 'ABP_ActionHuman_C_OnLocomotionSMUpdate::Temp_class_Variable_2' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_OnLocomotionSMUpdate, Temp_class_Variable_3) == 0x000758, "Member 'ABP_ActionHuman_C_OnLocomotionSMUpdate::Temp_class_Variable_3' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_OnLocomotionSMUpdate, CallFunc_Array_Contains_ReturnValue_4) == 0x000760, "Member 'ABP_ActionHuman_C_OnLocomotionSMUpdate::CallFunc_Array_Contains_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_OnLocomotionSMUpdate, CallFunc_Array_Contains_ReturnValue_5) == 0x000761, "Member 'ABP_ActionHuman_C_OnLocomotionSMUpdate::CallFunc_Array_Contains_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_OnLocomotionSMUpdate, CallFunc_BooleanOR_ReturnValue_1) == 0x000762, "Member 'ABP_ActionHuman_C_OnLocomotionSMUpdate::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_OnLocomotionSMUpdate, CallFunc_BooleanOR_ReturnValue_2) == 0x000763, "Member 'ABP_ActionHuman_C_OnLocomotionSMUpdate::CallFunc_BooleanOR_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_OnLocomotionSMUpdate, K2Node_VariableSet_MoveDirection_Deg_Latest_ImplicitCast) == 0x000768, "Member 'ABP_ActionHuman_C_OnLocomotionSMUpdate::K2Node_VariableSet_MoveDirection_Deg_Latest_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_OnLocomotionSMUpdate, K2Node_VariableSet_TurnPlayRate_ImplicitCast) == 0x000770, "Member 'ABP_ActionHuman_C_OnLocomotionSMUpdate::K2Node_VariableSet_TurnPlayRate_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(ABP_ActionHuman_C_OnLocomotionSMUpdate, K2Node_VariableSet_TurnAngle_ImplicitCast) == 0x000778, "Member 'ABP_ActionHuman_C_OnLocomotionSMUpdate::K2Node_VariableSet_TurnAngle_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_OnLocomotionSMUpdate, CallFunc_EqualEqual_BoolBool_ReturnValue) == 0x000830, "Member 'ABP_ActionHuman_C_OnLocomotionSMUpdate::CallFunc_EqualEqual_BoolBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_OnLocomotionSMUpdate, Temp_int_Array_Index_Variable_1) == 0x000834, "Member 'ABP_ActionHuman_C_OnLocomotionSMUpdate::Temp_int_Array_Index_Variable_1' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_OnLocomotionSMUpdate, CallFunc_EqualEqual_BoolBool_ReturnValue_1) == 0x000838, "Member 'ABP_ActionHuman_C_OnLocomotionSMUpdate::CallFunc_EqualEqual_BoolBool_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_OnLocomotionSMUpdate, CallFunc_Array_Get_Item_1) == 0x000840, "Member 'ABP_ActionHuman_C_OnLocomotionSMUpdate::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_OnLocomotionSMUpdate, CallFunc_Array_Add_ReturnValue_1) == 0x000848, "Member 'ABP_ActionHuman_C_OnLocomotionSMUpdate::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_OnLocomotionSMUpdate, CallFunc_Array_Contains_ReturnValue_3) == 0x00084C, "Member 'ABP_ActionHuman_C_OnLocomotionSMUpdate::CallFunc_Array_Contains_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_OnLocomotionSMUpdate, Temp_class_Variable_2) == 0x000850, "Member 'ABP_ActionHuman_C_OnLocomotionSMUpdate::Temp_class_Variable_2' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_OnLocomotionSMUpdate, Temp_class_Variable_3) == 0x000858, "Member 'ABP_ActionHuman_C_OnLocomotionSMUpdate::Temp_class_Variable_3' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_OnLocomotionSMUpdate, CallFunc_Array_Contains_ReturnValue_4) == 0x000860, "Member 'ABP_ActionHuman_C_OnLocomotionSMUpdate::CallFunc_Array_Contains_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_OnLocomotionSMUpdate, CallFunc_Array_Contains_ReturnValue_5) == 0x000861, "Member 'ABP_ActionHuman_C_OnLocomotionSMUpdate::CallFunc_Array_Contains_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_OnLocomotionSMUpdate, CallFunc_BooleanOR_ReturnValue_1) == 0x000862, "Member 'ABP_ActionHuman_C_OnLocomotionSMUpdate::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_OnLocomotionSMUpdate, CallFunc_BooleanOR_ReturnValue_2) == 0x000863, "Member 'ABP_ActionHuman_C_OnLocomotionSMUpdate::CallFunc_BooleanOR_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_OnLocomotionSMUpdate, K2Node_VariableSet_MoveDirection_Deg_Latest_ImplicitCast) == 0x000868, "Member 'ABP_ActionHuman_C_OnLocomotionSMUpdate::K2Node_VariableSet_MoveDirection_Deg_Latest_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_OnLocomotionSMUpdate, K2Node_VariableSet_TurnPlayRate_ImplicitCast) == 0x000870, "Member 'ABP_ActionHuman_C_OnLocomotionSMUpdate::K2Node_VariableSet_TurnPlayRate_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(ABP_ActionHuman_C_OnLocomotionSMUpdate, K2Node_VariableSet_TurnAngle_ImplicitCast) == 0x000878, "Member 'ABP_ActionHuman_C_OnLocomotionSMUpdate::K2Node_VariableSet_TurnAngle_ImplicitCast' has a wrong offset!");
 
 // Function ABP_ActionHuman.ABP_ActionHuman_C.OverrideBlendSlot
 // 0x0020 (0x0020 - 0x0000)

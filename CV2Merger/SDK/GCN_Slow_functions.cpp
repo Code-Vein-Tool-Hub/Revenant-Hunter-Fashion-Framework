@@ -180,5 +180,45 @@ void AGCN_Slow_C::OnRemoval(class AActor* Target, const struct FGameplayCueParam
 	UObject::ProcessEvent(Func, &Parms);
 }
 
+
+// Function GCN_Slow.GCN_Slow_C.OnTick
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   Delta_Seconds                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AGCN_Slow_C::OnTick(float Delta_Seconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GCN_Slow_C", "OnTick");
+
+	Params::GCN_Slow_C_OnTick Parms{};
+
+	Parms.Delta_Seconds = Delta_Seconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GCN_Slow.GCN_Slow_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AGCN_Slow_C::ReceiveTick(float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GCN_Slow_C", "ReceiveTick");
+
+	Params::GCN_Slow_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
 }
 

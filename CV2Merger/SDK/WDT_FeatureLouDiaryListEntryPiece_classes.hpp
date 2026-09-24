@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "BasicUI_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "GameplayTags_structs.hpp"
-#include "BasicUI_classes.hpp"
 
 
 namespace SDK

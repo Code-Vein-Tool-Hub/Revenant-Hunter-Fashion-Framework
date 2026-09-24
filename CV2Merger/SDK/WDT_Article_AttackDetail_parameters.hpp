@@ -16,30 +16,9 @@
 namespace SDK::Params
 {
 
-// Function WDT_Article_AttackDetail.WDT_Article_AttackDetail_C.SetBloodValue
-// 0x0050 (0x0050 - 0x0000)
-struct WDT_Article_AttackDetail_C_SetBloodValue final
-{
-public:
-	int32                                         InValue;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         InModValue;                                        // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0008(0x0010)()
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue_1;             // 0x0018(0x0010)()
-	struct FSlateColor                            CallFunc_GetTextColorByCompareResult_TextColor;    // 0x0028(0x0014)()
-	struct FSlateColor                            CallFunc_GetTextColorByCompareResult_TextColor_1;  // 0x003C(0x0014)()
-};
-static_assert(alignof(WDT_Article_AttackDetail_C_SetBloodValue) == 0x000008, "Wrong alignment on WDT_Article_AttackDetail_C_SetBloodValue");
-static_assert(sizeof(WDT_Article_AttackDetail_C_SetBloodValue) == 0x000050, "Wrong size on WDT_Article_AttackDetail_C_SetBloodValue");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetBloodValue, InValue) == 0x000000, "Member 'WDT_Article_AttackDetail_C_SetBloodValue::InValue' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetBloodValue, InModValue) == 0x000004, "Member 'WDT_Article_AttackDetail_C_SetBloodValue::InModValue' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetBloodValue, CallFunc_Conv_IntToText_ReturnValue) == 0x000008, "Member 'WDT_Article_AttackDetail_C_SetBloodValue::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetBloodValue, CallFunc_Conv_IntToText_ReturnValue_1) == 0x000018, "Member 'WDT_Article_AttackDetail_C_SetBloodValue::CallFunc_Conv_IntToText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetBloodValue, CallFunc_GetTextColorByCompareResult_TextColor) == 0x000028, "Member 'WDT_Article_AttackDetail_C_SetBloodValue::CallFunc_GetTextColorByCompareResult_TextColor' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetBloodValue, CallFunc_GetTextColorByCompareResult_TextColor_1) == 0x00003C, "Member 'WDT_Article_AttackDetail_C_SetBloodValue::CallFunc_GetTextColorByCompareResult_TextColor_1' has a wrong offset!");
-
-// Function WDT_Article_AttackDetail.WDT_Article_AttackDetail_C.SetBloodValueComparison
+// Function WDT_Article_AttackDetail.WDT_Article_AttackDetail_C.SetThunderValueComparison
 // 0x003C (0x003C - 0x0000)
-struct WDT_Article_AttackDetail_C_SetBloodValueComparison final
+struct WDT_Article_AttackDetail_C_SetThunderValueComparison final
 {
 public:
 	int32                                         InCurrentValue;                                    // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -53,21 +32,21 @@ public:
 	struct FSlateColor                            CallFunc_GetTextColorByCompareResult_TextColor;    // 0x0014(0x0014)()
 	struct FSlateColor                            CallFunc_GetTextColorByCompareResult_TextColor_1;  // 0x0028(0x0014)()
 };
-static_assert(alignof(WDT_Article_AttackDetail_C_SetBloodValueComparison) == 0x000004, "Wrong alignment on WDT_Article_AttackDetail_C_SetBloodValueComparison");
-static_assert(sizeof(WDT_Article_AttackDetail_C_SetBloodValueComparison) == 0x00003C, "Wrong size on WDT_Article_AttackDetail_C_SetBloodValueComparison");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetBloodValueComparison, InCurrentValue) == 0x000000, "Member 'WDT_Article_AttackDetail_C_SetBloodValueComparison::InCurrentValue' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetBloodValueComparison, InTargetValue) == 0x000004, "Member 'WDT_Article_AttackDetail_C_SetBloodValueComparison::InTargetValue' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetBloodValueComparison, InCurrentModValue) == 0x000008, "Member 'WDT_Article_AttackDetail_C_SetBloodValueComparison::InCurrentModValue' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetBloodValueComparison, InTargetModValue) == 0x00000C, "Member 'WDT_Article_AttackDetail_C_SetBloodValueComparison::InTargetModValue' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetBloodValueComparison, SwapComparisons) == 0x000010, "Member 'WDT_Article_AttackDetail_C_SetBloodValueComparison::SwapComparisons' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetBloodValueComparison, CallFunc_CompareInteger_CompareResult) == 0x000011, "Member 'WDT_Article_AttackDetail_C_SetBloodValueComparison::CallFunc_CompareInteger_CompareResult' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetBloodValueComparison, CallFunc_CompareInteger_CompareResult_1) == 0x000012, "Member 'WDT_Article_AttackDetail_C_SetBloodValueComparison::CallFunc_CompareInteger_CompareResult_1' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetBloodValueComparison, CallFunc_GetTextColorByCompareResult_TextColor) == 0x000014, "Member 'WDT_Article_AttackDetail_C_SetBloodValueComparison::CallFunc_GetTextColorByCompareResult_TextColor' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetBloodValueComparison, CallFunc_GetTextColorByCompareResult_TextColor_1) == 0x000028, "Member 'WDT_Article_AttackDetail_C_SetBloodValueComparison::CallFunc_GetTextColorByCompareResult_TextColor_1' has a wrong offset!");
+static_assert(alignof(WDT_Article_AttackDetail_C_SetThunderValueComparison) == 0x000004, "Wrong alignment on WDT_Article_AttackDetail_C_SetThunderValueComparison");
+static_assert(sizeof(WDT_Article_AttackDetail_C_SetThunderValueComparison) == 0x00003C, "Wrong size on WDT_Article_AttackDetail_C_SetThunderValueComparison");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetThunderValueComparison, InCurrentValue) == 0x000000, "Member 'WDT_Article_AttackDetail_C_SetThunderValueComparison::InCurrentValue' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetThunderValueComparison, InTargetValue) == 0x000004, "Member 'WDT_Article_AttackDetail_C_SetThunderValueComparison::InTargetValue' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetThunderValueComparison, InCurrentModValue) == 0x000008, "Member 'WDT_Article_AttackDetail_C_SetThunderValueComparison::InCurrentModValue' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetThunderValueComparison, InTargetModValue) == 0x00000C, "Member 'WDT_Article_AttackDetail_C_SetThunderValueComparison::InTargetModValue' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetThunderValueComparison, SwapComparisons) == 0x000010, "Member 'WDT_Article_AttackDetail_C_SetThunderValueComparison::SwapComparisons' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetThunderValueComparison, CallFunc_CompareInteger_CompareResult) == 0x000011, "Member 'WDT_Article_AttackDetail_C_SetThunderValueComparison::CallFunc_CompareInteger_CompareResult' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetThunderValueComparison, CallFunc_CompareInteger_CompareResult_1) == 0x000012, "Member 'WDT_Article_AttackDetail_C_SetThunderValueComparison::CallFunc_CompareInteger_CompareResult_1' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetThunderValueComparison, CallFunc_GetTextColorByCompareResult_TextColor) == 0x000014, "Member 'WDT_Article_AttackDetail_C_SetThunderValueComparison::CallFunc_GetTextColorByCompareResult_TextColor' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetThunderValueComparison, CallFunc_GetTextColorByCompareResult_TextColor_1) == 0x000028, "Member 'WDT_Article_AttackDetail_C_SetThunderValueComparison::CallFunc_GetTextColorByCompareResult_TextColor_1' has a wrong offset!");
 
-// Function WDT_Article_AttackDetail.WDT_Article_AttackDetail_C.SetFireValue
+// Function WDT_Article_AttackDetail.WDT_Article_AttackDetail_C.SetThunderValue
 // 0x0050 (0x0050 - 0x0000)
-struct WDT_Article_AttackDetail_C_SetFireValue final
+struct WDT_Article_AttackDetail_C_SetThunderValue final
 {
 public:
 	int32                                         InValue;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -77,18 +56,18 @@ public:
 	struct FSlateColor                            CallFunc_GetTextColorByCompareResult_TextColor;    // 0x0028(0x0014)()
 	struct FSlateColor                            CallFunc_GetTextColorByCompareResult_TextColor_1;  // 0x003C(0x0014)()
 };
-static_assert(alignof(WDT_Article_AttackDetail_C_SetFireValue) == 0x000008, "Wrong alignment on WDT_Article_AttackDetail_C_SetFireValue");
-static_assert(sizeof(WDT_Article_AttackDetail_C_SetFireValue) == 0x000050, "Wrong size on WDT_Article_AttackDetail_C_SetFireValue");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetFireValue, InValue) == 0x000000, "Member 'WDT_Article_AttackDetail_C_SetFireValue::InValue' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetFireValue, InModValue) == 0x000004, "Member 'WDT_Article_AttackDetail_C_SetFireValue::InModValue' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetFireValue, CallFunc_Conv_IntToText_ReturnValue) == 0x000008, "Member 'WDT_Article_AttackDetail_C_SetFireValue::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetFireValue, CallFunc_Conv_IntToText_ReturnValue_1) == 0x000018, "Member 'WDT_Article_AttackDetail_C_SetFireValue::CallFunc_Conv_IntToText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetFireValue, CallFunc_GetTextColorByCompareResult_TextColor) == 0x000028, "Member 'WDT_Article_AttackDetail_C_SetFireValue::CallFunc_GetTextColorByCompareResult_TextColor' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetFireValue, CallFunc_GetTextColorByCompareResult_TextColor_1) == 0x00003C, "Member 'WDT_Article_AttackDetail_C_SetFireValue::CallFunc_GetTextColorByCompareResult_TextColor_1' has a wrong offset!");
+static_assert(alignof(WDT_Article_AttackDetail_C_SetThunderValue) == 0x000008, "Wrong alignment on WDT_Article_AttackDetail_C_SetThunderValue");
+static_assert(sizeof(WDT_Article_AttackDetail_C_SetThunderValue) == 0x000050, "Wrong size on WDT_Article_AttackDetail_C_SetThunderValue");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetThunderValue, InValue) == 0x000000, "Member 'WDT_Article_AttackDetail_C_SetThunderValue::InValue' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetThunderValue, InModValue) == 0x000004, "Member 'WDT_Article_AttackDetail_C_SetThunderValue::InModValue' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetThunderValue, CallFunc_Conv_IntToText_ReturnValue) == 0x000008, "Member 'WDT_Article_AttackDetail_C_SetThunderValue::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetThunderValue, CallFunc_Conv_IntToText_ReturnValue_1) == 0x000018, "Member 'WDT_Article_AttackDetail_C_SetThunderValue::CallFunc_Conv_IntToText_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetThunderValue, CallFunc_GetTextColorByCompareResult_TextColor) == 0x000028, "Member 'WDT_Article_AttackDetail_C_SetThunderValue::CallFunc_GetTextColorByCompareResult_TextColor' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetThunderValue, CallFunc_GetTextColorByCompareResult_TextColor_1) == 0x00003C, "Member 'WDT_Article_AttackDetail_C_SetThunderValue::CallFunc_GetTextColorByCompareResult_TextColor_1' has a wrong offset!");
 
-// Function WDT_Article_AttackDetail.WDT_Article_AttackDetail_C.SetFireValueComparison
+// Function WDT_Article_AttackDetail.WDT_Article_AttackDetail_C.SetPhysicalValueComparison
 // 0x003C (0x003C - 0x0000)
-struct WDT_Article_AttackDetail_C_SetFireValueComparison final
+struct WDT_Article_AttackDetail_C_SetPhysicalValueComparison final
 {
 public:
 	int32                                         InCurrentValue;                                    // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -102,66 +81,17 @@ public:
 	struct FSlateColor                            CallFunc_GetTextColorByCompareResult_TextColor;    // 0x0014(0x0014)()
 	struct FSlateColor                            CallFunc_GetTextColorByCompareResult_TextColor_1;  // 0x0028(0x0014)()
 };
-static_assert(alignof(WDT_Article_AttackDetail_C_SetFireValueComparison) == 0x000004, "Wrong alignment on WDT_Article_AttackDetail_C_SetFireValueComparison");
-static_assert(sizeof(WDT_Article_AttackDetail_C_SetFireValueComparison) == 0x00003C, "Wrong size on WDT_Article_AttackDetail_C_SetFireValueComparison");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetFireValueComparison, InCurrentValue) == 0x000000, "Member 'WDT_Article_AttackDetail_C_SetFireValueComparison::InCurrentValue' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetFireValueComparison, InTargetValue) == 0x000004, "Member 'WDT_Article_AttackDetail_C_SetFireValueComparison::InTargetValue' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetFireValueComparison, InCurrentModValue) == 0x000008, "Member 'WDT_Article_AttackDetail_C_SetFireValueComparison::InCurrentModValue' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetFireValueComparison, InTargetModValue) == 0x00000C, "Member 'WDT_Article_AttackDetail_C_SetFireValueComparison::InTargetModValue' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetFireValueComparison, SwapComparisons) == 0x000010, "Member 'WDT_Article_AttackDetail_C_SetFireValueComparison::SwapComparisons' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetFireValueComparison, CallFunc_CompareInteger_CompareResult) == 0x000011, "Member 'WDT_Article_AttackDetail_C_SetFireValueComparison::CallFunc_CompareInteger_CompareResult' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetFireValueComparison, CallFunc_CompareInteger_CompareResult_1) == 0x000012, "Member 'WDT_Article_AttackDetail_C_SetFireValueComparison::CallFunc_CompareInteger_CompareResult_1' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetFireValueComparison, CallFunc_GetTextColorByCompareResult_TextColor) == 0x000014, "Member 'WDT_Article_AttackDetail_C_SetFireValueComparison::CallFunc_GetTextColorByCompareResult_TextColor' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetFireValueComparison, CallFunc_GetTextColorByCompareResult_TextColor_1) == 0x000028, "Member 'WDT_Article_AttackDetail_C_SetFireValueComparison::CallFunc_GetTextColorByCompareResult_TextColor_1' has a wrong offset!");
-
-// Function WDT_Article_AttackDetail.WDT_Article_AttackDetail_C.SetIceValue
-// 0x0050 (0x0050 - 0x0000)
-struct WDT_Article_AttackDetail_C_SetIceValue final
-{
-public:
-	int32                                         InValue;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         InModValue;                                        // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0008(0x0010)()
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue_1;             // 0x0018(0x0010)()
-	struct FSlateColor                            CallFunc_GetTextColorByCompareResult_TextColor;    // 0x0028(0x0014)()
-	struct FSlateColor                            CallFunc_GetTextColorByCompareResult_TextColor_1;  // 0x003C(0x0014)()
-};
-static_assert(alignof(WDT_Article_AttackDetail_C_SetIceValue) == 0x000008, "Wrong alignment on WDT_Article_AttackDetail_C_SetIceValue");
-static_assert(sizeof(WDT_Article_AttackDetail_C_SetIceValue) == 0x000050, "Wrong size on WDT_Article_AttackDetail_C_SetIceValue");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetIceValue, InValue) == 0x000000, "Member 'WDT_Article_AttackDetail_C_SetIceValue::InValue' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetIceValue, InModValue) == 0x000004, "Member 'WDT_Article_AttackDetail_C_SetIceValue::InModValue' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetIceValue, CallFunc_Conv_IntToText_ReturnValue) == 0x000008, "Member 'WDT_Article_AttackDetail_C_SetIceValue::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetIceValue, CallFunc_Conv_IntToText_ReturnValue_1) == 0x000018, "Member 'WDT_Article_AttackDetail_C_SetIceValue::CallFunc_Conv_IntToText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetIceValue, CallFunc_GetTextColorByCompareResult_TextColor) == 0x000028, "Member 'WDT_Article_AttackDetail_C_SetIceValue::CallFunc_GetTextColorByCompareResult_TextColor' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetIceValue, CallFunc_GetTextColorByCompareResult_TextColor_1) == 0x00003C, "Member 'WDT_Article_AttackDetail_C_SetIceValue::CallFunc_GetTextColorByCompareResult_TextColor_1' has a wrong offset!");
-
-// Function WDT_Article_AttackDetail.WDT_Article_AttackDetail_C.SetIceValueComparison
-// 0x003C (0x003C - 0x0000)
-struct WDT_Article_AttackDetail_C_SetIceValueComparison final
-{
-public:
-	int32                                         InCurrentValue;                                    // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         InTargetValue;                                     // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         InCurrentModValue;                                 // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         InTargetModValue;                                  // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          SwapComparisons;                                   // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_CompareInteger_CompareResult;             // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_CompareInteger_CompareResult_1;           // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_13[0x1];                                       // 0x0013(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateColor                            CallFunc_GetTextColorByCompareResult_TextColor;    // 0x0014(0x0014)()
-	struct FSlateColor                            CallFunc_GetTextColorByCompareResult_TextColor_1;  // 0x0028(0x0014)()
-};
-static_assert(alignof(WDT_Article_AttackDetail_C_SetIceValueComparison) == 0x000004, "Wrong alignment on WDT_Article_AttackDetail_C_SetIceValueComparison");
-static_assert(sizeof(WDT_Article_AttackDetail_C_SetIceValueComparison) == 0x00003C, "Wrong size on WDT_Article_AttackDetail_C_SetIceValueComparison");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetIceValueComparison, InCurrentValue) == 0x000000, "Member 'WDT_Article_AttackDetail_C_SetIceValueComparison::InCurrentValue' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetIceValueComparison, InTargetValue) == 0x000004, "Member 'WDT_Article_AttackDetail_C_SetIceValueComparison::InTargetValue' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetIceValueComparison, InCurrentModValue) == 0x000008, "Member 'WDT_Article_AttackDetail_C_SetIceValueComparison::InCurrentModValue' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetIceValueComparison, InTargetModValue) == 0x00000C, "Member 'WDT_Article_AttackDetail_C_SetIceValueComparison::InTargetModValue' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetIceValueComparison, SwapComparisons) == 0x000010, "Member 'WDT_Article_AttackDetail_C_SetIceValueComparison::SwapComparisons' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetIceValueComparison, CallFunc_CompareInteger_CompareResult) == 0x000011, "Member 'WDT_Article_AttackDetail_C_SetIceValueComparison::CallFunc_CompareInteger_CompareResult' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetIceValueComparison, CallFunc_CompareInteger_CompareResult_1) == 0x000012, "Member 'WDT_Article_AttackDetail_C_SetIceValueComparison::CallFunc_CompareInteger_CompareResult_1' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetIceValueComparison, CallFunc_GetTextColorByCompareResult_TextColor) == 0x000014, "Member 'WDT_Article_AttackDetail_C_SetIceValueComparison::CallFunc_GetTextColorByCompareResult_TextColor' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetIceValueComparison, CallFunc_GetTextColorByCompareResult_TextColor_1) == 0x000028, "Member 'WDT_Article_AttackDetail_C_SetIceValueComparison::CallFunc_GetTextColorByCompareResult_TextColor_1' has a wrong offset!");
+static_assert(alignof(WDT_Article_AttackDetail_C_SetPhysicalValueComparison) == 0x000004, "Wrong alignment on WDT_Article_AttackDetail_C_SetPhysicalValueComparison");
+static_assert(sizeof(WDT_Article_AttackDetail_C_SetPhysicalValueComparison) == 0x00003C, "Wrong size on WDT_Article_AttackDetail_C_SetPhysicalValueComparison");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetPhysicalValueComparison, InCurrentValue) == 0x000000, "Member 'WDT_Article_AttackDetail_C_SetPhysicalValueComparison::InCurrentValue' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetPhysicalValueComparison, InTargetValue) == 0x000004, "Member 'WDT_Article_AttackDetail_C_SetPhysicalValueComparison::InTargetValue' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetPhysicalValueComparison, InCurrentModValue) == 0x000008, "Member 'WDT_Article_AttackDetail_C_SetPhysicalValueComparison::InCurrentModValue' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetPhysicalValueComparison, InTargetModValue) == 0x00000C, "Member 'WDT_Article_AttackDetail_C_SetPhysicalValueComparison::InTargetModValue' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetPhysicalValueComparison, SwapComparisons) == 0x000010, "Member 'WDT_Article_AttackDetail_C_SetPhysicalValueComparison::SwapComparisons' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetPhysicalValueComparison, CallFunc_CompareInteger_CompareResult) == 0x000011, "Member 'WDT_Article_AttackDetail_C_SetPhysicalValueComparison::CallFunc_CompareInteger_CompareResult' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetPhysicalValueComparison, CallFunc_CompareInteger_CompareResult_1) == 0x000012, "Member 'WDT_Article_AttackDetail_C_SetPhysicalValueComparison::CallFunc_CompareInteger_CompareResult_1' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetPhysicalValueComparison, CallFunc_GetTextColorByCompareResult_TextColor) == 0x000014, "Member 'WDT_Article_AttackDetail_C_SetPhysicalValueComparison::CallFunc_GetTextColorByCompareResult_TextColor' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetPhysicalValueComparison, CallFunc_GetTextColorByCompareResult_TextColor_1) == 0x000028, "Member 'WDT_Article_AttackDetail_C_SetPhysicalValueComparison::CallFunc_GetTextColorByCompareResult_TextColor_1' has a wrong offset!");
 
 // Function WDT_Article_AttackDetail.WDT_Article_AttackDetail_C.SetPhysicalValue
 // 0x0070 (0x0070 - 0x0000)
@@ -208,9 +138,9 @@ static_assert(offsetof(WDT_Article_AttackDetail_C_SetPhysicalValue, CallFunc_Not
 static_assert(offsetof(WDT_Article_AttackDetail_C_SetPhysicalValue, CallFunc_NotEqual_ObjectObject_ReturnValue_1) == 0x000069, "Member 'WDT_Article_AttackDetail_C_SetPhysicalValue::CallFunc_NotEqual_ObjectObject_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(WDT_Article_AttackDetail_C_SetPhysicalValue, CallFunc_NotEqual_ObjectObject_ReturnValue_2) == 0x00006A, "Member 'WDT_Article_AttackDetail_C_SetPhysicalValue::CallFunc_NotEqual_ObjectObject_ReturnValue_2' has a wrong offset!");
 
-// Function WDT_Article_AttackDetail.WDT_Article_AttackDetail_C.SetPhysicalValueComparison
+// Function WDT_Article_AttackDetail.WDT_Article_AttackDetail_C.SetIceValueComparison
 // 0x003C (0x003C - 0x0000)
-struct WDT_Article_AttackDetail_C_SetPhysicalValueComparison final
+struct WDT_Article_AttackDetail_C_SetIceValueComparison final
 {
 public:
 	int32                                         InCurrentValue;                                    // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -224,21 +154,21 @@ public:
 	struct FSlateColor                            CallFunc_GetTextColorByCompareResult_TextColor;    // 0x0014(0x0014)()
 	struct FSlateColor                            CallFunc_GetTextColorByCompareResult_TextColor_1;  // 0x0028(0x0014)()
 };
-static_assert(alignof(WDT_Article_AttackDetail_C_SetPhysicalValueComparison) == 0x000004, "Wrong alignment on WDT_Article_AttackDetail_C_SetPhysicalValueComparison");
-static_assert(sizeof(WDT_Article_AttackDetail_C_SetPhysicalValueComparison) == 0x00003C, "Wrong size on WDT_Article_AttackDetail_C_SetPhysicalValueComparison");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetPhysicalValueComparison, InCurrentValue) == 0x000000, "Member 'WDT_Article_AttackDetail_C_SetPhysicalValueComparison::InCurrentValue' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetPhysicalValueComparison, InTargetValue) == 0x000004, "Member 'WDT_Article_AttackDetail_C_SetPhysicalValueComparison::InTargetValue' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetPhysicalValueComparison, InCurrentModValue) == 0x000008, "Member 'WDT_Article_AttackDetail_C_SetPhysicalValueComparison::InCurrentModValue' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetPhysicalValueComparison, InTargetModValue) == 0x00000C, "Member 'WDT_Article_AttackDetail_C_SetPhysicalValueComparison::InTargetModValue' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetPhysicalValueComparison, SwapComparisons) == 0x000010, "Member 'WDT_Article_AttackDetail_C_SetPhysicalValueComparison::SwapComparisons' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetPhysicalValueComparison, CallFunc_CompareInteger_CompareResult) == 0x000011, "Member 'WDT_Article_AttackDetail_C_SetPhysicalValueComparison::CallFunc_CompareInteger_CompareResult' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetPhysicalValueComparison, CallFunc_CompareInteger_CompareResult_1) == 0x000012, "Member 'WDT_Article_AttackDetail_C_SetPhysicalValueComparison::CallFunc_CompareInteger_CompareResult_1' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetPhysicalValueComparison, CallFunc_GetTextColorByCompareResult_TextColor) == 0x000014, "Member 'WDT_Article_AttackDetail_C_SetPhysicalValueComparison::CallFunc_GetTextColorByCompareResult_TextColor' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetPhysicalValueComparison, CallFunc_GetTextColorByCompareResult_TextColor_1) == 0x000028, "Member 'WDT_Article_AttackDetail_C_SetPhysicalValueComparison::CallFunc_GetTextColorByCompareResult_TextColor_1' has a wrong offset!");
+static_assert(alignof(WDT_Article_AttackDetail_C_SetIceValueComparison) == 0x000004, "Wrong alignment on WDT_Article_AttackDetail_C_SetIceValueComparison");
+static_assert(sizeof(WDT_Article_AttackDetail_C_SetIceValueComparison) == 0x00003C, "Wrong size on WDT_Article_AttackDetail_C_SetIceValueComparison");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetIceValueComparison, InCurrentValue) == 0x000000, "Member 'WDT_Article_AttackDetail_C_SetIceValueComparison::InCurrentValue' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetIceValueComparison, InTargetValue) == 0x000004, "Member 'WDT_Article_AttackDetail_C_SetIceValueComparison::InTargetValue' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetIceValueComparison, InCurrentModValue) == 0x000008, "Member 'WDT_Article_AttackDetail_C_SetIceValueComparison::InCurrentModValue' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetIceValueComparison, InTargetModValue) == 0x00000C, "Member 'WDT_Article_AttackDetail_C_SetIceValueComparison::InTargetModValue' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetIceValueComparison, SwapComparisons) == 0x000010, "Member 'WDT_Article_AttackDetail_C_SetIceValueComparison::SwapComparisons' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetIceValueComparison, CallFunc_CompareInteger_CompareResult) == 0x000011, "Member 'WDT_Article_AttackDetail_C_SetIceValueComparison::CallFunc_CompareInteger_CompareResult' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetIceValueComparison, CallFunc_CompareInteger_CompareResult_1) == 0x000012, "Member 'WDT_Article_AttackDetail_C_SetIceValueComparison::CallFunc_CompareInteger_CompareResult_1' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetIceValueComparison, CallFunc_GetTextColorByCompareResult_TextColor) == 0x000014, "Member 'WDT_Article_AttackDetail_C_SetIceValueComparison::CallFunc_GetTextColorByCompareResult_TextColor' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetIceValueComparison, CallFunc_GetTextColorByCompareResult_TextColor_1) == 0x000028, "Member 'WDT_Article_AttackDetail_C_SetIceValueComparison::CallFunc_GetTextColorByCompareResult_TextColor_1' has a wrong offset!");
 
-// Function WDT_Article_AttackDetail.WDT_Article_AttackDetail_C.SetThunderValue
+// Function WDT_Article_AttackDetail.WDT_Article_AttackDetail_C.SetIceValue
 // 0x0050 (0x0050 - 0x0000)
-struct WDT_Article_AttackDetail_C_SetThunderValue final
+struct WDT_Article_AttackDetail_C_SetIceValue final
 {
 public:
 	int32                                         InValue;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -248,18 +178,18 @@ public:
 	struct FSlateColor                            CallFunc_GetTextColorByCompareResult_TextColor;    // 0x0028(0x0014)()
 	struct FSlateColor                            CallFunc_GetTextColorByCompareResult_TextColor_1;  // 0x003C(0x0014)()
 };
-static_assert(alignof(WDT_Article_AttackDetail_C_SetThunderValue) == 0x000008, "Wrong alignment on WDT_Article_AttackDetail_C_SetThunderValue");
-static_assert(sizeof(WDT_Article_AttackDetail_C_SetThunderValue) == 0x000050, "Wrong size on WDT_Article_AttackDetail_C_SetThunderValue");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetThunderValue, InValue) == 0x000000, "Member 'WDT_Article_AttackDetail_C_SetThunderValue::InValue' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetThunderValue, InModValue) == 0x000004, "Member 'WDT_Article_AttackDetail_C_SetThunderValue::InModValue' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetThunderValue, CallFunc_Conv_IntToText_ReturnValue) == 0x000008, "Member 'WDT_Article_AttackDetail_C_SetThunderValue::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetThunderValue, CallFunc_Conv_IntToText_ReturnValue_1) == 0x000018, "Member 'WDT_Article_AttackDetail_C_SetThunderValue::CallFunc_Conv_IntToText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetThunderValue, CallFunc_GetTextColorByCompareResult_TextColor) == 0x000028, "Member 'WDT_Article_AttackDetail_C_SetThunderValue::CallFunc_GetTextColorByCompareResult_TextColor' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetThunderValue, CallFunc_GetTextColorByCompareResult_TextColor_1) == 0x00003C, "Member 'WDT_Article_AttackDetail_C_SetThunderValue::CallFunc_GetTextColorByCompareResult_TextColor_1' has a wrong offset!");
+static_assert(alignof(WDT_Article_AttackDetail_C_SetIceValue) == 0x000008, "Wrong alignment on WDT_Article_AttackDetail_C_SetIceValue");
+static_assert(sizeof(WDT_Article_AttackDetail_C_SetIceValue) == 0x000050, "Wrong size on WDT_Article_AttackDetail_C_SetIceValue");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetIceValue, InValue) == 0x000000, "Member 'WDT_Article_AttackDetail_C_SetIceValue::InValue' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetIceValue, InModValue) == 0x000004, "Member 'WDT_Article_AttackDetail_C_SetIceValue::InModValue' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetIceValue, CallFunc_Conv_IntToText_ReturnValue) == 0x000008, "Member 'WDT_Article_AttackDetail_C_SetIceValue::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetIceValue, CallFunc_Conv_IntToText_ReturnValue_1) == 0x000018, "Member 'WDT_Article_AttackDetail_C_SetIceValue::CallFunc_Conv_IntToText_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetIceValue, CallFunc_GetTextColorByCompareResult_TextColor) == 0x000028, "Member 'WDT_Article_AttackDetail_C_SetIceValue::CallFunc_GetTextColorByCompareResult_TextColor' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetIceValue, CallFunc_GetTextColorByCompareResult_TextColor_1) == 0x00003C, "Member 'WDT_Article_AttackDetail_C_SetIceValue::CallFunc_GetTextColorByCompareResult_TextColor_1' has a wrong offset!");
 
-// Function WDT_Article_AttackDetail.WDT_Article_AttackDetail_C.SetThunderValueComparison
+// Function WDT_Article_AttackDetail.WDT_Article_AttackDetail_C.SetFireValueComparison
 // 0x003C (0x003C - 0x0000)
-struct WDT_Article_AttackDetail_C_SetThunderValueComparison final
+struct WDT_Article_AttackDetail_C_SetFireValueComparison final
 {
 public:
 	int32                                         InCurrentValue;                                    // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -273,17 +203,87 @@ public:
 	struct FSlateColor                            CallFunc_GetTextColorByCompareResult_TextColor;    // 0x0014(0x0014)()
 	struct FSlateColor                            CallFunc_GetTextColorByCompareResult_TextColor_1;  // 0x0028(0x0014)()
 };
-static_assert(alignof(WDT_Article_AttackDetail_C_SetThunderValueComparison) == 0x000004, "Wrong alignment on WDT_Article_AttackDetail_C_SetThunderValueComparison");
-static_assert(sizeof(WDT_Article_AttackDetail_C_SetThunderValueComparison) == 0x00003C, "Wrong size on WDT_Article_AttackDetail_C_SetThunderValueComparison");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetThunderValueComparison, InCurrentValue) == 0x000000, "Member 'WDT_Article_AttackDetail_C_SetThunderValueComparison::InCurrentValue' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetThunderValueComparison, InTargetValue) == 0x000004, "Member 'WDT_Article_AttackDetail_C_SetThunderValueComparison::InTargetValue' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetThunderValueComparison, InCurrentModValue) == 0x000008, "Member 'WDT_Article_AttackDetail_C_SetThunderValueComparison::InCurrentModValue' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetThunderValueComparison, InTargetModValue) == 0x00000C, "Member 'WDT_Article_AttackDetail_C_SetThunderValueComparison::InTargetModValue' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetThunderValueComparison, SwapComparisons) == 0x000010, "Member 'WDT_Article_AttackDetail_C_SetThunderValueComparison::SwapComparisons' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetThunderValueComparison, CallFunc_CompareInteger_CompareResult) == 0x000011, "Member 'WDT_Article_AttackDetail_C_SetThunderValueComparison::CallFunc_CompareInteger_CompareResult' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetThunderValueComparison, CallFunc_CompareInteger_CompareResult_1) == 0x000012, "Member 'WDT_Article_AttackDetail_C_SetThunderValueComparison::CallFunc_CompareInteger_CompareResult_1' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetThunderValueComparison, CallFunc_GetTextColorByCompareResult_TextColor) == 0x000014, "Member 'WDT_Article_AttackDetail_C_SetThunderValueComparison::CallFunc_GetTextColorByCompareResult_TextColor' has a wrong offset!");
-static_assert(offsetof(WDT_Article_AttackDetail_C_SetThunderValueComparison, CallFunc_GetTextColorByCompareResult_TextColor_1) == 0x000028, "Member 'WDT_Article_AttackDetail_C_SetThunderValueComparison::CallFunc_GetTextColorByCompareResult_TextColor_1' has a wrong offset!");
+static_assert(alignof(WDT_Article_AttackDetail_C_SetFireValueComparison) == 0x000004, "Wrong alignment on WDT_Article_AttackDetail_C_SetFireValueComparison");
+static_assert(sizeof(WDT_Article_AttackDetail_C_SetFireValueComparison) == 0x00003C, "Wrong size on WDT_Article_AttackDetail_C_SetFireValueComparison");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetFireValueComparison, InCurrentValue) == 0x000000, "Member 'WDT_Article_AttackDetail_C_SetFireValueComparison::InCurrentValue' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetFireValueComparison, InTargetValue) == 0x000004, "Member 'WDT_Article_AttackDetail_C_SetFireValueComparison::InTargetValue' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetFireValueComparison, InCurrentModValue) == 0x000008, "Member 'WDT_Article_AttackDetail_C_SetFireValueComparison::InCurrentModValue' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetFireValueComparison, InTargetModValue) == 0x00000C, "Member 'WDT_Article_AttackDetail_C_SetFireValueComparison::InTargetModValue' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetFireValueComparison, SwapComparisons) == 0x000010, "Member 'WDT_Article_AttackDetail_C_SetFireValueComparison::SwapComparisons' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetFireValueComparison, CallFunc_CompareInteger_CompareResult) == 0x000011, "Member 'WDT_Article_AttackDetail_C_SetFireValueComparison::CallFunc_CompareInteger_CompareResult' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetFireValueComparison, CallFunc_CompareInteger_CompareResult_1) == 0x000012, "Member 'WDT_Article_AttackDetail_C_SetFireValueComparison::CallFunc_CompareInteger_CompareResult_1' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetFireValueComparison, CallFunc_GetTextColorByCompareResult_TextColor) == 0x000014, "Member 'WDT_Article_AttackDetail_C_SetFireValueComparison::CallFunc_GetTextColorByCompareResult_TextColor' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetFireValueComparison, CallFunc_GetTextColorByCompareResult_TextColor_1) == 0x000028, "Member 'WDT_Article_AttackDetail_C_SetFireValueComparison::CallFunc_GetTextColorByCompareResult_TextColor_1' has a wrong offset!");
+
+// Function WDT_Article_AttackDetail.WDT_Article_AttackDetail_C.SetFireValue
+// 0x0050 (0x0050 - 0x0000)
+struct WDT_Article_AttackDetail_C_SetFireValue final
+{
+public:
+	int32                                         InValue;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         InModValue;                                        // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0008(0x0010)()
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue_1;             // 0x0018(0x0010)()
+	struct FSlateColor                            CallFunc_GetTextColorByCompareResult_TextColor;    // 0x0028(0x0014)()
+	struct FSlateColor                            CallFunc_GetTextColorByCompareResult_TextColor_1;  // 0x003C(0x0014)()
+};
+static_assert(alignof(WDT_Article_AttackDetail_C_SetFireValue) == 0x000008, "Wrong alignment on WDT_Article_AttackDetail_C_SetFireValue");
+static_assert(sizeof(WDT_Article_AttackDetail_C_SetFireValue) == 0x000050, "Wrong size on WDT_Article_AttackDetail_C_SetFireValue");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetFireValue, InValue) == 0x000000, "Member 'WDT_Article_AttackDetail_C_SetFireValue::InValue' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetFireValue, InModValue) == 0x000004, "Member 'WDT_Article_AttackDetail_C_SetFireValue::InModValue' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetFireValue, CallFunc_Conv_IntToText_ReturnValue) == 0x000008, "Member 'WDT_Article_AttackDetail_C_SetFireValue::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetFireValue, CallFunc_Conv_IntToText_ReturnValue_1) == 0x000018, "Member 'WDT_Article_AttackDetail_C_SetFireValue::CallFunc_Conv_IntToText_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetFireValue, CallFunc_GetTextColorByCompareResult_TextColor) == 0x000028, "Member 'WDT_Article_AttackDetail_C_SetFireValue::CallFunc_GetTextColorByCompareResult_TextColor' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetFireValue, CallFunc_GetTextColorByCompareResult_TextColor_1) == 0x00003C, "Member 'WDT_Article_AttackDetail_C_SetFireValue::CallFunc_GetTextColorByCompareResult_TextColor_1' has a wrong offset!");
+
+// Function WDT_Article_AttackDetail.WDT_Article_AttackDetail_C.SetBloodValueComparison
+// 0x003C (0x003C - 0x0000)
+struct WDT_Article_AttackDetail_C_SetBloodValueComparison final
+{
+public:
+	int32                                         InCurrentValue;                                    // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         InTargetValue;                                     // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         InCurrentModValue;                                 // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         InTargetModValue;                                  // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          SwapComparisons;                                   // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_CompareInteger_CompareResult;             // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_CompareInteger_CompareResult_1;           // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_13[0x1];                                       // 0x0013(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateColor                            CallFunc_GetTextColorByCompareResult_TextColor;    // 0x0014(0x0014)()
+	struct FSlateColor                            CallFunc_GetTextColorByCompareResult_TextColor_1;  // 0x0028(0x0014)()
+};
+static_assert(alignof(WDT_Article_AttackDetail_C_SetBloodValueComparison) == 0x000004, "Wrong alignment on WDT_Article_AttackDetail_C_SetBloodValueComparison");
+static_assert(sizeof(WDT_Article_AttackDetail_C_SetBloodValueComparison) == 0x00003C, "Wrong size on WDT_Article_AttackDetail_C_SetBloodValueComparison");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetBloodValueComparison, InCurrentValue) == 0x000000, "Member 'WDT_Article_AttackDetail_C_SetBloodValueComparison::InCurrentValue' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetBloodValueComparison, InTargetValue) == 0x000004, "Member 'WDT_Article_AttackDetail_C_SetBloodValueComparison::InTargetValue' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetBloodValueComparison, InCurrentModValue) == 0x000008, "Member 'WDT_Article_AttackDetail_C_SetBloodValueComparison::InCurrentModValue' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetBloodValueComparison, InTargetModValue) == 0x00000C, "Member 'WDT_Article_AttackDetail_C_SetBloodValueComparison::InTargetModValue' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetBloodValueComparison, SwapComparisons) == 0x000010, "Member 'WDT_Article_AttackDetail_C_SetBloodValueComparison::SwapComparisons' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetBloodValueComparison, CallFunc_CompareInteger_CompareResult) == 0x000011, "Member 'WDT_Article_AttackDetail_C_SetBloodValueComparison::CallFunc_CompareInteger_CompareResult' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetBloodValueComparison, CallFunc_CompareInteger_CompareResult_1) == 0x000012, "Member 'WDT_Article_AttackDetail_C_SetBloodValueComparison::CallFunc_CompareInteger_CompareResult_1' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetBloodValueComparison, CallFunc_GetTextColorByCompareResult_TextColor) == 0x000014, "Member 'WDT_Article_AttackDetail_C_SetBloodValueComparison::CallFunc_GetTextColorByCompareResult_TextColor' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetBloodValueComparison, CallFunc_GetTextColorByCompareResult_TextColor_1) == 0x000028, "Member 'WDT_Article_AttackDetail_C_SetBloodValueComparison::CallFunc_GetTextColorByCompareResult_TextColor_1' has a wrong offset!");
+
+// Function WDT_Article_AttackDetail.WDT_Article_AttackDetail_C.SetBloodValue
+// 0x0050 (0x0050 - 0x0000)
+struct WDT_Article_AttackDetail_C_SetBloodValue final
+{
+public:
+	int32                                         InValue;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         InModValue;                                        // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0008(0x0010)()
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue_1;             // 0x0018(0x0010)()
+	struct FSlateColor                            CallFunc_GetTextColorByCompareResult_TextColor;    // 0x0028(0x0014)()
+	struct FSlateColor                            CallFunc_GetTextColorByCompareResult_TextColor_1;  // 0x003C(0x0014)()
+};
+static_assert(alignof(WDT_Article_AttackDetail_C_SetBloodValue) == 0x000008, "Wrong alignment on WDT_Article_AttackDetail_C_SetBloodValue");
+static_assert(sizeof(WDT_Article_AttackDetail_C_SetBloodValue) == 0x000050, "Wrong size on WDT_Article_AttackDetail_C_SetBloodValue");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetBloodValue, InValue) == 0x000000, "Member 'WDT_Article_AttackDetail_C_SetBloodValue::InValue' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetBloodValue, InModValue) == 0x000004, "Member 'WDT_Article_AttackDetail_C_SetBloodValue::InModValue' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetBloodValue, CallFunc_Conv_IntToText_ReturnValue) == 0x000008, "Member 'WDT_Article_AttackDetail_C_SetBloodValue::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetBloodValue, CallFunc_Conv_IntToText_ReturnValue_1) == 0x000018, "Member 'WDT_Article_AttackDetail_C_SetBloodValue::CallFunc_Conv_IntToText_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetBloodValue, CallFunc_GetTextColorByCompareResult_TextColor) == 0x000028, "Member 'WDT_Article_AttackDetail_C_SetBloodValue::CallFunc_GetTextColorByCompareResult_TextColor' has a wrong offset!");
+static_assert(offsetof(WDT_Article_AttackDetail_C_SetBloodValue, CallFunc_GetTextColorByCompareResult_TextColor_1) == 0x00003C, "Member 'WDT_Article_AttackDetail_C_SetBloodValue::CallFunc_GetTextColorByCompareResult_TextColor_1' has a wrong offset!");
 
 }
 

@@ -27,16 +27,16 @@ public:
 	class UTextBlock*                             GadgeLoad_Reliability_1;                           // 0x06E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void SetConductivityValue(int32 InValue);
-	void SetConductivityValueComparison(int32 InCurrentValue, int32 InTargetValue, bool SwapComparisons);
-	void SetEfficiencyValue(int32 InValue);
-	void SetEfficiencyValueComparison(int32 InCurrentValue, int32 InTargetValue, bool SwapComparisons);
-	void SetHandlingValue(int32 InValue);
-	void SetHandlingValueComparison(int32 InCurrentValue, int32 InTargetValue, bool SwapComparisons);
-	void SetReliabilityValue(int32 InValue);
-	void SetReliabilityValueComparison(int32 InCurrentValue, int32 InTargetValue, bool SwapComparisons);
-	void SetValue(class UTextBlock* TextWidget, int32 InValue);
 	void SetValueComparison(class UTextBlock* Self2, int32 EquipValue, int32 TargetValue, bool SwapComparisons);
+	void SetValue(class UTextBlock* TextWidget, int32 InValue);
+	void SetReliabilityValueComparison(int32 InCurrentValue, int32 InTargetValue, bool SwapComparisons);
+	void SetReliabilityValue(int32 InValue);
+	void SetHandlingValueComparison(int32 InCurrentValue, int32 InTargetValue, bool SwapComparisons);
+	void SetHandlingValue(int32 InValue);
+	void SetEfficiencyValueComparison(int32 InCurrentValue, int32 InTargetValue, bool SwapComparisons);
+	void SetEfficiencyValue(int32 InValue);
+	void SetConductivityValueComparison(int32 InCurrentValue, int32 InTargetValue, bool SwapComparisons);
+	void SetConductivityValue(int32 InValue);
 
 public:
 	static class UClass* StaticClass()

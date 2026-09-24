@@ -25,9 +25,9 @@ public:
 	class UTextBlock*                             Shape_UpArrow;                                     // 0x04C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void Clear();
-	void Down();
 	void Up();
+	void Down();
+	void Clear();
 
 public:
 	static class UClass* StaticClass()

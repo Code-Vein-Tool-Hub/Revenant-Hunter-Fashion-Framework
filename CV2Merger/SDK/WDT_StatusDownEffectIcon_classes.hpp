@@ -19,7 +19,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WDT_StatusDownEffectIcon.WDT_StatusDownEffectIcon_C
-// 0x0030 (0x0630 - 0x0600)
+// 0x0028 (0x0628 - 0x0600)
 class UWDT_StatusDownEffectIcon_C final : public UHudPieceBase
 {
 public:
@@ -27,9 +27,7 @@ public:
 	class UImage*                                 Image_EffectType;                                  // 0x0608(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 StatusEffectImage;                                 // 0x0610(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	struct FStatusEffectIconHandle                IconHandle;                                        // 0x0618(0x0008)(Edit, BlueprintVisible, NoDestructor)
-	EStatusDownEffectIconType                     IconType;                                          // 0x0620(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_621[0x7];                                      // 0x0621(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               DMI_StatusEffectIcon;                              // 0x0628(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               DMI_StatusEffectIcon;                              // 0x0620(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	bool ClearSubTexture(class FName ImageId);
@@ -40,7 +38,7 @@ public:
 	void MakeDMI();
 	void PreConstruct(bool IsDesignTime);
 	bool SetLazyTexture(const TSoftObjectPtr<class UTexture2D>& LazyTexture);
-	void SetStatusEffectIconInfo(const struct FStatusEffectIconHandle& InHandle, EStatusDownEffectIconType InType, class UTexture2D* InTexture, class UTexture2D* InFrame);
+	void SetStatusEffectIconInfo(const struct FStatusEffectIconHandle& InHandle, class UTexture2D* InTexture, class UTexture2D* InFrame);
 	void SetStatusTimeElapsed(double InTimeElapsed, double InTimeTotal);
 	bool SetSubLazyTexture(class FName ImageId, const TSoftObjectPtr<class UTexture2D>& LazyTexture);
 	bool SetSubTexture(class FName ImageId, class UTexture2D* Texture);
@@ -57,13 +55,12 @@ public:
 	}
 };
 static_assert(alignof(UWDT_StatusDownEffectIcon_C) == 0x000008, "Wrong alignment on UWDT_StatusDownEffectIcon_C");
-static_assert(sizeof(UWDT_StatusDownEffectIcon_C) == 0x000630, "Wrong size on UWDT_StatusDownEffectIcon_C");
+static_assert(sizeof(UWDT_StatusDownEffectIcon_C) == 0x000628, "Wrong size on UWDT_StatusDownEffectIcon_C");
 static_assert(offsetof(UWDT_StatusDownEffectIcon_C, UberGraphFrame) == 0x000600, "Member 'UWDT_StatusDownEffectIcon_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UWDT_StatusDownEffectIcon_C, Image_EffectType) == 0x000608, "Member 'UWDT_StatusDownEffectIcon_C::Image_EffectType' has a wrong offset!");
 static_assert(offsetof(UWDT_StatusDownEffectIcon_C, StatusEffectImage) == 0x000610, "Member 'UWDT_StatusDownEffectIcon_C::StatusEffectImage' has a wrong offset!");
 static_assert(offsetof(UWDT_StatusDownEffectIcon_C, IconHandle) == 0x000618, "Member 'UWDT_StatusDownEffectIcon_C::IconHandle' has a wrong offset!");
-static_assert(offsetof(UWDT_StatusDownEffectIcon_C, IconType) == 0x000620, "Member 'UWDT_StatusDownEffectIcon_C::IconType' has a wrong offset!");
-static_assert(offsetof(UWDT_StatusDownEffectIcon_C, DMI_StatusEffectIcon) == 0x000628, "Member 'UWDT_StatusDownEffectIcon_C::DMI_StatusEffectIcon' has a wrong offset!");
+static_assert(offsetof(UWDT_StatusDownEffectIcon_C, DMI_StatusEffectIcon) == 0x000620, "Member 'UWDT_StatusDownEffectIcon_C::DMI_StatusEffectIcon' has a wrong offset!");
 
 }
 

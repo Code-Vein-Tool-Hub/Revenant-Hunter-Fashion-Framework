@@ -120,7 +120,7 @@ void UWDT_ConfigGamePage_C::HasPhotoModeInputMappingContext(bool* NewParam)
 }
 
 
-// Function WDT_ConfigGamePage.WDT_ConfigGamePage_C.InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_12
+// Function WDT_ConfigGamePage.WDT_ConfigGamePage_C.InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_18
 // (BlueprintEvent)
 // Parameters:
 // struct FInputActionValue                ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
@@ -128,14 +128,14 @@ void UWDT_ConfigGamePage_C::HasPhotoModeInputMappingContext(bool* NewParam)
 // float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UInputAction*                     SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_12(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_18(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_ConfigGamePage_C", "InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_12");
+		Func = Class->GetFunction("WDT_ConfigGamePage_C", "InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_18");
 
-	Params::WDT_ConfigGamePage_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_12 Parms{};
+	Params::WDT_ConfigGamePage_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_18 Parms{};
 
 	Parms.ActionValue = std::move(ActionValue);
 	Parms.ElapsedTime = ElapsedTime;
@@ -146,7 +146,7 @@ void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInput
 }
 
 
-// Function WDT_ConfigGamePage.WDT_ConfigGamePage_C.InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_7
+// Function WDT_ConfigGamePage.WDT_ConfigGamePage_C.InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_13
 // (BlueprintEvent)
 // Parameters:
 // struct FInputActionValue                ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
@@ -154,14 +154,14 @@ void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInput
 // float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UInputAction*                     SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_7(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_13(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_ConfigGamePage_C", "InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_7");
+		Func = Class->GetFunction("WDT_ConfigGamePage_C", "InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_13");
 
-	Params::WDT_ConfigGamePage_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_7 Parms{};
+	Params::WDT_ConfigGamePage_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_13 Parms{};
 
 	Parms.ActionValue = std::move(ActionValue);
 	Parms.ElapsedTime = ElapsedTime;
@@ -172,7 +172,7 @@ void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInput
 }
 
 
-// Function WDT_ConfigGamePage.WDT_ConfigGamePage_C.InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_13
+// Function WDT_ConfigGamePage.WDT_ConfigGamePage_C.InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_19
 // (BlueprintEvent)
 // Parameters:
 // struct FInputActionValue                ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
@@ -180,14 +180,14 @@ void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInput
 // float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UInputAction*                     SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_13(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_19(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_ConfigGamePage_C", "InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_13");
+		Func = Class->GetFunction("WDT_ConfigGamePage_C", "InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_19");
 
-	Params::WDT_ConfigGamePage_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_13 Parms{};
+	Params::WDT_ConfigGamePage_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_19 Parms{};
 
 	Parms.ActionValue = std::move(ActionValue);
 	Parms.ElapsedTime = ElapsedTime;
@@ -198,7 +198,7 @@ void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent
 }
 
 
-// Function WDT_ConfigGamePage.WDT_ConfigGamePage_C.InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent_8
+// Function WDT_ConfigGamePage.WDT_ConfigGamePage_C.InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent_14
 // (BlueprintEvent)
 // Parameters:
 // struct FInputActionValue                ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
@@ -206,14 +206,14 @@ void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent
 // float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UInputAction*                     SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent_8(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent_14(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_ConfigGamePage_C", "InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent_8");
+		Func = Class->GetFunction("WDT_ConfigGamePage_C", "InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent_14");
 
-	Params::WDT_ConfigGamePage_C_InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent_8 Parms{};
+	Params::WDT_ConfigGamePage_C_InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent_14 Parms{};
 
 	Parms.ActionValue = std::move(ActionValue);
 	Parms.ElapsedTime = ElapsedTime;
@@ -224,7 +224,7 @@ void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent
 }
 
 
-// Function WDT_ConfigGamePage.WDT_ConfigGamePage_C.InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent_9
+// Function WDT_ConfigGamePage.WDT_ConfigGamePage_C.InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent_15
 // (BlueprintEvent)
 // Parameters:
 // struct FInputActionValue                ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
@@ -232,14 +232,14 @@ void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent
 // float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UInputAction*                     SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent_9(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent_15(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_ConfigGamePage_C", "InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent_9");
+		Func = Class->GetFunction("WDT_ConfigGamePage_C", "InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent_15");
 
-	Params::WDT_ConfigGamePage_C_InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent_9 Parms{};
+	Params::WDT_ConfigGamePage_C_InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent_15 Parms{};
 
 	Parms.ActionValue = std::move(ActionValue);
 	Parms.ElapsedTime = ElapsedTime;
@@ -250,7 +250,7 @@ void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent
 }
 
 
-// Function WDT_ConfigGamePage.WDT_ConfigGamePage_C.InpActEvt_IA_UI_MenuSpecial1_K2Node_EnhancedInputActionEvent_6
+// Function WDT_ConfigGamePage.WDT_ConfigGamePage_C.InpActEvt_IA_UI_MenuSpecial1_K2Node_EnhancedInputActionEvent_12
 // (BlueprintEvent)
 // Parameters:
 // struct FInputActionValue                ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
@@ -258,14 +258,14 @@ void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_Left_K2Node_EnhancedInputActionEvent
 // float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UInputAction*                     SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_MenuSpecial1_K2Node_EnhancedInputActionEvent_6(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_MenuSpecial1_K2Node_EnhancedInputActionEvent_12(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_ConfigGamePage_C", "InpActEvt_IA_UI_MenuSpecial1_K2Node_EnhancedInputActionEvent_6");
+		Func = Class->GetFunction("WDT_ConfigGamePage_C", "InpActEvt_IA_UI_MenuSpecial1_K2Node_EnhancedInputActionEvent_12");
 
-	Params::WDT_ConfigGamePage_C_InpActEvt_IA_UI_MenuSpecial1_K2Node_EnhancedInputActionEvent_6 Parms{};
+	Params::WDT_ConfigGamePage_C_InpActEvt_IA_UI_MenuSpecial1_K2Node_EnhancedInputActionEvent_12 Parms{};
 
 	Parms.ActionValue = std::move(ActionValue);
 	Parms.ElapsedTime = ElapsedTime;
@@ -276,7 +276,7 @@ void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_MenuSpecial1_K2Node_EnhancedInputAct
 }
 
 
-// Function WDT_ConfigGamePage.WDT_ConfigGamePage_C.InpActEvt_IA_UI_MenuSpecial4_K2Node_EnhancedInputActionEvent_1
+// Function WDT_ConfigGamePage.WDT_ConfigGamePage_C.InpActEvt_IA_UI_MenuSpecial4_K2Node_EnhancedInputActionEvent_7
 // (BlueprintEvent)
 // Parameters:
 // struct FInputActionValue                ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
@@ -284,14 +284,14 @@ void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_MenuSpecial1_K2Node_EnhancedInputAct
 // float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UInputAction*                     SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_MenuSpecial4_K2Node_EnhancedInputActionEvent_1(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_MenuSpecial4_K2Node_EnhancedInputActionEvent_7(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_ConfigGamePage_C", "InpActEvt_IA_UI_MenuSpecial4_K2Node_EnhancedInputActionEvent_1");
+		Func = Class->GetFunction("WDT_ConfigGamePage_C", "InpActEvt_IA_UI_MenuSpecial4_K2Node_EnhancedInputActionEvent_7");
 
-	Params::WDT_ConfigGamePage_C_InpActEvt_IA_UI_MenuSpecial4_K2Node_EnhancedInputActionEvent_1 Parms{};
+	Params::WDT_ConfigGamePage_C_InpActEvt_IA_UI_MenuSpecial4_K2Node_EnhancedInputActionEvent_7 Parms{};
 
 	Parms.ActionValue = std::move(ActionValue);
 	Parms.ElapsedTime = ElapsedTime;
@@ -302,7 +302,7 @@ void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_MenuSpecial4_K2Node_EnhancedInputAct
 }
 
 
-// Function WDT_ConfigGamePage.WDT_ConfigGamePage_C.InpActEvt_IA_UI_PhotoMode_Decide_K2Node_EnhancedInputActionEvent_0
+// Function WDT_ConfigGamePage.WDT_ConfigGamePage_C.InpActEvt_IA_UI_PhotoMode_Decide_K2Node_EnhancedInputActionEvent_6
 // (BlueprintEvent)
 // Parameters:
 // struct FInputActionValue                ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
@@ -310,14 +310,14 @@ void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_MenuSpecial4_K2Node_EnhancedInputAct
 // float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UInputAction*                     SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_PhotoMode_Decide_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_PhotoMode_Decide_K2Node_EnhancedInputActionEvent_6(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_ConfigGamePage_C", "InpActEvt_IA_UI_PhotoMode_Decide_K2Node_EnhancedInputActionEvent_0");
+		Func = Class->GetFunction("WDT_ConfigGamePage_C", "InpActEvt_IA_UI_PhotoMode_Decide_K2Node_EnhancedInputActionEvent_6");
 
-	Params::WDT_ConfigGamePage_C_InpActEvt_IA_UI_PhotoMode_Decide_K2Node_EnhancedInputActionEvent_0 Parms{};
+	Params::WDT_ConfigGamePage_C_InpActEvt_IA_UI_PhotoMode_Decide_K2Node_EnhancedInputActionEvent_6 Parms{};
 
 	Parms.ActionValue = std::move(ActionValue);
 	Parms.ElapsedTime = ElapsedTime;
@@ -328,7 +328,7 @@ void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_PhotoMode_Decide_K2Node_EnhancedInpu
 }
 
 
-// Function WDT_ConfigGamePage.WDT_ConfigGamePage_C.InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEvent_10
+// Function WDT_ConfigGamePage.WDT_ConfigGamePage_C.InpActEvt_IA_UI_PhotoModeDown_K2Node_EnhancedInputActionEvent_0
 // (BlueprintEvent)
 // Parameters:
 // struct FInputActionValue                ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
@@ -336,14 +336,14 @@ void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_PhotoMode_Decide_K2Node_EnhancedInpu
 // float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UInputAction*                     SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEvent_10(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_PhotoModeDown_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_ConfigGamePage_C", "InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEvent_10");
+		Func = Class->GetFunction("WDT_ConfigGamePage_C", "InpActEvt_IA_UI_PhotoModeDown_K2Node_EnhancedInputActionEvent_0");
 
-	Params::WDT_ConfigGamePage_C_InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEvent_10 Parms{};
+	Params::WDT_ConfigGamePage_C_InpActEvt_IA_UI_PhotoModeDown_K2Node_EnhancedInputActionEvent_0 Parms{};
 
 	Parms.ActionValue = std::move(ActionValue);
 	Parms.ElapsedTime = ElapsedTime;
@@ -354,7 +354,7 @@ void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEven
 }
 
 
-// Function WDT_ConfigGamePage.WDT_ConfigGamePage_C.InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEvent_11
+// Function WDT_ConfigGamePage.WDT_ConfigGamePage_C.InpActEvt_IA_UI_PhotoModeSwitchLeft_K2Node_EnhancedInputActionEvent_4
 // (BlueprintEvent)
 // Parameters:
 // struct FInputActionValue                ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
@@ -362,14 +362,14 @@ void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEven
 // float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UInputAction*                     SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEvent_11(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_PhotoModeSwitchLeft_K2Node_EnhancedInputActionEvent_4(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_ConfigGamePage_C", "InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEvent_11");
+		Func = Class->GetFunction("WDT_ConfigGamePage_C", "InpActEvt_IA_UI_PhotoModeSwitchLeft_K2Node_EnhancedInputActionEvent_4");
 
-	Params::WDT_ConfigGamePage_C_InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEvent_11 Parms{};
+	Params::WDT_ConfigGamePage_C_InpActEvt_IA_UI_PhotoModeSwitchLeft_K2Node_EnhancedInputActionEvent_4 Parms{};
 
 	Parms.ActionValue = std::move(ActionValue);
 	Parms.ElapsedTime = ElapsedTime;
@@ -380,7 +380,7 @@ void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEven
 }
 
 
-// Function WDT_ConfigGamePage.WDT_ConfigGamePage_C.InpActEvt_IA_UI_SwitchLeft_K2Node_EnhancedInputActionEvent_4
+// Function WDT_ConfigGamePage.WDT_ConfigGamePage_C.InpActEvt_IA_UI_PhotoModeSwitchLeft_K2Node_EnhancedInputActionEvent_5
 // (BlueprintEvent)
 // Parameters:
 // struct FInputActionValue                ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
@@ -388,14 +388,14 @@ void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEven
 // float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UInputAction*                     SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_SwitchLeft_K2Node_EnhancedInputActionEvent_4(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_PhotoModeSwitchLeft_K2Node_EnhancedInputActionEvent_5(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_ConfigGamePage_C", "InpActEvt_IA_UI_SwitchLeft_K2Node_EnhancedInputActionEvent_4");
+		Func = Class->GetFunction("WDT_ConfigGamePage_C", "InpActEvt_IA_UI_PhotoModeSwitchLeft_K2Node_EnhancedInputActionEvent_5");
 
-	Params::WDT_ConfigGamePage_C_InpActEvt_IA_UI_SwitchLeft_K2Node_EnhancedInputActionEvent_4 Parms{};
+	Params::WDT_ConfigGamePage_C_InpActEvt_IA_UI_PhotoModeSwitchLeft_K2Node_EnhancedInputActionEvent_5 Parms{};
 
 	Parms.ActionValue = std::move(ActionValue);
 	Parms.ElapsedTime = ElapsedTime;
@@ -406,7 +406,7 @@ void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_SwitchLeft_K2Node_EnhancedInputActio
 }
 
 
-// Function WDT_ConfigGamePage.WDT_ConfigGamePage_C.InpActEvt_IA_UI_SwitchLeft_K2Node_EnhancedInputActionEvent_5
+// Function WDT_ConfigGamePage.WDT_ConfigGamePage_C.InpActEvt_IA_UI_PhotoModeSwitchRight_K2Node_EnhancedInputActionEvent_2
 // (BlueprintEvent)
 // Parameters:
 // struct FInputActionValue                ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
@@ -414,14 +414,14 @@ void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_SwitchLeft_K2Node_EnhancedInputActio
 // float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UInputAction*                     SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_SwitchLeft_K2Node_EnhancedInputActionEvent_5(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_PhotoModeSwitchRight_K2Node_EnhancedInputActionEvent_2(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_ConfigGamePage_C", "InpActEvt_IA_UI_SwitchLeft_K2Node_EnhancedInputActionEvent_5");
+		Func = Class->GetFunction("WDT_ConfigGamePage_C", "InpActEvt_IA_UI_PhotoModeSwitchRight_K2Node_EnhancedInputActionEvent_2");
 
-	Params::WDT_ConfigGamePage_C_InpActEvt_IA_UI_SwitchLeft_K2Node_EnhancedInputActionEvent_5 Parms{};
+	Params::WDT_ConfigGamePage_C_InpActEvt_IA_UI_PhotoModeSwitchRight_K2Node_EnhancedInputActionEvent_2 Parms{};
 
 	Parms.ActionValue = std::move(ActionValue);
 	Parms.ElapsedTime = ElapsedTime;
@@ -432,7 +432,7 @@ void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_SwitchLeft_K2Node_EnhancedInputActio
 }
 
 
-// Function WDT_ConfigGamePage.WDT_ConfigGamePage_C.InpActEvt_IA_UI_SwitchRight_K2Node_EnhancedInputActionEvent_2
+// Function WDT_ConfigGamePage.WDT_ConfigGamePage_C.InpActEvt_IA_UI_PhotoModeSwitchRight_K2Node_EnhancedInputActionEvent_3
 // (BlueprintEvent)
 // Parameters:
 // struct FInputActionValue                ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
@@ -440,14 +440,14 @@ void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_SwitchLeft_K2Node_EnhancedInputActio
 // float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UInputAction*                     SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_SwitchRight_K2Node_EnhancedInputActionEvent_2(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_PhotoModeSwitchRight_K2Node_EnhancedInputActionEvent_3(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_ConfigGamePage_C", "InpActEvt_IA_UI_SwitchRight_K2Node_EnhancedInputActionEvent_2");
+		Func = Class->GetFunction("WDT_ConfigGamePage_C", "InpActEvt_IA_UI_PhotoModeSwitchRight_K2Node_EnhancedInputActionEvent_3");
 
-	Params::WDT_ConfigGamePage_C_InpActEvt_IA_UI_SwitchRight_K2Node_EnhancedInputActionEvent_2 Parms{};
+	Params::WDT_ConfigGamePage_C_InpActEvt_IA_UI_PhotoModeSwitchRight_K2Node_EnhancedInputActionEvent_3 Parms{};
 
 	Parms.ActionValue = std::move(ActionValue);
 	Parms.ElapsedTime = ElapsedTime;
@@ -458,7 +458,7 @@ void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_SwitchRight_K2Node_EnhancedInputActi
 }
 
 
-// Function WDT_ConfigGamePage.WDT_ConfigGamePage_C.InpActEvt_IA_UI_SwitchRight_K2Node_EnhancedInputActionEvent_3
+// Function WDT_ConfigGamePage.WDT_ConfigGamePage_C.InpActEvt_IA_UI_PhotoModeUp_K2Node_EnhancedInputActionEvent_1
 // (BlueprintEvent)
 // Parameters:
 // struct FInputActionValue                ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
@@ -466,14 +466,14 @@ void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_SwitchRight_K2Node_EnhancedInputActi
 // float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UInputAction*                     SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_SwitchRight_K2Node_EnhancedInputActionEvent_3(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_PhotoModeUp_K2Node_EnhancedInputActionEvent_1(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_ConfigGamePage_C", "InpActEvt_IA_UI_SwitchRight_K2Node_EnhancedInputActionEvent_3");
+		Func = Class->GetFunction("WDT_ConfigGamePage_C", "InpActEvt_IA_UI_PhotoModeUp_K2Node_EnhancedInputActionEvent_1");
 
-	Params::WDT_ConfigGamePage_C_InpActEvt_IA_UI_SwitchRight_K2Node_EnhancedInputActionEvent_3 Parms{};
+	Params::WDT_ConfigGamePage_C_InpActEvt_IA_UI_PhotoModeUp_K2Node_EnhancedInputActionEvent_1 Parms{};
 
 	Parms.ActionValue = std::move(ActionValue);
 	Parms.ElapsedTime = ElapsedTime;
@@ -484,7 +484,7 @@ void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_SwitchRight_K2Node_EnhancedInputActi
 }
 
 
-// Function WDT_ConfigGamePage.WDT_ConfigGamePage_C.InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_14
+// Function WDT_ConfigGamePage.WDT_ConfigGamePage_C.InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEvent_16
 // (BlueprintEvent)
 // Parameters:
 // struct FInputActionValue                ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
@@ -492,14 +492,170 @@ void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_SwitchRight_K2Node_EnhancedInputActi
 // float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UInputAction*                     SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_14(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEvent_16(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_ConfigGamePage_C", "InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_14");
+		Func = Class->GetFunction("WDT_ConfigGamePage_C", "InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEvent_16");
 
-	Params::WDT_ConfigGamePage_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_14 Parms{};
+	Params::WDT_ConfigGamePage_C_InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEvent_16 Parms{};
+
+	Parms.ActionValue = std::move(ActionValue);
+	Parms.ElapsedTime = ElapsedTime;
+	Parms.TriggeredTime = TriggeredTime;
+	Parms.SourceAction = SourceAction;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_ConfigGamePage.WDT_ConfigGamePage_C.InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEvent_17
+// (BlueprintEvent)
+// Parameters:
+// struct FInputActionValue                ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// float                                   ElapsedTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UInputAction*                     SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEvent_17(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_ConfigGamePage_C", "InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEvent_17");
+
+	Params::WDT_ConfigGamePage_C_InpActEvt_IA_UI_Right_K2Node_EnhancedInputActionEvent_17 Parms{};
+
+	Parms.ActionValue = std::move(ActionValue);
+	Parms.ElapsedTime = ElapsedTime;
+	Parms.TriggeredTime = TriggeredTime;
+	Parms.SourceAction = SourceAction;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_ConfigGamePage.WDT_ConfigGamePage_C.InpActEvt_IA_UI_SwitchLeft_K2Node_EnhancedInputActionEvent_10
+// (BlueprintEvent)
+// Parameters:
+// struct FInputActionValue                ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// float                                   ElapsedTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UInputAction*                     SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_SwitchLeft_K2Node_EnhancedInputActionEvent_10(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_ConfigGamePage_C", "InpActEvt_IA_UI_SwitchLeft_K2Node_EnhancedInputActionEvent_10");
+
+	Params::WDT_ConfigGamePage_C_InpActEvt_IA_UI_SwitchLeft_K2Node_EnhancedInputActionEvent_10 Parms{};
+
+	Parms.ActionValue = std::move(ActionValue);
+	Parms.ElapsedTime = ElapsedTime;
+	Parms.TriggeredTime = TriggeredTime;
+	Parms.SourceAction = SourceAction;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_ConfigGamePage.WDT_ConfigGamePage_C.InpActEvt_IA_UI_SwitchLeft_K2Node_EnhancedInputActionEvent_11
+// (BlueprintEvent)
+// Parameters:
+// struct FInputActionValue                ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// float                                   ElapsedTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UInputAction*                     SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_SwitchLeft_K2Node_EnhancedInputActionEvent_11(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_ConfigGamePage_C", "InpActEvt_IA_UI_SwitchLeft_K2Node_EnhancedInputActionEvent_11");
+
+	Params::WDT_ConfigGamePage_C_InpActEvt_IA_UI_SwitchLeft_K2Node_EnhancedInputActionEvent_11 Parms{};
+
+	Parms.ActionValue = std::move(ActionValue);
+	Parms.ElapsedTime = ElapsedTime;
+	Parms.TriggeredTime = TriggeredTime;
+	Parms.SourceAction = SourceAction;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_ConfigGamePage.WDT_ConfigGamePage_C.InpActEvt_IA_UI_SwitchRight_K2Node_EnhancedInputActionEvent_8
+// (BlueprintEvent)
+// Parameters:
+// struct FInputActionValue                ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// float                                   ElapsedTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UInputAction*                     SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_SwitchRight_K2Node_EnhancedInputActionEvent_8(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_ConfigGamePage_C", "InpActEvt_IA_UI_SwitchRight_K2Node_EnhancedInputActionEvent_8");
+
+	Params::WDT_ConfigGamePage_C_InpActEvt_IA_UI_SwitchRight_K2Node_EnhancedInputActionEvent_8 Parms{};
+
+	Parms.ActionValue = std::move(ActionValue);
+	Parms.ElapsedTime = ElapsedTime;
+	Parms.TriggeredTime = TriggeredTime;
+	Parms.SourceAction = SourceAction;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_ConfigGamePage.WDT_ConfigGamePage_C.InpActEvt_IA_UI_SwitchRight_K2Node_EnhancedInputActionEvent_9
+// (BlueprintEvent)
+// Parameters:
+// struct FInputActionValue                ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// float                                   ElapsedTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UInputAction*                     SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_SwitchRight_K2Node_EnhancedInputActionEvent_9(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_ConfigGamePage_C", "InpActEvt_IA_UI_SwitchRight_K2Node_EnhancedInputActionEvent_9");
+
+	Params::WDT_ConfigGamePage_C_InpActEvt_IA_UI_SwitchRight_K2Node_EnhancedInputActionEvent_9 Parms{};
+
+	Parms.ActionValue = std::move(ActionValue);
+	Parms.ElapsedTime = ElapsedTime;
+	Parms.TriggeredTime = TriggeredTime;
+	Parms.SourceAction = SourceAction;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_ConfigGamePage.WDT_ConfigGamePage_C.InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_20
+// (BlueprintEvent)
+// Parameters:
+// struct FInputActionValue                ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// float                                   ElapsedTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UInputAction*                     SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_ConfigGamePage_C::InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_20(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_ConfigGamePage_C", "InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_20");
+
+	Params::WDT_ConfigGamePage_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_20 Parms{};
 
 	Parms.ActionValue = std::move(ActionValue);
 	Parms.ElapsedTime = ElapsedTime;
@@ -628,6 +784,20 @@ void UWDT_ConfigGamePage_C::OnOpened()
 }
 
 
+// Function WDT_ConfigGamePage.WDT_ConfigGamePage_C.OnOpening
+// (Event, Protected, BlueprintEvent)
+
+void UWDT_ConfigGamePage_C::OnOpening()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_ConfigGamePage_C", "OnOpening");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WDT_ConfigGamePage.WDT_ConfigGamePage_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
@@ -685,6 +855,34 @@ void UWDT_ConfigGamePage_C::SetupConfigPieceValue()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("WDT_ConfigGamePage_C", "SetupConfigPieceValue");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WDT_ConfigGamePage.WDT_ConfigGamePage_C.UpdateDifficultyTypeEditable
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWDT_ConfigGamePage_C::UpdateDifficultyTypeEditable()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_ConfigGamePage_C", "UpdateDifficultyTypeEditable");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WDT_ConfigGamePage.WDT_ConfigGamePage_C.UpdateIdrisMaskEnableSettingVisibility
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWDT_ConfigGamePage_C::UpdateIdrisMaskEnableSettingVisibility()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_ConfigGamePage_C", "UpdateIdrisMaskEnableSettingVisibility");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

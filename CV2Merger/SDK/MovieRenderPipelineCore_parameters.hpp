@@ -17,528 +17,6 @@
 namespace SDK::Params
 {
 
-// Function MovieRenderPipelineCore.MovieGraphValueContainer.GetValueSerializedString
-// 0x0010 (0x0010 - 0x0000)
-struct MovieGraphValueContainer_GetValueSerializedString final
-{
-public:
-	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MovieGraphValueContainer_GetValueSerializedString) == 0x000008, "Wrong alignment on MovieGraphValueContainer_GetValueSerializedString");
-static_assert(sizeof(MovieGraphValueContainer_GetValueSerializedString) == 0x000010, "Wrong size on MovieGraphValueContainer_GetValueSerializedString");
-static_assert(offsetof(MovieGraphValueContainer_GetValueSerializedString, ReturnValue) == 0x000000, "Member 'MovieGraphValueContainer_GetValueSerializedString::ReturnValue' has a wrong offset!");
-
-// Function MovieRenderPipelineCore.MovieGraphValueContainer.SetValueBool
-// 0x0002 (0x0002 - 0x0000)
-struct MovieGraphValueContainer_SetValueBool final
-{
-public:
-	bool                                          bInValue;                                          // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MovieGraphValueContainer_SetValueBool) == 0x000001, "Wrong alignment on MovieGraphValueContainer_SetValueBool");
-static_assert(sizeof(MovieGraphValueContainer_SetValueBool) == 0x000002, "Wrong size on MovieGraphValueContainer_SetValueBool");
-static_assert(offsetof(MovieGraphValueContainer_SetValueBool, bInValue) == 0x000000, "Member 'MovieGraphValueContainer_SetValueBool::bInValue' has a wrong offset!");
-static_assert(offsetof(MovieGraphValueContainer_SetValueBool, ReturnValue) == 0x000001, "Member 'MovieGraphValueContainer_SetValueBool::ReturnValue' has a wrong offset!");
-
-// Function MovieRenderPipelineCore.MovieGraphValueContainer.SetValueByte
-// 0x0002 (0x0002 - 0x0000)
-struct MovieGraphValueContainer_SetValueByte final
-{
-public:
-	uint8                                         InValue;                                           // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MovieGraphValueContainer_SetValueByte) == 0x000001, "Wrong alignment on MovieGraphValueContainer_SetValueByte");
-static_assert(sizeof(MovieGraphValueContainer_SetValueByte) == 0x000002, "Wrong size on MovieGraphValueContainer_SetValueByte");
-static_assert(offsetof(MovieGraphValueContainer_SetValueByte, InValue) == 0x000000, "Member 'MovieGraphValueContainer_SetValueByte::InValue' has a wrong offset!");
-static_assert(offsetof(MovieGraphValueContainer_SetValueByte, ReturnValue) == 0x000001, "Member 'MovieGraphValueContainer_SetValueByte::ReturnValue' has a wrong offset!");
-
-// Function MovieRenderPipelineCore.MovieGraphValueContainer.SetValueClass
-// 0x0010 (0x0010 - 0x0000)
-struct MovieGraphValueContainer_SetValueClass final
-{
-public:
-	class UClass*                                 InValue;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(MovieGraphValueContainer_SetValueClass) == 0x000008, "Wrong alignment on MovieGraphValueContainer_SetValueClass");
-static_assert(sizeof(MovieGraphValueContainer_SetValueClass) == 0x000010, "Wrong size on MovieGraphValueContainer_SetValueClass");
-static_assert(offsetof(MovieGraphValueContainer_SetValueClass, InValue) == 0x000000, "Member 'MovieGraphValueContainer_SetValueClass::InValue' has a wrong offset!");
-static_assert(offsetof(MovieGraphValueContainer_SetValueClass, ReturnValue) == 0x000008, "Member 'MovieGraphValueContainer_SetValueClass::ReturnValue' has a wrong offset!");
-
-// Function MovieRenderPipelineCore.MovieGraphValueContainer.SetValueContainerType
-// 0x0001 (0x0001 - 0x0000)
-struct MovieGraphValueContainer_SetValueContainerType final
-{
-public:
-	EMovieGraphContainerType                      ContainerType;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MovieGraphValueContainer_SetValueContainerType) == 0x000001, "Wrong alignment on MovieGraphValueContainer_SetValueContainerType");
-static_assert(sizeof(MovieGraphValueContainer_SetValueContainerType) == 0x000001, "Wrong size on MovieGraphValueContainer_SetValueContainerType");
-static_assert(offsetof(MovieGraphValueContainer_SetValueContainerType, ContainerType) == 0x000000, "Member 'MovieGraphValueContainer_SetValueContainerType::ContainerType' has a wrong offset!");
-
-// Function MovieRenderPipelineCore.MovieGraphValueContainer.SetValueDouble
-// 0x0010 (0x0010 - 0x0000)
-struct MovieGraphValueContainer_SetValueDouble final
-{
-public:
-	double                                        InValue;                                           // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(MovieGraphValueContainer_SetValueDouble) == 0x000008, "Wrong alignment on MovieGraphValueContainer_SetValueDouble");
-static_assert(sizeof(MovieGraphValueContainer_SetValueDouble) == 0x000010, "Wrong size on MovieGraphValueContainer_SetValueDouble");
-static_assert(offsetof(MovieGraphValueContainer_SetValueDouble, InValue) == 0x000000, "Member 'MovieGraphValueContainer_SetValueDouble::InValue' has a wrong offset!");
-static_assert(offsetof(MovieGraphValueContainer_SetValueDouble, ReturnValue) == 0x000008, "Member 'MovieGraphValueContainer_SetValueDouble::ReturnValue' has a wrong offset!");
-
-// Function MovieRenderPipelineCore.MovieGraphValueContainer.SetValueEnum
-// 0x0018 (0x0018 - 0x0000)
-struct MovieGraphValueContainer_SetValueEnum final
-{
-public:
-	uint8                                         InValue;                                           // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	const class UEnum*                            Enum;                                              // 0x0008(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(MovieGraphValueContainer_SetValueEnum) == 0x000008, "Wrong alignment on MovieGraphValueContainer_SetValueEnum");
-static_assert(sizeof(MovieGraphValueContainer_SetValueEnum) == 0x000018, "Wrong size on MovieGraphValueContainer_SetValueEnum");
-static_assert(offsetof(MovieGraphValueContainer_SetValueEnum, InValue) == 0x000000, "Member 'MovieGraphValueContainer_SetValueEnum::InValue' has a wrong offset!");
-static_assert(offsetof(MovieGraphValueContainer_SetValueEnum, Enum) == 0x000008, "Member 'MovieGraphValueContainer_SetValueEnum::Enum' has a wrong offset!");
-static_assert(offsetof(MovieGraphValueContainer_SetValueEnum, ReturnValue) == 0x000010, "Member 'MovieGraphValueContainer_SetValueEnum::ReturnValue' has a wrong offset!");
-
-// Function MovieRenderPipelineCore.MovieGraphValueContainer.SetValueFloat
-// 0x0008 (0x0008 - 0x0000)
-struct MovieGraphValueContainer_SetValueFloat final
-{
-public:
-	float                                         InValue;                                           // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(MovieGraphValueContainer_SetValueFloat) == 0x000004, "Wrong alignment on MovieGraphValueContainer_SetValueFloat");
-static_assert(sizeof(MovieGraphValueContainer_SetValueFloat) == 0x000008, "Wrong size on MovieGraphValueContainer_SetValueFloat");
-static_assert(offsetof(MovieGraphValueContainer_SetValueFloat, InValue) == 0x000000, "Member 'MovieGraphValueContainer_SetValueFloat::InValue' has a wrong offset!");
-static_assert(offsetof(MovieGraphValueContainer_SetValueFloat, ReturnValue) == 0x000004, "Member 'MovieGraphValueContainer_SetValueFloat::ReturnValue' has a wrong offset!");
-
-// Function MovieRenderPipelineCore.MovieGraphValueContainer.SetValueInt32
-// 0x0008 (0x0008 - 0x0000)
-struct MovieGraphValueContainer_SetValueInt32 final
-{
-public:
-	int32                                         InValue;                                           // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(MovieGraphValueContainer_SetValueInt32) == 0x000004, "Wrong alignment on MovieGraphValueContainer_SetValueInt32");
-static_assert(sizeof(MovieGraphValueContainer_SetValueInt32) == 0x000008, "Wrong size on MovieGraphValueContainer_SetValueInt32");
-static_assert(offsetof(MovieGraphValueContainer_SetValueInt32, InValue) == 0x000000, "Member 'MovieGraphValueContainer_SetValueInt32::InValue' has a wrong offset!");
-static_assert(offsetof(MovieGraphValueContainer_SetValueInt32, ReturnValue) == 0x000004, "Member 'MovieGraphValueContainer_SetValueInt32::ReturnValue' has a wrong offset!");
-
-// Function MovieRenderPipelineCore.MovieGraphValueContainer.SetValueInt64
-// 0x0010 (0x0010 - 0x0000)
-struct MovieGraphValueContainer_SetValueInt64 final
-{
-public:
-	int64                                         InValue;                                           // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(MovieGraphValueContainer_SetValueInt64) == 0x000008, "Wrong alignment on MovieGraphValueContainer_SetValueInt64");
-static_assert(sizeof(MovieGraphValueContainer_SetValueInt64) == 0x000010, "Wrong size on MovieGraphValueContainer_SetValueInt64");
-static_assert(offsetof(MovieGraphValueContainer_SetValueInt64, InValue) == 0x000000, "Member 'MovieGraphValueContainer_SetValueInt64::InValue' has a wrong offset!");
-static_assert(offsetof(MovieGraphValueContainer_SetValueInt64, ReturnValue) == 0x000008, "Member 'MovieGraphValueContainer_SetValueInt64::ReturnValue' has a wrong offset!");
-
-// Function MovieRenderPipelineCore.MovieGraphValueContainer.SetValueName
-// 0x000C (0x000C - 0x0000)
-struct MovieGraphValueContainer_SetValueName final
-{
-public:
-	class FName                                   InValue;                                           // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(MovieGraphValueContainer_SetValueName) == 0x000004, "Wrong alignment on MovieGraphValueContainer_SetValueName");
-static_assert(sizeof(MovieGraphValueContainer_SetValueName) == 0x00000C, "Wrong size on MovieGraphValueContainer_SetValueName");
-static_assert(offsetof(MovieGraphValueContainer_SetValueName, InValue) == 0x000000, "Member 'MovieGraphValueContainer_SetValueName::InValue' has a wrong offset!");
-static_assert(offsetof(MovieGraphValueContainer_SetValueName, ReturnValue) == 0x000008, "Member 'MovieGraphValueContainer_SetValueName::ReturnValue' has a wrong offset!");
-
-// Function MovieRenderPipelineCore.MovieGraphValueContainer.SetValueObject
-// 0x0010 (0x0010 - 0x0000)
-struct MovieGraphValueContainer_SetValueObject final
-{
-public:
-	class UObject*                                InValue;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(MovieGraphValueContainer_SetValueObject) == 0x000008, "Wrong alignment on MovieGraphValueContainer_SetValueObject");
-static_assert(sizeof(MovieGraphValueContainer_SetValueObject) == 0x000010, "Wrong size on MovieGraphValueContainer_SetValueObject");
-static_assert(offsetof(MovieGraphValueContainer_SetValueObject, InValue) == 0x000000, "Member 'MovieGraphValueContainer_SetValueObject::InValue' has a wrong offset!");
-static_assert(offsetof(MovieGraphValueContainer_SetValueObject, ReturnValue) == 0x000008, "Member 'MovieGraphValueContainer_SetValueObject::ReturnValue' has a wrong offset!");
-
-// Function MovieRenderPipelineCore.MovieGraphValueContainer.SetValueSerializedString
-// 0x0018 (0x0018 - 0x0000)
-struct MovieGraphValueContainer_SetValueSerializedString final
-{
-public:
-	class FString                                 NewValue;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(MovieGraphValueContainer_SetValueSerializedString) == 0x000008, "Wrong alignment on MovieGraphValueContainer_SetValueSerializedString");
-static_assert(sizeof(MovieGraphValueContainer_SetValueSerializedString) == 0x000018, "Wrong size on MovieGraphValueContainer_SetValueSerializedString");
-static_assert(offsetof(MovieGraphValueContainer_SetValueSerializedString, NewValue) == 0x000000, "Member 'MovieGraphValueContainer_SetValueSerializedString::NewValue' has a wrong offset!");
-static_assert(offsetof(MovieGraphValueContainer_SetValueSerializedString, ReturnValue) == 0x000010, "Member 'MovieGraphValueContainer_SetValueSerializedString::ReturnValue' has a wrong offset!");
-
-// Function MovieRenderPipelineCore.MovieGraphValueContainer.SetValueString
-// 0x0018 (0x0018 - 0x0000)
-struct MovieGraphValueContainer_SetValueString final
-{
-public:
-	class FString                                 InValue;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(MovieGraphValueContainer_SetValueString) == 0x000008, "Wrong alignment on MovieGraphValueContainer_SetValueString");
-static_assert(sizeof(MovieGraphValueContainer_SetValueString) == 0x000018, "Wrong size on MovieGraphValueContainer_SetValueString");
-static_assert(offsetof(MovieGraphValueContainer_SetValueString, InValue) == 0x000000, "Member 'MovieGraphValueContainer_SetValueString::InValue' has a wrong offset!");
-static_assert(offsetof(MovieGraphValueContainer_SetValueString, ReturnValue) == 0x000010, "Member 'MovieGraphValueContainer_SetValueString::ReturnValue' has a wrong offset!");
-
-// Function MovieRenderPipelineCore.MovieGraphValueContainer.SetValueText
-// 0x0018 (0x0018 - 0x0000)
-struct MovieGraphValueContainer_SetValueText final
-{
-public:
-	class FText                                   InValue;                                           // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(MovieGraphValueContainer_SetValueText) == 0x000008, "Wrong alignment on MovieGraphValueContainer_SetValueText");
-static_assert(sizeof(MovieGraphValueContainer_SetValueText) == 0x000018, "Wrong size on MovieGraphValueContainer_SetValueText");
-static_assert(offsetof(MovieGraphValueContainer_SetValueText, InValue) == 0x000000, "Member 'MovieGraphValueContainer_SetValueText::InValue' has a wrong offset!");
-static_assert(offsetof(MovieGraphValueContainer_SetValueText, ReturnValue) == 0x000010, "Member 'MovieGraphValueContainer_SetValueText::ReturnValue' has a wrong offset!");
-
-// Function MovieRenderPipelineCore.MovieGraphValueContainer.SetValueType
-// 0x0010 (0x0010 - 0x0000)
-struct MovieGraphValueContainer_SetValueType final
-{
-public:
-	EMovieGraphValueType                          ValueType;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                InValueTypeObject;                                 // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MovieGraphValueContainer_SetValueType) == 0x000008, "Wrong alignment on MovieGraphValueContainer_SetValueType");
-static_assert(sizeof(MovieGraphValueContainer_SetValueType) == 0x000010, "Wrong size on MovieGraphValueContainer_SetValueType");
-static_assert(offsetof(MovieGraphValueContainer_SetValueType, ValueType) == 0x000000, "Member 'MovieGraphValueContainer_SetValueType::ValueType' has a wrong offset!");
-static_assert(offsetof(MovieGraphValueContainer_SetValueType, InValueTypeObject) == 0x000008, "Member 'MovieGraphValueContainer_SetValueType::InValueTypeObject' has a wrong offset!");
-
-// Function MovieRenderPipelineCore.MovieGraphValueContainer.SetValueTypeObject
-// 0x0008 (0x0008 - 0x0000)
-struct MovieGraphValueContainer_SetValueTypeObject final
-{
-public:
-	const class UObject*                          ValueTypeObject;                                   // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MovieGraphValueContainer_SetValueTypeObject) == 0x000008, "Wrong alignment on MovieGraphValueContainer_SetValueTypeObject");
-static_assert(sizeof(MovieGraphValueContainer_SetValueTypeObject) == 0x000008, "Wrong size on MovieGraphValueContainer_SetValueTypeObject");
-static_assert(offsetof(MovieGraphValueContainer_SetValueTypeObject, ValueTypeObject) == 0x000000, "Member 'MovieGraphValueContainer_SetValueTypeObject::ValueTypeObject' has a wrong offset!");
-
-// Function MovieRenderPipelineCore.MovieGraphValueContainer.GetValueBool
-// 0x0002 (0x0002 - 0x0000)
-struct MovieGraphValueContainer_GetValueBool final
-{
-public:
-	bool                                          bOutValue;                                         // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MovieGraphValueContainer_GetValueBool) == 0x000001, "Wrong alignment on MovieGraphValueContainer_GetValueBool");
-static_assert(sizeof(MovieGraphValueContainer_GetValueBool) == 0x000002, "Wrong size on MovieGraphValueContainer_GetValueBool");
-static_assert(offsetof(MovieGraphValueContainer_GetValueBool, bOutValue) == 0x000000, "Member 'MovieGraphValueContainer_GetValueBool::bOutValue' has a wrong offset!");
-static_assert(offsetof(MovieGraphValueContainer_GetValueBool, ReturnValue) == 0x000001, "Member 'MovieGraphValueContainer_GetValueBool::ReturnValue' has a wrong offset!");
-
-// Function MovieRenderPipelineCore.MovieGraphValueContainer.GetValueByte
-// 0x0002 (0x0002 - 0x0000)
-struct MovieGraphValueContainer_GetValueByte final
-{
-public:
-	uint8                                         OutValue;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MovieGraphValueContainer_GetValueByte) == 0x000001, "Wrong alignment on MovieGraphValueContainer_GetValueByte");
-static_assert(sizeof(MovieGraphValueContainer_GetValueByte) == 0x000002, "Wrong size on MovieGraphValueContainer_GetValueByte");
-static_assert(offsetof(MovieGraphValueContainer_GetValueByte, OutValue) == 0x000000, "Member 'MovieGraphValueContainer_GetValueByte::OutValue' has a wrong offset!");
-static_assert(offsetof(MovieGraphValueContainer_GetValueByte, ReturnValue) == 0x000001, "Member 'MovieGraphValueContainer_GetValueByte::ReturnValue' has a wrong offset!");
-
-// Function MovieRenderPipelineCore.MovieGraphValueContainer.GetValueClass
-// 0x0010 (0x0010 - 0x0000)
-struct MovieGraphValueContainer_GetValueClass final
-{
-public:
-	class UClass*                                 OutValue;                                          // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(MovieGraphValueContainer_GetValueClass) == 0x000008, "Wrong alignment on MovieGraphValueContainer_GetValueClass");
-static_assert(sizeof(MovieGraphValueContainer_GetValueClass) == 0x000010, "Wrong size on MovieGraphValueContainer_GetValueClass");
-static_assert(offsetof(MovieGraphValueContainer_GetValueClass, OutValue) == 0x000000, "Member 'MovieGraphValueContainer_GetValueClass::OutValue' has a wrong offset!");
-static_assert(offsetof(MovieGraphValueContainer_GetValueClass, ReturnValue) == 0x000008, "Member 'MovieGraphValueContainer_GetValueClass::ReturnValue' has a wrong offset!");
-
-// Function MovieRenderPipelineCore.MovieGraphValueContainer.GetValueContainerType
-// 0x0001 (0x0001 - 0x0000)
-struct MovieGraphValueContainer_GetValueContainerType final
-{
-public:
-	EMovieGraphContainerType                      ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MovieGraphValueContainer_GetValueContainerType) == 0x000001, "Wrong alignment on MovieGraphValueContainer_GetValueContainerType");
-static_assert(sizeof(MovieGraphValueContainer_GetValueContainerType) == 0x000001, "Wrong size on MovieGraphValueContainer_GetValueContainerType");
-static_assert(offsetof(MovieGraphValueContainer_GetValueContainerType, ReturnValue) == 0x000000, "Member 'MovieGraphValueContainer_GetValueContainerType::ReturnValue' has a wrong offset!");
-
-// Function MovieRenderPipelineCore.MovieGraphValueContainer.GetValueDouble
-// 0x0010 (0x0010 - 0x0000)
-struct MovieGraphValueContainer_GetValueDouble final
-{
-public:
-	double                                        OutValue;                                          // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(MovieGraphValueContainer_GetValueDouble) == 0x000008, "Wrong alignment on MovieGraphValueContainer_GetValueDouble");
-static_assert(sizeof(MovieGraphValueContainer_GetValueDouble) == 0x000010, "Wrong size on MovieGraphValueContainer_GetValueDouble");
-static_assert(offsetof(MovieGraphValueContainer_GetValueDouble, OutValue) == 0x000000, "Member 'MovieGraphValueContainer_GetValueDouble::OutValue' has a wrong offset!");
-static_assert(offsetof(MovieGraphValueContainer_GetValueDouble, ReturnValue) == 0x000008, "Member 'MovieGraphValueContainer_GetValueDouble::ReturnValue' has a wrong offset!");
-
-// Function MovieRenderPipelineCore.MovieGraphValueContainer.GetValueEnum
-// 0x0018 (0x0018 - 0x0000)
-struct MovieGraphValueContainer_GetValueEnum final
-{
-public:
-	uint8                                         OutValue;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	const class UEnum*                            RequestedEnum;                                     // 0x0008(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(MovieGraphValueContainer_GetValueEnum) == 0x000008, "Wrong alignment on MovieGraphValueContainer_GetValueEnum");
-static_assert(sizeof(MovieGraphValueContainer_GetValueEnum) == 0x000018, "Wrong size on MovieGraphValueContainer_GetValueEnum");
-static_assert(offsetof(MovieGraphValueContainer_GetValueEnum, OutValue) == 0x000000, "Member 'MovieGraphValueContainer_GetValueEnum::OutValue' has a wrong offset!");
-static_assert(offsetof(MovieGraphValueContainer_GetValueEnum, RequestedEnum) == 0x000008, "Member 'MovieGraphValueContainer_GetValueEnum::RequestedEnum' has a wrong offset!");
-static_assert(offsetof(MovieGraphValueContainer_GetValueEnum, ReturnValue) == 0x000010, "Member 'MovieGraphValueContainer_GetValueEnum::ReturnValue' has a wrong offset!");
-
-// Function MovieRenderPipelineCore.MovieGraphValueContainer.GetValueFloat
-// 0x0008 (0x0008 - 0x0000)
-struct MovieGraphValueContainer_GetValueFloat final
-{
-public:
-	float                                         OutValue;                                          // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(MovieGraphValueContainer_GetValueFloat) == 0x000004, "Wrong alignment on MovieGraphValueContainer_GetValueFloat");
-static_assert(sizeof(MovieGraphValueContainer_GetValueFloat) == 0x000008, "Wrong size on MovieGraphValueContainer_GetValueFloat");
-static_assert(offsetof(MovieGraphValueContainer_GetValueFloat, OutValue) == 0x000000, "Member 'MovieGraphValueContainer_GetValueFloat::OutValue' has a wrong offset!");
-static_assert(offsetof(MovieGraphValueContainer_GetValueFloat, ReturnValue) == 0x000004, "Member 'MovieGraphValueContainer_GetValueFloat::ReturnValue' has a wrong offset!");
-
-// Function MovieRenderPipelineCore.MovieGraphValueContainer.GetValueInt32
-// 0x0008 (0x0008 - 0x0000)
-struct MovieGraphValueContainer_GetValueInt32 final
-{
-public:
-	int32                                         OutValue;                                          // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(MovieGraphValueContainer_GetValueInt32) == 0x000004, "Wrong alignment on MovieGraphValueContainer_GetValueInt32");
-static_assert(sizeof(MovieGraphValueContainer_GetValueInt32) == 0x000008, "Wrong size on MovieGraphValueContainer_GetValueInt32");
-static_assert(offsetof(MovieGraphValueContainer_GetValueInt32, OutValue) == 0x000000, "Member 'MovieGraphValueContainer_GetValueInt32::OutValue' has a wrong offset!");
-static_assert(offsetof(MovieGraphValueContainer_GetValueInt32, ReturnValue) == 0x000004, "Member 'MovieGraphValueContainer_GetValueInt32::ReturnValue' has a wrong offset!");
-
-// Function MovieRenderPipelineCore.MovieGraphValueContainer.GetValueInt64
-// 0x0010 (0x0010 - 0x0000)
-struct MovieGraphValueContainer_GetValueInt64 final
-{
-public:
-	int64                                         OutValue;                                          // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(MovieGraphValueContainer_GetValueInt64) == 0x000008, "Wrong alignment on MovieGraphValueContainer_GetValueInt64");
-static_assert(sizeof(MovieGraphValueContainer_GetValueInt64) == 0x000010, "Wrong size on MovieGraphValueContainer_GetValueInt64");
-static_assert(offsetof(MovieGraphValueContainer_GetValueInt64, OutValue) == 0x000000, "Member 'MovieGraphValueContainer_GetValueInt64::OutValue' has a wrong offset!");
-static_assert(offsetof(MovieGraphValueContainer_GetValueInt64, ReturnValue) == 0x000008, "Member 'MovieGraphValueContainer_GetValueInt64::ReturnValue' has a wrong offset!");
-
-// Function MovieRenderPipelineCore.MovieGraphValueContainer.GetValueName
-// 0x000C (0x000C - 0x0000)
-struct MovieGraphValueContainer_GetValueName final
-{
-public:
-	class FName                                   OutValue;                                          // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(MovieGraphValueContainer_GetValueName) == 0x000004, "Wrong alignment on MovieGraphValueContainer_GetValueName");
-static_assert(sizeof(MovieGraphValueContainer_GetValueName) == 0x00000C, "Wrong size on MovieGraphValueContainer_GetValueName");
-static_assert(offsetof(MovieGraphValueContainer_GetValueName, OutValue) == 0x000000, "Member 'MovieGraphValueContainer_GetValueName::OutValue' has a wrong offset!");
-static_assert(offsetof(MovieGraphValueContainer_GetValueName, ReturnValue) == 0x000008, "Member 'MovieGraphValueContainer_GetValueName::ReturnValue' has a wrong offset!");
-
-// Function MovieRenderPipelineCore.MovieGraphValueContainer.GetValueObject
-// 0x0018 (0x0018 - 0x0000)
-struct MovieGraphValueContainer_GetValueObject final
-{
-public:
-	class UObject*                                OutValue;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	const class UClass*                           RequestedClass;                                    // 0x0008(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(MovieGraphValueContainer_GetValueObject) == 0x000008, "Wrong alignment on MovieGraphValueContainer_GetValueObject");
-static_assert(sizeof(MovieGraphValueContainer_GetValueObject) == 0x000018, "Wrong size on MovieGraphValueContainer_GetValueObject");
-static_assert(offsetof(MovieGraphValueContainer_GetValueObject, OutValue) == 0x000000, "Member 'MovieGraphValueContainer_GetValueObject::OutValue' has a wrong offset!");
-static_assert(offsetof(MovieGraphValueContainer_GetValueObject, RequestedClass) == 0x000008, "Member 'MovieGraphValueContainer_GetValueObject::RequestedClass' has a wrong offset!");
-static_assert(offsetof(MovieGraphValueContainer_GetValueObject, ReturnValue) == 0x000010, "Member 'MovieGraphValueContainer_GetValueObject::ReturnValue' has a wrong offset!");
-
-// Function MovieRenderPipelineCore.MovieGraphValueContainer.GetValueString
-// 0x0018 (0x0018 - 0x0000)
-struct MovieGraphValueContainer_GetValueString final
-{
-public:
-	class FString                                 OutValue;                                          // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(MovieGraphValueContainer_GetValueString) == 0x000008, "Wrong alignment on MovieGraphValueContainer_GetValueString");
-static_assert(sizeof(MovieGraphValueContainer_GetValueString) == 0x000018, "Wrong size on MovieGraphValueContainer_GetValueString");
-static_assert(offsetof(MovieGraphValueContainer_GetValueString, OutValue) == 0x000000, "Member 'MovieGraphValueContainer_GetValueString::OutValue' has a wrong offset!");
-static_assert(offsetof(MovieGraphValueContainer_GetValueString, ReturnValue) == 0x000010, "Member 'MovieGraphValueContainer_GetValueString::ReturnValue' has a wrong offset!");
-
-// Function MovieRenderPipelineCore.MovieGraphValueContainer.GetValueText
-// 0x0018 (0x0018 - 0x0000)
-struct MovieGraphValueContainer_GetValueText final
-{
-public:
-	class FText                                   OutValue;                                          // 0x0000(0x0010)(Parm, OutParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(MovieGraphValueContainer_GetValueText) == 0x000008, "Wrong alignment on MovieGraphValueContainer_GetValueText");
-static_assert(sizeof(MovieGraphValueContainer_GetValueText) == 0x000018, "Wrong size on MovieGraphValueContainer_GetValueText");
-static_assert(offsetof(MovieGraphValueContainer_GetValueText, OutValue) == 0x000000, "Member 'MovieGraphValueContainer_GetValueText::OutValue' has a wrong offset!");
-static_assert(offsetof(MovieGraphValueContainer_GetValueText, ReturnValue) == 0x000010, "Member 'MovieGraphValueContainer_GetValueText::ReturnValue' has a wrong offset!");
-
-// Function MovieRenderPipelineCore.MovieGraphValueContainer.GetValueType
-// 0x0001 (0x0001 - 0x0000)
-struct MovieGraphValueContainer_GetValueType final
-{
-public:
-	EMovieGraphValueType                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MovieGraphValueContainer_GetValueType) == 0x000001, "Wrong alignment on MovieGraphValueContainer_GetValueType");
-static_assert(sizeof(MovieGraphValueContainer_GetValueType) == 0x000001, "Wrong size on MovieGraphValueContainer_GetValueType");
-static_assert(offsetof(MovieGraphValueContainer_GetValueType, ReturnValue) == 0x000000, "Member 'MovieGraphValueContainer_GetValueType::ReturnValue' has a wrong offset!");
-
-// Function MovieRenderPipelineCore.MovieGraphValueContainer.GetValueTypeObject
-// 0x0008 (0x0008 - 0x0000)
-struct MovieGraphValueContainer_GetValueTypeObject final
-{
-public:
-	const class UObject*                          ReturnValue;                                       // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MovieGraphValueContainer_GetValueTypeObject) == 0x000008, "Wrong alignment on MovieGraphValueContainer_GetValueTypeObject");
-static_assert(sizeof(MovieGraphValueContainer_GetValueTypeObject) == 0x000008, "Wrong size on MovieGraphValueContainer_GetValueTypeObject");
-static_assert(offsetof(MovieGraphValueContainer_GetValueTypeObject, ReturnValue) == 0x000000, "Member 'MovieGraphValueContainer_GetValueTypeObject::ReturnValue' has a wrong offset!");
-
-// Function MovieRenderPipelineCore.MovieGraphMember.SetMemberName
-// 0x0018 (0x0018 - 0x0000)
-struct MovieGraphMember_SetMemberName final
-{
-public:
-	class FString                                 InNewName;                                         // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(MovieGraphMember_SetMemberName) == 0x000008, "Wrong alignment on MovieGraphMember_SetMemberName");
-static_assert(sizeof(MovieGraphMember_SetMemberName) == 0x000018, "Wrong size on MovieGraphMember_SetMemberName");
-static_assert(offsetof(MovieGraphMember_SetMemberName, InNewName) == 0x000000, "Member 'MovieGraphMember_SetMemberName::InNewName' has a wrong offset!");
-static_assert(offsetof(MovieGraphMember_SetMemberName, ReturnValue) == 0x000010, "Member 'MovieGraphMember_SetMemberName::ReturnValue' has a wrong offset!");
-
-// Function MovieRenderPipelineCore.MovieGraphMember.GetGuid
-// 0x0010 (0x0010 - 0x0000)
-struct MovieGraphMember_GetGuid final
-{
-public:
-	struct FGuid                                  ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MovieGraphMember_GetGuid) == 0x000004, "Wrong alignment on MovieGraphMember_GetGuid");
-static_assert(sizeof(MovieGraphMember_GetGuid) == 0x000010, "Wrong size on MovieGraphMember_GetGuid");
-static_assert(offsetof(MovieGraphMember_GetGuid, ReturnValue) == 0x000000, "Member 'MovieGraphMember_GetGuid::ReturnValue' has a wrong offset!");
-
-// Function MovieRenderPipelineCore.MovieGraphMember.GetMemberName
-// 0x0010 (0x0010 - 0x0000)
-struct MovieGraphMember_GetMemberName final
-{
-public:
-	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MovieGraphMember_GetMemberName) == 0x000008, "Wrong alignment on MovieGraphMember_GetMemberName");
-static_assert(sizeof(MovieGraphMember_GetMemberName) == 0x000010, "Wrong size on MovieGraphMember_GetMemberName");
-static_assert(offsetof(MovieGraphMember_GetMemberName, ReturnValue) == 0x000000, "Member 'MovieGraphMember_GetMemberName::ReturnValue' has a wrong offset!");
-
-// Function MovieRenderPipelineCore.MoviePipelineSetting.SetIsEnabled
-// 0x0001 (0x0001 - 0x0000)
-struct MoviePipelineSetting_SetIsEnabled final
-{
-public:
-	bool                                          bInEnabled;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MoviePipelineSetting_SetIsEnabled) == 0x000001, "Wrong alignment on MoviePipelineSetting_SetIsEnabled");
-static_assert(sizeof(MoviePipelineSetting_SetIsEnabled) == 0x000001, "Wrong size on MoviePipelineSetting_SetIsEnabled");
-static_assert(offsetof(MoviePipelineSetting_SetIsEnabled, bInEnabled) == 0x000000, "Member 'MoviePipelineSetting_SetIsEnabled::bInEnabled' has a wrong offset!");
-
-// Function MovieRenderPipelineCore.MoviePipelineSetting.BuildNewProcessCommandLine
-// 0x0020 (0x0020 - 0x0000)
-struct MoviePipelineSetting_BuildNewProcessCommandLine final
-{
-public:
-	class FString                                 InOutUnrealURLParams;                              // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 InOutCommandLineArgs;                              // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MoviePipelineSetting_BuildNewProcessCommandLine) == 0x000008, "Wrong alignment on MoviePipelineSetting_BuildNewProcessCommandLine");
-static_assert(sizeof(MoviePipelineSetting_BuildNewProcessCommandLine) == 0x000020, "Wrong size on MoviePipelineSetting_BuildNewProcessCommandLine");
-static_assert(offsetof(MoviePipelineSetting_BuildNewProcessCommandLine, InOutUnrealURLParams) == 0x000000, "Member 'MoviePipelineSetting_BuildNewProcessCommandLine::InOutUnrealURLParams' has a wrong offset!");
-static_assert(offsetof(MoviePipelineSetting_BuildNewProcessCommandLine, InOutCommandLineArgs) == 0x000010, "Member 'MoviePipelineSetting_BuildNewProcessCommandLine::InOutCommandLineArgs' has a wrong offset!");
-
-// Function MovieRenderPipelineCore.MoviePipelineSetting.BuildNewProcessCommandLineArgs
-// 0x0040 (0x0040 - 0x0000)
-struct MoviePipelineSetting_BuildNewProcessCommandLineArgs final
-{
-public:
-	TArray<class FString>                         InOutUnrealURLParams;                              // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	TArray<class FString>                         InOutCommandLineArgs;                              // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	TArray<class FString>                         InOutDeviceProfileCvars;                           // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	TArray<class FString>                         InOutExecCmds;                                     // 0x0030(0x0010)(Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MoviePipelineSetting_BuildNewProcessCommandLineArgs) == 0x000008, "Wrong alignment on MoviePipelineSetting_BuildNewProcessCommandLineArgs");
-static_assert(sizeof(MoviePipelineSetting_BuildNewProcessCommandLineArgs) == 0x000040, "Wrong size on MoviePipelineSetting_BuildNewProcessCommandLineArgs");
-static_assert(offsetof(MoviePipelineSetting_BuildNewProcessCommandLineArgs, InOutUnrealURLParams) == 0x000000, "Member 'MoviePipelineSetting_BuildNewProcessCommandLineArgs::InOutUnrealURLParams' has a wrong offset!");
-static_assert(offsetof(MoviePipelineSetting_BuildNewProcessCommandLineArgs, InOutCommandLineArgs) == 0x000010, "Member 'MoviePipelineSetting_BuildNewProcessCommandLineArgs::InOutCommandLineArgs' has a wrong offset!");
-static_assert(offsetof(MoviePipelineSetting_BuildNewProcessCommandLineArgs, InOutDeviceProfileCvars) == 0x000020, "Member 'MoviePipelineSetting_BuildNewProcessCommandLineArgs::InOutDeviceProfileCvars' has a wrong offset!");
-static_assert(offsetof(MoviePipelineSetting_BuildNewProcessCommandLineArgs, InOutExecCmds) == 0x000030, "Member 'MoviePipelineSetting_BuildNewProcessCommandLineArgs::InOutExecCmds' has a wrong offset!");
-
-// Function MovieRenderPipelineCore.MoviePipelineSetting.IsEnabled
-// 0x0001 (0x0001 - 0x0000)
-struct MoviePipelineSetting_IsEnabled final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MoviePipelineSetting_IsEnabled) == 0x000001, "Wrong alignment on MoviePipelineSetting_IsEnabled");
-static_assert(sizeof(MoviePipelineSetting_IsEnabled) == 0x000001, "Wrong size on MoviePipelineSetting_IsEnabled");
-static_assert(offsetof(MoviePipelineSetting_IsEnabled, ReturnValue) == 0x000000, "Member 'MoviePipelineSetting_IsEnabled::ReturnValue' has a wrong offset!");
-
 // Function MovieRenderPipelineCore.MovieGraphNode.TogglePromotePropertyToPin
 // 0x0008 (0x0008 - 0x0000)
 struct MovieGraphNode_TogglePromotePropertyToPin final
@@ -589,17 +67,6 @@ static_assert(alignof(MovieGraphNode_GetOutputPin) == 0x000008, "Wrong alignment
 static_assert(sizeof(MovieGraphNode_GetOutputPin) == 0x000010, "Wrong size on MovieGraphNode_GetOutputPin");
 static_assert(offsetof(MovieGraphNode_GetOutputPin, InPinLabel) == 0x000000, "Member 'MovieGraphNode_GetOutputPin::InPinLabel' has a wrong offset!");
 static_assert(offsetof(MovieGraphNode_GetOutputPin, ReturnValue) == 0x000008, "Member 'MovieGraphNode_GetOutputPin::ReturnValue' has a wrong offset!");
-
-// Function MovieRenderPipelineCore.MovieGraphPin.GetConnectedNodes
-// 0x0010 (0x0010 - 0x0000)
-struct MovieGraphPin_GetConnectedNodes final
-{
-public:
-	TArray<class UMovieGraphNode*>                ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MovieGraphPin_GetConnectedNodes) == 0x000008, "Wrong alignment on MovieGraphPin_GetConnectedNodes");
-static_assert(sizeof(MovieGraphPin_GetConnectedNodes) == 0x000010, "Wrong size on MovieGraphPin_GetConnectedNodes");
-static_assert(offsetof(MovieGraphPin_GetConnectedNodes, ReturnValue) == 0x000000, "Member 'MovieGraphPin_GetConnectedNodes::ReturnValue' has a wrong offset!");
 
 // Function MovieRenderPipelineCore.MovieGraphConditionGroupQueryBase.SetEnabled
 // 0x0001 (0x0001 - 0x0000)
@@ -1075,6 +542,487 @@ static_assert(sizeof(MovieGraphBurnInWidget_UpdateForGraph) == 0x000010, "Wrong 
 static_assert(offsetof(MovieGraphBurnInWidget_UpdateForGraph, InGraphPipeline) == 0x000000, "Member 'MovieGraphBurnInWidget_UpdateForGraph::InGraphPipeline' has a wrong offset!");
 static_assert(offsetof(MovieGraphBurnInWidget_UpdateForGraph, InEvaluatedConfig) == 0x000008, "Member 'MovieGraphBurnInWidget_UpdateForGraph::InEvaluatedConfig' has a wrong offset!");
 
+// Function MovieRenderPipelineCore.MovieGraphValueContainer.GetValueSerializedString
+// 0x0010 (0x0010 - 0x0000)
+struct MovieGraphValueContainer_GetValueSerializedString final
+{
+public:
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MovieGraphValueContainer_GetValueSerializedString) == 0x000008, "Wrong alignment on MovieGraphValueContainer_GetValueSerializedString");
+static_assert(sizeof(MovieGraphValueContainer_GetValueSerializedString) == 0x000010, "Wrong size on MovieGraphValueContainer_GetValueSerializedString");
+static_assert(offsetof(MovieGraphValueContainer_GetValueSerializedString, ReturnValue) == 0x000000, "Member 'MovieGraphValueContainer_GetValueSerializedString::ReturnValue' has a wrong offset!");
+
+// Function MovieRenderPipelineCore.MovieGraphValueContainer.SetValueBool
+// 0x0002 (0x0002 - 0x0000)
+struct MovieGraphValueContainer_SetValueBool final
+{
+public:
+	bool                                          bInValue;                                          // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MovieGraphValueContainer_SetValueBool) == 0x000001, "Wrong alignment on MovieGraphValueContainer_SetValueBool");
+static_assert(sizeof(MovieGraphValueContainer_SetValueBool) == 0x000002, "Wrong size on MovieGraphValueContainer_SetValueBool");
+static_assert(offsetof(MovieGraphValueContainer_SetValueBool, bInValue) == 0x000000, "Member 'MovieGraphValueContainer_SetValueBool::bInValue' has a wrong offset!");
+static_assert(offsetof(MovieGraphValueContainer_SetValueBool, ReturnValue) == 0x000001, "Member 'MovieGraphValueContainer_SetValueBool::ReturnValue' has a wrong offset!");
+
+// Function MovieRenderPipelineCore.MovieGraphValueContainer.SetValueByte
+// 0x0002 (0x0002 - 0x0000)
+struct MovieGraphValueContainer_SetValueByte final
+{
+public:
+	uint8                                         InValue;                                           // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MovieGraphValueContainer_SetValueByte) == 0x000001, "Wrong alignment on MovieGraphValueContainer_SetValueByte");
+static_assert(sizeof(MovieGraphValueContainer_SetValueByte) == 0x000002, "Wrong size on MovieGraphValueContainer_SetValueByte");
+static_assert(offsetof(MovieGraphValueContainer_SetValueByte, InValue) == 0x000000, "Member 'MovieGraphValueContainer_SetValueByte::InValue' has a wrong offset!");
+static_assert(offsetof(MovieGraphValueContainer_SetValueByte, ReturnValue) == 0x000001, "Member 'MovieGraphValueContainer_SetValueByte::ReturnValue' has a wrong offset!");
+
+// Function MovieRenderPipelineCore.MovieGraphValueContainer.SetValueClass
+// 0x0010 (0x0010 - 0x0000)
+struct MovieGraphValueContainer_SetValueClass final
+{
+public:
+	class UClass*                                 InValue;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(MovieGraphValueContainer_SetValueClass) == 0x000008, "Wrong alignment on MovieGraphValueContainer_SetValueClass");
+static_assert(sizeof(MovieGraphValueContainer_SetValueClass) == 0x000010, "Wrong size on MovieGraphValueContainer_SetValueClass");
+static_assert(offsetof(MovieGraphValueContainer_SetValueClass, InValue) == 0x000000, "Member 'MovieGraphValueContainer_SetValueClass::InValue' has a wrong offset!");
+static_assert(offsetof(MovieGraphValueContainer_SetValueClass, ReturnValue) == 0x000008, "Member 'MovieGraphValueContainer_SetValueClass::ReturnValue' has a wrong offset!");
+
+// Function MovieRenderPipelineCore.MovieGraphValueContainer.SetValueContainerType
+// 0x0001 (0x0001 - 0x0000)
+struct MovieGraphValueContainer_SetValueContainerType final
+{
+public:
+	EMovieGraphContainerType                      ContainerType;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MovieGraphValueContainer_SetValueContainerType) == 0x000001, "Wrong alignment on MovieGraphValueContainer_SetValueContainerType");
+static_assert(sizeof(MovieGraphValueContainer_SetValueContainerType) == 0x000001, "Wrong size on MovieGraphValueContainer_SetValueContainerType");
+static_assert(offsetof(MovieGraphValueContainer_SetValueContainerType, ContainerType) == 0x000000, "Member 'MovieGraphValueContainer_SetValueContainerType::ContainerType' has a wrong offset!");
+
+// Function MovieRenderPipelineCore.MovieGraphValueContainer.SetValueDouble
+// 0x0010 (0x0010 - 0x0000)
+struct MovieGraphValueContainer_SetValueDouble final
+{
+public:
+	double                                        InValue;                                           // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(MovieGraphValueContainer_SetValueDouble) == 0x000008, "Wrong alignment on MovieGraphValueContainer_SetValueDouble");
+static_assert(sizeof(MovieGraphValueContainer_SetValueDouble) == 0x000010, "Wrong size on MovieGraphValueContainer_SetValueDouble");
+static_assert(offsetof(MovieGraphValueContainer_SetValueDouble, InValue) == 0x000000, "Member 'MovieGraphValueContainer_SetValueDouble::InValue' has a wrong offset!");
+static_assert(offsetof(MovieGraphValueContainer_SetValueDouble, ReturnValue) == 0x000008, "Member 'MovieGraphValueContainer_SetValueDouble::ReturnValue' has a wrong offset!");
+
+// Function MovieRenderPipelineCore.MovieGraphValueContainer.SetValueEnum
+// 0x0018 (0x0018 - 0x0000)
+struct MovieGraphValueContainer_SetValueEnum final
+{
+public:
+	uint8                                         InValue;                                           // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	const class UEnum*                            Enum;                                              // 0x0008(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(MovieGraphValueContainer_SetValueEnum) == 0x000008, "Wrong alignment on MovieGraphValueContainer_SetValueEnum");
+static_assert(sizeof(MovieGraphValueContainer_SetValueEnum) == 0x000018, "Wrong size on MovieGraphValueContainer_SetValueEnum");
+static_assert(offsetof(MovieGraphValueContainer_SetValueEnum, InValue) == 0x000000, "Member 'MovieGraphValueContainer_SetValueEnum::InValue' has a wrong offset!");
+static_assert(offsetof(MovieGraphValueContainer_SetValueEnum, Enum) == 0x000008, "Member 'MovieGraphValueContainer_SetValueEnum::Enum' has a wrong offset!");
+static_assert(offsetof(MovieGraphValueContainer_SetValueEnum, ReturnValue) == 0x000010, "Member 'MovieGraphValueContainer_SetValueEnum::ReturnValue' has a wrong offset!");
+
+// Function MovieRenderPipelineCore.MovieGraphValueContainer.SetValueFloat
+// 0x0008 (0x0008 - 0x0000)
+struct MovieGraphValueContainer_SetValueFloat final
+{
+public:
+	float                                         InValue;                                           // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(MovieGraphValueContainer_SetValueFloat) == 0x000004, "Wrong alignment on MovieGraphValueContainer_SetValueFloat");
+static_assert(sizeof(MovieGraphValueContainer_SetValueFloat) == 0x000008, "Wrong size on MovieGraphValueContainer_SetValueFloat");
+static_assert(offsetof(MovieGraphValueContainer_SetValueFloat, InValue) == 0x000000, "Member 'MovieGraphValueContainer_SetValueFloat::InValue' has a wrong offset!");
+static_assert(offsetof(MovieGraphValueContainer_SetValueFloat, ReturnValue) == 0x000004, "Member 'MovieGraphValueContainer_SetValueFloat::ReturnValue' has a wrong offset!");
+
+// Function MovieRenderPipelineCore.MovieGraphValueContainer.SetValueInt32
+// 0x0008 (0x0008 - 0x0000)
+struct MovieGraphValueContainer_SetValueInt32 final
+{
+public:
+	int32                                         InValue;                                           // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(MovieGraphValueContainer_SetValueInt32) == 0x000004, "Wrong alignment on MovieGraphValueContainer_SetValueInt32");
+static_assert(sizeof(MovieGraphValueContainer_SetValueInt32) == 0x000008, "Wrong size on MovieGraphValueContainer_SetValueInt32");
+static_assert(offsetof(MovieGraphValueContainer_SetValueInt32, InValue) == 0x000000, "Member 'MovieGraphValueContainer_SetValueInt32::InValue' has a wrong offset!");
+static_assert(offsetof(MovieGraphValueContainer_SetValueInt32, ReturnValue) == 0x000004, "Member 'MovieGraphValueContainer_SetValueInt32::ReturnValue' has a wrong offset!");
+
+// Function MovieRenderPipelineCore.MovieGraphValueContainer.SetValueInt64
+// 0x0010 (0x0010 - 0x0000)
+struct MovieGraphValueContainer_SetValueInt64 final
+{
+public:
+	int64                                         InValue;                                           // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(MovieGraphValueContainer_SetValueInt64) == 0x000008, "Wrong alignment on MovieGraphValueContainer_SetValueInt64");
+static_assert(sizeof(MovieGraphValueContainer_SetValueInt64) == 0x000010, "Wrong size on MovieGraphValueContainer_SetValueInt64");
+static_assert(offsetof(MovieGraphValueContainer_SetValueInt64, InValue) == 0x000000, "Member 'MovieGraphValueContainer_SetValueInt64::InValue' has a wrong offset!");
+static_assert(offsetof(MovieGraphValueContainer_SetValueInt64, ReturnValue) == 0x000008, "Member 'MovieGraphValueContainer_SetValueInt64::ReturnValue' has a wrong offset!");
+
+// Function MovieRenderPipelineCore.MovieGraphValueContainer.SetValueName
+// 0x000C (0x000C - 0x0000)
+struct MovieGraphValueContainer_SetValueName final
+{
+public:
+	class FName                                   InValue;                                           // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(MovieGraphValueContainer_SetValueName) == 0x000004, "Wrong alignment on MovieGraphValueContainer_SetValueName");
+static_assert(sizeof(MovieGraphValueContainer_SetValueName) == 0x00000C, "Wrong size on MovieGraphValueContainer_SetValueName");
+static_assert(offsetof(MovieGraphValueContainer_SetValueName, InValue) == 0x000000, "Member 'MovieGraphValueContainer_SetValueName::InValue' has a wrong offset!");
+static_assert(offsetof(MovieGraphValueContainer_SetValueName, ReturnValue) == 0x000008, "Member 'MovieGraphValueContainer_SetValueName::ReturnValue' has a wrong offset!");
+
+// Function MovieRenderPipelineCore.MovieGraphValueContainer.SetValueObject
+// 0x0010 (0x0010 - 0x0000)
+struct MovieGraphValueContainer_SetValueObject final
+{
+public:
+	class UObject*                                InValue;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(MovieGraphValueContainer_SetValueObject) == 0x000008, "Wrong alignment on MovieGraphValueContainer_SetValueObject");
+static_assert(sizeof(MovieGraphValueContainer_SetValueObject) == 0x000010, "Wrong size on MovieGraphValueContainer_SetValueObject");
+static_assert(offsetof(MovieGraphValueContainer_SetValueObject, InValue) == 0x000000, "Member 'MovieGraphValueContainer_SetValueObject::InValue' has a wrong offset!");
+static_assert(offsetof(MovieGraphValueContainer_SetValueObject, ReturnValue) == 0x000008, "Member 'MovieGraphValueContainer_SetValueObject::ReturnValue' has a wrong offset!");
+
+// Function MovieRenderPipelineCore.MovieGraphValueContainer.SetValueSerializedString
+// 0x0018 (0x0018 - 0x0000)
+struct MovieGraphValueContainer_SetValueSerializedString final
+{
+public:
+	class FString                                 NewValue;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(MovieGraphValueContainer_SetValueSerializedString) == 0x000008, "Wrong alignment on MovieGraphValueContainer_SetValueSerializedString");
+static_assert(sizeof(MovieGraphValueContainer_SetValueSerializedString) == 0x000018, "Wrong size on MovieGraphValueContainer_SetValueSerializedString");
+static_assert(offsetof(MovieGraphValueContainer_SetValueSerializedString, NewValue) == 0x000000, "Member 'MovieGraphValueContainer_SetValueSerializedString::NewValue' has a wrong offset!");
+static_assert(offsetof(MovieGraphValueContainer_SetValueSerializedString, ReturnValue) == 0x000010, "Member 'MovieGraphValueContainer_SetValueSerializedString::ReturnValue' has a wrong offset!");
+
+// Function MovieRenderPipelineCore.MovieGraphValueContainer.SetValueString
+// 0x0018 (0x0018 - 0x0000)
+struct MovieGraphValueContainer_SetValueString final
+{
+public:
+	class FString                                 InValue;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(MovieGraphValueContainer_SetValueString) == 0x000008, "Wrong alignment on MovieGraphValueContainer_SetValueString");
+static_assert(sizeof(MovieGraphValueContainer_SetValueString) == 0x000018, "Wrong size on MovieGraphValueContainer_SetValueString");
+static_assert(offsetof(MovieGraphValueContainer_SetValueString, InValue) == 0x000000, "Member 'MovieGraphValueContainer_SetValueString::InValue' has a wrong offset!");
+static_assert(offsetof(MovieGraphValueContainer_SetValueString, ReturnValue) == 0x000010, "Member 'MovieGraphValueContainer_SetValueString::ReturnValue' has a wrong offset!");
+
+// Function MovieRenderPipelineCore.MovieGraphValueContainer.SetValueText
+// 0x0018 (0x0018 - 0x0000)
+struct MovieGraphValueContainer_SetValueText final
+{
+public:
+	class FText                                   InValue;                                           // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(MovieGraphValueContainer_SetValueText) == 0x000008, "Wrong alignment on MovieGraphValueContainer_SetValueText");
+static_assert(sizeof(MovieGraphValueContainer_SetValueText) == 0x000018, "Wrong size on MovieGraphValueContainer_SetValueText");
+static_assert(offsetof(MovieGraphValueContainer_SetValueText, InValue) == 0x000000, "Member 'MovieGraphValueContainer_SetValueText::InValue' has a wrong offset!");
+static_assert(offsetof(MovieGraphValueContainer_SetValueText, ReturnValue) == 0x000010, "Member 'MovieGraphValueContainer_SetValueText::ReturnValue' has a wrong offset!");
+
+// Function MovieRenderPipelineCore.MovieGraphValueContainer.SetValueType
+// 0x0010 (0x0010 - 0x0000)
+struct MovieGraphValueContainer_SetValueType final
+{
+public:
+	EMovieGraphValueType                          ValueType;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                InValueTypeObject;                                 // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MovieGraphValueContainer_SetValueType) == 0x000008, "Wrong alignment on MovieGraphValueContainer_SetValueType");
+static_assert(sizeof(MovieGraphValueContainer_SetValueType) == 0x000010, "Wrong size on MovieGraphValueContainer_SetValueType");
+static_assert(offsetof(MovieGraphValueContainer_SetValueType, ValueType) == 0x000000, "Member 'MovieGraphValueContainer_SetValueType::ValueType' has a wrong offset!");
+static_assert(offsetof(MovieGraphValueContainer_SetValueType, InValueTypeObject) == 0x000008, "Member 'MovieGraphValueContainer_SetValueType::InValueTypeObject' has a wrong offset!");
+
+// Function MovieRenderPipelineCore.MovieGraphValueContainer.SetValueTypeObject
+// 0x0008 (0x0008 - 0x0000)
+struct MovieGraphValueContainer_SetValueTypeObject final
+{
+public:
+	const class UObject*                          ValueTypeObject;                                   // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MovieGraphValueContainer_SetValueTypeObject) == 0x000008, "Wrong alignment on MovieGraphValueContainer_SetValueTypeObject");
+static_assert(sizeof(MovieGraphValueContainer_SetValueTypeObject) == 0x000008, "Wrong size on MovieGraphValueContainer_SetValueTypeObject");
+static_assert(offsetof(MovieGraphValueContainer_SetValueTypeObject, ValueTypeObject) == 0x000000, "Member 'MovieGraphValueContainer_SetValueTypeObject::ValueTypeObject' has a wrong offset!");
+
+// Function MovieRenderPipelineCore.MovieGraphValueContainer.GetValueBool
+// 0x0002 (0x0002 - 0x0000)
+struct MovieGraphValueContainer_GetValueBool final
+{
+public:
+	bool                                          bOutValue;                                         // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MovieGraphValueContainer_GetValueBool) == 0x000001, "Wrong alignment on MovieGraphValueContainer_GetValueBool");
+static_assert(sizeof(MovieGraphValueContainer_GetValueBool) == 0x000002, "Wrong size on MovieGraphValueContainer_GetValueBool");
+static_assert(offsetof(MovieGraphValueContainer_GetValueBool, bOutValue) == 0x000000, "Member 'MovieGraphValueContainer_GetValueBool::bOutValue' has a wrong offset!");
+static_assert(offsetof(MovieGraphValueContainer_GetValueBool, ReturnValue) == 0x000001, "Member 'MovieGraphValueContainer_GetValueBool::ReturnValue' has a wrong offset!");
+
+// Function MovieRenderPipelineCore.MovieGraphValueContainer.GetValueByte
+// 0x0002 (0x0002 - 0x0000)
+struct MovieGraphValueContainer_GetValueByte final
+{
+public:
+	uint8                                         OutValue;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MovieGraphValueContainer_GetValueByte) == 0x000001, "Wrong alignment on MovieGraphValueContainer_GetValueByte");
+static_assert(sizeof(MovieGraphValueContainer_GetValueByte) == 0x000002, "Wrong size on MovieGraphValueContainer_GetValueByte");
+static_assert(offsetof(MovieGraphValueContainer_GetValueByte, OutValue) == 0x000000, "Member 'MovieGraphValueContainer_GetValueByte::OutValue' has a wrong offset!");
+static_assert(offsetof(MovieGraphValueContainer_GetValueByte, ReturnValue) == 0x000001, "Member 'MovieGraphValueContainer_GetValueByte::ReturnValue' has a wrong offset!");
+
+// Function MovieRenderPipelineCore.MovieGraphValueContainer.GetValueClass
+// 0x0010 (0x0010 - 0x0000)
+struct MovieGraphValueContainer_GetValueClass final
+{
+public:
+	class UClass*                                 OutValue;                                          // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(MovieGraphValueContainer_GetValueClass) == 0x000008, "Wrong alignment on MovieGraphValueContainer_GetValueClass");
+static_assert(sizeof(MovieGraphValueContainer_GetValueClass) == 0x000010, "Wrong size on MovieGraphValueContainer_GetValueClass");
+static_assert(offsetof(MovieGraphValueContainer_GetValueClass, OutValue) == 0x000000, "Member 'MovieGraphValueContainer_GetValueClass::OutValue' has a wrong offset!");
+static_assert(offsetof(MovieGraphValueContainer_GetValueClass, ReturnValue) == 0x000008, "Member 'MovieGraphValueContainer_GetValueClass::ReturnValue' has a wrong offset!");
+
+// Function MovieRenderPipelineCore.MovieGraphValueContainer.GetValueContainerType
+// 0x0001 (0x0001 - 0x0000)
+struct MovieGraphValueContainer_GetValueContainerType final
+{
+public:
+	EMovieGraphContainerType                      ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MovieGraphValueContainer_GetValueContainerType) == 0x000001, "Wrong alignment on MovieGraphValueContainer_GetValueContainerType");
+static_assert(sizeof(MovieGraphValueContainer_GetValueContainerType) == 0x000001, "Wrong size on MovieGraphValueContainer_GetValueContainerType");
+static_assert(offsetof(MovieGraphValueContainer_GetValueContainerType, ReturnValue) == 0x000000, "Member 'MovieGraphValueContainer_GetValueContainerType::ReturnValue' has a wrong offset!");
+
+// Function MovieRenderPipelineCore.MovieGraphValueContainer.GetValueDouble
+// 0x0010 (0x0010 - 0x0000)
+struct MovieGraphValueContainer_GetValueDouble final
+{
+public:
+	double                                        OutValue;                                          // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(MovieGraphValueContainer_GetValueDouble) == 0x000008, "Wrong alignment on MovieGraphValueContainer_GetValueDouble");
+static_assert(sizeof(MovieGraphValueContainer_GetValueDouble) == 0x000010, "Wrong size on MovieGraphValueContainer_GetValueDouble");
+static_assert(offsetof(MovieGraphValueContainer_GetValueDouble, OutValue) == 0x000000, "Member 'MovieGraphValueContainer_GetValueDouble::OutValue' has a wrong offset!");
+static_assert(offsetof(MovieGraphValueContainer_GetValueDouble, ReturnValue) == 0x000008, "Member 'MovieGraphValueContainer_GetValueDouble::ReturnValue' has a wrong offset!");
+
+// Function MovieRenderPipelineCore.MovieGraphValueContainer.GetValueEnum
+// 0x0018 (0x0018 - 0x0000)
+struct MovieGraphValueContainer_GetValueEnum final
+{
+public:
+	uint8                                         OutValue;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	const class UEnum*                            RequestedEnum;                                     // 0x0008(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(MovieGraphValueContainer_GetValueEnum) == 0x000008, "Wrong alignment on MovieGraphValueContainer_GetValueEnum");
+static_assert(sizeof(MovieGraphValueContainer_GetValueEnum) == 0x000018, "Wrong size on MovieGraphValueContainer_GetValueEnum");
+static_assert(offsetof(MovieGraphValueContainer_GetValueEnum, OutValue) == 0x000000, "Member 'MovieGraphValueContainer_GetValueEnum::OutValue' has a wrong offset!");
+static_assert(offsetof(MovieGraphValueContainer_GetValueEnum, RequestedEnum) == 0x000008, "Member 'MovieGraphValueContainer_GetValueEnum::RequestedEnum' has a wrong offset!");
+static_assert(offsetof(MovieGraphValueContainer_GetValueEnum, ReturnValue) == 0x000010, "Member 'MovieGraphValueContainer_GetValueEnum::ReturnValue' has a wrong offset!");
+
+// Function MovieRenderPipelineCore.MovieGraphValueContainer.GetValueFloat
+// 0x0008 (0x0008 - 0x0000)
+struct MovieGraphValueContainer_GetValueFloat final
+{
+public:
+	float                                         OutValue;                                          // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(MovieGraphValueContainer_GetValueFloat) == 0x000004, "Wrong alignment on MovieGraphValueContainer_GetValueFloat");
+static_assert(sizeof(MovieGraphValueContainer_GetValueFloat) == 0x000008, "Wrong size on MovieGraphValueContainer_GetValueFloat");
+static_assert(offsetof(MovieGraphValueContainer_GetValueFloat, OutValue) == 0x000000, "Member 'MovieGraphValueContainer_GetValueFloat::OutValue' has a wrong offset!");
+static_assert(offsetof(MovieGraphValueContainer_GetValueFloat, ReturnValue) == 0x000004, "Member 'MovieGraphValueContainer_GetValueFloat::ReturnValue' has a wrong offset!");
+
+// Function MovieRenderPipelineCore.MovieGraphValueContainer.GetValueInt32
+// 0x0008 (0x0008 - 0x0000)
+struct MovieGraphValueContainer_GetValueInt32 final
+{
+public:
+	int32                                         OutValue;                                          // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(MovieGraphValueContainer_GetValueInt32) == 0x000004, "Wrong alignment on MovieGraphValueContainer_GetValueInt32");
+static_assert(sizeof(MovieGraphValueContainer_GetValueInt32) == 0x000008, "Wrong size on MovieGraphValueContainer_GetValueInt32");
+static_assert(offsetof(MovieGraphValueContainer_GetValueInt32, OutValue) == 0x000000, "Member 'MovieGraphValueContainer_GetValueInt32::OutValue' has a wrong offset!");
+static_assert(offsetof(MovieGraphValueContainer_GetValueInt32, ReturnValue) == 0x000004, "Member 'MovieGraphValueContainer_GetValueInt32::ReturnValue' has a wrong offset!");
+
+// Function MovieRenderPipelineCore.MovieGraphValueContainer.GetValueInt64
+// 0x0010 (0x0010 - 0x0000)
+struct MovieGraphValueContainer_GetValueInt64 final
+{
+public:
+	int64                                         OutValue;                                          // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(MovieGraphValueContainer_GetValueInt64) == 0x000008, "Wrong alignment on MovieGraphValueContainer_GetValueInt64");
+static_assert(sizeof(MovieGraphValueContainer_GetValueInt64) == 0x000010, "Wrong size on MovieGraphValueContainer_GetValueInt64");
+static_assert(offsetof(MovieGraphValueContainer_GetValueInt64, OutValue) == 0x000000, "Member 'MovieGraphValueContainer_GetValueInt64::OutValue' has a wrong offset!");
+static_assert(offsetof(MovieGraphValueContainer_GetValueInt64, ReturnValue) == 0x000008, "Member 'MovieGraphValueContainer_GetValueInt64::ReturnValue' has a wrong offset!");
+
+// Function MovieRenderPipelineCore.MovieGraphValueContainer.GetValueName
+// 0x000C (0x000C - 0x0000)
+struct MovieGraphValueContainer_GetValueName final
+{
+public:
+	class FName                                   OutValue;                                          // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(MovieGraphValueContainer_GetValueName) == 0x000004, "Wrong alignment on MovieGraphValueContainer_GetValueName");
+static_assert(sizeof(MovieGraphValueContainer_GetValueName) == 0x00000C, "Wrong size on MovieGraphValueContainer_GetValueName");
+static_assert(offsetof(MovieGraphValueContainer_GetValueName, OutValue) == 0x000000, "Member 'MovieGraphValueContainer_GetValueName::OutValue' has a wrong offset!");
+static_assert(offsetof(MovieGraphValueContainer_GetValueName, ReturnValue) == 0x000008, "Member 'MovieGraphValueContainer_GetValueName::ReturnValue' has a wrong offset!");
+
+// Function MovieRenderPipelineCore.MovieGraphValueContainer.GetValueObject
+// 0x0018 (0x0018 - 0x0000)
+struct MovieGraphValueContainer_GetValueObject final
+{
+public:
+	class UObject*                                OutValue;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	const class UClass*                           RequestedClass;                                    // 0x0008(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(MovieGraphValueContainer_GetValueObject) == 0x000008, "Wrong alignment on MovieGraphValueContainer_GetValueObject");
+static_assert(sizeof(MovieGraphValueContainer_GetValueObject) == 0x000018, "Wrong size on MovieGraphValueContainer_GetValueObject");
+static_assert(offsetof(MovieGraphValueContainer_GetValueObject, OutValue) == 0x000000, "Member 'MovieGraphValueContainer_GetValueObject::OutValue' has a wrong offset!");
+static_assert(offsetof(MovieGraphValueContainer_GetValueObject, RequestedClass) == 0x000008, "Member 'MovieGraphValueContainer_GetValueObject::RequestedClass' has a wrong offset!");
+static_assert(offsetof(MovieGraphValueContainer_GetValueObject, ReturnValue) == 0x000010, "Member 'MovieGraphValueContainer_GetValueObject::ReturnValue' has a wrong offset!");
+
+// Function MovieRenderPipelineCore.MovieGraphValueContainer.GetValueString
+// 0x0018 (0x0018 - 0x0000)
+struct MovieGraphValueContainer_GetValueString final
+{
+public:
+	class FString                                 OutValue;                                          // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(MovieGraphValueContainer_GetValueString) == 0x000008, "Wrong alignment on MovieGraphValueContainer_GetValueString");
+static_assert(sizeof(MovieGraphValueContainer_GetValueString) == 0x000018, "Wrong size on MovieGraphValueContainer_GetValueString");
+static_assert(offsetof(MovieGraphValueContainer_GetValueString, OutValue) == 0x000000, "Member 'MovieGraphValueContainer_GetValueString::OutValue' has a wrong offset!");
+static_assert(offsetof(MovieGraphValueContainer_GetValueString, ReturnValue) == 0x000010, "Member 'MovieGraphValueContainer_GetValueString::ReturnValue' has a wrong offset!");
+
+// Function MovieRenderPipelineCore.MovieGraphValueContainer.GetValueText
+// 0x0018 (0x0018 - 0x0000)
+struct MovieGraphValueContainer_GetValueText final
+{
+public:
+	class FText                                   OutValue;                                          // 0x0000(0x0010)(Parm, OutParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(MovieGraphValueContainer_GetValueText) == 0x000008, "Wrong alignment on MovieGraphValueContainer_GetValueText");
+static_assert(sizeof(MovieGraphValueContainer_GetValueText) == 0x000018, "Wrong size on MovieGraphValueContainer_GetValueText");
+static_assert(offsetof(MovieGraphValueContainer_GetValueText, OutValue) == 0x000000, "Member 'MovieGraphValueContainer_GetValueText::OutValue' has a wrong offset!");
+static_assert(offsetof(MovieGraphValueContainer_GetValueText, ReturnValue) == 0x000010, "Member 'MovieGraphValueContainer_GetValueText::ReturnValue' has a wrong offset!");
+
+// Function MovieRenderPipelineCore.MovieGraphValueContainer.GetValueType
+// 0x0001 (0x0001 - 0x0000)
+struct MovieGraphValueContainer_GetValueType final
+{
+public:
+	EMovieGraphValueType                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MovieGraphValueContainer_GetValueType) == 0x000001, "Wrong alignment on MovieGraphValueContainer_GetValueType");
+static_assert(sizeof(MovieGraphValueContainer_GetValueType) == 0x000001, "Wrong size on MovieGraphValueContainer_GetValueType");
+static_assert(offsetof(MovieGraphValueContainer_GetValueType, ReturnValue) == 0x000000, "Member 'MovieGraphValueContainer_GetValueType::ReturnValue' has a wrong offset!");
+
+// Function MovieRenderPipelineCore.MovieGraphValueContainer.GetValueTypeObject
+// 0x0008 (0x0008 - 0x0000)
+struct MovieGraphValueContainer_GetValueTypeObject final
+{
+public:
+	const class UObject*                          ReturnValue;                                       // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MovieGraphValueContainer_GetValueTypeObject) == 0x000008, "Wrong alignment on MovieGraphValueContainer_GetValueTypeObject");
+static_assert(sizeof(MovieGraphValueContainer_GetValueTypeObject) == 0x000008, "Wrong size on MovieGraphValueContainer_GetValueTypeObject");
+static_assert(offsetof(MovieGraphValueContainer_GetValueTypeObject, ReturnValue) == 0x000000, "Member 'MovieGraphValueContainer_GetValueTypeObject::ReturnValue' has a wrong offset!");
+
+// Function MovieRenderPipelineCore.MovieGraphMember.SetMemberName
+// 0x0018 (0x0018 - 0x0000)
+struct MovieGraphMember_SetMemberName final
+{
+public:
+	class FString                                 InNewName;                                         // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(MovieGraphMember_SetMemberName) == 0x000008, "Wrong alignment on MovieGraphMember_SetMemberName");
+static_assert(sizeof(MovieGraphMember_SetMemberName) == 0x000018, "Wrong size on MovieGraphMember_SetMemberName");
+static_assert(offsetof(MovieGraphMember_SetMemberName, InNewName) == 0x000000, "Member 'MovieGraphMember_SetMemberName::InNewName' has a wrong offset!");
+static_assert(offsetof(MovieGraphMember_SetMemberName, ReturnValue) == 0x000010, "Member 'MovieGraphMember_SetMemberName::ReturnValue' has a wrong offset!");
+
+// Function MovieRenderPipelineCore.MovieGraphMember.GetGuid
+// 0x0010 (0x0010 - 0x0000)
+struct MovieGraphMember_GetGuid final
+{
+public:
+	struct FGuid                                  ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MovieGraphMember_GetGuid) == 0x000004, "Wrong alignment on MovieGraphMember_GetGuid");
+static_assert(sizeof(MovieGraphMember_GetGuid) == 0x000010, "Wrong size on MovieGraphMember_GetGuid");
+static_assert(offsetof(MovieGraphMember_GetGuid, ReturnValue) == 0x000000, "Member 'MovieGraphMember_GetGuid::ReturnValue' has a wrong offset!");
+
+// Function MovieRenderPipelineCore.MovieGraphMember.GetMemberName
+// 0x0010 (0x0010 - 0x0000)
+struct MovieGraphMember_GetMemberName final
+{
+public:
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MovieGraphMember_GetMemberName) == 0x000008, "Wrong alignment on MovieGraphMember_GetMemberName");
+static_assert(sizeof(MovieGraphMember_GetMemberName) == 0x000010, "Wrong size on MovieGraphMember_GetMemberName");
+static_assert(offsetof(MovieGraphMember_GetMemberName, ReturnValue) == 0x000000, "Member 'MovieGraphMember_GetMemberName::ReturnValue' has a wrong offset!");
+
+// Function MovieRenderPipelineCore.MovieGraphRendererBase.GetPreviewData
+// 0x0010 (0x0010 - 0x0000)
+struct MovieGraphRendererBase_GetPreviewData final
+{
+public:
+	TArray<struct FMovieGraphImagePreviewData>    ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MovieGraphRendererBase_GetPreviewData) == 0x000008, "Wrong alignment on MovieGraphRendererBase_GetPreviewData");
+static_assert(sizeof(MovieGraphRendererBase_GetPreviewData) == 0x000010, "Wrong size on MovieGraphRendererBase_GetPreviewData");
+static_assert(offsetof(MovieGraphRendererBase_GetPreviewData, ReturnValue) == 0x000000, "Member 'MovieGraphRendererBase_GetPreviewData::ReturnValue' has a wrong offset!");
+
 // Function MovieRenderPipelineCore.MovieGraphEvaluatedConfig.GetBranchNames
 // 0x0010 (0x0010 - 0x0000)
 struct MovieGraphEvaluatedConfig_GetBranchNames final
@@ -1411,17 +1359,6 @@ static_assert(alignof(MovieGraphTimeStepBase_GetCalculatedTimeData) == 0x000008,
 static_assert(sizeof(MovieGraphTimeStepBase_GetCalculatedTimeData) == 0x000068, "Wrong size on MovieGraphTimeStepBase_GetCalculatedTimeData");
 static_assert(offsetof(MovieGraphTimeStepBase_GetCalculatedTimeData, ReturnValue) == 0x000000, "Member 'MovieGraphTimeStepBase_GetCalculatedTimeData::ReturnValue' has a wrong offset!");
 
-// Function MovieRenderPipelineCore.MovieGraphRendererBase.GetPreviewData
-// 0x0010 (0x0010 - 0x0000)
-struct MovieGraphRendererBase_GetPreviewData final
-{
-public:
-	TArray<struct FMovieGraphImagePreviewData>    ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MovieGraphRendererBase_GetPreviewData) == 0x000008, "Wrong alignment on MovieGraphRendererBase_GetPreviewData");
-static_assert(sizeof(MovieGraphRendererBase_GetPreviewData) == 0x000010, "Wrong size on MovieGraphRendererBase_GetPreviewData");
-static_assert(offsetof(MovieGraphRendererBase_GetPreviewData, ReturnValue) == 0x000000, "Member 'MovieGraphRendererBase_GetPreviewData::ReturnValue' has a wrong offset!");
-
 // Function MovieRenderPipelineCore.MovieGraphScriptBase.OnJobFinished
 // 0x0040 (0x0040 - 0x0000)
 struct MovieGraphScriptBase_OnJobFinished final
@@ -1571,6 +1508,17 @@ public:
 static_assert(alignof(MovieGraphModifierNode_GetModifiers) == 0x000008, "Wrong alignment on MovieGraphModifierNode_GetModifiers");
 static_assert(sizeof(MovieGraphModifierNode_GetModifiers) == 0x000010, "Wrong size on MovieGraphModifierNode_GetModifiers");
 static_assert(offsetof(MovieGraphModifierNode_GetModifiers, ReturnValue) == 0x000000, "Member 'MovieGraphModifierNode_GetModifiers::ReturnValue' has a wrong offset!");
+
+// Function MovieRenderPipelineCore.MovieGraphPin.GetConnectedNodes
+// 0x0010 (0x0010 - 0x0000)
+struct MovieGraphPin_GetConnectedNodes final
+{
+public:
+	TArray<class UMovieGraphNode*>                ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MovieGraphPin_GetConnectedNodes) == 0x000008, "Wrong alignment on MovieGraphPin_GetConnectedNodes");
+static_assert(sizeof(MovieGraphPin_GetConnectedNodes) == 0x000010, "Wrong size on MovieGraphPin_GetConnectedNodes");
+static_assert(offsetof(MovieGraphPin_GetConnectedNodes, ReturnValue) == 0x000000, "Member 'MovieGraphPin_GetConnectedNodes::ReturnValue' has a wrong offset!");
 
 // Function MovieRenderPipelineCore.MoviePipelineBase.RequestShutdown
 // 0x0001 (0x0001 - 0x0000)
@@ -2696,6 +2644,58 @@ static_assert(alignof(MovieJobVariableAssignmentContainer_GetValueTypeObject) ==
 static_assert(sizeof(MovieJobVariableAssignmentContainer_GetValueTypeObject) == 0x000010, "Wrong size on MovieJobVariableAssignmentContainer_GetValueTypeObject");
 static_assert(offsetof(MovieJobVariableAssignmentContainer_GetValueTypeObject, InGraphVariable) == 0x000000, "Member 'MovieJobVariableAssignmentContainer_GetValueTypeObject::InGraphVariable' has a wrong offset!");
 static_assert(offsetof(MovieJobVariableAssignmentContainer_GetValueTypeObject, ReturnValue) == 0x000008, "Member 'MovieJobVariableAssignmentContainer_GetValueTypeObject::ReturnValue' has a wrong offset!");
+
+// Function MovieRenderPipelineCore.MoviePipelineSetting.SetIsEnabled
+// 0x0001 (0x0001 - 0x0000)
+struct MoviePipelineSetting_SetIsEnabled final
+{
+public:
+	bool                                          bInEnabled;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MoviePipelineSetting_SetIsEnabled) == 0x000001, "Wrong alignment on MoviePipelineSetting_SetIsEnabled");
+static_assert(sizeof(MoviePipelineSetting_SetIsEnabled) == 0x000001, "Wrong size on MoviePipelineSetting_SetIsEnabled");
+static_assert(offsetof(MoviePipelineSetting_SetIsEnabled, bInEnabled) == 0x000000, "Member 'MoviePipelineSetting_SetIsEnabled::bInEnabled' has a wrong offset!");
+
+// Function MovieRenderPipelineCore.MoviePipelineSetting.BuildNewProcessCommandLine
+// 0x0020 (0x0020 - 0x0000)
+struct MoviePipelineSetting_BuildNewProcessCommandLine final
+{
+public:
+	class FString                                 InOutUnrealURLParams;                              // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 InOutCommandLineArgs;                              // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MoviePipelineSetting_BuildNewProcessCommandLine) == 0x000008, "Wrong alignment on MoviePipelineSetting_BuildNewProcessCommandLine");
+static_assert(sizeof(MoviePipelineSetting_BuildNewProcessCommandLine) == 0x000020, "Wrong size on MoviePipelineSetting_BuildNewProcessCommandLine");
+static_assert(offsetof(MoviePipelineSetting_BuildNewProcessCommandLine, InOutUnrealURLParams) == 0x000000, "Member 'MoviePipelineSetting_BuildNewProcessCommandLine::InOutUnrealURLParams' has a wrong offset!");
+static_assert(offsetof(MoviePipelineSetting_BuildNewProcessCommandLine, InOutCommandLineArgs) == 0x000010, "Member 'MoviePipelineSetting_BuildNewProcessCommandLine::InOutCommandLineArgs' has a wrong offset!");
+
+// Function MovieRenderPipelineCore.MoviePipelineSetting.BuildNewProcessCommandLineArgs
+// 0x0040 (0x0040 - 0x0000)
+struct MoviePipelineSetting_BuildNewProcessCommandLineArgs final
+{
+public:
+	TArray<class FString>                         InOutUnrealURLParams;                              // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<class FString>                         InOutCommandLineArgs;                              // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<class FString>                         InOutDeviceProfileCvars;                           // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<class FString>                         InOutExecCmds;                                     // 0x0030(0x0010)(Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MoviePipelineSetting_BuildNewProcessCommandLineArgs) == 0x000008, "Wrong alignment on MoviePipelineSetting_BuildNewProcessCommandLineArgs");
+static_assert(sizeof(MoviePipelineSetting_BuildNewProcessCommandLineArgs) == 0x000040, "Wrong size on MoviePipelineSetting_BuildNewProcessCommandLineArgs");
+static_assert(offsetof(MoviePipelineSetting_BuildNewProcessCommandLineArgs, InOutUnrealURLParams) == 0x000000, "Member 'MoviePipelineSetting_BuildNewProcessCommandLineArgs::InOutUnrealURLParams' has a wrong offset!");
+static_assert(offsetof(MoviePipelineSetting_BuildNewProcessCommandLineArgs, InOutCommandLineArgs) == 0x000010, "Member 'MoviePipelineSetting_BuildNewProcessCommandLineArgs::InOutCommandLineArgs' has a wrong offset!");
+static_assert(offsetof(MoviePipelineSetting_BuildNewProcessCommandLineArgs, InOutDeviceProfileCvars) == 0x000020, "Member 'MoviePipelineSetting_BuildNewProcessCommandLineArgs::InOutDeviceProfileCvars' has a wrong offset!");
+static_assert(offsetof(MoviePipelineSetting_BuildNewProcessCommandLineArgs, InOutExecCmds) == 0x000030, "Member 'MoviePipelineSetting_BuildNewProcessCommandLineArgs::InOutExecCmds' has a wrong offset!");
+
+// Function MovieRenderPipelineCore.MoviePipelineSetting.IsEnabled
+// 0x0001 (0x0001 - 0x0000)
+struct MoviePipelineSetting_IsEnabled final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MoviePipelineSetting_IsEnabled) == 0x000001, "Wrong alignment on MoviePipelineSetting_IsEnabled");
+static_assert(sizeof(MoviePipelineSetting_IsEnabled) == 0x000001, "Wrong size on MoviePipelineSetting_IsEnabled");
+static_assert(offsetof(MoviePipelineSetting_IsEnabled, ReturnValue) == 0x000000, "Member 'MoviePipelineSetting_IsEnabled::ReturnValue' has a wrong offset!");
 
 // Function MovieRenderPipelineCore.MoviePipelineSetting_BlueprintBase.ReceiveSetupForPipelineImpl
 // 0x0008 (0x0008 - 0x0000)

@@ -162,16 +162,6 @@ static_assert(offsetof(FWwiseEventCookedData, RequiredGroupValueSet) == 0x000048
 static_assert(offsetof(FWwiseEventCookedData, DestroyOptions) == 0x000098, "Member 'FWwiseEventCookedData::DestroyOptions' has a wrong offset!");
 static_assert(offsetof(FWwiseEventCookedData, DebugName) == 0x00009C, "Member 'FWwiseEventCookedData::DebugName' has a wrong offset!");
 
-// ScriptStruct WwiseResourceLoader.WwiseSharedGroupValueKey
-// 0x0010 (0x0010 - 0x0000)
-struct alignas(0x08) FWwiseSharedGroupValueKey final
-{
-public:
-	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FWwiseSharedGroupValueKey) == 0x000008, "Wrong alignment on FWwiseSharedGroupValueKey");
-static_assert(sizeof(FWwiseSharedGroupValueKey) == 0x000010, "Wrong size on FWwiseSharedGroupValueKey");
-
 // ScriptStruct WwiseResourceLoader.WwiseObjectInfo
 // 0x0020 (0x0020 - 0x0000)
 struct FWwiseObjectInfo
@@ -350,6 +340,16 @@ static_assert(alignof(FWwisePlatformId) == 0x000004, "Wrong alignment on FWwiseP
 static_assert(sizeof(FWwisePlatformId) == 0x000018, "Wrong size on FWwisePlatformId");
 static_assert(offsetof(FWwisePlatformId, PlatformGuid) == 0x000000, "Member 'FWwisePlatformId::PlatformGuid' has a wrong offset!");
 static_assert(offsetof(FWwisePlatformId, PlatformName) == 0x000010, "Member 'FWwisePlatformId::PlatformName' has a wrong offset!");
+
+// ScriptStruct WwiseResourceLoader.WwiseSharedGroupValueKey
+// 0x0010 (0x0010 - 0x0000)
+struct alignas(0x08) FWwiseSharedGroupValueKey final
+{
+public:
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FWwiseSharedGroupValueKey) == 0x000008, "Wrong alignment on FWwiseSharedGroupValueKey");
+static_assert(sizeof(FWwiseSharedGroupValueKey) == 0x000010, "Wrong size on FWwiseSharedGroupValueKey");
 
 // ScriptStruct WwiseResourceLoader.WwiseSharedLanguageId
 // 0x0018 (0x0018 - 0x0000)

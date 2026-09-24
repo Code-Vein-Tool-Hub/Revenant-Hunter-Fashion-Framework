@@ -26,9 +26,9 @@ public:
 	class UTextBlock*                             SummaryLV;                                         // 0x06D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void Construct();
-	void ExecuteUbergraph_WDT_Status_LevelPiece(int32 EntryPoint);
 	void SetLevel(int32 InLevel);
+	void ExecuteUbergraph_WDT_Status_LevelPiece(int32 EntryPoint);
+	void Construct();
 
 public:
 	static class UClass* StaticClass()

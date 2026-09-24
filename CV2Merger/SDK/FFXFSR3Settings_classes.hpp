@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "FFXFSR3Settings_structs.hpp"
+#include "Engine_structs.hpp"
 #include "DeveloperSettings_classes.hpp"
 
 

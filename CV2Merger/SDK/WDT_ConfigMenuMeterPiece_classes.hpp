@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "Extensions_structs.hpp"
+#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "WDT_ConfigPieceBase_classes.hpp"
 
@@ -57,12 +57,15 @@ public:
 public:
 	void UpdateTextStyle();
 	void SetupMeter();
+	void SetTogleOnOff_NoNotify(bool InFlag);
 	void SetTogleOnOff(bool InFlag);
 	void SetStrideValue(double NewParam);
 	void SetMeterValue(double Value);
 	void SetIsToggleEditable(bool InIsEditable);
 	void SetIsEditable(bool InFlag);
+	void SetDefaultVisualDisplayValue(double InInitalizeValue, double InDefaultValue);
 	void SetDefaultValue(double InInitializeValue, double InDefaultValue);
+	void SetDefaultDisplayValue_NoNotify(double InInitalizeValue, double InDefaultValue);
 	void SetDefaultDisplayValue(double InInitalizeValue, double InDefaultValue);
 	bool Select(bool PlayAnimation_0);
 	void PreConstruct(bool IsDesignTime);

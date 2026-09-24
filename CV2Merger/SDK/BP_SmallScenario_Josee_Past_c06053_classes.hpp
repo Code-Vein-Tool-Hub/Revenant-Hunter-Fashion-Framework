@@ -20,12 +20,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_SmallScenario_Josee_Past_c06053.BP_SmallScenario_Josee_Past_c06053_C
-// 0x0018 (0x03E0 - 0x03C8)
+// 0x0018 (0x03F0 - 0x03D8)
 class ABP_SmallScenario_Josee_Past_c06053_C final : public ABP_SmallScenarioBase_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_SmallScenario_Josee_Past_c06053_C; // 0x03C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FStoryFlagEvaluationFormula            Check_e20950;                                      // 0x03D0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_SmallScenario_Josee_Past_c06053_C; // 0x03D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FStoryFlagEvaluationFormula            Check_e20950;                                      // 0x03E0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
 	void Abort();
@@ -46,9 +46,9 @@ public:
 	}
 };
 static_assert(alignof(ABP_SmallScenario_Josee_Past_c06053_C) == 0x000008, "Wrong alignment on ABP_SmallScenario_Josee_Past_c06053_C");
-static_assert(sizeof(ABP_SmallScenario_Josee_Past_c06053_C) == 0x0003E0, "Wrong size on ABP_SmallScenario_Josee_Past_c06053_C");
-static_assert(offsetof(ABP_SmallScenario_Josee_Past_c06053_C, UberGraphFrame_BP_SmallScenario_Josee_Past_c06053_C) == 0x0003C8, "Member 'ABP_SmallScenario_Josee_Past_c06053_C::UberGraphFrame_BP_SmallScenario_Josee_Past_c06053_C' has a wrong offset!");
-static_assert(offsetof(ABP_SmallScenario_Josee_Past_c06053_C, Check_e20950) == 0x0003D0, "Member 'ABP_SmallScenario_Josee_Past_c06053_C::Check_e20950' has a wrong offset!");
+static_assert(sizeof(ABP_SmallScenario_Josee_Past_c06053_C) == 0x0003F0, "Wrong size on ABP_SmallScenario_Josee_Past_c06053_C");
+static_assert(offsetof(ABP_SmallScenario_Josee_Past_c06053_C, UberGraphFrame_BP_SmallScenario_Josee_Past_c06053_C) == 0x0003D8, "Member 'ABP_SmallScenario_Josee_Past_c06053_C::UberGraphFrame_BP_SmallScenario_Josee_Past_c06053_C' has a wrong offset!");
+static_assert(offsetof(ABP_SmallScenario_Josee_Past_c06053_C, Check_e20950) == 0x0003E0, "Member 'ABP_SmallScenario_Josee_Past_c06053_C::Check_e20950' has a wrong offset!");
 
 }
 

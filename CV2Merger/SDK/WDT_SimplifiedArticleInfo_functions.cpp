@@ -17,25 +17,41 @@
 namespace SDK
 {
 
-// Function WDT_SimplifiedArticleInfo.WDT_SimplifiedArticleInfo_C.EnhanceInfo
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   EnhanceLevel                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TSoftObjectPtr<class UTexture2D>        EnchantIcon_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, UObjectWrapper, HasGetValueTypeHash)
-// struct FGameplayTag                     EnchantTag                                             (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+// Function WDT_SimplifiedArticleInfo.WDT_SimplifiedArticleInfo_C.SetEmpty
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UWDT_SimplifiedArticleInfo_C::EnhanceInfo(int32 EnhanceLevel, TSoftObjectPtr<class UTexture2D> EnchantIcon_0, const struct FGameplayTag& EnchantTag)
+void UWDT_SimplifiedArticleInfo_C::SetEmpty()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_SimplifiedArticleInfo_C", "EnhanceInfo");
+		Func = Class->GetFunction("WDT_SimplifiedArticleInfo_C", "SetEmpty");
 
-	Params::WDT_SimplifiedArticleInfo_C_EnhanceInfo Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.EnhanceLevel = EnhanceLevel;
-	Parms.EnchantIcon_0 = EnchantIcon_0;
-	Parms.EnchantTag = std::move(EnchantTag);
+
+// Function WDT_SimplifiedArticleInfo.WDT_SimplifiedArticleInfo_C.SetArticleInfo
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FUIArticleInfo                   ArticleInfo                                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// int32                                   EnhancementLevel                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TSoftObjectPtr<class UTexture2D>        EnchantLcon                                            (BlueprintVisible, BlueprintReadOnly, Parm, UObjectWrapper, HasGetValueTypeHash)
+// struct FGameplayTag                     InEnchantTag                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_SimplifiedArticleInfo_C::SetArticleInfo(const struct FUIArticleInfo& ArticleInfo, int32 EnhancementLevel, TSoftObjectPtr<class UTexture2D> EnchantLcon, const struct FGameplayTag& InEnchantTag)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_SimplifiedArticleInfo_C", "SetArticleInfo");
+
+	Params::WDT_SimplifiedArticleInfo_C_SetArticleInfo Parms{};
+
+	Parms.ArticleInfo = std::move(ArticleInfo);
+	Parms.EnhancementLevel = EnhancementLevel;
+	Parms.EnchantLcon = EnchantLcon;
+	Parms.InEnchantTag = std::move(InEnchantTag);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -62,43 +78,27 @@ void UWDT_SimplifiedArticleInfo_C::IsEmpty(bool* NewParam)
 }
 
 
-// Function WDT_SimplifiedArticleInfo.WDT_SimplifiedArticleInfo_C.SetArticleInfo
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function WDT_SimplifiedArticleInfo.WDT_SimplifiedArticleInfo_C.EnhanceInfo
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FUIArticleInfo                   ArticleInfo                                            (BlueprintVisible, BlueprintReadOnly, Parm)
-// int32                                   EnhancementLevel                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TSoftObjectPtr<class UTexture2D>        EnchantLcon                                            (BlueprintVisible, BlueprintReadOnly, Parm, UObjectWrapper, HasGetValueTypeHash)
-// struct FGameplayTag                     InEnchantTag                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+// int32                                   EnhanceLevel                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TSoftObjectPtr<class UTexture2D>        EnchantIcon_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, UObjectWrapper, HasGetValueTypeHash)
+// struct FGameplayTag                     EnchantTag                                             (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_SimplifiedArticleInfo_C::SetArticleInfo(const struct FUIArticleInfo& ArticleInfo, int32 EnhancementLevel, TSoftObjectPtr<class UTexture2D> EnchantLcon, const struct FGameplayTag& InEnchantTag)
+void UWDT_SimplifiedArticleInfo_C::EnhanceInfo(int32 EnhanceLevel, TSoftObjectPtr<class UTexture2D> EnchantIcon_0, const struct FGameplayTag& EnchantTag)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_SimplifiedArticleInfo_C", "SetArticleInfo");
+		Func = Class->GetFunction("WDT_SimplifiedArticleInfo_C", "EnhanceInfo");
 
-	Params::WDT_SimplifiedArticleInfo_C_SetArticleInfo Parms{};
+	Params::WDT_SimplifiedArticleInfo_C_EnhanceInfo Parms{};
 
-	Parms.ArticleInfo = std::move(ArticleInfo);
-	Parms.EnhancementLevel = EnhancementLevel;
-	Parms.EnchantLcon = EnchantLcon;
-	Parms.InEnchantTag = std::move(InEnchantTag);
+	Parms.EnhanceLevel = EnhanceLevel;
+	Parms.EnchantIcon_0 = EnchantIcon_0;
+	Parms.EnchantTag = std::move(EnchantTag);
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_SimplifiedArticleInfo.WDT_SimplifiedArticleInfo_C.SetEmpty
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWDT_SimplifiedArticleInfo_C::SetEmpty()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_SimplifiedArticleInfo_C", "SetEmpty");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

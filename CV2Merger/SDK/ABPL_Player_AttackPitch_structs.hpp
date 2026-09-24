@@ -51,13 +51,5 @@ static_assert(offsetof(ABPL_Player_AttackPitch::FAnimBlueprintGeneratedConstantD
 static_assert(offsetof(ABPL_Player_AttackPitch::FAnimBlueprintGeneratedConstantData, AppAnimGraphNode_PitchUpperBody) == 0x000170, "Member 'ABPL_Player_AttackPitch::FAnimBlueprintGeneratedConstantData::AppAnimGraphNode_PitchUpperBody' has a wrong offset!");
 static_assert(offsetof(ABPL_Player_AttackPitch::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Root) == 0x0001A0, "Member 'ABPL_Player_AttackPitch::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Root' has a wrong offset!");
 
-// ScriptStruct ABPL_Player_AttackPitch.ABPL_Player_AttackPitch_C.AnimBlueprintGeneratedMutableData
-// 0x0000 (0x0001 - 0x0001)
-struct ABPL_Player_AttackPitch::FAnimBlueprintGeneratedMutableData final : public FAnimBlueprintMutableData
-{
-};
-static_assert(alignof(ABPL_Player_AttackPitch::FAnimBlueprintGeneratedMutableData) == 0x000001, "Wrong alignment on ABPL_Player_AttackPitch::FAnimBlueprintGeneratedMutableData");
-static_assert(sizeof(ABPL_Player_AttackPitch::FAnimBlueprintGeneratedMutableData) == 0x000001, "Wrong size on ABPL_Player_AttackPitch::FAnimBlueprintGeneratedMutableData");
-
 }
 

@@ -11,11 +11,11 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "SlateCore_structs.hpp"
 #include "BasicUI_structs.hpp"
-#include "Extensions_structs.hpp"
-#include "UMG_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "Extensions_structs.hpp"
+#include "SlateCore_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 namespace SDK::Params
@@ -66,7 +66,7 @@ static_assert(offsetof(WDT_ArticleInfo_C_BuildFeatureText, K2Node_MakeArray_Arra
 static_assert(offsetof(WDT_ArticleInfo_C_BuildFeatureText, CallFunc_Format_ReturnValue) == 0x000130, "Member 'WDT_ArticleInfo_C_BuildFeatureText::CallFunc_Format_ReturnValue' has a wrong offset!");
 
 // Function WDT_ArticleInfo.WDT_ArticleInfo_C.BuildFeatureUnitText
-// 0x02C8 (0x02C8 - 0x0000)
+// 0x02E8 (0x02E8 - 0x0000)
 struct WDT_ArticleInfo_C_BuildFeatureUnitText final
 {
 public:
@@ -84,26 +84,28 @@ public:
 	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0088(0x0010)()
 	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x0098(0x0010)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x00A8(0x0048)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x00F0(0x0048)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x0138(0x0048)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_3;            // 0x0180(0x0048)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x01C8(0x0010)(ReferenceParm)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x01D8(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x01E8(0x0010)()
-	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x01F8(0x0010)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_4;            // 0x0208(0x0048)(HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0250(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0254(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_255[0x3];                                      // 0x0255(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0258(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_25C[0x4];                                      // 0x025C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_5;            // 0x0260(0x0048)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_2;                          // 0x02A8(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue_2;                     // 0x02B8(0x0010)()
+	class FText                                   CallFunc_FormatTextWithPlayerInfo_ReturnValue;     // 0x00A8(0x0010)()
+	class FText                                   CallFunc_FormatTextWithPlayerInfo_ReturnValue_1;   // 0x00B8(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x00C8(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0110(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x0158(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_3;            // 0x01A0(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x01E8(0x0010)(ReferenceParm)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x01F8(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0208(0x0010)()
+	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x0218(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_4;            // 0x0228(0x0048)(HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0270(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0274(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_275[0x3];                                      // 0x0275(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0278(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_27C[0x4];                                      // 0x027C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_5;            // 0x0280(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_2;                          // 0x02C8(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue_2;                     // 0x02D8(0x0010)()
 };
 static_assert(alignof(WDT_ArticleInfo_C_BuildFeatureUnitText) == 0x000008, "Wrong alignment on WDT_ArticleInfo_C_BuildFeatureUnitText");
-static_assert(sizeof(WDT_ArticleInfo_C_BuildFeatureUnitText) == 0x0002C8, "Wrong size on WDT_ArticleInfo_C_BuildFeatureUnitText");
+static_assert(sizeof(WDT_ArticleInfo_C_BuildFeatureUnitText) == 0x0002E8, "Wrong size on WDT_ArticleInfo_C_BuildFeatureUnitText");
 static_assert(offsetof(WDT_ArticleInfo_C_BuildFeatureUnitText, UIFeatureInfo) == 0x000000, "Member 'WDT_ArticleInfo_C_BuildFeatureUnitText::UIFeatureInfo' has a wrong offset!");
 static_assert(offsetof(WDT_ArticleInfo_C_BuildFeatureUnitText, OutText) == 0x000020, "Member 'WDT_ArticleInfo_C_BuildFeatureUnitText::OutText' has a wrong offset!");
 static_assert(offsetof(WDT_ArticleInfo_C_BuildFeatureUnitText, L_FeatureText) == 0x000030, "Member 'WDT_ArticleInfo_C_BuildFeatureUnitText::L_FeatureText' has a wrong offset!");
@@ -115,21 +117,23 @@ static_assert(offsetof(WDT_ArticleInfo_C_BuildFeatureUnitText, CallFunc_Array_Ge
 static_assert(offsetof(WDT_ArticleInfo_C_BuildFeatureUnitText, CallFunc_Array_Length_ReturnValue) == 0x000080, "Member 'WDT_ArticleInfo_C_BuildFeatureUnitText::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_ArticleInfo_C_BuildFeatureUnitText, CallFunc_Conv_StringToText_ReturnValue) == 0x000088, "Member 'WDT_ArticleInfo_C_BuildFeatureUnitText::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_ArticleInfo_C_BuildFeatureUnitText, CallFunc_Conv_StringToText_ReturnValue_1) == 0x000098, "Member 'WDT_ArticleInfo_C_BuildFeatureUnitText::CallFunc_Conv_StringToText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_BuildFeatureUnitText, K2Node_MakeStruct_FormatArgumentData) == 0x0000A8, "Member 'WDT_ArticleInfo_C_BuildFeatureUnitText::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_BuildFeatureUnitText, K2Node_MakeStruct_FormatArgumentData_1) == 0x0000F0, "Member 'WDT_ArticleInfo_C_BuildFeatureUnitText::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_BuildFeatureUnitText, K2Node_MakeStruct_FormatArgumentData_2) == 0x000138, "Member 'WDT_ArticleInfo_C_BuildFeatureUnitText::K2Node_MakeStruct_FormatArgumentData_2' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_BuildFeatureUnitText, K2Node_MakeStruct_FormatArgumentData_3) == 0x000180, "Member 'WDT_ArticleInfo_C_BuildFeatureUnitText::K2Node_MakeStruct_FormatArgumentData_3' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_BuildFeatureUnitText, K2Node_MakeArray_Array) == 0x0001C8, "Member 'WDT_ArticleInfo_C_BuildFeatureUnitText::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_BuildFeatureUnitText, K2Node_MakeArray_Array_1) == 0x0001D8, "Member 'WDT_ArticleInfo_C_BuildFeatureUnitText::K2Node_MakeArray_Array_1' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_BuildFeatureUnitText, CallFunc_Format_ReturnValue) == 0x0001E8, "Member 'WDT_ArticleInfo_C_BuildFeatureUnitText::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_BuildFeatureUnitText, CallFunc_Format_ReturnValue_1) == 0x0001F8, "Member 'WDT_ArticleInfo_C_BuildFeatureUnitText::CallFunc_Format_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_BuildFeatureUnitText, K2Node_MakeStruct_FormatArgumentData_4) == 0x000208, "Member 'WDT_ArticleInfo_C_BuildFeatureUnitText::K2Node_MakeStruct_FormatArgumentData_4' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_BuildFeatureUnitText, Temp_int_Loop_Counter_Variable) == 0x000250, "Member 'WDT_ArticleInfo_C_BuildFeatureUnitText::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_BuildFeatureUnitText, CallFunc_Less_IntInt_ReturnValue) == 0x000254, "Member 'WDT_ArticleInfo_C_BuildFeatureUnitText::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_BuildFeatureUnitText, CallFunc_Add_IntInt_ReturnValue) == 0x000258, "Member 'WDT_ArticleInfo_C_BuildFeatureUnitText::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_BuildFeatureUnitText, K2Node_MakeStruct_FormatArgumentData_5) == 0x000260, "Member 'WDT_ArticleInfo_C_BuildFeatureUnitText::K2Node_MakeStruct_FormatArgumentData_5' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_BuildFeatureUnitText, K2Node_MakeArray_Array_2) == 0x0002A8, "Member 'WDT_ArticleInfo_C_BuildFeatureUnitText::K2Node_MakeArray_Array_2' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_BuildFeatureUnitText, CallFunc_Format_ReturnValue_2) == 0x0002B8, "Member 'WDT_ArticleInfo_C_BuildFeatureUnitText::CallFunc_Format_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_BuildFeatureUnitText, CallFunc_FormatTextWithPlayerInfo_ReturnValue) == 0x0000A8, "Member 'WDT_ArticleInfo_C_BuildFeatureUnitText::CallFunc_FormatTextWithPlayerInfo_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_BuildFeatureUnitText, CallFunc_FormatTextWithPlayerInfo_ReturnValue_1) == 0x0000B8, "Member 'WDT_ArticleInfo_C_BuildFeatureUnitText::CallFunc_FormatTextWithPlayerInfo_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_BuildFeatureUnitText, K2Node_MakeStruct_FormatArgumentData) == 0x0000C8, "Member 'WDT_ArticleInfo_C_BuildFeatureUnitText::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_BuildFeatureUnitText, K2Node_MakeStruct_FormatArgumentData_1) == 0x000110, "Member 'WDT_ArticleInfo_C_BuildFeatureUnitText::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_BuildFeatureUnitText, K2Node_MakeStruct_FormatArgumentData_2) == 0x000158, "Member 'WDT_ArticleInfo_C_BuildFeatureUnitText::K2Node_MakeStruct_FormatArgumentData_2' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_BuildFeatureUnitText, K2Node_MakeStruct_FormatArgumentData_3) == 0x0001A0, "Member 'WDT_ArticleInfo_C_BuildFeatureUnitText::K2Node_MakeStruct_FormatArgumentData_3' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_BuildFeatureUnitText, K2Node_MakeArray_Array) == 0x0001E8, "Member 'WDT_ArticleInfo_C_BuildFeatureUnitText::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_BuildFeatureUnitText, K2Node_MakeArray_Array_1) == 0x0001F8, "Member 'WDT_ArticleInfo_C_BuildFeatureUnitText::K2Node_MakeArray_Array_1' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_BuildFeatureUnitText, CallFunc_Format_ReturnValue) == 0x000208, "Member 'WDT_ArticleInfo_C_BuildFeatureUnitText::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_BuildFeatureUnitText, CallFunc_Format_ReturnValue_1) == 0x000218, "Member 'WDT_ArticleInfo_C_BuildFeatureUnitText::CallFunc_Format_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_BuildFeatureUnitText, K2Node_MakeStruct_FormatArgumentData_4) == 0x000228, "Member 'WDT_ArticleInfo_C_BuildFeatureUnitText::K2Node_MakeStruct_FormatArgumentData_4' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_BuildFeatureUnitText, Temp_int_Loop_Counter_Variable) == 0x000270, "Member 'WDT_ArticleInfo_C_BuildFeatureUnitText::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_BuildFeatureUnitText, CallFunc_Less_IntInt_ReturnValue) == 0x000274, "Member 'WDT_ArticleInfo_C_BuildFeatureUnitText::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_BuildFeatureUnitText, CallFunc_Add_IntInt_ReturnValue) == 0x000278, "Member 'WDT_ArticleInfo_C_BuildFeatureUnitText::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_BuildFeatureUnitText, K2Node_MakeStruct_FormatArgumentData_5) == 0x000280, "Member 'WDT_ArticleInfo_C_BuildFeatureUnitText::K2Node_MakeStruct_FormatArgumentData_5' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_BuildFeatureUnitText, K2Node_MakeArray_Array_2) == 0x0002C8, "Member 'WDT_ArticleInfo_C_BuildFeatureUnitText::K2Node_MakeArray_Array_2' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_BuildFeatureUnitText, CallFunc_Format_ReturnValue_2) == 0x0002D8, "Member 'WDT_ArticleInfo_C_BuildFeatureUnitText::CallFunc_Format_ReturnValue_2' has a wrong offset!");
 
 // Function WDT_ArticleInfo.WDT_ArticleInfo_C.CharacterFormat
 // 0x00B0 (0x00B0 - 0x0000)
@@ -676,575 +680,593 @@ static_assert(offsetof(WDT_ArticleInfo_C_SetAttrStatus, Num) == 0x000008, "Membe
 static_assert(offsetof(WDT_ArticleInfo_C_SetAttrStatus, Bar) == 0x000010, "Member 'WDT_ArticleInfo_C_SetAttrStatus::Bar' has a wrong offset!");
 
 // Function WDT_ArticleInfo.WDT_ArticleInfo_C.SetBloodCodeInfo
-// 0x0398 (0x0398 - 0x0000)
+// 0x0410 (0x0410 - 0x0000)
 struct WDT_ArticleInfo_C_SetBloodCodeInfo final
 {
 public:
-	struct FUIBloodCodeInfo                       InBloodCodeInfo;                                   // 0x0000(0x00D8)(BlueprintVisible, BlueprintReadOnly, Parm)
-	int32                                         L_BleedingFactor;                                  // 0x00D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_DC[0x4];                                       // 0x00DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FUIFeatureInfo>                 L_Features;                                        // 0x00E0(0x0010)(Edit, BlueprintVisible)
-	class FText                                   L_Description;                                     // 0x00F0(0x0010)(Edit, BlueprintVisible)
-	int32                                         L_CurseResistance;                                 // 0x0100(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_BleedResistance;                                 // 0x0104(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_WoundResistance;                                 // 0x0108(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_DiseaseResistance;                               // 0x010C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   L_BloodRelativeName;                               // 0x0110(0x0010)(Edit, BlueprintVisible)
-	int32                                         L_MaxProficiency;                                  // 0x0120(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Proficiency;                                     // 0x0124(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   L_ArticleName;                                     // 0x0128(0x0010)(Edit, BlueprintVisible)
-	int32                                         L_Fastness;                                        // 0x0138(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_13C[0x4];                                      // 0x013C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   L_Feature;                                         // 0x0140(0x0010)(Edit, BlueprintVisible)
-	int32                                         L_Stan;                                            // 0x0150(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Vanish;                                          // 0x0154(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Slow;                                            // 0x0158(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Leak;                                            // 0x015C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Venom;                                           // 0x0160(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_164[0x4];                                      // 0x0164(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        L_Thunder;                                         // 0x0168(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        L_Ice;                                             // 0x0170(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        L_Fire;                                            // 0x0178(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        L_Blood;                                           // 0x0180(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        L_Crush;                                           // 0x0188(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        L_Pierce;                                          // 0x0190(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        L_Sunder;                                          // 0x0198(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_BuddyPoint;                                      // 0x01A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_MaxIchor;                                        // 0x01A4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_AttributeFOR;                                    // 0x01A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_AttributeVIT;                                    // 0x01AC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_AttributeWIL;                                    // 0x01B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_AttributeMIND;                                   // 0x01B4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_AttributeDEX;                                    // 0x01B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_AttributeSTR;                                    // 0x01BC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MakeLiteralDouble_ReturnValue;            // 0x01C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x01C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue;  // 0x01D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x01D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Round_ReturnValue;                        // 0x01E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1E4[0x4];                                      // 0x01E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_1;           // 0x01E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x01F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MakeLiteralDouble_ReturnValue_1;          // 0x01F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_2;           // 0x0200(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MakeLiteralDouble_ReturnValue_2;          // 0x0208(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_1; // 0x0210(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_3;           // 0x0218(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x0220(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_2; // 0x0228(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Round_ReturnValue_1;                      // 0x0230(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_234[0x4];                                      // 0x0234(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_2;      // 0x0238(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_4;           // 0x0240(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Round_ReturnValue_2;                      // 0x0248(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_24C[0x4];                                      // 0x024C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_1;        // 0x0250(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_5;           // 0x0258(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_2;        // 0x0260(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_6;           // 0x0268(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MakeLiteralDouble_ReturnValue_3;          // 0x0270(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_7;           // 0x0278(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_3; // 0x0280(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_BuildFeatureText_Result;                  // 0x0288(0x0010)()
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_3;      // 0x0298(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_TextIsEmpty_ReturnValue;                  // 0x02A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2A1[0x3];                                      // 0x02A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Round_ReturnValue_3;                      // 0x02A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x02A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2A9[0x7];                                      // 0x02A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_8;           // 0x02B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_3;        // 0x02B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MakeLiteralDouble_ReturnValue_4;          // 0x02C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_9;           // 0x02C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_4; // 0x02D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_4;      // 0x02D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Round_ReturnValue_4;                      // 0x02E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2E4[0x4];                                      // 0x02E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_10;          // 0x02E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_4;        // 0x02F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MakeLiteralDouble_ReturnValue_5;          // 0x02F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_5; // 0x0300(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_5;      // 0x0308(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Round_ReturnValue_5;                      // 0x0310(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_314[0x4];                                      // 0x0314(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_11;          // 0x0318(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_5;        // 0x0320(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_12;          // 0x0328(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MakeLiteralDouble_ReturnValue_6;          // 0x0330(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_6; // 0x0338(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_6;      // 0x0340(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Round_ReturnValue_6;                      // 0x0348(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FUIBloodCodeInfo                       InBloodCodeInfo;                                   // 0x0000(0x00F8)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FUIBloodCodeAttributeConversionInfo    L_AttributeConversionInfo;                         // 0x00F8(0x0020)(Edit, BlueprintVisible)
+	int32                                         L_BleedingFactor;                                  // 0x0118(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11C[0x4];                                      // 0x011C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FUIFeatureInfo>                 L_Features;                                        // 0x0120(0x0010)(Edit, BlueprintVisible)
+	class FText                                   L_Description;                                     // 0x0130(0x0010)(Edit, BlueprintVisible)
+	int32                                         L_CurseResistance;                                 // 0x0140(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_BleedResistance;                                 // 0x0144(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_WoundResistance;                                 // 0x0148(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_DiseaseResistance;                               // 0x014C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   L_BloodRelativeName;                               // 0x0150(0x0010)(Edit, BlueprintVisible)
+	int32                                         L_MaxProficiency;                                  // 0x0160(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Proficiency;                                     // 0x0164(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   L_ArticleName;                                     // 0x0168(0x0010)(Edit, BlueprintVisible)
+	int32                                         L_Fastness;                                        // 0x0178(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_17C[0x4];                                      // 0x017C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   L_Feature;                                         // 0x0180(0x0010)(Edit, BlueprintVisible)
+	int32                                         L_Stan;                                            // 0x0190(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Vanish;                                          // 0x0194(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Slow;                                            // 0x0198(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Leak;                                            // 0x019C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Venom;                                           // 0x01A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1A4[0x4];                                      // 0x01A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        L_Thunder;                                         // 0x01A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        L_Ice;                                             // 0x01B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        L_Fire;                                            // 0x01B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        L_Blood;                                           // 0x01C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        L_Crush;                                           // 0x01C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        L_Pierce;                                          // 0x01D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        L_Sunder;                                          // 0x01D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_BuddyPoint;                                      // 0x01E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_MaxIchor;                                        // 0x01E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_AttributeFOR;                                    // 0x01E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_AttributeVIT;                                    // 0x01EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_AttributeWIL;                                    // 0x01F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_AttributeMIND;                                   // 0x01F4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_AttributeDEX;                                    // 0x01F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_AttributeSTR;                                    // 0x01FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MakeLiteralDouble_ReturnValue;            // 0x0200(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0208(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue;  // 0x0210(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0218(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Round_ReturnValue;                        // 0x0220(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_224[0x4];                                      // 0x0224(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_1;           // 0x0228(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0230(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MakeLiteralDouble_ReturnValue_1;          // 0x0238(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_2;           // 0x0240(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MakeLiteralDouble_ReturnValue_2;          // 0x0248(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_1; // 0x0250(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_3;           // 0x0258(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x0260(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_2; // 0x0268(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Round_ReturnValue_1;                      // 0x0270(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_274[0x4];                                      // 0x0274(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_2;      // 0x0278(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_4;           // 0x0280(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Round_ReturnValue_2;                      // 0x0288(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_28C[0x4];                                      // 0x028C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_1;        // 0x0290(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_5;           // 0x0298(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_2;        // 0x02A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_6;           // 0x02A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MakeLiteralDouble_ReturnValue_3;          // 0x02B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_7;           // 0x02B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_3; // 0x02C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_BuildFeatureText_Result;                  // 0x02C8(0x0010)()
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_3;      // 0x02D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_TextIsEmpty_ReturnValue;                  // 0x02E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2E1[0x3];                                      // 0x02E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Round_ReturnValue_3;                      // 0x02E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x02E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2E9[0x7];                                      // 0x02E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_8;           // 0x02F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_3;        // 0x02F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MakeLiteralDouble_ReturnValue_4;          // 0x0300(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_9;           // 0x0308(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_4; // 0x0310(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_4;      // 0x0318(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Round_ReturnValue_4;                      // 0x0320(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Get_Attribute_Convertion_Type_ConversionType; // 0x0324(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_10;          // 0x0328(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_4;        // 0x0330(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Get_Attribute_Convertion_Type_ConversionType_1; // 0x0338(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Get_Attribute_Convertion_Type_ConversionType_2; // 0x033C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Get_Attribute_Convertion_Type_ConversionType_3; // 0x0340(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Get_Attribute_Convertion_Type_ConversionType_4; // 0x0344(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Get_Attribute_Convertion_Type_ConversionType_5; // 0x0348(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_34C[0x4];                                      // 0x034C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_13;          // 0x0350(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_6;        // 0x0358(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x0360(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1;   // 0x0368(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2;   // 0x0370(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_3;   // 0x0378(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_4;   // 0x0380(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_5;   // 0x0388(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_6;   // 0x0390(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MakeLiteralDouble_ReturnValue_5;          // 0x0350(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_5; // 0x0358(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_5;      // 0x0360(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Round_ReturnValue_5;                      // 0x0368(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_36C[0x4];                                      // 0x036C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_11;          // 0x0370(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_5;        // 0x0378(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_FormatTextWithPlayerInfo_ReturnValue;     // 0x0380(0x0010)()
+	class FText                                   CallFunc_FormatTextWithPlayerInfo_ReturnValue_1;   // 0x0390(0x0010)()
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_12;          // 0x03A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MakeLiteralDouble_ReturnValue_6;          // 0x03A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_6; // 0x03B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_6;      // 0x03B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Round_ReturnValue_6;                      // 0x03C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3C4[0x4];                                      // 0x03C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_13;          // 0x03C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_6;        // 0x03D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x03D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1;   // 0x03E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2;   // 0x03E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_3;   // 0x03F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_4;   // 0x03F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_5;   // 0x0400(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_6;   // 0x0408(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_ArticleInfo_C_SetBloodCodeInfo) == 0x000008, "Wrong alignment on WDT_ArticleInfo_C_SetBloodCodeInfo");
-static_assert(sizeof(WDT_ArticleInfo_C_SetBloodCodeInfo) == 0x000398, "Wrong size on WDT_ArticleInfo_C_SetBloodCodeInfo");
+static_assert(sizeof(WDT_ArticleInfo_C_SetBloodCodeInfo) == 0x000410, "Wrong size on WDT_ArticleInfo_C_SetBloodCodeInfo");
 static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, InBloodCodeInfo) == 0x000000, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::InBloodCodeInfo' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_BleedingFactor) == 0x0000D8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_BleedingFactor' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_Features) == 0x0000E0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_Features' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_Description) == 0x0000F0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_Description' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_CurseResistance) == 0x000100, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_CurseResistance' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_BleedResistance) == 0x000104, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_BleedResistance' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_WoundResistance) == 0x000108, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_WoundResistance' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_DiseaseResistance) == 0x00010C, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_DiseaseResistance' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_BloodRelativeName) == 0x000110, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_BloodRelativeName' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_MaxProficiency) == 0x000120, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_MaxProficiency' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_Proficiency) == 0x000124, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_Proficiency' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_ArticleName) == 0x000128, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_ArticleName' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_Fastness) == 0x000138, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_Fastness' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_Feature) == 0x000140, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_Feature' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_Stan) == 0x000150, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_Stan' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_Vanish) == 0x000154, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_Vanish' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_Slow) == 0x000158, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_Slow' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_Leak) == 0x00015C, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_Leak' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_Venom) == 0x000160, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_Venom' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_Thunder) == 0x000168, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_Thunder' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_Ice) == 0x000170, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_Ice' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_Fire) == 0x000178, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_Fire' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_Blood) == 0x000180, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_Blood' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_Crush) == 0x000188, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_Crush' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_Pierce) == 0x000190, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_Pierce' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_Sunder) == 0x000198, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_Sunder' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_BuddyPoint) == 0x0001A0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_BuddyPoint' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_MaxIchor) == 0x0001A4, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_MaxIchor' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_AttributeFOR) == 0x0001A8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_AttributeFOR' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_AttributeVIT) == 0x0001AC, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_AttributeVIT' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_AttributeWIL) == 0x0001B0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_AttributeWIL' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_AttributeMIND) == 0x0001B4, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_AttributeMIND' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_AttributeDEX) == 0x0001B8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_AttributeDEX' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_AttributeSTR) == 0x0001BC, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_AttributeSTR' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_MakeLiteralDouble_ReturnValue) == 0x0001C0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_MakeLiteralDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Conv_IntToDouble_ReturnValue) == 0x0001C8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue) == 0x0001D0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x0001D8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Round_ReturnValue) == 0x0001E0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Round_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Conv_IntToDouble_ReturnValue_1) == 0x0001E8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Conv_IntToDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x0001F0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_MakeLiteralDouble_ReturnValue_1) == 0x0001F8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_MakeLiteralDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Conv_IntToDouble_ReturnValue_2) == 0x000200, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Conv_IntToDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_MakeLiteralDouble_ReturnValue_2) == 0x000208, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_MakeLiteralDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_1) == 0x000210, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Conv_IntToDouble_ReturnValue_3) == 0x000218, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Conv_IntToDouble_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000220, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_2) == 0x000228, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Round_ReturnValue_1) == 0x000230, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Round_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Multiply_DoubleDouble_ReturnValue_2) == 0x000238, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Multiply_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Conv_IntToDouble_ReturnValue_4) == 0x000240, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Conv_IntToDouble_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Round_ReturnValue_2) == 0x000248, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Round_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Divide_DoubleDouble_ReturnValue_1) == 0x000250, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Divide_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Conv_IntToDouble_ReturnValue_5) == 0x000258, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Conv_IntToDouble_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Divide_DoubleDouble_ReturnValue_2) == 0x000260, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Divide_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Conv_IntToDouble_ReturnValue_6) == 0x000268, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Conv_IntToDouble_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_MakeLiteralDouble_ReturnValue_3) == 0x000270, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_MakeLiteralDouble_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Conv_IntToDouble_ReturnValue_7) == 0x000278, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Conv_IntToDouble_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_3) == 0x000280, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_BuildFeatureText_Result) == 0x000288, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_BuildFeatureText_Result' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Multiply_DoubleDouble_ReturnValue_3) == 0x000298, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Multiply_DoubleDouble_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_TextIsEmpty_ReturnValue) == 0x0002A0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_TextIsEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Round_ReturnValue_3) == 0x0002A4, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Round_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Not_PreBool_ReturnValue) == 0x0002A8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Conv_IntToDouble_ReturnValue_8) == 0x0002B0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Conv_IntToDouble_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Divide_DoubleDouble_ReturnValue_3) == 0x0002B8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Divide_DoubleDouble_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_MakeLiteralDouble_ReturnValue_4) == 0x0002C0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_MakeLiteralDouble_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Conv_IntToDouble_ReturnValue_9) == 0x0002C8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Conv_IntToDouble_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_4) == 0x0002D0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Multiply_DoubleDouble_ReturnValue_4) == 0x0002D8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Multiply_DoubleDouble_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Round_ReturnValue_4) == 0x0002E0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Round_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Conv_IntToDouble_ReturnValue_10) == 0x0002E8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Conv_IntToDouble_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Divide_DoubleDouble_ReturnValue_4) == 0x0002F0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Divide_DoubleDouble_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_MakeLiteralDouble_ReturnValue_5) == 0x0002F8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_MakeLiteralDouble_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_5) == 0x000300, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Multiply_DoubleDouble_ReturnValue_5) == 0x000308, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Multiply_DoubleDouble_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Round_ReturnValue_5) == 0x000310, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Round_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Conv_IntToDouble_ReturnValue_11) == 0x000318, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Conv_IntToDouble_ReturnValue_11' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Divide_DoubleDouble_ReturnValue_5) == 0x000320, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Divide_DoubleDouble_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Conv_IntToDouble_ReturnValue_12) == 0x000328, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Conv_IntToDouble_ReturnValue_12' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_MakeLiteralDouble_ReturnValue_6) == 0x000330, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_MakeLiteralDouble_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_6) == 0x000338, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Multiply_DoubleDouble_ReturnValue_6) == 0x000340, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Multiply_DoubleDouble_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Round_ReturnValue_6) == 0x000348, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Round_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Conv_IntToDouble_ReturnValue_13) == 0x000350, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Conv_IntToDouble_ReturnValue_13' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Divide_DoubleDouble_ReturnValue_6) == 0x000358, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Divide_DoubleDouble_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x000360, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1) == 0x000368, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2) == 0x000370, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_3) == 0x000378, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_3' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_4) == 0x000380, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_4' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_5) == 0x000388, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_5' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_6) == 0x000390, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_6' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_AttributeConversionInfo) == 0x0000F8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_AttributeConversionInfo' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_BleedingFactor) == 0x000118, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_BleedingFactor' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_Features) == 0x000120, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_Features' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_Description) == 0x000130, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_Description' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_CurseResistance) == 0x000140, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_CurseResistance' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_BleedResistance) == 0x000144, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_BleedResistance' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_WoundResistance) == 0x000148, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_WoundResistance' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_DiseaseResistance) == 0x00014C, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_DiseaseResistance' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_BloodRelativeName) == 0x000150, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_BloodRelativeName' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_MaxProficiency) == 0x000160, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_MaxProficiency' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_Proficiency) == 0x000164, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_Proficiency' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_ArticleName) == 0x000168, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_ArticleName' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_Fastness) == 0x000178, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_Fastness' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_Feature) == 0x000180, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_Feature' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_Stan) == 0x000190, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_Stan' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_Vanish) == 0x000194, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_Vanish' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_Slow) == 0x000198, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_Slow' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_Leak) == 0x00019C, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_Leak' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_Venom) == 0x0001A0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_Venom' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_Thunder) == 0x0001A8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_Thunder' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_Ice) == 0x0001B0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_Ice' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_Fire) == 0x0001B8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_Fire' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_Blood) == 0x0001C0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_Blood' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_Crush) == 0x0001C8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_Crush' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_Pierce) == 0x0001D0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_Pierce' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_Sunder) == 0x0001D8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_Sunder' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_BuddyPoint) == 0x0001E0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_BuddyPoint' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_MaxIchor) == 0x0001E4, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_MaxIchor' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_AttributeFOR) == 0x0001E8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_AttributeFOR' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_AttributeVIT) == 0x0001EC, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_AttributeVIT' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_AttributeWIL) == 0x0001F0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_AttributeWIL' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_AttributeMIND) == 0x0001F4, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_AttributeMIND' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_AttributeDEX) == 0x0001F8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_AttributeDEX' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, L_AttributeSTR) == 0x0001FC, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::L_AttributeSTR' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_MakeLiteralDouble_ReturnValue) == 0x000200, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_MakeLiteralDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Conv_IntToDouble_ReturnValue) == 0x000208, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue) == 0x000210, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000218, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Round_ReturnValue) == 0x000220, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Round_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Conv_IntToDouble_ReturnValue_1) == 0x000228, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Conv_IntToDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000230, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_MakeLiteralDouble_ReturnValue_1) == 0x000238, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_MakeLiteralDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Conv_IntToDouble_ReturnValue_2) == 0x000240, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Conv_IntToDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_MakeLiteralDouble_ReturnValue_2) == 0x000248, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_MakeLiteralDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_1) == 0x000250, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Conv_IntToDouble_ReturnValue_3) == 0x000258, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Conv_IntToDouble_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000260, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_2) == 0x000268, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Round_ReturnValue_1) == 0x000270, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Round_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Multiply_DoubleDouble_ReturnValue_2) == 0x000278, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Multiply_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Conv_IntToDouble_ReturnValue_4) == 0x000280, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Conv_IntToDouble_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Round_ReturnValue_2) == 0x000288, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Round_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Divide_DoubleDouble_ReturnValue_1) == 0x000290, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Divide_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Conv_IntToDouble_ReturnValue_5) == 0x000298, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Conv_IntToDouble_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Divide_DoubleDouble_ReturnValue_2) == 0x0002A0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Divide_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Conv_IntToDouble_ReturnValue_6) == 0x0002A8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Conv_IntToDouble_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_MakeLiteralDouble_ReturnValue_3) == 0x0002B0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_MakeLiteralDouble_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Conv_IntToDouble_ReturnValue_7) == 0x0002B8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Conv_IntToDouble_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_3) == 0x0002C0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_BuildFeatureText_Result) == 0x0002C8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_BuildFeatureText_Result' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Multiply_DoubleDouble_ReturnValue_3) == 0x0002D8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Multiply_DoubleDouble_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_TextIsEmpty_ReturnValue) == 0x0002E0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_TextIsEmpty_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Round_ReturnValue_3) == 0x0002E4, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Round_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Not_PreBool_ReturnValue) == 0x0002E8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Conv_IntToDouble_ReturnValue_8) == 0x0002F0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Conv_IntToDouble_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Divide_DoubleDouble_ReturnValue_3) == 0x0002F8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Divide_DoubleDouble_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_MakeLiteralDouble_ReturnValue_4) == 0x000300, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_MakeLiteralDouble_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Conv_IntToDouble_ReturnValue_9) == 0x000308, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Conv_IntToDouble_ReturnValue_9' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_4) == 0x000310, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Multiply_DoubleDouble_ReturnValue_4) == 0x000318, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Multiply_DoubleDouble_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Round_ReturnValue_4) == 0x000320, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Round_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Get_Attribute_Convertion_Type_ConversionType) == 0x000324, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Get_Attribute_Convertion_Type_ConversionType' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Conv_IntToDouble_ReturnValue_10) == 0x000328, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Conv_IntToDouble_ReturnValue_10' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Divide_DoubleDouble_ReturnValue_4) == 0x000330, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Divide_DoubleDouble_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Get_Attribute_Convertion_Type_ConversionType_1) == 0x000338, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Get_Attribute_Convertion_Type_ConversionType_1' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Get_Attribute_Convertion_Type_ConversionType_2) == 0x00033C, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Get_Attribute_Convertion_Type_ConversionType_2' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Get_Attribute_Convertion_Type_ConversionType_3) == 0x000340, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Get_Attribute_Convertion_Type_ConversionType_3' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Get_Attribute_Convertion_Type_ConversionType_4) == 0x000344, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Get_Attribute_Convertion_Type_ConversionType_4' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Get_Attribute_Convertion_Type_ConversionType_5) == 0x000348, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Get_Attribute_Convertion_Type_ConversionType_5' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_MakeLiteralDouble_ReturnValue_5) == 0x000350, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_MakeLiteralDouble_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_5) == 0x000358, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Multiply_DoubleDouble_ReturnValue_5) == 0x000360, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Multiply_DoubleDouble_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Round_ReturnValue_5) == 0x000368, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Round_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Conv_IntToDouble_ReturnValue_11) == 0x000370, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Conv_IntToDouble_ReturnValue_11' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Divide_DoubleDouble_ReturnValue_5) == 0x000378, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Divide_DoubleDouble_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_FormatTextWithPlayerInfo_ReturnValue) == 0x000380, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_FormatTextWithPlayerInfo_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_FormatTextWithPlayerInfo_ReturnValue_1) == 0x000390, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_FormatTextWithPlayerInfo_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Conv_IntToDouble_ReturnValue_12) == 0x0003A0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Conv_IntToDouble_ReturnValue_12' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_MakeLiteralDouble_ReturnValue_6) == 0x0003A8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_MakeLiteralDouble_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_6) == 0x0003B0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Multiply_DoubleDouble_ReturnValue_6) == 0x0003B8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Multiply_DoubleDouble_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Round_ReturnValue_6) == 0x0003C0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Round_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Conv_IntToDouble_ReturnValue_13) == 0x0003C8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Conv_IntToDouble_ReturnValue_13' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Divide_DoubleDouble_ReturnValue_6) == 0x0003D0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Divide_DoubleDouble_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x0003D8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1) == 0x0003E0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2) == 0x0003E8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_3) == 0x0003F0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_3' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_4) == 0x0003F8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_4' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_5) == 0x000400, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_5' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfo, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_6) == 0x000408, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfo::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_6' has a wrong offset!");
 
 // Function WDT_ArticleInfo.WDT_ArticleInfo_C.SetBloodCodeInfoForComparison
-// 0x0668 (0x0668 - 0x0000)
+// 0x06A8 (0x06A8 - 0x0000)
 struct WDT_ArticleInfo_C_SetBloodCodeInfoForComparison final
 {
 public:
-	struct FUIBloodCodeInfo                       InTargetBloodCodeInfo;                             // 0x0000(0x00D8)(BlueprintVisible, BlueprintReadOnly, Parm)
-	struct FUIBloodCodeInfo                       InEquippedBloodCodeInfo;                           // 0x00D8(0x00D8)(BlueprintVisible, BlueprintReadOnly, Parm)
-	int32                                         L_CurseResistance_Equip;                           // 0x01B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_BleedResistance_Equip;                           // 0x01B4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_WoundResistance_Equip;                           // 0x01B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_DiseaseResistance_Equip;                         // 0x01BC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_CurseResistance;                                 // 0x01C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_BleedResistance;                                 // 0x01C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_WoundResistance;                                 // 0x01C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_DiseaseResistance;                               // 0x01CC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_MaxProficiency;                                  // 0x01D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Proficiency;                                     // 0x01D4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_MaxProficiency_Equip;                            // 0x01D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Proficiency_Equip;                               // 0x01DC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Fastness_Equip;                                  // 0x01E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Stan_Equip;                                      // 0x01E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Vanish_Equip;                                    // 0x01E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Slow_Equip;                                      // 0x01EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Leak_Equip;                                      // 0x01F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Venom_Equip;                                     // 0x01F4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        L_Thunder_Equip;                                   // 0x01F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        L_Ice_Equip;                                       // 0x0200(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        L_Fire_Equip;                                      // 0x0208(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        L_Blood_Equip;                                     // 0x0210(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        L_Crush_Equip;                                     // 0x0218(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        L_Pierce_Equip;                                    // 0x0220(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        L_Sunder_Equip;                                    // 0x0228(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_BuddyPoint_Equip;                                // 0x0230(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_MaxIchor_Equip;                                  // 0x0234(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_AttrFOR_Equip;                                   // 0x0238(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_AttrVIT_Equip;                                   // 0x023C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_AttrWIL_Equip;                                   // 0x0240(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_AttrMIND_Equip;                                  // 0x0244(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_AttrDEX_Equip;                                   // 0x0248(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_AttrSTR_Equip;                                   // 0x024C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   L_ArticleName;                                     // 0x0250(0x0010)(Edit, BlueprintVisible)
-	int32                                         L_Fastness;                                        // 0x0260(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_264[0x4];                                      // 0x0264(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   L_Feature;                                         // 0x0268(0x0010)(Edit, BlueprintVisible)
-	int32                                         L_Stan;                                            // 0x0278(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Vanish;                                          // 0x027C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Slow;                                            // 0x0280(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Leak;                                            // 0x0284(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Venom;                                           // 0x0288(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_28C[0x4];                                      // 0x028C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        L_Thunder;                                         // 0x0290(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        L_Ice;                                             // 0x0298(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        L_Fire;                                            // 0x02A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        L_Blood;                                           // 0x02A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        L_Crush;                                           // 0x02B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        L_Pierce;                                          // 0x02B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        L_Sunder;                                          // 0x02C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_BuddyPoint;                                      // 0x02C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_MaxIchor;                                        // 0x02CC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_AttributeFOR;                                    // 0x02D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_AttributeVIT;                                    // 0x02D4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_AttributeWIL;                                    // 0x02D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_AttributeMIND;                                   // 0x02DC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_AttributeDEX;                                    // 0x02E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_AttributeSTR;                                    // 0x02E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MakeLiteralDouble_ReturnValue;            // 0x02E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x02F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue;  // 0x02F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0300(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Round_ReturnValue;                        // 0x0308(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_30C[0x4];                                      // 0x030C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_1;           // 0x0310(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0318(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MakeLiteralDouble_ReturnValue_1;          // 0x0320(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_2;           // 0x0328(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_3;           // 0x0330(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_1; // 0x0338(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MakeLiteralDouble_ReturnValue_2;          // 0x0340(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x0348(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_4;           // 0x0350(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Round_ReturnValue_1;                      // 0x0358(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_35C[0x4];                                      // 0x035C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_2; // 0x0360(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_5;           // 0x0368(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_2;      // 0x0370(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_1;        // 0x0378(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Round_ReturnValue_2;                      // 0x0380(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_384[0x4];                                      // 0x0384(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_6;           // 0x0388(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MakeLiteralDouble_ReturnValue_3;          // 0x0390(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_2;        // 0x0398(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_7;           // 0x03A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_3; // 0x03A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MakeLiteralDouble_ReturnValue_4;          // 0x03B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_3;      // 0x03B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_4; // 0x03C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Round_ReturnValue_3;                      // 0x03C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3CC[0x4];                                      // 0x03CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_4;      // 0x03D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_8;           // 0x03D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Round_ReturnValue_4;                      // 0x03E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3E4[0x4];                                      // 0x03E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_3;        // 0x03E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_9;           // 0x03F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_4;        // 0x03F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MakeLiteralDouble_ReturnValue_5;          // 0x0400(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_10;          // 0x0408(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MakeLiteralDouble_ReturnValue_6;          // 0x0410(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_5; // 0x0418(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_11;          // 0x0420(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_5;      // 0x0428(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_6; // 0x0430(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Round_ReturnValue_5;                      // 0x0438(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_43C[0x4];                                      // 0x043C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_6;      // 0x0440(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_12;          // 0x0448(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Round_ReturnValue_6;                      // 0x0450(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_454[0x4];                                      // 0x0454(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_5;        // 0x0458(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_13;          // 0x0460(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_6;        // 0x0468(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MakeLiteralDouble_ReturnValue_7;          // 0x0470(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_14;          // 0x0478(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MakeLiteralDouble_ReturnValue_8;          // 0x0480(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_7; // 0x0488(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_15;          // 0x0490(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_7;      // 0x0498(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_8; // 0x04A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Round_ReturnValue_7;                      // 0x04A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4AC[0x4];                                      // 0x04AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_8;      // 0x04B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_16;          // 0x04B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Round_ReturnValue_8;                      // 0x04C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4C4[0x4];                                      // 0x04C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_7;        // 0x04C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_17;          // 0x04D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_8;        // 0x04D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MakeLiteralDouble_ReturnValue_9;          // 0x04E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_18;          // 0x04E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_19;          // 0x04F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_9; // 0x04F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MakeLiteralDouble_ReturnValue_10;         // 0x0500(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_9;      // 0x0508(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_10; // 0x0510(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Round_ReturnValue_9;                      // 0x0518(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_51C[0x4];                                      // 0x051C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_10;     // 0x0520(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_20;          // 0x0528(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Round_ReturnValue_10;                     // 0x0530(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_534[0x4];                                      // 0x0534(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_9;        // 0x0538(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_21;          // 0x0540(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_10;       // 0x0548(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_22;          // 0x0550(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MakeLiteralDouble_ReturnValue_11;         // 0x0558(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_23;          // 0x0560(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_11; // 0x0568(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_11;     // 0x0570(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Round_ReturnValue_11;                     // 0x0578(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57C[0x4];                                      // 0x057C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_24;          // 0x0580(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_11;       // 0x0588(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_25;          // 0x0590(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MakeLiteralDouble_ReturnValue_12;         // 0x0598(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_12; // 0x05A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_12;     // 0x05A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MakeLiteralDouble_ReturnValue_13;         // 0x05B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Round_ReturnValue_12;                     // 0x05B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FUIBloodCodeInfo                       InTargetBloodCodeInfo;                             // 0x0000(0x00F8)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FUIBloodCodeInfo                       InEquippedBloodCodeInfo;                           // 0x00F8(0x00F8)(BlueprintVisible, BlueprintReadOnly, Parm)
+	int32                                         L_CurseResistance_Equip;                           // 0x01F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_BleedResistance_Equip;                           // 0x01F4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_WoundResistance_Equip;                           // 0x01F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_DiseaseResistance_Equip;                         // 0x01FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_CurseResistance;                                 // 0x0200(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_BleedResistance;                                 // 0x0204(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_WoundResistance;                                 // 0x0208(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_DiseaseResistance;                               // 0x020C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_MaxProficiency;                                  // 0x0210(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Proficiency;                                     // 0x0214(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_MaxProficiency_Equip;                            // 0x0218(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Proficiency_Equip;                               // 0x021C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Fastness_Equip;                                  // 0x0220(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Stan_Equip;                                      // 0x0224(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Vanish_Equip;                                    // 0x0228(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Slow_Equip;                                      // 0x022C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Leak_Equip;                                      // 0x0230(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Venom_Equip;                                     // 0x0234(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        L_Thunder_Equip;                                   // 0x0238(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        L_Ice_Equip;                                       // 0x0240(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        L_Fire_Equip;                                      // 0x0248(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        L_Blood_Equip;                                     // 0x0250(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        L_Crush_Equip;                                     // 0x0258(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        L_Pierce_Equip;                                    // 0x0260(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        L_Sunder_Equip;                                    // 0x0268(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_BuddyPoint_Equip;                                // 0x0270(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_MaxIchor_Equip;                                  // 0x0274(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_AttrFOR_Equip;                                   // 0x0278(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_AttrVIT_Equip;                                   // 0x027C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_AttrWIL_Equip;                                   // 0x0280(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_AttrMIND_Equip;                                  // 0x0284(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_AttrDEX_Equip;                                   // 0x0288(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_AttrSTR_Equip;                                   // 0x028C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   L_ArticleName;                                     // 0x0290(0x0010)(Edit, BlueprintVisible)
+	int32                                         L_Fastness;                                        // 0x02A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2A4[0x4];                                      // 0x02A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   L_Feature;                                         // 0x02A8(0x0010)(Edit, BlueprintVisible)
+	int32                                         L_Stan;                                            // 0x02B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Vanish;                                          // 0x02BC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Slow;                                            // 0x02C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Leak;                                            // 0x02C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Venom;                                           // 0x02C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2CC[0x4];                                      // 0x02CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        L_Thunder;                                         // 0x02D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        L_Ice;                                             // 0x02D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        L_Fire;                                            // 0x02E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        L_Blood;                                           // 0x02E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        L_Crush;                                           // 0x02F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        L_Pierce;                                          // 0x02F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        L_Sunder;                                          // 0x0300(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_BuddyPoint;                                      // 0x0308(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_MaxIchor;                                        // 0x030C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_AttributeFOR;                                    // 0x0310(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_AttributeVIT;                                    // 0x0314(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_AttributeWIL;                                    // 0x0318(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_AttributeMIND;                                   // 0x031C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_AttributeDEX;                                    // 0x0320(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_AttributeSTR;                                    // 0x0324(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MakeLiteralDouble_ReturnValue;            // 0x0328(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0330(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue;  // 0x0338(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0340(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Round_ReturnValue;                        // 0x0348(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_34C[0x4];                                      // 0x034C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_1;           // 0x0350(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0358(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MakeLiteralDouble_ReturnValue_1;          // 0x0360(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_2;           // 0x0368(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_3;           // 0x0370(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_1; // 0x0378(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MakeLiteralDouble_ReturnValue_2;          // 0x0380(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x0388(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_4;           // 0x0390(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Round_ReturnValue_1;                      // 0x0398(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_39C[0x4];                                      // 0x039C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_2; // 0x03A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_5;           // 0x03A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_2;      // 0x03B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_1;        // 0x03B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Round_ReturnValue_2;                      // 0x03C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3C4[0x4];                                      // 0x03C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_6;           // 0x03C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MakeLiteralDouble_ReturnValue_3;          // 0x03D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_2;        // 0x03D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_7;           // 0x03E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_3; // 0x03E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MakeLiteralDouble_ReturnValue_4;          // 0x03F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_3;      // 0x03F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_4; // 0x0400(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Round_ReturnValue_3;                      // 0x0408(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_40C[0x4];                                      // 0x040C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_4;      // 0x0410(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_8;           // 0x0418(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Round_ReturnValue_4;                      // 0x0420(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_424[0x4];                                      // 0x0424(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_3;        // 0x0428(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_9;           // 0x0430(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_4;        // 0x0438(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MakeLiteralDouble_ReturnValue_5;          // 0x0440(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_10;          // 0x0448(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MakeLiteralDouble_ReturnValue_6;          // 0x0450(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_5; // 0x0458(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_11;          // 0x0460(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_5;      // 0x0468(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_6; // 0x0470(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Round_ReturnValue_5;                      // 0x0478(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_47C[0x4];                                      // 0x047C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_6;      // 0x0480(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_12;          // 0x0488(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Round_ReturnValue_6;                      // 0x0490(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_494[0x4];                                      // 0x0494(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_5;        // 0x0498(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_13;          // 0x04A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_6;        // 0x04A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MakeLiteralDouble_ReturnValue_7;          // 0x04B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_14;          // 0x04B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MakeLiteralDouble_ReturnValue_8;          // 0x04C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_7; // 0x04C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_15;          // 0x04D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_7;      // 0x04D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_8; // 0x04E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Round_ReturnValue_7;                      // 0x04E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4EC[0x4];                                      // 0x04EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_8;      // 0x04F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_16;          // 0x04F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Round_ReturnValue_8;                      // 0x0500(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_504[0x4];                                      // 0x0504(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_7;        // 0x0508(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_17;          // 0x0510(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_8;        // 0x0518(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MakeLiteralDouble_ReturnValue_9;          // 0x0520(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_18;          // 0x0528(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_19;          // 0x0530(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_9; // 0x0538(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MakeLiteralDouble_ReturnValue_10;         // 0x0540(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_9;      // 0x0548(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_10; // 0x0550(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Round_ReturnValue_9;                      // 0x0558(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_55C[0x4];                                      // 0x055C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_10;     // 0x0560(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_20;          // 0x0568(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Round_ReturnValue_10;                     // 0x0570(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_574[0x4];                                      // 0x0574(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_9;        // 0x0578(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_21;          // 0x0580(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_10;       // 0x0588(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_22;          // 0x0590(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MakeLiteralDouble_ReturnValue_11;         // 0x0598(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_23;          // 0x05A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_11; // 0x05A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_11;     // 0x05B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Round_ReturnValue_11;                     // 0x05B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_5BC[0x4];                                      // 0x05BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_13; // 0x05C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_26;          // 0x05C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_13;     // 0x05D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_12;       // 0x05D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Round_ReturnValue_13;                     // 0x05E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5E4[0x4];                                      // 0x05E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_27;          // 0x05E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_13;       // 0x05F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x05F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1;   // 0x0600(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2;   // 0x0608(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_3;   // 0x0610(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_4;   // 0x0618(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_5;   // 0x0620(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_6;   // 0x0628(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_7;   // 0x0630(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_8;   // 0x0638(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_9;   // 0x0640(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_10;  // 0x0648(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_11;  // 0x0650(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_12;  // 0x0658(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_13;  // 0x0660(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_24;          // 0x05C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_11;       // 0x05C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_25;          // 0x05D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MakeLiteralDouble_ReturnValue_12;         // 0x05D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_12; // 0x05E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_12;     // 0x05E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MakeLiteralDouble_ReturnValue_13;         // 0x05F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Round_ReturnValue_12;                     // 0x05F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5FC[0x4];                                      // 0x05FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_13; // 0x0600(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_26;          // 0x0608(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_13;     // 0x0610(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_12;       // 0x0618(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Round_ReturnValue_13;                     // 0x0620(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_624[0x4];                                      // 0x0624(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_27;          // 0x0628(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_13;       // 0x0630(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x0638(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1;   // 0x0640(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2;   // 0x0648(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_3;   // 0x0650(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_4;   // 0x0658(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_5;   // 0x0660(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_6;   // 0x0668(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_7;   // 0x0670(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_8;   // 0x0678(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_9;   // 0x0680(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_10;  // 0x0688(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_11;  // 0x0690(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_12;  // 0x0698(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_13;  // 0x06A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison) == 0x000008, "Wrong alignment on WDT_ArticleInfo_C_SetBloodCodeInfoForComparison");
-static_assert(sizeof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison) == 0x000668, "Wrong size on WDT_ArticleInfo_C_SetBloodCodeInfoForComparison");
+static_assert(sizeof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison) == 0x0006A8, "Wrong size on WDT_ArticleInfo_C_SetBloodCodeInfoForComparison");
 static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, InTargetBloodCodeInfo) == 0x000000, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::InTargetBloodCodeInfo' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, InEquippedBloodCodeInfo) == 0x0000D8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::InEquippedBloodCodeInfo' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_CurseResistance_Equip) == 0x0001B0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_CurseResistance_Equip' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_BleedResistance_Equip) == 0x0001B4, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_BleedResistance_Equip' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_WoundResistance_Equip) == 0x0001B8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_WoundResistance_Equip' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_DiseaseResistance_Equip) == 0x0001BC, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_DiseaseResistance_Equip' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_CurseResistance) == 0x0001C0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_CurseResistance' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_BleedResistance) == 0x0001C4, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_BleedResistance' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_WoundResistance) == 0x0001C8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_WoundResistance' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_DiseaseResistance) == 0x0001CC, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_DiseaseResistance' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_MaxProficiency) == 0x0001D0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_MaxProficiency' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Proficiency) == 0x0001D4, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Proficiency' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_MaxProficiency_Equip) == 0x0001D8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_MaxProficiency_Equip' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Proficiency_Equip) == 0x0001DC, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Proficiency_Equip' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Fastness_Equip) == 0x0001E0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Fastness_Equip' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Stan_Equip) == 0x0001E4, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Stan_Equip' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Vanish_Equip) == 0x0001E8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Vanish_Equip' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Slow_Equip) == 0x0001EC, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Slow_Equip' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Leak_Equip) == 0x0001F0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Leak_Equip' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Venom_Equip) == 0x0001F4, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Venom_Equip' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Thunder_Equip) == 0x0001F8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Thunder_Equip' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Ice_Equip) == 0x000200, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Ice_Equip' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Fire_Equip) == 0x000208, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Fire_Equip' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Blood_Equip) == 0x000210, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Blood_Equip' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Crush_Equip) == 0x000218, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Crush_Equip' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Pierce_Equip) == 0x000220, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Pierce_Equip' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Sunder_Equip) == 0x000228, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Sunder_Equip' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_BuddyPoint_Equip) == 0x000230, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_BuddyPoint_Equip' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_MaxIchor_Equip) == 0x000234, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_MaxIchor_Equip' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_AttrFOR_Equip) == 0x000238, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_AttrFOR_Equip' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_AttrVIT_Equip) == 0x00023C, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_AttrVIT_Equip' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_AttrWIL_Equip) == 0x000240, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_AttrWIL_Equip' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_AttrMIND_Equip) == 0x000244, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_AttrMIND_Equip' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_AttrDEX_Equip) == 0x000248, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_AttrDEX_Equip' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_AttrSTR_Equip) == 0x00024C, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_AttrSTR_Equip' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_ArticleName) == 0x000250, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_ArticleName' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Fastness) == 0x000260, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Fastness' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Feature) == 0x000268, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Feature' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Stan) == 0x000278, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Stan' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Vanish) == 0x00027C, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Vanish' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Slow) == 0x000280, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Slow' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Leak) == 0x000284, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Leak' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Venom) == 0x000288, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Venom' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Thunder) == 0x000290, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Thunder' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Ice) == 0x000298, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Ice' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Fire) == 0x0002A0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Fire' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Blood) == 0x0002A8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Blood' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Crush) == 0x0002B0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Crush' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Pierce) == 0x0002B8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Pierce' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Sunder) == 0x0002C0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Sunder' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_BuddyPoint) == 0x0002C8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_BuddyPoint' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_MaxIchor) == 0x0002CC, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_MaxIchor' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_AttributeFOR) == 0x0002D0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_AttributeFOR' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_AttributeVIT) == 0x0002D4, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_AttributeVIT' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_AttributeWIL) == 0x0002D8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_AttributeWIL' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_AttributeMIND) == 0x0002DC, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_AttributeMIND' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_AttributeDEX) == 0x0002E0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_AttributeDEX' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_AttributeSTR) == 0x0002E4, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_AttributeSTR' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MakeLiteralDouble_ReturnValue) == 0x0002E8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MakeLiteralDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue) == 0x0002F0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue) == 0x0002F8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000300, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Round_ReturnValue) == 0x000308, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Round_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue_1) == 0x000310, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000318, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MakeLiteralDouble_ReturnValue_1) == 0x000320, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MakeLiteralDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue_2) == 0x000328, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue_3) == 0x000330, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_1) == 0x000338, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MakeLiteralDouble_ReturnValue_2) == 0x000340, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MakeLiteralDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000348, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue_4) == 0x000350, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Round_ReturnValue_1) == 0x000358, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Round_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_2) == 0x000360, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue_5) == 0x000368, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_ReturnValue_2) == 0x000370, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Divide_DoubleDouble_ReturnValue_1) == 0x000378, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Divide_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Round_ReturnValue_2) == 0x000380, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Round_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue_6) == 0x000388, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MakeLiteralDouble_ReturnValue_3) == 0x000390, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MakeLiteralDouble_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Divide_DoubleDouble_ReturnValue_2) == 0x000398, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Divide_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue_7) == 0x0003A0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_3) == 0x0003A8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MakeLiteralDouble_ReturnValue_4) == 0x0003B0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MakeLiteralDouble_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_ReturnValue_3) == 0x0003B8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_4) == 0x0003C0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Round_ReturnValue_3) == 0x0003C8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Round_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_ReturnValue_4) == 0x0003D0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue_8) == 0x0003D8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Round_ReturnValue_4) == 0x0003E0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Round_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Divide_DoubleDouble_ReturnValue_3) == 0x0003E8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Divide_DoubleDouble_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue_9) == 0x0003F0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Divide_DoubleDouble_ReturnValue_4) == 0x0003F8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Divide_DoubleDouble_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MakeLiteralDouble_ReturnValue_5) == 0x000400, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MakeLiteralDouble_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue_10) == 0x000408, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MakeLiteralDouble_ReturnValue_6) == 0x000410, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MakeLiteralDouble_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_5) == 0x000418, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue_11) == 0x000420, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue_11' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_ReturnValue_5) == 0x000428, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_6) == 0x000430, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Round_ReturnValue_5) == 0x000438, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Round_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_ReturnValue_6) == 0x000440, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue_12) == 0x000448, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue_12' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Round_ReturnValue_6) == 0x000450, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Round_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Divide_DoubleDouble_ReturnValue_5) == 0x000458, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Divide_DoubleDouble_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue_13) == 0x000460, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue_13' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Divide_DoubleDouble_ReturnValue_6) == 0x000468, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Divide_DoubleDouble_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MakeLiteralDouble_ReturnValue_7) == 0x000470, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MakeLiteralDouble_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue_14) == 0x000478, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue_14' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MakeLiteralDouble_ReturnValue_8) == 0x000480, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MakeLiteralDouble_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_7) == 0x000488, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue_15) == 0x000490, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue_15' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_ReturnValue_7) == 0x000498, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_8) == 0x0004A0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Round_ReturnValue_7) == 0x0004A8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Round_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_ReturnValue_8) == 0x0004B0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue_16) == 0x0004B8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue_16' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Round_ReturnValue_8) == 0x0004C0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Round_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Divide_DoubleDouble_ReturnValue_7) == 0x0004C8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Divide_DoubleDouble_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue_17) == 0x0004D0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue_17' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Divide_DoubleDouble_ReturnValue_8) == 0x0004D8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Divide_DoubleDouble_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MakeLiteralDouble_ReturnValue_9) == 0x0004E0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MakeLiteralDouble_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue_18) == 0x0004E8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue_18' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue_19) == 0x0004F0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue_19' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_9) == 0x0004F8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MakeLiteralDouble_ReturnValue_10) == 0x000500, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MakeLiteralDouble_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_ReturnValue_9) == 0x000508, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_10) == 0x000510, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Round_ReturnValue_9) == 0x000518, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Round_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_ReturnValue_10) == 0x000520, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue_20) == 0x000528, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue_20' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Round_ReturnValue_10) == 0x000530, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Round_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Divide_DoubleDouble_ReturnValue_9) == 0x000538, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Divide_DoubleDouble_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue_21) == 0x000540, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue_21' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Divide_DoubleDouble_ReturnValue_10) == 0x000548, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Divide_DoubleDouble_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue_22) == 0x000550, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue_22' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MakeLiteralDouble_ReturnValue_11) == 0x000558, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MakeLiteralDouble_ReturnValue_11' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue_23) == 0x000560, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue_23' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_11) == 0x000568, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_11' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_ReturnValue_11) == 0x000570, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_ReturnValue_11' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Round_ReturnValue_11) == 0x000578, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Round_ReturnValue_11' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue_24) == 0x000580, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue_24' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Divide_DoubleDouble_ReturnValue_11) == 0x000588, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Divide_DoubleDouble_ReturnValue_11' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue_25) == 0x000590, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue_25' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MakeLiteralDouble_ReturnValue_12) == 0x000598, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MakeLiteralDouble_ReturnValue_12' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_12) == 0x0005A0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_12' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_ReturnValue_12) == 0x0005A8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_ReturnValue_12' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MakeLiteralDouble_ReturnValue_13) == 0x0005B0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MakeLiteralDouble_ReturnValue_13' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Round_ReturnValue_12) == 0x0005B8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Round_ReturnValue_12' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_13) == 0x0005C0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_13' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue_26) == 0x0005C8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue_26' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_ReturnValue_13) == 0x0005D0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_ReturnValue_13' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Divide_DoubleDouble_ReturnValue_12) == 0x0005D8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Divide_DoubleDouble_ReturnValue_12' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Round_ReturnValue_13) == 0x0005E0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Round_ReturnValue_13' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue_27) == 0x0005E8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue_27' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Divide_DoubleDouble_ReturnValue_13) == 0x0005F0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Divide_DoubleDouble_ReturnValue_13' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x0005F8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1) == 0x000600, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2) == 0x000608, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_3) == 0x000610, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_3' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_4) == 0x000618, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_4' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_5) == 0x000620, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_5' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_6) == 0x000628, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_6' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_7) == 0x000630, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_7' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_8) == 0x000638, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_8' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_9) == 0x000640, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_9' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_10) == 0x000648, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_10' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_11) == 0x000650, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_11' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_12) == 0x000658, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_12' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_13) == 0x000660, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_13' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, InEquippedBloodCodeInfo) == 0x0000F8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::InEquippedBloodCodeInfo' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_CurseResistance_Equip) == 0x0001F0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_CurseResistance_Equip' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_BleedResistance_Equip) == 0x0001F4, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_BleedResistance_Equip' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_WoundResistance_Equip) == 0x0001F8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_WoundResistance_Equip' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_DiseaseResistance_Equip) == 0x0001FC, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_DiseaseResistance_Equip' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_CurseResistance) == 0x000200, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_CurseResistance' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_BleedResistance) == 0x000204, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_BleedResistance' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_WoundResistance) == 0x000208, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_WoundResistance' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_DiseaseResistance) == 0x00020C, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_DiseaseResistance' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_MaxProficiency) == 0x000210, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_MaxProficiency' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Proficiency) == 0x000214, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Proficiency' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_MaxProficiency_Equip) == 0x000218, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_MaxProficiency_Equip' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Proficiency_Equip) == 0x00021C, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Proficiency_Equip' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Fastness_Equip) == 0x000220, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Fastness_Equip' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Stan_Equip) == 0x000224, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Stan_Equip' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Vanish_Equip) == 0x000228, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Vanish_Equip' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Slow_Equip) == 0x00022C, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Slow_Equip' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Leak_Equip) == 0x000230, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Leak_Equip' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Venom_Equip) == 0x000234, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Venom_Equip' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Thunder_Equip) == 0x000238, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Thunder_Equip' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Ice_Equip) == 0x000240, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Ice_Equip' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Fire_Equip) == 0x000248, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Fire_Equip' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Blood_Equip) == 0x000250, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Blood_Equip' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Crush_Equip) == 0x000258, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Crush_Equip' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Pierce_Equip) == 0x000260, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Pierce_Equip' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Sunder_Equip) == 0x000268, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Sunder_Equip' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_BuddyPoint_Equip) == 0x000270, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_BuddyPoint_Equip' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_MaxIchor_Equip) == 0x000274, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_MaxIchor_Equip' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_AttrFOR_Equip) == 0x000278, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_AttrFOR_Equip' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_AttrVIT_Equip) == 0x00027C, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_AttrVIT_Equip' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_AttrWIL_Equip) == 0x000280, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_AttrWIL_Equip' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_AttrMIND_Equip) == 0x000284, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_AttrMIND_Equip' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_AttrDEX_Equip) == 0x000288, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_AttrDEX_Equip' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_AttrSTR_Equip) == 0x00028C, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_AttrSTR_Equip' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_ArticleName) == 0x000290, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_ArticleName' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Fastness) == 0x0002A0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Fastness' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Feature) == 0x0002A8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Feature' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Stan) == 0x0002B8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Stan' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Vanish) == 0x0002BC, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Vanish' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Slow) == 0x0002C0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Slow' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Leak) == 0x0002C4, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Leak' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Venom) == 0x0002C8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Venom' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Thunder) == 0x0002D0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Thunder' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Ice) == 0x0002D8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Ice' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Fire) == 0x0002E0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Fire' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Blood) == 0x0002E8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Blood' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Crush) == 0x0002F0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Crush' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Pierce) == 0x0002F8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Pierce' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_Sunder) == 0x000300, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_Sunder' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_BuddyPoint) == 0x000308, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_BuddyPoint' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_MaxIchor) == 0x00030C, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_MaxIchor' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_AttributeFOR) == 0x000310, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_AttributeFOR' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_AttributeVIT) == 0x000314, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_AttributeVIT' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_AttributeWIL) == 0x000318, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_AttributeWIL' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_AttributeMIND) == 0x00031C, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_AttributeMIND' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_AttributeDEX) == 0x000320, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_AttributeDEX' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, L_AttributeSTR) == 0x000324, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::L_AttributeSTR' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MakeLiteralDouble_ReturnValue) == 0x000328, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MakeLiteralDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue) == 0x000330, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue) == 0x000338, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000340, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Round_ReturnValue) == 0x000348, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Round_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue_1) == 0x000350, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000358, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MakeLiteralDouble_ReturnValue_1) == 0x000360, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MakeLiteralDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue_2) == 0x000368, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue_3) == 0x000370, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_1) == 0x000378, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MakeLiteralDouble_ReturnValue_2) == 0x000380, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MakeLiteralDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000388, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue_4) == 0x000390, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Round_ReturnValue_1) == 0x000398, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Round_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_2) == 0x0003A0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue_5) == 0x0003A8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_ReturnValue_2) == 0x0003B0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Divide_DoubleDouble_ReturnValue_1) == 0x0003B8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Divide_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Round_ReturnValue_2) == 0x0003C0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Round_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue_6) == 0x0003C8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MakeLiteralDouble_ReturnValue_3) == 0x0003D0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MakeLiteralDouble_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Divide_DoubleDouble_ReturnValue_2) == 0x0003D8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Divide_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue_7) == 0x0003E0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_3) == 0x0003E8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MakeLiteralDouble_ReturnValue_4) == 0x0003F0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MakeLiteralDouble_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_ReturnValue_3) == 0x0003F8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_4) == 0x000400, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Round_ReturnValue_3) == 0x000408, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Round_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_ReturnValue_4) == 0x000410, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue_8) == 0x000418, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Round_ReturnValue_4) == 0x000420, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Round_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Divide_DoubleDouble_ReturnValue_3) == 0x000428, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Divide_DoubleDouble_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue_9) == 0x000430, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue_9' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Divide_DoubleDouble_ReturnValue_4) == 0x000438, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Divide_DoubleDouble_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MakeLiteralDouble_ReturnValue_5) == 0x000440, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MakeLiteralDouble_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue_10) == 0x000448, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue_10' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MakeLiteralDouble_ReturnValue_6) == 0x000450, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MakeLiteralDouble_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_5) == 0x000458, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue_11) == 0x000460, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue_11' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_ReturnValue_5) == 0x000468, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_6) == 0x000470, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Round_ReturnValue_5) == 0x000478, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Round_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_ReturnValue_6) == 0x000480, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue_12) == 0x000488, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue_12' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Round_ReturnValue_6) == 0x000490, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Round_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Divide_DoubleDouble_ReturnValue_5) == 0x000498, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Divide_DoubleDouble_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue_13) == 0x0004A0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue_13' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Divide_DoubleDouble_ReturnValue_6) == 0x0004A8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Divide_DoubleDouble_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MakeLiteralDouble_ReturnValue_7) == 0x0004B0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MakeLiteralDouble_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue_14) == 0x0004B8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue_14' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MakeLiteralDouble_ReturnValue_8) == 0x0004C0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MakeLiteralDouble_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_7) == 0x0004C8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue_15) == 0x0004D0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue_15' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_ReturnValue_7) == 0x0004D8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_8) == 0x0004E0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Round_ReturnValue_7) == 0x0004E8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Round_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_ReturnValue_8) == 0x0004F0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue_16) == 0x0004F8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue_16' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Round_ReturnValue_8) == 0x000500, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Round_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Divide_DoubleDouble_ReturnValue_7) == 0x000508, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Divide_DoubleDouble_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue_17) == 0x000510, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue_17' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Divide_DoubleDouble_ReturnValue_8) == 0x000518, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Divide_DoubleDouble_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MakeLiteralDouble_ReturnValue_9) == 0x000520, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MakeLiteralDouble_ReturnValue_9' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue_18) == 0x000528, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue_18' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue_19) == 0x000530, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue_19' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_9) == 0x000538, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_9' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MakeLiteralDouble_ReturnValue_10) == 0x000540, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MakeLiteralDouble_ReturnValue_10' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_ReturnValue_9) == 0x000548, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_ReturnValue_9' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_10) == 0x000550, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_10' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Round_ReturnValue_9) == 0x000558, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Round_ReturnValue_9' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_ReturnValue_10) == 0x000560, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_ReturnValue_10' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue_20) == 0x000568, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue_20' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Round_ReturnValue_10) == 0x000570, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Round_ReturnValue_10' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Divide_DoubleDouble_ReturnValue_9) == 0x000578, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Divide_DoubleDouble_ReturnValue_9' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue_21) == 0x000580, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue_21' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Divide_DoubleDouble_ReturnValue_10) == 0x000588, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Divide_DoubleDouble_ReturnValue_10' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue_22) == 0x000590, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue_22' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MakeLiteralDouble_ReturnValue_11) == 0x000598, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MakeLiteralDouble_ReturnValue_11' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue_23) == 0x0005A0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue_23' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_11) == 0x0005A8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_11' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_ReturnValue_11) == 0x0005B0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_ReturnValue_11' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Round_ReturnValue_11) == 0x0005B8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Round_ReturnValue_11' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue_24) == 0x0005C0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue_24' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Divide_DoubleDouble_ReturnValue_11) == 0x0005C8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Divide_DoubleDouble_ReturnValue_11' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue_25) == 0x0005D0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue_25' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MakeLiteralDouble_ReturnValue_12) == 0x0005D8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MakeLiteralDouble_ReturnValue_12' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_12) == 0x0005E0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_12' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_ReturnValue_12) == 0x0005E8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_ReturnValue_12' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MakeLiteralDouble_ReturnValue_13) == 0x0005F0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MakeLiteralDouble_ReturnValue_13' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Round_ReturnValue_12) == 0x0005F8, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Round_ReturnValue_12' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_13) == 0x000600, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_13' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue_26) == 0x000608, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue_26' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_ReturnValue_13) == 0x000610, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_ReturnValue_13' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Divide_DoubleDouble_ReturnValue_12) == 0x000618, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Divide_DoubleDouble_ReturnValue_12' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Round_ReturnValue_13) == 0x000620, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Round_ReturnValue_13' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Conv_IntToDouble_ReturnValue_27) == 0x000628, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Conv_IntToDouble_ReturnValue_27' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Divide_DoubleDouble_ReturnValue_13) == 0x000630, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Divide_DoubleDouble_ReturnValue_13' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x000638, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1) == 0x000640, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2) == 0x000648, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_3) == 0x000650, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_3' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_4) == 0x000658, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_4' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_5) == 0x000660, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_5' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_6) == 0x000668, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_6' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_7) == 0x000670, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_7' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_8) == 0x000678, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_8' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_9) == 0x000680, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_9' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_10) == 0x000688, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_10' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_11) == 0x000690, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_11' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_12) == 0x000698, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_12' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBloodCodeInfoForComparison, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_13) == 0x0006A0, "Member 'WDT_ArticleInfo_C_SetBloodCodeInfoForComparison::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_13' has a wrong offset!");
 
 // Function WDT_ArticleInfo.WDT_ArticleInfo_C.SetBoolResultText
 // 0x0010 (0x0010 - 0x0000)
@@ -1261,7 +1283,7 @@ static_assert(offsetof(WDT_ArticleInfo_C_SetBoolResultText, Condition) == 0x0000
 static_assert(offsetof(WDT_ArticleInfo_C_SetBoolResultText, TextWidget) == 0x000008, "Member 'WDT_ArticleInfo_C_SetBoolResultText::TextWidget' has a wrong offset!");
 
 // Function WDT_ArticleInfo.WDT_ArticleInfo_C.SetBoosterInfo
-// 0x0118 (0x0118 - 0x0000)
+// 0x0140 (0x0140 - 0x0000)
 struct WDT_ArticleInfo_C_SetBoosterInfo final
 {
 public:
@@ -1280,10 +1302,14 @@ public:
 	class FText                                   CallFunc_BuildFeatureText_Result;                  // 0x0100(0x0010)()
 	bool                                          CallFunc_TextIsEmpty_ReturnValue;                  // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0111(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Set_RichText_with_Empty_Designation_TextEmpty; // 0x0112(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_112[0x6];                                      // 0x0112(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_FormatTextWithPlayerInfo_ReturnValue;     // 0x0118(0x0010)()
+	bool                                          CallFunc_Set_RichText_with_Empty_Designation_TextEmpty; // 0x0128(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_129[0x7];                                      // 0x0129(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_FormatTextWithPlayerInfo_ReturnValue_1;   // 0x0130(0x0010)()
 };
 static_assert(alignof(WDT_ArticleInfo_C_SetBoosterInfo) == 0x000008, "Wrong alignment on WDT_ArticleInfo_C_SetBoosterInfo");
-static_assert(sizeof(WDT_ArticleInfo_C_SetBoosterInfo) == 0x000118, "Wrong size on WDT_ArticleInfo_C_SetBoosterInfo");
+static_assert(sizeof(WDT_ArticleInfo_C_SetBoosterInfo) == 0x000140, "Wrong size on WDT_ArticleInfo_C_SetBoosterInfo");
 static_assert(offsetof(WDT_ArticleInfo_C_SetBoosterInfo, InBoosterInfo) == 0x000000, "Member 'WDT_ArticleInfo_C_SetBoosterInfo::InBoosterInfo' has a wrong offset!");
 static_assert(offsetof(WDT_ArticleInfo_C_SetBoosterInfo, L_Features) == 0x000098, "Member 'WDT_ArticleInfo_C_SetBoosterInfo::L_Features' has a wrong offset!");
 static_assert(offsetof(WDT_ArticleInfo_C_SetBoosterInfo, L_Description) == 0x0000A8, "Member 'WDT_ArticleInfo_C_SetBoosterInfo::L_Description' has a wrong offset!");
@@ -1299,7 +1325,9 @@ static_assert(offsetof(WDT_ArticleInfo_C_SetBoosterInfo, L_AttributeLoadSTR) == 
 static_assert(offsetof(WDT_ArticleInfo_C_SetBoosterInfo, CallFunc_BuildFeatureText_Result) == 0x000100, "Member 'WDT_ArticleInfo_C_SetBoosterInfo::CallFunc_BuildFeatureText_Result' has a wrong offset!");
 static_assert(offsetof(WDT_ArticleInfo_C_SetBoosterInfo, CallFunc_TextIsEmpty_ReturnValue) == 0x000110, "Member 'WDT_ArticleInfo_C_SetBoosterInfo::CallFunc_TextIsEmpty_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_ArticleInfo_C_SetBoosterInfo, CallFunc_Not_PreBool_ReturnValue) == 0x000111, "Member 'WDT_ArticleInfo_C_SetBoosterInfo::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetBoosterInfo, CallFunc_Set_RichText_with_Empty_Designation_TextEmpty) == 0x000112, "Member 'WDT_ArticleInfo_C_SetBoosterInfo::CallFunc_Set_RichText_with_Empty_Designation_TextEmpty' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBoosterInfo, CallFunc_FormatTextWithPlayerInfo_ReturnValue) == 0x000118, "Member 'WDT_ArticleInfo_C_SetBoosterInfo::CallFunc_FormatTextWithPlayerInfo_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBoosterInfo, CallFunc_Set_RichText_with_Empty_Designation_TextEmpty) == 0x000128, "Member 'WDT_ArticleInfo_C_SetBoosterInfo::CallFunc_Set_RichText_with_Empty_Designation_TextEmpty' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetBoosterInfo, CallFunc_FormatTextWithPlayerInfo_ReturnValue_1) == 0x000130, "Member 'WDT_ArticleInfo_C_SetBoosterInfo::CallFunc_FormatTextWithPlayerInfo_ReturnValue_1' has a wrong offset!");
 
 // Function WDT_ArticleInfo.WDT_ArticleInfo_C.SetBoosterInfoForComparison
 // 0x0178 (0x0178 - 0x0000)
@@ -1374,7 +1402,7 @@ static_assert(offsetof(WDT_ArticleInfo_C_SetCompareIntegerBadStatus, Temp_byte_V
 static_assert(offsetof(WDT_ArticleInfo_C_SetCompareIntegerBadStatus, K2Node_Select_Default) == 0x000009, "Member 'WDT_ArticleInfo_C_SetCompareIntegerBadStatus::K2Node_Select_Default' has a wrong offset!");
 
 // Function WDT_ArticleInfo.WDT_ArticleInfo_C.SetDefensiveGadgetInfo
-// 0x0480 (0x0480 - 0x0000)
+// 0x04A0 (0x04A0 - 0x0000)
 struct WDT_ArticleInfo_C_SetDefensiveGadgetInfo final
 {
 public:
@@ -1482,40 +1510,42 @@ public:
 	uint8                                         Pad_39C[0x4];                                      // 0x039C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Conv_IntToDouble_ReturnValue_11;          // 0x03A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_5;        // 0x03A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_TextIsEmpty_ReturnValue;                  // 0x03B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue;   // 0x03B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x03B2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default_1;                           // 0x03B3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B4[0x4];                                      // 0x03B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_12;          // 0x03B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MakeLiteralDouble_ReturnValue_6;          // 0x03C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_6; // 0x03C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_6;      // 0x03D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Round_ReturnValue_6;                      // 0x03D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3DC[0x4];                                      // 0x03DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_13;          // 0x03E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_6;        // 0x03E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   K2Node_Select_Default_2;                           // 0x03F0(0x0010)()
-	bool                                          CallFunc_Set_RichText_with_Empty_Designation_TextEmpty; // 0x0400(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_401[0x7];                                      // 0x0401(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x0408(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1;   // 0x0410(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2;   // 0x0418(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_3;   // 0x0420(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_4;   // 0x0428(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_5;   // 0x0430(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_6;   // 0x0438(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetDefence_InThunder_ImplicitCast;        // 0x0440(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetDefence_InIce_ImplicitCast;            // 0x0448(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetDefence_InFire_ImplicitCast;           // 0x0450(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetDefence_InBlood_ImplicitCast;          // 0x0458(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetDefence_InCrush_ImplicitCast;          // 0x0460(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetDefence_InPierce_ImplicitCast;         // 0x0468(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetDefence_InSunder_ImplicitCast;         // 0x0470(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetValueFloat_InValue_ImplicitCast;       // 0x0478(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_FormatTextWithPlayerInfo_ReturnValue;     // 0x03B0(0x0010)()
+	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue;   // 0x03C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x03C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_TextIsEmpty_ReturnValue;                  // 0x03C2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default_1;                           // 0x03C3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3C4[0x4];                                      // 0x03C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_12;          // 0x03C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MakeLiteralDouble_ReturnValue_6;          // 0x03D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_6; // 0x03D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_6;      // 0x03E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Round_ReturnValue_6;                      // 0x03E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3EC[0x4];                                      // 0x03EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_13;          // 0x03F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_6;        // 0x03F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   K2Node_Select_Default_2;                           // 0x0400(0x0010)()
+	bool                                          CallFunc_Set_RichText_with_Empty_Designation_TextEmpty; // 0x0410(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_411[0x7];                                      // 0x0411(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_FormatTextWithPlayerInfo_ReturnValue_1;   // 0x0418(0x0010)()
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x0428(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1;   // 0x0430(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2;   // 0x0438(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_3;   // 0x0440(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_4;   // 0x0448(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_5;   // 0x0450(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_6;   // 0x0458(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetDefence_InThunder_ImplicitCast;        // 0x0460(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetDefence_InIce_ImplicitCast;            // 0x0468(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetDefence_InFire_ImplicitCast;           // 0x0470(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetDefence_InBlood_ImplicitCast;          // 0x0478(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetDefence_InCrush_ImplicitCast;          // 0x0480(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetDefence_InPierce_ImplicitCast;         // 0x0488(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetDefence_InSunder_ImplicitCast;         // 0x0490(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetValueFloat_InValue_ImplicitCast;       // 0x0498(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo) == 0x000008, "Wrong alignment on WDT_ArticleInfo_C_SetDefensiveGadgetInfo");
-static_assert(sizeof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo) == 0x000480, "Wrong size on WDT_ArticleInfo_C_SetDefensiveGadgetInfo");
+static_assert(sizeof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo) == 0x0004A0, "Wrong size on WDT_ArticleInfo_C_SetDefensiveGadgetInfo");
 static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, InDefensiveGadgetInfo) == 0x000000, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::InDefensiveGadgetInfo' has a wrong offset!");
 static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, L_ThunderByGuard) == 0x0000F8, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::L_ThunderByGuard' has a wrong offset!");
 static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, L_IceByGuard) == 0x0000FC, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::L_IceByGuard' has a wrong offset!");
@@ -1608,34 +1638,36 @@ static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_Multip
 static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_Round_ReturnValue_5) == 0x000398, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_Round_ReturnValue_5' has a wrong offset!");
 static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_Conv_IntToDouble_ReturnValue_11) == 0x0003A0, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_Conv_IntToDouble_ReturnValue_11' has a wrong offset!");
 static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_Divide_DoubleDouble_ReturnValue_5) == 0x0003A8, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_Divide_DoubleDouble_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_TextIsEmpty_ReturnValue) == 0x0003B0, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_TextIsEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_IsValidSoftObjectReference_ReturnValue) == 0x0003B1, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_IsValidSoftObjectReference_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, K2Node_Select_Default) == 0x0003B2, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, K2Node_Select_Default_1) == 0x0003B3, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_Conv_IntToDouble_ReturnValue_12) == 0x0003B8, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_Conv_IntToDouble_ReturnValue_12' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_MakeLiteralDouble_ReturnValue_6) == 0x0003C0, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_MakeLiteralDouble_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_6) == 0x0003C8, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_Multiply_DoubleDouble_ReturnValue_6) == 0x0003D0, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_Multiply_DoubleDouble_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_Round_ReturnValue_6) == 0x0003D8, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_Round_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_Conv_IntToDouble_ReturnValue_13) == 0x0003E0, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_Conv_IntToDouble_ReturnValue_13' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_Divide_DoubleDouble_ReturnValue_6) == 0x0003E8, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_Divide_DoubleDouble_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, K2Node_Select_Default_2) == 0x0003F0, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::K2Node_Select_Default_2' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_Set_RichText_with_Empty_Designation_TextEmpty) == 0x000400, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_Set_RichText_with_Empty_Designation_TextEmpty' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x000408, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1) == 0x000410, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2) == 0x000418, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_3) == 0x000420, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_3' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_4) == 0x000428, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_4' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_5) == 0x000430, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_5' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_6) == 0x000438, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_6' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_SetDefence_InThunder_ImplicitCast) == 0x000440, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_SetDefence_InThunder_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_SetDefence_InIce_ImplicitCast) == 0x000448, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_SetDefence_InIce_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_SetDefence_InFire_ImplicitCast) == 0x000450, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_SetDefence_InFire_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_SetDefence_InBlood_ImplicitCast) == 0x000458, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_SetDefence_InBlood_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_SetDefence_InCrush_ImplicitCast) == 0x000460, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_SetDefence_InCrush_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_SetDefence_InPierce_ImplicitCast) == 0x000468, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_SetDefence_InPierce_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_SetDefence_InSunder_ImplicitCast) == 0x000470, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_SetDefence_InSunder_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_SetValueFloat_InValue_ImplicitCast) == 0x000478, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_SetValueFloat_InValue_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_FormatTextWithPlayerInfo_ReturnValue) == 0x0003B0, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_FormatTextWithPlayerInfo_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_IsValidSoftObjectReference_ReturnValue) == 0x0003C0, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_IsValidSoftObjectReference_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, K2Node_Select_Default) == 0x0003C1, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_TextIsEmpty_ReturnValue) == 0x0003C2, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_TextIsEmpty_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, K2Node_Select_Default_1) == 0x0003C3, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::K2Node_Select_Default_1' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_Conv_IntToDouble_ReturnValue_12) == 0x0003C8, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_Conv_IntToDouble_ReturnValue_12' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_MakeLiteralDouble_ReturnValue_6) == 0x0003D0, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_MakeLiteralDouble_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_6) == 0x0003D8, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_Multiply_DoubleDouble_ReturnValue_6) == 0x0003E0, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_Multiply_DoubleDouble_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_Round_ReturnValue_6) == 0x0003E8, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_Round_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_Conv_IntToDouble_ReturnValue_13) == 0x0003F0, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_Conv_IntToDouble_ReturnValue_13' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_Divide_DoubleDouble_ReturnValue_6) == 0x0003F8, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_Divide_DoubleDouble_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, K2Node_Select_Default_2) == 0x000400, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::K2Node_Select_Default_2' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_Set_RichText_with_Empty_Designation_TextEmpty) == 0x000410, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_Set_RichText_with_Empty_Designation_TextEmpty' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_FormatTextWithPlayerInfo_ReturnValue_1) == 0x000418, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_FormatTextWithPlayerInfo_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x000428, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1) == 0x000430, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2) == 0x000438, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_3) == 0x000440, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_3' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_4) == 0x000448, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_4' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_5) == 0x000450, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_5' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_6) == 0x000458, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_6' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_SetDefence_InThunder_ImplicitCast) == 0x000460, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_SetDefence_InThunder_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_SetDefence_InIce_ImplicitCast) == 0x000468, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_SetDefence_InIce_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_SetDefence_InFire_ImplicitCast) == 0x000470, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_SetDefence_InFire_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_SetDefence_InBlood_ImplicitCast) == 0x000478, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_SetDefence_InBlood_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_SetDefence_InCrush_ImplicitCast) == 0x000480, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_SetDefence_InCrush_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_SetDefence_InPierce_ImplicitCast) == 0x000488, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_SetDefence_InPierce_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_SetDefence_InSunder_ImplicitCast) == 0x000490, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_SetDefence_InSunder_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetDefensiveGadgetInfo, CallFunc_SetValueFloat_InValue_ImplicitCast) == 0x000498, "Member 'WDT_ArticleInfo_C_SetDefensiveGadgetInfo::CallFunc_SetValueFloat_InValue_ImplicitCast' has a wrong offset!");
 
 // Function WDT_ArticleInfo.WDT_ArticleInfo_C.SetDefensiveGadgetInfoForComparison
 // 0x0820 (0x0820 - 0x0000)
@@ -2200,7 +2232,7 @@ static_assert(offsetof(WDT_ArticleInfo_C_SetImageColorbyBoolian, IsLoadOver) == 
 static_assert(offsetof(WDT_ArticleInfo_C_SetImageColorbyBoolian, Image) == 0x000008, "Member 'WDT_ArticleInfo_C_SetImageColorbyBoolian::Image' has a wrong offset!");
 
 // Function WDT_ArticleInfo.WDT_ArticleInfo_C.SetIndependentGadgetInfo
-// 0x0210 (0x0210 - 0x0000)
+// 0x0238 (0x0238 - 0x0000)
 struct WDT_ArticleInfo_C_SetIndependentGadgetInfo final
 {
 public:
@@ -2244,18 +2276,22 @@ public:
 	bool                                          Temp_bool_Variable;                                // 0x018A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable;                                // 0x018B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x018C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x018D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_18E[0x2];                                      // 0x018E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0190(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x0198(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_199[0x7];                                      // 0x0199(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x01A0(0x0048)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x01E8(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x01F8(0x0010)()
-	bool                                          CallFunc_Set_RichText_with_Empty_Designation_TextEmpty; // 0x0208(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_18D[0x3];                                      // 0x018D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_FormatTextWithPlayerInfo_ReturnValue;     // 0x0190(0x0010)()
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x01A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1A1[0x7];                                      // 0x01A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x01A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1B1[0x7];                                      // 0x01B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x01B8(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0200(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0210(0x0010)()
+	bool                                          CallFunc_Set_RichText_with_Empty_Designation_TextEmpty; // 0x0220(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_221[0x7];                                      // 0x0221(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_FormatTextWithPlayerInfo_ReturnValue_1;   // 0x0228(0x0010)()
 };
 static_assert(alignof(WDT_ArticleInfo_C_SetIndependentGadgetInfo) == 0x000008, "Wrong alignment on WDT_ArticleInfo_C_SetIndependentGadgetInfo");
-static_assert(sizeof(WDT_ArticleInfo_C_SetIndependentGadgetInfo) == 0x000210, "Wrong size on WDT_ArticleInfo_C_SetIndependentGadgetInfo");
+static_assert(sizeof(WDT_ArticleInfo_C_SetIndependentGadgetInfo) == 0x000238, "Wrong size on WDT_ArticleInfo_C_SetIndependentGadgetInfo");
 static_assert(offsetof(WDT_ArticleInfo_C_SetIndependentGadgetInfo, InIndependentGadgetInfo) == 0x000000, "Member 'WDT_ArticleInfo_C_SetIndependentGadgetInfo::InIndependentGadgetInfo' has a wrong offset!");
 static_assert(offsetof(WDT_ArticleInfo_C_SetIndependentGadgetInfo, L_PierceAdditional) == 0x0000F0, "Member 'WDT_ArticleInfo_C_SetIndependentGadgetInfo::L_PierceAdditional' has a wrong offset!");
 static_assert(offsetof(WDT_ArticleInfo_C_SetIndependentGadgetInfo, L_Pierce) == 0x0000F4, "Member 'WDT_ArticleInfo_C_SetIndependentGadgetInfo::L_Pierce' has a wrong offset!");
@@ -2294,13 +2330,15 @@ static_assert(offsetof(WDT_ArticleInfo_C_SetIndependentGadgetInfo, L_AttrModSTR)
 static_assert(offsetof(WDT_ArticleInfo_C_SetIndependentGadgetInfo, Temp_bool_Variable) == 0x00018A, "Member 'WDT_ArticleInfo_C_SetIndependentGadgetInfo::Temp_bool_Variable' has a wrong offset!");
 static_assert(offsetof(WDT_ArticleInfo_C_SetIndependentGadgetInfo, Temp_byte_Variable) == 0x00018B, "Member 'WDT_ArticleInfo_C_SetIndependentGadgetInfo::Temp_byte_Variable' has a wrong offset!");
 static_assert(offsetof(WDT_ArticleInfo_C_SetIndependentGadgetInfo, Temp_byte_Variable_1) == 0x00018C, "Member 'WDT_ArticleInfo_C_SetIndependentGadgetInfo::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetIndependentGadgetInfo, CallFunc_Greater_IntInt_ReturnValue) == 0x00018D, "Member 'WDT_ArticleInfo_C_SetIndependentGadgetInfo::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetIndependentGadgetInfo, CallFunc_Conv_IntToInt64_ReturnValue) == 0x000190, "Member 'WDT_ArticleInfo_C_SetIndependentGadgetInfo::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetIndependentGadgetInfo, K2Node_Select_Default) == 0x000198, "Member 'WDT_ArticleInfo_C_SetIndependentGadgetInfo::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetIndependentGadgetInfo, K2Node_MakeStruct_FormatArgumentData) == 0x0001A0, "Member 'WDT_ArticleInfo_C_SetIndependentGadgetInfo::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetIndependentGadgetInfo, K2Node_MakeArray_Array) == 0x0001E8, "Member 'WDT_ArticleInfo_C_SetIndependentGadgetInfo::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetIndependentGadgetInfo, CallFunc_Format_ReturnValue) == 0x0001F8, "Member 'WDT_ArticleInfo_C_SetIndependentGadgetInfo::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetIndependentGadgetInfo, CallFunc_Set_RichText_with_Empty_Designation_TextEmpty) == 0x000208, "Member 'WDT_ArticleInfo_C_SetIndependentGadgetInfo::CallFunc_Set_RichText_with_Empty_Designation_TextEmpty' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetIndependentGadgetInfo, CallFunc_FormatTextWithPlayerInfo_ReturnValue) == 0x000190, "Member 'WDT_ArticleInfo_C_SetIndependentGadgetInfo::CallFunc_FormatTextWithPlayerInfo_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetIndependentGadgetInfo, CallFunc_Greater_IntInt_ReturnValue) == 0x0001A0, "Member 'WDT_ArticleInfo_C_SetIndependentGadgetInfo::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetIndependentGadgetInfo, CallFunc_Conv_IntToInt64_ReturnValue) == 0x0001A8, "Member 'WDT_ArticleInfo_C_SetIndependentGadgetInfo::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetIndependentGadgetInfo, K2Node_Select_Default) == 0x0001B0, "Member 'WDT_ArticleInfo_C_SetIndependentGadgetInfo::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetIndependentGadgetInfo, K2Node_MakeStruct_FormatArgumentData) == 0x0001B8, "Member 'WDT_ArticleInfo_C_SetIndependentGadgetInfo::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetIndependentGadgetInfo, K2Node_MakeArray_Array) == 0x000200, "Member 'WDT_ArticleInfo_C_SetIndependentGadgetInfo::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetIndependentGadgetInfo, CallFunc_Format_ReturnValue) == 0x000210, "Member 'WDT_ArticleInfo_C_SetIndependentGadgetInfo::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetIndependentGadgetInfo, CallFunc_Set_RichText_with_Empty_Designation_TextEmpty) == 0x000220, "Member 'WDT_ArticleInfo_C_SetIndependentGadgetInfo::CallFunc_Set_RichText_with_Empty_Designation_TextEmpty' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetIndependentGadgetInfo, CallFunc_FormatTextWithPlayerInfo_ReturnValue_1) == 0x000228, "Member 'WDT_ArticleInfo_C_SetIndependentGadgetInfo::CallFunc_FormatTextWithPlayerInfo_ReturnValue_1' has a wrong offset!");
 
 // Function WDT_ArticleInfo.WDT_ArticleInfo_C.SetIndependentGadgetInfoForComparison
 // 0x0430 (0x0430 - 0x0000)
@@ -2508,7 +2546,7 @@ static_assert(offsetof(WDT_ArticleInfo_C_SetIndependentGadgetInfoForComparison, 
 static_assert(offsetof(WDT_ArticleInfo_C_SetIndependentGadgetInfoForComparison, CallFunc_SetSTRValueComparison_InTargetValue_ImplicitCast) == 0x000428, "Member 'WDT_ArticleInfo_C_SetIndependentGadgetInfoForComparison::CallFunc_SetSTRValueComparison_InTargetValue_ImplicitCast' has a wrong offset!");
 
 // Function WDT_ArticleInfo.WDT_ArticleInfo_C.SetItemInfo
-// 0x01E8 (0x01E8 - 0x0000)
+// 0x01F0 (0x01F0 - 0x0000)
 struct WDT_ArticleInfo_C_SetItemInfo final
 {
 public:
@@ -2536,28 +2574,34 @@ public:
 	class FText                                   L_ItemProcurementMethod;                           // 0x00E8(0x0010)(Edit, BlueprintVisible)
 	class FText                                   L_ItemEffectDescription;                           // 0x00F8(0x0010)(Edit, BlueprintVisible)
 	class FText                                   L_Description;                                     // 0x0108(0x0010)(Edit, BlueprintVisible)
-	bool                                          Temp_bool_Variable;                                // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable;                                // 0x0119(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0119(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x011A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11B[0x5];                                      // 0x011B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	ESlateVisibility                              Temp_byte_Variable_2;                              // 0x011B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_3;                              // 0x011C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x011D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x011E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11F[0x1];                                      // 0x011F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0120(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0128(0x0048)(HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_171[0x7];                                      // 0x0171(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x0128(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_129[0x7];                                      // 0x0129(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0130(0x0048)(HasGetValueTypeHash)
 	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0178(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0188(0x0010)()
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x0198(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_199[0x7];                                      // 0x0199(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_FormatTextWithPlayerInfo_ReturnValue;     // 0x01A0(0x0010)()
-	bool                                          CallFunc_Set_RichText_with_Empty_Designation_TextEmpty; // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x01B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1B2[0x6];                                      // 0x01B2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_GetItemCategoryByEnum_ReturnValue;        // 0x01B8(0x0010)()
-	class FText                                   CallFunc_FormatTextWithPlayerInfo_ReturnValue_1;   // 0x01C8(0x0010)()
-	class FText                                   CallFunc_FormatTextWithPlayerInfo_ReturnValue_2;   // 0x01D8(0x0010)()
+	bool                                          CallFunc_Greater_IntInt_ReturnValue_1;             // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_189[0x7];                                      // 0x0189(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0190(0x0010)()
+	ESlateVisibility                              K2Node_Select_Default_1;                           // 0x01A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1A1[0x7];                                      // 0x01A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_FormatTextWithPlayerInfo_ReturnValue;     // 0x01A8(0x0010)()
+	bool                                          CallFunc_Set_RichText_with_Empty_Designation_TextEmpty; // 0x01B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x01B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1BA[0x6];                                      // 0x01BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_GetItemCategoryByEnum_ReturnValue;        // 0x01C0(0x0010)()
+	class FText                                   CallFunc_FormatTextWithPlayerInfo_ReturnValue_1;   // 0x01D0(0x0010)()
+	class FText                                   CallFunc_FormatTextWithPlayerInfo_ReturnValue_2;   // 0x01E0(0x0010)()
 };
 static_assert(alignof(WDT_ArticleInfo_C_SetItemInfo) == 0x000008, "Wrong alignment on WDT_ArticleInfo_C_SetItemInfo");
-static_assert(sizeof(WDT_ArticleInfo_C_SetItemInfo) == 0x0001E8, "Wrong size on WDT_ArticleInfo_C_SetItemInfo");
+static_assert(sizeof(WDT_ArticleInfo_C_SetItemInfo) == 0x0001F0, "Wrong size on WDT_ArticleInfo_C_SetItemInfo");
 static_assert(offsetof(WDT_ArticleInfo_C_SetItemInfo, InItemInfo) == 0x000000, "Member 'WDT_ArticleInfo_C_SetItemInfo::InItemInfo' has a wrong offset!");
 static_assert(offsetof(WDT_ArticleInfo_C_SetItemInfo, L_ItemMaxCountStorage) == 0x0000A8, "Member 'WDT_ArticleInfo_C_SetItemInfo::L_ItemMaxCountStorage' has a wrong offset!");
 static_assert(offsetof(WDT_ArticleInfo_C_SetItemInfo, L_IsUnconsumable) == 0x0000AC, "Member 'WDT_ArticleInfo_C_SetItemInfo::L_IsUnconsumable' has a wrong offset!");
@@ -2579,24 +2623,29 @@ static_assert(offsetof(WDT_ArticleInfo_C_SetItemInfo, L_ItemCategory) == 0x0000E
 static_assert(offsetof(WDT_ArticleInfo_C_SetItemInfo, L_ItemProcurementMethod) == 0x0000E8, "Member 'WDT_ArticleInfo_C_SetItemInfo::L_ItemProcurementMethod' has a wrong offset!");
 static_assert(offsetof(WDT_ArticleInfo_C_SetItemInfo, L_ItemEffectDescription) == 0x0000F8, "Member 'WDT_ArticleInfo_C_SetItemInfo::L_ItemEffectDescription' has a wrong offset!");
 static_assert(offsetof(WDT_ArticleInfo_C_SetItemInfo, L_Description) == 0x000108, "Member 'WDT_ArticleInfo_C_SetItemInfo::L_Description' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetItemInfo, Temp_bool_Variable) == 0x000118, "Member 'WDT_ArticleInfo_C_SetItemInfo::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetItemInfo, Temp_byte_Variable) == 0x000119, "Member 'WDT_ArticleInfo_C_SetItemInfo::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetItemInfo, Temp_byte_Variable) == 0x000118, "Member 'WDT_ArticleInfo_C_SetItemInfo::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetItemInfo, Temp_bool_Variable) == 0x000119, "Member 'WDT_ArticleInfo_C_SetItemInfo::Temp_bool_Variable' has a wrong offset!");
 static_assert(offsetof(WDT_ArticleInfo_C_SetItemInfo, Temp_byte_Variable_1) == 0x00011A, "Member 'WDT_ArticleInfo_C_SetItemInfo::Temp_byte_Variable_1' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetItemInfo, Temp_byte_Variable_2) == 0x00011B, "Member 'WDT_ArticleInfo_C_SetItemInfo::Temp_byte_Variable_2' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetItemInfo, Temp_byte_Variable_3) == 0x00011C, "Member 'WDT_ArticleInfo_C_SetItemInfo::Temp_byte_Variable_3' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetItemInfo, CallFunc_Greater_IntInt_ReturnValue) == 0x00011D, "Member 'WDT_ArticleInfo_C_SetItemInfo::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetItemInfo, Temp_bool_Variable_1) == 0x00011E, "Member 'WDT_ArticleInfo_C_SetItemInfo::Temp_bool_Variable_1' has a wrong offset!");
 static_assert(offsetof(WDT_ArticleInfo_C_SetItemInfo, CallFunc_Conv_IntToInt64_ReturnValue) == 0x000120, "Member 'WDT_ArticleInfo_C_SetItemInfo::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetItemInfo, K2Node_MakeStruct_FormatArgumentData) == 0x000128, "Member 'WDT_ArticleInfo_C_SetItemInfo::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetItemInfo, CallFunc_Greater_IntInt_ReturnValue) == 0x000170, "Member 'WDT_ArticleInfo_C_SetItemInfo::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetItemInfo, K2Node_Select_Default) == 0x000128, "Member 'WDT_ArticleInfo_C_SetItemInfo::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetItemInfo, K2Node_MakeStruct_FormatArgumentData) == 0x000130, "Member 'WDT_ArticleInfo_C_SetItemInfo::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
 static_assert(offsetof(WDT_ArticleInfo_C_SetItemInfo, K2Node_MakeArray_Array) == 0x000178, "Member 'WDT_ArticleInfo_C_SetItemInfo::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetItemInfo, CallFunc_Format_ReturnValue) == 0x000188, "Member 'WDT_ArticleInfo_C_SetItemInfo::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetItemInfo, K2Node_Select_Default) == 0x000198, "Member 'WDT_ArticleInfo_C_SetItemInfo::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetItemInfo, CallFunc_FormatTextWithPlayerInfo_ReturnValue) == 0x0001A0, "Member 'WDT_ArticleInfo_C_SetItemInfo::CallFunc_FormatTextWithPlayerInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetItemInfo, CallFunc_Set_RichText_with_Empty_Designation_TextEmpty) == 0x0001B0, "Member 'WDT_ArticleInfo_C_SetItemInfo::CallFunc_Set_RichText_with_Empty_Designation_TextEmpty' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetItemInfo, K2Node_SwitchEnum_CmpSuccess) == 0x0001B1, "Member 'WDT_ArticleInfo_C_SetItemInfo::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetItemInfo, CallFunc_GetItemCategoryByEnum_ReturnValue) == 0x0001B8, "Member 'WDT_ArticleInfo_C_SetItemInfo::CallFunc_GetItemCategoryByEnum_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetItemInfo, CallFunc_FormatTextWithPlayerInfo_ReturnValue_1) == 0x0001C8, "Member 'WDT_ArticleInfo_C_SetItemInfo::CallFunc_FormatTextWithPlayerInfo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetItemInfo, CallFunc_FormatTextWithPlayerInfo_ReturnValue_2) == 0x0001D8, "Member 'WDT_ArticleInfo_C_SetItemInfo::CallFunc_FormatTextWithPlayerInfo_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetItemInfo, CallFunc_Greater_IntInt_ReturnValue_1) == 0x000188, "Member 'WDT_ArticleInfo_C_SetItemInfo::CallFunc_Greater_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetItemInfo, CallFunc_Format_ReturnValue) == 0x000190, "Member 'WDT_ArticleInfo_C_SetItemInfo::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetItemInfo, K2Node_Select_Default_1) == 0x0001A0, "Member 'WDT_ArticleInfo_C_SetItemInfo::K2Node_Select_Default_1' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetItemInfo, CallFunc_FormatTextWithPlayerInfo_ReturnValue) == 0x0001A8, "Member 'WDT_ArticleInfo_C_SetItemInfo::CallFunc_FormatTextWithPlayerInfo_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetItemInfo, CallFunc_Set_RichText_with_Empty_Designation_TextEmpty) == 0x0001B8, "Member 'WDT_ArticleInfo_C_SetItemInfo::CallFunc_Set_RichText_with_Empty_Designation_TextEmpty' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetItemInfo, K2Node_SwitchEnum_CmpSuccess) == 0x0001B9, "Member 'WDT_ArticleInfo_C_SetItemInfo::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetItemInfo, CallFunc_GetItemCategoryByEnum_ReturnValue) == 0x0001C0, "Member 'WDT_ArticleInfo_C_SetItemInfo::CallFunc_GetItemCategoryByEnum_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetItemInfo, CallFunc_FormatTextWithPlayerInfo_ReturnValue_1) == 0x0001D0, "Member 'WDT_ArticleInfo_C_SetItemInfo::CallFunc_FormatTextWithPlayerInfo_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetItemInfo, CallFunc_FormatTextWithPlayerInfo_ReturnValue_2) == 0x0001E0, "Member 'WDT_ArticleInfo_C_SetItemInfo::CallFunc_FormatTextWithPlayerInfo_ReturnValue_2' has a wrong offset!");
 
 // Function WDT_ArticleInfo.WDT_ArticleInfo_C.SetJailInfo
-// 0x04D8 (0x04D8 - 0x0000)
+// 0x04F8 (0x04F8 - 0x0000)
 struct WDT_ArticleInfo_C_SetJailInfo final
 {
 public:
@@ -2720,32 +2769,34 @@ public:
 	uint8                                         Pad_3D4[0x4];                                      // 0x03D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Conv_IntToDouble_ReturnValue_11;          // 0x03D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_5;        // 0x03E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x03E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3E9[0x7];                                      // 0x03E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x03F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x03F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_FormatTextWithPlayerInfo_ReturnValue;     // 0x03E8(0x0010)()
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x03F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_3F9[0x7];                                      // 0x03F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0400(0x0048)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0448(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0458(0x0010)()
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_12;          // 0x0468(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MakeLiteralDouble_ReturnValue_6;          // 0x0470(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_6; // 0x0478(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_6;      // 0x0480(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Round_ReturnValue_6;                      // 0x0488(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_48C[0x4];                                      // 0x048C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_13;          // 0x0490(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_6;        // 0x0498(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x04A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1;   // 0x04A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2;   // 0x04B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_3;   // 0x04B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_4;   // 0x04C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_5;   // 0x04C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_6;   // 0x04D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0400(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x0408(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_409[0x7];                                      // 0x0409(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0410(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0458(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0468(0x0010)()
+	class FText                                   CallFunc_FormatTextWithPlayerInfo_ReturnValue_1;   // 0x0478(0x0010)()
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_12;          // 0x0488(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MakeLiteralDouble_ReturnValue_6;          // 0x0490(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_6; // 0x0498(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_6;      // 0x04A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Round_ReturnValue_6;                      // 0x04A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4AC[0x4];                                      // 0x04AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_13;          // 0x04B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_6;        // 0x04B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x04C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1;   // 0x04C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2;   // 0x04D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_3;   // 0x04D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_4;   // 0x04E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_5;   // 0x04E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_6;   // 0x04F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_ArticleInfo_C_SetJailInfo) == 0x000008, "Wrong alignment on WDT_ArticleInfo_C_SetJailInfo");
-static_assert(sizeof(WDT_ArticleInfo_C_SetJailInfo) == 0x0004D8, "Wrong size on WDT_ArticleInfo_C_SetJailInfo");
+static_assert(sizeof(WDT_ArticleInfo_C_SetJailInfo) == 0x0004F8, "Wrong size on WDT_ArticleInfo_C_SetJailInfo");
 static_assert(offsetof(WDT_ArticleInfo_C_SetJailInfo, InJailInfo) == 0x000000, "Member 'WDT_ArticleInfo_C_SetJailInfo::InJailInfo' has a wrong offset!");
 static_assert(offsetof(WDT_ArticleInfo_C_SetJailInfo, L_Features) == 0x000148, "Member 'WDT_ArticleInfo_C_SetJailInfo::L_Features' has a wrong offset!");
 static_assert(offsetof(WDT_ArticleInfo_C_SetJailInfo, L_PierceAdditional) == 0x000158, "Member 'WDT_ArticleInfo_C_SetJailInfo::L_PierceAdditional' has a wrong offset!");
@@ -2853,26 +2904,28 @@ static_assert(offsetof(WDT_ArticleInfo_C_SetJailInfo, CallFunc_Multiply_DoubleDo
 static_assert(offsetof(WDT_ArticleInfo_C_SetJailInfo, CallFunc_Round_ReturnValue_5) == 0x0003D0, "Member 'WDT_ArticleInfo_C_SetJailInfo::CallFunc_Round_ReturnValue_5' has a wrong offset!");
 static_assert(offsetof(WDT_ArticleInfo_C_SetJailInfo, CallFunc_Conv_IntToDouble_ReturnValue_11) == 0x0003D8, "Member 'WDT_ArticleInfo_C_SetJailInfo::CallFunc_Conv_IntToDouble_ReturnValue_11' has a wrong offset!");
 static_assert(offsetof(WDT_ArticleInfo_C_SetJailInfo, CallFunc_Divide_DoubleDouble_ReturnValue_5) == 0x0003E0, "Member 'WDT_ArticleInfo_C_SetJailInfo::CallFunc_Divide_DoubleDouble_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetJailInfo, CallFunc_Greater_IntInt_ReturnValue) == 0x0003E8, "Member 'WDT_ArticleInfo_C_SetJailInfo::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetJailInfo, CallFunc_Conv_IntToInt64_ReturnValue) == 0x0003F0, "Member 'WDT_ArticleInfo_C_SetJailInfo::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetJailInfo, K2Node_Select_Default) == 0x0003F8, "Member 'WDT_ArticleInfo_C_SetJailInfo::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetJailInfo, K2Node_MakeStruct_FormatArgumentData) == 0x000400, "Member 'WDT_ArticleInfo_C_SetJailInfo::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetJailInfo, K2Node_MakeArray_Array) == 0x000448, "Member 'WDT_ArticleInfo_C_SetJailInfo::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetJailInfo, CallFunc_Format_ReturnValue) == 0x000458, "Member 'WDT_ArticleInfo_C_SetJailInfo::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetJailInfo, CallFunc_Conv_IntToDouble_ReturnValue_12) == 0x000468, "Member 'WDT_ArticleInfo_C_SetJailInfo::CallFunc_Conv_IntToDouble_ReturnValue_12' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetJailInfo, CallFunc_MakeLiteralDouble_ReturnValue_6) == 0x000470, "Member 'WDT_ArticleInfo_C_SetJailInfo::CallFunc_MakeLiteralDouble_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetJailInfo, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_6) == 0x000478, "Member 'WDT_ArticleInfo_C_SetJailInfo::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetJailInfo, CallFunc_Multiply_DoubleDouble_ReturnValue_6) == 0x000480, "Member 'WDT_ArticleInfo_C_SetJailInfo::CallFunc_Multiply_DoubleDouble_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetJailInfo, CallFunc_Round_ReturnValue_6) == 0x000488, "Member 'WDT_ArticleInfo_C_SetJailInfo::CallFunc_Round_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetJailInfo, CallFunc_Conv_IntToDouble_ReturnValue_13) == 0x000490, "Member 'WDT_ArticleInfo_C_SetJailInfo::CallFunc_Conv_IntToDouble_ReturnValue_13' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetJailInfo, CallFunc_Divide_DoubleDouble_ReturnValue_6) == 0x000498, "Member 'WDT_ArticleInfo_C_SetJailInfo::CallFunc_Divide_DoubleDouble_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetJailInfo, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x0004A0, "Member 'WDT_ArticleInfo_C_SetJailInfo::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetJailInfo, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1) == 0x0004A8, "Member 'WDT_ArticleInfo_C_SetJailInfo::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetJailInfo, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2) == 0x0004B0, "Member 'WDT_ArticleInfo_C_SetJailInfo::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetJailInfo, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_3) == 0x0004B8, "Member 'WDT_ArticleInfo_C_SetJailInfo::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_3' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetJailInfo, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_4) == 0x0004C0, "Member 'WDT_ArticleInfo_C_SetJailInfo::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_4' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetJailInfo, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_5) == 0x0004C8, "Member 'WDT_ArticleInfo_C_SetJailInfo::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_5' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetJailInfo, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_6) == 0x0004D0, "Member 'WDT_ArticleInfo_C_SetJailInfo::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_6' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetJailInfo, CallFunc_FormatTextWithPlayerInfo_ReturnValue) == 0x0003E8, "Member 'WDT_ArticleInfo_C_SetJailInfo::CallFunc_FormatTextWithPlayerInfo_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetJailInfo, CallFunc_Greater_IntInt_ReturnValue) == 0x0003F8, "Member 'WDT_ArticleInfo_C_SetJailInfo::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetJailInfo, CallFunc_Conv_IntToInt64_ReturnValue) == 0x000400, "Member 'WDT_ArticleInfo_C_SetJailInfo::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetJailInfo, K2Node_Select_Default) == 0x000408, "Member 'WDT_ArticleInfo_C_SetJailInfo::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetJailInfo, K2Node_MakeStruct_FormatArgumentData) == 0x000410, "Member 'WDT_ArticleInfo_C_SetJailInfo::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetJailInfo, K2Node_MakeArray_Array) == 0x000458, "Member 'WDT_ArticleInfo_C_SetJailInfo::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetJailInfo, CallFunc_Format_ReturnValue) == 0x000468, "Member 'WDT_ArticleInfo_C_SetJailInfo::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetJailInfo, CallFunc_FormatTextWithPlayerInfo_ReturnValue_1) == 0x000478, "Member 'WDT_ArticleInfo_C_SetJailInfo::CallFunc_FormatTextWithPlayerInfo_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetJailInfo, CallFunc_Conv_IntToDouble_ReturnValue_12) == 0x000488, "Member 'WDT_ArticleInfo_C_SetJailInfo::CallFunc_Conv_IntToDouble_ReturnValue_12' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetJailInfo, CallFunc_MakeLiteralDouble_ReturnValue_6) == 0x000490, "Member 'WDT_ArticleInfo_C_SetJailInfo::CallFunc_MakeLiteralDouble_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetJailInfo, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_6) == 0x000498, "Member 'WDT_ArticleInfo_C_SetJailInfo::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetJailInfo, CallFunc_Multiply_DoubleDouble_ReturnValue_6) == 0x0004A0, "Member 'WDT_ArticleInfo_C_SetJailInfo::CallFunc_Multiply_DoubleDouble_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetJailInfo, CallFunc_Round_ReturnValue_6) == 0x0004A8, "Member 'WDT_ArticleInfo_C_SetJailInfo::CallFunc_Round_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetJailInfo, CallFunc_Conv_IntToDouble_ReturnValue_13) == 0x0004B0, "Member 'WDT_ArticleInfo_C_SetJailInfo::CallFunc_Conv_IntToDouble_ReturnValue_13' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetJailInfo, CallFunc_Divide_DoubleDouble_ReturnValue_6) == 0x0004B8, "Member 'WDT_ArticleInfo_C_SetJailInfo::CallFunc_Divide_DoubleDouble_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetJailInfo, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x0004C0, "Member 'WDT_ArticleInfo_C_SetJailInfo::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetJailInfo, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1) == 0x0004C8, "Member 'WDT_ArticleInfo_C_SetJailInfo::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetJailInfo, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2) == 0x0004D0, "Member 'WDT_ArticleInfo_C_SetJailInfo::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetJailInfo, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_3) == 0x0004D8, "Member 'WDT_ArticleInfo_C_SetJailInfo::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_3' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetJailInfo, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_4) == 0x0004E0, "Member 'WDT_ArticleInfo_C_SetJailInfo::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_4' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetJailInfo, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_5) == 0x0004E8, "Member 'WDT_ArticleInfo_C_SetJailInfo::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_5' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetJailInfo, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_6) == 0x0004F0, "Member 'WDT_ArticleInfo_C_SetJailInfo::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_6' has a wrong offset!");
 
 // Function WDT_ArticleInfo.WDT_ArticleInfo_C.SetJailInfoForComparison
 // 0x0980 (0x0980 - 0x0000)
@@ -3434,401 +3487,405 @@ static_assert(offsetof(WDT_ArticleInfo_C_SetMaterialEnemyImages, CallFunc_IsVali
 static_assert(offsetof(WDT_ArticleInfo_C_SetMaterialEnemyImages, CallFunc_Array_IsNotEmpty_ReturnValue) == 0x000039, "Member 'WDT_ArticleInfo_C_SetMaterialEnemyImages::CallFunc_Array_IsNotEmpty_ReturnValue' has a wrong offset!");
 
 // Function WDT_ArticleInfo.WDT_ArticleInfo_C.SetPlayerStatusSummary
-// 0x0228 (0x0228 - 0x0000)
+// 0x0268 (0x0268 - 0x0000)
 struct WDT_ArticleInfo_C_SetPlayerStatusSummary final
 {
 public:
-	struct FUIPlayerStatusSummaryInfo             InCurrentSummaryInfo;                              // 0x0000(0x00B8)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	int32                                         L_MaxBuddyPoint;                                   // 0x00B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         L_MaxIchor;                                        // 0x00BC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_IndependentGadgetBleedingFactor;                 // 0x00C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Weapon2BleedingFactor;                           // 0x00C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Weapon1BleedingFactor;                           // 0x00C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EUIWeaponCategory                             L_Weapon2Category;                                 // 0x00CC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EUIWeaponCategory                             L_Weapon1Category;                                 // 0x00CD(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CE[0x2];                                       // 0x00CE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         L_CurseResistance;                                 // 0x00D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_BleedResistance;                                 // 0x00D4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_WoundResistance;                                 // 0x00D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_DiseaseResistance;                               // 0x00DC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Stan;                                            // 0x00E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Vanish;                                          // 0x00E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Slow;                                            // 0x00E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Leak;                                            // 0x00EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Venom;                                           // 0x00F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_F4[0x4];                                       // 0x00F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        L_Thunder;                                         // 0x00F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        L_Ice;                                             // 0x0100(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        L_Fire;                                            // 0x0108(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        L_Blood;                                           // 0x0110(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        L_Crush;                                           // 0x0118(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        L_Pierce;                                          // 0x0120(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        L_Sunder;                                          // 0x0128(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Fastness;                                        // 0x0130(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EUIEvasionType                                L_EvasionType;                                     // 0x0134(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_135[0x3];                                      // 0x0135(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         L_SuckingBloodAttackPower;                         // 0x0138(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_IndependentAttackPower;                          // 0x013C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Weapon2AttackPower;                              // 0x0140(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Weapon1AttackPower;                              // 0x0144(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_BuddyPoint;                                      // 0x0148(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_14C[0x4];                                      // 0x014C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        L_Ichor;                                           // 0x0150(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_MaxStamina;                                      // 0x0158(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Stamina;                                         // 0x015C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        L_MaxHealth;                                       // 0x0160(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        L_Health;                                          // 0x0168(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_AttributeLoadFOR;                                // 0x0170(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_AttributeLoadVIT;                                // 0x0174(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_AttributeLoadWIL;                                // 0x0178(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_AttributeLoadMIND;                               // 0x017C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_AttributeLoadDEX;                                // 0x0180(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_AttributeLoadSTR;                                // 0x0184(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_AttributeFOR;                                    // 0x0188(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_AttributeVIT;                                    // 0x018C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_AttributeWIL;                                    // 0x0190(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_AttributeMIND;                                   // 0x0194(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_AttributeDEX;                                    // 0x0198(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_AttributeSTR;                                    // 0x019C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Exp;                                             // 0x01A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Level;                                           // 0x01A4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   LEvasion;                                          // 0x01A8(0x0010)(Edit, BlueprintVisible)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x01B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1B9[0x3];                                      // 0x01B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateColor                            CallFunc_Get_Text_Color_by_Compare_Result_TextColor; // 0x01BC(0x0014)()
-	double                                        K2Node_VariableSet_L_Health_ImplicitCast;          // 0x01D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_VariableSet_L_MaxHealth_ImplicitCast;       // 0x01D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_VariableSet_L_Ichor_ImplicitCast;           // 0x01E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_VariableSet_L_Sunder_ImplicitCast;          // 0x01E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_VariableSet_L_Crush_ImplicitCast;           // 0x01F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_VariableSet_L_Pierce_ImplicitCast;          // 0x01F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_VariableSet_L_Blood_ImplicitCast;           // 0x0200(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_VariableSet_L_Fire_ImplicitCast;            // 0x0208(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_VariableSet_L_Ice_ImplicitCast;             // 0x0210(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_VariableSet_L_Thunder_ImplicitCast;         // 0x0218(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetValueFloat_InMaxIchor_ImplicitCast;    // 0x0220(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FUIPlayerStatusSummaryInfo             InCurrentSummaryInfo;                              // 0x0000(0x00D8)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FUIBloodCodeAttributeConversionInfo    L_AttributeConversionInfo;                         // 0x00D8(0x0020)(Edit, BlueprintVisible)
+	int32                                         L_MaxBuddyPoint;                                   // 0x00F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         L_MaxIchor;                                        // 0x00FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_IndependentGadgetBleedingFactor;                 // 0x0100(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Weapon2BleedingFactor;                           // 0x0104(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Weapon1BleedingFactor;                           // 0x0108(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EUIWeaponCategory                             L_Weapon2Category;                                 // 0x010C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EUIWeaponCategory                             L_Weapon1Category;                                 // 0x010D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_10E[0x2];                                      // 0x010E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         L_CurseResistance;                                 // 0x0110(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_BleedResistance;                                 // 0x0114(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_WoundResistance;                                 // 0x0118(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_DiseaseResistance;                               // 0x011C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Stan;                                            // 0x0120(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Vanish;                                          // 0x0124(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Slow;                                            // 0x0128(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Leak;                                            // 0x012C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Venom;                                           // 0x0130(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_134[0x4];                                      // 0x0134(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        L_Thunder;                                         // 0x0138(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        L_Ice;                                             // 0x0140(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        L_Fire;                                            // 0x0148(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        L_Blood;                                           // 0x0150(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        L_Crush;                                           // 0x0158(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        L_Pierce;                                          // 0x0160(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        L_Sunder;                                          // 0x0168(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Fastness;                                        // 0x0170(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EUIEvasionType                                L_EvasionType;                                     // 0x0174(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_175[0x3];                                      // 0x0175(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         L_SuckingBloodAttackPower;                         // 0x0178(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_IndependentAttackPower;                          // 0x017C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Weapon2AttackPower;                              // 0x0180(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Weapon1AttackPower;                              // 0x0184(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_BuddyPoint;                                      // 0x0188(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_18C[0x4];                                      // 0x018C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        L_Ichor;                                           // 0x0190(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_MaxStamina;                                      // 0x0198(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Stamina;                                         // 0x019C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        L_MaxHealth;                                       // 0x01A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        L_Health;                                          // 0x01A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_AttributeLoadFOR;                                // 0x01B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_AttributeLoadVIT;                                // 0x01B4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_AttributeLoadWIL;                                // 0x01B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_AttributeLoadMIND;                               // 0x01BC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_AttributeLoadDEX;                                // 0x01C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_AttributeLoadSTR;                                // 0x01C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_AttributeFOR;                                    // 0x01C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_AttributeVIT;                                    // 0x01CC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_AttributeWIL;                                    // 0x01D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_AttributeMIND;                                   // 0x01D4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_AttributeDEX;                                    // 0x01D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_AttributeSTR;                                    // 0x01DC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Exp;                                             // 0x01E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Level;                                           // 0x01E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   LEvasion;                                          // 0x01E8(0x0010)(Edit, BlueprintVisible)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x01F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1F9[0x3];                                      // 0x01F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateColor                            CallFunc_Get_Text_Color_by_Compare_Result_TextColor; // 0x01FC(0x0014)()
+	double                                        K2Node_VariableSet_L_Health_ImplicitCast;          // 0x0210(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_VariableSet_L_MaxHealth_ImplicitCast;       // 0x0218(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_VariableSet_L_Ichor_ImplicitCast;           // 0x0220(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_VariableSet_L_Sunder_ImplicitCast;          // 0x0228(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_VariableSet_L_Crush_ImplicitCast;           // 0x0230(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_VariableSet_L_Pierce_ImplicitCast;          // 0x0238(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_VariableSet_L_Blood_ImplicitCast;           // 0x0240(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_VariableSet_L_Fire_ImplicitCast;            // 0x0248(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_VariableSet_L_Ice_ImplicitCast;             // 0x0250(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_VariableSet_L_Thunder_ImplicitCast;         // 0x0258(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetValueFloat_InMaxIchor_ImplicitCast;    // 0x0260(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_ArticleInfo_C_SetPlayerStatusSummary) == 0x000008, "Wrong alignment on WDT_ArticleInfo_C_SetPlayerStatusSummary");
-static_assert(sizeof(WDT_ArticleInfo_C_SetPlayerStatusSummary) == 0x000228, "Wrong size on WDT_ArticleInfo_C_SetPlayerStatusSummary");
+static_assert(sizeof(WDT_ArticleInfo_C_SetPlayerStatusSummary) == 0x000268, "Wrong size on WDT_ArticleInfo_C_SetPlayerStatusSummary");
 static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, InCurrentSummaryInfo) == 0x000000, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::InCurrentSummaryInfo' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_MaxBuddyPoint) == 0x0000B8, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_MaxBuddyPoint' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_MaxIchor) == 0x0000BC, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_MaxIchor' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_IndependentGadgetBleedingFactor) == 0x0000C0, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_IndependentGadgetBleedingFactor' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_Weapon2BleedingFactor) == 0x0000C4, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_Weapon2BleedingFactor' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_Weapon1BleedingFactor) == 0x0000C8, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_Weapon1BleedingFactor' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_Weapon2Category) == 0x0000CC, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_Weapon2Category' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_Weapon1Category) == 0x0000CD, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_Weapon1Category' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_CurseResistance) == 0x0000D0, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_CurseResistance' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_BleedResistance) == 0x0000D4, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_BleedResistance' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_WoundResistance) == 0x0000D8, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_WoundResistance' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_DiseaseResistance) == 0x0000DC, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_DiseaseResistance' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_Stan) == 0x0000E0, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_Stan' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_Vanish) == 0x0000E4, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_Vanish' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_Slow) == 0x0000E8, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_Slow' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_Leak) == 0x0000EC, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_Leak' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_Venom) == 0x0000F0, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_Venom' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_Thunder) == 0x0000F8, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_Thunder' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_Ice) == 0x000100, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_Ice' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_Fire) == 0x000108, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_Fire' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_Blood) == 0x000110, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_Blood' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_Crush) == 0x000118, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_Crush' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_Pierce) == 0x000120, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_Pierce' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_Sunder) == 0x000128, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_Sunder' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_Fastness) == 0x000130, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_Fastness' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_EvasionType) == 0x000134, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_EvasionType' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_SuckingBloodAttackPower) == 0x000138, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_SuckingBloodAttackPower' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_IndependentAttackPower) == 0x00013C, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_IndependentAttackPower' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_Weapon2AttackPower) == 0x000140, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_Weapon2AttackPower' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_Weapon1AttackPower) == 0x000144, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_Weapon1AttackPower' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_BuddyPoint) == 0x000148, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_BuddyPoint' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_Ichor) == 0x000150, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_Ichor' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_MaxStamina) == 0x000158, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_MaxStamina' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_Stamina) == 0x00015C, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_Stamina' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_MaxHealth) == 0x000160, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_MaxHealth' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_Health) == 0x000168, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_Health' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_AttributeLoadFOR) == 0x000170, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_AttributeLoadFOR' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_AttributeLoadVIT) == 0x000174, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_AttributeLoadVIT' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_AttributeLoadWIL) == 0x000178, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_AttributeLoadWIL' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_AttributeLoadMIND) == 0x00017C, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_AttributeLoadMIND' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_AttributeLoadDEX) == 0x000180, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_AttributeLoadDEX' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_AttributeLoadSTR) == 0x000184, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_AttributeLoadSTR' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_AttributeFOR) == 0x000188, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_AttributeFOR' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_AttributeVIT) == 0x00018C, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_AttributeVIT' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_AttributeWIL) == 0x000190, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_AttributeWIL' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_AttributeMIND) == 0x000194, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_AttributeMIND' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_AttributeDEX) == 0x000198, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_AttributeDEX' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_AttributeSTR) == 0x00019C, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_AttributeSTR' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_Exp) == 0x0001A0, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_Exp' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_Level) == 0x0001A4, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_Level' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, LEvasion) == 0x0001A8, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::LEvasion' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, K2Node_SwitchEnum_CmpSuccess) == 0x0001B8, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, CallFunc_Get_Text_Color_by_Compare_Result_TextColor) == 0x0001BC, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::CallFunc_Get_Text_Color_by_Compare_Result_TextColor' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, K2Node_VariableSet_L_Health_ImplicitCast) == 0x0001D0, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::K2Node_VariableSet_L_Health_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, K2Node_VariableSet_L_MaxHealth_ImplicitCast) == 0x0001D8, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::K2Node_VariableSet_L_MaxHealth_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, K2Node_VariableSet_L_Ichor_ImplicitCast) == 0x0001E0, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::K2Node_VariableSet_L_Ichor_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, K2Node_VariableSet_L_Sunder_ImplicitCast) == 0x0001E8, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::K2Node_VariableSet_L_Sunder_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, K2Node_VariableSet_L_Crush_ImplicitCast) == 0x0001F0, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::K2Node_VariableSet_L_Crush_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, K2Node_VariableSet_L_Pierce_ImplicitCast) == 0x0001F8, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::K2Node_VariableSet_L_Pierce_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, K2Node_VariableSet_L_Blood_ImplicitCast) == 0x000200, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::K2Node_VariableSet_L_Blood_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, K2Node_VariableSet_L_Fire_ImplicitCast) == 0x000208, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::K2Node_VariableSet_L_Fire_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, K2Node_VariableSet_L_Ice_ImplicitCast) == 0x000210, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::K2Node_VariableSet_L_Ice_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, K2Node_VariableSet_L_Thunder_ImplicitCast) == 0x000218, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::K2Node_VariableSet_L_Thunder_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, CallFunc_SetValueFloat_InMaxIchor_ImplicitCast) == 0x000220, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::CallFunc_SetValueFloat_InMaxIchor_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_AttributeConversionInfo) == 0x0000D8, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_AttributeConversionInfo' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_MaxBuddyPoint) == 0x0000F8, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_MaxBuddyPoint' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_MaxIchor) == 0x0000FC, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_MaxIchor' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_IndependentGadgetBleedingFactor) == 0x000100, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_IndependentGadgetBleedingFactor' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_Weapon2BleedingFactor) == 0x000104, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_Weapon2BleedingFactor' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_Weapon1BleedingFactor) == 0x000108, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_Weapon1BleedingFactor' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_Weapon2Category) == 0x00010C, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_Weapon2Category' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_Weapon1Category) == 0x00010D, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_Weapon1Category' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_CurseResistance) == 0x000110, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_CurseResistance' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_BleedResistance) == 0x000114, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_BleedResistance' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_WoundResistance) == 0x000118, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_WoundResistance' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_DiseaseResistance) == 0x00011C, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_DiseaseResistance' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_Stan) == 0x000120, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_Stan' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_Vanish) == 0x000124, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_Vanish' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_Slow) == 0x000128, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_Slow' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_Leak) == 0x00012C, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_Leak' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_Venom) == 0x000130, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_Venom' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_Thunder) == 0x000138, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_Thunder' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_Ice) == 0x000140, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_Ice' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_Fire) == 0x000148, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_Fire' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_Blood) == 0x000150, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_Blood' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_Crush) == 0x000158, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_Crush' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_Pierce) == 0x000160, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_Pierce' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_Sunder) == 0x000168, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_Sunder' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_Fastness) == 0x000170, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_Fastness' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_EvasionType) == 0x000174, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_EvasionType' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_SuckingBloodAttackPower) == 0x000178, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_SuckingBloodAttackPower' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_IndependentAttackPower) == 0x00017C, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_IndependentAttackPower' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_Weapon2AttackPower) == 0x000180, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_Weapon2AttackPower' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_Weapon1AttackPower) == 0x000184, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_Weapon1AttackPower' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_BuddyPoint) == 0x000188, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_BuddyPoint' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_Ichor) == 0x000190, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_Ichor' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_MaxStamina) == 0x000198, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_MaxStamina' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_Stamina) == 0x00019C, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_Stamina' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_MaxHealth) == 0x0001A0, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_MaxHealth' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_Health) == 0x0001A8, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_Health' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_AttributeLoadFOR) == 0x0001B0, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_AttributeLoadFOR' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_AttributeLoadVIT) == 0x0001B4, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_AttributeLoadVIT' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_AttributeLoadWIL) == 0x0001B8, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_AttributeLoadWIL' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_AttributeLoadMIND) == 0x0001BC, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_AttributeLoadMIND' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_AttributeLoadDEX) == 0x0001C0, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_AttributeLoadDEX' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_AttributeLoadSTR) == 0x0001C4, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_AttributeLoadSTR' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_AttributeFOR) == 0x0001C8, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_AttributeFOR' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_AttributeVIT) == 0x0001CC, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_AttributeVIT' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_AttributeWIL) == 0x0001D0, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_AttributeWIL' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_AttributeMIND) == 0x0001D4, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_AttributeMIND' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_AttributeDEX) == 0x0001D8, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_AttributeDEX' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_AttributeSTR) == 0x0001DC, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_AttributeSTR' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_Exp) == 0x0001E0, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_Exp' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, L_Level) == 0x0001E4, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::L_Level' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, LEvasion) == 0x0001E8, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::LEvasion' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, K2Node_SwitchEnum_CmpSuccess) == 0x0001F8, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, CallFunc_Get_Text_Color_by_Compare_Result_TextColor) == 0x0001FC, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::CallFunc_Get_Text_Color_by_Compare_Result_TextColor' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, K2Node_VariableSet_L_Health_ImplicitCast) == 0x000210, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::K2Node_VariableSet_L_Health_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, K2Node_VariableSet_L_MaxHealth_ImplicitCast) == 0x000218, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::K2Node_VariableSet_L_MaxHealth_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, K2Node_VariableSet_L_Ichor_ImplicitCast) == 0x000220, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::K2Node_VariableSet_L_Ichor_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, K2Node_VariableSet_L_Sunder_ImplicitCast) == 0x000228, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::K2Node_VariableSet_L_Sunder_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, K2Node_VariableSet_L_Crush_ImplicitCast) == 0x000230, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::K2Node_VariableSet_L_Crush_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, K2Node_VariableSet_L_Pierce_ImplicitCast) == 0x000238, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::K2Node_VariableSet_L_Pierce_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, K2Node_VariableSet_L_Blood_ImplicitCast) == 0x000240, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::K2Node_VariableSet_L_Blood_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, K2Node_VariableSet_L_Fire_ImplicitCast) == 0x000248, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::K2Node_VariableSet_L_Fire_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, K2Node_VariableSet_L_Ice_ImplicitCast) == 0x000250, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::K2Node_VariableSet_L_Ice_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, K2Node_VariableSet_L_Thunder_ImplicitCast) == 0x000258, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::K2Node_VariableSet_L_Thunder_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummary, CallFunc_SetValueFloat_InMaxIchor_ImplicitCast) == 0x000260, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummary::CallFunc_SetValueFloat_InMaxIchor_ImplicitCast' has a wrong offset!");
 
 // Function WDT_ArticleInfo.WDT_ArticleInfo_C.SetPlayerStatusSummaryForComparison
-// 0x0400 (0x0400 - 0x0000)
+// 0x0460 (0x0460 - 0x0000)
 struct WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison final
 {
 public:
-	struct FUIPlayerStatusSummaryInfo             InCurrentSummaryInfo;                              // 0x0000(0x00B8)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	struct FUIPlayerStatusSummaryInfo             InEstimatedSummaryInfo;                            // 0x00B8(0x00B8)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	int32                                         L_IndependentBleedingFactor_Current;               // 0x0170(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_IndependentBleedingFactor;                       // 0x0174(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Weapon2BleedingFactor;                           // 0x0178(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Weapon1BleedingFactor;                           // 0x017C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Weapon2BleedingFactor_Current;                   // 0x0180(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Weapon1BleedingFactor_Current;                   // 0x0184(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_CurseResistance_Current;                         // 0x0188(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_BleedResistance_Current;                         // 0x018C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_WoundResistance_Current;                         // 0x0190(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_DiseaseResistance_Current;                       // 0x0194(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_CurseResistance;                                 // 0x0198(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_BleedResistance;                                 // 0x019C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_WoundResistance;                                 // 0x01A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_DiseaseResistance;                               // 0x01A4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_AttrLoadFOR_Current;                             // 0x01A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_AttrLoadVIT_Current;                             // 0x01AC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_AttrLoadWIL_Current;                             // 0x01B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_AttrLoadMIND_Current;                            // 0x01B4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_AttrLoadDEX_Current;                             // 0x01B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_AttrLoadSTR_Current;                             // 0x01BC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Stan_Current;                                    // 0x01C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Vanish_Current;                                  // 0x01C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Slow_Current;                                    // 0x01C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Leak_Current;                                    // 0x01CC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Venom_Current;                                   // 0x01D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1D4[0x4];                                      // 0x01D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        L_Thunder_Current;                                 // 0x01D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        L_Ice_Current;                                     // 0x01E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        L_Fire_Current;                                    // 0x01E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        L_Blood_Current;                                   // 0x01F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        L_Crush_Current;                                   // 0x01F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        L_Pierce_Current;                                  // 0x0200(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        L_Sunder_Current;                                  // 0x0208(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Fastness_Current;                                // 0x0210(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EUIEvasionType                                L_EvasionType_Current;                             // 0x0214(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_215[0x3];                                      // 0x0215(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         L_BuddyRank_Current;                               // 0x0218(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_BuddyCombat_Current;                             // 0x021C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_SuckBlood_Current;                               // 0x0220(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Independent_Current;                             // 0x0224(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Weapon2Attack_Current;                           // 0x0228(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Weapon1Attack_Current;                           // 0x022C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_MaxBuddyPoint_Current;                           // 0x0230(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FUIPlayerStatusSummaryInfo             InCurrentSummaryInfo;                              // 0x0000(0x00D8)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FUIPlayerStatusSummaryInfo             InEstimatedSummaryInfo;                            // 0x00D8(0x00D8)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FUIBloodCodeAttributeConversionInfo    L_AttributeConversionInfo;                         // 0x01B0(0x0020)(Edit, BlueprintVisible)
+	int32                                         L_IndependentBleedingFactor_Current;               // 0x01D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_IndependentBleedingFactor;                       // 0x01D4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Weapon2BleedingFactor;                           // 0x01D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Weapon1BleedingFactor;                           // 0x01DC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Weapon2BleedingFactor_Current;                   // 0x01E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Weapon1BleedingFactor_Current;                   // 0x01E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_CurseResistance_Current;                         // 0x01E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_BleedResistance_Current;                         // 0x01EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_WoundResistance_Current;                         // 0x01F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_DiseaseResistance_Current;                       // 0x01F4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_CurseResistance;                                 // 0x01F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_BleedResistance;                                 // 0x01FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_WoundResistance;                                 // 0x0200(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_DiseaseResistance;                               // 0x0204(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_AttrLoadFOR_Current;                             // 0x0208(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_AttrLoadVIT_Current;                             // 0x020C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_AttrLoadWIL_Current;                             // 0x0210(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_AttrLoadMIND_Current;                            // 0x0214(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_AttrLoadDEX_Current;                             // 0x0218(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_AttrLoadSTR_Current;                             // 0x021C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Stan_Current;                                    // 0x0220(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Vanish_Current;                                  // 0x0224(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Slow_Current;                                    // 0x0228(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Leak_Current;                                    // 0x022C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Venom_Current;                                   // 0x0230(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_234[0x4];                                      // 0x0234(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        L_MaxIchor_Current;                                // 0x0238(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_MaxStamin_Current;                               // 0x0240(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_MaxHealth_Current;                               // 0x0244(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_AttrFOR_Current;                                 // 0x0248(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_AttrVIT_Current;                                 // 0x024C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_AttrWIL_Current;                                 // 0x0250(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_AttrMIND_Current;                                // 0x0254(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_AttrDEX_Current;                                 // 0x0258(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_AttrSTR_Current;                                 // 0x025C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Stan;                                            // 0x0260(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Vanish;                                          // 0x0264(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Slow;                                            // 0x0268(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Leak;                                            // 0x026C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Venom;                                           // 0x0270(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_274[0x4];                                      // 0x0274(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        L_Thunder;                                         // 0x0278(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        L_Ice;                                             // 0x0280(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        L_Fire;                                            // 0x0288(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        L_Blood;                                           // 0x0290(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        L_Crush;                                           // 0x0298(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        L_Pierce;                                          // 0x02A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        L_Sunder;                                          // 0x02A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Fastness;                                        // 0x02B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EUIEvasionType                                L_EvasionType;                                     // 0x02B4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2B5[0x3];                                      // 0x02B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         L_BuddySkillRank;                                  // 0x02B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_BuddyCombatPower;                                // 0x02BC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_SuckingBloodAttackPower;                         // 0x02C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_IndependentAttackPower;                          // 0x02C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Weapon2AttackPower;                              // 0x02C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Weapon1AttackPower;                              // 0x02CC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_MaxBuddyPoint;                                   // 0x02D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        L_Thunder_Current;                                 // 0x0238(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        L_Ice_Current;                                     // 0x0240(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        L_Fire_Current;                                    // 0x0248(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        L_Blood_Current;                                   // 0x0250(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        L_Crush_Current;                                   // 0x0258(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        L_Pierce_Current;                                  // 0x0260(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        L_Sunder_Current;                                  // 0x0268(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Fastness_Current;                                // 0x0270(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EUIEvasionType                                L_EvasionType_Current;                             // 0x0274(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_275[0x3];                                      // 0x0275(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         L_BuddyRank_Current;                               // 0x0278(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_BuddyCombat_Current;                             // 0x027C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_SuckBlood_Current;                               // 0x0280(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Independent_Current;                             // 0x0284(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Weapon2Attack_Current;                           // 0x0288(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Weapon1Attack_Current;                           // 0x028C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_MaxBuddyPoint_Current;                           // 0x0290(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_294[0x4];                                      // 0x0294(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        L_MaxIchor_Current;                                // 0x0298(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_MaxStamin_Current;                               // 0x02A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_MaxHealth_Current;                               // 0x02A4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_AttrFOR_Current;                                 // 0x02A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_AttrVIT_Current;                                 // 0x02AC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_AttrWIL_Current;                                 // 0x02B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_AttrMIND_Current;                                // 0x02B4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_AttrDEX_Current;                                 // 0x02B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_AttrSTR_Current;                                 // 0x02BC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Stan;                                            // 0x02C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Vanish;                                          // 0x02C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Slow;                                            // 0x02C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Leak;                                            // 0x02CC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Venom;                                           // 0x02D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_2D4[0x4];                                      // 0x02D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        L_MaxIchor;                                        // 0x02D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_MaxStamina;                                      // 0x02E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Stamina;                                         // 0x02E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_MaxHealth;                                       // 0x02E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Health;                                          // 0x02EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_AttributeLoadFOR;                                // 0x02F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_AttributeLoadVIT;                                // 0x02F4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_AttributeLoadWIL;                                // 0x02F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_AttributeLoadMIND;                               // 0x02FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_AttributeLoadDEX;                                // 0x0300(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_AttributeLoadSTR;                                // 0x0304(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_AttributeFOR;                                    // 0x0308(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_AttributeVIT;                                    // 0x030C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_AttributeWIL;                                    // 0x0310(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_AttributeMIND;                                   // 0x0314(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_AttributeDEX;                                    // 0x0318(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_AttributeSTR;                                    // 0x031C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Exp;                                             // 0x0320(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Level;                                           // 0x0324(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   LEvasion;                                          // 0x0328(0x0010)(Edit, BlueprintVisible)
-	int32                                         CallFunc_FTrunc_ReturnValue;                       // 0x0338(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_FTrunc_ReturnValue_1;                     // 0x033C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_FTrunc_ReturnValue_2;                     // 0x0340(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x0344(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Conv_ByteToInt_ReturnValue_1;             // 0x0348(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_CompareInteger_CompareResult;             // 0x034C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34D[0x3];                                      // 0x034D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateColor                            CallFunc_Get_Text_Color_by_Compare_Result_TextColor; // 0x0350(0x0014)()
-	uint8                                         Pad_364[0x4];                                      // 0x0364(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_FTrunc_A_ImplicitCast;                    // 0x0368(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FTrunc_A_ImplicitCast_1;                  // 0x0370(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_VariableSet_L_MaxIchor_ImplicitCast;        // 0x0378(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_VariableSet_L_Sunder_ImplicitCast;          // 0x0380(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_VariableSet_L_Crush_ImplicitCast;           // 0x0388(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_VariableSet_L_Pierce_ImplicitCast;          // 0x0390(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_VariableSet_L_Blood_ImplicitCast;           // 0x0398(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_VariableSet_L_Fire_ImplicitCast;            // 0x03A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_VariableSet_L_Ice_ImplicitCast;             // 0x03A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_VariableSet_L_Thunder_ImplicitCast;         // 0x03B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FTrunc_A_ImplicitCast_2;                  // 0x03B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_VariableSet_L_MaxIchor_Current_ImplicitCast; // 0x03C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_VariableSet_L_Sunder_Current_ImplicitCast;  // 0x03C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_VariableSet_L_Crush_Current_ImplicitCast;   // 0x03D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_VariableSet_L_Pierce_Current_ImplicitCast;  // 0x03D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_VariableSet_L_Blood_Current_ImplicitCast;   // 0x03E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_VariableSet_L_Fire_Current_ImplicitCast;    // 0x03E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_VariableSet_L_Ice_Current_ImplicitCast;     // 0x03F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_VariableSet_L_Thunder_Current_ImplicitCast; // 0x03F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        L_Thunder;                                         // 0x02D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        L_Ice;                                             // 0x02E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        L_Fire;                                            // 0x02E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        L_Blood;                                           // 0x02F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        L_Crush;                                           // 0x02F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        L_Pierce;                                          // 0x0300(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        L_Sunder;                                          // 0x0308(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Fastness;                                        // 0x0310(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EUIEvasionType                                L_EvasionType;                                     // 0x0314(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_315[0x3];                                      // 0x0315(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         L_BuddySkillRank;                                  // 0x0318(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_BuddyCombatPower;                                // 0x031C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_SuckingBloodAttackPower;                         // 0x0320(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_IndependentAttackPower;                          // 0x0324(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Weapon2AttackPower;                              // 0x0328(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Weapon1AttackPower;                              // 0x032C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_MaxBuddyPoint;                                   // 0x0330(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_334[0x4];                                      // 0x0334(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        L_MaxIchor;                                        // 0x0338(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_MaxStamina;                                      // 0x0340(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Stamina;                                         // 0x0344(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_MaxHealth;                                       // 0x0348(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Health;                                          // 0x034C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_AttributeLoadFOR;                                // 0x0350(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_AttributeLoadVIT;                                // 0x0354(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_AttributeLoadWIL;                                // 0x0358(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_AttributeLoadMIND;                               // 0x035C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_AttributeLoadDEX;                                // 0x0360(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_AttributeLoadSTR;                                // 0x0364(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_AttributeFOR;                                    // 0x0368(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_AttributeVIT;                                    // 0x036C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_AttributeWIL;                                    // 0x0370(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_AttributeMIND;                                   // 0x0374(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_AttributeDEX;                                    // 0x0378(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_AttributeSTR;                                    // 0x037C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Exp;                                             // 0x0380(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Level;                                           // 0x0384(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   LEvasion;                                          // 0x0388(0x0010)(Edit, BlueprintVisible)
+	int32                                         CallFunc_FTrunc_ReturnValue;                       // 0x0398(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_FTrunc_ReturnValue_1;                     // 0x039C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_FTrunc_ReturnValue_2;                     // 0x03A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x03A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Conv_ByteToInt_ReturnValue_1;             // 0x03A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_CompareInteger_CompareResult;             // 0x03AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3AD[0x3];                                      // 0x03AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateColor                            CallFunc_Get_Text_Color_by_Compare_Result_TextColor; // 0x03B0(0x0014)()
+	uint8                                         Pad_3C4[0x4];                                      // 0x03C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_FTrunc_A_ImplicitCast;                    // 0x03C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FTrunc_A_ImplicitCast_1;                  // 0x03D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_VariableSet_L_MaxIchor_ImplicitCast;        // 0x03D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_VariableSet_L_Sunder_ImplicitCast;          // 0x03E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_VariableSet_L_Crush_ImplicitCast;           // 0x03E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_VariableSet_L_Pierce_ImplicitCast;          // 0x03F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_VariableSet_L_Blood_ImplicitCast;           // 0x03F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_VariableSet_L_Fire_ImplicitCast;            // 0x0400(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_VariableSet_L_Ice_ImplicitCast;             // 0x0408(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_VariableSet_L_Thunder_ImplicitCast;         // 0x0410(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FTrunc_A_ImplicitCast_2;                  // 0x0418(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_VariableSet_L_MaxIchor_Current_ImplicitCast; // 0x0420(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_VariableSet_L_Sunder_Current_ImplicitCast;  // 0x0428(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_VariableSet_L_Crush_Current_ImplicitCast;   // 0x0430(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_VariableSet_L_Pierce_Current_ImplicitCast;  // 0x0438(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_VariableSet_L_Blood_Current_ImplicitCast;   // 0x0440(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_VariableSet_L_Fire_Current_ImplicitCast;    // 0x0448(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_VariableSet_L_Ice_Current_ImplicitCast;     // 0x0450(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_VariableSet_L_Thunder_Current_ImplicitCast; // 0x0458(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison) == 0x000008, "Wrong alignment on WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison");
-static_assert(sizeof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison) == 0x000400, "Wrong size on WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison");
+static_assert(sizeof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison) == 0x000460, "Wrong size on WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison");
 static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, InCurrentSummaryInfo) == 0x000000, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::InCurrentSummaryInfo' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, InEstimatedSummaryInfo) == 0x0000B8, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::InEstimatedSummaryInfo' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_IndependentBleedingFactor_Current) == 0x000170, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_IndependentBleedingFactor_Current' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_IndependentBleedingFactor) == 0x000174, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_IndependentBleedingFactor' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Weapon2BleedingFactor) == 0x000178, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Weapon2BleedingFactor' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Weapon1BleedingFactor) == 0x00017C, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Weapon1BleedingFactor' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Weapon2BleedingFactor_Current) == 0x000180, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Weapon2BleedingFactor_Current' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Weapon1BleedingFactor_Current) == 0x000184, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Weapon1BleedingFactor_Current' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_CurseResistance_Current) == 0x000188, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_CurseResistance_Current' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_BleedResistance_Current) == 0x00018C, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_BleedResistance_Current' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_WoundResistance_Current) == 0x000190, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_WoundResistance_Current' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_DiseaseResistance_Current) == 0x000194, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_DiseaseResistance_Current' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_CurseResistance) == 0x000198, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_CurseResistance' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_BleedResistance) == 0x00019C, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_BleedResistance' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_WoundResistance) == 0x0001A0, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_WoundResistance' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_DiseaseResistance) == 0x0001A4, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_DiseaseResistance' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_AttrLoadFOR_Current) == 0x0001A8, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_AttrLoadFOR_Current' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_AttrLoadVIT_Current) == 0x0001AC, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_AttrLoadVIT_Current' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_AttrLoadWIL_Current) == 0x0001B0, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_AttrLoadWIL_Current' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_AttrLoadMIND_Current) == 0x0001B4, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_AttrLoadMIND_Current' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_AttrLoadDEX_Current) == 0x0001B8, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_AttrLoadDEX_Current' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_AttrLoadSTR_Current) == 0x0001BC, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_AttrLoadSTR_Current' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Stan_Current) == 0x0001C0, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Stan_Current' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Vanish_Current) == 0x0001C4, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Vanish_Current' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Slow_Current) == 0x0001C8, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Slow_Current' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Leak_Current) == 0x0001CC, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Leak_Current' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Venom_Current) == 0x0001D0, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Venom_Current' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Thunder_Current) == 0x0001D8, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Thunder_Current' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Ice_Current) == 0x0001E0, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Ice_Current' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Fire_Current) == 0x0001E8, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Fire_Current' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Blood_Current) == 0x0001F0, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Blood_Current' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Crush_Current) == 0x0001F8, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Crush_Current' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Pierce_Current) == 0x000200, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Pierce_Current' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Sunder_Current) == 0x000208, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Sunder_Current' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Fastness_Current) == 0x000210, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Fastness_Current' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_EvasionType_Current) == 0x000214, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_EvasionType_Current' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_BuddyRank_Current) == 0x000218, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_BuddyRank_Current' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_BuddyCombat_Current) == 0x00021C, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_BuddyCombat_Current' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_SuckBlood_Current) == 0x000220, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_SuckBlood_Current' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Independent_Current) == 0x000224, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Independent_Current' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Weapon2Attack_Current) == 0x000228, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Weapon2Attack_Current' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Weapon1Attack_Current) == 0x00022C, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Weapon1Attack_Current' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_MaxBuddyPoint_Current) == 0x000230, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_MaxBuddyPoint_Current' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_MaxIchor_Current) == 0x000238, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_MaxIchor_Current' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_MaxStamin_Current) == 0x000240, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_MaxStamin_Current' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_MaxHealth_Current) == 0x000244, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_MaxHealth_Current' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_AttrFOR_Current) == 0x000248, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_AttrFOR_Current' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_AttrVIT_Current) == 0x00024C, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_AttrVIT_Current' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_AttrWIL_Current) == 0x000250, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_AttrWIL_Current' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_AttrMIND_Current) == 0x000254, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_AttrMIND_Current' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_AttrDEX_Current) == 0x000258, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_AttrDEX_Current' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_AttrSTR_Current) == 0x00025C, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_AttrSTR_Current' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Stan) == 0x000260, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Stan' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Vanish) == 0x000264, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Vanish' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Slow) == 0x000268, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Slow' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Leak) == 0x00026C, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Leak' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Venom) == 0x000270, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Venom' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Thunder) == 0x000278, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Thunder' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Ice) == 0x000280, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Ice' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Fire) == 0x000288, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Fire' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Blood) == 0x000290, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Blood' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Crush) == 0x000298, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Crush' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Pierce) == 0x0002A0, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Pierce' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Sunder) == 0x0002A8, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Sunder' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Fastness) == 0x0002B0, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Fastness' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_EvasionType) == 0x0002B4, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_EvasionType' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_BuddySkillRank) == 0x0002B8, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_BuddySkillRank' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_BuddyCombatPower) == 0x0002BC, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_BuddyCombatPower' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_SuckingBloodAttackPower) == 0x0002C0, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_SuckingBloodAttackPower' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_IndependentAttackPower) == 0x0002C4, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_IndependentAttackPower' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Weapon2AttackPower) == 0x0002C8, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Weapon2AttackPower' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Weapon1AttackPower) == 0x0002CC, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Weapon1AttackPower' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_MaxBuddyPoint) == 0x0002D0, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_MaxBuddyPoint' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_MaxIchor) == 0x0002D8, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_MaxIchor' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_MaxStamina) == 0x0002E0, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_MaxStamina' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Stamina) == 0x0002E4, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Stamina' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_MaxHealth) == 0x0002E8, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_MaxHealth' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Health) == 0x0002EC, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Health' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_AttributeLoadFOR) == 0x0002F0, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_AttributeLoadFOR' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_AttributeLoadVIT) == 0x0002F4, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_AttributeLoadVIT' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_AttributeLoadWIL) == 0x0002F8, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_AttributeLoadWIL' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_AttributeLoadMIND) == 0x0002FC, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_AttributeLoadMIND' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_AttributeLoadDEX) == 0x000300, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_AttributeLoadDEX' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_AttributeLoadSTR) == 0x000304, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_AttributeLoadSTR' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_AttributeFOR) == 0x000308, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_AttributeFOR' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_AttributeVIT) == 0x00030C, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_AttributeVIT' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_AttributeWIL) == 0x000310, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_AttributeWIL' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_AttributeMIND) == 0x000314, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_AttributeMIND' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_AttributeDEX) == 0x000318, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_AttributeDEX' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_AttributeSTR) == 0x00031C, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_AttributeSTR' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Exp) == 0x000320, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Exp' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Level) == 0x000324, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Level' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, LEvasion) == 0x000328, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::LEvasion' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, CallFunc_FTrunc_ReturnValue) == 0x000338, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::CallFunc_FTrunc_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, CallFunc_FTrunc_ReturnValue_1) == 0x00033C, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::CallFunc_FTrunc_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, CallFunc_FTrunc_ReturnValue_2) == 0x000340, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::CallFunc_FTrunc_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, CallFunc_Conv_ByteToInt_ReturnValue) == 0x000344, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::CallFunc_Conv_ByteToInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, CallFunc_Conv_ByteToInt_ReturnValue_1) == 0x000348, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::CallFunc_Conv_ByteToInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, CallFunc_CompareInteger_CompareResult) == 0x00034C, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::CallFunc_CompareInteger_CompareResult' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, CallFunc_Get_Text_Color_by_Compare_Result_TextColor) == 0x000350, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::CallFunc_Get_Text_Color_by_Compare_Result_TextColor' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, CallFunc_FTrunc_A_ImplicitCast) == 0x000368, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::CallFunc_FTrunc_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, CallFunc_FTrunc_A_ImplicitCast_1) == 0x000370, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::CallFunc_FTrunc_A_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, K2Node_VariableSet_L_MaxIchor_ImplicitCast) == 0x000378, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::K2Node_VariableSet_L_MaxIchor_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, K2Node_VariableSet_L_Sunder_ImplicitCast) == 0x000380, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::K2Node_VariableSet_L_Sunder_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, K2Node_VariableSet_L_Crush_ImplicitCast) == 0x000388, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::K2Node_VariableSet_L_Crush_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, K2Node_VariableSet_L_Pierce_ImplicitCast) == 0x000390, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::K2Node_VariableSet_L_Pierce_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, K2Node_VariableSet_L_Blood_ImplicitCast) == 0x000398, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::K2Node_VariableSet_L_Blood_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, K2Node_VariableSet_L_Fire_ImplicitCast) == 0x0003A0, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::K2Node_VariableSet_L_Fire_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, K2Node_VariableSet_L_Ice_ImplicitCast) == 0x0003A8, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::K2Node_VariableSet_L_Ice_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, K2Node_VariableSet_L_Thunder_ImplicitCast) == 0x0003B0, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::K2Node_VariableSet_L_Thunder_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, CallFunc_FTrunc_A_ImplicitCast_2) == 0x0003B8, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::CallFunc_FTrunc_A_ImplicitCast_2' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, K2Node_VariableSet_L_MaxIchor_Current_ImplicitCast) == 0x0003C0, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::K2Node_VariableSet_L_MaxIchor_Current_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, K2Node_VariableSet_L_Sunder_Current_ImplicitCast) == 0x0003C8, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::K2Node_VariableSet_L_Sunder_Current_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, K2Node_VariableSet_L_Crush_Current_ImplicitCast) == 0x0003D0, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::K2Node_VariableSet_L_Crush_Current_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, K2Node_VariableSet_L_Pierce_Current_ImplicitCast) == 0x0003D8, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::K2Node_VariableSet_L_Pierce_Current_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, K2Node_VariableSet_L_Blood_Current_ImplicitCast) == 0x0003E0, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::K2Node_VariableSet_L_Blood_Current_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, K2Node_VariableSet_L_Fire_Current_ImplicitCast) == 0x0003E8, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::K2Node_VariableSet_L_Fire_Current_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, K2Node_VariableSet_L_Ice_Current_ImplicitCast) == 0x0003F0, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::K2Node_VariableSet_L_Ice_Current_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, K2Node_VariableSet_L_Thunder_Current_ImplicitCast) == 0x0003F8, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::K2Node_VariableSet_L_Thunder_Current_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, InEstimatedSummaryInfo) == 0x0000D8, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::InEstimatedSummaryInfo' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_AttributeConversionInfo) == 0x0001B0, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_AttributeConversionInfo' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_IndependentBleedingFactor_Current) == 0x0001D0, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_IndependentBleedingFactor_Current' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_IndependentBleedingFactor) == 0x0001D4, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_IndependentBleedingFactor' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Weapon2BleedingFactor) == 0x0001D8, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Weapon2BleedingFactor' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Weapon1BleedingFactor) == 0x0001DC, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Weapon1BleedingFactor' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Weapon2BleedingFactor_Current) == 0x0001E0, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Weapon2BleedingFactor_Current' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Weapon1BleedingFactor_Current) == 0x0001E4, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Weapon1BleedingFactor_Current' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_CurseResistance_Current) == 0x0001E8, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_CurseResistance_Current' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_BleedResistance_Current) == 0x0001EC, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_BleedResistance_Current' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_WoundResistance_Current) == 0x0001F0, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_WoundResistance_Current' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_DiseaseResistance_Current) == 0x0001F4, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_DiseaseResistance_Current' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_CurseResistance) == 0x0001F8, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_CurseResistance' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_BleedResistance) == 0x0001FC, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_BleedResistance' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_WoundResistance) == 0x000200, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_WoundResistance' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_DiseaseResistance) == 0x000204, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_DiseaseResistance' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_AttrLoadFOR_Current) == 0x000208, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_AttrLoadFOR_Current' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_AttrLoadVIT_Current) == 0x00020C, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_AttrLoadVIT_Current' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_AttrLoadWIL_Current) == 0x000210, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_AttrLoadWIL_Current' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_AttrLoadMIND_Current) == 0x000214, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_AttrLoadMIND_Current' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_AttrLoadDEX_Current) == 0x000218, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_AttrLoadDEX_Current' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_AttrLoadSTR_Current) == 0x00021C, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_AttrLoadSTR_Current' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Stan_Current) == 0x000220, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Stan_Current' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Vanish_Current) == 0x000224, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Vanish_Current' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Slow_Current) == 0x000228, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Slow_Current' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Leak_Current) == 0x00022C, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Leak_Current' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Venom_Current) == 0x000230, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Venom_Current' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Thunder_Current) == 0x000238, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Thunder_Current' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Ice_Current) == 0x000240, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Ice_Current' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Fire_Current) == 0x000248, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Fire_Current' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Blood_Current) == 0x000250, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Blood_Current' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Crush_Current) == 0x000258, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Crush_Current' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Pierce_Current) == 0x000260, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Pierce_Current' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Sunder_Current) == 0x000268, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Sunder_Current' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Fastness_Current) == 0x000270, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Fastness_Current' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_EvasionType_Current) == 0x000274, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_EvasionType_Current' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_BuddyRank_Current) == 0x000278, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_BuddyRank_Current' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_BuddyCombat_Current) == 0x00027C, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_BuddyCombat_Current' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_SuckBlood_Current) == 0x000280, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_SuckBlood_Current' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Independent_Current) == 0x000284, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Independent_Current' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Weapon2Attack_Current) == 0x000288, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Weapon2Attack_Current' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Weapon1Attack_Current) == 0x00028C, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Weapon1Attack_Current' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_MaxBuddyPoint_Current) == 0x000290, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_MaxBuddyPoint_Current' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_MaxIchor_Current) == 0x000298, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_MaxIchor_Current' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_MaxStamin_Current) == 0x0002A0, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_MaxStamin_Current' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_MaxHealth_Current) == 0x0002A4, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_MaxHealth_Current' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_AttrFOR_Current) == 0x0002A8, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_AttrFOR_Current' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_AttrVIT_Current) == 0x0002AC, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_AttrVIT_Current' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_AttrWIL_Current) == 0x0002B0, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_AttrWIL_Current' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_AttrMIND_Current) == 0x0002B4, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_AttrMIND_Current' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_AttrDEX_Current) == 0x0002B8, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_AttrDEX_Current' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_AttrSTR_Current) == 0x0002BC, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_AttrSTR_Current' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Stan) == 0x0002C0, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Stan' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Vanish) == 0x0002C4, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Vanish' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Slow) == 0x0002C8, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Slow' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Leak) == 0x0002CC, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Leak' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Venom) == 0x0002D0, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Venom' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Thunder) == 0x0002D8, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Thunder' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Ice) == 0x0002E0, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Ice' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Fire) == 0x0002E8, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Fire' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Blood) == 0x0002F0, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Blood' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Crush) == 0x0002F8, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Crush' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Pierce) == 0x000300, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Pierce' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Sunder) == 0x000308, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Sunder' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Fastness) == 0x000310, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Fastness' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_EvasionType) == 0x000314, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_EvasionType' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_BuddySkillRank) == 0x000318, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_BuddySkillRank' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_BuddyCombatPower) == 0x00031C, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_BuddyCombatPower' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_SuckingBloodAttackPower) == 0x000320, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_SuckingBloodAttackPower' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_IndependentAttackPower) == 0x000324, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_IndependentAttackPower' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Weapon2AttackPower) == 0x000328, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Weapon2AttackPower' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Weapon1AttackPower) == 0x00032C, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Weapon1AttackPower' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_MaxBuddyPoint) == 0x000330, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_MaxBuddyPoint' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_MaxIchor) == 0x000338, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_MaxIchor' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_MaxStamina) == 0x000340, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_MaxStamina' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Stamina) == 0x000344, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Stamina' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_MaxHealth) == 0x000348, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_MaxHealth' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Health) == 0x00034C, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Health' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_AttributeLoadFOR) == 0x000350, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_AttributeLoadFOR' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_AttributeLoadVIT) == 0x000354, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_AttributeLoadVIT' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_AttributeLoadWIL) == 0x000358, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_AttributeLoadWIL' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_AttributeLoadMIND) == 0x00035C, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_AttributeLoadMIND' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_AttributeLoadDEX) == 0x000360, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_AttributeLoadDEX' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_AttributeLoadSTR) == 0x000364, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_AttributeLoadSTR' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_AttributeFOR) == 0x000368, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_AttributeFOR' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_AttributeVIT) == 0x00036C, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_AttributeVIT' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_AttributeWIL) == 0x000370, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_AttributeWIL' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_AttributeMIND) == 0x000374, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_AttributeMIND' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_AttributeDEX) == 0x000378, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_AttributeDEX' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_AttributeSTR) == 0x00037C, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_AttributeSTR' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Exp) == 0x000380, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Exp' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, L_Level) == 0x000384, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::L_Level' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, LEvasion) == 0x000388, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::LEvasion' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, CallFunc_FTrunc_ReturnValue) == 0x000398, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::CallFunc_FTrunc_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, CallFunc_FTrunc_ReturnValue_1) == 0x00039C, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::CallFunc_FTrunc_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, CallFunc_FTrunc_ReturnValue_2) == 0x0003A0, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::CallFunc_FTrunc_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, CallFunc_Conv_ByteToInt_ReturnValue) == 0x0003A4, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::CallFunc_Conv_ByteToInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, CallFunc_Conv_ByteToInt_ReturnValue_1) == 0x0003A8, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::CallFunc_Conv_ByteToInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, CallFunc_CompareInteger_CompareResult) == 0x0003AC, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::CallFunc_CompareInteger_CompareResult' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, CallFunc_Get_Text_Color_by_Compare_Result_TextColor) == 0x0003B0, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::CallFunc_Get_Text_Color_by_Compare_Result_TextColor' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, CallFunc_FTrunc_A_ImplicitCast) == 0x0003C8, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::CallFunc_FTrunc_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, CallFunc_FTrunc_A_ImplicitCast_1) == 0x0003D0, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::CallFunc_FTrunc_A_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, K2Node_VariableSet_L_MaxIchor_ImplicitCast) == 0x0003D8, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::K2Node_VariableSet_L_MaxIchor_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, K2Node_VariableSet_L_Sunder_ImplicitCast) == 0x0003E0, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::K2Node_VariableSet_L_Sunder_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, K2Node_VariableSet_L_Crush_ImplicitCast) == 0x0003E8, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::K2Node_VariableSet_L_Crush_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, K2Node_VariableSet_L_Pierce_ImplicitCast) == 0x0003F0, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::K2Node_VariableSet_L_Pierce_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, K2Node_VariableSet_L_Blood_ImplicitCast) == 0x0003F8, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::K2Node_VariableSet_L_Blood_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, K2Node_VariableSet_L_Fire_ImplicitCast) == 0x000400, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::K2Node_VariableSet_L_Fire_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, K2Node_VariableSet_L_Ice_ImplicitCast) == 0x000408, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::K2Node_VariableSet_L_Ice_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, K2Node_VariableSet_L_Thunder_ImplicitCast) == 0x000410, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::K2Node_VariableSet_L_Thunder_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, CallFunc_FTrunc_A_ImplicitCast_2) == 0x000418, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::CallFunc_FTrunc_A_ImplicitCast_2' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, K2Node_VariableSet_L_MaxIchor_Current_ImplicitCast) == 0x000420, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::K2Node_VariableSet_L_MaxIchor_Current_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, K2Node_VariableSet_L_Sunder_Current_ImplicitCast) == 0x000428, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::K2Node_VariableSet_L_Sunder_Current_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, K2Node_VariableSet_L_Crush_Current_ImplicitCast) == 0x000430, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::K2Node_VariableSet_L_Crush_Current_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, K2Node_VariableSet_L_Pierce_Current_ImplicitCast) == 0x000438, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::K2Node_VariableSet_L_Pierce_Current_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, K2Node_VariableSet_L_Blood_Current_ImplicitCast) == 0x000440, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::K2Node_VariableSet_L_Blood_Current_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, K2Node_VariableSet_L_Fire_Current_ImplicitCast) == 0x000448, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::K2Node_VariableSet_L_Fire_Current_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, K2Node_VariableSet_L_Ice_Current_ImplicitCast) == 0x000450, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::K2Node_VariableSet_L_Ice_Current_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison, K2Node_VariableSet_L_Thunder_Current_ImplicitCast) == 0x000458, "Member 'WDT_ArticleInfo_C_SetPlayerStatusSummaryForComparison::K2Node_VariableSet_L_Thunder_Current_ImplicitCast' has a wrong offset!");
 
 // Function WDT_ArticleInfo.WDT_ArticleInfo_C.SetSoftTextureWithEmptyDesignation
 // 0x0038 (0x0038 - 0x0000)
@@ -3884,15 +3941,17 @@ static_assert(offsetof(WDT_ArticleInfo_C_SetStamina, InCurrentStamina) == 0x0000
 static_assert(offsetof(WDT_ArticleInfo_C_SetStamina, InMaxStamina) == 0x000004, "Member 'WDT_ArticleInfo_C_SetStamina::InMaxStamina' has a wrong offset!");
 
 // Function WDT_ArticleInfo.WDT_ArticleInfo_C.SetSuckingBloodInfo
-// 0x0080 (0x0080 - 0x0000)
+// 0x0090 (0x0090 - 0x0000)
 struct WDT_ArticleInfo_C_SetSuckingBloodInfo final
 {
 public:
 	struct FUISuckingBloodInfo                    InSuckingBloodInfo;                                // 0x0000(0x0080)(BlueprintVisible, BlueprintReadOnly, Parm)
+	class FText                                   CallFunc_FormatTextWithPlayerInfo_ReturnValue;     // 0x0080(0x0010)()
 };
 static_assert(alignof(WDT_ArticleInfo_C_SetSuckingBloodInfo) == 0x000008, "Wrong alignment on WDT_ArticleInfo_C_SetSuckingBloodInfo");
-static_assert(sizeof(WDT_ArticleInfo_C_SetSuckingBloodInfo) == 0x000080, "Wrong size on WDT_ArticleInfo_C_SetSuckingBloodInfo");
+static_assert(sizeof(WDT_ArticleInfo_C_SetSuckingBloodInfo) == 0x000090, "Wrong size on WDT_ArticleInfo_C_SetSuckingBloodInfo");
 static_assert(offsetof(WDT_ArticleInfo_C_SetSuckingBloodInfo, InSuckingBloodInfo) == 0x000000, "Member 'WDT_ArticleInfo_C_SetSuckingBloodInfo::InSuckingBloodInfo' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetSuckingBloodInfo, CallFunc_FormatTextWithPlayerInfo_ReturnValue) == 0x000080, "Member 'WDT_ArticleInfo_C_SetSuckingBloodInfo::CallFunc_FormatTextWithPlayerInfo_ReturnValue' has a wrong offset!");
 
 // Function WDT_ArticleInfo.WDT_ArticleInfo_C.SetTextwithEmptyNone
 // 0x0048 (0x0048 - 0x0000)
@@ -3917,7 +3976,7 @@ static_assert(offsetof(WDT_ArticleInfo_C_SetTextwithEmptyNone, Temp_text_Variabl
 static_assert(offsetof(WDT_ArticleInfo_C_SetTextwithEmptyNone, K2Node_Select_Default) == 0x000038, "Member 'WDT_ArticleInfo_C_SetTextwithEmptyNone::K2Node_Select_Default' has a wrong offset!");
 
 // Function WDT_ArticleInfo.WDT_ArticleInfo_C.SetWeaponGadget
-// 0x0060 (0x0060 - 0x0000)
+// 0x0070 (0x0070 - 0x0000)
 struct WDT_ArticleInfo_C_SetWeaponGadget final
 {
 public:
@@ -3928,20 +3987,22 @@ public:
 	int32                                         GadgetIchorNum;                                    // 0x0048(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWDT_Article_WeaponGadgetIcon_C*        GadgetIconWidget;                                  // 0x0050(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Set_Text_with_Empty_Designation_TextEmpty; // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_FormatTextWithPlayerInfo_ReturnValue;     // 0x0058(0x0010)()
+	bool                                          CallFunc_Set_Text_with_Empty_Designation_TextEmpty; // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_ArticleInfo_C_SetWeaponGadget) == 0x000008, "Wrong alignment on WDT_ArticleInfo_C_SetWeaponGadget");
-static_assert(sizeof(WDT_ArticleInfo_C_SetWeaponGadget) == 0x000060, "Wrong size on WDT_ArticleInfo_C_SetWeaponGadget");
+static_assert(sizeof(WDT_ArticleInfo_C_SetWeaponGadget) == 0x000070, "Wrong size on WDT_ArticleInfo_C_SetWeaponGadget");
 static_assert(offsetof(WDT_ArticleInfo_C_SetWeaponGadget, GadgetNameText) == 0x000000, "Member 'WDT_ArticleInfo_C_SetWeaponGadget::GadgetNameText' has a wrong offset!");
 static_assert(offsetof(WDT_ArticleInfo_C_SetWeaponGadget, GadgetName) == 0x000008, "Member 'WDT_ArticleInfo_C_SetWeaponGadget::GadgetName' has a wrong offset!");
 static_assert(offsetof(WDT_ArticleInfo_C_SetWeaponGadget, GadgetIcon) == 0x000018, "Member 'WDT_ArticleInfo_C_SetWeaponGadget::GadgetIcon' has a wrong offset!");
 static_assert(offsetof(WDT_ArticleInfo_C_SetWeaponGadget, EmptyTexture) == 0x000040, "Member 'WDT_ArticleInfo_C_SetWeaponGadget::EmptyTexture' has a wrong offset!");
 static_assert(offsetof(WDT_ArticleInfo_C_SetWeaponGadget, GadgetIchorNum) == 0x000048, "Member 'WDT_ArticleInfo_C_SetWeaponGadget::GadgetIchorNum' has a wrong offset!");
 static_assert(offsetof(WDT_ArticleInfo_C_SetWeaponGadget, GadgetIconWidget) == 0x000050, "Member 'WDT_ArticleInfo_C_SetWeaponGadget::GadgetIconWidget' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetWeaponGadget, CallFunc_Set_Text_with_Empty_Designation_TextEmpty) == 0x000058, "Member 'WDT_ArticleInfo_C_SetWeaponGadget::CallFunc_Set_Text_with_Empty_Designation_TextEmpty' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetWeaponGadget, CallFunc_FormatTextWithPlayerInfo_ReturnValue) == 0x000058, "Member 'WDT_ArticleInfo_C_SetWeaponGadget::CallFunc_FormatTextWithPlayerInfo_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetWeaponGadget, CallFunc_Set_Text_with_Empty_Designation_TextEmpty) == 0x000068, "Member 'WDT_ArticleInfo_C_SetWeaponGadget::CallFunc_Set_Text_with_Empty_Designation_TextEmpty' has a wrong offset!");
 
 // Function WDT_ArticleInfo.WDT_ArticleInfo_C.SetWeaponGadgetInfo
-// 0x01D8 (0x01D8 - 0x0000)
+// 0x01F8 (0x01F8 - 0x0000)
 struct WDT_ArticleInfo_C_SetWeaponGadgetInfo final
 {
 public:
@@ -3993,10 +4054,12 @@ public:
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x01C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Set_RichText_with_Empty_Designation_TextEmpty; // 0x01C2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1C3[0x5];                                      // 0x01C3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_EnumToWeaponGadgetCategoryText_NewParam;  // 0x01C8(0x0010)()
+	class FText                                   CallFunc_FormatTextWithPlayerInfo_ReturnValue;     // 0x01C8(0x0010)()
+	class FText                                   CallFunc_EnumToWeaponGadgetCategoryText_NewParam;  // 0x01D8(0x0010)()
+	class FText                                   CallFunc_FormatTextWithPlayerInfo_ReturnValue_1;   // 0x01E8(0x0010)()
 };
 static_assert(alignof(WDT_ArticleInfo_C_SetWeaponGadgetInfo) == 0x000008, "Wrong alignment on WDT_ArticleInfo_C_SetWeaponGadgetInfo");
-static_assert(sizeof(WDT_ArticleInfo_C_SetWeaponGadgetInfo) == 0x0001D8, "Wrong size on WDT_ArticleInfo_C_SetWeaponGadgetInfo");
+static_assert(sizeof(WDT_ArticleInfo_C_SetWeaponGadgetInfo) == 0x0001F8, "Wrong size on WDT_ArticleInfo_C_SetWeaponGadgetInfo");
 static_assert(offsetof(WDT_ArticleInfo_C_SetWeaponGadgetInfo, InWeaponGadgetInfo) == 0x000000, "Member 'WDT_ArticleInfo_C_SetWeaponGadgetInfo::InWeaponGadgetInfo' has a wrong offset!");
 static_assert(offsetof(WDT_ArticleInfo_C_SetWeaponGadgetInfo, L_ArticleIcon) == 0x0000D0, "Member 'WDT_ArticleInfo_C_SetWeaponGadgetInfo::L_ArticleIcon' has a wrong offset!");
 static_assert(offsetof(WDT_ArticleInfo_C_SetWeaponGadgetInfo, L_EquippableWeaponCategories) == 0x0000F8, "Member 'WDT_ArticleInfo_C_SetWeaponGadgetInfo::L_EquippableWeaponCategories' has a wrong offset!");
@@ -4040,10 +4103,12 @@ static_assert(offsetof(WDT_ArticleInfo_C_SetWeaponGadgetInfo, CallFunc_MakeLiter
 static_assert(offsetof(WDT_ArticleInfo_C_SetWeaponGadgetInfo, CallFunc_EqualEqual_TextText_ReturnValue) == 0x0001C0, "Member 'WDT_ArticleInfo_C_SetWeaponGadgetInfo::CallFunc_EqualEqual_TextText_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_ArticleInfo_C_SetWeaponGadgetInfo, CallFunc_BooleanAND_ReturnValue) == 0x0001C1, "Member 'WDT_ArticleInfo_C_SetWeaponGadgetInfo::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_ArticleInfo_C_SetWeaponGadgetInfo, CallFunc_Set_RichText_with_Empty_Designation_TextEmpty) == 0x0001C2, "Member 'WDT_ArticleInfo_C_SetWeaponGadgetInfo::CallFunc_Set_RichText_with_Empty_Designation_TextEmpty' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetWeaponGadgetInfo, CallFunc_EnumToWeaponGadgetCategoryText_NewParam) == 0x0001C8, "Member 'WDT_ArticleInfo_C_SetWeaponGadgetInfo::CallFunc_EnumToWeaponGadgetCategoryText_NewParam' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetWeaponGadgetInfo, CallFunc_FormatTextWithPlayerInfo_ReturnValue) == 0x0001C8, "Member 'WDT_ArticleInfo_C_SetWeaponGadgetInfo::CallFunc_FormatTextWithPlayerInfo_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetWeaponGadgetInfo, CallFunc_EnumToWeaponGadgetCategoryText_NewParam) == 0x0001D8, "Member 'WDT_ArticleInfo_C_SetWeaponGadgetInfo::CallFunc_EnumToWeaponGadgetCategoryText_NewParam' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetWeaponGadgetInfo, CallFunc_FormatTextWithPlayerInfo_ReturnValue_1) == 0x0001E8, "Member 'WDT_ArticleInfo_C_SetWeaponGadgetInfo::CallFunc_FormatTextWithPlayerInfo_ReturnValue_1' has a wrong offset!");
 
 // Function WDT_ArticleInfo.WDT_ArticleInfo_C.SetWeaponGadgetInfoAndInitGadgetInfo
-// 0x0418 (0x0418 - 0x0000)
+// 0x0428 (0x0428 - 0x0000)
 struct WDT_ArticleInfo_C_SetWeaponGadgetInfoAndInitGadgetInfo final
 {
 public:
@@ -4149,9 +4214,10 @@ public:
 	uint8                                         Pad_3F4[0x4];                                      // 0x03F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_Conv_IntToText_ReturnValue_3;             // 0x03F8(0x0010)()
 	class FText                                   CallFunc_Conv_IntToText_ReturnValue_4;             // 0x0408(0x0010)()
+	class FText                                   CallFunc_FormatTextWithPlayerInfo_ReturnValue;     // 0x0418(0x0010)()
 };
 static_assert(alignof(WDT_ArticleInfo_C_SetWeaponGadgetInfoAndInitGadgetInfo) == 0x000008, "Wrong alignment on WDT_ArticleInfo_C_SetWeaponGadgetInfoAndInitGadgetInfo");
-static_assert(sizeof(WDT_ArticleInfo_C_SetWeaponGadgetInfoAndInitGadgetInfo) == 0x000418, "Wrong size on WDT_ArticleInfo_C_SetWeaponGadgetInfoAndInitGadgetInfo");
+static_assert(sizeof(WDT_ArticleInfo_C_SetWeaponGadgetInfoAndInitGadgetInfo) == 0x000428, "Wrong size on WDT_ArticleInfo_C_SetWeaponGadgetInfoAndInitGadgetInfo");
 static_assert(offsetof(WDT_ArticleInfo_C_SetWeaponGadgetInfoAndInitGadgetInfo, InWeaponGadgetInfo) == 0x000000, "Member 'WDT_ArticleInfo_C_SetWeaponGadgetInfoAndInitGadgetInfo::InWeaponGadgetInfo' has a wrong offset!");
 static_assert(offsetof(WDT_ArticleInfo_C_SetWeaponGadgetInfoAndInitGadgetInfo, InInitGadgetInfo) == 0x0000D0, "Member 'WDT_ArticleInfo_C_SetWeaponGadgetInfoAndInitGadgetInfo::InInitGadgetInfo' has a wrong offset!");
 static_assert(offsetof(WDT_ArticleInfo_C_SetWeaponGadgetInfoAndInitGadgetInfo, L_ArticleIcon) == 0x0001A0, "Member 'WDT_ArticleInfo_C_SetWeaponGadgetInfoAndInitGadgetInfo::L_ArticleIcon' has a wrong offset!");
@@ -4238,6 +4304,7 @@ static_assert(offsetof(WDT_ArticleInfo_C_SetWeaponGadgetInfoAndInitGadgetInfo, C
 static_assert(offsetof(WDT_ArticleInfo_C_SetWeaponGadgetInfoAndInitGadgetInfo, CallFunc_Get_Text_Color_by_Compare_Result_TextColor_7) == 0x0003E0, "Member 'WDT_ArticleInfo_C_SetWeaponGadgetInfoAndInitGadgetInfo::CallFunc_Get_Text_Color_by_Compare_Result_TextColor_7' has a wrong offset!");
 static_assert(offsetof(WDT_ArticleInfo_C_SetWeaponGadgetInfoAndInitGadgetInfo, CallFunc_Conv_IntToText_ReturnValue_3) == 0x0003F8, "Member 'WDT_ArticleInfo_C_SetWeaponGadgetInfoAndInitGadgetInfo::CallFunc_Conv_IntToText_ReturnValue_3' has a wrong offset!");
 static_assert(offsetof(WDT_ArticleInfo_C_SetWeaponGadgetInfoAndInitGadgetInfo, CallFunc_Conv_IntToText_ReturnValue_4) == 0x000408, "Member 'WDT_ArticleInfo_C_SetWeaponGadgetInfoAndInitGadgetInfo::CallFunc_Conv_IntToText_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetWeaponGadgetInfoAndInitGadgetInfo, CallFunc_FormatTextWithPlayerInfo_ReturnValue) == 0x000418, "Member 'WDT_ArticleInfo_C_SetWeaponGadgetInfoAndInitGadgetInfo::CallFunc_FormatTextWithPlayerInfo_ReturnValue' has a wrong offset!");
 
 // Function WDT_ArticleInfo.WDT_ArticleInfo_C.SetWeaponGadgetInfoForComparison
 // 0x0260 (0x0260 - 0x0000)
@@ -4355,7 +4422,7 @@ static_assert(offsetof(WDT_ArticleInfo_C_SetWeaponGadgetInfoForComparison, L_Rei
 static_assert(offsetof(WDT_ArticleInfo_C_SetWeaponGadgetInfoForComparison, L_UseIchor) == 0x00025C, "Member 'WDT_ArticleInfo_C_SetWeaponGadgetInfoForComparison::L_UseIchor' has a wrong offset!");
 
 // Function WDT_ArticleInfo.WDT_ArticleInfo_C.SetWeaponInfo
-// 0x0908 (0x0908 - 0x0000)
+// 0x0928 (0x0928 - 0x0000)
 struct WDT_ArticleInfo_C_SetWeaponInfo final
 {
 public:
@@ -4466,17 +4533,19 @@ public:
 	ESlateVisibility                              K2Node_Select_Default;                             // 0x08D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_8D9[0x7];                                      // 0x08D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_Format_ReturnValue;                       // 0x08E0(0x0010)()
-	bool                                          CallFunc_Set_RichText_with_Empty_Designation_TextEmpty; // 0x08F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue;   // 0x08F1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default_1;                           // 0x08F2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_TextIsEmpty_ReturnValue_1;                // 0x08F3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default_2;                           // 0x08F4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Set_RichText_with_Empty_Designation_TextEmpty_1; // 0x08F5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8F6[0x2];                                      // 0x08F6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_EnumToWeaponCategoryText_ReturnValue;     // 0x08F8(0x0010)()
+	class FText                                   CallFunc_FormatTextWithPlayerInfo_ReturnValue;     // 0x08F0(0x0010)()
+	bool                                          CallFunc_Set_RichText_with_Empty_Designation_TextEmpty; // 0x0900(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue;   // 0x0901(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default_1;                           // 0x0902(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_TextIsEmpty_ReturnValue_1;                // 0x0903(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default_2;                           // 0x0904(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Set_RichText_with_Empty_Designation_TextEmpty_1; // 0x0905(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_906[0x2];                                      // 0x0906(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_EnumToWeaponCategoryText_ReturnValue;     // 0x0908(0x0010)()
+	class FText                                   CallFunc_FormatTextWithPlayerInfo_ReturnValue_1;   // 0x0918(0x0010)()
 };
 static_assert(alignof(WDT_ArticleInfo_C_SetWeaponInfo) == 0x000008, "Wrong alignment on WDT_ArticleInfo_C_SetWeaponInfo");
-static_assert(sizeof(WDT_ArticleInfo_C_SetWeaponInfo) == 0x000908, "Wrong size on WDT_ArticleInfo_C_SetWeaponInfo");
+static_assert(sizeof(WDT_ArticleInfo_C_SetWeaponInfo) == 0x000928, "Wrong size on WDT_ArticleInfo_C_SetWeaponInfo");
 static_assert(offsetof(WDT_ArticleInfo_C_SetWeaponInfo, InWeaponInfo) == 0x000000, "Member 'WDT_ArticleInfo_C_SetWeaponInfo::InWeaponInfo' has a wrong offset!");
 static_assert(offsetof(WDT_ArticleInfo_C_SetWeaponInfo, L_Features) == 0x0005B8, "Member 'WDT_ArticleInfo_C_SetWeaponInfo::L_Features' has a wrong offset!");
 static_assert(offsetof(WDT_ArticleInfo_C_SetWeaponInfo, L_PierceVisibleFlag) == 0x0005C8, "Member 'WDT_ArticleInfo_C_SetWeaponInfo::L_PierceVisibleFlag' has a wrong offset!");
@@ -4572,13 +4641,15 @@ static_assert(offsetof(WDT_ArticleInfo_C_SetWeaponInfo, K2Node_MakeStruct_Format
 static_assert(offsetof(WDT_ArticleInfo_C_SetWeaponInfo, K2Node_MakeArray_Array_1) == 0x0008C8, "Member 'WDT_ArticleInfo_C_SetWeaponInfo::K2Node_MakeArray_Array_1' has a wrong offset!");
 static_assert(offsetof(WDT_ArticleInfo_C_SetWeaponInfo, K2Node_Select_Default) == 0x0008D8, "Member 'WDT_ArticleInfo_C_SetWeaponInfo::K2Node_Select_Default' has a wrong offset!");
 static_assert(offsetof(WDT_ArticleInfo_C_SetWeaponInfo, CallFunc_Format_ReturnValue) == 0x0008E0, "Member 'WDT_ArticleInfo_C_SetWeaponInfo::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetWeaponInfo, CallFunc_Set_RichText_with_Empty_Designation_TextEmpty) == 0x0008F0, "Member 'WDT_ArticleInfo_C_SetWeaponInfo::CallFunc_Set_RichText_with_Empty_Designation_TextEmpty' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetWeaponInfo, CallFunc_IsValidSoftObjectReference_ReturnValue) == 0x0008F1, "Member 'WDT_ArticleInfo_C_SetWeaponInfo::CallFunc_IsValidSoftObjectReference_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetWeaponInfo, K2Node_Select_Default_1) == 0x0008F2, "Member 'WDT_ArticleInfo_C_SetWeaponInfo::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetWeaponInfo, CallFunc_TextIsEmpty_ReturnValue_1) == 0x0008F3, "Member 'WDT_ArticleInfo_C_SetWeaponInfo::CallFunc_TextIsEmpty_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetWeaponInfo, K2Node_Select_Default_2) == 0x0008F4, "Member 'WDT_ArticleInfo_C_SetWeaponInfo::K2Node_Select_Default_2' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetWeaponInfo, CallFunc_Set_RichText_with_Empty_Designation_TextEmpty_1) == 0x0008F5, "Member 'WDT_ArticleInfo_C_SetWeaponInfo::CallFunc_Set_RichText_with_Empty_Designation_TextEmpty_1' has a wrong offset!");
-static_assert(offsetof(WDT_ArticleInfo_C_SetWeaponInfo, CallFunc_EnumToWeaponCategoryText_ReturnValue) == 0x0008F8, "Member 'WDT_ArticleInfo_C_SetWeaponInfo::CallFunc_EnumToWeaponCategoryText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetWeaponInfo, CallFunc_FormatTextWithPlayerInfo_ReturnValue) == 0x0008F0, "Member 'WDT_ArticleInfo_C_SetWeaponInfo::CallFunc_FormatTextWithPlayerInfo_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetWeaponInfo, CallFunc_Set_RichText_with_Empty_Designation_TextEmpty) == 0x000900, "Member 'WDT_ArticleInfo_C_SetWeaponInfo::CallFunc_Set_RichText_with_Empty_Designation_TextEmpty' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetWeaponInfo, CallFunc_IsValidSoftObjectReference_ReturnValue) == 0x000901, "Member 'WDT_ArticleInfo_C_SetWeaponInfo::CallFunc_IsValidSoftObjectReference_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetWeaponInfo, K2Node_Select_Default_1) == 0x000902, "Member 'WDT_ArticleInfo_C_SetWeaponInfo::K2Node_Select_Default_1' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetWeaponInfo, CallFunc_TextIsEmpty_ReturnValue_1) == 0x000903, "Member 'WDT_ArticleInfo_C_SetWeaponInfo::CallFunc_TextIsEmpty_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetWeaponInfo, K2Node_Select_Default_2) == 0x000904, "Member 'WDT_ArticleInfo_C_SetWeaponInfo::K2Node_Select_Default_2' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetWeaponInfo, CallFunc_Set_RichText_with_Empty_Designation_TextEmpty_1) == 0x000905, "Member 'WDT_ArticleInfo_C_SetWeaponInfo::CallFunc_Set_RichText_with_Empty_Designation_TextEmpty_1' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetWeaponInfo, CallFunc_EnumToWeaponCategoryText_ReturnValue) == 0x000908, "Member 'WDT_ArticleInfo_C_SetWeaponInfo::CallFunc_EnumToWeaponCategoryText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ArticleInfo_C_SetWeaponInfo, CallFunc_FormatTextWithPlayerInfo_ReturnValue_1) == 0x000918, "Member 'WDT_ArticleInfo_C_SetWeaponInfo::CallFunc_FormatTextWithPlayerInfo_ReturnValue_1' has a wrong offset!");
 
 // Function WDT_ArticleInfo.WDT_ArticleInfo_C.SetWeaponInfoForComparison
 // 0x0F60 (0x0F60 - 0x0000)

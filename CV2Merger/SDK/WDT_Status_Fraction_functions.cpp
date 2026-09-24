@@ -17,99 +17,23 @@
 namespace SDK
 {
 
-// Function WDT_Status_Fraction.WDT_Status_Fraction_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWDT_Status_Fraction_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Status_Fraction_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WDT_Status_Fraction.WDT_Status_Fraction_C.ExecuteUbergraph_WDT_Status_Fraction
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_Status_Fraction_C::ExecuteUbergraph_WDT_Status_Fraction(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Status_Fraction_C", "ExecuteUbergraph_WDT_Status_Fraction");
-
-	Params::WDT_Status_Fraction_C_ExecuteUbergraph_WDT_Status_Fraction Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_Status_Fraction.WDT_Status_Fraction_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_Status_Fraction_C::PreConstruct(bool IsDesignTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Status_Fraction_C", "PreConstruct");
-
-	Params::WDT_Status_Fraction_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_Status_Fraction.WDT_Status_Fraction_C.SetValueFloat
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double                                  InIchor                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  InMaxIchor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_Status_Fraction_C::SetValueFloat(double InIchor, double InMaxIchor)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Status_Fraction_C", "SetValueFloat");
-
-	Params::WDT_Status_Fraction_C_SetValueFloat Parms{};
-
-	Parms.InIchor = InIchor;
-	Parms.InMaxIchor = InMaxIchor;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_Status_Fraction.WDT_Status_Fraction_C.SetValueFloatComparison
+// Function WDT_Status_Fraction.WDT_Status_Fraction_C.SetValueIntComparison
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// double                                  InMaxIchorCurrent                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  InMaxIchor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InMaxStaminaCurrent                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InMaxStamina                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_Status_Fraction_C::SetValueFloatComparison(double InMaxIchorCurrent, double InMaxIchor)
+void UWDT_Status_Fraction_C::SetValueIntComparison(int32 InMaxStaminaCurrent, int32 InMaxStamina)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Status_Fraction_C", "SetValueFloatComparison");
+		Func = Class->GetFunction("WDT_Status_Fraction_C", "SetValueIntComparison");
 
-	Params::WDT_Status_Fraction_C_SetValueFloatComparison Parms{};
+	Params::WDT_Status_Fraction_C_SetValueIntComparison Parms{};
 
-	Parms.InMaxIchorCurrent = InMaxIchorCurrent;
-	Parms.InMaxIchor = InMaxIchor;
+	Parms.InMaxStaminaCurrent = InMaxStaminaCurrent;
+	Parms.InMaxStamina = InMaxStamina;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -137,25 +61,101 @@ void UWDT_Status_Fraction_C::SetValueInt(int32 InStamina, int32 InMaxStamina)
 }
 
 
-// Function WDT_Status_Fraction.WDT_Status_Fraction_C.SetValueIntComparison
+// Function WDT_Status_Fraction.WDT_Status_Fraction_C.SetValueFloatComparison
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   InMaxStaminaCurrent                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   InMaxStamina                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  InMaxIchorCurrent                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  InMaxIchor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_Status_Fraction_C::SetValueIntComparison(int32 InMaxStaminaCurrent, int32 InMaxStamina)
+void UWDT_Status_Fraction_C::SetValueFloatComparison(double InMaxIchorCurrent, double InMaxIchor)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Status_Fraction_C", "SetValueIntComparison");
+		Func = Class->GetFunction("WDT_Status_Fraction_C", "SetValueFloatComparison");
 
-	Params::WDT_Status_Fraction_C_SetValueIntComparison Parms{};
+	Params::WDT_Status_Fraction_C_SetValueFloatComparison Parms{};
 
-	Parms.InMaxStaminaCurrent = InMaxStaminaCurrent;
-	Parms.InMaxStamina = InMaxStamina;
+	Parms.InMaxIchorCurrent = InMaxIchorCurrent;
+	Parms.InMaxIchor = InMaxIchor;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_Status_Fraction.WDT_Status_Fraction_C.SetValueFloat
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  InIchor                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  InMaxIchor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_Status_Fraction_C::SetValueFloat(double InIchor, double InMaxIchor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_Status_Fraction_C", "SetValueFloat");
+
+	Params::WDT_Status_Fraction_C_SetValueFloat Parms{};
+
+	Parms.InIchor = InIchor;
+	Parms.InMaxIchor = InMaxIchor;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_Status_Fraction.WDT_Status_Fraction_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_Status_Fraction_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_Status_Fraction_C", "PreConstruct");
+
+	Params::WDT_Status_Fraction_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_Status_Fraction.WDT_Status_Fraction_C.ExecuteUbergraph_WDT_Status_Fraction
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_Status_Fraction_C::ExecuteUbergraph_WDT_Status_Fraction(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_Status_Fraction_C", "ExecuteUbergraph_WDT_Status_Fraction");
+
+	Params::WDT_Status_Fraction_C_ExecuteUbergraph_WDT_Status_Fraction Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_Status_Fraction.WDT_Status_Fraction_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWDT_Status_Fraction_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_Status_Fraction_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

@@ -31,10 +31,10 @@ public:
 	class FText                                   IconText;                                          // 0x0700(0x0010)(Edit, BlueprintVisible)
 
 public:
-	void ExecuteUbergraph_WDT_Article_AttributeLoad(int32 EntryPoint);
-	void PreConstruct(bool IsDesignTime);
-	void SetValue(int32 InValue);
 	void SetValueComparison(int32 InCurrentValue, int32 InTargetValue, bool SwapComparisons);
+	void SetValue(int32 InValue);
+	void PreConstruct(bool IsDesignTime);
+	void ExecuteUbergraph_WDT_Article_AttributeLoad(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

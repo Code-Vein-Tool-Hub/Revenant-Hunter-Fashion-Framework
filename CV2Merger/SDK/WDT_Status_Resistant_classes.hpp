@@ -30,9 +30,9 @@ public:
 	class UTexture2D*                             IconTexture;                                       // 0x06F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_WDT_Status_Resistant(int32 EntryPoint);
-	void PreConstruct(bool IsDesignTime);
 	void SetResistantValue(int32 InValue);
+	void PreConstruct(bool IsDesignTime);
+	void ExecuteUbergraph_WDT_Status_Resistant(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

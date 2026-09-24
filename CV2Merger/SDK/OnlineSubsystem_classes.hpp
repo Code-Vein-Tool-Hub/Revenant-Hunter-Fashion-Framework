@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "OnlineSubsystem_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "OnlineSubsystem_structs.hpp"
 
 
 namespace SDK

@@ -53,13 +53,5 @@ static_assert(offsetof(ABPL_Player_ShoeSole::FAnimBlueprintGeneratedConstantData
 static_assert(offsetof(ABPL_Player_ShoeSole::FAnimBlueprintGeneratedConstantData, AppAnimGraphNode_FABRIK) == 0x0001A0, "Member 'ABPL_Player_ShoeSole::FAnimBlueprintGeneratedConstantData::AppAnimGraphNode_FABRIK' has a wrong offset!");
 static_assert(offsetof(ABPL_Player_ShoeSole::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Root) == 0x0001D0, "Member 'ABPL_Player_ShoeSole::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Root' has a wrong offset!");
 
-// ScriptStruct ABPL_Player_ShoeSole.ABPL_Player_ShoeSole_C.AnimBlueprintGeneratedMutableData
-// 0x0000 (0x0001 - 0x0001)
-struct ABPL_Player_ShoeSole::FAnimBlueprintGeneratedMutableData final : public FAnimBlueprintMutableData
-{
-};
-static_assert(alignof(ABPL_Player_ShoeSole::FAnimBlueprintGeneratedMutableData) == 0x000001, "Wrong alignment on ABPL_Player_ShoeSole::FAnimBlueprintGeneratedMutableData");
-static_assert(sizeof(ABPL_Player_ShoeSole::FAnimBlueprintGeneratedMutableData) == 0x000001, "Wrong size on ABPL_Player_ShoeSole::FAnimBlueprintGeneratedMutableData");
-
 }
 

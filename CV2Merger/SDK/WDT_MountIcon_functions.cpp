@@ -17,21 +17,35 @@
 namespace SDK
 {
 
-// Function WDT_MountIcon.WDT_MountIcon_C.SetNoMountAction
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    InIsNoMountAction                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function WDT_MountIcon.WDT_MountIcon_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UWDT_MountIcon_C::SetNoMountAction(bool InIsNoMountAction)
+void UWDT_MountIcon_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_MountIcon_C", "SetNoMountAction");
+		Func = Class->GetFunction("WDT_MountIcon_C", "Construct");
 
-	Params::WDT_MountIcon_C_SetNoMountAction Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.InIsNoMountAction = InIsNoMountAction;
+
+// Function WDT_MountIcon.WDT_MountIcon_C.ExecuteUbergraph_WDT_MountIcon
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_MountIcon_C::ExecuteUbergraph_WDT_MountIcon(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_MountIcon_C", "ExecuteUbergraph_WDT_MountIcon");
+
+	Params::WDT_MountIcon_C_ExecuteUbergraph_WDT_MountIcon Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -57,37 +71,23 @@ void UWDT_MountIcon_C::SetMountIconVisibility(bool InIsVisible)
 }
 
 
-// Function WDT_MountIcon.WDT_MountIcon_C.ExecuteUbergraph_WDT_MountIcon
-// (Final, UbergraphFunction)
+// Function WDT_MountIcon.WDT_MountIcon_C.SetNoMountAction
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    InIsNoMountAction                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_MountIcon_C::ExecuteUbergraph_WDT_MountIcon(int32 EntryPoint)
+void UWDT_MountIcon_C::SetNoMountAction(bool InIsNoMountAction)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_MountIcon_C", "ExecuteUbergraph_WDT_MountIcon");
+		Func = Class->GetFunction("WDT_MountIcon_C", "SetNoMountAction");
 
-	Params::WDT_MountIcon_C_ExecuteUbergraph_WDT_MountIcon Parms{};
+	Params::WDT_MountIcon_C_SetNoMountAction Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.InIsNoMountAction = InIsNoMountAction;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_MountIcon.WDT_MountIcon_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWDT_MountIcon_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_MountIcon_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

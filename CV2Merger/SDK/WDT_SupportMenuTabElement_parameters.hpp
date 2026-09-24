@@ -14,38 +14,27 @@
 namespace SDK::Params
 {
 
-// Function WDT_SupportMenuTabElement.WDT_SupportMenuTabElement_C.SetTitleText
-// 0x0010 (0x0010 - 0x0000)
-struct WDT_SupportMenuTabElement_C_SetTitleText final
-{
-public:
-	class FText                                   Text_0;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
-};
-static_assert(alignof(WDT_SupportMenuTabElement_C_SetTitleText) == 0x000008, "Wrong alignment on WDT_SupportMenuTabElement_C_SetTitleText");
-static_assert(sizeof(WDT_SupportMenuTabElement_C_SetTitleText) == 0x000010, "Wrong size on WDT_SupportMenuTabElement_C_SetTitleText");
-static_assert(offsetof(WDT_SupportMenuTabElement_C_SetTitleText, Text_0) == 0x000000, "Member 'WDT_SupportMenuTabElement_C_SetTitleText::Text_0' has a wrong offset!");
-
-// Function WDT_SupportMenuTabElement.WDT_SupportMenuTabElement_C.SetDiffIconVIsibility
+// Function WDT_SupportMenuTabElement.WDT_SupportMenuTabElement_C.BP_OnItemExpansionChanged
 // 0x0001 (0x0001 - 0x0000)
-struct WDT_SupportMenuTabElement_C_SetDiffIconVIsibility final
+struct WDT_SupportMenuTabElement_C_BP_OnItemExpansionChanged final
 {
 public:
-	bool                                          InVisibility;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bIsExpanded;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WDT_SupportMenuTabElement_C_SetDiffIconVIsibility) == 0x000001, "Wrong alignment on WDT_SupportMenuTabElement_C_SetDiffIconVIsibility");
-static_assert(sizeof(WDT_SupportMenuTabElement_C_SetDiffIconVIsibility) == 0x000001, "Wrong size on WDT_SupportMenuTabElement_C_SetDiffIconVIsibility");
-static_assert(offsetof(WDT_SupportMenuTabElement_C_SetDiffIconVIsibility, InVisibility) == 0x000000, "Member 'WDT_SupportMenuTabElement_C_SetDiffIconVIsibility::InVisibility' has a wrong offset!");
+static_assert(alignof(WDT_SupportMenuTabElement_C_BP_OnItemExpansionChanged) == 0x000001, "Wrong alignment on WDT_SupportMenuTabElement_C_BP_OnItemExpansionChanged");
+static_assert(sizeof(WDT_SupportMenuTabElement_C_BP_OnItemExpansionChanged) == 0x000001, "Wrong size on WDT_SupportMenuTabElement_C_BP_OnItemExpansionChanged");
+static_assert(offsetof(WDT_SupportMenuTabElement_C_BP_OnItemExpansionChanged, bIsExpanded) == 0x000000, "Member 'WDT_SupportMenuTabElement_C_BP_OnItemExpansionChanged::bIsExpanded' has a wrong offset!");
 
-// Function WDT_SupportMenuTabElement.WDT_SupportMenuTabElement_C.OnListItemObjectSet
-// 0x0008 (0x0008 - 0x0000)
-struct WDT_SupportMenuTabElement_C_OnListItemObjectSet final
+// Function WDT_SupportMenuTabElement.WDT_SupportMenuTabElement_C.BP_OnItemSelectionChanged
+// 0x0001 (0x0001 - 0x0000)
+struct WDT_SupportMenuTabElement_C_BP_OnItemSelectionChanged final
 {
 public:
-	class UObject*                                ListItemObject;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          bIsSelected;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WDT_SupportMenuTabElement_C_OnListItemObjectSet) == 0x000008, "Wrong alignment on WDT_SupportMenuTabElement_C_OnListItemObjectSet");
-static_assert(sizeof(WDT_SupportMenuTabElement_C_OnListItemObjectSet) == 0x000008, "Wrong size on WDT_SupportMenuTabElement_C_OnListItemObjectSet");
-static_assert(offsetof(WDT_SupportMenuTabElement_C_OnListItemObjectSet, ListItemObject) == 0x000000, "Member 'WDT_SupportMenuTabElement_C_OnListItemObjectSet::ListItemObject' has a wrong offset!");
+static_assert(alignof(WDT_SupportMenuTabElement_C_BP_OnItemSelectionChanged) == 0x000001, "Wrong alignment on WDT_SupportMenuTabElement_C_BP_OnItemSelectionChanged");
+static_assert(sizeof(WDT_SupportMenuTabElement_C_BP_OnItemSelectionChanged) == 0x000001, "Wrong size on WDT_SupportMenuTabElement_C_BP_OnItemSelectionChanged");
+static_assert(offsetof(WDT_SupportMenuTabElement_C_BP_OnItemSelectionChanged, bIsSelected) == 0x000000, "Member 'WDT_SupportMenuTabElement_C_BP_OnItemSelectionChanged::bIsSelected' has a wrong offset!");
 
 // Function WDT_SupportMenuTabElement.WDT_SupportMenuTabElement_C.ExecuteUbergraph_WDT_SupportMenuTabElement
 // 0x0048 (0x0048 - 0x0000)
@@ -75,27 +64,38 @@ static_assert(offsetof(WDT_SupportMenuTabElement_C_ExecuteUbergraph_WDT_SupportM
 static_assert(offsetof(WDT_SupportMenuTabElement_C_ExecuteUbergraph_WDT_SupportMenuTabElement, K2Node_Event_bIsExpanded) == 0x000030, "Member 'WDT_SupportMenuTabElement_C_ExecuteUbergraph_WDT_SupportMenuTabElement::K2Node_Event_bIsExpanded' has a wrong offset!");
 static_assert(offsetof(WDT_SupportMenuTabElement_C_ExecuteUbergraph_WDT_SupportMenuTabElement, K2Node_CreateDelegate_OutputDelegate) == 0x000034, "Member 'WDT_SupportMenuTabElement_C_ExecuteUbergraph_WDT_SupportMenuTabElement::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
 
-// Function WDT_SupportMenuTabElement.WDT_SupportMenuTabElement_C.BP_OnItemSelectionChanged
-// 0x0001 (0x0001 - 0x0000)
-struct WDT_SupportMenuTabElement_C_BP_OnItemSelectionChanged final
+// Function WDT_SupportMenuTabElement.WDT_SupportMenuTabElement_C.OnListItemObjectSet
+// 0x0008 (0x0008 - 0x0000)
+struct WDT_SupportMenuTabElement_C_OnListItemObjectSet final
 {
 public:
-	bool                                          bIsSelected;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                ListItemObject;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WDT_SupportMenuTabElement_C_BP_OnItemSelectionChanged) == 0x000001, "Wrong alignment on WDT_SupportMenuTabElement_C_BP_OnItemSelectionChanged");
-static_assert(sizeof(WDT_SupportMenuTabElement_C_BP_OnItemSelectionChanged) == 0x000001, "Wrong size on WDT_SupportMenuTabElement_C_BP_OnItemSelectionChanged");
-static_assert(offsetof(WDT_SupportMenuTabElement_C_BP_OnItemSelectionChanged, bIsSelected) == 0x000000, "Member 'WDT_SupportMenuTabElement_C_BP_OnItemSelectionChanged::bIsSelected' has a wrong offset!");
+static_assert(alignof(WDT_SupportMenuTabElement_C_OnListItemObjectSet) == 0x000008, "Wrong alignment on WDT_SupportMenuTabElement_C_OnListItemObjectSet");
+static_assert(sizeof(WDT_SupportMenuTabElement_C_OnListItemObjectSet) == 0x000008, "Wrong size on WDT_SupportMenuTabElement_C_OnListItemObjectSet");
+static_assert(offsetof(WDT_SupportMenuTabElement_C_OnListItemObjectSet, ListItemObject) == 0x000000, "Member 'WDT_SupportMenuTabElement_C_OnListItemObjectSet::ListItemObject' has a wrong offset!");
 
-// Function WDT_SupportMenuTabElement.WDT_SupportMenuTabElement_C.BP_OnItemExpansionChanged
+// Function WDT_SupportMenuTabElement.WDT_SupportMenuTabElement_C.SetDiffIconVIsibility
 // 0x0001 (0x0001 - 0x0000)
-struct WDT_SupportMenuTabElement_C_BP_OnItemExpansionChanged final
+struct WDT_SupportMenuTabElement_C_SetDiffIconVIsibility final
 {
 public:
-	bool                                          bIsExpanded;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          InVisibility;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WDT_SupportMenuTabElement_C_BP_OnItemExpansionChanged) == 0x000001, "Wrong alignment on WDT_SupportMenuTabElement_C_BP_OnItemExpansionChanged");
-static_assert(sizeof(WDT_SupportMenuTabElement_C_BP_OnItemExpansionChanged) == 0x000001, "Wrong size on WDT_SupportMenuTabElement_C_BP_OnItemExpansionChanged");
-static_assert(offsetof(WDT_SupportMenuTabElement_C_BP_OnItemExpansionChanged, bIsExpanded) == 0x000000, "Member 'WDT_SupportMenuTabElement_C_BP_OnItemExpansionChanged::bIsExpanded' has a wrong offset!");
+static_assert(alignof(WDT_SupportMenuTabElement_C_SetDiffIconVIsibility) == 0x000001, "Wrong alignment on WDT_SupportMenuTabElement_C_SetDiffIconVIsibility");
+static_assert(sizeof(WDT_SupportMenuTabElement_C_SetDiffIconVIsibility) == 0x000001, "Wrong size on WDT_SupportMenuTabElement_C_SetDiffIconVIsibility");
+static_assert(offsetof(WDT_SupportMenuTabElement_C_SetDiffIconVIsibility, InVisibility) == 0x000000, "Member 'WDT_SupportMenuTabElement_C_SetDiffIconVIsibility::InVisibility' has a wrong offset!");
+
+// Function WDT_SupportMenuTabElement.WDT_SupportMenuTabElement_C.SetTitleText
+// 0x0010 (0x0010 - 0x0000)
+struct WDT_SupportMenuTabElement_C_SetTitleText final
+{
+public:
+	class FText                                   Text_0;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+};
+static_assert(alignof(WDT_SupportMenuTabElement_C_SetTitleText) == 0x000008, "Wrong alignment on WDT_SupportMenuTabElement_C_SetTitleText");
+static_assert(sizeof(WDT_SupportMenuTabElement_C_SetTitleText) == 0x000010, "Wrong size on WDT_SupportMenuTabElement_C_SetTitleText");
+static_assert(offsetof(WDT_SupportMenuTabElement_C_SetTitleText, Text_0) == 0x000000, "Member 'WDT_SupportMenuTabElement_C_SetTitleText::Text_0' has a wrong offset!");
 
 }
 

@@ -75,13 +75,5 @@ static_assert(offsetof(ABP_Motorcycle::FAnimBlueprintGeneratedConstantData, Anim
 static_assert(offsetof(ABP_Motorcycle::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Root) == 0x000400, "Member 'ABP_Motorcycle::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Root' has a wrong offset!");
 static_assert(offsetof(ABP_Motorcycle::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ModifyBone) == 0x000430, "Member 'ABP_Motorcycle::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ModifyBone' has a wrong offset!");
 
-// ScriptStruct ABP_Motorcycle.ABP_Motorcycle_C.AnimBlueprintGeneratedMutableData
-// 0x0000 (0x0001 - 0x0001)
-struct ABP_Motorcycle::FAnimBlueprintGeneratedMutableData final : public FAnimBlueprintMutableData
-{
-};
-static_assert(alignof(ABP_Motorcycle::FAnimBlueprintGeneratedMutableData) == 0x000001, "Wrong alignment on ABP_Motorcycle::FAnimBlueprintGeneratedMutableData");
-static_assert(sizeof(ABP_Motorcycle::FAnimBlueprintGeneratedMutableData) == 0x000001, "Wrong size on ABP_Motorcycle::FAnimBlueprintGeneratedMutableData");
-
 }
 

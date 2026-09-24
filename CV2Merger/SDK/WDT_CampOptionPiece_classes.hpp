@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "Extensions_structs.hpp"
+#include "Engine_structs.hpp"
 #include "EN_CampOption_structs.hpp"
 #include "BasicUI_classes.hpp"
+#include "CoreUObject_structs.hpp"
 #include "UMG_structs.hpp"
 
 
@@ -49,6 +49,7 @@ public:
 	struct FLinearColor                           SelectBrushColor;                                  // 0x0670(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UTexture2D*                             CampOptionIconTexture;                             // 0x0680(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	EUICampRestOption                             TargetRestOption;                                  // 0x0688(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EUIPresetMenuType                             EquipPresetOption;                                 // 0x0689(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void WidgetAnimationEvt_DecideAnimation_K2Node_WidgetAnimationEvent_0();
@@ -98,6 +99,7 @@ static_assert(offsetof(UWDT_CampOptionPiece_C, HilightBrushColor) == 0x000660, "
 static_assert(offsetof(UWDT_CampOptionPiece_C, SelectBrushColor) == 0x000670, "Member 'UWDT_CampOptionPiece_C::SelectBrushColor' has a wrong offset!");
 static_assert(offsetof(UWDT_CampOptionPiece_C, CampOptionIconTexture) == 0x000680, "Member 'UWDT_CampOptionPiece_C::CampOptionIconTexture' has a wrong offset!");
 static_assert(offsetof(UWDT_CampOptionPiece_C, TargetRestOption) == 0x000688, "Member 'UWDT_CampOptionPiece_C::TargetRestOption' has a wrong offset!");
+static_assert(offsetof(UWDT_CampOptionPiece_C, EquipPresetOption) == 0x000689, "Member 'UWDT_CampOptionPiece_C::EquipPresetOption' has a wrong offset!");
 
 }
 

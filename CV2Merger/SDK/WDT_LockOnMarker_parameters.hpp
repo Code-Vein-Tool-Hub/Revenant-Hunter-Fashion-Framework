@@ -36,7 +36,7 @@ static_assert(offsetof(WDT_LockOnMarker_C_ExecuteUbergraph_WDT_LockOnMarker, K2N
 static_assert(offsetof(WDT_LockOnMarker_C_ExecuteUbergraph_WDT_LockOnMarker, CallFunc_Tick_Hud_Position_InDeltaTime_ImplicitCast) == 0x000040, "Member 'WDT_LockOnMarker_C_ExecuteUbergraph_WDT_LockOnMarker::CallFunc_Tick_Hud_Position_InDeltaTime_ImplicitCast' has a wrong offset!");
 
 // Function WDT_LockOnMarker.WDT_LockOnMarker_C.SetPosition
-// 0x0078 (0x0078 - 0x0000)
+// 0x0080 (0x0080 - 0x0000)
 struct WDT_LockOnMarker_C_SetPosition final
 {
 public:
@@ -44,27 +44,28 @@ public:
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UConfigurationManager*                  CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FConfigurationGameSaveData             CallFunc_GetConfigGameSaveData_ReturnValue;        // 0x0028(0x0010)(ConstParm, NoDestructor)
-	class UCanvasPanelSlot*                       CallFunc_SlotAsCanvasSlot_ReturnValue;             // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x0040(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_ProjectWorldLocationToWidgetPosition_ScreenPosition; // 0x0060(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_ProjectWorldLocationToWidgetPosition_ReturnValue; // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FConfigurationGameSaveData             CallFunc_GetConfigGameSaveData_ReturnValue;        // 0x0028(0x0014)(ConstParm, NoDestructor)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCanvasPanelSlot*                       CallFunc_SlotAsCanvasSlot_ReturnValue;             // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x0048(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_ProjectWorldLocationToWidgetPosition_ScreenPosition; // 0x0068(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_ProjectWorldLocationToWidgetPosition_ReturnValue; // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_LockOnMarker_C_SetPosition) == 0x000008, "Wrong alignment on WDT_LockOnMarker_C_SetPosition");
-static_assert(sizeof(WDT_LockOnMarker_C_SetPosition) == 0x000078, "Wrong size on WDT_LockOnMarker_C_SetPosition");
+static_assert(sizeof(WDT_LockOnMarker_C_SetPosition) == 0x000080, "Wrong size on WDT_LockOnMarker_C_SetPosition");
 static_assert(offsetof(WDT_LockOnMarker_C_SetPosition, InWorldPosition) == 0x000000, "Member 'WDT_LockOnMarker_C_SetPosition::InWorldPosition' has a wrong offset!");
 static_assert(offsetof(WDT_LockOnMarker_C_SetPosition, ReturnValue) == 0x000018, "Member 'WDT_LockOnMarker_C_SetPosition::ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_LockOnMarker_C_SetPosition, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000020, "Member 'WDT_LockOnMarker_C_SetPosition::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_LockOnMarker_C_SetPosition, CallFunc_GetConfigGameSaveData_ReturnValue) == 0x000028, "Member 'WDT_LockOnMarker_C_SetPosition::CallFunc_GetConfigGameSaveData_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_LockOnMarker_C_SetPosition, CallFunc_SlotAsCanvasSlot_ReturnValue) == 0x000038, "Member 'WDT_LockOnMarker_C_SetPosition::CallFunc_SlotAsCanvasSlot_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_LockOnMarker_C_SetPosition, CallFunc_Add_VectorVector_ReturnValue) == 0x000040, "Member 'WDT_LockOnMarker_C_SetPosition::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_LockOnMarker_C_SetPosition, CallFunc_GetPlayerController_ReturnValue) == 0x000058, "Member 'WDT_LockOnMarker_C_SetPosition::CallFunc_GetPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_LockOnMarker_C_SetPosition, CallFunc_ProjectWorldLocationToWidgetPosition_ScreenPosition) == 0x000060, "Member 'WDT_LockOnMarker_C_SetPosition::CallFunc_ProjectWorldLocationToWidgetPosition_ScreenPosition' has a wrong offset!");
-static_assert(offsetof(WDT_LockOnMarker_C_SetPosition, CallFunc_ProjectWorldLocationToWidgetPosition_ReturnValue) == 0x000070, "Member 'WDT_LockOnMarker_C_SetPosition::CallFunc_ProjectWorldLocationToWidgetPosition_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_LockOnMarker_C_SetPosition, CallFunc_SlotAsCanvasSlot_ReturnValue) == 0x000040, "Member 'WDT_LockOnMarker_C_SetPosition::CallFunc_SlotAsCanvasSlot_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_LockOnMarker_C_SetPosition, CallFunc_Add_VectorVector_ReturnValue) == 0x000048, "Member 'WDT_LockOnMarker_C_SetPosition::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_LockOnMarker_C_SetPosition, CallFunc_GetPlayerController_ReturnValue) == 0x000060, "Member 'WDT_LockOnMarker_C_SetPosition::CallFunc_GetPlayerController_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_LockOnMarker_C_SetPosition, CallFunc_ProjectWorldLocationToWidgetPosition_ScreenPosition) == 0x000068, "Member 'WDT_LockOnMarker_C_SetPosition::CallFunc_ProjectWorldLocationToWidgetPosition_ScreenPosition' has a wrong offset!");
+static_assert(offsetof(WDT_LockOnMarker_C_SetPosition, CallFunc_ProjectWorldLocationToWidgetPosition_ReturnValue) == 0x000078, "Member 'WDT_LockOnMarker_C_SetPosition::CallFunc_ProjectWorldLocationToWidgetPosition_ReturnValue' has a wrong offset!");
 
 // Function WDT_LockOnMarker.WDT_LockOnMarker_C.SetTargetActor
-// 0x0040 (0x0040 - 0x0000)
+// 0x0048 (0x0048 - 0x0000)
 struct WDT_LockOnMarker_C_SetTargetActor final
 {
 public:
@@ -73,21 +74,22 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UConfigurationManager*                  CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FConfigurationGameSaveData             CallFunc_GetConfigGameSaveData_ReturnValue;        // 0x0020(0x0010)(ConstParm, NoDestructor)
-	class USkeletalMeshComponent*                 CallFunc_GetComponentByClass_ReturnValue;          // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FConfigurationGameSaveData             CallFunc_GetConfigGameSaveData_ReturnValue;        // 0x0020(0x0014)(ConstParm, NoDestructor)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMeshComponent*                 CallFunc_GetComponentByClass_ReturnValue;          // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_LockOnMarker_C_SetTargetActor) == 0x000008, "Wrong alignment on WDT_LockOnMarker_C_SetTargetActor");
-static_assert(sizeof(WDT_LockOnMarker_C_SetTargetActor) == 0x000040, "Wrong size on WDT_LockOnMarker_C_SetTargetActor");
+static_assert(sizeof(WDT_LockOnMarker_C_SetTargetActor) == 0x000048, "Wrong size on WDT_LockOnMarker_C_SetTargetActor");
 static_assert(offsetof(WDT_LockOnMarker_C_SetTargetActor, InTargetActor) == 0x000000, "Member 'WDT_LockOnMarker_C_SetTargetActor::InTargetActor' has a wrong offset!");
 static_assert(offsetof(WDT_LockOnMarker_C_SetTargetActor, InTargetSocket) == 0x000008, "Member 'WDT_LockOnMarker_C_SetTargetActor::InTargetSocket' has a wrong offset!");
 static_assert(offsetof(WDT_LockOnMarker_C_SetTargetActor, ReturnValue) == 0x000010, "Member 'WDT_LockOnMarker_C_SetTargetActor::ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_LockOnMarker_C_SetTargetActor, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000018, "Member 'WDT_LockOnMarker_C_SetTargetActor::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_LockOnMarker_C_SetTargetActor, CallFunc_GetConfigGameSaveData_ReturnValue) == 0x000020, "Member 'WDT_LockOnMarker_C_SetTargetActor::CallFunc_GetConfigGameSaveData_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_LockOnMarker_C_SetTargetActor, CallFunc_GetComponentByClass_ReturnValue) == 0x000030, "Member 'WDT_LockOnMarker_C_SetTargetActor::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_LockOnMarker_C_SetTargetActor, CallFunc_IsValid_ReturnValue) == 0x000038, "Member 'WDT_LockOnMarker_C_SetTargetActor::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_LockOnMarker_C_SetTargetActor, CallFunc_IsValid_ReturnValue_1) == 0x000039, "Member 'WDT_LockOnMarker_C_SetTargetActor::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_LockOnMarker_C_SetTargetActor, CallFunc_GetComponentByClass_ReturnValue) == 0x000038, "Member 'WDT_LockOnMarker_C_SetTargetActor::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_LockOnMarker_C_SetTargetActor, CallFunc_IsValid_ReturnValue) == 0x000040, "Member 'WDT_LockOnMarker_C_SetTargetActor::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_LockOnMarker_C_SetTargetActor, CallFunc_IsValid_ReturnValue_1) == 0x000041, "Member 'WDT_LockOnMarker_C_SetTargetActor::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
 
 // Function WDT_LockOnMarker.WDT_LockOnMarker_C.Tick
 // 0x003C (0x003C - 0x0000)

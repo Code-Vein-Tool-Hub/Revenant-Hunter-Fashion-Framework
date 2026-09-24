@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "Extensions_classes.hpp"
 
 
@@ -17,16 +18,19 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_MapMenuUIObject.BP_MapMenuUIObject_C
-// 0x0020 (0x0090 - 0x0070)
+// 0x0028 (0x00A0 - 0x0078)
 class UBP_MapMenuUIObject_C final : public UMapMenuUIObject
 {
 public:
-	TArray<TSoftObjectPtr<class UTexture2D>>      CurrentMapTexture;                                 // 0x0070(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<TSoftObjectPtr<class UTexture2D>>      PastMapTexture;                                    // 0x0080(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0078(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	TArray<TSoftObjectPtr<class UTexture2D>>      CurrentMapTexture;                                 // 0x0080(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<TSoftObjectPtr<class UTexture2D>>      PastMapTexture;                                    // 0x0090(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	bool Close();
+	void ExecuteUbergraph_BP_MapMenuUIObject(int32 EntryPoint);
 	bool NotifyFastTravelProhibited(bool InEnabled);
+	void OnMiniMapArea(const struct FGameplayTag& InTag, int32 InCount);
 	bool Open();
 	void SetSelectFeature(const struct FGameplayTag& InFeatureId, class FName InSelectLouDiaryID);
 
@@ -41,9 +45,10 @@ public:
 	}
 };
 static_assert(alignof(UBP_MapMenuUIObject_C) == 0x000008, "Wrong alignment on UBP_MapMenuUIObject_C");
-static_assert(sizeof(UBP_MapMenuUIObject_C) == 0x000090, "Wrong size on UBP_MapMenuUIObject_C");
-static_assert(offsetof(UBP_MapMenuUIObject_C, CurrentMapTexture) == 0x000070, "Member 'UBP_MapMenuUIObject_C::CurrentMapTexture' has a wrong offset!");
-static_assert(offsetof(UBP_MapMenuUIObject_C, PastMapTexture) == 0x000080, "Member 'UBP_MapMenuUIObject_C::PastMapTexture' has a wrong offset!");
+static_assert(sizeof(UBP_MapMenuUIObject_C) == 0x0000A0, "Wrong size on UBP_MapMenuUIObject_C");
+static_assert(offsetof(UBP_MapMenuUIObject_C, UberGraphFrame) == 0x000078, "Member 'UBP_MapMenuUIObject_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UBP_MapMenuUIObject_C, CurrentMapTexture) == 0x000080, "Member 'UBP_MapMenuUIObject_C::CurrentMapTexture' has a wrong offset!");
+static_assert(offsetof(UBP_MapMenuUIObject_C, PastMapTexture) == 0x000090, "Member 'UBP_MapMenuUIObject_C::PastMapTexture' has a wrong offset!");
 
 }
 

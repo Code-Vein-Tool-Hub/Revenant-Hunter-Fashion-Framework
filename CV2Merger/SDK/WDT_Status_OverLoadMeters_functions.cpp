@@ -17,37 +17,29 @@
 namespace SDK
 {
 
-// Function WDT_Status_OverLoadMeters.WDT_Status_OverLoadMeters_C.ExecuteUbergraph_WDT_Status_OverLoadMeters
-// (Final, UbergraphFunction)
+// Function WDT_Status_OverLoadMeters.WDT_Status_OverLoadMeters_C.SetValueComparison
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InCurrentCapacity                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InAfterCapacity                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InCurrentLoad                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InAfterLoad                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_Status_OverLoadMeters_C::ExecuteUbergraph_WDT_Status_OverLoadMeters(int32 EntryPoint)
+void UWDT_Status_OverLoadMeters_C::SetValueComparison(int32 InCurrentCapacity, int32 InAfterCapacity, int32 InCurrentLoad, int32 InAfterLoad)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Status_OverLoadMeters_C", "ExecuteUbergraph_WDT_Status_OverLoadMeters");
+		Func = Class->GetFunction("WDT_Status_OverLoadMeters_C", "SetValueComparison");
 
-	Params::WDT_Status_OverLoadMeters_C_ExecuteUbergraph_WDT_Status_OverLoadMeters Parms{};
+	Params::WDT_Status_OverLoadMeters_C_SetValueComparison Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.InCurrentCapacity = InCurrentCapacity;
+	Parms.InAfterCapacity = InAfterCapacity;
+	Parms.InCurrentLoad = InCurrentLoad;
+	Parms.InAfterLoad = InAfterLoad;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_Status_OverLoadMeters.WDT_Status_OverLoadMeters_C.OnInitialized
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWDT_Status_OverLoadMeters_C::OnInitialized()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Status_OverLoadMeters_C", "OnInitialized");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -73,27 +65,35 @@ void UWDT_Status_OverLoadMeters_C::SetValue(int32 InCapacityValue, int32 InLoadV
 }
 
 
-// Function WDT_Status_OverLoadMeters.WDT_Status_OverLoadMeters_C.SetValueComparison
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InCurrentCapacity                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   InAfterCapacity                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   InCurrentLoad                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   InAfterLoad                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function WDT_Status_OverLoadMeters.WDT_Status_OverLoadMeters_C.OnInitialized
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UWDT_Status_OverLoadMeters_C::SetValueComparison(int32 InCurrentCapacity, int32 InAfterCapacity, int32 InCurrentLoad, int32 InAfterLoad)
+void UWDT_Status_OverLoadMeters_C::OnInitialized()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Status_OverLoadMeters_C", "SetValueComparison");
+		Func = Class->GetFunction("WDT_Status_OverLoadMeters_C", "OnInitialized");
 
-	Params::WDT_Status_OverLoadMeters_C_SetValueComparison Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.InCurrentCapacity = InCurrentCapacity;
-	Parms.InAfterCapacity = InAfterCapacity;
-	Parms.InCurrentLoad = InCurrentLoad;
-	Parms.InAfterLoad = InAfterLoad;
+
+// Function WDT_Status_OverLoadMeters.WDT_Status_OverLoadMeters_C.ExecuteUbergraph_WDT_Status_OverLoadMeters
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_Status_OverLoadMeters_C::ExecuteUbergraph_WDT_Status_OverLoadMeters(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_Status_OverLoadMeters_C", "ExecuteUbergraph_WDT_Status_OverLoadMeters");
+
+	Params::WDT_Status_OverLoadMeters_C_ExecuteUbergraph_WDT_Status_OverLoadMeters Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

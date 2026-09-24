@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "AppAnimGraph_structs.hpp"
+#include "ControlRig_structs.hpp"
 #include "Engine_structs.hpp"
+#include "AppAnimGraph_structs.hpp"
+#include "KawaiiPhysics_structs.hpp"
 #include "AnimGraphRuntime_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "ControlRig_structs.hpp"
-#include "KawaiiPhysics_structs.hpp"
 #include "Extensions_structs.hpp"
 #include "Extensions_classes.hpp"
 
@@ -24,40 +24,40 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass PPABP_Gobbo.PPABP_Gobbo_C
-// 0x38E0 (0x3FF0 - 0x0710)
+// 0x38E0 (0x4020 - 0x0740)
 class UPPABP_Gobbo_C final : public UAnimDynamicsPostProcessAnimInstance
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0710(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x0718(0x0008)()
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x0720(0x0008)()
-	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0728(0x0020)()
-	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose;                     // 0x0748(0x00B8)()
-	struct FAnimNode_ControlRig                   AnimGraphNode_ControlRig;                          // 0x0800(0x04D0)(ContainsInstancedReference)
-	struct FAppAnimNode_RigidBody                 AppAnimGraphNode_RigidBody;                        // 0x0CD0(0x09B0)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_3;                     // 0x1680(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_2;                     // 0x16A8(0x0028)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_1;                    // 0x16D0(0x0080)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_1;                     // 0x1750(0x0028)()
-	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x1778(0x0020)()
-	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x1798(0x0020)()
-	uint8                                         Pad_17B8[0x8];                                     // 0x17B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_3;                     // 0x17C0(0x07B0)()
-	struct FAppAnimNode_ShoeSole                  AppAnimGraphNode_ShoeSole;                         // 0x1F70(0x0330)()
-	struct FAppAnimNode_FABRIK                    AppAnimGraphNode_FABRIK;                           // 0x22A0(0x0170)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose;                       // 0x2410(0x0028)()
-	uint8                                         Pad_2438[0x8];                                     // 0x2438(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_2;                     // 0x2440(0x07B0)()
-	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_1;                     // 0x2BF0(0x07B0)()
-	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics;                       // 0x33A0(0x07B0)()
-	struct FAnimNode_PoseBlendNode                AnimGraphNode_PoseBlendNode_1;                     // 0x3B50(0x00D0)()
-	struct FAnimNode_PoseBlendNode                AnimGraphNode_PoseBlendNode;                       // 0x3C20(0x00D0)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose;                      // 0x3CF0(0x0080)()
-	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend_1;                  // 0x3D70(0x00F0)()
-	struct FAnimNode_SequenceEvaluator            AnimGraphNode_SequenceEvaluator_1;                 // 0x3E60(0x0040)()
-	struct FAnimNode_SequenceEvaluator            AnimGraphNode_SequenceEvaluator;                   // 0x3EA0(0x0040)()
-	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend;                    // 0x3EE0(0x00F0)()
-	struct FVector                                Gravity_Param;                                     // 0x3FD0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0740(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x0748(0x0008)()
+	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x0750(0x0008)()
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0758(0x0020)()
+	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose;                     // 0x0778(0x00B8)()
+	struct FAnimNode_ControlRig                   AnimGraphNode_ControlRig;                          // 0x0830(0x04D0)(ContainsInstancedReference)
+	struct FAppAnimNode_RigidBody                 AppAnimGraphNode_RigidBody;                        // 0x0D00(0x09B0)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_3;                     // 0x16B0(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_2;                     // 0x16D8(0x0028)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_1;                    // 0x1700(0x0080)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_1;                     // 0x1780(0x0028)()
+	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x17A8(0x0020)()
+	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x17C8(0x0020)()
+	uint8                                         Pad_17E8[0x8];                                     // 0x17E8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_3;                     // 0x17F0(0x07B0)()
+	struct FAppAnimNode_ShoeSole                  AppAnimGraphNode_ShoeSole;                         // 0x1FA0(0x0330)()
+	struct FAppAnimNode_FABRIK                    AppAnimGraphNode_FABRIK;                           // 0x22D0(0x0170)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose;                       // 0x2440(0x0028)()
+	uint8                                         Pad_2468[0x8];                                     // 0x2468(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_2;                     // 0x2470(0x07B0)()
+	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_1;                     // 0x2C20(0x07B0)()
+	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics;                       // 0x33D0(0x07B0)()
+	struct FAnimNode_PoseBlendNode                AnimGraphNode_PoseBlendNode_1;                     // 0x3B80(0x00D0)()
+	struct FAnimNode_PoseBlendNode                AnimGraphNode_PoseBlendNode;                       // 0x3C50(0x00D0)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose;                      // 0x3D20(0x0080)()
+	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend_1;                  // 0x3DA0(0x00F0)()
+	struct FAnimNode_SequenceEvaluator            AnimGraphNode_SequenceEvaluator_1;                 // 0x3E90(0x0040)()
+	struct FAnimNode_SequenceEvaluator            AnimGraphNode_SequenceEvaluator;                   // 0x3ED0(0x0040)()
+	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend;                    // 0x3F10(0x00F0)()
+	struct FVector                                Gravity_Param;                                     // 0x4000(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AnimGraph(const struct FPoseLink& InPose, struct FPoseLink* AnimGraph_0);
@@ -82,35 +82,35 @@ public:
 	}
 };
 static_assert(alignof(UPPABP_Gobbo_C) == 0x000010, "Wrong alignment on UPPABP_Gobbo_C");
-static_assert(sizeof(UPPABP_Gobbo_C) == 0x003FF0, "Wrong size on UPPABP_Gobbo_C");
-static_assert(offsetof(UPPABP_Gobbo_C, UberGraphFrame) == 0x000710, "Member 'UPPABP_Gobbo_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UPPABP_Gobbo_C, AnimBlueprintExtension_PropertyAccess) == 0x000718, "Member 'UPPABP_Gobbo_C::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
-static_assert(offsetof(UPPABP_Gobbo_C, AnimBlueprintExtension_Base) == 0x000720, "Member 'UPPABP_Gobbo_C::AnimBlueprintExtension_Base' has a wrong offset!");
-static_assert(offsetof(UPPABP_Gobbo_C, AnimGraphNode_Root) == 0x000728, "Member 'UPPABP_Gobbo_C::AnimGraphNode_Root' has a wrong offset!");
-static_assert(offsetof(UPPABP_Gobbo_C, AnimGraphNode_LinkedInputPose) == 0x000748, "Member 'UPPABP_Gobbo_C::AnimGraphNode_LinkedInputPose' has a wrong offset!");
-static_assert(offsetof(UPPABP_Gobbo_C, AnimGraphNode_ControlRig) == 0x000800, "Member 'UPPABP_Gobbo_C::AnimGraphNode_ControlRig' has a wrong offset!");
-static_assert(offsetof(UPPABP_Gobbo_C, AppAnimGraphNode_RigidBody) == 0x000CD0, "Member 'UPPABP_Gobbo_C::AppAnimGraphNode_RigidBody' has a wrong offset!");
-static_assert(offsetof(UPPABP_Gobbo_C, AnimGraphNode_UseCachedPose_3) == 0x001680, "Member 'UPPABP_Gobbo_C::AnimGraphNode_UseCachedPose_3' has a wrong offset!");
-static_assert(offsetof(UPPABP_Gobbo_C, AnimGraphNode_UseCachedPose_2) == 0x0016A8, "Member 'UPPABP_Gobbo_C::AnimGraphNode_UseCachedPose_2' has a wrong offset!");
-static_assert(offsetof(UPPABP_Gobbo_C, AnimGraphNode_SaveCachedPose_1) == 0x0016D0, "Member 'UPPABP_Gobbo_C::AnimGraphNode_SaveCachedPose_1' has a wrong offset!");
-static_assert(offsetof(UPPABP_Gobbo_C, AnimGraphNode_UseCachedPose_1) == 0x001750, "Member 'UPPABP_Gobbo_C::AnimGraphNode_UseCachedPose_1' has a wrong offset!");
-static_assert(offsetof(UPPABP_Gobbo_C, AnimGraphNode_LocalToComponentSpace) == 0x001778, "Member 'UPPABP_Gobbo_C::AnimGraphNode_LocalToComponentSpace' has a wrong offset!");
-static_assert(offsetof(UPPABP_Gobbo_C, AnimGraphNode_ComponentToLocalSpace) == 0x001798, "Member 'UPPABP_Gobbo_C::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
-static_assert(offsetof(UPPABP_Gobbo_C, AnimGraphNode_KawaiiPhysics_3) == 0x0017C0, "Member 'UPPABP_Gobbo_C::AnimGraphNode_KawaiiPhysics_3' has a wrong offset!");
-static_assert(offsetof(UPPABP_Gobbo_C, AppAnimGraphNode_ShoeSole) == 0x001F70, "Member 'UPPABP_Gobbo_C::AppAnimGraphNode_ShoeSole' has a wrong offset!");
-static_assert(offsetof(UPPABP_Gobbo_C, AppAnimGraphNode_FABRIK) == 0x0022A0, "Member 'UPPABP_Gobbo_C::AppAnimGraphNode_FABRIK' has a wrong offset!");
-static_assert(offsetof(UPPABP_Gobbo_C, AnimGraphNode_UseCachedPose) == 0x002410, "Member 'UPPABP_Gobbo_C::AnimGraphNode_UseCachedPose' has a wrong offset!");
-static_assert(offsetof(UPPABP_Gobbo_C, AnimGraphNode_KawaiiPhysics_2) == 0x002440, "Member 'UPPABP_Gobbo_C::AnimGraphNode_KawaiiPhysics_2' has a wrong offset!");
-static_assert(offsetof(UPPABP_Gobbo_C, AnimGraphNode_KawaiiPhysics_1) == 0x002BF0, "Member 'UPPABP_Gobbo_C::AnimGraphNode_KawaiiPhysics_1' has a wrong offset!");
-static_assert(offsetof(UPPABP_Gobbo_C, AnimGraphNode_KawaiiPhysics) == 0x0033A0, "Member 'UPPABP_Gobbo_C::AnimGraphNode_KawaiiPhysics' has a wrong offset!");
-static_assert(offsetof(UPPABP_Gobbo_C, AnimGraphNode_PoseBlendNode_1) == 0x003B50, "Member 'UPPABP_Gobbo_C::AnimGraphNode_PoseBlendNode_1' has a wrong offset!");
-static_assert(offsetof(UPPABP_Gobbo_C, AnimGraphNode_PoseBlendNode) == 0x003C20, "Member 'UPPABP_Gobbo_C::AnimGraphNode_PoseBlendNode' has a wrong offset!");
-static_assert(offsetof(UPPABP_Gobbo_C, AnimGraphNode_SaveCachedPose) == 0x003CF0, "Member 'UPPABP_Gobbo_C::AnimGraphNode_SaveCachedPose' has a wrong offset!");
-static_assert(offsetof(UPPABP_Gobbo_C, AnimGraphNode_LayeredBoneBlend_1) == 0x003D70, "Member 'UPPABP_Gobbo_C::AnimGraphNode_LayeredBoneBlend_1' has a wrong offset!");
-static_assert(offsetof(UPPABP_Gobbo_C, AnimGraphNode_SequenceEvaluator_1) == 0x003E60, "Member 'UPPABP_Gobbo_C::AnimGraphNode_SequenceEvaluator_1' has a wrong offset!");
-static_assert(offsetof(UPPABP_Gobbo_C, AnimGraphNode_SequenceEvaluator) == 0x003EA0, "Member 'UPPABP_Gobbo_C::AnimGraphNode_SequenceEvaluator' has a wrong offset!");
-static_assert(offsetof(UPPABP_Gobbo_C, AnimGraphNode_LayeredBoneBlend) == 0x003EE0, "Member 'UPPABP_Gobbo_C::AnimGraphNode_LayeredBoneBlend' has a wrong offset!");
-static_assert(offsetof(UPPABP_Gobbo_C, Gravity_Param) == 0x003FD0, "Member 'UPPABP_Gobbo_C::Gravity_Param' has a wrong offset!");
+static_assert(sizeof(UPPABP_Gobbo_C) == 0x004020, "Wrong size on UPPABP_Gobbo_C");
+static_assert(offsetof(UPPABP_Gobbo_C, UberGraphFrame) == 0x000740, "Member 'UPPABP_Gobbo_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UPPABP_Gobbo_C, AnimBlueprintExtension_PropertyAccess) == 0x000748, "Member 'UPPABP_Gobbo_C::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
+static_assert(offsetof(UPPABP_Gobbo_C, AnimBlueprintExtension_Base) == 0x000750, "Member 'UPPABP_Gobbo_C::AnimBlueprintExtension_Base' has a wrong offset!");
+static_assert(offsetof(UPPABP_Gobbo_C, AnimGraphNode_Root) == 0x000758, "Member 'UPPABP_Gobbo_C::AnimGraphNode_Root' has a wrong offset!");
+static_assert(offsetof(UPPABP_Gobbo_C, AnimGraphNode_LinkedInputPose) == 0x000778, "Member 'UPPABP_Gobbo_C::AnimGraphNode_LinkedInputPose' has a wrong offset!");
+static_assert(offsetof(UPPABP_Gobbo_C, AnimGraphNode_ControlRig) == 0x000830, "Member 'UPPABP_Gobbo_C::AnimGraphNode_ControlRig' has a wrong offset!");
+static_assert(offsetof(UPPABP_Gobbo_C, AppAnimGraphNode_RigidBody) == 0x000D00, "Member 'UPPABP_Gobbo_C::AppAnimGraphNode_RigidBody' has a wrong offset!");
+static_assert(offsetof(UPPABP_Gobbo_C, AnimGraphNode_UseCachedPose_3) == 0x0016B0, "Member 'UPPABP_Gobbo_C::AnimGraphNode_UseCachedPose_3' has a wrong offset!");
+static_assert(offsetof(UPPABP_Gobbo_C, AnimGraphNode_UseCachedPose_2) == 0x0016D8, "Member 'UPPABP_Gobbo_C::AnimGraphNode_UseCachedPose_2' has a wrong offset!");
+static_assert(offsetof(UPPABP_Gobbo_C, AnimGraphNode_SaveCachedPose_1) == 0x001700, "Member 'UPPABP_Gobbo_C::AnimGraphNode_SaveCachedPose_1' has a wrong offset!");
+static_assert(offsetof(UPPABP_Gobbo_C, AnimGraphNode_UseCachedPose_1) == 0x001780, "Member 'UPPABP_Gobbo_C::AnimGraphNode_UseCachedPose_1' has a wrong offset!");
+static_assert(offsetof(UPPABP_Gobbo_C, AnimGraphNode_LocalToComponentSpace) == 0x0017A8, "Member 'UPPABP_Gobbo_C::AnimGraphNode_LocalToComponentSpace' has a wrong offset!");
+static_assert(offsetof(UPPABP_Gobbo_C, AnimGraphNode_ComponentToLocalSpace) == 0x0017C8, "Member 'UPPABP_Gobbo_C::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
+static_assert(offsetof(UPPABP_Gobbo_C, AnimGraphNode_KawaiiPhysics_3) == 0x0017F0, "Member 'UPPABP_Gobbo_C::AnimGraphNode_KawaiiPhysics_3' has a wrong offset!");
+static_assert(offsetof(UPPABP_Gobbo_C, AppAnimGraphNode_ShoeSole) == 0x001FA0, "Member 'UPPABP_Gobbo_C::AppAnimGraphNode_ShoeSole' has a wrong offset!");
+static_assert(offsetof(UPPABP_Gobbo_C, AppAnimGraphNode_FABRIK) == 0x0022D0, "Member 'UPPABP_Gobbo_C::AppAnimGraphNode_FABRIK' has a wrong offset!");
+static_assert(offsetof(UPPABP_Gobbo_C, AnimGraphNode_UseCachedPose) == 0x002440, "Member 'UPPABP_Gobbo_C::AnimGraphNode_UseCachedPose' has a wrong offset!");
+static_assert(offsetof(UPPABP_Gobbo_C, AnimGraphNode_KawaiiPhysics_2) == 0x002470, "Member 'UPPABP_Gobbo_C::AnimGraphNode_KawaiiPhysics_2' has a wrong offset!");
+static_assert(offsetof(UPPABP_Gobbo_C, AnimGraphNode_KawaiiPhysics_1) == 0x002C20, "Member 'UPPABP_Gobbo_C::AnimGraphNode_KawaiiPhysics_1' has a wrong offset!");
+static_assert(offsetof(UPPABP_Gobbo_C, AnimGraphNode_KawaiiPhysics) == 0x0033D0, "Member 'UPPABP_Gobbo_C::AnimGraphNode_KawaiiPhysics' has a wrong offset!");
+static_assert(offsetof(UPPABP_Gobbo_C, AnimGraphNode_PoseBlendNode_1) == 0x003B80, "Member 'UPPABP_Gobbo_C::AnimGraphNode_PoseBlendNode_1' has a wrong offset!");
+static_assert(offsetof(UPPABP_Gobbo_C, AnimGraphNode_PoseBlendNode) == 0x003C50, "Member 'UPPABP_Gobbo_C::AnimGraphNode_PoseBlendNode' has a wrong offset!");
+static_assert(offsetof(UPPABP_Gobbo_C, AnimGraphNode_SaveCachedPose) == 0x003D20, "Member 'UPPABP_Gobbo_C::AnimGraphNode_SaveCachedPose' has a wrong offset!");
+static_assert(offsetof(UPPABP_Gobbo_C, AnimGraphNode_LayeredBoneBlend_1) == 0x003DA0, "Member 'UPPABP_Gobbo_C::AnimGraphNode_LayeredBoneBlend_1' has a wrong offset!");
+static_assert(offsetof(UPPABP_Gobbo_C, AnimGraphNode_SequenceEvaluator_1) == 0x003E90, "Member 'UPPABP_Gobbo_C::AnimGraphNode_SequenceEvaluator_1' has a wrong offset!");
+static_assert(offsetof(UPPABP_Gobbo_C, AnimGraphNode_SequenceEvaluator) == 0x003ED0, "Member 'UPPABP_Gobbo_C::AnimGraphNode_SequenceEvaluator' has a wrong offset!");
+static_assert(offsetof(UPPABP_Gobbo_C, AnimGraphNode_LayeredBoneBlend) == 0x003F10, "Member 'UPPABP_Gobbo_C::AnimGraphNode_LayeredBoneBlend' has a wrong offset!");
+static_assert(offsetof(UPPABP_Gobbo_C, Gravity_Param) == 0x004000, "Member 'UPPABP_Gobbo_C::Gravity_Param' has a wrong offset!");
 
 }
 

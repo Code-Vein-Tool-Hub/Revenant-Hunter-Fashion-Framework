@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function WDT_Article_IchorConsumption.WDT_Article_IchorConsumption_C.SetValue
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InValue                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_Article_IchorConsumption_C::SetValue(int32 InValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Article_IchorConsumption_C", "SetValue");
-
-	Params::WDT_Article_IchorConsumption_C_SetValue Parms{};
-
-	Parms.InValue = InValue;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WDT_Article_IchorConsumption.WDT_Article_IchorConsumption_C.SetValueComparison
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -56,6 +36,26 @@ void UWDT_Article_IchorConsumption_C::SetValueComparison(int32 InCurrentValue, i
 	Parms.InCurrentValue = InCurrentValue;
 	Parms.InTargetValue = InTargetValue;
 	Parms.SwapComparisons = SwapComparisons;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_Article_IchorConsumption.WDT_Article_IchorConsumption_C.SetValue
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InValue                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_Article_IchorConsumption_C::SetValue(int32 InValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_Article_IchorConsumption_C", "SetValue");
+
+	Params::WDT_Article_IchorConsumption_C_SetValue Parms{};
+
+	Parms.InValue = InValue;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

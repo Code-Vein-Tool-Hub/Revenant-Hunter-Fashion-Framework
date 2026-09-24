@@ -17,25 +17,35 @@
 namespace SDK
 {
 
-// Function WDT_StaminaGauge.WDT_StaminaGauge_C.SetStamina
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double                                  InCurrentStamina                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  InMaxStamina                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EResourceChangeFactor                   InChangeFactor                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function WDT_StaminaGauge.WDT_StaminaGauge_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UWDT_StaminaGauge_C::SetStamina(double InCurrentStamina, double InMaxStamina, EResourceChangeFactor InChangeFactor)
+void UWDT_StaminaGauge_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_StaminaGauge_C", "SetStamina");
+		Func = Class->GetFunction("WDT_StaminaGauge_C", "Construct");
 
-	Params::WDT_StaminaGauge_C_SetStamina Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.InCurrentStamina = InCurrentStamina;
-	Parms.InMaxStamina = InMaxStamina;
-	Parms.InChangeFactor = InChangeFactor;
+
+// Function WDT_StaminaGauge.WDT_StaminaGauge_C.ExecuteUbergraph_WDT_StaminaGauge
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_StaminaGauge_C::ExecuteUbergraph_WDT_StaminaGauge(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_StaminaGauge_C", "ExecuteUbergraph_WDT_StaminaGauge");
+
+	Params::WDT_StaminaGauge_C_ExecuteUbergraph_WDT_StaminaGauge Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -61,37 +71,27 @@ void UWDT_StaminaGauge_C::OnBattleStateChanged(bool InBattleState)
 }
 
 
-// Function WDT_StaminaGauge.WDT_StaminaGauge_C.ExecuteUbergraph_WDT_StaminaGauge
-// (Final, UbergraphFunction)
+// Function WDT_StaminaGauge.WDT_StaminaGauge_C.SetStamina
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  InCurrentStamina                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  InMaxStamina                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EResourceChangeFactor                   InChangeFactor                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_StaminaGauge_C::ExecuteUbergraph_WDT_StaminaGauge(int32 EntryPoint)
+void UWDT_StaminaGauge_C::SetStamina(double InCurrentStamina, double InMaxStamina, EResourceChangeFactor InChangeFactor)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_StaminaGauge_C", "ExecuteUbergraph_WDT_StaminaGauge");
+		Func = Class->GetFunction("WDT_StaminaGauge_C", "SetStamina");
 
-	Params::WDT_StaminaGauge_C_ExecuteUbergraph_WDT_StaminaGauge Parms{};
+	Params::WDT_StaminaGauge_C_SetStamina Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.InCurrentStamina = InCurrentStamina;
+	Parms.InMaxStamina = InMaxStamina;
+	Parms.InChangeFactor = InChangeFactor;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_StaminaGauge.WDT_StaminaGauge_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWDT_StaminaGauge_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_StaminaGauge_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

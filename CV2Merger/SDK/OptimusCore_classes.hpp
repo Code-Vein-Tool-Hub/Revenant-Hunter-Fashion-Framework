@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "OptimusCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "ComputeFramework_structs.hpp"
 #include "ComputeFramework_classes.hpp"
-#include "OptimusCore_structs.hpp"
 #include "Engine_classes.hpp"
 
 
@@ -242,29 +242,6 @@ public:
 static_assert(alignof(IOptimusNodeGraphCollectionOwner) == 0x000008, "Wrong alignment on IOptimusNodeGraphCollectionOwner");
 static_assert(sizeof(IOptimusNodeGraphCollectionOwner) == 0x000028, "Wrong size on IOptimusNodeGraphCollectionOwner");
 
-// Class OptimusCore.OptimusNodePair
-// 0x0010 (0x0038 - 0x0028)
-class UOptimusNodePair final : public UObject
-{
-public:
-	class UOptimusNode*                           First;                                             // 0x0028(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UOptimusNode*                           Second;                                            // 0x0030(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"OptimusNodePair">();
-	}
-	static class UOptimusNodePair* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOptimusNodePair>();
-	}
-};
-static_assert(alignof(UOptimusNodePair) == 0x000008, "Wrong alignment on UOptimusNodePair");
-static_assert(sizeof(UOptimusNodePair) == 0x000038, "Wrong size on UOptimusNodePair");
-static_assert(offsetof(UOptimusNodePair, First) == 0x000028, "Member 'UOptimusNodePair::First' has a wrong offset!");
-static_assert(offsetof(UOptimusNodePair, Second) == 0x000030, "Member 'UOptimusNodePair::Second' has a wrong offset!");
-
 // Class OptimusCore.OptimusNodeGraphProvider
 // 0x0000 (0x0028 - 0x0028)
 class IOptimusNodeGraphProvider final : public IInterface
@@ -434,128 +411,6 @@ public:
 };
 static_assert(alignof(IOptimusPinMutabilityDefiner) == 0x000008, "Wrong alignment on IOptimusPinMutabilityDefiner");
 static_assert(sizeof(IOptimusPinMutabilityDefiner) == 0x000028, "Wrong size on IOptimusPinMutabilityDefiner");
-
-// Class OptimusCore.OptimusNodeGraph
-// 0x0070 (0x0098 - 0x0028)
-class UOptimusNodeGraph : public UObject
-{
-public:
-	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	EOptimusNodeGraphType                         GraphType;                                         // 0x0030(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UOptimusNode*>                   Nodes;                                             // 0x0038(0x0010)(ZeroConstructor, NonTransactional, UObjectWrapper, NativeAccessSpecifierPrivate)
-	TArray<class UOptimusNodeLink*>               Links;                                             // 0x0048(0x0010)(ZeroConstructor, NonTransactional, UObjectWrapper, NativeAccessSpecifierPrivate)
-	TArray<class UOptimusNodePair*>               NodePairs;                                         // 0x0058(0x0010)(ZeroConstructor, NonTransactional, UObjectWrapper, NativeAccessSpecifierPrivate)
-	TArray<class UOptimusNodeGraph*>              SubGraphs;                                         // 0x0068(0x0010)(ZeroConstructor, NonTransactional, UObjectWrapper, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_78[0x20];                                      // 0x0078(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	class UOptimusNode* AddComponentBindingGetNode(class UOptimusComponentSourceBinding* InComponentBinding, const struct FVector2D& InPosition);
-	class UOptimusNode* AddDataInterfaceNode(const TSubclassOf<class UOptimusComputeDataInterface> InDataInterfaceClass, const struct FVector2D& InPosition);
-	class UOptimusNode* AddFunctionReferenceNode(TSoftObjectPtr<class UOptimusFunctionNodeGraph> InFunctionGraph, const struct FVector2D& InPosition);
-	bool AddLink(class UOptimusNodePin* InNodeOutputPin, class UOptimusNodePin* InNodeInputPin);
-	TArray<class UOptimusNode*> AddLoopTerminalNodes(const struct FVector2D& InPosition);
-	class UOptimusNode* AddNode(const TSubclassOf<class UOptimusNode> InNodeClass, const struct FVector2D& InPosition);
-	class UOptimusNode* AddResourceGetNode(class UOptimusResourceDescription* InResourceDesc, const struct FVector2D& InPosition);
-	class UOptimusNode* AddResourceNode(class UOptimusResourceDescription* InResourceDesc, const struct FVector2D& InPosition);
-	class UOptimusNode* AddResourceSetNode(class UOptimusResourceDescription* InResourceDesc, const struct FVector2D& InPosition);
-	class UOptimusNode* AddValueNode(const struct FOptimusDataTypeRef& InDataTypeRef, const struct FVector2D& InPosition);
-	class UOptimusNode* AddVariableGetNode(class UOptimusVariableDescription* InVariableDesc, const struct FVector2D& InPosition);
-	class UOptimusNode* CollapseNodesToFunction(const TArray<class UOptimusNode*>& InNodes);
-	class UOptimusNode* CollapseNodesToSubGraph(const TArray<class UOptimusNode*>& InNodes);
-	class UOptimusNode* ConvertCustomKernelToFunction(class UOptimusNode* InCustomKernel);
-	class UOptimusNode* ConvertFunctionToCustomKernel(class UOptimusNode* InKernelFunction);
-	bool ConvertToFunction(class UOptimusNode* InSubGraphNode);
-	bool ConvertToSubGraph(class UOptimusNode* InFunctionNode);
-	class UOptimusNode* DuplicateNode(class UOptimusNode* InNode, const struct FVector2D& InPosition);
-	bool DuplicateNodes(const TArray<class UOptimusNode*>& InNodes, const struct FVector2D& InPosition);
-	TArray<class UOptimusNode*> ExpandCollapsedNodes(class UOptimusNode* InGraphReferenceNode);
-	bool MoveGraphDirect(class UOptimusNodeGraph* InGraph, int32 InInsertBefore);
-	bool RemoveAllLinks(class UOptimusNodePin* InNodePin);
-	bool RemoveLink(class UOptimusNodePin* InNodeOutputPin, class UOptimusNodePin* InNodeInputPin);
-	bool RemoveNode(class UOptimusNode* InNode);
-	bool RemoveNodes(const TArray<class UOptimusNode*>& InNodes);
-	bool RenameGraph(class UOptimusNodeGraph* InGraph, const class FString& InNewName);
-	bool RenameGraphDirect(class UOptimusNodeGraph* InGraph, const class FString& InNewName);
-
-	int32 GetGraphIndex() const;
-	const TArray<class UOptimusNodeGraph*> GetGraphs() const;
-	EOptimusNodeGraphType GetGraphType() const;
-	bool IsCustomKernel(class UOptimusNode* InNode) const;
-	bool IsExecutionGraph() const;
-	bool IsFunctionGraph() const;
-	bool IsFunctionReference(class UOptimusNode* InNode) const;
-	bool IsKernelFunction(class UOptimusNode* InNode) const;
-	bool IsSubGraphReference(class UOptimusNode* InNode) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"OptimusNodeGraph">();
-	}
-	static class UOptimusNodeGraph* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOptimusNodeGraph>();
-	}
-};
-static_assert(alignof(UOptimusNodeGraph) == 0x000008, "Wrong alignment on UOptimusNodeGraph");
-static_assert(sizeof(UOptimusNodeGraph) == 0x000098, "Wrong size on UOptimusNodeGraph");
-static_assert(offsetof(UOptimusNodeGraph, GraphType) == 0x000030, "Member 'UOptimusNodeGraph::GraphType' has a wrong offset!");
-static_assert(offsetof(UOptimusNodeGraph, Nodes) == 0x000038, "Member 'UOptimusNodeGraph::Nodes' has a wrong offset!");
-static_assert(offsetof(UOptimusNodeGraph, Links) == 0x000048, "Member 'UOptimusNodeGraph::Links' has a wrong offset!");
-static_assert(offsetof(UOptimusNodeGraph, NodePairs) == 0x000058, "Member 'UOptimusNodeGraph::NodePairs' has a wrong offset!");
-static_assert(offsetof(UOptimusNodeGraph, SubGraphs) == 0x000068, "Member 'UOptimusNodeGraph::SubGraphs' has a wrong offset!");
-
-// Class OptimusCore.OptimusNodeSubGraph
-// 0x00E8 (0x0180 - 0x0098)
-class UOptimusNodeSubGraph : public UOptimusNodeGraph
-{
-public:
-	uint8                                         Pad_98[0x8];                                       // 0x0098(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FOptimusParameterBindingArray          InputBindings;                                     // 0x00A0(0x0010)(Edit, NativeAccessSpecifierPublic)
-	struct FOptimusParameterBindingArray          OutputBindings;                                    // 0x00B0(0x0010)(Edit, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C0[0xC0];                                      // 0x00C0(0x00C0)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"OptimusNodeSubGraph">();
-	}
-	static class UOptimusNodeSubGraph* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOptimusNodeSubGraph>();
-	}
-};
-static_assert(alignof(UOptimusNodeSubGraph) == 0x000008, "Wrong alignment on UOptimusNodeSubGraph");
-static_assert(sizeof(UOptimusNodeSubGraph) == 0x000180, "Wrong size on UOptimusNodeSubGraph");
-static_assert(offsetof(UOptimusNodeSubGraph, InputBindings) == 0x0000A0, "Member 'UOptimusNodeSubGraph::InputBindings' has a wrong offset!");
-static_assert(offsetof(UOptimusNodeSubGraph, OutputBindings) == 0x0000B0, "Member 'UOptimusNodeSubGraph::OutputBindings' has a wrong offset!");
-
-// Class OptimusCore.OptimusFunctionNodeGraph
-// 0x0010 (0x0190 - 0x0180)
-class UOptimusFunctionNodeGraph final : public UOptimusNodeSubGraph
-{
-public:
-	class FName                                   Category;                                          // 0x0180(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   AccessSpecifier;                                   // 0x0188(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	TArray<class FName> GetAccessSpecifierOptions() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"OptimusFunctionNodeGraph">();
-	}
-	static class UOptimusFunctionNodeGraph* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOptimusFunctionNodeGraph>();
-	}
-};
-static_assert(alignof(UOptimusFunctionNodeGraph) == 0x000008, "Wrong alignment on UOptimusFunctionNodeGraph");
-static_assert(sizeof(UOptimusFunctionNodeGraph) == 0x000190, "Wrong size on UOptimusFunctionNodeGraph");
-static_assert(offsetof(UOptimusFunctionNodeGraph, Category) == 0x000180, "Member 'UOptimusFunctionNodeGraph::Category' has a wrong offset!");
-static_assert(offsetof(UOptimusFunctionNodeGraph, AccessSpecifier) == 0x000188, "Member 'UOptimusFunctionNodeGraph::AccessSpecifier' has a wrong offset!");
 
 // Class OptimusCore.OptimusShaderTextProvider
 // 0x0000 (0x0028 - 0x0028)
@@ -1033,35 +888,6 @@ public:
 static_assert(alignof(UOptimusDuplicateVerticesDataInterface) == 0x000008, "Wrong alignment on UOptimusDuplicateVerticesDataInterface");
 static_assert(sizeof(UOptimusDuplicateVerticesDataInterface) == 0x000028, "Wrong size on UOptimusDuplicateVerticesDataInterface");
 
-// Class OptimusCore.OptimusVariableDescription
-// 0x0040 (0x0068 - 0x0028)
-class UOptimusVariableDescription final : public UObject
-{
-public:
-	struct FGuid                                  Guid;                                              // 0x0028(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   VariableName;                                      // 0x0038(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FOptimusDataTypeRef                    DataType;                                          // 0x0040(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	class UOptimusValueContainer*                 DefaultValue;                                      // 0x0050(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<uint8>                                 ValueData;                                         // 0x0058(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"OptimusVariableDescription">();
-	}
-	static class UOptimusVariableDescription* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOptimusVariableDescription>();
-	}
-};
-static_assert(alignof(UOptimusVariableDescription) == 0x000008, "Wrong alignment on UOptimusVariableDescription");
-static_assert(sizeof(UOptimusVariableDescription) == 0x000068, "Wrong size on UOptimusVariableDescription");
-static_assert(offsetof(UOptimusVariableDescription, Guid) == 0x000028, "Member 'UOptimusVariableDescription::Guid' has a wrong offset!");
-static_assert(offsetof(UOptimusVariableDescription, VariableName) == 0x000038, "Member 'UOptimusVariableDescription::VariableName' has a wrong offset!");
-static_assert(offsetof(UOptimusVariableDescription, DataType) == 0x000040, "Member 'UOptimusVariableDescription::DataType' has a wrong offset!");
-static_assert(offsetof(UOptimusVariableDescription, DefaultValue) == 0x000050, "Member 'UOptimusVariableDescription::DefaultValue' has a wrong offset!");
-static_assert(offsetof(UOptimusVariableDescription, ValueData) == 0x000058, "Member 'UOptimusVariableDescription::ValueData' has a wrong offset!");
-
 // Class OptimusCore.OptimusDuplicateVerticesDataProvider
 // 0x0008 (0x0030 - 0x0028)
 class UOptimusDuplicateVerticesDataProvider final : public UComputeDataProvider
@@ -1480,35 +1306,6 @@ public:
 };
 static_assert(alignof(UOptimusSkeletonDataInterface) == 0x000008, "Wrong alignment on UOptimusSkeletonDataInterface");
 static_assert(sizeof(UOptimusSkeletonDataInterface) == 0x000028, "Wrong size on UOptimusSkeletonDataInterface");
-
-// Class OptimusCore.OptimusResourceDescription
-// 0x0068 (0x0090 - 0x0028)
-class UOptimusResourceDescription final : public UObject
-{
-public:
-	class FName                                   ResourceName;                                      // 0x0028(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FOptimusDataTypeRef                    DataType;                                          // 0x0030(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	TWeakObjectPtr<class UOptimusComponentSourceBinding> ComponentBinding;                                  // 0x0040(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FOptimusDataDomain                     DataDomain;                                        // 0x0048(0x0040)(Edit, NativeAccessSpecifierPublic)
-	class UOptimusPersistentBufferDataInterface*  DataInterface;                                     // 0x0088(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"OptimusResourceDescription">();
-	}
-	static class UOptimusResourceDescription* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOptimusResourceDescription>();
-	}
-};
-static_assert(alignof(UOptimusResourceDescription) == 0x000008, "Wrong alignment on UOptimusResourceDescription");
-static_assert(sizeof(UOptimusResourceDescription) == 0x000090, "Wrong size on UOptimusResourceDescription");
-static_assert(offsetof(UOptimusResourceDescription, ResourceName) == 0x000028, "Member 'UOptimusResourceDescription::ResourceName' has a wrong offset!");
-static_assert(offsetof(UOptimusResourceDescription, DataType) == 0x000030, "Member 'UOptimusResourceDescription::DataType' has a wrong offset!");
-static_assert(offsetof(UOptimusResourceDescription, ComponentBinding) == 0x000040, "Member 'UOptimusResourceDescription::ComponentBinding' has a wrong offset!");
-static_assert(offsetof(UOptimusResourceDescription, DataDomain) == 0x000048, "Member 'UOptimusResourceDescription::DataDomain' has a wrong offset!");
-static_assert(offsetof(UOptimusResourceDescription, DataInterface) == 0x000088, "Member 'UOptimusResourceDescription::DataInterface' has a wrong offset!");
 
 // Class OptimusCore.OptimusSkeletonDataProvider
 // 0x0008 (0x0030 - 0x0028)
@@ -1940,27 +1737,6 @@ static_assert(sizeof(UOptimusNode_FunctionReference) == 0x000150, "Wrong size on
 static_assert(offsetof(UOptimusNode_FunctionReference, FunctionGraph) == 0x000120, "Member 'UOptimusNode_FunctionReference::FunctionGraph' has a wrong offset!");
 static_assert(offsetof(UOptimusNode_FunctionReference, DefaultComponentPin) == 0x000148, "Member 'UOptimusNode_FunctionReference::DefaultComponentPin' has a wrong offset!");
 
-// Class OptimusCore.OptimusResourceContainer
-// 0x0010 (0x0038 - 0x0028)
-class UOptimusResourceContainer final : public UObject
-{
-public:
-	TArray<class UOptimusResourceDescription*>    Descriptions;                                      // 0x0028(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"OptimusResourceContainer">();
-	}
-	static class UOptimusResourceContainer* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOptimusResourceContainer>();
-	}
-};
-static_assert(alignof(UOptimusResourceContainer) == 0x000008, "Wrong alignment on UOptimusResourceContainer");
-static_assert(sizeof(UOptimusResourceContainer) == 0x000038, "Wrong size on UOptimusResourceContainer");
-static_assert(offsetof(UOptimusResourceContainer, Descriptions) == 0x000028, "Member 'UOptimusResourceContainer::Descriptions' has a wrong offset!");
-
 // Class OptimusCore.OptimusNode_ResourceAccessorBase
 // 0x0088 (0x0190 - 0x0108)
 class UOptimusNode_ResourceAccessorBase : public UOptimusNode
@@ -2257,6 +2033,27 @@ static_assert(alignof(UOptimusVariableContainer) == 0x000008, "Wrong alignment o
 static_assert(sizeof(UOptimusVariableContainer) == 0x000038, "Wrong size on UOptimusVariableContainer");
 static_assert(offsetof(UOptimusVariableContainer, Descriptions) == 0x000028, "Member 'UOptimusVariableContainer::Descriptions' has a wrong offset!");
 
+// Class OptimusCore.OptimusResourceContainer
+// 0x0010 (0x0038 - 0x0028)
+class UOptimusResourceContainer final : public UObject
+{
+public:
+	TArray<class UOptimusResourceDescription*>    Descriptions;                                      // 0x0028(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"OptimusResourceContainer">();
+	}
+	static class UOptimusResourceContainer* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOptimusResourceContainer>();
+	}
+};
+static_assert(alignof(UOptimusResourceContainer) == 0x000008, "Wrong alignment on UOptimusResourceContainer");
+static_assert(sizeof(UOptimusResourceContainer) == 0x000038, "Wrong size on UOptimusResourceContainer");
+static_assert(offsetof(UOptimusResourceContainer, Descriptions) == 0x000028, "Member 'UOptimusResourceContainer::Descriptions' has a wrong offset!");
+
 // Class OptimusCore.OptimusDeformer
 // 0x0130 (0x0158 - 0x0028)
 class UOptimusDeformer final : public UMeshDeformer
@@ -2367,6 +2164,128 @@ static_assert(offsetof(UOptimusDeformerInstance, Variables) == 0x000048, "Member
 static_assert(offsetof(UOptimusDeformerInstance, WeakBoundComponents) == 0x000050, "Member 'UOptimusDeformerInstance::WeakBoundComponents' has a wrong offset!");
 static_assert(offsetof(UOptimusDeformerInstance, WeakComponentSources) == 0x000060, "Member 'UOptimusDeformerInstance::WeakComponentSources' has a wrong offset!");
 
+// Class OptimusCore.OptimusNodeGraph
+// 0x0070 (0x0098 - 0x0028)
+class UOptimusNodeGraph : public UObject
+{
+public:
+	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	EOptimusNodeGraphType                         GraphType;                                         // 0x0030(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UOptimusNode*>                   Nodes;                                             // 0x0038(0x0010)(ZeroConstructor, NonTransactional, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TArray<class UOptimusNodeLink*>               Links;                                             // 0x0048(0x0010)(ZeroConstructor, NonTransactional, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TArray<class UOptimusNodePair*>               NodePairs;                                         // 0x0058(0x0010)(ZeroConstructor, NonTransactional, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TArray<class UOptimusNodeGraph*>              SubGraphs;                                         // 0x0068(0x0010)(ZeroConstructor, NonTransactional, UObjectWrapper, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_78[0x20];                                      // 0x0078(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	class UOptimusNode* AddComponentBindingGetNode(class UOptimusComponentSourceBinding* InComponentBinding, const struct FVector2D& InPosition);
+	class UOptimusNode* AddDataInterfaceNode(const TSubclassOf<class UOptimusComputeDataInterface> InDataInterfaceClass, const struct FVector2D& InPosition);
+	class UOptimusNode* AddFunctionReferenceNode(TSoftObjectPtr<class UOptimusFunctionNodeGraph> InFunctionGraph, const struct FVector2D& InPosition);
+	bool AddLink(class UOptimusNodePin* InNodeOutputPin, class UOptimusNodePin* InNodeInputPin);
+	TArray<class UOptimusNode*> AddLoopTerminalNodes(const struct FVector2D& InPosition);
+	class UOptimusNode* AddNode(const TSubclassOf<class UOptimusNode> InNodeClass, const struct FVector2D& InPosition);
+	class UOptimusNode* AddResourceGetNode(class UOptimusResourceDescription* InResourceDesc, const struct FVector2D& InPosition);
+	class UOptimusNode* AddResourceNode(class UOptimusResourceDescription* InResourceDesc, const struct FVector2D& InPosition);
+	class UOptimusNode* AddResourceSetNode(class UOptimusResourceDescription* InResourceDesc, const struct FVector2D& InPosition);
+	class UOptimusNode* AddValueNode(const struct FOptimusDataTypeRef& InDataTypeRef, const struct FVector2D& InPosition);
+	class UOptimusNode* AddVariableGetNode(class UOptimusVariableDescription* InVariableDesc, const struct FVector2D& InPosition);
+	class UOptimusNode* CollapseNodesToFunction(const TArray<class UOptimusNode*>& InNodes);
+	class UOptimusNode* CollapseNodesToSubGraph(const TArray<class UOptimusNode*>& InNodes);
+	class UOptimusNode* ConvertCustomKernelToFunction(class UOptimusNode* InCustomKernel);
+	class UOptimusNode* ConvertFunctionToCustomKernel(class UOptimusNode* InKernelFunction);
+	bool ConvertToFunction(class UOptimusNode* InSubGraphNode);
+	bool ConvertToSubGraph(class UOptimusNode* InFunctionNode);
+	class UOptimusNode* DuplicateNode(class UOptimusNode* InNode, const struct FVector2D& InPosition);
+	bool DuplicateNodes(const TArray<class UOptimusNode*>& InNodes, const struct FVector2D& InPosition);
+	TArray<class UOptimusNode*> ExpandCollapsedNodes(class UOptimusNode* InGraphReferenceNode);
+	bool MoveGraphDirect(class UOptimusNodeGraph* InGraph, int32 InInsertBefore);
+	bool RemoveAllLinks(class UOptimusNodePin* InNodePin);
+	bool RemoveLink(class UOptimusNodePin* InNodeOutputPin, class UOptimusNodePin* InNodeInputPin);
+	bool RemoveNode(class UOptimusNode* InNode);
+	bool RemoveNodes(const TArray<class UOptimusNode*>& InNodes);
+	bool RenameGraph(class UOptimusNodeGraph* InGraph, const class FString& InNewName);
+	bool RenameGraphDirect(class UOptimusNodeGraph* InGraph, const class FString& InNewName);
+
+	int32 GetGraphIndex() const;
+	const TArray<class UOptimusNodeGraph*> GetGraphs() const;
+	EOptimusNodeGraphType GetGraphType() const;
+	bool IsCustomKernel(class UOptimusNode* InNode) const;
+	bool IsExecutionGraph() const;
+	bool IsFunctionGraph() const;
+	bool IsFunctionReference(class UOptimusNode* InNode) const;
+	bool IsKernelFunction(class UOptimusNode* InNode) const;
+	bool IsSubGraphReference(class UOptimusNode* InNode) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"OptimusNodeGraph">();
+	}
+	static class UOptimusNodeGraph* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOptimusNodeGraph>();
+	}
+};
+static_assert(alignof(UOptimusNodeGraph) == 0x000008, "Wrong alignment on UOptimusNodeGraph");
+static_assert(sizeof(UOptimusNodeGraph) == 0x000098, "Wrong size on UOptimusNodeGraph");
+static_assert(offsetof(UOptimusNodeGraph, GraphType) == 0x000030, "Member 'UOptimusNodeGraph::GraphType' has a wrong offset!");
+static_assert(offsetof(UOptimusNodeGraph, Nodes) == 0x000038, "Member 'UOptimusNodeGraph::Nodes' has a wrong offset!");
+static_assert(offsetof(UOptimusNodeGraph, Links) == 0x000048, "Member 'UOptimusNodeGraph::Links' has a wrong offset!");
+static_assert(offsetof(UOptimusNodeGraph, NodePairs) == 0x000058, "Member 'UOptimusNodeGraph::NodePairs' has a wrong offset!");
+static_assert(offsetof(UOptimusNodeGraph, SubGraphs) == 0x000068, "Member 'UOptimusNodeGraph::SubGraphs' has a wrong offset!");
+
+// Class OptimusCore.OptimusNodeSubGraph
+// 0x00E8 (0x0180 - 0x0098)
+class UOptimusNodeSubGraph : public UOptimusNodeGraph
+{
+public:
+	uint8                                         Pad_98[0x8];                                       // 0x0098(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FOptimusParameterBindingArray          InputBindings;                                     // 0x00A0(0x0010)(Edit, NativeAccessSpecifierPublic)
+	struct FOptimusParameterBindingArray          OutputBindings;                                    // 0x00B0(0x0010)(Edit, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C0[0xC0];                                      // 0x00C0(0x00C0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"OptimusNodeSubGraph">();
+	}
+	static class UOptimusNodeSubGraph* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOptimusNodeSubGraph>();
+	}
+};
+static_assert(alignof(UOptimusNodeSubGraph) == 0x000008, "Wrong alignment on UOptimusNodeSubGraph");
+static_assert(sizeof(UOptimusNodeSubGraph) == 0x000180, "Wrong size on UOptimusNodeSubGraph");
+static_assert(offsetof(UOptimusNodeSubGraph, InputBindings) == 0x0000A0, "Member 'UOptimusNodeSubGraph::InputBindings' has a wrong offset!");
+static_assert(offsetof(UOptimusNodeSubGraph, OutputBindings) == 0x0000B0, "Member 'UOptimusNodeSubGraph::OutputBindings' has a wrong offset!");
+
+// Class OptimusCore.OptimusFunctionNodeGraph
+// 0x0010 (0x0190 - 0x0180)
+class UOptimusFunctionNodeGraph final : public UOptimusNodeSubGraph
+{
+public:
+	class FName                                   Category;                                          // 0x0180(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   AccessSpecifier;                                   // 0x0188(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	TArray<class FName> GetAccessSpecifierOptions() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"OptimusFunctionNodeGraph">();
+	}
+	static class UOptimusFunctionNodeGraph* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOptimusFunctionNodeGraph>();
+	}
+};
+static_assert(alignof(UOptimusFunctionNodeGraph) == 0x000008, "Wrong alignment on UOptimusFunctionNodeGraph");
+static_assert(sizeof(UOptimusFunctionNodeGraph) == 0x000190, "Wrong size on UOptimusFunctionNodeGraph");
+static_assert(offsetof(UOptimusFunctionNodeGraph, Category) == 0x000180, "Member 'UOptimusFunctionNodeGraph::Category' has a wrong offset!");
+static_assert(offsetof(UOptimusFunctionNodeGraph, AccessSpecifier) == 0x000188, "Member 'UOptimusFunctionNodeGraph::AccessSpecifier' has a wrong offset!");
+
 // Class OptimusCore.OptimusNodeLink
 // 0x0010 (0x0038 - 0x0028)
 class UOptimusNodeLink final : public UObject
@@ -2389,6 +2308,29 @@ static_assert(alignof(UOptimusNodeLink) == 0x000008, "Wrong alignment on UOptimu
 static_assert(sizeof(UOptimusNodeLink) == 0x000038, "Wrong size on UOptimusNodeLink");
 static_assert(offsetof(UOptimusNodeLink, NodeOutputPin) == 0x000028, "Member 'UOptimusNodeLink::NodeOutputPin' has a wrong offset!");
 static_assert(offsetof(UOptimusNodeLink, NodeInputPin) == 0x000030, "Member 'UOptimusNodeLink::NodeInputPin' has a wrong offset!");
+
+// Class OptimusCore.OptimusNodePair
+// 0x0010 (0x0038 - 0x0028)
+class UOptimusNodePair final : public UObject
+{
+public:
+	class UOptimusNode*                           First;                                             // 0x0028(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UOptimusNode*                           Second;                                            // 0x0030(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"OptimusNodePair">();
+	}
+	static class UOptimusNodePair* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOptimusNodePair>();
+	}
+};
+static_assert(alignof(UOptimusNodePair) == 0x000008, "Wrong alignment on UOptimusNodePair");
+static_assert(sizeof(UOptimusNodePair) == 0x000038, "Wrong size on UOptimusNodePair");
+static_assert(offsetof(UOptimusNodePair, First) == 0x000028, "Member 'UOptimusNodePair::First' has a wrong offset!");
+static_assert(offsetof(UOptimusNodePair, Second) == 0x000030, "Member 'UOptimusNodePair::Second' has a wrong offset!");
 
 // Class OptimusCore.OptimusNodePin
 // 0x0068 (0x0090 - 0x0028)
@@ -2421,6 +2363,35 @@ static_assert(offsetof(UOptimusNodePin, StorageType) == 0x00002A, "Member 'UOpti
 static_assert(offsetof(UOptimusNodePin, DataDomain) == 0x000030, "Member 'UOptimusNodePin::DataDomain' has a wrong offset!");
 static_assert(offsetof(UOptimusNodePin, DataType) == 0x000070, "Member 'UOptimusNodePin::DataType' has a wrong offset!");
 static_assert(offsetof(UOptimusNodePin, SubPins) == 0x000080, "Member 'UOptimusNodePin::SubPins' has a wrong offset!");
+
+// Class OptimusCore.OptimusResourceDescription
+// 0x0068 (0x0090 - 0x0028)
+class UOptimusResourceDescription final : public UObject
+{
+public:
+	class FName                                   ResourceName;                                      // 0x0028(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FOptimusDataTypeRef                    DataType;                                          // 0x0030(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	TWeakObjectPtr<class UOptimusComponentSourceBinding> ComponentBinding;                                  // 0x0040(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FOptimusDataDomain                     DataDomain;                                        // 0x0048(0x0040)(Edit, NativeAccessSpecifierPublic)
+	class UOptimusPersistentBufferDataInterface*  DataInterface;                                     // 0x0088(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"OptimusResourceDescription">();
+	}
+	static class UOptimusResourceDescription* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOptimusResourceDescription>();
+	}
+};
+static_assert(alignof(UOptimusResourceDescription) == 0x000008, "Wrong alignment on UOptimusResourceDescription");
+static_assert(sizeof(UOptimusResourceDescription) == 0x000090, "Wrong size on UOptimusResourceDescription");
+static_assert(offsetof(UOptimusResourceDescription, ResourceName) == 0x000028, "Member 'UOptimusResourceDescription::ResourceName' has a wrong offset!");
+static_assert(offsetof(UOptimusResourceDescription, DataType) == 0x000030, "Member 'UOptimusResourceDescription::DataType' has a wrong offset!");
+static_assert(offsetof(UOptimusResourceDescription, ComponentBinding) == 0x000040, "Member 'UOptimusResourceDescription::ComponentBinding' has a wrong offset!");
+static_assert(offsetof(UOptimusResourceDescription, DataDomain) == 0x000048, "Member 'UOptimusResourceDescription::DataDomain' has a wrong offset!");
+static_assert(offsetof(UOptimusResourceDescription, DataInterface) == 0x000088, "Member 'UOptimusResourceDescription::DataInterface' has a wrong offset!");
 
 // Class OptimusCore.OptimusSource
 // 0x0018 (0x0050 - 0x0038)
@@ -2481,6 +2452,35 @@ public:
 };
 static_assert(alignof(UOptimusValueContainer) == 0x000008, "Wrong alignment on UOptimusValueContainer");
 static_assert(sizeof(UOptimusValueContainer) == 0x000028, "Wrong size on UOptimusValueContainer");
+
+// Class OptimusCore.OptimusVariableDescription
+// 0x0040 (0x0068 - 0x0028)
+class UOptimusVariableDescription final : public UObject
+{
+public:
+	struct FGuid                                  Guid;                                              // 0x0028(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   VariableName;                                      // 0x0038(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FOptimusDataTypeRef                    DataType;                                          // 0x0040(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	class UOptimusValueContainer*                 DefaultValue;                                      // 0x0050(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<uint8>                                 ValueData;                                         // 0x0058(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"OptimusVariableDescription">();
+	}
+	static class UOptimusVariableDescription* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOptimusVariableDescription>();
+	}
+};
+static_assert(alignof(UOptimusVariableDescription) == 0x000008, "Wrong alignment on UOptimusVariableDescription");
+static_assert(sizeof(UOptimusVariableDescription) == 0x000068, "Wrong size on UOptimusVariableDescription");
+static_assert(offsetof(UOptimusVariableDescription, Guid) == 0x000028, "Member 'UOptimusVariableDescription::Guid' has a wrong offset!");
+static_assert(offsetof(UOptimusVariableDescription, VariableName) == 0x000038, "Member 'UOptimusVariableDescription::VariableName' has a wrong offset!");
+static_assert(offsetof(UOptimusVariableDescription, DataType) == 0x000040, "Member 'UOptimusVariableDescription::DataType' has a wrong offset!");
+static_assert(offsetof(UOptimusVariableDescription, DefaultValue) == 0x000050, "Member 'UOptimusVariableDescription::DefaultValue' has a wrong offset!");
+static_assert(offsetof(UOptimusVariableDescription, ValueData) == 0x000058, "Member 'UOptimusVariableDescription::ValueData' has a wrong offset!");
 
 }
 

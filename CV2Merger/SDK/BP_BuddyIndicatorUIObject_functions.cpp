@@ -400,6 +400,29 @@ bool UBP_BuddyIndicatorUIObject_C::SetBuddyIcon(class UMaterialInstance* InBuddy
 }
 
 
+// Function BP_BuddyIndicatorUIObject.BP_BuddyIndicatorUIObject_C.SetSubBuddyIcon
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UMaterialInstance*                InBuddyIcon                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool UBP_BuddyIndicatorUIObject_C::SetSubBuddyIcon(class UMaterialInstance* InBuddyIcon)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_BuddyIndicatorUIObject_C", "SetSubBuddyIcon");
+
+	Params::BP_BuddyIndicatorUIObject_C_SetSubBuddyIcon Parms{};
+
+	Parms.InBuddyIcon = InBuddyIcon;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function BP_BuddyIndicatorUIObject.BP_BuddyIndicatorUIObject_C.SetSummonEmpowerEnabled
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:

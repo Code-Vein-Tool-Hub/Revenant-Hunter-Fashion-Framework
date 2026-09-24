@@ -51,13 +51,5 @@ static_assert(offsetof(ABPL_ActionHuman_MountRiderPitch::FAnimBlueprintGenerated
 static_assert(offsetof(ABPL_ActionHuman_MountRiderPitch::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ComponentToLocalSpace) == 0x000170, "Member 'ABPL_ActionHuman_MountRiderPitch::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
 static_assert(offsetof(ABPL_ActionHuman_MountRiderPitch::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Root) == 0x0001A0, "Member 'ABPL_ActionHuman_MountRiderPitch::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Root' has a wrong offset!");
 
-// ScriptStruct ABPL_ActionHuman_MountRiderPitch.ABPL_ActionHuman_MountRiderPitch_C.AnimBlueprintGeneratedMutableData
-// 0x0000 (0x0001 - 0x0001)
-struct ABPL_ActionHuman_MountRiderPitch::FAnimBlueprintGeneratedMutableData final : public FAnimBlueprintMutableData
-{
-};
-static_assert(alignof(ABPL_ActionHuman_MountRiderPitch::FAnimBlueprintGeneratedMutableData) == 0x000001, "Wrong alignment on ABPL_ActionHuman_MountRiderPitch::FAnimBlueprintGeneratedMutableData");
-static_assert(sizeof(ABPL_ActionHuman_MountRiderPitch::FAnimBlueprintGeneratedMutableData) == 0x000001, "Wrong size on ABPL_ActionHuman_MountRiderPitch::FAnimBlueprintGeneratedMutableData");
-
 }
 

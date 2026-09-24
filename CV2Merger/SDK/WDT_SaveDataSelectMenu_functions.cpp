@@ -17,6 +17,26 @@
 namespace SDK
 {
 
+// Function WDT_SaveDataSelectMenu.WDT_SaveDataSelectMenu_C.OnSaveDataSelectEvent__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_SaveDataSelectMenu_C::OnSaveDataSelectEvent__DelegateSignature(int32 Index_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_SaveDataSelectMenu_C", "OnSaveDataSelectEvent__DelegateSignature");
+
+	Params::WDT_SaveDataSelectMenu_C_OnSaveDataSelectEvent__DelegateSignature Parms{};
+
+	Parms.Index_0 = Index_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WDT_SaveDataSelectMenu.WDT_SaveDataSelectMenu_C.BndEvt__WDT_SaveDataSelectMenu_SaveDataList_K2Node_ComponentBoundEvent_0_OnItemIsHoveredChangedDynamic__DelegateSignature
 // (BlueprintEvent)
 // Parameters:
@@ -588,26 +608,6 @@ void UWDT_SaveDataSelectMenu_C::OnOpened()
 		Func = Class->GetFunction("WDT_SaveDataSelectMenu_C", "OnOpened");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WDT_SaveDataSelectMenu.WDT_SaveDataSelectMenu_C.OnSaveDataSelectEvent__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_SaveDataSelectMenu_C::OnSaveDataSelectEvent__DelegateSignature(int32 Index_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_SaveDataSelectMenu_C", "OnSaveDataSelectEvent__DelegateSignature");
-
-	Params::WDT_SaveDataSelectMenu_C_OnSaveDataSelectEvent__DelegateSignature Parms{};
-
-	Parms.Index_0 = Index_0;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 

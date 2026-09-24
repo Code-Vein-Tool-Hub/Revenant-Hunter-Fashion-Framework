@@ -17,6 +17,34 @@
 namespace SDK
 {
 
+// Function WDT_MapImage.WDT_MapImage_C.HideMiniMap
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWDT_MapImage_C::HideMiniMap()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_MapImage_C", "HideMiniMap");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WDT_MapImage.WDT_MapImage_C.OnOpenAnimationFinished
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWDT_MapImage_C::OnOpenAnimationFinished()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_MapImage_C", "OnOpenAnimationFinished");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WDT_MapImage.WDT_MapImage_C.GetMousePosition
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -1060,9 +1088,8 @@ void UWDT_MapImage_C::StickyCurosrToPosition(double InInputThreshold, bool InIsT
 // Parameters:
 // struct FVector2D                        InEndPosition                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double                                  InMoveTime                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    IsResetPlayerPosition                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_MapImage_C::StartAutoMoveCursor(const struct FVector2D& InEndPosition, double InMoveTime, bool IsResetPlayerPosition)
+void UWDT_MapImage_C::StartAutoMoveCursor(const struct FVector2D& InEndPosition, double InMoveTime)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1073,7 +1100,6 @@ void UWDT_MapImage_C::StartAutoMoveCursor(const struct FVector2D& InEndPosition,
 
 	Parms.InEndPosition = std::move(InEndPosition);
 	Parms.InMoveTime = InMoveTime;
-	Parms.IsResetPlayerPosition = IsResetPlayerPosition;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -3384,20 +3410,6 @@ void UWDT_MapImage_C::OnMouseWheelUpMenu(int32 Level)
 	Parms.Level = Level;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_MapImage.WDT_MapImage_C.OnOpenAnimationFinished
-// (BlueprintCallable, BlueprintEvent)
-
-void UWDT_MapImage_C::OnOpenAnimationFinished()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_MapImage_C", "OnOpenAnimationFinished");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 

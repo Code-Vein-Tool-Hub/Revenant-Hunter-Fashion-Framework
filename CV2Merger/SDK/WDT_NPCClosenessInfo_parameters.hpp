@@ -17,6 +17,39 @@
 namespace SDK::Params
 {
 
+// Function WDT_NPCClosenessInfo.WDT_NPCClosenessInfo_C.GetPercent
+// 0x00B8 (0x00B8 - 0x0000)
+struct WDT_NPCClosenessInfo_C_GetPercent final
+{
+public:
+	double                                        A;                                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        B;                                                 // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          DiableFloat;                                       // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_SelectInt_ReturnValue;                    // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_DoubleToText_ReturnValue;            // 0x0040(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0050(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0098(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00A8(0x0010)()
+};
+static_assert(alignof(WDT_NPCClosenessInfo_C_GetPercent) == 0x000008, "Wrong alignment on WDT_NPCClosenessInfo_C_GetPercent");
+static_assert(sizeof(WDT_NPCClosenessInfo_C_GetPercent) == 0x0000B8, "Wrong size on WDT_NPCClosenessInfo_C_GetPercent");
+static_assert(offsetof(WDT_NPCClosenessInfo_C_GetPercent, A) == 0x000000, "Member 'WDT_NPCClosenessInfo_C_GetPercent::A' has a wrong offset!");
+static_assert(offsetof(WDT_NPCClosenessInfo_C_GetPercent, B) == 0x000008, "Member 'WDT_NPCClosenessInfo_C_GetPercent::B' has a wrong offset!");
+static_assert(offsetof(WDT_NPCClosenessInfo_C_GetPercent, DiableFloat) == 0x000010, "Member 'WDT_NPCClosenessInfo_C_GetPercent::DiableFloat' has a wrong offset!");
+static_assert(offsetof(WDT_NPCClosenessInfo_C_GetPercent, ReturnValue) == 0x000018, "Member 'WDT_NPCClosenessInfo_C_GetPercent::ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_NPCClosenessInfo_C_GetPercent, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000028, "Member 'WDT_NPCClosenessInfo_C_GetPercent::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_NPCClosenessInfo_C_GetPercent, CallFunc_SelectInt_ReturnValue) == 0x000030, "Member 'WDT_NPCClosenessInfo_C_GetPercent::CallFunc_SelectInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_NPCClosenessInfo_C_GetPercent, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000038, "Member 'WDT_NPCClosenessInfo_C_GetPercent::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_NPCClosenessInfo_C_GetPercent, CallFunc_Conv_DoubleToText_ReturnValue) == 0x000040, "Member 'WDT_NPCClosenessInfo_C_GetPercent::CallFunc_Conv_DoubleToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_NPCClosenessInfo_C_GetPercent, K2Node_MakeStruct_FormatArgumentData) == 0x000050, "Member 'WDT_NPCClosenessInfo_C_GetPercent::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(WDT_NPCClosenessInfo_C_GetPercent, K2Node_MakeArray_Array) == 0x000098, "Member 'WDT_NPCClosenessInfo_C_GetPercent::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WDT_NPCClosenessInfo_C_GetPercent, CallFunc_Format_ReturnValue) == 0x0000A8, "Member 'WDT_NPCClosenessInfo_C_GetPercent::CallFunc_Format_ReturnValue' has a wrong offset!");
+
 // Function WDT_NPCClosenessInfo.WDT_NPCClosenessInfo_C.SetClosenessInfo
 // 0x0118 (0x0118 - 0x0000)
 struct WDT_NPCClosenessInfo_C_SetClosenessInfo final
@@ -74,39 +107,6 @@ static_assert(offsetof(WDT_NPCClosenessInfo_C_SetClosenessInfo, CallFunc_GetPerc
 static_assert(offsetof(WDT_NPCClosenessInfo_C_SetClosenessInfo, CallFunc_GetPercent_B_ImplicitCast_1) == 0x000100, "Member 'WDT_NPCClosenessInfo_C_SetClosenessInfo::CallFunc_GetPercent_B_ImplicitCast_1' has a wrong offset!");
 static_assert(offsetof(WDT_NPCClosenessInfo_C_SetClosenessInfo, CallFunc_GetPercent_A_ImplicitCast_2) == 0x000108, "Member 'WDT_NPCClosenessInfo_C_SetClosenessInfo::CallFunc_GetPercent_A_ImplicitCast_2' has a wrong offset!");
 static_assert(offsetof(WDT_NPCClosenessInfo_C_SetClosenessInfo, CallFunc_GetPercent_B_ImplicitCast_2) == 0x000110, "Member 'WDT_NPCClosenessInfo_C_SetClosenessInfo::CallFunc_GetPercent_B_ImplicitCast_2' has a wrong offset!");
-
-// Function WDT_NPCClosenessInfo.WDT_NPCClosenessInfo_C.GetPercent
-// 0x00B8 (0x00B8 - 0x0000)
-struct WDT_NPCClosenessInfo_C_GetPercent final
-{
-public:
-	double                                        A;                                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        B;                                                 // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          DiableFloat;                                       // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_SelectInt_ReturnValue;                    // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_DoubleToText_ReturnValue;            // 0x0040(0x0010)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0050(0x0048)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0098(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00A8(0x0010)()
-};
-static_assert(alignof(WDT_NPCClosenessInfo_C_GetPercent) == 0x000008, "Wrong alignment on WDT_NPCClosenessInfo_C_GetPercent");
-static_assert(sizeof(WDT_NPCClosenessInfo_C_GetPercent) == 0x0000B8, "Wrong size on WDT_NPCClosenessInfo_C_GetPercent");
-static_assert(offsetof(WDT_NPCClosenessInfo_C_GetPercent, A) == 0x000000, "Member 'WDT_NPCClosenessInfo_C_GetPercent::A' has a wrong offset!");
-static_assert(offsetof(WDT_NPCClosenessInfo_C_GetPercent, B) == 0x000008, "Member 'WDT_NPCClosenessInfo_C_GetPercent::B' has a wrong offset!");
-static_assert(offsetof(WDT_NPCClosenessInfo_C_GetPercent, DiableFloat) == 0x000010, "Member 'WDT_NPCClosenessInfo_C_GetPercent::DiableFloat' has a wrong offset!");
-static_assert(offsetof(WDT_NPCClosenessInfo_C_GetPercent, ReturnValue) == 0x000018, "Member 'WDT_NPCClosenessInfo_C_GetPercent::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_NPCClosenessInfo_C_GetPercent, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000028, "Member 'WDT_NPCClosenessInfo_C_GetPercent::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_NPCClosenessInfo_C_GetPercent, CallFunc_SelectInt_ReturnValue) == 0x000030, "Member 'WDT_NPCClosenessInfo_C_GetPercent::CallFunc_SelectInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_NPCClosenessInfo_C_GetPercent, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000038, "Member 'WDT_NPCClosenessInfo_C_GetPercent::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_NPCClosenessInfo_C_GetPercent, CallFunc_Conv_DoubleToText_ReturnValue) == 0x000040, "Member 'WDT_NPCClosenessInfo_C_GetPercent::CallFunc_Conv_DoubleToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_NPCClosenessInfo_C_GetPercent, K2Node_MakeStruct_FormatArgumentData) == 0x000050, "Member 'WDT_NPCClosenessInfo_C_GetPercent::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(WDT_NPCClosenessInfo_C_GetPercent, K2Node_MakeArray_Array) == 0x000098, "Member 'WDT_NPCClosenessInfo_C_GetPercent::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WDT_NPCClosenessInfo_C_GetPercent, CallFunc_Format_ReturnValue) == 0x0000A8, "Member 'WDT_NPCClosenessInfo_C_GetPercent::CallFunc_Format_ReturnValue' has a wrong offset!");
 
 }
 

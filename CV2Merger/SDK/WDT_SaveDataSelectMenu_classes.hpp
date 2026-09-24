@@ -57,6 +57,7 @@ public:
 	class FText                                   NotEnoughDLCErrorText;                             // 0x0768(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
+	void OnSaveDataSelectEvent__DelegateSignature(int32 Index_0);
 	void BndEvt__WDT_SaveDataSelectMenu_SaveDataList_K2Node_ComponentBoundEvent_0_OnItemIsHoveredChangedDynamic__DelegateSignature(class UObject* Item, bool bIsHovered);
 	void BndEvt__WDT_SaveDataSelectMenu_SaveDataList_K2Node_ComponentBoundEvent_1_SimpleListItemEventDynamic__DelegateSignature(class UObject* Item);
 	void BndEvt__WDT_SaveDataSelectMenu_SaveDataList_K2Node_ComponentBoundEvent_2_OnListEntryReleasedDynamic__DelegateSignature(class UUserWidget* Widget);
@@ -87,7 +88,6 @@ public:
 	void OnMouseLeaveMenuPiece(class UMenuPieceBase* MenuPiece);
 	void OnMouseLeftClickMenuPiece(class UMenuPieceBase* MenuPiece);
 	void OnOpened();
-	void OnSaveDataSelectEvent__DelegateSignature(int32 Index_0);
 	void OnScreenMaskCompleted();
 	void OpenInvalidSlotDialog(EUISaveDataStatus InSlotStatus);
 	void OpenNotEnoughDLCErrorDialog(TArray<EDLCType>& NotEnoughDLCs);

@@ -17,329 +17,6 @@
 namespace SDK::Params
 {
 
-// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.SetSelectDialogIndex
-// 0x0020 (0x0020 - 0x0000)
-struct WDT_InventoryMenuDialog_C_SetSelectDialogIndex final
-{
-public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget*                                CallFunc_GetChildAt_ReturnValue;                   // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UMenuPieceBase*                         K2Node_DynamicCast_AsMenu_Piece_Base;              // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_InventoryMenuDialog_C_SetSelectDialogIndex) == 0x000008, "Wrong alignment on WDT_InventoryMenuDialog_C_SetSelectDialogIndex");
-static_assert(sizeof(WDT_InventoryMenuDialog_C_SetSelectDialogIndex) == 0x000020, "Wrong size on WDT_InventoryMenuDialog_C_SetSelectDialogIndex");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_SetSelectDialogIndex, Index_0) == 0x000000, "Member 'WDT_InventoryMenuDialog_C_SetSelectDialogIndex::Index_0' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_SetSelectDialogIndex, CallFunc_GetChildAt_ReturnValue) == 0x000008, "Member 'WDT_InventoryMenuDialog_C_SetSelectDialogIndex::CallFunc_GetChildAt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_SetSelectDialogIndex, K2Node_DynamicCast_AsMenu_Piece_Base) == 0x000010, "Member 'WDT_InventoryMenuDialog_C_SetSelectDialogIndex::K2Node_DynamicCast_AsMenu_Piece_Base' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_SetSelectDialogIndex, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'WDT_InventoryMenuDialog_C_SetSelectDialogIndex::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_SetSelectDialogIndex, CallFunc_IsValid_ReturnValue) == 0x000019, "Member 'WDT_InventoryMenuDialog_C_SetSelectDialogIndex::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-
-// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.SetCaptionText
-// 0x0010 (0x0010 - 0x0000)
-struct WDT_InventoryMenuDialog_C_SetCaptionText final
-{
-public:
-	class FText                                   InCaptionText;                                     // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
-};
-static_assert(alignof(WDT_InventoryMenuDialog_C_SetCaptionText) == 0x000008, "Wrong alignment on WDT_InventoryMenuDialog_C_SetCaptionText");
-static_assert(sizeof(WDT_InventoryMenuDialog_C_SetCaptionText) == 0x000010, "Wrong size on WDT_InventoryMenuDialog_C_SetCaptionText");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_SetCaptionText, InCaptionText) == 0x000000, "Member 'WDT_InventoryMenuDialog_C_SetCaptionText::InCaptionText' has a wrong offset!");
-
-// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.OnUpPressed
-// 0x0010 (0x0010 - 0x0000)
-struct WDT_InventoryMenuDialog_C_OnUpPressed final
-{
-public:
-	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SelectNextPieceByDirection_bOutIsNextSelectionSuccessful; // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_PlayUIAudioEvent_ReturnValue;             // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsActivated_ReturnValue;                  // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_InventoryMenuDialog_C_OnUpPressed) == 0x000008, "Wrong alignment on WDT_InventoryMenuDialog_C_OnUpPressed");
-static_assert(sizeof(WDT_InventoryMenuDialog_C_OnUpPressed) == 0x000010, "Wrong size on WDT_InventoryMenuDialog_C_OnUpPressed");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_OnUpPressed, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000000, "Member 'WDT_InventoryMenuDialog_C_OnUpPressed::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_OnUpPressed, CallFunc_SelectNextPieceByDirection_bOutIsNextSelectionSuccessful) == 0x000008, "Member 'WDT_InventoryMenuDialog_C_OnUpPressed::CallFunc_SelectNextPieceByDirection_bOutIsNextSelectionSuccessful' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_OnUpPressed, CallFunc_PlayUIAudioEvent_ReturnValue) == 0x000009, "Member 'WDT_InventoryMenuDialog_C_OnUpPressed::CallFunc_PlayUIAudioEvent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_OnUpPressed, CallFunc_IsActivated_ReturnValue) == 0x00000A, "Member 'WDT_InventoryMenuDialog_C_OnUpPressed::CallFunc_IsActivated_ReturnValue' has a wrong offset!");
-
-// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.OnSetDialogInfo
-// 0x0058 (0x0058 - 0x0000)
-struct WDT_InventoryMenuDialog_C_OnSetDialogInfo final
-{
-public:
-	struct FDialogInfo                            InDialogInfo;                                      // 0x0000(0x0058)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-};
-static_assert(alignof(WDT_InventoryMenuDialog_C_OnSetDialogInfo) == 0x000008, "Wrong alignment on WDT_InventoryMenuDialog_C_OnSetDialogInfo");
-static_assert(sizeof(WDT_InventoryMenuDialog_C_OnSetDialogInfo) == 0x000058, "Wrong size on WDT_InventoryMenuDialog_C_OnSetDialogInfo");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_OnSetDialogInfo, InDialogInfo) == 0x000000, "Member 'WDT_InventoryMenuDialog_C_OnSetDialogInfo::InDialogInfo' has a wrong offset!");
-
-// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.OnMouseLeftClickMenuPiece
-// 0x0008 (0x0008 - 0x0000)
-struct WDT_InventoryMenuDialog_C_OnMouseLeftClickMenuPiece final
-{
-public:
-	class UMenuPieceBase*                         MenuPiece;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_InventoryMenuDialog_C_OnMouseLeftClickMenuPiece) == 0x000008, "Wrong alignment on WDT_InventoryMenuDialog_C_OnMouseLeftClickMenuPiece");
-static_assert(sizeof(WDT_InventoryMenuDialog_C_OnMouseLeftClickMenuPiece) == 0x000008, "Wrong size on WDT_InventoryMenuDialog_C_OnMouseLeftClickMenuPiece");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_OnMouseLeftClickMenuPiece, MenuPiece) == 0x000000, "Member 'WDT_InventoryMenuDialog_C_OnMouseLeftClickMenuPiece::MenuPiece' has a wrong offset!");
-
-// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.OnMouseEnterMenuPiece
-// 0x0008 (0x0008 - 0x0000)
-struct WDT_InventoryMenuDialog_C_OnMouseEnterMenuPiece final
-{
-public:
-	class UMenuPieceBase*                         MenuPiece;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_InventoryMenuDialog_C_OnMouseEnterMenuPiece) == 0x000008, "Wrong alignment on WDT_InventoryMenuDialog_C_OnMouseEnterMenuPiece");
-static_assert(sizeof(WDT_InventoryMenuDialog_C_OnMouseEnterMenuPiece) == 0x000008, "Wrong size on WDT_InventoryMenuDialog_C_OnMouseEnterMenuPiece");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_OnMouseEnterMenuPiece, MenuPiece) == 0x000000, "Member 'WDT_InventoryMenuDialog_C_OnMouseEnterMenuPiece::MenuPiece' has a wrong offset!");
-
-// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.OnGetOpenAnimation
-// 0x0008 (0x0008 - 0x0000)
-struct WDT_InventoryMenuDialog_C_OnGetOpenAnimation final
-{
-public:
-	class UWidgetAnimation*                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_InventoryMenuDialog_C_OnGetOpenAnimation) == 0x000008, "Wrong alignment on WDT_InventoryMenuDialog_C_OnGetOpenAnimation");
-static_assert(sizeof(WDT_InventoryMenuDialog_C_OnGetOpenAnimation) == 0x000008, "Wrong size on WDT_InventoryMenuDialog_C_OnGetOpenAnimation");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_OnGetOpenAnimation, ReturnValue) == 0x000000, "Member 'WDT_InventoryMenuDialog_C_OnGetOpenAnimation::ReturnValue' has a wrong offset!");
-
-// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.OnGetCloseAnimation
-// 0x0008 (0x0008 - 0x0000)
-struct WDT_InventoryMenuDialog_C_OnGetCloseAnimation final
-{
-public:
-	class UWidgetAnimation*                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_InventoryMenuDialog_C_OnGetCloseAnimation) == 0x000008, "Wrong alignment on WDT_InventoryMenuDialog_C_OnGetCloseAnimation");
-static_assert(sizeof(WDT_InventoryMenuDialog_C_OnGetCloseAnimation) == 0x000008, "Wrong size on WDT_InventoryMenuDialog_C_OnGetCloseAnimation");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_OnGetCloseAnimation, ReturnValue) == 0x000000, "Member 'WDT_InventoryMenuDialog_C_OnGetCloseAnimation::ReturnValue' has a wrong offset!");
-
-// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.OnDownPressed
-// 0x0010 (0x0010 - 0x0000)
-struct WDT_InventoryMenuDialog_C_OnDownPressed final
-{
-public:
-	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SelectNextPieceByDirection_bOutIsNextSelectionSuccessful; // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_PlayUIAudioEvent_ReturnValue;             // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsActivated_ReturnValue;                  // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_InventoryMenuDialog_C_OnDownPressed) == 0x000008, "Wrong alignment on WDT_InventoryMenuDialog_C_OnDownPressed");
-static_assert(sizeof(WDT_InventoryMenuDialog_C_OnDownPressed) == 0x000010, "Wrong size on WDT_InventoryMenuDialog_C_OnDownPressed");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_OnDownPressed, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000000, "Member 'WDT_InventoryMenuDialog_C_OnDownPressed::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_OnDownPressed, CallFunc_SelectNextPieceByDirection_bOutIsNextSelectionSuccessful) == 0x000008, "Member 'WDT_InventoryMenuDialog_C_OnDownPressed::CallFunc_SelectNextPieceByDirection_bOutIsNextSelectionSuccessful' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_OnDownPressed, CallFunc_PlayUIAudioEvent_ReturnValue) == 0x000009, "Member 'WDT_InventoryMenuDialog_C_OnDownPressed::CallFunc_PlayUIAudioEvent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_OnDownPressed, CallFunc_IsActivated_ReturnValue) == 0x00000A, "Member 'WDT_InventoryMenuDialog_C_OnDownPressed::CallFunc_IsActivated_ReturnValue' has a wrong offset!");
-
-// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.OnDecidePressed
-// 0x0028 (0x0028 - 0x0000)
-struct WDT_InventoryMenuDialog_C_OnDecidePressed final
-{
-public:
-	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Finish_ReturnValue;                       // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_PlayUIAudioEvent_ReturnValue;             // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMenuPieceBase*                         CallFunc_GetSelectedMenuPiece_ReturnValue;         // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsActivated_ReturnValue;                  // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetSelectedPieceIndex_Index;              // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_Conv_IntToByte_ReturnValue;               // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_InventoryMenuDialog_C_OnDecidePressed) == 0x000008, "Wrong alignment on WDT_InventoryMenuDialog_C_OnDecidePressed");
-static_assert(sizeof(WDT_InventoryMenuDialog_C_OnDecidePressed) == 0x000028, "Wrong size on WDT_InventoryMenuDialog_C_OnDecidePressed");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_OnDecidePressed, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000000, "Member 'WDT_InventoryMenuDialog_C_OnDecidePressed::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_OnDecidePressed, CallFunc_Finish_ReturnValue) == 0x000008, "Member 'WDT_InventoryMenuDialog_C_OnDecidePressed::CallFunc_Finish_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_OnDecidePressed, CallFunc_PlayUIAudioEvent_ReturnValue) == 0x000009, "Member 'WDT_InventoryMenuDialog_C_OnDecidePressed::CallFunc_PlayUIAudioEvent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_OnDecidePressed, CallFunc_GetSelectedMenuPiece_ReturnValue) == 0x000010, "Member 'WDT_InventoryMenuDialog_C_OnDecidePressed::CallFunc_GetSelectedMenuPiece_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_OnDecidePressed, CallFunc_IsActivated_ReturnValue) == 0x000018, "Member 'WDT_InventoryMenuDialog_C_OnDecidePressed::CallFunc_IsActivated_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_OnDecidePressed, CallFunc_GetSelectedPieceIndex_Index) == 0x00001C, "Member 'WDT_InventoryMenuDialog_C_OnDecidePressed::CallFunc_GetSelectedPieceIndex_Index' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_OnDecidePressed, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x000020, "Member 'WDT_InventoryMenuDialog_C_OnDecidePressed::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_OnDecidePressed, CallFunc_Conv_IntToByte_ReturnValue) == 0x000021, "Member 'WDT_InventoryMenuDialog_C_OnDecidePressed::CallFunc_Conv_IntToByte_ReturnValue' has a wrong offset!");
-
-// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.OnCancelPressed
-// 0x0010 (0x0010 - 0x0000)
-struct WDT_InventoryMenuDialog_C_OnCancelPressed final
-{
-public:
-	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Finish_ReturnValue;                       // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_PlayUIAudioEvent_ReturnValue;             // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_InventoryMenuDialog_C_OnCancelPressed) == 0x000008, "Wrong alignment on WDT_InventoryMenuDialog_C_OnCancelPressed");
-static_assert(sizeof(WDT_InventoryMenuDialog_C_OnCancelPressed) == 0x000010, "Wrong size on WDT_InventoryMenuDialog_C_OnCancelPressed");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_OnCancelPressed, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000000, "Member 'WDT_InventoryMenuDialog_C_OnCancelPressed::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_OnCancelPressed, CallFunc_Finish_ReturnValue) == 0x000008, "Member 'WDT_InventoryMenuDialog_C_OnCancelPressed::CallFunc_Finish_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_OnCancelPressed, CallFunc_PlayUIAudioEvent_ReturnValue) == 0x000009, "Member 'WDT_InventoryMenuDialog_C_OnCancelPressed::CallFunc_PlayUIAudioEvent_ReturnValue' has a wrong offset!");
-
-// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3
-// 0x0030 (0x0030 - 0x0000)
-struct WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3 final
-{
-public:
-	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3) == 0x000008, "Wrong alignment on WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3");
-static_assert(sizeof(WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3) == 0x000030, "Wrong size on WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3, ActionValue) == 0x000000, "Member 'WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3::ActionValue' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3, ElapsedTime) == 0x000020, "Member 'WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3::ElapsedTime' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3, TriggeredTime) == 0x000024, "Member 'WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3::TriggeredTime' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3, SourceAction) == 0x000028, "Member 'WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3::SourceAction' has a wrong offset!");
-
-// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2
-// 0x0030 (0x0030 - 0x0000)
-struct WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2 final
-{
-public:
-	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2) == 0x000008, "Wrong alignment on WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2");
-static_assert(sizeof(WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2) == 0x000030, "Wrong size on WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2, ActionValue) == 0x000000, "Member 'WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2::ActionValue' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2, ElapsedTime) == 0x000020, "Member 'WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2::ElapsedTime' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2, TriggeredTime) == 0x000024, "Member 'WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2::TriggeredTime' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2, SourceAction) == 0x000028, "Member 'WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2::SourceAction' has a wrong offset!");
-
-// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_1
-// 0x0030 (0x0030 - 0x0000)
-struct WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_1 final
-{
-public:
-	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_1) == 0x000008, "Wrong alignment on WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_1");
-static_assert(sizeof(WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_1) == 0x000030, "Wrong size on WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_1");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_1, ActionValue) == 0x000000, "Member 'WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_1::ActionValue' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_1, ElapsedTime) == 0x000020, "Member 'WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_1::ElapsedTime' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_1, TriggeredTime) == 0x000024, "Member 'WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_1::TriggeredTime' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_1, SourceAction) == 0x000028, "Member 'WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_1::SourceAction' has a wrong offset!");
-
-// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_0
-// 0x0030 (0x0030 - 0x0000)
-struct WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_0 final
-{
-public:
-	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_0) == 0x000008, "Wrong alignment on WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_0");
-static_assert(sizeof(WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_0) == 0x000030, "Wrong size on WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_0");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_0, ActionValue) == 0x000000, "Member 'WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_0::ActionValue' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_0, ElapsedTime) == 0x000020, "Member 'WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_0::ElapsedTime' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_0, TriggeredTime) == 0x000024, "Member 'WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_0::TriggeredTime' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_0, SourceAction) == 0x000028, "Member 'WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_0::SourceAction' has a wrong offset!");
-
-// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.Initialize
-// 0x0110 (0x0110 - 0x0000)
-struct WDT_InventoryMenuDialog_C_Initialize final
-{
-public:
-	TArray<class UWDT_ConfirmOptionButton_C*>     L_AvailableButtons;                                // 0x0000(0x0010)(Edit, BlueprintVisible, ContainsInstancedReference)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UWDT_ConfirmOptionButton_C*             CallFunc_Array_Get_Item;                           // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWDT_ConfirmOptionButton_C*             CallFunc_Array_Get_Item_1;                         // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_LastIndex_ReturnValue;              // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_LastIndex_ReturnValue_1;            // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UWDT_ConfirmOptionButton_C*             CallFunc_Array_Get_Item_2;                         // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWDT_ConfirmOptionButton_C*             CallFunc_Array_Get_Item_3;                         // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FDialogInfo                            CallFunc_GetDialogInfo_ReturnValue;                // 0x0048(0x0058)(ConstParm)
-	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A4[0x4];                                       // 0x00A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Array_Get_Item_4;                         // 0x00A8(0x0010)()
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x00BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C1[0x7];                                       // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWDT_ConfirmOptionButton_C*             CallFunc_Array_Get_Item_5;                         // 0x00C8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWDT_ConfirmOptionButton_C*             CallFunc_Array_Get_Item_6;                         // 0x00D0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class ISelectableInterface>  CallFunc_SetSelectProhibited_self_CastInput;       // 0x00D8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SetSelectProhibited_ReturnValue;          // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E9[0x3];                                       // 0x00E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x00EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class ISelectableInterface>  CallFunc_SetSelectProhibited_self_CastInput_1;     // 0x00F0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SetSelectProhibited_ReturnValue_1;        // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_101[0x3];                                      // 0x0101(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0104(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_InventoryMenuDialog_C_Initialize) == 0x000008, "Wrong alignment on WDT_InventoryMenuDialog_C_Initialize");
-static_assert(sizeof(WDT_InventoryMenuDialog_C_Initialize) == 0x000110, "Wrong size on WDT_InventoryMenuDialog_C_Initialize");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_Initialize, L_AvailableButtons) == 0x000000, "Member 'WDT_InventoryMenuDialog_C_Initialize::L_AvailableButtons' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_Initialize, Temp_int_Loop_Counter_Variable) == 0x000010, "Member 'WDT_InventoryMenuDialog_C_Initialize::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_Initialize, CallFunc_Add_IntInt_ReturnValue) == 0x000014, "Member 'WDT_InventoryMenuDialog_C_Initialize::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_Initialize, Temp_int_Array_Index_Variable) == 0x000018, "Member 'WDT_InventoryMenuDialog_C_Initialize::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_Initialize, Temp_int_Array_Index_Variable_1) == 0x00001C, "Member 'WDT_InventoryMenuDialog_C_Initialize::Temp_int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_Initialize, CallFunc_Array_Get_Item) == 0x000020, "Member 'WDT_InventoryMenuDialog_C_Initialize::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_Initialize, CallFunc_Array_Get_Item_1) == 0x000028, "Member 'WDT_InventoryMenuDialog_C_Initialize::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_Initialize, CallFunc_Array_LastIndex_ReturnValue) == 0x000030, "Member 'WDT_InventoryMenuDialog_C_Initialize::CallFunc_Array_LastIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_Initialize, CallFunc_Array_LastIndex_ReturnValue_1) == 0x000034, "Member 'WDT_InventoryMenuDialog_C_Initialize::CallFunc_Array_LastIndex_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_Initialize, CallFunc_Array_Get_Item_2) == 0x000038, "Member 'WDT_InventoryMenuDialog_C_Initialize::CallFunc_Array_Get_Item_2' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_Initialize, CallFunc_Array_Get_Item_3) == 0x000040, "Member 'WDT_InventoryMenuDialog_C_Initialize::CallFunc_Array_Get_Item_3' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_Initialize, CallFunc_GetDialogInfo_ReturnValue) == 0x000048, "Member 'WDT_InventoryMenuDialog_C_Initialize::CallFunc_GetDialogInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_Initialize, Temp_int_Loop_Counter_Variable_1) == 0x0000A0, "Member 'WDT_InventoryMenuDialog_C_Initialize::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_Initialize, CallFunc_Array_Get_Item_4) == 0x0000A8, "Member 'WDT_InventoryMenuDialog_C_Initialize::CallFunc_Array_Get_Item_4' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_Initialize, CallFunc_Array_Length_ReturnValue) == 0x0000B8, "Member 'WDT_InventoryMenuDialog_C_Initialize::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_Initialize, CallFunc_Add_IntInt_ReturnValue_1) == 0x0000BC, "Member 'WDT_InventoryMenuDialog_C_Initialize::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_Initialize, CallFunc_Less_IntInt_ReturnValue) == 0x0000C0, "Member 'WDT_InventoryMenuDialog_C_Initialize::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_Initialize, CallFunc_Array_Get_Item_5) == 0x0000C8, "Member 'WDT_InventoryMenuDialog_C_Initialize::CallFunc_Array_Get_Item_5' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_Initialize, CallFunc_Array_Get_Item_6) == 0x0000D0, "Member 'WDT_InventoryMenuDialog_C_Initialize::CallFunc_Array_Get_Item_6' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_Initialize, CallFunc_SetSelectProhibited_self_CastInput) == 0x0000D8, "Member 'WDT_InventoryMenuDialog_C_Initialize::CallFunc_SetSelectProhibited_self_CastInput' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_Initialize, CallFunc_SetSelectProhibited_ReturnValue) == 0x0000E8, "Member 'WDT_InventoryMenuDialog_C_Initialize::CallFunc_SetSelectProhibited_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_Initialize, CallFunc_Array_Add_ReturnValue) == 0x0000EC, "Member 'WDT_InventoryMenuDialog_C_Initialize::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_Initialize, CallFunc_SetSelectProhibited_self_CastInput_1) == 0x0000F0, "Member 'WDT_InventoryMenuDialog_C_Initialize::CallFunc_SetSelectProhibited_self_CastInput_1' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_Initialize, CallFunc_SetSelectProhibited_ReturnValue_1) == 0x000100, "Member 'WDT_InventoryMenuDialog_C_Initialize::CallFunc_SetSelectProhibited_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_Initialize, CallFunc_Array_Length_ReturnValue_1) == 0x000104, "Member 'WDT_InventoryMenuDialog_C_Initialize::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_Initialize, CallFunc_Less_IntInt_ReturnValue_1) == 0x000108, "Member 'WDT_InventoryMenuDialog_C_Initialize::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-
-// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.GetSelectedPieceIndex
-// 0x0030 (0x0030 - 0x0000)
-struct WDT_InventoryMenuDialog_C_GetSelectedPieceIndex final
-{
-public:
-	class UMenuPieceBase*                         SelectedPiece;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         Index_0;                                           // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWDT_ConfirmOptionButton_C*             CallFunc_Array_Get_Item;                           // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_InventoryMenuDialog_C_GetSelectedPieceIndex) == 0x000008, "Wrong alignment on WDT_InventoryMenuDialog_C_GetSelectedPieceIndex");
-static_assert(sizeof(WDT_InventoryMenuDialog_C_GetSelectedPieceIndex) == 0x000030, "Wrong size on WDT_InventoryMenuDialog_C_GetSelectedPieceIndex");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_GetSelectedPieceIndex, SelectedPiece) == 0x000000, "Member 'WDT_InventoryMenuDialog_C_GetSelectedPieceIndex::SelectedPiece' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_GetSelectedPieceIndex, Index_0) == 0x000008, "Member 'WDT_InventoryMenuDialog_C_GetSelectedPieceIndex::Index_0' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_GetSelectedPieceIndex, Temp_int_Array_Index_Variable) == 0x00000C, "Member 'WDT_InventoryMenuDialog_C_GetSelectedPieceIndex::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_GetSelectedPieceIndex, Temp_int_Loop_Counter_Variable) == 0x000010, "Member 'WDT_InventoryMenuDialog_C_GetSelectedPieceIndex::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_GetSelectedPieceIndex, CallFunc_Add_IntInt_ReturnValue) == 0x000014, "Member 'WDT_InventoryMenuDialog_C_GetSelectedPieceIndex::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_GetSelectedPieceIndex, CallFunc_Array_Length_ReturnValue) == 0x000018, "Member 'WDT_InventoryMenuDialog_C_GetSelectedPieceIndex::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_GetSelectedPieceIndex, CallFunc_Array_Get_Item) == 0x000020, "Member 'WDT_InventoryMenuDialog_C_GetSelectedPieceIndex::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_GetSelectedPieceIndex, CallFunc_Less_IntInt_ReturnValue) == 0x000028, "Member 'WDT_InventoryMenuDialog_C_GetSelectedPieceIndex::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_InventoryMenuDialog_C_GetSelectedPieceIndex, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000029, "Member 'WDT_InventoryMenuDialog_C_GetSelectedPieceIndex::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
-
 // Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.ExecuteUbergraph_WDT_InventoryMenuDialog
 // 0x02A0 (0x02A0 - 0x0000)
 struct WDT_InventoryMenuDialog_C_ExecuteUbergraph_WDT_InventoryMenuDialog final
@@ -499,6 +176,329 @@ static_assert(offsetof(WDT_InventoryMenuDialog_C_ExecuteUbergraph_WDT_InventoryM
 static_assert(offsetof(WDT_InventoryMenuDialog_C_ExecuteUbergraph_WDT_InventoryMenuDialog, K2Node_DynamicCast_bSuccess) == 0x000298, "Member 'WDT_InventoryMenuDialog_C_ExecuteUbergraph_WDT_InventoryMenuDialog::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 static_assert(offsetof(WDT_InventoryMenuDialog_C_ExecuteUbergraph_WDT_InventoryMenuDialog, CallFunc_Less_IntInt_ReturnValue) == 0x000299, "Member 'WDT_InventoryMenuDialog_C_ExecuteUbergraph_WDT_InventoryMenuDialog::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_InventoryMenuDialog_C_ExecuteUbergraph_WDT_InventoryMenuDialog, CallFunc_Array_Add_ReturnValue) == 0x00029C, "Member 'WDT_InventoryMenuDialog_C_ExecuteUbergraph_WDT_InventoryMenuDialog::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+
+// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.GetSelectedPieceIndex
+// 0x0030 (0x0030 - 0x0000)
+struct WDT_InventoryMenuDialog_C_GetSelectedPieceIndex final
+{
+public:
+	class UMenuPieceBase*                         SelectedPiece;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         Index_0;                                           // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWDT_ConfirmOptionButton_C*             CallFunc_Array_Get_Item;                           // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_InventoryMenuDialog_C_GetSelectedPieceIndex) == 0x000008, "Wrong alignment on WDT_InventoryMenuDialog_C_GetSelectedPieceIndex");
+static_assert(sizeof(WDT_InventoryMenuDialog_C_GetSelectedPieceIndex) == 0x000030, "Wrong size on WDT_InventoryMenuDialog_C_GetSelectedPieceIndex");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_GetSelectedPieceIndex, SelectedPiece) == 0x000000, "Member 'WDT_InventoryMenuDialog_C_GetSelectedPieceIndex::SelectedPiece' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_GetSelectedPieceIndex, Index_0) == 0x000008, "Member 'WDT_InventoryMenuDialog_C_GetSelectedPieceIndex::Index_0' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_GetSelectedPieceIndex, Temp_int_Array_Index_Variable) == 0x00000C, "Member 'WDT_InventoryMenuDialog_C_GetSelectedPieceIndex::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_GetSelectedPieceIndex, Temp_int_Loop_Counter_Variable) == 0x000010, "Member 'WDT_InventoryMenuDialog_C_GetSelectedPieceIndex::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_GetSelectedPieceIndex, CallFunc_Add_IntInt_ReturnValue) == 0x000014, "Member 'WDT_InventoryMenuDialog_C_GetSelectedPieceIndex::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_GetSelectedPieceIndex, CallFunc_Array_Length_ReturnValue) == 0x000018, "Member 'WDT_InventoryMenuDialog_C_GetSelectedPieceIndex::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_GetSelectedPieceIndex, CallFunc_Array_Get_Item) == 0x000020, "Member 'WDT_InventoryMenuDialog_C_GetSelectedPieceIndex::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_GetSelectedPieceIndex, CallFunc_Less_IntInt_ReturnValue) == 0x000028, "Member 'WDT_InventoryMenuDialog_C_GetSelectedPieceIndex::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_GetSelectedPieceIndex, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000029, "Member 'WDT_InventoryMenuDialog_C_GetSelectedPieceIndex::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
+
+// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.Initialize
+// 0x0110 (0x0110 - 0x0000)
+struct WDT_InventoryMenuDialog_C_Initialize final
+{
+public:
+	TArray<class UWDT_ConfirmOptionButton_C*>     L_AvailableButtons;                                // 0x0000(0x0010)(Edit, BlueprintVisible, ContainsInstancedReference)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWDT_ConfirmOptionButton_C*             CallFunc_Array_Get_Item;                           // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWDT_ConfirmOptionButton_C*             CallFunc_Array_Get_Item_1;                         // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_LastIndex_ReturnValue;              // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_LastIndex_ReturnValue_1;            // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWDT_ConfirmOptionButton_C*             CallFunc_Array_Get_Item_2;                         // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWDT_ConfirmOptionButton_C*             CallFunc_Array_Get_Item_3;                         // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FDialogInfo                            CallFunc_GetDialogInfo_ReturnValue;                // 0x0048(0x0058)(ConstParm)
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A4[0x4];                                       // 0x00A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Array_Get_Item_4;                         // 0x00A8(0x0010)()
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x00BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C1[0x7];                                       // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWDT_ConfirmOptionButton_C*             CallFunc_Array_Get_Item_5;                         // 0x00C8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWDT_ConfirmOptionButton_C*             CallFunc_Array_Get_Item_6;                         // 0x00D0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class ISelectableInterface>  CallFunc_SetSelectProhibited_self_CastInput;       // 0x00D8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SetSelectProhibited_ReturnValue;          // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E9[0x3];                                       // 0x00E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x00EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class ISelectableInterface>  CallFunc_SetSelectProhibited_self_CastInput_1;     // 0x00F0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SetSelectProhibited_ReturnValue_1;        // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_101[0x3];                                      // 0x0101(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0104(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_InventoryMenuDialog_C_Initialize) == 0x000008, "Wrong alignment on WDT_InventoryMenuDialog_C_Initialize");
+static_assert(sizeof(WDT_InventoryMenuDialog_C_Initialize) == 0x000110, "Wrong size on WDT_InventoryMenuDialog_C_Initialize");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_Initialize, L_AvailableButtons) == 0x000000, "Member 'WDT_InventoryMenuDialog_C_Initialize::L_AvailableButtons' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_Initialize, Temp_int_Loop_Counter_Variable) == 0x000010, "Member 'WDT_InventoryMenuDialog_C_Initialize::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_Initialize, CallFunc_Add_IntInt_ReturnValue) == 0x000014, "Member 'WDT_InventoryMenuDialog_C_Initialize::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_Initialize, Temp_int_Array_Index_Variable) == 0x000018, "Member 'WDT_InventoryMenuDialog_C_Initialize::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_Initialize, Temp_int_Array_Index_Variable_1) == 0x00001C, "Member 'WDT_InventoryMenuDialog_C_Initialize::Temp_int_Array_Index_Variable_1' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_Initialize, CallFunc_Array_Get_Item) == 0x000020, "Member 'WDT_InventoryMenuDialog_C_Initialize::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_Initialize, CallFunc_Array_Get_Item_1) == 0x000028, "Member 'WDT_InventoryMenuDialog_C_Initialize::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_Initialize, CallFunc_Array_LastIndex_ReturnValue) == 0x000030, "Member 'WDT_InventoryMenuDialog_C_Initialize::CallFunc_Array_LastIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_Initialize, CallFunc_Array_LastIndex_ReturnValue_1) == 0x000034, "Member 'WDT_InventoryMenuDialog_C_Initialize::CallFunc_Array_LastIndex_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_Initialize, CallFunc_Array_Get_Item_2) == 0x000038, "Member 'WDT_InventoryMenuDialog_C_Initialize::CallFunc_Array_Get_Item_2' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_Initialize, CallFunc_Array_Get_Item_3) == 0x000040, "Member 'WDT_InventoryMenuDialog_C_Initialize::CallFunc_Array_Get_Item_3' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_Initialize, CallFunc_GetDialogInfo_ReturnValue) == 0x000048, "Member 'WDT_InventoryMenuDialog_C_Initialize::CallFunc_GetDialogInfo_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_Initialize, Temp_int_Loop_Counter_Variable_1) == 0x0000A0, "Member 'WDT_InventoryMenuDialog_C_Initialize::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_Initialize, CallFunc_Array_Get_Item_4) == 0x0000A8, "Member 'WDT_InventoryMenuDialog_C_Initialize::CallFunc_Array_Get_Item_4' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_Initialize, CallFunc_Array_Length_ReturnValue) == 0x0000B8, "Member 'WDT_InventoryMenuDialog_C_Initialize::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_Initialize, CallFunc_Add_IntInt_ReturnValue_1) == 0x0000BC, "Member 'WDT_InventoryMenuDialog_C_Initialize::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_Initialize, CallFunc_Less_IntInt_ReturnValue) == 0x0000C0, "Member 'WDT_InventoryMenuDialog_C_Initialize::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_Initialize, CallFunc_Array_Get_Item_5) == 0x0000C8, "Member 'WDT_InventoryMenuDialog_C_Initialize::CallFunc_Array_Get_Item_5' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_Initialize, CallFunc_Array_Get_Item_6) == 0x0000D0, "Member 'WDT_InventoryMenuDialog_C_Initialize::CallFunc_Array_Get_Item_6' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_Initialize, CallFunc_SetSelectProhibited_self_CastInput) == 0x0000D8, "Member 'WDT_InventoryMenuDialog_C_Initialize::CallFunc_SetSelectProhibited_self_CastInput' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_Initialize, CallFunc_SetSelectProhibited_ReturnValue) == 0x0000E8, "Member 'WDT_InventoryMenuDialog_C_Initialize::CallFunc_SetSelectProhibited_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_Initialize, CallFunc_Array_Add_ReturnValue) == 0x0000EC, "Member 'WDT_InventoryMenuDialog_C_Initialize::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_Initialize, CallFunc_SetSelectProhibited_self_CastInput_1) == 0x0000F0, "Member 'WDT_InventoryMenuDialog_C_Initialize::CallFunc_SetSelectProhibited_self_CastInput_1' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_Initialize, CallFunc_SetSelectProhibited_ReturnValue_1) == 0x000100, "Member 'WDT_InventoryMenuDialog_C_Initialize::CallFunc_SetSelectProhibited_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_Initialize, CallFunc_Array_Length_ReturnValue_1) == 0x000104, "Member 'WDT_InventoryMenuDialog_C_Initialize::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_Initialize, CallFunc_Less_IntInt_ReturnValue_1) == 0x000108, "Member 'WDT_InventoryMenuDialog_C_Initialize::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+
+// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_0
+// 0x0030 (0x0030 - 0x0000)
+struct WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_0 final
+{
+public:
+	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_0) == 0x000008, "Wrong alignment on WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_0");
+static_assert(sizeof(WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_0) == 0x000030, "Wrong size on WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_0");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_0, ActionValue) == 0x000000, "Member 'WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_0::ActionValue' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_0, ElapsedTime) == 0x000020, "Member 'WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_0::ElapsedTime' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_0, TriggeredTime) == 0x000024, "Member 'WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_0::TriggeredTime' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_0, SourceAction) == 0x000028, "Member 'WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_0::SourceAction' has a wrong offset!");
+
+// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_1
+// 0x0030 (0x0030 - 0x0000)
+struct WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_1 final
+{
+public:
+	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_1) == 0x000008, "Wrong alignment on WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_1");
+static_assert(sizeof(WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_1) == 0x000030, "Wrong size on WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_1");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_1, ActionValue) == 0x000000, "Member 'WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_1::ActionValue' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_1, ElapsedTime) == 0x000020, "Member 'WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_1::ElapsedTime' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_1, TriggeredTime) == 0x000024, "Member 'WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_1::TriggeredTime' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_1, SourceAction) == 0x000028, "Member 'WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_1::SourceAction' has a wrong offset!");
+
+// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2
+// 0x0030 (0x0030 - 0x0000)
+struct WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2 final
+{
+public:
+	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2) == 0x000008, "Wrong alignment on WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2");
+static_assert(sizeof(WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2) == 0x000030, "Wrong size on WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2, ActionValue) == 0x000000, "Member 'WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2::ActionValue' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2, ElapsedTime) == 0x000020, "Member 'WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2::ElapsedTime' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2, TriggeredTime) == 0x000024, "Member 'WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2::TriggeredTime' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2, SourceAction) == 0x000028, "Member 'WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2::SourceAction' has a wrong offset!");
+
+// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3
+// 0x0030 (0x0030 - 0x0000)
+struct WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3 final
+{
+public:
+	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3) == 0x000008, "Wrong alignment on WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3");
+static_assert(sizeof(WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3) == 0x000030, "Wrong size on WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3, ActionValue) == 0x000000, "Member 'WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3::ActionValue' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3, ElapsedTime) == 0x000020, "Member 'WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3::ElapsedTime' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3, TriggeredTime) == 0x000024, "Member 'WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3::TriggeredTime' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3, SourceAction) == 0x000028, "Member 'WDT_InventoryMenuDialog_C_InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3::SourceAction' has a wrong offset!");
+
+// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.OnCancelPressed
+// 0x0010 (0x0010 - 0x0000)
+struct WDT_InventoryMenuDialog_C_OnCancelPressed final
+{
+public:
+	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Finish_ReturnValue;                       // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_PlayUIAudioEvent_ReturnValue;             // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_InventoryMenuDialog_C_OnCancelPressed) == 0x000008, "Wrong alignment on WDT_InventoryMenuDialog_C_OnCancelPressed");
+static_assert(sizeof(WDT_InventoryMenuDialog_C_OnCancelPressed) == 0x000010, "Wrong size on WDT_InventoryMenuDialog_C_OnCancelPressed");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_OnCancelPressed, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000000, "Member 'WDT_InventoryMenuDialog_C_OnCancelPressed::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_OnCancelPressed, CallFunc_Finish_ReturnValue) == 0x000008, "Member 'WDT_InventoryMenuDialog_C_OnCancelPressed::CallFunc_Finish_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_OnCancelPressed, CallFunc_PlayUIAudioEvent_ReturnValue) == 0x000009, "Member 'WDT_InventoryMenuDialog_C_OnCancelPressed::CallFunc_PlayUIAudioEvent_ReturnValue' has a wrong offset!");
+
+// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.OnDecidePressed
+// 0x0028 (0x0028 - 0x0000)
+struct WDT_InventoryMenuDialog_C_OnDecidePressed final
+{
+public:
+	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Finish_ReturnValue;                       // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_PlayUIAudioEvent_ReturnValue;             // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMenuPieceBase*                         CallFunc_GetSelectedMenuPiece_ReturnValue;         // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsActivated_ReturnValue;                  // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetSelectedPieceIndex_Index;              // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_Conv_IntToByte_ReturnValue;               // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_InventoryMenuDialog_C_OnDecidePressed) == 0x000008, "Wrong alignment on WDT_InventoryMenuDialog_C_OnDecidePressed");
+static_assert(sizeof(WDT_InventoryMenuDialog_C_OnDecidePressed) == 0x000028, "Wrong size on WDT_InventoryMenuDialog_C_OnDecidePressed");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_OnDecidePressed, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000000, "Member 'WDT_InventoryMenuDialog_C_OnDecidePressed::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_OnDecidePressed, CallFunc_Finish_ReturnValue) == 0x000008, "Member 'WDT_InventoryMenuDialog_C_OnDecidePressed::CallFunc_Finish_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_OnDecidePressed, CallFunc_PlayUIAudioEvent_ReturnValue) == 0x000009, "Member 'WDT_InventoryMenuDialog_C_OnDecidePressed::CallFunc_PlayUIAudioEvent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_OnDecidePressed, CallFunc_GetSelectedMenuPiece_ReturnValue) == 0x000010, "Member 'WDT_InventoryMenuDialog_C_OnDecidePressed::CallFunc_GetSelectedMenuPiece_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_OnDecidePressed, CallFunc_IsActivated_ReturnValue) == 0x000018, "Member 'WDT_InventoryMenuDialog_C_OnDecidePressed::CallFunc_IsActivated_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_OnDecidePressed, CallFunc_GetSelectedPieceIndex_Index) == 0x00001C, "Member 'WDT_InventoryMenuDialog_C_OnDecidePressed::CallFunc_GetSelectedPieceIndex_Index' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_OnDecidePressed, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x000020, "Member 'WDT_InventoryMenuDialog_C_OnDecidePressed::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_OnDecidePressed, CallFunc_Conv_IntToByte_ReturnValue) == 0x000021, "Member 'WDT_InventoryMenuDialog_C_OnDecidePressed::CallFunc_Conv_IntToByte_ReturnValue' has a wrong offset!");
+
+// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.OnDownPressed
+// 0x0010 (0x0010 - 0x0000)
+struct WDT_InventoryMenuDialog_C_OnDownPressed final
+{
+public:
+	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SelectNextPieceByDirection_bOutIsNextSelectionSuccessful; // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_PlayUIAudioEvent_ReturnValue;             // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsActivated_ReturnValue;                  // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_InventoryMenuDialog_C_OnDownPressed) == 0x000008, "Wrong alignment on WDT_InventoryMenuDialog_C_OnDownPressed");
+static_assert(sizeof(WDT_InventoryMenuDialog_C_OnDownPressed) == 0x000010, "Wrong size on WDT_InventoryMenuDialog_C_OnDownPressed");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_OnDownPressed, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000000, "Member 'WDT_InventoryMenuDialog_C_OnDownPressed::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_OnDownPressed, CallFunc_SelectNextPieceByDirection_bOutIsNextSelectionSuccessful) == 0x000008, "Member 'WDT_InventoryMenuDialog_C_OnDownPressed::CallFunc_SelectNextPieceByDirection_bOutIsNextSelectionSuccessful' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_OnDownPressed, CallFunc_PlayUIAudioEvent_ReturnValue) == 0x000009, "Member 'WDT_InventoryMenuDialog_C_OnDownPressed::CallFunc_PlayUIAudioEvent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_OnDownPressed, CallFunc_IsActivated_ReturnValue) == 0x00000A, "Member 'WDT_InventoryMenuDialog_C_OnDownPressed::CallFunc_IsActivated_ReturnValue' has a wrong offset!");
+
+// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.OnGetCloseAnimation
+// 0x0008 (0x0008 - 0x0000)
+struct WDT_InventoryMenuDialog_C_OnGetCloseAnimation final
+{
+public:
+	class UWidgetAnimation*                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_InventoryMenuDialog_C_OnGetCloseAnimation) == 0x000008, "Wrong alignment on WDT_InventoryMenuDialog_C_OnGetCloseAnimation");
+static_assert(sizeof(WDT_InventoryMenuDialog_C_OnGetCloseAnimation) == 0x000008, "Wrong size on WDT_InventoryMenuDialog_C_OnGetCloseAnimation");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_OnGetCloseAnimation, ReturnValue) == 0x000000, "Member 'WDT_InventoryMenuDialog_C_OnGetCloseAnimation::ReturnValue' has a wrong offset!");
+
+// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.OnGetOpenAnimation
+// 0x0008 (0x0008 - 0x0000)
+struct WDT_InventoryMenuDialog_C_OnGetOpenAnimation final
+{
+public:
+	class UWidgetAnimation*                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_InventoryMenuDialog_C_OnGetOpenAnimation) == 0x000008, "Wrong alignment on WDT_InventoryMenuDialog_C_OnGetOpenAnimation");
+static_assert(sizeof(WDT_InventoryMenuDialog_C_OnGetOpenAnimation) == 0x000008, "Wrong size on WDT_InventoryMenuDialog_C_OnGetOpenAnimation");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_OnGetOpenAnimation, ReturnValue) == 0x000000, "Member 'WDT_InventoryMenuDialog_C_OnGetOpenAnimation::ReturnValue' has a wrong offset!");
+
+// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.OnMouseEnterMenuPiece
+// 0x0008 (0x0008 - 0x0000)
+struct WDT_InventoryMenuDialog_C_OnMouseEnterMenuPiece final
+{
+public:
+	class UMenuPieceBase*                         MenuPiece;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_InventoryMenuDialog_C_OnMouseEnterMenuPiece) == 0x000008, "Wrong alignment on WDT_InventoryMenuDialog_C_OnMouseEnterMenuPiece");
+static_assert(sizeof(WDT_InventoryMenuDialog_C_OnMouseEnterMenuPiece) == 0x000008, "Wrong size on WDT_InventoryMenuDialog_C_OnMouseEnterMenuPiece");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_OnMouseEnterMenuPiece, MenuPiece) == 0x000000, "Member 'WDT_InventoryMenuDialog_C_OnMouseEnterMenuPiece::MenuPiece' has a wrong offset!");
+
+// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.OnMouseLeftClickMenuPiece
+// 0x0008 (0x0008 - 0x0000)
+struct WDT_InventoryMenuDialog_C_OnMouseLeftClickMenuPiece final
+{
+public:
+	class UMenuPieceBase*                         MenuPiece;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_InventoryMenuDialog_C_OnMouseLeftClickMenuPiece) == 0x000008, "Wrong alignment on WDT_InventoryMenuDialog_C_OnMouseLeftClickMenuPiece");
+static_assert(sizeof(WDT_InventoryMenuDialog_C_OnMouseLeftClickMenuPiece) == 0x000008, "Wrong size on WDT_InventoryMenuDialog_C_OnMouseLeftClickMenuPiece");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_OnMouseLeftClickMenuPiece, MenuPiece) == 0x000000, "Member 'WDT_InventoryMenuDialog_C_OnMouseLeftClickMenuPiece::MenuPiece' has a wrong offset!");
+
+// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.OnSetDialogInfo
+// 0x0058 (0x0058 - 0x0000)
+struct WDT_InventoryMenuDialog_C_OnSetDialogInfo final
+{
+public:
+	struct FDialogInfo                            InDialogInfo;                                      // 0x0000(0x0058)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+static_assert(alignof(WDT_InventoryMenuDialog_C_OnSetDialogInfo) == 0x000008, "Wrong alignment on WDT_InventoryMenuDialog_C_OnSetDialogInfo");
+static_assert(sizeof(WDT_InventoryMenuDialog_C_OnSetDialogInfo) == 0x000058, "Wrong size on WDT_InventoryMenuDialog_C_OnSetDialogInfo");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_OnSetDialogInfo, InDialogInfo) == 0x000000, "Member 'WDT_InventoryMenuDialog_C_OnSetDialogInfo::InDialogInfo' has a wrong offset!");
+
+// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.OnUpPressed
+// 0x0010 (0x0010 - 0x0000)
+struct WDT_InventoryMenuDialog_C_OnUpPressed final
+{
+public:
+	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SelectNextPieceByDirection_bOutIsNextSelectionSuccessful; // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_PlayUIAudioEvent_ReturnValue;             // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsActivated_ReturnValue;                  // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_InventoryMenuDialog_C_OnUpPressed) == 0x000008, "Wrong alignment on WDT_InventoryMenuDialog_C_OnUpPressed");
+static_assert(sizeof(WDT_InventoryMenuDialog_C_OnUpPressed) == 0x000010, "Wrong size on WDT_InventoryMenuDialog_C_OnUpPressed");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_OnUpPressed, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000000, "Member 'WDT_InventoryMenuDialog_C_OnUpPressed::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_OnUpPressed, CallFunc_SelectNextPieceByDirection_bOutIsNextSelectionSuccessful) == 0x000008, "Member 'WDT_InventoryMenuDialog_C_OnUpPressed::CallFunc_SelectNextPieceByDirection_bOutIsNextSelectionSuccessful' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_OnUpPressed, CallFunc_PlayUIAudioEvent_ReturnValue) == 0x000009, "Member 'WDT_InventoryMenuDialog_C_OnUpPressed::CallFunc_PlayUIAudioEvent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_OnUpPressed, CallFunc_IsActivated_ReturnValue) == 0x00000A, "Member 'WDT_InventoryMenuDialog_C_OnUpPressed::CallFunc_IsActivated_ReturnValue' has a wrong offset!");
+
+// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.SetCaptionText
+// 0x0010 (0x0010 - 0x0000)
+struct WDT_InventoryMenuDialog_C_SetCaptionText final
+{
+public:
+	class FText                                   InCaptionText;                                     // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+};
+static_assert(alignof(WDT_InventoryMenuDialog_C_SetCaptionText) == 0x000008, "Wrong alignment on WDT_InventoryMenuDialog_C_SetCaptionText");
+static_assert(sizeof(WDT_InventoryMenuDialog_C_SetCaptionText) == 0x000010, "Wrong size on WDT_InventoryMenuDialog_C_SetCaptionText");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_SetCaptionText, InCaptionText) == 0x000000, "Member 'WDT_InventoryMenuDialog_C_SetCaptionText::InCaptionText' has a wrong offset!");
+
+// Function WDT_InventoryMenuDialog.WDT_InventoryMenuDialog_C.SetSelectDialogIndex
+// 0x0020 (0x0020 - 0x0000)
+struct WDT_InventoryMenuDialog_C_SetSelectDialogIndex final
+{
+public:
+	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                CallFunc_GetChildAt_ReturnValue;                   // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UMenuPieceBase*                         K2Node_DynamicCast_AsMenu_Piece_Base;              // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_InventoryMenuDialog_C_SetSelectDialogIndex) == 0x000008, "Wrong alignment on WDT_InventoryMenuDialog_C_SetSelectDialogIndex");
+static_assert(sizeof(WDT_InventoryMenuDialog_C_SetSelectDialogIndex) == 0x000020, "Wrong size on WDT_InventoryMenuDialog_C_SetSelectDialogIndex");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_SetSelectDialogIndex, Index_0) == 0x000000, "Member 'WDT_InventoryMenuDialog_C_SetSelectDialogIndex::Index_0' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_SetSelectDialogIndex, CallFunc_GetChildAt_ReturnValue) == 0x000008, "Member 'WDT_InventoryMenuDialog_C_SetSelectDialogIndex::CallFunc_GetChildAt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_SetSelectDialogIndex, K2Node_DynamicCast_AsMenu_Piece_Base) == 0x000010, "Member 'WDT_InventoryMenuDialog_C_SetSelectDialogIndex::K2Node_DynamicCast_AsMenu_Piece_Base' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_SetSelectDialogIndex, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'WDT_InventoryMenuDialog_C_SetSelectDialogIndex::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WDT_InventoryMenuDialog_C_SetSelectDialogIndex, CallFunc_IsValid_ReturnValue) == 0x000019, "Member 'WDT_InventoryMenuDialog_C_SetSelectDialogIndex::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
 }
 

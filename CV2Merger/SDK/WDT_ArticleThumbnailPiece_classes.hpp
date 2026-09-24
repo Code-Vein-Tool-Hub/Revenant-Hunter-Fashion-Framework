@@ -19,7 +19,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WDT_ArticleThumbnailPiece.WDT_ArticleThumbnailPiece_C
-// 0x01D8 (0x07A0 - 0x05C8)
+// 0x01E8 (0x07B0 - 0x05C8)
 class UWDT_ArticleThumbnailPiece_C final : public UMenuPieceBase
 {
 public:
@@ -35,32 +35,35 @@ public:
 	class UImage*                                 EquipIcon;                                         // 0x0610(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 EquipIcon_Equiped;                                 // 0x0618(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 HideSynseticResult;                                // 0x0620(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       InitGadgetText;                                    // 0x0628(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       LowerRightNumberText;                              // 0x0630(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       LowerRightNumberText_Shadow;                       // 0x0638(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               LowerRightNumberTextSet;                           // 0x0640(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Master_Shape;                                      // 0x0648(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 MouseArea;                                         // 0x0650(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 NG_Line_;                                          // 0x0658(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 NG_Line_Shadow;                                    // 0x0660(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       NumberText;                                        // 0x0668(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       NumberText_Shadow;                                 // 0x0670(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               Overlay_1;                                         // 0x0678(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               Overlay_CantCreateOverride;                        // 0x0680(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonLazyImage*                       SlotImage;                                         // 0x0688(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonLazyImage*                       TargetImage;                                       // 0x0690(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 UnassignedImage;                                   // 0x0698(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UScrollerItem*                          ScrollerItem;                                      // 0x06A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TMap<class FName, int32>                      Number;                                            // 0x06A8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          NewVar;                                            // 0x06F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6F9[0x7];                                      // 0x06F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftObjectPtr<class UTexture2D>              GadgetSlot1Texture;                                // 0x0700(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash)
-	TSoftObjectPtr<class UTexture2D>              GadgetSlot2Texture;                                // 0x0728(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash)
-	TSoftObjectPtr<class UTexture2D>              GadgetSlot3Texture;                                // 0x0750(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash)
-	TSoftObjectPtr<class UTexture2D>              GadgetSlot4Texture;                                // 0x0778(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash)
+	class UImage*                                 ImportantTradeOutLine;                             // 0x0628(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       InitGadgetText;                                    // 0x0630(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       LowerRightNumberText;                              // 0x0638(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       LowerRightNumberText_Shadow;                       // 0x0640(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               LowerRightNumberTextSet;                           // 0x0648(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Master_Shape;                                      // 0x0650(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 MouseArea;                                         // 0x0658(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 NG_Line_;                                          // 0x0660(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 NG_Line_Shadow;                                    // 0x0668(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       NumberText;                                        // 0x0670(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       NumberText_Shadow;                                 // 0x0678(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               Overlay_1;                                         // 0x0680(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               Overlay_CantCreateOverride;                        // 0x0688(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonLazyImage*                       SlotImage;                                         // 0x0690(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonLazyImage*                       SubTargetImage;                                    // 0x0698(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonLazyImage*                       TargetImage;                                       // 0x06A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 UnassignedImage;                                   // 0x06A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UScrollerItem*                          ScrollerItem;                                      // 0x06B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TMap<class FName, int32>                      Number;                                            // 0x06B8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          NewVar;                                            // 0x0708(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_709[0x7];                                      // 0x0709(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UTexture2D>              GadgetSlot1Texture;                                // 0x0710(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UTexture2D>              GadgetSlot2Texture;                                // 0x0738(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UTexture2D>              GadgetSlot3Texture;                                // 0x0760(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UTexture2D>              GadgetSlot4Texture;                                // 0x0788(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash)
 
 public:
 	void WidgetAnimationEvt_SelectMoveAnimation_K2Node_WidgetAnimationEvent_0();
+	void UpdateCheck(bool PlayAnimation_0);
 	bool Unhighlight(bool PlayAnimation_0);
 	bool Uncheck(bool PlayAnimation_0);
 	bool SetTexture(class UTexture2D* Texture);
@@ -76,6 +79,7 @@ public:
 	void OnListItemObjectSet(class UObject* ListItemObject);
 	struct FEventReply OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent);
 	bool IsChecked();
+	bool IsAnotherAppearance();
 	bool Highlight(bool PlayAnimation_0);
 	void GetScrollerItem(class UScrollerItem** OutItem);
 	int32 GetInteger(class FName NumberID);
@@ -103,7 +107,7 @@ public:
 	}
 };
 static_assert(alignof(UWDT_ArticleThumbnailPiece_C) == 0x000008, "Wrong alignment on UWDT_ArticleThumbnailPiece_C");
-static_assert(sizeof(UWDT_ArticleThumbnailPiece_C) == 0x0007A0, "Wrong size on UWDT_ArticleThumbnailPiece_C");
+static_assert(sizeof(UWDT_ArticleThumbnailPiece_C) == 0x0007B0, "Wrong size on UWDT_ArticleThumbnailPiece_C");
 static_assert(offsetof(UWDT_ArticleThumbnailPiece_C, UberGraphFrame) == 0x0005C8, "Member 'UWDT_ArticleThumbnailPiece_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UWDT_ArticleThumbnailPiece_C, SelectMoveAnimation) == 0x0005D0, "Member 'UWDT_ArticleThumbnailPiece_C::SelectMoveAnimation' has a wrong offset!");
 static_assert(offsetof(UWDT_ArticleThumbnailPiece_C, DecideAnimation) == 0x0005D8, "Member 'UWDT_ArticleThumbnailPiece_C::DecideAnimation' has a wrong offset!");
@@ -116,28 +120,30 @@ static_assert(offsetof(UWDT_ArticleThumbnailPiece_C, ElementImage) == 0x000608, 
 static_assert(offsetof(UWDT_ArticleThumbnailPiece_C, EquipIcon) == 0x000610, "Member 'UWDT_ArticleThumbnailPiece_C::EquipIcon' has a wrong offset!");
 static_assert(offsetof(UWDT_ArticleThumbnailPiece_C, EquipIcon_Equiped) == 0x000618, "Member 'UWDT_ArticleThumbnailPiece_C::EquipIcon_Equiped' has a wrong offset!");
 static_assert(offsetof(UWDT_ArticleThumbnailPiece_C, HideSynseticResult) == 0x000620, "Member 'UWDT_ArticleThumbnailPiece_C::HideSynseticResult' has a wrong offset!");
-static_assert(offsetof(UWDT_ArticleThumbnailPiece_C, InitGadgetText) == 0x000628, "Member 'UWDT_ArticleThumbnailPiece_C::InitGadgetText' has a wrong offset!");
-static_assert(offsetof(UWDT_ArticleThumbnailPiece_C, LowerRightNumberText) == 0x000630, "Member 'UWDT_ArticleThumbnailPiece_C::LowerRightNumberText' has a wrong offset!");
-static_assert(offsetof(UWDT_ArticleThumbnailPiece_C, LowerRightNumberText_Shadow) == 0x000638, "Member 'UWDT_ArticleThumbnailPiece_C::LowerRightNumberText_Shadow' has a wrong offset!");
-static_assert(offsetof(UWDT_ArticleThumbnailPiece_C, LowerRightNumberTextSet) == 0x000640, "Member 'UWDT_ArticleThumbnailPiece_C::LowerRightNumberTextSet' has a wrong offset!");
-static_assert(offsetof(UWDT_ArticleThumbnailPiece_C, Master_Shape) == 0x000648, "Member 'UWDT_ArticleThumbnailPiece_C::Master_Shape' has a wrong offset!");
-static_assert(offsetof(UWDT_ArticleThumbnailPiece_C, MouseArea) == 0x000650, "Member 'UWDT_ArticleThumbnailPiece_C::MouseArea' has a wrong offset!");
-static_assert(offsetof(UWDT_ArticleThumbnailPiece_C, NG_Line_) == 0x000658, "Member 'UWDT_ArticleThumbnailPiece_C::NG_Line_' has a wrong offset!");
-static_assert(offsetof(UWDT_ArticleThumbnailPiece_C, NG_Line_Shadow) == 0x000660, "Member 'UWDT_ArticleThumbnailPiece_C::NG_Line_Shadow' has a wrong offset!");
-static_assert(offsetof(UWDT_ArticleThumbnailPiece_C, NumberText) == 0x000668, "Member 'UWDT_ArticleThumbnailPiece_C::NumberText' has a wrong offset!");
-static_assert(offsetof(UWDT_ArticleThumbnailPiece_C, NumberText_Shadow) == 0x000670, "Member 'UWDT_ArticleThumbnailPiece_C::NumberText_Shadow' has a wrong offset!");
-static_assert(offsetof(UWDT_ArticleThumbnailPiece_C, Overlay_1) == 0x000678, "Member 'UWDT_ArticleThumbnailPiece_C::Overlay_1' has a wrong offset!");
-static_assert(offsetof(UWDT_ArticleThumbnailPiece_C, Overlay_CantCreateOverride) == 0x000680, "Member 'UWDT_ArticleThumbnailPiece_C::Overlay_CantCreateOverride' has a wrong offset!");
-static_assert(offsetof(UWDT_ArticleThumbnailPiece_C, SlotImage) == 0x000688, "Member 'UWDT_ArticleThumbnailPiece_C::SlotImage' has a wrong offset!");
-static_assert(offsetof(UWDT_ArticleThumbnailPiece_C, TargetImage) == 0x000690, "Member 'UWDT_ArticleThumbnailPiece_C::TargetImage' has a wrong offset!");
-static_assert(offsetof(UWDT_ArticleThumbnailPiece_C, UnassignedImage) == 0x000698, "Member 'UWDT_ArticleThumbnailPiece_C::UnassignedImage' has a wrong offset!");
-static_assert(offsetof(UWDT_ArticleThumbnailPiece_C, ScrollerItem) == 0x0006A0, "Member 'UWDT_ArticleThumbnailPiece_C::ScrollerItem' has a wrong offset!");
-static_assert(offsetof(UWDT_ArticleThumbnailPiece_C, Number) == 0x0006A8, "Member 'UWDT_ArticleThumbnailPiece_C::Number' has a wrong offset!");
-static_assert(offsetof(UWDT_ArticleThumbnailPiece_C, NewVar) == 0x0006F8, "Member 'UWDT_ArticleThumbnailPiece_C::NewVar' has a wrong offset!");
-static_assert(offsetof(UWDT_ArticleThumbnailPiece_C, GadgetSlot1Texture) == 0x000700, "Member 'UWDT_ArticleThumbnailPiece_C::GadgetSlot1Texture' has a wrong offset!");
-static_assert(offsetof(UWDT_ArticleThumbnailPiece_C, GadgetSlot2Texture) == 0x000728, "Member 'UWDT_ArticleThumbnailPiece_C::GadgetSlot2Texture' has a wrong offset!");
-static_assert(offsetof(UWDT_ArticleThumbnailPiece_C, GadgetSlot3Texture) == 0x000750, "Member 'UWDT_ArticleThumbnailPiece_C::GadgetSlot3Texture' has a wrong offset!");
-static_assert(offsetof(UWDT_ArticleThumbnailPiece_C, GadgetSlot4Texture) == 0x000778, "Member 'UWDT_ArticleThumbnailPiece_C::GadgetSlot4Texture' has a wrong offset!");
+static_assert(offsetof(UWDT_ArticleThumbnailPiece_C, ImportantTradeOutLine) == 0x000628, "Member 'UWDT_ArticleThumbnailPiece_C::ImportantTradeOutLine' has a wrong offset!");
+static_assert(offsetof(UWDT_ArticleThumbnailPiece_C, InitGadgetText) == 0x000630, "Member 'UWDT_ArticleThumbnailPiece_C::InitGadgetText' has a wrong offset!");
+static_assert(offsetof(UWDT_ArticleThumbnailPiece_C, LowerRightNumberText) == 0x000638, "Member 'UWDT_ArticleThumbnailPiece_C::LowerRightNumberText' has a wrong offset!");
+static_assert(offsetof(UWDT_ArticleThumbnailPiece_C, LowerRightNumberText_Shadow) == 0x000640, "Member 'UWDT_ArticleThumbnailPiece_C::LowerRightNumberText_Shadow' has a wrong offset!");
+static_assert(offsetof(UWDT_ArticleThumbnailPiece_C, LowerRightNumberTextSet) == 0x000648, "Member 'UWDT_ArticleThumbnailPiece_C::LowerRightNumberTextSet' has a wrong offset!");
+static_assert(offsetof(UWDT_ArticleThumbnailPiece_C, Master_Shape) == 0x000650, "Member 'UWDT_ArticleThumbnailPiece_C::Master_Shape' has a wrong offset!");
+static_assert(offsetof(UWDT_ArticleThumbnailPiece_C, MouseArea) == 0x000658, "Member 'UWDT_ArticleThumbnailPiece_C::MouseArea' has a wrong offset!");
+static_assert(offsetof(UWDT_ArticleThumbnailPiece_C, NG_Line_) == 0x000660, "Member 'UWDT_ArticleThumbnailPiece_C::NG_Line_' has a wrong offset!");
+static_assert(offsetof(UWDT_ArticleThumbnailPiece_C, NG_Line_Shadow) == 0x000668, "Member 'UWDT_ArticleThumbnailPiece_C::NG_Line_Shadow' has a wrong offset!");
+static_assert(offsetof(UWDT_ArticleThumbnailPiece_C, NumberText) == 0x000670, "Member 'UWDT_ArticleThumbnailPiece_C::NumberText' has a wrong offset!");
+static_assert(offsetof(UWDT_ArticleThumbnailPiece_C, NumberText_Shadow) == 0x000678, "Member 'UWDT_ArticleThumbnailPiece_C::NumberText_Shadow' has a wrong offset!");
+static_assert(offsetof(UWDT_ArticleThumbnailPiece_C, Overlay_1) == 0x000680, "Member 'UWDT_ArticleThumbnailPiece_C::Overlay_1' has a wrong offset!");
+static_assert(offsetof(UWDT_ArticleThumbnailPiece_C, Overlay_CantCreateOverride) == 0x000688, "Member 'UWDT_ArticleThumbnailPiece_C::Overlay_CantCreateOverride' has a wrong offset!");
+static_assert(offsetof(UWDT_ArticleThumbnailPiece_C, SlotImage) == 0x000690, "Member 'UWDT_ArticleThumbnailPiece_C::SlotImage' has a wrong offset!");
+static_assert(offsetof(UWDT_ArticleThumbnailPiece_C, SubTargetImage) == 0x000698, "Member 'UWDT_ArticleThumbnailPiece_C::SubTargetImage' has a wrong offset!");
+static_assert(offsetof(UWDT_ArticleThumbnailPiece_C, TargetImage) == 0x0006A0, "Member 'UWDT_ArticleThumbnailPiece_C::TargetImage' has a wrong offset!");
+static_assert(offsetof(UWDT_ArticleThumbnailPiece_C, UnassignedImage) == 0x0006A8, "Member 'UWDT_ArticleThumbnailPiece_C::UnassignedImage' has a wrong offset!");
+static_assert(offsetof(UWDT_ArticleThumbnailPiece_C, ScrollerItem) == 0x0006B0, "Member 'UWDT_ArticleThumbnailPiece_C::ScrollerItem' has a wrong offset!");
+static_assert(offsetof(UWDT_ArticleThumbnailPiece_C, Number) == 0x0006B8, "Member 'UWDT_ArticleThumbnailPiece_C::Number' has a wrong offset!");
+static_assert(offsetof(UWDT_ArticleThumbnailPiece_C, NewVar) == 0x000708, "Member 'UWDT_ArticleThumbnailPiece_C::NewVar' has a wrong offset!");
+static_assert(offsetof(UWDT_ArticleThumbnailPiece_C, GadgetSlot1Texture) == 0x000710, "Member 'UWDT_ArticleThumbnailPiece_C::GadgetSlot1Texture' has a wrong offset!");
+static_assert(offsetof(UWDT_ArticleThumbnailPiece_C, GadgetSlot2Texture) == 0x000738, "Member 'UWDT_ArticleThumbnailPiece_C::GadgetSlot2Texture' has a wrong offset!");
+static_assert(offsetof(UWDT_ArticleThumbnailPiece_C, GadgetSlot3Texture) == 0x000760, "Member 'UWDT_ArticleThumbnailPiece_C::GadgetSlot3Texture' has a wrong offset!");
+static_assert(offsetof(UWDT_ArticleThumbnailPiece_C, GadgetSlot4Texture) == 0x000788, "Member 'UWDT_ArticleThumbnailPiece_C::GadgetSlot4Texture' has a wrong offset!");
 
 }
 

@@ -25,6 +25,17 @@ static_assert(alignof(WDT_ConfigIconTextPiece_C_SetText) == 0x000008, "Wrong ali
 static_assert(sizeof(WDT_ConfigIconTextPiece_C_SetText) == 0x000010, "Wrong size on WDT_ConfigIconTextPiece_C_SetText");
 static_assert(offsetof(WDT_ConfigIconTextPiece_C_SetText, SetText_0) == 0x000000, "Member 'WDT_ConfigIconTextPiece_C_SetText::SetText_0' has a wrong offset!");
 
+// Function WDT_ConfigIconTextPiece.WDT_ConfigIconTextPiece_C.SetIconText
+// 0x0010 (0x0010 - 0x0000)
+struct WDT_ConfigIconTextPiece_C_SetIconText final
+{
+public:
+	class FText                                   InText;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+};
+static_assert(alignof(WDT_ConfigIconTextPiece_C_SetIconText) == 0x000008, "Wrong alignment on WDT_ConfigIconTextPiece_C_SetIconText");
+static_assert(sizeof(WDT_ConfigIconTextPiece_C_SetIconText) == 0x000010, "Wrong size on WDT_ConfigIconTextPiece_C_SetIconText");
+static_assert(offsetof(WDT_ConfigIconTextPiece_C_SetIconText, InText) == 0x000000, "Member 'WDT_ConfigIconTextPiece_C_SetIconText::InText' has a wrong offset!");
+
 // Function WDT_ConfigIconTextPiece.WDT_ConfigIconTextPiece_C.Select
 // 0x0002 (0x0002 - 0x0000)
 struct WDT_ConfigIconTextPiece_C_Select final

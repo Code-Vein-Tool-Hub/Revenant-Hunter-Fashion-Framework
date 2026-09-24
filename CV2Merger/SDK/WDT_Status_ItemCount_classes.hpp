@@ -11,13 +11,14 @@
 #include "Basic.hpp"
 
 #include "WDT_Status_PieceBase_classes.hpp"
+#include "UMG_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WDT_Status_ItemCount.WDT_Status_ItemCount_C
-// 0x0030 (0x06F8 - 0x06C8)
+// 0x0038 (0x0700 - 0x06C8)
 class UWDT_Status_ItemCount_C final : public UWDT_Status_PieceBase_C
 {
 public:
@@ -26,7 +27,8 @@ public:
 	class UTextBlock*                             ItemCountText;                                     // 0x06D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UHorizontalBox*                         ItemPossesionRoot;                                 // 0x06E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UTextBlock*                             StorageCountText;                                  // 0x06E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         StorageRoot;                                       // 0x06F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         StorageNumRoot;                                    // 0x06F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         StorageRoot;                                       // 0x06F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void SetItemCount(int32 InItemCount, int32 InMaxCount);
@@ -43,13 +45,14 @@ public:
 	}
 };
 static_assert(alignof(UWDT_Status_ItemCount_C) == 0x000008, "Wrong alignment on UWDT_Status_ItemCount_C");
-static_assert(sizeof(UWDT_Status_ItemCount_C) == 0x0006F8, "Wrong size on UWDT_Status_ItemCount_C");
+static_assert(sizeof(UWDT_Status_ItemCount_C) == 0x000700, "Wrong size on UWDT_Status_ItemCount_C");
 static_assert(offsetof(UWDT_Status_ItemCount_C, Index_StorageCountText) == 0x0006C8, "Member 'UWDT_Status_ItemCount_C::Index_StorageCountText' has a wrong offset!");
 static_assert(offsetof(UWDT_Status_ItemCount_C, ItemCountBox) == 0x0006D0, "Member 'UWDT_Status_ItemCount_C::ItemCountBox' has a wrong offset!");
 static_assert(offsetof(UWDT_Status_ItemCount_C, ItemCountText) == 0x0006D8, "Member 'UWDT_Status_ItemCount_C::ItemCountText' has a wrong offset!");
 static_assert(offsetof(UWDT_Status_ItemCount_C, ItemPossesionRoot) == 0x0006E0, "Member 'UWDT_Status_ItemCount_C::ItemPossesionRoot' has a wrong offset!");
 static_assert(offsetof(UWDT_Status_ItemCount_C, StorageCountText) == 0x0006E8, "Member 'UWDT_Status_ItemCount_C::StorageCountText' has a wrong offset!");
-static_assert(offsetof(UWDT_Status_ItemCount_C, StorageRoot) == 0x0006F0, "Member 'UWDT_Status_ItemCount_C::StorageRoot' has a wrong offset!");
+static_assert(offsetof(UWDT_Status_ItemCount_C, StorageNumRoot) == 0x0006F0, "Member 'UWDT_Status_ItemCount_C::StorageNumRoot' has a wrong offset!");
+static_assert(offsetof(UWDT_Status_ItemCount_C, StorageRoot) == 0x0006F8, "Member 'UWDT_Status_ItemCount_C::StorageRoot' has a wrong offset!");
 
 }
 

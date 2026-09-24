@@ -16,49 +16,115 @@
 namespace SDK::Params
 {
 
-// Function WDT_Article_DefenceByGuard.WDT_Article_DefenceByGuard_C.SetBloodDiff
+// Function WDT_Article_DefenceByGuard.WDT_Article_DefenceByGuard_C.SetThunderDiff
 // 0x0030 (0x0030 - 0x0000)
-struct WDT_Article_DefenceByGuard_C_SetBloodDiff final
+struct WDT_Article_DefenceByGuard_C_SetThunderDiff final
 {
 public:
-	double                                        InBloodCurrent;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        InBlood;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        InThunderCurrent;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        InThunder;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_FTrunc_ReturnValue;                       // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_FTrunc_ReturnValue_1;                     // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         CallFunc_CompareInteger_CompareResult;             // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateColor                            CallFunc_GetTextColorByCompareResult_TextColor;    // 0x001C(0x0014)()
 };
-static_assert(alignof(WDT_Article_DefenceByGuard_C_SetBloodDiff) == 0x000008, "Wrong alignment on WDT_Article_DefenceByGuard_C_SetBloodDiff");
-static_assert(sizeof(WDT_Article_DefenceByGuard_C_SetBloodDiff) == 0x000030, "Wrong size on WDT_Article_DefenceByGuard_C_SetBloodDiff");
-static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetBloodDiff, InBloodCurrent) == 0x000000, "Member 'WDT_Article_DefenceByGuard_C_SetBloodDiff::InBloodCurrent' has a wrong offset!");
-static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetBloodDiff, InBlood) == 0x000008, "Member 'WDT_Article_DefenceByGuard_C_SetBloodDiff::InBlood' has a wrong offset!");
-static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetBloodDiff, CallFunc_FTrunc_ReturnValue) == 0x000010, "Member 'WDT_Article_DefenceByGuard_C_SetBloodDiff::CallFunc_FTrunc_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetBloodDiff, CallFunc_FTrunc_ReturnValue_1) == 0x000014, "Member 'WDT_Article_DefenceByGuard_C_SetBloodDiff::CallFunc_FTrunc_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetBloodDiff, CallFunc_CompareInteger_CompareResult) == 0x000018, "Member 'WDT_Article_DefenceByGuard_C_SetBloodDiff::CallFunc_CompareInteger_CompareResult' has a wrong offset!");
-static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetBloodDiff, CallFunc_GetTextColorByCompareResult_TextColor) == 0x00001C, "Member 'WDT_Article_DefenceByGuard_C_SetBloodDiff::CallFunc_GetTextColorByCompareResult_TextColor' has a wrong offset!");
+static_assert(alignof(WDT_Article_DefenceByGuard_C_SetThunderDiff) == 0x000008, "Wrong alignment on WDT_Article_DefenceByGuard_C_SetThunderDiff");
+static_assert(sizeof(WDT_Article_DefenceByGuard_C_SetThunderDiff) == 0x000030, "Wrong size on WDT_Article_DefenceByGuard_C_SetThunderDiff");
+static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetThunderDiff, InThunderCurrent) == 0x000000, "Member 'WDT_Article_DefenceByGuard_C_SetThunderDiff::InThunderCurrent' has a wrong offset!");
+static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetThunderDiff, InThunder) == 0x000008, "Member 'WDT_Article_DefenceByGuard_C_SetThunderDiff::InThunder' has a wrong offset!");
+static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetThunderDiff, CallFunc_FTrunc_ReturnValue) == 0x000010, "Member 'WDT_Article_DefenceByGuard_C_SetThunderDiff::CallFunc_FTrunc_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetThunderDiff, CallFunc_FTrunc_ReturnValue_1) == 0x000014, "Member 'WDT_Article_DefenceByGuard_C_SetThunderDiff::CallFunc_FTrunc_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetThunderDiff, CallFunc_CompareInteger_CompareResult) == 0x000018, "Member 'WDT_Article_DefenceByGuard_C_SetThunderDiff::CallFunc_CompareInteger_CompareResult' has a wrong offset!");
+static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetThunderDiff, CallFunc_GetTextColorByCompareResult_TextColor) == 0x00001C, "Member 'WDT_Article_DefenceByGuard_C_SetThunderDiff::CallFunc_GetTextColorByCompareResult_TextColor' has a wrong offset!");
 
-// Function WDT_Article_DefenceByGuard.WDT_Article_DefenceByGuard_C.SetCrushDiff
+// Function WDT_Article_DefenceByGuard.WDT_Article_DefenceByGuard_C.SetSunderDiff
 // 0x0030 (0x0030 - 0x0000)
-struct WDT_Article_DefenceByGuard_C_SetCrushDiff final
+struct WDT_Article_DefenceByGuard_C_SetSunderDiff final
 {
 public:
-	double                                        InCrushCurrent;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        InCrush;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        InSunderCurrent;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        InSunder;                                          // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_FTrunc_ReturnValue;                       // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_FTrunc_ReturnValue_1;                     // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         CallFunc_CompareInteger_CompareResult;             // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateColor                            CallFunc_GetTextColorByCompareResult_TextColor;    // 0x001C(0x0014)()
 };
-static_assert(alignof(WDT_Article_DefenceByGuard_C_SetCrushDiff) == 0x000008, "Wrong alignment on WDT_Article_DefenceByGuard_C_SetCrushDiff");
-static_assert(sizeof(WDT_Article_DefenceByGuard_C_SetCrushDiff) == 0x000030, "Wrong size on WDT_Article_DefenceByGuard_C_SetCrushDiff");
-static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetCrushDiff, InCrushCurrent) == 0x000000, "Member 'WDT_Article_DefenceByGuard_C_SetCrushDiff::InCrushCurrent' has a wrong offset!");
-static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetCrushDiff, InCrush) == 0x000008, "Member 'WDT_Article_DefenceByGuard_C_SetCrushDiff::InCrush' has a wrong offset!");
-static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetCrushDiff, CallFunc_FTrunc_ReturnValue) == 0x000010, "Member 'WDT_Article_DefenceByGuard_C_SetCrushDiff::CallFunc_FTrunc_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetCrushDiff, CallFunc_FTrunc_ReturnValue_1) == 0x000014, "Member 'WDT_Article_DefenceByGuard_C_SetCrushDiff::CallFunc_FTrunc_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetCrushDiff, CallFunc_CompareInteger_CompareResult) == 0x000018, "Member 'WDT_Article_DefenceByGuard_C_SetCrushDiff::CallFunc_CompareInteger_CompareResult' has a wrong offset!");
-static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetCrushDiff, CallFunc_GetTextColorByCompareResult_TextColor) == 0x00001C, "Member 'WDT_Article_DefenceByGuard_C_SetCrushDiff::CallFunc_GetTextColorByCompareResult_TextColor' has a wrong offset!");
+static_assert(alignof(WDT_Article_DefenceByGuard_C_SetSunderDiff) == 0x000008, "Wrong alignment on WDT_Article_DefenceByGuard_C_SetSunderDiff");
+static_assert(sizeof(WDT_Article_DefenceByGuard_C_SetSunderDiff) == 0x000030, "Wrong size on WDT_Article_DefenceByGuard_C_SetSunderDiff");
+static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetSunderDiff, InSunderCurrent) == 0x000000, "Member 'WDT_Article_DefenceByGuard_C_SetSunderDiff::InSunderCurrent' has a wrong offset!");
+static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetSunderDiff, InSunder) == 0x000008, "Member 'WDT_Article_DefenceByGuard_C_SetSunderDiff::InSunder' has a wrong offset!");
+static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetSunderDiff, CallFunc_FTrunc_ReturnValue) == 0x000010, "Member 'WDT_Article_DefenceByGuard_C_SetSunderDiff::CallFunc_FTrunc_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetSunderDiff, CallFunc_FTrunc_ReturnValue_1) == 0x000014, "Member 'WDT_Article_DefenceByGuard_C_SetSunderDiff::CallFunc_FTrunc_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetSunderDiff, CallFunc_CompareInteger_CompareResult) == 0x000018, "Member 'WDT_Article_DefenceByGuard_C_SetSunderDiff::CallFunc_CompareInteger_CompareResult' has a wrong offset!");
+static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetSunderDiff, CallFunc_GetTextColorByCompareResult_TextColor) == 0x00001C, "Member 'WDT_Article_DefenceByGuard_C_SetSunderDiff::CallFunc_GetTextColorByCompareResult_TextColor' has a wrong offset!");
+
+// Function WDT_Article_DefenceByGuard.WDT_Article_DefenceByGuard_C.SetPierceDiff
+// 0x0030 (0x0030 - 0x0000)
+struct WDT_Article_DefenceByGuard_C_SetPierceDiff final
+{
+public:
+	double                                        InPierceCurrent;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        InPierce;                                          // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_FTrunc_ReturnValue;                       // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_FTrunc_ReturnValue_1;                     // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_CompareInteger_CompareResult;             // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateColor                            CallFunc_GetTextColorByCompareResult_TextColor;    // 0x001C(0x0014)()
+};
+static_assert(alignof(WDT_Article_DefenceByGuard_C_SetPierceDiff) == 0x000008, "Wrong alignment on WDT_Article_DefenceByGuard_C_SetPierceDiff");
+static_assert(sizeof(WDT_Article_DefenceByGuard_C_SetPierceDiff) == 0x000030, "Wrong size on WDT_Article_DefenceByGuard_C_SetPierceDiff");
+static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetPierceDiff, InPierceCurrent) == 0x000000, "Member 'WDT_Article_DefenceByGuard_C_SetPierceDiff::InPierceCurrent' has a wrong offset!");
+static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetPierceDiff, InPierce) == 0x000008, "Member 'WDT_Article_DefenceByGuard_C_SetPierceDiff::InPierce' has a wrong offset!");
+static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetPierceDiff, CallFunc_FTrunc_ReturnValue) == 0x000010, "Member 'WDT_Article_DefenceByGuard_C_SetPierceDiff::CallFunc_FTrunc_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetPierceDiff, CallFunc_FTrunc_ReturnValue_1) == 0x000014, "Member 'WDT_Article_DefenceByGuard_C_SetPierceDiff::CallFunc_FTrunc_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetPierceDiff, CallFunc_CompareInteger_CompareResult) == 0x000018, "Member 'WDT_Article_DefenceByGuard_C_SetPierceDiff::CallFunc_CompareInteger_CompareResult' has a wrong offset!");
+static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetPierceDiff, CallFunc_GetTextColorByCompareResult_TextColor) == 0x00001C, "Member 'WDT_Article_DefenceByGuard_C_SetPierceDiff::CallFunc_GetTextColorByCompareResult_TextColor' has a wrong offset!");
+
+// Function WDT_Article_DefenceByGuard.WDT_Article_DefenceByGuard_C.SetIceDiff
+// 0x0030 (0x0030 - 0x0000)
+struct WDT_Article_DefenceByGuard_C_SetIceDiff final
+{
+public:
+	double                                        InIceCurrent;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        InIce;                                             // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_FTrunc_ReturnValue;                       // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_FTrunc_ReturnValue_1;                     // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_CompareInteger_CompareResult;             // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateColor                            CallFunc_GetTextColorByCompareResult_TextColor;    // 0x001C(0x0014)()
+};
+static_assert(alignof(WDT_Article_DefenceByGuard_C_SetIceDiff) == 0x000008, "Wrong alignment on WDT_Article_DefenceByGuard_C_SetIceDiff");
+static_assert(sizeof(WDT_Article_DefenceByGuard_C_SetIceDiff) == 0x000030, "Wrong size on WDT_Article_DefenceByGuard_C_SetIceDiff");
+static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetIceDiff, InIceCurrent) == 0x000000, "Member 'WDT_Article_DefenceByGuard_C_SetIceDiff::InIceCurrent' has a wrong offset!");
+static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetIceDiff, InIce) == 0x000008, "Member 'WDT_Article_DefenceByGuard_C_SetIceDiff::InIce' has a wrong offset!");
+static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetIceDiff, CallFunc_FTrunc_ReturnValue) == 0x000010, "Member 'WDT_Article_DefenceByGuard_C_SetIceDiff::CallFunc_FTrunc_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetIceDiff, CallFunc_FTrunc_ReturnValue_1) == 0x000014, "Member 'WDT_Article_DefenceByGuard_C_SetIceDiff::CallFunc_FTrunc_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetIceDiff, CallFunc_CompareInteger_CompareResult) == 0x000018, "Member 'WDT_Article_DefenceByGuard_C_SetIceDiff::CallFunc_CompareInteger_CompareResult' has a wrong offset!");
+static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetIceDiff, CallFunc_GetTextColorByCompareResult_TextColor) == 0x00001C, "Member 'WDT_Article_DefenceByGuard_C_SetIceDiff::CallFunc_GetTextColorByCompareResult_TextColor' has a wrong offset!");
+
+// Function WDT_Article_DefenceByGuard.WDT_Article_DefenceByGuard_C.SetFireDiff
+// 0x0030 (0x0030 - 0x0000)
+struct WDT_Article_DefenceByGuard_C_SetFireDiff final
+{
+public:
+	double                                        InFireCurrent;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        InFire;                                            // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_FTrunc_ReturnValue;                       // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_FTrunc_ReturnValue_1;                     // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_CompareInteger_CompareResult;             // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateColor                            CallFunc_GetTextColorByCompareResult_TextColor;    // 0x001C(0x0014)()
+};
+static_assert(alignof(WDT_Article_DefenceByGuard_C_SetFireDiff) == 0x000008, "Wrong alignment on WDT_Article_DefenceByGuard_C_SetFireDiff");
+static_assert(sizeof(WDT_Article_DefenceByGuard_C_SetFireDiff) == 0x000030, "Wrong size on WDT_Article_DefenceByGuard_C_SetFireDiff");
+static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetFireDiff, InFireCurrent) == 0x000000, "Member 'WDT_Article_DefenceByGuard_C_SetFireDiff::InFireCurrent' has a wrong offset!");
+static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetFireDiff, InFire) == 0x000008, "Member 'WDT_Article_DefenceByGuard_C_SetFireDiff::InFire' has a wrong offset!");
+static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetFireDiff, CallFunc_FTrunc_ReturnValue) == 0x000010, "Member 'WDT_Article_DefenceByGuard_C_SetFireDiff::CallFunc_FTrunc_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetFireDiff, CallFunc_FTrunc_ReturnValue_1) == 0x000014, "Member 'WDT_Article_DefenceByGuard_C_SetFireDiff::CallFunc_FTrunc_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetFireDiff, CallFunc_CompareInteger_CompareResult) == 0x000018, "Member 'WDT_Article_DefenceByGuard_C_SetFireDiff::CallFunc_CompareInteger_CompareResult' has a wrong offset!");
+static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetFireDiff, CallFunc_GetTextColorByCompareResult_TextColor) == 0x00001C, "Member 'WDT_Article_DefenceByGuard_C_SetFireDiff::CallFunc_GetTextColorByCompareResult_TextColor' has a wrong offset!");
 
 // Function WDT_Article_DefenceByGuard.WDT_Article_DefenceByGuard_C.SetDefence
 // 0x0288 (0x0288 - 0x0000)
@@ -194,115 +260,49 @@ static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetDefence, K2Node_Select_De
 static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetDefence, K2Node_Select_Default_6) == 0x000260, "Member 'WDT_Article_DefenceByGuard_C_SetDefence::K2Node_Select_Default_6' has a wrong offset!");
 static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetDefence, CallFunc_GetTextColorByCompareResult_TextColor_6) == 0x000270, "Member 'WDT_Article_DefenceByGuard_C_SetDefence::CallFunc_GetTextColorByCompareResult_TextColor_6' has a wrong offset!");
 
-// Function WDT_Article_DefenceByGuard.WDT_Article_DefenceByGuard_C.SetFireDiff
+// Function WDT_Article_DefenceByGuard.WDT_Article_DefenceByGuard_C.SetCrushDiff
 // 0x0030 (0x0030 - 0x0000)
-struct WDT_Article_DefenceByGuard_C_SetFireDiff final
+struct WDT_Article_DefenceByGuard_C_SetCrushDiff final
 {
 public:
-	double                                        InFireCurrent;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        InFire;                                            // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        InCrushCurrent;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        InCrush;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_FTrunc_ReturnValue;                       // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_FTrunc_ReturnValue_1;                     // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         CallFunc_CompareInteger_CompareResult;             // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateColor                            CallFunc_GetTextColorByCompareResult_TextColor;    // 0x001C(0x0014)()
 };
-static_assert(alignof(WDT_Article_DefenceByGuard_C_SetFireDiff) == 0x000008, "Wrong alignment on WDT_Article_DefenceByGuard_C_SetFireDiff");
-static_assert(sizeof(WDT_Article_DefenceByGuard_C_SetFireDiff) == 0x000030, "Wrong size on WDT_Article_DefenceByGuard_C_SetFireDiff");
-static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetFireDiff, InFireCurrent) == 0x000000, "Member 'WDT_Article_DefenceByGuard_C_SetFireDiff::InFireCurrent' has a wrong offset!");
-static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetFireDiff, InFire) == 0x000008, "Member 'WDT_Article_DefenceByGuard_C_SetFireDiff::InFire' has a wrong offset!");
-static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetFireDiff, CallFunc_FTrunc_ReturnValue) == 0x000010, "Member 'WDT_Article_DefenceByGuard_C_SetFireDiff::CallFunc_FTrunc_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetFireDiff, CallFunc_FTrunc_ReturnValue_1) == 0x000014, "Member 'WDT_Article_DefenceByGuard_C_SetFireDiff::CallFunc_FTrunc_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetFireDiff, CallFunc_CompareInteger_CompareResult) == 0x000018, "Member 'WDT_Article_DefenceByGuard_C_SetFireDiff::CallFunc_CompareInteger_CompareResult' has a wrong offset!");
-static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetFireDiff, CallFunc_GetTextColorByCompareResult_TextColor) == 0x00001C, "Member 'WDT_Article_DefenceByGuard_C_SetFireDiff::CallFunc_GetTextColorByCompareResult_TextColor' has a wrong offset!");
+static_assert(alignof(WDT_Article_DefenceByGuard_C_SetCrushDiff) == 0x000008, "Wrong alignment on WDT_Article_DefenceByGuard_C_SetCrushDiff");
+static_assert(sizeof(WDT_Article_DefenceByGuard_C_SetCrushDiff) == 0x000030, "Wrong size on WDT_Article_DefenceByGuard_C_SetCrushDiff");
+static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetCrushDiff, InCrushCurrent) == 0x000000, "Member 'WDT_Article_DefenceByGuard_C_SetCrushDiff::InCrushCurrent' has a wrong offset!");
+static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetCrushDiff, InCrush) == 0x000008, "Member 'WDT_Article_DefenceByGuard_C_SetCrushDiff::InCrush' has a wrong offset!");
+static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetCrushDiff, CallFunc_FTrunc_ReturnValue) == 0x000010, "Member 'WDT_Article_DefenceByGuard_C_SetCrushDiff::CallFunc_FTrunc_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetCrushDiff, CallFunc_FTrunc_ReturnValue_1) == 0x000014, "Member 'WDT_Article_DefenceByGuard_C_SetCrushDiff::CallFunc_FTrunc_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetCrushDiff, CallFunc_CompareInteger_CompareResult) == 0x000018, "Member 'WDT_Article_DefenceByGuard_C_SetCrushDiff::CallFunc_CompareInteger_CompareResult' has a wrong offset!");
+static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetCrushDiff, CallFunc_GetTextColorByCompareResult_TextColor) == 0x00001C, "Member 'WDT_Article_DefenceByGuard_C_SetCrushDiff::CallFunc_GetTextColorByCompareResult_TextColor' has a wrong offset!");
 
-// Function WDT_Article_DefenceByGuard.WDT_Article_DefenceByGuard_C.SetIceDiff
+// Function WDT_Article_DefenceByGuard.WDT_Article_DefenceByGuard_C.SetBloodDiff
 // 0x0030 (0x0030 - 0x0000)
-struct WDT_Article_DefenceByGuard_C_SetIceDiff final
+struct WDT_Article_DefenceByGuard_C_SetBloodDiff final
 {
 public:
-	double                                        InIceCurrent;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        InIce;                                             // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        InBloodCurrent;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        InBlood;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_FTrunc_ReturnValue;                       // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_FTrunc_ReturnValue_1;                     // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         CallFunc_CompareInteger_CompareResult;             // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateColor                            CallFunc_GetTextColorByCompareResult_TextColor;    // 0x001C(0x0014)()
 };
-static_assert(alignof(WDT_Article_DefenceByGuard_C_SetIceDiff) == 0x000008, "Wrong alignment on WDT_Article_DefenceByGuard_C_SetIceDiff");
-static_assert(sizeof(WDT_Article_DefenceByGuard_C_SetIceDiff) == 0x000030, "Wrong size on WDT_Article_DefenceByGuard_C_SetIceDiff");
-static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetIceDiff, InIceCurrent) == 0x000000, "Member 'WDT_Article_DefenceByGuard_C_SetIceDiff::InIceCurrent' has a wrong offset!");
-static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetIceDiff, InIce) == 0x000008, "Member 'WDT_Article_DefenceByGuard_C_SetIceDiff::InIce' has a wrong offset!");
-static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetIceDiff, CallFunc_FTrunc_ReturnValue) == 0x000010, "Member 'WDT_Article_DefenceByGuard_C_SetIceDiff::CallFunc_FTrunc_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetIceDiff, CallFunc_FTrunc_ReturnValue_1) == 0x000014, "Member 'WDT_Article_DefenceByGuard_C_SetIceDiff::CallFunc_FTrunc_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetIceDiff, CallFunc_CompareInteger_CompareResult) == 0x000018, "Member 'WDT_Article_DefenceByGuard_C_SetIceDiff::CallFunc_CompareInteger_CompareResult' has a wrong offset!");
-static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetIceDiff, CallFunc_GetTextColorByCompareResult_TextColor) == 0x00001C, "Member 'WDT_Article_DefenceByGuard_C_SetIceDiff::CallFunc_GetTextColorByCompareResult_TextColor' has a wrong offset!");
-
-// Function WDT_Article_DefenceByGuard.WDT_Article_DefenceByGuard_C.SetPierceDiff
-// 0x0030 (0x0030 - 0x0000)
-struct WDT_Article_DefenceByGuard_C_SetPierceDiff final
-{
-public:
-	double                                        InPierceCurrent;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        InPierce;                                          // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_FTrunc_ReturnValue;                       // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_FTrunc_ReturnValue_1;                     // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_CompareInteger_CompareResult;             // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateColor                            CallFunc_GetTextColorByCompareResult_TextColor;    // 0x001C(0x0014)()
-};
-static_assert(alignof(WDT_Article_DefenceByGuard_C_SetPierceDiff) == 0x000008, "Wrong alignment on WDT_Article_DefenceByGuard_C_SetPierceDiff");
-static_assert(sizeof(WDT_Article_DefenceByGuard_C_SetPierceDiff) == 0x000030, "Wrong size on WDT_Article_DefenceByGuard_C_SetPierceDiff");
-static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetPierceDiff, InPierceCurrent) == 0x000000, "Member 'WDT_Article_DefenceByGuard_C_SetPierceDiff::InPierceCurrent' has a wrong offset!");
-static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetPierceDiff, InPierce) == 0x000008, "Member 'WDT_Article_DefenceByGuard_C_SetPierceDiff::InPierce' has a wrong offset!");
-static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetPierceDiff, CallFunc_FTrunc_ReturnValue) == 0x000010, "Member 'WDT_Article_DefenceByGuard_C_SetPierceDiff::CallFunc_FTrunc_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetPierceDiff, CallFunc_FTrunc_ReturnValue_1) == 0x000014, "Member 'WDT_Article_DefenceByGuard_C_SetPierceDiff::CallFunc_FTrunc_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetPierceDiff, CallFunc_CompareInteger_CompareResult) == 0x000018, "Member 'WDT_Article_DefenceByGuard_C_SetPierceDiff::CallFunc_CompareInteger_CompareResult' has a wrong offset!");
-static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetPierceDiff, CallFunc_GetTextColorByCompareResult_TextColor) == 0x00001C, "Member 'WDT_Article_DefenceByGuard_C_SetPierceDiff::CallFunc_GetTextColorByCompareResult_TextColor' has a wrong offset!");
-
-// Function WDT_Article_DefenceByGuard.WDT_Article_DefenceByGuard_C.SetSunderDiff
-// 0x0030 (0x0030 - 0x0000)
-struct WDT_Article_DefenceByGuard_C_SetSunderDiff final
-{
-public:
-	double                                        InSunderCurrent;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        InSunder;                                          // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_FTrunc_ReturnValue;                       // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_FTrunc_ReturnValue_1;                     // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_CompareInteger_CompareResult;             // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateColor                            CallFunc_GetTextColorByCompareResult_TextColor;    // 0x001C(0x0014)()
-};
-static_assert(alignof(WDT_Article_DefenceByGuard_C_SetSunderDiff) == 0x000008, "Wrong alignment on WDT_Article_DefenceByGuard_C_SetSunderDiff");
-static_assert(sizeof(WDT_Article_DefenceByGuard_C_SetSunderDiff) == 0x000030, "Wrong size on WDT_Article_DefenceByGuard_C_SetSunderDiff");
-static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetSunderDiff, InSunderCurrent) == 0x000000, "Member 'WDT_Article_DefenceByGuard_C_SetSunderDiff::InSunderCurrent' has a wrong offset!");
-static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetSunderDiff, InSunder) == 0x000008, "Member 'WDT_Article_DefenceByGuard_C_SetSunderDiff::InSunder' has a wrong offset!");
-static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetSunderDiff, CallFunc_FTrunc_ReturnValue) == 0x000010, "Member 'WDT_Article_DefenceByGuard_C_SetSunderDiff::CallFunc_FTrunc_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetSunderDiff, CallFunc_FTrunc_ReturnValue_1) == 0x000014, "Member 'WDT_Article_DefenceByGuard_C_SetSunderDiff::CallFunc_FTrunc_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetSunderDiff, CallFunc_CompareInteger_CompareResult) == 0x000018, "Member 'WDT_Article_DefenceByGuard_C_SetSunderDiff::CallFunc_CompareInteger_CompareResult' has a wrong offset!");
-static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetSunderDiff, CallFunc_GetTextColorByCompareResult_TextColor) == 0x00001C, "Member 'WDT_Article_DefenceByGuard_C_SetSunderDiff::CallFunc_GetTextColorByCompareResult_TextColor' has a wrong offset!");
-
-// Function WDT_Article_DefenceByGuard.WDT_Article_DefenceByGuard_C.SetThunderDiff
-// 0x0030 (0x0030 - 0x0000)
-struct WDT_Article_DefenceByGuard_C_SetThunderDiff final
-{
-public:
-	double                                        InThunderCurrent;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        InThunder;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_FTrunc_ReturnValue;                       // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_FTrunc_ReturnValue_1;                     // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_CompareInteger_CompareResult;             // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateColor                            CallFunc_GetTextColorByCompareResult_TextColor;    // 0x001C(0x0014)()
-};
-static_assert(alignof(WDT_Article_DefenceByGuard_C_SetThunderDiff) == 0x000008, "Wrong alignment on WDT_Article_DefenceByGuard_C_SetThunderDiff");
-static_assert(sizeof(WDT_Article_DefenceByGuard_C_SetThunderDiff) == 0x000030, "Wrong size on WDT_Article_DefenceByGuard_C_SetThunderDiff");
-static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetThunderDiff, InThunderCurrent) == 0x000000, "Member 'WDT_Article_DefenceByGuard_C_SetThunderDiff::InThunderCurrent' has a wrong offset!");
-static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetThunderDiff, InThunder) == 0x000008, "Member 'WDT_Article_DefenceByGuard_C_SetThunderDiff::InThunder' has a wrong offset!");
-static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetThunderDiff, CallFunc_FTrunc_ReturnValue) == 0x000010, "Member 'WDT_Article_DefenceByGuard_C_SetThunderDiff::CallFunc_FTrunc_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetThunderDiff, CallFunc_FTrunc_ReturnValue_1) == 0x000014, "Member 'WDT_Article_DefenceByGuard_C_SetThunderDiff::CallFunc_FTrunc_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetThunderDiff, CallFunc_CompareInteger_CompareResult) == 0x000018, "Member 'WDT_Article_DefenceByGuard_C_SetThunderDiff::CallFunc_CompareInteger_CompareResult' has a wrong offset!");
-static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetThunderDiff, CallFunc_GetTextColorByCompareResult_TextColor) == 0x00001C, "Member 'WDT_Article_DefenceByGuard_C_SetThunderDiff::CallFunc_GetTextColorByCompareResult_TextColor' has a wrong offset!");
+static_assert(alignof(WDT_Article_DefenceByGuard_C_SetBloodDiff) == 0x000008, "Wrong alignment on WDT_Article_DefenceByGuard_C_SetBloodDiff");
+static_assert(sizeof(WDT_Article_DefenceByGuard_C_SetBloodDiff) == 0x000030, "Wrong size on WDT_Article_DefenceByGuard_C_SetBloodDiff");
+static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetBloodDiff, InBloodCurrent) == 0x000000, "Member 'WDT_Article_DefenceByGuard_C_SetBloodDiff::InBloodCurrent' has a wrong offset!");
+static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetBloodDiff, InBlood) == 0x000008, "Member 'WDT_Article_DefenceByGuard_C_SetBloodDiff::InBlood' has a wrong offset!");
+static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetBloodDiff, CallFunc_FTrunc_ReturnValue) == 0x000010, "Member 'WDT_Article_DefenceByGuard_C_SetBloodDiff::CallFunc_FTrunc_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetBloodDiff, CallFunc_FTrunc_ReturnValue_1) == 0x000014, "Member 'WDT_Article_DefenceByGuard_C_SetBloodDiff::CallFunc_FTrunc_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetBloodDiff, CallFunc_CompareInteger_CompareResult) == 0x000018, "Member 'WDT_Article_DefenceByGuard_C_SetBloodDiff::CallFunc_CompareInteger_CompareResult' has a wrong offset!");
+static_assert(offsetof(WDT_Article_DefenceByGuard_C_SetBloodDiff, CallFunc_GetTextColorByCompareResult_TextColor) == 0x00001C, "Member 'WDT_Article_DefenceByGuard_C_SetBloodDiff::CallFunc_GetTextColorByCompareResult_TextColor' has a wrong offset!");
 
 }
 

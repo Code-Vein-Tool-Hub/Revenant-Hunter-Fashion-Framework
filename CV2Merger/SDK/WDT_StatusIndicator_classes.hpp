@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "BasicUI_classes.hpp"
+#include "CoreUObject_structs.hpp"
 #include "Extensions_structs.hpp"
 
 
@@ -20,7 +20,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WDT_StatusIndicator.WDT_StatusIndicator_C
-// 0x00C8 (0x0680 - 0x05B8)
+// 0x00D8 (0x0690 - 0x05B8)
 class UWDT_StatusIndicator_C final : public UMenuBase
 {
 public:
@@ -30,27 +30,28 @@ public:
 	class UWDT_ExpPanel_C*                        ExpPanel;                                          // 0x05D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWDT_HealthGauge_C*                     HealthGauge;                                       // 0x05D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWDT_IchorAmountPanel_C*                IchorAmountPanel;                                  // 0x05E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UProgressBar*                           LostHealthBar;                                     // 0x05E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               Overlay_1;                                         // 0x05F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               Overlay_LostHealth;                                // 0x05F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               SizeBox_HP;                                        // 0x0600(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               SizeBox_LostHealth;                                // 0x0608(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               SizeBox_LP_Barrier;                                // 0x0610(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               SizeBox_ST;                                        // 0x0618(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_StaminaGauge_C*                    StaminaGauge;                                      // 0x0620(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_StatusEffectPanel_C*               StatusEffectPanel;                                 // 0x0628(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_AccumulateIndicator_C*             WDT_AccumulateIndicator;                           // 0x0630(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	double                                        HealthLengthRatio;                                 // 0x0638(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        StaminaLengthRatio;                                // 0x0640(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	FMulticastInlineDelegateProperty_             NotifyHealthGaugeLengthChanged;                    // 0x0648(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	float                                         FixedHealthGaugeLength;                            // 0x0658(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_65C[0x4];                                      // 0x065C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        HealthGaugeLength;                                 // 0x0660(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        BarrierGaugeLength;                                // 0x0668(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              DefaultBarrierGaugeTranslation;                    // 0x0670(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UInvalidationBox*                       InvalidationBox_0;                                 // 0x05E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UProgressBar*                           LostHealthBar;                                     // 0x05F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               Overlay_1;                                         // 0x05F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               Overlay_LostHealth;                                // 0x0600(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               SizeBox_HP;                                        // 0x0608(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               SizeBox_LostHealth;                                // 0x0610(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               SizeBox_LP_Barrier;                                // 0x0618(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               SizeBox_ST;                                        // 0x0620(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_StaminaGauge_C*                    StaminaGauge;                                      // 0x0628(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_StatusEffectPanel_C*               StatusEffectPanel;                                 // 0x0630(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_AccumulateIndicator_C*             WDT_AccumulateIndicator;                           // 0x0638(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	double                                        HealthLengthRatio;                                 // 0x0640(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        StaminaLengthRatio;                                // 0x0648(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	FMulticastInlineDelegateProperty_             NotifyHealthGaugeLengthChanged;                    // 0x0650(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	float                                         FixedHealthGaugeLength;                            // 0x0660(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_664[0x4];                                      // 0x0664(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        HealthGaugeLength;                                 // 0x0668(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        BarrierGaugeLength;                                // 0x0670(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              DefaultBarrierGaugeTranslation;                    // 0x0678(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        OldHealthMaxPercentage;                            // 0x0688(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void NotifyHealthGaugeLengthChanged__DelegateSignature(double InLength);
 	void Construct();
 	void ExecuteUbergraph_WDT_StatusIndicator(int32 EntryPoint);
 	void GetBarrierGauge(class UWDT_BarrierGauge_C** OutBarrierGauge);
@@ -60,6 +61,7 @@ public:
 	void GetIchorAmountPanel(class UWDT_IchorAmountPanel_C** OutPanel);
 	void GetStaminaGauge(class UWDT_StaminaGauge_C** OutGauge);
 	void GetStatusEffectPanel(class UWDT_StatusEffectPanel_C** OutPanel);
+	void NotifyHealthGaugeLengthChanged__DelegateSignature(double InLength);
 	void PreConstruct(bool IsDesignTime);
 	void SetBarrierGaugeLength(double InMaxBarrier);
 	void SetBarrierGaugeVisible(bool InVisible);
@@ -82,30 +84,32 @@ public:
 	}
 };
 static_assert(alignof(UWDT_StatusIndicator_C) == 0x000008, "Wrong alignment on UWDT_StatusIndicator_C");
-static_assert(sizeof(UWDT_StatusIndicator_C) == 0x000680, "Wrong size on UWDT_StatusIndicator_C");
+static_assert(sizeof(UWDT_StatusIndicator_C) == 0x000690, "Wrong size on UWDT_StatusIndicator_C");
 static_assert(offsetof(UWDT_StatusIndicator_C, UberGraphFrame) == 0x0005B8, "Member 'UWDT_StatusIndicator_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UWDT_StatusIndicator_C, BattleEndAnimation) == 0x0005C0, "Member 'UWDT_StatusIndicator_C::BattleEndAnimation' has a wrong offset!");
 static_assert(offsetof(UWDT_StatusIndicator_C, BarrierGauge) == 0x0005C8, "Member 'UWDT_StatusIndicator_C::BarrierGauge' has a wrong offset!");
 static_assert(offsetof(UWDT_StatusIndicator_C, ExpPanel) == 0x0005D0, "Member 'UWDT_StatusIndicator_C::ExpPanel' has a wrong offset!");
 static_assert(offsetof(UWDT_StatusIndicator_C, HealthGauge) == 0x0005D8, "Member 'UWDT_StatusIndicator_C::HealthGauge' has a wrong offset!");
 static_assert(offsetof(UWDT_StatusIndicator_C, IchorAmountPanel) == 0x0005E0, "Member 'UWDT_StatusIndicator_C::IchorAmountPanel' has a wrong offset!");
-static_assert(offsetof(UWDT_StatusIndicator_C, LostHealthBar) == 0x0005E8, "Member 'UWDT_StatusIndicator_C::LostHealthBar' has a wrong offset!");
-static_assert(offsetof(UWDT_StatusIndicator_C, Overlay_1) == 0x0005F0, "Member 'UWDT_StatusIndicator_C::Overlay_1' has a wrong offset!");
-static_assert(offsetof(UWDT_StatusIndicator_C, Overlay_LostHealth) == 0x0005F8, "Member 'UWDT_StatusIndicator_C::Overlay_LostHealth' has a wrong offset!");
-static_assert(offsetof(UWDT_StatusIndicator_C, SizeBox_HP) == 0x000600, "Member 'UWDT_StatusIndicator_C::SizeBox_HP' has a wrong offset!");
-static_assert(offsetof(UWDT_StatusIndicator_C, SizeBox_LostHealth) == 0x000608, "Member 'UWDT_StatusIndicator_C::SizeBox_LostHealth' has a wrong offset!");
-static_assert(offsetof(UWDT_StatusIndicator_C, SizeBox_LP_Barrier) == 0x000610, "Member 'UWDT_StatusIndicator_C::SizeBox_LP_Barrier' has a wrong offset!");
-static_assert(offsetof(UWDT_StatusIndicator_C, SizeBox_ST) == 0x000618, "Member 'UWDT_StatusIndicator_C::SizeBox_ST' has a wrong offset!");
-static_assert(offsetof(UWDT_StatusIndicator_C, StaminaGauge) == 0x000620, "Member 'UWDT_StatusIndicator_C::StaminaGauge' has a wrong offset!");
-static_assert(offsetof(UWDT_StatusIndicator_C, StatusEffectPanel) == 0x000628, "Member 'UWDT_StatusIndicator_C::StatusEffectPanel' has a wrong offset!");
-static_assert(offsetof(UWDT_StatusIndicator_C, WDT_AccumulateIndicator) == 0x000630, "Member 'UWDT_StatusIndicator_C::WDT_AccumulateIndicator' has a wrong offset!");
-static_assert(offsetof(UWDT_StatusIndicator_C, HealthLengthRatio) == 0x000638, "Member 'UWDT_StatusIndicator_C::HealthLengthRatio' has a wrong offset!");
-static_assert(offsetof(UWDT_StatusIndicator_C, StaminaLengthRatio) == 0x000640, "Member 'UWDT_StatusIndicator_C::StaminaLengthRatio' has a wrong offset!");
-static_assert(offsetof(UWDT_StatusIndicator_C, NotifyHealthGaugeLengthChanged) == 0x000648, "Member 'UWDT_StatusIndicator_C::NotifyHealthGaugeLengthChanged' has a wrong offset!");
-static_assert(offsetof(UWDT_StatusIndicator_C, FixedHealthGaugeLength) == 0x000658, "Member 'UWDT_StatusIndicator_C::FixedHealthGaugeLength' has a wrong offset!");
-static_assert(offsetof(UWDT_StatusIndicator_C, HealthGaugeLength) == 0x000660, "Member 'UWDT_StatusIndicator_C::HealthGaugeLength' has a wrong offset!");
-static_assert(offsetof(UWDT_StatusIndicator_C, BarrierGaugeLength) == 0x000668, "Member 'UWDT_StatusIndicator_C::BarrierGaugeLength' has a wrong offset!");
-static_assert(offsetof(UWDT_StatusIndicator_C, DefaultBarrierGaugeTranslation) == 0x000670, "Member 'UWDT_StatusIndicator_C::DefaultBarrierGaugeTranslation' has a wrong offset!");
+static_assert(offsetof(UWDT_StatusIndicator_C, InvalidationBox_0) == 0x0005E8, "Member 'UWDT_StatusIndicator_C::InvalidationBox_0' has a wrong offset!");
+static_assert(offsetof(UWDT_StatusIndicator_C, LostHealthBar) == 0x0005F0, "Member 'UWDT_StatusIndicator_C::LostHealthBar' has a wrong offset!");
+static_assert(offsetof(UWDT_StatusIndicator_C, Overlay_1) == 0x0005F8, "Member 'UWDT_StatusIndicator_C::Overlay_1' has a wrong offset!");
+static_assert(offsetof(UWDT_StatusIndicator_C, Overlay_LostHealth) == 0x000600, "Member 'UWDT_StatusIndicator_C::Overlay_LostHealth' has a wrong offset!");
+static_assert(offsetof(UWDT_StatusIndicator_C, SizeBox_HP) == 0x000608, "Member 'UWDT_StatusIndicator_C::SizeBox_HP' has a wrong offset!");
+static_assert(offsetof(UWDT_StatusIndicator_C, SizeBox_LostHealth) == 0x000610, "Member 'UWDT_StatusIndicator_C::SizeBox_LostHealth' has a wrong offset!");
+static_assert(offsetof(UWDT_StatusIndicator_C, SizeBox_LP_Barrier) == 0x000618, "Member 'UWDT_StatusIndicator_C::SizeBox_LP_Barrier' has a wrong offset!");
+static_assert(offsetof(UWDT_StatusIndicator_C, SizeBox_ST) == 0x000620, "Member 'UWDT_StatusIndicator_C::SizeBox_ST' has a wrong offset!");
+static_assert(offsetof(UWDT_StatusIndicator_C, StaminaGauge) == 0x000628, "Member 'UWDT_StatusIndicator_C::StaminaGauge' has a wrong offset!");
+static_assert(offsetof(UWDT_StatusIndicator_C, StatusEffectPanel) == 0x000630, "Member 'UWDT_StatusIndicator_C::StatusEffectPanel' has a wrong offset!");
+static_assert(offsetof(UWDT_StatusIndicator_C, WDT_AccumulateIndicator) == 0x000638, "Member 'UWDT_StatusIndicator_C::WDT_AccumulateIndicator' has a wrong offset!");
+static_assert(offsetof(UWDT_StatusIndicator_C, HealthLengthRatio) == 0x000640, "Member 'UWDT_StatusIndicator_C::HealthLengthRatio' has a wrong offset!");
+static_assert(offsetof(UWDT_StatusIndicator_C, StaminaLengthRatio) == 0x000648, "Member 'UWDT_StatusIndicator_C::StaminaLengthRatio' has a wrong offset!");
+static_assert(offsetof(UWDT_StatusIndicator_C, NotifyHealthGaugeLengthChanged) == 0x000650, "Member 'UWDT_StatusIndicator_C::NotifyHealthGaugeLengthChanged' has a wrong offset!");
+static_assert(offsetof(UWDT_StatusIndicator_C, FixedHealthGaugeLength) == 0x000660, "Member 'UWDT_StatusIndicator_C::FixedHealthGaugeLength' has a wrong offset!");
+static_assert(offsetof(UWDT_StatusIndicator_C, HealthGaugeLength) == 0x000668, "Member 'UWDT_StatusIndicator_C::HealthGaugeLength' has a wrong offset!");
+static_assert(offsetof(UWDT_StatusIndicator_C, BarrierGaugeLength) == 0x000670, "Member 'UWDT_StatusIndicator_C::BarrierGaugeLength' has a wrong offset!");
+static_assert(offsetof(UWDT_StatusIndicator_C, DefaultBarrierGaugeTranslation) == 0x000678, "Member 'UWDT_StatusIndicator_C::DefaultBarrierGaugeTranslation' has a wrong offset!");
+static_assert(offsetof(UWDT_StatusIndicator_C, OldHealthMaxPercentage) == 0x000688, "Member 'UWDT_StatusIndicator_C::OldHealthMaxPercentage' has a wrong offset!");
 
 }
 

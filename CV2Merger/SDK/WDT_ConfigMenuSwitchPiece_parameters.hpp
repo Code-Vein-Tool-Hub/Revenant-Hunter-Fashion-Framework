@@ -46,6 +46,17 @@ static_assert(sizeof(WDT_ConfigMenuSwitchPiece_C_SetIsEditable) == 0x000018, "Wr
 static_assert(offsetof(WDT_ConfigMenuSwitchPiece_C_SetIsEditable, InFlag) == 0x000000, "Member 'WDT_ConfigMenuSwitchPiece_C_SetIsEditable::InFlag' has a wrong offset!");
 static_assert(offsetof(WDT_ConfigMenuSwitchPiece_C_SetIsEditable, K2Node_MakeStruct_SlateColor) == 0x000004, "Member 'WDT_ConfigMenuSwitchPiece_C_SetIsEditable::K2Node_MakeStruct_SlateColor' has a wrong offset!");
 
+// Function WDT_ConfigMenuSwitchPiece.WDT_ConfigMenuSwitchPiece_C.SetEditableGrayOut
+// 0x0001 (0x0001 - 0x0000)
+struct WDT_ConfigMenuSwitchPiece_C_SetEditableGrayOut final
+{
+public:
+	bool                                          Flag;                                              // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_ConfigMenuSwitchPiece_C_SetEditableGrayOut) == 0x000001, "Wrong alignment on WDT_ConfigMenuSwitchPiece_C_SetEditableGrayOut");
+static_assert(sizeof(WDT_ConfigMenuSwitchPiece_C_SetEditableGrayOut) == 0x000001, "Wrong size on WDT_ConfigMenuSwitchPiece_C_SetEditableGrayOut");
+static_assert(offsetof(WDT_ConfigMenuSwitchPiece_C_SetEditableGrayOut, Flag) == 0x000000, "Member 'WDT_ConfigMenuSwitchPiece_C_SetEditableGrayOut::Flag' has a wrong offset!");
+
 // Function WDT_ConfigMenuSwitchPiece.WDT_ConfigMenuSwitchPiece_C.SetDefaultOnOff
 // 0x0003 (0x0003 - 0x0000)
 struct WDT_ConfigMenuSwitchPiece_C_SetDefaultOnOff final

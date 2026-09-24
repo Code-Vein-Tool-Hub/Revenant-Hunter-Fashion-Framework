@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "BasicUI_classes.hpp"
 #include "SlateCore_structs.hpp"
+#include "BasicUI_classes.hpp"
 #include "Extensions_structs.hpp"
 #include "UMG_structs.hpp"
 
@@ -57,15 +57,15 @@ public:
 	struct FSlateColor                            OverColor;                                         // 0x05B4(0x0014)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
-	class FText EnumToWeaponCategoryText(EUIWeaponCategory Enumerator);
-	void Get_Color(int32 NewLoad, int32 CurrentLoad, int32 Capacity, struct FSlateColor* Color);
-	void GetRankTextByRankEnum(EUIAttributeModifierRank RankEnum, class FText* RankText);
-	void GetTextColorByCompareResult(uint8 CompareResult, struct FSlateColor* TextColor);
-	void ResetWeaponColor();
-	void ResetWeaponLoad();
-	uint8 SetCompareIntegerBadStatus(int32 TargetValue);
-	void SetWeaponInfo(const struct FUIWeaponInfo& UIWeaponInfo);
 	void SetWeaponLoadInfo(int32 Reilability, int32 Handling, int32 Efficiency, int32 Conductivity);
+	void SetWeaponInfo(const struct FUIWeaponInfo& UIWeaponInfo);
+	uint8 SetCompareIntegerBadStatus(int32 TargetValue);
+	void ResetWeaponLoad();
+	void ResetWeaponColor();
+	void GetTextColorByCompareResult(uint8 CompareResult, struct FSlateColor* TextColor);
+	void GetRankTextByRankEnum(EUIAttributeModifierRank RankEnum, class FText* RankText);
+	void Get_Color(int32 NewLoad, int32 CurrentLoad, int32 Capacity, struct FSlateColor* Color);
+	class FText EnumToWeaponCategoryText(EUIWeaponCategory Enumerator);
 
 public:
 	static class UClass* StaticClass()

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "EnhancedInput_structs.hpp"
 #include "Extensions_structs.hpp"
+#include "EnhancedInput_structs.hpp"
 
 
 namespace SDK::Params
@@ -279,10 +279,9 @@ public:
 	EUICampRestOption                             NewLocalVar;                                       // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_PlayUIAudioEvent_ReturnValue;             // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x001C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0018(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_PlayUIAudioEvent_ReturnValue;             // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMenuPieceBase*                         CallFunc_GetSelectedMenuPiece_ReturnValue;         // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UWDT_CampOptionPiece_C*                 K2Node_DynamicCast_AsWDT_Camp_Option_Piece;        // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -295,8 +294,8 @@ static_assert(sizeof(WDT_RestMenu_C_OnDecide) == 0x000048, "Wrong size on WDT_Re
 static_assert(offsetof(WDT_RestMenu_C_OnDecide, NewLocalVar_0) == 0x000000, "Member 'WDT_RestMenu_C_OnDecide::NewLocalVar_0' has a wrong offset!");
 static_assert(offsetof(WDT_RestMenu_C_OnDecide, NewLocalVar) == 0x000008, "Member 'WDT_RestMenu_C_OnDecide::NewLocalVar' has a wrong offset!");
 static_assert(offsetof(WDT_RestMenu_C_OnDecide, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000010, "Member 'WDT_RestMenu_C_OnDecide::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_RestMenu_C_OnDecide, CallFunc_PlayUIAudioEvent_ReturnValue) == 0x000018, "Member 'WDT_RestMenu_C_OnDecide::CallFunc_PlayUIAudioEvent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_RestMenu_C_OnDecide, K2Node_CreateDelegate_OutputDelegate) == 0x00001C, "Member 'WDT_RestMenu_C_OnDecide::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(WDT_RestMenu_C_OnDecide, K2Node_CreateDelegate_OutputDelegate) == 0x000018, "Member 'WDT_RestMenu_C_OnDecide::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(WDT_RestMenu_C_OnDecide, CallFunc_PlayUIAudioEvent_ReturnValue) == 0x000028, "Member 'WDT_RestMenu_C_OnDecide::CallFunc_PlayUIAudioEvent_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_RestMenu_C_OnDecide, CallFunc_GetSelectedMenuPiece_ReturnValue) == 0x000030, "Member 'WDT_RestMenu_C_OnDecide::CallFunc_GetSelectedMenuPiece_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_RestMenu_C_OnDecide, K2Node_DynamicCast_AsWDT_Camp_Option_Piece) == 0x000038, "Member 'WDT_RestMenu_C_OnDecide::K2Node_DynamicCast_AsWDT_Camp_Option_Piece' has a wrong offset!");
 static_assert(offsetof(WDT_RestMenu_C_OnDecide, K2Node_DynamicCast_bSuccess) == 0x000040, "Member 'WDT_RestMenu_C_OnDecide::K2Node_DynamicCast_bSuccess' has a wrong offset!");
@@ -305,36 +304,26 @@ static_assert(offsetof(WDT_RestMenu_C_OnDecide, CallFunc_GetIsEnabled_ReturnValu
 static_assert(offsetof(WDT_RestMenu_C_OnDecide, CallFunc_IsActivated_ReturnValue) == 0x000043, "Member 'WDT_RestMenu_C_OnDecide::CallFunc_IsActivated_ReturnValue' has a wrong offset!");
 
 // Function WDT_RestMenu.WDT_RestMenu_C.OnDecideAnimEnd
-// 0x0048 (0x0048 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct WDT_RestMenu_C_OnDecideAnimEnd final
 {
 public:
 	class UWDT_CampOptionPiece_C*                 NewLocalVar_1;                                     // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UEnhancedInputLocalPlayerSubsystem*     CallFunc_GetLocalPlayerSubsystem_ReturnValue;      // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMenuPieceBase*                         CallFunc_GetSelectedMenuPiece_ReturnValue;         // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Close_ReturnValue;                        // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMenuPieceBase*                         CallFunc_GetSelectedMenuPiece_ReturnValue;         // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWDT_CampOptionPiece_C*                 K2Node_DynamicCast_AsWDT_Camp_Option_Piece;        // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Close_ReturnValue;                        // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FModifyContextOptions                  Temp_struct_Variable;                              // 0x0032(0x0001)(ConstParm, NoDestructor)
-	uint8                                         Pad_33[0x5];                                       // 0x0033(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IEnhancedInputSubsystemInterface> CallFunc_RemoveMappingContext_self_CastInput;      // 0x0038(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWDT_CampOptionPiece_C*                 K2Node_DynamicCast_AsWDT_Camp_Option_Piece;        // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_RestMenu_C_OnDecideAnimEnd) == 0x000008, "Wrong alignment on WDT_RestMenu_C_OnDecideAnimEnd");
-static_assert(sizeof(WDT_RestMenu_C_OnDecideAnimEnd) == 0x000048, "Wrong size on WDT_RestMenu_C_OnDecideAnimEnd");
+static_assert(sizeof(WDT_RestMenu_C_OnDecideAnimEnd) == 0x000028, "Wrong size on WDT_RestMenu_C_OnDecideAnimEnd");
 static_assert(offsetof(WDT_RestMenu_C_OnDecideAnimEnd, NewLocalVar_1) == 0x000000, "Member 'WDT_RestMenu_C_OnDecideAnimEnd::NewLocalVar_1' has a wrong offset!");
-static_assert(offsetof(WDT_RestMenu_C_OnDecideAnimEnd, CallFunc_GetLocalPlayerSubsystem_ReturnValue) == 0x000008, "Member 'WDT_RestMenu_C_OnDecideAnimEnd::CallFunc_GetLocalPlayerSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_RestMenu_C_OnDecideAnimEnd, CallFunc_IsValid_ReturnValue) == 0x000010, "Member 'WDT_RestMenu_C_OnDecideAnimEnd::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_RestMenu_C_OnDecideAnimEnd, CallFunc_GetSelectedMenuPiece_ReturnValue) == 0x000018, "Member 'WDT_RestMenu_C_OnDecideAnimEnd::CallFunc_GetSelectedMenuPiece_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_RestMenu_C_OnDecideAnimEnd, K2Node_SwitchEnum_CmpSuccess) == 0x000020, "Member 'WDT_RestMenu_C_OnDecideAnimEnd::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(WDT_RestMenu_C_OnDecideAnimEnd, K2Node_DynamicCast_AsWDT_Camp_Option_Piece) == 0x000028, "Member 'WDT_RestMenu_C_OnDecideAnimEnd::K2Node_DynamicCast_AsWDT_Camp_Option_Piece' has a wrong offset!");
-static_assert(offsetof(WDT_RestMenu_C_OnDecideAnimEnd, K2Node_DynamicCast_bSuccess) == 0x000030, "Member 'WDT_RestMenu_C_OnDecideAnimEnd::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WDT_RestMenu_C_OnDecideAnimEnd, CallFunc_Close_ReturnValue) == 0x000031, "Member 'WDT_RestMenu_C_OnDecideAnimEnd::CallFunc_Close_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_RestMenu_C_OnDecideAnimEnd, Temp_struct_Variable) == 0x000032, "Member 'WDT_RestMenu_C_OnDecideAnimEnd::Temp_struct_Variable' has a wrong offset!");
-static_assert(offsetof(WDT_RestMenu_C_OnDecideAnimEnd, CallFunc_RemoveMappingContext_self_CastInput) == 0x000038, "Member 'WDT_RestMenu_C_OnDecideAnimEnd::CallFunc_RemoveMappingContext_self_CastInput' has a wrong offset!");
+static_assert(offsetof(WDT_RestMenu_C_OnDecideAnimEnd, CallFunc_GetSelectedMenuPiece_ReturnValue) == 0x000008, "Member 'WDT_RestMenu_C_OnDecideAnimEnd::CallFunc_GetSelectedMenuPiece_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_RestMenu_C_OnDecideAnimEnd, CallFunc_Close_ReturnValue) == 0x000010, "Member 'WDT_RestMenu_C_OnDecideAnimEnd::CallFunc_Close_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_RestMenu_C_OnDecideAnimEnd, K2Node_DynamicCast_AsWDT_Camp_Option_Piece) == 0x000018, "Member 'WDT_RestMenu_C_OnDecideAnimEnd::K2Node_DynamicCast_AsWDT_Camp_Option_Piece' has a wrong offset!");
+static_assert(offsetof(WDT_RestMenu_C_OnDecideAnimEnd, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'WDT_RestMenu_C_OnDecideAnimEnd::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WDT_RestMenu_C_OnDecideAnimEnd, K2Node_SwitchEnum_CmpSuccess) == 0x000021, "Member 'WDT_RestMenu_C_OnDecideAnimEnd::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
 
 // Function WDT_RestMenu.WDT_RestMenu_C.OnGetCloseAnimation
 // 0x0008 (0x0008 - 0x0000)
@@ -379,24 +368,6 @@ public:
 static_assert(alignof(WDT_RestMenu_C_OnMouseLeftClickMenuPiece) == 0x000008, "Wrong alignment on WDT_RestMenu_C_OnMouseLeftClickMenuPiece");
 static_assert(sizeof(WDT_RestMenu_C_OnMouseLeftClickMenuPiece) == 0x000008, "Wrong size on WDT_RestMenu_C_OnMouseLeftClickMenuPiece");
 static_assert(offsetof(WDT_RestMenu_C_OnMouseLeftClickMenuPiece, MenuPiece) == 0x000000, "Member 'WDT_RestMenu_C_OnMouseLeftClickMenuPiece::MenuPiece' has a wrong offset!");
-
-// Function WDT_RestMenu.WDT_RestMenu_C.OnNotifyCampRestEnded
-// 0x0020 (0x0020 - 0x0000)
-struct WDT_RestMenu_C_OnNotifyCampRestEnded final
-{
-public:
-	class UEnhancedInputLocalPlayerSubsystem*     CallFunc_GetLocalPlayerSubsystem_ReturnValue;      // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FModifyContextOptions                  Temp_struct_Variable;                              // 0x0008(0x0001)(ConstParm, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IEnhancedInputSubsystemInterface> CallFunc_AddMappingContext_self_CastInput;         // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_RestMenu_C_OnNotifyCampRestEnded) == 0x000008, "Wrong alignment on WDT_RestMenu_C_OnNotifyCampRestEnded");
-static_assert(sizeof(WDT_RestMenu_C_OnNotifyCampRestEnded) == 0x000020, "Wrong size on WDT_RestMenu_C_OnNotifyCampRestEnded");
-static_assert(offsetof(WDT_RestMenu_C_OnNotifyCampRestEnded, CallFunc_GetLocalPlayerSubsystem_ReturnValue) == 0x000000, "Member 'WDT_RestMenu_C_OnNotifyCampRestEnded::CallFunc_GetLocalPlayerSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_RestMenu_C_OnNotifyCampRestEnded, Temp_struct_Variable) == 0x000008, "Member 'WDT_RestMenu_C_OnNotifyCampRestEnded::Temp_struct_Variable' has a wrong offset!");
-static_assert(offsetof(WDT_RestMenu_C_OnNotifyCampRestEnded, CallFunc_IsValid_ReturnValue) == 0x000009, "Member 'WDT_RestMenu_C_OnNotifyCampRestEnded::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_RestMenu_C_OnNotifyCampRestEnded, CallFunc_AddMappingContext_self_CastInput) == 0x000010, "Member 'WDT_RestMenu_C_OnNotifyCampRestEnded::CallFunc_AddMappingContext_self_CastInput' has a wrong offset!");
 
 }
 

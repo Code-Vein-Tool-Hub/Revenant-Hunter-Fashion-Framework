@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_UIManager.BP_UIManager_C
-// 0x0000 (0x05B0 - 0x05B0)
+// 0x0000 (0x0640 - 0x0640)
 class UBP_UIManager_C final : public UAppUIManager
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UBP_UIManager_C) == 0x000008, "Wrong alignment on UBP_UIManager_C");
-static_assert(sizeof(UBP_UIManager_C) == 0x0005B0, "Wrong size on UBP_UIManager_C");
+static_assert(sizeof(UBP_UIManager_C) == 0x000640, "Wrong size on UBP_UIManager_C");
 
 }
 

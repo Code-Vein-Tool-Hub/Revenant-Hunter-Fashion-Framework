@@ -17,6 +17,26 @@
 namespace SDK
 {
 
+// Function BP_MatchingUIObject.BP_MatchingUIObject_C.Close
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool UBP_MatchingUIObject_C::Close()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MatchingUIObject_C", "Close");
+
+	Params::BP_MatchingUIObject_C_Close Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function BP_MatchingUIObject.BP_MatchingUIObject_C.ExecuteUbergraph_BP_MatchingUIObject
 // (Final, UbergraphFunction)
 // Parameters:

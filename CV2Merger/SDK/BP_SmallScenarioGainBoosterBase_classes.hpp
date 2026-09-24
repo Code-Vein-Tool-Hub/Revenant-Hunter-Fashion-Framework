@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_SmallScenarioGainBoosterBase.BP_SmallScenarioGainBoosterBase_C
-// 0x0008 (0x03D0 - 0x03C8)
+// 0x0008 (0x03E0 - 0x03D8)
 class ABP_SmallScenarioGainBoosterBase_C : public ABP_SmallScenarioBase_C
 {
 public:
-	class UDataTable*                             GainBoosterSmallScenarioDataTable;                 // 0x03C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UDataTable*                             GainBoosterSmallScenarioDataTable;                 // 0x03D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void GainBooster();
@@ -37,8 +37,8 @@ public:
 	}
 };
 static_assert(alignof(ABP_SmallScenarioGainBoosterBase_C) == 0x000008, "Wrong alignment on ABP_SmallScenarioGainBoosterBase_C");
-static_assert(sizeof(ABP_SmallScenarioGainBoosterBase_C) == 0x0003D0, "Wrong size on ABP_SmallScenarioGainBoosterBase_C");
-static_assert(offsetof(ABP_SmallScenarioGainBoosterBase_C, GainBoosterSmallScenarioDataTable) == 0x0003C8, "Member 'ABP_SmallScenarioGainBoosterBase_C::GainBoosterSmallScenarioDataTable' has a wrong offset!");
+static_assert(sizeof(ABP_SmallScenarioGainBoosterBase_C) == 0x0003E0, "Wrong size on ABP_SmallScenarioGainBoosterBase_C");
+static_assert(offsetof(ABP_SmallScenarioGainBoosterBase_C, GainBoosterSmallScenarioDataTable) == 0x0003D8, "Member 'ABP_SmallScenarioGainBoosterBase_C::GainBoosterSmallScenarioDataTable' has a wrong offset!");
 
 }
 

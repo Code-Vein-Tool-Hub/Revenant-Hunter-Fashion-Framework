@@ -183,7 +183,7 @@ static_assert(sizeof(UAnimExecutionContextLibrary) == 0x000028, "Wrong size on U
 
 // Class AnimGraphRuntime.AnimNotify_PlayMontageNotify
 // 0x0008 (0x0040 - 0x0038)
-class UAnimNotify_PlayMontageNotify : public UAnimNotify
+class UAnimNotify_PlayMontageNotify final : public UAnimNotify
 {
 public:
 	class FName                                   NotifyName;                                        // 0x0038(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)

@@ -5,6 +5,7 @@
 #include "ModPatch.h"
 #include "Util.h"
 #include "Config.h"
+//#include "CharacterCreatorPreset.h"
 #include <filesystem>
 #include <thread>
 
@@ -393,7 +394,12 @@ HOOK(void, __stdcall, Hook_InputHook, Sig_InputHook, SDK::UGameViewportClient* _
     {
         if (EventType == SDK::EInputEvent::IE_Pressed)
         {
-            
+            SDK::UAppOnlineSessionManager* OnlineSessionManager = (SDK::UAppOnlineSessionManager*)SDK::USubsystemBlueprintLibrary::GetGameInstanceSubsystem(SDK::UWorld::GetWorld(), SDK::UAppOnlineSessionManager::StaticClass());
+            OnlineSessionManager->SetOnlineMode(!OnlineSessionManager->IsOnlineMode());
+            if (OnlineSessionManager->IsOnlineMode())
+                printf("[Online] Is Online\n");
+            else
+                printf("[Online] Is Offline\n");
         }
     }
     orig_Hook_InputHook(_this, Key, EventType);
@@ -405,26 +411,50 @@ HOOK(uint64_t*, __stdcall, Hook_FPakPlatformFile_HandleMountPakDelegate, Sig_FPa
     return orig_Hook_FPakPlatformFile_HandleMountPakDelegate(_this, PakFilePath, PakOrder);
 }
 
-HOOK(HRESULT, __stdcall, hook_CreateFileW, &CreateFileW,
-    LPCWSTR               lpFileName,
-    DWORD                 dwDesiredAccess,
-    DWORD                 dwShareMode,
-    LPSECURITY_ATTRIBUTES lpSecurityAttributes,
-    DWORD                 dwCreationDisposition,
-    DWORD                 dwFlagsAndAttributes,
-    HANDLE                hTemplateFile
-)
+HOOK(HRESULT, __stdcall, hook_CreateFileW, &CreateFileW, LPCWSTR lpFileName, DWORD dwDesiredAccess, DWORD dwShareMode, LPSECURITY_ATTRIBUTES lpSecurityAttributes, DWORD dwCreationDisposition, DWORD dwFlagsAndAttributes, HANDLE hTemplateFile)
 {
     //if (wcsstr(lpFileName, L"hid") == NULL) // don't log audio
     //{
     //    printf("File Access Log: %S\r\n", lpFileName);
     //}
-    if (wcsstr(lpFileName, L"z10_RHFF_P.pak"))
+    if (wcsstr(lpFileName, Config::CompanionPakName.c_str()))
     {
         printf("[RHFF] Loaded RHFF Companion pak, extra functionality is available.\n");
         Config::CompanionPakLoaded = true;
     }
+    else if (wcsstr(lpFileName, Config::PresetModName.c_str()))
+    {
+        printf("[RHFF] Loaded Loaded Character Preset Mod.\n");
+        Config::PresetModLoaded = true;
+    }
     return orig_hook_CreateFileW(lpFileName, dwDesiredAccess, dwShareMode, lpSecurityAttributes, dwCreationDisposition, dwFlagsAndAttributes, hTemplateFile);
+}
+
+HOOK(void, __stdcall, Hook_UObject_ProcessEvent, Sig_UObject_ProcessEvent, SDK::UObject* _this, SDK::UFunction* Function, void* Param)
+{
+    //printf("[RHFF] ProcessEvent: %s\n", Function->GetFullName().c_str());
+    /*
+    std::string FuncName = Function->GetFullName();
+    if (FuncName.contains("WDT_CharacterPresetImporter_C.Construct"))
+    {
+        CharacterCreatorPreset::GetSaveFiles(static_cast<SDK::UUserWidget*>(_this));
+        printf("[RHFF] [CharacterPresets] Adding Save Files to Widget String Array.\n");
+    }
+    /*
+    else if (FuncName.contains("WDT_CharacterPresetImporter_Button_LoadPreset"))
+    {
+
+    }
+    else if (FuncName.contains("WDT_CharacterPresetImporter_Button_SavePreset"))
+    {
+
+    }
+    else if (FuncName.contains("WDT_CharacterPresetImporter_C"))
+    {
+        printf("[RHFF] ProcessEvent: %s\n", Function->GetFullName().c_str());
+    }
+    */
+    return orig_Hook_UObject_ProcessEvent(_this, Function, Param);
 }
 
 #pragma endregion
@@ -446,6 +476,7 @@ BOOL APIENTRY DllMain( HMODULE hModule,
         }
 
         INSTALL_HOOK(hook_CreateFileW);
+        //INSTALL_HOOK(Hook_UObject_ProcessEvent);
 		INSTALL_HOOK(Hook_UGameFlowManager_OnShaderCompileWaitFinished);
         INSTALL_HOOK(Hook_UDataTable_Serialize);
         if (Config::AccessoryInfo)
@@ -453,7 +484,7 @@ BOOL APIENTRY DllMain( HMODULE hModule,
             INSTALL_HOOK(Hook_CameraResetPressed);
         }
         //Not needed right now but maybe i'll need this in the future
-        //INSTALL_HOOK(Hook_InputHook);
+        INSTALL_HOOK(Hook_InputHook);
 
 		return TRUE;
     case DLL_THREAD_ATTACH:

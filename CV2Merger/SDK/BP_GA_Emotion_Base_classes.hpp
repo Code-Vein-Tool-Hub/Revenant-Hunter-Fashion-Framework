@@ -18,12 +18,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_GA_Emotion_Base.BP_GA_Emotion_Base_C
-// 0x0010 (0x0570 - 0x0560)
+// 0x0010 (0x0568 - 0x0558)
 class UBP_GA_Emotion_Base_C : public UEmotionAbility
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0560(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	bool                                          IsPlayMontageSection;                              // 0x0568(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0558(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	bool                                          IsPlayMontageSection;                              // 0x0560(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BeginNotify(class FName NotifyName);
@@ -59,9 +59,9 @@ public:
 	}
 };
 static_assert(alignof(UBP_GA_Emotion_Base_C) == 0x000008, "Wrong alignment on UBP_GA_Emotion_Base_C");
-static_assert(sizeof(UBP_GA_Emotion_Base_C) == 0x000570, "Wrong size on UBP_GA_Emotion_Base_C");
-static_assert(offsetof(UBP_GA_Emotion_Base_C, UberGraphFrame) == 0x000560, "Member 'UBP_GA_Emotion_Base_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_GA_Emotion_Base_C, IsPlayMontageSection) == 0x000568, "Member 'UBP_GA_Emotion_Base_C::IsPlayMontageSection' has a wrong offset!");
+static_assert(sizeof(UBP_GA_Emotion_Base_C) == 0x000568, "Wrong size on UBP_GA_Emotion_Base_C");
+static_assert(offsetof(UBP_GA_Emotion_Base_C, UberGraphFrame) == 0x000558, "Member 'UBP_GA_Emotion_Base_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UBP_GA_Emotion_Base_C, IsPlayMontageSection) == 0x000560, "Member 'UBP_GA_Emotion_Base_C::IsPlayMontageSection' has a wrong offset!");
 
 }
 

@@ -11,18 +11,19 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "SlateCore_structs.hpp"
 #include "BasicUI_structs.hpp"
 #include "Extensions_structs.hpp"
 #include "Extensions_classes.hpp"
+#include "SlateCore_structs.hpp"
 #include "UMG_structs.hpp"
+#include "CommonUser_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WDT_TitleMenu_Variationable.WDT_TitleMenu_Variationable_C
-// 0x03C8 (0x0980 - 0x05B8)
+// 0x0470 (0x0A28 - 0x05B8)
 class UWDT_TitleMenu_Variationable_C final : public UAppMenuBase
 {
 public:
@@ -39,48 +40,61 @@ public:
 	class UImage*                                 Black;                                             // 0x0608(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 CODEVEINII;                                        // 0x0610(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UBorder*                                ContinueEmphasis;                                  // 0x0618(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       HelpText;                                          // 0x0620(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_356;                                         // 0x0628(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               Overlay_AspectRatio;                               // 0x0630(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               PressAnyButton;                                    // 0x0638(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       PressAnyButtonText;                                // 0x0640(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonLazyImage*                       TitleLogoImage;                                    // 0x0648(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           TitleMenu;                                         // 0x0650(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCanvasPanel*                           TitleMenuCanvas;                                   // 0x0658(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           TitleMenuEntryBox;                                 // 0x0660(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_TitleMenuEntryPiece_C*             TitleMenuEntryContinue;                            // 0x0668(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_TitleMenuEntryPiece_C*             TitleMenuEntryLoadGame;                            // 0x0670(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_TitleMenuEntryPiece_C*             TitleMenuEntryLoadGame_LouRescue;                  // 0x0678(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_TitleMenuEntryPiece_C*             TitleMenuEntryNewGame;                             // 0x0680(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_TitleMenuEntryPiece_C*             TitleMenuEntryNewGame_LouRescue;                   // 0x0688(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_TitleMenuEntryPiece_C*             TitleMenuEntryQuitGame;                            // 0x0690(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBP_TitleMenuUIObject_C*                BP_TitleMenuUIObject;                              // 0x0698(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TArray<class UWDT_TitleMenuEntryPiece_C*>     TitleMenuList;                                     // 0x06A0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	struct FMenuContext                           OKDialogContext;                                   // 0x06B0(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	TMap<ETitleProgressType, TSoftClassPtr<class UClass>> BGMap;                                             // 0x06E8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TMap<class FName, class FText>                HelpTextMap;                                       // 0x0738(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class FText                                   NetworkErrorTitleText;                             // 0x0788(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class FText                                   NetworkErrorText;                                  // 0x0798(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FSlateFontInfo                         DefaultFont;                                       // 0x07A8(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	class FText                                   NoEmptySlotText;                                   // 0x0808(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TMap<ETitleProgressType, class UAkAudioEvent*> BGMMap;                                            // 0x0818(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	int32                                         PlayingBGMID;                                      // 0x0868(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_86C[0x4];                                      // 0x086C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMenuContext                           WarningDialogContext;                              // 0x0870(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	class FText                                   WarningDialogText;                                 // 0x08A8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          IsFromConsent;                                     // 0x08B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsFromBack;                                        // 0x08B9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8BA[0x6];                                      // 0x08BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMenuContext                           ShowShopYesNoDialogContext;                        // 0x08C0(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	struct FMenuContext                           ShowStoreUIFailedDialog;                           // 0x08F8(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	bool                                          ShowStoreUIResult;                                 // 0x0930(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_931[0x7];                                      // 0x0931(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   ShowStoreUIFailedText;                             // 0x0938(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FMenuContext                           ErrorDialog;                                       // 0x0948(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	class UCommonTextBlock*                       DLC_Name_MaskofIdris;                              // 0x0620(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       HelpText;                                          // 0x0628(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_356;                                         // 0x0630(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               Overlay_AspectRatio;                               // 0x0638(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               PressAnyButton;                                    // 0x0640(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       PressAnyButtonText;                                // 0x0648(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonLazyImage*                       TitleLogoImage;                                    // 0x0650(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           TitleMenu;                                         // 0x0658(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCanvasPanel*                           TitleMenuCanvas;                                   // 0x0660(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           TitleMenuEntryBox;                                 // 0x0668(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_TitleMenuEntryPiece_C*             TitleMenuEntryContinue;                            // 0x0670(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_TitleMenuEntryPiece_C*             TitleMenuEntryLoadGame;                            // 0x0678(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_TitleMenuEntryPiece_C*             TitleMenuEntryLoadGame_LouRescue;                  // 0x0680(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_TitleMenuEntryPiece_C*             TitleMenuEntryNewGame;                             // 0x0688(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_TitleMenuEntryPiece_C*             TitleMenuEntryNewGame_LouRescue;                   // 0x0690(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_TitleMenuEntryPiece_C*             TitleMenuEntryQuitGame;                            // 0x0698(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBP_TitleMenuUIObject_C*                BP_TitleMenuUIObject;                              // 0x06A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TArray<class UWDT_TitleMenuEntryPiece_C*>     TitleMenuList;                                     // 0x06A8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	struct FMenuContext                           OKDialogContext;                                   // 0x06B8(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	TMap<ETitleProgressType, TSoftClassPtr<class UClass>> BGMap;                                             // 0x06F0(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TMap<class FName, class FText>                HelpTextMap;                                       // 0x0740(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class FText                                   NetworkErrorTitleText;                             // 0x0790(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class FText                                   NetworkErrorText;                                  // 0x07A0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FSlateFontInfo                         DefaultFont;                                       // 0x07B0(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	class FText                                   NoEmptySlotText;                                   // 0x0810(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TMap<ETitleProgressType, class UAkAudioEvent*> BGMMap;                                            // 0x0820(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	int32                                         PlayingBGMID;                                      // 0x0870(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_874[0x4];                                      // 0x0874(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMenuContext                           WarningDialogContext;                              // 0x0878(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	class FText                                   WarningDialogText;                                 // 0x08B0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          IsFromConsent;                                     // 0x08C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsFromBack;                                        // 0x08C1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8C2[0x6];                                      // 0x08C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMenuContext                           ShowShopYesNoDialogContext;                        // 0x08C8(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	struct FMenuContext                           ShowStoreUIFailedDialog;                           // 0x0900(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	bool                                          ShowStoreUIResult;                                 // 0x0938(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_939[0x7];                                      // 0x0939(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   ShowStoreUIFailedText;                             // 0x0940(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FMenuContext                           ErrorDialog;                                       // 0x0950(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	class FText                                   OnlineModeText;                                    // 0x0988(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class FText                                   OfflineModeText;                                   // 0x0998(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<class UTextBlock*>                     AvailableDLCTexts;                                 // 0x09A8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	TArray<EDLCType>                              CheckDLCTypes;                                     // 0x09B8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FMenuContext                           DifficultyModeDialogContext;                       // 0x09C8(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	TArray<class FText>                           DifficultyModeTexts;                               // 0x0A00(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<EDifficultyType>                       DifficultyModes;                                   // 0x0A10(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          FromMenu;                                          // 0x0A20(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
+	void CheckNetworkAvailable();
 	void DecideMenu(class FName LastSelectedMenuName);
 	void ExecuteUbergraph_WDT_TitleMenu_Variationable(int32 EntryPoint);
+	void GetDLCGroupShowedFlag(EDLCGroup InDLCGroup, bool* Result);
+	void GetErrorDialogBodyText(ECommonUserPrivilegeResult PrivilegeResult, class FText* Text);
+	void GetErrorDialogTitleText(ECommonUserPrivilegeResult PrivilegeResult, class FText* Text);
 	void GetMenuPieceByName(class FName Name_0, class UWDT_TitleMenuEntryPiece_C** Array_Element);
 	void InpActEvt_IA_UI_AnyKey_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
 	void InpActEvt_IA_UI_Cancel_K2Node_EnhancedInputActionEvent_3(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
@@ -95,7 +109,7 @@ public:
 	void OnCancelPressed();
 	void OnChangeInitialSettingsStep();
 	void OnChangeTitleProgress(ETitleProgressType Progress);
-	void OnCheckNetworkAvailable(bool Result);
+	void OnCheckNetworkAvailable(ECommonUserPrivilegeResult Result);
 	void OnClosed();
 	void OnClosedErrorDialog();
 	void OnClosedNetworkConnectionErrorDialog();
@@ -104,8 +118,10 @@ public:
 	void OnConfig();
 	void OnConsentSectionClosed(bool InIsDecide);
 	void OnContinue();
+	void OnDecideDifficultyModeDialog(uint8 DecideOptionNumber);
 	void OnDecidePressed();
 	void OnDecideStoreOpenDialog(uint8 DecideOptionNumber);
+	void OnDifficultyModeDialogClosed();
 	void OnDLCGuideDialogClosed();
 	void OnDownPressed();
 	class UWidgetAnimation* OnGetCloseAnimation();
@@ -133,7 +149,9 @@ public:
 	void OpenInvalidSlotErrorDialog(EUISaveDataStatus InSlotStatus);
 	void OpenNotEnoughDLCErrorDialog(TArray<EDLCType>& NotEnoughDLCs);
 	void OpenWarningDialog();
+	void SetDLCGroupShowedFlag(struct FConfigurationDownloadContentsSaveData& InTarget, EDLCGroup InDLCGroup, bool InShowed);
 	void ShowConsentSection(const struct FConfigurationConsentTypeTags& InTag);
+	void ShowDifficultyModeDialog();
 	void ShowDLCGuideDialog();
 	void ShowGameSettingSectionBrightness();
 	void ShowNetworkSectionSelectionRegion();
@@ -155,7 +173,7 @@ public:
 	}
 };
 static_assert(alignof(UWDT_TitleMenu_Variationable_C) == 0x000008, "Wrong alignment on UWDT_TitleMenu_Variationable_C");
-static_assert(sizeof(UWDT_TitleMenu_Variationable_C) == 0x000980, "Wrong size on UWDT_TitleMenu_Variationable_C");
+static_assert(sizeof(UWDT_TitleMenu_Variationable_C) == 0x000A28, "Wrong size on UWDT_TitleMenu_Variationable_C");
 static_assert(offsetof(UWDT_TitleMenu_Variationable_C, UberGraphFrame) == 0x0005B8, "Member 'UWDT_TitleMenu_Variationable_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UWDT_TitleMenu_Variationable_C, ZenonCursor) == 0x0005C0, "Member 'UWDT_TitleMenu_Variationable_C::ZenonCursor' has a wrong offset!");
 static_assert(offsetof(UWDT_TitleMenu_Variationable_C, TitleMenuOpen1shotAnim) == 0x0005C8, "Member 'UWDT_TitleMenu_Variationable_C::TitleMenuOpen1shotAnim' has a wrong offset!");
@@ -169,41 +187,50 @@ static_assert(offsetof(UWDT_TitleMenu_Variationable_C, BGRoot) == 0x000600, "Mem
 static_assert(offsetof(UWDT_TitleMenu_Variationable_C, Black) == 0x000608, "Member 'UWDT_TitleMenu_Variationable_C::Black' has a wrong offset!");
 static_assert(offsetof(UWDT_TitleMenu_Variationable_C, CODEVEINII) == 0x000610, "Member 'UWDT_TitleMenu_Variationable_C::CODEVEINII' has a wrong offset!");
 static_assert(offsetof(UWDT_TitleMenu_Variationable_C, ContinueEmphasis) == 0x000618, "Member 'UWDT_TitleMenu_Variationable_C::ContinueEmphasis' has a wrong offset!");
-static_assert(offsetof(UWDT_TitleMenu_Variationable_C, HelpText) == 0x000620, "Member 'UWDT_TitleMenu_Variationable_C::HelpText' has a wrong offset!");
-static_assert(offsetof(UWDT_TitleMenu_Variationable_C, Image_356) == 0x000628, "Member 'UWDT_TitleMenu_Variationable_C::Image_356' has a wrong offset!");
-static_assert(offsetof(UWDT_TitleMenu_Variationable_C, Overlay_AspectRatio) == 0x000630, "Member 'UWDT_TitleMenu_Variationable_C::Overlay_AspectRatio' has a wrong offset!");
-static_assert(offsetof(UWDT_TitleMenu_Variationable_C, PressAnyButton) == 0x000638, "Member 'UWDT_TitleMenu_Variationable_C::PressAnyButton' has a wrong offset!");
-static_assert(offsetof(UWDT_TitleMenu_Variationable_C, PressAnyButtonText) == 0x000640, "Member 'UWDT_TitleMenu_Variationable_C::PressAnyButtonText' has a wrong offset!");
-static_assert(offsetof(UWDT_TitleMenu_Variationable_C, TitleLogoImage) == 0x000648, "Member 'UWDT_TitleMenu_Variationable_C::TitleLogoImage' has a wrong offset!");
-static_assert(offsetof(UWDT_TitleMenu_Variationable_C, TitleMenu) == 0x000650, "Member 'UWDT_TitleMenu_Variationable_C::TitleMenu' has a wrong offset!");
-static_assert(offsetof(UWDT_TitleMenu_Variationable_C, TitleMenuCanvas) == 0x000658, "Member 'UWDT_TitleMenu_Variationable_C::TitleMenuCanvas' has a wrong offset!");
-static_assert(offsetof(UWDT_TitleMenu_Variationable_C, TitleMenuEntryBox) == 0x000660, "Member 'UWDT_TitleMenu_Variationable_C::TitleMenuEntryBox' has a wrong offset!");
-static_assert(offsetof(UWDT_TitleMenu_Variationable_C, TitleMenuEntryContinue) == 0x000668, "Member 'UWDT_TitleMenu_Variationable_C::TitleMenuEntryContinue' has a wrong offset!");
-static_assert(offsetof(UWDT_TitleMenu_Variationable_C, TitleMenuEntryLoadGame) == 0x000670, "Member 'UWDT_TitleMenu_Variationable_C::TitleMenuEntryLoadGame' has a wrong offset!");
-static_assert(offsetof(UWDT_TitleMenu_Variationable_C, TitleMenuEntryLoadGame_LouRescue) == 0x000678, "Member 'UWDT_TitleMenu_Variationable_C::TitleMenuEntryLoadGame_LouRescue' has a wrong offset!");
-static_assert(offsetof(UWDT_TitleMenu_Variationable_C, TitleMenuEntryNewGame) == 0x000680, "Member 'UWDT_TitleMenu_Variationable_C::TitleMenuEntryNewGame' has a wrong offset!");
-static_assert(offsetof(UWDT_TitleMenu_Variationable_C, TitleMenuEntryNewGame_LouRescue) == 0x000688, "Member 'UWDT_TitleMenu_Variationable_C::TitleMenuEntryNewGame_LouRescue' has a wrong offset!");
-static_assert(offsetof(UWDT_TitleMenu_Variationable_C, TitleMenuEntryQuitGame) == 0x000690, "Member 'UWDT_TitleMenu_Variationable_C::TitleMenuEntryQuitGame' has a wrong offset!");
-static_assert(offsetof(UWDT_TitleMenu_Variationable_C, BP_TitleMenuUIObject) == 0x000698, "Member 'UWDT_TitleMenu_Variationable_C::BP_TitleMenuUIObject' has a wrong offset!");
-static_assert(offsetof(UWDT_TitleMenu_Variationable_C, TitleMenuList) == 0x0006A0, "Member 'UWDT_TitleMenu_Variationable_C::TitleMenuList' has a wrong offset!");
-static_assert(offsetof(UWDT_TitleMenu_Variationable_C, OKDialogContext) == 0x0006B0, "Member 'UWDT_TitleMenu_Variationable_C::OKDialogContext' has a wrong offset!");
-static_assert(offsetof(UWDT_TitleMenu_Variationable_C, BGMap) == 0x0006E8, "Member 'UWDT_TitleMenu_Variationable_C::BGMap' has a wrong offset!");
-static_assert(offsetof(UWDT_TitleMenu_Variationable_C, HelpTextMap) == 0x000738, "Member 'UWDT_TitleMenu_Variationable_C::HelpTextMap' has a wrong offset!");
-static_assert(offsetof(UWDT_TitleMenu_Variationable_C, NetworkErrorTitleText) == 0x000788, "Member 'UWDT_TitleMenu_Variationable_C::NetworkErrorTitleText' has a wrong offset!");
-static_assert(offsetof(UWDT_TitleMenu_Variationable_C, NetworkErrorText) == 0x000798, "Member 'UWDT_TitleMenu_Variationable_C::NetworkErrorText' has a wrong offset!");
-static_assert(offsetof(UWDT_TitleMenu_Variationable_C, DefaultFont) == 0x0007A8, "Member 'UWDT_TitleMenu_Variationable_C::DefaultFont' has a wrong offset!");
-static_assert(offsetof(UWDT_TitleMenu_Variationable_C, NoEmptySlotText) == 0x000808, "Member 'UWDT_TitleMenu_Variationable_C::NoEmptySlotText' has a wrong offset!");
-static_assert(offsetof(UWDT_TitleMenu_Variationable_C, BGMMap) == 0x000818, "Member 'UWDT_TitleMenu_Variationable_C::BGMMap' has a wrong offset!");
-static_assert(offsetof(UWDT_TitleMenu_Variationable_C, PlayingBGMID) == 0x000868, "Member 'UWDT_TitleMenu_Variationable_C::PlayingBGMID' has a wrong offset!");
-static_assert(offsetof(UWDT_TitleMenu_Variationable_C, WarningDialogContext) == 0x000870, "Member 'UWDT_TitleMenu_Variationable_C::WarningDialogContext' has a wrong offset!");
-static_assert(offsetof(UWDT_TitleMenu_Variationable_C, WarningDialogText) == 0x0008A8, "Member 'UWDT_TitleMenu_Variationable_C::WarningDialogText' has a wrong offset!");
-static_assert(offsetof(UWDT_TitleMenu_Variationable_C, IsFromConsent) == 0x0008B8, "Member 'UWDT_TitleMenu_Variationable_C::IsFromConsent' has a wrong offset!");
-static_assert(offsetof(UWDT_TitleMenu_Variationable_C, IsFromBack) == 0x0008B9, "Member 'UWDT_TitleMenu_Variationable_C::IsFromBack' has a wrong offset!");
-static_assert(offsetof(UWDT_TitleMenu_Variationable_C, ShowShopYesNoDialogContext) == 0x0008C0, "Member 'UWDT_TitleMenu_Variationable_C::ShowShopYesNoDialogContext' has a wrong offset!");
-static_assert(offsetof(UWDT_TitleMenu_Variationable_C, ShowStoreUIFailedDialog) == 0x0008F8, "Member 'UWDT_TitleMenu_Variationable_C::ShowStoreUIFailedDialog' has a wrong offset!");
-static_assert(offsetof(UWDT_TitleMenu_Variationable_C, ShowStoreUIResult) == 0x000930, "Member 'UWDT_TitleMenu_Variationable_C::ShowStoreUIResult' has a wrong offset!");
-static_assert(offsetof(UWDT_TitleMenu_Variationable_C, ShowStoreUIFailedText) == 0x000938, "Member 'UWDT_TitleMenu_Variationable_C::ShowStoreUIFailedText' has a wrong offset!");
-static_assert(offsetof(UWDT_TitleMenu_Variationable_C, ErrorDialog) == 0x000948, "Member 'UWDT_TitleMenu_Variationable_C::ErrorDialog' has a wrong offset!");
+static_assert(offsetof(UWDT_TitleMenu_Variationable_C, DLC_Name_MaskofIdris) == 0x000620, "Member 'UWDT_TitleMenu_Variationable_C::DLC_Name_MaskofIdris' has a wrong offset!");
+static_assert(offsetof(UWDT_TitleMenu_Variationable_C, HelpText) == 0x000628, "Member 'UWDT_TitleMenu_Variationable_C::HelpText' has a wrong offset!");
+static_assert(offsetof(UWDT_TitleMenu_Variationable_C, Image_356) == 0x000630, "Member 'UWDT_TitleMenu_Variationable_C::Image_356' has a wrong offset!");
+static_assert(offsetof(UWDT_TitleMenu_Variationable_C, Overlay_AspectRatio) == 0x000638, "Member 'UWDT_TitleMenu_Variationable_C::Overlay_AspectRatio' has a wrong offset!");
+static_assert(offsetof(UWDT_TitleMenu_Variationable_C, PressAnyButton) == 0x000640, "Member 'UWDT_TitleMenu_Variationable_C::PressAnyButton' has a wrong offset!");
+static_assert(offsetof(UWDT_TitleMenu_Variationable_C, PressAnyButtonText) == 0x000648, "Member 'UWDT_TitleMenu_Variationable_C::PressAnyButtonText' has a wrong offset!");
+static_assert(offsetof(UWDT_TitleMenu_Variationable_C, TitleLogoImage) == 0x000650, "Member 'UWDT_TitleMenu_Variationable_C::TitleLogoImage' has a wrong offset!");
+static_assert(offsetof(UWDT_TitleMenu_Variationable_C, TitleMenu) == 0x000658, "Member 'UWDT_TitleMenu_Variationable_C::TitleMenu' has a wrong offset!");
+static_assert(offsetof(UWDT_TitleMenu_Variationable_C, TitleMenuCanvas) == 0x000660, "Member 'UWDT_TitleMenu_Variationable_C::TitleMenuCanvas' has a wrong offset!");
+static_assert(offsetof(UWDT_TitleMenu_Variationable_C, TitleMenuEntryBox) == 0x000668, "Member 'UWDT_TitleMenu_Variationable_C::TitleMenuEntryBox' has a wrong offset!");
+static_assert(offsetof(UWDT_TitleMenu_Variationable_C, TitleMenuEntryContinue) == 0x000670, "Member 'UWDT_TitleMenu_Variationable_C::TitleMenuEntryContinue' has a wrong offset!");
+static_assert(offsetof(UWDT_TitleMenu_Variationable_C, TitleMenuEntryLoadGame) == 0x000678, "Member 'UWDT_TitleMenu_Variationable_C::TitleMenuEntryLoadGame' has a wrong offset!");
+static_assert(offsetof(UWDT_TitleMenu_Variationable_C, TitleMenuEntryLoadGame_LouRescue) == 0x000680, "Member 'UWDT_TitleMenu_Variationable_C::TitleMenuEntryLoadGame_LouRescue' has a wrong offset!");
+static_assert(offsetof(UWDT_TitleMenu_Variationable_C, TitleMenuEntryNewGame) == 0x000688, "Member 'UWDT_TitleMenu_Variationable_C::TitleMenuEntryNewGame' has a wrong offset!");
+static_assert(offsetof(UWDT_TitleMenu_Variationable_C, TitleMenuEntryNewGame_LouRescue) == 0x000690, "Member 'UWDT_TitleMenu_Variationable_C::TitleMenuEntryNewGame_LouRescue' has a wrong offset!");
+static_assert(offsetof(UWDT_TitleMenu_Variationable_C, TitleMenuEntryQuitGame) == 0x000698, "Member 'UWDT_TitleMenu_Variationable_C::TitleMenuEntryQuitGame' has a wrong offset!");
+static_assert(offsetof(UWDT_TitleMenu_Variationable_C, BP_TitleMenuUIObject) == 0x0006A0, "Member 'UWDT_TitleMenu_Variationable_C::BP_TitleMenuUIObject' has a wrong offset!");
+static_assert(offsetof(UWDT_TitleMenu_Variationable_C, TitleMenuList) == 0x0006A8, "Member 'UWDT_TitleMenu_Variationable_C::TitleMenuList' has a wrong offset!");
+static_assert(offsetof(UWDT_TitleMenu_Variationable_C, OKDialogContext) == 0x0006B8, "Member 'UWDT_TitleMenu_Variationable_C::OKDialogContext' has a wrong offset!");
+static_assert(offsetof(UWDT_TitleMenu_Variationable_C, BGMap) == 0x0006F0, "Member 'UWDT_TitleMenu_Variationable_C::BGMap' has a wrong offset!");
+static_assert(offsetof(UWDT_TitleMenu_Variationable_C, HelpTextMap) == 0x000740, "Member 'UWDT_TitleMenu_Variationable_C::HelpTextMap' has a wrong offset!");
+static_assert(offsetof(UWDT_TitleMenu_Variationable_C, NetworkErrorTitleText) == 0x000790, "Member 'UWDT_TitleMenu_Variationable_C::NetworkErrorTitleText' has a wrong offset!");
+static_assert(offsetof(UWDT_TitleMenu_Variationable_C, NetworkErrorText) == 0x0007A0, "Member 'UWDT_TitleMenu_Variationable_C::NetworkErrorText' has a wrong offset!");
+static_assert(offsetof(UWDT_TitleMenu_Variationable_C, DefaultFont) == 0x0007B0, "Member 'UWDT_TitleMenu_Variationable_C::DefaultFont' has a wrong offset!");
+static_assert(offsetof(UWDT_TitleMenu_Variationable_C, NoEmptySlotText) == 0x000810, "Member 'UWDT_TitleMenu_Variationable_C::NoEmptySlotText' has a wrong offset!");
+static_assert(offsetof(UWDT_TitleMenu_Variationable_C, BGMMap) == 0x000820, "Member 'UWDT_TitleMenu_Variationable_C::BGMMap' has a wrong offset!");
+static_assert(offsetof(UWDT_TitleMenu_Variationable_C, PlayingBGMID) == 0x000870, "Member 'UWDT_TitleMenu_Variationable_C::PlayingBGMID' has a wrong offset!");
+static_assert(offsetof(UWDT_TitleMenu_Variationable_C, WarningDialogContext) == 0x000878, "Member 'UWDT_TitleMenu_Variationable_C::WarningDialogContext' has a wrong offset!");
+static_assert(offsetof(UWDT_TitleMenu_Variationable_C, WarningDialogText) == 0x0008B0, "Member 'UWDT_TitleMenu_Variationable_C::WarningDialogText' has a wrong offset!");
+static_assert(offsetof(UWDT_TitleMenu_Variationable_C, IsFromConsent) == 0x0008C0, "Member 'UWDT_TitleMenu_Variationable_C::IsFromConsent' has a wrong offset!");
+static_assert(offsetof(UWDT_TitleMenu_Variationable_C, IsFromBack) == 0x0008C1, "Member 'UWDT_TitleMenu_Variationable_C::IsFromBack' has a wrong offset!");
+static_assert(offsetof(UWDT_TitleMenu_Variationable_C, ShowShopYesNoDialogContext) == 0x0008C8, "Member 'UWDT_TitleMenu_Variationable_C::ShowShopYesNoDialogContext' has a wrong offset!");
+static_assert(offsetof(UWDT_TitleMenu_Variationable_C, ShowStoreUIFailedDialog) == 0x000900, "Member 'UWDT_TitleMenu_Variationable_C::ShowStoreUIFailedDialog' has a wrong offset!");
+static_assert(offsetof(UWDT_TitleMenu_Variationable_C, ShowStoreUIResult) == 0x000938, "Member 'UWDT_TitleMenu_Variationable_C::ShowStoreUIResult' has a wrong offset!");
+static_assert(offsetof(UWDT_TitleMenu_Variationable_C, ShowStoreUIFailedText) == 0x000940, "Member 'UWDT_TitleMenu_Variationable_C::ShowStoreUIFailedText' has a wrong offset!");
+static_assert(offsetof(UWDT_TitleMenu_Variationable_C, ErrorDialog) == 0x000950, "Member 'UWDT_TitleMenu_Variationable_C::ErrorDialog' has a wrong offset!");
+static_assert(offsetof(UWDT_TitleMenu_Variationable_C, OnlineModeText) == 0x000988, "Member 'UWDT_TitleMenu_Variationable_C::OnlineModeText' has a wrong offset!");
+static_assert(offsetof(UWDT_TitleMenu_Variationable_C, OfflineModeText) == 0x000998, "Member 'UWDT_TitleMenu_Variationable_C::OfflineModeText' has a wrong offset!");
+static_assert(offsetof(UWDT_TitleMenu_Variationable_C, AvailableDLCTexts) == 0x0009A8, "Member 'UWDT_TitleMenu_Variationable_C::AvailableDLCTexts' has a wrong offset!");
+static_assert(offsetof(UWDT_TitleMenu_Variationable_C, CheckDLCTypes) == 0x0009B8, "Member 'UWDT_TitleMenu_Variationable_C::CheckDLCTypes' has a wrong offset!");
+static_assert(offsetof(UWDT_TitleMenu_Variationable_C, DifficultyModeDialogContext) == 0x0009C8, "Member 'UWDT_TitleMenu_Variationable_C::DifficultyModeDialogContext' has a wrong offset!");
+static_assert(offsetof(UWDT_TitleMenu_Variationable_C, DifficultyModeTexts) == 0x000A00, "Member 'UWDT_TitleMenu_Variationable_C::DifficultyModeTexts' has a wrong offset!");
+static_assert(offsetof(UWDT_TitleMenu_Variationable_C, DifficultyModes) == 0x000A10, "Member 'UWDT_TitleMenu_Variationable_C::DifficultyModes' has a wrong offset!");
+static_assert(offsetof(UWDT_TitleMenu_Variationable_C, FromMenu) == 0x000A20, "Member 'UWDT_TitleMenu_Variationable_C::FromMenu' has a wrong offset!");
 
 }
 

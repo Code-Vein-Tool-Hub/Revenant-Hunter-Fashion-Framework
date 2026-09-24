@@ -46,40 +46,43 @@ static_assert(offsetof(GCN_Slow_C_EndEffect, CallFunc_VCF_GetCharacterVisualCont
 static_assert(offsetof(GCN_Slow_C_EndEffect, CallFunc_IsValid_ReturnValue) == 0x000008, "Member 'GCN_Slow_C_EndEffect::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
 // Function GCN_Slow.GCN_Slow_C.ExecuteUbergraph_GCN_Slow
-// 0x04E8 (0x04E8 - 0x0000)
+// 0x04F0 (0x04F0 - 0x0000)
 struct GCN_Slow_C_ExecuteUbergraph_GCN_Slow final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 K2Node_Event_Target_3;                             // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayCueParameters                 K2Node_Event_Parameters_3;                         // 0x0010(0x00D8)(ConstParm, ContainsInstancedReference)
-	struct FGameplayCueNotify_SpawnResult         K2Node_Event_SpawnResults_3;                       // 0x00E8(0x0058)(ConstParm, ContainsInstancedReference)
-	class AActor*                                 K2Node_Event_Target_2;                             // 0x0140(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayCueParameters                 K2Node_Event_Parameters_2;                         // 0x0148(0x00D8)(ConstParm, ContainsInstancedReference)
-	struct FGameplayCueNotify_SpawnResult         K2Node_Event_SpawnResults_2;                       // 0x0220(0x0058)(ConstParm, ContainsInstancedReference)
-	class AActor*                                 K2Node_Event_Target_1;                             // 0x0278(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayCueParameters                 K2Node_Event_Parameters_1;                         // 0x0280(0x00D8)(ConstParm, ContainsInstancedReference)
-	struct FGameplayCueNotify_SpawnResult         K2Node_Event_SpawnResults_1;                       // 0x0358(0x0058)(ConstParm, ContainsInstancedReference)
-	class AActor*                                 K2Node_Event_Target;                               // 0x03B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayCueParameters                 K2Node_Event_Parameters;                           // 0x03B8(0x00D8)(ConstParm, ContainsInstancedReference)
-	struct FGameplayCueNotify_SpawnResult         K2Node_Event_SpawnResults;                         // 0x0490(0x0058)(ConstParm, ContainsInstancedReference)
+	float                                         K2Node_Event_DeltaSeconds;                         // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 K2Node_Event_Target_1;                             // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayCueParameters                 K2Node_Event_Parameters_1;                         // 0x0010(0x00D8)(ConstParm, ContainsInstancedReference)
+	struct FGameplayCueNotify_SpawnResult         K2Node_Event_SpawnResults_1;                       // 0x00E8(0x0058)(ConstParm, ContainsInstancedReference)
+	class AActor*                                 K2Node_Event_Target;                               // 0x0140(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayCueParameters                 K2Node_Event_Parameters;                           // 0x0148(0x00D8)(ConstParm, ContainsInstancedReference)
+	struct FGameplayCueNotify_SpawnResult         K2Node_Event_SpawnResults;                         // 0x0220(0x0058)(ConstParm, ContainsInstancedReference)
+	class AActor*                                 K2Node_Event_Target_2;                             // 0x0278(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayCueParameters                 K2Node_Event_Parameters_2;                         // 0x0280(0x00D8)(ConstParm, ContainsInstancedReference)
+	struct FGameplayCueNotify_SpawnResult         K2Node_Event_SpawnResults_2;                       // 0x0358(0x0058)(ConstParm, ContainsInstancedReference)
+	class AActor*                                 K2Node_Event_Target_3;                             // 0x03B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayCueParameters                 K2Node_Event_Parameters_3;                         // 0x03B8(0x00D8)(ConstParm, ContainsInstancedReference)
+	struct FGameplayCueNotify_SpawnResult         K2Node_Event_SpawnResults_3;                       // 0x0490(0x0058)(ConstParm, ContainsInstancedReference)
+	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x04E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(GCN_Slow_C_ExecuteUbergraph_GCN_Slow) == 0x000008, "Wrong alignment on GCN_Slow_C_ExecuteUbergraph_GCN_Slow");
-static_assert(sizeof(GCN_Slow_C_ExecuteUbergraph_GCN_Slow) == 0x0004E8, "Wrong size on GCN_Slow_C_ExecuteUbergraph_GCN_Slow");
+static_assert(sizeof(GCN_Slow_C_ExecuteUbergraph_GCN_Slow) == 0x0004F0, "Wrong size on GCN_Slow_C_ExecuteUbergraph_GCN_Slow");
 static_assert(offsetof(GCN_Slow_C_ExecuteUbergraph_GCN_Slow, EntryPoint) == 0x000000, "Member 'GCN_Slow_C_ExecuteUbergraph_GCN_Slow::EntryPoint' has a wrong offset!");
-static_assert(offsetof(GCN_Slow_C_ExecuteUbergraph_GCN_Slow, K2Node_Event_Target_3) == 0x000008, "Member 'GCN_Slow_C_ExecuteUbergraph_GCN_Slow::K2Node_Event_Target_3' has a wrong offset!");
-static_assert(offsetof(GCN_Slow_C_ExecuteUbergraph_GCN_Slow, K2Node_Event_Parameters_3) == 0x000010, "Member 'GCN_Slow_C_ExecuteUbergraph_GCN_Slow::K2Node_Event_Parameters_3' has a wrong offset!");
-static_assert(offsetof(GCN_Slow_C_ExecuteUbergraph_GCN_Slow, K2Node_Event_SpawnResults_3) == 0x0000E8, "Member 'GCN_Slow_C_ExecuteUbergraph_GCN_Slow::K2Node_Event_SpawnResults_3' has a wrong offset!");
-static_assert(offsetof(GCN_Slow_C_ExecuteUbergraph_GCN_Slow, K2Node_Event_Target_2) == 0x000140, "Member 'GCN_Slow_C_ExecuteUbergraph_GCN_Slow::K2Node_Event_Target_2' has a wrong offset!");
-static_assert(offsetof(GCN_Slow_C_ExecuteUbergraph_GCN_Slow, K2Node_Event_Parameters_2) == 0x000148, "Member 'GCN_Slow_C_ExecuteUbergraph_GCN_Slow::K2Node_Event_Parameters_2' has a wrong offset!");
-static_assert(offsetof(GCN_Slow_C_ExecuteUbergraph_GCN_Slow, K2Node_Event_SpawnResults_2) == 0x000220, "Member 'GCN_Slow_C_ExecuteUbergraph_GCN_Slow::K2Node_Event_SpawnResults_2' has a wrong offset!");
-static_assert(offsetof(GCN_Slow_C_ExecuteUbergraph_GCN_Slow, K2Node_Event_Target_1) == 0x000278, "Member 'GCN_Slow_C_ExecuteUbergraph_GCN_Slow::K2Node_Event_Target_1' has a wrong offset!");
-static_assert(offsetof(GCN_Slow_C_ExecuteUbergraph_GCN_Slow, K2Node_Event_Parameters_1) == 0x000280, "Member 'GCN_Slow_C_ExecuteUbergraph_GCN_Slow::K2Node_Event_Parameters_1' has a wrong offset!");
-static_assert(offsetof(GCN_Slow_C_ExecuteUbergraph_GCN_Slow, K2Node_Event_SpawnResults_1) == 0x000358, "Member 'GCN_Slow_C_ExecuteUbergraph_GCN_Slow::K2Node_Event_SpawnResults_1' has a wrong offset!");
-static_assert(offsetof(GCN_Slow_C_ExecuteUbergraph_GCN_Slow, K2Node_Event_Target) == 0x0003B0, "Member 'GCN_Slow_C_ExecuteUbergraph_GCN_Slow::K2Node_Event_Target' has a wrong offset!");
-static_assert(offsetof(GCN_Slow_C_ExecuteUbergraph_GCN_Slow, K2Node_Event_Parameters) == 0x0003B8, "Member 'GCN_Slow_C_ExecuteUbergraph_GCN_Slow::K2Node_Event_Parameters' has a wrong offset!");
-static_assert(offsetof(GCN_Slow_C_ExecuteUbergraph_GCN_Slow, K2Node_Event_SpawnResults) == 0x000490, "Member 'GCN_Slow_C_ExecuteUbergraph_GCN_Slow::K2Node_Event_SpawnResults' has a wrong offset!");
+static_assert(offsetof(GCN_Slow_C_ExecuteUbergraph_GCN_Slow, K2Node_Event_DeltaSeconds) == 0x000004, "Member 'GCN_Slow_C_ExecuteUbergraph_GCN_Slow::K2Node_Event_DeltaSeconds' has a wrong offset!");
+static_assert(offsetof(GCN_Slow_C_ExecuteUbergraph_GCN_Slow, K2Node_Event_Target_1) == 0x000008, "Member 'GCN_Slow_C_ExecuteUbergraph_GCN_Slow::K2Node_Event_Target_1' has a wrong offset!");
+static_assert(offsetof(GCN_Slow_C_ExecuteUbergraph_GCN_Slow, K2Node_Event_Parameters_1) == 0x000010, "Member 'GCN_Slow_C_ExecuteUbergraph_GCN_Slow::K2Node_Event_Parameters_1' has a wrong offset!");
+static_assert(offsetof(GCN_Slow_C_ExecuteUbergraph_GCN_Slow, K2Node_Event_SpawnResults_1) == 0x0000E8, "Member 'GCN_Slow_C_ExecuteUbergraph_GCN_Slow::K2Node_Event_SpawnResults_1' has a wrong offset!");
+static_assert(offsetof(GCN_Slow_C_ExecuteUbergraph_GCN_Slow, K2Node_Event_Target) == 0x000140, "Member 'GCN_Slow_C_ExecuteUbergraph_GCN_Slow::K2Node_Event_Target' has a wrong offset!");
+static_assert(offsetof(GCN_Slow_C_ExecuteUbergraph_GCN_Slow, K2Node_Event_Parameters) == 0x000148, "Member 'GCN_Slow_C_ExecuteUbergraph_GCN_Slow::K2Node_Event_Parameters' has a wrong offset!");
+static_assert(offsetof(GCN_Slow_C_ExecuteUbergraph_GCN_Slow, K2Node_Event_SpawnResults) == 0x000220, "Member 'GCN_Slow_C_ExecuteUbergraph_GCN_Slow::K2Node_Event_SpawnResults' has a wrong offset!");
+static_assert(offsetof(GCN_Slow_C_ExecuteUbergraph_GCN_Slow, K2Node_Event_Target_2) == 0x000278, "Member 'GCN_Slow_C_ExecuteUbergraph_GCN_Slow::K2Node_Event_Target_2' has a wrong offset!");
+static_assert(offsetof(GCN_Slow_C_ExecuteUbergraph_GCN_Slow, K2Node_Event_Parameters_2) == 0x000280, "Member 'GCN_Slow_C_ExecuteUbergraph_GCN_Slow::K2Node_Event_Parameters_2' has a wrong offset!");
+static_assert(offsetof(GCN_Slow_C_ExecuteUbergraph_GCN_Slow, K2Node_Event_SpawnResults_2) == 0x000358, "Member 'GCN_Slow_C_ExecuteUbergraph_GCN_Slow::K2Node_Event_SpawnResults_2' has a wrong offset!");
+static_assert(offsetof(GCN_Slow_C_ExecuteUbergraph_GCN_Slow, K2Node_Event_Target_3) == 0x0003B0, "Member 'GCN_Slow_C_ExecuteUbergraph_GCN_Slow::K2Node_Event_Target_3' has a wrong offset!");
+static_assert(offsetof(GCN_Slow_C_ExecuteUbergraph_GCN_Slow, K2Node_Event_Parameters_3) == 0x0003B8, "Member 'GCN_Slow_C_ExecuteUbergraph_GCN_Slow::K2Node_Event_Parameters_3' has a wrong offset!");
+static_assert(offsetof(GCN_Slow_C_ExecuteUbergraph_GCN_Slow, K2Node_Event_SpawnResults_3) == 0x000490, "Member 'GCN_Slow_C_ExecuteUbergraph_GCN_Slow::K2Node_Event_SpawnResults_3' has a wrong offset!");
+static_assert(offsetof(GCN_Slow_C_ExecuteUbergraph_GCN_Slow, CallFunc_GetOwner_ReturnValue) == 0x0004E8, "Member 'GCN_Slow_C_ExecuteUbergraph_GCN_Slow::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
 
 // Function GCN_Slow.GCN_Slow_C.InitializeEffect
 // 0x0028 (0x0028 - 0x0000)
@@ -163,6 +166,41 @@ static_assert(sizeof(GCN_Slow_C_OnRemoval) == 0x000138, "Wrong size on GCN_Slow_
 static_assert(offsetof(GCN_Slow_C_OnRemoval, Target) == 0x000000, "Member 'GCN_Slow_C_OnRemoval::Target' has a wrong offset!");
 static_assert(offsetof(GCN_Slow_C_OnRemoval, Parameters) == 0x000008, "Member 'GCN_Slow_C_OnRemoval::Parameters' has a wrong offset!");
 static_assert(offsetof(GCN_Slow_C_OnRemoval, SpawnResults) == 0x0000E0, "Member 'GCN_Slow_C_OnRemoval::SpawnResults' has a wrong offset!");
+
+// Function GCN_Slow.GCN_Slow_C.OnTick
+// 0x0030 (0x0030 - 0x0000)
+struct GCN_Slow_C_OnTick final
+{
+public:
+	float                                         Delta_Seconds;                                     // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         InDeltaSeconds;                                    // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ACharacter*                             K2Node_DynamicCast_AsCharacter;                    // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCharacterVisualControlComponent*       CallFunc_VCF_GetCharacterVisualControl_ReturnValue; // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(GCN_Slow_C_OnTick) == 0x000008, "Wrong alignment on GCN_Slow_C_OnTick");
+static_assert(sizeof(GCN_Slow_C_OnTick) == 0x000030, "Wrong size on GCN_Slow_C_OnTick");
+static_assert(offsetof(GCN_Slow_C_OnTick, Delta_Seconds) == 0x000000, "Member 'GCN_Slow_C_OnTick::Delta_Seconds' has a wrong offset!");
+static_assert(offsetof(GCN_Slow_C_OnTick, InDeltaSeconds) == 0x000004, "Member 'GCN_Slow_C_OnTick::InDeltaSeconds' has a wrong offset!");
+static_assert(offsetof(GCN_Slow_C_OnTick, CallFunc_GetOwner_ReturnValue) == 0x000008, "Member 'GCN_Slow_C_OnTick::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GCN_Slow_C_OnTick, K2Node_DynamicCast_AsCharacter) == 0x000010, "Member 'GCN_Slow_C_OnTick::K2Node_DynamicCast_AsCharacter' has a wrong offset!");
+static_assert(offsetof(GCN_Slow_C_OnTick, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'GCN_Slow_C_OnTick::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(GCN_Slow_C_OnTick, CallFunc_VCF_GetCharacterVisualControl_ReturnValue) == 0x000020, "Member 'GCN_Slow_C_OnTick::CallFunc_VCF_GetCharacterVisualControl_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GCN_Slow_C_OnTick, CallFunc_IsValid_ReturnValue) == 0x000028, "Member 'GCN_Slow_C_OnTick::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+
+// Function GCN_Slow.GCN_Slow_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct GCN_Slow_C_ReceiveTick final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(GCN_Slow_C_ReceiveTick) == 0x000004, "Wrong alignment on GCN_Slow_C_ReceiveTick");
+static_assert(sizeof(GCN_Slow_C_ReceiveTick) == 0x000004, "Wrong size on GCN_Slow_C_ReceiveTick");
+static_assert(offsetof(GCN_Slow_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'GCN_Slow_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
 
 }
 

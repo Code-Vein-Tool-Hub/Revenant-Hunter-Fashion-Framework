@@ -10,14 +10,148 @@
 
 #include "Basic.hpp"
 
-#include "InputCore_structs.hpp"
-#include "SlateCore_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "Extensions_structs.hpp"
+#include "InputCore_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "SlateCore_structs.hpp"
 
 
 namespace SDK::Params
 {
+
+// Function WDT_ActionInputTrgGuide.WDT_ActionInputTrgGuide_C.ExecuteUbergraph_WDT_ActionInputTrgGuide
+// 0x0030 (0x0030 - 0x0000)
+struct WDT_ActionInputTrgGuide_C_ExecuteUbergraph_WDT_ActionInputTrgGuide final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue;                 // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_IsDesignTime;                         // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_K2_IsCurrentInputDeviceGamePad_ReturnValue; // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FKey>                           CallFunc_GetAssignKeys_ReturnValue;                // 0x0020(0x0010)(ConstParm, ReferenceParm)
+};
+static_assert(alignof(WDT_ActionInputTrgGuide_C_ExecuteUbergraph_WDT_ActionInputTrgGuide) == 0x000008, "Wrong alignment on WDT_ActionInputTrgGuide_C_ExecuteUbergraph_WDT_ActionInputTrgGuide");
+static_assert(sizeof(WDT_ActionInputTrgGuide_C_ExecuteUbergraph_WDT_ActionInputTrgGuide) == 0x000030, "Wrong size on WDT_ActionInputTrgGuide_C_ExecuteUbergraph_WDT_ActionInputTrgGuide");
+static_assert(offsetof(WDT_ActionInputTrgGuide_C_ExecuteUbergraph_WDT_ActionInputTrgGuide, EntryPoint) == 0x000000, "Member 'WDT_ActionInputTrgGuide_C_ExecuteUbergraph_WDT_ActionInputTrgGuide::EntryPoint' has a wrong offset!");
+static_assert(offsetof(WDT_ActionInputTrgGuide_C_ExecuteUbergraph_WDT_ActionInputTrgGuide, CallFunc_MakeVector2D_ReturnValue) == 0x000008, "Member 'WDT_ActionInputTrgGuide_C_ExecuteUbergraph_WDT_ActionInputTrgGuide::CallFunc_MakeVector2D_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ActionInputTrgGuide_C_ExecuteUbergraph_WDT_ActionInputTrgGuide, K2Node_Event_IsDesignTime) == 0x000018, "Member 'WDT_ActionInputTrgGuide_C_ExecuteUbergraph_WDT_ActionInputTrgGuide::K2Node_Event_IsDesignTime' has a wrong offset!");
+static_assert(offsetof(WDT_ActionInputTrgGuide_C_ExecuteUbergraph_WDT_ActionInputTrgGuide, CallFunc_K2_IsCurrentInputDeviceGamePad_ReturnValue) == 0x000019, "Member 'WDT_ActionInputTrgGuide_C_ExecuteUbergraph_WDT_ActionInputTrgGuide::CallFunc_K2_IsCurrentInputDeviceGamePad_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ActionInputTrgGuide_C_ExecuteUbergraph_WDT_ActionInputTrgGuide, CallFunc_GetAssignKeys_ReturnValue) == 0x000020, "Member 'WDT_ActionInputTrgGuide_C_ExecuteUbergraph_WDT_ActionInputTrgGuide::CallFunc_GetAssignKeys_ReturnValue' has a wrong offset!");
+
+// Function WDT_ActionInputTrgGuide.WDT_ActionInputTrgGuide_C.GetAssignKey
+// 0x0028 (0x0028 - 0x0000)
+struct WDT_ActionInputTrgGuide_C_GetAssignKey final
+{
+public:
+	TArray<struct FKey>                           OutAssignKey;                                      // 0x0000(0x0010)(Parm, OutParm)
+	bool                                          CallFunc_K2_IsCurrentInputDeviceGamePad_ReturnValue; // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FKey>                           CallFunc_GetAssignKeys_ReturnValue;                // 0x0018(0x0010)(ConstParm, ReferenceParm)
+};
+static_assert(alignof(WDT_ActionInputTrgGuide_C_GetAssignKey) == 0x000008, "Wrong alignment on WDT_ActionInputTrgGuide_C_GetAssignKey");
+static_assert(sizeof(WDT_ActionInputTrgGuide_C_GetAssignKey) == 0x000028, "Wrong size on WDT_ActionInputTrgGuide_C_GetAssignKey");
+static_assert(offsetof(WDT_ActionInputTrgGuide_C_GetAssignKey, OutAssignKey) == 0x000000, "Member 'WDT_ActionInputTrgGuide_C_GetAssignKey::OutAssignKey' has a wrong offset!");
+static_assert(offsetof(WDT_ActionInputTrgGuide_C_GetAssignKey, CallFunc_K2_IsCurrentInputDeviceGamePad_ReturnValue) == 0x000010, "Member 'WDT_ActionInputTrgGuide_C_GetAssignKey::CallFunc_K2_IsCurrentInputDeviceGamePad_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ActionInputTrgGuide_C_GetAssignKey, CallFunc_GetAssignKeys_ReturnValue) == 0x000018, "Member 'WDT_ActionInputTrgGuide_C_GetAssignKey::CallFunc_GetAssignKeys_ReturnValue' has a wrong offset!");
+
+// Function WDT_ActionInputTrgGuide.WDT_ActionInputTrgGuide_C.InitializeTag
+// 0x0020 (0x0020 - 0x0000)
+struct WDT_ActionInputTrgGuide_C_InitializeTag final
+{
+public:
+	struct FInputActionTag                        InInputActionTag;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_K2_IsCurrentInputDeviceGamePad_ReturnValue; // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FKey>                           CallFunc_GetAssignKeys_ReturnValue;                // 0x0010(0x0010)(ConstParm, ReferenceParm)
+};
+static_assert(alignof(WDT_ActionInputTrgGuide_C_InitializeTag) == 0x000008, "Wrong alignment on WDT_ActionInputTrgGuide_C_InitializeTag");
+static_assert(sizeof(WDT_ActionInputTrgGuide_C_InitializeTag) == 0x000020, "Wrong size on WDT_ActionInputTrgGuide_C_InitializeTag");
+static_assert(offsetof(WDT_ActionInputTrgGuide_C_InitializeTag, InInputActionTag) == 0x000000, "Member 'WDT_ActionInputTrgGuide_C_InitializeTag::InInputActionTag' has a wrong offset!");
+static_assert(offsetof(WDT_ActionInputTrgGuide_C_InitializeTag, CallFunc_K2_IsCurrentInputDeviceGamePad_ReturnValue) == 0x000008, "Member 'WDT_ActionInputTrgGuide_C_InitializeTag::CallFunc_K2_IsCurrentInputDeviceGamePad_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ActionInputTrgGuide_C_InitializeTag, CallFunc_GetAssignKeys_ReturnValue) == 0x000010, "Member 'WDT_ActionInputTrgGuide_C_InitializeTag::CallFunc_GetAssignKeys_ReturnValue' has a wrong offset!");
+
+// Function WDT_ActionInputTrgGuide.WDT_ActionInputTrgGuide_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WDT_ActionInputTrgGuide_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_ActionInputTrgGuide_C_PreConstruct) == 0x000001, "Wrong alignment on WDT_ActionInputTrgGuide_C_PreConstruct");
+static_assert(sizeof(WDT_ActionInputTrgGuide_C_PreConstruct) == 0x000001, "Wrong size on WDT_ActionInputTrgGuide_C_PreConstruct");
+static_assert(offsetof(WDT_ActionInputTrgGuide_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WDT_ActionInputTrgGuide_C_PreConstruct::IsDesignTime' has a wrong offset!");
+
+// Function WDT_ActionInputTrgGuide.WDT_ActionInputTrgGuide_C.SetAllIconImageBrushTintColor
+// 0x0014 (0x0014 - 0x0000)
+struct WDT_ActionInputTrgGuide_C_SetAllIconImageBrushTintColor final
+{
+public:
+	struct FSlateColor                            InTintColor;                                       // 0x0000(0x0014)(BlueprintVisible, BlueprintReadOnly, Parm)
+};
+static_assert(alignof(WDT_ActionInputTrgGuide_C_SetAllIconImageBrushTintColor) == 0x000004, "Wrong alignment on WDT_ActionInputTrgGuide_C_SetAllIconImageBrushTintColor");
+static_assert(sizeof(WDT_ActionInputTrgGuide_C_SetAllIconImageBrushTintColor) == 0x000014, "Wrong size on WDT_ActionInputTrgGuide_C_SetAllIconImageBrushTintColor");
+static_assert(offsetof(WDT_ActionInputTrgGuide_C_SetAllIconImageBrushTintColor, InTintColor) == 0x000000, "Member 'WDT_ActionInputTrgGuide_C_SetAllIconImageBrushTintColor::InTintColor' has a wrong offset!");
+
+// Function WDT_ActionInputTrgGuide.WDT_ActionInputTrgGuide_C.SetBrushImageSize
+// 0x02A0 (0x02A0 - 0x0000)
+struct WDT_ActionInputTrgGuide_C_SetBrushImageSize final
+{
+public:
+	struct FVector2D                              InSize;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush;                      // 0x0010(0x00D0)()
+	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush_1;                    // 0x00E0(0x00D0)()
+	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush_2;                    // 0x01B0(0x00D0)()
+	struct FDeprecateSlateVector2D                K2Node_MakeStruct_ImageSize_ImplicitCast;          // 0x0280(0x0008)(NoDestructor, HasGetValueTypeHash)
+	struct FDeprecateSlateVector2D                K2Node_MakeStruct_ImageSize_ImplicitCast_1;        // 0x0288(0x0008)(NoDestructor, HasGetValueTypeHash)
+	struct FDeprecateSlateVector2D                K2Node_MakeStruct_ImageSize_ImplicitCast_2;        // 0x0290(0x0008)(NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_ActionInputTrgGuide_C_SetBrushImageSize) == 0x000010, "Wrong alignment on WDT_ActionInputTrgGuide_C_SetBrushImageSize");
+static_assert(sizeof(WDT_ActionInputTrgGuide_C_SetBrushImageSize) == 0x0002A0, "Wrong size on WDT_ActionInputTrgGuide_C_SetBrushImageSize");
+static_assert(offsetof(WDT_ActionInputTrgGuide_C_SetBrushImageSize, InSize) == 0x000000, "Member 'WDT_ActionInputTrgGuide_C_SetBrushImageSize::InSize' has a wrong offset!");
+static_assert(offsetof(WDT_ActionInputTrgGuide_C_SetBrushImageSize, K2Node_MakeStruct_SlateBrush) == 0x000010, "Member 'WDT_ActionInputTrgGuide_C_SetBrushImageSize::K2Node_MakeStruct_SlateBrush' has a wrong offset!");
+static_assert(offsetof(WDT_ActionInputTrgGuide_C_SetBrushImageSize, K2Node_MakeStruct_SlateBrush_1) == 0x0000E0, "Member 'WDT_ActionInputTrgGuide_C_SetBrushImageSize::K2Node_MakeStruct_SlateBrush_1' has a wrong offset!");
+static_assert(offsetof(WDT_ActionInputTrgGuide_C_SetBrushImageSize, K2Node_MakeStruct_SlateBrush_2) == 0x0001B0, "Member 'WDT_ActionInputTrgGuide_C_SetBrushImageSize::K2Node_MakeStruct_SlateBrush_2' has a wrong offset!");
+static_assert(offsetof(WDT_ActionInputTrgGuide_C_SetBrushImageSize, K2Node_MakeStruct_ImageSize_ImplicitCast) == 0x000280, "Member 'WDT_ActionInputTrgGuide_C_SetBrushImageSize::K2Node_MakeStruct_ImageSize_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_ActionInputTrgGuide_C_SetBrushImageSize, K2Node_MakeStruct_ImageSize_ImplicitCast_1) == 0x000288, "Member 'WDT_ActionInputTrgGuide_C_SetBrushImageSize::K2Node_MakeStruct_ImageSize_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(WDT_ActionInputTrgGuide_C_SetBrushImageSize, K2Node_MakeStruct_ImageSize_ImplicitCast_2) == 0x000290, "Member 'WDT_ActionInputTrgGuide_C_SetBrushImageSize::K2Node_MakeStruct_ImageSize_ImplicitCast_2' has a wrong offset!");
+
+// Function WDT_ActionInputTrgGuide.WDT_ActionInputTrgGuide_C.SetHideKey
+// 0x0018 (0x0018 - 0x0000)
+struct WDT_ActionInputTrgGuide_C_SetHideKey final
+{
+public:
+	struct FKey                                   InHideKey;                                         // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_ActionInputTrgGuide_C_SetHideKey) == 0x000008, "Wrong alignment on WDT_ActionInputTrgGuide_C_SetHideKey");
+static_assert(sizeof(WDT_ActionInputTrgGuide_C_SetHideKey) == 0x000018, "Wrong size on WDT_ActionInputTrgGuide_C_SetHideKey");
+static_assert(offsetof(WDT_ActionInputTrgGuide_C_SetHideKey, InHideKey) == 0x000000, "Member 'WDT_ActionInputTrgGuide_C_SetHideKey::InHideKey' has a wrong offset!");
+
+// Function WDT_ActionInputTrgGuide.WDT_ActionInputTrgGuide_C.SetKeys
+// 0x0010 (0x0010 - 0x0000)
+struct WDT_ActionInputTrgGuide_C_SetKeys final
+{
+public:
+	TArray<struct FKey>                           InKeys;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+static_assert(alignof(WDT_ActionInputTrgGuide_C_SetKeys) == 0x000008, "Wrong alignment on WDT_ActionInputTrgGuide_C_SetKeys");
+static_assert(sizeof(WDT_ActionInputTrgGuide_C_SetKeys) == 0x000010, "Wrong size on WDT_ActionInputTrgGuide_C_SetKeys");
+static_assert(offsetof(WDT_ActionInputTrgGuide_C_SetKeys, InKeys) == 0x000000, "Member 'WDT_ActionInputTrgGuide_C_SetKeys::InKeys' has a wrong offset!");
+
+// Function WDT_ActionInputTrgGuide.WDT_ActionInputTrgGuide_C.UpdateInputActionTrgImage
+// 0x0018 (0x0018 - 0x0000)
+struct WDT_ActionInputTrgGuide_C_UpdateInputActionTrgImage final
+{
+public:
+	bool                                          CallFunc_K2_IsCurrentInputDeviceGamePad_ReturnValue; // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FKey>                           CallFunc_GetAssignKeys_ReturnValue;                // 0x0008(0x0010)(ConstParm, ReferenceParm)
+};
+static_assert(alignof(WDT_ActionInputTrgGuide_C_UpdateInputActionTrgImage) == 0x000008, "Wrong alignment on WDT_ActionInputTrgGuide_C_UpdateInputActionTrgImage");
+static_assert(sizeof(WDT_ActionInputTrgGuide_C_UpdateInputActionTrgImage) == 0x000018, "Wrong size on WDT_ActionInputTrgGuide_C_UpdateInputActionTrgImage");
+static_assert(offsetof(WDT_ActionInputTrgGuide_C_UpdateInputActionTrgImage, CallFunc_K2_IsCurrentInputDeviceGamePad_ReturnValue) == 0x000000, "Member 'WDT_ActionInputTrgGuide_C_UpdateInputActionTrgImage::CallFunc_K2_IsCurrentInputDeviceGamePad_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ActionInputTrgGuide_C_UpdateInputActionTrgImage, CallFunc_GetAssignKeys_ReturnValue) == 0x000008, "Member 'WDT_ActionInputTrgGuide_C_UpdateInputActionTrgImage::CallFunc_GetAssignKeys_ReturnValue' has a wrong offset!");
 
 // Function WDT_ActionInputTrgGuide.WDT_ActionInputTrgGuide_C.UpdateTrgImage
 // 0x02A0 (0x02A0 - 0x0000)
@@ -110,140 +244,6 @@ static_assert(offsetof(WDT_ActionInputTrgGuide_C_UpdateTrgImage, CallFunc_Array_
 static_assert(offsetof(WDT_ActionInputTrgGuide_C_UpdateTrgImage, CallFunc_BooleanAND_ReturnValue_1) == 0x000295, "Member 'WDT_ActionInputTrgGuide_C_UpdateTrgImage::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(WDT_ActionInputTrgGuide_C_UpdateTrgImage, CallFunc_Less_IntInt_ReturnValue) == 0x000296, "Member 'WDT_ActionInputTrgGuide_C_UpdateTrgImage::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_ActionInputTrgGuide_C_UpdateTrgImage, CallFunc_Add_IntInt_ReturnValue) == 0x000298, "Member 'WDT_ActionInputTrgGuide_C_UpdateTrgImage::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-
-// Function WDT_ActionInputTrgGuide.WDT_ActionInputTrgGuide_C.UpdateInputActionTrgImage
-// 0x0018 (0x0018 - 0x0000)
-struct WDT_ActionInputTrgGuide_C_UpdateInputActionTrgImage final
-{
-public:
-	bool                                          CallFunc_K2_IsCurrentInputDeviceGamePad_ReturnValue; // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FKey>                           CallFunc_GetAssignKeys_ReturnValue;                // 0x0008(0x0010)(ConstParm, ReferenceParm)
-};
-static_assert(alignof(WDT_ActionInputTrgGuide_C_UpdateInputActionTrgImage) == 0x000008, "Wrong alignment on WDT_ActionInputTrgGuide_C_UpdateInputActionTrgImage");
-static_assert(sizeof(WDT_ActionInputTrgGuide_C_UpdateInputActionTrgImage) == 0x000018, "Wrong size on WDT_ActionInputTrgGuide_C_UpdateInputActionTrgImage");
-static_assert(offsetof(WDT_ActionInputTrgGuide_C_UpdateInputActionTrgImage, CallFunc_K2_IsCurrentInputDeviceGamePad_ReturnValue) == 0x000000, "Member 'WDT_ActionInputTrgGuide_C_UpdateInputActionTrgImage::CallFunc_K2_IsCurrentInputDeviceGamePad_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ActionInputTrgGuide_C_UpdateInputActionTrgImage, CallFunc_GetAssignKeys_ReturnValue) == 0x000008, "Member 'WDT_ActionInputTrgGuide_C_UpdateInputActionTrgImage::CallFunc_GetAssignKeys_ReturnValue' has a wrong offset!");
-
-// Function WDT_ActionInputTrgGuide.WDT_ActionInputTrgGuide_C.SetKeys
-// 0x0010 (0x0010 - 0x0000)
-struct WDT_ActionInputTrgGuide_C_SetKeys final
-{
-public:
-	TArray<struct FKey>                           InKeys;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-};
-static_assert(alignof(WDT_ActionInputTrgGuide_C_SetKeys) == 0x000008, "Wrong alignment on WDT_ActionInputTrgGuide_C_SetKeys");
-static_assert(sizeof(WDT_ActionInputTrgGuide_C_SetKeys) == 0x000010, "Wrong size on WDT_ActionInputTrgGuide_C_SetKeys");
-static_assert(offsetof(WDT_ActionInputTrgGuide_C_SetKeys, InKeys) == 0x000000, "Member 'WDT_ActionInputTrgGuide_C_SetKeys::InKeys' has a wrong offset!");
-
-// Function WDT_ActionInputTrgGuide.WDT_ActionInputTrgGuide_C.SetHideKey
-// 0x0018 (0x0018 - 0x0000)
-struct WDT_ActionInputTrgGuide_C_SetHideKey final
-{
-public:
-	struct FKey                                   InHideKey;                                         // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_ActionInputTrgGuide_C_SetHideKey) == 0x000008, "Wrong alignment on WDT_ActionInputTrgGuide_C_SetHideKey");
-static_assert(sizeof(WDT_ActionInputTrgGuide_C_SetHideKey) == 0x000018, "Wrong size on WDT_ActionInputTrgGuide_C_SetHideKey");
-static_assert(offsetof(WDT_ActionInputTrgGuide_C_SetHideKey, InHideKey) == 0x000000, "Member 'WDT_ActionInputTrgGuide_C_SetHideKey::InHideKey' has a wrong offset!");
-
-// Function WDT_ActionInputTrgGuide.WDT_ActionInputTrgGuide_C.SetBrushImageSize
-// 0x02A0 (0x02A0 - 0x0000)
-struct WDT_ActionInputTrgGuide_C_SetBrushImageSize final
-{
-public:
-	struct FVector2D                              InSize;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush;                      // 0x0010(0x00D0)()
-	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush_1;                    // 0x00E0(0x00D0)()
-	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush_2;                    // 0x01B0(0x00D0)()
-	struct FDeprecateSlateVector2D                K2Node_MakeStruct_ImageSize_ImplicitCast;          // 0x0280(0x0008)(NoDestructor, HasGetValueTypeHash)
-	struct FDeprecateSlateVector2D                K2Node_MakeStruct_ImageSize_ImplicitCast_1;        // 0x0288(0x0008)(NoDestructor, HasGetValueTypeHash)
-	struct FDeprecateSlateVector2D                K2Node_MakeStruct_ImageSize_ImplicitCast_2;        // 0x0290(0x0008)(NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_ActionInputTrgGuide_C_SetBrushImageSize) == 0x000010, "Wrong alignment on WDT_ActionInputTrgGuide_C_SetBrushImageSize");
-static_assert(sizeof(WDT_ActionInputTrgGuide_C_SetBrushImageSize) == 0x0002A0, "Wrong size on WDT_ActionInputTrgGuide_C_SetBrushImageSize");
-static_assert(offsetof(WDT_ActionInputTrgGuide_C_SetBrushImageSize, InSize) == 0x000000, "Member 'WDT_ActionInputTrgGuide_C_SetBrushImageSize::InSize' has a wrong offset!");
-static_assert(offsetof(WDT_ActionInputTrgGuide_C_SetBrushImageSize, K2Node_MakeStruct_SlateBrush) == 0x000010, "Member 'WDT_ActionInputTrgGuide_C_SetBrushImageSize::K2Node_MakeStruct_SlateBrush' has a wrong offset!");
-static_assert(offsetof(WDT_ActionInputTrgGuide_C_SetBrushImageSize, K2Node_MakeStruct_SlateBrush_1) == 0x0000E0, "Member 'WDT_ActionInputTrgGuide_C_SetBrushImageSize::K2Node_MakeStruct_SlateBrush_1' has a wrong offset!");
-static_assert(offsetof(WDT_ActionInputTrgGuide_C_SetBrushImageSize, K2Node_MakeStruct_SlateBrush_2) == 0x0001B0, "Member 'WDT_ActionInputTrgGuide_C_SetBrushImageSize::K2Node_MakeStruct_SlateBrush_2' has a wrong offset!");
-static_assert(offsetof(WDT_ActionInputTrgGuide_C_SetBrushImageSize, K2Node_MakeStruct_ImageSize_ImplicitCast) == 0x000280, "Member 'WDT_ActionInputTrgGuide_C_SetBrushImageSize::K2Node_MakeStruct_ImageSize_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WDT_ActionInputTrgGuide_C_SetBrushImageSize, K2Node_MakeStruct_ImageSize_ImplicitCast_1) == 0x000288, "Member 'WDT_ActionInputTrgGuide_C_SetBrushImageSize::K2Node_MakeStruct_ImageSize_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(WDT_ActionInputTrgGuide_C_SetBrushImageSize, K2Node_MakeStruct_ImageSize_ImplicitCast_2) == 0x000290, "Member 'WDT_ActionInputTrgGuide_C_SetBrushImageSize::K2Node_MakeStruct_ImageSize_ImplicitCast_2' has a wrong offset!");
-
-// Function WDT_ActionInputTrgGuide.WDT_ActionInputTrgGuide_C.SetAllIconImageBrushTintColor
-// 0x0014 (0x0014 - 0x0000)
-struct WDT_ActionInputTrgGuide_C_SetAllIconImageBrushTintColor final
-{
-public:
-	struct FSlateColor                            InTintColor;                                       // 0x0000(0x0014)(BlueprintVisible, BlueprintReadOnly, Parm)
-};
-static_assert(alignof(WDT_ActionInputTrgGuide_C_SetAllIconImageBrushTintColor) == 0x000004, "Wrong alignment on WDT_ActionInputTrgGuide_C_SetAllIconImageBrushTintColor");
-static_assert(sizeof(WDT_ActionInputTrgGuide_C_SetAllIconImageBrushTintColor) == 0x000014, "Wrong size on WDT_ActionInputTrgGuide_C_SetAllIconImageBrushTintColor");
-static_assert(offsetof(WDT_ActionInputTrgGuide_C_SetAllIconImageBrushTintColor, InTintColor) == 0x000000, "Member 'WDT_ActionInputTrgGuide_C_SetAllIconImageBrushTintColor::InTintColor' has a wrong offset!");
-
-// Function WDT_ActionInputTrgGuide.WDT_ActionInputTrgGuide_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WDT_ActionInputTrgGuide_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_ActionInputTrgGuide_C_PreConstruct) == 0x000001, "Wrong alignment on WDT_ActionInputTrgGuide_C_PreConstruct");
-static_assert(sizeof(WDT_ActionInputTrgGuide_C_PreConstruct) == 0x000001, "Wrong size on WDT_ActionInputTrgGuide_C_PreConstruct");
-static_assert(offsetof(WDT_ActionInputTrgGuide_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WDT_ActionInputTrgGuide_C_PreConstruct::IsDesignTime' has a wrong offset!");
-
-// Function WDT_ActionInputTrgGuide.WDT_ActionInputTrgGuide_C.InitializeTag
-// 0x0020 (0x0020 - 0x0000)
-struct WDT_ActionInputTrgGuide_C_InitializeTag final
-{
-public:
-	struct FInputActionTag                        InInputActionTag;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_K2_IsCurrentInputDeviceGamePad_ReturnValue; // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FKey>                           CallFunc_GetAssignKeys_ReturnValue;                // 0x0010(0x0010)(ConstParm, ReferenceParm)
-};
-static_assert(alignof(WDT_ActionInputTrgGuide_C_InitializeTag) == 0x000008, "Wrong alignment on WDT_ActionInputTrgGuide_C_InitializeTag");
-static_assert(sizeof(WDT_ActionInputTrgGuide_C_InitializeTag) == 0x000020, "Wrong size on WDT_ActionInputTrgGuide_C_InitializeTag");
-static_assert(offsetof(WDT_ActionInputTrgGuide_C_InitializeTag, InInputActionTag) == 0x000000, "Member 'WDT_ActionInputTrgGuide_C_InitializeTag::InInputActionTag' has a wrong offset!");
-static_assert(offsetof(WDT_ActionInputTrgGuide_C_InitializeTag, CallFunc_K2_IsCurrentInputDeviceGamePad_ReturnValue) == 0x000008, "Member 'WDT_ActionInputTrgGuide_C_InitializeTag::CallFunc_K2_IsCurrentInputDeviceGamePad_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ActionInputTrgGuide_C_InitializeTag, CallFunc_GetAssignKeys_ReturnValue) == 0x000010, "Member 'WDT_ActionInputTrgGuide_C_InitializeTag::CallFunc_GetAssignKeys_ReturnValue' has a wrong offset!");
-
-// Function WDT_ActionInputTrgGuide.WDT_ActionInputTrgGuide_C.GetAssignKey
-// 0x0028 (0x0028 - 0x0000)
-struct WDT_ActionInputTrgGuide_C_GetAssignKey final
-{
-public:
-	TArray<struct FKey>                           OutAssignKey;                                      // 0x0000(0x0010)(Parm, OutParm)
-	bool                                          CallFunc_K2_IsCurrentInputDeviceGamePad_ReturnValue; // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FKey>                           CallFunc_GetAssignKeys_ReturnValue;                // 0x0018(0x0010)(ConstParm, ReferenceParm)
-};
-static_assert(alignof(WDT_ActionInputTrgGuide_C_GetAssignKey) == 0x000008, "Wrong alignment on WDT_ActionInputTrgGuide_C_GetAssignKey");
-static_assert(sizeof(WDT_ActionInputTrgGuide_C_GetAssignKey) == 0x000028, "Wrong size on WDT_ActionInputTrgGuide_C_GetAssignKey");
-static_assert(offsetof(WDT_ActionInputTrgGuide_C_GetAssignKey, OutAssignKey) == 0x000000, "Member 'WDT_ActionInputTrgGuide_C_GetAssignKey::OutAssignKey' has a wrong offset!");
-static_assert(offsetof(WDT_ActionInputTrgGuide_C_GetAssignKey, CallFunc_K2_IsCurrentInputDeviceGamePad_ReturnValue) == 0x000010, "Member 'WDT_ActionInputTrgGuide_C_GetAssignKey::CallFunc_K2_IsCurrentInputDeviceGamePad_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ActionInputTrgGuide_C_GetAssignKey, CallFunc_GetAssignKeys_ReturnValue) == 0x000018, "Member 'WDT_ActionInputTrgGuide_C_GetAssignKey::CallFunc_GetAssignKeys_ReturnValue' has a wrong offset!");
-
-// Function WDT_ActionInputTrgGuide.WDT_ActionInputTrgGuide_C.ExecuteUbergraph_WDT_ActionInputTrgGuide
-// 0x0030 (0x0030 - 0x0000)
-struct WDT_ActionInputTrgGuide_C_ExecuteUbergraph_WDT_ActionInputTrgGuide final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue;                 // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_IsDesignTime;                         // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_K2_IsCurrentInputDeviceGamePad_ReturnValue; // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FKey>                           CallFunc_GetAssignKeys_ReturnValue;                // 0x0020(0x0010)(ConstParm, ReferenceParm)
-};
-static_assert(alignof(WDT_ActionInputTrgGuide_C_ExecuteUbergraph_WDT_ActionInputTrgGuide) == 0x000008, "Wrong alignment on WDT_ActionInputTrgGuide_C_ExecuteUbergraph_WDT_ActionInputTrgGuide");
-static_assert(sizeof(WDT_ActionInputTrgGuide_C_ExecuteUbergraph_WDT_ActionInputTrgGuide) == 0x000030, "Wrong size on WDT_ActionInputTrgGuide_C_ExecuteUbergraph_WDT_ActionInputTrgGuide");
-static_assert(offsetof(WDT_ActionInputTrgGuide_C_ExecuteUbergraph_WDT_ActionInputTrgGuide, EntryPoint) == 0x000000, "Member 'WDT_ActionInputTrgGuide_C_ExecuteUbergraph_WDT_ActionInputTrgGuide::EntryPoint' has a wrong offset!");
-static_assert(offsetof(WDT_ActionInputTrgGuide_C_ExecuteUbergraph_WDT_ActionInputTrgGuide, CallFunc_MakeVector2D_ReturnValue) == 0x000008, "Member 'WDT_ActionInputTrgGuide_C_ExecuteUbergraph_WDT_ActionInputTrgGuide::CallFunc_MakeVector2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ActionInputTrgGuide_C_ExecuteUbergraph_WDT_ActionInputTrgGuide, K2Node_Event_IsDesignTime) == 0x000018, "Member 'WDT_ActionInputTrgGuide_C_ExecuteUbergraph_WDT_ActionInputTrgGuide::K2Node_Event_IsDesignTime' has a wrong offset!");
-static_assert(offsetof(WDT_ActionInputTrgGuide_C_ExecuteUbergraph_WDT_ActionInputTrgGuide, CallFunc_K2_IsCurrentInputDeviceGamePad_ReturnValue) == 0x000019, "Member 'WDT_ActionInputTrgGuide_C_ExecuteUbergraph_WDT_ActionInputTrgGuide::CallFunc_K2_IsCurrentInputDeviceGamePad_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_ActionInputTrgGuide_C_ExecuteUbergraph_WDT_ActionInputTrgGuide, CallFunc_GetAssignKeys_ReturnValue) == 0x000020, "Member 'WDT_ActionInputTrgGuide_C_ExecuteUbergraph_WDT_ActionInputTrgGuide::CallFunc_GetAssignKeys_ReturnValue' has a wrong offset!");
 
 }
 

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "BasicUI_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "UMG_structs.hpp"
 #include "GameplayTags_structs.hpp"
@@ -19,6 +19,38 @@
 
 namespace SDK::Params
 {
+
+// Function BasicUI.MultipleFlagInterface.GetFlag
+// 0x000C (0x000C - 0x0000)
+struct MultipleFlagInterface_GetFlag final
+{
+public:
+	class FName                                   FlagName;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(MultipleFlagInterface_GetFlag) == 0x000004, "Wrong alignment on MultipleFlagInterface_GetFlag");
+static_assert(sizeof(MultipleFlagInterface_GetFlag) == 0x00000C, "Wrong size on MultipleFlagInterface_GetFlag");
+static_assert(offsetof(MultipleFlagInterface_GetFlag, FlagName) == 0x000000, "Member 'MultipleFlagInterface_GetFlag::FlagName' has a wrong offset!");
+static_assert(offsetof(MultipleFlagInterface_GetFlag, ReturnValue) == 0x000008, "Member 'MultipleFlagInterface_GetFlag::ReturnValue' has a wrong offset!");
+
+// Function BasicUI.MultipleFlagInterface.SetFlag
+// 0x000C (0x000C - 0x0000)
+struct MultipleFlagInterface_SetFlag final
+{
+public:
+	class FName                                   FlagName;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          FlagValue;                                         // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bFireEvent;                                        // 0x0009(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x000A(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B[0x1];                                        // 0x000B(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(MultipleFlagInterface_SetFlag) == 0x000004, "Wrong alignment on MultipleFlagInterface_SetFlag");
+static_assert(sizeof(MultipleFlagInterface_SetFlag) == 0x00000C, "Wrong size on MultipleFlagInterface_SetFlag");
+static_assert(offsetof(MultipleFlagInterface_SetFlag, FlagName) == 0x000000, "Member 'MultipleFlagInterface_SetFlag::FlagName' has a wrong offset!");
+static_assert(offsetof(MultipleFlagInterface_SetFlag, FlagValue) == 0x000008, "Member 'MultipleFlagInterface_SetFlag::FlagValue' has a wrong offset!");
+static_assert(offsetof(MultipleFlagInterface_SetFlag, bFireEvent) == 0x000009, "Member 'MultipleFlagInterface_SetFlag::bFireEvent' has a wrong offset!");
+static_assert(offsetof(MultipleFlagInterface_SetFlag, ReturnValue) == 0x00000A, "Member 'MultipleFlagInterface_SetFlag::ReturnValue' has a wrong offset!");
 
 // Function BasicUI.AsyncTileMap.BuildTileMap
 // 0x0001 (0x0001 - 0x0000)
@@ -250,6 +282,45 @@ static_assert(alignof(UIElementBase_Show) == 0x000001, "Wrong alignment on UIEle
 static_assert(sizeof(UIElementBase_Show) == 0x000002, "Wrong size on UIElementBase_Show");
 static_assert(offsetof(UIElementBase_Show, bRestoreVisibility) == 0x000000, "Member 'UIElementBase_Show::bRestoreVisibility' has a wrong offset!");
 static_assert(offsetof(UIElementBase_Show, ReturnValue) == 0x000001, "Member 'UIElementBase_Show::ReturnValue' has a wrong offset!");
+
+// Function BasicUI.CheckableInterface.Check
+// 0x0003 (0x0003 - 0x0000)
+struct CheckableInterface_Check final
+{
+public:
+	bool                                          PlayAnimation;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          AnotherAppearance;                                 // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0002(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(CheckableInterface_Check) == 0x000001, "Wrong alignment on CheckableInterface_Check");
+static_assert(sizeof(CheckableInterface_Check) == 0x000003, "Wrong size on CheckableInterface_Check");
+static_assert(offsetof(CheckableInterface_Check, PlayAnimation) == 0x000000, "Member 'CheckableInterface_Check::PlayAnimation' has a wrong offset!");
+static_assert(offsetof(CheckableInterface_Check, AnotherAppearance) == 0x000001, "Member 'CheckableInterface_Check::AnotherAppearance' has a wrong offset!");
+static_assert(offsetof(CheckableInterface_Check, ReturnValue) == 0x000002, "Member 'CheckableInterface_Check::ReturnValue' has a wrong offset!");
+
+// Function BasicUI.CheckableInterface.IsChecked
+// 0x0001 (0x0001 - 0x0000)
+struct CheckableInterface_IsChecked final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(CheckableInterface_IsChecked) == 0x000001, "Wrong alignment on CheckableInterface_IsChecked");
+static_assert(sizeof(CheckableInterface_IsChecked) == 0x000001, "Wrong size on CheckableInterface_IsChecked");
+static_assert(offsetof(CheckableInterface_IsChecked, ReturnValue) == 0x000000, "Member 'CheckableInterface_IsChecked::ReturnValue' has a wrong offset!");
+
+// Function BasicUI.CheckableInterface.Uncheck
+// 0x0002 (0x0002 - 0x0000)
+struct CheckableInterface_Uncheck final
+{
+public:
+	bool                                          PlayAnimation;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(CheckableInterface_Uncheck) == 0x000001, "Wrong alignment on CheckableInterface_Uncheck");
+static_assert(sizeof(CheckableInterface_Uncheck) == 0x000002, "Wrong size on CheckableInterface_Uncheck");
+static_assert(offsetof(CheckableInterface_Uncheck, PlayAnimation) == 0x000000, "Member 'CheckableInterface_Uncheck::PlayAnimation' has a wrong offset!");
+static_assert(offsetof(CheckableInterface_Uncheck, ReturnValue) == 0x000001, "Member 'CheckableInterface_Uncheck::ReturnValue' has a wrong offset!");
 
 // Function BasicUI.MenuBase.BindMenuCloseEvent
 // 0x0010 (0x0010 - 0x0000)
@@ -835,31 +906,6 @@ static_assert(alignof(DialogBase_GetDialogInfo) == 0x000008, "Wrong alignment on
 static_assert(sizeof(DialogBase_GetDialogInfo) == 0x000058, "Wrong size on DialogBase_GetDialogInfo");
 static_assert(offsetof(DialogBase_GetDialogInfo, ReturnValue) == 0x000000, "Member 'DialogBase_GetDialogInfo::ReturnValue' has a wrong offset!");
 
-// Function BasicUI.FloatHolderInterface.GetFloat
-// 0x0004 (0x0004 - 0x0000)
-struct FloatHolderInterface_GetFloat final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FloatHolderInterface_GetFloat) == 0x000004, "Wrong alignment on FloatHolderInterface_GetFloat");
-static_assert(sizeof(FloatHolderInterface_GetFloat) == 0x000004, "Wrong size on FloatHolderInterface_GetFloat");
-static_assert(offsetof(FloatHolderInterface_GetFloat, ReturnValue) == 0x000000, "Member 'FloatHolderInterface_GetFloat::ReturnValue' has a wrong offset!");
-
-// Function BasicUI.FloatHolderInterface.SetFloat
-// 0x0008 (0x0008 - 0x0000)
-struct FloatHolderInterface_SetFloat final
-{
-public:
-	float                                         Number;                                            // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FloatHolderInterface_SetFloat) == 0x000004, "Wrong alignment on FloatHolderInterface_SetFloat");
-static_assert(sizeof(FloatHolderInterface_SetFloat) == 0x000008, "Wrong size on FloatHolderInterface_SetFloat");
-static_assert(offsetof(FloatHolderInterface_SetFloat, Number) == 0x000000, "Member 'FloatHolderInterface_SetFloat::Number' has a wrong offset!");
-static_assert(offsetof(FloatHolderInterface_SetFloat, ReturnValue) == 0x000004, "Member 'FloatHolderInterface_SetFloat::ReturnValue' has a wrong offset!");
-
 // Function BasicUI.EnhancedWidgetSwitcher.IsSwitchingChildWidget
 // 0x0001 (0x0001 - 0x0000)
 struct EnhancedWidgetSwitcher_IsSwitchingChildWidget final
@@ -870,6 +916,28 @@ public:
 static_assert(alignof(EnhancedWidgetSwitcher_IsSwitchingChildWidget) == 0x000001, "Wrong alignment on EnhancedWidgetSwitcher_IsSwitchingChildWidget");
 static_assert(sizeof(EnhancedWidgetSwitcher_IsSwitchingChildWidget) == 0x000001, "Wrong size on EnhancedWidgetSwitcher_IsSwitchingChildWidget");
 static_assert(offsetof(EnhancedWidgetSwitcher_IsSwitchingChildWidget, ReturnValue) == 0x000000, "Member 'EnhancedWidgetSwitcher_IsSwitchingChildWidget::ReturnValue' has a wrong offset!");
+
+// Function BasicUI.ButtonInterface.PressButton
+// 0x0001 (0x0001 - 0x0000)
+struct ButtonInterface_PressButton final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(ButtonInterface_PressButton) == 0x000001, "Wrong alignment on ButtonInterface_PressButton");
+static_assert(sizeof(ButtonInterface_PressButton) == 0x000001, "Wrong size on ButtonInterface_PressButton");
+static_assert(offsetof(ButtonInterface_PressButton, ReturnValue) == 0x000000, "Member 'ButtonInterface_PressButton::ReturnValue' has a wrong offset!");
+
+// Function BasicUI.ButtonInterface.ReleaseButton
+// 0x0001 (0x0001 - 0x0000)
+struct ButtonInterface_ReleaseButton final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(ButtonInterface_ReleaseButton) == 0x000001, "Wrong alignment on ButtonInterface_ReleaseButton");
+static_assert(sizeof(ButtonInterface_ReleaseButton) == 0x000001, "Wrong size on ButtonInterface_ReleaseButton");
+static_assert(offsetof(ButtonInterface_ReleaseButton, ReturnValue) == 0x000000, "Member 'ButtonInterface_ReleaseButton::ReturnValue' has a wrong offset!");
 
 // Function BasicUI.GridScroller.BuildWidget
 // 0x0004 (0x0004 - 0x0000)
@@ -982,6 +1050,17 @@ public:
 static_assert(alignof(GridScroller_SetEnableScrollAnimation) == 0x000001, "Wrong alignment on GridScroller_SetEnableScrollAnimation");
 static_assert(sizeof(GridScroller_SetEnableScrollAnimation) == 0x000001, "Wrong size on GridScroller_SetEnableScrollAnimation");
 static_assert(offsetof(GridScroller_SetEnableScrollAnimation, bInEnableScrollAnimation) == 0x000000, "Member 'GridScroller_SetEnableScrollAnimation::bInEnableScrollAnimation' has a wrong offset!");
+
+// Function BasicUI.GeneralUIExpressionInterface.Blink
+// 0x0001 (0x0001 - 0x0000)
+struct GeneralUIExpressionInterface_Blink final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeneralUIExpressionInterface_Blink) == 0x000001, "Wrong alignment on GeneralUIExpressionInterface_Blink");
+static_assert(sizeof(GeneralUIExpressionInterface_Blink) == 0x000001, "Wrong size on GeneralUIExpressionInterface_Blink");
+static_assert(offsetof(GeneralUIExpressionInterface_Blink, ReturnValue) == 0x000000, "Member 'GeneralUIExpressionInterface_Blink::ReturnValue' has a wrong offset!");
 
 // Function BasicUI.ListScroller.BuildWidget
 // 0x0004 (0x0004 - 0x0000)
@@ -1267,6 +1346,642 @@ public:
 static_assert(alignof(MenuPieceBase_GetUIObject) == 0x000008, "Wrong alignment on MenuPieceBase_GetUIObject");
 static_assert(sizeof(MenuPieceBase_GetUIObject) == 0x000008, "Wrong size on MenuPieceBase_GetUIObject");
 static_assert(offsetof(MenuPieceBase_GetUIObject, ReturnValue) == 0x000000, "Member 'MenuPieceBase_GetUIObject::ReturnValue' has a wrong offset!");
+
+// Function BasicUI.MeterPieceBase.OnMeterValueChanged
+// 0x0010 (0x0010 - 0x0000)
+struct MeterPieceBase_OnMeterValueChanged final
+{
+public:
+	float                                         MeterValueToNotify;                                // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Percentage;                                        // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DisplayNumber;                                     // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          PlayAnimation_0;                                   // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(MeterPieceBase_OnMeterValueChanged) == 0x000004, "Wrong alignment on MeterPieceBase_OnMeterValueChanged");
+static_assert(sizeof(MeterPieceBase_OnMeterValueChanged) == 0x000010, "Wrong size on MeterPieceBase_OnMeterValueChanged");
+static_assert(offsetof(MeterPieceBase_OnMeterValueChanged, MeterValueToNotify) == 0x000000, "Member 'MeterPieceBase_OnMeterValueChanged::MeterValueToNotify' has a wrong offset!");
+static_assert(offsetof(MeterPieceBase_OnMeterValueChanged, Percentage) == 0x000004, "Member 'MeterPieceBase_OnMeterValueChanged::Percentage' has a wrong offset!");
+static_assert(offsetof(MeterPieceBase_OnMeterValueChanged, DisplayNumber) == 0x000008, "Member 'MeterPieceBase_OnMeterValueChanged::DisplayNumber' has a wrong offset!");
+static_assert(offsetof(MeterPieceBase_OnMeterValueChanged, PlayAnimation_0) == 0x00000C, "Member 'MeterPieceBase_OnMeterValueChanged::PlayAnimation_0' has a wrong offset!");
+
+// Function BasicUI.ScrollerItem.GetElementIndex
+// 0x0004 (0x0004 - 0x0000)
+struct ScrollerItem_GetElementIndex final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(ScrollerItem_GetElementIndex) == 0x000004, "Wrong alignment on ScrollerItem_GetElementIndex");
+static_assert(sizeof(ScrollerItem_GetElementIndex) == 0x000004, "Wrong size on ScrollerItem_GetElementIndex");
+static_assert(offsetof(ScrollerItem_GetElementIndex, ReturnValue) == 0x000000, "Member 'ScrollerItem_GetElementIndex::ReturnValue' has a wrong offset!");
+
+// Function BasicUI.CommunicatorInterface.SendMessage
+// 0x0020 (0x0020 - 0x0000)
+struct CommunicatorInterface_SendMessage final
+{
+public:
+	class UObject*                                AnotherUI;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Message;                                           // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(CommunicatorInterface_SendMessage) == 0x000008, "Wrong alignment on CommunicatorInterface_SendMessage");
+static_assert(sizeof(CommunicatorInterface_SendMessage) == 0x000020, "Wrong size on CommunicatorInterface_SendMessage");
+static_assert(offsetof(CommunicatorInterface_SendMessage, AnotherUI) == 0x000000, "Member 'CommunicatorInterface_SendMessage::AnotherUI' has a wrong offset!");
+static_assert(offsetof(CommunicatorInterface_SendMessage, Message) == 0x000008, "Member 'CommunicatorInterface_SendMessage::Message' has a wrong offset!");
+static_assert(offsetof(CommunicatorInterface_SendMessage, ReturnValue) == 0x000018, "Member 'CommunicatorInterface_SendMessage::ReturnValue' has a wrong offset!");
+
+// Function BasicUI.EnableInterface.Disable
+// 0x0001 (0x0001 - 0x0000)
+struct EnableInterface_Disable final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(EnableInterface_Disable) == 0x000001, "Wrong alignment on EnableInterface_Disable");
+static_assert(sizeof(EnableInterface_Disable) == 0x000001, "Wrong size on EnableInterface_Disable");
+static_assert(offsetof(EnableInterface_Disable, ReturnValue) == 0x000000, "Member 'EnableInterface_Disable::ReturnValue' has a wrong offset!");
+
+// Function BasicUI.EnableInterface.Enable
+// 0x0001 (0x0001 - 0x0000)
+struct EnableInterface_Enable final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(EnableInterface_Enable) == 0x000001, "Wrong alignment on EnableInterface_Enable");
+static_assert(sizeof(EnableInterface_Enable) == 0x000001, "Wrong size on EnableInterface_Enable");
+static_assert(offsetof(EnableInterface_Enable, ReturnValue) == 0x000000, "Member 'EnableInterface_Enable::ReturnValue' has a wrong offset!");
+
+// Function BasicUI.EnableInterface.IsEnabled
+// 0x0001 (0x0001 - 0x0000)
+struct EnableInterface_IsEnabled final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(EnableInterface_IsEnabled) == 0x000001, "Wrong alignment on EnableInterface_IsEnabled");
+static_assert(sizeof(EnableInterface_IsEnabled) == 0x000001, "Wrong size on EnableInterface_IsEnabled");
+static_assert(offsetof(EnableInterface_IsEnabled, ReturnValue) == 0x000000, "Member 'EnableInterface_IsEnabled::ReturnValue' has a wrong offset!");
+
+// Function BasicUI.ResetInterface.Reset
+// 0x0001 (0x0001 - 0x0000)
+struct ResetInterface_Reset final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(ResetInterface_Reset) == 0x000001, "Wrong alignment on ResetInterface_Reset");
+static_assert(sizeof(ResetInterface_Reset) == 0x000001, "Wrong size on ResetInterface_Reset");
+static_assert(offsetof(ResetInterface_Reset, ReturnValue) == 0x000000, "Member 'ResetInterface_Reset::ReturnValue' has a wrong offset!");
+
+// Function BasicUI.SelectableInterface.Deselect
+// 0x0002 (0x0002 - 0x0000)
+struct SelectableInterface_Deselect final
+{
+public:
+	bool                                          PlayAnimation;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(SelectableInterface_Deselect) == 0x000001, "Wrong alignment on SelectableInterface_Deselect");
+static_assert(sizeof(SelectableInterface_Deselect) == 0x000002, "Wrong size on SelectableInterface_Deselect");
+static_assert(offsetof(SelectableInterface_Deselect, PlayAnimation) == 0x000000, "Member 'SelectableInterface_Deselect::PlayAnimation' has a wrong offset!");
+static_assert(offsetof(SelectableInterface_Deselect, ReturnValue) == 0x000001, "Member 'SelectableInterface_Deselect::ReturnValue' has a wrong offset!");
+
+// Function BasicUI.SelectableInterface.IsSelectable
+// 0x0001 (0x0001 - 0x0000)
+struct SelectableInterface_IsSelectable final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(SelectableInterface_IsSelectable) == 0x000001, "Wrong alignment on SelectableInterface_IsSelectable");
+static_assert(sizeof(SelectableInterface_IsSelectable) == 0x000001, "Wrong size on SelectableInterface_IsSelectable");
+static_assert(offsetof(SelectableInterface_IsSelectable, ReturnValue) == 0x000000, "Member 'SelectableInterface_IsSelectable::ReturnValue' has a wrong offset!");
+
+// Function BasicUI.SelectableInterface.IsSelected
+// 0x0001 (0x0001 - 0x0000)
+struct SelectableInterface_IsSelected final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(SelectableInterface_IsSelected) == 0x000001, "Wrong alignment on SelectableInterface_IsSelected");
+static_assert(sizeof(SelectableInterface_IsSelected) == 0x000001, "Wrong size on SelectableInterface_IsSelected");
+static_assert(offsetof(SelectableInterface_IsSelected, ReturnValue) == 0x000000, "Member 'SelectableInterface_IsSelected::ReturnValue' has a wrong offset!");
+
+// Function BasicUI.SelectableInterface.Select
+// 0x0002 (0x0002 - 0x0000)
+struct SelectableInterface_Select final
+{
+public:
+	bool                                          PlayAnimation;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(SelectableInterface_Select) == 0x000001, "Wrong alignment on SelectableInterface_Select");
+static_assert(sizeof(SelectableInterface_Select) == 0x000002, "Wrong size on SelectableInterface_Select");
+static_assert(offsetof(SelectableInterface_Select, PlayAnimation) == 0x000000, "Member 'SelectableInterface_Select::PlayAnimation' has a wrong offset!");
+static_assert(offsetof(SelectableInterface_Select, ReturnValue) == 0x000001, "Member 'SelectableInterface_Select::ReturnValue' has a wrong offset!");
+
+// Function BasicUI.SelectableInterface.SetSelectProhibited
+// 0x0002 (0x0002 - 0x0000)
+struct SelectableInterface_SetSelectProhibited final
+{
+public:
+	bool                                          Prohibited;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(SelectableInterface_SetSelectProhibited) == 0x000001, "Wrong alignment on SelectableInterface_SetSelectProhibited");
+static_assert(sizeof(SelectableInterface_SetSelectProhibited) == 0x000002, "Wrong size on SelectableInterface_SetSelectProhibited");
+static_assert(offsetof(SelectableInterface_SetSelectProhibited, Prohibited) == 0x000000, "Member 'SelectableInterface_SetSelectProhibited::Prohibited' has a wrong offset!");
+static_assert(offsetof(SelectableInterface_SetSelectProhibited, ReturnValue) == 0x000001, "Member 'SelectableInterface_SetSelectProhibited::ReturnValue' has a wrong offset!");
+
+// Function BasicUI.HighlightableInterface.Highlight
+// 0x0002 (0x0002 - 0x0000)
+struct HighlightableInterface_Highlight final
+{
+public:
+	bool                                          PlayAnimation;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(HighlightableInterface_Highlight) == 0x000001, "Wrong alignment on HighlightableInterface_Highlight");
+static_assert(sizeof(HighlightableInterface_Highlight) == 0x000002, "Wrong size on HighlightableInterface_Highlight");
+static_assert(offsetof(HighlightableInterface_Highlight, PlayAnimation) == 0x000000, "Member 'HighlightableInterface_Highlight::PlayAnimation' has a wrong offset!");
+static_assert(offsetof(HighlightableInterface_Highlight, ReturnValue) == 0x000001, "Member 'HighlightableInterface_Highlight::ReturnValue' has a wrong offset!");
+
+// Function BasicUI.HighlightableInterface.IsHighlightable
+// 0x0001 (0x0001 - 0x0000)
+struct HighlightableInterface_IsHighlightable final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(HighlightableInterface_IsHighlightable) == 0x000001, "Wrong alignment on HighlightableInterface_IsHighlightable");
+static_assert(sizeof(HighlightableInterface_IsHighlightable) == 0x000001, "Wrong size on HighlightableInterface_IsHighlightable");
+static_assert(offsetof(HighlightableInterface_IsHighlightable, ReturnValue) == 0x000000, "Member 'HighlightableInterface_IsHighlightable::ReturnValue' has a wrong offset!");
+
+// Function BasicUI.HighlightableInterface.IsHighlighted
+// 0x0001 (0x0001 - 0x0000)
+struct HighlightableInterface_IsHighlighted final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(HighlightableInterface_IsHighlighted) == 0x000001, "Wrong alignment on HighlightableInterface_IsHighlighted");
+static_assert(sizeof(HighlightableInterface_IsHighlighted) == 0x000001, "Wrong size on HighlightableInterface_IsHighlighted");
+static_assert(offsetof(HighlightableInterface_IsHighlighted, ReturnValue) == 0x000000, "Member 'HighlightableInterface_IsHighlighted::ReturnValue' has a wrong offset!");
+
+// Function BasicUI.HighlightableInterface.SetHighlightProhibited
+// 0x0002 (0x0002 - 0x0000)
+struct HighlightableInterface_SetHighlightProhibited final
+{
+public:
+	bool                                          Prohibited;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(HighlightableInterface_SetHighlightProhibited) == 0x000001, "Wrong alignment on HighlightableInterface_SetHighlightProhibited");
+static_assert(sizeof(HighlightableInterface_SetHighlightProhibited) == 0x000002, "Wrong size on HighlightableInterface_SetHighlightProhibited");
+static_assert(offsetof(HighlightableInterface_SetHighlightProhibited, Prohibited) == 0x000000, "Member 'HighlightableInterface_SetHighlightProhibited::Prohibited' has a wrong offset!");
+static_assert(offsetof(HighlightableInterface_SetHighlightProhibited, ReturnValue) == 0x000001, "Member 'HighlightableInterface_SetHighlightProhibited::ReturnValue' has a wrong offset!");
+
+// Function BasicUI.HighlightableInterface.Unhighlight
+// 0x0002 (0x0002 - 0x0000)
+struct HighlightableInterface_Unhighlight final
+{
+public:
+	bool                                          PlayAnimation;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(HighlightableInterface_Unhighlight) == 0x000001, "Wrong alignment on HighlightableInterface_Unhighlight");
+static_assert(sizeof(HighlightableInterface_Unhighlight) == 0x000002, "Wrong size on HighlightableInterface_Unhighlight");
+static_assert(offsetof(HighlightableInterface_Unhighlight, PlayAnimation) == 0x000000, "Member 'HighlightableInterface_Unhighlight::PlayAnimation' has a wrong offset!");
+static_assert(offsetof(HighlightableInterface_Unhighlight, ReturnValue) == 0x000001, "Member 'HighlightableInterface_Unhighlight::ReturnValue' has a wrong offset!");
+
+// Function BasicUI.MeterInterface.DecreaseValue
+// 0x0002 (0x0002 - 0x0000)
+struct MeterInterface_DecreaseValue final
+{
+public:
+	bool                                          PlayAnimation;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MeterInterface_DecreaseValue) == 0x000001, "Wrong alignment on MeterInterface_DecreaseValue");
+static_assert(sizeof(MeterInterface_DecreaseValue) == 0x000002, "Wrong size on MeterInterface_DecreaseValue");
+static_assert(offsetof(MeterInterface_DecreaseValue, PlayAnimation) == 0x000000, "Member 'MeterInterface_DecreaseValue::PlayAnimation' has a wrong offset!");
+static_assert(offsetof(MeterInterface_DecreaseValue, ReturnValue) == 0x000001, "Member 'MeterInterface_DecreaseValue::ReturnValue' has a wrong offset!");
+
+// Function BasicUI.MeterInterface.GetMeterDisplayValue
+// 0x0004 (0x0004 - 0x0000)
+struct MeterInterface_GetMeterDisplayValue final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MeterInterface_GetMeterDisplayValue) == 0x000004, "Wrong alignment on MeterInterface_GetMeterDisplayValue");
+static_assert(sizeof(MeterInterface_GetMeterDisplayValue) == 0x000004, "Wrong size on MeterInterface_GetMeterDisplayValue");
+static_assert(offsetof(MeterInterface_GetMeterDisplayValue, ReturnValue) == 0x000000, "Member 'MeterInterface_GetMeterDisplayValue::ReturnValue' has a wrong offset!");
+
+// Function BasicUI.MeterInterface.GetMeterPercentage
+// 0x0004 (0x0004 - 0x0000)
+struct MeterInterface_GetMeterPercentage final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MeterInterface_GetMeterPercentage) == 0x000004, "Wrong alignment on MeterInterface_GetMeterPercentage");
+static_assert(sizeof(MeterInterface_GetMeterPercentage) == 0x000004, "Wrong size on MeterInterface_GetMeterPercentage");
+static_assert(offsetof(MeterInterface_GetMeterPercentage, ReturnValue) == 0x000000, "Member 'MeterInterface_GetMeterPercentage::ReturnValue' has a wrong offset!");
+
+// Function BasicUI.MeterInterface.GetMeterValue
+// 0x0004 (0x0004 - 0x0000)
+struct MeterInterface_GetMeterValue final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MeterInterface_GetMeterValue) == 0x000004, "Wrong alignment on MeterInterface_GetMeterValue");
+static_assert(sizeof(MeterInterface_GetMeterValue) == 0x000004, "Wrong size on MeterInterface_GetMeterValue");
+static_assert(offsetof(MeterInterface_GetMeterValue, ReturnValue) == 0x000000, "Member 'MeterInterface_GetMeterValue::ReturnValue' has a wrong offset!");
+
+// Function BasicUI.MeterInterface.IncreaseValue
+// 0x0002 (0x0002 - 0x0000)
+struct MeterInterface_IncreaseValue final
+{
+public:
+	bool                                          PlayAnimation;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MeterInterface_IncreaseValue) == 0x000001, "Wrong alignment on MeterInterface_IncreaseValue");
+static_assert(sizeof(MeterInterface_IncreaseValue) == 0x000002, "Wrong size on MeterInterface_IncreaseValue");
+static_assert(offsetof(MeterInterface_IncreaseValue, PlayAnimation) == 0x000000, "Member 'MeterInterface_IncreaseValue::PlayAnimation' has a wrong offset!");
+static_assert(offsetof(MeterInterface_IncreaseValue, ReturnValue) == 0x000001, "Member 'MeterInterface_IncreaseValue::ReturnValue' has a wrong offset!");
+
+// Function BasicUI.MeterInterface.SetMeterMaxValue
+// 0x0008 (0x0008 - 0x0000)
+struct MeterInterface_SetMeterMaxValue final
+{
+public:
+	float                                         MeterValue;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(MeterInterface_SetMeterMaxValue) == 0x000004, "Wrong alignment on MeterInterface_SetMeterMaxValue");
+static_assert(sizeof(MeterInterface_SetMeterMaxValue) == 0x000008, "Wrong size on MeterInterface_SetMeterMaxValue");
+static_assert(offsetof(MeterInterface_SetMeterMaxValue, MeterValue) == 0x000000, "Member 'MeterInterface_SetMeterMaxValue::MeterValue' has a wrong offset!");
+static_assert(offsetof(MeterInterface_SetMeterMaxValue, ReturnValue) == 0x000004, "Member 'MeterInterface_SetMeterMaxValue::ReturnValue' has a wrong offset!");
+
+// Function BasicUI.MeterInterface.SetMeterMinValue
+// 0x0008 (0x0008 - 0x0000)
+struct MeterInterface_SetMeterMinValue final
+{
+public:
+	float                                         MeterValue;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(MeterInterface_SetMeterMinValue) == 0x000004, "Wrong alignment on MeterInterface_SetMeterMinValue");
+static_assert(sizeof(MeterInterface_SetMeterMinValue) == 0x000008, "Wrong size on MeterInterface_SetMeterMinValue");
+static_assert(offsetof(MeterInterface_SetMeterMinValue, MeterValue) == 0x000000, "Member 'MeterInterface_SetMeterMinValue::MeterValue' has a wrong offset!");
+static_assert(offsetof(MeterInterface_SetMeterMinValue, ReturnValue) == 0x000004, "Member 'MeterInterface_SetMeterMinValue::ReturnValue' has a wrong offset!");
+
+// Function BasicUI.MeterInterface.SetMeterValue
+// 0x0008 (0x0008 - 0x0000)
+struct MeterInterface_SetMeterValue final
+{
+public:
+	float                                         MeterValue;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          PlayAnimation;                                     // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0005(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(MeterInterface_SetMeterValue) == 0x000004, "Wrong alignment on MeterInterface_SetMeterValue");
+static_assert(sizeof(MeterInterface_SetMeterValue) == 0x000008, "Wrong size on MeterInterface_SetMeterValue");
+static_assert(offsetof(MeterInterface_SetMeterValue, MeterValue) == 0x000000, "Member 'MeterInterface_SetMeterValue::MeterValue' has a wrong offset!");
+static_assert(offsetof(MeterInterface_SetMeterValue, PlayAnimation) == 0x000004, "Member 'MeterInterface_SetMeterValue::PlayAnimation' has a wrong offset!");
+static_assert(offsetof(MeterInterface_SetMeterValue, ReturnValue) == 0x000005, "Member 'MeterInterface_SetMeterValue::ReturnValue' has a wrong offset!");
+
+// Function BasicUI.TextureInterface.ClearSubTexture
+// 0x000C (0x000C - 0x0000)
+struct TextureInterface_ClearSubTexture final
+{
+public:
+	class FName                                   ImageId;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(TextureInterface_ClearSubTexture) == 0x000004, "Wrong alignment on TextureInterface_ClearSubTexture");
+static_assert(sizeof(TextureInterface_ClearSubTexture) == 0x00000C, "Wrong size on TextureInterface_ClearSubTexture");
+static_assert(offsetof(TextureInterface_ClearSubTexture, ImageId) == 0x000000, "Member 'TextureInterface_ClearSubTexture::ImageId' has a wrong offset!");
+static_assert(offsetof(TextureInterface_ClearSubTexture, ReturnValue) == 0x000008, "Member 'TextureInterface_ClearSubTexture::ReturnValue' has a wrong offset!");
+
+// Function BasicUI.TextureInterface.ClearTexture
+// 0x0001 (0x0001 - 0x0000)
+struct TextureInterface_ClearTexture final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(TextureInterface_ClearTexture) == 0x000001, "Wrong alignment on TextureInterface_ClearTexture");
+static_assert(sizeof(TextureInterface_ClearTexture) == 0x000001, "Wrong size on TextureInterface_ClearTexture");
+static_assert(offsetof(TextureInterface_ClearTexture, ReturnValue) == 0x000000, "Member 'TextureInterface_ClearTexture::ReturnValue' has a wrong offset!");
+
+// Function BasicUI.TextureInterface.FlipTexture
+// 0x0002 (0x0002 - 0x0000)
+struct TextureInterface_FlipTexture final
+{
+public:
+	bool                                          IsInverse;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(TextureInterface_FlipTexture) == 0x000001, "Wrong alignment on TextureInterface_FlipTexture");
+static_assert(sizeof(TextureInterface_FlipTexture) == 0x000002, "Wrong size on TextureInterface_FlipTexture");
+static_assert(offsetof(TextureInterface_FlipTexture, IsInverse) == 0x000000, "Member 'TextureInterface_FlipTexture::IsInverse' has a wrong offset!");
+static_assert(offsetof(TextureInterface_FlipTexture, ReturnValue) == 0x000001, "Member 'TextureInterface_FlipTexture::ReturnValue' has a wrong offset!");
+
+// Function BasicUI.TextureInterface.SetLazyTexture
+// 0x0030 (0x0030 - 0x0000)
+struct TextureInterface_SetLazyTexture final
+{
+public:
+	TSoftObjectPtr<class UTexture2D>              LazyTexture;                                       // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(TextureInterface_SetLazyTexture) == 0x000008, "Wrong alignment on TextureInterface_SetLazyTexture");
+static_assert(sizeof(TextureInterface_SetLazyTexture) == 0x000030, "Wrong size on TextureInterface_SetLazyTexture");
+static_assert(offsetof(TextureInterface_SetLazyTexture, LazyTexture) == 0x000000, "Member 'TextureInterface_SetLazyTexture::LazyTexture' has a wrong offset!");
+static_assert(offsetof(TextureInterface_SetLazyTexture, ReturnValue) == 0x000028, "Member 'TextureInterface_SetLazyTexture::ReturnValue' has a wrong offset!");
+
+// Function BasicUI.TextureInterface.SetSubLazyTexture
+// 0x0038 (0x0038 - 0x0000)
+struct TextureInterface_SetSubLazyTexture final
+{
+public:
+	class FName                                   ImageId;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UTexture2D>              LazyTexture;                                       // 0x0008(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(TextureInterface_SetSubLazyTexture) == 0x000008, "Wrong alignment on TextureInterface_SetSubLazyTexture");
+static_assert(sizeof(TextureInterface_SetSubLazyTexture) == 0x000038, "Wrong size on TextureInterface_SetSubLazyTexture");
+static_assert(offsetof(TextureInterface_SetSubLazyTexture, ImageId) == 0x000000, "Member 'TextureInterface_SetSubLazyTexture::ImageId' has a wrong offset!");
+static_assert(offsetof(TextureInterface_SetSubLazyTexture, LazyTexture) == 0x000008, "Member 'TextureInterface_SetSubLazyTexture::LazyTexture' has a wrong offset!");
+static_assert(offsetof(TextureInterface_SetSubLazyTexture, ReturnValue) == 0x000030, "Member 'TextureInterface_SetSubLazyTexture::ReturnValue' has a wrong offset!");
+
+// Function BasicUI.TextureInterface.SetSubTexture
+// 0x0018 (0x0018 - 0x0000)
+struct TextureInterface_SetSubTexture final
+{
+public:
+	class FName                                   ImageId;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTexture2D*                             Texture;                                           // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(TextureInterface_SetSubTexture) == 0x000008, "Wrong alignment on TextureInterface_SetSubTexture");
+static_assert(sizeof(TextureInterface_SetSubTexture) == 0x000018, "Wrong size on TextureInterface_SetSubTexture");
+static_assert(offsetof(TextureInterface_SetSubTexture, ImageId) == 0x000000, "Member 'TextureInterface_SetSubTexture::ImageId' has a wrong offset!");
+static_assert(offsetof(TextureInterface_SetSubTexture, Texture) == 0x000008, "Member 'TextureInterface_SetSubTexture::Texture' has a wrong offset!");
+static_assert(offsetof(TextureInterface_SetSubTexture, ReturnValue) == 0x000010, "Member 'TextureInterface_SetSubTexture::ReturnValue' has a wrong offset!");
+
+// Function BasicUI.TextureInterface.SetTexture
+// 0x0010 (0x0010 - 0x0000)
+struct TextureInterface_SetTexture final
+{
+public:
+	class UTexture2D*                             Texture;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(TextureInterface_SetTexture) == 0x000008, "Wrong alignment on TextureInterface_SetTexture");
+static_assert(sizeof(TextureInterface_SetTexture) == 0x000010, "Wrong size on TextureInterface_SetTexture");
+static_assert(offsetof(TextureInterface_SetTexture, Texture) == 0x000000, "Member 'TextureInterface_SetTexture::Texture' has a wrong offset!");
+static_assert(offsetof(TextureInterface_SetTexture, ReturnValue) == 0x000008, "Member 'TextureInterface_SetTexture::ReturnValue' has a wrong offset!");
+
+// Function BasicUI.IntegerHolderInterface.GetInteger
+// 0x000C (0x000C - 0x0000)
+struct IntegerHolderInterface_GetInteger final
+{
+public:
+	class FName                                   NumberID;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(IntegerHolderInterface_GetInteger) == 0x000004, "Wrong alignment on IntegerHolderInterface_GetInteger");
+static_assert(sizeof(IntegerHolderInterface_GetInteger) == 0x00000C, "Wrong size on IntegerHolderInterface_GetInteger");
+static_assert(offsetof(IntegerHolderInterface_GetInteger, NumberID) == 0x000000, "Member 'IntegerHolderInterface_GetInteger::NumberID' has a wrong offset!");
+static_assert(offsetof(IntegerHolderInterface_GetInteger, ReturnValue) == 0x000008, "Member 'IntegerHolderInterface_GetInteger::ReturnValue' has a wrong offset!");
+
+// Function BasicUI.IntegerHolderInterface.SetInteger
+// 0x0010 (0x0010 - 0x0000)
+struct IntegerHolderInterface_SetInteger final
+{
+public:
+	int32                                         Number;                                            // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   NumberID;                                          // 0x0004(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(IntegerHolderInterface_SetInteger) == 0x000004, "Wrong alignment on IntegerHolderInterface_SetInteger");
+static_assert(sizeof(IntegerHolderInterface_SetInteger) == 0x000010, "Wrong size on IntegerHolderInterface_SetInteger");
+static_assert(offsetof(IntegerHolderInterface_SetInteger, Number) == 0x000000, "Member 'IntegerHolderInterface_SetInteger::Number' has a wrong offset!");
+static_assert(offsetof(IntegerHolderInterface_SetInteger, NumberID) == 0x000004, "Member 'IntegerHolderInterface_SetInteger::NumberID' has a wrong offset!");
+static_assert(offsetof(IntegerHolderInterface_SetInteger, ReturnValue) == 0x00000C, "Member 'IntegerHolderInterface_SetInteger::ReturnValue' has a wrong offset!");
+
+// Function BasicUI.FloatHolderInterface.GetFloat
+// 0x0004 (0x0004 - 0x0000)
+struct FloatHolderInterface_GetFloat final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FloatHolderInterface_GetFloat) == 0x000004, "Wrong alignment on FloatHolderInterface_GetFloat");
+static_assert(sizeof(FloatHolderInterface_GetFloat) == 0x000004, "Wrong size on FloatHolderInterface_GetFloat");
+static_assert(offsetof(FloatHolderInterface_GetFloat, ReturnValue) == 0x000000, "Member 'FloatHolderInterface_GetFloat::ReturnValue' has a wrong offset!");
+
+// Function BasicUI.FloatHolderInterface.SetFloat
+// 0x0008 (0x0008 - 0x0000)
+struct FloatHolderInterface_SetFloat final
+{
+public:
+	float                                         Number;                                            // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FloatHolderInterface_SetFloat) == 0x000004, "Wrong alignment on FloatHolderInterface_SetFloat");
+static_assert(sizeof(FloatHolderInterface_SetFloat) == 0x000008, "Wrong size on FloatHolderInterface_SetFloat");
+static_assert(offsetof(FloatHolderInterface_SetFloat, Number) == 0x000000, "Member 'FloatHolderInterface_SetFloat::Number' has a wrong offset!");
+static_assert(offsetof(FloatHolderInterface_SetFloat, ReturnValue) == 0x000004, "Member 'FloatHolderInterface_SetFloat::ReturnValue' has a wrong offset!");
+
+// Function BasicUI.TextHolderInterface.GetText
+// 0x0010 (0x0010 - 0x0000)
+struct TextHolderInterface_GetText final
+{
+public:
+	class FText                                   LocalText;                                         // 0x0000(0x0010)(Parm, OutParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(TextHolderInterface_GetText) == 0x000008, "Wrong alignment on TextHolderInterface_GetText");
+static_assert(sizeof(TextHolderInterface_GetText) == 0x000010, "Wrong size on TextHolderInterface_GetText");
+static_assert(offsetof(TextHolderInterface_GetText, LocalText) == 0x000000, "Member 'TextHolderInterface_GetText::LocalText' has a wrong offset!");
+
+// Function BasicUI.TextHolderInterface.GetTexts
+// 0x0010 (0x0010 - 0x0000)
+struct TextHolderInterface_GetTexts final
+{
+public:
+	TArray<class FText>                           LocalTexts;                                        // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(TextHolderInterface_GetTexts) == 0x000008, "Wrong alignment on TextHolderInterface_GetTexts");
+static_assert(sizeof(TextHolderInterface_GetTexts) == 0x000010, "Wrong size on TextHolderInterface_GetTexts");
+static_assert(offsetof(TextHolderInterface_GetTexts, LocalTexts) == 0x000000, "Member 'TextHolderInterface_GetTexts::LocalTexts' has a wrong offset!");
+
+// Function BasicUI.TextHolderInterface.SetText
+// 0x0018 (0x0018 - 0x0000)
+struct TextHolderInterface_SetText final
+{
+public:
+	class FText                                   LocalText;                                         // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(TextHolderInterface_SetText) == 0x000008, "Wrong alignment on TextHolderInterface_SetText");
+static_assert(sizeof(TextHolderInterface_SetText) == 0x000018, "Wrong size on TextHolderInterface_SetText");
+static_assert(offsetof(TextHolderInterface_SetText, LocalText) == 0x000000, "Member 'TextHolderInterface_SetText::LocalText' has a wrong offset!");
+static_assert(offsetof(TextHolderInterface_SetText, ReturnValue) == 0x000010, "Member 'TextHolderInterface_SetText::ReturnValue' has a wrong offset!");
+
+// Function BasicUI.TextHolderInterface.SetTexts
+// 0x0018 (0x0018 - 0x0000)
+struct TextHolderInterface_SetTexts final
+{
+public:
+	TArray<class FText>                           LocalTexts;                                        // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(TextHolderInterface_SetTexts) == 0x000008, "Wrong alignment on TextHolderInterface_SetTexts");
+static_assert(sizeof(TextHolderInterface_SetTexts) == 0x000018, "Wrong size on TextHolderInterface_SetTexts");
+static_assert(offsetof(TextHolderInterface_SetTexts, LocalTexts) == 0x000000, "Member 'TextHolderInterface_SetTexts::LocalTexts' has a wrong offset!");
+static_assert(offsetof(TextHolderInterface_SetTexts, ReturnValue) == 0x000010, "Member 'TextHolderInterface_SetTexts::ReturnValue' has a wrong offset!");
+
+// Function BasicUI.TextureListInterface.ClearHighlight
+// 0x0001 (0x0001 - 0x0000)
+struct TextureListInterface_ClearHighlight final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(TextureListInterface_ClearHighlight) == 0x000001, "Wrong alignment on TextureListInterface_ClearHighlight");
+static_assert(sizeof(TextureListInterface_ClearHighlight) == 0x000001, "Wrong size on TextureListInterface_ClearHighlight");
+static_assert(offsetof(TextureListInterface_ClearHighlight, ReturnValue) == 0x000000, "Member 'TextureListInterface_ClearHighlight::ReturnValue' has a wrong offset!");
+
+// Function BasicUI.TextureListInterface.ClearSelection
+// 0x0001 (0x0001 - 0x0000)
+struct TextureListInterface_ClearSelection final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(TextureListInterface_ClearSelection) == 0x000001, "Wrong alignment on TextureListInterface_ClearSelection");
+static_assert(sizeof(TextureListInterface_ClearSelection) == 0x000001, "Wrong size on TextureListInterface_ClearSelection");
+static_assert(offsetof(TextureListInterface_ClearSelection, ReturnValue) == 0x000000, "Member 'TextureListInterface_ClearSelection::ReturnValue' has a wrong offset!");
+
+// Function BasicUI.TextureListInterface.ClearTexture
+// 0x0008 (0x0008 - 0x0000)
+struct TextureListInterface_ClearTexture final
+{
+public:
+	int32                                         Index_0;                                           // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(TextureListInterface_ClearTexture) == 0x000004, "Wrong alignment on TextureListInterface_ClearTexture");
+static_assert(sizeof(TextureListInterface_ClearTexture) == 0x000008, "Wrong size on TextureListInterface_ClearTexture");
+static_assert(offsetof(TextureListInterface_ClearTexture, Index_0) == 0x000000, "Member 'TextureListInterface_ClearTexture::Index_0' has a wrong offset!");
+static_assert(offsetof(TextureListInterface_ClearTexture, ReturnValue) == 0x000004, "Member 'TextureListInterface_ClearTexture::ReturnValue' has a wrong offset!");
+
+// Function BasicUI.TextureListInterface.GetHighlightedIndex
+// 0x0004 (0x0004 - 0x0000)
+struct TextureListInterface_GetHighlightedIndex final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(TextureListInterface_GetHighlightedIndex) == 0x000004, "Wrong alignment on TextureListInterface_GetHighlightedIndex");
+static_assert(sizeof(TextureListInterface_GetHighlightedIndex) == 0x000004, "Wrong size on TextureListInterface_GetHighlightedIndex");
+static_assert(offsetof(TextureListInterface_GetHighlightedIndex, ReturnValue) == 0x000000, "Member 'TextureListInterface_GetHighlightedIndex::ReturnValue' has a wrong offset!");
+
+// Function BasicUI.TextureListInterface.GetSelectedIndex
+// 0x0004 (0x0004 - 0x0000)
+struct TextureListInterface_GetSelectedIndex final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(TextureListInterface_GetSelectedIndex) == 0x000004, "Wrong alignment on TextureListInterface_GetSelectedIndex");
+static_assert(sizeof(TextureListInterface_GetSelectedIndex) == 0x000004, "Wrong size on TextureListInterface_GetSelectedIndex");
+static_assert(offsetof(TextureListInterface_GetSelectedIndex, ReturnValue) == 0x000000, "Member 'TextureListInterface_GetSelectedIndex::ReturnValue' has a wrong offset!");
+
+// Function BasicUI.TextureListInterface.SetHighlightedIndex
+// 0x0008 (0x0008 - 0x0000)
+struct TextureListInterface_SetHighlightedIndex final
+{
+public:
+	int32                                         Index_0;                                           // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(TextureListInterface_SetHighlightedIndex) == 0x000004, "Wrong alignment on TextureListInterface_SetHighlightedIndex");
+static_assert(sizeof(TextureListInterface_SetHighlightedIndex) == 0x000008, "Wrong size on TextureListInterface_SetHighlightedIndex");
+static_assert(offsetof(TextureListInterface_SetHighlightedIndex, Index_0) == 0x000000, "Member 'TextureListInterface_SetHighlightedIndex::Index_0' has a wrong offset!");
+static_assert(offsetof(TextureListInterface_SetHighlightedIndex, ReturnValue) == 0x000004, "Member 'TextureListInterface_SetHighlightedIndex::ReturnValue' has a wrong offset!");
+
+// Function BasicUI.TextureListInterface.SetLazyTexture
+// 0x0038 (0x0038 - 0x0000)
+struct TextureListInterface_SetLazyTexture final
+{
+public:
+	int32                                         Index_0;                                           // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UTexture2D>              LazyTexture;                                       // 0x0008(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(TextureListInterface_SetLazyTexture) == 0x000008, "Wrong alignment on TextureListInterface_SetLazyTexture");
+static_assert(sizeof(TextureListInterface_SetLazyTexture) == 0x000038, "Wrong size on TextureListInterface_SetLazyTexture");
+static_assert(offsetof(TextureListInterface_SetLazyTexture, Index_0) == 0x000000, "Member 'TextureListInterface_SetLazyTexture::Index_0' has a wrong offset!");
+static_assert(offsetof(TextureListInterface_SetLazyTexture, LazyTexture) == 0x000008, "Member 'TextureListInterface_SetLazyTexture::LazyTexture' has a wrong offset!");
+static_assert(offsetof(TextureListInterface_SetLazyTexture, ReturnValue) == 0x000030, "Member 'TextureListInterface_SetLazyTexture::ReturnValue' has a wrong offset!");
+
+// Function BasicUI.TextureListInterface.SetSelectedIndex
+// 0x0008 (0x0008 - 0x0000)
+struct TextureListInterface_SetSelectedIndex final
+{
+public:
+	int32                                         Index_0;                                           // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(TextureListInterface_SetSelectedIndex) == 0x000004, "Wrong alignment on TextureListInterface_SetSelectedIndex");
+static_assert(sizeof(TextureListInterface_SetSelectedIndex) == 0x000008, "Wrong size on TextureListInterface_SetSelectedIndex");
+static_assert(offsetof(TextureListInterface_SetSelectedIndex, Index_0) == 0x000000, "Member 'TextureListInterface_SetSelectedIndex::Index_0' has a wrong offset!");
+static_assert(offsetof(TextureListInterface_SetSelectedIndex, ReturnValue) == 0x000004, "Member 'TextureListInterface_SetSelectedIndex::ReturnValue' has a wrong offset!");
+
+// Function BasicUI.TextureListInterface.SetTexture
+// 0x0018 (0x0018 - 0x0000)
+struct TextureListInterface_SetTexture final
+{
+public:
+	int32                                         Index_0;                                           // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTexture2D*                             Texture;                                           // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(TextureListInterface_SetTexture) == 0x000008, "Wrong alignment on TextureListInterface_SetTexture");
+static_assert(sizeof(TextureListInterface_SetTexture) == 0x000018, "Wrong size on TextureListInterface_SetTexture");
+static_assert(offsetof(TextureListInterface_SetTexture, Index_0) == 0x000000, "Member 'TextureListInterface_SetTexture::Index_0' has a wrong offset!");
+static_assert(offsetof(TextureListInterface_SetTexture, Texture) == 0x000008, "Member 'TextureListInterface_SetTexture::Texture' has a wrong offset!");
+static_assert(offsetof(TextureListInterface_SetTexture, ReturnValue) == 0x000010, "Member 'TextureListInterface_SetTexture::ReturnValue' has a wrong offset!");
 
 // Function BasicUI.UIManager.AddUIObjectBySoftClassPtr
 // 0x0040 (0x0040 - 0x0000)
@@ -1572,217 +2287,6 @@ static_assert(sizeof(UIManager_IsMenuOpen) == 0x00000C, "Wrong size on UIManager
 static_assert(offsetof(UIManager_IsMenuOpen, InMenuName) == 0x000000, "Member 'UIManager_IsMenuOpen::InMenuName' has a wrong offset!");
 static_assert(offsetof(UIManager_IsMenuOpen, ReturnValue) == 0x000008, "Member 'UIManager_IsMenuOpen::ReturnValue' has a wrong offset!");
 
-// Function BasicUI.MeterPieceBase.OnMeterValueChanged
-// 0x0010 (0x0010 - 0x0000)
-struct MeterPieceBase_OnMeterValueChanged final
-{
-public:
-	float                                         MeterValueToNotify;                                // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Percentage;                                        // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DisplayNumber;                                     // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          PlayAnimation_0;                                   // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(MeterPieceBase_OnMeterValueChanged) == 0x000004, "Wrong alignment on MeterPieceBase_OnMeterValueChanged");
-static_assert(sizeof(MeterPieceBase_OnMeterValueChanged) == 0x000010, "Wrong size on MeterPieceBase_OnMeterValueChanged");
-static_assert(offsetof(MeterPieceBase_OnMeterValueChanged, MeterValueToNotify) == 0x000000, "Member 'MeterPieceBase_OnMeterValueChanged::MeterValueToNotify' has a wrong offset!");
-static_assert(offsetof(MeterPieceBase_OnMeterValueChanged, Percentage) == 0x000004, "Member 'MeterPieceBase_OnMeterValueChanged::Percentage' has a wrong offset!");
-static_assert(offsetof(MeterPieceBase_OnMeterValueChanged, DisplayNumber) == 0x000008, "Member 'MeterPieceBase_OnMeterValueChanged::DisplayNumber' has a wrong offset!");
-static_assert(offsetof(MeterPieceBase_OnMeterValueChanged, PlayAnimation_0) == 0x00000C, "Member 'MeterPieceBase_OnMeterValueChanged::PlayAnimation_0' has a wrong offset!");
-
-// Function BasicUI.ScrollerItem.GetElementIndex
-// 0x0004 (0x0004 - 0x0000)
-struct ScrollerItem_GetElementIndex final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(ScrollerItem_GetElementIndex) == 0x000004, "Wrong alignment on ScrollerItem_GetElementIndex");
-static_assert(sizeof(ScrollerItem_GetElementIndex) == 0x000004, "Wrong size on ScrollerItem_GetElementIndex");
-static_assert(offsetof(ScrollerItem_GetElementIndex, ReturnValue) == 0x000000, "Member 'ScrollerItem_GetElementIndex::ReturnValue' has a wrong offset!");
-
-// Function BasicUI.CommunicatorInterface.SendMessage
-// 0x0020 (0x0020 - 0x0000)
-struct CommunicatorInterface_SendMessage final
-{
-public:
-	class UObject*                                AnotherUI;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Message;                                           // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(CommunicatorInterface_SendMessage) == 0x000008, "Wrong alignment on CommunicatorInterface_SendMessage");
-static_assert(sizeof(CommunicatorInterface_SendMessage) == 0x000020, "Wrong size on CommunicatorInterface_SendMessage");
-static_assert(offsetof(CommunicatorInterface_SendMessage, AnotherUI) == 0x000000, "Member 'CommunicatorInterface_SendMessage::AnotherUI' has a wrong offset!");
-static_assert(offsetof(CommunicatorInterface_SendMessage, Message) == 0x000008, "Member 'CommunicatorInterface_SendMessage::Message' has a wrong offset!");
-static_assert(offsetof(CommunicatorInterface_SendMessage, ReturnValue) == 0x000018, "Member 'CommunicatorInterface_SendMessage::ReturnValue' has a wrong offset!");
-
-// Function BasicUI.EnableInterface.Disable
-// 0x0001 (0x0001 - 0x0000)
-struct EnableInterface_Disable final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(EnableInterface_Disable) == 0x000001, "Wrong alignment on EnableInterface_Disable");
-static_assert(sizeof(EnableInterface_Disable) == 0x000001, "Wrong size on EnableInterface_Disable");
-static_assert(offsetof(EnableInterface_Disable, ReturnValue) == 0x000000, "Member 'EnableInterface_Disable::ReturnValue' has a wrong offset!");
-
-// Function BasicUI.EnableInterface.Enable
-// 0x0001 (0x0001 - 0x0000)
-struct EnableInterface_Enable final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(EnableInterface_Enable) == 0x000001, "Wrong alignment on EnableInterface_Enable");
-static_assert(sizeof(EnableInterface_Enable) == 0x000001, "Wrong size on EnableInterface_Enable");
-static_assert(offsetof(EnableInterface_Enable, ReturnValue) == 0x000000, "Member 'EnableInterface_Enable::ReturnValue' has a wrong offset!");
-
-// Function BasicUI.EnableInterface.IsEnabled
-// 0x0001 (0x0001 - 0x0000)
-struct EnableInterface_IsEnabled final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(EnableInterface_IsEnabled) == 0x000001, "Wrong alignment on EnableInterface_IsEnabled");
-static_assert(sizeof(EnableInterface_IsEnabled) == 0x000001, "Wrong size on EnableInterface_IsEnabled");
-static_assert(offsetof(EnableInterface_IsEnabled, ReturnValue) == 0x000000, "Member 'EnableInterface_IsEnabled::ReturnValue' has a wrong offset!");
-
-// Function BasicUI.ResetInterface.Reset
-// 0x0001 (0x0001 - 0x0000)
-struct ResetInterface_Reset final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(ResetInterface_Reset) == 0x000001, "Wrong alignment on ResetInterface_Reset");
-static_assert(sizeof(ResetInterface_Reset) == 0x000001, "Wrong size on ResetInterface_Reset");
-static_assert(offsetof(ResetInterface_Reset, ReturnValue) == 0x000000, "Member 'ResetInterface_Reset::ReturnValue' has a wrong offset!");
-
-// Function BasicUI.SelectableInterface.Deselect
-// 0x0002 (0x0002 - 0x0000)
-struct SelectableInterface_Deselect final
-{
-public:
-	bool                                          PlayAnimation;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(SelectableInterface_Deselect) == 0x000001, "Wrong alignment on SelectableInterface_Deselect");
-static_assert(sizeof(SelectableInterface_Deselect) == 0x000002, "Wrong size on SelectableInterface_Deselect");
-static_assert(offsetof(SelectableInterface_Deselect, PlayAnimation) == 0x000000, "Member 'SelectableInterface_Deselect::PlayAnimation' has a wrong offset!");
-static_assert(offsetof(SelectableInterface_Deselect, ReturnValue) == 0x000001, "Member 'SelectableInterface_Deselect::ReturnValue' has a wrong offset!");
-
-// Function BasicUI.SelectableInterface.IsSelectable
-// 0x0001 (0x0001 - 0x0000)
-struct SelectableInterface_IsSelectable final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(SelectableInterface_IsSelectable) == 0x000001, "Wrong alignment on SelectableInterface_IsSelectable");
-static_assert(sizeof(SelectableInterface_IsSelectable) == 0x000001, "Wrong size on SelectableInterface_IsSelectable");
-static_assert(offsetof(SelectableInterface_IsSelectable, ReturnValue) == 0x000000, "Member 'SelectableInterface_IsSelectable::ReturnValue' has a wrong offset!");
-
-// Function BasicUI.SelectableInterface.IsSelected
-// 0x0001 (0x0001 - 0x0000)
-struct SelectableInterface_IsSelected final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(SelectableInterface_IsSelected) == 0x000001, "Wrong alignment on SelectableInterface_IsSelected");
-static_assert(sizeof(SelectableInterface_IsSelected) == 0x000001, "Wrong size on SelectableInterface_IsSelected");
-static_assert(offsetof(SelectableInterface_IsSelected, ReturnValue) == 0x000000, "Member 'SelectableInterface_IsSelected::ReturnValue' has a wrong offset!");
-
-// Function BasicUI.SelectableInterface.Select
-// 0x0002 (0x0002 - 0x0000)
-struct SelectableInterface_Select final
-{
-public:
-	bool                                          PlayAnimation;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(SelectableInterface_Select) == 0x000001, "Wrong alignment on SelectableInterface_Select");
-static_assert(sizeof(SelectableInterface_Select) == 0x000002, "Wrong size on SelectableInterface_Select");
-static_assert(offsetof(SelectableInterface_Select, PlayAnimation) == 0x000000, "Member 'SelectableInterface_Select::PlayAnimation' has a wrong offset!");
-static_assert(offsetof(SelectableInterface_Select, ReturnValue) == 0x000001, "Member 'SelectableInterface_Select::ReturnValue' has a wrong offset!");
-
-// Function BasicUI.SelectableInterface.SetSelectProhibited
-// 0x0002 (0x0002 - 0x0000)
-struct SelectableInterface_SetSelectProhibited final
-{
-public:
-	bool                                          Prohibited;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(SelectableInterface_SetSelectProhibited) == 0x000001, "Wrong alignment on SelectableInterface_SetSelectProhibited");
-static_assert(sizeof(SelectableInterface_SetSelectProhibited) == 0x000002, "Wrong size on SelectableInterface_SetSelectProhibited");
-static_assert(offsetof(SelectableInterface_SetSelectProhibited, Prohibited) == 0x000000, "Member 'SelectableInterface_SetSelectProhibited::Prohibited' has a wrong offset!");
-static_assert(offsetof(SelectableInterface_SetSelectProhibited, ReturnValue) == 0x000001, "Member 'SelectableInterface_SetSelectProhibited::ReturnValue' has a wrong offset!");
-
-// Function BasicUI.HighlightableInterface.Highlight
-// 0x0002 (0x0002 - 0x0000)
-struct HighlightableInterface_Highlight final
-{
-public:
-	bool                                          PlayAnimation;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(HighlightableInterface_Highlight) == 0x000001, "Wrong alignment on HighlightableInterface_Highlight");
-static_assert(sizeof(HighlightableInterface_Highlight) == 0x000002, "Wrong size on HighlightableInterface_Highlight");
-static_assert(offsetof(HighlightableInterface_Highlight, PlayAnimation) == 0x000000, "Member 'HighlightableInterface_Highlight::PlayAnimation' has a wrong offset!");
-static_assert(offsetof(HighlightableInterface_Highlight, ReturnValue) == 0x000001, "Member 'HighlightableInterface_Highlight::ReturnValue' has a wrong offset!");
-
-// Function BasicUI.HighlightableInterface.IsHighlightable
-// 0x0001 (0x0001 - 0x0000)
-struct HighlightableInterface_IsHighlightable final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(HighlightableInterface_IsHighlightable) == 0x000001, "Wrong alignment on HighlightableInterface_IsHighlightable");
-static_assert(sizeof(HighlightableInterface_IsHighlightable) == 0x000001, "Wrong size on HighlightableInterface_IsHighlightable");
-static_assert(offsetof(HighlightableInterface_IsHighlightable, ReturnValue) == 0x000000, "Member 'HighlightableInterface_IsHighlightable::ReturnValue' has a wrong offset!");
-
-// Function BasicUI.HighlightableInterface.IsHighlighted
-// 0x0001 (0x0001 - 0x0000)
-struct HighlightableInterface_IsHighlighted final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(HighlightableInterface_IsHighlighted) == 0x000001, "Wrong alignment on HighlightableInterface_IsHighlighted");
-static_assert(sizeof(HighlightableInterface_IsHighlighted) == 0x000001, "Wrong size on HighlightableInterface_IsHighlighted");
-static_assert(offsetof(HighlightableInterface_IsHighlighted, ReturnValue) == 0x000000, "Member 'HighlightableInterface_IsHighlighted::ReturnValue' has a wrong offset!");
-
-// Function BasicUI.HighlightableInterface.SetHighlightProhibited
-// 0x0002 (0x0002 - 0x0000)
-struct HighlightableInterface_SetHighlightProhibited final
-{
-public:
-	bool                                          Prohibited;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(HighlightableInterface_SetHighlightProhibited) == 0x000001, "Wrong alignment on HighlightableInterface_SetHighlightProhibited");
-static_assert(sizeof(HighlightableInterface_SetHighlightProhibited) == 0x000002, "Wrong size on HighlightableInterface_SetHighlightProhibited");
-static_assert(offsetof(HighlightableInterface_SetHighlightProhibited, Prohibited) == 0x000000, "Member 'HighlightableInterface_SetHighlightProhibited::Prohibited' has a wrong offset!");
-static_assert(offsetof(HighlightableInterface_SetHighlightProhibited, ReturnValue) == 0x000001, "Member 'HighlightableInterface_SetHighlightProhibited::ReturnValue' has a wrong offset!");
-
-// Function BasicUI.HighlightableInterface.Unhighlight
-// 0x0002 (0x0002 - 0x0000)
-struct HighlightableInterface_Unhighlight final
-{
-public:
-	bool                                          PlayAnimation;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(HighlightableInterface_Unhighlight) == 0x000001, "Wrong alignment on HighlightableInterface_Unhighlight");
-static_assert(sizeof(HighlightableInterface_Unhighlight) == 0x000002, "Wrong size on HighlightableInterface_Unhighlight");
-static_assert(offsetof(HighlightableInterface_Unhighlight, PlayAnimation) == 0x000000, "Member 'HighlightableInterface_Unhighlight::PlayAnimation' has a wrong offset!");
-static_assert(offsetof(HighlightableInterface_Unhighlight, ReturnValue) == 0x000001, "Member 'HighlightableInterface_Unhighlight::ReturnValue' has a wrong offset!");
-
 // Function BasicUI.UIObjectBase.Close
 // 0x0001 (0x0001 - 0x0000)
 struct UIObjectBase_Close final
@@ -1851,510 +2355,6 @@ public:
 static_assert(alignof(UIObjectBase_IsOpen) == 0x000001, "Wrong alignment on UIObjectBase_IsOpen");
 static_assert(sizeof(UIObjectBase_IsOpen) == 0x000001, "Wrong size on UIObjectBase_IsOpen");
 static_assert(offsetof(UIObjectBase_IsOpen, ReturnValue) == 0x000000, "Member 'UIObjectBase_IsOpen::ReturnValue' has a wrong offset!");
-
-// Function BasicUI.MultipleFlagInterface.GetFlag
-// 0x000C (0x000C - 0x0000)
-struct MultipleFlagInterface_GetFlag final
-{
-public:
-	class FName                                   FlagName;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(MultipleFlagInterface_GetFlag) == 0x000004, "Wrong alignment on MultipleFlagInterface_GetFlag");
-static_assert(sizeof(MultipleFlagInterface_GetFlag) == 0x00000C, "Wrong size on MultipleFlagInterface_GetFlag");
-static_assert(offsetof(MultipleFlagInterface_GetFlag, FlagName) == 0x000000, "Member 'MultipleFlagInterface_GetFlag::FlagName' has a wrong offset!");
-static_assert(offsetof(MultipleFlagInterface_GetFlag, ReturnValue) == 0x000008, "Member 'MultipleFlagInterface_GetFlag::ReturnValue' has a wrong offset!");
-
-// Function BasicUI.MultipleFlagInterface.SetFlag
-// 0x000C (0x000C - 0x0000)
-struct MultipleFlagInterface_SetFlag final
-{
-public:
-	class FName                                   FlagName;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          FlagValue;                                         // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bFireEvent;                                        // 0x0009(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x000A(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B[0x1];                                        // 0x000B(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(MultipleFlagInterface_SetFlag) == 0x000004, "Wrong alignment on MultipleFlagInterface_SetFlag");
-static_assert(sizeof(MultipleFlagInterface_SetFlag) == 0x00000C, "Wrong size on MultipleFlagInterface_SetFlag");
-static_assert(offsetof(MultipleFlagInterface_SetFlag, FlagName) == 0x000000, "Member 'MultipleFlagInterface_SetFlag::FlagName' has a wrong offset!");
-static_assert(offsetof(MultipleFlagInterface_SetFlag, FlagValue) == 0x000008, "Member 'MultipleFlagInterface_SetFlag::FlagValue' has a wrong offset!");
-static_assert(offsetof(MultipleFlagInterface_SetFlag, bFireEvent) == 0x000009, "Member 'MultipleFlagInterface_SetFlag::bFireEvent' has a wrong offset!");
-static_assert(offsetof(MultipleFlagInterface_SetFlag, ReturnValue) == 0x00000A, "Member 'MultipleFlagInterface_SetFlag::ReturnValue' has a wrong offset!");
-
-// Function BasicUI.ButtonInterface.PressButton
-// 0x0001 (0x0001 - 0x0000)
-struct ButtonInterface_PressButton final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(ButtonInterface_PressButton) == 0x000001, "Wrong alignment on ButtonInterface_PressButton");
-static_assert(sizeof(ButtonInterface_PressButton) == 0x000001, "Wrong size on ButtonInterface_PressButton");
-static_assert(offsetof(ButtonInterface_PressButton, ReturnValue) == 0x000000, "Member 'ButtonInterface_PressButton::ReturnValue' has a wrong offset!");
-
-// Function BasicUI.ButtonInterface.ReleaseButton
-// 0x0001 (0x0001 - 0x0000)
-struct ButtonInterface_ReleaseButton final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(ButtonInterface_ReleaseButton) == 0x000001, "Wrong alignment on ButtonInterface_ReleaseButton");
-static_assert(sizeof(ButtonInterface_ReleaseButton) == 0x000001, "Wrong size on ButtonInterface_ReleaseButton");
-static_assert(offsetof(ButtonInterface_ReleaseButton, ReturnValue) == 0x000000, "Member 'ButtonInterface_ReleaseButton::ReturnValue' has a wrong offset!");
-
-// Function BasicUI.MeterInterface.DecreaseValue
-// 0x0002 (0x0002 - 0x0000)
-struct MeterInterface_DecreaseValue final
-{
-public:
-	bool                                          PlayAnimation;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MeterInterface_DecreaseValue) == 0x000001, "Wrong alignment on MeterInterface_DecreaseValue");
-static_assert(sizeof(MeterInterface_DecreaseValue) == 0x000002, "Wrong size on MeterInterface_DecreaseValue");
-static_assert(offsetof(MeterInterface_DecreaseValue, PlayAnimation) == 0x000000, "Member 'MeterInterface_DecreaseValue::PlayAnimation' has a wrong offset!");
-static_assert(offsetof(MeterInterface_DecreaseValue, ReturnValue) == 0x000001, "Member 'MeterInterface_DecreaseValue::ReturnValue' has a wrong offset!");
-
-// Function BasicUI.MeterInterface.GetMeterDisplayValue
-// 0x0004 (0x0004 - 0x0000)
-struct MeterInterface_GetMeterDisplayValue final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MeterInterface_GetMeterDisplayValue) == 0x000004, "Wrong alignment on MeterInterface_GetMeterDisplayValue");
-static_assert(sizeof(MeterInterface_GetMeterDisplayValue) == 0x000004, "Wrong size on MeterInterface_GetMeterDisplayValue");
-static_assert(offsetof(MeterInterface_GetMeterDisplayValue, ReturnValue) == 0x000000, "Member 'MeterInterface_GetMeterDisplayValue::ReturnValue' has a wrong offset!");
-
-// Function BasicUI.MeterInterface.GetMeterPercentage
-// 0x0004 (0x0004 - 0x0000)
-struct MeterInterface_GetMeterPercentage final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MeterInterface_GetMeterPercentage) == 0x000004, "Wrong alignment on MeterInterface_GetMeterPercentage");
-static_assert(sizeof(MeterInterface_GetMeterPercentage) == 0x000004, "Wrong size on MeterInterface_GetMeterPercentage");
-static_assert(offsetof(MeterInterface_GetMeterPercentage, ReturnValue) == 0x000000, "Member 'MeterInterface_GetMeterPercentage::ReturnValue' has a wrong offset!");
-
-// Function BasicUI.MeterInterface.GetMeterValue
-// 0x0004 (0x0004 - 0x0000)
-struct MeterInterface_GetMeterValue final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MeterInterface_GetMeterValue) == 0x000004, "Wrong alignment on MeterInterface_GetMeterValue");
-static_assert(sizeof(MeterInterface_GetMeterValue) == 0x000004, "Wrong size on MeterInterface_GetMeterValue");
-static_assert(offsetof(MeterInterface_GetMeterValue, ReturnValue) == 0x000000, "Member 'MeterInterface_GetMeterValue::ReturnValue' has a wrong offset!");
-
-// Function BasicUI.MeterInterface.IncreaseValue
-// 0x0002 (0x0002 - 0x0000)
-struct MeterInterface_IncreaseValue final
-{
-public:
-	bool                                          PlayAnimation;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MeterInterface_IncreaseValue) == 0x000001, "Wrong alignment on MeterInterface_IncreaseValue");
-static_assert(sizeof(MeterInterface_IncreaseValue) == 0x000002, "Wrong size on MeterInterface_IncreaseValue");
-static_assert(offsetof(MeterInterface_IncreaseValue, PlayAnimation) == 0x000000, "Member 'MeterInterface_IncreaseValue::PlayAnimation' has a wrong offset!");
-static_assert(offsetof(MeterInterface_IncreaseValue, ReturnValue) == 0x000001, "Member 'MeterInterface_IncreaseValue::ReturnValue' has a wrong offset!");
-
-// Function BasicUI.MeterInterface.SetMeterMaxValue
-// 0x0008 (0x0008 - 0x0000)
-struct MeterInterface_SetMeterMaxValue final
-{
-public:
-	float                                         MeterValue;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(MeterInterface_SetMeterMaxValue) == 0x000004, "Wrong alignment on MeterInterface_SetMeterMaxValue");
-static_assert(sizeof(MeterInterface_SetMeterMaxValue) == 0x000008, "Wrong size on MeterInterface_SetMeterMaxValue");
-static_assert(offsetof(MeterInterface_SetMeterMaxValue, MeterValue) == 0x000000, "Member 'MeterInterface_SetMeterMaxValue::MeterValue' has a wrong offset!");
-static_assert(offsetof(MeterInterface_SetMeterMaxValue, ReturnValue) == 0x000004, "Member 'MeterInterface_SetMeterMaxValue::ReturnValue' has a wrong offset!");
-
-// Function BasicUI.MeterInterface.SetMeterMinValue
-// 0x0008 (0x0008 - 0x0000)
-struct MeterInterface_SetMeterMinValue final
-{
-public:
-	float                                         MeterValue;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(MeterInterface_SetMeterMinValue) == 0x000004, "Wrong alignment on MeterInterface_SetMeterMinValue");
-static_assert(sizeof(MeterInterface_SetMeterMinValue) == 0x000008, "Wrong size on MeterInterface_SetMeterMinValue");
-static_assert(offsetof(MeterInterface_SetMeterMinValue, MeterValue) == 0x000000, "Member 'MeterInterface_SetMeterMinValue::MeterValue' has a wrong offset!");
-static_assert(offsetof(MeterInterface_SetMeterMinValue, ReturnValue) == 0x000004, "Member 'MeterInterface_SetMeterMinValue::ReturnValue' has a wrong offset!");
-
-// Function BasicUI.MeterInterface.SetMeterValue
-// 0x0008 (0x0008 - 0x0000)
-struct MeterInterface_SetMeterValue final
-{
-public:
-	float                                         MeterValue;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          PlayAnimation;                                     // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0005(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(MeterInterface_SetMeterValue) == 0x000004, "Wrong alignment on MeterInterface_SetMeterValue");
-static_assert(sizeof(MeterInterface_SetMeterValue) == 0x000008, "Wrong size on MeterInterface_SetMeterValue");
-static_assert(offsetof(MeterInterface_SetMeterValue, MeterValue) == 0x000000, "Member 'MeterInterface_SetMeterValue::MeterValue' has a wrong offset!");
-static_assert(offsetof(MeterInterface_SetMeterValue, PlayAnimation) == 0x000004, "Member 'MeterInterface_SetMeterValue::PlayAnimation' has a wrong offset!");
-static_assert(offsetof(MeterInterface_SetMeterValue, ReturnValue) == 0x000005, "Member 'MeterInterface_SetMeterValue::ReturnValue' has a wrong offset!");
-
-// Function BasicUI.TextureInterface.ClearSubTexture
-// 0x000C (0x000C - 0x0000)
-struct TextureInterface_ClearSubTexture final
-{
-public:
-	class FName                                   ImageId;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(TextureInterface_ClearSubTexture) == 0x000004, "Wrong alignment on TextureInterface_ClearSubTexture");
-static_assert(sizeof(TextureInterface_ClearSubTexture) == 0x00000C, "Wrong size on TextureInterface_ClearSubTexture");
-static_assert(offsetof(TextureInterface_ClearSubTexture, ImageId) == 0x000000, "Member 'TextureInterface_ClearSubTexture::ImageId' has a wrong offset!");
-static_assert(offsetof(TextureInterface_ClearSubTexture, ReturnValue) == 0x000008, "Member 'TextureInterface_ClearSubTexture::ReturnValue' has a wrong offset!");
-
-// Function BasicUI.TextureInterface.ClearTexture
-// 0x0001 (0x0001 - 0x0000)
-struct TextureInterface_ClearTexture final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(TextureInterface_ClearTexture) == 0x000001, "Wrong alignment on TextureInterface_ClearTexture");
-static_assert(sizeof(TextureInterface_ClearTexture) == 0x000001, "Wrong size on TextureInterface_ClearTexture");
-static_assert(offsetof(TextureInterface_ClearTexture, ReturnValue) == 0x000000, "Member 'TextureInterface_ClearTexture::ReturnValue' has a wrong offset!");
-
-// Function BasicUI.TextureInterface.FlipTexture
-// 0x0002 (0x0002 - 0x0000)
-struct TextureInterface_FlipTexture final
-{
-public:
-	bool                                          IsInverse;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(TextureInterface_FlipTexture) == 0x000001, "Wrong alignment on TextureInterface_FlipTexture");
-static_assert(sizeof(TextureInterface_FlipTexture) == 0x000002, "Wrong size on TextureInterface_FlipTexture");
-static_assert(offsetof(TextureInterface_FlipTexture, IsInverse) == 0x000000, "Member 'TextureInterface_FlipTexture::IsInverse' has a wrong offset!");
-static_assert(offsetof(TextureInterface_FlipTexture, ReturnValue) == 0x000001, "Member 'TextureInterface_FlipTexture::ReturnValue' has a wrong offset!");
-
-// Function BasicUI.TextureInterface.SetLazyTexture
-// 0x0030 (0x0030 - 0x0000)
-struct TextureInterface_SetLazyTexture final
-{
-public:
-	TSoftObjectPtr<class UTexture2D>              LazyTexture;                                       // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(TextureInterface_SetLazyTexture) == 0x000008, "Wrong alignment on TextureInterface_SetLazyTexture");
-static_assert(sizeof(TextureInterface_SetLazyTexture) == 0x000030, "Wrong size on TextureInterface_SetLazyTexture");
-static_assert(offsetof(TextureInterface_SetLazyTexture, LazyTexture) == 0x000000, "Member 'TextureInterface_SetLazyTexture::LazyTexture' has a wrong offset!");
-static_assert(offsetof(TextureInterface_SetLazyTexture, ReturnValue) == 0x000028, "Member 'TextureInterface_SetLazyTexture::ReturnValue' has a wrong offset!");
-
-// Function BasicUI.TextureInterface.SetSubLazyTexture
-// 0x0038 (0x0038 - 0x0000)
-struct TextureInterface_SetSubLazyTexture final
-{
-public:
-	class FName                                   ImageId;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class UTexture2D>              LazyTexture;                                       // 0x0008(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(TextureInterface_SetSubLazyTexture) == 0x000008, "Wrong alignment on TextureInterface_SetSubLazyTexture");
-static_assert(sizeof(TextureInterface_SetSubLazyTexture) == 0x000038, "Wrong size on TextureInterface_SetSubLazyTexture");
-static_assert(offsetof(TextureInterface_SetSubLazyTexture, ImageId) == 0x000000, "Member 'TextureInterface_SetSubLazyTexture::ImageId' has a wrong offset!");
-static_assert(offsetof(TextureInterface_SetSubLazyTexture, LazyTexture) == 0x000008, "Member 'TextureInterface_SetSubLazyTexture::LazyTexture' has a wrong offset!");
-static_assert(offsetof(TextureInterface_SetSubLazyTexture, ReturnValue) == 0x000030, "Member 'TextureInterface_SetSubLazyTexture::ReturnValue' has a wrong offset!");
-
-// Function BasicUI.TextureInterface.SetSubTexture
-// 0x0018 (0x0018 - 0x0000)
-struct TextureInterface_SetSubTexture final
-{
-public:
-	class FName                                   ImageId;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTexture2D*                             Texture;                                           // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(TextureInterface_SetSubTexture) == 0x000008, "Wrong alignment on TextureInterface_SetSubTexture");
-static_assert(sizeof(TextureInterface_SetSubTexture) == 0x000018, "Wrong size on TextureInterface_SetSubTexture");
-static_assert(offsetof(TextureInterface_SetSubTexture, ImageId) == 0x000000, "Member 'TextureInterface_SetSubTexture::ImageId' has a wrong offset!");
-static_assert(offsetof(TextureInterface_SetSubTexture, Texture) == 0x000008, "Member 'TextureInterface_SetSubTexture::Texture' has a wrong offset!");
-static_assert(offsetof(TextureInterface_SetSubTexture, ReturnValue) == 0x000010, "Member 'TextureInterface_SetSubTexture::ReturnValue' has a wrong offset!");
-
-// Function BasicUI.TextureInterface.SetTexture
-// 0x0010 (0x0010 - 0x0000)
-struct TextureInterface_SetTexture final
-{
-public:
-	class UTexture2D*                             Texture;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(TextureInterface_SetTexture) == 0x000008, "Wrong alignment on TextureInterface_SetTexture");
-static_assert(sizeof(TextureInterface_SetTexture) == 0x000010, "Wrong size on TextureInterface_SetTexture");
-static_assert(offsetof(TextureInterface_SetTexture, Texture) == 0x000000, "Member 'TextureInterface_SetTexture::Texture' has a wrong offset!");
-static_assert(offsetof(TextureInterface_SetTexture, ReturnValue) == 0x000008, "Member 'TextureInterface_SetTexture::ReturnValue' has a wrong offset!");
-
-// Function BasicUI.CheckableInterface.Check
-// 0x0003 (0x0003 - 0x0000)
-struct CheckableInterface_Check final
-{
-public:
-	bool                                          PlayAnimation;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          AnotherAppearance;                                 // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0002(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(CheckableInterface_Check) == 0x000001, "Wrong alignment on CheckableInterface_Check");
-static_assert(sizeof(CheckableInterface_Check) == 0x000003, "Wrong size on CheckableInterface_Check");
-static_assert(offsetof(CheckableInterface_Check, PlayAnimation) == 0x000000, "Member 'CheckableInterface_Check::PlayAnimation' has a wrong offset!");
-static_assert(offsetof(CheckableInterface_Check, AnotherAppearance) == 0x000001, "Member 'CheckableInterface_Check::AnotherAppearance' has a wrong offset!");
-static_assert(offsetof(CheckableInterface_Check, ReturnValue) == 0x000002, "Member 'CheckableInterface_Check::ReturnValue' has a wrong offset!");
-
-// Function BasicUI.CheckableInterface.IsChecked
-// 0x0001 (0x0001 - 0x0000)
-struct CheckableInterface_IsChecked final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(CheckableInterface_IsChecked) == 0x000001, "Wrong alignment on CheckableInterface_IsChecked");
-static_assert(sizeof(CheckableInterface_IsChecked) == 0x000001, "Wrong size on CheckableInterface_IsChecked");
-static_assert(offsetof(CheckableInterface_IsChecked, ReturnValue) == 0x000000, "Member 'CheckableInterface_IsChecked::ReturnValue' has a wrong offset!");
-
-// Function BasicUI.CheckableInterface.Uncheck
-// 0x0002 (0x0002 - 0x0000)
-struct CheckableInterface_Uncheck final
-{
-public:
-	bool                                          PlayAnimation;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(CheckableInterface_Uncheck) == 0x000001, "Wrong alignment on CheckableInterface_Uncheck");
-static_assert(sizeof(CheckableInterface_Uncheck) == 0x000002, "Wrong size on CheckableInterface_Uncheck");
-static_assert(offsetof(CheckableInterface_Uncheck, PlayAnimation) == 0x000000, "Member 'CheckableInterface_Uncheck::PlayAnimation' has a wrong offset!");
-static_assert(offsetof(CheckableInterface_Uncheck, ReturnValue) == 0x000001, "Member 'CheckableInterface_Uncheck::ReturnValue' has a wrong offset!");
-
-// Function BasicUI.IntegerHolderInterface.GetInteger
-// 0x000C (0x000C - 0x0000)
-struct IntegerHolderInterface_GetInteger final
-{
-public:
-	class FName                                   NumberID;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(IntegerHolderInterface_GetInteger) == 0x000004, "Wrong alignment on IntegerHolderInterface_GetInteger");
-static_assert(sizeof(IntegerHolderInterface_GetInteger) == 0x00000C, "Wrong size on IntegerHolderInterface_GetInteger");
-static_assert(offsetof(IntegerHolderInterface_GetInteger, NumberID) == 0x000000, "Member 'IntegerHolderInterface_GetInteger::NumberID' has a wrong offset!");
-static_assert(offsetof(IntegerHolderInterface_GetInteger, ReturnValue) == 0x000008, "Member 'IntegerHolderInterface_GetInteger::ReturnValue' has a wrong offset!");
-
-// Function BasicUI.IntegerHolderInterface.SetInteger
-// 0x0010 (0x0010 - 0x0000)
-struct IntegerHolderInterface_SetInteger final
-{
-public:
-	int32                                         Number;                                            // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   NumberID;                                          // 0x0004(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(IntegerHolderInterface_SetInteger) == 0x000004, "Wrong alignment on IntegerHolderInterface_SetInteger");
-static_assert(sizeof(IntegerHolderInterface_SetInteger) == 0x000010, "Wrong size on IntegerHolderInterface_SetInteger");
-static_assert(offsetof(IntegerHolderInterface_SetInteger, Number) == 0x000000, "Member 'IntegerHolderInterface_SetInteger::Number' has a wrong offset!");
-static_assert(offsetof(IntegerHolderInterface_SetInteger, NumberID) == 0x000004, "Member 'IntegerHolderInterface_SetInteger::NumberID' has a wrong offset!");
-static_assert(offsetof(IntegerHolderInterface_SetInteger, ReturnValue) == 0x00000C, "Member 'IntegerHolderInterface_SetInteger::ReturnValue' has a wrong offset!");
-
-// Function BasicUI.TextHolderInterface.GetText
-// 0x0010 (0x0010 - 0x0000)
-struct TextHolderInterface_GetText final
-{
-public:
-	class FText                                   LocalText;                                         // 0x0000(0x0010)(Parm, OutParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(TextHolderInterface_GetText) == 0x000008, "Wrong alignment on TextHolderInterface_GetText");
-static_assert(sizeof(TextHolderInterface_GetText) == 0x000010, "Wrong size on TextHolderInterface_GetText");
-static_assert(offsetof(TextHolderInterface_GetText, LocalText) == 0x000000, "Member 'TextHolderInterface_GetText::LocalText' has a wrong offset!");
-
-// Function BasicUI.TextHolderInterface.GetTexts
-// 0x0010 (0x0010 - 0x0000)
-struct TextHolderInterface_GetTexts final
-{
-public:
-	TArray<class FText>                           LocalTexts;                                        // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(TextHolderInterface_GetTexts) == 0x000008, "Wrong alignment on TextHolderInterface_GetTexts");
-static_assert(sizeof(TextHolderInterface_GetTexts) == 0x000010, "Wrong size on TextHolderInterface_GetTexts");
-static_assert(offsetof(TextHolderInterface_GetTexts, LocalTexts) == 0x000000, "Member 'TextHolderInterface_GetTexts::LocalTexts' has a wrong offset!");
-
-// Function BasicUI.TextHolderInterface.SetText
-// 0x0018 (0x0018 - 0x0000)
-struct TextHolderInterface_SetText final
-{
-public:
-	class FText                                   LocalText;                                         // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(TextHolderInterface_SetText) == 0x000008, "Wrong alignment on TextHolderInterface_SetText");
-static_assert(sizeof(TextHolderInterface_SetText) == 0x000018, "Wrong size on TextHolderInterface_SetText");
-static_assert(offsetof(TextHolderInterface_SetText, LocalText) == 0x000000, "Member 'TextHolderInterface_SetText::LocalText' has a wrong offset!");
-static_assert(offsetof(TextHolderInterface_SetText, ReturnValue) == 0x000010, "Member 'TextHolderInterface_SetText::ReturnValue' has a wrong offset!");
-
-// Function BasicUI.TextHolderInterface.SetTexts
-// 0x0018 (0x0018 - 0x0000)
-struct TextHolderInterface_SetTexts final
-{
-public:
-	TArray<class FText>                           LocalTexts;                                        // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(TextHolderInterface_SetTexts) == 0x000008, "Wrong alignment on TextHolderInterface_SetTexts");
-static_assert(sizeof(TextHolderInterface_SetTexts) == 0x000018, "Wrong size on TextHolderInterface_SetTexts");
-static_assert(offsetof(TextHolderInterface_SetTexts, LocalTexts) == 0x000000, "Member 'TextHolderInterface_SetTexts::LocalTexts' has a wrong offset!");
-static_assert(offsetof(TextHolderInterface_SetTexts, ReturnValue) == 0x000010, "Member 'TextHolderInterface_SetTexts::ReturnValue' has a wrong offset!");
-
-// Function BasicUI.GeneralUIExpressionInterface.Blink
-// 0x0001 (0x0001 - 0x0000)
-struct GeneralUIExpressionInterface_Blink final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GeneralUIExpressionInterface_Blink) == 0x000001, "Wrong alignment on GeneralUIExpressionInterface_Blink");
-static_assert(sizeof(GeneralUIExpressionInterface_Blink) == 0x000001, "Wrong size on GeneralUIExpressionInterface_Blink");
-static_assert(offsetof(GeneralUIExpressionInterface_Blink, ReturnValue) == 0x000000, "Member 'GeneralUIExpressionInterface_Blink::ReturnValue' has a wrong offset!");
-
-// Function BasicUI.TextureListInterface.ClearHighlight
-// 0x0001 (0x0001 - 0x0000)
-struct TextureListInterface_ClearHighlight final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(TextureListInterface_ClearHighlight) == 0x000001, "Wrong alignment on TextureListInterface_ClearHighlight");
-static_assert(sizeof(TextureListInterface_ClearHighlight) == 0x000001, "Wrong size on TextureListInterface_ClearHighlight");
-static_assert(offsetof(TextureListInterface_ClearHighlight, ReturnValue) == 0x000000, "Member 'TextureListInterface_ClearHighlight::ReturnValue' has a wrong offset!");
-
-// Function BasicUI.TextureListInterface.ClearSelection
-// 0x0001 (0x0001 - 0x0000)
-struct TextureListInterface_ClearSelection final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(TextureListInterface_ClearSelection) == 0x000001, "Wrong alignment on TextureListInterface_ClearSelection");
-static_assert(sizeof(TextureListInterface_ClearSelection) == 0x000001, "Wrong size on TextureListInterface_ClearSelection");
-static_assert(offsetof(TextureListInterface_ClearSelection, ReturnValue) == 0x000000, "Member 'TextureListInterface_ClearSelection::ReturnValue' has a wrong offset!");
-
-// Function BasicUI.TextureListInterface.ClearTexture
-// 0x0008 (0x0008 - 0x0000)
-struct TextureListInterface_ClearTexture final
-{
-public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(TextureListInterface_ClearTexture) == 0x000004, "Wrong alignment on TextureListInterface_ClearTexture");
-static_assert(sizeof(TextureListInterface_ClearTexture) == 0x000008, "Wrong size on TextureListInterface_ClearTexture");
-static_assert(offsetof(TextureListInterface_ClearTexture, Index_0) == 0x000000, "Member 'TextureListInterface_ClearTexture::Index_0' has a wrong offset!");
-static_assert(offsetof(TextureListInterface_ClearTexture, ReturnValue) == 0x000004, "Member 'TextureListInterface_ClearTexture::ReturnValue' has a wrong offset!");
-
-// Function BasicUI.TextureListInterface.GetHighlightedIndex
-// 0x0004 (0x0004 - 0x0000)
-struct TextureListInterface_GetHighlightedIndex final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(TextureListInterface_GetHighlightedIndex) == 0x000004, "Wrong alignment on TextureListInterface_GetHighlightedIndex");
-static_assert(sizeof(TextureListInterface_GetHighlightedIndex) == 0x000004, "Wrong size on TextureListInterface_GetHighlightedIndex");
-static_assert(offsetof(TextureListInterface_GetHighlightedIndex, ReturnValue) == 0x000000, "Member 'TextureListInterface_GetHighlightedIndex::ReturnValue' has a wrong offset!");
-
-// Function BasicUI.TextureListInterface.GetSelectedIndex
-// 0x0004 (0x0004 - 0x0000)
-struct TextureListInterface_GetSelectedIndex final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(TextureListInterface_GetSelectedIndex) == 0x000004, "Wrong alignment on TextureListInterface_GetSelectedIndex");
-static_assert(sizeof(TextureListInterface_GetSelectedIndex) == 0x000004, "Wrong size on TextureListInterface_GetSelectedIndex");
-static_assert(offsetof(TextureListInterface_GetSelectedIndex, ReturnValue) == 0x000000, "Member 'TextureListInterface_GetSelectedIndex::ReturnValue' has a wrong offset!");
-
-// Function BasicUI.TextureListInterface.SetHighlightedIndex
-// 0x0008 (0x0008 - 0x0000)
-struct TextureListInterface_SetHighlightedIndex final
-{
-public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(TextureListInterface_SetHighlightedIndex) == 0x000004, "Wrong alignment on TextureListInterface_SetHighlightedIndex");
-static_assert(sizeof(TextureListInterface_SetHighlightedIndex) == 0x000008, "Wrong size on TextureListInterface_SetHighlightedIndex");
-static_assert(offsetof(TextureListInterface_SetHighlightedIndex, Index_0) == 0x000000, "Member 'TextureListInterface_SetHighlightedIndex::Index_0' has a wrong offset!");
-static_assert(offsetof(TextureListInterface_SetHighlightedIndex, ReturnValue) == 0x000004, "Member 'TextureListInterface_SetHighlightedIndex::ReturnValue' has a wrong offset!");
-
-// Function BasicUI.TextureListInterface.SetLazyTexture
-// 0x0038 (0x0038 - 0x0000)
-struct TextureListInterface_SetLazyTexture final
-{
-public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftObjectPtr<class UTexture2D>              LazyTexture;                                       // 0x0008(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(TextureListInterface_SetLazyTexture) == 0x000008, "Wrong alignment on TextureListInterface_SetLazyTexture");
-static_assert(sizeof(TextureListInterface_SetLazyTexture) == 0x000038, "Wrong size on TextureListInterface_SetLazyTexture");
-static_assert(offsetof(TextureListInterface_SetLazyTexture, Index_0) == 0x000000, "Member 'TextureListInterface_SetLazyTexture::Index_0' has a wrong offset!");
-static_assert(offsetof(TextureListInterface_SetLazyTexture, LazyTexture) == 0x000008, "Member 'TextureListInterface_SetLazyTexture::LazyTexture' has a wrong offset!");
-static_assert(offsetof(TextureListInterface_SetLazyTexture, ReturnValue) == 0x000030, "Member 'TextureListInterface_SetLazyTexture::ReturnValue' has a wrong offset!");
-
-// Function BasicUI.TextureListInterface.SetSelectedIndex
-// 0x0008 (0x0008 - 0x0000)
-struct TextureListInterface_SetSelectedIndex final
-{
-public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(TextureListInterface_SetSelectedIndex) == 0x000004, "Wrong alignment on TextureListInterface_SetSelectedIndex");
-static_assert(sizeof(TextureListInterface_SetSelectedIndex) == 0x000008, "Wrong size on TextureListInterface_SetSelectedIndex");
-static_assert(offsetof(TextureListInterface_SetSelectedIndex, Index_0) == 0x000000, "Member 'TextureListInterface_SetSelectedIndex::Index_0' has a wrong offset!");
-static_assert(offsetof(TextureListInterface_SetSelectedIndex, ReturnValue) == 0x000004, "Member 'TextureListInterface_SetSelectedIndex::ReturnValue' has a wrong offset!");
-
-// Function BasicUI.TextureListInterface.SetTexture
-// 0x0018 (0x0018 - 0x0000)
-struct TextureListInterface_SetTexture final
-{
-public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTexture2D*                             Texture;                                           // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(TextureListInterface_SetTexture) == 0x000008, "Wrong alignment on TextureListInterface_SetTexture");
-static_assert(sizeof(TextureListInterface_SetTexture) == 0x000018, "Wrong size on TextureListInterface_SetTexture");
-static_assert(offsetof(TextureListInterface_SetTexture, Index_0) == 0x000000, "Member 'TextureListInterface_SetTexture::Index_0' has a wrong offset!");
-static_assert(offsetof(TextureListInterface_SetTexture, Texture) == 0x000008, "Member 'TextureListInterface_SetTexture::Texture' has a wrong offset!");
-static_assert(offsetof(TextureListInterface_SetTexture, ReturnValue) == 0x000010, "Member 'TextureListInterface_SetTexture::ReturnValue' has a wrong offset!");
 
 }
 

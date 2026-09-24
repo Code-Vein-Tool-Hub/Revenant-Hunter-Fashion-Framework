@@ -170,6 +170,28 @@ void UWDT_BuddyIndicator_C::IsShowExplorationDialog(bool* InIsShow)
 }
 
 
+// Function WDT_BuddyIndicator.WDT_BuddyIndicator_C.NotifyLossTimeGaugeUpdated
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<double>                          InGaugeRate                                            (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UWDT_BuddyIndicator_C::NotifyLossTimeGaugeUpdated(TArray<double>& InGaugeRate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_BuddyIndicator_C", "NotifyLossTimeGaugeUpdated");
+
+	Params::WDT_BuddyIndicator_C_NotifyLossTimeGaugeUpdated Parms{};
+
+	Parms.InGaugeRate = std::move(InGaugeRate);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	InGaugeRate = std::move(Parms.InGaugeRate);
+}
+
+
 // Function WDT_BuddyIndicator.WDT_BuddyIndicator_C.OnBattleStateChanged
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -393,6 +415,26 @@ void UWDT_BuddyIndicator_C::SetNoMountAction(bool InIsNoMountAction)
 	Params::WDT_BuddyIndicator_C_SetNoMountAction Parms{};
 
 	Parms.InIsNoMountAction = InIsNoMountAction;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_BuddyIndicator.WDT_BuddyIndicator_C.SetSubBuddyIcon
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UMaterialInstance*                InBuddyMaterial                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_BuddyIndicator_C::SetSubBuddyIcon(class UMaterialInstance* InBuddyMaterial)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_BuddyIndicator_C", "SetSubBuddyIcon");
+
+	Params::WDT_BuddyIndicator_C_SetSubBuddyIcon Parms{};
+
+	Parms.InBuddyMaterial = InBuddyMaterial;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

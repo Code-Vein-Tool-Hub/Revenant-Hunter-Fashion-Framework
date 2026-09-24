@@ -17,59 +17,19 @@
 namespace SDK
 {
 
-// Function WDT_Article_NumberAndDiff.WDT_Article_NumberAndDiff_C.ExecuteUbergraph_WDT_Article_NumberAndDiff
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_Article_NumberAndDiff_C::ExecuteUbergraph_WDT_Article_NumberAndDiff(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Article_NumberAndDiff_C", "ExecuteUbergraph_WDT_Article_NumberAndDiff");
-
-	Params::WDT_Article_NumberAndDiff_C_ExecuteUbergraph_WDT_Article_NumberAndDiff Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_Article_NumberAndDiff.WDT_Article_NumberAndDiff_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_Article_NumberAndDiff_C::PreConstruct(bool IsDesignTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Article_NumberAndDiff_C", "PreConstruct");
-
-	Params::WDT_Article_NumberAndDiff_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_Article_NumberAndDiff.WDT_Article_NumberAndDiff_C.SetValue
+// Function WDT_Article_NumberAndDiff.WDT_Article_NumberAndDiff_C.SetValueFloat
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   InValue                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  InValue                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_Article_NumberAndDiff_C::SetValue(int32 InValue)
+void UWDT_Article_NumberAndDiff_C::SetValueFloat(double InValue)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Article_NumberAndDiff_C", "SetValue");
+		Func = Class->GetFunction("WDT_Article_NumberAndDiff_C", "SetValueFloat");
 
-	Params::WDT_Article_NumberAndDiff_C_SetValue Parms{};
+	Params::WDT_Article_NumberAndDiff_C_SetValueFloat Parms{};
 
 	Parms.InValue = InValue;
 
@@ -101,21 +61,61 @@ void UWDT_Article_NumberAndDiff_C::SetValueComparison(int32 InCurrentValue, int3
 }
 
 
-// Function WDT_Article_NumberAndDiff.WDT_Article_NumberAndDiff_C.SetValueFloat
+// Function WDT_Article_NumberAndDiff.WDT_Article_NumberAndDiff_C.SetValue
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// double                                  InValue                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InValue                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_Article_NumberAndDiff_C::SetValueFloat(double InValue)
+void UWDT_Article_NumberAndDiff_C::SetValue(int32 InValue)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Article_NumberAndDiff_C", "SetValueFloat");
+		Func = Class->GetFunction("WDT_Article_NumberAndDiff_C", "SetValue");
 
-	Params::WDT_Article_NumberAndDiff_C_SetValueFloat Parms{};
+	Params::WDT_Article_NumberAndDiff_C_SetValue Parms{};
 
 	Parms.InValue = InValue;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_Article_NumberAndDiff.WDT_Article_NumberAndDiff_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_Article_NumberAndDiff_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_Article_NumberAndDiff_C", "PreConstruct");
+
+	Params::WDT_Article_NumberAndDiff_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_Article_NumberAndDiff.WDT_Article_NumberAndDiff_C.ExecuteUbergraph_WDT_Article_NumberAndDiff
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_Article_NumberAndDiff_C::ExecuteUbergraph_WDT_Article_NumberAndDiff(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_Article_NumberAndDiff_C", "ExecuteUbergraph_WDT_Article_NumberAndDiff");
+
+	Params::WDT_Article_NumberAndDiff_C_ExecuteUbergraph_WDT_Article_NumberAndDiff Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

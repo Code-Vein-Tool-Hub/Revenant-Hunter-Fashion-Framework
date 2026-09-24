@@ -51,7 +51,7 @@ public:
 	uint8                                         Pad_1C8[0x68];                                     // 0x01C8(0x0068)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	void AdvertiseSession();
+	bool AdvertiseSession();
 	void BreakUpSession();
 	void CreateSession(bool bInUseInvite);
 	void DestroySession();
@@ -66,7 +66,7 @@ public:
 	bool IsGuestPlayer();
 	bool IsHostPlayer();
 	bool IsWorldHostPlayer();
-	void KeepSessionPrivate();
+	bool KeepSessionPrivate();
 	void KickGuestPlayer();
 	void LeaveSession();
 	void SetLANMatch(bool bInLANMatch);

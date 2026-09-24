@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_MetaAIManager.BP_MetaAIManager_C
-// 0x0000 (0x0100 - 0x0100)
+// 0x0000 (0x0128 - 0x0128)
 class UBP_MetaAIManager_C final : public UMetaAIManager
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UBP_MetaAIManager_C) == 0x000008, "Wrong alignment on UBP_MetaAIManager_C");
-static_assert(sizeof(UBP_MetaAIManager_C) == 0x000100, "Wrong size on UBP_MetaAIManager_C");
+static_assert(sizeof(UBP_MetaAIManager_C) == 0x000128, "Wrong size on UBP_MetaAIManager_C");
 
 }
 

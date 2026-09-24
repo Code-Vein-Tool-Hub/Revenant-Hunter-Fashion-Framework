@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "STR_MapFeatureInfoUI_structs.hpp"
 #include "Engine_structs.hpp"
+#include "EN_MapMenuState_structs.hpp"
+#include "STR_FeatureQuestList_structs.hpp"
+#include "STR_MapFeatureInfoUI_structs.hpp"
+#include "BasicUI_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "GameplayTags_structs.hpp"
-#include "EN_MapMenuState_structs.hpp"
-#include "BasicUI_structs.hpp"
-#include "STR_FeatureQuestList_structs.hpp"
 #include "Extensions_structs.hpp"
 #include "Extensions_classes.hpp"
 #include "UMG_structs.hpp"
@@ -26,7 +26,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WDT_MapImage.WDT_MapImage_C
-// 0x0800 (0x0DB8 - 0x05B8)
+// 0x0830 (0x0DE8 - 0x05B8)
 class UWDT_MapImage_C final : public UMapImageBase
 {
 public:
@@ -56,130 +56,135 @@ public:
 	class UImage*                                 PlayerToCursorLine;                                // 0x0670(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UCommonTextBlock*                       RegionNameText;                                    // 0x0678(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UHorizontalBox*                         RegionTabBox;                                      // 0x0680(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_MapRegionIcon_C*                   RegionTabForestOfCorpses;                          // 0x0688(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_MapRegionIcon_C*                   RegionTabMagmell;                                  // 0x0690(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_MapRegionIcon_C*                   RegionTabPrisonIsland;                             // 0x0698(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_MapRegionIcon_C*                   RegionTabSubmergedCity;                            // 0x06A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_MapRegionIcon_C*                   RegionTabTerritoryOfMoon;                          // 0x06A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_MapRegionIcon_C*                   RegionTabValleyOfAcid;                             // 0x06B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_MapRegionIcon_C*                   RegionTabWorld;                                    // 0x06B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       TimeSeriesText;                                    // 0x06C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_ConfigIconTextPiece_C*             TrgGuideParts_FeatureFilterList;                   // 0x06C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_ConfigIconTextPiece_C*             TrgGuideParts_IconOnOff;                           // 0x06D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_ConfigIconTextPiece_C*             TrgGuideParts_MiniMapOnOff;                        // 0x06D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_ConfigIconTextPiece_C*             TrgGuideParts_Move;                                // 0x06E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_ConfigIconTextPiece_C*             TrgGuideParts_NearYadorigiList;                    // 0x06E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_ConfigIconTextPiece_C*             TrgGuideParts_OpenSupportMenu;                     // 0x06F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_ConfigIconTextPiece_C*             TrgGuideParts_PinSelect;                           // 0x06F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_ConfigIconTextPiece_C*             TrgGuideParts_QuestDecide;                         // 0x0700(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_ConfigIconTextPiece_C*             TrgGuideParts_ReturnToCurrent;                     // 0x0708(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_ConfigIconTextPiece_C*             TrgGuideParts_UnknownFeatureLouDiaryList;          // 0x0710(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_ConfigIconTextPiece_C*             TrgGuideParts_Zoom;                                // 0x0718(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_ConfigIconTextPiece_C*             TrgGuideParts_Zoom_1;                              // 0x0720(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 VeiledAreaImage;                                   // 0x0728(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_AreaBuffList_C*                    WDT_AreaBuffList;                                  // 0x0730(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_FeatureFilterEntryPiece_C*         WDT_FeatureFilterEntryPiece_FastTravelPoint;       // 0x0738(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_FeatureFilterEntryPiece_C*         WDT_FeatureFilterEntryPiece_NoneQuestFeature;      // 0x0740(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_FeatureFilterEntryPiece_C*         WDT_FeatureFilterEntryPiece_QuestFeature;          // 0x0748(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_MapCursor_C*                       WDT_MapCursor;                                     // 0x0750(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_MiniMapWideModeImage_C*            WDT_MiniMapWideModeImage;                          // 0x0758(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_Piece_TrgText_C*                   WDT_Piece_TrgText;                                 // 0x0760(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 WholeMapImage;                                     // 0x0768(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               YadorigiList_SizeBox;                              // 0x0770(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBorder*                                YadorigiListBorder;                                // 0x0778(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 YadorigiLocationImage;                             // 0x0780(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWDT_PlayerIcon_C*                      PlayerIcon;                                        // 0x0788(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class ABP_MapSystem_C*                        BPMapSystem;                                       // 0x0790(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FSTR_MapFeatureInfoUI>          MapFeatureUIInfoLIst;                              // 0x0798(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	struct FVector2D                              MapPivot;                                          // 0x07A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FMapInfo                               Out_Map_Info;                                      // 0x07B8(0x0098)(Edit, BlueprintVisible, DisableEditOnInstance)
-	double                                        MapSwitchScale;                                    // 0x0850(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              TileMapDisplaySize;                                // 0x0858(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                MapUserMarker;                                     // 0x0868(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	double                                        FeatureDetectionRange;                             // 0x0870(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSTR_MapFeatureInfoUI                  DetectedFeatureInfo;                               // 0x0878(0x00F0)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference, HasGetValueTypeHash)
-	class UWDT_MapUserMarker_C*                   UserMarkerWidget;                                  // 0x0968(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          FeatrueDetected;                                   // 0x0970(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_971[0x7];                                      // 0x0971(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FName>                           TimeSeriesRowNames;                                // 0x0978(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	int32                                         CurrentTimeSeriesIndex;                            // 0x0988(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_98C[0x4];                                      // 0x098C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        ReverseInput;                                      // 0x0990(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class UWDT_MapUserMarker_C*>           UserMarkerWidgetArray;                             // 0x0998(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	struct FVector2D                              FeatureScale;                                      // 0x09A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         MakerWidgetNum;                                    // 0x09B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWDT_MapRegionIcon_C*                   RegionTabDLCWorld;                                 // 0x0688(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_MapRegionIcon_C*                   RegionTabForestOfCorpses;                          // 0x0690(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_MapRegionIcon_C*                   RegionTabMagmell;                                  // 0x0698(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_MapRegionIcon_C*                   RegionTabMulti_Siren;                              // 0x06A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_MapRegionIcon_C*                   RegionTabPrisonIsland;                             // 0x06A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_MapRegionIcon_C*                   RegionTabSubmergedCity;                            // 0x06B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_MapRegionIcon_C*                   RegionTabTerritoryOfMoon;                          // 0x06B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_MapRegionIcon_C*                   RegionTabValleyOfAcid;                             // 0x06C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_MapRegionIcon_C*                   RegionTabWorld;                                    // 0x06C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 T_UI_MultiplayDungeon;                             // 0x06D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       TimeSeriesText;                                    // 0x06D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_ConfigIconTextPiece_C*             TrgGuideParts_FeatureFilterList;                   // 0x06E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_ConfigIconTextPiece_C*             TrgGuideParts_IconOnOff;                           // 0x06E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_ConfigIconTextPiece_C*             TrgGuideParts_MiniMapOnOff;                        // 0x06F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_ConfigIconTextPiece_C*             TrgGuideParts_Move;                                // 0x06F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_ConfigIconTextPiece_C*             TrgGuideParts_NearYadorigiList;                    // 0x0700(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_ConfigIconTextPiece_C*             TrgGuideParts_OpenSupportMenu;                     // 0x0708(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_ConfigIconTextPiece_C*             TrgGuideParts_PinSelect;                           // 0x0710(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_ConfigIconTextPiece_C*             TrgGuideParts_QuestDecide;                         // 0x0718(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_ConfigIconTextPiece_C*             TrgGuideParts_ReturnToCurrent;                     // 0x0720(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_ConfigIconTextPiece_C*             TrgGuideParts_UnknownFeatureLouDiaryList;          // 0x0728(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_ConfigIconTextPiece_C*             TrgGuideParts_Zoom;                                // 0x0730(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_ConfigIconTextPiece_C*             TrgGuideParts_Zoom_1;                              // 0x0738(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 VeiledAreaImage;                                   // 0x0740(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_AreaBuffList_C*                    WDT_AreaBuffList;                                  // 0x0748(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_FeatureFilterEntryPiece_C*         WDT_FeatureFilterEntryPiece_FastTravelPoint;       // 0x0750(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_FeatureFilterEntryPiece_C*         WDT_FeatureFilterEntryPiece_NoneQuestFeature;      // 0x0758(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_FeatureFilterEntryPiece_C*         WDT_FeatureFilterEntryPiece_QuestFeature;          // 0x0760(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_MapCursor_C*                       WDT_MapCursor;                                     // 0x0768(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_MiniMapWideModeImage_C*            WDT_MiniMapWideModeImage;                          // 0x0770(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_Piece_TrgText_C*                   WDT_Piece_TrgText;                                 // 0x0778(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 WholeMapImage;                                     // 0x0780(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               YadorigiList_SizeBox;                              // 0x0788(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBorder*                                YadorigiListBorder;                                // 0x0790(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 YadorigiLocationImage;                             // 0x0798(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWDT_PlayerIcon_C*                      PlayerIcon;                                        // 0x07A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class ABP_MapSystem_C*                        BPMapSystem;                                       // 0x07A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FSTR_MapFeatureInfoUI>          MapFeatureUIInfoLIst;                              // 0x07B0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	struct FVector2D                              MapPivot;                                          // 0x07C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FMapInfo                               Out_Map_Info;                                      // 0x07D0(0x0098)(Edit, BlueprintVisible, DisableEditOnInstance)
+	double                                        MapSwitchScale;                                    // 0x0868(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              TileMapDisplaySize;                                // 0x0870(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                MapUserMarker;                                     // 0x0880(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	double                                        FeatureDetectionRange;                             // 0x0888(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSTR_MapFeatureInfoUI                  DetectedFeatureInfo;                               // 0x0890(0x0108)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference, HasGetValueTypeHash)
+	class UWDT_MapUserMarker_C*                   UserMarkerWidget;                                  // 0x0998(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          FeatrueDetected;                                   // 0x09A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9A1[0x7];                                      // 0x09A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FName>                           TimeSeriesRowNames;                                // 0x09A8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	int32                                         CurrentTimeSeriesIndex;                            // 0x09B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_9BC[0x4];                                      // 0x09BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               DMI_MapVeilArea;                                   // 0x09C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UAsyncTileMap*                          CurrentTileMap;                                    // 0x09C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 CurrentWholeMap;                                   // 0x09D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FMenuContext                           FastTravelDialogContext;                           // 0x09D8(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	struct FDialogInfo                            FastTravelDialogInfo;                              // 0x0A10(0x0058)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FGameplayTag                           PendingFastTravelFeatureId;                        // 0x0A68(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FMenuContext                           TimeTravelDialogContext;                           // 0x0A70(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	struct FDialogInfo                            TimeTravelDialogInfo;                              // 0x0AA8(0x0058)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class UDialogBase*                            FastTravelDialog;                                  // 0x0B00(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          DialogOpening;                                     // 0x0B08(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B09[0x7];                                      // 0x0B09(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FGameplayTag>                   UserMarkerTags;                                    // 0x0B10(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          InputProcessFlag;                                  // 0x0B20(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B21[0x7];                                      // 0x0B21(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWDT_MapUserMarker_C*                   TargetMakerWidget;                                 // 0x0B28(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           TargetTimeSeriesTag;                               // 0x0B30(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TArray<class UWDT_MapFeatureSymbol_C*>        FeatureWidgetArray;                                // 0x0B38(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	class UWDT_MapQuestMarker_C*                  QuestMarkerWidget;                                 // 0x0B48(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWDT_CameraFOV_C*                       CameraFOVWidget;                                   // 0x0B50(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CameraFOVScale;                                    // 0x0B58(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Destroyed;                                         // 0x0B68(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B69[0x7];                                      // 0x0B69(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UWDT_MapPhotoLogSymbol_C*>       PhotoLogWidgetArray;                               // 0x0B70(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	bool                                          PhotoLogVisible;                                   // 0x0B80(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          YadorigiListMode;                                  // 0x0B81(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B82[0x2];                                      // 0x0B82(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   TargetRegionName;                                  // 0x0B84(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B8C[0x4];                                      // 0x0B8C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWDT_MapRegionIcon_C*                   TargetRegionPiece;                                 // 0x0B90(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWDT_YadorigiListEntryPiece_C*          TargetYadorigiPiece;                               // 0x0B98(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          bIsAutoCursorMovePosition;                         // 0x0BA0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_BA1[0x7];                                      // 0x0BA1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        TickCursorMoveTimeLimit;                           // 0x0BA8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        TickCursorMoveTimer;                               // 0x0BB0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CusorMoveStartPosition;                            // 0x0BB8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CusorMoveEndPosition;                              // 0x0BC8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsMouseButtonPress;                                // 0x0BD8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_BD9[0x7];                                      // 0x0BD9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              OldMousePressedPosition;                           // 0x0BE0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          WasKeyJustPressedUpDown;                           // 0x0BF0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          WasKeyJustPressedSwitch;                           // 0x0BF1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_BF2[0x6];                                      // 0x0BF2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              LeftStickInputValue;                               // 0x0BF8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsMouseDrag;                                       // 0x0C08(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ReverseInput;                                      // 0x09C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class UWDT_MapUserMarker_C*>           UserMarkerWidgetArray;                             // 0x09C8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	struct FVector2D                              FeatureScale;                                      // 0x09D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         MakerWidgetNum;                                    // 0x09E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9EC[0x4];                                      // 0x09EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               DMI_MapVeilArea;                                   // 0x09F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UAsyncTileMap*                          CurrentTileMap;                                    // 0x09F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UImage*                                 CurrentWholeMap;                                   // 0x0A00(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FMenuContext                           FastTravelDialogContext;                           // 0x0A08(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	struct FDialogInfo                            FastTravelDialogInfo;                              // 0x0A40(0x0058)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FGameplayTag                           PendingFastTravelFeatureId;                        // 0x0A98(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FMenuContext                           TimeTravelDialogContext;                           // 0x0AA0(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	struct FDialogInfo                            TimeTravelDialogInfo;                              // 0x0AD8(0x0058)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class UDialogBase*                            FastTravelDialog;                                  // 0x0B30(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          DialogOpening;                                     // 0x0B38(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B39[0x7];                                      // 0x0B39(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FGameplayTag>                   UserMarkerTags;                                    // 0x0B40(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          InputProcessFlag;                                  // 0x0B50(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B51[0x7];                                      // 0x0B51(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWDT_MapUserMarker_C*                   TargetMakerWidget;                                 // 0x0B58(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           TargetTimeSeriesTag;                               // 0x0B60(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TArray<class UWDT_MapFeatureSymbol_C*>        FeatureWidgetArray;                                // 0x0B68(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	class UWDT_MapQuestMarker_C*                  QuestMarkerWidget;                                 // 0x0B78(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWDT_CameraFOV_C*                       CameraFOVWidget;                                   // 0x0B80(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CameraFOVScale;                                    // 0x0B88(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Destroyed;                                         // 0x0B98(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B99[0x7];                                      // 0x0B99(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UWDT_MapPhotoLogSymbol_C*>       PhotoLogWidgetArray;                               // 0x0BA0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	bool                                          PhotoLogVisible;                                   // 0x0BB0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          YadorigiListMode;                                  // 0x0BB1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_BB2[0x2];                                      // 0x0BB2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   TargetRegionName;                                  // 0x0BB4(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_BBC[0x4];                                      // 0x0BBC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWDT_MapRegionIcon_C*                   TargetRegionPiece;                                 // 0x0BC0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWDT_YadorigiListEntryPiece_C*          TargetYadorigiPiece;                               // 0x0BC8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          bIsAutoCursorMovePosition;                         // 0x0BD0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_BD1[0x7];                                      // 0x0BD1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        TickCursorMoveTimeLimit;                           // 0x0BD8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        TickCursorMoveTimer;                               // 0x0BE0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CusorMoveStartPosition;                            // 0x0BE8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CusorMoveEndPosition;                              // 0x0BF8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsMouseButtonPress;                                // 0x0C08(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_C09[0x7];                                      // 0x0C09(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWDT_YadorigiListEntryPiece_C*          TargetNearYadrigiPiece;                            // 0x0C10(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsMouseStop;                                       // 0x0C18(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          OldMousePosition;                                  // 0x0C19(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C1A[0x2];                                      // 0x0C1A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         SelectUserMarkerIndex;                             // 0x0C1C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Detected;                                          // 0x0C20(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C21[0x7];                                      // 0x0C21(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWDT_MapUserMarker_C*                   OldUserMarkerWidget;                               // 0x0C28(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TMap<class FName, bool>                       FeatureFilterMap;                                  // 0x0C30(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	EN_MapMenuState                               MapMenuState;                                      // 0x0C80(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C81[0x7];                                      // 0x0C81(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWDT_FeatureFilterEntryPiece_C*         TargetFeatureFilterPiece;                          // 0x0C88(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TMap<struct FGameplayTag, struct FSTR_FeatureQuestList> FeatureQuestMap;                                   // 0x0C90(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class FName                                   DefaultSelectLouDaryId;                            // 0x0CE0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class FName>                           UnknownFeatureLouDiaryList;                        // 0x0CE8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TMap<struct FGameplayTag, struct FVector2D>   FeatureUICoordinateCorrectionMap;                  // 0x0CF8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class FName                                   DefaultSelectRegion;                               // 0x0D48(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsClosing;                                         // 0x0D50(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D51[0x7];                                      // 0x0D51(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWDT_MapLostExpMarker_C*                LostExpMarkerWidget;                               // 0x0D58(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TMap<struct FGameplayTag, class UWDT_MapFeatureSymbol_C*> GuardianSpiritFeatureMap;                          // 0x0D60(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	bool                                          CanPressTransitSuppportMenu;                       // 0x0DB0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          OpenSupportMenu;                                   // 0x0DB1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          OpenAnimationFinished;                             // 0x0DB2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              OldMousePressedPosition;                           // 0x0C10(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          WasKeyJustPressedUpDown;                           // 0x0C20(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          WasKeyJustPressedSwitch;                           // 0x0C21(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C22[0x6];                                      // 0x0C22(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              LeftStickInputValue;                               // 0x0C28(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsMouseDrag;                                       // 0x0C38(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C39[0x7];                                      // 0x0C39(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWDT_YadorigiListEntryPiece_C*          TargetNearYadrigiPiece;                            // 0x0C40(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsMouseStop;                                       // 0x0C48(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          OldMousePosition;                                  // 0x0C49(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C4A[0x2];                                      // 0x0C4A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         SelectUserMarkerIndex;                             // 0x0C4C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Detected;                                          // 0x0C50(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C51[0x7];                                      // 0x0C51(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWDT_MapUserMarker_C*                   OldUserMarkerWidget;                               // 0x0C58(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TMap<class FName, bool>                       FeatureFilterMap;                                  // 0x0C60(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	EN_MapMenuState                               MapMenuState;                                      // 0x0CB0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CB1[0x7];                                      // 0x0CB1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWDT_FeatureFilterEntryPiece_C*         TargetFeatureFilterPiece;                          // 0x0CB8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TMap<struct FGameplayTag, struct FSTR_FeatureQuestList> FeatureQuestMap;                                   // 0x0CC0(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class FName                                   DefaultSelectLouDaryId;                            // 0x0D10(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class FName>                           UnknownFeatureLouDiaryList;                        // 0x0D18(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TMap<struct FGameplayTag, struct FVector2D>   FeatureUICoordinateCorrectionMap;                  // 0x0D28(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class FName                                   DefaultSelectRegion;                               // 0x0D78(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsClosing;                                         // 0x0D80(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D81[0x7];                                      // 0x0D81(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWDT_MapLostExpMarker_C*                LostExpMarkerWidget;                               // 0x0D88(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TMap<struct FGameplayTag, class UWDT_MapFeatureSymbol_C*> GuardianSpiritFeatureMap;                          // 0x0D90(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	bool                                          CanPressTransitSuppportMenu;                       // 0x0DE0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          OpenSupportMenu;                                   // 0x0DE1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          OpenAnimationFinished;                             // 0x0DE2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
+	void HideMiniMap();
+	void OnOpenAnimationFinished();
 	void GetMousePosition(struct FVector2D* NewParam);
 	void UpdateGuardianSpiritFeatureIcon();
 	void SetAreaBuffListVisibility(bool InVisibility);
@@ -235,7 +240,7 @@ public:
 	void SelectUpperNearYadorigi();
 	void BuildNearYadorigiList();
 	void StickyCurosrToPosition(double InInputThreshold, bool InIsTeleportation, const struct FVector2D& InTargetMapPosition);
-	void StartAutoMoveCursor(const struct FVector2D& InEndPosition, double InMoveTime, bool IsResetPlayerPosition);
+	void StartAutoMoveCursor(const struct FVector2D& InEndPosition, double InMoveTime);
 	void MouseTranslateMapHV(const struct FVector2D& InTranslateValue);
 	void GetCursorPositionMapUV(struct FVector2D* OutCursorMapUV);
 	void GetCursorCenterPosition(struct FVector2D* OutCursorTranslation);
@@ -353,7 +358,6 @@ public:
 	void OnMouseEnterMenuPiece(class UMenuPieceBase* MenuPiece);
 	void OnMouseWheelDownMenu(int32 Level);
 	void OnMouseWheelUpMenu(int32 Level);
-	void OnOpenAnimationFinished();
 	void InitializeCursorPosition();
 	void ExecuteUbergraph_WDT_MapImage(int32 EntryPoint);
 
@@ -368,7 +372,7 @@ public:
 	}
 };
 static_assert(alignof(UWDT_MapImage_C) == 0x000008, "Wrong alignment on UWDT_MapImage_C");
-static_assert(sizeof(UWDT_MapImage_C) == 0x000DB8, "Wrong size on UWDT_MapImage_C");
+static_assert(sizeof(UWDT_MapImage_C) == 0x000DE8, "Wrong size on UWDT_MapImage_C");
 static_assert(offsetof(UWDT_MapImage_C, UberGraphFrame) == 0x0005B8, "Member 'UWDT_MapImage_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UWDT_MapImage_C, AsyncTileMap) == 0x0005C0, "Member 'UWDT_MapImage_C::AsyncTileMap' has a wrong offset!");
 static_assert(offsetof(UWDT_MapImage_C, BG_YadorigiList) == 0x0005C8, "Member 'UWDT_MapImage_C::BG_YadorigiList' has a wrong offset!");
@@ -395,112 +399,115 @@ static_assert(offsetof(UWDT_MapImage_C, NearYadorigiListLocationBox) == 0x000668
 static_assert(offsetof(UWDT_MapImage_C, PlayerToCursorLine) == 0x000670, "Member 'UWDT_MapImage_C::PlayerToCursorLine' has a wrong offset!");
 static_assert(offsetof(UWDT_MapImage_C, RegionNameText) == 0x000678, "Member 'UWDT_MapImage_C::RegionNameText' has a wrong offset!");
 static_assert(offsetof(UWDT_MapImage_C, RegionTabBox) == 0x000680, "Member 'UWDT_MapImage_C::RegionTabBox' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, RegionTabForestOfCorpses) == 0x000688, "Member 'UWDT_MapImage_C::RegionTabForestOfCorpses' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, RegionTabMagmell) == 0x000690, "Member 'UWDT_MapImage_C::RegionTabMagmell' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, RegionTabPrisonIsland) == 0x000698, "Member 'UWDT_MapImage_C::RegionTabPrisonIsland' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, RegionTabSubmergedCity) == 0x0006A0, "Member 'UWDT_MapImage_C::RegionTabSubmergedCity' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, RegionTabTerritoryOfMoon) == 0x0006A8, "Member 'UWDT_MapImage_C::RegionTabTerritoryOfMoon' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, RegionTabValleyOfAcid) == 0x0006B0, "Member 'UWDT_MapImage_C::RegionTabValleyOfAcid' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, RegionTabWorld) == 0x0006B8, "Member 'UWDT_MapImage_C::RegionTabWorld' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, TimeSeriesText) == 0x0006C0, "Member 'UWDT_MapImage_C::TimeSeriesText' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, TrgGuideParts_FeatureFilterList) == 0x0006C8, "Member 'UWDT_MapImage_C::TrgGuideParts_FeatureFilterList' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, TrgGuideParts_IconOnOff) == 0x0006D0, "Member 'UWDT_MapImage_C::TrgGuideParts_IconOnOff' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, TrgGuideParts_MiniMapOnOff) == 0x0006D8, "Member 'UWDT_MapImage_C::TrgGuideParts_MiniMapOnOff' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, TrgGuideParts_Move) == 0x0006E0, "Member 'UWDT_MapImage_C::TrgGuideParts_Move' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, TrgGuideParts_NearYadorigiList) == 0x0006E8, "Member 'UWDT_MapImage_C::TrgGuideParts_NearYadorigiList' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, TrgGuideParts_OpenSupportMenu) == 0x0006F0, "Member 'UWDT_MapImage_C::TrgGuideParts_OpenSupportMenu' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, TrgGuideParts_PinSelect) == 0x0006F8, "Member 'UWDT_MapImage_C::TrgGuideParts_PinSelect' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, TrgGuideParts_QuestDecide) == 0x000700, "Member 'UWDT_MapImage_C::TrgGuideParts_QuestDecide' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, TrgGuideParts_ReturnToCurrent) == 0x000708, "Member 'UWDT_MapImage_C::TrgGuideParts_ReturnToCurrent' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, TrgGuideParts_UnknownFeatureLouDiaryList) == 0x000710, "Member 'UWDT_MapImage_C::TrgGuideParts_UnknownFeatureLouDiaryList' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, TrgGuideParts_Zoom) == 0x000718, "Member 'UWDT_MapImage_C::TrgGuideParts_Zoom' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, TrgGuideParts_Zoom_1) == 0x000720, "Member 'UWDT_MapImage_C::TrgGuideParts_Zoom_1' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, VeiledAreaImage) == 0x000728, "Member 'UWDT_MapImage_C::VeiledAreaImage' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, WDT_AreaBuffList) == 0x000730, "Member 'UWDT_MapImage_C::WDT_AreaBuffList' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, WDT_FeatureFilterEntryPiece_FastTravelPoint) == 0x000738, "Member 'UWDT_MapImage_C::WDT_FeatureFilterEntryPiece_FastTravelPoint' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, WDT_FeatureFilterEntryPiece_NoneQuestFeature) == 0x000740, "Member 'UWDT_MapImage_C::WDT_FeatureFilterEntryPiece_NoneQuestFeature' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, WDT_FeatureFilterEntryPiece_QuestFeature) == 0x000748, "Member 'UWDT_MapImage_C::WDT_FeatureFilterEntryPiece_QuestFeature' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, WDT_MapCursor) == 0x000750, "Member 'UWDT_MapImage_C::WDT_MapCursor' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, WDT_MiniMapWideModeImage) == 0x000758, "Member 'UWDT_MapImage_C::WDT_MiniMapWideModeImage' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, WDT_Piece_TrgText) == 0x000760, "Member 'UWDT_MapImage_C::WDT_Piece_TrgText' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, WholeMapImage) == 0x000768, "Member 'UWDT_MapImage_C::WholeMapImage' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, YadorigiList_SizeBox) == 0x000770, "Member 'UWDT_MapImage_C::YadorigiList_SizeBox' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, YadorigiListBorder) == 0x000778, "Member 'UWDT_MapImage_C::YadorigiListBorder' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, YadorigiLocationImage) == 0x000780, "Member 'UWDT_MapImage_C::YadorigiLocationImage' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, PlayerIcon) == 0x000788, "Member 'UWDT_MapImage_C::PlayerIcon' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, BPMapSystem) == 0x000790, "Member 'UWDT_MapImage_C::BPMapSystem' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, MapFeatureUIInfoLIst) == 0x000798, "Member 'UWDT_MapImage_C::MapFeatureUIInfoLIst' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, MapPivot) == 0x0007A8, "Member 'UWDT_MapImage_C::MapPivot' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, Out_Map_Info) == 0x0007B8, "Member 'UWDT_MapImage_C::Out_Map_Info' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, MapSwitchScale) == 0x000850, "Member 'UWDT_MapImage_C::MapSwitchScale' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, TileMapDisplaySize) == 0x000858, "Member 'UWDT_MapImage_C::TileMapDisplaySize' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, MapUserMarker) == 0x000868, "Member 'UWDT_MapImage_C::MapUserMarker' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, FeatureDetectionRange) == 0x000870, "Member 'UWDT_MapImage_C::FeatureDetectionRange' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, DetectedFeatureInfo) == 0x000878, "Member 'UWDT_MapImage_C::DetectedFeatureInfo' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, UserMarkerWidget) == 0x000968, "Member 'UWDT_MapImage_C::UserMarkerWidget' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, FeatrueDetected) == 0x000970, "Member 'UWDT_MapImage_C::FeatrueDetected' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, TimeSeriesRowNames) == 0x000978, "Member 'UWDT_MapImage_C::TimeSeriesRowNames' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, CurrentTimeSeriesIndex) == 0x000988, "Member 'UWDT_MapImage_C::CurrentTimeSeriesIndex' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, ReverseInput) == 0x000990, "Member 'UWDT_MapImage_C::ReverseInput' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, UserMarkerWidgetArray) == 0x000998, "Member 'UWDT_MapImage_C::UserMarkerWidgetArray' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, FeatureScale) == 0x0009A8, "Member 'UWDT_MapImage_C::FeatureScale' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, MakerWidgetNum) == 0x0009B8, "Member 'UWDT_MapImage_C::MakerWidgetNum' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, DMI_MapVeilArea) == 0x0009C0, "Member 'UWDT_MapImage_C::DMI_MapVeilArea' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, CurrentTileMap) == 0x0009C8, "Member 'UWDT_MapImage_C::CurrentTileMap' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, CurrentWholeMap) == 0x0009D0, "Member 'UWDT_MapImage_C::CurrentWholeMap' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, FastTravelDialogContext) == 0x0009D8, "Member 'UWDT_MapImage_C::FastTravelDialogContext' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, FastTravelDialogInfo) == 0x000A10, "Member 'UWDT_MapImage_C::FastTravelDialogInfo' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, PendingFastTravelFeatureId) == 0x000A68, "Member 'UWDT_MapImage_C::PendingFastTravelFeatureId' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, TimeTravelDialogContext) == 0x000A70, "Member 'UWDT_MapImage_C::TimeTravelDialogContext' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, TimeTravelDialogInfo) == 0x000AA8, "Member 'UWDT_MapImage_C::TimeTravelDialogInfo' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, FastTravelDialog) == 0x000B00, "Member 'UWDT_MapImage_C::FastTravelDialog' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, DialogOpening) == 0x000B08, "Member 'UWDT_MapImage_C::DialogOpening' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, UserMarkerTags) == 0x000B10, "Member 'UWDT_MapImage_C::UserMarkerTags' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, InputProcessFlag) == 0x000B20, "Member 'UWDT_MapImage_C::InputProcessFlag' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, TargetMakerWidget) == 0x000B28, "Member 'UWDT_MapImage_C::TargetMakerWidget' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, TargetTimeSeriesTag) == 0x000B30, "Member 'UWDT_MapImage_C::TargetTimeSeriesTag' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, FeatureWidgetArray) == 0x000B38, "Member 'UWDT_MapImage_C::FeatureWidgetArray' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, QuestMarkerWidget) == 0x000B48, "Member 'UWDT_MapImage_C::QuestMarkerWidget' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, CameraFOVWidget) == 0x000B50, "Member 'UWDT_MapImage_C::CameraFOVWidget' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, CameraFOVScale) == 0x000B58, "Member 'UWDT_MapImage_C::CameraFOVScale' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, Destroyed) == 0x000B68, "Member 'UWDT_MapImage_C::Destroyed' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, PhotoLogWidgetArray) == 0x000B70, "Member 'UWDT_MapImage_C::PhotoLogWidgetArray' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, PhotoLogVisible) == 0x000B80, "Member 'UWDT_MapImage_C::PhotoLogVisible' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, YadorigiListMode) == 0x000B81, "Member 'UWDT_MapImage_C::YadorigiListMode' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, TargetRegionName) == 0x000B84, "Member 'UWDT_MapImage_C::TargetRegionName' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, TargetRegionPiece) == 0x000B90, "Member 'UWDT_MapImage_C::TargetRegionPiece' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, TargetYadorigiPiece) == 0x000B98, "Member 'UWDT_MapImage_C::TargetYadorigiPiece' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, bIsAutoCursorMovePosition) == 0x000BA0, "Member 'UWDT_MapImage_C::bIsAutoCursorMovePosition' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, TickCursorMoveTimeLimit) == 0x000BA8, "Member 'UWDT_MapImage_C::TickCursorMoveTimeLimit' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, TickCursorMoveTimer) == 0x000BB0, "Member 'UWDT_MapImage_C::TickCursorMoveTimer' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, CusorMoveStartPosition) == 0x000BB8, "Member 'UWDT_MapImage_C::CusorMoveStartPosition' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, CusorMoveEndPosition) == 0x000BC8, "Member 'UWDT_MapImage_C::CusorMoveEndPosition' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, IsMouseButtonPress) == 0x000BD8, "Member 'UWDT_MapImage_C::IsMouseButtonPress' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, OldMousePressedPosition) == 0x000BE0, "Member 'UWDT_MapImage_C::OldMousePressedPosition' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, WasKeyJustPressedUpDown) == 0x000BF0, "Member 'UWDT_MapImage_C::WasKeyJustPressedUpDown' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, WasKeyJustPressedSwitch) == 0x000BF1, "Member 'UWDT_MapImage_C::WasKeyJustPressedSwitch' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, LeftStickInputValue) == 0x000BF8, "Member 'UWDT_MapImage_C::LeftStickInputValue' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, IsMouseDrag) == 0x000C08, "Member 'UWDT_MapImage_C::IsMouseDrag' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, TargetNearYadrigiPiece) == 0x000C10, "Member 'UWDT_MapImage_C::TargetNearYadrigiPiece' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, IsMouseStop) == 0x000C18, "Member 'UWDT_MapImage_C::IsMouseStop' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, OldMousePosition) == 0x000C19, "Member 'UWDT_MapImage_C::OldMousePosition' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, SelectUserMarkerIndex) == 0x000C1C, "Member 'UWDT_MapImage_C::SelectUserMarkerIndex' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, Detected) == 0x000C20, "Member 'UWDT_MapImage_C::Detected' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, OldUserMarkerWidget) == 0x000C28, "Member 'UWDT_MapImage_C::OldUserMarkerWidget' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, FeatureFilterMap) == 0x000C30, "Member 'UWDT_MapImage_C::FeatureFilterMap' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, MapMenuState) == 0x000C80, "Member 'UWDT_MapImage_C::MapMenuState' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, TargetFeatureFilterPiece) == 0x000C88, "Member 'UWDT_MapImage_C::TargetFeatureFilterPiece' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, FeatureQuestMap) == 0x000C90, "Member 'UWDT_MapImage_C::FeatureQuestMap' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, DefaultSelectLouDaryId) == 0x000CE0, "Member 'UWDT_MapImage_C::DefaultSelectLouDaryId' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, UnknownFeatureLouDiaryList) == 0x000CE8, "Member 'UWDT_MapImage_C::UnknownFeatureLouDiaryList' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, FeatureUICoordinateCorrectionMap) == 0x000CF8, "Member 'UWDT_MapImage_C::FeatureUICoordinateCorrectionMap' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, DefaultSelectRegion) == 0x000D48, "Member 'UWDT_MapImage_C::DefaultSelectRegion' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, IsClosing) == 0x000D50, "Member 'UWDT_MapImage_C::IsClosing' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, LostExpMarkerWidget) == 0x000D58, "Member 'UWDT_MapImage_C::LostExpMarkerWidget' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, GuardianSpiritFeatureMap) == 0x000D60, "Member 'UWDT_MapImage_C::GuardianSpiritFeatureMap' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, CanPressTransitSuppportMenu) == 0x000DB0, "Member 'UWDT_MapImage_C::CanPressTransitSuppportMenu' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, OpenSupportMenu) == 0x000DB1, "Member 'UWDT_MapImage_C::OpenSupportMenu' has a wrong offset!");
-static_assert(offsetof(UWDT_MapImage_C, OpenAnimationFinished) == 0x000DB2, "Member 'UWDT_MapImage_C::OpenAnimationFinished' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, RegionTabDLCWorld) == 0x000688, "Member 'UWDT_MapImage_C::RegionTabDLCWorld' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, RegionTabForestOfCorpses) == 0x000690, "Member 'UWDT_MapImage_C::RegionTabForestOfCorpses' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, RegionTabMagmell) == 0x000698, "Member 'UWDT_MapImage_C::RegionTabMagmell' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, RegionTabMulti_Siren) == 0x0006A0, "Member 'UWDT_MapImage_C::RegionTabMulti_Siren' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, RegionTabPrisonIsland) == 0x0006A8, "Member 'UWDT_MapImage_C::RegionTabPrisonIsland' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, RegionTabSubmergedCity) == 0x0006B0, "Member 'UWDT_MapImage_C::RegionTabSubmergedCity' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, RegionTabTerritoryOfMoon) == 0x0006B8, "Member 'UWDT_MapImage_C::RegionTabTerritoryOfMoon' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, RegionTabValleyOfAcid) == 0x0006C0, "Member 'UWDT_MapImage_C::RegionTabValleyOfAcid' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, RegionTabWorld) == 0x0006C8, "Member 'UWDT_MapImage_C::RegionTabWorld' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, T_UI_MultiplayDungeon) == 0x0006D0, "Member 'UWDT_MapImage_C::T_UI_MultiplayDungeon' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, TimeSeriesText) == 0x0006D8, "Member 'UWDT_MapImage_C::TimeSeriesText' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, TrgGuideParts_FeatureFilterList) == 0x0006E0, "Member 'UWDT_MapImage_C::TrgGuideParts_FeatureFilterList' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, TrgGuideParts_IconOnOff) == 0x0006E8, "Member 'UWDT_MapImage_C::TrgGuideParts_IconOnOff' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, TrgGuideParts_MiniMapOnOff) == 0x0006F0, "Member 'UWDT_MapImage_C::TrgGuideParts_MiniMapOnOff' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, TrgGuideParts_Move) == 0x0006F8, "Member 'UWDT_MapImage_C::TrgGuideParts_Move' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, TrgGuideParts_NearYadorigiList) == 0x000700, "Member 'UWDT_MapImage_C::TrgGuideParts_NearYadorigiList' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, TrgGuideParts_OpenSupportMenu) == 0x000708, "Member 'UWDT_MapImage_C::TrgGuideParts_OpenSupportMenu' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, TrgGuideParts_PinSelect) == 0x000710, "Member 'UWDT_MapImage_C::TrgGuideParts_PinSelect' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, TrgGuideParts_QuestDecide) == 0x000718, "Member 'UWDT_MapImage_C::TrgGuideParts_QuestDecide' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, TrgGuideParts_ReturnToCurrent) == 0x000720, "Member 'UWDT_MapImage_C::TrgGuideParts_ReturnToCurrent' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, TrgGuideParts_UnknownFeatureLouDiaryList) == 0x000728, "Member 'UWDT_MapImage_C::TrgGuideParts_UnknownFeatureLouDiaryList' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, TrgGuideParts_Zoom) == 0x000730, "Member 'UWDT_MapImage_C::TrgGuideParts_Zoom' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, TrgGuideParts_Zoom_1) == 0x000738, "Member 'UWDT_MapImage_C::TrgGuideParts_Zoom_1' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, VeiledAreaImage) == 0x000740, "Member 'UWDT_MapImage_C::VeiledAreaImage' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, WDT_AreaBuffList) == 0x000748, "Member 'UWDT_MapImage_C::WDT_AreaBuffList' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, WDT_FeatureFilterEntryPiece_FastTravelPoint) == 0x000750, "Member 'UWDT_MapImage_C::WDT_FeatureFilterEntryPiece_FastTravelPoint' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, WDT_FeatureFilterEntryPiece_NoneQuestFeature) == 0x000758, "Member 'UWDT_MapImage_C::WDT_FeatureFilterEntryPiece_NoneQuestFeature' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, WDT_FeatureFilterEntryPiece_QuestFeature) == 0x000760, "Member 'UWDT_MapImage_C::WDT_FeatureFilterEntryPiece_QuestFeature' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, WDT_MapCursor) == 0x000768, "Member 'UWDT_MapImage_C::WDT_MapCursor' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, WDT_MiniMapWideModeImage) == 0x000770, "Member 'UWDT_MapImage_C::WDT_MiniMapWideModeImage' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, WDT_Piece_TrgText) == 0x000778, "Member 'UWDT_MapImage_C::WDT_Piece_TrgText' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, WholeMapImage) == 0x000780, "Member 'UWDT_MapImage_C::WholeMapImage' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, YadorigiList_SizeBox) == 0x000788, "Member 'UWDT_MapImage_C::YadorigiList_SizeBox' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, YadorigiListBorder) == 0x000790, "Member 'UWDT_MapImage_C::YadorigiListBorder' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, YadorigiLocationImage) == 0x000798, "Member 'UWDT_MapImage_C::YadorigiLocationImage' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, PlayerIcon) == 0x0007A0, "Member 'UWDT_MapImage_C::PlayerIcon' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, BPMapSystem) == 0x0007A8, "Member 'UWDT_MapImage_C::BPMapSystem' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, MapFeatureUIInfoLIst) == 0x0007B0, "Member 'UWDT_MapImage_C::MapFeatureUIInfoLIst' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, MapPivot) == 0x0007C0, "Member 'UWDT_MapImage_C::MapPivot' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, Out_Map_Info) == 0x0007D0, "Member 'UWDT_MapImage_C::Out_Map_Info' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, MapSwitchScale) == 0x000868, "Member 'UWDT_MapImage_C::MapSwitchScale' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, TileMapDisplaySize) == 0x000870, "Member 'UWDT_MapImage_C::TileMapDisplaySize' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, MapUserMarker) == 0x000880, "Member 'UWDT_MapImage_C::MapUserMarker' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, FeatureDetectionRange) == 0x000888, "Member 'UWDT_MapImage_C::FeatureDetectionRange' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, DetectedFeatureInfo) == 0x000890, "Member 'UWDT_MapImage_C::DetectedFeatureInfo' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, UserMarkerWidget) == 0x000998, "Member 'UWDT_MapImage_C::UserMarkerWidget' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, FeatrueDetected) == 0x0009A0, "Member 'UWDT_MapImage_C::FeatrueDetected' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, TimeSeriesRowNames) == 0x0009A8, "Member 'UWDT_MapImage_C::TimeSeriesRowNames' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, CurrentTimeSeriesIndex) == 0x0009B8, "Member 'UWDT_MapImage_C::CurrentTimeSeriesIndex' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, ReverseInput) == 0x0009C0, "Member 'UWDT_MapImage_C::ReverseInput' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, UserMarkerWidgetArray) == 0x0009C8, "Member 'UWDT_MapImage_C::UserMarkerWidgetArray' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, FeatureScale) == 0x0009D8, "Member 'UWDT_MapImage_C::FeatureScale' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, MakerWidgetNum) == 0x0009E8, "Member 'UWDT_MapImage_C::MakerWidgetNum' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, DMI_MapVeilArea) == 0x0009F0, "Member 'UWDT_MapImage_C::DMI_MapVeilArea' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, CurrentTileMap) == 0x0009F8, "Member 'UWDT_MapImage_C::CurrentTileMap' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, CurrentWholeMap) == 0x000A00, "Member 'UWDT_MapImage_C::CurrentWholeMap' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, FastTravelDialogContext) == 0x000A08, "Member 'UWDT_MapImage_C::FastTravelDialogContext' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, FastTravelDialogInfo) == 0x000A40, "Member 'UWDT_MapImage_C::FastTravelDialogInfo' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, PendingFastTravelFeatureId) == 0x000A98, "Member 'UWDT_MapImage_C::PendingFastTravelFeatureId' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, TimeTravelDialogContext) == 0x000AA0, "Member 'UWDT_MapImage_C::TimeTravelDialogContext' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, TimeTravelDialogInfo) == 0x000AD8, "Member 'UWDT_MapImage_C::TimeTravelDialogInfo' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, FastTravelDialog) == 0x000B30, "Member 'UWDT_MapImage_C::FastTravelDialog' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, DialogOpening) == 0x000B38, "Member 'UWDT_MapImage_C::DialogOpening' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, UserMarkerTags) == 0x000B40, "Member 'UWDT_MapImage_C::UserMarkerTags' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, InputProcessFlag) == 0x000B50, "Member 'UWDT_MapImage_C::InputProcessFlag' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, TargetMakerWidget) == 0x000B58, "Member 'UWDT_MapImage_C::TargetMakerWidget' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, TargetTimeSeriesTag) == 0x000B60, "Member 'UWDT_MapImage_C::TargetTimeSeriesTag' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, FeatureWidgetArray) == 0x000B68, "Member 'UWDT_MapImage_C::FeatureWidgetArray' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, QuestMarkerWidget) == 0x000B78, "Member 'UWDT_MapImage_C::QuestMarkerWidget' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, CameraFOVWidget) == 0x000B80, "Member 'UWDT_MapImage_C::CameraFOVWidget' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, CameraFOVScale) == 0x000B88, "Member 'UWDT_MapImage_C::CameraFOVScale' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, Destroyed) == 0x000B98, "Member 'UWDT_MapImage_C::Destroyed' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, PhotoLogWidgetArray) == 0x000BA0, "Member 'UWDT_MapImage_C::PhotoLogWidgetArray' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, PhotoLogVisible) == 0x000BB0, "Member 'UWDT_MapImage_C::PhotoLogVisible' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, YadorigiListMode) == 0x000BB1, "Member 'UWDT_MapImage_C::YadorigiListMode' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, TargetRegionName) == 0x000BB4, "Member 'UWDT_MapImage_C::TargetRegionName' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, TargetRegionPiece) == 0x000BC0, "Member 'UWDT_MapImage_C::TargetRegionPiece' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, TargetYadorigiPiece) == 0x000BC8, "Member 'UWDT_MapImage_C::TargetYadorigiPiece' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, bIsAutoCursorMovePosition) == 0x000BD0, "Member 'UWDT_MapImage_C::bIsAutoCursorMovePosition' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, TickCursorMoveTimeLimit) == 0x000BD8, "Member 'UWDT_MapImage_C::TickCursorMoveTimeLimit' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, TickCursorMoveTimer) == 0x000BE0, "Member 'UWDT_MapImage_C::TickCursorMoveTimer' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, CusorMoveStartPosition) == 0x000BE8, "Member 'UWDT_MapImage_C::CusorMoveStartPosition' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, CusorMoveEndPosition) == 0x000BF8, "Member 'UWDT_MapImage_C::CusorMoveEndPosition' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, IsMouseButtonPress) == 0x000C08, "Member 'UWDT_MapImage_C::IsMouseButtonPress' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, OldMousePressedPosition) == 0x000C10, "Member 'UWDT_MapImage_C::OldMousePressedPosition' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, WasKeyJustPressedUpDown) == 0x000C20, "Member 'UWDT_MapImage_C::WasKeyJustPressedUpDown' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, WasKeyJustPressedSwitch) == 0x000C21, "Member 'UWDT_MapImage_C::WasKeyJustPressedSwitch' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, LeftStickInputValue) == 0x000C28, "Member 'UWDT_MapImage_C::LeftStickInputValue' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, IsMouseDrag) == 0x000C38, "Member 'UWDT_MapImage_C::IsMouseDrag' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, TargetNearYadrigiPiece) == 0x000C40, "Member 'UWDT_MapImage_C::TargetNearYadrigiPiece' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, IsMouseStop) == 0x000C48, "Member 'UWDT_MapImage_C::IsMouseStop' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, OldMousePosition) == 0x000C49, "Member 'UWDT_MapImage_C::OldMousePosition' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, SelectUserMarkerIndex) == 0x000C4C, "Member 'UWDT_MapImage_C::SelectUserMarkerIndex' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, Detected) == 0x000C50, "Member 'UWDT_MapImage_C::Detected' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, OldUserMarkerWidget) == 0x000C58, "Member 'UWDT_MapImage_C::OldUserMarkerWidget' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, FeatureFilterMap) == 0x000C60, "Member 'UWDT_MapImage_C::FeatureFilterMap' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, MapMenuState) == 0x000CB0, "Member 'UWDT_MapImage_C::MapMenuState' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, TargetFeatureFilterPiece) == 0x000CB8, "Member 'UWDT_MapImage_C::TargetFeatureFilterPiece' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, FeatureQuestMap) == 0x000CC0, "Member 'UWDT_MapImage_C::FeatureQuestMap' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, DefaultSelectLouDaryId) == 0x000D10, "Member 'UWDT_MapImage_C::DefaultSelectLouDaryId' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, UnknownFeatureLouDiaryList) == 0x000D18, "Member 'UWDT_MapImage_C::UnknownFeatureLouDiaryList' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, FeatureUICoordinateCorrectionMap) == 0x000D28, "Member 'UWDT_MapImage_C::FeatureUICoordinateCorrectionMap' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, DefaultSelectRegion) == 0x000D78, "Member 'UWDT_MapImage_C::DefaultSelectRegion' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, IsClosing) == 0x000D80, "Member 'UWDT_MapImage_C::IsClosing' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, LostExpMarkerWidget) == 0x000D88, "Member 'UWDT_MapImage_C::LostExpMarkerWidget' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, GuardianSpiritFeatureMap) == 0x000D90, "Member 'UWDT_MapImage_C::GuardianSpiritFeatureMap' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, CanPressTransitSuppportMenu) == 0x000DE0, "Member 'UWDT_MapImage_C::CanPressTransitSuppportMenu' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, OpenSupportMenu) == 0x000DE1, "Member 'UWDT_MapImage_C::OpenSupportMenu' has a wrong offset!");
+static_assert(offsetof(UWDT_MapImage_C, OpenAnimationFinished) == 0x000DE2, "Member 'UWDT_MapImage_C::OpenAnimationFinished' has a wrong offset!");
 
 }
 

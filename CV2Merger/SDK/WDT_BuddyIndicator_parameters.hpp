@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "GameplayTags_structs.hpp"
 #include "Extensions_structs.hpp"
 #include "Engine_structs.hpp"
-#include "GameplayTags_structs.hpp"
 
 
 namespace SDK::Params
@@ -116,6 +116,19 @@ static_assert(offsetof(WDT_BuddyIndicator_C_IsShowExplorationDialog, CallFunc_Ge
 static_assert(offsetof(WDT_BuddyIndicator_C_IsShowExplorationDialog, CallFunc_IsShow_OutIsShow) == 0x000030, "Member 'WDT_BuddyIndicator_C_IsShowExplorationDialog::CallFunc_IsShow_OutIsShow' has a wrong offset!");
 static_assert(offsetof(WDT_BuddyIndicator_C_IsShowExplorationDialog, CallFunc_IsValid_ReturnValue) == 0x000031, "Member 'WDT_BuddyIndicator_C_IsShowExplorationDialog::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
+// Function WDT_BuddyIndicator.WDT_BuddyIndicator_C.NotifyLossTimeGaugeUpdated
+// 0x0018 (0x0018 - 0x0000)
+struct WDT_BuddyIndicator_C_NotifyLossTimeGaugeUpdated final
+{
+public:
+	TArray<double>                                InGaugeRate;                                       // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	int32                                         L_GaugeNum;                                        // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_BuddyIndicator_C_NotifyLossTimeGaugeUpdated) == 0x000008, "Wrong alignment on WDT_BuddyIndicator_C_NotifyLossTimeGaugeUpdated");
+static_assert(sizeof(WDT_BuddyIndicator_C_NotifyLossTimeGaugeUpdated) == 0x000018, "Wrong size on WDT_BuddyIndicator_C_NotifyLossTimeGaugeUpdated");
+static_assert(offsetof(WDT_BuddyIndicator_C_NotifyLossTimeGaugeUpdated, InGaugeRate) == 0x000000, "Member 'WDT_BuddyIndicator_C_NotifyLossTimeGaugeUpdated::InGaugeRate' has a wrong offset!");
+static_assert(offsetof(WDT_BuddyIndicator_C_NotifyLossTimeGaugeUpdated, L_GaugeNum) == 0x000010, "Member 'WDT_BuddyIndicator_C_NotifyLossTimeGaugeUpdated::L_GaugeNum' has a wrong offset!");
+
 // Function WDT_BuddyIndicator.WDT_BuddyIndicator_C.OnBattleStateChanged
 // 0x0028 (0x0028 - 0x0000)
 struct WDT_BuddyIndicator_C_OnBattleStateChanged final
@@ -165,30 +178,38 @@ static_assert(offsetof(WDT_BuddyIndicator_C_OnForcedShowByStatementEnd, CallFunc
 static_assert(offsetof(WDT_BuddyIndicator_C_OnForcedShowByStatementEnd, CallFunc_IsHUDAutoHideEnabled_ReturnValue) == 0x000020, "Member 'WDT_BuddyIndicator_C_OnForcedShowByStatementEnd::CallFunc_IsHUDAutoHideEnabled_ReturnValue' has a wrong offset!");
 
 // Function WDT_BuddyIndicator.WDT_BuddyIndicator_C.OnNotifyBuddyStatementFinished
-// 0x0002 (0x0002 - 0x0000)
+// 0x0004 (0x0004 - 0x0000)
 struct WDT_BuddyIndicator_C_OnNotifyBuddyStatementFinished final
 {
 public:
 	bool                                          IsLouStatement;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_GameplayTag_ReturnValue;       // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_GameplayTag_ReturnValue_1;     // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_BuddyIndicator_C_OnNotifyBuddyStatementFinished) == 0x000001, "Wrong alignment on WDT_BuddyIndicator_C_OnNotifyBuddyStatementFinished");
-static_assert(sizeof(WDT_BuddyIndicator_C_OnNotifyBuddyStatementFinished) == 0x000002, "Wrong size on WDT_BuddyIndicator_C_OnNotifyBuddyStatementFinished");
+static_assert(sizeof(WDT_BuddyIndicator_C_OnNotifyBuddyStatementFinished) == 0x000004, "Wrong size on WDT_BuddyIndicator_C_OnNotifyBuddyStatementFinished");
 static_assert(offsetof(WDT_BuddyIndicator_C_OnNotifyBuddyStatementFinished, IsLouStatement) == 0x000000, "Member 'WDT_BuddyIndicator_C_OnNotifyBuddyStatementFinished::IsLouStatement' has a wrong offset!");
 static_assert(offsetof(WDT_BuddyIndicator_C_OnNotifyBuddyStatementFinished, CallFunc_EqualEqual_GameplayTag_ReturnValue) == 0x000001, "Member 'WDT_BuddyIndicator_C_OnNotifyBuddyStatementFinished::CallFunc_EqualEqual_GameplayTag_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_BuddyIndicator_C_OnNotifyBuddyStatementFinished, CallFunc_EqualEqual_GameplayTag_ReturnValue_1) == 0x000002, "Member 'WDT_BuddyIndicator_C_OnNotifyBuddyStatementFinished::CallFunc_EqualEqual_GameplayTag_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_BuddyIndicator_C_OnNotifyBuddyStatementFinished, CallFunc_BooleanOR_ReturnValue) == 0x000003, "Member 'WDT_BuddyIndicator_C_OnNotifyBuddyStatementFinished::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
 
 // Function WDT_BuddyIndicator.WDT_BuddyIndicator_C.OnNotifyBuddyStatementStarted
-// 0x0002 (0x0002 - 0x0000)
+// 0x0004 (0x0004 - 0x0000)
 struct WDT_BuddyIndicator_C_OnNotifyBuddyStatementStarted final
 {
 public:
 	bool                                          IsLouStatement;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_GameplayTag_ReturnValue;       // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_GameplayTag_ReturnValue_1;     // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_BuddyIndicator_C_OnNotifyBuddyStatementStarted) == 0x000001, "Wrong alignment on WDT_BuddyIndicator_C_OnNotifyBuddyStatementStarted");
-static_assert(sizeof(WDT_BuddyIndicator_C_OnNotifyBuddyStatementStarted) == 0x000002, "Wrong size on WDT_BuddyIndicator_C_OnNotifyBuddyStatementStarted");
+static_assert(sizeof(WDT_BuddyIndicator_C_OnNotifyBuddyStatementStarted) == 0x000004, "Wrong size on WDT_BuddyIndicator_C_OnNotifyBuddyStatementStarted");
 static_assert(offsetof(WDT_BuddyIndicator_C_OnNotifyBuddyStatementStarted, IsLouStatement) == 0x000000, "Member 'WDT_BuddyIndicator_C_OnNotifyBuddyStatementStarted::IsLouStatement' has a wrong offset!");
 static_assert(offsetof(WDT_BuddyIndicator_C_OnNotifyBuddyStatementStarted, CallFunc_EqualEqual_GameplayTag_ReturnValue) == 0x000001, "Member 'WDT_BuddyIndicator_C_OnNotifyBuddyStatementStarted::CallFunc_EqualEqual_GameplayTag_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_BuddyIndicator_C_OnNotifyBuddyStatementStarted, CallFunc_EqualEqual_GameplayTag_ReturnValue_1) == 0x000002, "Member 'WDT_BuddyIndicator_C_OnNotifyBuddyStatementStarted::CallFunc_EqualEqual_GameplayTag_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_BuddyIndicator_C_OnNotifyBuddyStatementStarted, CallFunc_BooleanOR_ReturnValue) == 0x000003, "Member 'WDT_BuddyIndicator_C_OnNotifyBuddyStatementStarted::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
 
 // Function WDT_BuddyIndicator.WDT_BuddyIndicator_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)
@@ -286,6 +307,19 @@ public:
 static_assert(alignof(WDT_BuddyIndicator_C_SetNoMountAction) == 0x000001, "Wrong alignment on WDT_BuddyIndicator_C_SetNoMountAction");
 static_assert(sizeof(WDT_BuddyIndicator_C_SetNoMountAction) == 0x000001, "Wrong size on WDT_BuddyIndicator_C_SetNoMountAction");
 static_assert(offsetof(WDT_BuddyIndicator_C_SetNoMountAction, InIsNoMountAction) == 0x000000, "Member 'WDT_BuddyIndicator_C_SetNoMountAction::InIsNoMountAction' has a wrong offset!");
+
+// Function WDT_BuddyIndicator.WDT_BuddyIndicator_C.SetSubBuddyIcon
+// 0x0010 (0x0010 - 0x0000)
+struct WDT_BuddyIndicator_C_SetSubBuddyIcon final
+{
+public:
+	class UMaterialInstance*                      InBuddyMaterial;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_BuddyIndicator_C_SetSubBuddyIcon) == 0x000008, "Wrong alignment on WDT_BuddyIndicator_C_SetSubBuddyIcon");
+static_assert(sizeof(WDT_BuddyIndicator_C_SetSubBuddyIcon) == 0x000010, "Wrong size on WDT_BuddyIndicator_C_SetSubBuddyIcon");
+static_assert(offsetof(WDT_BuddyIndicator_C_SetSubBuddyIcon, InBuddyMaterial) == 0x000000, "Member 'WDT_BuddyIndicator_C_SetSubBuddyIcon::InBuddyMaterial' has a wrong offset!");
+static_assert(offsetof(WDT_BuddyIndicator_C_SetSubBuddyIcon, CallFunc_IsValid_ReturnValue) == 0x000008, "Member 'WDT_BuddyIndicator_C_SetSubBuddyIcon::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
 // Function WDT_BuddyIndicator.WDT_BuddyIndicator_C.ShowBuddyIcon
 // 0x0030 (0x0030 - 0x0000)

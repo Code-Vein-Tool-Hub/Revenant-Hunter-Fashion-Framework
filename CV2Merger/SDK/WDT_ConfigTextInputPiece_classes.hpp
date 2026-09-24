@@ -11,15 +11,15 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "SlateCore_structs.hpp"
 #include "BasicUI_classes.hpp"
+#include "SlateCore_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WDT_ConfigTextInputPiece.WDT_ConfigTextInputPiece_C
-// 0x0020 (0x05E8 - 0x05C8)
+// 0x0030 (0x05F8 - 0x05C8)
 class UWDT_ConfigTextInputPiece_C final : public UMenuPieceBase
 {
 public:
@@ -27,6 +27,8 @@ public:
 	class UEditableTextBox*                       EditableTextBox_165;                               // 0x05D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class URichTextBlock*                         IconText;                                          // 0x05D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	bool                                          bIsIconDisplayEnable;                              // 0x05E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5E1[0x7];                                      // 0x05E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnTextCommitted;                                   // 0x05E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	void SetText(const class FText& InText);
@@ -35,6 +37,7 @@ public:
 	void SetIconDisplayEnable(bool InIsFlag);
 	void SetDeselect();
 	void RefreshKeyImage();
+	void OnTextCommitted__DelegateSignature(const class FText& InText, ETextCommit InCommitMethot);
 	void InputModeCancel();
 	void InputMode();
 	void GetText(class FText* OutText);
@@ -52,11 +55,12 @@ public:
 	}
 };
 static_assert(alignof(UWDT_ConfigTextInputPiece_C) == 0x000008, "Wrong alignment on UWDT_ConfigTextInputPiece_C");
-static_assert(sizeof(UWDT_ConfigTextInputPiece_C) == 0x0005E8, "Wrong size on UWDT_ConfigTextInputPiece_C");
+static_assert(sizeof(UWDT_ConfigTextInputPiece_C) == 0x0005F8, "Wrong size on UWDT_ConfigTextInputPiece_C");
 static_assert(offsetof(UWDT_ConfigTextInputPiece_C, UberGraphFrame) == 0x0005C8, "Member 'UWDT_ConfigTextInputPiece_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UWDT_ConfigTextInputPiece_C, EditableTextBox_165) == 0x0005D0, "Member 'UWDT_ConfigTextInputPiece_C::EditableTextBox_165' has a wrong offset!");
 static_assert(offsetof(UWDT_ConfigTextInputPiece_C, IconText) == 0x0005D8, "Member 'UWDT_ConfigTextInputPiece_C::IconText' has a wrong offset!");
 static_assert(offsetof(UWDT_ConfigTextInputPiece_C, bIsIconDisplayEnable) == 0x0005E0, "Member 'UWDT_ConfigTextInputPiece_C::bIsIconDisplayEnable' has a wrong offset!");
+static_assert(offsetof(UWDT_ConfigTextInputPiece_C, OnTextCommitted) == 0x0005E8, "Member 'UWDT_ConfigTextInputPiece_C::OnTextCommitted' has a wrong offset!");
 
 }
 

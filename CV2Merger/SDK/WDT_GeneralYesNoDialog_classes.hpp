@@ -59,8 +59,8 @@ public:
 	void Initialize();
 	void GeneralYesNoDialogOpenAnim_Event(class UCanvasPanel* CanvasPanel_23);
 	void ExecuteUbergraph_WDT_GeneralYesNoDialog(int32 EntryPoint);
-	void BP_OnDeactivated();
 	void BP_OnActivated();
+	void BP_OnDeactivated();
 
 public:
 	static class UClass* StaticClass()

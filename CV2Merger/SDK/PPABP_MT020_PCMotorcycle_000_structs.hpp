@@ -47,13 +47,5 @@ static_assert(offsetof(PPABP_MT020_PCMotorcycle_000::FAnimBlueprintGeneratedCons
 static_assert(offsetof(PPABP_MT020_PCMotorcycle_000::FAnimBlueprintGeneratedConstantData, AppAnimGraphNode_RigidBody) == 0x000138, "Member 'PPABP_MT020_PCMotorcycle_000::FAnimBlueprintGeneratedConstantData::AppAnimGraphNode_RigidBody' has a wrong offset!");
 static_assert(offsetof(PPABP_MT020_PCMotorcycle_000::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ComponentToLocalSpace) == 0x000168, "Member 'PPABP_MT020_PCMotorcycle_000::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
 
-// ScriptStruct PPABP_MT020_PCMotorcycle_000.PPABP_MT020_PCMotorcycle_000_C.AnimBlueprintGeneratedMutableData
-// 0x0000 (0x0001 - 0x0001)
-struct PPABP_MT020_PCMotorcycle_000::FAnimBlueprintGeneratedMutableData final : public FAnimBlueprintMutableData
-{
-};
-static_assert(alignof(PPABP_MT020_PCMotorcycle_000::FAnimBlueprintGeneratedMutableData) == 0x000001, "Wrong alignment on PPABP_MT020_PCMotorcycle_000::FAnimBlueprintGeneratedMutableData");
-static_assert(sizeof(PPABP_MT020_PCMotorcycle_000::FAnimBlueprintGeneratedMutableData) == 0x000001, "Wrong size on PPABP_MT020_PCMotorcycle_000::FAnimBlueprintGeneratedMutableData");
-
 }
 

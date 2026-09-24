@@ -18,21 +18,25 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WDT_StatusEffectPanel.WDT_StatusEffectPanel_C
-// 0x0010 (0x0610 - 0x0600)
+// 0x0018 (0x0618 - 0x0600)
 class UWDT_StatusEffectPanel_C final : public UHudPieceBase
 {
 public:
 	class UHorizontalBox*                         StatusDownEffectIconBox;                           // 0x0600(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UHorizontalBox*                         StatusUpEffectIconBox;                             // 0x0608(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBP_StatusIndicatorUIObject_C*          StatusIndicatorUIObject;                           // 0x0610(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void CreateStatusDownEffectIcon(const struct FStatusEffectIconHandle& InHandle, EStatusDownEffectIconType InIconType, EStatusEffectFrameType InFrame);
+	void CreateStatusDownEffectIconEx(const struct FStatusEffectIconHandle& InHandle, EStatusDownEffectIconTypeEx InIconType, EStatusEffectFrameType InFrame);
 	void CreateStatusUpEffectIcon(const struct FStatusEffectIconHandle& InHandle, EStatusUpEffectIconType InIconType, EStatusEffectFrameType InFrame);
 	void CreateStatusUpEffectIconEx(const struct FStatusEffectIconHandle& InHandle, EStatusUpEffectIconTypeEx InIconType, EStatusEffectFrameType InFrame);
 	void GetStatusEffectIcon(const struct FStatusEffectIconHandle& InHandle, class UUserWidget** OutIcon);
+	void GetStausIndicatorUIObject(class UBP_StatusIndicatorUIObject_C** OutUIObject);
 	void HideAllIcons();
 	void IsAnyIconVisible(bool* OutVisible);
 	void NotifyStatusDownEffectApplied(EStatusDownEffectIconType InStatusEffect, const struct FStatusEffectIconHandle& InStatusEffectIconHandle);
+	void NotifyStatusDownEffectAppliedExWithFrame(EStatusDownEffectIconTypeEx InStatusEffect, const struct FStatusEffectIconHandle& InStatusEffectIconHandle, EStatusEffectFrameType InFrame);
 	void NotifyStatusDownEffectAppliedWithFrame(EStatusDownEffectIconType InStatusEffect, const struct FStatusEffectIconHandle& InStatusEffectIconHandle, EStatusEffectFrameType InFrame);
 	void NotifyStatusEffectRemoved(const struct FStatusEffectIconHandle& InStatusEffectHandle);
 	void NotifyStatusEffectTimeElapsed(const struct FStatusEffectIconHandle& InStatusEffectHandle, double InRemainingTime, double InTotalTime);
@@ -51,9 +55,10 @@ public:
 	}
 };
 static_assert(alignof(UWDT_StatusEffectPanel_C) == 0x000008, "Wrong alignment on UWDT_StatusEffectPanel_C");
-static_assert(sizeof(UWDT_StatusEffectPanel_C) == 0x000610, "Wrong size on UWDT_StatusEffectPanel_C");
+static_assert(sizeof(UWDT_StatusEffectPanel_C) == 0x000618, "Wrong size on UWDT_StatusEffectPanel_C");
 static_assert(offsetof(UWDT_StatusEffectPanel_C, StatusDownEffectIconBox) == 0x000600, "Member 'UWDT_StatusEffectPanel_C::StatusDownEffectIconBox' has a wrong offset!");
 static_assert(offsetof(UWDT_StatusEffectPanel_C, StatusUpEffectIconBox) == 0x000608, "Member 'UWDT_StatusEffectPanel_C::StatusUpEffectIconBox' has a wrong offset!");
+static_assert(offsetof(UWDT_StatusEffectPanel_C, StatusIndicatorUIObject) == 0x000610, "Member 'UWDT_StatusEffectPanel_C::StatusIndicatorUIObject' has a wrong offset!");
 
 }
 

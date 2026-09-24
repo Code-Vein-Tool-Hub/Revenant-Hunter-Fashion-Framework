@@ -18,39 +18,33 @@
 namespace SDK::Params
 {
 
-// Function WDT_StatusIndicator.WDT_StatusIndicator_C.NotifyHealthGaugeLengthChanged__DelegateSignature
-// 0x0008 (0x0008 - 0x0000)
-struct WDT_StatusIndicator_C_NotifyHealthGaugeLengthChanged__DelegateSignature final
-{
-public:
-	double                                        InLength;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_StatusIndicator_C_NotifyHealthGaugeLengthChanged__DelegateSignature) == 0x000008, "Wrong alignment on WDT_StatusIndicator_C_NotifyHealthGaugeLengthChanged__DelegateSignature");
-static_assert(sizeof(WDT_StatusIndicator_C_NotifyHealthGaugeLengthChanged__DelegateSignature) == 0x000008, "Wrong size on WDT_StatusIndicator_C_NotifyHealthGaugeLengthChanged__DelegateSignature");
-static_assert(offsetof(WDT_StatusIndicator_C_NotifyHealthGaugeLengthChanged__DelegateSignature, InLength) == 0x000000, "Member 'WDT_StatusIndicator_C_NotifyHealthGaugeLengthChanged__DelegateSignature::InLength' has a wrong offset!");
-
 // Function WDT_StatusIndicator.WDT_StatusIndicator_C.ExecuteUbergraph_WDT_StatusIndicator
-// 0x0058 (0x0058 - 0x0000)
+// 0x0068 (0x0068 - 0x0000)
 struct WDT_StatusIndicator_C_ExecuteUbergraph_WDT_StatusIndicator final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_IsDesignTime;                         // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0008(0x0038)(IsPlainOldData, NoDestructor)
-	float                                         K2Node_Event_InDeltaTime;                          // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        K2Node_VariableSet_BarrierGaugeLength_ImplicitCast; // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_VariableSet_HealthGaugeLength_ImplicitCast; // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_GetMaxPercent_OutLength;                  // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_IsDesignTime;                         // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0014(0x0038)(IsPlainOldData, NoDestructor)
+	float                                         K2Node_Event_InDeltaTime;                          // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_DoubleDouble_ReturnValue;        // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        K2Node_VariableSet_HealthGaugeLength_ImplicitCast; // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_VariableSet_BarrierGaugeLength_ImplicitCast; // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_StatusIndicator_C_ExecuteUbergraph_WDT_StatusIndicator) == 0x000008, "Wrong alignment on WDT_StatusIndicator_C_ExecuteUbergraph_WDT_StatusIndicator");
-static_assert(sizeof(WDT_StatusIndicator_C_ExecuteUbergraph_WDT_StatusIndicator) == 0x000058, "Wrong size on WDT_StatusIndicator_C_ExecuteUbergraph_WDT_StatusIndicator");
+static_assert(sizeof(WDT_StatusIndicator_C_ExecuteUbergraph_WDT_StatusIndicator) == 0x000068, "Wrong size on WDT_StatusIndicator_C_ExecuteUbergraph_WDT_StatusIndicator");
 static_assert(offsetof(WDT_StatusIndicator_C_ExecuteUbergraph_WDT_StatusIndicator, EntryPoint) == 0x000000, "Member 'WDT_StatusIndicator_C_ExecuteUbergraph_WDT_StatusIndicator::EntryPoint' has a wrong offset!");
-static_assert(offsetof(WDT_StatusIndicator_C_ExecuteUbergraph_WDT_StatusIndicator, K2Node_Event_IsDesignTime) == 0x000004, "Member 'WDT_StatusIndicator_C_ExecuteUbergraph_WDT_StatusIndicator::K2Node_Event_IsDesignTime' has a wrong offset!");
-static_assert(offsetof(WDT_StatusIndicator_C_ExecuteUbergraph_WDT_StatusIndicator, K2Node_Event_MyGeometry) == 0x000008, "Member 'WDT_StatusIndicator_C_ExecuteUbergraph_WDT_StatusIndicator::K2Node_Event_MyGeometry' has a wrong offset!");
-static_assert(offsetof(WDT_StatusIndicator_C_ExecuteUbergraph_WDT_StatusIndicator, K2Node_Event_InDeltaTime) == 0x000040, "Member 'WDT_StatusIndicator_C_ExecuteUbergraph_WDT_StatusIndicator::K2Node_Event_InDeltaTime' has a wrong offset!");
-static_assert(offsetof(WDT_StatusIndicator_C_ExecuteUbergraph_WDT_StatusIndicator, K2Node_VariableSet_BarrierGaugeLength_ImplicitCast) == 0x000048, "Member 'WDT_StatusIndicator_C_ExecuteUbergraph_WDT_StatusIndicator::K2Node_VariableSet_BarrierGaugeLength_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WDT_StatusIndicator_C_ExecuteUbergraph_WDT_StatusIndicator, K2Node_VariableSet_HealthGaugeLength_ImplicitCast) == 0x000050, "Member 'WDT_StatusIndicator_C_ExecuteUbergraph_WDT_StatusIndicator::K2Node_VariableSet_HealthGaugeLength_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_StatusIndicator_C_ExecuteUbergraph_WDT_StatusIndicator, CallFunc_GetMaxPercent_OutLength) == 0x000008, "Member 'WDT_StatusIndicator_C_ExecuteUbergraph_WDT_StatusIndicator::CallFunc_GetMaxPercent_OutLength' has a wrong offset!");
+static_assert(offsetof(WDT_StatusIndicator_C_ExecuteUbergraph_WDT_StatusIndicator, K2Node_Event_IsDesignTime) == 0x000010, "Member 'WDT_StatusIndicator_C_ExecuteUbergraph_WDT_StatusIndicator::K2Node_Event_IsDesignTime' has a wrong offset!");
+static_assert(offsetof(WDT_StatusIndicator_C_ExecuteUbergraph_WDT_StatusIndicator, K2Node_Event_MyGeometry) == 0x000014, "Member 'WDT_StatusIndicator_C_ExecuteUbergraph_WDT_StatusIndicator::K2Node_Event_MyGeometry' has a wrong offset!");
+static_assert(offsetof(WDT_StatusIndicator_C_ExecuteUbergraph_WDT_StatusIndicator, K2Node_Event_InDeltaTime) == 0x00004C, "Member 'WDT_StatusIndicator_C_ExecuteUbergraph_WDT_StatusIndicator::K2Node_Event_InDeltaTime' has a wrong offset!");
+static_assert(offsetof(WDT_StatusIndicator_C_ExecuteUbergraph_WDT_StatusIndicator, CallFunc_NotEqual_DoubleDouble_ReturnValue) == 0x000050, "Member 'WDT_StatusIndicator_C_ExecuteUbergraph_WDT_StatusIndicator::CallFunc_NotEqual_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusIndicator_C_ExecuteUbergraph_WDT_StatusIndicator, K2Node_VariableSet_HealthGaugeLength_ImplicitCast) == 0x000058, "Member 'WDT_StatusIndicator_C_ExecuteUbergraph_WDT_StatusIndicator::K2Node_VariableSet_HealthGaugeLength_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_StatusIndicator_C_ExecuteUbergraph_WDT_StatusIndicator, K2Node_VariableSet_BarrierGaugeLength_ImplicitCast) == 0x000060, "Member 'WDT_StatusIndicator_C_ExecuteUbergraph_WDT_StatusIndicator::K2Node_VariableSet_BarrierGaugeLength_ImplicitCast' has a wrong offset!");
 
 // Function WDT_StatusIndicator.WDT_StatusIndicator_C.GetBarrierGauge
 // 0x0008 (0x0008 - 0x0000)
@@ -128,6 +122,17 @@ public:
 static_assert(alignof(WDT_StatusIndicator_C_GetStatusEffectPanel) == 0x000008, "Wrong alignment on WDT_StatusIndicator_C_GetStatusEffectPanel");
 static_assert(sizeof(WDT_StatusIndicator_C_GetStatusEffectPanel) == 0x000008, "Wrong size on WDT_StatusIndicator_C_GetStatusEffectPanel");
 static_assert(offsetof(WDT_StatusIndicator_C_GetStatusEffectPanel, OutPanel) == 0x000000, "Member 'WDT_StatusIndicator_C_GetStatusEffectPanel::OutPanel' has a wrong offset!");
+
+// Function WDT_StatusIndicator.WDT_StatusIndicator_C.NotifyHealthGaugeLengthChanged__DelegateSignature
+// 0x0008 (0x0008 - 0x0000)
+struct WDT_StatusIndicator_C_NotifyHealthGaugeLengthChanged__DelegateSignature final
+{
+public:
+	double                                        InLength;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_StatusIndicator_C_NotifyHealthGaugeLengthChanged__DelegateSignature) == 0x000008, "Wrong alignment on WDT_StatusIndicator_C_NotifyHealthGaugeLengthChanged__DelegateSignature");
+static_assert(sizeof(WDT_StatusIndicator_C_NotifyHealthGaugeLengthChanged__DelegateSignature) == 0x000008, "Wrong size on WDT_StatusIndicator_C_NotifyHealthGaugeLengthChanged__DelegateSignature");
+static_assert(offsetof(WDT_StatusIndicator_C_NotifyHealthGaugeLengthChanged__DelegateSignature, InLength) == 0x000000, "Member 'WDT_StatusIndicator_C_NotifyHealthGaugeLengthChanged__DelegateSignature::InLength' has a wrong offset!");
 
 // Function WDT_StatusIndicator.WDT_StatusIndicator_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)
@@ -305,44 +310,23 @@ static_assert(offsetof(WDT_StatusIndicator_C_UpdateVisibilityOnBattleState, Call
 static_assert(offsetof(WDT_StatusIndicator_C_UpdateVisibilityOnBattleState, CallFunc_BooleanAND_ReturnValue_1) == 0x000040, "Member 'WDT_StatusIndicator_C_UpdateVisibilityOnBattleState::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
 
 // Function WDT_StatusIndicator.WDT_StatusIndicator_C.UpdateBarrierGaugeTranslation
-// 0x0080 (0x0080 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct WDT_StatusIndicator_C_UpdateBarrierGaugeTranslation final
 {
 public:
 	double                                        CallFunc_GetMaxPercent_OutLength;                  // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UUIManager*                             CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UUIObjectBase*                          CallFunc_GetUIObjectByClass_ReturnValue;           // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_GetMaxPercent_OutLength_1;                // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UBP_StatusIndicatorUIObject_C*          K2Node_DynamicCast_AsBP_Status_Indicator_UIObject; // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EHealthGaugeType                              CallFunc_GetHealthGaugeType_ReturnValue;           // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_1;      // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue;                 // 0x0058(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_Subtract_Vector2DVector2D_ReturnValue;    // 0x0068(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetPercent_InPercent_ImplicitCast;        // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue;                 // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_Subtract_Vector2DVector2D_ReturnValue;    // 0x0028(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_StatusIndicator_C_UpdateBarrierGaugeTranslation) == 0x000008, "Wrong alignment on WDT_StatusIndicator_C_UpdateBarrierGaugeTranslation");
-static_assert(sizeof(WDT_StatusIndicator_C_UpdateBarrierGaugeTranslation) == 0x000080, "Wrong size on WDT_StatusIndicator_C_UpdateBarrierGaugeTranslation");
+static_assert(sizeof(WDT_StatusIndicator_C_UpdateBarrierGaugeTranslation) == 0x000038, "Wrong size on WDT_StatusIndicator_C_UpdateBarrierGaugeTranslation");
 static_assert(offsetof(WDT_StatusIndicator_C_UpdateBarrierGaugeTranslation, CallFunc_GetMaxPercent_OutLength) == 0x000000, "Member 'WDT_StatusIndicator_C_UpdateBarrierGaugeTranslation::CallFunc_GetMaxPercent_OutLength' has a wrong offset!");
-static_assert(offsetof(WDT_StatusIndicator_C_UpdateBarrierGaugeTranslation, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x000008, "Member 'WDT_StatusIndicator_C_UpdateBarrierGaugeTranslation::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_StatusIndicator_C_UpdateBarrierGaugeTranslation, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000010, "Member 'WDT_StatusIndicator_C_UpdateBarrierGaugeTranslation::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_StatusIndicator_C_UpdateBarrierGaugeTranslation, CallFunc_GetUIObjectByClass_ReturnValue) == 0x000018, "Member 'WDT_StatusIndicator_C_UpdateBarrierGaugeTranslation::CallFunc_GetUIObjectByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_StatusIndicator_C_UpdateBarrierGaugeTranslation, CallFunc_GetMaxPercent_OutLength_1) == 0x000020, "Member 'WDT_StatusIndicator_C_UpdateBarrierGaugeTranslation::CallFunc_GetMaxPercent_OutLength_1' has a wrong offset!");
-static_assert(offsetof(WDT_StatusIndicator_C_UpdateBarrierGaugeTranslation, K2Node_DynamicCast_AsBP_Status_Indicator_UIObject) == 0x000028, "Member 'WDT_StatusIndicator_C_UpdateBarrierGaugeTranslation::K2Node_DynamicCast_AsBP_Status_Indicator_UIObject' has a wrong offset!");
-static_assert(offsetof(WDT_StatusIndicator_C_UpdateBarrierGaugeTranslation, K2Node_DynamicCast_bSuccess) == 0x000030, "Member 'WDT_StatusIndicator_C_UpdateBarrierGaugeTranslation::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WDT_StatusIndicator_C_UpdateBarrierGaugeTranslation, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000038, "Member 'WDT_StatusIndicator_C_UpdateBarrierGaugeTranslation::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_StatusIndicator_C_UpdateBarrierGaugeTranslation, CallFunc_GetHealthGaugeType_ReturnValue) == 0x000040, "Member 'WDT_StatusIndicator_C_UpdateBarrierGaugeTranslation::CallFunc_GetHealthGaugeType_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_StatusIndicator_C_UpdateBarrierGaugeTranslation, CallFunc_Subtract_DoubleDouble_ReturnValue_1) == 0x000048, "Member 'WDT_StatusIndicator_C_UpdateBarrierGaugeTranslation::CallFunc_Subtract_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_StatusIndicator_C_UpdateBarrierGaugeTranslation, K2Node_SwitchEnum_CmpSuccess) == 0x000050, "Member 'WDT_StatusIndicator_C_UpdateBarrierGaugeTranslation::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(WDT_StatusIndicator_C_UpdateBarrierGaugeTranslation, CallFunc_MakeVector2D_ReturnValue) == 0x000058, "Member 'WDT_StatusIndicator_C_UpdateBarrierGaugeTranslation::CallFunc_MakeVector2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_StatusIndicator_C_UpdateBarrierGaugeTranslation, CallFunc_Subtract_Vector2DVector2D_ReturnValue) == 0x000068, "Member 'WDT_StatusIndicator_C_UpdateBarrierGaugeTranslation::CallFunc_Subtract_Vector2DVector2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_StatusIndicator_C_UpdateBarrierGaugeTranslation, CallFunc_SetPercent_InPercent_ImplicitCast) == 0x000078, "Member 'WDT_StatusIndicator_C_UpdateBarrierGaugeTranslation::CallFunc_SetPercent_InPercent_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_StatusIndicator_C_UpdateBarrierGaugeTranslation, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000008, "Member 'WDT_StatusIndicator_C_UpdateBarrierGaugeTranslation::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusIndicator_C_UpdateBarrierGaugeTranslation, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x000010, "Member 'WDT_StatusIndicator_C_UpdateBarrierGaugeTranslation::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusIndicator_C_UpdateBarrierGaugeTranslation, CallFunc_MakeVector2D_ReturnValue) == 0x000018, "Member 'WDT_StatusIndicator_C_UpdateBarrierGaugeTranslation::CallFunc_MakeVector2D_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusIndicator_C_UpdateBarrierGaugeTranslation, CallFunc_Subtract_Vector2DVector2D_ReturnValue) == 0x000028, "Member 'WDT_StatusIndicator_C_UpdateBarrierGaugeTranslation::CallFunc_Subtract_Vector2DVector2D_ReturnValue' has a wrong offset!");
 
 }
 

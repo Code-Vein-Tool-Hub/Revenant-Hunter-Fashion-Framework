@@ -11,6 +11,7 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "StoryFlagSystem_structs.hpp"
 #include "Extensions_classes.hpp"
 
 
@@ -18,7 +19,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WDT_JailEquipmentMenu.WDT_JailEquipmentMenu_C
-// 0x0078 (0x0630 - 0x05B8)
+// 0x0088 (0x0640 - 0x05B8)
 class UWDT_JailEquipmentMenu_C final : public UAppMenuBase
 {
 public:
@@ -37,6 +38,8 @@ public:
 	class UWDT_SpecialBuffList_C*                 WDT_SpecialBuffList;                               // 0x0618(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UFieldMenuUIObject*                     FieldMenuUIObject;                                 // 0x0620(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsInputHorizonFirstStarted;                        // 0x0628(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_629[0x7];                                      // 0x0629(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FStoryFlagEvaluationFormula            HasPathosJailFormula;                              // 0x0630(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
 	void BndEvt__WDT_JailEquipmentMenu_JailGridBox_K2Node_ComponentBoundEvent_0_OnListEntryInitializedDynamic__DelegateSignature(class UObject* Item, class UUserWidget* Widget);
@@ -105,7 +108,7 @@ public:
 	}
 };
 static_assert(alignof(UWDT_JailEquipmentMenu_C) == 0x000008, "Wrong alignment on UWDT_JailEquipmentMenu_C");
-static_assert(sizeof(UWDT_JailEquipmentMenu_C) == 0x000630, "Wrong size on UWDT_JailEquipmentMenu_C");
+static_assert(sizeof(UWDT_JailEquipmentMenu_C) == 0x000640, "Wrong size on UWDT_JailEquipmentMenu_C");
 static_assert(offsetof(UWDT_JailEquipmentMenu_C, UberGraphFrame) == 0x0005B8, "Member 'UWDT_JailEquipmentMenu_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UWDT_JailEquipmentMenu_C, CloseAnim) == 0x0005C0, "Member 'UWDT_JailEquipmentMenu_C::CloseAnim' has a wrong offset!");
 static_assert(offsetof(UWDT_JailEquipmentMenu_C, OpenAnim) == 0x0005C8, "Member 'UWDT_JailEquipmentMenu_C::OpenAnim' has a wrong offset!");
@@ -121,6 +124,7 @@ static_assert(offsetof(UWDT_JailEquipmentMenu_C, WDT_GridBoxEmptyText) == 0x0006
 static_assert(offsetof(UWDT_JailEquipmentMenu_C, WDT_SpecialBuffList) == 0x000618, "Member 'UWDT_JailEquipmentMenu_C::WDT_SpecialBuffList' has a wrong offset!");
 static_assert(offsetof(UWDT_JailEquipmentMenu_C, FieldMenuUIObject) == 0x000620, "Member 'UWDT_JailEquipmentMenu_C::FieldMenuUIObject' has a wrong offset!");
 static_assert(offsetof(UWDT_JailEquipmentMenu_C, IsInputHorizonFirstStarted) == 0x000628, "Member 'UWDT_JailEquipmentMenu_C::IsInputHorizonFirstStarted' has a wrong offset!");
+static_assert(offsetof(UWDT_JailEquipmentMenu_C, HasPathosJailFormula) == 0x000630, "Member 'UWDT_JailEquipmentMenu_C::HasPathosJailFormula' has a wrong offset!");
 
 }
 

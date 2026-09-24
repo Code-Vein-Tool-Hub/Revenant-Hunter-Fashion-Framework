@@ -36,10 +36,10 @@ public:
 	class UVerticalBox*                           WeaponGadgetGroup;                                 // 0x0520(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void RefreshKeyImage();
-	void SetBuddyInfo(const struct FUIBuddyInfo& InBuddyInfo);
-	void SetHelpText(const class FText& InHelpTItleText, const class FText& InHelpText);
 	void SetWeaponGadgetInfo(const struct FUIWeaponGadgetInfo& InGadgetInfo);
+	void SetHelpText(const class FText& InHelpTItleText, const class FText& InHelpText);
+	void SetBuddyInfo(const struct FUIBuddyInfo& InBuddyInfo);
+	void RefreshKeyImage();
 
 public:
 	static class UClass* StaticClass()

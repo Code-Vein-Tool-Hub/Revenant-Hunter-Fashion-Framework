@@ -17,6 +17,26 @@
 namespace SDK
 {
 
+// Function WDT_Article_Characteristic.WDT_Article_Characteristic_C.SetValue
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FText                             InValue                                                (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UWDT_Article_Characteristic_C::SetValue(const class FText& InValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_Article_Characteristic_C", "SetValue");
+
+	Params::WDT_Article_Characteristic_C_SetValue Parms{};
+
+	Parms.InValue = std::move(InValue);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WDT_Article_Characteristic.WDT_Article_Characteristic_C.GetTextWithEmptyNone
 // (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -37,26 +57,6 @@ class FText UWDT_Article_Characteristic_C::GetTextWithEmptyNone(const class FTex
 	UObject::ProcessEvent(Func, &Parms);
 
 	return Parms.ReturnValue;
-}
-
-
-// Function WDT_Article_Characteristic.WDT_Article_Characteristic_C.SetValue
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FText                             InValue                                                (BlueprintVisible, BlueprintReadOnly, Parm)
-
-void UWDT_Article_Characteristic_C::SetValue(const class FText& InValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Article_Characteristic_C", "SetValue");
-
-	Params::WDT_Article_Characteristic_C_SetValue Parms{};
-
-	Parms.InValue = std::move(InValue);
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "Extensions_structs.hpp"
 #include "GameplayTags_structs.hpp"
 #include "BasicUI_classes.hpp"
-#include "Extensions_structs.hpp"
 
 
 namespace SDK
@@ -50,6 +50,7 @@ public:
 	void GetBuddyIcon(class UWDT_BuddyIcon_C** OutIcon);
 	void GetBuddyIconBox(class UVerticalBox** OutIconBox);
 	void IsShowExplorationDialog(bool* InIsShow);
+	void NotifyLossTimeGaugeUpdated(TArray<double>& InGaugeRate);
 	void OnBattleStateChanged(bool InBattleState);
 	void OnForcedShowByStatementEnd();
 	void OnInputDeviceChanged();
@@ -62,6 +63,7 @@ public:
 	void SetBuddyType(const struct FGameplayTag& InBuddyType);
 	void SetLouIconVisible(bool InVisible);
 	void SetNoMountAction(bool InIsNoMountAction);
+	void SetSubBuddyIcon(class UMaterialInstance* InBuddyMaterial);
 	void ShowBuddyIcon(bool IsShow);
 	void UpdateMountIconVisibility();
 

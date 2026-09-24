@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Extensions_structs.hpp"
-#include "BasicUI_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "BasicUI_structs.hpp"
 #include "UMG_structs.hpp"
 
 

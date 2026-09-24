@@ -17,41 +17,25 @@
 namespace SDK
 {
 
-// Function WDT_Status_NumberAndDiff.WDT_Status_NumberAndDiff_C.ExecuteUbergraph_WDT_Status_NumberAndDiff
-// (Final, UbergraphFunction, HasDefaults)
+// Function WDT_Status_NumberAndDiff.WDT_Status_NumberAndDiff_C.SetNumberDiff
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InCurrentNumber                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InNumber                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    SwapComparison                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_Status_NumberAndDiff_C::ExecuteUbergraph_WDT_Status_NumberAndDiff(int32 EntryPoint)
+void UWDT_Status_NumberAndDiff_C::SetNumberDiff(int32 InCurrentNumber, int32 InNumber, bool SwapComparison)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Status_NumberAndDiff_C", "ExecuteUbergraph_WDT_Status_NumberAndDiff");
+		Func = Class->GetFunction("WDT_Status_NumberAndDiff_C", "SetNumberDiff");
 
-	Params::WDT_Status_NumberAndDiff_C_ExecuteUbergraph_WDT_Status_NumberAndDiff Parms{};
+	Params::WDT_Status_NumberAndDiff_C_SetNumberDiff Parms{};
 
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_Status_NumberAndDiff.WDT_Status_NumberAndDiff_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_Status_NumberAndDiff_C::PreConstruct(bool IsDesignTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Status_NumberAndDiff_C", "PreConstruct");
-
-	Params::WDT_Status_NumberAndDiff_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
+	Parms.InCurrentNumber = InCurrentNumber;
+	Parms.InNumber = InNumber;
+	Parms.SwapComparison = SwapComparison;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -77,25 +61,41 @@ void UWDT_Status_NumberAndDiff_C::SetNumber(int32 InNumber)
 }
 
 
-// Function WDT_Status_NumberAndDiff.WDT_Status_NumberAndDiff_C.SetNumberDiff
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function WDT_Status_NumberAndDiff.WDT_Status_NumberAndDiff_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// int32                                   InCurrentNumber                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   InNumber                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    SwapComparison                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_Status_NumberAndDiff_C::SetNumberDiff(int32 InCurrentNumber, int32 InNumber, bool SwapComparison)
+void UWDT_Status_NumberAndDiff_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_Status_NumberAndDiff_C", "SetNumberDiff");
+		Func = Class->GetFunction("WDT_Status_NumberAndDiff_C", "PreConstruct");
 
-	Params::WDT_Status_NumberAndDiff_C_SetNumberDiff Parms{};
+	Params::WDT_Status_NumberAndDiff_C_PreConstruct Parms{};
 
-	Parms.InCurrentNumber = InCurrentNumber;
-	Parms.InNumber = InNumber;
-	Parms.SwapComparison = SwapComparison;
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_Status_NumberAndDiff.WDT_Status_NumberAndDiff_C.ExecuteUbergraph_WDT_Status_NumberAndDiff
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_Status_NumberAndDiff_C::ExecuteUbergraph_WDT_Status_NumberAndDiff(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_Status_NumberAndDiff_C", "ExecuteUbergraph_WDT_Status_NumberAndDiff");
+
+	Params::WDT_Status_NumberAndDiff_C_ExecuteUbergraph_WDT_Status_NumberAndDiff Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

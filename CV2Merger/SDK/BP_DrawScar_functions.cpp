@@ -485,6 +485,20 @@ void UBP_DrawScar_C::OnDying()
 }
 
 
+// Function BP_DrawScar.BP_DrawScar_C.OnResetBleedingAmount
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_DrawScar_C::OnResetBleedingAmount()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_DrawScar_C", "OnResetBleedingAmount");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_DrawScar.BP_DrawScar_C.OnUpdateBleedingAmountReduction
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:

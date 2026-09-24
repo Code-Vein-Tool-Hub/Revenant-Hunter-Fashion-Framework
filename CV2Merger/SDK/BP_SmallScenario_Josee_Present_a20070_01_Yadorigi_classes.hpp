@@ -18,11 +18,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_SmallScenario_Josee_Present_a20070_01_Yadorigi.BP_SmallScenario_Josee_Present_a20070_01_Yadorigi_C
-// 0x0008 (0x0408 - 0x0400)
+// 0x0008 (0x0418 - 0x0410)
 class ABP_SmallScenario_Josee_Present_a20070_01_Yadorigi_C final : public ABP_SmallScenarioGainBloodCodeBase_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_SmallScenario_Josee_Present_a20070_01_Yadorigi_C; // 0x0400(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_SmallScenario_Josee_Present_a20070_01_Yadorigi_C; // 0x0410(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void Abort();
@@ -43,8 +43,8 @@ public:
 	}
 };
 static_assert(alignof(ABP_SmallScenario_Josee_Present_a20070_01_Yadorigi_C) == 0x000008, "Wrong alignment on ABP_SmallScenario_Josee_Present_a20070_01_Yadorigi_C");
-static_assert(sizeof(ABP_SmallScenario_Josee_Present_a20070_01_Yadorigi_C) == 0x000408, "Wrong size on ABP_SmallScenario_Josee_Present_a20070_01_Yadorigi_C");
-static_assert(offsetof(ABP_SmallScenario_Josee_Present_a20070_01_Yadorigi_C, UberGraphFrame_BP_SmallScenario_Josee_Present_a20070_01_Yadorigi_C) == 0x000400, "Member 'ABP_SmallScenario_Josee_Present_a20070_01_Yadorigi_C::UberGraphFrame_BP_SmallScenario_Josee_Present_a20070_01_Yadorigi_C' has a wrong offset!");
+static_assert(sizeof(ABP_SmallScenario_Josee_Present_a20070_01_Yadorigi_C) == 0x000418, "Wrong size on ABP_SmallScenario_Josee_Present_a20070_01_Yadorigi_C");
+static_assert(offsetof(ABP_SmallScenario_Josee_Present_a20070_01_Yadorigi_C, UberGraphFrame_BP_SmallScenario_Josee_Present_a20070_01_Yadorigi_C) == 0x000410, "Member 'ABP_SmallScenario_Josee_Present_a20070_01_Yadorigi_C::UberGraphFrame_BP_SmallScenario_Josee_Present_a20070_01_Yadorigi_C' has a wrong offset!");
 
 }
 

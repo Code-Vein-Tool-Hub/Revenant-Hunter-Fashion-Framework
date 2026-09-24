@@ -251,11 +251,11 @@ void UBP_DrawScarElement_C::Post_Process()
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // double                                  CaptureSize                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  ScarLifetime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  OldScarLifetime                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  ScarLifeTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  OldScarLifeTime                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // struct FVector                          CaptureLocation                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_DrawScarElement_C::Pre_Process(double CaptureSize, double ScarLifetime, double OldScarLifetime, const struct FVector& CaptureLocation)
+void UBP_DrawScarElement_C::Pre_Process(double CaptureSize, double ScarLifeTime, double OldScarLifeTime, const struct FVector& CaptureLocation)
 {
 	static class UFunction* Func = nullptr;
 
@@ -265,8 +265,8 @@ void UBP_DrawScarElement_C::Pre_Process(double CaptureSize, double ScarLifetime,
 	Params::BP_DrawScarElement_C_Pre_Process Parms{};
 
 	Parms.CaptureSize = CaptureSize;
-	Parms.ScarLifetime = ScarLifetime;
-	Parms.OldScarLifetime = OldScarLifetime;
+	Parms.ScarLifeTime = ScarLifeTime;
+	Parms.OldScarLifeTime = OldScarLifeTime;
 	Parms.CaptureLocation = std::move(CaptureLocation);
 
 	UObject::ProcessEvent(Func, &Parms);

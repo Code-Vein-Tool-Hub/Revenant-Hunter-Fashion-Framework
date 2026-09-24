@@ -119,8 +119,30 @@ void UWDT_ConfigTextInputPiece_C::RefreshKeyImage()
 }
 
 
+// Function WDT_ConfigTextInputPiece.WDT_ConfigTextInputPiece_C.OnTextCommitted__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FText                             InText                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
+// ETextCommit                             InCommitMethot                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_ConfigTextInputPiece_C::OnTextCommitted__DelegateSignature(const class FText& InText, ETextCommit InCommitMethot)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_ConfigTextInputPiece_C", "OnTextCommitted__DelegateSignature");
+
+	Params::WDT_ConfigTextInputPiece_C_OnTextCommitted__DelegateSignature Parms{};
+
+	Parms.InText = std::move(InText);
+	Parms.InCommitMethot = InCommitMethot;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WDT_ConfigTextInputPiece.WDT_ConfigTextInputPiece_C.InputModeCancel
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWDT_ConfigTextInputPiece_C::InputModeCancel()
 {

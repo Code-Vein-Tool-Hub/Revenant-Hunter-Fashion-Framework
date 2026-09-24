@@ -17,57 +17,23 @@
 namespace SDK
 {
 
-// Function WDT_StatusSummary_Health.WDT_StatusSummary_Health_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWDT_StatusSummary_Health_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_StatusSummary_Health_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WDT_StatusSummary_Health.WDT_StatusSummary_Health_C.ExecuteUbergraph_WDT_StatusSummary_Health
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_StatusSummary_Health_C::ExecuteUbergraph_WDT_StatusSummary_Health(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_StatusSummary_Health_C", "ExecuteUbergraph_WDT_StatusSummary_Health");
-
-	Params::WDT_StatusSummary_Health_C_ExecuteUbergraph_WDT_StatusSummary_Health Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WDT_StatusSummary_Health.WDT_StatusSummary_Health_C.SetHealth
+// Function WDT_StatusSummary_Health.WDT_StatusSummary_Health_C.SetLP
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// double                                  InHealth                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  InMaxHealth                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InLP                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InMaxLP                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_StatusSummary_Health_C::SetHealth(double InHealth, double InMaxHealth)
+void UWDT_StatusSummary_Health_C::SetLP(int32 InLP, int32 InMaxLP)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_StatusSummary_Health_C", "SetHealth");
+		Func = Class->GetFunction("WDT_StatusSummary_Health_C", "SetLP");
 
-	Params::WDT_StatusSummary_Health_C_SetHealth Parms{};
+	Params::WDT_StatusSummary_Health_C_SetLP Parms{};
 
-	Parms.InHealth = InHealth;
-	Parms.InMaxHealth = InMaxHealth;
+	Parms.InLP = InLP;
+	Parms.InMaxLP = InMaxLP;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -99,25 +65,59 @@ void UWDT_StatusSummary_Health_C::SetHealthComparison(int32 InMaxHealthCurrent, 
 }
 
 
-// Function WDT_StatusSummary_Health.WDT_StatusSummary_Health_C.SetLP
+// Function WDT_StatusSummary_Health.WDT_StatusSummary_Health_C.SetHealth
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   InLP                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   InMaxLP                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  InHealth                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  InMaxHealth                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_StatusSummary_Health_C::SetLP(int32 InLP, int32 InMaxLP)
+void UWDT_StatusSummary_Health_C::SetHealth(double InHealth, double InMaxHealth)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_StatusSummary_Health_C", "SetLP");
+		Func = Class->GetFunction("WDT_StatusSummary_Health_C", "SetHealth");
 
-	Params::WDT_StatusSummary_Health_C_SetLP Parms{};
+	Params::WDT_StatusSummary_Health_C_SetHealth Parms{};
 
-	Parms.InLP = InLP;
-	Parms.InMaxLP = InMaxLP;
+	Parms.InHealth = InHealth;
+	Parms.InMaxHealth = InMaxHealth;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_StatusSummary_Health.WDT_StatusSummary_Health_C.ExecuteUbergraph_WDT_StatusSummary_Health
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_StatusSummary_Health_C::ExecuteUbergraph_WDT_StatusSummary_Health(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_StatusSummary_Health_C", "ExecuteUbergraph_WDT_StatusSummary_Health");
+
+	Params::WDT_StatusSummary_Health_C_ExecuteUbergraph_WDT_StatusSummary_Health Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_StatusSummary_Health.WDT_StatusSummary_Health_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWDT_StatusSummary_Health_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_StatusSummary_Health_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

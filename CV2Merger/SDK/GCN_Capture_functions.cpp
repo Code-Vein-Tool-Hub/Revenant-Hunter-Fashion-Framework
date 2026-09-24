@@ -37,6 +37,27 @@ void AGCN_Capture_C::ActiveEffect(class AActor* TargetActor)
 }
 
 
+// Function GCN_Capture.GCN_Capture_C.CheckEffectLoop
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AGCN_Capture_C::CheckEffectLoop(bool* Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GCN_Capture_C", "CheckEffectLoop");
+
+	Params::GCN_Capture_C_CheckEffectLoop Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Result != nullptr)
+		*Result = Parms.Result;
+}
+
+
 // Function GCN_Capture.GCN_Capture_C.CreateEffectBegin
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -162,11 +183,12 @@ void AGCN_Capture_C::ExecuteUbergraph_GCN_Capture(int32 EntryPoint)
 
 
 // Function GCN_Capture.GCN_Capture_C.InitializeEffect
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                           TargetActor                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AGCN_Capture_C::InitializeEffect(class AActor* TargetActor)
+void AGCN_Capture_C::InitializeEffect(class AActor* TargetActor, bool* Result)
 {
 	static class UFunction* Func = nullptr;
 
@@ -178,6 +200,9 @@ void AGCN_Capture_C::InitializeEffect(class AActor* TargetActor)
 	Parms.TargetActor = TargetActor;
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (Result != nullptr)
+		*Result = Parms.Result;
 }
 
 

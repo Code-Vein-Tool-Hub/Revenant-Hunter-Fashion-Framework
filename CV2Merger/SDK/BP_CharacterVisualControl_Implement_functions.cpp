@@ -272,6 +272,38 @@ void UBP_CharacterVisualControl_Implement_C::BodyTrailEffect_SetMaterialParamete
 }
 
 
+// Function BP_CharacterVisualControl_Implement.BP_CharacterVisualControl_Implement_C.BodyTrailEffect_SetParameter
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   MaxCount                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   FrameStep                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Lifetime                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bUseColor                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FLinearColor                     EmissiveColorBegin                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FLinearColor                     EmissiveColorEnd                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  EmissiveScale                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_CharacterVisualControl_Implement_C::BodyTrailEffect_SetParameter(int32 MaxCount, int32 FrameStep, double Lifetime, bool bUseColor, const struct FLinearColor& EmissiveColorBegin, const struct FLinearColor& EmissiveColorEnd, double EmissiveScale)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CharacterVisualControl_Implement_C", "BodyTrailEffect_SetParameter");
+
+	Params::BP_CharacterVisualControl_Implement_C_BodyTrailEffect_SetParameter Parms{};
+
+	Parms.MaxCount = MaxCount;
+	Parms.FrameStep = FrameStep;
+	Parms.Lifetime = Lifetime;
+	Parms.bUseColor = bUseColor;
+	Parms.EmissiveColorBegin = std::move(EmissiveColorBegin);
+	Parms.EmissiveColorEnd = std::move(EmissiveColorEnd);
+	Parms.EmissiveScale = EmissiveScale;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_CharacterVisualControl_Implement.BP_CharacterVisualControl_Implement_C.CheckOtherMesh
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -1362,14 +1394,15 @@ void UBP_CharacterVisualControl_Implement_C::SetVanishBodyMode(class UBP_VanishB
 
 
 // Function BP_CharacterVisualControl_Implement.BP_CharacterVisualControl_Implement_C.SetVisibilityMesh
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                                    bVisibility                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    bCharacter                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    bWeapon                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    bOther                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TMap<class UMeshComponent*, bool>       VisibilityMap                                          (Parm, OutParm, ContainsInstancedReference)
 
-void UBP_CharacterVisualControl_Implement_C::SetVisibilityMesh(bool bVisibility, bool bCharacter, bool bWeapon, bool bOther)
+void UBP_CharacterVisualControl_Implement_C::SetVisibilityMesh(bool bVisibility, bool bCharacter, bool bWeapon, bool bOther, TMap<class UMeshComponent*, bool>* VisibilityMap)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1384,6 +1417,9 @@ void UBP_CharacterVisualControl_Implement_C::SetVisibilityMesh(bool bVisibility,
 	Parms.bOther = bOther;
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (VisibilityMap != nullptr)
+		*VisibilityMap = std::move(Parms.VisibilityMap);
 }
 
 

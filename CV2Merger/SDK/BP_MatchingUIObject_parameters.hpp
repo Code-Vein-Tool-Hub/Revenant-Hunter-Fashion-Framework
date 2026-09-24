@@ -16,6 +16,32 @@
 namespace SDK::Params
 {
 
+// Function BP_MatchingUIObject.BP_MatchingUIObject_C.Close
+// 0x0030 (0x0030 - 0x0000)
+struct BP_MatchingUIObject_C_Close final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UUIObjectBase*                          CallFunc_GetUIObjectByClass_ReturnValue;           // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue_1;   // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UBP_ConfigurationUIObject_C*            K2Node_DynamicCast_AsBP_Configuration_UIObject;    // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Close_ReturnValue;                        // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_CloseMenu_ReturnValue;                    // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_MatchingUIObject_C_Close) == 0x000008, "Wrong alignment on BP_MatchingUIObject_C_Close");
+static_assert(sizeof(BP_MatchingUIObject_C_Close) == 0x000030, "Wrong size on BP_MatchingUIObject_C_Close");
+static_assert(offsetof(BP_MatchingUIObject_C_Close, ReturnValue) == 0x000000, "Member 'BP_MatchingUIObject_C_Close::ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MatchingUIObject_C_Close, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000008, "Member 'BP_MatchingUIObject_C_Close::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MatchingUIObject_C_Close, CallFunc_GetUIObjectByClass_ReturnValue) == 0x000010, "Member 'BP_MatchingUIObject_C_Close::CallFunc_GetUIObjectByClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MatchingUIObject_C_Close, CallFunc_GetGameInstanceSubsystem_ReturnValue_1) == 0x000018, "Member 'BP_MatchingUIObject_C_Close::CallFunc_GetGameInstanceSubsystem_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MatchingUIObject_C_Close, K2Node_DynamicCast_AsBP_Configuration_UIObject) == 0x000020, "Member 'BP_MatchingUIObject_C_Close::K2Node_DynamicCast_AsBP_Configuration_UIObject' has a wrong offset!");
+static_assert(offsetof(BP_MatchingUIObject_C_Close, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'BP_MatchingUIObject_C_Close::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BP_MatchingUIObject_C_Close, CallFunc_Close_ReturnValue) == 0x000029, "Member 'BP_MatchingUIObject_C_Close::CallFunc_Close_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MatchingUIObject_C_Close, CallFunc_CloseMenu_ReturnValue) == 0x00002A, "Member 'BP_MatchingUIObject_C_Close::CallFunc_CloseMenu_ReturnValue' has a wrong offset!");
+
 // Function BP_MatchingUIObject.BP_MatchingUIObject_C.ExecuteUbergraph_BP_MatchingUIObject
 // 0x0038 (0x0038 - 0x0000)
 struct BP_MatchingUIObject_C_ExecuteUbergraph_BP_MatchingUIObject final
@@ -77,11 +103,10 @@ struct BP_MatchingUIObject_C_OpenHelperMenu final
 {
 public:
 	class UAppMenuBase*                           Caller;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x000C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0010(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMenuContext                           K2Node_Copy_ReturnValue;                           // 0x0028(0x0038)(NoDestructor)
 	struct FMenuContext                           K2Node_SetFieldsInStruct_StructOut;                // 0x0060(0x0038)(NoDestructor)
 	class UMenuBase*                              CallFunc_OpenMenu_ReturnValue;                     // 0x0098(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
@@ -89,9 +114,9 @@ public:
 static_assert(alignof(BP_MatchingUIObject_C_OpenHelperMenu) == 0x000008, "Wrong alignment on BP_MatchingUIObject_C_OpenHelperMenu");
 static_assert(sizeof(BP_MatchingUIObject_C_OpenHelperMenu) == 0x0000A0, "Wrong size on BP_MatchingUIObject_C_OpenHelperMenu");
 static_assert(offsetof(BP_MatchingUIObject_C_OpenHelperMenu, Caller) == 0x000000, "Member 'BP_MatchingUIObject_C_OpenHelperMenu::Caller' has a wrong offset!");
-static_assert(offsetof(BP_MatchingUIObject_C_OpenHelperMenu, CallFunc_IsValid_ReturnValue) == 0x000008, "Member 'BP_MatchingUIObject_C_OpenHelperMenu::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MatchingUIObject_C_OpenHelperMenu, K2Node_CreateDelegate_OutputDelegate) == 0x00000C, "Member 'BP_MatchingUIObject_C_OpenHelperMenu::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_MatchingUIObject_C_OpenHelperMenu, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000020, "Member 'BP_MatchingUIObject_C_OpenHelperMenu::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MatchingUIObject_C_OpenHelperMenu, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000008, "Member 'BP_MatchingUIObject_C_OpenHelperMenu::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MatchingUIObject_C_OpenHelperMenu, K2Node_CreateDelegate_OutputDelegate) == 0x000010, "Member 'BP_MatchingUIObject_C_OpenHelperMenu::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(BP_MatchingUIObject_C_OpenHelperMenu, CallFunc_IsValid_ReturnValue) == 0x000020, "Member 'BP_MatchingUIObject_C_OpenHelperMenu::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_MatchingUIObject_C_OpenHelperMenu, K2Node_Copy_ReturnValue) == 0x000028, "Member 'BP_MatchingUIObject_C_OpenHelperMenu::K2Node_Copy_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_MatchingUIObject_C_OpenHelperMenu, K2Node_SetFieldsInStruct_StructOut) == 0x000060, "Member 'BP_MatchingUIObject_C_OpenHelperMenu::K2Node_SetFieldsInStruct_StructOut' has a wrong offset!");
 static_assert(offsetof(BP_MatchingUIObject_C_OpenHelperMenu, CallFunc_OpenMenu_ReturnValue) == 0x000098, "Member 'BP_MatchingUIObject_C_OpenHelperMenu::CallFunc_OpenMenu_ReturnValue' has a wrong offset!");

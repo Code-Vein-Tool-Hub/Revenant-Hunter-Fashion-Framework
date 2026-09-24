@@ -443,9 +443,9 @@ public:
 static_assert(alignof(FClosestPhysicsObjectResult) == 0x000008, "Wrong alignment on FClosestPhysicsObjectResult");
 static_assert(sizeof(FClosestPhysicsObjectResult) == 0x000028, "Wrong size on FClosestPhysicsObjectResult");
 
-// ScriptStruct Chaos.SolverTrailingFilterSettings
+// ScriptStruct Chaos.SolverBreakingFilterSettings
 // 0x0010 (0x0010 - 0x0000)
-struct FSolverTrailingFilterSettings final
+struct FSolverBreakingFilterSettings final
 {
 public:
 	bool                                          FilterEnabled;                                     // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -454,12 +454,12 @@ public:
 	float                                         MinSpeed;                                          // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MinVolume;                                         // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FSolverTrailingFilterSettings) == 0x000004, "Wrong alignment on FSolverTrailingFilterSettings");
-static_assert(sizeof(FSolverTrailingFilterSettings) == 0x000010, "Wrong size on FSolverTrailingFilterSettings");
-static_assert(offsetof(FSolverTrailingFilterSettings, FilterEnabled) == 0x000000, "Member 'FSolverTrailingFilterSettings::FilterEnabled' has a wrong offset!");
-static_assert(offsetof(FSolverTrailingFilterSettings, MinMass) == 0x000004, "Member 'FSolverTrailingFilterSettings::MinMass' has a wrong offset!");
-static_assert(offsetof(FSolverTrailingFilterSettings, MinSpeed) == 0x000008, "Member 'FSolverTrailingFilterSettings::MinSpeed' has a wrong offset!");
-static_assert(offsetof(FSolverTrailingFilterSettings, MinVolume) == 0x00000C, "Member 'FSolverTrailingFilterSettings::MinVolume' has a wrong offset!");
+static_assert(alignof(FSolverBreakingFilterSettings) == 0x000004, "Wrong alignment on FSolverBreakingFilterSettings");
+static_assert(sizeof(FSolverBreakingFilterSettings) == 0x000010, "Wrong size on FSolverBreakingFilterSettings");
+static_assert(offsetof(FSolverBreakingFilterSettings, FilterEnabled) == 0x000000, "Member 'FSolverBreakingFilterSettings::FilterEnabled' has a wrong offset!");
+static_assert(offsetof(FSolverBreakingFilterSettings, MinMass) == 0x000004, "Member 'FSolverBreakingFilterSettings::MinMass' has a wrong offset!");
+static_assert(offsetof(FSolverBreakingFilterSettings, MinSpeed) == 0x000008, "Member 'FSolverBreakingFilterSettings::MinSpeed' has a wrong offset!");
+static_assert(offsetof(FSolverBreakingFilterSettings, MinVolume) == 0x00000C, "Member 'FSolverBreakingFilterSettings::MinVolume' has a wrong offset!");
 
 // ScriptStruct Chaos.SolverCollisionFilterSettings
 // 0x0010 (0x0010 - 0x0000)
@@ -479,9 +479,9 @@ static_assert(offsetof(FSolverCollisionFilterSettings, MinMass) == 0x000004, "Me
 static_assert(offsetof(FSolverCollisionFilterSettings, MinSpeed) == 0x000008, "Member 'FSolverCollisionFilterSettings::MinSpeed' has a wrong offset!");
 static_assert(offsetof(FSolverCollisionFilterSettings, MinImpulse) == 0x00000C, "Member 'FSolverCollisionFilterSettings::MinImpulse' has a wrong offset!");
 
-// ScriptStruct Chaos.SolverBreakingFilterSettings
+// ScriptStruct Chaos.SolverTrailingFilterSettings
 // 0x0010 (0x0010 - 0x0000)
-struct FSolverBreakingFilterSettings final
+struct FSolverTrailingFilterSettings final
 {
 public:
 	bool                                          FilterEnabled;                                     // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -490,12 +490,12 @@ public:
 	float                                         MinSpeed;                                          // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MinVolume;                                         // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FSolverBreakingFilterSettings) == 0x000004, "Wrong alignment on FSolverBreakingFilterSettings");
-static_assert(sizeof(FSolverBreakingFilterSettings) == 0x000010, "Wrong size on FSolverBreakingFilterSettings");
-static_assert(offsetof(FSolverBreakingFilterSettings, FilterEnabled) == 0x000000, "Member 'FSolverBreakingFilterSettings::FilterEnabled' has a wrong offset!");
-static_assert(offsetof(FSolverBreakingFilterSettings, MinMass) == 0x000004, "Member 'FSolverBreakingFilterSettings::MinMass' has a wrong offset!");
-static_assert(offsetof(FSolverBreakingFilterSettings, MinSpeed) == 0x000008, "Member 'FSolverBreakingFilterSettings::MinSpeed' has a wrong offset!");
-static_assert(offsetof(FSolverBreakingFilterSettings, MinVolume) == 0x00000C, "Member 'FSolverBreakingFilterSettings::MinVolume' has a wrong offset!");
+static_assert(alignof(FSolverTrailingFilterSettings) == 0x000004, "Wrong alignment on FSolverTrailingFilterSettings");
+static_assert(sizeof(FSolverTrailingFilterSettings) == 0x000010, "Wrong size on FSolverTrailingFilterSettings");
+static_assert(offsetof(FSolverTrailingFilterSettings, FilterEnabled) == 0x000000, "Member 'FSolverTrailingFilterSettings::FilterEnabled' has a wrong offset!");
+static_assert(offsetof(FSolverTrailingFilterSettings, MinMass) == 0x000004, "Member 'FSolverTrailingFilterSettings::MinMass' has a wrong offset!");
+static_assert(offsetof(FSolverTrailingFilterSettings, MinSpeed) == 0x000008, "Member 'FSolverTrailingFilterSettings::MinSpeed' has a wrong offset!");
+static_assert(offsetof(FSolverTrailingFilterSettings, MinVolume) == 0x00000C, "Member 'FSolverTrailingFilterSettings::MinVolume' has a wrong offset!");
 
 // ScriptStruct Chaos.ChaosSolverConfiguration
 // 0x006C (0x006C - 0x0000)

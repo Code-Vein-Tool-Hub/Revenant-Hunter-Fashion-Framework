@@ -32,7 +32,7 @@ void UBP_GameSystemManager_C::CustomEvent()
 
 
 // Function BP_GameSystemManager.BP_GameSystemManager_C.ExecuteUbergraph_BP_GameSystemManager
-// (Final, UbergraphFunction)
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

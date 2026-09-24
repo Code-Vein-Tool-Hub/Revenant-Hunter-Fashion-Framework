@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK
@@ -39,6 +39,32 @@ enum class EStoryFlagCompare : uint8
 	GreaterOrEqual                           = 5,
 	EStoryFlagCompare_MAX                    = 6,
 };
+
+// Enum StoryFlagSystem.FStoryFlagAccessDebugLogType
+// NumValues: 0x000A
+enum class EFStoryFlagAccessDebugLogType : uint32
+{
+	None                                     = 0,
+	SetBoolean                               = 1,
+	SetInteger                               = 2,
+	SetGamePlayTag                           = 3,
+	GetBoolean                               = 4,
+	GetInteger                               = 5,
+	GetGamePlayTag                           = 6,
+	IsEvaluationFormula                      = 7,
+	SetPreset                                = 8,
+	FStoryFlagAccessDebugLogType_MAX         = 9,
+};
+
+// ScriptStruct StoryFlagSystem.EFA_Token
+// 0x0020 (0x0020 - 0x0000)
+struct alignas(0x08) FEFA_Token final
+{
+public:
+	uint8                                         Pad_0[0x20];                                       // 0x0000(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FEFA_Token) == 0x000008, "Wrong alignment on FEFA_Token");
+static_assert(sizeof(FEFA_Token) == 0x000020, "Wrong size on FEFA_Token");
 
 // ScriptStruct StoryFlagSystem.SymbolEvaluationFormulaBase
 // 0x0010 (0x0010 - 0x0000)
@@ -94,6 +120,17 @@ static_assert(alignof(FStoryFlagPresetLabel) == 0x000004, "Wrong alignment on FS
 static_assert(sizeof(FStoryFlagPresetLabel) == 0x000008, "Wrong size on FStoryFlagPresetLabel");
 static_assert(offsetof(FStoryFlagPresetLabel, Label) == 0x000000, "Member 'FStoryFlagPresetLabel::Label' has a wrong offset!");
 
+// ScriptStruct StoryFlagSystem.StoryFlagAliasLabel
+// 0x0008 (0x0008 - 0x0000)
+struct FStoryFlagAliasLabel final
+{
+public:
+	class FName                                   Label;                                             // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FStoryFlagAliasLabel) == 0x000004, "Wrong alignment on FStoryFlagAliasLabel");
+static_assert(sizeof(FStoryFlagAliasLabel) == 0x000008, "Wrong size on FStoryFlagAliasLabel");
+static_assert(offsetof(FStoryFlagAliasLabel, Label) == 0x000000, "Member 'FStoryFlagAliasLabel::Label' has a wrong offset!");
+
 // ScriptStruct StoryFlagSystem.StoryFlagLabel
 // 0x0008 (0x0008 - 0x0000)
 struct FStoryFlagLabel final
@@ -123,27 +160,6 @@ static_assert(offsetof(FStoryFlagChangeParam, PrevValue) == 0x000008, "Member 'F
 static_assert(offsetof(FStoryFlagChangeParam, NewValue) == 0x00000C, "Member 'FStoryFlagChangeParam::NewValue' has a wrong offset!");
 static_assert(offsetof(FStoryFlagChangeParam, PrevTag) == 0x000010, "Member 'FStoryFlagChangeParam::PrevTag' has a wrong offset!");
 static_assert(offsetof(FStoryFlagChangeParam, NewTag) == 0x000018, "Member 'FStoryFlagChangeParam::NewTag' has a wrong offset!");
-
-// ScriptStruct StoryFlagSystem.StoryFlagAliasLabel
-// 0x0008 (0x0008 - 0x0000)
-struct FStoryFlagAliasLabel final
-{
-public:
-	class FName                                   Label;                                             // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FStoryFlagAliasLabel) == 0x000004, "Wrong alignment on FStoryFlagAliasLabel");
-static_assert(sizeof(FStoryFlagAliasLabel) == 0x000008, "Wrong size on FStoryFlagAliasLabel");
-static_assert(offsetof(FStoryFlagAliasLabel, Label) == 0x000000, "Member 'FStoryFlagAliasLabel::Label' has a wrong offset!");
-
-// ScriptStruct StoryFlagSystem.EFA_Token
-// 0x0020 (0x0020 - 0x0000)
-struct alignas(0x08) FEFA_Token final
-{
-public:
-	uint8                                         Pad_0[0x20];                                       // 0x0000(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FEFA_Token) == 0x000008, "Wrong alignment on FEFA_Token");
-static_assert(sizeof(FEFA_Token) == 0x000020, "Wrong size on FEFA_Token");
 
 // ScriptStruct StoryFlagSystem.StoryFlagDefinitionDataRow
 // 0x0058 (0x0060 - 0x0008)
@@ -235,6 +251,45 @@ static_assert(sizeof(FStoryFlagEvaluationFormulaAliasDataRow) == 0x000030, "Wron
 static_assert(offsetof(FStoryFlagEvaluationFormulaAliasDataRow, Description) == 0x000008, "Member 'FStoryFlagEvaluationFormulaAliasDataRow::Description' has a wrong offset!");
 static_assert(offsetof(FStoryFlagEvaluationFormulaAliasDataRow, Category) == 0x000018, "Member 'FStoryFlagEvaluationFormulaAliasDataRow::Category' has a wrong offset!");
 static_assert(offsetof(FStoryFlagEvaluationFormulaAliasDataRow, EvaluationFormula) == 0x000020, "Member 'FStoryFlagEvaluationFormulaAliasDataRow::EvaluationFormula' has a wrong offset!");
+
+// ScriptStruct StoryFlagSystem.StoryFlagAccessDebugLog
+// 0x0058 (0x0058 - 0x0000)
+struct FStoryFlagAccessDebugLog final
+{
+public:
+	EFStoryFlagAccessDebugLogType                 LogType;                                           // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Label;                                             // 0x0008(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Caller;                                            // 0x0018(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          SetBooleanPrevValue;                               // 0x0028(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          SetBooleanNewValue;                                // 0x0029(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2A[0x2];                                       // 0x002A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         SetIntegerPrevValue;                               // 0x002C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         SetIntegerNewValue;                                // 0x0030(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayTag                           SetGamePlayTagPrevValue;                           // 0x0034(0x0008)(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayTag                           SetGamePlayTagNewValue;                            // 0x003C(0x0008)(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          GetBooleanValue;                                   // 0x0044(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_45[0x3];                                       // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         GetIntegerValue;                                   // 0x0048(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayTag                           GetGamePlayTagValue;                               // 0x004C(0x0008)(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsEvaluationFormulaValue;                          // 0x0054(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_55[0x3];                                       // 0x0055(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FStoryFlagAccessDebugLog) == 0x000008, "Wrong alignment on FStoryFlagAccessDebugLog");
+static_assert(sizeof(FStoryFlagAccessDebugLog) == 0x000058, "Wrong size on FStoryFlagAccessDebugLog");
+static_assert(offsetof(FStoryFlagAccessDebugLog, LogType) == 0x000000, "Member 'FStoryFlagAccessDebugLog::LogType' has a wrong offset!");
+static_assert(offsetof(FStoryFlagAccessDebugLog, Label) == 0x000008, "Member 'FStoryFlagAccessDebugLog::Label' has a wrong offset!");
+static_assert(offsetof(FStoryFlagAccessDebugLog, Caller) == 0x000018, "Member 'FStoryFlagAccessDebugLog::Caller' has a wrong offset!");
+static_assert(offsetof(FStoryFlagAccessDebugLog, SetBooleanPrevValue) == 0x000028, "Member 'FStoryFlagAccessDebugLog::SetBooleanPrevValue' has a wrong offset!");
+static_assert(offsetof(FStoryFlagAccessDebugLog, SetBooleanNewValue) == 0x000029, "Member 'FStoryFlagAccessDebugLog::SetBooleanNewValue' has a wrong offset!");
+static_assert(offsetof(FStoryFlagAccessDebugLog, SetIntegerPrevValue) == 0x00002C, "Member 'FStoryFlagAccessDebugLog::SetIntegerPrevValue' has a wrong offset!");
+static_assert(offsetof(FStoryFlagAccessDebugLog, SetIntegerNewValue) == 0x000030, "Member 'FStoryFlagAccessDebugLog::SetIntegerNewValue' has a wrong offset!");
+static_assert(offsetof(FStoryFlagAccessDebugLog, SetGamePlayTagPrevValue) == 0x000034, "Member 'FStoryFlagAccessDebugLog::SetGamePlayTagPrevValue' has a wrong offset!");
+static_assert(offsetof(FStoryFlagAccessDebugLog, SetGamePlayTagNewValue) == 0x00003C, "Member 'FStoryFlagAccessDebugLog::SetGamePlayTagNewValue' has a wrong offset!");
+static_assert(offsetof(FStoryFlagAccessDebugLog, GetBooleanValue) == 0x000044, "Member 'FStoryFlagAccessDebugLog::GetBooleanValue' has a wrong offset!");
+static_assert(offsetof(FStoryFlagAccessDebugLog, GetIntegerValue) == 0x000048, "Member 'FStoryFlagAccessDebugLog::GetIntegerValue' has a wrong offset!");
+static_assert(offsetof(FStoryFlagAccessDebugLog, GetGamePlayTagValue) == 0x00004C, "Member 'FStoryFlagAccessDebugLog::GetGamePlayTagValue' has a wrong offset!");
+static_assert(offsetof(FStoryFlagAccessDebugLog, IsEvaluationFormulaValue) == 0x000054, "Member 'FStoryFlagAccessDebugLog::IsEvaluationFormulaValue' has a wrong offset!");
 
 }
 

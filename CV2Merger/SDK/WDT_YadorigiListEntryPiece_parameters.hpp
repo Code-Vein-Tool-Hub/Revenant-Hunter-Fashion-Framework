@@ -158,21 +158,21 @@ static_assert(offsetof(WDT_YadorigiListEntryPiece_C_Select, PlayAnimation_0) == 
 static_assert(offsetof(WDT_YadorigiListEntryPiece_C_Select, ReturnValue) == 0x000001, "Member 'WDT_YadorigiListEntryPiece_C_Select::ReturnValue' has a wrong offset!");
 
 // Function WDT_YadorigiListEntryPiece.WDT_YadorigiListEntryPiece_C.Set Fast Travel Feature Info
-// 0x0120 (0x0120 - 0x0000)
+// 0x0138 (0x0138 - 0x0000)
 struct WDT_YadorigiListEntryPiece_C_Set_Fast_Travel_Feature_Info final
 {
 public:
 	class ABP_MapSystem_C*                        InMapSystem;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FFastTravelFeature                     InFeatureInfo;                                     // 0x0008(0x0030)(BlueprintVisible, BlueprintReadOnly, Parm)
-	struct FMapFeatureInfo                        CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo;  // 0x0038(0x00E0)()
-	bool                                          CallFunc_GetMapFeatureInfoFromMap_ReturnValue;     // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FMapFeatureInfo                        CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo;  // 0x0038(0x00F8)()
+	bool                                          CallFunc_GetMapFeatureInfoFromMap_ReturnValue;     // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_YadorigiListEntryPiece_C_Set_Fast_Travel_Feature_Info) == 0x000008, "Wrong alignment on WDT_YadorigiListEntryPiece_C_Set_Fast_Travel_Feature_Info");
-static_assert(sizeof(WDT_YadorigiListEntryPiece_C_Set_Fast_Travel_Feature_Info) == 0x000120, "Wrong size on WDT_YadorigiListEntryPiece_C_Set_Fast_Travel_Feature_Info");
+static_assert(sizeof(WDT_YadorigiListEntryPiece_C_Set_Fast_Travel_Feature_Info) == 0x000138, "Wrong size on WDT_YadorigiListEntryPiece_C_Set_Fast_Travel_Feature_Info");
 static_assert(offsetof(WDT_YadorigiListEntryPiece_C_Set_Fast_Travel_Feature_Info, InMapSystem) == 0x000000, "Member 'WDT_YadorigiListEntryPiece_C_Set_Fast_Travel_Feature_Info::InMapSystem' has a wrong offset!");
 static_assert(offsetof(WDT_YadorigiListEntryPiece_C_Set_Fast_Travel_Feature_Info, InFeatureInfo) == 0x000008, "Member 'WDT_YadorigiListEntryPiece_C_Set_Fast_Travel_Feature_Info::InFeatureInfo' has a wrong offset!");
 static_assert(offsetof(WDT_YadorigiListEntryPiece_C_Set_Fast_Travel_Feature_Info, CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo) == 0x000038, "Member 'WDT_YadorigiListEntryPiece_C_Set_Fast_Travel_Feature_Info::CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo' has a wrong offset!");
-static_assert(offsetof(WDT_YadorigiListEntryPiece_C_Set_Fast_Travel_Feature_Info, CallFunc_GetMapFeatureInfoFromMap_ReturnValue) == 0x000118, "Member 'WDT_YadorigiListEntryPiece_C_Set_Fast_Travel_Feature_Info::CallFunc_GetMapFeatureInfoFromMap_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_YadorigiListEntryPiece_C_Set_Fast_Travel_Feature_Info, CallFunc_GetMapFeatureInfoFromMap_ReturnValue) == 0x000130, "Member 'WDT_YadorigiListEntryPiece_C_Set_Fast_Travel_Feature_Info::CallFunc_GetMapFeatureInfoFromMap_ReturnValue' has a wrong offset!");
 
 }
 

@@ -240,7 +240,7 @@ void UWDT_RestMenu_C::OnDecide()
 
 
 // Function WDT_RestMenu.WDT_RestMenu_C.OnDecideAnimEnd
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWDT_RestMenu_C::OnDecideAnimEnd()
 {
@@ -348,7 +348,7 @@ void UWDT_RestMenu_C::OnMouseLeftClickMenuPiece(class UMenuPieceBase* MenuPiece)
 
 
 // Function WDT_RestMenu.WDT_RestMenu_C.OnNotifyCampRestEnded
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWDT_RestMenu_C::OnNotifyCampRestEnded()
 {

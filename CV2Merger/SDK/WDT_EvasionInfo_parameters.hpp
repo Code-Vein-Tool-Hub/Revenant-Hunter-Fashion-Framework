@@ -17,87 +17,6 @@
 namespace SDK::Params
 {
 
-// Function WDT_EvasionInfo.WDT_EvasionInfo_C.ExecuteUbergraph_WDT_EvasionInfo
-// 0x000C (0x000C - 0x0000)
-struct WDT_EvasionInfo_C_ExecuteUbergraph_WDT_EvasionInfo final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EUIEvasionType                                Temp_byte_Variable;                                // 0x0004(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EUIEvasionType                                Temp_byte_Variable_1;                              // 0x0005(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EUIEvasionType                                Temp_byte_Variable_2;                              // 0x0006(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_3;                              // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_4;                              // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_IsDesignTime;                         // 0x000B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_EvasionInfo_C_ExecuteUbergraph_WDT_EvasionInfo) == 0x000004, "Wrong alignment on WDT_EvasionInfo_C_ExecuteUbergraph_WDT_EvasionInfo");
-static_assert(sizeof(WDT_EvasionInfo_C_ExecuteUbergraph_WDT_EvasionInfo) == 0x00000C, "Wrong size on WDT_EvasionInfo_C_ExecuteUbergraph_WDT_EvasionInfo");
-static_assert(offsetof(WDT_EvasionInfo_C_ExecuteUbergraph_WDT_EvasionInfo, EntryPoint) == 0x000000, "Member 'WDT_EvasionInfo_C_ExecuteUbergraph_WDT_EvasionInfo::EntryPoint' has a wrong offset!");
-static_assert(offsetof(WDT_EvasionInfo_C_ExecuteUbergraph_WDT_EvasionInfo, Temp_byte_Variable) == 0x000004, "Member 'WDT_EvasionInfo_C_ExecuteUbergraph_WDT_EvasionInfo::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(WDT_EvasionInfo_C_ExecuteUbergraph_WDT_EvasionInfo, Temp_byte_Variable_1) == 0x000005, "Member 'WDT_EvasionInfo_C_ExecuteUbergraph_WDT_EvasionInfo::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(WDT_EvasionInfo_C_ExecuteUbergraph_WDT_EvasionInfo, Temp_byte_Variable_2) == 0x000006, "Member 'WDT_EvasionInfo_C_ExecuteUbergraph_WDT_EvasionInfo::Temp_byte_Variable_2' has a wrong offset!");
-static_assert(offsetof(WDT_EvasionInfo_C_ExecuteUbergraph_WDT_EvasionInfo, Temp_bool_Variable) == 0x000007, "Member 'WDT_EvasionInfo_C_ExecuteUbergraph_WDT_EvasionInfo::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WDT_EvasionInfo_C_ExecuteUbergraph_WDT_EvasionInfo, Temp_byte_Variable_3) == 0x000008, "Member 'WDT_EvasionInfo_C_ExecuteUbergraph_WDT_EvasionInfo::Temp_byte_Variable_3' has a wrong offset!");
-static_assert(offsetof(WDT_EvasionInfo_C_ExecuteUbergraph_WDT_EvasionInfo, Temp_byte_Variable_4) == 0x000009, "Member 'WDT_EvasionInfo_C_ExecuteUbergraph_WDT_EvasionInfo::Temp_byte_Variable_4' has a wrong offset!");
-static_assert(offsetof(WDT_EvasionInfo_C_ExecuteUbergraph_WDT_EvasionInfo, K2Node_Select_Default) == 0x00000A, "Member 'WDT_EvasionInfo_C_ExecuteUbergraph_WDT_EvasionInfo::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WDT_EvasionInfo_C_ExecuteUbergraph_WDT_EvasionInfo, K2Node_Event_IsDesignTime) == 0x00000B, "Member 'WDT_EvasionInfo_C_ExecuteUbergraph_WDT_EvasionInfo::K2Node_Event_IsDesignTime' has a wrong offset!");
-
-// Function WDT_EvasionInfo.WDT_EvasionInfo_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WDT_EvasionInfo_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_EvasionInfo_C_PreConstruct) == 0x000001, "Wrong alignment on WDT_EvasionInfo_C_PreConstruct");
-static_assert(sizeof(WDT_EvasionInfo_C_PreConstruct) == 0x000001, "Wrong size on WDT_EvasionInfo_C_PreConstruct");
-static_assert(offsetof(WDT_EvasionInfo_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WDT_EvasionInfo_C_PreConstruct::IsDesignTime' has a wrong offset!");
-
-// Function WDT_EvasionInfo.WDT_EvasionInfo_C.SetEvasionType
-// 0x0078 (0x0078 - 0x0000)
-struct WDT_EvasionInfo_C_SetEvasionType final
-{
-public:
-	EUIEvasionType                                EvasionType;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCanvasPanel*                           CallFunc_Map_Find_Value;                           // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget*                                CallFunc_GetChildAt_ReturnValue;                   // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWidget*                                CallFunc_GetChildAt_ReturnValue_1;                 // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 K2Node_DynamicCast_AsImage;                        // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget*                                CallFunc_GetChildAt_ReturnValue_2;                 // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWidget*                                CallFunc_GetChildAt_ReturnValue_3;                 // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 K2Node_DynamicCast_AsImage_1;                      // 0x0048(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget*                                CallFunc_GetChildAt_ReturnValue_4;                 // 0x0058(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWidget*                                CallFunc_GetChildAt_ReturnValue_5;                 // 0x0060(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 K2Node_DynamicCast_AsImage_2;                      // 0x0068(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_EvasionInfo_C_SetEvasionType) == 0x000008, "Wrong alignment on WDT_EvasionInfo_C_SetEvasionType");
-static_assert(sizeof(WDT_EvasionInfo_C_SetEvasionType) == 0x000078, "Wrong size on WDT_EvasionInfo_C_SetEvasionType");
-static_assert(offsetof(WDT_EvasionInfo_C_SetEvasionType, EvasionType) == 0x000000, "Member 'WDT_EvasionInfo_C_SetEvasionType::EvasionType' has a wrong offset!");
-static_assert(offsetof(WDT_EvasionInfo_C_SetEvasionType, CallFunc_Map_Find_Value) == 0x000008, "Member 'WDT_EvasionInfo_C_SetEvasionType::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(WDT_EvasionInfo_C_SetEvasionType, CallFunc_Map_Find_ReturnValue) == 0x000010, "Member 'WDT_EvasionInfo_C_SetEvasionType::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_EvasionInfo_C_SetEvasionType, CallFunc_GetChildAt_ReturnValue) == 0x000018, "Member 'WDT_EvasionInfo_C_SetEvasionType::CallFunc_GetChildAt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_EvasionInfo_C_SetEvasionType, CallFunc_GetChildAt_ReturnValue_1) == 0x000020, "Member 'WDT_EvasionInfo_C_SetEvasionType::CallFunc_GetChildAt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_EvasionInfo_C_SetEvasionType, K2Node_DynamicCast_AsImage) == 0x000028, "Member 'WDT_EvasionInfo_C_SetEvasionType::K2Node_DynamicCast_AsImage' has a wrong offset!");
-static_assert(offsetof(WDT_EvasionInfo_C_SetEvasionType, K2Node_DynamicCast_bSuccess) == 0x000030, "Member 'WDT_EvasionInfo_C_SetEvasionType::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WDT_EvasionInfo_C_SetEvasionType, CallFunc_GetChildAt_ReturnValue_2) == 0x000038, "Member 'WDT_EvasionInfo_C_SetEvasionType::CallFunc_GetChildAt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WDT_EvasionInfo_C_SetEvasionType, CallFunc_GetChildAt_ReturnValue_3) == 0x000040, "Member 'WDT_EvasionInfo_C_SetEvasionType::CallFunc_GetChildAt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WDT_EvasionInfo_C_SetEvasionType, K2Node_DynamicCast_AsImage_1) == 0x000048, "Member 'WDT_EvasionInfo_C_SetEvasionType::K2Node_DynamicCast_AsImage_1' has a wrong offset!");
-static_assert(offsetof(WDT_EvasionInfo_C_SetEvasionType, K2Node_DynamicCast_bSuccess_1) == 0x000050, "Member 'WDT_EvasionInfo_C_SetEvasionType::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(WDT_EvasionInfo_C_SetEvasionType, CallFunc_GetChildAt_ReturnValue_4) == 0x000058, "Member 'WDT_EvasionInfo_C_SetEvasionType::CallFunc_GetChildAt_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(WDT_EvasionInfo_C_SetEvasionType, CallFunc_GetChildAt_ReturnValue_5) == 0x000060, "Member 'WDT_EvasionInfo_C_SetEvasionType::CallFunc_GetChildAt_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(WDT_EvasionInfo_C_SetEvasionType, K2Node_DynamicCast_AsImage_2) == 0x000068, "Member 'WDT_EvasionInfo_C_SetEvasionType::K2Node_DynamicCast_AsImage_2' has a wrong offset!");
-static_assert(offsetof(WDT_EvasionInfo_C_SetEvasionType, K2Node_DynamicCast_bSuccess_2) == 0x000070, "Member 'WDT_EvasionInfo_C_SetEvasionType::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-
 // Function WDT_EvasionInfo.WDT_EvasionInfo_C.SetEvasionTypeForComparison
 // 0x0128 (0x0128 - 0x0000)
 struct WDT_EvasionInfo_C_SetEvasionTypeForComparison final
@@ -207,6 +126,87 @@ static_assert(offsetof(WDT_EvasionInfo_C_SetEvasionTypeForComparison, CallFunc_L
 static_assert(offsetof(WDT_EvasionInfo_C_SetEvasionTypeForComparison, CallFunc_GetChildAt_ReturnValue_11) == 0x000110, "Member 'WDT_EvasionInfo_C_SetEvasionTypeForComparison::CallFunc_GetChildAt_ReturnValue_11' has a wrong offset!");
 static_assert(offsetof(WDT_EvasionInfo_C_SetEvasionTypeForComparison, K2Node_DynamicCast_AsImage_4) == 0x000118, "Member 'WDT_EvasionInfo_C_SetEvasionTypeForComparison::K2Node_DynamicCast_AsImage_4' has a wrong offset!");
 static_assert(offsetof(WDT_EvasionInfo_C_SetEvasionTypeForComparison, K2Node_DynamicCast_bSuccess_4) == 0x000120, "Member 'WDT_EvasionInfo_C_SetEvasionTypeForComparison::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
+
+// Function WDT_EvasionInfo.WDT_EvasionInfo_C.SetEvasionType
+// 0x0078 (0x0078 - 0x0000)
+struct WDT_EvasionInfo_C_SetEvasionType final
+{
+public:
+	EUIEvasionType                                EvasionType;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCanvasPanel*                           CallFunc_Map_Find_Value;                           // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                CallFunc_GetChildAt_ReturnValue;                   // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                CallFunc_GetChildAt_ReturnValue_1;                 // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UImage*                                 K2Node_DynamicCast_AsImage;                        // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                CallFunc_GetChildAt_ReturnValue_2;                 // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                CallFunc_GetChildAt_ReturnValue_3;                 // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UImage*                                 K2Node_DynamicCast_AsImage_1;                      // 0x0048(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                CallFunc_GetChildAt_ReturnValue_4;                 // 0x0058(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                CallFunc_GetChildAt_ReturnValue_5;                 // 0x0060(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UImage*                                 K2Node_DynamicCast_AsImage_2;                      // 0x0068(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_EvasionInfo_C_SetEvasionType) == 0x000008, "Wrong alignment on WDT_EvasionInfo_C_SetEvasionType");
+static_assert(sizeof(WDT_EvasionInfo_C_SetEvasionType) == 0x000078, "Wrong size on WDT_EvasionInfo_C_SetEvasionType");
+static_assert(offsetof(WDT_EvasionInfo_C_SetEvasionType, EvasionType) == 0x000000, "Member 'WDT_EvasionInfo_C_SetEvasionType::EvasionType' has a wrong offset!");
+static_assert(offsetof(WDT_EvasionInfo_C_SetEvasionType, CallFunc_Map_Find_Value) == 0x000008, "Member 'WDT_EvasionInfo_C_SetEvasionType::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(WDT_EvasionInfo_C_SetEvasionType, CallFunc_Map_Find_ReturnValue) == 0x000010, "Member 'WDT_EvasionInfo_C_SetEvasionType::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_EvasionInfo_C_SetEvasionType, CallFunc_GetChildAt_ReturnValue) == 0x000018, "Member 'WDT_EvasionInfo_C_SetEvasionType::CallFunc_GetChildAt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_EvasionInfo_C_SetEvasionType, CallFunc_GetChildAt_ReturnValue_1) == 0x000020, "Member 'WDT_EvasionInfo_C_SetEvasionType::CallFunc_GetChildAt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_EvasionInfo_C_SetEvasionType, K2Node_DynamicCast_AsImage) == 0x000028, "Member 'WDT_EvasionInfo_C_SetEvasionType::K2Node_DynamicCast_AsImage' has a wrong offset!");
+static_assert(offsetof(WDT_EvasionInfo_C_SetEvasionType, K2Node_DynamicCast_bSuccess) == 0x000030, "Member 'WDT_EvasionInfo_C_SetEvasionType::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WDT_EvasionInfo_C_SetEvasionType, CallFunc_GetChildAt_ReturnValue_2) == 0x000038, "Member 'WDT_EvasionInfo_C_SetEvasionType::CallFunc_GetChildAt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_EvasionInfo_C_SetEvasionType, CallFunc_GetChildAt_ReturnValue_3) == 0x000040, "Member 'WDT_EvasionInfo_C_SetEvasionType::CallFunc_GetChildAt_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WDT_EvasionInfo_C_SetEvasionType, K2Node_DynamicCast_AsImage_1) == 0x000048, "Member 'WDT_EvasionInfo_C_SetEvasionType::K2Node_DynamicCast_AsImage_1' has a wrong offset!");
+static_assert(offsetof(WDT_EvasionInfo_C_SetEvasionType, K2Node_DynamicCast_bSuccess_1) == 0x000050, "Member 'WDT_EvasionInfo_C_SetEvasionType::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(WDT_EvasionInfo_C_SetEvasionType, CallFunc_GetChildAt_ReturnValue_4) == 0x000058, "Member 'WDT_EvasionInfo_C_SetEvasionType::CallFunc_GetChildAt_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WDT_EvasionInfo_C_SetEvasionType, CallFunc_GetChildAt_ReturnValue_5) == 0x000060, "Member 'WDT_EvasionInfo_C_SetEvasionType::CallFunc_GetChildAt_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(WDT_EvasionInfo_C_SetEvasionType, K2Node_DynamicCast_AsImage_2) == 0x000068, "Member 'WDT_EvasionInfo_C_SetEvasionType::K2Node_DynamicCast_AsImage_2' has a wrong offset!");
+static_assert(offsetof(WDT_EvasionInfo_C_SetEvasionType, K2Node_DynamicCast_bSuccess_2) == 0x000070, "Member 'WDT_EvasionInfo_C_SetEvasionType::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+
+// Function WDT_EvasionInfo.WDT_EvasionInfo_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WDT_EvasionInfo_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_EvasionInfo_C_PreConstruct) == 0x000001, "Wrong alignment on WDT_EvasionInfo_C_PreConstruct");
+static_assert(sizeof(WDT_EvasionInfo_C_PreConstruct) == 0x000001, "Wrong size on WDT_EvasionInfo_C_PreConstruct");
+static_assert(offsetof(WDT_EvasionInfo_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WDT_EvasionInfo_C_PreConstruct::IsDesignTime' has a wrong offset!");
+
+// Function WDT_EvasionInfo.WDT_EvasionInfo_C.ExecuteUbergraph_WDT_EvasionInfo
+// 0x000C (0x000C - 0x0000)
+struct WDT_EvasionInfo_C_ExecuteUbergraph_WDT_EvasionInfo final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EUIEvasionType                                Temp_byte_Variable;                                // 0x0004(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EUIEvasionType                                Temp_byte_Variable_1;                              // 0x0005(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EUIEvasionType                                Temp_byte_Variable_2;                              // 0x0006(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_3;                              // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_4;                              // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_IsDesignTime;                         // 0x000B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_EvasionInfo_C_ExecuteUbergraph_WDT_EvasionInfo) == 0x000004, "Wrong alignment on WDT_EvasionInfo_C_ExecuteUbergraph_WDT_EvasionInfo");
+static_assert(sizeof(WDT_EvasionInfo_C_ExecuteUbergraph_WDT_EvasionInfo) == 0x00000C, "Wrong size on WDT_EvasionInfo_C_ExecuteUbergraph_WDT_EvasionInfo");
+static_assert(offsetof(WDT_EvasionInfo_C_ExecuteUbergraph_WDT_EvasionInfo, EntryPoint) == 0x000000, "Member 'WDT_EvasionInfo_C_ExecuteUbergraph_WDT_EvasionInfo::EntryPoint' has a wrong offset!");
+static_assert(offsetof(WDT_EvasionInfo_C_ExecuteUbergraph_WDT_EvasionInfo, Temp_byte_Variable) == 0x000004, "Member 'WDT_EvasionInfo_C_ExecuteUbergraph_WDT_EvasionInfo::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(WDT_EvasionInfo_C_ExecuteUbergraph_WDT_EvasionInfo, Temp_byte_Variable_1) == 0x000005, "Member 'WDT_EvasionInfo_C_ExecuteUbergraph_WDT_EvasionInfo::Temp_byte_Variable_1' has a wrong offset!");
+static_assert(offsetof(WDT_EvasionInfo_C_ExecuteUbergraph_WDT_EvasionInfo, Temp_byte_Variable_2) == 0x000006, "Member 'WDT_EvasionInfo_C_ExecuteUbergraph_WDT_EvasionInfo::Temp_byte_Variable_2' has a wrong offset!");
+static_assert(offsetof(WDT_EvasionInfo_C_ExecuteUbergraph_WDT_EvasionInfo, Temp_bool_Variable) == 0x000007, "Member 'WDT_EvasionInfo_C_ExecuteUbergraph_WDT_EvasionInfo::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WDT_EvasionInfo_C_ExecuteUbergraph_WDT_EvasionInfo, Temp_byte_Variable_3) == 0x000008, "Member 'WDT_EvasionInfo_C_ExecuteUbergraph_WDT_EvasionInfo::Temp_byte_Variable_3' has a wrong offset!");
+static_assert(offsetof(WDT_EvasionInfo_C_ExecuteUbergraph_WDT_EvasionInfo, Temp_byte_Variable_4) == 0x000009, "Member 'WDT_EvasionInfo_C_ExecuteUbergraph_WDT_EvasionInfo::Temp_byte_Variable_4' has a wrong offset!");
+static_assert(offsetof(WDT_EvasionInfo_C_ExecuteUbergraph_WDT_EvasionInfo, K2Node_Select_Default) == 0x00000A, "Member 'WDT_EvasionInfo_C_ExecuteUbergraph_WDT_EvasionInfo::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WDT_EvasionInfo_C_ExecuteUbergraph_WDT_EvasionInfo, K2Node_Event_IsDesignTime) == 0x00000B, "Member 'WDT_EvasionInfo_C_ExecuteUbergraph_WDT_EvasionInfo::K2Node_Event_IsDesignTime' has a wrong offset!");
 
 }
 

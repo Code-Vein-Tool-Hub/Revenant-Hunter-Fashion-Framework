@@ -16,22 +16,16 @@
 namespace SDK::Params
 {
 
-// Function WDT_StaminaGauge.WDT_StaminaGauge_C.SetStamina
-// 0x0018 (0x0018 - 0x0000)
-struct WDT_StaminaGauge_C_SetStamina final
+// Function WDT_StaminaGauge.WDT_StaminaGauge_C.ExecuteUbergraph_WDT_StaminaGauge
+// 0x0004 (0x0004 - 0x0000)
+struct WDT_StaminaGauge_C_ExecuteUbergraph_WDT_StaminaGauge final
 {
 public:
-	double                                        InCurrentStamina;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        InMaxStamina;                                      // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EResourceChangeFactor                         InChangeFactor;                                    // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WDT_StaminaGauge_C_SetStamina) == 0x000008, "Wrong alignment on WDT_StaminaGauge_C_SetStamina");
-static_assert(sizeof(WDT_StaminaGauge_C_SetStamina) == 0x000018, "Wrong size on WDT_StaminaGauge_C_SetStamina");
-static_assert(offsetof(WDT_StaminaGauge_C_SetStamina, InCurrentStamina) == 0x000000, "Member 'WDT_StaminaGauge_C_SetStamina::InCurrentStamina' has a wrong offset!");
-static_assert(offsetof(WDT_StaminaGauge_C_SetStamina, InMaxStamina) == 0x000008, "Member 'WDT_StaminaGauge_C_SetStamina::InMaxStamina' has a wrong offset!");
-static_assert(offsetof(WDT_StaminaGauge_C_SetStamina, InChangeFactor) == 0x000010, "Member 'WDT_StaminaGauge_C_SetStamina::InChangeFactor' has a wrong offset!");
-static_assert(offsetof(WDT_StaminaGauge_C_SetStamina, K2Node_SwitchEnum_CmpSuccess) == 0x000011, "Member 'WDT_StaminaGauge_C_SetStamina::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(alignof(WDT_StaminaGauge_C_ExecuteUbergraph_WDT_StaminaGauge) == 0x000004, "Wrong alignment on WDT_StaminaGauge_C_ExecuteUbergraph_WDT_StaminaGauge");
+static_assert(sizeof(WDT_StaminaGauge_C_ExecuteUbergraph_WDT_StaminaGauge) == 0x000004, "Wrong size on WDT_StaminaGauge_C_ExecuteUbergraph_WDT_StaminaGauge");
+static_assert(offsetof(WDT_StaminaGauge_C_ExecuteUbergraph_WDT_StaminaGauge, EntryPoint) == 0x000000, "Member 'WDT_StaminaGauge_C_ExecuteUbergraph_WDT_StaminaGauge::EntryPoint' has a wrong offset!");
 
 // Function WDT_StaminaGauge.WDT_StaminaGauge_C.OnBattleStateChanged
 // 0x0030 (0x0030 - 0x0000)
@@ -65,16 +59,22 @@ static_assert(offsetof(WDT_StaminaGauge_C_OnBattleStateChanged, CallFunc_Boolean
 static_assert(offsetof(WDT_StaminaGauge_C_OnBattleStateChanged, CallFunc_PlayAnimation_ReturnValue) == 0x000020, "Member 'WDT_StaminaGauge_C_OnBattleStateChanged::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_StaminaGauge_C_OnBattleStateChanged, CallFunc_NotEqual_DoubleDouble_A_ImplicitCast) == 0x000028, "Member 'WDT_StaminaGauge_C_OnBattleStateChanged::CallFunc_NotEqual_DoubleDouble_A_ImplicitCast' has a wrong offset!");
 
-// Function WDT_StaminaGauge.WDT_StaminaGauge_C.ExecuteUbergraph_WDT_StaminaGauge
-// 0x0004 (0x0004 - 0x0000)
-struct WDT_StaminaGauge_C_ExecuteUbergraph_WDT_StaminaGauge final
+// Function WDT_StaminaGauge.WDT_StaminaGauge_C.SetStamina
+// 0x0018 (0x0018 - 0x0000)
+struct WDT_StaminaGauge_C_SetStamina final
 {
 public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        InCurrentStamina;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        InMaxStamina;                                      // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EResourceChangeFactor                         InChangeFactor;                                    // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WDT_StaminaGauge_C_ExecuteUbergraph_WDT_StaminaGauge) == 0x000004, "Wrong alignment on WDT_StaminaGauge_C_ExecuteUbergraph_WDT_StaminaGauge");
-static_assert(sizeof(WDT_StaminaGauge_C_ExecuteUbergraph_WDT_StaminaGauge) == 0x000004, "Wrong size on WDT_StaminaGauge_C_ExecuteUbergraph_WDT_StaminaGauge");
-static_assert(offsetof(WDT_StaminaGauge_C_ExecuteUbergraph_WDT_StaminaGauge, EntryPoint) == 0x000000, "Member 'WDT_StaminaGauge_C_ExecuteUbergraph_WDT_StaminaGauge::EntryPoint' has a wrong offset!");
+static_assert(alignof(WDT_StaminaGauge_C_SetStamina) == 0x000008, "Wrong alignment on WDT_StaminaGauge_C_SetStamina");
+static_assert(sizeof(WDT_StaminaGauge_C_SetStamina) == 0x000018, "Wrong size on WDT_StaminaGauge_C_SetStamina");
+static_assert(offsetof(WDT_StaminaGauge_C_SetStamina, InCurrentStamina) == 0x000000, "Member 'WDT_StaminaGauge_C_SetStamina::InCurrentStamina' has a wrong offset!");
+static_assert(offsetof(WDT_StaminaGauge_C_SetStamina, InMaxStamina) == 0x000008, "Member 'WDT_StaminaGauge_C_SetStamina::InMaxStamina' has a wrong offset!");
+static_assert(offsetof(WDT_StaminaGauge_C_SetStamina, InChangeFactor) == 0x000010, "Member 'WDT_StaminaGauge_C_SetStamina::InChangeFactor' has a wrong offset!");
+static_assert(offsetof(WDT_StaminaGauge_C_SetStamina, K2Node_SwitchEnum_CmpSuccess) == 0x000011, "Member 'WDT_StaminaGauge_C_SetStamina::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
 
 }
 

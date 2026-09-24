@@ -40,31 +40,31 @@ public:
 	TArray<class UWDT_ConfirmOptionButton_C*>     Buttons;                                           // 0x0690(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 
 public:
-	void SetSelectDialogIndex(int32 Index_0);
-	void SetCaptionText(const class FText& InCaptionText);
-	void OnUpPressed();
-	void OnSetDialogInfo(const struct FDialogInfo& InDialogInfo);
-	void OnOpening();
-	void OnOpened();
-	void OnMouseLeftClickMenuPiece(class UMenuPieceBase* MenuPiece);
-	void OnMouseEnterMenuPiece(class UMenuPieceBase* MenuPiece);
-	void OnMenuInitialized();
-	class UWidgetAnimation* OnGetOpenAnimation();
-	class UWidgetAnimation* OnGetCloseAnimation();
-	void OnDownPressed();
-	void OnDecidePressed();
-	void OnClosed();
-	void OnCancelPressed();
-	void InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_1(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void Initialize();
-	void GetSelectedPieceIndex(class UMenuPieceBase* SelectedPiece, int32* Index_0);
-	void ExecuteUbergraph_WDT_InventoryMenuDialog(int32 EntryPoint);
-	void Construct();
-	void BP_OnDeactivated();
 	void BP_OnActivated();
+	void BP_OnDeactivated();
+	void Construct();
+	void ExecuteUbergraph_WDT_InventoryMenuDialog(int32 EntryPoint);
+	void GetSelectedPieceIndex(class UMenuPieceBase* SelectedPiece, int32* Index_0);
+	void Initialize();
+	void InpActEvt_IA_UI_CancelOnRelease_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_1(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_UI_Down_K2Node_EnhancedInputActionEvent_2(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_UI_Up_K2Node_EnhancedInputActionEvent_3(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void OnCancelPressed();
+	void OnClosed();
+	void OnDecidePressed();
+	void OnDownPressed();
+	class UWidgetAnimation* OnGetCloseAnimation();
+	class UWidgetAnimation* OnGetOpenAnimation();
+	void OnMenuInitialized();
+	void OnMouseEnterMenuPiece(class UMenuPieceBase* MenuPiece);
+	void OnMouseLeftClickMenuPiece(class UMenuPieceBase* MenuPiece);
+	void OnOpened();
+	void OnOpening();
+	void OnSetDialogInfo(const struct FDialogInfo& InDialogInfo);
+	void OnUpPressed();
+	void SetCaptionText(const class FText& InCaptionText);
+	void SetSelectDialogIndex(int32 Index_0);
 
 public:
 	static class UClass* StaticClass()

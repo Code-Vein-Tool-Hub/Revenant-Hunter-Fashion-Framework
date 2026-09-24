@@ -36,9 +36,9 @@ public:
 	struct FLinearColor                           UnequippableColor;                                 // 0x0718(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void Construct();
-	void ExecuteUbergraph_WDT_Article_EquipmentRequirements(int32 EntryPoint);
 	void SetValue(TArray<EUIWeaponCategory>& InValue);
+	void ExecuteUbergraph_WDT_Article_EquipmentRequirements(int32 EntryPoint);
+	void Construct();
 
 public:
 	static class UClass* StaticClass()

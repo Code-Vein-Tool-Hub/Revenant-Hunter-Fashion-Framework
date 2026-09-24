@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "GameplayTags_structs.hpp"
 #include "Extensions_structs.hpp"
+#include "GameplayTags_structs.hpp"
 #include "StoryFlagSystem_structs.hpp"
 
 
@@ -146,7 +146,7 @@ static_assert(offsetof(BP_BuddyIndicatorUIObject_C_NotifyBarrierBrokenDown, Call
 static_assert(offsetof(BP_BuddyIndicatorUIObject_C_NotifyBarrierBrokenDown, CallFunc_GetBarrierGauge_OutBarrierGauge) == 0x000030, "Member 'BP_BuddyIndicatorUIObject_C_NotifyBarrierBrokenDown::CallFunc_GetBarrierGauge_OutBarrierGauge' has a wrong offset!");
 
 // Function BP_BuddyIndicatorUIObject.BP_BuddyIndicatorUIObject_C.NotifyBuddyLossTimeGaugeChanged
-// 0x0040 (0x0040 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct BP_BuddyIndicatorUIObject_C_NotifyBuddyLossTimeGaugeChanged final
 {
 public:
@@ -156,17 +156,15 @@ public:
 	class UWDT_BuddyIndicator_C*                  CallFunc_GetBuddyIndicator_OutIndicator;           // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWDT_BuddyIcon_C*                       CallFunc_GetBuddyIcon_OutIcon;                     // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TArray<double>                                CallFunc_NotifyLossTimeGaugeUpdated_InGaugeRate_ImplicitCast; // 0x0030(0x0010)(ReferenceParm)
+	TArray<double>                                CallFunc_NotifyLossTimeGaugeUpdated_InGaugeRate_ImplicitCast; // 0x0028(0x0010)(ReferenceParm)
 };
 static_assert(alignof(BP_BuddyIndicatorUIObject_C_NotifyBuddyLossTimeGaugeChanged) == 0x000008, "Wrong alignment on BP_BuddyIndicatorUIObject_C_NotifyBuddyLossTimeGaugeChanged");
-static_assert(sizeof(BP_BuddyIndicatorUIObject_C_NotifyBuddyLossTimeGaugeChanged) == 0x000040, "Wrong size on BP_BuddyIndicatorUIObject_C_NotifyBuddyLossTimeGaugeChanged");
+static_assert(sizeof(BP_BuddyIndicatorUIObject_C_NotifyBuddyLossTimeGaugeChanged) == 0x000038, "Wrong size on BP_BuddyIndicatorUIObject_C_NotifyBuddyLossTimeGaugeChanged");
 static_assert(offsetof(BP_BuddyIndicatorUIObject_C_NotifyBuddyLossTimeGaugeChanged, InLossTimeRateArray) == 0x000000, "Member 'BP_BuddyIndicatorUIObject_C_NotifyBuddyLossTimeGaugeChanged::InLossTimeRateArray' has a wrong offset!");
 static_assert(offsetof(BP_BuddyIndicatorUIObject_C_NotifyBuddyLossTimeGaugeChanged, ReturnValue) == 0x000010, "Member 'BP_BuddyIndicatorUIObject_C_NotifyBuddyLossTimeGaugeChanged::ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_BuddyIndicatorUIObject_C_NotifyBuddyLossTimeGaugeChanged, CallFunc_GetBuddyIndicator_OutIndicator) == 0x000018, "Member 'BP_BuddyIndicatorUIObject_C_NotifyBuddyLossTimeGaugeChanged::CallFunc_GetBuddyIndicator_OutIndicator' has a wrong offset!");
 static_assert(offsetof(BP_BuddyIndicatorUIObject_C_NotifyBuddyLossTimeGaugeChanged, CallFunc_IsValid_ReturnValue) == 0x000020, "Member 'BP_BuddyIndicatorUIObject_C_NotifyBuddyLossTimeGaugeChanged::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BuddyIndicatorUIObject_C_NotifyBuddyLossTimeGaugeChanged, CallFunc_GetBuddyIcon_OutIcon) == 0x000028, "Member 'BP_BuddyIndicatorUIObject_C_NotifyBuddyLossTimeGaugeChanged::CallFunc_GetBuddyIcon_OutIcon' has a wrong offset!");
-static_assert(offsetof(BP_BuddyIndicatorUIObject_C_NotifyBuddyLossTimeGaugeChanged, CallFunc_NotifyLossTimeGaugeUpdated_InGaugeRate_ImplicitCast) == 0x000030, "Member 'BP_BuddyIndicatorUIObject_C_NotifyBuddyLossTimeGaugeChanged::CallFunc_NotifyLossTimeGaugeUpdated_InGaugeRate_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_BuddyIndicatorUIObject_C_NotifyBuddyLossTimeGaugeChanged, CallFunc_NotifyLossTimeGaugeUpdated_InGaugeRate_ImplicitCast) == 0x000028, "Member 'BP_BuddyIndicatorUIObject_C_NotifyBuddyLossTimeGaugeChanged::CallFunc_NotifyLossTimeGaugeUpdated_InGaugeRate_ImplicitCast' has a wrong offset!");
 
 // Function BP_BuddyIndicatorUIObject.BP_BuddyIndicatorUIObject_C.NotifyBuddyStatementFinished
 // 0x0018 (0x0018 - 0x0000)
@@ -490,6 +488,26 @@ static_assert(offsetof(BP_BuddyIndicatorUIObject_C_SetBuddyIcon, CallFunc_GetBud
 static_assert(offsetof(BP_BuddyIndicatorUIObject_C_SetBuddyIcon, CallFunc_IsValid_ReturnValue) == 0x000028, "Member 'BP_BuddyIndicatorUIObject_C_SetBuddyIcon::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_BuddyIndicatorUIObject_C_SetBuddyIcon, CallFunc_IsValid_ReturnValue_1) == 0x000029, "Member 'BP_BuddyIndicatorUIObject_C_SetBuddyIcon::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(BP_BuddyIndicatorUIObject_C_SetBuddyIcon, CallFunc_GetBuddyIconBox_OutIconBox) == 0x000030, "Member 'BP_BuddyIndicatorUIObject_C_SetBuddyIcon::CallFunc_GetBuddyIconBox_OutIconBox' has a wrong offset!");
+
+// Function BP_BuddyIndicatorUIObject.BP_BuddyIndicatorUIObject_C.SetSubBuddyIcon
+// 0x0020 (0x0020 - 0x0000)
+struct BP_BuddyIndicatorUIObject_C_SetSubBuddyIcon final
+{
+public:
+	class UMaterialInstance*                      InBuddyIcon;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWDT_BuddyIndicator_C*                  CallFunc_GetBuddyIndicator_OutIndicator;           // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SetSubBuddyIcon_ReturnValue;              // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_BuddyIndicatorUIObject_C_SetSubBuddyIcon) == 0x000008, "Wrong alignment on BP_BuddyIndicatorUIObject_C_SetSubBuddyIcon");
+static_assert(sizeof(BP_BuddyIndicatorUIObject_C_SetSubBuddyIcon) == 0x000020, "Wrong size on BP_BuddyIndicatorUIObject_C_SetSubBuddyIcon");
+static_assert(offsetof(BP_BuddyIndicatorUIObject_C_SetSubBuddyIcon, InBuddyIcon) == 0x000000, "Member 'BP_BuddyIndicatorUIObject_C_SetSubBuddyIcon::InBuddyIcon' has a wrong offset!");
+static_assert(offsetof(BP_BuddyIndicatorUIObject_C_SetSubBuddyIcon, ReturnValue) == 0x000008, "Member 'BP_BuddyIndicatorUIObject_C_SetSubBuddyIcon::ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_BuddyIndicatorUIObject_C_SetSubBuddyIcon, CallFunc_GetBuddyIndicator_OutIndicator) == 0x000010, "Member 'BP_BuddyIndicatorUIObject_C_SetSubBuddyIcon::CallFunc_GetBuddyIndicator_OutIndicator' has a wrong offset!");
+static_assert(offsetof(BP_BuddyIndicatorUIObject_C_SetSubBuddyIcon, CallFunc_SetSubBuddyIcon_ReturnValue) == 0x000018, "Member 'BP_BuddyIndicatorUIObject_C_SetSubBuddyIcon::CallFunc_SetSubBuddyIcon_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_BuddyIndicatorUIObject_C_SetSubBuddyIcon, CallFunc_IsValid_ReturnValue) == 0x000019, "Member 'BP_BuddyIndicatorUIObject_C_SetSubBuddyIcon::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
 // Function BP_BuddyIndicatorUIObject.BP_BuddyIndicatorUIObject_C.SetSummonEmpowerEnabled
 // 0x0020 (0x0020 - 0x0000)

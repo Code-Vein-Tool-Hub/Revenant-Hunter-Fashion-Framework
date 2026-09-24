@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "ClothingSystemRuntimeCommon_structs.hpp"
 #include "ClothingSystemRuntimeInterface_structs.hpp"
 #include "ClothingSystemRuntimeInterface_classes.hpp"
 #include "CoreUObject_classes.hpp"
-#include "ClothingSystemRuntimeCommon_structs.hpp"
 
 
 namespace SDK

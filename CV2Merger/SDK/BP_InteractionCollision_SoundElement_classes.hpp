@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "AkAudio_structs.hpp"
 #include "STR_InteractionCollision_Sound_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "AkAudio_structs.hpp"
 
 
 namespace SDK

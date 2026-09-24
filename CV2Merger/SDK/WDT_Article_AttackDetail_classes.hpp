@@ -49,16 +49,16 @@ public:
 	class UImage*                                 SecondTypeImage;                                   // 0x0790(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void SetBloodValue(int32 InValue, int32 InModValue);
-	void SetBloodValueComparison(int32 InCurrentValue, int32 InTargetValue, int32 InCurrentModValue, int32 InTargetModValue, bool SwapComparisons);
-	void SetFireValue(int32 InValue, int32 InModValue);
-	void SetFireValueComparison(int32 InCurrentValue, int32 InTargetValue, int32 InCurrentModValue, int32 InTargetModValue, bool SwapComparisons);
-	void SetIceValue(int32 InValue, int32 InModValue);
-	void SetIceValueComparison(int32 InCurrentValue, int32 InTargetValue, int32 InCurrentModValue, int32 InTargetModValue, bool SwapComparisons);
-	void SetPhysicalValue(int32 InValue, int32 InModValue, bool HasSunder, bool HasCrush, bool HasPierce);
-	void SetPhysicalValueComparison(int32 InCurrentValue, int32 InTargetValue, int32 InCurrentModValue, int32 InTargetModValue, bool SwapComparisons);
-	void SetThunderValue(int32 InValue, int32 InModValue);
 	void SetThunderValueComparison(int32 InCurrentValue, int32 InTargetValue, int32 InCurrentModValue, int32 InTargetModValue, bool SwapComparisons);
+	void SetThunderValue(int32 InValue, int32 InModValue);
+	void SetPhysicalValueComparison(int32 InCurrentValue, int32 InTargetValue, int32 InCurrentModValue, int32 InTargetModValue, bool SwapComparisons);
+	void SetPhysicalValue(int32 InValue, int32 InModValue, bool HasSunder, bool HasCrush, bool HasPierce);
+	void SetIceValueComparison(int32 InCurrentValue, int32 InTargetValue, int32 InCurrentModValue, int32 InTargetModValue, bool SwapComparisons);
+	void SetIceValue(int32 InValue, int32 InModValue);
+	void SetFireValueComparison(int32 InCurrentValue, int32 InTargetValue, int32 InCurrentModValue, int32 InTargetModValue, bool SwapComparisons);
+	void SetFireValue(int32 InValue, int32 InModValue);
+	void SetBloodValueComparison(int32 InCurrentValue, int32 InTargetValue, int32 InCurrentModValue, int32 InTargetModValue, bool SwapComparisons);
+	void SetBloodValue(int32 InValue, int32 InModValue);
 
 public:
 	static class UClass* StaticClass()

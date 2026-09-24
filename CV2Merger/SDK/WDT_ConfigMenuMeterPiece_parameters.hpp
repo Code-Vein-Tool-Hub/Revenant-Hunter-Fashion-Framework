@@ -57,6 +57,19 @@ static_assert(offsetof(WDT_ConfigMenuMeterPiece_C_SetupMeter, CallFunc_SetMeterV
 static_assert(offsetof(WDT_ConfigMenuMeterPiece_C_SetupMeter, CallFunc_SetMeterValue_ReturnValue) == 0x000010, "Member 'WDT_ConfigMenuMeterPiece_C_SetupMeter::CallFunc_SetMeterValue_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_ConfigMenuMeterPiece_C_SetupMeter, CallFunc_SetMeterValue_MeterValue_ImplicitCast) == 0x000014, "Member 'WDT_ConfigMenuMeterPiece_C_SetupMeter::CallFunc_SetMeterValue_MeterValue_ImplicitCast' has a wrong offset!");
 
+// Function WDT_ConfigMenuMeterPiece.WDT_ConfigMenuMeterPiece_C.SetTogleOnOff_NoNotify
+// 0x0002 (0x0002 - 0x0000)
+struct WDT_ConfigMenuMeterPiece_C_SetTogleOnOff_NoNotify final
+{
+public:
+	bool                                          InFlag;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_ConfigMenuMeterPiece_C_SetTogleOnOff_NoNotify) == 0x000001, "Wrong alignment on WDT_ConfigMenuMeterPiece_C_SetTogleOnOff_NoNotify");
+static_assert(sizeof(WDT_ConfigMenuMeterPiece_C_SetTogleOnOff_NoNotify) == 0x000002, "Wrong size on WDT_ConfigMenuMeterPiece_C_SetTogleOnOff_NoNotify");
+static_assert(offsetof(WDT_ConfigMenuMeterPiece_C_SetTogleOnOff_NoNotify, InFlag) == 0x000000, "Member 'WDT_ConfigMenuMeterPiece_C_SetTogleOnOff_NoNotify::InFlag' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigMenuMeterPiece_C_SetTogleOnOff_NoNotify, CallFunc_BooleanAND_ReturnValue) == 0x000001, "Member 'WDT_ConfigMenuMeterPiece_C_SetTogleOnOff_NoNotify::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+
 // Function WDT_ConfigMenuMeterPiece.WDT_ConfigMenuMeterPiece_C.SetTogleOnOff
 // 0x0002 (0x0002 - 0x0000)
 struct WDT_ConfigMenuMeterPiece_C_SetTogleOnOff final
@@ -126,6 +139,23 @@ static_assert(sizeof(WDT_ConfigMenuMeterPiece_C_SetIsEditable) == 0x000018, "Wro
 static_assert(offsetof(WDT_ConfigMenuMeterPiece_C_SetIsEditable, InFlag) == 0x000000, "Member 'WDT_ConfigMenuMeterPiece_C_SetIsEditable::InFlag' has a wrong offset!");
 static_assert(offsetof(WDT_ConfigMenuMeterPiece_C_SetIsEditable, K2Node_MakeStruct_SlateColor) == 0x000004, "Member 'WDT_ConfigMenuMeterPiece_C_SetIsEditable::K2Node_MakeStruct_SlateColor' has a wrong offset!");
 
+// Function WDT_ConfigMenuMeterPiece.WDT_ConfigMenuMeterPiece_C.SetDefaultVisualDisplayValue
+// 0x0020 (0x0020 - 0x0000)
+struct WDT_ConfigMenuMeterPiece_C_SetDefaultVisualDisplayValue final
+{
+public:
+	double                                        InInitalizeValue;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        InDefaultValue;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_DisplayValueToMeterValue_OutMeterValue;   // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_DisplayValueToMeterValue_OutMeterValue_1; // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_ConfigMenuMeterPiece_C_SetDefaultVisualDisplayValue) == 0x000008, "Wrong alignment on WDT_ConfigMenuMeterPiece_C_SetDefaultVisualDisplayValue");
+static_assert(sizeof(WDT_ConfigMenuMeterPiece_C_SetDefaultVisualDisplayValue) == 0x000020, "Wrong size on WDT_ConfigMenuMeterPiece_C_SetDefaultVisualDisplayValue");
+static_assert(offsetof(WDT_ConfigMenuMeterPiece_C_SetDefaultVisualDisplayValue, InInitalizeValue) == 0x000000, "Member 'WDT_ConfigMenuMeterPiece_C_SetDefaultVisualDisplayValue::InInitalizeValue' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigMenuMeterPiece_C_SetDefaultVisualDisplayValue, InDefaultValue) == 0x000008, "Member 'WDT_ConfigMenuMeterPiece_C_SetDefaultVisualDisplayValue::InDefaultValue' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigMenuMeterPiece_C_SetDefaultVisualDisplayValue, CallFunc_DisplayValueToMeterValue_OutMeterValue) == 0x000010, "Member 'WDT_ConfigMenuMeterPiece_C_SetDefaultVisualDisplayValue::CallFunc_DisplayValueToMeterValue_OutMeterValue' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigMenuMeterPiece_C_SetDefaultVisualDisplayValue, CallFunc_DisplayValueToMeterValue_OutMeterValue_1) == 0x000018, "Member 'WDT_ConfigMenuMeterPiece_C_SetDefaultVisualDisplayValue::CallFunc_DisplayValueToMeterValue_OutMeterValue_1' has a wrong offset!");
+
 // Function WDT_ConfigMenuMeterPiece.WDT_ConfigMenuMeterPiece_C.SetDefaultValue
 // 0x0030 (0x0030 - 0x0000)
 struct WDT_ConfigMenuMeterPiece_C_SetDefaultValue final
@@ -150,6 +180,35 @@ static_assert(offsetof(WDT_ConfigMenuMeterPiece_C_SetDefaultValue, K2Node_Dynami
 static_assert(offsetof(WDT_ConfigMenuMeterPiece_C_SetDefaultValue, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'WDT_ConfigMenuMeterPiece_C_SetDefaultValue::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 static_assert(offsetof(WDT_ConfigMenuMeterPiece_C_SetDefaultValue, CallFunc_SetMeterValue_ReturnValue) == 0x000029, "Member 'WDT_ConfigMenuMeterPiece_C_SetDefaultValue::CallFunc_SetMeterValue_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_ConfigMenuMeterPiece_C_SetDefaultValue, CallFunc_SetMeterValue_MeterValue_ImplicitCast) == 0x00002C, "Member 'WDT_ConfigMenuMeterPiece_C_SetDefaultValue::CallFunc_SetMeterValue_MeterValue_ImplicitCast' has a wrong offset!");
+
+// Function WDT_ConfigMenuMeterPiece.WDT_ConfigMenuMeterPiece_C.SetDefaultDisplayValue_NoNotify
+// 0x0040 (0x0040 - 0x0000)
+struct WDT_ConfigMenuMeterPiece_C_SetDefaultDisplayValue_NoNotify final
+{
+public:
+	double                                        InInitalizeValue;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        InDefaultValue;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IMeterInterface>       K2Node_DynamicCast_AsMeter_Interface;              // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetIsEditable_OutFlag;                    // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_DisplayValueToMeterValue_OutMeterValue;   // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_DisplayValueToMeterValue_OutMeterValue_1; // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SetMeterValue_ReturnValue;                // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_SetMeterValue_MeterValue_ImplicitCast;    // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_ConfigMenuMeterPiece_C_SetDefaultDisplayValue_NoNotify) == 0x000008, "Wrong alignment on WDT_ConfigMenuMeterPiece_C_SetDefaultDisplayValue_NoNotify");
+static_assert(sizeof(WDT_ConfigMenuMeterPiece_C_SetDefaultDisplayValue_NoNotify) == 0x000040, "Wrong size on WDT_ConfigMenuMeterPiece_C_SetDefaultDisplayValue_NoNotify");
+static_assert(offsetof(WDT_ConfigMenuMeterPiece_C_SetDefaultDisplayValue_NoNotify, InInitalizeValue) == 0x000000, "Member 'WDT_ConfigMenuMeterPiece_C_SetDefaultDisplayValue_NoNotify::InInitalizeValue' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigMenuMeterPiece_C_SetDefaultDisplayValue_NoNotify, InDefaultValue) == 0x000008, "Member 'WDT_ConfigMenuMeterPiece_C_SetDefaultDisplayValue_NoNotify::InDefaultValue' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigMenuMeterPiece_C_SetDefaultDisplayValue_NoNotify, K2Node_DynamicCast_AsMeter_Interface) == 0x000010, "Member 'WDT_ConfigMenuMeterPiece_C_SetDefaultDisplayValue_NoNotify::K2Node_DynamicCast_AsMeter_Interface' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigMenuMeterPiece_C_SetDefaultDisplayValue_NoNotify, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'WDT_ConfigMenuMeterPiece_C_SetDefaultDisplayValue_NoNotify::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigMenuMeterPiece_C_SetDefaultDisplayValue_NoNotify, CallFunc_GetIsEditable_OutFlag) == 0x000021, "Member 'WDT_ConfigMenuMeterPiece_C_SetDefaultDisplayValue_NoNotify::CallFunc_GetIsEditable_OutFlag' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigMenuMeterPiece_C_SetDefaultDisplayValue_NoNotify, CallFunc_DisplayValueToMeterValue_OutMeterValue) == 0x000028, "Member 'WDT_ConfigMenuMeterPiece_C_SetDefaultDisplayValue_NoNotify::CallFunc_DisplayValueToMeterValue_OutMeterValue' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigMenuMeterPiece_C_SetDefaultDisplayValue_NoNotify, CallFunc_DisplayValueToMeterValue_OutMeterValue_1) == 0x000030, "Member 'WDT_ConfigMenuMeterPiece_C_SetDefaultDisplayValue_NoNotify::CallFunc_DisplayValueToMeterValue_OutMeterValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigMenuMeterPiece_C_SetDefaultDisplayValue_NoNotify, CallFunc_SetMeterValue_ReturnValue) == 0x000038, "Member 'WDT_ConfigMenuMeterPiece_C_SetDefaultDisplayValue_NoNotify::CallFunc_SetMeterValue_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_ConfigMenuMeterPiece_C_SetDefaultDisplayValue_NoNotify, CallFunc_SetMeterValue_MeterValue_ImplicitCast) == 0x00003C, "Member 'WDT_ConfigMenuMeterPiece_C_SetDefaultDisplayValue_NoNotify::CallFunc_SetMeterValue_MeterValue_ImplicitCast' has a wrong offset!");
 
 // Function WDT_ConfigMenuMeterPiece.WDT_ConfigMenuMeterPiece_C.SetDefaultDisplayValue
 // 0x0020 (0x0020 - 0x0000)

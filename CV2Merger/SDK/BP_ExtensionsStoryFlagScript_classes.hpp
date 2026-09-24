@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_ExtensionsStoryFlagScript.BP_ExtensionsStoryFlagScript_C
-// 0x0000 (0x0158 - 0x0158)
+// 0x0000 (0x0140 - 0x0140)
 class UBP_ExtensionsStoryFlagScript_C final : public UExtensionsStoryFlagScript
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UBP_ExtensionsStoryFlagScript_C) == 0x000008, "Wrong alignment on UBP_ExtensionsStoryFlagScript_C");
-static_assert(sizeof(UBP_ExtensionsStoryFlagScript_C) == 0x000158, "Wrong size on UBP_ExtensionsStoryFlagScript_C");
+static_assert(sizeof(UBP_ExtensionsStoryFlagScript_C) == 0x000140, "Wrong size on UBP_ExtensionsStoryFlagScript_C");
 
 }
 

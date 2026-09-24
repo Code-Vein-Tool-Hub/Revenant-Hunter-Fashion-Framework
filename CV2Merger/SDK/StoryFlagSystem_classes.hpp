@@ -56,6 +56,8 @@ public:
 	static class FString GetStoryFlagEvaluationFormulaString(const struct FStoryFlagEvaluationFormula& EvaluationFormula);
 	static int32 GetStoryFlagGameplayTagIndex(const class UObject* InWorldContext, const struct FStoryFlagLabel& Label, const struct FGameplayTag& Tag);
 	static TArray<struct FStoryFlagLabel> GetStoryFlagLabelsByCategory(const class UObject* InWorldContext, class FName Category);
+	static TArray<class FName> GetStoryFlagPresetAllCategory(const class UObject* InWorldContext);
+	static TArray<struct FStoryFlagPresetLabel> GetStoryFlagPresetLabelsByCategory(const class UObject* InWorldContext, class FName Category);
 	static const class FString GetStoryFlagString(const struct FStoryFlagLabel& Label);
 	static EStoryFlagType GetStoryFlagType(const class UObject* InWorldContext, const struct FStoryFlagLabel& Label);
 	static bool GetStoryFlagValueByBoolean(const class UObject* InWorldContext, const struct FStoryFlagLabel& Label);

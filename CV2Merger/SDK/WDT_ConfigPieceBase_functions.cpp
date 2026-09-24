@@ -41,6 +41,26 @@ void UWDT_ConfigPieceBase_C::SetTitleText(const class FText& InText, bool* Succe
 }
 
 
+// Function WDT_ConfigPieceBase.WDT_ConfigPieceBase_C.SetLogText
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FText                             InText                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UWDT_ConfigPieceBase_C::SetLogText(const class FText& InText)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_ConfigPieceBase_C", "SetLogText");
+
+	Params::WDT_ConfigPieceBase_C_SetLogText Parms{};
+
+	Parms.InText = std::move(InText);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WDT_ConfigPieceBase.WDT_ConfigPieceBase_C.SetIsEditable
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:

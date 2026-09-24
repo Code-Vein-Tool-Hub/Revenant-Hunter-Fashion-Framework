@@ -406,10 +406,11 @@ void UWDT_WeaponGadgetChangeMenu_C::ExecuteUbergraph_WDT_WeaponGadgetChangeMenu(
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int32                                   InValue                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EUIWeaponGadgetSlot                     ExclusionSlot                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    HasValue                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // EUIWeaponGadgetSlot                     Key                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_WeaponGadgetChangeMenu_C::Find_Key_from_Equiped_Gadget_Indexes(int32 InValue, bool* HasValue, EUIWeaponGadgetSlot* Key)
+void UWDT_WeaponGadgetChangeMenu_C::Find_Key_from_Equiped_Gadget_Indexes(int32 InValue, EUIWeaponGadgetSlot ExclusionSlot, bool* HasValue, EUIWeaponGadgetSlot* Key)
 {
 	static class UFunction* Func = nullptr;
 
@@ -419,6 +420,7 @@ void UWDT_WeaponGadgetChangeMenu_C::Find_Key_from_Equiped_Gadget_Indexes(int32 I
 	Params::WDT_WeaponGadgetChangeMenu_C_Find_Key_from_Equiped_Gadget_Indexes Parms{};
 
 	Parms.InValue = InValue;
+	Parms.ExclusionSlot = ExclusionSlot;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -1507,6 +1509,28 @@ void UWDT_WeaponGadgetChangeMenu_C::ShowMessage(const class FText& Message)
 	Params::WDT_WeaponGadgetChangeMenu_C_ShowMessage Parms{};
 
 	Parms.Message = std::move(Message);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_WeaponGadgetChangeMenu.WDT_WeaponGadgetChangeMenu_C.Tick
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// struct FGeometry                        MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_WeaponGadgetChangeMenu_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_WeaponGadgetChangeMenu_C", "Tick");
+
+	Params::WDT_WeaponGadgetChangeMenu_C_Tick Parms{};
+
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.InDeltaTime = InDeltaTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

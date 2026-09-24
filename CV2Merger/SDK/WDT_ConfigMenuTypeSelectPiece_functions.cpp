@@ -156,6 +156,28 @@ void UWDT_ConfigMenuTypeSelectPiece_C::SetDisableColor(bool* OutFlag)
 }
 
 
+// Function WDT_ConfigMenuTypeSelectPiece.WDT_ConfigMenuTypeSelectPiece_C.SetDefaultSelectIndex_NoNotify
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InInitializeIndex                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InDefaultIndex                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_ConfigMenuTypeSelectPiece_C::SetDefaultSelectIndex_NoNotify(int32 InInitializeIndex, int32 InDefaultIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_ConfigMenuTypeSelectPiece_C", "SetDefaultSelectIndex_NoNotify");
+
+	Params::WDT_ConfigMenuTypeSelectPiece_C_SetDefaultSelectIndex_NoNotify Parms{};
+
+	Parms.InInitializeIndex = InInitializeIndex;
+	Parms.InDefaultIndex = InDefaultIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WDT_ConfigMenuTypeSelectPiece.WDT_ConfigMenuTypeSelectPiece_C.SetDefaultSelectIndex
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:

@@ -19,7 +19,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WDT_BuddyThumbnailPiece.WDT_BuddyThumbnailPiece_C
-// 0x0038 (0x0600 - 0x05C8)
+// 0x0040 (0x0608 - 0x05C8)
 class UWDT_BuddyThumbnailPiece_C final : public UMenuPieceBase
 {
 public:
@@ -30,28 +30,31 @@ public:
 	class UImage*                                 CantCallOverride;                                  // 0x05E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 EquipIcon;                                         // 0x05F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 MouseArea;                                         // 0x05F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 VariationIcon;                                     // 0x0600(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void BP_OnEntryReleased();
-	void BP_OnItemExpansionChanged(bool bIsExpanded);
-	void BP_OnItemSelectionChanged(bool bIsSelected);
-	bool Check(bool PlayAnimation_0, bool AnotherAppearance);
-	bool ClearSubTexture(class FName ImageId);
-	bool ClearTexture();
-	bool Deselect(bool PlayAnimation_0);
-	void ExecuteUbergraph_WDT_BuddyThumbnailPiece(int32 EntryPoint);
-	bool FlipTexture(bool IsInverse);
-	bool IsChecked();
-	struct FEventReply OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent);
-	void OnListItemObjectSet(class UObject* ListItemObject);
-	bool Reset();
-	bool Select(bool PlayAnimation_0);
-	void SetInfo(class UMaterialInstance* IconMaterial, bool IsCantCall);
-	bool SetLazyTexture(const TSoftObjectPtr<class UTexture2D>& LazyTexture);
-	bool SetSubLazyTexture(class FName ImageId, const TSoftObjectPtr<class UTexture2D>& LazyTexture);
-	bool SetSubTexture(class FName ImageId, class UTexture2D* Texture);
-	bool SetTexture(class UTexture2D* Texture);
 	bool Uncheck(bool PlayAnimation_0);
+	bool SetTexture(class UTexture2D* Texture);
+	bool SetSubTexture(class FName ImageId, class UTexture2D* Texture);
+	bool SetSubLazyTexture(class FName ImageId, const TSoftObjectPtr<class UTexture2D>& LazyTexture);
+	bool SetLazyTexture(const TSoftObjectPtr<class UTexture2D>& LazyTexture);
+	void SetInfo(class UMaterialInstance* IconMaterial, bool IsCantCall);
+	bool SetFlag(class FName FlagName, bool FlagValue, bool bFireEvent);
+	bool Select(bool PlayAnimation_0);
+	bool Reset();
+	void OnListItemObjectSet(class UObject* ListItemObject);
+	struct FEventReply OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent);
+	bool IsChecked();
+	void HasVariation(bool* NewParam);
+	bool FlipTexture(bool IsInverse);
+	void ExecuteUbergraph_WDT_BuddyThumbnailPiece(int32 EntryPoint);
+	bool Deselect(bool PlayAnimation_0);
+	bool ClearTexture();
+	bool ClearSubTexture(class FName ImageId);
+	bool Check(bool PlayAnimation_0, bool AnotherAppearance);
+	void BP_OnItemSelectionChanged(bool bIsSelected);
+	void BP_OnItemExpansionChanged(bool bIsExpanded);
+	void BP_OnEntryReleased();
 
 public:
 	static class UClass* StaticClass()
@@ -64,7 +67,7 @@ public:
 	}
 };
 static_assert(alignof(UWDT_BuddyThumbnailPiece_C) == 0x000008, "Wrong alignment on UWDT_BuddyThumbnailPiece_C");
-static_assert(sizeof(UWDT_BuddyThumbnailPiece_C) == 0x000600, "Wrong size on UWDT_BuddyThumbnailPiece_C");
+static_assert(sizeof(UWDT_BuddyThumbnailPiece_C) == 0x000608, "Wrong size on UWDT_BuddyThumbnailPiece_C");
 static_assert(offsetof(UWDT_BuddyThumbnailPiece_C, UberGraphFrame) == 0x0005C8, "Member 'UWDT_BuddyThumbnailPiece_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UWDT_BuddyThumbnailPiece_C, BoxCursorBG) == 0x0005D0, "Member 'UWDT_BuddyThumbnailPiece_C::BoxCursorBG' has a wrong offset!");
 static_assert(offsetof(UWDT_BuddyThumbnailPiece_C, BoxCursorImage) == 0x0005D8, "Member 'UWDT_BuddyThumbnailPiece_C::BoxCursorImage' has a wrong offset!");
@@ -72,6 +75,7 @@ static_assert(offsetof(UWDT_BuddyThumbnailPiece_C, BuddyIcon) == 0x0005E0, "Memb
 static_assert(offsetof(UWDT_BuddyThumbnailPiece_C, CantCallOverride) == 0x0005E8, "Member 'UWDT_BuddyThumbnailPiece_C::CantCallOverride' has a wrong offset!");
 static_assert(offsetof(UWDT_BuddyThumbnailPiece_C, EquipIcon) == 0x0005F0, "Member 'UWDT_BuddyThumbnailPiece_C::EquipIcon' has a wrong offset!");
 static_assert(offsetof(UWDT_BuddyThumbnailPiece_C, MouseArea) == 0x0005F8, "Member 'UWDT_BuddyThumbnailPiece_C::MouseArea' has a wrong offset!");
+static_assert(offsetof(UWDT_BuddyThumbnailPiece_C, VariationIcon) == 0x000600, "Member 'UWDT_BuddyThumbnailPiece_C::VariationIcon' has a wrong offset!");
 
 }
 

@@ -26,8 +26,8 @@ public:
 	class UImage*                                 Image_Gadget2;                                     // 0x06D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void SetSoftTextureWithEmptyTexture(const TSoftObjectPtr<class UTexture2D>& SoftObjectReference, class UImage* TargetImage, class UTexture2D* EmptyTexture);
 	void SetValue(const TSoftObjectPtr<class UTexture2D>& IconTexture, class UTexture2D* EmptyTexture, int32 IchorNum, bool IsEmpty);
+	void SetSoftTextureWithEmptyTexture(const TSoftObjectPtr<class UTexture2D>& SoftObjectReference, class UImage* TargetImage, class UTexture2D* EmptyTexture);
 
 public:
 	static class UClass* StaticClass()

@@ -34,7 +34,6 @@ public:
 	void OnAnimationFinished(const class UWidgetAnimation* Animation);
 	void PlayBleedAttackEffect();
 	void SetBleedAmount(double InBleedAmount, double InMaxBleedAmount, EResourceChangeFactor InFactor);
-	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 
 public:
 	static class UClass* StaticClass()

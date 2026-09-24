@@ -32,12 +32,12 @@ public:
 	class UCommonTextBlock*                       IndexTextIGadgetName;                              // 0x0708(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void SetIndependentAttack(int32 InAttack);
-	void SetJailAttack(int32 InAttack);
-	void SetWeapon1Attack(int32 InAttack);
-	void SetWeapon1Icon(class UTexture2D* InIcon);
-	void SetWeapon2Attack(int32 InAttack);
 	void SetWeapon2Icon(class UTexture2D* InIcon);
+	void SetWeapon2Attack(int32 InAttack);
+	void SetWeapon1Icon(class UTexture2D* InIcon);
+	void SetWeapon1Attack(int32 InAttack);
+	void SetJailAttack(int32 InAttack);
+	void SetIndependentAttack(int32 InAttack);
 
 public:
 	static class UClass* StaticClass()

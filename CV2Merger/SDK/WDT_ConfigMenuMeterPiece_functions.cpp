@@ -45,6 +45,26 @@ void UWDT_ConfigMenuMeterPiece_C::SetupMeter()
 }
 
 
+// Function WDT_ConfigMenuMeterPiece.WDT_ConfigMenuMeterPiece_C.SetTogleOnOff_NoNotify
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    InFlag                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_ConfigMenuMeterPiece_C::SetTogleOnOff_NoNotify(bool InFlag)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_ConfigMenuMeterPiece_C", "SetTogleOnOff_NoNotify");
+
+	Params::WDT_ConfigMenuMeterPiece_C_SetTogleOnOff_NoNotify Parms{};
+
+	Parms.InFlag = InFlag;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WDT_ConfigMenuMeterPiece.WDT_ConfigMenuMeterPiece_C.SetTogleOnOff
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -145,6 +165,28 @@ void UWDT_ConfigMenuMeterPiece_C::SetIsEditable(bool InFlag)
 }
 
 
+// Function WDT_ConfigMenuMeterPiece.WDT_ConfigMenuMeterPiece_C.SetDefaultVisualDisplayValue
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  InInitalizeValue                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  InDefaultValue                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_ConfigMenuMeterPiece_C::SetDefaultVisualDisplayValue(double InInitalizeValue, double InDefaultValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_ConfigMenuMeterPiece_C", "SetDefaultVisualDisplayValue");
+
+	Params::WDT_ConfigMenuMeterPiece_C_SetDefaultVisualDisplayValue Parms{};
+
+	Parms.InInitalizeValue = InInitalizeValue;
+	Parms.InDefaultValue = InDefaultValue;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WDT_ConfigMenuMeterPiece.WDT_ConfigMenuMeterPiece_C.SetDefaultValue
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -161,6 +203,28 @@ void UWDT_ConfigMenuMeterPiece_C::SetDefaultValue(double InInitializeValue, doub
 	Params::WDT_ConfigMenuMeterPiece_C_SetDefaultValue Parms{};
 
 	Parms.InInitializeValue = InInitializeValue;
+	Parms.InDefaultValue = InDefaultValue;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_ConfigMenuMeterPiece.WDT_ConfigMenuMeterPiece_C.SetDefaultDisplayValue_NoNotify
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  InInitalizeValue                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  InDefaultValue                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_ConfigMenuMeterPiece_C::SetDefaultDisplayValue_NoNotify(double InInitalizeValue, double InDefaultValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_ConfigMenuMeterPiece_C", "SetDefaultDisplayValue_NoNotify");
+
+	Params::WDT_ConfigMenuMeterPiece_C_SetDefaultDisplayValue_NoNotify Parms{};
+
+	Parms.InInitalizeValue = InInitalizeValue;
 	Parms.InDefaultValue = InDefaultValue;
 
 	UObject::ProcessEvent(Func, &Parms);

@@ -23,113 +23,6 @@
 namespace SDK
 {
 
-// Class AIFramework.AIFwNodeBase
-// 0x0008 (0x0030 - 0x0028)
-class UAIFwNodeBase : public UObject
-{
-public:
-	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"AIFwNodeBase">();
-	}
-	static class UAIFwNodeBase* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAIFwNodeBase>();
-	}
-};
-static_assert(alignof(UAIFwNodeBase) == 0x000008, "Wrong alignment on UAIFwNodeBase");
-static_assert(sizeof(UAIFwNodeBase) == 0x000030, "Wrong size on UAIFwNodeBase");
-
-// Class AIFramework.AIFwPTEvaluationNode
-// 0x0018 (0x0048 - 0x0030)
-class UAIFwPTEvaluationNode : public UAIFwNodeBase
-{
-public:
-	bool                                          Filter;                                            // 0x0030(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          Score;                                             // 0x0031(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	EPTEvalOperation                              AdditionalOperation;                               // 0x0032(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_33[0x1];                                       // 0x0033(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         AdditionalScale;                                   // 0x0034(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_38[0x10];                                      // 0x0038(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"AIFwPTEvaluationNode">();
-	}
-	static class UAIFwPTEvaluationNode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAIFwPTEvaluationNode>();
-	}
-};
-static_assert(alignof(UAIFwPTEvaluationNode) == 0x000008, "Wrong alignment on UAIFwPTEvaluationNode");
-static_assert(sizeof(UAIFwPTEvaluationNode) == 0x000048, "Wrong size on UAIFwPTEvaluationNode");
-static_assert(offsetof(UAIFwPTEvaluationNode, Filter) == 0x000030, "Member 'UAIFwPTEvaluationNode::Filter' has a wrong offset!");
-static_assert(offsetof(UAIFwPTEvaluationNode, Score) == 0x000031, "Member 'UAIFwPTEvaluationNode::Score' has a wrong offset!");
-static_assert(offsetof(UAIFwPTEvaluationNode, AdditionalOperation) == 0x000032, "Member 'UAIFwPTEvaluationNode::AdditionalOperation' has a wrong offset!");
-static_assert(offsetof(UAIFwPTEvaluationNode, AdditionalScale) == 0x000034, "Member 'UAIFwPTEvaluationNode::AdditionalScale' has a wrong offset!");
-
-// Class AIFramework.AIFwPTEvaluationNodeUseCriterion
-// 0x0008 (0x0050 - 0x0048)
-class UAIFwPTEvaluationNodeUseCriterion : public UAIFwPTEvaluationNode
-{
-public:
-	bool                                          AllPath;                                           // 0x0048(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	EPTEvalScoreType                              ScoreType;                                         // 0x0049(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_4A[0x6];                                       // 0x004A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"AIFwPTEvaluationNodeUseCriterion">();
-	}
-	static class UAIFwPTEvaluationNodeUseCriterion* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAIFwPTEvaluationNodeUseCriterion>();
-	}
-};
-static_assert(alignof(UAIFwPTEvaluationNodeUseCriterion) == 0x000008, "Wrong alignment on UAIFwPTEvaluationNodeUseCriterion");
-static_assert(sizeof(UAIFwPTEvaluationNodeUseCriterion) == 0x000050, "Wrong size on UAIFwPTEvaluationNodeUseCriterion");
-static_assert(offsetof(UAIFwPTEvaluationNodeUseCriterion, AllPath) == 0x000048, "Member 'UAIFwPTEvaluationNodeUseCriterion::AllPath' has a wrong offset!");
-static_assert(offsetof(UAIFwPTEvaluationNodeUseCriterion, ScoreType) == 0x000049, "Member 'UAIFwPTEvaluationNodeUseCriterion::ScoreType' has a wrong offset!");
-
-// Class AIFramework.AIFwPTEvaluationPathfinding
-// 0x0020 (0x0070 - 0x0050)
-class UAIFwPTEvaluationPathfinding final : public UAIFwPTEvaluationNodeUseCriterion
-{
-public:
-	EAIFwPTEvalPathfindingMode                    Mode;                                              // 0x0050(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class UNavigationQueryFilter>     FilterClass;                                       // 0x0058(0x0008)(Edit, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          PathFromCriterion;                                 // 0x0060(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_61[0x3];                                       // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         MinValue;                                          // 0x0064(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         MaxValue;                                          // 0x0068(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          Acceptance;                                        // 0x006C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_6D[0x3];                                       // 0x006D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"AIFwPTEvaluationPathfinding">();
-	}
-	static class UAIFwPTEvaluationPathfinding* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAIFwPTEvaluationPathfinding>();
-	}
-};
-static_assert(alignof(UAIFwPTEvaluationPathfinding) == 0x000008, "Wrong alignment on UAIFwPTEvaluationPathfinding");
-static_assert(sizeof(UAIFwPTEvaluationPathfinding) == 0x000070, "Wrong size on UAIFwPTEvaluationPathfinding");
-static_assert(offsetof(UAIFwPTEvaluationPathfinding, Mode) == 0x000050, "Member 'UAIFwPTEvaluationPathfinding::Mode' has a wrong offset!");
-static_assert(offsetof(UAIFwPTEvaluationPathfinding, FilterClass) == 0x000058, "Member 'UAIFwPTEvaluationPathfinding::FilterClass' has a wrong offset!");
-static_assert(offsetof(UAIFwPTEvaluationPathfinding, PathFromCriterion) == 0x000060, "Member 'UAIFwPTEvaluationPathfinding::PathFromCriterion' has a wrong offset!");
-static_assert(offsetof(UAIFwPTEvaluationPathfinding, MinValue) == 0x000064, "Member 'UAIFwPTEvaluationPathfinding::MinValue' has a wrong offset!");
-static_assert(offsetof(UAIFwPTEvaluationPathfinding, MaxValue) == 0x000068, "Member 'UAIFwPTEvaluationPathfinding::MaxValue' has a wrong offset!");
-static_assert(offsetof(UAIFwPTEvaluationPathfinding, Acceptance) == 0x00006C, "Member 'UAIFwPTEvaluationPathfinding::Acceptance' has a wrong offset!");
-
 // Class AIFramework.AIFwAIDirector
 // 0x0010 (0x02B0 - 0x02A0)
 class AAIFwAIDirector final : public AActor
@@ -156,49 +49,64 @@ static_assert(sizeof(AAIFwAIDirector) == 0x0002B0, "Wrong size on AAIFwAIDirecto
 static_assert(offsetof(AAIFwAIDirector, BlackboardComponent) == 0x0002A0, "Member 'AAIFwAIDirector::BlackboardComponent' has a wrong offset!");
 static_assert(offsetof(AAIFwAIDirector, HierarchyComponent) == 0x0002A8, "Member 'AAIFwAIDirector::HierarchyComponent' has a wrong offset!");
 
-// Class AIFramework.AIFwPTCriterionNode
-// 0x0010 (0x0040 - 0x0030)
-class UAIFwPTCriterionNode : public UAIFwNodeBase
+// Class AIFramework.AIFwNodeBase
+// 0x0008 (0x0030 - 0x0028)
+class UAIFwNodeBase : public UObject
 {
 public:
-	EPTCriterionSlot                              CriterionSlot;                                     // 0x0030(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_31[0xF];                                       // 0x0031(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AIFwPTCriterionNode">();
+		return StaticClassImpl<"AIFwNodeBase">();
 	}
-	static class UAIFwPTCriterionNode* GetDefaultObj()
+	static class UAIFwNodeBase* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UAIFwPTCriterionNode>();
+		return GetDefaultObjImpl<UAIFwNodeBase>();
 	}
 };
-static_assert(alignof(UAIFwPTCriterionNode) == 0x000008, "Wrong alignment on UAIFwPTCriterionNode");
-static_assert(sizeof(UAIFwPTCriterionNode) == 0x000040, "Wrong size on UAIFwPTCriterionNode");
-static_assert(offsetof(UAIFwPTCriterionNode, CriterionSlot) == 0x000030, "Member 'UAIFwPTCriterionNode::CriterionSlot' has a wrong offset!");
+static_assert(alignof(UAIFwNodeBase) == 0x000008, "Wrong alignment on UAIFwNodeBase");
+static_assert(sizeof(UAIFwNodeBase) == 0x000030, "Wrong size on UAIFwNodeBase");
 
-// Class AIFramework.AIFwPTCriterionSquadMemberDestinations
-// 0x0008 (0x0048 - 0x0040)
-class UAIFwPTCriterionSquadMemberDestinations final : public UAIFwPTCriterionNode
+// Class AIFramework.AIFwNodeBasedAsset
+// 0x0000 (0x0028 - 0x0028)
+class UAIFwNodeBasedAsset : public UObject
 {
 public:
-	bool                                          IgnoreSelf;                                        // 0x0040(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"AIFwNodeBasedAsset">();
+	}
+	static class UAIFwNodeBasedAsset* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAIFwNodeBasedAsset>();
+	}
+};
+static_assert(alignof(UAIFwNodeBasedAsset) == 0x000008, "Wrong alignment on UAIFwNodeBasedAsset");
+static_assert(sizeof(UAIFwNodeBasedAsset) == 0x000028, "Wrong size on UAIFwNodeBasedAsset");
+
+// Class AIFramework.AIFwNavVolumeBoundsVolume
+// 0x0008 (0x02E0 - 0x02D8)
+class AAIFwNavVolumeBoundsVolume final : public AVolume
+{
+public:
+	struct FNavAgentSelector                      SupportedAgents;                                   // 0x02D8(0x0004)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2DC[0x4];                                      // 0x02DC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AIFwPTCriterionSquadMemberDestinations">();
+		return StaticClassImpl<"AIFwNavVolumeBoundsVolume">();
 	}
-	static class UAIFwPTCriterionSquadMemberDestinations* GetDefaultObj()
+	static class AAIFwNavVolumeBoundsVolume* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UAIFwPTCriterionSquadMemberDestinations>();
+		return GetDefaultObjImpl<AAIFwNavVolumeBoundsVolume>();
 	}
 };
-static_assert(alignof(UAIFwPTCriterionSquadMemberDestinations) == 0x000008, "Wrong alignment on UAIFwPTCriterionSquadMemberDestinations");
-static_assert(sizeof(UAIFwPTCriterionSquadMemberDestinations) == 0x000048, "Wrong size on UAIFwPTCriterionSquadMemberDestinations");
-static_assert(offsetof(UAIFwPTCriterionSquadMemberDestinations, IgnoreSelf) == 0x000040, "Member 'UAIFwPTCriterionSquadMemberDestinations::IgnoreSelf' has a wrong offset!");
+static_assert(alignof(AAIFwNavVolumeBoundsVolume) == 0x000008, "Wrong alignment on AAIFwNavVolumeBoundsVolume");
+static_assert(sizeof(AAIFwNavVolumeBoundsVolume) == 0x0002E0, "Wrong size on AAIFwNavVolumeBoundsVolume");
+static_assert(offsetof(AAIFwNavVolumeBoundsVolume, SupportedAgents) == 0x0002D8, "Member 'AAIFwNavVolumeBoundsVolume::SupportedAgents' has a wrong offset!");
 
 // Class AIFramework.AIFwAITask_TeleportTo
 // 0x0020 (0x0090 - 0x0070)
@@ -220,45 +128,6 @@ public:
 static_assert(alignof(UAIFwAITask_TeleportTo) == 0x000008, "Wrong alignment on UAIFwAITask_TeleportTo");
 static_assert(sizeof(UAIFwAITask_TeleportTo) == 0x000090, "Wrong size on UAIFwAITask_TeleportTo");
 
-// Class AIFramework.AIFwNodeBasedAsset
-// 0x0000 (0x0028 - 0x0028)
-class UAIFwNodeBasedAsset : public UObject
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"AIFwNodeBasedAsset">();
-	}
-	static class UAIFwNodeBasedAsset* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAIFwNodeBasedAsset>();
-	}
-};
-static_assert(alignof(UAIFwNodeBasedAsset) == 0x000008, "Wrong alignment on UAIFwNodeBasedAsset");
-static_assert(sizeof(UAIFwNodeBasedAsset) == 0x000028, "Wrong size on UAIFwNodeBasedAsset");
-
-// Class AIFramework.AIFwNavVolumeTestingActor
-// 0x0008 (0x03D8 - 0x03D0)
-class AAIFwNavVolumeTestingActor final : public ANavigationTestingActor
-{
-public:
-	uint8                                         bWantsStringPulling : 1;                           // 0x03D0(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bWantsShortcutPath : 1;                            // 0x03D0(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_3D1[0x7];                                      // 0x03D1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"AIFwNavVolumeTestingActor">();
-	}
-	static class AAIFwNavVolumeTestingActor* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<AAIFwNavVolumeTestingActor>();
-	}
-};
-static_assert(alignof(AAIFwNavVolumeTestingActor) == 0x000008, "Wrong alignment on AAIFwNavVolumeTestingActor");
-static_assert(sizeof(AAIFwNavVolumeTestingActor) == 0x0003D8, "Wrong size on AAIFwNavVolumeTestingActor");
-
 // Class AIFramework.AIFwBehaviorTree
 // 0x0010 (0x0038 - 0x0028)
 class UAIFwBehaviorTree final : public UAIFwNodeBasedAsset
@@ -278,30 +147,6 @@ public:
 };
 static_assert(alignof(UAIFwBehaviorTree) == 0x000008, "Wrong alignment on UAIFwBehaviorTree");
 static_assert(sizeof(UAIFwBehaviorTree) == 0x000038, "Wrong size on UAIFwBehaviorTree");
-
-// Class AIFramework.AIFwBTService_RunPerceptionTree
-// 0x0010 (0x00A8 - 0x0098)
-class UAIFwBTService_RunPerceptionTree final : public UBTService_BlackboardBase
-{
-public:
-	class UAIFwBehaviorTree*                      PerceptionTree;                                    // 0x0098(0x0008)(Edit, ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bClearBBValueWhenFailed;                           // 0x00A0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"AIFwBTService_RunPerceptionTree">();
-	}
-	static class UAIFwBTService_RunPerceptionTree* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAIFwBTService_RunPerceptionTree>();
-	}
-};
-static_assert(alignof(UAIFwBTService_RunPerceptionTree) == 0x000008, "Wrong alignment on UAIFwBTService_RunPerceptionTree");
-static_assert(sizeof(UAIFwBTService_RunPerceptionTree) == 0x0000A8, "Wrong size on UAIFwBTService_RunPerceptionTree");
-static_assert(offsetof(UAIFwBTService_RunPerceptionTree, PerceptionTree) == 0x000098, "Member 'UAIFwBTService_RunPerceptionTree::PerceptionTree' has a wrong offset!");
-static_assert(offsetof(UAIFwBTService_RunPerceptionTree, bClearBBValueWhenFailed) == 0x0000A0, "Member 'UAIFwBTService_RunPerceptionTree::bClearBBValueWhenFailed' has a wrong offset!");
 
 // Class AIFramework.AIFwBlackboardBlueprintLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -343,30 +188,6 @@ public:
 };
 static_assert(alignof(UAIFwBlackboardBlueprintLibrary) == 0x000008, "Wrong alignment on UAIFwBlackboardBlueprintLibrary");
 static_assert(sizeof(UAIFwBlackboardBlueprintLibrary) == 0x000028, "Wrong size on UAIFwBlackboardBlueprintLibrary");
-
-// Class AIFramework.AIFwPTEvaluationNavMeshRaycast
-// 0x0010 (0x0060 - 0x0050)
-class UAIFwPTEvaluationNavMeshRaycast final : public UAIFwPTEvaluationNodeUseCriterion
-{
-public:
-	TSubclassOf<class UNavigationQueryFilter>     FilterClass;                                       // 0x0050(0x0008)(Edit, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          Acceptance;                                        // 0x0058(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"AIFwPTEvaluationNavMeshRaycast">();
-	}
-	static class UAIFwPTEvaluationNavMeshRaycast* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAIFwPTEvaluationNavMeshRaycast>();
-	}
-};
-static_assert(alignof(UAIFwPTEvaluationNavMeshRaycast) == 0x000008, "Wrong alignment on UAIFwPTEvaluationNavMeshRaycast");
-static_assert(sizeof(UAIFwPTEvaluationNavMeshRaycast) == 0x000060, "Wrong size on UAIFwPTEvaluationNavMeshRaycast");
-static_assert(offsetof(UAIFwPTEvaluationNavMeshRaycast, FilterClass) == 0x000050, "Member 'UAIFwPTEvaluationNavMeshRaycast::FilterClass' has a wrong offset!");
-static_assert(offsetof(UAIFwPTEvaluationNavMeshRaycast, Acceptance) == 0x000058, "Member 'UAIFwPTEvaluationNavMeshRaycast::Acceptance' has a wrong offset!");
 
 // Class AIFramework.AIFwBlackboardComponent
 // 0x0028 (0x00C8 - 0x00A0)
@@ -421,60 +242,6 @@ public:
 };
 static_assert(alignof(UAIFwBlackboardComponent) == 0x000008, "Wrong alignment on UAIFwBlackboardComponent");
 static_assert(sizeof(UAIFwBlackboardComponent) == 0x0000C8, "Wrong size on UAIFwBlackboardComponent");
-
-// Class AIFramework.AIFwBTNode
-// 0x0010 (0x0040 - 0x0030)
-class UAIFwBTNode : public UAIFwNodeBase
-{
-public:
-	uint8                                         Pad_30[0x10];                                      // 0x0030(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"AIFwBTNode">();
-	}
-	static class UAIFwBTNode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAIFwBTNode>();
-	}
-};
-static_assert(alignof(UAIFwBTNode) == 0x000008, "Wrong alignment on UAIFwBTNode");
-static_assert(sizeof(UAIFwBTNode) == 0x000040, "Wrong size on UAIFwBTNode");
-
-// Class AIFramework.AIFwBTMoveTo
-// 0x00A8 (0x00E8 - 0x0040)
-class UAIFwBTMoveTo final : public UAIFwBTNode
-{
-public:
-	uint8                                         Pad_40[0x8];                                       // 0x0040(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAIFwBTNodePropertyString              BlackboardKey;                                     // 0x0048(0x0020)(Edit, Protected, NativeAccessSpecifierProtected)
-	struct FAIFwBTNodePropertyFloat               AcceptableRadius;                                  // 0x0068(0x0018)(Edit, Protected, NativeAccessSpecifierProtected)
-	TSubclassOf<class UNavigationQueryFilter>     FilterClass;                                       // 0x0080(0x0008)(Edit, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FAIFwBTNodePropertyBool                bAllowStrafe;                                      // 0x0088(0x0018)(Edit, Protected, NativeAccessSpecifierProtected)
-	struct FAIFwBTNodePropertyBool                bAllowPartialPath;                                 // 0x00A0(0x0018)(Edit, AdvancedDisplay, Protected, NativeAccessSpecifierProtected)
-	struct FAIFwBTNodePropertyBool                bReachTestIncludesAgentRadius;                     // 0x00B8(0x0018)(Edit, Protected, NativeAccessSpecifierProtected)
-	struct FAIFwBTNodePropertyBool                bReachTestIncludesGoalRadius;                      // 0x00D0(0x0018)(Edit, Protected, NativeAccessSpecifierProtected)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"AIFwBTMoveTo">();
-	}
-	static class UAIFwBTMoveTo* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAIFwBTMoveTo>();
-	}
-};
-static_assert(alignof(UAIFwBTMoveTo) == 0x000008, "Wrong alignment on UAIFwBTMoveTo");
-static_assert(sizeof(UAIFwBTMoveTo) == 0x0000E8, "Wrong size on UAIFwBTMoveTo");
-static_assert(offsetof(UAIFwBTMoveTo, BlackboardKey) == 0x000048, "Member 'UAIFwBTMoveTo::BlackboardKey' has a wrong offset!");
-static_assert(offsetof(UAIFwBTMoveTo, AcceptableRadius) == 0x000068, "Member 'UAIFwBTMoveTo::AcceptableRadius' has a wrong offset!");
-static_assert(offsetof(UAIFwBTMoveTo, FilterClass) == 0x000080, "Member 'UAIFwBTMoveTo::FilterClass' has a wrong offset!");
-static_assert(offsetof(UAIFwBTMoveTo, bAllowStrafe) == 0x000088, "Member 'UAIFwBTMoveTo::bAllowStrafe' has a wrong offset!");
-static_assert(offsetof(UAIFwBTMoveTo, bAllowPartialPath) == 0x0000A0, "Member 'UAIFwBTMoveTo::bAllowPartialPath' has a wrong offset!");
-static_assert(offsetof(UAIFwBTMoveTo, bReachTestIncludesAgentRadius) == 0x0000B8, "Member 'UAIFwBTMoveTo::bReachTestIncludesAgentRadius' has a wrong offset!");
-static_assert(offsetof(UAIFwBTMoveTo, bReachTestIncludesGoalRadius) == 0x0000D0, "Member 'UAIFwBTMoveTo::bReachTestIncludesGoalRadius' has a wrong offset!");
 
 // Class AIFramework.AIFwBlueprintLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -552,33 +319,25 @@ static_assert(sizeof(UAIFwBTFocus) == 0x000060, "Wrong size on UAIFwBTFocus");
 static_assert(offsetof(UAIFwBTFocus, BlackboardKey) == 0x000038, "Member 'UAIFwBTFocus::BlackboardKey' has a wrong offset!");
 static_assert(offsetof(UAIFwBTFocus, FocusPriority) == 0x000058, "Member 'UAIFwBTFocus::FocusPriority' has a wrong offset!");
 
-// Class AIFramework.AIFwBTRunPerceptionTree
-// 0x0048 (0x0088 - 0x0040)
-class UAIFwBTRunPerceptionTree final : public UAIFwBTNode
+// Class AIFramework.AIFwBTNode
+// 0x0010 (0x0040 - 0x0030)
+class UAIFwBTNode : public UAIFwNodeBase
 {
 public:
-	class UAIFwBehaviorTree*                      PerceptionTree;                                    // 0x0040(0x0008)(Edit, ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FAIFwBTNodePropertyString              BlackboardKey;                                     // 0x0048(0x0020)(Edit, Protected, NativeAccessSpecifierProtected)
-	EAIFwPTRunMode                                RunMode;                                           // 0x0068(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAIFwBTNodePropertyInt                 MaxCount;                                          // 0x0070(0x0018)(Edit, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_30[0x10];                                      // 0x0030(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AIFwBTRunPerceptionTree">();
+		return StaticClassImpl<"AIFwBTNode">();
 	}
-	static class UAIFwBTRunPerceptionTree* GetDefaultObj()
+	static class UAIFwBTNode* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UAIFwBTRunPerceptionTree>();
+		return GetDefaultObjImpl<UAIFwBTNode>();
 	}
 };
-static_assert(alignof(UAIFwBTRunPerceptionTree) == 0x000008, "Wrong alignment on UAIFwBTRunPerceptionTree");
-static_assert(sizeof(UAIFwBTRunPerceptionTree) == 0x000088, "Wrong size on UAIFwBTRunPerceptionTree");
-static_assert(offsetof(UAIFwBTRunPerceptionTree, PerceptionTree) == 0x000040, "Member 'UAIFwBTRunPerceptionTree::PerceptionTree' has a wrong offset!");
-static_assert(offsetof(UAIFwBTRunPerceptionTree, BlackboardKey) == 0x000048, "Member 'UAIFwBTRunPerceptionTree::BlackboardKey' has a wrong offset!");
-static_assert(offsetof(UAIFwBTRunPerceptionTree, RunMode) == 0x000068, "Member 'UAIFwBTRunPerceptionTree::RunMode' has a wrong offset!");
-static_assert(offsetof(UAIFwBTRunPerceptionTree, MaxCount) == 0x000070, "Member 'UAIFwBTRunPerceptionTree::MaxCount' has a wrong offset!");
+static_assert(alignof(UAIFwBTNode) == 0x000008, "Wrong alignment on UAIFwBTNode");
+static_assert(sizeof(UAIFwBTNode) == 0x000040, "Wrong size on UAIFwBTNode");
 
 // Class AIFramework.AIFwBTInvokeFunction
 // 0x0040 (0x0080 - 0x0040)
@@ -623,6 +382,40 @@ public:
 static_assert(alignof(UAIFwBTMaxWalkSpeed) == 0x000008, "Wrong alignment on UAIFwBTMaxWalkSpeed");
 static_assert(sizeof(UAIFwBTMaxWalkSpeed) == 0x000050, "Wrong size on UAIFwBTMaxWalkSpeed");
 static_assert(offsetof(UAIFwBTMaxWalkSpeed, MaxWalkSpeed) == 0x000038, "Member 'UAIFwBTMaxWalkSpeed::MaxWalkSpeed' has a wrong offset!");
+
+// Class AIFramework.AIFwBTMoveTo
+// 0x00A8 (0x00E8 - 0x0040)
+class UAIFwBTMoveTo final : public UAIFwBTNode
+{
+public:
+	uint8                                         Pad_40[0x8];                                       // 0x0040(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAIFwBTNodePropertyString              BlackboardKey;                                     // 0x0048(0x0020)(Edit, Protected, NativeAccessSpecifierProtected)
+	struct FAIFwBTNodePropertyFloat               AcceptableRadius;                                  // 0x0068(0x0018)(Edit, Protected, NativeAccessSpecifierProtected)
+	TSubclassOf<class UNavigationQueryFilter>     FilterClass;                                       // 0x0080(0x0008)(Edit, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FAIFwBTNodePropertyBool                bAllowStrafe;                                      // 0x0088(0x0018)(Edit, Protected, NativeAccessSpecifierProtected)
+	struct FAIFwBTNodePropertyBool                bAllowPartialPath;                                 // 0x00A0(0x0018)(Edit, AdvancedDisplay, Protected, NativeAccessSpecifierProtected)
+	struct FAIFwBTNodePropertyBool                bReachTestIncludesAgentRadius;                     // 0x00B8(0x0018)(Edit, Protected, NativeAccessSpecifierProtected)
+	struct FAIFwBTNodePropertyBool                bReachTestIncludesGoalRadius;                      // 0x00D0(0x0018)(Edit, Protected, NativeAccessSpecifierProtected)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"AIFwBTMoveTo">();
+	}
+	static class UAIFwBTMoveTo* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAIFwBTMoveTo>();
+	}
+};
+static_assert(alignof(UAIFwBTMoveTo) == 0x000008, "Wrong alignment on UAIFwBTMoveTo");
+static_assert(sizeof(UAIFwBTMoveTo) == 0x0000E8, "Wrong size on UAIFwBTMoveTo");
+static_assert(offsetof(UAIFwBTMoveTo, BlackboardKey) == 0x000048, "Member 'UAIFwBTMoveTo::BlackboardKey' has a wrong offset!");
+static_assert(offsetof(UAIFwBTMoveTo, AcceptableRadius) == 0x000068, "Member 'UAIFwBTMoveTo::AcceptableRadius' has a wrong offset!");
+static_assert(offsetof(UAIFwBTMoveTo, FilterClass) == 0x000080, "Member 'UAIFwBTMoveTo::FilterClass' has a wrong offset!");
+static_assert(offsetof(UAIFwBTMoveTo, bAllowStrafe) == 0x000088, "Member 'UAIFwBTMoveTo::bAllowStrafe' has a wrong offset!");
+static_assert(offsetof(UAIFwBTMoveTo, bAllowPartialPath) == 0x0000A0, "Member 'UAIFwBTMoveTo::bAllowPartialPath' has a wrong offset!");
+static_assert(offsetof(UAIFwBTMoveTo, bReachTestIncludesAgentRadius) == 0x0000B8, "Member 'UAIFwBTMoveTo::bReachTestIncludesAgentRadius' has a wrong offset!");
+static_assert(offsetof(UAIFwBTMoveTo, bReachTestIncludesGoalRadius) == 0x0000D0, "Member 'UAIFwBTMoveTo::bReachTestIncludesGoalRadius' has a wrong offset!");
 
 // Class AIFramework.AIFwBTPrintString
 // 0x0028 (0x0068 - 0x0040)
@@ -697,6 +490,34 @@ static_assert(alignof(UAIFwBTRunHTNPlan) == 0x000008, "Wrong alignment on UAIFwB
 static_assert(sizeof(UAIFwBTRunHTNPlan) == 0x000050, "Wrong size on UAIFwBTRunHTNPlan");
 static_assert(offsetof(UAIFwBTRunHTNPlan, TaskName) == 0x000040, "Member 'UAIFwBTRunHTNPlan::TaskName' has a wrong offset!");
 
+// Class AIFramework.AIFwBTRunPerceptionTree
+// 0x0048 (0x0088 - 0x0040)
+class UAIFwBTRunPerceptionTree final : public UAIFwBTNode
+{
+public:
+	class UAIFwBehaviorTree*                      PerceptionTree;                                    // 0x0040(0x0008)(Edit, ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FAIFwBTNodePropertyString              BlackboardKey;                                     // 0x0048(0x0020)(Edit, Protected, NativeAccessSpecifierProtected)
+	EAIFwPTRunMode                                RunMode;                                           // 0x0068(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAIFwBTNodePropertyInt                 MaxCount;                                          // 0x0070(0x0018)(Edit, Protected, NativeAccessSpecifierProtected)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"AIFwBTRunPerceptionTree">();
+	}
+	static class UAIFwBTRunPerceptionTree* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAIFwBTRunPerceptionTree>();
+	}
+};
+static_assert(alignof(UAIFwBTRunPerceptionTree) == 0x000008, "Wrong alignment on UAIFwBTRunPerceptionTree");
+static_assert(sizeof(UAIFwBTRunPerceptionTree) == 0x000088, "Wrong size on UAIFwBTRunPerceptionTree");
+static_assert(offsetof(UAIFwBTRunPerceptionTree, PerceptionTree) == 0x000040, "Member 'UAIFwBTRunPerceptionTree::PerceptionTree' has a wrong offset!");
+static_assert(offsetof(UAIFwBTRunPerceptionTree, BlackboardKey) == 0x000048, "Member 'UAIFwBTRunPerceptionTree::BlackboardKey' has a wrong offset!");
+static_assert(offsetof(UAIFwBTRunPerceptionTree, RunMode) == 0x000068, "Member 'UAIFwBTRunPerceptionTree::RunMode' has a wrong offset!");
+static_assert(offsetof(UAIFwBTRunPerceptionTree, MaxCount) == 0x000070, "Member 'UAIFwBTRunPerceptionTree::MaxCount' has a wrong offset!");
+
 // Class AIFramework.AIFwBTService_ReactiveSkill
 // 0x0010 (0x0080 - 0x0070)
 class UAIFwBTService_ReactiveSkill final : public UBTService
@@ -719,6 +540,30 @@ public:
 static_assert(alignof(UAIFwBTService_ReactiveSkill) == 0x000008, "Wrong alignment on UAIFwBTService_ReactiveSkill");
 static_assert(sizeof(UAIFwBTService_ReactiveSkill) == 0x000080, "Wrong size on UAIFwBTService_ReactiveSkill");
 static_assert(offsetof(UAIFwBTService_ReactiveSkill, SkillTag) == 0x000070, "Member 'UAIFwBTService_ReactiveSkill::SkillTag' has a wrong offset!");
+
+// Class AIFramework.AIFwBTService_RunPerceptionTree
+// 0x0010 (0x00A8 - 0x0098)
+class UAIFwBTService_RunPerceptionTree final : public UBTService_BlackboardBase
+{
+public:
+	class UAIFwBehaviorTree*                      PerceptionTree;                                    // 0x0098(0x0008)(Edit, ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bClearBBValueWhenFailed;                           // 0x00A0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"AIFwBTService_RunPerceptionTree">();
+	}
+	static class UAIFwBTService_RunPerceptionTree* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAIFwBTService_RunPerceptionTree>();
+	}
+};
+static_assert(alignof(UAIFwBTService_RunPerceptionTree) == 0x000008, "Wrong alignment on UAIFwBTService_RunPerceptionTree");
+static_assert(sizeof(UAIFwBTService_RunPerceptionTree) == 0x0000A8, "Wrong size on UAIFwBTService_RunPerceptionTree");
+static_assert(offsetof(UAIFwBTService_RunPerceptionTree, PerceptionTree) == 0x000098, "Member 'UAIFwBTService_RunPerceptionTree::PerceptionTree' has a wrong offset!");
+static_assert(offsetof(UAIFwBTService_RunPerceptionTree, bClearBBValueWhenFailed) == 0x0000A0, "Member 'UAIFwBTService_RunPerceptionTree::bClearBBValueWhenFailed' has a wrong offset!");
 
 // Class AIFramework.AIFwBTTask_RunHTNPlan
 // 0x0010 (0x0080 - 0x0070)
@@ -1426,28 +1271,6 @@ static_assert(offsetof(AAIFwNavVolume, DefaultDrawDistance) == 0x0004C0, "Member
 static_assert(offsetof(AAIFwNavVolume, DefaultMaxSearchNodes) == 0x0004C4, "Member 'AAIFwNavVolume::DefaultMaxSearchNodes' has a wrong offset!");
 static_assert(offsetof(AAIFwNavVolume, HeuristicScale) == 0x0004F0, "Member 'AAIFwNavVolume::HeuristicScale' has a wrong offset!");
 
-// Class AIFramework.AIFwNavVolumeBoundsVolume
-// 0x0008 (0x02E0 - 0x02D8)
-class AAIFwNavVolumeBoundsVolume final : public AVolume
-{
-public:
-	struct FNavAgentSelector                      SupportedAgents;                                   // 0x02D8(0x0004)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2DC[0x4];                                      // 0x02DC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"AIFwNavVolumeBoundsVolume">();
-	}
-	static class AAIFwNavVolumeBoundsVolume* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<AAIFwNavVolumeBoundsVolume>();
-	}
-};
-static_assert(alignof(AAIFwNavVolumeBoundsVolume) == 0x000008, "Wrong alignment on AAIFwNavVolumeBoundsVolume");
-static_assert(sizeof(AAIFwNavVolumeBoundsVolume) == 0x0002E0, "Wrong size on AAIFwNavVolumeBoundsVolume");
-static_assert(offsetof(AAIFwNavVolumeBoundsVolume, SupportedAgents) == 0x0002D8, "Member 'AAIFwNavVolumeBoundsVolume::SupportedAgents' has a wrong offset!");
-
 // Class AIFramework.AIFwNavVolumeRenderingComponent
 // 0x0010 (0x0530 - 0x0520)
 class UAIFwNavVolumeRenderingComponent final : public UPrimitiveComponent
@@ -1467,6 +1290,28 @@ public:
 };
 static_assert(alignof(UAIFwNavVolumeRenderingComponent) == 0x000010, "Wrong alignment on UAIFwNavVolumeRenderingComponent");
 static_assert(sizeof(UAIFwNavVolumeRenderingComponent) == 0x000530, "Wrong size on UAIFwNavVolumeRenderingComponent");
+
+// Class AIFramework.AIFwNavVolumeTestingActor
+// 0x0008 (0x03D8 - 0x03D0)
+class AAIFwNavVolumeTestingActor final : public ANavigationTestingActor
+{
+public:
+	uint8                                         bWantsStringPulling : 1;                           // 0x03D0(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bWantsShortcutPath : 1;                            // 0x03D0(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_3D1[0x7];                                      // 0x03D1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"AIFwNavVolumeTestingActor">();
+	}
+	static class AAIFwNavVolumeTestingActor* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AAIFwNavVolumeTestingActor>();
+	}
+};
+static_assert(alignof(AAIFwNavVolumeTestingActor) == 0x000008, "Wrong alignment on AAIFwNavVolumeTestingActor");
+static_assert(sizeof(AAIFwNavVolumeTestingActor) == 0x0003D8, "Wrong size on AAIFwNavVolumeTestingActor");
 
 // Class AIFramework.AIFwPerceptionComponent
 // 0x0028 (0x00C8 - 0x00A0)
@@ -1530,6 +1375,28 @@ static_assert(alignof(UAIFwPerceptionTreeInstanceBlueprintWrapper) == 0x000008, 
 static_assert(sizeof(UAIFwPerceptionTreeInstanceBlueprintWrapper) == 0x000068, "Wrong size on UAIFwPerceptionTreeInstanceBlueprintWrapper");
 static_assert(offsetof(UAIFwPerceptionTreeInstanceBlueprintWrapper, OnFinishedDelegate) == 0x000058, "Member 'UAIFwPerceptionTreeInstanceBlueprintWrapper::OnFinishedDelegate' has a wrong offset!");
 
+// Class AIFramework.AIFwPTCriterionNode
+// 0x0010 (0x0040 - 0x0030)
+class UAIFwPTCriterionNode : public UAIFwNodeBase
+{
+public:
+	EPTCriterionSlot                              CriterionSlot;                                     // 0x0030(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_31[0xF];                                       // 0x0031(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"AIFwPTCriterionNode">();
+	}
+	static class UAIFwPTCriterionNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAIFwPTCriterionNode>();
+	}
+};
+static_assert(alignof(UAIFwPTCriterionNode) == 0x000008, "Wrong alignment on UAIFwPTCriterionNode");
+static_assert(sizeof(UAIFwPTCriterionNode) == 0x000040, "Wrong size on UAIFwPTCriterionNode");
+static_assert(offsetof(UAIFwPTCriterionNode, CriterionSlot) == 0x000030, "Member 'UAIFwPTCriterionNode::CriterionSlot' has a wrong offset!");
+
 // Class AIFramework.AIFwPTCriterionActorsOfClass
 // 0x0008 (0x0048 - 0x0040)
 class UAIFwPTCriterionActorsOfClass final : public UAIFwPTCriterionNode
@@ -1573,6 +1440,81 @@ static_assert(alignof(UAIFwPTCriterionSquadMember) == 0x000008, "Wrong alignment
 static_assert(sizeof(UAIFwPTCriterionSquadMember) == 0x000048, "Wrong size on UAIFwPTCriterionSquadMember");
 static_assert(offsetof(UAIFwPTCriterionSquadMember, IgnoreSelf) == 0x000040, "Member 'UAIFwPTCriterionSquadMember::IgnoreSelf' has a wrong offset!");
 
+// Class AIFramework.AIFwPTCriterionSquadMemberDestinations
+// 0x0008 (0x0048 - 0x0040)
+class UAIFwPTCriterionSquadMemberDestinations final : public UAIFwPTCriterionNode
+{
+public:
+	bool                                          IgnoreSelf;                                        // 0x0040(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"AIFwPTCriterionSquadMemberDestinations">();
+	}
+	static class UAIFwPTCriterionSquadMemberDestinations* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAIFwPTCriterionSquadMemberDestinations>();
+	}
+};
+static_assert(alignof(UAIFwPTCriterionSquadMemberDestinations) == 0x000008, "Wrong alignment on UAIFwPTCriterionSquadMemberDestinations");
+static_assert(sizeof(UAIFwPTCriterionSquadMemberDestinations) == 0x000048, "Wrong size on UAIFwPTCriterionSquadMemberDestinations");
+static_assert(offsetof(UAIFwPTCriterionSquadMemberDestinations, IgnoreSelf) == 0x000040, "Member 'UAIFwPTCriterionSquadMemberDestinations::IgnoreSelf' has a wrong offset!");
+
+// Class AIFramework.AIFwPTEvaluationNode
+// 0x0018 (0x0048 - 0x0030)
+class UAIFwPTEvaluationNode : public UAIFwNodeBase
+{
+public:
+	bool                                          Filter;                                            // 0x0030(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          Score;                                             // 0x0031(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EPTEvalOperation                              AdditionalOperation;                               // 0x0032(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_33[0x1];                                       // 0x0033(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         AdditionalScale;                                   // 0x0034(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_38[0x10];                                      // 0x0038(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"AIFwPTEvaluationNode">();
+	}
+	static class UAIFwPTEvaluationNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAIFwPTEvaluationNode>();
+	}
+};
+static_assert(alignof(UAIFwPTEvaluationNode) == 0x000008, "Wrong alignment on UAIFwPTEvaluationNode");
+static_assert(sizeof(UAIFwPTEvaluationNode) == 0x000048, "Wrong size on UAIFwPTEvaluationNode");
+static_assert(offsetof(UAIFwPTEvaluationNode, Filter) == 0x000030, "Member 'UAIFwPTEvaluationNode::Filter' has a wrong offset!");
+static_assert(offsetof(UAIFwPTEvaluationNode, Score) == 0x000031, "Member 'UAIFwPTEvaluationNode::Score' has a wrong offset!");
+static_assert(offsetof(UAIFwPTEvaluationNode, AdditionalOperation) == 0x000032, "Member 'UAIFwPTEvaluationNode::AdditionalOperation' has a wrong offset!");
+static_assert(offsetof(UAIFwPTEvaluationNode, AdditionalScale) == 0x000034, "Member 'UAIFwPTEvaluationNode::AdditionalScale' has a wrong offset!");
+
+// Class AIFramework.AIFwPTEvaluationNodeUseCriterion
+// 0x0008 (0x0050 - 0x0048)
+class UAIFwPTEvaluationNodeUseCriterion : public UAIFwPTEvaluationNode
+{
+public:
+	bool                                          AllPath;                                           // 0x0048(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EPTEvalScoreType                              ScoreType;                                         // 0x0049(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_4A[0x6];                                       // 0x004A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"AIFwPTEvaluationNodeUseCriterion">();
+	}
+	static class UAIFwPTEvaluationNodeUseCriterion* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAIFwPTEvaluationNodeUseCriterion>();
+	}
+};
+static_assert(alignof(UAIFwPTEvaluationNodeUseCriterion) == 0x000008, "Wrong alignment on UAIFwPTEvaluationNodeUseCriterion");
+static_assert(sizeof(UAIFwPTEvaluationNodeUseCriterion) == 0x000050, "Wrong size on UAIFwPTEvaluationNodeUseCriterion");
+static_assert(offsetof(UAIFwPTEvaluationNodeUseCriterion, AllPath) == 0x000048, "Member 'UAIFwPTEvaluationNodeUseCriterion::AllPath' has a wrong offset!");
+static_assert(offsetof(UAIFwPTEvaluationNodeUseCriterion, ScoreType) == 0x000049, "Member 'UAIFwPTEvaluationNodeUseCriterion::ScoreType' has a wrong offset!");
+
 // Class AIFramework.AIFwPTEvaluationInfluence
 // 0x0018 (0x0068 - 0x0050)
 class UAIFwPTEvaluationInfluence final : public UAIFwPTEvaluationNodeUseCriterion
@@ -1597,6 +1539,64 @@ static_assert(sizeof(UAIFwPTEvaluationInfluence) == 0x000068, "Wrong size on UAI
 static_assert(offsetof(UAIFwPTEvaluationInfluence, LayerName) == 0x000050, "Member 'UAIFwPTEvaluationInfluence::LayerName' has a wrong offset!");
 static_assert(offsetof(UAIFwPTEvaluationInfluence, MinValue) == 0x000060, "Member 'UAIFwPTEvaluationInfluence::MinValue' has a wrong offset!");
 static_assert(offsetof(UAIFwPTEvaluationInfluence, MaxValue) == 0x000064, "Member 'UAIFwPTEvaluationInfluence::MaxValue' has a wrong offset!");
+
+// Class AIFramework.AIFwPTEvaluationNavMeshRaycast
+// 0x0010 (0x0060 - 0x0050)
+class UAIFwPTEvaluationNavMeshRaycast final : public UAIFwPTEvaluationNodeUseCriterion
+{
+public:
+	TSubclassOf<class UNavigationQueryFilter>     FilterClass;                                       // 0x0050(0x0008)(Edit, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          Acceptance;                                        // 0x0058(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"AIFwPTEvaluationNavMeshRaycast">();
+	}
+	static class UAIFwPTEvaluationNavMeshRaycast* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAIFwPTEvaluationNavMeshRaycast>();
+	}
+};
+static_assert(alignof(UAIFwPTEvaluationNavMeshRaycast) == 0x000008, "Wrong alignment on UAIFwPTEvaluationNavMeshRaycast");
+static_assert(sizeof(UAIFwPTEvaluationNavMeshRaycast) == 0x000060, "Wrong size on UAIFwPTEvaluationNavMeshRaycast");
+static_assert(offsetof(UAIFwPTEvaluationNavMeshRaycast, FilterClass) == 0x000050, "Member 'UAIFwPTEvaluationNavMeshRaycast::FilterClass' has a wrong offset!");
+static_assert(offsetof(UAIFwPTEvaluationNavMeshRaycast, Acceptance) == 0x000058, "Member 'UAIFwPTEvaluationNavMeshRaycast::Acceptance' has a wrong offset!");
+
+// Class AIFramework.AIFwPTEvaluationPathfinding
+// 0x0020 (0x0070 - 0x0050)
+class UAIFwPTEvaluationPathfinding final : public UAIFwPTEvaluationNodeUseCriterion
+{
+public:
+	EAIFwPTEvalPathfindingMode                    Mode;                                              // 0x0050(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class UNavigationQueryFilter>     FilterClass;                                       // 0x0058(0x0008)(Edit, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          PathFromCriterion;                                 // 0x0060(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_61[0x3];                                       // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         MinValue;                                          // 0x0064(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         MaxValue;                                          // 0x0068(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          Acceptance;                                        // 0x006C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_6D[0x3];                                       // 0x006D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"AIFwPTEvaluationPathfinding">();
+	}
+	static class UAIFwPTEvaluationPathfinding* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAIFwPTEvaluationPathfinding>();
+	}
+};
+static_assert(alignof(UAIFwPTEvaluationPathfinding) == 0x000008, "Wrong alignment on UAIFwPTEvaluationPathfinding");
+static_assert(sizeof(UAIFwPTEvaluationPathfinding) == 0x000070, "Wrong size on UAIFwPTEvaluationPathfinding");
+static_assert(offsetof(UAIFwPTEvaluationPathfinding, Mode) == 0x000050, "Member 'UAIFwPTEvaluationPathfinding::Mode' has a wrong offset!");
+static_assert(offsetof(UAIFwPTEvaluationPathfinding, FilterClass) == 0x000058, "Member 'UAIFwPTEvaluationPathfinding::FilterClass' has a wrong offset!");
+static_assert(offsetof(UAIFwPTEvaluationPathfinding, PathFromCriterion) == 0x000060, "Member 'UAIFwPTEvaluationPathfinding::PathFromCriterion' has a wrong offset!");
+static_assert(offsetof(UAIFwPTEvaluationPathfinding, MinValue) == 0x000064, "Member 'UAIFwPTEvaluationPathfinding::MinValue' has a wrong offset!");
+static_assert(offsetof(UAIFwPTEvaluationPathfinding, MaxValue) == 0x000068, "Member 'UAIFwPTEvaluationPathfinding::MaxValue' has a wrong offset!");
+static_assert(offsetof(UAIFwPTEvaluationPathfinding, Acceptance) == 0x00006C, "Member 'UAIFwPTEvaluationPathfinding::Acceptance' has a wrong offset!");
 
 // Class AIFramework.AIFwPTEvaluationTrace
 // 0x0018 (0x0068 - 0x0050)

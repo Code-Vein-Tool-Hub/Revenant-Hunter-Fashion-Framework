@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_LouDiaryManager.BP_LouDiaryManager_C
-// 0x0000 (0x00F0 - 0x00F0)
+// 0x0000 (0x0110 - 0x0110)
 class UBP_LouDiaryManager_C final : public ULouDiaryManager
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UBP_LouDiaryManager_C) == 0x000008, "Wrong alignment on UBP_LouDiaryManager_C");
-static_assert(sizeof(UBP_LouDiaryManager_C) == 0x0000F0, "Wrong size on UBP_LouDiaryManager_C");
+static_assert(sizeof(UBP_LouDiaryManager_C) == 0x000110, "Wrong size on UBP_LouDiaryManager_C");
 
 }
 

@@ -24,8 +24,8 @@ public:
 	class URichTextBlock*                         Characteristic;                                    // 0x06C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	class FText GetTextWithEmptyNone(const class FText& InText);
 	void SetValue(const class FText& InValue);
+	class FText GetTextWithEmptyNone(const class FText& InText);
 
 public:
 	static class UClass* StaticClass()

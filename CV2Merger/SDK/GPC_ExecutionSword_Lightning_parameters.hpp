@@ -18,40 +18,51 @@
 namespace SDK::Params
 {
 
-// Function GPC_ExecutionSword_Lightning.GPC_ExecutionSword_Lightning_C.ActiveEffect
-// 0x0010 (0x0010 - 0x0000)
-struct GPC_ExecutionSword_Lightning_C_ActiveEffect final
+// Function GPC_ExecutionSword_Lightning.GPC_ExecutionSword_Lightning_C.CreateAkComponent
+// 0x0020 (0x0020 - 0x0000)
+struct GPC_ExecutionSword_Lightning_C_CreateAkComponent final
 {
 public:
 	int32                                         CallFunc_PostEventComponent_ReturnValue;           // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_K2_AttachToComponent_ReturnValue;         // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7[0x1];                                        // 0x0007(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAkComponent*                           CallFunc_AddComponentByClass_ReturnValue;          // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UAkComponent*                           CallFunc_AddComponentByClass_ReturnValue;          // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(GPC_ExecutionSword_Lightning_C_ActiveEffect) == 0x000008, "Wrong alignment on GPC_ExecutionSword_Lightning_C_ActiveEffect");
-static_assert(sizeof(GPC_ExecutionSword_Lightning_C_ActiveEffect) == 0x000010, "Wrong size on GPC_ExecutionSword_Lightning_C_ActiveEffect");
-static_assert(offsetof(GPC_ExecutionSword_Lightning_C_ActiveEffect, CallFunc_PostEventComponent_ReturnValue) == 0x000000, "Member 'GPC_ExecutionSword_Lightning_C_ActiveEffect::CallFunc_PostEventComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GPC_ExecutionSword_Lightning_C_ActiveEffect, CallFunc_IsValid_ReturnValue) == 0x000004, "Member 'GPC_ExecutionSword_Lightning_C_ActiveEffect::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GPC_ExecutionSword_Lightning_C_ActiveEffect, CallFunc_K2_AttachToComponent_ReturnValue) == 0x000005, "Member 'GPC_ExecutionSword_Lightning_C_ActiveEffect::CallFunc_K2_AttachToComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GPC_ExecutionSword_Lightning_C_ActiveEffect, CallFunc_IsValid_ReturnValue_1) == 0x000006, "Member 'GPC_ExecutionSword_Lightning_C_ActiveEffect::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(GPC_ExecutionSword_Lightning_C_ActiveEffect, CallFunc_AddComponentByClass_ReturnValue) == 0x000008, "Member 'GPC_ExecutionSword_Lightning_C_ActiveEffect::CallFunc_AddComponentByClass_ReturnValue' has a wrong offset!");
+static_assert(alignof(GPC_ExecutionSword_Lightning_C_CreateAkComponent) == 0x000008, "Wrong alignment on GPC_ExecutionSword_Lightning_C_CreateAkComponent");
+static_assert(sizeof(GPC_ExecutionSword_Lightning_C_CreateAkComponent) == 0x000020, "Wrong size on GPC_ExecutionSword_Lightning_C_CreateAkComponent");
+static_assert(offsetof(GPC_ExecutionSword_Lightning_C_CreateAkComponent, CallFunc_PostEventComponent_ReturnValue) == 0x000000, "Member 'GPC_ExecutionSword_Lightning_C_CreateAkComponent::CallFunc_PostEventComponent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GPC_ExecutionSword_Lightning_C_CreateAkComponent, CallFunc_IsValid_ReturnValue) == 0x000004, "Member 'GPC_ExecutionSword_Lightning_C_CreateAkComponent::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GPC_ExecutionSword_Lightning_C_CreateAkComponent, CallFunc_K2_AttachToComponent_ReturnValue) == 0x000005, "Member 'GPC_ExecutionSword_Lightning_C_CreateAkComponent::CallFunc_K2_AttachToComponent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GPC_ExecutionSword_Lightning_C_CreateAkComponent, CallFunc_GetOwner_ReturnValue) == 0x000008, "Member 'GPC_ExecutionSword_Lightning_C_CreateAkComponent::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GPC_ExecutionSword_Lightning_C_CreateAkComponent, CallFunc_AddComponentByClass_ReturnValue) == 0x000010, "Member 'GPC_ExecutionSword_Lightning_C_CreateAkComponent::CallFunc_AddComponentByClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GPC_ExecutionSword_Lightning_C_CreateAkComponent, CallFunc_IsValid_ReturnValue_1) == 0x000018, "Member 'GPC_ExecutionSword_Lightning_C_CreateAkComponent::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
 
 // Function GPC_ExecutionSword_Lightning.GPC_ExecutionSword_Lightning_C.DeactiveEffect
-// 0x0008 (0x0008 - 0x0000)
+// 0x0001 (0x0001 - 0x0000)
 struct GPC_ExecutionSword_Lightning_C_DeactiveEffect final
+{
+public:
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(GPC_ExecutionSword_Lightning_C_DeactiveEffect) == 0x000001, "Wrong alignment on GPC_ExecutionSword_Lightning_C_DeactiveEffect");
+static_assert(sizeof(GPC_ExecutionSword_Lightning_C_DeactiveEffect) == 0x000001, "Wrong size on GPC_ExecutionSword_Lightning_C_DeactiveEffect");
+static_assert(offsetof(GPC_ExecutionSword_Lightning_C_DeactiveEffect, CallFunc_IsValid_ReturnValue) == 0x000000, "Member 'GPC_ExecutionSword_Lightning_C_DeactiveEffect::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+
+// Function GPC_ExecutionSword_Lightning.GPC_ExecutionSword_Lightning_C.DestroyAkComponent
+// 0x0008 (0x0008 - 0x0000)
+struct GPC_ExecutionSword_Lightning_C_DestroyAkComponent final
 {
 public:
 	int32                                         CallFunc_PostEventComponent_ReturnValue;           // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(GPC_ExecutionSword_Lightning_C_DeactiveEffect) == 0x000004, "Wrong alignment on GPC_ExecutionSword_Lightning_C_DeactiveEffect");
-static_assert(sizeof(GPC_ExecutionSword_Lightning_C_DeactiveEffect) == 0x000008, "Wrong size on GPC_ExecutionSword_Lightning_C_DeactiveEffect");
-static_assert(offsetof(GPC_ExecutionSword_Lightning_C_DeactiveEffect, CallFunc_PostEventComponent_ReturnValue) == 0x000000, "Member 'GPC_ExecutionSword_Lightning_C_DeactiveEffect::CallFunc_PostEventComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GPC_ExecutionSword_Lightning_C_DeactiveEffect, CallFunc_IsValid_ReturnValue) == 0x000004, "Member 'GPC_ExecutionSword_Lightning_C_DeactiveEffect::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GPC_ExecutionSword_Lightning_C_DeactiveEffect, CallFunc_IsValid_ReturnValue_1) == 0x000005, "Member 'GPC_ExecutionSword_Lightning_C_DeactiveEffect::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(alignof(GPC_ExecutionSword_Lightning_C_DestroyAkComponent) == 0x000004, "Wrong alignment on GPC_ExecutionSword_Lightning_C_DestroyAkComponent");
+static_assert(sizeof(GPC_ExecutionSword_Lightning_C_DestroyAkComponent) == 0x000008, "Wrong size on GPC_ExecutionSword_Lightning_C_DestroyAkComponent");
+static_assert(offsetof(GPC_ExecutionSword_Lightning_C_DestroyAkComponent, CallFunc_PostEventComponent_ReturnValue) == 0x000000, "Member 'GPC_ExecutionSword_Lightning_C_DestroyAkComponent::CallFunc_PostEventComponent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GPC_ExecutionSword_Lightning_C_DestroyAkComponent, CallFunc_IsValid_ReturnValue) == 0x000004, "Member 'GPC_ExecutionSword_Lightning_C_DestroyAkComponent::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
 // Function GPC_ExecutionSword_Lightning.GPC_ExecutionSword_Lightning_C.ExecuteUbergraph_GPC_ExecutionSword_Lightning
 // 0x04F0 (0x04F0 - 0x0000)

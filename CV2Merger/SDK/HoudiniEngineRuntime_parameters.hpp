@@ -62,50 +62,6 @@ static_assert(offsetof(HoudiniAssetBlueprintComponent_SetToggleValueAt, Name_0) 
 static_assert(offsetof(HoudiniAssetBlueprintComponent_SetToggleValueAt, Value) == 0x000010, "Member 'HoudiniAssetBlueprintComponent_SetToggleValueAt::Value' has a wrong offset!");
 static_assert(offsetof(HoudiniAssetBlueprintComponent_SetToggleValueAt, Index_0) == 0x000014, "Member 'HoudiniAssetBlueprintComponent_SetToggleValueAt::Index_0' has a wrong offset!");
 
-// Function HoudiniEngineRuntime.HoudiniStaticMeshComponent.GetMesh
-// 0x0008 (0x0008 - 0x0000)
-struct HoudiniStaticMeshComponent_GetMesh final
-{
-public:
-	class UHoudiniStaticMesh*                     ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(HoudiniStaticMeshComponent_GetMesh) == 0x000008, "Wrong alignment on HoudiniStaticMeshComponent_GetMesh");
-static_assert(sizeof(HoudiniStaticMeshComponent_GetMesh) == 0x000008, "Wrong size on HoudiniStaticMeshComponent_GetMesh");
-static_assert(offsetof(HoudiniStaticMeshComponent_GetMesh, ReturnValue) == 0x000000, "Member 'HoudiniStaticMeshComponent_GetMesh::ReturnValue' has a wrong offset!");
-
-// Function HoudiniEngineRuntime.HoudiniStaticMeshComponent.SetHoudiniIconVisible
-// 0x0001 (0x0001 - 0x0000)
-struct HoudiniStaticMeshComponent_SetHoudiniIconVisible final
-{
-public:
-	bool                                          bInHoudiniIconVisible;                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(HoudiniStaticMeshComponent_SetHoudiniIconVisible) == 0x000001, "Wrong alignment on HoudiniStaticMeshComponent_SetHoudiniIconVisible");
-static_assert(sizeof(HoudiniStaticMeshComponent_SetHoudiniIconVisible) == 0x000001, "Wrong size on HoudiniStaticMeshComponent_SetHoudiniIconVisible");
-static_assert(offsetof(HoudiniStaticMeshComponent_SetHoudiniIconVisible, bInHoudiniIconVisible) == 0x000000, "Member 'HoudiniStaticMeshComponent_SetHoudiniIconVisible::bInHoudiniIconVisible' has a wrong offset!");
-
-// Function HoudiniEngineRuntime.HoudiniStaticMeshComponent.SetMesh
-// 0x0008 (0x0008 - 0x0000)
-struct HoudiniStaticMeshComponent_SetMesh final
-{
-public:
-	class UHoudiniStaticMesh*                     InMesh;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(HoudiniStaticMeshComponent_SetMesh) == 0x000008, "Wrong alignment on HoudiniStaticMeshComponent_SetMesh");
-static_assert(sizeof(HoudiniStaticMeshComponent_SetMesh) == 0x000008, "Wrong size on HoudiniStaticMeshComponent_SetMesh");
-static_assert(offsetof(HoudiniStaticMeshComponent_SetMesh, InMesh) == 0x000000, "Member 'HoudiniStaticMeshComponent_SetMesh::InMesh' has a wrong offset!");
-
-// Function HoudiniEngineRuntime.HoudiniStaticMeshComponent.IsHoudiniIconVisible
-// 0x0001 (0x0001 - 0x0000)
-struct HoudiniStaticMeshComponent_IsHoudiniIconVisible final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(HoudiniStaticMeshComponent_IsHoudiniIconVisible) == 0x000001, "Wrong alignment on HoudiniStaticMeshComponent_IsHoudiniIconVisible");
-static_assert(sizeof(HoudiniStaticMeshComponent_IsHoudiniIconVisible) == 0x000001, "Wrong size on HoudiniStaticMeshComponent_IsHoudiniIconVisible");
-static_assert(offsetof(HoudiniStaticMeshComponent_IsHoudiniIconVisible, ReturnValue) == 0x000000, "Member 'HoudiniStaticMeshComponent_IsHoudiniIconVisible::ReturnValue' has a wrong offset!");
-
 // Function HoudiniEngineRuntime.HoudiniStaticMesh.AddStaticMaterial
 // 0x0038 (0x0038 - 0x0000)
 struct HoudiniStaticMesh_AddStaticMaterial final
@@ -616,6 +572,50 @@ static_assert(alignof(HoudiniStaticMesh_IsValid) == 0x000001, "Wrong alignment o
 static_assert(sizeof(HoudiniStaticMesh_IsValid) == 0x000002, "Wrong size on HoudiniStaticMesh_IsValid");
 static_assert(offsetof(HoudiniStaticMesh_IsValid, bInSkipVertexIndicesCheck) == 0x000000, "Member 'HoudiniStaticMesh_IsValid::bInSkipVertexIndicesCheck' has a wrong offset!");
 static_assert(offsetof(HoudiniStaticMesh_IsValid, ReturnValue) == 0x000001, "Member 'HoudiniStaticMesh_IsValid::ReturnValue' has a wrong offset!");
+
+// Function HoudiniEngineRuntime.HoudiniStaticMeshComponent.GetMesh
+// 0x0008 (0x0008 - 0x0000)
+struct HoudiniStaticMeshComponent_GetMesh final
+{
+public:
+	class UHoudiniStaticMesh*                     ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(HoudiniStaticMeshComponent_GetMesh) == 0x000008, "Wrong alignment on HoudiniStaticMeshComponent_GetMesh");
+static_assert(sizeof(HoudiniStaticMeshComponent_GetMesh) == 0x000008, "Wrong size on HoudiniStaticMeshComponent_GetMesh");
+static_assert(offsetof(HoudiniStaticMeshComponent_GetMesh, ReturnValue) == 0x000000, "Member 'HoudiniStaticMeshComponent_GetMesh::ReturnValue' has a wrong offset!");
+
+// Function HoudiniEngineRuntime.HoudiniStaticMeshComponent.SetHoudiniIconVisible
+// 0x0001 (0x0001 - 0x0000)
+struct HoudiniStaticMeshComponent_SetHoudiniIconVisible final
+{
+public:
+	bool                                          bInHoudiniIconVisible;                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(HoudiniStaticMeshComponent_SetHoudiniIconVisible) == 0x000001, "Wrong alignment on HoudiniStaticMeshComponent_SetHoudiniIconVisible");
+static_assert(sizeof(HoudiniStaticMeshComponent_SetHoudiniIconVisible) == 0x000001, "Wrong size on HoudiniStaticMeshComponent_SetHoudiniIconVisible");
+static_assert(offsetof(HoudiniStaticMeshComponent_SetHoudiniIconVisible, bInHoudiniIconVisible) == 0x000000, "Member 'HoudiniStaticMeshComponent_SetHoudiniIconVisible::bInHoudiniIconVisible' has a wrong offset!");
+
+// Function HoudiniEngineRuntime.HoudiniStaticMeshComponent.SetMesh
+// 0x0008 (0x0008 - 0x0000)
+struct HoudiniStaticMeshComponent_SetMesh final
+{
+public:
+	class UHoudiniStaticMesh*                     InMesh;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(HoudiniStaticMeshComponent_SetMesh) == 0x000008, "Wrong alignment on HoudiniStaticMeshComponent_SetMesh");
+static_assert(sizeof(HoudiniStaticMeshComponent_SetMesh) == 0x000008, "Wrong size on HoudiniStaticMeshComponent_SetMesh");
+static_assert(offsetof(HoudiniStaticMeshComponent_SetMesh, InMesh) == 0x000000, "Member 'HoudiniStaticMeshComponent_SetMesh::InMesh' has a wrong offset!");
+
+// Function HoudiniEngineRuntime.HoudiniStaticMeshComponent.IsHoudiniIconVisible
+// 0x0001 (0x0001 - 0x0000)
+struct HoudiniStaticMeshComponent_IsHoudiniIconVisible final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(HoudiniStaticMeshComponent_IsHoudiniIconVisible) == 0x000001, "Wrong alignment on HoudiniStaticMeshComponent_IsHoudiniIconVisible");
+static_assert(sizeof(HoudiniStaticMeshComponent_IsHoudiniIconVisible) == 0x000001, "Wrong size on HoudiniStaticMeshComponent_IsHoudiniIconVisible");
+static_assert(offsetof(HoudiniStaticMeshComponent_IsHoudiniIconVisible, ReturnValue) == 0x000000, "Member 'HoudiniStaticMeshComponent_IsHoudiniIconVisible::ReturnValue' has a wrong offset!");
 
 // Function HoudiniEngineRuntime.HoudiniToolData.PopulateFromJSONData
 // 0x0018 (0x0018 - 0x0000)

@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_BindableCineActor.BP_BindableCineActor_C
-// 0x0000 (0x0F00 - 0x0F00)
+// 0x0000 (0x0F10 - 0x0F10)
 class ABP_BindableCineActor_C final : public ABindableCinematicCharacter
 {
 public:
@@ -36,7 +36,7 @@ public:
 	}
 };
 static_assert(alignof(ABP_BindableCineActor_C) == 0x000010, "Wrong alignment on ABP_BindableCineActor_C");
-static_assert(sizeof(ABP_BindableCineActor_C) == 0x000F00, "Wrong size on ABP_BindableCineActor_C");
+static_assert(sizeof(ABP_BindableCineActor_C) == 0x000F10, "Wrong size on ABP_BindableCineActor_C");
 
 }
 

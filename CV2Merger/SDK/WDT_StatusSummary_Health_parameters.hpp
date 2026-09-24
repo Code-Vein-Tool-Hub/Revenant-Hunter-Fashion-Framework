@@ -14,16 +14,39 @@
 namespace SDK::Params
 {
 
-// Function WDT_StatusSummary_Health.WDT_StatusSummary_Health_C.ExecuteUbergraph_WDT_StatusSummary_Health
-// 0x0004 (0x0004 - 0x0000)
-struct WDT_StatusSummary_Health_C_ExecuteUbergraph_WDT_StatusSummary_Health final
+// Function WDT_StatusSummary_Health.WDT_StatusSummary_Health_C.SetLP
+// 0x0028 (0x0028 - 0x0000)
+struct WDT_StatusSummary_Health_C_SetLP final
 {
 public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         InLP;                                              // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         InMaxLP;                                           // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0008(0x0010)()
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue_1;             // 0x0018(0x0010)()
 };
-static_assert(alignof(WDT_StatusSummary_Health_C_ExecuteUbergraph_WDT_StatusSummary_Health) == 0x000004, "Wrong alignment on WDT_StatusSummary_Health_C_ExecuteUbergraph_WDT_StatusSummary_Health");
-static_assert(sizeof(WDT_StatusSummary_Health_C_ExecuteUbergraph_WDT_StatusSummary_Health) == 0x000004, "Wrong size on WDT_StatusSummary_Health_C_ExecuteUbergraph_WDT_StatusSummary_Health");
-static_assert(offsetof(WDT_StatusSummary_Health_C_ExecuteUbergraph_WDT_StatusSummary_Health, EntryPoint) == 0x000000, "Member 'WDT_StatusSummary_Health_C_ExecuteUbergraph_WDT_StatusSummary_Health::EntryPoint' has a wrong offset!");
+static_assert(alignof(WDT_StatusSummary_Health_C_SetLP) == 0x000008, "Wrong alignment on WDT_StatusSummary_Health_C_SetLP");
+static_assert(sizeof(WDT_StatusSummary_Health_C_SetLP) == 0x000028, "Wrong size on WDT_StatusSummary_Health_C_SetLP");
+static_assert(offsetof(WDT_StatusSummary_Health_C_SetLP, InLP) == 0x000000, "Member 'WDT_StatusSummary_Health_C_SetLP::InLP' has a wrong offset!");
+static_assert(offsetof(WDT_StatusSummary_Health_C_SetLP, InMaxLP) == 0x000004, "Member 'WDT_StatusSummary_Health_C_SetLP::InMaxLP' has a wrong offset!");
+static_assert(offsetof(WDT_StatusSummary_Health_C_SetLP, CallFunc_Conv_IntToText_ReturnValue) == 0x000008, "Member 'WDT_StatusSummary_Health_C_SetLP::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_StatusSummary_Health_C_SetLP, CallFunc_Conv_IntToText_ReturnValue_1) == 0x000018, "Member 'WDT_StatusSummary_Health_C_SetLP::CallFunc_Conv_IntToText_ReturnValue_1' has a wrong offset!");
+
+// Function WDT_StatusSummary_Health.WDT_StatusSummary_Health_C.SetHealthComparison
+// 0x0010 (0x0010 - 0x0000)
+struct WDT_StatusSummary_Health_C_SetHealthComparison final
+{
+public:
+	int32                                         InMaxHealthCurrent;                                // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         InMaxHealth;                                       // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         InMaxLPCurrent;                                    // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         InMaxLP;                                           // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_StatusSummary_Health_C_SetHealthComparison) == 0x000004, "Wrong alignment on WDT_StatusSummary_Health_C_SetHealthComparison");
+static_assert(sizeof(WDT_StatusSummary_Health_C_SetHealthComparison) == 0x000010, "Wrong size on WDT_StatusSummary_Health_C_SetHealthComparison");
+static_assert(offsetof(WDT_StatusSummary_Health_C_SetHealthComparison, InMaxHealthCurrent) == 0x000000, "Member 'WDT_StatusSummary_Health_C_SetHealthComparison::InMaxHealthCurrent' has a wrong offset!");
+static_assert(offsetof(WDT_StatusSummary_Health_C_SetHealthComparison, InMaxHealth) == 0x000004, "Member 'WDT_StatusSummary_Health_C_SetHealthComparison::InMaxHealth' has a wrong offset!");
+static_assert(offsetof(WDT_StatusSummary_Health_C_SetHealthComparison, InMaxLPCurrent) == 0x000008, "Member 'WDT_StatusSummary_Health_C_SetHealthComparison::InMaxLPCurrent' has a wrong offset!");
+static_assert(offsetof(WDT_StatusSummary_Health_C_SetHealthComparison, InMaxLP) == 0x00000C, "Member 'WDT_StatusSummary_Health_C_SetHealthComparison::InMaxLP' has a wrong offset!");
 
 // Function WDT_StatusSummary_Health.WDT_StatusSummary_Health_C.SetHealth
 // 0x0050 (0x0050 - 0x0000)
@@ -52,39 +75,16 @@ static_assert(offsetof(WDT_StatusSummary_Health_C_SetHealth, CallFunc_InRange_Fl
 static_assert(offsetof(WDT_StatusSummary_Health_C_SetHealth, CallFunc_Conv_IntToText_ReturnValue_1) == 0x000030, "Member 'WDT_StatusSummary_Health_C_SetHealth::CallFunc_Conv_IntToText_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(WDT_StatusSummary_Health_C_SetHealth, CallFunc_SelectText_ReturnValue) == 0x000040, "Member 'WDT_StatusSummary_Health_C_SetHealth::CallFunc_SelectText_ReturnValue' has a wrong offset!");
 
-// Function WDT_StatusSummary_Health.WDT_StatusSummary_Health_C.SetHealthComparison
-// 0x0010 (0x0010 - 0x0000)
-struct WDT_StatusSummary_Health_C_SetHealthComparison final
+// Function WDT_StatusSummary_Health.WDT_StatusSummary_Health_C.ExecuteUbergraph_WDT_StatusSummary_Health
+// 0x0004 (0x0004 - 0x0000)
+struct WDT_StatusSummary_Health_C_ExecuteUbergraph_WDT_StatusSummary_Health final
 {
 public:
-	int32                                         InMaxHealthCurrent;                                // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         InMaxHealth;                                       // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         InMaxLPCurrent;                                    // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         InMaxLP;                                           // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WDT_StatusSummary_Health_C_SetHealthComparison) == 0x000004, "Wrong alignment on WDT_StatusSummary_Health_C_SetHealthComparison");
-static_assert(sizeof(WDT_StatusSummary_Health_C_SetHealthComparison) == 0x000010, "Wrong size on WDT_StatusSummary_Health_C_SetHealthComparison");
-static_assert(offsetof(WDT_StatusSummary_Health_C_SetHealthComparison, InMaxHealthCurrent) == 0x000000, "Member 'WDT_StatusSummary_Health_C_SetHealthComparison::InMaxHealthCurrent' has a wrong offset!");
-static_assert(offsetof(WDT_StatusSummary_Health_C_SetHealthComparison, InMaxHealth) == 0x000004, "Member 'WDT_StatusSummary_Health_C_SetHealthComparison::InMaxHealth' has a wrong offset!");
-static_assert(offsetof(WDT_StatusSummary_Health_C_SetHealthComparison, InMaxLPCurrent) == 0x000008, "Member 'WDT_StatusSummary_Health_C_SetHealthComparison::InMaxLPCurrent' has a wrong offset!");
-static_assert(offsetof(WDT_StatusSummary_Health_C_SetHealthComparison, InMaxLP) == 0x00000C, "Member 'WDT_StatusSummary_Health_C_SetHealthComparison::InMaxLP' has a wrong offset!");
-
-// Function WDT_StatusSummary_Health.WDT_StatusSummary_Health_C.SetLP
-// 0x0028 (0x0028 - 0x0000)
-struct WDT_StatusSummary_Health_C_SetLP final
-{
-public:
-	int32                                         InLP;                                              // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         InMaxLP;                                           // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0008(0x0010)()
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue_1;             // 0x0018(0x0010)()
-};
-static_assert(alignof(WDT_StatusSummary_Health_C_SetLP) == 0x000008, "Wrong alignment on WDT_StatusSummary_Health_C_SetLP");
-static_assert(sizeof(WDT_StatusSummary_Health_C_SetLP) == 0x000028, "Wrong size on WDT_StatusSummary_Health_C_SetLP");
-static_assert(offsetof(WDT_StatusSummary_Health_C_SetLP, InLP) == 0x000000, "Member 'WDT_StatusSummary_Health_C_SetLP::InLP' has a wrong offset!");
-static_assert(offsetof(WDT_StatusSummary_Health_C_SetLP, InMaxLP) == 0x000004, "Member 'WDT_StatusSummary_Health_C_SetLP::InMaxLP' has a wrong offset!");
-static_assert(offsetof(WDT_StatusSummary_Health_C_SetLP, CallFunc_Conv_IntToText_ReturnValue) == 0x000008, "Member 'WDT_StatusSummary_Health_C_SetLP::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_StatusSummary_Health_C_SetLP, CallFunc_Conv_IntToText_ReturnValue_1) == 0x000018, "Member 'WDT_StatusSummary_Health_C_SetLP::CallFunc_Conv_IntToText_ReturnValue_1' has a wrong offset!");
+static_assert(alignof(WDT_StatusSummary_Health_C_ExecuteUbergraph_WDT_StatusSummary_Health) == 0x000004, "Wrong alignment on WDT_StatusSummary_Health_C_ExecuteUbergraph_WDT_StatusSummary_Health");
+static_assert(sizeof(WDT_StatusSummary_Health_C_ExecuteUbergraph_WDT_StatusSummary_Health) == 0x000004, "Wrong size on WDT_StatusSummary_Health_C_ExecuteUbergraph_WDT_StatusSummary_Health");
+static_assert(offsetof(WDT_StatusSummary_Health_C_ExecuteUbergraph_WDT_StatusSummary_Health, EntryPoint) == 0x000000, "Member 'WDT_StatusSummary_Health_C_ExecuteUbergraph_WDT_StatusSummary_Health::EntryPoint' has a wrong offset!");
 
 }
 

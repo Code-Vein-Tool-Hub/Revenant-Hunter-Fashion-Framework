@@ -1013,6 +1013,20 @@ static_assert(alignof(AppAudioVoiceComponent_BP_IsPlaying) == 0x000001, "Wrong a
 static_assert(sizeof(AppAudioVoiceComponent_BP_IsPlaying) == 0x000001, "Wrong size on AppAudioVoiceComponent_BP_IsPlaying");
 static_assert(offsetof(AppAudioVoiceComponent_BP_IsPlaying, ReturnValue) == 0x000000, "Member 'AppAudioVoiceComponent_BP_IsPlaying::ReturnValue' has a wrong offset!");
 
+// Function AppAudio.AppAudioVoiceLibrary.GetActivePlayingIDFromActor
+// 0x0010 (0x0010 - 0x0000)
+struct AppAudioVoiceLibrary_GetActivePlayingIDFromActor final
+{
+public:
+	class AActor*                                 Actor;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(AppAudioVoiceLibrary_GetActivePlayingIDFromActor) == 0x000008, "Wrong alignment on AppAudioVoiceLibrary_GetActivePlayingIDFromActor");
+static_assert(sizeof(AppAudioVoiceLibrary_GetActivePlayingIDFromActor) == 0x000010, "Wrong size on AppAudioVoiceLibrary_GetActivePlayingIDFromActor");
+static_assert(offsetof(AppAudioVoiceLibrary_GetActivePlayingIDFromActor, Actor) == 0x000000, "Member 'AppAudioVoiceLibrary_GetActivePlayingIDFromActor::Actor' has a wrong offset!");
+static_assert(offsetof(AppAudioVoiceLibrary_GetActivePlayingIDFromActor, ReturnValue) == 0x000008, "Member 'AppAudioVoiceLibrary_GetActivePlayingIDFromActor::ReturnValue' has a wrong offset!");
+
 // Function AppAudio.AppAudioVoiceLibrary.GetVoiceComponentFromActor
 // 0x0010 (0x0010 - 0x0000)
 struct AppAudioVoiceLibrary_GetVoiceComponentFromActor final
@@ -1204,6 +1218,17 @@ static_assert(alignof(AppAudioVoicePlayer_VoicePlayCallback) == 0x000008, "Wrong
 static_assert(sizeof(AppAudioVoicePlayer_VoicePlayCallback) == 0x000010, "Wrong size on AppAudioVoicePlayer_VoicePlayCallback");
 static_assert(offsetof(AppAudioVoicePlayer_VoicePlayCallback, CallbackType) == 0x000000, "Member 'AppAudioVoicePlayer_VoicePlayCallback::CallbackType' has a wrong offset!");
 static_assert(offsetof(AppAudioVoicePlayer_VoicePlayCallback, CallbackInfo) == 0x000008, "Member 'AppAudioVoicePlayer_VoicePlayCallback::CallbackInfo' has a wrong offset!");
+
+// Function AppAudio.AppAudioVoicePlayer.GetActivePlayingID
+// 0x0004 (0x0004 - 0x0000)
+struct AppAudioVoicePlayer_GetActivePlayingID final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(AppAudioVoicePlayer_GetActivePlayingID) == 0x000004, "Wrong alignment on AppAudioVoicePlayer_GetActivePlayingID");
+static_assert(sizeof(AppAudioVoicePlayer_GetActivePlayingID) == 0x000004, "Wrong size on AppAudioVoicePlayer_GetActivePlayingID");
+static_assert(offsetof(AppAudioVoicePlayer_GetActivePlayingID, ReturnValue) == 0x000000, "Member 'AppAudioVoicePlayer_GetActivePlayingID::ReturnValue' has a wrong offset!");
 
 // Function AppAudio.AppAudioVoicePlayer.GetPlayingID
 // 0x0004 (0x0004 - 0x0000)

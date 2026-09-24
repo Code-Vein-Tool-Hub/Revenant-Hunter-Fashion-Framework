@@ -19,19 +19,21 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WDT_MatchingSelectableTextPiece.WDT_MatchingSelectableTextPiece_C
-// 0x0038 (0x0600 - 0x05C8)
+// 0x0040 (0x0608 - 0x05C8)
 class UWDT_MatchingSelectableTextPiece_C final : public UMenuPieceBase
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x05C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 ButtonBg;                                          // 0x05D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBorder*                                SelectBorder_Base;                                 // 0x05D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UBorder*                                SelectionBack;                                     // 0x05D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UTextBlock*                             TitleText;                                         // 0x05E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	EN_MatchingMenuType                           MatchingMenuType;                                  // 0x05E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5E9[0x7];                                      // 0x05E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Title;                                             // 0x05F0(0x0010)(Edit, BlueprintVisible)
+	class UCommonTextBlock*                       TitleText_Shadow;                                  // 0x05E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	EN_MatchingMenuType                           MatchingMenuType;                                  // 0x05F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5F1[0x7];                                      // 0x05F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Title;                                             // 0x05F8(0x0010)(Edit, BlueprintVisible)
 
 public:
+	void SetText(const class FText& Text);
 	bool Select(bool PlayAnimation_0);
 	void PreConstruct(bool IsDesignTime);
 	void ExecuteUbergraph_WDT_MatchingSelectableTextPiece(int32 EntryPoint);
@@ -48,13 +50,14 @@ public:
 	}
 };
 static_assert(alignof(UWDT_MatchingSelectableTextPiece_C) == 0x000008, "Wrong alignment on UWDT_MatchingSelectableTextPiece_C");
-static_assert(sizeof(UWDT_MatchingSelectableTextPiece_C) == 0x000600, "Wrong size on UWDT_MatchingSelectableTextPiece_C");
+static_assert(sizeof(UWDT_MatchingSelectableTextPiece_C) == 0x000608, "Wrong size on UWDT_MatchingSelectableTextPiece_C");
 static_assert(offsetof(UWDT_MatchingSelectableTextPiece_C, UberGraphFrame) == 0x0005C8, "Member 'UWDT_MatchingSelectableTextPiece_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWDT_MatchingSelectableTextPiece_C, ButtonBg) == 0x0005D0, "Member 'UWDT_MatchingSelectableTextPiece_C::ButtonBg' has a wrong offset!");
+static_assert(offsetof(UWDT_MatchingSelectableTextPiece_C, SelectBorder_Base) == 0x0005D0, "Member 'UWDT_MatchingSelectableTextPiece_C::SelectBorder_Base' has a wrong offset!");
 static_assert(offsetof(UWDT_MatchingSelectableTextPiece_C, SelectionBack) == 0x0005D8, "Member 'UWDT_MatchingSelectableTextPiece_C::SelectionBack' has a wrong offset!");
 static_assert(offsetof(UWDT_MatchingSelectableTextPiece_C, TitleText) == 0x0005E0, "Member 'UWDT_MatchingSelectableTextPiece_C::TitleText' has a wrong offset!");
-static_assert(offsetof(UWDT_MatchingSelectableTextPiece_C, MatchingMenuType) == 0x0005E8, "Member 'UWDT_MatchingSelectableTextPiece_C::MatchingMenuType' has a wrong offset!");
-static_assert(offsetof(UWDT_MatchingSelectableTextPiece_C, Title) == 0x0005F0, "Member 'UWDT_MatchingSelectableTextPiece_C::Title' has a wrong offset!");
+static_assert(offsetof(UWDT_MatchingSelectableTextPiece_C, TitleText_Shadow) == 0x0005E8, "Member 'UWDT_MatchingSelectableTextPiece_C::TitleText_Shadow' has a wrong offset!");
+static_assert(offsetof(UWDT_MatchingSelectableTextPiece_C, MatchingMenuType) == 0x0005F0, "Member 'UWDT_MatchingSelectableTextPiece_C::MatchingMenuType' has a wrong offset!");
+static_assert(offsetof(UWDT_MatchingSelectableTextPiece_C, Title) == 0x0005F8, "Member 'UWDT_MatchingSelectableTextPiece_C::Title' has a wrong offset!");
 
 }
 

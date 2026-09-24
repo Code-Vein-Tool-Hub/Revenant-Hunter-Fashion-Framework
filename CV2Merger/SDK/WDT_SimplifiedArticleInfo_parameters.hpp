@@ -10,14 +10,52 @@
 
 #include "Basic.hpp"
 
+#include "Extensions_structs.hpp"
 #include "GameplayTags_structs.hpp"
 #include "UMG_structs.hpp"
 #include "Engine_structs.hpp"
-#include "Extensions_structs.hpp"
 
 
 namespace SDK::Params
 {
+
+// Function WDT_SimplifiedArticleInfo.WDT_SimplifiedArticleInfo_C.SetArticleInfo
+// 0x00A0 (0x00A0 - 0x0000)
+struct WDT_SimplifiedArticleInfo_C_SetArticleInfo final
+{
+public:
+	struct FUIArticleInfo                         ArticleInfo;                                       // 0x0000(0x0048)(BlueprintVisible, BlueprintReadOnly, Parm)
+	int32                                         EnhancementLevel;                                  // 0x0048(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UTexture2D>              EnchantLcon;                                       // 0x0050(0x0028)(BlueprintVisible, BlueprintReadOnly, Parm, UObjectWrapper, HasGetValueTypeHash)
+	struct FGameplayTag                           InEnchantTag;                                      // 0x0078(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_FormatTextWithPlayerInfo_ReturnValue;     // 0x0080(0x0010)()
+	class FText                                   CallFunc_FormatTextWithPlayerInfo_ReturnValue_1;   // 0x0090(0x0010)()
+};
+static_assert(alignof(WDT_SimplifiedArticleInfo_C_SetArticleInfo) == 0x000008, "Wrong alignment on WDT_SimplifiedArticleInfo_C_SetArticleInfo");
+static_assert(sizeof(WDT_SimplifiedArticleInfo_C_SetArticleInfo) == 0x0000A0, "Wrong size on WDT_SimplifiedArticleInfo_C_SetArticleInfo");
+static_assert(offsetof(WDT_SimplifiedArticleInfo_C_SetArticleInfo, ArticleInfo) == 0x000000, "Member 'WDT_SimplifiedArticleInfo_C_SetArticleInfo::ArticleInfo' has a wrong offset!");
+static_assert(offsetof(WDT_SimplifiedArticleInfo_C_SetArticleInfo, EnhancementLevel) == 0x000048, "Member 'WDT_SimplifiedArticleInfo_C_SetArticleInfo::EnhancementLevel' has a wrong offset!");
+static_assert(offsetof(WDT_SimplifiedArticleInfo_C_SetArticleInfo, EnchantLcon) == 0x000050, "Member 'WDT_SimplifiedArticleInfo_C_SetArticleInfo::EnchantLcon' has a wrong offset!");
+static_assert(offsetof(WDT_SimplifiedArticleInfo_C_SetArticleInfo, InEnchantTag) == 0x000078, "Member 'WDT_SimplifiedArticleInfo_C_SetArticleInfo::InEnchantTag' has a wrong offset!");
+static_assert(offsetof(WDT_SimplifiedArticleInfo_C_SetArticleInfo, CallFunc_FormatTextWithPlayerInfo_ReturnValue) == 0x000080, "Member 'WDT_SimplifiedArticleInfo_C_SetArticleInfo::CallFunc_FormatTextWithPlayerInfo_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_SimplifiedArticleInfo_C_SetArticleInfo, CallFunc_FormatTextWithPlayerInfo_ReturnValue_1) == 0x000090, "Member 'WDT_SimplifiedArticleInfo_C_SetArticleInfo::CallFunc_FormatTextWithPlayerInfo_ReturnValue_1' has a wrong offset!");
+
+// Function WDT_SimplifiedArticleInfo.WDT_SimplifiedArticleInfo_C.IsEmpty
+// 0x000C (0x000C - 0x0000)
+struct WDT_SimplifiedArticleInfo_C_IsEmpty final
+{
+public:
+	bool                                          NewParam;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetActiveWidgetIndex_ReturnValue;         // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WDT_SimplifiedArticleInfo_C_IsEmpty) == 0x000004, "Wrong alignment on WDT_SimplifiedArticleInfo_C_IsEmpty");
+static_assert(sizeof(WDT_SimplifiedArticleInfo_C_IsEmpty) == 0x00000C, "Wrong size on WDT_SimplifiedArticleInfo_C_IsEmpty");
+static_assert(offsetof(WDT_SimplifiedArticleInfo_C_IsEmpty, NewParam) == 0x000000, "Member 'WDT_SimplifiedArticleInfo_C_IsEmpty::NewParam' has a wrong offset!");
+static_assert(offsetof(WDT_SimplifiedArticleInfo_C_IsEmpty, CallFunc_GetActiveWidgetIndex_ReturnValue) == 0x000004, "Member 'WDT_SimplifiedArticleInfo_C_IsEmpty::CallFunc_GetActiveWidgetIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_SimplifiedArticleInfo_C_IsEmpty, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000008, "Member 'WDT_SimplifiedArticleInfo_C_IsEmpty::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
 
 // Function WDT_SimplifiedArticleInfo.WDT_SimplifiedArticleInfo_C.EnhanceInfo
 // 0x00D8 (0x00D8 - 0x0000)
@@ -76,40 +114,6 @@ static_assert(offsetof(WDT_SimplifiedArticleInfo_C_EnhanceInfo, CallFunc_TextIsE
 static_assert(offsetof(WDT_SimplifiedArticleInfo_C_EnhanceInfo, K2Node_Select_Default_1) == 0x0000D1, "Member 'WDT_SimplifiedArticleInfo_C_EnhanceInfo::K2Node_Select_Default_1' has a wrong offset!");
 static_assert(offsetof(WDT_SimplifiedArticleInfo_C_EnhanceInfo, Temp_bool_Variable_2) == 0x0000D2, "Member 'WDT_SimplifiedArticleInfo_C_EnhanceInfo::Temp_bool_Variable_2' has a wrong offset!");
 static_assert(offsetof(WDT_SimplifiedArticleInfo_C_EnhanceInfo, K2Node_Select_Default_2) == 0x0000D3, "Member 'WDT_SimplifiedArticleInfo_C_EnhanceInfo::K2Node_Select_Default_2' has a wrong offset!");
-
-// Function WDT_SimplifiedArticleInfo.WDT_SimplifiedArticleInfo_C.IsEmpty
-// 0x000C (0x000C - 0x0000)
-struct WDT_SimplifiedArticleInfo_C_IsEmpty final
-{
-public:
-	bool                                          NewParam;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetActiveWidgetIndex_ReturnValue;         // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_SimplifiedArticleInfo_C_IsEmpty) == 0x000004, "Wrong alignment on WDT_SimplifiedArticleInfo_C_IsEmpty");
-static_assert(sizeof(WDT_SimplifiedArticleInfo_C_IsEmpty) == 0x00000C, "Wrong size on WDT_SimplifiedArticleInfo_C_IsEmpty");
-static_assert(offsetof(WDT_SimplifiedArticleInfo_C_IsEmpty, NewParam) == 0x000000, "Member 'WDT_SimplifiedArticleInfo_C_IsEmpty::NewParam' has a wrong offset!");
-static_assert(offsetof(WDT_SimplifiedArticleInfo_C_IsEmpty, CallFunc_GetActiveWidgetIndex_ReturnValue) == 0x000004, "Member 'WDT_SimplifiedArticleInfo_C_IsEmpty::CallFunc_GetActiveWidgetIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_SimplifiedArticleInfo_C_IsEmpty, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000008, "Member 'WDT_SimplifiedArticleInfo_C_IsEmpty::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-
-// Function WDT_SimplifiedArticleInfo.WDT_SimplifiedArticleInfo_C.SetArticleInfo
-// 0x0080 (0x0080 - 0x0000)
-struct WDT_SimplifiedArticleInfo_C_SetArticleInfo final
-{
-public:
-	struct FUIArticleInfo                         ArticleInfo;                                       // 0x0000(0x0048)(BlueprintVisible, BlueprintReadOnly, Parm)
-	int32                                         EnhancementLevel;                                  // 0x0048(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftObjectPtr<class UTexture2D>              EnchantLcon;                                       // 0x0050(0x0028)(BlueprintVisible, BlueprintReadOnly, Parm, UObjectWrapper, HasGetValueTypeHash)
-	struct FGameplayTag                           InEnchantTag;                                      // 0x0078(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WDT_SimplifiedArticleInfo_C_SetArticleInfo) == 0x000008, "Wrong alignment on WDT_SimplifiedArticleInfo_C_SetArticleInfo");
-static_assert(sizeof(WDT_SimplifiedArticleInfo_C_SetArticleInfo) == 0x000080, "Wrong size on WDT_SimplifiedArticleInfo_C_SetArticleInfo");
-static_assert(offsetof(WDT_SimplifiedArticleInfo_C_SetArticleInfo, ArticleInfo) == 0x000000, "Member 'WDT_SimplifiedArticleInfo_C_SetArticleInfo::ArticleInfo' has a wrong offset!");
-static_assert(offsetof(WDT_SimplifiedArticleInfo_C_SetArticleInfo, EnhancementLevel) == 0x000048, "Member 'WDT_SimplifiedArticleInfo_C_SetArticleInfo::EnhancementLevel' has a wrong offset!");
-static_assert(offsetof(WDT_SimplifiedArticleInfo_C_SetArticleInfo, EnchantLcon) == 0x000050, "Member 'WDT_SimplifiedArticleInfo_C_SetArticleInfo::EnchantLcon' has a wrong offset!");
-static_assert(offsetof(WDT_SimplifiedArticleInfo_C_SetArticleInfo, InEnchantTag) == 0x000078, "Member 'WDT_SimplifiedArticleInfo_C_SetArticleInfo::InEnchantTag' has a wrong offset!");
 
 }
 

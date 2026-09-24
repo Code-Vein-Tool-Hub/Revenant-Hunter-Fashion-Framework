@@ -41,8 +41,8 @@ public:
 	TArray<class UTexture*>                       ScarTextureArray_Pile;                             // 0x01E0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	double                                        CaptureSize;                                       // 0x01F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UStaticMeshComponent*                   BGMesh;                                            // 0x01F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	double                                        ScarLifetime;                                      // 0x0200(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        OldScarLifetime;                                   // 0x0208(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ScarLifeTime;                                      // 0x0200(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        OldScarLifeTime;                                   // 0x0208(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        ScarLifeTime_Substruct;                            // 0x0210(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        OldScarLifeTime_Substruct;                         // 0x0218(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bPreProccess;                                      // 0x0220(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -99,6 +99,7 @@ public:
 	void OnBloodFeed_End(const struct FVector& Position);
 	void OnDestroy();
 	void OnDying();
+	void OnResetBleedingAmount();
 	void OnUpdateBleedingAmountReduction(double PreBleedingAmount, double BleedingAmount);
 	void Post_Process();
 	void Post_Process_CaptureData(int32 CaptureIndex);
@@ -145,8 +146,8 @@ static_assert(offsetof(UBP_DrawScar_C, ScarTextureArray_Blow) == 0x0001D0, "Memb
 static_assert(offsetof(UBP_DrawScar_C, ScarTextureArray_Pile) == 0x0001E0, "Member 'UBP_DrawScar_C::ScarTextureArray_Pile' has a wrong offset!");
 static_assert(offsetof(UBP_DrawScar_C, CaptureSize) == 0x0001F0, "Member 'UBP_DrawScar_C::CaptureSize' has a wrong offset!");
 static_assert(offsetof(UBP_DrawScar_C, BGMesh) == 0x0001F8, "Member 'UBP_DrawScar_C::BGMesh' has a wrong offset!");
-static_assert(offsetof(UBP_DrawScar_C, ScarLifetime) == 0x000200, "Member 'UBP_DrawScar_C::ScarLifetime' has a wrong offset!");
-static_assert(offsetof(UBP_DrawScar_C, OldScarLifetime) == 0x000208, "Member 'UBP_DrawScar_C::OldScarLifetime' has a wrong offset!");
+static_assert(offsetof(UBP_DrawScar_C, ScarLifeTime) == 0x000200, "Member 'UBP_DrawScar_C::ScarLifeTime' has a wrong offset!");
+static_assert(offsetof(UBP_DrawScar_C, OldScarLifeTime) == 0x000208, "Member 'UBP_DrawScar_C::OldScarLifeTime' has a wrong offset!");
 static_assert(offsetof(UBP_DrawScar_C, ScarLifeTime_Substruct) == 0x000210, "Member 'UBP_DrawScar_C::ScarLifeTime_Substruct' has a wrong offset!");
 static_assert(offsetof(UBP_DrawScar_C, OldScarLifeTime_Substruct) == 0x000218, "Member 'UBP_DrawScar_C::OldScarLifeTime_Substruct' has a wrong offset!");
 static_assert(offsetof(UBP_DrawScar_C, bPreProccess) == 0x000220, "Member 'UBP_DrawScar_C::bPreProccess' has a wrong offset!");

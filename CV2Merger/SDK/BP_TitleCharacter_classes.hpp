@@ -17,11 +17,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_TitleCharacter.BP_TitleCharacter_C
-// 0x0010 (0x0870 - 0x0860)
+// 0x0010 (0x0880 - 0x0870)
 class ABP_TitleCharacter_C final : public AAppCharacter
 {
 public:
-	class UBP_CharacterCustomizeComponent_C*      BP_CharacterCustomizeComponent;                    // 0x0860(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_868[0x8];                                      // 0x0868(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_CharacterCustomizeComponent_C*      BP_CharacterCustomizeComponent;                    // 0x0870(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -34,8 +35,8 @@ public:
 	}
 };
 static_assert(alignof(ABP_TitleCharacter_C) == 0x000010, "Wrong alignment on ABP_TitleCharacter_C");
-static_assert(sizeof(ABP_TitleCharacter_C) == 0x000870, "Wrong size on ABP_TitleCharacter_C");
-static_assert(offsetof(ABP_TitleCharacter_C, BP_CharacterCustomizeComponent) == 0x000860, "Member 'ABP_TitleCharacter_C::BP_CharacterCustomizeComponent' has a wrong offset!");
+static_assert(sizeof(ABP_TitleCharacter_C) == 0x000880, "Wrong size on ABP_TitleCharacter_C");
+static_assert(offsetof(ABP_TitleCharacter_C, BP_CharacterCustomizeComponent) == 0x000870, "Member 'ABP_TitleCharacter_C::BP_CharacterCustomizeComponent' has a wrong offset!");
 
 }
 

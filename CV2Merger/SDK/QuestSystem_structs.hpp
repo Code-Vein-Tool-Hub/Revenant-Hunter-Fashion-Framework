@@ -108,37 +108,16 @@ static_assert(offsetof(FQSDataProviderBase, bOverrideParam) == 0x000000, "Member
 static_assert(offsetof(FQSDataProviderBase, ParamName) == 0x000004, "Member 'FQSDataProviderBase::ParamName' has a wrong offset!");
 static_assert(offsetof(FQSDataProviderBase, DataProviderKeyType) == 0x000010, "Member 'FQSDataProviderBase::DataProviderKeyType' has a wrong offset!");
 
-// ScriptStruct QuestSystem.QSDataProviderDoubleValue
+// ScriptStruct QuestSystem.QSDataProviderNameValue
 // 0x0008 (0x0020 - 0x0018)
-struct FQSDataProviderDoubleValue final : public FQSDataProviderBase
+struct FQSDataProviderNameValue final : public FQSDataProviderBase
 {
 public:
-	double                                        Value;                                             // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Value;                                             // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FQSDataProviderDoubleValue) == 0x000008, "Wrong alignment on FQSDataProviderDoubleValue");
-static_assert(sizeof(FQSDataProviderDoubleValue) == 0x000020, "Wrong size on FQSDataProviderDoubleValue");
-static_assert(offsetof(FQSDataProviderDoubleValue, Value) == 0x000018, "Member 'FQSDataProviderDoubleValue::Value' has a wrong offset!");
-
-// ScriptStruct QuestSystem.QSMessageParamBase
-// 0x0000 (0x0000 - 0x0000)
-#pragma pack(push, 0x1)
-struct alignas(0x01) FQSMessageParamBase
-{
-};
-#pragma pack(pop)
-static_assert(alignof(FQSMessageParamBase) == 0x000001, "Wrong alignment on FQSMessageParamBase");
-static_assert(sizeof(FQSMessageParamBase) == 0x000001, "Wrong size on FQSMessageParamBase");
-
-// ScriptStruct QuestSystem.QSSimpleMessageParam
-// 0x0008 (0x0008 - 0x0000)
-struct FQSSimpleMessageParam : public FQSMessageParamBase
-{
-public:
-	class FName                                   Message;                                           // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FQSSimpleMessageParam) == 0x000004, "Wrong alignment on FQSSimpleMessageParam");
-static_assert(sizeof(FQSSimpleMessageParam) == 0x000008, "Wrong size on FQSSimpleMessageParam");
-static_assert(offsetof(FQSSimpleMessageParam, Message) == 0x000000, "Member 'FQSSimpleMessageParam::Message' has a wrong offset!");
+static_assert(alignof(FQSDataProviderNameValue) == 0x000008, "Wrong alignment on FQSDataProviderNameValue");
+static_assert(sizeof(FQSDataProviderNameValue) == 0x000020, "Wrong size on FQSDataProviderNameValue");
+static_assert(offsetof(FQSDataProviderNameValue, Value) == 0x000018, "Member 'FQSDataProviderNameValue::Value' has a wrong offset!");
 
 // ScriptStruct QuestSystem.QSSharedMemorySelecter
 // 0x0010 (0x0010 - 0x0000)
@@ -189,16 +168,16 @@ static_assert(alignof(FQSDataProviderFloatValue) == 0x000008, "Wrong alignment o
 static_assert(sizeof(FQSDataProviderFloatValue) == 0x000020, "Wrong size on FQSDataProviderFloatValue");
 static_assert(offsetof(FQSDataProviderFloatValue, Value) == 0x000018, "Member 'FQSDataProviderFloatValue::Value' has a wrong offset!");
 
-// ScriptStruct QuestSystem.QSDataProviderNameValue
+// ScriptStruct QuestSystem.QSDataProviderDoubleValue
 // 0x0008 (0x0020 - 0x0018)
-struct FQSDataProviderNameValue final : public FQSDataProviderBase
+struct FQSDataProviderDoubleValue final : public FQSDataProviderBase
 {
 public:
-	class FName                                   Value;                                             // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        Value;                                             // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FQSDataProviderNameValue) == 0x000008, "Wrong alignment on FQSDataProviderNameValue");
-static_assert(sizeof(FQSDataProviderNameValue) == 0x000020, "Wrong size on FQSDataProviderNameValue");
-static_assert(offsetof(FQSDataProviderNameValue, Value) == 0x000018, "Member 'FQSDataProviderNameValue::Value' has a wrong offset!");
+static_assert(alignof(FQSDataProviderDoubleValue) == 0x000008, "Wrong alignment on FQSDataProviderDoubleValue");
+static_assert(sizeof(FQSDataProviderDoubleValue) == 0x000020, "Wrong size on FQSDataProviderDoubleValue");
+static_assert(offsetof(FQSDataProviderDoubleValue, Value) == 0x000018, "Member 'FQSDataProviderDoubleValue::Value' has a wrong offset!");
 
 // ScriptStruct QuestSystem.QSActorBinding
 // 0x0008 (0x0008 - 0x0000)
@@ -351,6 +330,27 @@ public:
 static_assert(alignof(FQSAssetSetting) == 0x000001, "Wrong alignment on FQSAssetSetting");
 static_assert(sizeof(FQSAssetSetting) == 0x000001, "Wrong size on FQSAssetSetting");
 static_assert(offsetof(FQSAssetSetting, bIsExcludeFromAllResets) == 0x000000, "Member 'FQSAssetSetting::bIsExcludeFromAllResets' has a wrong offset!");
+
+// ScriptStruct QuestSystem.QSMessageParamBase
+// 0x0000 (0x0000 - 0x0000)
+#pragma pack(push, 0x1)
+struct alignas(0x01) FQSMessageParamBase
+{
+};
+#pragma pack(pop)
+static_assert(alignof(FQSMessageParamBase) == 0x000001, "Wrong alignment on FQSMessageParamBase");
+static_assert(sizeof(FQSMessageParamBase) == 0x000001, "Wrong size on FQSMessageParamBase");
+
+// ScriptStruct QuestSystem.QSSimpleMessageParam
+// 0x0008 (0x0008 - 0x0000)
+struct FQSSimpleMessageParam : public FQSMessageParamBase
+{
+public:
+	class FName                                   Message;                                           // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FQSSimpleMessageParam) == 0x000004, "Wrong alignment on FQSSimpleMessageParam");
+static_assert(sizeof(FQSSimpleMessageParam) == 0x000008, "Wrong size on FQSSimpleMessageParam");
+static_assert(offsetof(FQSSimpleMessageParam, Message) == 0x000000, "Member 'FQSSimpleMessageParam::Message' has a wrong offset!");
 
 }
 

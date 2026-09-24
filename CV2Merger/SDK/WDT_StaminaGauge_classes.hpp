@@ -29,10 +29,10 @@ public:
 	class UWDT_ResourceBar_C*                     Stamina_bar;                                       // 0x0618(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void SetStamina(double InCurrentStamina, double InMaxStamina, EResourceChangeFactor InChangeFactor);
-	void OnBattleStateChanged(bool InBattleState);
-	void ExecuteUbergraph_WDT_StaminaGauge(int32 EntryPoint);
 	void Construct();
+	void ExecuteUbergraph_WDT_StaminaGauge(int32 EntryPoint);
+	void OnBattleStateChanged(bool InBattleState);
+	void SetStamina(double InCurrentStamina, double InMaxStamina, EResourceChangeFactor InChangeFactor);
 
 public:
 	static class UClass* StaticClass()

@@ -178,11 +178,10 @@ bool UWDT_StatusDownEffectIcon_C::SetLazyTexture(const TSoftObjectPtr<class UTex
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FStatusEffectIconHandle          InHandle                                               (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// EStatusDownEffectIconType               InType                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UTexture2D*                       InTexture                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class UTexture2D*                       InFrame                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWDT_StatusDownEffectIcon_C::SetStatusEffectIconInfo(const struct FStatusEffectIconHandle& InHandle, EStatusDownEffectIconType InType, class UTexture2D* InTexture, class UTexture2D* InFrame)
+void UWDT_StatusDownEffectIcon_C::SetStatusEffectIconInfo(const struct FStatusEffectIconHandle& InHandle, class UTexture2D* InTexture, class UTexture2D* InFrame)
 {
 	static class UFunction* Func = nullptr;
 
@@ -192,7 +191,6 @@ void UWDT_StatusDownEffectIcon_C::SetStatusEffectIconInfo(const struct FStatusEf
 	Params::WDT_StatusDownEffectIcon_C_SetStatusEffectIconInfo Parms{};
 
 	Parms.InHandle = std::move(InHandle);
-	Parms.InType = InType;
 	Parms.InTexture = InTexture;
 	Parms.InFrame = InFrame;
 

@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "GameplayTags_structs.hpp"
 #include "Extensions_structs.hpp"
 #include "Engine_structs.hpp"
-#include "GameplayTags_structs.hpp"
 
 
 namespace SDK::Params
@@ -310,6 +310,30 @@ static_assert(offsetof(BP_StatusIndicatorUIObject_C_NotifyStatusDownEffectApplie
 static_assert(offsetof(BP_StatusIndicatorUIObject_C_NotifyStatusDownEffectApplied, CallFunc_MakeStatusEffectIconHandle_ReturnValue) == 0x000028, "Member 'BP_StatusIndicatorUIObject_C_NotifyStatusDownEffectApplied::CallFunc_MakeStatusEffectIconHandle_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_StatusIndicatorUIObject_C_NotifyStatusDownEffectApplied, CallFunc_GetStatusEffectPanel_OutPanel) == 0x000030, "Member 'BP_StatusIndicatorUIObject_C_NotifyStatusDownEffectApplied::CallFunc_GetStatusEffectPanel_OutPanel' has a wrong offset!");
 
+// Function BP_StatusIndicatorUIObject.BP_StatusIndicatorUIObject_C.NotifyStatusDownEffectAppliedEx
+// 0x0030 (0x0030 - 0x0000)
+struct BP_StatusIndicatorUIObject_C_NotifyStatusDownEffectAppliedEx final
+{
+public:
+	EStatusDownEffectIconTypeEx                   InType;                                            // 0x0000(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EStatusEffectFrameType                        InFrame;                                           // 0x0001(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FStatusEffectIconHandle                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ReturnParm, NoDestructor)
+	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UWDT_StatusIndicator_C*                 CallFunc_GetStatusIndicator_OutIndicator;          // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FStatusEffectIconHandle                CallFunc_MakeStatusEffectIconHandle_ReturnValue;   // 0x0020(0x0008)(NoDestructor)
+	class UWDT_StatusEffectPanel_C*               CallFunc_GetStatusEffectPanel_OutPanel;            // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_StatusIndicatorUIObject_C_NotifyStatusDownEffectAppliedEx) == 0x000008, "Wrong alignment on BP_StatusIndicatorUIObject_C_NotifyStatusDownEffectAppliedEx");
+static_assert(sizeof(BP_StatusIndicatorUIObject_C_NotifyStatusDownEffectAppliedEx) == 0x000030, "Wrong size on BP_StatusIndicatorUIObject_C_NotifyStatusDownEffectAppliedEx");
+static_assert(offsetof(BP_StatusIndicatorUIObject_C_NotifyStatusDownEffectAppliedEx, InType) == 0x000000, "Member 'BP_StatusIndicatorUIObject_C_NotifyStatusDownEffectAppliedEx::InType' has a wrong offset!");
+static_assert(offsetof(BP_StatusIndicatorUIObject_C_NotifyStatusDownEffectAppliedEx, InFrame) == 0x000001, "Member 'BP_StatusIndicatorUIObject_C_NotifyStatusDownEffectAppliedEx::InFrame' has a wrong offset!");
+static_assert(offsetof(BP_StatusIndicatorUIObject_C_NotifyStatusDownEffectAppliedEx, ReturnValue) == 0x000008, "Member 'BP_StatusIndicatorUIObject_C_NotifyStatusDownEffectAppliedEx::ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_StatusIndicatorUIObject_C_NotifyStatusDownEffectAppliedEx, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000010, "Member 'BP_StatusIndicatorUIObject_C_NotifyStatusDownEffectAppliedEx::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_StatusIndicatorUIObject_C_NotifyStatusDownEffectAppliedEx, CallFunc_GetStatusIndicator_OutIndicator) == 0x000018, "Member 'BP_StatusIndicatorUIObject_C_NotifyStatusDownEffectAppliedEx::CallFunc_GetStatusIndicator_OutIndicator' has a wrong offset!");
+static_assert(offsetof(BP_StatusIndicatorUIObject_C_NotifyStatusDownEffectAppliedEx, CallFunc_MakeStatusEffectIconHandle_ReturnValue) == 0x000020, "Member 'BP_StatusIndicatorUIObject_C_NotifyStatusDownEffectAppliedEx::CallFunc_MakeStatusEffectIconHandle_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_StatusIndicatorUIObject_C_NotifyStatusDownEffectAppliedEx, CallFunc_GetStatusEffectPanel_OutPanel) == 0x000028, "Member 'BP_StatusIndicatorUIObject_C_NotifyStatusDownEffectAppliedEx::CallFunc_GetStatusEffectPanel_OutPanel' has a wrong offset!");
+
 // Function BP_StatusIndicatorUIObject.BP_StatusIndicatorUIObject_C.NotifyStatusEffectRemoved
 // 0x0020 (0x0020 - 0x0000)
 struct BP_StatusIndicatorUIObject_C_NotifyStatusEffectRemoved final
@@ -563,6 +587,28 @@ static_assert(offsetof(BP_StatusIndicatorUIObject_C_UpdateAccumulateStateValue, 
 static_assert(offsetof(BP_StatusIndicatorUIObject_C_UpdateAccumulateStateValue, K2Node_DynamicCast_AsAccumulate_Attribute_Widget_Interface) == 0x000100, "Member 'BP_StatusIndicatorUIObject_C_UpdateAccumulateStateValue::K2Node_DynamicCast_AsAccumulate_Attribute_Widget_Interface' has a wrong offset!");
 static_assert(offsetof(BP_StatusIndicatorUIObject_C_UpdateAccumulateStateValue, K2Node_DynamicCast_bSuccess) == 0x000110, "Member 'BP_StatusIndicatorUIObject_C_UpdateAccumulateStateValue::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 static_assert(offsetof(BP_StatusIndicatorUIObject_C_UpdateAccumulateStateValue, CallFunc_UpdateAccumulateStateValue_ReturnValue) == 0x000111, "Member 'BP_StatusIndicatorUIObject_C_UpdateAccumulateStateValue::CallFunc_UpdateAccumulateStateValue_ReturnValue' has a wrong offset!");
+
+// Function BP_StatusIndicatorUIObject.BP_StatusIndicatorUIObject_C.UpdateGadgetIcon
+// 0x0030 (0x0030 - 0x0000)
+struct BP_StatusIndicatorUIObject_C_UpdateGadgetIcon final
+{
+public:
+	class UUIObjectBase*                          CallFunc_GetUIObjectByClass_ReturnValue;           // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UBP_GadgetIndicatorUIObject_C*          K2Node_DynamicCast_AsBP_Gadget_Indicator_UIObject; // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWDT_GadgetIndicator_C*                 CallFunc_GetGadgetIndicator_OutIndicator;          // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWDT_GadgetPanel_C*                     CallFunc_GetGadgetPanel_OutPanel;                  // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_StatusIndicatorUIObject_C_UpdateGadgetIcon) == 0x000008, "Wrong alignment on BP_StatusIndicatorUIObject_C_UpdateGadgetIcon");
+static_assert(sizeof(BP_StatusIndicatorUIObject_C_UpdateGadgetIcon) == 0x000030, "Wrong size on BP_StatusIndicatorUIObject_C_UpdateGadgetIcon");
+static_assert(offsetof(BP_StatusIndicatorUIObject_C_UpdateGadgetIcon, CallFunc_GetUIObjectByClass_ReturnValue) == 0x000000, "Member 'BP_StatusIndicatorUIObject_C_UpdateGadgetIcon::CallFunc_GetUIObjectByClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_StatusIndicatorUIObject_C_UpdateGadgetIcon, K2Node_DynamicCast_AsBP_Gadget_Indicator_UIObject) == 0x000008, "Member 'BP_StatusIndicatorUIObject_C_UpdateGadgetIcon::K2Node_DynamicCast_AsBP_Gadget_Indicator_UIObject' has a wrong offset!");
+static_assert(offsetof(BP_StatusIndicatorUIObject_C_UpdateGadgetIcon, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'BP_StatusIndicatorUIObject_C_UpdateGadgetIcon::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BP_StatusIndicatorUIObject_C_UpdateGadgetIcon, CallFunc_GetGadgetIndicator_OutIndicator) == 0x000018, "Member 'BP_StatusIndicatorUIObject_C_UpdateGadgetIcon::CallFunc_GetGadgetIndicator_OutIndicator' has a wrong offset!");
+static_assert(offsetof(BP_StatusIndicatorUIObject_C_UpdateGadgetIcon, CallFunc_GetGadgetPanel_OutPanel) == 0x000020, "Member 'BP_StatusIndicatorUIObject_C_UpdateGadgetIcon::CallFunc_GetGadgetPanel_OutPanel' has a wrong offset!");
+static_assert(offsetof(BP_StatusIndicatorUIObject_C_UpdateGadgetIcon, CallFunc_IsValid_ReturnValue) == 0x000028, "Member 'BP_StatusIndicatorUIObject_C_UpdateGadgetIcon::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
 }
 

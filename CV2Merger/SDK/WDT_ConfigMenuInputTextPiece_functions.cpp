@@ -178,6 +178,28 @@ void UWDT_ConfigMenuInputTextPiece_C::PreConstruct(bool IsDesignTime)
 }
 
 
+// Function WDT_ConfigMenuInputTextPiece.WDT_ConfigMenuInputTextPiece_C.OnTextCommitted__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FText                             InText                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
+// ETextCommit                             InCommitMethot                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_ConfigMenuInputTextPiece_C::OnTextCommitted__DelegateSignature(const class FText& InText, ETextCommit InCommitMethot)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_ConfigMenuInputTextPiece_C", "OnTextCommitted__DelegateSignature");
+
+	Params::WDT_ConfigMenuInputTextPiece_C_OnTextCommitted__DelegateSignature Parms{};
+
+	Parms.InText = std::move(InText);
+	Parms.InCommitMethot = InCommitMethot;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WDT_ConfigMenuInputTextPiece.WDT_ConfigMenuInputTextPiece_C.OnMouseLeaveSubPiece
 // (Event, Protected, BlueprintEvent)
 // Parameters:
@@ -332,7 +354,7 @@ void UWDT_ConfigMenuInputTextPiece_C::GetLogMoviePath(class FString* OutPath, bo
 
 
 // Function WDT_ConfigMenuInputTextPiece.WDT_ConfigMenuInputTextPiece_C.ExecuteUbergraph_WDT_ConfigMenuInputTextPiece
-// (Final, UbergraphFunction)
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -371,6 +393,28 @@ bool UWDT_ConfigMenuInputTextPiece_C::Deselect(bool PlayAnimation_0)
 	UObject::ProcessEvent(Func, &Parms);
 
 	return Parms.ReturnValue;
+}
+
+
+// Function WDT_ConfigMenuInputTextPiece.WDT_ConfigMenuInputTextPiece_C.BndEvt__WDT_ConfigMenuInputTextPiece_WDT_ConfigTextInputElement_K2Node_ComponentBoundEvent_0_OnTextCommitted__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class FText                             InText                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
+// ETextCommit                             InCommitMethot                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_ConfigMenuInputTextPiece_C::BndEvt__WDT_ConfigMenuInputTextPiece_WDT_ConfigTextInputElement_K2Node_ComponentBoundEvent_0_OnTextCommitted__DelegateSignature(const class FText& InText, ETextCommit InCommitMethot)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_ConfigMenuInputTextPiece_C", "BndEvt__WDT_ConfigMenuInputTextPiece_WDT_ConfigTextInputElement_K2Node_ComponentBoundEvent_0_OnTextCommitted__DelegateSignature");
+
+	Params::WDT_ConfigMenuInputTextPiece_C_BndEvt__WDT_ConfigMenuInputTextPiece_WDT_ConfigTextInputElement_K2Node_ComponentBoundEvent_0_OnTextCommitted__DelegateSignature Parms{};
+
+	Parms.InText = std::move(InText);
+	Parms.InCommitMethot = InCommitMethot;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

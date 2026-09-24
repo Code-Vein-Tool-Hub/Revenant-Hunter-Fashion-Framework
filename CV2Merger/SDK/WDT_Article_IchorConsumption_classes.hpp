@@ -29,8 +29,8 @@ public:
 	class UHorizontalBox*                         ItemIchorConsumptionBox;                           // 0x06F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void SetValue(int32 InValue);
 	void SetValueComparison(int32 InCurrentValue, int32 InTargetValue, bool SwapComparisons);
+	void SetValue(int32 InValue);
 
 public:
 	static class UClass* StaticClass()

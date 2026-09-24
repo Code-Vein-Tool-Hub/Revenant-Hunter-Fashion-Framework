@@ -18,14 +18,14 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GCN_Slow.GCN_Slow_C
-// 0x0020 (0x0F38 - 0x0F18)
+// 0x0020 (0x0F48 - 0x0F28)
 class AGCN_Slow_C final : public AGCN_StatusEffect_Looping_Base_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_GCN_Slow_C;                         // 0x0F18(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class AAppCharacter*                          CharacterActor;                                    // 0x0F20(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 CharacterMesh;                                     // 0x0F28(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	double                                        EffectSize;                                        // 0x0F30(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_GCN_Slow_C;                         // 0x0F28(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class AAppCharacter*                          CharacterActor;                                    // 0x0F30(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 CharacterMesh;                                     // 0x0F38(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	double                                        EffectSize;                                        // 0x0F40(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BeginEffect();
@@ -36,6 +36,8 @@ public:
 	void OnLoopingStart(class AActor* Target, const struct FGameplayCueParameters& Parameters, const struct FGameplayCueNotify_SpawnResult& SpawnResults);
 	void OnRecurring(class AActor* Target, const struct FGameplayCueParameters& Parameters, const struct FGameplayCueNotify_SpawnResult& SpawnResults);
 	void OnRemoval(class AActor* Target, const struct FGameplayCueParameters& Parameters, const struct FGameplayCueNotify_SpawnResult& SpawnResults);
+	void OnTick(float Delta_Seconds);
+	void ReceiveTick(float DeltaSeconds);
 
 public:
 	static class UClass* StaticClass()
@@ -48,11 +50,11 @@ public:
 	}
 };
 static_assert(alignof(AGCN_Slow_C) == 0x000008, "Wrong alignment on AGCN_Slow_C");
-static_assert(sizeof(AGCN_Slow_C) == 0x000F38, "Wrong size on AGCN_Slow_C");
-static_assert(offsetof(AGCN_Slow_C, UberGraphFrame_GCN_Slow_C) == 0x000F18, "Member 'AGCN_Slow_C::UberGraphFrame_GCN_Slow_C' has a wrong offset!");
-static_assert(offsetof(AGCN_Slow_C, CharacterActor) == 0x000F20, "Member 'AGCN_Slow_C::CharacterActor' has a wrong offset!");
-static_assert(offsetof(AGCN_Slow_C, CharacterMesh) == 0x000F28, "Member 'AGCN_Slow_C::CharacterMesh' has a wrong offset!");
-static_assert(offsetof(AGCN_Slow_C, EffectSize) == 0x000F30, "Member 'AGCN_Slow_C::EffectSize' has a wrong offset!");
+static_assert(sizeof(AGCN_Slow_C) == 0x000F48, "Wrong size on AGCN_Slow_C");
+static_assert(offsetof(AGCN_Slow_C, UberGraphFrame_GCN_Slow_C) == 0x000F28, "Member 'AGCN_Slow_C::UberGraphFrame_GCN_Slow_C' has a wrong offset!");
+static_assert(offsetof(AGCN_Slow_C, CharacterActor) == 0x000F30, "Member 'AGCN_Slow_C::CharacterActor' has a wrong offset!");
+static_assert(offsetof(AGCN_Slow_C, CharacterMesh) == 0x000F38, "Member 'AGCN_Slow_C::CharacterMesh' has a wrong offset!");
+static_assert(offsetof(AGCN_Slow_C, EffectSize) == 0x000F40, "Member 'AGCN_Slow_C::EffectSize' has a wrong offset!");
 
 }
 

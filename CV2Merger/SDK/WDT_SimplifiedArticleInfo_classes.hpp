@@ -32,10 +32,10 @@ public:
 	class UWidgetSwitcher*                        WidgetSwitcher_1;                                  // 0x0600(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void EnhanceInfo(int32 EnhanceLevel, TSoftObjectPtr<class UTexture2D> EnchantIcon_0, const struct FGameplayTag& EnchantTag);
-	void IsEmpty(bool* NewParam);
-	void SetArticleInfo(const struct FUIArticleInfo& ArticleInfo, int32 EnhancementLevel, TSoftObjectPtr<class UTexture2D> EnchantLcon, const struct FGameplayTag& InEnchantTag);
 	void SetEmpty();
+	void SetArticleInfo(const struct FUIArticleInfo& ArticleInfo, int32 EnhancementLevel, TSoftObjectPtr<class UTexture2D> EnchantLcon, const struct FGameplayTag& InEnchantTag);
+	void IsEmpty(bool* NewParam);
+	void EnhanceInfo(int32 EnhanceLevel, TSoftObjectPtr<class UTexture2D> EnchantIcon_0, const struct FGameplayTag& EnchantTag);
 
 public:
 	static class UClass* StaticClass()

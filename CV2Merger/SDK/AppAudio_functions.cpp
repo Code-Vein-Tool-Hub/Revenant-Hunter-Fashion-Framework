@@ -2086,6 +2086,34 @@ bool UAppAudioVoiceComponent::BP_IsPlaying() const
 }
 
 
+// Function AppAudio.AppAudioVoiceLibrary.GetActivePlayingIDFromActor
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class AActor*                           Actor                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UAppAudioVoiceLibrary::GetActivePlayingIDFromActor(class AActor* Actor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("AppAudioVoiceLibrary", "GetActivePlayingIDFromActor");
+
+	Params::AppAudioVoiceLibrary_GetActivePlayingIDFromActor Parms{};
+
+	Parms.Actor = Actor;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function AppAudio.AppAudioVoiceLibrary.GetVoiceComponentFromActor
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
@@ -2531,6 +2559,31 @@ void UAppAudioVoicePlayer::VoicePlayCallback(EAkCallbackType CallbackType, class
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AppAudio.AppAudioVoicePlayer.GetActivePlayingID
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UAppAudioVoicePlayer::GetActivePlayingID() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AppAudioVoicePlayer", "GetActivePlayingID");
+
+	Params::AppAudioVoicePlayer_GetActivePlayingID Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 

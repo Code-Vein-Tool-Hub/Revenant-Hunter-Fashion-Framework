@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "E_CharacterVisualControl_CharacterMode_structs.hpp"
 #include "Extensions_classes.hpp"
+#include "E_CharacterVisualControl_CharacterMode_structs.hpp"
 
 
 namespace SDK

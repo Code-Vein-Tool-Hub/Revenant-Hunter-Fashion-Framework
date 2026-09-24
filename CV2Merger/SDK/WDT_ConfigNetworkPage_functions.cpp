@@ -45,6 +45,50 @@ void UWDT_ConfigNetworkPage_C::BndEvt__WDT_ConfigGamePage_WDT_ConfigHeader_K2Nod
 }
 
 
+// Function WDT_ConfigNetworkPage.WDT_ConfigNetworkPage_C.BndEvt__WDT_ConfigNetworkPage_CodeName_K2Node_ComponentBoundEvent_0_OnTextCommitted__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class FText                             InText                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
+// ETextCommit                             InCommitMethot                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_ConfigNetworkPage_C::BndEvt__WDT_ConfigNetworkPage_CodeName_K2Node_ComponentBoundEvent_0_OnTextCommitted__DelegateSignature(const class FText& InText, ETextCommit InCommitMethot)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_ConfigNetworkPage_C", "BndEvt__WDT_ConfigNetworkPage_CodeName_K2Node_ComponentBoundEvent_0_OnTextCommitted__DelegateSignature");
+
+	Params::WDT_ConfigNetworkPage_C_BndEvt__WDT_ConfigNetworkPage_CodeName_K2Node_ComponentBoundEvent_0_OnTextCommitted__DelegateSignature Parms{};
+
+	Parms.InText = std::move(InText);
+	Parms.InCommitMethot = InCommitMethot;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_ConfigNetworkPage.WDT_ConfigNetworkPage_C.BndEvt__WDT_ConfigNetworkPage_Passward_K2Node_ComponentBoundEvent_3_OnTextCommitted__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class FText                             InText                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
+// ETextCommit                             InCommitMethot                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_ConfigNetworkPage_C::BndEvt__WDT_ConfigNetworkPage_Passward_K2Node_ComponentBoundEvent_3_OnTextCommitted__DelegateSignature(const class FText& InText, ETextCommit InCommitMethot)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_ConfigNetworkPage_C", "BndEvt__WDT_ConfigNetworkPage_Passward_K2Node_ComponentBoundEvent_3_OnTextCommitted__DelegateSignature");
+
+	Params::WDT_ConfigNetworkPage_C_BndEvt__WDT_ConfigNetworkPage_Passward_K2Node_ComponentBoundEvent_3_OnTextCommitted__DelegateSignature Parms{};
+
+	Parms.InText = std::move(InText);
+	Parms.InCommitMethot = InCommitMethot;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WDT_ConfigNetworkPage.WDT_ConfigNetworkPage_C.ExecuteUbergraph_WDT_ConfigNetworkPage
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -374,6 +418,56 @@ void UWDT_ConfigNetworkPage_C::OnClosed()
 }
 
 
+// Function WDT_ConfigNetworkPage.WDT_ConfigNetworkPage_C.OnCloseSanitizeDialog
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWDT_ConfigNetworkPage_C::OnCloseSanitizeDialog()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_ConfigNetworkPage_C", "OnCloseSanitizeDialog");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WDT_ConfigNetworkPage.WDT_ConfigNetworkPage_C.OnClosing
+// (Event, Protected, BlueprintEvent)
+
+void UWDT_ConfigNetworkPage_C::OnClosing()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_ConfigNetworkPage_C", "OnClosing");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WDT_ConfigNetworkPage.WDT_ConfigNetworkPage_C.OnCodeNameSanitizeFInished
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Result                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FString                           CodeName_0                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UWDT_ConfigNetworkPage_C::OnCodeNameSanitizeFInished(bool Result, const class FString& CodeName_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_ConfigNetworkPage_C", "OnCodeNameSanitizeFInished");
+
+	Params::WDT_ConfigNetworkPage_C_OnCodeNameSanitizeFInished Parms{};
+
+	Parms.Result = Result;
+	Parms.CodeName_0 = std::move(CodeName_0);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WDT_ConfigNetworkPage.WDT_ConfigNetworkPage_C.OnFieldMenuCloseAnimationFinish
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
@@ -397,6 +491,20 @@ void UWDT_ConfigNetworkPage_C::OnInputDeviceChanged()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("WDT_ConfigNetworkPage_C", "OnInputDeviceChanged");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WDT_ConfigNetworkPage.WDT_ConfigNetworkPage_C.OnMatchingMenuClosed
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWDT_ConfigNetworkPage_C::OnMatchingMenuClosed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_ConfigNetworkPage_C", "OnMatchingMenuClosed");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -479,6 +587,42 @@ void UWDT_ConfigNetworkPage_C::OnOpened()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("WDT_ConfigNetworkPage_C", "OnOpened");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WDT_ConfigNetworkPage.WDT_ConfigNetworkPage_C.OnPasswardSanitizeFinished
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Result                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FString                           CodeName_0                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UWDT_ConfigNetworkPage_C::OnPasswardSanitizeFinished(bool Result, const class FString& CodeName_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_ConfigNetworkPage_C", "OnPasswardSanitizeFinished");
+
+	Params::WDT_ConfigNetworkPage_C_OnPasswardSanitizeFinished Parms{};
+
+	Parms.Result = Result;
+	Parms.CodeName_0 = std::move(CodeName_0);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_ConfigNetworkPage.WDT_ConfigNetworkPage_C.OpenSanitizeDialog
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWDT_ConfigNetworkPage_C::OpenSanitizeDialog()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_ConfigNetworkPage_C", "OpenSanitizeDialog");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

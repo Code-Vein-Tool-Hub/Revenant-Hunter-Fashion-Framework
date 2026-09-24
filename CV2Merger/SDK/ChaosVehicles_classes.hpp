@@ -181,7 +181,7 @@ static_assert(offsetof(UChaosVehicleMovementComponent, OverrideController) == 0x
 
 // Class ChaosVehicles.ChaosVehicleWheel
 // 0x02B8 (0x02E0 - 0x0028)
-class UChaosVehicleWheel : public UObject
+class UChaosVehicleWheel final : public UObject
 {
 public:
 	class UStaticMesh*                            CollisionMesh;                                     // 0x0028(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)

@@ -41,6 +41,30 @@ void UWDT_StatusEffectPanel_C::CreateStatusDownEffectIcon(const struct FStatusEf
 }
 
 
+// Function WDT_StatusEffectPanel.WDT_StatusEffectPanel_C.CreateStatusDownEffectIconEx
+// (Private, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FStatusEffectIconHandle          InHandle                                               (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// EStatusDownEffectIconTypeEx             InIconType                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EStatusEffectFrameType                  InFrame                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_StatusEffectPanel_C::CreateStatusDownEffectIconEx(const struct FStatusEffectIconHandle& InHandle, EStatusDownEffectIconTypeEx InIconType, EStatusEffectFrameType InFrame)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_StatusEffectPanel_C", "CreateStatusDownEffectIconEx");
+
+	Params::WDT_StatusEffectPanel_C_CreateStatusDownEffectIconEx Parms{};
+
+	Parms.InHandle = std::move(InHandle);
+	Parms.InIconType = InIconType;
+	Parms.InFrame = InFrame;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WDT_StatusEffectPanel.WDT_StatusEffectPanel_C.CreateStatusUpEffectIcon
 // (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -113,6 +137,27 @@ void UWDT_StatusEffectPanel_C::GetStatusEffectIcon(const struct FStatusEffectIco
 }
 
 
+// Function WDT_StatusEffectPanel.WDT_StatusEffectPanel_C.GetStausIndicatorUIObject
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UBP_StatusIndicatorUIObject_C*    OutUIObject                                            (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_StatusEffectPanel_C::GetStausIndicatorUIObject(class UBP_StatusIndicatorUIObject_C** OutUIObject)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_StatusEffectPanel_C", "GetStausIndicatorUIObject");
+
+	Params::WDT_StatusEffectPanel_C_GetStausIndicatorUIObject Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (OutUIObject != nullptr)
+		*OutUIObject = Parms.OutUIObject;
+}
+
+
 // Function WDT_StatusEffectPanel.WDT_StatusEffectPanel_C.HideAllIcons
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
@@ -165,6 +210,30 @@ void UWDT_StatusEffectPanel_C::NotifyStatusDownEffectApplied(EStatusDownEffectIc
 
 	Parms.InStatusEffect = InStatusEffect;
 	Parms.InStatusEffectIconHandle = std::move(InStatusEffectIconHandle);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WDT_StatusEffectPanel.WDT_StatusEffectPanel_C.NotifyStatusDownEffectAppliedExWithFrame
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EStatusDownEffectIconTypeEx             InStatusEffect                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FStatusEffectIconHandle          InStatusEffectIconHandle                               (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// EStatusEffectFrameType                  InFrame                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_StatusEffectPanel_C::NotifyStatusDownEffectAppliedExWithFrame(EStatusDownEffectIconTypeEx InStatusEffect, const struct FStatusEffectIconHandle& InStatusEffectIconHandle, EStatusEffectFrameType InFrame)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_StatusEffectPanel_C", "NotifyStatusDownEffectAppliedExWithFrame");
+
+	Params::WDT_StatusEffectPanel_C_NotifyStatusDownEffectAppliedExWithFrame Parms{};
+
+	Parms.InStatusEffect = InStatusEffect;
+	Parms.InStatusEffectIconHandle = std::move(InStatusEffectIconHandle);
+	Parms.InFrame = InFrame;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

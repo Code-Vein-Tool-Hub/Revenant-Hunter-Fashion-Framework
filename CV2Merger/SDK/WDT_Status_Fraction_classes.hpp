@@ -34,13 +34,13 @@ public:
 	class FText                                   IndexText;                                         // 0x0710(0x0010)(Edit, BlueprintVisible)
 
 public:
-	void Construct();
-	void ExecuteUbergraph_WDT_Status_Fraction(int32 EntryPoint);
-	void PreConstruct(bool IsDesignTime);
-	void SetValueFloat(double InIchor, double InMaxIchor);
-	void SetValueFloatComparison(double InMaxIchorCurrent, double InMaxIchor);
-	void SetValueInt(int32 InStamina, int32 InMaxStamina);
 	void SetValueIntComparison(int32 InMaxStaminaCurrent, int32 InMaxStamina);
+	void SetValueInt(int32 InStamina, int32 InMaxStamina);
+	void SetValueFloatComparison(double InMaxIchorCurrent, double InMaxIchor);
+	void SetValueFloat(double InIchor, double InMaxIchor);
+	void PreConstruct(bool IsDesignTime);
+	void ExecuteUbergraph_WDT_Status_Fraction(int32 EntryPoint);
+	void Construct();
 
 public:
 	static class UClass* StaticClass()

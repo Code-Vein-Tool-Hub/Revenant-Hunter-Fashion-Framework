@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function WDT_StatusIndicator.WDT_StatusIndicator_C.NotifyHealthGaugeLengthChanged__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double                                  InLength                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWDT_StatusIndicator_C::NotifyHealthGaugeLengthChanged__DelegateSignature(double InLength)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WDT_StatusIndicator_C", "NotifyHealthGaugeLengthChanged__DelegateSignature");
-
-	Params::WDT_StatusIndicator_C_NotifyHealthGaugeLengthChanged__DelegateSignature Parms{};
-
-	Parms.InLength = InLength;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WDT_StatusIndicator.WDT_StatusIndicator_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
@@ -215,6 +195,26 @@ void UWDT_StatusIndicator_C::GetStatusEffectPanel(class UWDT_StatusEffectPanel_C
 
 	if (OutPanel != nullptr)
 		*OutPanel = Parms.OutPanel;
+}
+
+
+// Function WDT_StatusIndicator.WDT_StatusIndicator_C.NotifyHealthGaugeLengthChanged__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  InLength                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWDT_StatusIndicator_C::NotifyHealthGaugeLengthChanged__DelegateSignature(double InLength)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WDT_StatusIndicator_C", "NotifyHealthGaugeLengthChanged__DelegateSignature");
+
+	Params::WDT_StatusIndicator_C_NotifyHealthGaugeLengthChanged__DelegateSignature Parms{};
+
+	Parms.InLength = InLength;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

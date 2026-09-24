@@ -767,6 +767,35 @@ static_assert(offsetof(FInterpCurveVector, Points) == 0x000000, "Member 'FInterp
 static_assert(offsetof(FInterpCurveVector, bIsLooped) == 0x000010, "Member 'FInterpCurveVector::bIsLooped' has a wrong offset!");
 static_assert(offsetof(FInterpCurveVector, LoopKeyOffset) == 0x000014, "Member 'FInterpCurveVector::LoopKeyOffset' has a wrong offset!");
 
+// ScriptStruct CoreUObject.OverriddenPropertyNodeID
+// 0x0010 (0x0010 - 0x0000)
+struct FOverriddenPropertyNodeID final
+{
+public:
+	class FName                                   Path;                                              // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UObject*                                Object;                                            // 0x0008(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FOverriddenPropertyNodeID) == 0x000008, "Wrong alignment on FOverriddenPropertyNodeID");
+static_assert(sizeof(FOverriddenPropertyNodeID) == 0x000010, "Wrong size on FOverriddenPropertyNodeID");
+static_assert(offsetof(FOverriddenPropertyNodeID, Path) == 0x000000, "Member 'FOverriddenPropertyNodeID::Path' has a wrong offset!");
+static_assert(offsetof(FOverriddenPropertyNodeID, Object) == 0x000008, "Member 'FOverriddenPropertyNodeID::Object' has a wrong offset!");
+
+// ScriptStruct CoreUObject.OverriddenPropertyNode
+// 0x0068 (0x0068 - 0x0000)
+struct FOverriddenPropertyNode final
+{
+public:
+	struct FOverriddenPropertyNodeID              NodeID;                                            // 0x0000(0x0010)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EOverriddenPropertyOperation                  Operation;                                         // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<struct FOverriddenPropertyNodeID, struct FOverriddenPropertyNodeID> SubPropertyNodeKeys;                               // 0x0018(0x0050)(NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FOverriddenPropertyNode) == 0x000008, "Wrong alignment on FOverriddenPropertyNode");
+static_assert(sizeof(FOverriddenPropertyNode) == 0x000068, "Wrong size on FOverriddenPropertyNode");
+static_assert(offsetof(FOverriddenPropertyNode, NodeID) == 0x000000, "Member 'FOverriddenPropertyNode::NodeID' has a wrong offset!");
+static_assert(offsetof(FOverriddenPropertyNode, Operation) == 0x000010, "Member 'FOverriddenPropertyNode::Operation' has a wrong offset!");
+static_assert(offsetof(FOverriddenPropertyNode, SubPropertyNodeKeys) == 0x000018, "Member 'FOverriddenPropertyNode::SubPropertyNodeKeys' has a wrong offset!");
+
 // ScriptStruct CoreUObject.Vector2D
 // 0x0010 (0x0010 - 0x0000)
 struct FVector2D final
@@ -1119,17 +1148,6 @@ public:
 static_assert(alignof(FDirectoryPath) == 0x000008, "Wrong alignment on FDirectoryPath");
 static_assert(sizeof(FDirectoryPath) == 0x000010, "Wrong size on FDirectoryPath");
 static_assert(offsetof(FDirectoryPath, Path) == 0x000000, "Member 'FDirectoryPath::Path' has a wrong offset!");
-
-// ScriptStruct CoreUObject.FieldCookedMetaDataStore
-// 0x0050 (0x0050 - 0x0000)
-struct FFieldCookedMetaDataStore final
-{
-public:
-	TMap<class FName, class FString>              FieldMetaData;                                     // 0x0000(0x0050)(NativeAccessSpecifierPrivate)
-};
-static_assert(alignof(FFieldCookedMetaDataStore) == 0x000008, "Wrong alignment on FFieldCookedMetaDataStore");
-static_assert(sizeof(FFieldCookedMetaDataStore) == 0x000050, "Wrong size on FFieldCookedMetaDataStore");
-static_assert(offsetof(FFieldCookedMetaDataStore, FieldMetaData) == 0x000000, "Member 'FFieldCookedMetaDataStore::FieldMetaData' has a wrong offset!");
 
 // ScriptStruct CoreUObject.DoubleRangeBound
 // 0x0010 (0x0010 - 0x0000)
@@ -1538,35 +1556,6 @@ static_assert(sizeof(FInterpCurveLinearColor) == 0x000018, "Wrong size on FInter
 static_assert(offsetof(FInterpCurveLinearColor, Points) == 0x000000, "Member 'FInterpCurveLinearColor::Points' has a wrong offset!");
 static_assert(offsetof(FInterpCurveLinearColor, bIsLooped) == 0x000010, "Member 'FInterpCurveLinearColor::bIsLooped' has a wrong offset!");
 static_assert(offsetof(FInterpCurveLinearColor, LoopKeyOffset) == 0x000014, "Member 'FInterpCurveLinearColor::LoopKeyOffset' has a wrong offset!");
-
-// ScriptStruct CoreUObject.OverriddenPropertyNodeID
-// 0x0010 (0x0010 - 0x0000)
-struct FOverriddenPropertyNodeID final
-{
-public:
-	class FName                                   Path;                                              // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UObject*                                Object;                                            // 0x0008(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FOverriddenPropertyNodeID) == 0x000008, "Wrong alignment on FOverriddenPropertyNodeID");
-static_assert(sizeof(FOverriddenPropertyNodeID) == 0x000010, "Wrong size on FOverriddenPropertyNodeID");
-static_assert(offsetof(FOverriddenPropertyNodeID, Path) == 0x000000, "Member 'FOverriddenPropertyNodeID::Path' has a wrong offset!");
-static_assert(offsetof(FOverriddenPropertyNodeID, Object) == 0x000008, "Member 'FOverriddenPropertyNodeID::Object' has a wrong offset!");
-
-// ScriptStruct CoreUObject.OverriddenPropertyNode
-// 0x0068 (0x0068 - 0x0000)
-struct FOverriddenPropertyNode final
-{
-public:
-	struct FOverriddenPropertyNodeID              NodeID;                                            // 0x0000(0x0010)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EOverriddenPropertyOperation                  Operation;                                         // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<struct FOverriddenPropertyNodeID, struct FOverriddenPropertyNodeID> SubPropertyNodeKeys;                               // 0x0018(0x0050)(NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FOverriddenPropertyNode) == 0x000008, "Wrong alignment on FOverriddenPropertyNode");
-static_assert(sizeof(FOverriddenPropertyNode) == 0x000068, "Wrong size on FOverriddenPropertyNode");
-static_assert(offsetof(FOverriddenPropertyNode, NodeID) == 0x000000, "Member 'FOverriddenPropertyNode::NodeID' has a wrong offset!");
-static_assert(offsetof(FOverriddenPropertyNode, Operation) == 0x000010, "Member 'FOverriddenPropertyNode::Operation' has a wrong offset!");
-static_assert(offsetof(FOverriddenPropertyNode, SubPropertyNodeKeys) == 0x000018, "Member 'FOverriddenPropertyNode::SubPropertyNodeKeys' has a wrong offset!");
 
 // ScriptStruct CoreUObject.IntPoint
 // 0x0008 (0x0008 - 0x0000)
@@ -2131,6 +2120,17 @@ static_assert(sizeof(FTransform) == 0x000060, "Wrong size on FTransform");
 static_assert(offsetof(FTransform, Rotation) == 0x000000, "Member 'FTransform::Rotation' has a wrong offset!");
 static_assert(offsetof(FTransform, Translation) == 0x000020, "Member 'FTransform::Translation' has a wrong offset!");
 static_assert(offsetof(FTransform, Scale3D) == 0x000040, "Member 'FTransform::Scale3D' has a wrong offset!");
+
+// ScriptStruct CoreUObject.FieldCookedMetaDataStore
+// 0x0050 (0x0050 - 0x0000)
+struct FFieldCookedMetaDataStore final
+{
+public:
+	TMap<class FName, class FString>              FieldMetaData;                                     // 0x0000(0x0050)(NativeAccessSpecifierPrivate)
+};
+static_assert(alignof(FFieldCookedMetaDataStore) == 0x000008, "Wrong alignment on FFieldCookedMetaDataStore");
+static_assert(sizeof(FFieldCookedMetaDataStore) == 0x000050, "Wrong size on FFieldCookedMetaDataStore");
+static_assert(offsetof(FFieldCookedMetaDataStore, FieldMetaData) == 0x000000, "Member 'FFieldCookedMetaDataStore::FieldMetaData' has a wrong offset!");
 
 // ScriptStruct CoreUObject.Transform3d
 // 0x0060 (0x0060 - 0x0000)

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "EN_Anchor_structs.hpp"
+#include "Engine_structs.hpp"
 #include "Extensions_classes.hpp"
 
 
@@ -38,14 +38,15 @@ public:
 	TMap<class UClass*, EN_Anchor>                OverrideHelpAnchor;                                // 0x0678(0x0050)(Edit, BlueprintVisible)
 
 public:
-	void GetActualAnchor(EN_Anchor InDefaultAnchor, class UClass*& InParentMenuClass, TMap<class UClass*, EN_Anchor>& InOverrideAnchorMap, EN_Anchor* OutAnchor);
-	void MakeAlignment(EN_Anchor InAnchor, struct FVector2D* Alignment);
-	void MakeCoordinate(class UWidget* Widget, EN_Anchor Anchor, struct FVector2D* Coordinate);
-	bool IsSelectable();
-	bool Deselect(bool PlayAnimation_0);
-	bool Select(bool PlayAnimation_0);
-	void SetHelpWindowPosition(class UWDT_ParameterHelp_C* InHelpWindow, class UClass* InParentClass);
 	void ExecuteUbergraph_WDT_Status_PieceBase(int32 EntryPoint);
+	void SetHelpWindowPosition_Preset(class UWDT_ParameterHelp_Preset_C* NewParam, class UClass* InParentClass);
+	void SetHelpWindowPosition(class UWDT_ParameterHelp_C* InHelpWindow, class UClass* InParentClass);
+	bool Select(bool PlayAnimation_0);
+	bool Deselect(bool PlayAnimation_0);
+	bool IsSelectable();
+	void MakeCoordinate(class UWidget* Widget, EN_Anchor Anchor, struct FVector2D* Coordinate);
+	void MakeAlignment(EN_Anchor InAnchor, struct FVector2D* Alignment);
+	void GetActualAnchor(EN_Anchor InDefaultAnchor, class UClass*& InParentMenuClass, TMap<class UClass*, EN_Anchor>& InOverrideAnchorMap, EN_Anchor* OutAnchor);
 
 public:
 	static class UClass* StaticClass()

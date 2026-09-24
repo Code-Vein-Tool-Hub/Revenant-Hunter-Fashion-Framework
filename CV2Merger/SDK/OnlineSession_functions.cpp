@@ -47,20 +47,26 @@ float UOnlineSessionBPLibrary::OnlineSessionSampleFunction(float Param)
 
 // Function OnlineSession.OnlineSessionSubsystem.AdvertiseSession
 // (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UOnlineSessionSubsystem::AdvertiseSession()
+bool UOnlineSessionSubsystem::AdvertiseSession()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("OnlineSessionSubsystem", "AdvertiseSession");
 
+	Params::OnlineSessionSubsystem_AdvertiseSession Parms{};
+
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(Func, nullptr);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
@@ -395,20 +401,26 @@ bool UOnlineSessionSubsystem::IsWorldHostPlayer()
 
 // Function OnlineSession.OnlineSessionSubsystem.KeepSessionPrivate
 // (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UOnlineSessionSubsystem::KeepSessionPrivate()
+bool UOnlineSessionSubsystem::KeepSessionPrivate()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("OnlineSessionSubsystem", "KeepSessionPrivate");
 
+	Params::OnlineSessionSubsystem_KeepSessionPrivate Parms{};
+
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(Func, nullptr);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 

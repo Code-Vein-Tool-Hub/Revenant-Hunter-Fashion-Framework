@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "STR_FeatureQuestList_structs.hpp"
-#include "BasicUI_structs.hpp"
-#include "SlateCore_structs.hpp"
 #include "STR_MapFeatureUICoordinateCorrection_structs.hpp"
+#include "BasicUI_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "Extensions_structs.hpp"
 #include "GameplayTags_structs.hpp"
-#include "STR_MapFeatureInfoUI_structs.hpp"
 #include "EnhancedInput_structs.hpp"
+#include "STR_MapFeatureInfoUI_structs.hpp"
+#include "STR_FeatureQuestList_structs.hpp"
 #include "UMG_structs.hpp"
 #include "Engine_structs.hpp"
 
@@ -44,7 +44,7 @@ static_assert(offsetof(WDT_MapImage_C_GetMousePosition, CallFunc_GetCachedGeomet
 static_assert(offsetof(WDT_MapImage_C_GetMousePosition, CallFunc_AbsoluteToLocal_ReturnValue) == 0x000058, "Member 'WDT_MapImage_C_GetMousePosition::CallFunc_AbsoluteToLocal_ReturnValue' has a wrong offset!");
 
 // Function WDT_MapImage.WDT_MapImage_C.UpdateGuardianSpiritFeatureIcon
-// 0x01F8 (0x01F8 - 0x0000)
+// 0x0210 (0x0210 - 0x0000)
 struct WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon final
 {
 public:
@@ -75,23 +75,23 @@ public:
 	class AMapSystem*                             CallFunc_GetMapSystem_ReturnValue_3;               // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SetFeatureState_ReturnValue_1;            // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_C9[0x7];                                       // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMapFeatureInfo                        CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo;  // 0x00D0(0x00E0)()
-	bool                                          CallFunc_GetMapFeatureInfoFromMap_ReturnValue;     // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1B1[0x7];                                      // 0x01B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AMapSystem*                             CallFunc_GetMapSystem_ReturnValue_4;               // 0x01B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x01C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1C1[0x7];                                      // 0x01C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AMapSystem*                             CallFunc_GetMapSystem_ReturnValue_5;               // 0x01C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	EGuardianSpiritState                          CallFunc_GetGuardianSpiritState_ReturnValue;       // 0x01D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x01D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1D2[0x6];                                      // 0x01D2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FGameplayTag>                   CallFunc_Map_Keys_Keys;                            // 0x01D8(0x0010)(ReferenceParm)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x01E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           CallFunc_Array_Get_Item_1;                         // 0x01EC(0x0008)(NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x01F4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FMapFeatureInfo                        CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo;  // 0x00D0(0x00F8)()
+	bool                                          CallFunc_GetMapFeatureInfoFromMap_ReturnValue;     // 0x01C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1C9[0x7];                                      // 0x01C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AMapSystem*                             CallFunc_GetMapSystem_ReturnValue_4;               // 0x01D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x01D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1D9[0x7];                                      // 0x01D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AMapSystem*                             CallFunc_GetMapSystem_ReturnValue_5;               // 0x01E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	EGuardianSpiritState                          CallFunc_GetGuardianSpiritState_ReturnValue;       // 0x01E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x01E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1EA[0x6];                                      // 0x01EA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FGameplayTag>                   CallFunc_Map_Keys_Keys;                            // 0x01F0(0x0010)(ReferenceParm)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0200(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           CallFunc_Array_Get_Item_1;                         // 0x0204(0x0008)(NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x020C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon) == 0x000008, "Wrong alignment on WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon");
-static_assert(sizeof(WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon) == 0x0001F8, "Wrong size on WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon");
+static_assert(sizeof(WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon) == 0x000210, "Wrong size on WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon");
 static_assert(offsetof(WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon, L_CurrentTag) == 0x000000, "Member 'WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon::L_CurrentTag' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon, Temp_int_Array_Index_Variable) == 0x000008, "Member 'WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon::Temp_int_Array_Index_Variable' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon, Temp_int_Loop_Counter_Variable) == 0x00000C, "Member 'WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon::Temp_int_Loop_Counter_Variable' has a wrong offset!");
@@ -113,16 +113,16 @@ static_assert(offsetof(WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon, CallFunc_
 static_assert(offsetof(WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon, CallFunc_GetMapSystem_ReturnValue_3) == 0x0000C0, "Member 'WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon::CallFunc_GetMapSystem_ReturnValue_3' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon, CallFunc_SetFeatureState_ReturnValue_1) == 0x0000C8, "Member 'WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon::CallFunc_SetFeatureState_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon, CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo) == 0x0000D0, "Member 'WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon::CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon, CallFunc_GetMapFeatureInfoFromMap_ReturnValue) == 0x0001B0, "Member 'WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon::CallFunc_GetMapFeatureInfoFromMap_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon, CallFunc_GetMapSystem_ReturnValue_4) == 0x0001B8, "Member 'WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon::CallFunc_GetMapSystem_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon, CallFunc_IsValid_ReturnValue) == 0x0001C0, "Member 'WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon, CallFunc_GetMapSystem_ReturnValue_5) == 0x0001C8, "Member 'WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon::CallFunc_GetMapSystem_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon, CallFunc_GetGuardianSpiritState_ReturnValue) == 0x0001D0, "Member 'WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon::CallFunc_GetGuardianSpiritState_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon, K2Node_SwitchEnum_CmpSuccess) == 0x0001D1, "Member 'WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon, CallFunc_Map_Keys_Keys) == 0x0001D8, "Member 'WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon::CallFunc_Map_Keys_Keys' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon, CallFunc_Array_Length_ReturnValue) == 0x0001E8, "Member 'WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon, CallFunc_Array_Get_Item_1) == 0x0001EC, "Member 'WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon, CallFunc_Less_IntInt_ReturnValue) == 0x0001F4, "Member 'WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon, CallFunc_GetMapFeatureInfoFromMap_ReturnValue) == 0x0001C8, "Member 'WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon::CallFunc_GetMapFeatureInfoFromMap_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon, CallFunc_GetMapSystem_ReturnValue_4) == 0x0001D0, "Member 'WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon::CallFunc_GetMapSystem_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon, CallFunc_IsValid_ReturnValue) == 0x0001D8, "Member 'WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon, CallFunc_GetMapSystem_ReturnValue_5) == 0x0001E0, "Member 'WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon::CallFunc_GetMapSystem_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon, CallFunc_GetGuardianSpiritState_ReturnValue) == 0x0001E8, "Member 'WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon::CallFunc_GetGuardianSpiritState_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon, K2Node_SwitchEnum_CmpSuccess) == 0x0001E9, "Member 'WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon, CallFunc_Map_Keys_Keys) == 0x0001F0, "Member 'WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon::CallFunc_Map_Keys_Keys' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon, CallFunc_Array_Length_ReturnValue) == 0x000200, "Member 'WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon, CallFunc_Array_Get_Item_1) == 0x000204, "Member 'WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon, CallFunc_Less_IntInt_ReturnValue) == 0x00020C, "Member 'WDT_MapImage_C_UpdateGuardianSpiritFeatureIcon::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
 
 // Function WDT_MapImage.WDT_MapImage_C.SetAreaBuffListVisibility
 // 0x0001 (0x0001 - 0x0000)
@@ -191,7 +191,7 @@ static_assert(offsetof(WDT_MapImage_C_OnTimeTravelDialogClosed, Temp_struct_Vari
 static_assert(offsetof(WDT_MapImage_C_OnTimeTravelDialogClosed, CallFunc_AddMappingContext_self_CastInput_1) == 0x000050, "Member 'WDT_MapImage_C_OnTimeTravelDialogClosed::CallFunc_AddMappingContext_self_CastInput_1' has a wrong offset!");
 
 // Function WDT_MapImage.WDT_MapImage_C.OnTimeTravelDecideDialogOption
-// 0x01C8 (0x01C8 - 0x0000)
+// 0x01E0 (0x01E0 - 0x0000)
 struct WDT_MapImage_C_OnTimeTravelDecideDialogOption final
 {
 public:
@@ -202,62 +202,62 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_16[0x2];                                       // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMapFeatureInfo                        CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo;  // 0x0018(0x00E0)()
-	bool                                          CallFunc_GetMapFeatureInfoFromMap_ReturnValue;     // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FModifyContextOptions                  Temp_struct_Variable;                              // 0x00F9(0x0001)(ConstParm, NoDestructor)
-	uint8                                         Pad_FA[0x6];                                       // 0x00FA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IEnhancedInputSubsystemInterface> CallFunc_RemoveMappingContext_self_CastInput;      // 0x0100(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FModifyContextOptions                  Temp_struct_Variable_1;                            // 0x0111(0x0001)(ConstParm, NoDestructor)
+	struct FMapFeatureInfo                        CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo;  // 0x0018(0x00F8)()
+	bool                                          CallFunc_GetMapFeatureInfoFromMap_ReturnValue;     // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FModifyContextOptions                  Temp_struct_Variable;                              // 0x0111(0x0001)(ConstParm, NoDestructor)
 	uint8                                         Pad_112[0x6];                                      // 0x0112(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_GetFastTravelProhibitMessage_OutMessageTitle; // 0x0118(0x0010)()
-	class FText                                   CallFunc_GetFastTravelProhibitMessage_OutMessageMain; // 0x0128(0x0010)()
-	float                                         CallFunc_GetFastTravelProhibitMessage_OutMessageDuration; // 0x0138(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_13C[0x4];                                      // 0x013C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IEnhancedInputSubsystemInterface> CallFunc_RemoveMappingContext_self_CastInput_1;    // 0x0140(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UUIManager*                             CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0150(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsFastTravelProhibited_ReturnValue;       // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_159[0x7];                                      // 0x0159(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMenuBase*                              CallFunc_GetMenu_ReturnValue;                      // 0x0160(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_169[0x7];                                      // 0x0169(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUIObjectBase*                          CallFunc_GetUIObject_ReturnValue;                  // 0x0170(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Close_ReturnValue;                        // 0x0179(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetFastTravelLocation_OutResult;          // 0x017A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_17B[0x5];                                      // 0x017B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_GetFastTravelLocation_OutLocation;        // 0x0180(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_GetFastTravelLocation_OutPlayerRotation;  // 0x0198(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FRotator                               CallFunc_GetFastTravelLocation_OutCameraRotation;  // 0x01B0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	TScriptInterface<class IEnhancedInputSubsystemInterface> CallFunc_RemoveMappingContext_self_CastInput;      // 0x0118(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0128(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FModifyContextOptions                  Temp_struct_Variable_1;                            // 0x0129(0x0001)(ConstParm, NoDestructor)
+	uint8                                         Pad_12A[0x6];                                      // 0x012A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_GetFastTravelProhibitMessage_OutMessageTitle; // 0x0130(0x0010)()
+	class FText                                   CallFunc_GetFastTravelProhibitMessage_OutMessageMain; // 0x0140(0x0010)()
+	float                                         CallFunc_GetFastTravelProhibitMessage_OutMessageDuration; // 0x0150(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_154[0x4];                                      // 0x0154(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IEnhancedInputSubsystemInterface> CallFunc_RemoveMappingContext_self_CastInput_1;    // 0x0158(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UUIManager*                             CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0168(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsFastTravelProhibited_ReturnValue;       // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_171[0x7];                                      // 0x0171(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMenuBase*                              CallFunc_GetMenu_ReturnValue;                      // 0x0178(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0180(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_181[0x7];                                      // 0x0181(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUIObjectBase*                          CallFunc_GetUIObject_ReturnValue;                  // 0x0188(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0190(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Close_ReturnValue;                        // 0x0191(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetFastTravelLocation_OutResult;          // 0x0192(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_193[0x5];                                      // 0x0193(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_GetFastTravelLocation_OutLocation;        // 0x0198(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_GetFastTravelLocation_OutPlayerRotation;  // 0x01B0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FRotator                               CallFunc_GetFastTravelLocation_OutCameraRotation;  // 0x01C8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(WDT_MapImage_C_OnTimeTravelDecideDialogOption) == 0x000008, "Wrong alignment on WDT_MapImage_C_OnTimeTravelDecideDialogOption");
-static_assert(sizeof(WDT_MapImage_C_OnTimeTravelDecideDialogOption) == 0x0001C8, "Wrong size on WDT_MapImage_C_OnTimeTravelDecideDialogOption");
+static_assert(sizeof(WDT_MapImage_C_OnTimeTravelDecideDialogOption) == 0x0001E0, "Wrong size on WDT_MapImage_C_OnTimeTravelDecideDialogOption");
 static_assert(offsetof(WDT_MapImage_C_OnTimeTravelDecideDialogOption, InSelectedOption) == 0x000000, "Member 'WDT_MapImage_C_OnTimeTravelDecideDialogOption::InSelectedOption' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_OnTimeTravelDecideDialogOption, CallFunc_GetLocalPlayerSubsystem_ReturnValue) == 0x000008, "Member 'WDT_MapImage_C_OnTimeTravelDecideDialogOption::CallFunc_GetLocalPlayerSubsystem_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_OnTimeTravelDecideDialogOption, CallFunc_Conv_ByteToInt_ReturnValue) == 0x000010, "Member 'WDT_MapImage_C_OnTimeTravelDecideDialogOption::CallFunc_Conv_ByteToInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_OnTimeTravelDecideDialogOption, CallFunc_IsValid_ReturnValue) == 0x000014, "Member 'WDT_MapImage_C_OnTimeTravelDecideDialogOption::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_OnTimeTravelDecideDialogOption, K2Node_SwitchInteger_CmpSuccess) == 0x000015, "Member 'WDT_MapImage_C_OnTimeTravelDecideDialogOption::K2Node_SwitchInteger_CmpSuccess' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_OnTimeTravelDecideDialogOption, CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo) == 0x000018, "Member 'WDT_MapImage_C_OnTimeTravelDecideDialogOption::CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_OnTimeTravelDecideDialogOption, CallFunc_GetMapFeatureInfoFromMap_ReturnValue) == 0x0000F8, "Member 'WDT_MapImage_C_OnTimeTravelDecideDialogOption::CallFunc_GetMapFeatureInfoFromMap_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_OnTimeTravelDecideDialogOption, Temp_struct_Variable) == 0x0000F9, "Member 'WDT_MapImage_C_OnTimeTravelDecideDialogOption::Temp_struct_Variable' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_OnTimeTravelDecideDialogOption, CallFunc_RemoveMappingContext_self_CastInput) == 0x000100, "Member 'WDT_MapImage_C_OnTimeTravelDecideDialogOption::CallFunc_RemoveMappingContext_self_CastInput' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_OnTimeTravelDecideDialogOption, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000110, "Member 'WDT_MapImage_C_OnTimeTravelDecideDialogOption::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_OnTimeTravelDecideDialogOption, Temp_struct_Variable_1) == 0x000111, "Member 'WDT_MapImage_C_OnTimeTravelDecideDialogOption::Temp_struct_Variable_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_OnTimeTravelDecideDialogOption, CallFunc_GetFastTravelProhibitMessage_OutMessageTitle) == 0x000118, "Member 'WDT_MapImage_C_OnTimeTravelDecideDialogOption::CallFunc_GetFastTravelProhibitMessage_OutMessageTitle' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_OnTimeTravelDecideDialogOption, CallFunc_GetFastTravelProhibitMessage_OutMessageMain) == 0x000128, "Member 'WDT_MapImage_C_OnTimeTravelDecideDialogOption::CallFunc_GetFastTravelProhibitMessage_OutMessageMain' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_OnTimeTravelDecideDialogOption, CallFunc_GetFastTravelProhibitMessage_OutMessageDuration) == 0x000138, "Member 'WDT_MapImage_C_OnTimeTravelDecideDialogOption::CallFunc_GetFastTravelProhibitMessage_OutMessageDuration' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_OnTimeTravelDecideDialogOption, CallFunc_RemoveMappingContext_self_CastInput_1) == 0x000140, "Member 'WDT_MapImage_C_OnTimeTravelDecideDialogOption::CallFunc_RemoveMappingContext_self_CastInput_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_OnTimeTravelDecideDialogOption, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000150, "Member 'WDT_MapImage_C_OnTimeTravelDecideDialogOption::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_OnTimeTravelDecideDialogOption, CallFunc_IsFastTravelProhibited_ReturnValue) == 0x000158, "Member 'WDT_MapImage_C_OnTimeTravelDecideDialogOption::CallFunc_IsFastTravelProhibited_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_OnTimeTravelDecideDialogOption, CallFunc_GetMenu_ReturnValue) == 0x000160, "Member 'WDT_MapImage_C_OnTimeTravelDecideDialogOption::CallFunc_GetMenu_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_OnTimeTravelDecideDialogOption, CallFunc_IsValid_ReturnValue_1) == 0x000168, "Member 'WDT_MapImage_C_OnTimeTravelDecideDialogOption::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_OnTimeTravelDecideDialogOption, CallFunc_GetUIObject_ReturnValue) == 0x000170, "Member 'WDT_MapImage_C_OnTimeTravelDecideDialogOption::CallFunc_GetUIObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_OnTimeTravelDecideDialogOption, CallFunc_Not_PreBool_ReturnValue) == 0x000178, "Member 'WDT_MapImage_C_OnTimeTravelDecideDialogOption::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_OnTimeTravelDecideDialogOption, CallFunc_Close_ReturnValue) == 0x000179, "Member 'WDT_MapImage_C_OnTimeTravelDecideDialogOption::CallFunc_Close_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_OnTimeTravelDecideDialogOption, CallFunc_GetFastTravelLocation_OutResult) == 0x00017A, "Member 'WDT_MapImage_C_OnTimeTravelDecideDialogOption::CallFunc_GetFastTravelLocation_OutResult' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_OnTimeTravelDecideDialogOption, CallFunc_GetFastTravelLocation_OutLocation) == 0x000180, "Member 'WDT_MapImage_C_OnTimeTravelDecideDialogOption::CallFunc_GetFastTravelLocation_OutLocation' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_OnTimeTravelDecideDialogOption, CallFunc_GetFastTravelLocation_OutPlayerRotation) == 0x000198, "Member 'WDT_MapImage_C_OnTimeTravelDecideDialogOption::CallFunc_GetFastTravelLocation_OutPlayerRotation' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_OnTimeTravelDecideDialogOption, CallFunc_GetFastTravelLocation_OutCameraRotation) == 0x0001B0, "Member 'WDT_MapImage_C_OnTimeTravelDecideDialogOption::CallFunc_GetFastTravelLocation_OutCameraRotation' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_OnTimeTravelDecideDialogOption, CallFunc_GetMapFeatureInfoFromMap_ReturnValue) == 0x000110, "Member 'WDT_MapImage_C_OnTimeTravelDecideDialogOption::CallFunc_GetMapFeatureInfoFromMap_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_OnTimeTravelDecideDialogOption, Temp_struct_Variable) == 0x000111, "Member 'WDT_MapImage_C_OnTimeTravelDecideDialogOption::Temp_struct_Variable' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_OnTimeTravelDecideDialogOption, CallFunc_RemoveMappingContext_self_CastInput) == 0x000118, "Member 'WDT_MapImage_C_OnTimeTravelDecideDialogOption::CallFunc_RemoveMappingContext_self_CastInput' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_OnTimeTravelDecideDialogOption, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000128, "Member 'WDT_MapImage_C_OnTimeTravelDecideDialogOption::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_OnTimeTravelDecideDialogOption, Temp_struct_Variable_1) == 0x000129, "Member 'WDT_MapImage_C_OnTimeTravelDecideDialogOption::Temp_struct_Variable_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_OnTimeTravelDecideDialogOption, CallFunc_GetFastTravelProhibitMessage_OutMessageTitle) == 0x000130, "Member 'WDT_MapImage_C_OnTimeTravelDecideDialogOption::CallFunc_GetFastTravelProhibitMessage_OutMessageTitle' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_OnTimeTravelDecideDialogOption, CallFunc_GetFastTravelProhibitMessage_OutMessageMain) == 0x000140, "Member 'WDT_MapImage_C_OnTimeTravelDecideDialogOption::CallFunc_GetFastTravelProhibitMessage_OutMessageMain' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_OnTimeTravelDecideDialogOption, CallFunc_GetFastTravelProhibitMessage_OutMessageDuration) == 0x000150, "Member 'WDT_MapImage_C_OnTimeTravelDecideDialogOption::CallFunc_GetFastTravelProhibitMessage_OutMessageDuration' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_OnTimeTravelDecideDialogOption, CallFunc_RemoveMappingContext_self_CastInput_1) == 0x000158, "Member 'WDT_MapImage_C_OnTimeTravelDecideDialogOption::CallFunc_RemoveMappingContext_self_CastInput_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_OnTimeTravelDecideDialogOption, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000168, "Member 'WDT_MapImage_C_OnTimeTravelDecideDialogOption::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_OnTimeTravelDecideDialogOption, CallFunc_IsFastTravelProhibited_ReturnValue) == 0x000170, "Member 'WDT_MapImage_C_OnTimeTravelDecideDialogOption::CallFunc_IsFastTravelProhibited_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_OnTimeTravelDecideDialogOption, CallFunc_GetMenu_ReturnValue) == 0x000178, "Member 'WDT_MapImage_C_OnTimeTravelDecideDialogOption::CallFunc_GetMenu_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_OnTimeTravelDecideDialogOption, CallFunc_IsValid_ReturnValue_1) == 0x000180, "Member 'WDT_MapImage_C_OnTimeTravelDecideDialogOption::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_OnTimeTravelDecideDialogOption, CallFunc_GetUIObject_ReturnValue) == 0x000188, "Member 'WDT_MapImage_C_OnTimeTravelDecideDialogOption::CallFunc_GetUIObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_OnTimeTravelDecideDialogOption, CallFunc_Not_PreBool_ReturnValue) == 0x000190, "Member 'WDT_MapImage_C_OnTimeTravelDecideDialogOption::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_OnTimeTravelDecideDialogOption, CallFunc_Close_ReturnValue) == 0x000191, "Member 'WDT_MapImage_C_OnTimeTravelDecideDialogOption::CallFunc_Close_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_OnTimeTravelDecideDialogOption, CallFunc_GetFastTravelLocation_OutResult) == 0x000192, "Member 'WDT_MapImage_C_OnTimeTravelDecideDialogOption::CallFunc_GetFastTravelLocation_OutResult' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_OnTimeTravelDecideDialogOption, CallFunc_GetFastTravelLocation_OutLocation) == 0x000198, "Member 'WDT_MapImage_C_OnTimeTravelDecideDialogOption::CallFunc_GetFastTravelLocation_OutLocation' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_OnTimeTravelDecideDialogOption, CallFunc_GetFastTravelLocation_OutPlayerRotation) == 0x0001B0, "Member 'WDT_MapImage_C_OnTimeTravelDecideDialogOption::CallFunc_GetFastTravelLocation_OutPlayerRotation' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_OnTimeTravelDecideDialogOption, CallFunc_GetFastTravelLocation_OutCameraRotation) == 0x0001C8, "Member 'WDT_MapImage_C_OnTimeTravelDecideDialogOption::CallFunc_GetFastTravelLocation_OutCameraRotation' has a wrong offset!");
 
 // Function WDT_MapImage.WDT_MapImage_C.OpenTimeTravelConfirmDialog
 // 0x0088 (0x0088 - 0x0000)
@@ -331,7 +331,7 @@ static_assert(offsetof(WDT_MapImage_C_IsInMap, CallFunc_InRange_FloatFloat_Retur
 static_assert(offsetof(WDT_MapImage_C_IsInMap, CallFunc_BooleanAND_ReturnValue) == 0x00004A, "Member 'WDT_MapImage_C_IsInMap::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
 
 // Function WDT_MapImage.WDT_MapImage_C.SetSelectedFeatureFilter
-// 0x0118 (0x0118 - 0x0000)
+// 0x0130 (0x0130 - 0x0000)
 struct WDT_MapImage_C_SetSelectedFeatureFilter final
 {
 public:
@@ -344,14 +344,14 @@ public:
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSTR_MapFeatureInfoUI                  CallFunc_Array_Get_Item;                           // 0x0020(0x00F0)(ContainsInstancedReference, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0110(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0114(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_CheckFeatureFilterFeatureVisibility_OutIsVisible; // 0x0115(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0116(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSTR_MapFeatureInfoUI                  CallFunc_Array_Get_Item;                           // 0x0020(0x0108)(ContainsInstancedReference, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0128(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x012C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_CheckFeatureFilterFeatureVisibility_OutIsVisible; // 0x012D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x012E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_MapImage_C_SetSelectedFeatureFilter) == 0x000008, "Wrong alignment on WDT_MapImage_C_SetSelectedFeatureFilter");
-static_assert(sizeof(WDT_MapImage_C_SetSelectedFeatureFilter) == 0x000118, "Wrong size on WDT_MapImage_C_SetSelectedFeatureFilter");
+static_assert(sizeof(WDT_MapImage_C_SetSelectedFeatureFilter) == 0x000130, "Wrong size on WDT_MapImage_C_SetSelectedFeatureFilter");
 static_assert(offsetof(WDT_MapImage_C_SetSelectedFeatureFilter, InToggleFilter) == 0x000000, "Member 'WDT_MapImage_C_SetSelectedFeatureFilter::InToggleFilter' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_SetSelectedFeatureFilter, Temp_int_Array_Index_Variable) == 0x000004, "Member 'WDT_MapImage_C_SetSelectedFeatureFilter::Temp_int_Array_Index_Variable' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_SetSelectedFeatureFilter, CallFunc_GetMapSystem_ReturnValue) == 0x000008, "Member 'WDT_MapImage_C_SetSelectedFeatureFilter::CallFunc_GetMapSystem_ReturnValue' has a wrong offset!");
@@ -359,10 +359,10 @@ static_assert(offsetof(WDT_MapImage_C_SetSelectedFeatureFilter, CallFunc_GetTogg
 static_assert(offsetof(WDT_MapImage_C_SetSelectedFeatureFilter, Temp_int_Loop_Counter_Variable) == 0x000014, "Member 'WDT_MapImage_C_SetSelectedFeatureFilter::Temp_int_Loop_Counter_Variable' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_SetSelectedFeatureFilter, CallFunc_Add_IntInt_ReturnValue) == 0x000018, "Member 'WDT_MapImage_C_SetSelectedFeatureFilter::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_SetSelectedFeatureFilter, CallFunc_Array_Get_Item) == 0x000020, "Member 'WDT_MapImage_C_SetSelectedFeatureFilter::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSelectedFeatureFilter, CallFunc_Array_Length_ReturnValue) == 0x000110, "Member 'WDT_MapImage_C_SetSelectedFeatureFilter::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSelectedFeatureFilter, CallFunc_Less_IntInt_ReturnValue) == 0x000114, "Member 'WDT_MapImage_C_SetSelectedFeatureFilter::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSelectedFeatureFilter, CallFunc_CheckFeatureFilterFeatureVisibility_OutIsVisible) == 0x000115, "Member 'WDT_MapImage_C_SetSelectedFeatureFilter::CallFunc_CheckFeatureFilterFeatureVisibility_OutIsVisible' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSelectedFeatureFilter, CallFunc_IsValid_ReturnValue) == 0x000116, "Member 'WDT_MapImage_C_SetSelectedFeatureFilter::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSelectedFeatureFilter, CallFunc_Array_Length_ReturnValue) == 0x000128, "Member 'WDT_MapImage_C_SetSelectedFeatureFilter::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSelectedFeatureFilter, CallFunc_Less_IntInt_ReturnValue) == 0x00012C, "Member 'WDT_MapImage_C_SetSelectedFeatureFilter::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSelectedFeatureFilter, CallFunc_CheckFeatureFilterFeatureVisibility_OutIsVisible) == 0x00012D, "Member 'WDT_MapImage_C_SetSelectedFeatureFilter::CallFunc_CheckFeatureFilterFeatureVisibility_OutIsVisible' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSelectedFeatureFilter, CallFunc_IsValid_ReturnValue) == 0x00012E, "Member 'WDT_MapImage_C_SetSelectedFeatureFilter::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
 // Function WDT_MapImage.WDT_MapImage_C.UpdateMiniMapOnOffGuideVisibility
 // 0x0010 (0x0010 - 0x0000)
@@ -712,7 +712,7 @@ static_assert(offsetof(WDT_MapImage_C_GetRegionTabIDToRegionTag, CallFunc_Map_Fi
 static_assert(offsetof(WDT_MapImage_C_GetRegionTabIDToRegionTag, CallFunc_Map_Find_ReturnValue) == 0x0000B8, "Member 'WDT_MapImage_C_GetRegionTabIDToRegionTag::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
 
 // Function WDT_MapImage.WDT_MapImage_C.GetRegionTagToRegionTabID
-// 0x00C0 (0x00C0 - 0x0000)
+// 0x00C8 (0x00C8 - 0x0000)
 struct WDT_MapImage_C_GetRegionTagToRegionTabID final
 {
 public:
@@ -720,17 +720,24 @@ public:
 	class FName                                   OutRegionName;                                     // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TMap<struct FGameplayTag, class FName>        ConvertMap;                                        // 0x0010(0x0050)(Edit, BlueprintVisible)
 	TMap<struct FGameplayTag, class FName>        K2Node_MakeVariable_MakeVariableOutput;            // 0x0060(0x0050)()
-	class FName                                   CallFunc_Map_Find_Value;                           // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           CallFunc_MakeLiteralGameplayTag_ReturnValue;       // 0x00B0(0x0008)(NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsGameFlagValid_ReturnValue;              // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x00B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_BA[0x2];                                       // 0x00BA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   CallFunc_Map_Find_Value;                           // 0x00BC(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x00C4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_MapImage_C_GetRegionTagToRegionTabID) == 0x000008, "Wrong alignment on WDT_MapImage_C_GetRegionTagToRegionTabID");
-static_assert(sizeof(WDT_MapImage_C_GetRegionTagToRegionTabID) == 0x0000C0, "Wrong size on WDT_MapImage_C_GetRegionTagToRegionTabID");
+static_assert(sizeof(WDT_MapImage_C_GetRegionTagToRegionTabID) == 0x0000C8, "Wrong size on WDT_MapImage_C_GetRegionTagToRegionTabID");
 static_assert(offsetof(WDT_MapImage_C_GetRegionTagToRegionTabID, InRegionTag) == 0x000000, "Member 'WDT_MapImage_C_GetRegionTagToRegionTabID::InRegionTag' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_GetRegionTagToRegionTabID, OutRegionName) == 0x000008, "Member 'WDT_MapImage_C_GetRegionTagToRegionTabID::OutRegionName' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_GetRegionTagToRegionTabID, ConvertMap) == 0x000010, "Member 'WDT_MapImage_C_GetRegionTagToRegionTabID::ConvertMap' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_GetRegionTagToRegionTabID, K2Node_MakeVariable_MakeVariableOutput) == 0x000060, "Member 'WDT_MapImage_C_GetRegionTagToRegionTabID::K2Node_MakeVariable_MakeVariableOutput' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_GetRegionTagToRegionTabID, CallFunc_Map_Find_Value) == 0x0000B0, "Member 'WDT_MapImage_C_GetRegionTagToRegionTabID::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_GetRegionTagToRegionTabID, CallFunc_Map_Find_ReturnValue) == 0x0000B8, "Member 'WDT_MapImage_C_GetRegionTagToRegionTabID::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_GetRegionTagToRegionTabID, CallFunc_MakeLiteralGameplayTag_ReturnValue) == 0x0000B0, "Member 'WDT_MapImage_C_GetRegionTagToRegionTabID::CallFunc_MakeLiteralGameplayTag_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_GetRegionTagToRegionTabID, CallFunc_IsGameFlagValid_ReturnValue) == 0x0000B8, "Member 'WDT_MapImage_C_GetRegionTagToRegionTabID::CallFunc_IsGameFlagValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_GetRegionTagToRegionTabID, CallFunc_Not_PreBool_ReturnValue) == 0x0000B9, "Member 'WDT_MapImage_C_GetRegionTagToRegionTabID::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_GetRegionTagToRegionTabID, CallFunc_Map_Find_Value) == 0x0000BC, "Member 'WDT_MapImage_C_GetRegionTagToRegionTabID::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_GetRegionTagToRegionTabID, CallFunc_Map_Find_ReturnValue) == 0x0000C4, "Member 'WDT_MapImage_C_GetRegionTagToRegionTabID::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
 
 // Function WDT_MapImage.WDT_MapImage_C.CheckEnableQuestTimeSeries
 // 0x00F8 (0x00F8 - 0x0000)
@@ -768,15 +775,15 @@ public:
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FGameplayTag>                   CallFunc_GetFeatureTag_OutTag;                     // 0x0020(0x0010)(ReferenceParm)
-	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           CallFunc_Array_Get_Item;                           // 0x0038(0x0008)(NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_PlayUIAudioEvent_ReturnValue;             // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsGameplayTagValid_ReturnValue;           // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_42[0x2];                                       // 0x0042(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FGameplayTag>                   CallFunc_GetFeatureTag_OutTag;                     // 0x0028(0x0010)(ReferenceParm)
+	bool                                          CallFunc_PlayUIAudioEvent_ReturnValue;             // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTag                           CallFunc_Array_Get_Item;                           // 0x003C(0x0008)(NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          CallFunc_IsGameplayTagValid_ReturnValue;           // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4A[0x6];                                       // 0x004A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class AMapSystem*                             CallFunc_GetMapSystem_ReturnValue;                 // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_CanDisplayFeature_ReturnValue;            // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
@@ -792,13 +799,13 @@ static_assert(offsetof(WDT_MapImage_C_SelectLouDiaryList, SelectedItem) == 0x000
 static_assert(offsetof(WDT_MapImage_C_SelectLouDiaryList, Temp_int_Array_Index_Variable) == 0x000010, "Member 'WDT_MapImage_C_SelectLouDiaryList::Temp_int_Array_Index_Variable' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_SelectLouDiaryList, Temp_int_Loop_Counter_Variable) == 0x000014, "Member 'WDT_MapImage_C_SelectLouDiaryList::Temp_int_Loop_Counter_Variable' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_SelectLouDiaryList, CallFunc_Add_IntInt_ReturnValue) == 0x000018, "Member 'WDT_MapImage_C_SelectLouDiaryList::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SelectLouDiaryList, CallFunc_GetFeatureTag_OutTag) == 0x000020, "Member 'WDT_MapImage_C_SelectLouDiaryList::CallFunc_GetFeatureTag_OutTag' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SelectLouDiaryList, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000030, "Member 'WDT_MapImage_C_SelectLouDiaryList::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SelectLouDiaryList, CallFunc_Array_Get_Item) == 0x000038, "Member 'WDT_MapImage_C_SelectLouDiaryList::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SelectLouDiaryList, CallFunc_PlayUIAudioEvent_ReturnValue) == 0x000040, "Member 'WDT_MapImage_C_SelectLouDiaryList::CallFunc_PlayUIAudioEvent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SelectLouDiaryList, CallFunc_IsGameplayTagValid_ReturnValue) == 0x000041, "Member 'WDT_MapImage_C_SelectLouDiaryList::CallFunc_IsGameplayTagValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SelectLouDiaryList, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000020, "Member 'WDT_MapImage_C_SelectLouDiaryList::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SelectLouDiaryList, CallFunc_GetFeatureTag_OutTag) == 0x000028, "Member 'WDT_MapImage_C_SelectLouDiaryList::CallFunc_GetFeatureTag_OutTag' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SelectLouDiaryList, CallFunc_PlayUIAudioEvent_ReturnValue) == 0x000038, "Member 'WDT_MapImage_C_SelectLouDiaryList::CallFunc_PlayUIAudioEvent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SelectLouDiaryList, CallFunc_Array_Get_Item) == 0x00003C, "Member 'WDT_MapImage_C_SelectLouDiaryList::CallFunc_Array_Get_Item' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_SelectLouDiaryList, CallFunc_Array_Length_ReturnValue) == 0x000044, "Member 'WDT_MapImage_C_SelectLouDiaryList::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_SelectLouDiaryList, CallFunc_Less_IntInt_ReturnValue) == 0x000048, "Member 'WDT_MapImage_C_SelectLouDiaryList::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SelectLouDiaryList, CallFunc_IsGameplayTagValid_ReturnValue) == 0x000049, "Member 'WDT_MapImage_C_SelectLouDiaryList::CallFunc_IsGameplayTagValid_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_SelectLouDiaryList, CallFunc_GetMapSystem_ReturnValue) == 0x000050, "Member 'WDT_MapImage_C_SelectLouDiaryList::CallFunc_GetMapSystem_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_SelectLouDiaryList, CallFunc_CanDisplayFeature_ReturnValue) == 0x000058, "Member 'WDT_MapImage_C_SelectLouDiaryList::CallFunc_CanDisplayFeature_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_SelectLouDiaryList, CallFunc_GetSelectedItem_ReturnValue) == 0x000060, "Member 'WDT_MapImage_C_SelectLouDiaryList::CallFunc_GetSelectedItem_ReturnValue' has a wrong offset!");
@@ -1078,7 +1085,7 @@ static_assert(offsetof(WDT_MapImage_C_OnDecideLouDiary, CallFunc_Greater_IntInt_
 static_assert(offsetof(WDT_MapImage_C_OnDecideLouDiary, CallFunc_GetLouDiaryID_OutID) == 0x00001C, "Member 'WDT_MapImage_C_OnDecideLouDiary::CallFunc_GetLouDiaryID_OutID' has a wrong offset!");
 
 // Function WDT_MapImage.WDT_MapImage_C.SetSelectFeatureLouDiary
-// 0x02D8 (0x02D8 - 0x0000)
+// 0x02F0 (0x02F0 - 0x0000)
 struct WDT_MapImage_C_SetSelectFeatureLouDiary final
 {
 public:
@@ -1100,15 +1107,15 @@ public:
 	uint8                                         Pad_1C9[0x3];                                      // 0x01C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   CallFunc_GetRegionTagToRegionTabID_OutRegionName_1; // 0x01CC(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1D4[0x4];                                      // 0x01D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMapFeatureInfo                        CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo;  // 0x01D8(0x00E0)()
-	bool                                          CallFunc_GetMapFeatureInfoFromMap_ReturnValue;     // 0x02B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2B9[0x3];                                      // 0x02B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTag                           CallFunc_GetGameplayTagFromString_ReturnValue;     // 0x02BC(0x0008)(NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2C4[0x4];                                      // 0x02C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              CallFunc_GetFeatureMap2DPosition_NewParam;         // 0x02C8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FMapFeatureInfo                        CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo;  // 0x01D8(0x00F8)()
+	bool                                          CallFunc_GetMapFeatureInfoFromMap_ReturnValue;     // 0x02D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2D1[0x3];                                      // 0x02D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTag                           CallFunc_GetGameplayTagFromString_ReturnValue;     // 0x02D4(0x0008)(NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2DC[0x4];                                      // 0x02DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              CallFunc_GetFeatureMap2DPosition_NewParam;         // 0x02E0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_MapImage_C_SetSelectFeatureLouDiary) == 0x000008, "Wrong alignment on WDT_MapImage_C_SetSelectFeatureLouDiary");
-static_assert(sizeof(WDT_MapImage_C_SetSelectFeatureLouDiary) == 0x0002D8, "Wrong size on WDT_MapImage_C_SetSelectFeatureLouDiary");
+static_assert(sizeof(WDT_MapImage_C_SetSelectFeatureLouDiary) == 0x0002F0, "Wrong size on WDT_MapImage_C_SetSelectFeatureLouDiary");
 static_assert(offsetof(WDT_MapImage_C_SetSelectFeatureLouDiary, InFeatureId) == 0x000000, "Member 'WDT_MapImage_C_SetSelectFeatureLouDiary::InFeatureId' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_SetSelectFeatureLouDiary, InSelectLouDiaryID) == 0x000008, "Member 'WDT_MapImage_C_SetSelectFeatureLouDiary::InSelectLouDiaryID' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_SetSelectFeatureLouDiary, CallFunc_EqualEqual_NameName_ReturnValue) == 0x000010, "Member 'WDT_MapImage_C_SetSelectFeatureLouDiary::CallFunc_EqualEqual_NameName_ReturnValue' has a wrong offset!");
@@ -1123,9 +1130,9 @@ static_assert(offsetof(WDT_MapImage_C_SetSelectFeatureLouDiary, CallFunc_GetData
 static_assert(offsetof(WDT_MapImage_C_SetSelectFeatureLouDiary, CallFunc_GetDataTableRowFromName_ReturnValue_1) == 0x0001C8, "Member 'WDT_MapImage_C_SetSelectFeatureLouDiary::CallFunc_GetDataTableRowFromName_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_SetSelectFeatureLouDiary, CallFunc_GetRegionTagToRegionTabID_OutRegionName_1) == 0x0001CC, "Member 'WDT_MapImage_C_SetSelectFeatureLouDiary::CallFunc_GetRegionTagToRegionTabID_OutRegionName_1' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_SetSelectFeatureLouDiary, CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo) == 0x0001D8, "Member 'WDT_MapImage_C_SetSelectFeatureLouDiary::CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSelectFeatureLouDiary, CallFunc_GetMapFeatureInfoFromMap_ReturnValue) == 0x0002B8, "Member 'WDT_MapImage_C_SetSelectFeatureLouDiary::CallFunc_GetMapFeatureInfoFromMap_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSelectFeatureLouDiary, CallFunc_GetGameplayTagFromString_ReturnValue) == 0x0002BC, "Member 'WDT_MapImage_C_SetSelectFeatureLouDiary::CallFunc_GetGameplayTagFromString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSelectFeatureLouDiary, CallFunc_GetFeatureMap2DPosition_NewParam) == 0x0002C8, "Member 'WDT_MapImage_C_SetSelectFeatureLouDiary::CallFunc_GetFeatureMap2DPosition_NewParam' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSelectFeatureLouDiary, CallFunc_GetMapFeatureInfoFromMap_ReturnValue) == 0x0002D0, "Member 'WDT_MapImage_C_SetSelectFeatureLouDiary::CallFunc_GetMapFeatureInfoFromMap_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSelectFeatureLouDiary, CallFunc_GetGameplayTagFromString_ReturnValue) == 0x0002D4, "Member 'WDT_MapImage_C_SetSelectFeatureLouDiary::CallFunc_GetGameplayTagFromString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSelectFeatureLouDiary, CallFunc_GetFeatureMap2DPosition_NewParam) == 0x0002E0, "Member 'WDT_MapImage_C_SetSelectFeatureLouDiary::CallFunc_GetFeatureMap2DPosition_NewParam' has a wrong offset!");
 
 // Function WDT_MapImage.WDT_MapImage_C.TransitToLouDiary
 // 0x0058 (0x0058 - 0x0000)
@@ -1234,7 +1241,7 @@ static_assert(offsetof(WDT_MapImage_C_ToggleLouDiaryList, CallFunc_EqualEqual_Na
 static_assert(offsetof(WDT_MapImage_C_ToggleLouDiaryList, CallFunc_GetRegionNamebyRegionTabName_OutRegionName) == 0x000058, "Member 'WDT_MapImage_C_ToggleLouDiaryList::CallFunc_GetRegionNamebyRegionTabName_OutRegionName' has a wrong offset!");
 
 // Function WDT_MapImage.WDT_MapImage_C.LouDiaryListSelectRegion
-// 0x0380 (0x0380 - 0x0000)
+// 0x03A0 (0x03A0 - 0x0000)
 struct WDT_MapImage_C_LouDiaryListSelectRegion final
 {
 public:
@@ -1246,88 +1253,95 @@ public:
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ULouDiaryManager*                       CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UDataTable*                             CallFunc_GetLouDiaryTable_ReturnValue;             // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable_2;                  // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UWDT_FeatureLouDiaryListEntryPiece_C*   CallFunc_Create_ReturnValue;                       // 0x0058(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable_3;                  // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_3;                 // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable_2;                   // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable_3;                   // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_79[0x3];                                       // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWDT_FeatureLouDiaryListEntryPiece_C*   CallFunc_Create_ReturnValue;                       // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_2;                  // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_3;                  // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_3;                 // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_2;                   // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FGameplayTag>                   K2Node_MakeArray_Array;                            // 0x0068(0x0010)(ConstParm, ReferenceParm)
+	bool                                          CallFunc_Array_Contains_ReturnValue;               // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x0079(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x007A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_NameName_ReturnValue_1;        // 0x007B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FGameplayTag                           CallFunc_GetRegionTabIDToRegionTag_OutRegionTag;   // 0x007C(0x0008)(NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0084(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_Array_Get_Item;                           // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0094(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_95[0x3];                                       // 0x0095(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTagContainer                  CallFunc_MakeGameplayTagContainerFromTag_ReturnValue; // 0x0098(0x0020)()
-	bool                                          CallFunc_HasTag_ReturnValue;                       // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B9[0x7];                                       // 0x00B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AMapSystem*                             CallFunc_GetMapSystem_ReturnValue;                 // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FMapRegionInfo                         CallFunc_GetMapRegionInfo_OutMapRegionInfo;        // 0x00C8(0x0038)()
-	bool                                          CallFunc_GetMapRegionInfo_ReturnValue;             // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_101[0x7];                                      // 0x0101(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ULouDiaryManager*                       CallFunc_GetWorldSubsystem_ReturnValue_1;          // 0x0108(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UDataTable*                             CallFunc_GetLouDiaryTable_ReturnValue_1;           // 0x0110(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<class FName>                           CallFunc_GetDataTableRowNames_OutRowNames;         // 0x0118(0x0010)(ReferenceParm)
-	class FName                                   CallFunc_Array_Get_Item_1;                         // 0x0128(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0130(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0134(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_135[0x3];                                      // 0x0135(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class AMapSystem*                             CallFunc_GetMapSystem_ReturnValue_1;               // 0x0138(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                CallFunc_GetSelectedItem_ReturnValue;              // 0x0140(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UWDT_FeatureLouDiaryListEntryPiece_C*   K2Node_DynamicCast_AsWDT_Feature_Lou_Diary_List_Entry_Piece; // 0x0148(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0150(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_151[0x7];                                      // 0x0151(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWDT_FeatureLouDiaryListEntryPiece_C*   CallFunc_Create_ReturnValue_1;                     // 0x0158(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FGameplayTag>                   CallFunc_GetFeatureTag_OutTag;                     // 0x0160(0x0010)(ReferenceParm)
-	struct FGameplayTag                           CallFunc_Array_Get_Item_2;                         // 0x0170(0x0008)(NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x0178(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x017C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsGameplayTagValid_ReturnValue;           // 0x017D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_CanDisplayFeature_ReturnValue;            // 0x017E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_17F[0x1];                                      // 0x017F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLouDiaryDataTableRow                  CallFunc_GetDataTableRowFromName_OutRow;           // 0x0180(0x00D0)()
-	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0250(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_CheckEnableTimeSeries_OutIsEnable;        // 0x0251(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_252[0x6];                                      // 0x0252(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UObject*>                        CallFunc_GetListItems_ReturnValue;                 // 0x0258(0x0010)(ConstParm, ReferenceParm)
-	class UObject*                                CallFunc_Array_Get_Item_3;                         // 0x0268(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_3;               // 0x0270(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetIndexForItem_ReturnValue;              // 0x0274(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_3;                // 0x0278(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_279[0x7];                                      // 0x0279(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0280(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UWDT_FeatureLouDiaryListEntryPiece_C*   K2Node_DynamicCast_AsWDT_Feature_Lou_Diary_List_Entry_Piece_1; // 0x0288(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0290(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_291[0x3];                                      // 0x0291(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   CallFunc_GetLouDiaryID_OutID;                      // 0x0294(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsFindedValidFeatureTag_OutFindValidFeaturetag; // 0x029C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_NameName_ReturnValue_1;        // 0x029D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsStoryFlagEvaluationFormulaAnalysis_ReturnValue; // 0x029E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x029F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetStoryFlagValueByBoolean_ReturnValue;   // 0x02A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetStoryFlagValueByBoolean_ReturnValue_1; // 0x02A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x02A2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x02A3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_NameName_ReturnValue;            // 0x02A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x02A5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsGameplayTagValid_ReturnValue_1;         // 0x02A6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2A7[0x1];                                      // 0x02A7(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLouDiaryDataTableRow                  CallFunc_GetDataTableRowFromName_OutRow_1;         // 0x02A8(0x00D0)()
-	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue_1;    // 0x0378(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsFindedValidFeatureTag_OutFindValidFeaturetag_1; // 0x0379(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_37A[0x2];                                      // 0x037A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_SetScrollOffset_InScrollOffset_ImplicitCast; // 0x037C(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class ULouDiaryManager*                       CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_94[0x4];                                       // 0x0094(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UDataTable*                             CallFunc_GetLouDiaryTable_ReturnValue;             // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A5[0x3];                                       // 0x00A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagContainer                  CallFunc_MakeGameplayTagContainerFromTag_ReturnValue; // 0x00A8(0x0020)()
+	bool                                          CallFunc_HasTag_ReturnValue;                       // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C9[0x7];                                       // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ULouDiaryManager*                       CallFunc_GetWorldSubsystem_ReturnValue_1;          // 0x00D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UDataTable*                             CallFunc_GetLouDiaryTable_ReturnValue_1;           // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AMapSystem*                             CallFunc_GetMapSystem_ReturnValue;                 // 0x00E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<class FName>                           CallFunc_GetDataTableRowNames_OutRowNames;         // 0x00E8(0x0010)(ReferenceParm)
+	struct FMapRegionInfo                         CallFunc_GetMapRegionInfo_OutMapRegionInfo;        // 0x00F8(0x0038)()
+	bool                                          CallFunc_GetMapRegionInfo_ReturnValue;             // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_131[0x3];                                      // 0x0131(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   CallFunc_Array_Get_Item;                           // 0x0134(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x013C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_141[0x7];                                      // 0x0141(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AMapSystem*                             CallFunc_GetMapSystem_ReturnValue_1;               // 0x0148(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_3;                   // 0x0150(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_Array_Get_Item_1;                         // 0x0154(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_15C[0x4];                                      // 0x015C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                CallFunc_GetSelectedItem_ReturnValue;              // 0x0160(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UWDT_FeatureLouDiaryListEntryPiece_C*   K2Node_DynamicCast_AsWDT_Feature_Lou_Diary_List_Entry_Piece; // 0x0168(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_171[0x7];                                      // 0x0171(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FGameplayTag>                   CallFunc_GetFeatureTag_OutTag;                     // 0x0178(0x0010)(ReferenceParm)
+	struct FGameplayTag                           CallFunc_Array_Get_Item_2;                         // 0x0188(0x0008)(NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x0190(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_CanDisplayFeature_ReturnValue;            // 0x0194(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x0195(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsGameplayTagValid_ReturnValue;           // 0x0196(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_197[0x1];                                      // 0x0197(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWDT_FeatureLouDiaryListEntryPiece_C*   CallFunc_Create_ReturnValue_1;                     // 0x0198(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FLouDiaryDataTableRow                  CallFunc_GetDataTableRowFromName_OutRow;           // 0x01A0(0x00D0)()
+	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0270(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_CheckEnableTimeSeries_OutIsEnable;        // 0x0271(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_272[0x6];                                      // 0x0272(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UObject*>                        CallFunc_GetListItems_ReturnValue;                 // 0x0278(0x0010)(ConstParm, ReferenceParm)
+	class UObject*                                CallFunc_Array_Get_Item_3;                         // 0x0288(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_3;               // 0x0290(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetIndexForItem_ReturnValue;              // 0x0294(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_3;                // 0x0298(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_299[0x7];                                      // 0x0299(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x02A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWDT_FeatureLouDiaryListEntryPiece_C*   K2Node_DynamicCast_AsWDT_Feature_Lou_Diary_List_Entry_Piece_1; // 0x02A8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x02B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2B1[0x3];                                      // 0x02B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   CallFunc_GetLouDiaryID_OutID;                      // 0x02B4(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsFindedValidFeatureTag_OutFindValidFeaturetag; // 0x02BC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_NameName_ReturnValue_2;        // 0x02BD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsStoryFlagEvaluationFormulaAnalysis_ReturnValue; // 0x02BE(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x02BF(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetStoryFlagValueByBoolean_ReturnValue;   // 0x02C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetStoryFlagValueByBoolean_ReturnValue_1; // 0x02C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x02C2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x02C3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_NameName_ReturnValue;            // 0x02C4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x02C5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsGameplayTagValid_ReturnValue_1;         // 0x02C6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2C7[0x1];                                      // 0x02C7(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLouDiaryDataTableRow                  CallFunc_GetDataTableRowFromName_OutRow_1;         // 0x02C8(0x00D0)()
+	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue_1;    // 0x0398(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsFindedValidFeatureTag_OutFindValidFeaturetag_1; // 0x0399(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_39A[0x2];                                      // 0x039A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_SetScrollOffset_InScrollOffset_ImplicitCast; // 0x039C(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_MapImage_C_LouDiaryListSelectRegion) == 0x000008, "Wrong alignment on WDT_MapImage_C_LouDiaryListSelectRegion");
-static_assert(sizeof(WDT_MapImage_C_LouDiaryListSelectRegion) == 0x000380, "Wrong size on WDT_MapImage_C_LouDiaryListSelectRegion");
+static_assert(sizeof(WDT_MapImage_C_LouDiaryListSelectRegion) == 0x0003A0, "Wrong size on WDT_MapImage_C_LouDiaryListSelectRegion");
 static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, InRegionName) == 0x000000, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::InRegionName' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, L_CurrentRegionName) == 0x000008, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::L_CurrentRegionName' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, L_GrayOutIdList) == 0x000010, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::L_GrayOutIdList' has a wrong offset!");
@@ -1336,73 +1350,77 @@ static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, L_CurrentID) == 
 static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, Temp_int_Array_Index_Variable) == 0x000030, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::Temp_int_Array_Index_Variable' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, Temp_int_Loop_Counter_Variable) == 0x000034, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::Temp_int_Loop_Counter_Variable' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_Add_IntInt_ReturnValue) == 0x000038, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, Temp_int_Loop_Counter_Variable_1) == 0x00003C, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_GetWorldSubsystem_ReturnValue) == 0x000040, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_GetWorldSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_GetLouDiaryTable_ReturnValue) == 0x000048, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_GetLouDiaryTable_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_Add_IntInt_ReturnValue_1) == 0x000050, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, Temp_int_Loop_Counter_Variable_2) == 0x000054, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::Temp_int_Loop_Counter_Variable_2' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_Create_ReturnValue) == 0x000058, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_Create_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_Add_IntInt_ReturnValue_2) == 0x000060, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, Temp_int_Array_Index_Variable_1) == 0x000064, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::Temp_int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, Temp_int_Loop_Counter_Variable_3) == 0x000068, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::Temp_int_Loop_Counter_Variable_3' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_Add_IntInt_ReturnValue_3) == 0x00006C, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_Add_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, Temp_int_Array_Index_Variable_2) == 0x000070, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::Temp_int_Array_Index_Variable_2' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, Temp_int_Array_Index_Variable_3) == 0x000074, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::Temp_int_Array_Index_Variable_3' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_EqualEqual_NameName_ReturnValue) == 0x000078, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_EqualEqual_NameName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_Create_ReturnValue) == 0x000040, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_Create_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, Temp_int_Loop_Counter_Variable_1) == 0x000048, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_Add_IntInt_ReturnValue_1) == 0x00004C, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, Temp_int_Loop_Counter_Variable_2) == 0x000050, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::Temp_int_Loop_Counter_Variable_2' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, Temp_int_Array_Index_Variable_1) == 0x000054, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::Temp_int_Array_Index_Variable_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_Add_IntInt_ReturnValue_2) == 0x000058, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, Temp_int_Loop_Counter_Variable_3) == 0x00005C, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::Temp_int_Loop_Counter_Variable_3' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_Add_IntInt_ReturnValue_3) == 0x000060, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_Add_IntInt_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, Temp_int_Array_Index_Variable_2) == 0x000064, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::Temp_int_Array_Index_Variable_2' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, K2Node_MakeArray_Array) == 0x000068, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_Array_Contains_ReturnValue) == 0x000078, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_Array_Contains_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_EqualEqual_NameName_ReturnValue) == 0x000079, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_EqualEqual_NameName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_BooleanAND_ReturnValue) == 0x00007A, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_EqualEqual_NameName_ReturnValue_1) == 0x00007B, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_EqualEqual_NameName_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_GetRegionTabIDToRegionTag_OutRegionTag) == 0x00007C, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_GetRegionTabIDToRegionTag_OutRegionTag' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_Array_Add_ReturnValue) == 0x000084, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_Array_Get_Item) == 0x000088, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_Array_Length_ReturnValue) == 0x000090, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_Less_IntInt_ReturnValue) == 0x000094, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_MakeGameplayTagContainerFromTag_ReturnValue) == 0x000098, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_MakeGameplayTagContainerFromTag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_HasTag_ReturnValue) == 0x0000B8, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_HasTag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_GetMapSystem_ReturnValue) == 0x0000C0, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_GetMapSystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_GetMapRegionInfo_OutMapRegionInfo) == 0x0000C8, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_GetMapRegionInfo_OutMapRegionInfo' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_GetMapRegionInfo_ReturnValue) == 0x000100, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_GetMapRegionInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_GetWorldSubsystem_ReturnValue_1) == 0x000108, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_GetWorldSubsystem_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_GetLouDiaryTable_ReturnValue_1) == 0x000110, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_GetLouDiaryTable_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_GetDataTableRowNames_OutRowNames) == 0x000118, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_GetDataTableRowNames_OutRowNames' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_Array_Get_Item_1) == 0x000128, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_Array_Length_ReturnValue_1) == 0x000130, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_Less_IntInt_ReturnValue_1) == 0x000134, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_GetMapSystem_ReturnValue_1) == 0x000138, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_GetMapSystem_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_GetSelectedItem_ReturnValue) == 0x000140, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_GetSelectedItem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, K2Node_DynamicCast_AsWDT_Feature_Lou_Diary_List_Entry_Piece) == 0x000148, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::K2Node_DynamicCast_AsWDT_Feature_Lou_Diary_List_Entry_Piece' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, K2Node_DynamicCast_bSuccess) == 0x000150, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_Create_ReturnValue_1) == 0x000158, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_Create_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_GetFeatureTag_OutTag) == 0x000160, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_GetFeatureTag_OutTag' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_Array_Get_Item_2) == 0x000170, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_Array_Get_Item_2' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_Array_Length_ReturnValue_2) == 0x000178, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_Less_IntInt_ReturnValue_2) == 0x00017C, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_IsGameplayTagValid_ReturnValue) == 0x00017D, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_IsGameplayTagValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_CanDisplayFeature_ReturnValue) == 0x00017E, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_CanDisplayFeature_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_GetDataTableRowFromName_OutRow) == 0x000180, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x000250, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_CheckEnableTimeSeries_OutIsEnable) == 0x000251, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_CheckEnableTimeSeries_OutIsEnable' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_GetListItems_ReturnValue) == 0x000258, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_GetListItems_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_Array_Get_Item_3) == 0x000268, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_Array_Get_Item_3' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_Array_Length_ReturnValue_3) == 0x000270, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_Array_Length_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_GetIndexForItem_ReturnValue) == 0x000274, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_GetIndexForItem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_Less_IntInt_ReturnValue_3) == 0x000278, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_Less_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_Conv_IntToDouble_ReturnValue) == 0x000280, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, K2Node_DynamicCast_AsWDT_Feature_Lou_Diary_List_Entry_Piece_1) == 0x000288, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::K2Node_DynamicCast_AsWDT_Feature_Lou_Diary_List_Entry_Piece_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, K2Node_DynamicCast_bSuccess_1) == 0x000290, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_GetLouDiaryID_OutID) == 0x000294, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_GetLouDiaryID_OutID' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_IsFindedValidFeatureTag_OutFindValidFeaturetag) == 0x00029C, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_IsFindedValidFeatureTag_OutFindValidFeaturetag' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_EqualEqual_NameName_ReturnValue_1) == 0x00029D, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_EqualEqual_NameName_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_IsStoryFlagEvaluationFormulaAnalysis_ReturnValue) == 0x00029E, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_IsStoryFlagEvaluationFormulaAnalysis_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_Not_PreBool_ReturnValue) == 0x00029F, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_GetStoryFlagValueByBoolean_ReturnValue) == 0x0002A0, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_GetStoryFlagValueByBoolean_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_GetStoryFlagValueByBoolean_ReturnValue_1) == 0x0002A1, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_GetStoryFlagValueByBoolean_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_Not_PreBool_ReturnValue_1) == 0x0002A2, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_BooleanAND_ReturnValue) == 0x0002A3, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_NotEqual_NameName_ReturnValue) == 0x0002A4, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_NotEqual_NameName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_BooleanAND_ReturnValue_1) == 0x0002A5, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_IsGameplayTagValid_ReturnValue_1) == 0x0002A6, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_IsGameplayTagValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_GetDataTableRowFromName_OutRow_1) == 0x0002A8, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_GetDataTableRowFromName_OutRow_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_GetDataTableRowFromName_ReturnValue_1) == 0x000378, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_GetDataTableRowFromName_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_IsFindedValidFeatureTag_OutFindValidFeaturetag_1) == 0x000379, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_IsFindedValidFeatureTag_OutFindValidFeaturetag_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_SetScrollOffset_InScrollOffset_ImplicitCast) == 0x00037C, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_SetScrollOffset_InScrollOffset_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_GetWorldSubsystem_ReturnValue) == 0x000088, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_GetWorldSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_Array_Add_ReturnValue) == 0x000090, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_GetLouDiaryTable_ReturnValue) == 0x000098, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_GetLouDiaryTable_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_Array_Length_ReturnValue) == 0x0000A0, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_Less_IntInt_ReturnValue) == 0x0000A4, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_MakeGameplayTagContainerFromTag_ReturnValue) == 0x0000A8, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_MakeGameplayTagContainerFromTag_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_HasTag_ReturnValue) == 0x0000C8, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_HasTag_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_GetWorldSubsystem_ReturnValue_1) == 0x0000D0, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_GetWorldSubsystem_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_GetLouDiaryTable_ReturnValue_1) == 0x0000D8, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_GetLouDiaryTable_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_GetMapSystem_ReturnValue) == 0x0000E0, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_GetMapSystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_GetDataTableRowNames_OutRowNames) == 0x0000E8, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_GetDataTableRowNames_OutRowNames' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_GetMapRegionInfo_OutMapRegionInfo) == 0x0000F8, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_GetMapRegionInfo_OutMapRegionInfo' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_GetMapRegionInfo_ReturnValue) == 0x000130, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_GetMapRegionInfo_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_Array_Get_Item) == 0x000134, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_Array_Length_ReturnValue_1) == 0x00013C, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_Less_IntInt_ReturnValue_1) == 0x000140, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_GetMapSystem_ReturnValue_1) == 0x000148, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_GetMapSystem_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, Temp_int_Array_Index_Variable_3) == 0x000150, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::Temp_int_Array_Index_Variable_3' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_Array_Get_Item_1) == 0x000154, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_GetSelectedItem_ReturnValue) == 0x000160, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_GetSelectedItem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, K2Node_DynamicCast_AsWDT_Feature_Lou_Diary_List_Entry_Piece) == 0x000168, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::K2Node_DynamicCast_AsWDT_Feature_Lou_Diary_List_Entry_Piece' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, K2Node_DynamicCast_bSuccess) == 0x000170, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_GetFeatureTag_OutTag) == 0x000178, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_GetFeatureTag_OutTag' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_Array_Get_Item_2) == 0x000188, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_Array_Get_Item_2' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_Array_Length_ReturnValue_2) == 0x000190, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_CanDisplayFeature_ReturnValue) == 0x000194, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_CanDisplayFeature_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_Less_IntInt_ReturnValue_2) == 0x000195, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_IsGameplayTagValid_ReturnValue) == 0x000196, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_IsGameplayTagValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_Create_ReturnValue_1) == 0x000198, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_Create_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_GetDataTableRowFromName_OutRow) == 0x0001A0, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x000270, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_CheckEnableTimeSeries_OutIsEnable) == 0x000271, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_CheckEnableTimeSeries_OutIsEnable' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_GetListItems_ReturnValue) == 0x000278, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_GetListItems_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_Array_Get_Item_3) == 0x000288, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_Array_Get_Item_3' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_Array_Length_ReturnValue_3) == 0x000290, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_Array_Length_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_GetIndexForItem_ReturnValue) == 0x000294, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_GetIndexForItem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_Less_IntInt_ReturnValue_3) == 0x000298, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_Less_IntInt_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_Conv_IntToDouble_ReturnValue) == 0x0002A0, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, K2Node_DynamicCast_AsWDT_Feature_Lou_Diary_List_Entry_Piece_1) == 0x0002A8, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::K2Node_DynamicCast_AsWDT_Feature_Lou_Diary_List_Entry_Piece_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, K2Node_DynamicCast_bSuccess_1) == 0x0002B0, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_GetLouDiaryID_OutID) == 0x0002B4, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_GetLouDiaryID_OutID' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_IsFindedValidFeatureTag_OutFindValidFeaturetag) == 0x0002BC, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_IsFindedValidFeatureTag_OutFindValidFeaturetag' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_EqualEqual_NameName_ReturnValue_2) == 0x0002BD, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_EqualEqual_NameName_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_IsStoryFlagEvaluationFormulaAnalysis_ReturnValue) == 0x0002BE, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_IsStoryFlagEvaluationFormulaAnalysis_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_Not_PreBool_ReturnValue) == 0x0002BF, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_GetStoryFlagValueByBoolean_ReturnValue) == 0x0002C0, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_GetStoryFlagValueByBoolean_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_GetStoryFlagValueByBoolean_ReturnValue_1) == 0x0002C1, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_GetStoryFlagValueByBoolean_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_Not_PreBool_ReturnValue_1) == 0x0002C2, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_BooleanAND_ReturnValue_1) == 0x0002C3, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_NotEqual_NameName_ReturnValue) == 0x0002C4, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_NotEqual_NameName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_BooleanAND_ReturnValue_2) == 0x0002C5, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_IsGameplayTagValid_ReturnValue_1) == 0x0002C6, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_IsGameplayTagValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_GetDataTableRowFromName_OutRow_1) == 0x0002C8, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_GetDataTableRowFromName_OutRow_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_GetDataTableRowFromName_ReturnValue_1) == 0x000398, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_GetDataTableRowFromName_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_IsFindedValidFeatureTag_OutFindValidFeaturetag_1) == 0x000399, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_IsFindedValidFeatureTag_OutFindValidFeaturetag_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_LouDiaryListSelectRegion, CallFunc_SetScrollOffset_InScrollOffset_ImplicitCast) == 0x00039C, "Member 'WDT_MapImage_C_LouDiaryListSelectRegion::CallFunc_SetScrollOffset_InScrollOffset_ImplicitCast' has a wrong offset!");
 
 // Function WDT_MapImage.WDT_MapImage_C.BuildFeatureLouDiaryMapData
 // 0x0198 (0x0198 - 0x0000)
@@ -1488,25 +1506,25 @@ static_assert(offsetof(WDT_MapImage_C_BuildFeatureLouDiaryMapData, CallFunc_Bool
 static_assert(offsetof(WDT_MapImage_C_BuildFeatureLouDiaryMapData, CallFunc_BooleanAND_ReturnValue_1) == 0x000190, "Member 'WDT_MapImage_C_BuildFeatureLouDiaryMapData::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
 
 // Function WDT_MapImage.WDT_MapImage_C.GetFeatureInfoFilterCategory
-// 0x0158 (0x0158 - 0x0000)
+// 0x0170 (0x0170 - 0x0000)
 struct WDT_MapImage_C_GetFeatureInfoFilterCategory final
 {
 public:
-	struct FSTR_MapFeatureInfoUI                  InUIFeatureInfo;                                   // 0x0000(0x00F0)(BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference, HasGetValueTypeHash)
-	class FName                                   OutFilterCategory;                                 // 0x00F0(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AMapSystem*                             CallFunc_GetMapSystem_ReturnValue;                 // 0x00F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UDataTable*                             CallFunc_GetDataTableMapFeatureType_ReturnValue;   // 0x0100(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FMapFeatureType                        CallFunc_GetDataTableRowFromName_OutRow;           // 0x0108(0x0048)()
-	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0150(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSTR_MapFeatureInfoUI                  InUIFeatureInfo;                                   // 0x0000(0x0108)(BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference, HasGetValueTypeHash)
+	class FName                                   OutFilterCategory;                                 // 0x0108(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AMapSystem*                             CallFunc_GetMapSystem_ReturnValue;                 // 0x0110(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UDataTable*                             CallFunc_GetDataTableMapFeatureType_ReturnValue;   // 0x0118(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FMapFeatureType                        CallFunc_GetDataTableRowFromName_OutRow;           // 0x0120(0x0048)()
+	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_MapImage_C_GetFeatureInfoFilterCategory) == 0x000008, "Wrong alignment on WDT_MapImage_C_GetFeatureInfoFilterCategory");
-static_assert(sizeof(WDT_MapImage_C_GetFeatureInfoFilterCategory) == 0x000158, "Wrong size on WDT_MapImage_C_GetFeatureInfoFilterCategory");
+static_assert(sizeof(WDT_MapImage_C_GetFeatureInfoFilterCategory) == 0x000170, "Wrong size on WDT_MapImage_C_GetFeatureInfoFilterCategory");
 static_assert(offsetof(WDT_MapImage_C_GetFeatureInfoFilterCategory, InUIFeatureInfo) == 0x000000, "Member 'WDT_MapImage_C_GetFeatureInfoFilterCategory::InUIFeatureInfo' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_GetFeatureInfoFilterCategory, OutFilterCategory) == 0x0000F0, "Member 'WDT_MapImage_C_GetFeatureInfoFilterCategory::OutFilterCategory' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_GetFeatureInfoFilterCategory, CallFunc_GetMapSystem_ReturnValue) == 0x0000F8, "Member 'WDT_MapImage_C_GetFeatureInfoFilterCategory::CallFunc_GetMapSystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_GetFeatureInfoFilterCategory, CallFunc_GetDataTableMapFeatureType_ReturnValue) == 0x000100, "Member 'WDT_MapImage_C_GetFeatureInfoFilterCategory::CallFunc_GetDataTableMapFeatureType_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_GetFeatureInfoFilterCategory, CallFunc_GetDataTableRowFromName_OutRow) == 0x000108, "Member 'WDT_MapImage_C_GetFeatureInfoFilterCategory::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_GetFeatureInfoFilterCategory, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x000150, "Member 'WDT_MapImage_C_GetFeatureInfoFilterCategory::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_GetFeatureInfoFilterCategory, OutFilterCategory) == 0x000108, "Member 'WDT_MapImage_C_GetFeatureInfoFilterCategory::OutFilterCategory' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_GetFeatureInfoFilterCategory, CallFunc_GetMapSystem_ReturnValue) == 0x000110, "Member 'WDT_MapImage_C_GetFeatureInfoFilterCategory::CallFunc_GetMapSystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_GetFeatureInfoFilterCategory, CallFunc_GetDataTableMapFeatureType_ReturnValue) == 0x000118, "Member 'WDT_MapImage_C_GetFeatureInfoFilterCategory::CallFunc_GetDataTableMapFeatureType_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_GetFeatureInfoFilterCategory, CallFunc_GetDataTableRowFromName_OutRow) == 0x000120, "Member 'WDT_MapImage_C_GetFeatureInfoFilterCategory::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_GetFeatureInfoFilterCategory, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x000168, "Member 'WDT_MapImage_C_GetFeatureInfoFilterCategory::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
 
 // Function WDT_MapImage.WDT_MapImage_C.HideFeatureFilterList
 // 0x0001 (0x0001 - 0x0000)
@@ -1681,7 +1699,7 @@ static_assert(offsetof(WDT_MapImage_C_SelectUpperFeatureFilter, CallFunc_Subtrac
 static_assert(offsetof(WDT_MapImage_C_SelectUpperFeatureFilter, CallFunc_GetChildIndex_ReturnValue) == 0x0000B8, "Member 'WDT_MapImage_C_SelectUpperFeatureFilter::CallFunc_GetChildIndex_ReturnValue' has a wrong offset!");
 
 // Function WDT_MapImage.WDT_MapImage_C.BuildFeatureFilter
-// 0x0108 (0x0108 - 0x0000)
+// 0x0150 (0x0150 - 0x0000)
 struct WDT_MapImage_C_BuildFeatureFilter final
 {
 public:
@@ -1692,67 +1710,90 @@ public:
 	class FName                                   L_CurrentFeatureId;                                // 0x005C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FName>                           L_AddFeatureIdList;                                // 0x0068(0x0010)(Edit, BlueprintVisible)
-	int32                                         Temp_int_Variable;                                 // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget*                                CallFunc_GetChildAt_ReturnValue;                   // 0x0080(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class ISelectableInterface>  K2Node_DynamicCast_AsSelectable_Interface;         // 0x0088(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWDT_FeatureFilterEntryPiece_C*         K2Node_DynamicCast_AsWDT_Feature_Filter_Entry_Piece; // 0x00A0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Select_ReturnValue;                       // 0x00A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_AA[0x2];                                       // 0x00AA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetChildrenCount_ReturnValue;             // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x00B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B9[0x7];                                       // 0x00B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget*                                CallFunc_GetChildAt_ReturnValue_1;                 // 0x00C0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWDT_FeatureFilterEntryPiece_C*         K2Node_DynamicCast_AsWDT_Feature_Filter_Entry_Piece_1; // 0x00C8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D1[0x3];                                       // 0x00D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetChildrenCount_ReturnValue_1;           // 0x00D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D9[0x7];                                       // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AMapSystem*                             CallFunc_GetMapSystem_ReturnValue;                 // 0x00E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AMapSystem*                             CallFunc_GetMapSystem_ReturnValue_1;               // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_FindFeatureFilter_bOutIsOn;               // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_FindFeatureFilter_ReturnValue;            // 0x00F1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_F2[0x6];                                       // 0x00F2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class AMapSystem*                             CallFunc_GetMapSystem_ReturnValue_2;               // 0x00F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_FindFeatureFilter_bOutIsOn_1;             // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_FindFeatureFilter_ReturnValue_1;          // 0x0101(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable;                                 // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0084(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8C[0x4];                                       // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UWDT_FeatureFilterEntryPiece_C*> K2Node_MakeArray_Array;                            // 0x0090(0x0010)(ReferenceParm, ContainsInstancedReference)
+	class UWDT_FeatureFilterEntryPiece_C*         CallFunc_Array_Get_Item;                           // 0x00A0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class ISelectableInterface>  K2Node_DynamicCast_AsSelectable_Interface;         // 0x00A8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B9[0x3];                                       // 0x00B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Deselect_ReturnValue;                     // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C2[0x6];                                       // 0x00C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                CallFunc_GetChildAt_ReturnValue;                   // 0x00C8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetChildrenCount_ReturnValue;             // 0x00D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D4[0x4];                                       // 0x00D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWDT_FeatureFilterEntryPiece_C*         K2Node_DynamicCast_AsWDT_Feature_Filter_Entry_Piece; // 0x00D8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E1[0x3];                                       // 0x00E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x00E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E9[0x7];                                       // 0x00E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                CallFunc_GetChildAt_ReturnValue_1;                 // 0x00F0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWDT_FeatureFilterEntryPiece_C*         K2Node_DynamicCast_AsWDT_Feature_Filter_Entry_Piece_1; // 0x00F8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_101[0x3];                                      // 0x0101(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetChildrenCount_ReturnValue_1;           // 0x0104(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_109[0x7];                                      // 0x0109(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AMapSystem*                             CallFunc_GetMapSystem_ReturnValue;                 // 0x0110(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class ISelectableInterface>  K2Node_DynamicCast_AsSelectable_Interface_1;       // 0x0118(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0128(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_129[0x7];                                      // 0x0129(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AMapSystem*                             CallFunc_GetMapSystem_ReturnValue_1;               // 0x0130(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Select_ReturnValue;                       // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_FindFeatureFilter_bOutIsOn;               // 0x0139(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_FindFeatureFilter_ReturnValue;            // 0x013A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_13B[0x5];                                      // 0x013B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class AMapSystem*                             CallFunc_GetMapSystem_ReturnValue_2;               // 0x0140(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_FindFeatureFilter_bOutIsOn_1;             // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_FindFeatureFilter_ReturnValue_1;          // 0x0149(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_MapImage_C_BuildFeatureFilter) == 0x000008, "Wrong alignment on WDT_MapImage_C_BuildFeatureFilter");
-static_assert(sizeof(WDT_MapImage_C_BuildFeatureFilter) == 0x000108, "Wrong size on WDT_MapImage_C_BuildFeatureFilter");
+static_assert(sizeof(WDT_MapImage_C_BuildFeatureFilter) == 0x000150, "Wrong size on WDT_MapImage_C_BuildFeatureFilter");
 static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, L_CurrentFilterItem) == 0x000000, "Member 'WDT_MapImage_C_BuildFeatureFilter::L_CurrentFilterItem' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, L_AddItemCategoryMap) == 0x000008, "Member 'WDT_MapImage_C_BuildFeatureFilter::L_AddItemCategoryMap' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, L_ToggleFlag) == 0x000058, "Member 'WDT_MapImage_C_BuildFeatureFilter::L_ToggleFlag' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, L_CurrentFeatureId) == 0x00005C, "Member 'WDT_MapImage_C_BuildFeatureFilter::L_CurrentFeatureId' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, L_AddFeatureIdList) == 0x000068, "Member 'WDT_MapImage_C_BuildFeatureFilter::L_AddFeatureIdList' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, Temp_int_Variable) == 0x000078, "Member 'WDT_MapImage_C_BuildFeatureFilter::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, CallFunc_GetChildAt_ReturnValue) == 0x000080, "Member 'WDT_MapImage_C_BuildFeatureFilter::CallFunc_GetChildAt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, K2Node_DynamicCast_AsSelectable_Interface) == 0x000088, "Member 'WDT_MapImage_C_BuildFeatureFilter::K2Node_DynamicCast_AsSelectable_Interface' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, K2Node_DynamicCast_bSuccess) == 0x000098, "Member 'WDT_MapImage_C_BuildFeatureFilter::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, K2Node_DynamicCast_AsWDT_Feature_Filter_Entry_Piece) == 0x0000A0, "Member 'WDT_MapImage_C_BuildFeatureFilter::K2Node_DynamicCast_AsWDT_Feature_Filter_Entry_Piece' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, K2Node_DynamicCast_bSuccess_1) == 0x0000A8, "Member 'WDT_MapImage_C_BuildFeatureFilter::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, CallFunc_Select_ReturnValue) == 0x0000A9, "Member 'WDT_MapImage_C_BuildFeatureFilter::CallFunc_Select_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, CallFunc_Add_IntInt_ReturnValue) == 0x0000AC, "Member 'WDT_MapImage_C_BuildFeatureFilter::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, CallFunc_GetChildrenCount_ReturnValue) == 0x0000B0, "Member 'WDT_MapImage_C_BuildFeatureFilter::CallFunc_GetChildrenCount_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, CallFunc_Subtract_IntInt_ReturnValue) == 0x0000B4, "Member 'WDT_MapImage_C_BuildFeatureFilter::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, CallFunc_LessEqual_IntInt_ReturnValue) == 0x0000B8, "Member 'WDT_MapImage_C_BuildFeatureFilter::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, CallFunc_GetChildAt_ReturnValue_1) == 0x0000C0, "Member 'WDT_MapImage_C_BuildFeatureFilter::CallFunc_GetChildAt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, K2Node_DynamicCast_AsWDT_Feature_Filter_Entry_Piece_1) == 0x0000C8, "Member 'WDT_MapImage_C_BuildFeatureFilter::K2Node_DynamicCast_AsWDT_Feature_Filter_Entry_Piece_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, K2Node_DynamicCast_bSuccess_2) == 0x0000D0, "Member 'WDT_MapImage_C_BuildFeatureFilter::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, CallFunc_GetChildrenCount_ReturnValue_1) == 0x0000D4, "Member 'WDT_MapImage_C_BuildFeatureFilter::CallFunc_GetChildrenCount_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, CallFunc_Greater_IntInt_ReturnValue) == 0x0000D8, "Member 'WDT_MapImage_C_BuildFeatureFilter::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, CallFunc_GetMapSystem_ReturnValue) == 0x0000E0, "Member 'WDT_MapImage_C_BuildFeatureFilter::CallFunc_GetMapSystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, CallFunc_GetMapSystem_ReturnValue_1) == 0x0000E8, "Member 'WDT_MapImage_C_BuildFeatureFilter::CallFunc_GetMapSystem_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, CallFunc_FindFeatureFilter_bOutIsOn) == 0x0000F0, "Member 'WDT_MapImage_C_BuildFeatureFilter::CallFunc_FindFeatureFilter_bOutIsOn' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, CallFunc_FindFeatureFilter_ReturnValue) == 0x0000F1, "Member 'WDT_MapImage_C_BuildFeatureFilter::CallFunc_FindFeatureFilter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, CallFunc_GetMapSystem_ReturnValue_2) == 0x0000F8, "Member 'WDT_MapImage_C_BuildFeatureFilter::CallFunc_GetMapSystem_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, CallFunc_FindFeatureFilter_bOutIsOn_1) == 0x000100, "Member 'WDT_MapImage_C_BuildFeatureFilter::CallFunc_FindFeatureFilter_bOutIsOn_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, CallFunc_FindFeatureFilter_ReturnValue_1) == 0x000101, "Member 'WDT_MapImage_C_BuildFeatureFilter::CallFunc_FindFeatureFilter_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, Temp_int_Array_Index_Variable) == 0x000078, "Member 'WDT_MapImage_C_BuildFeatureFilter::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, Temp_int_Variable) == 0x00007C, "Member 'WDT_MapImage_C_BuildFeatureFilter::Temp_int_Variable' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, CallFunc_Add_IntInt_ReturnValue) == 0x000080, "Member 'WDT_MapImage_C_BuildFeatureFilter::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, Temp_int_Loop_Counter_Variable) == 0x000084, "Member 'WDT_MapImage_C_BuildFeatureFilter::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, CallFunc_Add_IntInt_ReturnValue_1) == 0x000088, "Member 'WDT_MapImage_C_BuildFeatureFilter::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, K2Node_MakeArray_Array) == 0x000090, "Member 'WDT_MapImage_C_BuildFeatureFilter::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, CallFunc_Array_Get_Item) == 0x0000A0, "Member 'WDT_MapImage_C_BuildFeatureFilter::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, K2Node_DynamicCast_AsSelectable_Interface) == 0x0000A8, "Member 'WDT_MapImage_C_BuildFeatureFilter::K2Node_DynamicCast_AsSelectable_Interface' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, K2Node_DynamicCast_bSuccess) == 0x0000B8, "Member 'WDT_MapImage_C_BuildFeatureFilter::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, CallFunc_Array_Length_ReturnValue) == 0x0000BC, "Member 'WDT_MapImage_C_BuildFeatureFilter::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, CallFunc_Deselect_ReturnValue) == 0x0000C0, "Member 'WDT_MapImage_C_BuildFeatureFilter::CallFunc_Deselect_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, CallFunc_Less_IntInt_ReturnValue) == 0x0000C1, "Member 'WDT_MapImage_C_BuildFeatureFilter::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, CallFunc_GetChildAt_ReturnValue) == 0x0000C8, "Member 'WDT_MapImage_C_BuildFeatureFilter::CallFunc_GetChildAt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, CallFunc_GetChildrenCount_ReturnValue) == 0x0000D0, "Member 'WDT_MapImage_C_BuildFeatureFilter::CallFunc_GetChildrenCount_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, K2Node_DynamicCast_AsWDT_Feature_Filter_Entry_Piece) == 0x0000D8, "Member 'WDT_MapImage_C_BuildFeatureFilter::K2Node_DynamicCast_AsWDT_Feature_Filter_Entry_Piece' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, K2Node_DynamicCast_bSuccess_1) == 0x0000E0, "Member 'WDT_MapImage_C_BuildFeatureFilter::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, CallFunc_Subtract_IntInt_ReturnValue) == 0x0000E4, "Member 'WDT_MapImage_C_BuildFeatureFilter::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, CallFunc_LessEqual_IntInt_ReturnValue) == 0x0000E8, "Member 'WDT_MapImage_C_BuildFeatureFilter::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, CallFunc_GetChildAt_ReturnValue_1) == 0x0000F0, "Member 'WDT_MapImage_C_BuildFeatureFilter::CallFunc_GetChildAt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, K2Node_DynamicCast_AsWDT_Feature_Filter_Entry_Piece_1) == 0x0000F8, "Member 'WDT_MapImage_C_BuildFeatureFilter::K2Node_DynamicCast_AsWDT_Feature_Filter_Entry_Piece_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, K2Node_DynamicCast_bSuccess_2) == 0x000100, "Member 'WDT_MapImage_C_BuildFeatureFilter::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, CallFunc_GetChildrenCount_ReturnValue_1) == 0x000104, "Member 'WDT_MapImage_C_BuildFeatureFilter::CallFunc_GetChildrenCount_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, CallFunc_Greater_IntInt_ReturnValue) == 0x000108, "Member 'WDT_MapImage_C_BuildFeatureFilter::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, CallFunc_GetMapSystem_ReturnValue) == 0x000110, "Member 'WDT_MapImage_C_BuildFeatureFilter::CallFunc_GetMapSystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, K2Node_DynamicCast_AsSelectable_Interface_1) == 0x000118, "Member 'WDT_MapImage_C_BuildFeatureFilter::K2Node_DynamicCast_AsSelectable_Interface_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, K2Node_DynamicCast_bSuccess_3) == 0x000128, "Member 'WDT_MapImage_C_BuildFeatureFilter::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, CallFunc_GetMapSystem_ReturnValue_1) == 0x000130, "Member 'WDT_MapImage_C_BuildFeatureFilter::CallFunc_GetMapSystem_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, CallFunc_Select_ReturnValue) == 0x000138, "Member 'WDT_MapImage_C_BuildFeatureFilter::CallFunc_Select_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, CallFunc_FindFeatureFilter_bOutIsOn) == 0x000139, "Member 'WDT_MapImage_C_BuildFeatureFilter::CallFunc_FindFeatureFilter_bOutIsOn' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, CallFunc_FindFeatureFilter_ReturnValue) == 0x00013A, "Member 'WDT_MapImage_C_BuildFeatureFilter::CallFunc_FindFeatureFilter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, CallFunc_GetMapSystem_ReturnValue_2) == 0x000140, "Member 'WDT_MapImage_C_BuildFeatureFilter::CallFunc_GetMapSystem_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, CallFunc_FindFeatureFilter_bOutIsOn_1) == 0x000148, "Member 'WDT_MapImage_C_BuildFeatureFilter::CallFunc_FindFeatureFilter_bOutIsOn_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_BuildFeatureFilter, CallFunc_FindFeatureFilter_ReturnValue_1) == 0x000149, "Member 'WDT_MapImage_C_BuildFeatureFilter::CallFunc_FindFeatureFilter_ReturnValue_1' has a wrong offset!");
 
 // Function WDT_MapImage.WDT_MapImage_C.OnMakerRemoveAnimationFinished
 // 0x0008 (0x0008 - 0x0000)
@@ -1792,54 +1833,54 @@ static_assert(offsetof(WDT_MapImage_C_StickyCursorToUserMarker, CallFunc_IsValid
 static_assert(offsetof(WDT_MapImage_C_StickyCursorToUserMarker, CallFunc_StickyCurosrToPosition_InInputThreshold_ImplicitCast) == 0x000008, "Member 'WDT_MapImage_C_StickyCursorToUserMarker::CallFunc_StickyCurosrToPosition_InInputThreshold_ImplicitCast' has a wrong offset!");
 
 // Function WDT_MapImage.WDT_MapImage_C.GetNearbyFeatureOrUserMarker
-// 0x02A8 (0x02A8 - 0x0000)
+// 0x02D8 (0x02D8 - 0x0000)
 struct WDT_MapImage_C_GetNearbyFeatureOrUserMarker final
 {
 public:
-	struct FSTR_MapFeatureInfoUI                  InFeatureInfo;                                     // 0x0000(0x00F0)(BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference, HasGetValueTypeHash)
-	class UWidget*                                InMarkerWidget;                                    // 0x00F0(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          OutIsFeature;                                      // 0x00F8(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_F9[0x7];                                       // 0x00F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSTR_MapFeatureInfoUI                  L_TargetFeatureInfo;                               // 0x0100(0x00F0)(Edit, BlueprintVisible, ContainsInstancedReference, HasGetValueTypeHash)
-	class FString                                 NewLocalVar;                                       // 0x01F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	bool                                          L_NearbyFeature;                                   // 0x0200(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_201[0x7];                                      // 0x0201(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              L_UserMarkerMapPosition;                           // 0x0208(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              L_FeatureMapPosition;                              // 0x0218(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0228(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0229(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_22A[0x6];                                      // 0x022A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              CallFunc_GetMapSize_OutSize;                       // 0x0230(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_GetMapPosition2D_OutPos;                  // 0x0240(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_GetCursorCenterPosition_OutCursorTranslation; // 0x0250(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_GetCursorCenterPosition_OutCursorTranslation_1; // 0x0260(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_Subtract_Vector2DVector2D_ReturnValue;    // 0x0270(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_Subtract_Vector2DVector2D_ReturnValue_1;  // 0x0280(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_VSize2D_ReturnValue;                      // 0x0290(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_VSize2D_ReturnValue_1;                    // 0x0298(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x02A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSTR_MapFeatureInfoUI                  InFeatureInfo;                                     // 0x0000(0x0108)(BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference, HasGetValueTypeHash)
+	class UWidget*                                InMarkerWidget;                                    // 0x0108(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          OutIsFeature;                                      // 0x0110(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_111[0x7];                                      // 0x0111(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSTR_MapFeatureInfoUI                  L_TargetFeatureInfo;                               // 0x0118(0x0108)(Edit, BlueprintVisible, ContainsInstancedReference, HasGetValueTypeHash)
+	class FString                                 NewLocalVar;                                       // 0x0220(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	bool                                          L_NearbyFeature;                                   // 0x0230(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_231[0x7];                                      // 0x0231(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              L_UserMarkerMapPosition;                           // 0x0238(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              L_FeatureMapPosition;                              // 0x0248(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0258(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0259(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_25A[0x6];                                      // 0x025A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              CallFunc_GetMapSize_OutSize;                       // 0x0260(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_GetMapPosition2D_OutPos;                  // 0x0270(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_GetCursorCenterPosition_OutCursorTranslation; // 0x0280(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_GetCursorCenterPosition_OutCursorTranslation_1; // 0x0290(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_Subtract_Vector2DVector2D_ReturnValue;    // 0x02A0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_Subtract_Vector2DVector2D_ReturnValue_1;  // 0x02B0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_VSize2D_ReturnValue;                      // 0x02C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_VSize2D_ReturnValue_1;                    // 0x02C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x02D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_MapImage_C_GetNearbyFeatureOrUserMarker) == 0x000008, "Wrong alignment on WDT_MapImage_C_GetNearbyFeatureOrUserMarker");
-static_assert(sizeof(WDT_MapImage_C_GetNearbyFeatureOrUserMarker) == 0x0002A8, "Wrong size on WDT_MapImage_C_GetNearbyFeatureOrUserMarker");
+static_assert(sizeof(WDT_MapImage_C_GetNearbyFeatureOrUserMarker) == 0x0002D8, "Wrong size on WDT_MapImage_C_GetNearbyFeatureOrUserMarker");
 static_assert(offsetof(WDT_MapImage_C_GetNearbyFeatureOrUserMarker, InFeatureInfo) == 0x000000, "Member 'WDT_MapImage_C_GetNearbyFeatureOrUserMarker::InFeatureInfo' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_GetNearbyFeatureOrUserMarker, InMarkerWidget) == 0x0000F0, "Member 'WDT_MapImage_C_GetNearbyFeatureOrUserMarker::InMarkerWidget' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_GetNearbyFeatureOrUserMarker, OutIsFeature) == 0x0000F8, "Member 'WDT_MapImage_C_GetNearbyFeatureOrUserMarker::OutIsFeature' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_GetNearbyFeatureOrUserMarker, L_TargetFeatureInfo) == 0x000100, "Member 'WDT_MapImage_C_GetNearbyFeatureOrUserMarker::L_TargetFeatureInfo' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_GetNearbyFeatureOrUserMarker, NewLocalVar) == 0x0001F0, "Member 'WDT_MapImage_C_GetNearbyFeatureOrUserMarker::NewLocalVar' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_GetNearbyFeatureOrUserMarker, L_NearbyFeature) == 0x000200, "Member 'WDT_MapImage_C_GetNearbyFeatureOrUserMarker::L_NearbyFeature' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_GetNearbyFeatureOrUserMarker, L_UserMarkerMapPosition) == 0x000208, "Member 'WDT_MapImage_C_GetNearbyFeatureOrUserMarker::L_UserMarkerMapPosition' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_GetNearbyFeatureOrUserMarker, L_FeatureMapPosition) == 0x000218, "Member 'WDT_MapImage_C_GetNearbyFeatureOrUserMarker::L_FeatureMapPosition' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_GetNearbyFeatureOrUserMarker, CallFunc_IsValid_ReturnValue) == 0x000228, "Member 'WDT_MapImage_C_GetNearbyFeatureOrUserMarker::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_GetNearbyFeatureOrUserMarker, CallFunc_IsValid_ReturnValue_1) == 0x000229, "Member 'WDT_MapImage_C_GetNearbyFeatureOrUserMarker::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_GetNearbyFeatureOrUserMarker, CallFunc_GetMapSize_OutSize) == 0x000230, "Member 'WDT_MapImage_C_GetNearbyFeatureOrUserMarker::CallFunc_GetMapSize_OutSize' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_GetNearbyFeatureOrUserMarker, CallFunc_GetMapPosition2D_OutPos) == 0x000240, "Member 'WDT_MapImage_C_GetNearbyFeatureOrUserMarker::CallFunc_GetMapPosition2D_OutPos' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_GetNearbyFeatureOrUserMarker, CallFunc_GetCursorCenterPosition_OutCursorTranslation) == 0x000250, "Member 'WDT_MapImage_C_GetNearbyFeatureOrUserMarker::CallFunc_GetCursorCenterPosition_OutCursorTranslation' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_GetNearbyFeatureOrUserMarker, CallFunc_GetCursorCenterPosition_OutCursorTranslation_1) == 0x000260, "Member 'WDT_MapImage_C_GetNearbyFeatureOrUserMarker::CallFunc_GetCursorCenterPosition_OutCursorTranslation_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_GetNearbyFeatureOrUserMarker, CallFunc_Subtract_Vector2DVector2D_ReturnValue) == 0x000270, "Member 'WDT_MapImage_C_GetNearbyFeatureOrUserMarker::CallFunc_Subtract_Vector2DVector2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_GetNearbyFeatureOrUserMarker, CallFunc_Subtract_Vector2DVector2D_ReturnValue_1) == 0x000280, "Member 'WDT_MapImage_C_GetNearbyFeatureOrUserMarker::CallFunc_Subtract_Vector2DVector2D_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_GetNearbyFeatureOrUserMarker, CallFunc_VSize2D_ReturnValue) == 0x000290, "Member 'WDT_MapImage_C_GetNearbyFeatureOrUserMarker::CallFunc_VSize2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_GetNearbyFeatureOrUserMarker, CallFunc_VSize2D_ReturnValue_1) == 0x000298, "Member 'WDT_MapImage_C_GetNearbyFeatureOrUserMarker::CallFunc_VSize2D_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_GetNearbyFeatureOrUserMarker, CallFunc_Less_DoubleDouble_ReturnValue) == 0x0002A0, "Member 'WDT_MapImage_C_GetNearbyFeatureOrUserMarker::CallFunc_Less_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_GetNearbyFeatureOrUserMarker, InMarkerWidget) == 0x000108, "Member 'WDT_MapImage_C_GetNearbyFeatureOrUserMarker::InMarkerWidget' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_GetNearbyFeatureOrUserMarker, OutIsFeature) == 0x000110, "Member 'WDT_MapImage_C_GetNearbyFeatureOrUserMarker::OutIsFeature' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_GetNearbyFeatureOrUserMarker, L_TargetFeatureInfo) == 0x000118, "Member 'WDT_MapImage_C_GetNearbyFeatureOrUserMarker::L_TargetFeatureInfo' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_GetNearbyFeatureOrUserMarker, NewLocalVar) == 0x000220, "Member 'WDT_MapImage_C_GetNearbyFeatureOrUserMarker::NewLocalVar' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_GetNearbyFeatureOrUserMarker, L_NearbyFeature) == 0x000230, "Member 'WDT_MapImage_C_GetNearbyFeatureOrUserMarker::L_NearbyFeature' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_GetNearbyFeatureOrUserMarker, L_UserMarkerMapPosition) == 0x000238, "Member 'WDT_MapImage_C_GetNearbyFeatureOrUserMarker::L_UserMarkerMapPosition' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_GetNearbyFeatureOrUserMarker, L_FeatureMapPosition) == 0x000248, "Member 'WDT_MapImage_C_GetNearbyFeatureOrUserMarker::L_FeatureMapPosition' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_GetNearbyFeatureOrUserMarker, CallFunc_IsValid_ReturnValue) == 0x000258, "Member 'WDT_MapImage_C_GetNearbyFeatureOrUserMarker::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_GetNearbyFeatureOrUserMarker, CallFunc_IsValid_ReturnValue_1) == 0x000259, "Member 'WDT_MapImage_C_GetNearbyFeatureOrUserMarker::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_GetNearbyFeatureOrUserMarker, CallFunc_GetMapSize_OutSize) == 0x000260, "Member 'WDT_MapImage_C_GetNearbyFeatureOrUserMarker::CallFunc_GetMapSize_OutSize' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_GetNearbyFeatureOrUserMarker, CallFunc_GetMapPosition2D_OutPos) == 0x000270, "Member 'WDT_MapImage_C_GetNearbyFeatureOrUserMarker::CallFunc_GetMapPosition2D_OutPos' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_GetNearbyFeatureOrUserMarker, CallFunc_GetCursorCenterPosition_OutCursorTranslation) == 0x000280, "Member 'WDT_MapImage_C_GetNearbyFeatureOrUserMarker::CallFunc_GetCursorCenterPosition_OutCursorTranslation' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_GetNearbyFeatureOrUserMarker, CallFunc_GetCursorCenterPosition_OutCursorTranslation_1) == 0x000290, "Member 'WDT_MapImage_C_GetNearbyFeatureOrUserMarker::CallFunc_GetCursorCenterPosition_OutCursorTranslation_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_GetNearbyFeatureOrUserMarker, CallFunc_Subtract_Vector2DVector2D_ReturnValue) == 0x0002A0, "Member 'WDT_MapImage_C_GetNearbyFeatureOrUserMarker::CallFunc_Subtract_Vector2DVector2D_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_GetNearbyFeatureOrUserMarker, CallFunc_Subtract_Vector2DVector2D_ReturnValue_1) == 0x0002B0, "Member 'WDT_MapImage_C_GetNearbyFeatureOrUserMarker::CallFunc_Subtract_Vector2DVector2D_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_GetNearbyFeatureOrUserMarker, CallFunc_VSize2D_ReturnValue) == 0x0002C0, "Member 'WDT_MapImage_C_GetNearbyFeatureOrUserMarker::CallFunc_VSize2D_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_GetNearbyFeatureOrUserMarker, CallFunc_VSize2D_ReturnValue_1) == 0x0002C8, "Member 'WDT_MapImage_C_GetNearbyFeatureOrUserMarker::CallFunc_VSize2D_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_GetNearbyFeatureOrUserMarker, CallFunc_Less_DoubleDouble_ReturnValue) == 0x0002D0, "Member 'WDT_MapImage_C_GetNearbyFeatureOrUserMarker::CallFunc_Less_DoubleDouble_ReturnValue' has a wrong offset!");
 
 // Function WDT_MapImage.WDT_MapImage_C.UpdatePinGuideVisibility
 // 0x0001 (0x0001 - 0x0000)
@@ -2087,7 +2128,7 @@ static_assert(offsetof(WDT_MapImage_C_SelectUpperNearYadorigi, CallFunc_Subtract
 static_assert(offsetof(WDT_MapImage_C_SelectUpperNearYadorigi, CallFunc_GetChildIndex_ReturnValue) == 0x000100, "Member 'WDT_MapImage_C_SelectUpperNearYadorigi::CallFunc_GetChildIndex_ReturnValue' has a wrong offset!");
 
 // Function WDT_MapImage.WDT_MapImage_C.BuildNearYadorigiList
-// 0x01C8 (0x01C8 - 0x0000)
+// 0x01E0 (0x01E0 - 0x0000)
 struct WDT_MapImage_C_BuildNearYadorigiList final
 {
 public:
@@ -2120,22 +2161,22 @@ public:
 	bool                                          CallFunc_Select_ReturnValue_1;                     // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UPanelSlot*                             CallFunc_AddChild_ReturnValue;                     // 0x0080(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FSTR_MapFeatureInfoUI                  CallFunc_Array_Get_Item;                           // 0x0088(0x00F0)(ContainsInstancedReference, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0178(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsInDetectionRange_InRange;               // 0x017C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x017D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x017E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_CanFastTravelFeatureTypeByFeatureId_OutCanFastTravel_1; // 0x017F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x0180(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_181[0x7];                                      // 0x0181(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFastTravelFeature                     K2Node_MakeStruct_FastTravelFeature;               // 0x0188(0x0030)()
-	bool                                          CallFunc_BooleanAND_ReturnValue_3;                 // 0x01B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_GameplayTag_ReturnValue;       // 0x01B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1BA[0x6];                                      // 0x01BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_IsInDetectionRange_InDetectionRange_ImplicitCast; // 0x01C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSTR_MapFeatureInfoUI                  CallFunc_Array_Get_Item;                           // 0x0088(0x0108)(ContainsInstancedReference, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0190(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsInDetectionRange_InRange;               // 0x0194(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0195(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0196(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_CanFastTravelFeatureTypeByFeatureId_OutCanFastTravel_1; // 0x0197(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x0198(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_199[0x7];                                      // 0x0199(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFastTravelFeature                     K2Node_MakeStruct_FastTravelFeature;               // 0x01A0(0x0030)()
+	bool                                          CallFunc_BooleanAND_ReturnValue_3;                 // 0x01D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_GameplayTag_ReturnValue;       // 0x01D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1D2[0x6];                                      // 0x01D2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_IsInDetectionRange_InDetectionRange_ImplicitCast; // 0x01D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_MapImage_C_BuildNearYadorigiList) == 0x000008, "Wrong alignment on WDT_MapImage_C_BuildNearYadorigiList");
-static_assert(sizeof(WDT_MapImage_C_BuildNearYadorigiList) == 0x0001C8, "Wrong size on WDT_MapImage_C_BuildNearYadorigiList");
+static_assert(sizeof(WDT_MapImage_C_BuildNearYadorigiList) == 0x0001E0, "Wrong size on WDT_MapImage_C_BuildNearYadorigiList");
 static_assert(offsetof(WDT_MapImage_C_BuildNearYadorigiList, L_SelectedYadorigiPiece) == 0x000000, "Member 'WDT_MapImage_C_BuildNearYadorigiList::L_SelectedYadorigiPiece' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_BuildNearYadorigiList, Temp_int_Array_Index_Variable) == 0x000008, "Member 'WDT_MapImage_C_BuildNearYadorigiList::Temp_int_Array_Index_Variable' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_BuildNearYadorigiList, Temp_int_Loop_Counter_Variable) == 0x00000C, "Member 'WDT_MapImage_C_BuildNearYadorigiList::Temp_int_Loop_Counter_Variable' has a wrong offset!");
@@ -2159,19 +2200,19 @@ static_assert(offsetof(WDT_MapImage_C_BuildNearYadorigiList, CallFunc_Select_sel
 static_assert(offsetof(WDT_MapImage_C_BuildNearYadorigiList, CallFunc_Select_ReturnValue_1) == 0x000078, "Member 'WDT_MapImage_C_BuildNearYadorigiList::CallFunc_Select_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_BuildNearYadorigiList, CallFunc_AddChild_ReturnValue) == 0x000080, "Member 'WDT_MapImage_C_BuildNearYadorigiList::CallFunc_AddChild_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_BuildNearYadorigiList, CallFunc_Array_Get_Item) == 0x000088, "Member 'WDT_MapImage_C_BuildNearYadorigiList::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_BuildNearYadorigiList, CallFunc_Array_Length_ReturnValue) == 0x000178, "Member 'WDT_MapImage_C_BuildNearYadorigiList::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_BuildNearYadorigiList, CallFunc_IsInDetectionRange_InRange) == 0x00017C, "Member 'WDT_MapImage_C_BuildNearYadorigiList::CallFunc_IsInDetectionRange_InRange' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_BuildNearYadorigiList, CallFunc_Less_IntInt_ReturnValue) == 0x00017D, "Member 'WDT_MapImage_C_BuildNearYadorigiList::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_BuildNearYadorigiList, CallFunc_IsVisible_ReturnValue) == 0x00017E, "Member 'WDT_MapImage_C_BuildNearYadorigiList::CallFunc_IsVisible_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_BuildNearYadorigiList, CallFunc_CanFastTravelFeatureTypeByFeatureId_OutCanFastTravel_1) == 0x00017F, "Member 'WDT_MapImage_C_BuildNearYadorigiList::CallFunc_CanFastTravelFeatureTypeByFeatureId_OutCanFastTravel_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_BuildNearYadorigiList, CallFunc_BooleanAND_ReturnValue_2) == 0x000180, "Member 'WDT_MapImage_C_BuildNearYadorigiList::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_BuildNearYadorigiList, K2Node_MakeStruct_FastTravelFeature) == 0x000188, "Member 'WDT_MapImage_C_BuildNearYadorigiList::K2Node_MakeStruct_FastTravelFeature' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_BuildNearYadorigiList, CallFunc_BooleanAND_ReturnValue_3) == 0x0001B8, "Member 'WDT_MapImage_C_BuildNearYadorigiList::CallFunc_BooleanAND_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_BuildNearYadorigiList, CallFunc_EqualEqual_GameplayTag_ReturnValue) == 0x0001B9, "Member 'WDT_MapImage_C_BuildNearYadorigiList::CallFunc_EqualEqual_GameplayTag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_BuildNearYadorigiList, CallFunc_IsInDetectionRange_InDetectionRange_ImplicitCast) == 0x0001C0, "Member 'WDT_MapImage_C_BuildNearYadorigiList::CallFunc_IsInDetectionRange_InDetectionRange_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_BuildNearYadorigiList, CallFunc_Array_Length_ReturnValue) == 0x000190, "Member 'WDT_MapImage_C_BuildNearYadorigiList::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_BuildNearYadorigiList, CallFunc_IsInDetectionRange_InRange) == 0x000194, "Member 'WDT_MapImage_C_BuildNearYadorigiList::CallFunc_IsInDetectionRange_InRange' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_BuildNearYadorigiList, CallFunc_Less_IntInt_ReturnValue) == 0x000195, "Member 'WDT_MapImage_C_BuildNearYadorigiList::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_BuildNearYadorigiList, CallFunc_IsVisible_ReturnValue) == 0x000196, "Member 'WDT_MapImage_C_BuildNearYadorigiList::CallFunc_IsVisible_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_BuildNearYadorigiList, CallFunc_CanFastTravelFeatureTypeByFeatureId_OutCanFastTravel_1) == 0x000197, "Member 'WDT_MapImage_C_BuildNearYadorigiList::CallFunc_CanFastTravelFeatureTypeByFeatureId_OutCanFastTravel_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_BuildNearYadorigiList, CallFunc_BooleanAND_ReturnValue_2) == 0x000198, "Member 'WDT_MapImage_C_BuildNearYadorigiList::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_BuildNearYadorigiList, K2Node_MakeStruct_FastTravelFeature) == 0x0001A0, "Member 'WDT_MapImage_C_BuildNearYadorigiList::K2Node_MakeStruct_FastTravelFeature' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_BuildNearYadorigiList, CallFunc_BooleanAND_ReturnValue_3) == 0x0001D0, "Member 'WDT_MapImage_C_BuildNearYadorigiList::CallFunc_BooleanAND_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_BuildNearYadorigiList, CallFunc_EqualEqual_GameplayTag_ReturnValue) == 0x0001D1, "Member 'WDT_MapImage_C_BuildNearYadorigiList::CallFunc_EqualEqual_GameplayTag_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_BuildNearYadorigiList, CallFunc_IsInDetectionRange_InDetectionRange_ImplicitCast) == 0x0001D8, "Member 'WDT_MapImage_C_BuildNearYadorigiList::CallFunc_IsInDetectionRange_InDetectionRange_ImplicitCast' has a wrong offset!");
 
 // Function WDT_MapImage.WDT_MapImage_C.StickyCurosrToPosition
-// 0x00E0 (0x00E0 - 0x0000)
+// 0x00E8 (0x00E8 - 0x0000)
 struct WDT_MapImage_C_StickyCurosrToPosition final
 {
 public:
@@ -2181,8 +2222,9 @@ public:
 	struct FVector2D                              InTargetMapPosition;                               // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        NewLocalVar_0;                                     // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector2D                              TargetDirection;                                   // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_CanCorsorStickyDetectedFeature_ReturnValue; // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          CallFunc_CanCorsorStickyDetectingFeature_ReturnValue; // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_CanCorsorStickyDetectedFeature_ReturnValue; // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3A[0x6];                                       // 0x003A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              CallFunc_GetCursorCenterPosition_OutCursorTranslation; // 0x0040(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_Vector2DVector2D_ReturnValue;  // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -2191,32 +2233,33 @@ public:
 	double                                        CallFunc_BreakVector2D_Y;                          // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0069(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x006A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_CanCorsorStickyDetectingFeature_ReturnValue; // 0x006B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6A[0x6];                                       // 0x006A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              CallFunc_GetMapTranslation_OutTranslation;         // 0x0070(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_GetMapSize_OutSize;                       // 0x0080(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector2D_X_1;                        // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector2D_Y_1;                        // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_1;        // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue;                 // 0x00B0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C1[0x7];                                       // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_VSize2D_ReturnValue;                      // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue;       // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x00D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D2[0x6];                                       // 0x00D2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_StartAutoMoveCursor_InMoveTime_ImplicitCast; // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              CallFunc_GetMapSize_OutSize;                       // 0x0088(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector2D_X_1;                        // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector2D_Y_1;                        // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_1;        // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue;                 // 0x00B8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C9[0x7];                                       // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_VSize2D_ReturnValue;                      // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue;       // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x00D9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_DA[0x6];                                       // 0x00DA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_StartAutoMoveCursor_InMoveTime_ImplicitCast; // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_MapImage_C_StickyCurosrToPosition) == 0x000008, "Wrong alignment on WDT_MapImage_C_StickyCurosrToPosition");
-static_assert(sizeof(WDT_MapImage_C_StickyCurosrToPosition) == 0x0000E0, "Wrong size on WDT_MapImage_C_StickyCurosrToPosition");
+static_assert(sizeof(WDT_MapImage_C_StickyCurosrToPosition) == 0x0000E8, "Wrong size on WDT_MapImage_C_StickyCurosrToPosition");
 static_assert(offsetof(WDT_MapImage_C_StickyCurosrToPosition, InInputThreshold) == 0x000000, "Member 'WDT_MapImage_C_StickyCurosrToPosition::InInputThreshold' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_StickyCurosrToPosition, InIsTeleportation) == 0x000008, "Member 'WDT_MapImage_C_StickyCurosrToPosition::InIsTeleportation' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_StickyCurosrToPosition, InTargetMapPosition) == 0x000010, "Member 'WDT_MapImage_C_StickyCurosrToPosition::InTargetMapPosition' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_StickyCurosrToPosition, NewLocalVar_0) == 0x000020, "Member 'WDT_MapImage_C_StickyCurosrToPosition::NewLocalVar_0' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_StickyCurosrToPosition, TargetDirection) == 0x000028, "Member 'WDT_MapImage_C_StickyCurosrToPosition::TargetDirection' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_StickyCurosrToPosition, CallFunc_CanCorsorStickyDetectedFeature_ReturnValue) == 0x000038, "Member 'WDT_MapImage_C_StickyCurosrToPosition::CallFunc_CanCorsorStickyDetectedFeature_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_StickyCurosrToPosition, CallFunc_CanCorsorStickyDetectingFeature_ReturnValue) == 0x000038, "Member 'WDT_MapImage_C_StickyCurosrToPosition::CallFunc_CanCorsorStickyDetectingFeature_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_StickyCurosrToPosition, CallFunc_CanCorsorStickyDetectedFeature_ReturnValue) == 0x000039, "Member 'WDT_MapImage_C_StickyCurosrToPosition::CallFunc_CanCorsorStickyDetectedFeature_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_StickyCurosrToPosition, CallFunc_GetCursorCenterPosition_OutCursorTranslation) == 0x000040, "Member 'WDT_MapImage_C_StickyCurosrToPosition::CallFunc_GetCursorCenterPosition_OutCursorTranslation' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_StickyCurosrToPosition, CallFunc_EqualEqual_Vector2DVector2D_ReturnValue) == 0x000050, "Member 'WDT_MapImage_C_StickyCurosrToPosition::CallFunc_EqualEqual_Vector2DVector2D_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_StickyCurosrToPosition, CallFunc_Not_PreBool_ReturnValue) == 0x000051, "Member 'WDT_MapImage_C_StickyCurosrToPosition::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
@@ -2224,35 +2267,32 @@ static_assert(offsetof(WDT_MapImage_C_StickyCurosrToPosition, CallFunc_BreakVect
 static_assert(offsetof(WDT_MapImage_C_StickyCurosrToPosition, CallFunc_BreakVector2D_Y) == 0x000060, "Member 'WDT_MapImage_C_StickyCurosrToPosition::CallFunc_BreakVector2D_Y' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_StickyCurosrToPosition, CallFunc_Not_PreBool_ReturnValue_1) == 0x000068, "Member 'WDT_MapImage_C_StickyCurosrToPosition::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_StickyCurosrToPosition, CallFunc_BooleanAND_ReturnValue) == 0x000069, "Member 'WDT_MapImage_C_StickyCurosrToPosition::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_StickyCurosrToPosition, CallFunc_BooleanAND_ReturnValue_1) == 0x00006A, "Member 'WDT_MapImage_C_StickyCurosrToPosition::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_StickyCurosrToPosition, CallFunc_CanCorsorStickyDetectingFeature_ReturnValue) == 0x00006B, "Member 'WDT_MapImage_C_StickyCurosrToPosition::CallFunc_CanCorsorStickyDetectingFeature_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_StickyCurosrToPosition, CallFunc_GetMapTranslation_OutTranslation) == 0x000070, "Member 'WDT_MapImage_C_StickyCurosrToPosition::CallFunc_GetMapTranslation_OutTranslation' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_StickyCurosrToPosition, CallFunc_GetMapSize_OutSize) == 0x000080, "Member 'WDT_MapImage_C_StickyCurosrToPosition::CallFunc_GetMapSize_OutSize' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_StickyCurosrToPosition, CallFunc_BreakVector2D_X_1) == 0x000090, "Member 'WDT_MapImage_C_StickyCurosrToPosition::CallFunc_BreakVector2D_X_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_StickyCurosrToPosition, CallFunc_BreakVector2D_Y_1) == 0x000098, "Member 'WDT_MapImage_C_StickyCurosrToPosition::CallFunc_BreakVector2D_Y_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_StickyCurosrToPosition, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x0000A0, "Member 'WDT_MapImage_C_StickyCurosrToPosition::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_StickyCurosrToPosition, CallFunc_Divide_DoubleDouble_ReturnValue_1) == 0x0000A8, "Member 'WDT_MapImage_C_StickyCurosrToPosition::CallFunc_Divide_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_StickyCurosrToPosition, CallFunc_MakeVector2D_ReturnValue) == 0x0000B0, "Member 'WDT_MapImage_C_StickyCurosrToPosition::CallFunc_MakeVector2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_StickyCurosrToPosition, CallFunc_Not_PreBool_ReturnValue_2) == 0x0000C0, "Member 'WDT_MapImage_C_StickyCurosrToPosition::CallFunc_Not_PreBool_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_StickyCurosrToPosition, CallFunc_VSize2D_ReturnValue) == 0x0000C8, "Member 'WDT_MapImage_C_StickyCurosrToPosition::CallFunc_VSize2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_StickyCurosrToPosition, CallFunc_LessEqual_DoubleDouble_ReturnValue) == 0x0000D0, "Member 'WDT_MapImage_C_StickyCurosrToPosition::CallFunc_LessEqual_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_StickyCurosrToPosition, CallFunc_BooleanAND_ReturnValue_2) == 0x0000D1, "Member 'WDT_MapImage_C_StickyCurosrToPosition::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_StickyCurosrToPosition, CallFunc_StartAutoMoveCursor_InMoveTime_ImplicitCast) == 0x0000D8, "Member 'WDT_MapImage_C_StickyCurosrToPosition::CallFunc_StartAutoMoveCursor_InMoveTime_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_StickyCurosrToPosition, CallFunc_BooleanAND_ReturnValue_1) == 0x000080, "Member 'WDT_MapImage_C_StickyCurosrToPosition::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_StickyCurosrToPosition, CallFunc_GetMapSize_OutSize) == 0x000088, "Member 'WDT_MapImage_C_StickyCurosrToPosition::CallFunc_GetMapSize_OutSize' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_StickyCurosrToPosition, CallFunc_BreakVector2D_X_1) == 0x000098, "Member 'WDT_MapImage_C_StickyCurosrToPosition::CallFunc_BreakVector2D_X_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_StickyCurosrToPosition, CallFunc_BreakVector2D_Y_1) == 0x0000A0, "Member 'WDT_MapImage_C_StickyCurosrToPosition::CallFunc_BreakVector2D_Y_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_StickyCurosrToPosition, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x0000A8, "Member 'WDT_MapImage_C_StickyCurosrToPosition::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_StickyCurosrToPosition, CallFunc_Divide_DoubleDouble_ReturnValue_1) == 0x0000B0, "Member 'WDT_MapImage_C_StickyCurosrToPosition::CallFunc_Divide_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_StickyCurosrToPosition, CallFunc_MakeVector2D_ReturnValue) == 0x0000B8, "Member 'WDT_MapImage_C_StickyCurosrToPosition::CallFunc_MakeVector2D_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_StickyCurosrToPosition, CallFunc_Not_PreBool_ReturnValue_2) == 0x0000C8, "Member 'WDT_MapImage_C_StickyCurosrToPosition::CallFunc_Not_PreBool_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_StickyCurosrToPosition, CallFunc_VSize2D_ReturnValue) == 0x0000D0, "Member 'WDT_MapImage_C_StickyCurosrToPosition::CallFunc_VSize2D_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_StickyCurosrToPosition, CallFunc_LessEqual_DoubleDouble_ReturnValue) == 0x0000D8, "Member 'WDT_MapImage_C_StickyCurosrToPosition::CallFunc_LessEqual_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_StickyCurosrToPosition, CallFunc_BooleanAND_ReturnValue_2) == 0x0000D9, "Member 'WDT_MapImage_C_StickyCurosrToPosition::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_StickyCurosrToPosition, CallFunc_StartAutoMoveCursor_InMoveTime_ImplicitCast) == 0x0000E0, "Member 'WDT_MapImage_C_StickyCurosrToPosition::CallFunc_StartAutoMoveCursor_InMoveTime_ImplicitCast' has a wrong offset!");
 
 // Function WDT_MapImage.WDT_MapImage_C.StartAutoMoveCursor
-// 0x0020 (0x0020 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct WDT_MapImage_C_StartAutoMoveCursor final
 {
 public:
 	struct FVector2D                              InEndPosition;                                     // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        InMoveTime;                                        // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsResetPlayerPosition;                             // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_MapImage_C_StartAutoMoveCursor) == 0x000008, "Wrong alignment on WDT_MapImage_C_StartAutoMoveCursor");
-static_assert(sizeof(WDT_MapImage_C_StartAutoMoveCursor) == 0x000020, "Wrong size on WDT_MapImage_C_StartAutoMoveCursor");
+static_assert(sizeof(WDT_MapImage_C_StartAutoMoveCursor) == 0x000018, "Wrong size on WDT_MapImage_C_StartAutoMoveCursor");
 static_assert(offsetof(WDT_MapImage_C_StartAutoMoveCursor, InEndPosition) == 0x000000, "Member 'WDT_MapImage_C_StartAutoMoveCursor::InEndPosition' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_StartAutoMoveCursor, InMoveTime) == 0x000010, "Member 'WDT_MapImage_C_StartAutoMoveCursor::InMoveTime' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_StartAutoMoveCursor, IsResetPlayerPosition) == 0x000018, "Member 'WDT_MapImage_C_StartAutoMoveCursor::IsResetPlayerPosition' has a wrong offset!");
 
 // Function WDT_MapImage.WDT_MapImage_C.MouseTranslateMapHV
 // 0x0060 (0x0060 - 0x0000)
@@ -2484,55 +2524,55 @@ static_assert(offsetof(WDT_MapImage_C_OnMouseDrag, CallFunc_Divide_Vector2DVecto
 static_assert(offsetof(WDT_MapImage_C_OnMouseDrag, CallFunc_BooleanAND_ReturnValue_7) == 0x000260, "Member 'WDT_MapImage_C_OnMouseDrag::CallFunc_BooleanAND_ReturnValue_7' has a wrong offset!");
 
 // Function WDT_MapImage.WDT_MapImage_C.OnDecide
-// 0x0138 (0x0138 - 0x0000)
+// 0x0150 (0x0150 - 0x0000)
 struct WDT_MapImage_C_OnDecide final
 {
 public:
 	bool                                          CallFunc_DetectMapFeature_bDetected;               // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSTR_MapFeatureInfoUI                  CallFunc_DetectMapFeature_OutFeatureInfo;          // 0x0008(0x00F0)(ContainsInstancedReference, HasGetValueTypeHash)
-	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x00F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_CanFastTravelFeatureTypeByFeatureId_OutCanFastTravel; // 0x00FA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x00FB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_CanFastTravelToFeature_ReturnValue;       // 0x00FC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetNearbyFeatureOrUserMarker_OutIsFeature; // 0x00FD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x00FE(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x00FF(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_GetFastTravelProhibitMessage_OutMessageTitle; // 0x0100(0x0010)()
-	class FText                                   CallFunc_GetFastTravelProhibitMessage_OutMessageMain; // 0x0110(0x0010)()
-	float                                         CallFunc_GetFastTravelProhibitMessage_OutMessageDuration; // 0x0120(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsFastTravelProhibited_ReturnValue;       // 0x0124(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0125(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_CanFastTravelFeatureTypeByFeatureId_OutCanFastTravel_1; // 0x0126(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_127[0x1];                                      // 0x0127(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTag                           CallFunc_GetGameplayTagFromString_ReturnValue;     // 0x0128(0x0008)(NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsActivated_ReturnValue;                  // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_3;                // 0x0131(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0132(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSTR_MapFeatureInfoUI                  CallFunc_DetectMapFeature_OutFeatureInfo;          // 0x0008(0x0108)(ContainsInstancedReference, HasGetValueTypeHash)
+	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x0111(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_CanFastTravelFeatureTypeByFeatureId_OutCanFastTravel; // 0x0112(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0113(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_CanFastTravelToFeature_ReturnValue;       // 0x0114(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetNearbyFeatureOrUserMarker_OutIsFeature; // 0x0115(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0116(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x0117(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_GetFastTravelProhibitMessage_OutMessageTitle; // 0x0118(0x0010)()
+	class FText                                   CallFunc_GetFastTravelProhibitMessage_OutMessageMain; // 0x0128(0x0010)()
+	float                                         CallFunc_GetFastTravelProhibitMessage_OutMessageDuration; // 0x0138(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsFastTravelProhibited_ReturnValue;       // 0x013C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x013D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_CanFastTravelFeatureTypeByFeatureId_OutCanFastTravel_1; // 0x013E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_13F[0x1];                                      // 0x013F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTag                           CallFunc_GetGameplayTagFromString_ReturnValue;     // 0x0140(0x0008)(NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsActivated_ReturnValue;                  // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_3;                // 0x0149(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x014A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_MapImage_C_OnDecide) == 0x000008, "Wrong alignment on WDT_MapImage_C_OnDecide");
-static_assert(sizeof(WDT_MapImage_C_OnDecide) == 0x000138, "Wrong size on WDT_MapImage_C_OnDecide");
+static_assert(sizeof(WDT_MapImage_C_OnDecide) == 0x000150, "Wrong size on WDT_MapImage_C_OnDecide");
 static_assert(offsetof(WDT_MapImage_C_OnDecide, CallFunc_DetectMapFeature_bDetected) == 0x000000, "Member 'WDT_MapImage_C_OnDecide::CallFunc_DetectMapFeature_bDetected' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_OnDecide, CallFunc_DetectMapFeature_OutFeatureInfo) == 0x000008, "Member 'WDT_MapImage_C_OnDecide::CallFunc_DetectMapFeature_OutFeatureInfo' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_OnDecide, CallFunc_IsVisible_ReturnValue) == 0x0000F8, "Member 'WDT_MapImage_C_OnDecide::CallFunc_IsVisible_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_OnDecide, CallFunc_EqualEqual_NameName_ReturnValue) == 0x0000F9, "Member 'WDT_MapImage_C_OnDecide::CallFunc_EqualEqual_NameName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_OnDecide, CallFunc_CanFastTravelFeatureTypeByFeatureId_OutCanFastTravel) == 0x0000FA, "Member 'WDT_MapImage_C_OnDecide::CallFunc_CanFastTravelFeatureTypeByFeatureId_OutCanFastTravel' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_OnDecide, CallFunc_Not_PreBool_ReturnValue) == 0x0000FB, "Member 'WDT_MapImage_C_OnDecide::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_OnDecide, CallFunc_CanFastTravelToFeature_ReturnValue) == 0x0000FC, "Member 'WDT_MapImage_C_OnDecide::CallFunc_CanFastTravelToFeature_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_OnDecide, CallFunc_GetNearbyFeatureOrUserMarker_OutIsFeature) == 0x0000FD, "Member 'WDT_MapImage_C_OnDecide::CallFunc_GetNearbyFeatureOrUserMarker_OutIsFeature' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_OnDecide, CallFunc_Not_PreBool_ReturnValue_1) == 0x0000FE, "Member 'WDT_MapImage_C_OnDecide::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_OnDecide, CallFunc_Not_PreBool_ReturnValue_2) == 0x0000FF, "Member 'WDT_MapImage_C_OnDecide::CallFunc_Not_PreBool_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_OnDecide, CallFunc_GetFastTravelProhibitMessage_OutMessageTitle) == 0x000100, "Member 'WDT_MapImage_C_OnDecide::CallFunc_GetFastTravelProhibitMessage_OutMessageTitle' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_OnDecide, CallFunc_GetFastTravelProhibitMessage_OutMessageMain) == 0x000110, "Member 'WDT_MapImage_C_OnDecide::CallFunc_GetFastTravelProhibitMessage_OutMessageMain' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_OnDecide, CallFunc_GetFastTravelProhibitMessage_OutMessageDuration) == 0x000120, "Member 'WDT_MapImage_C_OnDecide::CallFunc_GetFastTravelProhibitMessage_OutMessageDuration' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_OnDecide, CallFunc_IsFastTravelProhibited_ReturnValue) == 0x000124, "Member 'WDT_MapImage_C_OnDecide::CallFunc_IsFastTravelProhibited_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_OnDecide, CallFunc_BooleanOR_ReturnValue) == 0x000125, "Member 'WDT_MapImage_C_OnDecide::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_OnDecide, CallFunc_CanFastTravelFeatureTypeByFeatureId_OutCanFastTravel_1) == 0x000126, "Member 'WDT_MapImage_C_OnDecide::CallFunc_CanFastTravelFeatureTypeByFeatureId_OutCanFastTravel_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_OnDecide, CallFunc_GetGameplayTagFromString_ReturnValue) == 0x000128, "Member 'WDT_MapImage_C_OnDecide::CallFunc_GetGameplayTagFromString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_OnDecide, CallFunc_IsActivated_ReturnValue) == 0x000130, "Member 'WDT_MapImage_C_OnDecide::CallFunc_IsActivated_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_OnDecide, CallFunc_Not_PreBool_ReturnValue_3) == 0x000131, "Member 'WDT_MapImage_C_OnDecide::CallFunc_Not_PreBool_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_OnDecide, CallFunc_BooleanAND_ReturnValue) == 0x000132, "Member 'WDT_MapImage_C_OnDecide::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_OnDecide, CallFunc_IsVisible_ReturnValue) == 0x000110, "Member 'WDT_MapImage_C_OnDecide::CallFunc_IsVisible_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_OnDecide, CallFunc_EqualEqual_NameName_ReturnValue) == 0x000111, "Member 'WDT_MapImage_C_OnDecide::CallFunc_EqualEqual_NameName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_OnDecide, CallFunc_CanFastTravelFeatureTypeByFeatureId_OutCanFastTravel) == 0x000112, "Member 'WDT_MapImage_C_OnDecide::CallFunc_CanFastTravelFeatureTypeByFeatureId_OutCanFastTravel' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_OnDecide, CallFunc_Not_PreBool_ReturnValue) == 0x000113, "Member 'WDT_MapImage_C_OnDecide::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_OnDecide, CallFunc_CanFastTravelToFeature_ReturnValue) == 0x000114, "Member 'WDT_MapImage_C_OnDecide::CallFunc_CanFastTravelToFeature_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_OnDecide, CallFunc_GetNearbyFeatureOrUserMarker_OutIsFeature) == 0x000115, "Member 'WDT_MapImage_C_OnDecide::CallFunc_GetNearbyFeatureOrUserMarker_OutIsFeature' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_OnDecide, CallFunc_Not_PreBool_ReturnValue_1) == 0x000116, "Member 'WDT_MapImage_C_OnDecide::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_OnDecide, CallFunc_Not_PreBool_ReturnValue_2) == 0x000117, "Member 'WDT_MapImage_C_OnDecide::CallFunc_Not_PreBool_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_OnDecide, CallFunc_GetFastTravelProhibitMessage_OutMessageTitle) == 0x000118, "Member 'WDT_MapImage_C_OnDecide::CallFunc_GetFastTravelProhibitMessage_OutMessageTitle' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_OnDecide, CallFunc_GetFastTravelProhibitMessage_OutMessageMain) == 0x000128, "Member 'WDT_MapImage_C_OnDecide::CallFunc_GetFastTravelProhibitMessage_OutMessageMain' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_OnDecide, CallFunc_GetFastTravelProhibitMessage_OutMessageDuration) == 0x000138, "Member 'WDT_MapImage_C_OnDecide::CallFunc_GetFastTravelProhibitMessage_OutMessageDuration' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_OnDecide, CallFunc_IsFastTravelProhibited_ReturnValue) == 0x00013C, "Member 'WDT_MapImage_C_OnDecide::CallFunc_IsFastTravelProhibited_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_OnDecide, CallFunc_BooleanOR_ReturnValue) == 0x00013D, "Member 'WDT_MapImage_C_OnDecide::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_OnDecide, CallFunc_CanFastTravelFeatureTypeByFeatureId_OutCanFastTravel_1) == 0x00013E, "Member 'WDT_MapImage_C_OnDecide::CallFunc_CanFastTravelFeatureTypeByFeatureId_OutCanFastTravel_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_OnDecide, CallFunc_GetGameplayTagFromString_ReturnValue) == 0x000140, "Member 'WDT_MapImage_C_OnDecide::CallFunc_GetGameplayTagFromString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_OnDecide, CallFunc_IsActivated_ReturnValue) == 0x000148, "Member 'WDT_MapImage_C_OnDecide::CallFunc_IsActivated_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_OnDecide, CallFunc_Not_PreBool_ReturnValue_3) == 0x000149, "Member 'WDT_MapImage_C_OnDecide::CallFunc_Not_PreBool_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_OnDecide, CallFunc_BooleanAND_ReturnValue) == 0x00014A, "Member 'WDT_MapImage_C_OnDecide::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
 
 // Function WDT_MapImage.WDT_MapImage_C.ViewportPositionToMapImageUV
 // 0x0198 (0x0198 - 0x0000)
@@ -2760,7 +2800,7 @@ static_assert(offsetof(WDT_MapImage_C_TickUpdateConnectPlayerLine, CallFunc_DegC
 static_assert(offsetof(WDT_MapImage_C_TickUpdateConnectPlayerLine, CallFunc_SetRenderTransformAngle_Angle_ImplicitCast) == 0x0003F8, "Member 'WDT_MapImage_C_TickUpdateConnectPlayerLine::CallFunc_SetRenderTransformAngle_Angle_ImplicitCast' has a wrong offset!");
 
 // Function WDT_MapImage.WDT_MapImage_C.TickUpdateCursorFeatureSelectGuide
-// 0x0138 (0x0138 - 0x0000)
+// 0x0150 (0x0150 - 0x0000)
 struct WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide final
 {
 public:
@@ -2769,56 +2809,56 @@ public:
 	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_DetectMapFeature_bDetected;               // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_7[0x1];                                        // 0x0007(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSTR_MapFeatureInfoUI                  CallFunc_DetectMapFeature_OutFeatureInfo;          // 0x0008(0x00F0)(ContainsInstancedReference, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue_1;          // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetNearbyFeatureOrUserMarker_OutIsFeature; // 0x00F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00FA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x00FB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_CanFastTravelFeatureTypeByFeatureId_OutCanFastTravel; // 0x00FC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_FD[0x3];                                       // 0x00FD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_GetCurosrGuide_GuardianSpirit_ReturnValue; // 0x0100(0x0010)()
-	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0111(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0112(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_113[0x1];                                      // 0x0113(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0114(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0118(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11C[0x4];                                      // 0x011C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWDT_MapUserMarker_C*                   CallFunc_Array_Get_Item;                           // 0x0120(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0128(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x012C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x012D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_CanFastTravelToFeature_ReturnValue;       // 0x012E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x012F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsFastTravelProhibited_ReturnValue;       // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0131(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSTR_MapFeatureInfoUI                  CallFunc_DetectMapFeature_OutFeatureInfo;          // 0x0008(0x0108)(ContainsInstancedReference, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue_1;          // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetNearbyFeatureOrUserMarker_OutIsFeature; // 0x0111(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0112(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0113(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_CanFastTravelFeatureTypeByFeatureId_OutCanFastTravel; // 0x0114(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_115[0x3];                                      // 0x0115(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_GetCurosrGuide_GuardianSpirit_ReturnValue; // 0x0118(0x0010)()
+	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x0128(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0129(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x012A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_12B[0x1];                                      // 0x012B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x012C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0130(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_134[0x4];                                      // 0x0134(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWDT_MapUserMarker_C*                   CallFunc_Array_Get_Item;                           // 0x0138(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0140(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0144(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0145(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_CanFastTravelToFeature_ReturnValue;       // 0x0146(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x0147(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsFastTravelProhibited_ReturnValue;       // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0149(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide) == 0x000008, "Wrong alignment on WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide");
-static_assert(sizeof(WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide) == 0x000138, "Wrong size on WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide");
+static_assert(sizeof(WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide) == 0x000150, "Wrong size on WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide");
 static_assert(offsetof(WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide, Temp_int_Array_Index_Variable) == 0x000000, "Member 'WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide::Temp_int_Array_Index_Variable' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide, CallFunc_Not_PreBool_ReturnValue) == 0x000004, "Member 'WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide, CallFunc_NotEqual_ByteByte_ReturnValue) == 0x000005, "Member 'WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide::CallFunc_NotEqual_ByteByte_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide, CallFunc_DetectMapFeature_bDetected) == 0x000006, "Member 'WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide::CallFunc_DetectMapFeature_bDetected' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide, CallFunc_DetectMapFeature_OutFeatureInfo) == 0x000008, "Member 'WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide::CallFunc_DetectMapFeature_OutFeatureInfo' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide, CallFunc_NotEqual_ByteByte_ReturnValue_1) == 0x0000F8, "Member 'WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide::CallFunc_NotEqual_ByteByte_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide, CallFunc_GetNearbyFeatureOrUserMarker_OutIsFeature) == 0x0000F9, "Member 'WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide::CallFunc_GetNearbyFeatureOrUserMarker_OutIsFeature' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide, CallFunc_BooleanAND_ReturnValue) == 0x0000FA, "Member 'WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide, CallFunc_BooleanAND_ReturnValue_1) == 0x0000FB, "Member 'WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide, CallFunc_CanFastTravelFeatureTypeByFeatureId_OutCanFastTravel) == 0x0000FC, "Member 'WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide::CallFunc_CanFastTravelFeatureTypeByFeatureId_OutCanFastTravel' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide, CallFunc_GetCurosrGuide_GuardianSpirit_ReturnValue) == 0x000100, "Member 'WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide::CallFunc_GetCurosrGuide_GuardianSpirit_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide, CallFunc_EqualEqual_NameName_ReturnValue) == 0x000110, "Member 'WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide::CallFunc_EqualEqual_NameName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide, CallFunc_Not_PreBool_ReturnValue_1) == 0x000111, "Member 'WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide, CallFunc_IsVisible_ReturnValue) == 0x000112, "Member 'WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide::CallFunc_IsVisible_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide, Temp_int_Loop_Counter_Variable) == 0x000114, "Member 'WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide, CallFunc_Add_IntInt_ReturnValue) == 0x000118, "Member 'WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide, CallFunc_Array_Get_Item) == 0x000120, "Member 'WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide, CallFunc_Array_Length_ReturnValue) == 0x000128, "Member 'WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x00012C, "Member 'WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide, CallFunc_Less_IntInt_ReturnValue) == 0x00012D, "Member 'WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide, CallFunc_CanFastTravelToFeature_ReturnValue) == 0x00012E, "Member 'WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide::CallFunc_CanFastTravelToFeature_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide, CallFunc_Not_PreBool_ReturnValue_2) == 0x00012F, "Member 'WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide::CallFunc_Not_PreBool_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide, CallFunc_IsFastTravelProhibited_ReturnValue) == 0x000130, "Member 'WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide::CallFunc_IsFastTravelProhibited_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide, CallFunc_BooleanOR_ReturnValue) == 0x000131, "Member 'WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide, CallFunc_NotEqual_ByteByte_ReturnValue_1) == 0x000110, "Member 'WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide::CallFunc_NotEqual_ByteByte_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide, CallFunc_GetNearbyFeatureOrUserMarker_OutIsFeature) == 0x000111, "Member 'WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide::CallFunc_GetNearbyFeatureOrUserMarker_OutIsFeature' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide, CallFunc_BooleanAND_ReturnValue) == 0x000112, "Member 'WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide, CallFunc_BooleanAND_ReturnValue_1) == 0x000113, "Member 'WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide, CallFunc_CanFastTravelFeatureTypeByFeatureId_OutCanFastTravel) == 0x000114, "Member 'WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide::CallFunc_CanFastTravelFeatureTypeByFeatureId_OutCanFastTravel' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide, CallFunc_GetCurosrGuide_GuardianSpirit_ReturnValue) == 0x000118, "Member 'WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide::CallFunc_GetCurosrGuide_GuardianSpirit_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide, CallFunc_EqualEqual_NameName_ReturnValue) == 0x000128, "Member 'WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide::CallFunc_EqualEqual_NameName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide, CallFunc_Not_PreBool_ReturnValue_1) == 0x000129, "Member 'WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide, CallFunc_IsVisible_ReturnValue) == 0x00012A, "Member 'WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide::CallFunc_IsVisible_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide, Temp_int_Loop_Counter_Variable) == 0x00012C, "Member 'WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide, CallFunc_Add_IntInt_ReturnValue) == 0x000130, "Member 'WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide, CallFunc_Array_Get_Item) == 0x000138, "Member 'WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide, CallFunc_Array_Length_ReturnValue) == 0x000140, "Member 'WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000144, "Member 'WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide, CallFunc_Less_IntInt_ReturnValue) == 0x000145, "Member 'WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide, CallFunc_CanFastTravelToFeature_ReturnValue) == 0x000146, "Member 'WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide::CallFunc_CanFastTravelToFeature_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide, CallFunc_Not_PreBool_ReturnValue_2) == 0x000147, "Member 'WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide::CallFunc_Not_PreBool_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide, CallFunc_IsFastTravelProhibited_ReturnValue) == 0x000148, "Member 'WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide::CallFunc_IsFastTravelProhibited_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide, CallFunc_BooleanOR_ReturnValue) == 0x000149, "Member 'WDT_MapImage_C_TickUpdateCursorFeatureSelectGuide::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
 
 // Function WDT_MapImage.WDT_MapImage_C.TickCursorMovePosition
 // 0x0170 (0x0170 - 0x0000)
@@ -2926,27 +2966,27 @@ static_assert(offsetof(WDT_MapImage_C_GetWholeMapForTimeSeries, CallFunc_IsStory
 static_assert(offsetof(WDT_MapImage_C_GetWholeMapForTimeSeries, CallFunc_EqualEqual_GameplayTag_ReturnValue) == 0x000127, "Member 'WDT_MapImage_C_GetWholeMapForTimeSeries::CallFunc_EqualEqual_GameplayTag_ReturnValue' has a wrong offset!");
 
 // Function WDT_MapImage.WDT_MapImage_C.OffsetToMapFeature
-// 0x0110 (0x0110 - 0x0000)
+// 0x0128 (0x0128 - 0x0000)
 struct WDT_MapImage_C_OffsetToMapFeature final
 {
 public:
 	struct FGameplayTag                           InMapFeature;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-	struct FMapFeatureInfo                        CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo;  // 0x0008(0x00E0)()
-	bool                                          CallFunc_GetMapFeatureInfoFromMap_ReturnValue;     // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E9[0x3];                                       // 0x00E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTag                           CallFunc_GetGameplayTagFromString_ReturnValue;     // 0x00EC(0x0008)(NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_F4[0x4];                                       // 0x00F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              CallFunc_GetFeatureMap2DPosition_NewParam;         // 0x00F8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_StartAutoMoveCursor_InMoveTime_ImplicitCast; // 0x0108(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FMapFeatureInfo                        CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo;  // 0x0008(0x00F8)()
+	bool                                          CallFunc_GetMapFeatureInfoFromMap_ReturnValue;     // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_101[0x3];                                      // 0x0101(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTag                           CallFunc_GetGameplayTagFromString_ReturnValue;     // 0x0104(0x0008)(NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_10C[0x4];                                      // 0x010C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              CallFunc_GetFeatureMap2DPosition_NewParam;         // 0x0110(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_StartAutoMoveCursor_InMoveTime_ImplicitCast; // 0x0120(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_MapImage_C_OffsetToMapFeature) == 0x000008, "Wrong alignment on WDT_MapImage_C_OffsetToMapFeature");
-static_assert(sizeof(WDT_MapImage_C_OffsetToMapFeature) == 0x000110, "Wrong size on WDT_MapImage_C_OffsetToMapFeature");
+static_assert(sizeof(WDT_MapImage_C_OffsetToMapFeature) == 0x000128, "Wrong size on WDT_MapImage_C_OffsetToMapFeature");
 static_assert(offsetof(WDT_MapImage_C_OffsetToMapFeature, InMapFeature) == 0x000000, "Member 'WDT_MapImage_C_OffsetToMapFeature::InMapFeature' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_OffsetToMapFeature, CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo) == 0x000008, "Member 'WDT_MapImage_C_OffsetToMapFeature::CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_OffsetToMapFeature, CallFunc_GetMapFeatureInfoFromMap_ReturnValue) == 0x0000E8, "Member 'WDT_MapImage_C_OffsetToMapFeature::CallFunc_GetMapFeatureInfoFromMap_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_OffsetToMapFeature, CallFunc_GetGameplayTagFromString_ReturnValue) == 0x0000EC, "Member 'WDT_MapImage_C_OffsetToMapFeature::CallFunc_GetGameplayTagFromString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_OffsetToMapFeature, CallFunc_GetFeatureMap2DPosition_NewParam) == 0x0000F8, "Member 'WDT_MapImage_C_OffsetToMapFeature::CallFunc_GetFeatureMap2DPosition_NewParam' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_OffsetToMapFeature, CallFunc_StartAutoMoveCursor_InMoveTime_ImplicitCast) == 0x000108, "Member 'WDT_MapImage_C_OffsetToMapFeature::CallFunc_StartAutoMoveCursor_InMoveTime_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_OffsetToMapFeature, CallFunc_GetMapFeatureInfoFromMap_ReturnValue) == 0x000100, "Member 'WDT_MapImage_C_OffsetToMapFeature::CallFunc_GetMapFeatureInfoFromMap_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_OffsetToMapFeature, CallFunc_GetGameplayTagFromString_ReturnValue) == 0x000104, "Member 'WDT_MapImage_C_OffsetToMapFeature::CallFunc_GetGameplayTagFromString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_OffsetToMapFeature, CallFunc_GetFeatureMap2DPosition_NewParam) == 0x000110, "Member 'WDT_MapImage_C_OffsetToMapFeature::CallFunc_GetFeatureMap2DPosition_NewParam' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_OffsetToMapFeature, CallFunc_StartAutoMoveCursor_InMoveTime_ImplicitCast) == 0x000120, "Member 'WDT_MapImage_C_OffsetToMapFeature::CallFunc_StartAutoMoveCursor_InMoveTime_ImplicitCast' has a wrong offset!");
 
 // Function WDT_MapImage.WDT_MapImage_C.SelectLowerYadorigi
 // 0x0048 (0x0048 - 0x0000)
@@ -3015,7 +3055,7 @@ static_assert(offsetof(WDT_MapImage_C_SelectUpperYadorigi, K2Node_DynamicCast_As
 static_assert(offsetof(WDT_MapImage_C_SelectUpperYadorigi, K2Node_DynamicCast_bSuccess_1) == 0x000040, "Member 'WDT_MapImage_C_SelectUpperYadorigi::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
 
 // Function WDT_MapImage.WDT_MapImage_C.SwitchToLeftRegion
-// 0x0098 (0x0098 - 0x0000)
+// 0x00A0 (0x00A0 - 0x0000)
 struct WDT_MapImage_C_SwitchToLeftRegion final
 {
 public:
@@ -3039,19 +3079,20 @@ public:
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue_2;            // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0069(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6A[0x2];                                       // 0x006A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue_3;            // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6A[0x6];                                       // 0x006A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWidget*                                CallFunc_GetChildAt_ReturnValue;                   // 0x0070(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWDT_MapRegionIcon_C*                   K2Node_DynamicCast_AsWDT_Map_Region_Icon;          // 0x0078(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_PlayUIAudioEvent_ReturnValue;             // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_NameName_ReturnValue;            // 0x0091(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0092(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue_3;            // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWDT_MapRegionIcon_C*                   K2Node_DynamicCast_AsWDT_Map_Region_Icon;          // 0x0080(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0089(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_NameName_ReturnValue;            // 0x008A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8B[0x5];                                       // 0x008B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAppUIManager*                          CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_PlayUIAudioEvent_ReturnValue;             // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_MapImage_C_SwitchToLeftRegion) == 0x000008, "Wrong alignment on WDT_MapImage_C_SwitchToLeftRegion");
-static_assert(sizeof(WDT_MapImage_C_SwitchToLeftRegion) == 0x000098, "Wrong size on WDT_MapImage_C_SwitchToLeftRegion");
+static_assert(sizeof(WDT_MapImage_C_SwitchToLeftRegion) == 0x0000A0, "Wrong size on WDT_MapImage_C_SwitchToLeftRegion");
 static_assert(offsetof(WDT_MapImage_C_SwitchToLeftRegion, OutRegionTabID) == 0x000000, "Member 'WDT_MapImage_C_SwitchToLeftRegion::OutRegionTabID' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_SwitchToLeftRegion, L_OldSelectRegion) == 0x000008, "Member 'WDT_MapImage_C_SwitchToLeftRegion::L_OldSelectRegion' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_SwitchToLeftRegion, NewIndex) == 0x000010, "Member 'WDT_MapImage_C_SwitchToLeftRegion::NewIndex' has a wrong offset!");
@@ -3069,14 +3110,14 @@ static_assert(offsetof(WDT_MapImage_C_SwitchToLeftRegion, CallFunc_Less_IntInt_R
 static_assert(offsetof(WDT_MapImage_C_SwitchToLeftRegion, CallFunc_Subtract_IntInt_ReturnValue_2) == 0x000064, "Member 'WDT_MapImage_C_SwitchToLeftRegion::CallFunc_Subtract_IntInt_ReturnValue_2' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_SwitchToLeftRegion, CallFunc_BooleanAND_ReturnValue) == 0x000068, "Member 'WDT_MapImage_C_SwitchToLeftRegion::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_SwitchToLeftRegion, CallFunc_LessEqual_IntInt_ReturnValue) == 0x000069, "Member 'WDT_MapImage_C_SwitchToLeftRegion::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SwitchToLeftRegion, CallFunc_Subtract_IntInt_ReturnValue_3) == 0x00006C, "Member 'WDT_MapImage_C_SwitchToLeftRegion::CallFunc_Subtract_IntInt_ReturnValue_3' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_SwitchToLeftRegion, CallFunc_GetChildAt_ReturnValue) == 0x000070, "Member 'WDT_MapImage_C_SwitchToLeftRegion::CallFunc_GetChildAt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SwitchToLeftRegion, K2Node_DynamicCast_AsWDT_Map_Region_Icon) == 0x000078, "Member 'WDT_MapImage_C_SwitchToLeftRegion::K2Node_DynamicCast_AsWDT_Map_Region_Icon' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SwitchToLeftRegion, K2Node_DynamicCast_bSuccess) == 0x000080, "Member 'WDT_MapImage_C_SwitchToLeftRegion::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SwitchToLeftRegion, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000088, "Member 'WDT_MapImage_C_SwitchToLeftRegion::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SwitchToLeftRegion, CallFunc_PlayUIAudioEvent_ReturnValue) == 0x000090, "Member 'WDT_MapImage_C_SwitchToLeftRegion::CallFunc_PlayUIAudioEvent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SwitchToLeftRegion, CallFunc_NotEqual_NameName_ReturnValue) == 0x000091, "Member 'WDT_MapImage_C_SwitchToLeftRegion::CallFunc_NotEqual_NameName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SwitchToLeftRegion, CallFunc_IsVisible_ReturnValue) == 0x000092, "Member 'WDT_MapImage_C_SwitchToLeftRegion::CallFunc_IsVisible_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SwitchToLeftRegion, CallFunc_Subtract_IntInt_ReturnValue_3) == 0x000078, "Member 'WDT_MapImage_C_SwitchToLeftRegion::CallFunc_Subtract_IntInt_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SwitchToLeftRegion, K2Node_DynamicCast_AsWDT_Map_Region_Icon) == 0x000080, "Member 'WDT_MapImage_C_SwitchToLeftRegion::K2Node_DynamicCast_AsWDT_Map_Region_Icon' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SwitchToLeftRegion, K2Node_DynamicCast_bSuccess) == 0x000088, "Member 'WDT_MapImage_C_SwitchToLeftRegion::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SwitchToLeftRegion, CallFunc_IsVisible_ReturnValue) == 0x000089, "Member 'WDT_MapImage_C_SwitchToLeftRegion::CallFunc_IsVisible_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SwitchToLeftRegion, CallFunc_NotEqual_NameName_ReturnValue) == 0x00008A, "Member 'WDT_MapImage_C_SwitchToLeftRegion::CallFunc_NotEqual_NameName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SwitchToLeftRegion, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000090, "Member 'WDT_MapImage_C_SwitchToLeftRegion::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SwitchToLeftRegion, CallFunc_PlayUIAudioEvent_ReturnValue) == 0x000098, "Member 'WDT_MapImage_C_SwitchToLeftRegion::CallFunc_PlayUIAudioEvent_ReturnValue' has a wrong offset!");
 
 // Function WDT_MapImage.WDT_MapImage_C.SwitchToRightRegion
 // 0x00D0 (0x00D0 - 0x0000)
@@ -3269,43 +3310,43 @@ static_assert(offsetof(WDT_MapImage_C_YadorigiListSelectRegion, CallFunc_Less_In
 static_assert(offsetof(WDT_MapImage_C_YadorigiListSelectRegion, CallFunc_Add_IntInt_ReturnValue) == 0x0000C8, "Member 'WDT_MapImage_C_YadorigiListSelectRegion::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
 
 // Function WDT_MapImage.WDT_MapImage_C.SortFeatureIdArray
-// 0x0218 (0x0218 - 0x0000)
+// 0x0248 (0x0248 - 0x0000)
 struct WDT_MapImage_C_SortFeatureIdArray final
 {
 public:
 	TArray<struct FGameplayTag>                   InTagArray;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	TArray<struct FGameplayTag>                   OutTagArray;                                       // 0x0010(0x0010)(Parm, OutParm)
-	struct FMapFeatureInfo                        L_FeatureInfo;                                     // 0x0020(0x00E0)(Edit, BlueprintVisible)
-	TArray<struct FGameplayTag>                   L_TagArray;                                        // 0x0100(0x0010)(Edit, BlueprintVisible)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0110(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0114(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0118(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           CallFunc_Array_Get_Item;                           // 0x011C(0x0008)(NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0124(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_125[0x3];                                      // 0x0125(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0128(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x012C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FMapFeatureInfo                        CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo;  // 0x0130(0x00E0)()
-	bool                                          CallFunc_GetMapFeatureInfoFromMap_ReturnValue;     // 0x0210(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FMapFeatureInfo                        L_FeatureInfo;                                     // 0x0020(0x00F8)(Edit, BlueprintVisible)
+	TArray<struct FGameplayTag>                   L_TagArray;                                        // 0x0118(0x0010)(Edit, BlueprintVisible)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0128(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x012C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0130(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           CallFunc_Array_Get_Item;                           // 0x0134(0x0008)(NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x013C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_13D[0x3];                                      // 0x013D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0140(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0144(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FMapFeatureInfo                        CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo;  // 0x0148(0x00F8)()
+	bool                                          CallFunc_GetMapFeatureInfoFromMap_ReturnValue;     // 0x0240(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_MapImage_C_SortFeatureIdArray) == 0x000008, "Wrong alignment on WDT_MapImage_C_SortFeatureIdArray");
-static_assert(sizeof(WDT_MapImage_C_SortFeatureIdArray) == 0x000218, "Wrong size on WDT_MapImage_C_SortFeatureIdArray");
+static_assert(sizeof(WDT_MapImage_C_SortFeatureIdArray) == 0x000248, "Wrong size on WDT_MapImage_C_SortFeatureIdArray");
 static_assert(offsetof(WDT_MapImage_C_SortFeatureIdArray, InTagArray) == 0x000000, "Member 'WDT_MapImage_C_SortFeatureIdArray::InTagArray' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_SortFeatureIdArray, OutTagArray) == 0x000010, "Member 'WDT_MapImage_C_SortFeatureIdArray::OutTagArray' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_SortFeatureIdArray, L_FeatureInfo) == 0x000020, "Member 'WDT_MapImage_C_SortFeatureIdArray::L_FeatureInfo' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SortFeatureIdArray, L_TagArray) == 0x000100, "Member 'WDT_MapImage_C_SortFeatureIdArray::L_TagArray' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SortFeatureIdArray, CallFunc_Array_Length_ReturnValue) == 0x000110, "Member 'WDT_MapImage_C_SortFeatureIdArray::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SortFeatureIdArray, Temp_int_Array_Index_Variable) == 0x000114, "Member 'WDT_MapImage_C_SortFeatureIdArray::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SortFeatureIdArray, Temp_int_Loop_Counter_Variable) == 0x000118, "Member 'WDT_MapImage_C_SortFeatureIdArray::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SortFeatureIdArray, CallFunc_Array_Get_Item) == 0x00011C, "Member 'WDT_MapImage_C_SortFeatureIdArray::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SortFeatureIdArray, CallFunc_Less_IntInt_ReturnValue) == 0x000124, "Member 'WDT_MapImage_C_SortFeatureIdArray::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SortFeatureIdArray, CallFunc_Add_IntInt_ReturnValue) == 0x000128, "Member 'WDT_MapImage_C_SortFeatureIdArray::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SortFeatureIdArray, CallFunc_Array_Add_ReturnValue) == 0x00012C, "Member 'WDT_MapImage_C_SortFeatureIdArray::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SortFeatureIdArray, CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo) == 0x000130, "Member 'WDT_MapImage_C_SortFeatureIdArray::CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SortFeatureIdArray, CallFunc_GetMapFeatureInfoFromMap_ReturnValue) == 0x000210, "Member 'WDT_MapImage_C_SortFeatureIdArray::CallFunc_GetMapFeatureInfoFromMap_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SortFeatureIdArray, L_TagArray) == 0x000118, "Member 'WDT_MapImage_C_SortFeatureIdArray::L_TagArray' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SortFeatureIdArray, CallFunc_Array_Length_ReturnValue) == 0x000128, "Member 'WDT_MapImage_C_SortFeatureIdArray::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SortFeatureIdArray, Temp_int_Array_Index_Variable) == 0x00012C, "Member 'WDT_MapImage_C_SortFeatureIdArray::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SortFeatureIdArray, Temp_int_Loop_Counter_Variable) == 0x000130, "Member 'WDT_MapImage_C_SortFeatureIdArray::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SortFeatureIdArray, CallFunc_Array_Get_Item) == 0x000134, "Member 'WDT_MapImage_C_SortFeatureIdArray::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SortFeatureIdArray, CallFunc_Less_IntInt_ReturnValue) == 0x00013C, "Member 'WDT_MapImage_C_SortFeatureIdArray::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SortFeatureIdArray, CallFunc_Add_IntInt_ReturnValue) == 0x000140, "Member 'WDT_MapImage_C_SortFeatureIdArray::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SortFeatureIdArray, CallFunc_Array_Add_ReturnValue) == 0x000144, "Member 'WDT_MapImage_C_SortFeatureIdArray::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SortFeatureIdArray, CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo) == 0x000148, "Member 'WDT_MapImage_C_SortFeatureIdArray::CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SortFeatureIdArray, CallFunc_GetMapFeatureInfoFromMap_ReturnValue) == 0x000240, "Member 'WDT_MapImage_C_SortFeatureIdArray::CallFunc_GetMapFeatureInfoFromMap_ReturnValue' has a wrong offset!");
 
 // Function WDT_MapImage.WDT_MapImage_C.UpdateFastTravelProhibited
-// 0x0170 (0x0170 - 0x0000)
+// 0x0188 (0x0188 - 0x0000)
 struct WDT_MapImage_C_UpdateFastTravelProhibited final
 {
 public:
@@ -3316,36 +3357,36 @@ public:
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsFastTravelProhibited_ReturnValue;       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSTR_MapFeatureInfoUI                  CallFunc_Array_Get_Item;                           // 0x0018(0x00F0)(ContainsInstancedReference, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0108(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_10C[0x4];                                      // 0x010C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWDT_MapFeatureSymbol_C*                K2Node_DynamicCast_AsWDT_Map_Feature_Symbol;       // 0x0110(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0119(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11A[0x6];                                      // 0x011A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMapFeatureType                        CallFunc_GetMapFeatureTypeFromMap_OutFeatureType;  // 0x0120(0x0048)()
-	bool                                          CallFunc_GetMapFeatureTypeFromMap_ReturnValue;     // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_CanFastTravelToFeature_ReturnValue;       // 0x0169(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x016A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x016B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSTR_MapFeatureInfoUI                  CallFunc_Array_Get_Item;                           // 0x0018(0x0108)(ContainsInstancedReference, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0120(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_124[0x4];                                      // 0x0124(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWDT_MapFeatureSymbol_C*                K2Node_DynamicCast_AsWDT_Map_Feature_Symbol;       // 0x0128(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0131(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_132[0x6];                                      // 0x0132(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMapFeatureType                        CallFunc_GetMapFeatureTypeFromMap_OutFeatureType;  // 0x0138(0x0048)()
+	bool                                          CallFunc_GetMapFeatureTypeFromMap_ReturnValue;     // 0x0180(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_CanFastTravelToFeature_ReturnValue;       // 0x0181(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0182(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0183(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_MapImage_C_UpdateFastTravelProhibited) == 0x000008, "Wrong alignment on WDT_MapImage_C_UpdateFastTravelProhibited");
-static_assert(sizeof(WDT_MapImage_C_UpdateFastTravelProhibited) == 0x000170, "Wrong size on WDT_MapImage_C_UpdateFastTravelProhibited");
+static_assert(sizeof(WDT_MapImage_C_UpdateFastTravelProhibited) == 0x000188, "Wrong size on WDT_MapImage_C_UpdateFastTravelProhibited");
 static_assert(offsetof(WDT_MapImage_C_UpdateFastTravelProhibited, L_FastTravelProhibited) == 0x000000, "Member 'WDT_MapImage_C_UpdateFastTravelProhibited::L_FastTravelProhibited' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_UpdateFastTravelProhibited, Temp_int_Array_Index_Variable) == 0x000004, "Member 'WDT_MapImage_C_UpdateFastTravelProhibited::Temp_int_Array_Index_Variable' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_UpdateFastTravelProhibited, Temp_int_Loop_Counter_Variable) == 0x000008, "Member 'WDT_MapImage_C_UpdateFastTravelProhibited::Temp_int_Loop_Counter_Variable' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_UpdateFastTravelProhibited, CallFunc_Add_IntInt_ReturnValue) == 0x00000C, "Member 'WDT_MapImage_C_UpdateFastTravelProhibited::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_UpdateFastTravelProhibited, CallFunc_IsFastTravelProhibited_ReturnValue) == 0x000010, "Member 'WDT_MapImage_C_UpdateFastTravelProhibited::CallFunc_IsFastTravelProhibited_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_UpdateFastTravelProhibited, CallFunc_Array_Get_Item) == 0x000018, "Member 'WDT_MapImage_C_UpdateFastTravelProhibited::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_UpdateFastTravelProhibited, CallFunc_Array_Length_ReturnValue) == 0x000108, "Member 'WDT_MapImage_C_UpdateFastTravelProhibited::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_UpdateFastTravelProhibited, K2Node_DynamicCast_AsWDT_Map_Feature_Symbol) == 0x000110, "Member 'WDT_MapImage_C_UpdateFastTravelProhibited::K2Node_DynamicCast_AsWDT_Map_Feature_Symbol' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_UpdateFastTravelProhibited, K2Node_DynamicCast_bSuccess) == 0x000118, "Member 'WDT_MapImage_C_UpdateFastTravelProhibited::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_UpdateFastTravelProhibited, CallFunc_Less_IntInt_ReturnValue) == 0x000119, "Member 'WDT_MapImage_C_UpdateFastTravelProhibited::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_UpdateFastTravelProhibited, CallFunc_GetMapFeatureTypeFromMap_OutFeatureType) == 0x000120, "Member 'WDT_MapImage_C_UpdateFastTravelProhibited::CallFunc_GetMapFeatureTypeFromMap_OutFeatureType' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_UpdateFastTravelProhibited, CallFunc_GetMapFeatureTypeFromMap_ReturnValue) == 0x000168, "Member 'WDT_MapImage_C_UpdateFastTravelProhibited::CallFunc_GetMapFeatureTypeFromMap_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_UpdateFastTravelProhibited, CallFunc_CanFastTravelToFeature_ReturnValue) == 0x000169, "Member 'WDT_MapImage_C_UpdateFastTravelProhibited::CallFunc_CanFastTravelToFeature_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_UpdateFastTravelProhibited, CallFunc_Not_PreBool_ReturnValue) == 0x00016A, "Member 'WDT_MapImage_C_UpdateFastTravelProhibited::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_UpdateFastTravelProhibited, CallFunc_BooleanOR_ReturnValue) == 0x00016B, "Member 'WDT_MapImage_C_UpdateFastTravelProhibited::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_UpdateFastTravelProhibited, CallFunc_Array_Length_ReturnValue) == 0x000120, "Member 'WDT_MapImage_C_UpdateFastTravelProhibited::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_UpdateFastTravelProhibited, K2Node_DynamicCast_AsWDT_Map_Feature_Symbol) == 0x000128, "Member 'WDT_MapImage_C_UpdateFastTravelProhibited::K2Node_DynamicCast_AsWDT_Map_Feature_Symbol' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_UpdateFastTravelProhibited, K2Node_DynamicCast_bSuccess) == 0x000130, "Member 'WDT_MapImage_C_UpdateFastTravelProhibited::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_UpdateFastTravelProhibited, CallFunc_Less_IntInt_ReturnValue) == 0x000131, "Member 'WDT_MapImage_C_UpdateFastTravelProhibited::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_UpdateFastTravelProhibited, CallFunc_GetMapFeatureTypeFromMap_OutFeatureType) == 0x000138, "Member 'WDT_MapImage_C_UpdateFastTravelProhibited::CallFunc_GetMapFeatureTypeFromMap_OutFeatureType' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_UpdateFastTravelProhibited, CallFunc_GetMapFeatureTypeFromMap_ReturnValue) == 0x000180, "Member 'WDT_MapImage_C_UpdateFastTravelProhibited::CallFunc_GetMapFeatureTypeFromMap_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_UpdateFastTravelProhibited, CallFunc_CanFastTravelToFeature_ReturnValue) == 0x000181, "Member 'WDT_MapImage_C_UpdateFastTravelProhibited::CallFunc_CanFastTravelToFeature_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_UpdateFastTravelProhibited, CallFunc_Not_PreBool_ReturnValue) == 0x000182, "Member 'WDT_MapImage_C_UpdateFastTravelProhibited::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_UpdateFastTravelProhibited, CallFunc_BooleanOR_ReturnValue) == 0x000183, "Member 'WDT_MapImage_C_UpdateFastTravelProhibited::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
 
 // Function WDT_MapImage.WDT_MapImage_C.RemovePhotoLogMap
 // 0x0020 (0x0020 - 0x0000)
@@ -3401,7 +3442,7 @@ static_assert(offsetof(WDT_MapImage_C_ToggleYadorigiList, CallFunc_GetCurrentReg
 static_assert(offsetof(WDT_MapImage_C_ToggleYadorigiList, CallFunc_GetRegionTagToRegionTabID_OutRegionName) == 0x000054, "Member 'WDT_MapImage_C_ToggleYadorigiList::CallFunc_GetRegionTagToRegionTabID_OutRegionName' has a wrong offset!");
 
 // Function WDT_MapImage.WDT_MapImage_C.SetLostExpMarkerAtStart
-// 0x01F8 (0x01F8 - 0x0000)
+// 0x02B8 (0x02B8 - 0x0000)
 struct WDT_MapImage_C_SetLostExpMarkerAtStart final
 {
 public:
@@ -3410,76 +3451,112 @@ public:
 	TArray<struct FFieldTargetManageData>         L_UserMarkerManageInfo;                            // 0x0028(0x0010)(Edit, BlueprintVisible, ContainsInstancedReference)
 	ESlateVisibility                              Temp_byte_Variable;                                // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3A[0x2];                                       // 0x003A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_GetMapSize_OutSize;                       // 0x0040(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector2D_X;                          // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector2D_Y;                          // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_GetMapPosition2D_OutPos;                  // 0x0060(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_BreakVector2D_X_1;                        // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector2D_Y_1;                        // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x003A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_2;                              // 0x003B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_3;                              // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFieldTargetInfo                       CallFunc_Array_Get_Item;                           // 0x0050(0x0038)(NoDestructor)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_InRange_FloatFloat_ReturnValue;           // 0x0089(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_InRange_FloatFloat_ReturnValue_1;         // 0x008A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8B[0x1];                                       // 0x008B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0089(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8A[0x2];                                       // 0x008A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x008C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_91[0x3];                                       // 0x0091(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTag                           CallFunc_GetCurrentFakeRegionTag_OutRegionTag;     // 0x0094(0x0008)(NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetCurrentFakeRegionTag_ReturnValue;      // 0x009C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9D[0x3];                                       // 0x009D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FFieldTargetInfo>               CallFunc_GetLostExpFieldTarget_OutFIeldTargetInfo; // 0x00A0(0x0010)(ReferenceParm)
-	bool                                          CallFunc_GetLostExpFieldTarget_OutFound;           // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x00B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B2[0x2];                                       // 0x00B2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x00B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFieldTargetInfo                       CallFunc_Array_Get_Item;                           // 0x00B8(0x0038)(NoDestructor)
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_F1[0x7];                                       // 0x00F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMapFeatureInfo                        CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo;  // 0x00F8(0x00E0)()
-	bool                                          CallFunc_GetMapFeatureInfoFromMap_ReturnValue;     // 0x01D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x01D9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1DA[0x6];                                      // 0x01DA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class AAppPlayerController*                   CallFunc_GetController_ReturnValue;                // 0x01E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UOverlaySlot*                           CallFunc_AddChildToOverlay_ReturnValue;            // 0x01E8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWDT_MapLostExpMarker_C*                CallFunc_Create_ReturnValue;                       // 0x01F0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              CallFunc_Conv_VectorToVector2D_ReturnValue;        // 0x0098(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_GetMapSize_OutSize;                       // 0x00A8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector2D_X;                          // 0x00B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector2D_Y;                          // 0x00C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_GetMapPosition2D_OutPos;                  // 0x00C8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector2D_X_1;                        // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector2D_Y_1;                        // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_Conv_VectorToVector2D_ReturnValue_1;      // 0x00E8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_InRange_FloatFloat_ReturnValue;           // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_InRange_FloatFloat_ReturnValue_1;         // 0x00F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00FA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_FB[0x1];                                       // 0x00FB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTag                           CallFunc_GetFakeRegionFromPosition_ReturnValue;    // 0x00FC(0x0008)(NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x0104(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_105[0x3];                                      // 0x0105(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              CallFunc_GetOuterCoordinateForRegion_OutOuterCoordinate; // 0x0108(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetOuterCoordinateForRegion_ReturnValue;  // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_119[0x7];                                      // 0x0119(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FFieldTargetInfo>               CallFunc_GetLostExpFieldTarget_OutFIeldTargetInfo; // 0x0120(0x0010)(ReferenceParm)
+	bool                                          CallFunc_GetLostExpFieldTarget_OutFound;           // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_131[0x7];                                      // 0x0131(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_Conv_Vector2DToVector_ReturnValue;        // 0x0138(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_GetMapSize_OutSize_1;                     // 0x0150(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FMapFeatureInfo                        CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo;  // 0x0160(0x00F8)()
+	bool                                          CallFunc_GetMapFeatureInfoFromMap_ReturnValue;     // 0x0258(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_259[0x7];                                      // 0x0259(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_BreakVector2D_X_2;                        // 0x0260(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector2D_Y_2;                        // 0x0268(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_GetMapPosition2D_OutPos_1;                // 0x0270(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector2D_X_3;                        // 0x0280(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector2D_Y_3;                        // 0x0288(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UOverlaySlot*                           CallFunc_AddChildToOverlay_ReturnValue;            // 0x0290(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_InRange_FloatFloat_ReturnValue_2;         // 0x0298(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_InRange_FloatFloat_ReturnValue_3;         // 0x0299(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x029A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29B[0x5];                                      // 0x029B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class AAppPlayerController*                   CallFunc_GetController_ReturnValue;                // 0x02A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UWDT_MapLostExpMarker_C*                CallFunc_Create_ReturnValue;                       // 0x02A8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default_1;                           // 0x02B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_MapImage_C_SetLostExpMarkerAtStart) == 0x000008, "Wrong alignment on WDT_MapImage_C_SetLostExpMarkerAtStart");
-static_assert(sizeof(WDT_MapImage_C_SetLostExpMarkerAtStart) == 0x0001F8, "Wrong size on WDT_MapImage_C_SetLostExpMarkerAtStart");
+static_assert(sizeof(WDT_MapImage_C_SetLostExpMarkerAtStart) == 0x0002B8, "Wrong size on WDT_MapImage_C_SetLostExpMarkerAtStart");
 static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, L_Position3D) == 0x000000, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::L_Position3D' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, L_LostExpFieldTargetInfo) == 0x000018, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::L_LostExpFieldTargetInfo' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, L_UserMarkerManageInfo) == 0x000028, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::L_UserMarkerManageInfo' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, Temp_byte_Variable) == 0x000038, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::Temp_byte_Variable' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, Temp_byte_Variable_1) == 0x000039, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_Array_Length_ReturnValue) == 0x00003C, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_GetMapSize_OutSize) == 0x000040, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_GetMapSize_OutSize' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_BreakVector2D_X) == 0x000050, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_BreakVector2D_X' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_BreakVector2D_Y) == 0x000058, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_BreakVector2D_Y' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_GetMapPosition2D_OutPos) == 0x000060, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_GetMapPosition2D_OutPos' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, Temp_int_Loop_Counter_Variable) == 0x000070, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_BreakVector2D_X_1) == 0x000078, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_BreakVector2D_X_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_BreakVector2D_Y_1) == 0x000080, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_BreakVector2D_Y_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, Temp_bool_Variable) == 0x00003A, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, Temp_byte_Variable_2) == 0x00003B, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::Temp_byte_Variable_2' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, Temp_byte_Variable_3) == 0x00003C, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::Temp_byte_Variable_3' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_Array_Length_ReturnValue) == 0x000040, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, Temp_int_Array_Index_Variable) == 0x000044, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, Temp_int_Loop_Counter_Variable) == 0x000048, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_Array_Get_Item) == 0x000050, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_Array_Get_Item' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_Less_IntInt_ReturnValue) == 0x000088, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_InRange_FloatFloat_ReturnValue) == 0x000089, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_InRange_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_InRange_FloatFloat_ReturnValue_1) == 0x00008A, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_InRange_FloatFloat_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, K2Node_SwitchEnum_CmpSuccess) == 0x000089, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_Add_IntInt_ReturnValue) == 0x00008C, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_BooleanAND_ReturnValue) == 0x000090, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_GetCurrentFakeRegionTag_OutRegionTag) == 0x000094, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_GetCurrentFakeRegionTag_OutRegionTag' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_GetCurrentFakeRegionTag_ReturnValue) == 0x00009C, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_GetCurrentFakeRegionTag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_GetLostExpFieldTarget_OutFIeldTargetInfo) == 0x0000A0, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_GetLostExpFieldTarget_OutFIeldTargetInfo' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_GetLostExpFieldTarget_OutFound) == 0x0000B0, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_GetLostExpFieldTarget_OutFound' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, Temp_bool_Variable) == 0x0000B1, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, Temp_int_Array_Index_Variable) == 0x0000B4, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_Array_Get_Item) == 0x0000B8, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, K2Node_Select_Default) == 0x0000F0, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo) == 0x0000F8, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_GetMapFeatureInfoFromMap_ReturnValue) == 0x0001D8, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_GetMapFeatureInfoFromMap_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, K2Node_SwitchEnum_CmpSuccess) == 0x0001D9, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_GetController_ReturnValue) == 0x0001E0, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_GetController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_AddChildToOverlay_ReturnValue) == 0x0001E8, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_AddChildToOverlay_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_Create_ReturnValue) == 0x0001F0, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_Create_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, Temp_bool_Variable_1) == 0x000090, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::Temp_bool_Variable_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_Conv_VectorToVector2D_ReturnValue) == 0x000098, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_Conv_VectorToVector2D_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_GetMapSize_OutSize) == 0x0000A8, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_GetMapSize_OutSize' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_BreakVector2D_X) == 0x0000B8, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_BreakVector2D_X' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_BreakVector2D_Y) == 0x0000C0, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_BreakVector2D_Y' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_GetMapPosition2D_OutPos) == 0x0000C8, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_GetMapPosition2D_OutPos' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_BreakVector2D_X_1) == 0x0000D8, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_BreakVector2D_X_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_BreakVector2D_Y_1) == 0x0000E0, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_BreakVector2D_Y_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_Conv_VectorToVector2D_ReturnValue_1) == 0x0000E8, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_Conv_VectorToVector2D_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_InRange_FloatFloat_ReturnValue) == 0x0000F8, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_InRange_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_InRange_FloatFloat_ReturnValue_1) == 0x0000F9, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_InRange_FloatFloat_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_BooleanAND_ReturnValue) == 0x0000FA, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_GetFakeRegionFromPosition_ReturnValue) == 0x0000FC, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_GetFakeRegionFromPosition_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, K2Node_Select_Default) == 0x000104, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_GetOuterCoordinateForRegion_OutOuterCoordinate) == 0x000108, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_GetOuterCoordinateForRegion_OutOuterCoordinate' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_GetOuterCoordinateForRegion_ReturnValue) == 0x000118, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_GetOuterCoordinateForRegion_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_GetLostExpFieldTarget_OutFIeldTargetInfo) == 0x000120, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_GetLostExpFieldTarget_OutFIeldTargetInfo' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_GetLostExpFieldTarget_OutFound) == 0x000130, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_GetLostExpFieldTarget_OutFound' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_Conv_Vector2DToVector_ReturnValue) == 0x000138, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_Conv_Vector2DToVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_GetMapSize_OutSize_1) == 0x000150, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_GetMapSize_OutSize_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo) == 0x000160, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_GetMapFeatureInfoFromMap_ReturnValue) == 0x000258, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_GetMapFeatureInfoFromMap_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_BreakVector2D_X_2) == 0x000260, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_BreakVector2D_X_2' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_BreakVector2D_Y_2) == 0x000268, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_BreakVector2D_Y_2' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_GetMapPosition2D_OutPos_1) == 0x000270, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_GetMapPosition2D_OutPos_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_BreakVector2D_X_3) == 0x000280, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_BreakVector2D_X_3' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_BreakVector2D_Y_3) == 0x000288, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_BreakVector2D_Y_3' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_AddChildToOverlay_ReturnValue) == 0x000290, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_AddChildToOverlay_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_InRange_FloatFloat_ReturnValue_2) == 0x000298, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_InRange_FloatFloat_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_InRange_FloatFloat_ReturnValue_3) == 0x000299, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_InRange_FloatFloat_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_BooleanAND_ReturnValue_1) == 0x00029A, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_GetController_ReturnValue) == 0x0002A0, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_GetController_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, CallFunc_Create_ReturnValue) == 0x0002A8, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::CallFunc_Create_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetLostExpMarkerAtStart, K2Node_Select_Default_1) == 0x0002B0, "Member 'WDT_MapImage_C_SetLostExpMarkerAtStart::K2Node_Select_Default_1' has a wrong offset!");
 
 // Function WDT_MapImage.WDT_MapImage_C.GetLostExpFieldTarget
 // 0x00B0 (0x00B0 - 0x0000)
@@ -3964,7 +4041,7 @@ static_assert(offsetof(WDT_MapImage_C_OpenFastTravelConfirmDialog, K2Node_Dynami
 static_assert(offsetof(WDT_MapImage_C_OpenFastTravelConfirmDialog, CallFunc_IsValid_ReturnValue_1) == 0x000081, "Member 'WDT_MapImage_C_OpenFastTravelConfirmDialog::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
 
 // Function WDT_MapImage.WDT_MapImage_C.ScaleMapIcon
-// 0x0190 (0x0190 - 0x0000)
+// 0x01A8 (0x01A8 - 0x0000)
 struct WDT_MapImage_C_ScaleMapIcon final
 {
 public:
@@ -3996,16 +4073,16 @@ public:
 	uint8                                         Pad_87[0x1];                                       // 0x0087(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Loop_Counter_Variable_2;                  // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_8C[0x4];                                       // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSTR_MapFeatureInfoUI                  CallFunc_Array_Get_Item_2;                         // 0x0090(0x00F0)(ContainsInstancedReference, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x0180(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0184(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_5;                    // 0x0185(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x0186(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_187[0x1];                                      // 0x0187(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0188(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSTR_MapFeatureInfoUI                  CallFunc_Array_Get_Item_2;                         // 0x0090(0x0108)(ContainsInstancedReference, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x0198(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x019C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_5;                    // 0x019D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x019E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19F[0x1];                                      // 0x019F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x01A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_MapImage_C_ScaleMapIcon) == 0x000008, "Wrong alignment on WDT_MapImage_C_ScaleMapIcon");
-static_assert(sizeof(WDT_MapImage_C_ScaleMapIcon) == 0x000190, "Wrong size on WDT_MapImage_C_ScaleMapIcon");
+static_assert(sizeof(WDT_MapImage_C_ScaleMapIcon) == 0x0001A8, "Wrong size on WDT_MapImage_C_ScaleMapIcon");
 static_assert(offsetof(WDT_MapImage_C_ScaleMapIcon, L_FeatureIconMinScale) == 0x000000, "Member 'WDT_MapImage_C_ScaleMapIcon::L_FeatureIconMinScale' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_ScaleMapIcon, L_FeatureIconMaxScale) == 0x000008, "Member 'WDT_MapImage_C_ScaleMapIcon::L_FeatureIconMaxScale' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_ScaleMapIcon, L_ScaleValue) == 0x000010, "Member 'WDT_MapImage_C_ScaleMapIcon::L_ScaleValue' has a wrong offset!");
@@ -4031,11 +4108,11 @@ static_assert(offsetof(WDT_MapImage_C_ScaleMapIcon, CallFunc_Less_IntInt_ReturnV
 static_assert(offsetof(WDT_MapImage_C_ScaleMapIcon, CallFunc_IsValid_ReturnValue_4) == 0x000086, "Member 'WDT_MapImage_C_ScaleMapIcon::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_ScaleMapIcon, Temp_int_Loop_Counter_Variable_2) == 0x000088, "Member 'WDT_MapImage_C_ScaleMapIcon::Temp_int_Loop_Counter_Variable_2' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_ScaleMapIcon, CallFunc_Array_Get_Item_2) == 0x000090, "Member 'WDT_MapImage_C_ScaleMapIcon::CallFunc_Array_Get_Item_2' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_ScaleMapIcon, CallFunc_Array_Length_ReturnValue_2) == 0x000180, "Member 'WDT_MapImage_C_ScaleMapIcon::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_ScaleMapIcon, CallFunc_Less_IntInt_ReturnValue_1) == 0x000184, "Member 'WDT_MapImage_C_ScaleMapIcon::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_ScaleMapIcon, CallFunc_IsValid_ReturnValue_5) == 0x000185, "Member 'WDT_MapImage_C_ScaleMapIcon::CallFunc_IsValid_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_ScaleMapIcon, CallFunc_Less_IntInt_ReturnValue_2) == 0x000186, "Member 'WDT_MapImage_C_ScaleMapIcon::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_ScaleMapIcon, CallFunc_Add_IntInt_ReturnValue_2) == 0x000188, "Member 'WDT_MapImage_C_ScaleMapIcon::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_ScaleMapIcon, CallFunc_Array_Length_ReturnValue_2) == 0x000198, "Member 'WDT_MapImage_C_ScaleMapIcon::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_ScaleMapIcon, CallFunc_Less_IntInt_ReturnValue_1) == 0x00019C, "Member 'WDT_MapImage_C_ScaleMapIcon::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_ScaleMapIcon, CallFunc_IsValid_ReturnValue_5) == 0x00019D, "Member 'WDT_MapImage_C_ScaleMapIcon::CallFunc_IsValid_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_ScaleMapIcon, CallFunc_Less_IntInt_ReturnValue_2) == 0x00019E, "Member 'WDT_MapImage_C_ScaleMapIcon::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_ScaleMapIcon, CallFunc_Add_IntInt_ReturnValue_2) == 0x0001A0, "Member 'WDT_MapImage_C_ScaleMapIcon::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
 
 // Function WDT_MapImage.WDT_MapImage_C.SwitchToNexTimeSeries
 // 0x0014 (0x0014 - 0x0000)
@@ -4077,152 +4154,152 @@ static_assert(offsetof(WDT_MapImage_C_SwitchToPrevTimeSeries, CallFunc_GreaterEq
 static_assert(offsetof(WDT_MapImage_C_SwitchToPrevTimeSeries, CallFunc_Add_IntInt_ReturnValue_1) == 0x000010, "Member 'WDT_MapImage_C_SwitchToPrevTimeSeries::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
 
 // Function WDT_MapImage.WDT_MapImage_C.DetectMapFeature
-// 0x0488 (0x0488 - 0x0000)
+// 0x04E8 (0x04E8 - 0x0000)
 struct WDT_MapImage_C_DetectMapFeature final
 {
 public:
 	class FName                                   InFeatureTypeId;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bDetected;                                         // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSTR_MapFeatureInfoUI                  OutFeatureInfo;                                    // 0x0010(0x00F0)(Parm, OutParm, ContainsInstancedReference, HasGetValueTypeHash)
-	struct FSTR_MapFeatureInfoUI                  L_DetectedFeatureInfo;                             // 0x0100(0x00F0)(Edit, BlueprintVisible, ContainsInstancedReference, HasGetValueTypeHash)
-	struct FVector2D                              L_CurosrPosition;                                  // 0x01F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSTR_MapFeatureInfoUI                  L_DetectedNearestFeatureInfo;                      // 0x0200(0x00F0)(Edit, BlueprintVisible, ContainsInstancedReference, HasGetValueTypeHash)
-	bool                                          L_Detected;                                        // 0x02F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2F1[0x3];                                      // 0x02F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x02F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x02F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2F9[0x3];                                      // 0x02F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTag                           CallFunc_GetGameplayTagFromString_ReturnValue;     // 0x02FC(0x0008)(NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_304[0x4];                                      // 0x0304(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              CallFunc_GetFeatureMap2DPosition_NewParam;         // 0x0308(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_Subtract_Vector2DVector2D_ReturnValue;    // 0x0318(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_VSize2D_ReturnValue;                      // 0x0328(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_GetCursorCenterPosition_OutCursorTranslation; // 0x0330(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           CallFunc_GetGameplayTagFromString_ReturnValue_1;   // 0x0340(0x0008)(NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_GetFeatureMap2DPosition_NewParam_1;       // 0x0348(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0358(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_35C[0x4];                                      // 0x035C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              CallFunc_Subtract_Vector2DVector2D_ReturnValue_1;  // 0x0360(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_VSize2D_ReturnValue_1;                    // 0x0370(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0378(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x037C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_37D[0x3];                                      // 0x037D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0380(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_384[0x4];                                      // 0x0384(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSTR_MapFeatureInfoUI                  CallFunc_Array_Get_Item;                           // 0x0388(0x00F0)(ContainsInstancedReference, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0478(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsInDetectionRange_InRange;               // 0x0479(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_NameName_ReturnValue_1;        // 0x047A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x047B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47C[0x4];                                      // 0x047C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_IsInDetectionRange_InDetectionRange_ImplicitCast; // 0x0480(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSTR_MapFeatureInfoUI                  OutFeatureInfo;                                    // 0x0010(0x0108)(Parm, OutParm, ContainsInstancedReference, HasGetValueTypeHash)
+	struct FSTR_MapFeatureInfoUI                  L_DetectedFeatureInfo;                             // 0x0118(0x0108)(Edit, BlueprintVisible, ContainsInstancedReference, HasGetValueTypeHash)
+	struct FVector2D                              L_CurosrPosition;                                  // 0x0220(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSTR_MapFeatureInfoUI                  L_DetectedNearestFeatureInfo;                      // 0x0230(0x0108)(Edit, BlueprintVisible, ContainsInstancedReference, HasGetValueTypeHash)
+	bool                                          L_Detected;                                        // 0x0338(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_339[0x3];                                      // 0x0339(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x033C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x0340(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_341[0x3];                                      // 0x0341(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTag                           CallFunc_GetGameplayTagFromString_ReturnValue;     // 0x0344(0x0008)(NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_34C[0x4];                                      // 0x034C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              CallFunc_GetFeatureMap2DPosition_NewParam;         // 0x0350(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_Subtract_Vector2DVector2D_ReturnValue;    // 0x0360(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_VSize2D_ReturnValue;                      // 0x0370(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_GetCursorCenterPosition_OutCursorTranslation; // 0x0378(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           CallFunc_GetGameplayTagFromString_ReturnValue_1;   // 0x0388(0x0008)(NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_GetFeatureMap2DPosition_NewParam_1;       // 0x0390(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x03A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3A4[0x4];                                      // 0x03A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              CallFunc_Subtract_Vector2DVector2D_ReturnValue_1;  // 0x03A8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_VSize2D_ReturnValue_1;                    // 0x03B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x03C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x03C4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3C5[0x3];                                      // 0x03C5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x03C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3CC[0x4];                                      // 0x03CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSTR_MapFeatureInfoUI                  CallFunc_Array_Get_Item;                           // 0x03D0(0x0108)(ContainsInstancedReference, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x04D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsInDetectionRange_InRange;               // 0x04D9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_NameName_ReturnValue_1;        // 0x04DA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x04DB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4DC[0x4];                                      // 0x04DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_IsInDetectionRange_InDetectionRange_ImplicitCast; // 0x04E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_MapImage_C_DetectMapFeature) == 0x000008, "Wrong alignment on WDT_MapImage_C_DetectMapFeature");
-static_assert(sizeof(WDT_MapImage_C_DetectMapFeature) == 0x000488, "Wrong size on WDT_MapImage_C_DetectMapFeature");
+static_assert(sizeof(WDT_MapImage_C_DetectMapFeature) == 0x0004E8, "Wrong size on WDT_MapImage_C_DetectMapFeature");
 static_assert(offsetof(WDT_MapImage_C_DetectMapFeature, InFeatureTypeId) == 0x000000, "Member 'WDT_MapImage_C_DetectMapFeature::InFeatureTypeId' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_DetectMapFeature, bDetected) == 0x000008, "Member 'WDT_MapImage_C_DetectMapFeature::bDetected' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_DetectMapFeature, OutFeatureInfo) == 0x000010, "Member 'WDT_MapImage_C_DetectMapFeature::OutFeatureInfo' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_DetectMapFeature, L_DetectedFeatureInfo) == 0x000100, "Member 'WDT_MapImage_C_DetectMapFeature::L_DetectedFeatureInfo' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_DetectMapFeature, L_CurosrPosition) == 0x0001F0, "Member 'WDT_MapImage_C_DetectMapFeature::L_CurosrPosition' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_DetectMapFeature, L_DetectedNearestFeatureInfo) == 0x000200, "Member 'WDT_MapImage_C_DetectMapFeature::L_DetectedNearestFeatureInfo' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_DetectMapFeature, L_Detected) == 0x0002F0, "Member 'WDT_MapImage_C_DetectMapFeature::L_Detected' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_DetectMapFeature, Temp_int_Array_Index_Variable) == 0x0002F4, "Member 'WDT_MapImage_C_DetectMapFeature::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_DetectMapFeature, CallFunc_EqualEqual_NameName_ReturnValue) == 0x0002F8, "Member 'WDT_MapImage_C_DetectMapFeature::CallFunc_EqualEqual_NameName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_DetectMapFeature, CallFunc_GetGameplayTagFromString_ReturnValue) == 0x0002FC, "Member 'WDT_MapImage_C_DetectMapFeature::CallFunc_GetGameplayTagFromString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_DetectMapFeature, CallFunc_GetFeatureMap2DPosition_NewParam) == 0x000308, "Member 'WDT_MapImage_C_DetectMapFeature::CallFunc_GetFeatureMap2DPosition_NewParam' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_DetectMapFeature, CallFunc_Subtract_Vector2DVector2D_ReturnValue) == 0x000318, "Member 'WDT_MapImage_C_DetectMapFeature::CallFunc_Subtract_Vector2DVector2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_DetectMapFeature, CallFunc_VSize2D_ReturnValue) == 0x000328, "Member 'WDT_MapImage_C_DetectMapFeature::CallFunc_VSize2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_DetectMapFeature, CallFunc_GetCursorCenterPosition_OutCursorTranslation) == 0x000330, "Member 'WDT_MapImage_C_DetectMapFeature::CallFunc_GetCursorCenterPosition_OutCursorTranslation' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_DetectMapFeature, CallFunc_GetGameplayTagFromString_ReturnValue_1) == 0x000340, "Member 'WDT_MapImage_C_DetectMapFeature::CallFunc_GetGameplayTagFromString_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_DetectMapFeature, CallFunc_GetFeatureMap2DPosition_NewParam_1) == 0x000348, "Member 'WDT_MapImage_C_DetectMapFeature::CallFunc_GetFeatureMap2DPosition_NewParam_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_DetectMapFeature, Temp_int_Loop_Counter_Variable) == 0x000358, "Member 'WDT_MapImage_C_DetectMapFeature::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_DetectMapFeature, CallFunc_Subtract_Vector2DVector2D_ReturnValue_1) == 0x000360, "Member 'WDT_MapImage_C_DetectMapFeature::CallFunc_Subtract_Vector2DVector2D_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_DetectMapFeature, CallFunc_VSize2D_ReturnValue_1) == 0x000370, "Member 'WDT_MapImage_C_DetectMapFeature::CallFunc_VSize2D_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_DetectMapFeature, CallFunc_Add_IntInt_ReturnValue) == 0x000378, "Member 'WDT_MapImage_C_DetectMapFeature::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_DetectMapFeature, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x00037C, "Member 'WDT_MapImage_C_DetectMapFeature::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_DetectMapFeature, CallFunc_Array_Length_ReturnValue) == 0x000380, "Member 'WDT_MapImage_C_DetectMapFeature::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_DetectMapFeature, CallFunc_Array_Get_Item) == 0x000388, "Member 'WDT_MapImage_C_DetectMapFeature::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_DetectMapFeature, CallFunc_Less_IntInt_ReturnValue) == 0x000478, "Member 'WDT_MapImage_C_DetectMapFeature::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_DetectMapFeature, CallFunc_IsInDetectionRange_InRange) == 0x000479, "Member 'WDT_MapImage_C_DetectMapFeature::CallFunc_IsInDetectionRange_InRange' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_DetectMapFeature, CallFunc_EqualEqual_NameName_ReturnValue_1) == 0x00047A, "Member 'WDT_MapImage_C_DetectMapFeature::CallFunc_EqualEqual_NameName_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_DetectMapFeature, CallFunc_BooleanOR_ReturnValue) == 0x00047B, "Member 'WDT_MapImage_C_DetectMapFeature::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_DetectMapFeature, CallFunc_IsInDetectionRange_InDetectionRange_ImplicitCast) == 0x000480, "Member 'WDT_MapImage_C_DetectMapFeature::CallFunc_IsInDetectionRange_InDetectionRange_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_DetectMapFeature, L_DetectedFeatureInfo) == 0x000118, "Member 'WDT_MapImage_C_DetectMapFeature::L_DetectedFeatureInfo' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_DetectMapFeature, L_CurosrPosition) == 0x000220, "Member 'WDT_MapImage_C_DetectMapFeature::L_CurosrPosition' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_DetectMapFeature, L_DetectedNearestFeatureInfo) == 0x000230, "Member 'WDT_MapImage_C_DetectMapFeature::L_DetectedNearestFeatureInfo' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_DetectMapFeature, L_Detected) == 0x000338, "Member 'WDT_MapImage_C_DetectMapFeature::L_Detected' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_DetectMapFeature, Temp_int_Array_Index_Variable) == 0x00033C, "Member 'WDT_MapImage_C_DetectMapFeature::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_DetectMapFeature, CallFunc_EqualEqual_NameName_ReturnValue) == 0x000340, "Member 'WDT_MapImage_C_DetectMapFeature::CallFunc_EqualEqual_NameName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_DetectMapFeature, CallFunc_GetGameplayTagFromString_ReturnValue) == 0x000344, "Member 'WDT_MapImage_C_DetectMapFeature::CallFunc_GetGameplayTagFromString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_DetectMapFeature, CallFunc_GetFeatureMap2DPosition_NewParam) == 0x000350, "Member 'WDT_MapImage_C_DetectMapFeature::CallFunc_GetFeatureMap2DPosition_NewParam' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_DetectMapFeature, CallFunc_Subtract_Vector2DVector2D_ReturnValue) == 0x000360, "Member 'WDT_MapImage_C_DetectMapFeature::CallFunc_Subtract_Vector2DVector2D_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_DetectMapFeature, CallFunc_VSize2D_ReturnValue) == 0x000370, "Member 'WDT_MapImage_C_DetectMapFeature::CallFunc_VSize2D_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_DetectMapFeature, CallFunc_GetCursorCenterPosition_OutCursorTranslation) == 0x000378, "Member 'WDT_MapImage_C_DetectMapFeature::CallFunc_GetCursorCenterPosition_OutCursorTranslation' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_DetectMapFeature, CallFunc_GetGameplayTagFromString_ReturnValue_1) == 0x000388, "Member 'WDT_MapImage_C_DetectMapFeature::CallFunc_GetGameplayTagFromString_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_DetectMapFeature, CallFunc_GetFeatureMap2DPosition_NewParam_1) == 0x000390, "Member 'WDT_MapImage_C_DetectMapFeature::CallFunc_GetFeatureMap2DPosition_NewParam_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_DetectMapFeature, Temp_int_Loop_Counter_Variable) == 0x0003A0, "Member 'WDT_MapImage_C_DetectMapFeature::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_DetectMapFeature, CallFunc_Subtract_Vector2DVector2D_ReturnValue_1) == 0x0003A8, "Member 'WDT_MapImage_C_DetectMapFeature::CallFunc_Subtract_Vector2DVector2D_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_DetectMapFeature, CallFunc_VSize2D_ReturnValue_1) == 0x0003B8, "Member 'WDT_MapImage_C_DetectMapFeature::CallFunc_VSize2D_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_DetectMapFeature, CallFunc_Add_IntInt_ReturnValue) == 0x0003C0, "Member 'WDT_MapImage_C_DetectMapFeature::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_DetectMapFeature, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x0003C4, "Member 'WDT_MapImage_C_DetectMapFeature::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_DetectMapFeature, CallFunc_Array_Length_ReturnValue) == 0x0003C8, "Member 'WDT_MapImage_C_DetectMapFeature::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_DetectMapFeature, CallFunc_Array_Get_Item) == 0x0003D0, "Member 'WDT_MapImage_C_DetectMapFeature::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_DetectMapFeature, CallFunc_Less_IntInt_ReturnValue) == 0x0004D8, "Member 'WDT_MapImage_C_DetectMapFeature::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_DetectMapFeature, CallFunc_IsInDetectionRange_InRange) == 0x0004D9, "Member 'WDT_MapImage_C_DetectMapFeature::CallFunc_IsInDetectionRange_InRange' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_DetectMapFeature, CallFunc_EqualEqual_NameName_ReturnValue_1) == 0x0004DA, "Member 'WDT_MapImage_C_DetectMapFeature::CallFunc_EqualEqual_NameName_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_DetectMapFeature, CallFunc_BooleanOR_ReturnValue) == 0x0004DB, "Member 'WDT_MapImage_C_DetectMapFeature::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_DetectMapFeature, CallFunc_IsInDetectionRange_InDetectionRange_ImplicitCast) == 0x0004E0, "Member 'WDT_MapImage_C_DetectMapFeature::CallFunc_IsInDetectionRange_InDetectionRange_ImplicitCast' has a wrong offset!");
 
 // Function WDT_MapImage.WDT_MapImage_C.DetectFastTravelFeature
-// 0x04D0 (0x04D0 - 0x0000)
+// 0x0530 (0x0530 - 0x0000)
 struct WDT_MapImage_C_DetectFastTravelFeature final
 {
 public:
 	bool                                          bDetected;                                         // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSTR_MapFeatureInfoUI                  OutFeatureInfo;                                    // 0x0008(0x00F0)(Parm, OutParm, ContainsInstancedReference, HasGetValueTypeHash)
-	struct FSTR_MapFeatureInfoUI                  L_DetectedNearestFeatureInfo;                      // 0x00F8(0x00F0)(Edit, BlueprintVisible, ContainsInstancedReference, HasGetValueTypeHash)
-	struct FVector2D                              L_CursorPosition;                                  // 0x01E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSTR_MapFeatureInfoUI                  L_DetectedFeatureInfo;                             // 0x01F8(0x00F0)(Edit, BlueprintVisible, ContainsInstancedReference, HasGetValueTypeHash)
-	bool                                          L_Detected;                                        // 0x02E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2E9[0x3];                                      // 0x02E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x02EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_GetMapSize_OutSize;                       // 0x02F0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_GetMapPosition2D_OutPos;                  // 0x0300(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_Subtract_Vector2DVector2D_ReturnValue;    // 0x0310(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_VSize2D_ReturnValue;                      // 0x0320(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_GetMapSize_OutSize_1;                     // 0x0328(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_GetMapPosition2D_OutPos_1;                // 0x0338(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_Subtract_Vector2DVector2D_ReturnValue_1;  // 0x0348(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_VSize2D_ReturnValue_1;                    // 0x0358(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0360(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_361[0x7];                                      // 0x0361(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              CallFunc_GetCursorCenterPosition_OutCursorTranslation; // 0x0368(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0378(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x037C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0380(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_384[0x4];                                      // 0x0384(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSTR_MapFeatureInfoUI                  CallFunc_Array_Get_Item;                           // 0x0388(0x00F0)(ContainsInstancedReference, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0478(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsInDetectionRange_InRange;               // 0x0479(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_CanFastTravelFeatureTypeByFeatureId_OutCanFastTravel; // 0x047A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetFastTravelLocation_OutResult;          // 0x047B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47C[0x4];                                      // 0x047C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_GetFastTravelLocation_OutLocation;        // 0x0480(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_GetFastTravelLocation_OutPlayerRotation;  // 0x0498(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FRotator                               CallFunc_GetFastTravelLocation_OutCameraRotation;  // 0x04B0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	double                                        CallFunc_IsInDetectionRange_InDetectionRange_ImplicitCast; // 0x04C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSTR_MapFeatureInfoUI                  OutFeatureInfo;                                    // 0x0008(0x0108)(Parm, OutParm, ContainsInstancedReference, HasGetValueTypeHash)
+	struct FSTR_MapFeatureInfoUI                  L_DetectedNearestFeatureInfo;                      // 0x0110(0x0108)(Edit, BlueprintVisible, ContainsInstancedReference, HasGetValueTypeHash)
+	struct FVector2D                              L_CursorPosition;                                  // 0x0218(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSTR_MapFeatureInfoUI                  L_DetectedFeatureInfo;                             // 0x0228(0x0108)(Edit, BlueprintVisible, ContainsInstancedReference, HasGetValueTypeHash)
+	bool                                          L_Detected;                                        // 0x0330(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_331[0x3];                                      // 0x0331(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0334(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_GetMapSize_OutSize;                       // 0x0338(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_GetMapPosition2D_OutPos;                  // 0x0348(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_Subtract_Vector2DVector2D_ReturnValue;    // 0x0358(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_VSize2D_ReturnValue;                      // 0x0368(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_GetMapSize_OutSize_1;                     // 0x0370(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_GetMapPosition2D_OutPos_1;                // 0x0380(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_Subtract_Vector2DVector2D_ReturnValue_1;  // 0x0390(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_VSize2D_ReturnValue_1;                    // 0x03A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x03A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3A9[0x7];                                      // 0x03A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              CallFunc_GetCursorCenterPosition_OutCursorTranslation; // 0x03B0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x03C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x03C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x03C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3CC[0x4];                                      // 0x03CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSTR_MapFeatureInfoUI                  CallFunc_Array_Get_Item;                           // 0x03D0(0x0108)(ContainsInstancedReference, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x04D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsInDetectionRange_InRange;               // 0x04D9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_CanFastTravelFeatureTypeByFeatureId_OutCanFastTravel; // 0x04DA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetFastTravelLocation_OutResult;          // 0x04DB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4DC[0x4];                                      // 0x04DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_GetFastTravelLocation_OutLocation;        // 0x04E0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_GetFastTravelLocation_OutPlayerRotation;  // 0x04F8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FRotator                               CallFunc_GetFastTravelLocation_OutCameraRotation;  // 0x0510(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	double                                        CallFunc_IsInDetectionRange_InDetectionRange_ImplicitCast; // 0x0528(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_MapImage_C_DetectFastTravelFeature) == 0x000008, "Wrong alignment on WDT_MapImage_C_DetectFastTravelFeature");
-static_assert(sizeof(WDT_MapImage_C_DetectFastTravelFeature) == 0x0004D0, "Wrong size on WDT_MapImage_C_DetectFastTravelFeature");
+static_assert(sizeof(WDT_MapImage_C_DetectFastTravelFeature) == 0x000530, "Wrong size on WDT_MapImage_C_DetectFastTravelFeature");
 static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, bDetected) == 0x000000, "Member 'WDT_MapImage_C_DetectFastTravelFeature::bDetected' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, OutFeatureInfo) == 0x000008, "Member 'WDT_MapImage_C_DetectFastTravelFeature::OutFeatureInfo' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, L_DetectedNearestFeatureInfo) == 0x0000F8, "Member 'WDT_MapImage_C_DetectFastTravelFeature::L_DetectedNearestFeatureInfo' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, L_CursorPosition) == 0x0001E8, "Member 'WDT_MapImage_C_DetectFastTravelFeature::L_CursorPosition' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, L_DetectedFeatureInfo) == 0x0001F8, "Member 'WDT_MapImage_C_DetectFastTravelFeature::L_DetectedFeatureInfo' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, L_Detected) == 0x0002E8, "Member 'WDT_MapImage_C_DetectFastTravelFeature::L_Detected' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, Temp_int_Array_Index_Variable) == 0x0002EC, "Member 'WDT_MapImage_C_DetectFastTravelFeature::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, CallFunc_GetMapSize_OutSize) == 0x0002F0, "Member 'WDT_MapImage_C_DetectFastTravelFeature::CallFunc_GetMapSize_OutSize' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, CallFunc_GetMapPosition2D_OutPos) == 0x000300, "Member 'WDT_MapImage_C_DetectFastTravelFeature::CallFunc_GetMapPosition2D_OutPos' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, CallFunc_Subtract_Vector2DVector2D_ReturnValue) == 0x000310, "Member 'WDT_MapImage_C_DetectFastTravelFeature::CallFunc_Subtract_Vector2DVector2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, CallFunc_VSize2D_ReturnValue) == 0x000320, "Member 'WDT_MapImage_C_DetectFastTravelFeature::CallFunc_VSize2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, CallFunc_GetMapSize_OutSize_1) == 0x000328, "Member 'WDT_MapImage_C_DetectFastTravelFeature::CallFunc_GetMapSize_OutSize_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, CallFunc_GetMapPosition2D_OutPos_1) == 0x000338, "Member 'WDT_MapImage_C_DetectFastTravelFeature::CallFunc_GetMapPosition2D_OutPos_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, CallFunc_Subtract_Vector2DVector2D_ReturnValue_1) == 0x000348, "Member 'WDT_MapImage_C_DetectFastTravelFeature::CallFunc_Subtract_Vector2DVector2D_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, CallFunc_VSize2D_ReturnValue_1) == 0x000358, "Member 'WDT_MapImage_C_DetectFastTravelFeature::CallFunc_VSize2D_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000360, "Member 'WDT_MapImage_C_DetectFastTravelFeature::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, CallFunc_GetCursorCenterPosition_OutCursorTranslation) == 0x000368, "Member 'WDT_MapImage_C_DetectFastTravelFeature::CallFunc_GetCursorCenterPosition_OutCursorTranslation' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, Temp_int_Loop_Counter_Variable) == 0x000378, "Member 'WDT_MapImage_C_DetectFastTravelFeature::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, CallFunc_Add_IntInt_ReturnValue) == 0x00037C, "Member 'WDT_MapImage_C_DetectFastTravelFeature::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, CallFunc_Array_Length_ReturnValue) == 0x000380, "Member 'WDT_MapImage_C_DetectFastTravelFeature::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, CallFunc_Array_Get_Item) == 0x000388, "Member 'WDT_MapImage_C_DetectFastTravelFeature::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, CallFunc_Less_IntInt_ReturnValue) == 0x000478, "Member 'WDT_MapImage_C_DetectFastTravelFeature::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, CallFunc_IsInDetectionRange_InRange) == 0x000479, "Member 'WDT_MapImage_C_DetectFastTravelFeature::CallFunc_IsInDetectionRange_InRange' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, CallFunc_CanFastTravelFeatureTypeByFeatureId_OutCanFastTravel) == 0x00047A, "Member 'WDT_MapImage_C_DetectFastTravelFeature::CallFunc_CanFastTravelFeatureTypeByFeatureId_OutCanFastTravel' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, CallFunc_GetFastTravelLocation_OutResult) == 0x00047B, "Member 'WDT_MapImage_C_DetectFastTravelFeature::CallFunc_GetFastTravelLocation_OutResult' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, CallFunc_GetFastTravelLocation_OutLocation) == 0x000480, "Member 'WDT_MapImage_C_DetectFastTravelFeature::CallFunc_GetFastTravelLocation_OutLocation' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, CallFunc_GetFastTravelLocation_OutPlayerRotation) == 0x000498, "Member 'WDT_MapImage_C_DetectFastTravelFeature::CallFunc_GetFastTravelLocation_OutPlayerRotation' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, CallFunc_GetFastTravelLocation_OutCameraRotation) == 0x0004B0, "Member 'WDT_MapImage_C_DetectFastTravelFeature::CallFunc_GetFastTravelLocation_OutCameraRotation' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, CallFunc_IsInDetectionRange_InDetectionRange_ImplicitCast) == 0x0004C8, "Member 'WDT_MapImage_C_DetectFastTravelFeature::CallFunc_IsInDetectionRange_InDetectionRange_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, L_DetectedNearestFeatureInfo) == 0x000110, "Member 'WDT_MapImage_C_DetectFastTravelFeature::L_DetectedNearestFeatureInfo' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, L_CursorPosition) == 0x000218, "Member 'WDT_MapImage_C_DetectFastTravelFeature::L_CursorPosition' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, L_DetectedFeatureInfo) == 0x000228, "Member 'WDT_MapImage_C_DetectFastTravelFeature::L_DetectedFeatureInfo' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, L_Detected) == 0x000330, "Member 'WDT_MapImage_C_DetectFastTravelFeature::L_Detected' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, Temp_int_Array_Index_Variable) == 0x000334, "Member 'WDT_MapImage_C_DetectFastTravelFeature::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, CallFunc_GetMapSize_OutSize) == 0x000338, "Member 'WDT_MapImage_C_DetectFastTravelFeature::CallFunc_GetMapSize_OutSize' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, CallFunc_GetMapPosition2D_OutPos) == 0x000348, "Member 'WDT_MapImage_C_DetectFastTravelFeature::CallFunc_GetMapPosition2D_OutPos' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, CallFunc_Subtract_Vector2DVector2D_ReturnValue) == 0x000358, "Member 'WDT_MapImage_C_DetectFastTravelFeature::CallFunc_Subtract_Vector2DVector2D_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, CallFunc_VSize2D_ReturnValue) == 0x000368, "Member 'WDT_MapImage_C_DetectFastTravelFeature::CallFunc_VSize2D_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, CallFunc_GetMapSize_OutSize_1) == 0x000370, "Member 'WDT_MapImage_C_DetectFastTravelFeature::CallFunc_GetMapSize_OutSize_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, CallFunc_GetMapPosition2D_OutPos_1) == 0x000380, "Member 'WDT_MapImage_C_DetectFastTravelFeature::CallFunc_GetMapPosition2D_OutPos_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, CallFunc_Subtract_Vector2DVector2D_ReturnValue_1) == 0x000390, "Member 'WDT_MapImage_C_DetectFastTravelFeature::CallFunc_Subtract_Vector2DVector2D_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, CallFunc_VSize2D_ReturnValue_1) == 0x0003A0, "Member 'WDT_MapImage_C_DetectFastTravelFeature::CallFunc_VSize2D_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x0003A8, "Member 'WDT_MapImage_C_DetectFastTravelFeature::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, CallFunc_GetCursorCenterPosition_OutCursorTranslation) == 0x0003B0, "Member 'WDT_MapImage_C_DetectFastTravelFeature::CallFunc_GetCursorCenterPosition_OutCursorTranslation' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, Temp_int_Loop_Counter_Variable) == 0x0003C0, "Member 'WDT_MapImage_C_DetectFastTravelFeature::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, CallFunc_Add_IntInt_ReturnValue) == 0x0003C4, "Member 'WDT_MapImage_C_DetectFastTravelFeature::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, CallFunc_Array_Length_ReturnValue) == 0x0003C8, "Member 'WDT_MapImage_C_DetectFastTravelFeature::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, CallFunc_Array_Get_Item) == 0x0003D0, "Member 'WDT_MapImage_C_DetectFastTravelFeature::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, CallFunc_Less_IntInt_ReturnValue) == 0x0004D8, "Member 'WDT_MapImage_C_DetectFastTravelFeature::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, CallFunc_IsInDetectionRange_InRange) == 0x0004D9, "Member 'WDT_MapImage_C_DetectFastTravelFeature::CallFunc_IsInDetectionRange_InRange' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, CallFunc_CanFastTravelFeatureTypeByFeatureId_OutCanFastTravel) == 0x0004DA, "Member 'WDT_MapImage_C_DetectFastTravelFeature::CallFunc_CanFastTravelFeatureTypeByFeatureId_OutCanFastTravel' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, CallFunc_GetFastTravelLocation_OutResult) == 0x0004DB, "Member 'WDT_MapImage_C_DetectFastTravelFeature::CallFunc_GetFastTravelLocation_OutResult' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, CallFunc_GetFastTravelLocation_OutLocation) == 0x0004E0, "Member 'WDT_MapImage_C_DetectFastTravelFeature::CallFunc_GetFastTravelLocation_OutLocation' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, CallFunc_GetFastTravelLocation_OutPlayerRotation) == 0x0004F8, "Member 'WDT_MapImage_C_DetectFastTravelFeature::CallFunc_GetFastTravelLocation_OutPlayerRotation' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, CallFunc_GetFastTravelLocation_OutCameraRotation) == 0x000510, "Member 'WDT_MapImage_C_DetectFastTravelFeature::CallFunc_GetFastTravelLocation_OutCameraRotation' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_DetectFastTravelFeature, CallFunc_IsInDetectionRange_InDetectionRange_ImplicitCast) == 0x000528, "Member 'WDT_MapImage_C_DetectFastTravelFeature::CallFunc_IsInDetectionRange_InDetectionRange_ImplicitCast' has a wrong offset!");
 
 // Function WDT_MapImage.WDT_MapImage_C.SetQuestMarkerAtStart
-// 0x01D0 (0x01D0 - 0x0000)
+// 0x01E8 (0x01E8 - 0x0000)
 struct WDT_MapImage_C_SetQuestMarkerAtStart final
 {
 public:
@@ -4239,21 +4316,21 @@ public:
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0075(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_76[0x2];                                       // 0x0076(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              CallFunc_GetMapSize_OutSize;                       // 0x0078(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FMapFeatureInfo                        CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo;  // 0x0088(0x00E0)()
-	bool                                          CallFunc_GetMapFeatureInfoFromMap_ReturnValue;     // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_169[0x7];                                      // 0x0169(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              CallFunc_GetMapSize_OutSize_1;                     // 0x0170(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_GetMapPosition2D_OutPos;                  // 0x0180(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_GetMapPosition2D_OutPos_1;                // 0x0190(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UOverlaySlot*                           CallFunc_AddChildToOverlay_ReturnValue;            // 0x01A0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class AAppPlayerController*                   CallFunc_GetController_ReturnValue;                // 0x01A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FFieldTargetInfo>               CallFunc_GetQuestFieldTarget_OutFIeldTargetInfo;   // 0x01B0(0x0010)(ReferenceParm)
-	bool                                          CallFunc_GetQuestFieldTarget_OutFound;             // 0x01C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1C1[0x7];                                      // 0x01C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWDT_MapQuestMarker_C*                  CallFunc_Create_ReturnValue;                       // 0x01C8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FMapFeatureInfo                        CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo;  // 0x0088(0x00F8)()
+	bool                                          CallFunc_GetMapFeatureInfoFromMap_ReturnValue;     // 0x0180(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_181[0x7];                                      // 0x0181(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              CallFunc_GetMapSize_OutSize_1;                     // 0x0188(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_GetMapPosition2D_OutPos;                  // 0x0198(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_GetMapPosition2D_OutPos_1;                // 0x01A8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UOverlaySlot*                           CallFunc_AddChildToOverlay_ReturnValue;            // 0x01B8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class AAppPlayerController*                   CallFunc_GetController_ReturnValue;                // 0x01C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FFieldTargetInfo>               CallFunc_GetQuestFieldTarget_OutFIeldTargetInfo;   // 0x01C8(0x0010)(ReferenceParm)
+	bool                                          CallFunc_GetQuestFieldTarget_OutFound;             // 0x01D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1D9[0x7];                                      // 0x01D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWDT_MapQuestMarker_C*                  CallFunc_Create_ReturnValue;                       // 0x01E0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_MapImage_C_SetQuestMarkerAtStart) == 0x000008, "Wrong alignment on WDT_MapImage_C_SetQuestMarkerAtStart");
-static_assert(sizeof(WDT_MapImage_C_SetQuestMarkerAtStart) == 0x0001D0, "Wrong size on WDT_MapImage_C_SetQuestMarkerAtStart");
+static_assert(sizeof(WDT_MapImage_C_SetQuestMarkerAtStart) == 0x0001E8, "Wrong size on WDT_MapImage_C_SetQuestMarkerAtStart");
 static_assert(offsetof(WDT_MapImage_C_SetQuestMarkerAtStart, L_QuestMarkerWidget) == 0x000000, "Member 'WDT_MapImage_C_SetQuestMarkerAtStart::L_QuestMarkerWidget' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_SetQuestMarkerAtStart, L_QuestFieldTargetInfo) == 0x000008, "Member 'WDT_MapImage_C_SetQuestMarkerAtStart::L_QuestFieldTargetInfo' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_SetQuestMarkerAtStart, L_UserMarkerManageInfo) == 0x000018, "Member 'WDT_MapImage_C_SetQuestMarkerAtStart::L_UserMarkerManageInfo' has a wrong offset!");
@@ -4266,15 +4343,15 @@ static_assert(offsetof(WDT_MapImage_C_SetQuestMarkerAtStart, CallFunc_Less_IntIn
 static_assert(offsetof(WDT_MapImage_C_SetQuestMarkerAtStart, K2Node_SwitchEnum_CmpSuccess) == 0x000075, "Member 'WDT_MapImage_C_SetQuestMarkerAtStart::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_SetQuestMarkerAtStart, CallFunc_GetMapSize_OutSize) == 0x000078, "Member 'WDT_MapImage_C_SetQuestMarkerAtStart::CallFunc_GetMapSize_OutSize' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_SetQuestMarkerAtStart, CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo) == 0x000088, "Member 'WDT_MapImage_C_SetQuestMarkerAtStart::CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetQuestMarkerAtStart, CallFunc_GetMapFeatureInfoFromMap_ReturnValue) == 0x000168, "Member 'WDT_MapImage_C_SetQuestMarkerAtStart::CallFunc_GetMapFeatureInfoFromMap_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetQuestMarkerAtStart, CallFunc_GetMapSize_OutSize_1) == 0x000170, "Member 'WDT_MapImage_C_SetQuestMarkerAtStart::CallFunc_GetMapSize_OutSize_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetQuestMarkerAtStart, CallFunc_GetMapPosition2D_OutPos) == 0x000180, "Member 'WDT_MapImage_C_SetQuestMarkerAtStart::CallFunc_GetMapPosition2D_OutPos' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetQuestMarkerAtStart, CallFunc_GetMapPosition2D_OutPos_1) == 0x000190, "Member 'WDT_MapImage_C_SetQuestMarkerAtStart::CallFunc_GetMapPosition2D_OutPos_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetQuestMarkerAtStart, CallFunc_AddChildToOverlay_ReturnValue) == 0x0001A0, "Member 'WDT_MapImage_C_SetQuestMarkerAtStart::CallFunc_AddChildToOverlay_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetQuestMarkerAtStart, CallFunc_GetController_ReturnValue) == 0x0001A8, "Member 'WDT_MapImage_C_SetQuestMarkerAtStart::CallFunc_GetController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetQuestMarkerAtStart, CallFunc_GetQuestFieldTarget_OutFIeldTargetInfo) == 0x0001B0, "Member 'WDT_MapImage_C_SetQuestMarkerAtStart::CallFunc_GetQuestFieldTarget_OutFIeldTargetInfo' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetQuestMarkerAtStart, CallFunc_GetQuestFieldTarget_OutFound) == 0x0001C0, "Member 'WDT_MapImage_C_SetQuestMarkerAtStart::CallFunc_GetQuestFieldTarget_OutFound' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetQuestMarkerAtStart, CallFunc_Create_ReturnValue) == 0x0001C8, "Member 'WDT_MapImage_C_SetQuestMarkerAtStart::CallFunc_Create_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetQuestMarkerAtStart, CallFunc_GetMapFeatureInfoFromMap_ReturnValue) == 0x000180, "Member 'WDT_MapImage_C_SetQuestMarkerAtStart::CallFunc_GetMapFeatureInfoFromMap_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetQuestMarkerAtStart, CallFunc_GetMapSize_OutSize_1) == 0x000188, "Member 'WDT_MapImage_C_SetQuestMarkerAtStart::CallFunc_GetMapSize_OutSize_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetQuestMarkerAtStart, CallFunc_GetMapPosition2D_OutPos) == 0x000198, "Member 'WDT_MapImage_C_SetQuestMarkerAtStart::CallFunc_GetMapPosition2D_OutPos' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetQuestMarkerAtStart, CallFunc_GetMapPosition2D_OutPos_1) == 0x0001A8, "Member 'WDT_MapImage_C_SetQuestMarkerAtStart::CallFunc_GetMapPosition2D_OutPos_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetQuestMarkerAtStart, CallFunc_AddChildToOverlay_ReturnValue) == 0x0001B8, "Member 'WDT_MapImage_C_SetQuestMarkerAtStart::CallFunc_AddChildToOverlay_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetQuestMarkerAtStart, CallFunc_GetController_ReturnValue) == 0x0001C0, "Member 'WDT_MapImage_C_SetQuestMarkerAtStart::CallFunc_GetController_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetQuestMarkerAtStart, CallFunc_GetQuestFieldTarget_OutFIeldTargetInfo) == 0x0001C8, "Member 'WDT_MapImage_C_SetQuestMarkerAtStart::CallFunc_GetQuestFieldTarget_OutFIeldTargetInfo' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetQuestMarkerAtStart, CallFunc_GetQuestFieldTarget_OutFound) == 0x0001D8, "Member 'WDT_MapImage_C_SetQuestMarkerAtStart::CallFunc_GetQuestFieldTarget_OutFound' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetQuestMarkerAtStart, CallFunc_Create_ReturnValue) == 0x0001E0, "Member 'WDT_MapImage_C_SetQuestMarkerAtStart::CallFunc_Create_ReturnValue' has a wrong offset!");
 
 // Function WDT_MapImage.WDT_MapImage_C.SetUserMarkerAtStart
 // 0x00F8 (0x00F8 - 0x0000)
@@ -4303,9 +4380,9 @@ public:
 	uint8                                         Pad_9C[0x4];                                       // 0x009C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              CallFunc_GetMapSize_OutSize;                       // 0x00A0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector2D                              CallFunc_GetMapPosition2D_OutPos;                  // 0x00B0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetUserMarkerFieldTargetData_bResult;     // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetUserMarkerFieldTargetData_MapImage_bResult; // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_C1[0x7];                                       // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FFieldTargetManageData>         CallFunc_GetUserMarkerFieldTargetData_OutFieldTargetInfo; // 0x00C8(0x0010)(ReferenceParm, ContainsInstancedReference)
+	TArray<struct FFieldTargetManageData>         CallFunc_GetUserMarkerFieldTargetData_MapImage_OutFieldTargetInfo; // 0x00C8(0x0010)(ReferenceParm, ContainsInstancedReference)
 	class AAppPlayerController*                   CallFunc_GetController_ReturnValue;                // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UWDT_MapUserMarker_C*                   CallFunc_Create_ReturnValue;                       // 0x00E0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x00E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -4332,8 +4409,8 @@ static_assert(offsetof(WDT_MapImage_C_SetUserMarkerAtStart, CallFunc_Less_IntInt
 static_assert(offsetof(WDT_MapImage_C_SetUserMarkerAtStart, CallFunc_Add_IntInt_ReturnValue_1) == 0x000098, "Member 'WDT_MapImage_C_SetUserMarkerAtStart::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_SetUserMarkerAtStart, CallFunc_GetMapSize_OutSize) == 0x0000A0, "Member 'WDT_MapImage_C_SetUserMarkerAtStart::CallFunc_GetMapSize_OutSize' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_SetUserMarkerAtStart, CallFunc_GetMapPosition2D_OutPos) == 0x0000B0, "Member 'WDT_MapImage_C_SetUserMarkerAtStart::CallFunc_GetMapPosition2D_OutPos' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetUserMarkerAtStart, CallFunc_GetUserMarkerFieldTargetData_bResult) == 0x0000C0, "Member 'WDT_MapImage_C_SetUserMarkerAtStart::CallFunc_GetUserMarkerFieldTargetData_bResult' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetUserMarkerAtStart, CallFunc_GetUserMarkerFieldTargetData_OutFieldTargetInfo) == 0x0000C8, "Member 'WDT_MapImage_C_SetUserMarkerAtStart::CallFunc_GetUserMarkerFieldTargetData_OutFieldTargetInfo' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetUserMarkerAtStart, CallFunc_GetUserMarkerFieldTargetData_MapImage_bResult) == 0x0000C0, "Member 'WDT_MapImage_C_SetUserMarkerAtStart::CallFunc_GetUserMarkerFieldTargetData_MapImage_bResult' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetUserMarkerAtStart, CallFunc_GetUserMarkerFieldTargetData_MapImage_OutFieldTargetInfo) == 0x0000C8, "Member 'WDT_MapImage_C_SetUserMarkerAtStart::CallFunc_GetUserMarkerFieldTargetData_MapImage_OutFieldTargetInfo' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_SetUserMarkerAtStart, CallFunc_GetController_ReturnValue) == 0x0000D8, "Member 'WDT_MapImage_C_SetUserMarkerAtStart::CallFunc_GetController_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_SetUserMarkerAtStart, CallFunc_Create_ReturnValue) == 0x0000E0, "Member 'WDT_MapImage_C_SetUserMarkerAtStart::CallFunc_Create_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_SetUserMarkerAtStart, CallFunc_Array_Add_ReturnValue) == 0x0000E8, "Member 'WDT_MapImage_C_SetUserMarkerAtStart::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
@@ -4503,123 +4580,123 @@ static_assert(offsetof(WDT_MapImage_C_Set_or_Remove_User_Marker, CallFunc_FTrunc
 static_assert(offsetof(WDT_MapImage_C_Set_or_Remove_User_Marker, CallFunc_FTrunc_A_ImplicitCast_1) == 0x0000C8, "Member 'WDT_MapImage_C_Set_or_Remove_User_Marker::CallFunc_FTrunc_A_ImplicitCast_1' has a wrong offset!");
 
 // Function WDT_MapImage.WDT_MapImage_C.FindFeatureInfoByWidget
-// 0x0208 (0x0208 - 0x0000)
+// 0x0238 (0x0238 - 0x0000)
 struct WDT_MapImage_C_FindFeatureInfoByWidget final
 {
 public:
 	class UMenuPieceBase*                         InPiece;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          bResult;                                           // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSTR_MapFeatureInfoUI                  OutInfo;                                           // 0x0010(0x00F0)(Parm, OutParm, ContainsInstancedReference, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0100(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0104(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0108(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x010C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSTR_MapFeatureInfoUI                  CallFunc_Array_Get_Item;                           // 0x0110(0x00F0)(ContainsInstancedReference, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0200(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0201(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSTR_MapFeatureInfoUI                  OutInfo;                                           // 0x0010(0x0108)(Parm, OutParm, ContainsInstancedReference, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0118(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x011C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0120(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0124(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSTR_MapFeatureInfoUI                  CallFunc_Array_Get_Item;                           // 0x0128(0x0108)(ContainsInstancedReference, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0230(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0231(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_MapImage_C_FindFeatureInfoByWidget) == 0x000008, "Wrong alignment on WDT_MapImage_C_FindFeatureInfoByWidget");
-static_assert(sizeof(WDT_MapImage_C_FindFeatureInfoByWidget) == 0x000208, "Wrong size on WDT_MapImage_C_FindFeatureInfoByWidget");
+static_assert(sizeof(WDT_MapImage_C_FindFeatureInfoByWidget) == 0x000238, "Wrong size on WDT_MapImage_C_FindFeatureInfoByWidget");
 static_assert(offsetof(WDT_MapImage_C_FindFeatureInfoByWidget, InPiece) == 0x000000, "Member 'WDT_MapImage_C_FindFeatureInfoByWidget::InPiece' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_FindFeatureInfoByWidget, bResult) == 0x000008, "Member 'WDT_MapImage_C_FindFeatureInfoByWidget::bResult' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_FindFeatureInfoByWidget, OutInfo) == 0x000010, "Member 'WDT_MapImage_C_FindFeatureInfoByWidget::OutInfo' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_FindFeatureInfoByWidget, Temp_int_Array_Index_Variable) == 0x000100, "Member 'WDT_MapImage_C_FindFeatureInfoByWidget::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_FindFeatureInfoByWidget, Temp_int_Loop_Counter_Variable) == 0x000104, "Member 'WDT_MapImage_C_FindFeatureInfoByWidget::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_FindFeatureInfoByWidget, CallFunc_Add_IntInt_ReturnValue) == 0x000108, "Member 'WDT_MapImage_C_FindFeatureInfoByWidget::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_FindFeatureInfoByWidget, CallFunc_Array_Length_ReturnValue) == 0x00010C, "Member 'WDT_MapImage_C_FindFeatureInfoByWidget::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_FindFeatureInfoByWidget, CallFunc_Array_Get_Item) == 0x000110, "Member 'WDT_MapImage_C_FindFeatureInfoByWidget::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_FindFeatureInfoByWidget, CallFunc_Less_IntInt_ReturnValue) == 0x000200, "Member 'WDT_MapImage_C_FindFeatureInfoByWidget::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_FindFeatureInfoByWidget, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000201, "Member 'WDT_MapImage_C_FindFeatureInfoByWidget::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_FindFeatureInfoByWidget, Temp_int_Array_Index_Variable) == 0x000118, "Member 'WDT_MapImage_C_FindFeatureInfoByWidget::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_FindFeatureInfoByWidget, Temp_int_Loop_Counter_Variable) == 0x00011C, "Member 'WDT_MapImage_C_FindFeatureInfoByWidget::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_FindFeatureInfoByWidget, CallFunc_Add_IntInt_ReturnValue) == 0x000120, "Member 'WDT_MapImage_C_FindFeatureInfoByWidget::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_FindFeatureInfoByWidget, CallFunc_Array_Length_ReturnValue) == 0x000124, "Member 'WDT_MapImage_C_FindFeatureInfoByWidget::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_FindFeatureInfoByWidget, CallFunc_Array_Get_Item) == 0x000128, "Member 'WDT_MapImage_C_FindFeatureInfoByWidget::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_FindFeatureInfoByWidget, CallFunc_Less_IntInt_ReturnValue) == 0x000230, "Member 'WDT_MapImage_C_FindFeatureInfoByWidget::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_FindFeatureInfoByWidget, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000231, "Member 'WDT_MapImage_C_FindFeatureInfoByWidget::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
 
 // Function WDT_MapImage.WDT_MapImage_C.IsInDetectionRange
-// 0x0220 (0x0220 - 0x0000)
+// 0x0238 (0x0238 - 0x0000)
 struct WDT_MapImage_C_IsInDetectionRange final
 {
 public:
-	struct FSTR_MapFeatureInfoUI                  InFeatureInfo;                                     // 0x0000(0x00F0)(BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference, HasGetValueTypeHash)
-	double                                        InDetectionRange;                                  // 0x00F0(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          InRange;                                           // 0x00F8(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_F9[0x7];                                       // 0x00F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        L_FeatureDetectionRange;                           // 0x0100(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UWDT_MapFeatureSymbol_C*                L_MapFeatureSymbol;                                // 0x0108(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	double                                        L_FeatureY;                                        // 0x0110(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        L_FeatureX;                                        // 0x0118(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        L_CenterY;                                         // 0x0120(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        L_CenterX;                                         // 0x0128(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0130(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_GetCursorPositionMapUV_OutCursorMapUV;    // 0x0138(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_GetMapCurrentScale_ReturnValue;           // 0x0148(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector2D_X;                          // 0x0158(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector2D_Y;                          // 0x0160(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector2D_X_1;                        // 0x0168(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector2D_Y_1;                        // 0x0170(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_1;        // 0x0178(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_GetHeight_OutHeight;                      // 0x0180(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_2;        // 0x0188(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_GetWidth_OutWidth;                        // 0x0190(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_3;        // 0x0198(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UWDT_MapFeatureSymbol_C*                K2Node_DynamicCast_AsWDT_Map_Feature_Symbol;       // 0x01A0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x01A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1A9[0x7];                                      // 0x01A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x01B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Abs_ReturnValue;                          // 0x01B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue;       // 0x01C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSTR_MapFeatureInfoUI                  InFeatureInfo;                                     // 0x0000(0x0108)(BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference, HasGetValueTypeHash)
+	double                                        InDetectionRange;                                  // 0x0108(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          InRange;                                           // 0x0110(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_111[0x7];                                      // 0x0111(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        L_FeatureDetectionRange;                           // 0x0118(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWDT_MapFeatureSymbol_C*                L_MapFeatureSymbol;                                // 0x0120(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	double                                        L_FeatureY;                                        // 0x0128(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        L_FeatureX;                                        // 0x0130(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        L_CenterY;                                         // 0x0138(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        L_CenterX;                                         // 0x0140(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0148(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_GetCursorPositionMapUV_OutCursorMapUV;    // 0x0150(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_GetMapCurrentScale_ReturnValue;           // 0x0160(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector2D_X;                          // 0x0170(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector2D_Y;                          // 0x0178(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector2D_X_1;                        // 0x0180(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector2D_Y_1;                        // 0x0188(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_1;        // 0x0190(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_GetHeight_OutHeight;                      // 0x0198(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_2;        // 0x01A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_GetWidth_OutWidth;                        // 0x01A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_3;        // 0x01B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWDT_MapFeatureSymbol_C*                K2Node_DynamicCast_AsWDT_Map_Feature_Symbol;       // 0x01B8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x01C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1C1[0x7];                                      // 0x01C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_1;      // 0x01C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Abs_ReturnValue_1;                        // 0x01D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue_1;     // 0x01D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x01D9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1DA[0x6];                                      // 0x01DA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_BreakVector2D_X_2;                        // 0x01E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector2D_Y_2;                        // 0x01E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x01F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue_1;           // 0x01F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0200(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x0208(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_B_ImplicitCast;     // 0x0210(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_B_ImplicitCast_1;   // 0x0218(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x01C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Abs_ReturnValue;                          // 0x01D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue;       // 0x01D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1D9[0x7];                                      // 0x01D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_1;      // 0x01E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Abs_ReturnValue_1;                        // 0x01E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue_1;     // 0x01F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x01F1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1F2[0x6];                                      // 0x01F2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_BreakVector2D_X_2;                        // 0x01F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector2D_Y_2;                        // 0x0200(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0208(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue_1;           // 0x0210(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0218(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x0220(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_B_ImplicitCast;     // 0x0228(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_B_ImplicitCast_1;   // 0x0230(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_MapImage_C_IsInDetectionRange) == 0x000008, "Wrong alignment on WDT_MapImage_C_IsInDetectionRange");
-static_assert(sizeof(WDT_MapImage_C_IsInDetectionRange) == 0x000220, "Wrong size on WDT_MapImage_C_IsInDetectionRange");
+static_assert(sizeof(WDT_MapImage_C_IsInDetectionRange) == 0x000238, "Wrong size on WDT_MapImage_C_IsInDetectionRange");
 static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, InFeatureInfo) == 0x000000, "Member 'WDT_MapImage_C_IsInDetectionRange::InFeatureInfo' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, InDetectionRange) == 0x0000F0, "Member 'WDT_MapImage_C_IsInDetectionRange::InDetectionRange' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, InRange) == 0x0000F8, "Member 'WDT_MapImage_C_IsInDetectionRange::InRange' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, L_FeatureDetectionRange) == 0x000100, "Member 'WDT_MapImage_C_IsInDetectionRange::L_FeatureDetectionRange' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, L_MapFeatureSymbol) == 0x000108, "Member 'WDT_MapImage_C_IsInDetectionRange::L_MapFeatureSymbol' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, L_FeatureY) == 0x000110, "Member 'WDT_MapImage_C_IsInDetectionRange::L_FeatureY' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, L_FeatureX) == 0x000118, "Member 'WDT_MapImage_C_IsInDetectionRange::L_FeatureX' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, L_CenterY) == 0x000120, "Member 'WDT_MapImage_C_IsInDetectionRange::L_CenterY' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, L_CenterX) == 0x000128, "Member 'WDT_MapImage_C_IsInDetectionRange::L_CenterX' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000130, "Member 'WDT_MapImage_C_IsInDetectionRange::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, CallFunc_GetCursorPositionMapUV_OutCursorMapUV) == 0x000138, "Member 'WDT_MapImage_C_IsInDetectionRange::CallFunc_GetCursorPositionMapUV_OutCursorMapUV' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, CallFunc_GetMapCurrentScale_ReturnValue) == 0x000148, "Member 'WDT_MapImage_C_IsInDetectionRange::CallFunc_GetMapCurrentScale_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, CallFunc_BreakVector2D_X) == 0x000158, "Member 'WDT_MapImage_C_IsInDetectionRange::CallFunc_BreakVector2D_X' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, CallFunc_BreakVector2D_Y) == 0x000160, "Member 'WDT_MapImage_C_IsInDetectionRange::CallFunc_BreakVector2D_Y' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, CallFunc_BreakVector2D_X_1) == 0x000168, "Member 'WDT_MapImage_C_IsInDetectionRange::CallFunc_BreakVector2D_X_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, CallFunc_BreakVector2D_Y_1) == 0x000170, "Member 'WDT_MapImage_C_IsInDetectionRange::CallFunc_BreakVector2D_Y_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, CallFunc_Divide_DoubleDouble_ReturnValue_1) == 0x000178, "Member 'WDT_MapImage_C_IsInDetectionRange::CallFunc_Divide_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, CallFunc_GetHeight_OutHeight) == 0x000180, "Member 'WDT_MapImage_C_IsInDetectionRange::CallFunc_GetHeight_OutHeight' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, CallFunc_Divide_DoubleDouble_ReturnValue_2) == 0x000188, "Member 'WDT_MapImage_C_IsInDetectionRange::CallFunc_Divide_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, CallFunc_GetWidth_OutWidth) == 0x000190, "Member 'WDT_MapImage_C_IsInDetectionRange::CallFunc_GetWidth_OutWidth' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, CallFunc_Divide_DoubleDouble_ReturnValue_3) == 0x000198, "Member 'WDT_MapImage_C_IsInDetectionRange::CallFunc_Divide_DoubleDouble_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, K2Node_DynamicCast_AsWDT_Map_Feature_Symbol) == 0x0001A0, "Member 'WDT_MapImage_C_IsInDetectionRange::K2Node_DynamicCast_AsWDT_Map_Feature_Symbol' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, K2Node_DynamicCast_bSuccess) == 0x0001A8, "Member 'WDT_MapImage_C_IsInDetectionRange::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x0001B0, "Member 'WDT_MapImage_C_IsInDetectionRange::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, CallFunc_Abs_ReturnValue) == 0x0001B8, "Member 'WDT_MapImage_C_IsInDetectionRange::CallFunc_Abs_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, CallFunc_LessEqual_DoubleDouble_ReturnValue) == 0x0001C0, "Member 'WDT_MapImage_C_IsInDetectionRange::CallFunc_LessEqual_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, CallFunc_Subtract_DoubleDouble_ReturnValue_1) == 0x0001C8, "Member 'WDT_MapImage_C_IsInDetectionRange::CallFunc_Subtract_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, CallFunc_Abs_ReturnValue_1) == 0x0001D0, "Member 'WDT_MapImage_C_IsInDetectionRange::CallFunc_Abs_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, CallFunc_LessEqual_DoubleDouble_ReturnValue_1) == 0x0001D8, "Member 'WDT_MapImage_C_IsInDetectionRange::CallFunc_LessEqual_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, CallFunc_BooleanAND_ReturnValue) == 0x0001D9, "Member 'WDT_MapImage_C_IsInDetectionRange::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, CallFunc_BreakVector2D_X_2) == 0x0001E0, "Member 'WDT_MapImage_C_IsInDetectionRange::CallFunc_BreakVector2D_X_2' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, CallFunc_BreakVector2D_Y_2) == 0x0001E8, "Member 'WDT_MapImage_C_IsInDetectionRange::CallFunc_BreakVector2D_Y_2' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, CallFunc_Add_DoubleDouble_ReturnValue) == 0x0001F0, "Member 'WDT_MapImage_C_IsInDetectionRange::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, CallFunc_Add_DoubleDouble_ReturnValue_1) == 0x0001F8, "Member 'WDT_MapImage_C_IsInDetectionRange::CallFunc_Add_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000200, "Member 'WDT_MapImage_C_IsInDetectionRange::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000208, "Member 'WDT_MapImage_C_IsInDetectionRange::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, CallFunc_Multiply_DoubleDouble_B_ImplicitCast) == 0x000210, "Member 'WDT_MapImage_C_IsInDetectionRange::CallFunc_Multiply_DoubleDouble_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, CallFunc_Multiply_DoubleDouble_B_ImplicitCast_1) == 0x000218, "Member 'WDT_MapImage_C_IsInDetectionRange::CallFunc_Multiply_DoubleDouble_B_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, InDetectionRange) == 0x000108, "Member 'WDT_MapImage_C_IsInDetectionRange::InDetectionRange' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, InRange) == 0x000110, "Member 'WDT_MapImage_C_IsInDetectionRange::InRange' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, L_FeatureDetectionRange) == 0x000118, "Member 'WDT_MapImage_C_IsInDetectionRange::L_FeatureDetectionRange' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, L_MapFeatureSymbol) == 0x000120, "Member 'WDT_MapImage_C_IsInDetectionRange::L_MapFeatureSymbol' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, L_FeatureY) == 0x000128, "Member 'WDT_MapImage_C_IsInDetectionRange::L_FeatureY' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, L_FeatureX) == 0x000130, "Member 'WDT_MapImage_C_IsInDetectionRange::L_FeatureX' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, L_CenterY) == 0x000138, "Member 'WDT_MapImage_C_IsInDetectionRange::L_CenterY' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, L_CenterX) == 0x000140, "Member 'WDT_MapImage_C_IsInDetectionRange::L_CenterX' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000148, "Member 'WDT_MapImage_C_IsInDetectionRange::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, CallFunc_GetCursorPositionMapUV_OutCursorMapUV) == 0x000150, "Member 'WDT_MapImage_C_IsInDetectionRange::CallFunc_GetCursorPositionMapUV_OutCursorMapUV' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, CallFunc_GetMapCurrentScale_ReturnValue) == 0x000160, "Member 'WDT_MapImage_C_IsInDetectionRange::CallFunc_GetMapCurrentScale_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, CallFunc_BreakVector2D_X) == 0x000170, "Member 'WDT_MapImage_C_IsInDetectionRange::CallFunc_BreakVector2D_X' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, CallFunc_BreakVector2D_Y) == 0x000178, "Member 'WDT_MapImage_C_IsInDetectionRange::CallFunc_BreakVector2D_Y' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, CallFunc_BreakVector2D_X_1) == 0x000180, "Member 'WDT_MapImage_C_IsInDetectionRange::CallFunc_BreakVector2D_X_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, CallFunc_BreakVector2D_Y_1) == 0x000188, "Member 'WDT_MapImage_C_IsInDetectionRange::CallFunc_BreakVector2D_Y_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, CallFunc_Divide_DoubleDouble_ReturnValue_1) == 0x000190, "Member 'WDT_MapImage_C_IsInDetectionRange::CallFunc_Divide_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, CallFunc_GetHeight_OutHeight) == 0x000198, "Member 'WDT_MapImage_C_IsInDetectionRange::CallFunc_GetHeight_OutHeight' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, CallFunc_Divide_DoubleDouble_ReturnValue_2) == 0x0001A0, "Member 'WDT_MapImage_C_IsInDetectionRange::CallFunc_Divide_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, CallFunc_GetWidth_OutWidth) == 0x0001A8, "Member 'WDT_MapImage_C_IsInDetectionRange::CallFunc_GetWidth_OutWidth' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, CallFunc_Divide_DoubleDouble_ReturnValue_3) == 0x0001B0, "Member 'WDT_MapImage_C_IsInDetectionRange::CallFunc_Divide_DoubleDouble_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, K2Node_DynamicCast_AsWDT_Map_Feature_Symbol) == 0x0001B8, "Member 'WDT_MapImage_C_IsInDetectionRange::K2Node_DynamicCast_AsWDT_Map_Feature_Symbol' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, K2Node_DynamicCast_bSuccess) == 0x0001C0, "Member 'WDT_MapImage_C_IsInDetectionRange::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x0001C8, "Member 'WDT_MapImage_C_IsInDetectionRange::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, CallFunc_Abs_ReturnValue) == 0x0001D0, "Member 'WDT_MapImage_C_IsInDetectionRange::CallFunc_Abs_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, CallFunc_LessEqual_DoubleDouble_ReturnValue) == 0x0001D8, "Member 'WDT_MapImage_C_IsInDetectionRange::CallFunc_LessEqual_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, CallFunc_Subtract_DoubleDouble_ReturnValue_1) == 0x0001E0, "Member 'WDT_MapImage_C_IsInDetectionRange::CallFunc_Subtract_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, CallFunc_Abs_ReturnValue_1) == 0x0001E8, "Member 'WDT_MapImage_C_IsInDetectionRange::CallFunc_Abs_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, CallFunc_LessEqual_DoubleDouble_ReturnValue_1) == 0x0001F0, "Member 'WDT_MapImage_C_IsInDetectionRange::CallFunc_LessEqual_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, CallFunc_BooleanAND_ReturnValue) == 0x0001F1, "Member 'WDT_MapImage_C_IsInDetectionRange::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, CallFunc_BreakVector2D_X_2) == 0x0001F8, "Member 'WDT_MapImage_C_IsInDetectionRange::CallFunc_BreakVector2D_X_2' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, CallFunc_BreakVector2D_Y_2) == 0x000200, "Member 'WDT_MapImage_C_IsInDetectionRange::CallFunc_BreakVector2D_Y_2' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000208, "Member 'WDT_MapImage_C_IsInDetectionRange::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, CallFunc_Add_DoubleDouble_ReturnValue_1) == 0x000210, "Member 'WDT_MapImage_C_IsInDetectionRange::CallFunc_Add_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000218, "Member 'WDT_MapImage_C_IsInDetectionRange::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000220, "Member 'WDT_MapImage_C_IsInDetectionRange::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, CallFunc_Multiply_DoubleDouble_B_ImplicitCast) == 0x000228, "Member 'WDT_MapImage_C_IsInDetectionRange::CallFunc_Multiply_DoubleDouble_B_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_IsInDetectionRange, CallFunc_Multiply_DoubleDouble_B_ImplicitCast_1) == 0x000230, "Member 'WDT_MapImage_C_IsInDetectionRange::CallFunc_Multiply_DoubleDouble_B_ImplicitCast_1' has a wrong offset!");
 
 // Function WDT_MapImage.WDT_MapImage_C.OffsetToPlayerPosition
 // 0x0028 (0x0028 - 0x0000)
@@ -4676,7 +4753,7 @@ static_assert(offsetof(WDT_MapImage_C_GetMapTranslation, CallFunc_Add_DoubleDoub
 static_assert(offsetof(WDT_MapImage_C_GetMapTranslation, CallFunc_MakeVector2D_ReturnValue) == 0x000080, "Member 'WDT_MapImage_C_GetMapTranslation::CallFunc_MakeVector2D_ReturnValue' has a wrong offset!");
 
 // Function WDT_MapImage.WDT_MapImage_C.FastTravelByFeatureSymbolPiece
-// 0x0180 (0x0180 - 0x0000)
+// 0x0198 (0x0198 - 0x0000)
 struct WDT_MapImage_C_FastTravelByFeatureSymbolPiece final
 {
 public:
@@ -4691,16 +4768,18 @@ public:
 	struct FVector                                CallFunc_GetFastTravelLocation_OutLocation;        // 0x0048(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               CallFunc_GetFastTravelLocation_OutPlayerRotation;  // 0x0060(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FRotator                               CallFunc_GetFastTravelLocation_OutCameraRotation;  // 0x0078(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FMapFeatureInfo                        CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo;  // 0x0090(0x00E0)()
-	bool                                          CallFunc_GetMapFeatureInfoFromMap_ReturnValue;     // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x0171(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_NameName_ReturnValue_1;        // 0x0172(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0173(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_174[0x4];                                      // 0x0174(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_StartAutoMoveCursor_InMoveTime_ImplicitCast; // 0x0178(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FMapFeatureInfo                        CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo;  // 0x0090(0x00F8)()
+	bool                                          CallFunc_GetMapFeatureInfoFromMap_ReturnValue;     // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x0189(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_NameName_ReturnValue_1;        // 0x018A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_NameName_ReturnValue_2;        // 0x018B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x018C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x018D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_18E[0x2];                                      // 0x018E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_StartAutoMoveCursor_InMoveTime_ImplicitCast; // 0x0190(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_MapImage_C_FastTravelByFeatureSymbolPiece) == 0x000008, "Wrong alignment on WDT_MapImage_C_FastTravelByFeatureSymbolPiece");
-static_assert(sizeof(WDT_MapImage_C_FastTravelByFeatureSymbolPiece) == 0x000180, "Wrong size on WDT_MapImage_C_FastTravelByFeatureSymbolPiece");
+static_assert(sizeof(WDT_MapImage_C_FastTravelByFeatureSymbolPiece) == 0x000198, "Wrong size on WDT_MapImage_C_FastTravelByFeatureSymbolPiece");
 static_assert(offsetof(WDT_MapImage_C_FastTravelByFeatureSymbolPiece, InFeatureId) == 0x000000, "Member 'WDT_MapImage_C_FastTravelByFeatureSymbolPiece::InFeatureId' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_FastTravelByFeatureSymbolPiece, InFeatureLocation) == 0x000008, "Member 'WDT_MapImage_C_FastTravelByFeatureSymbolPiece::InFeatureLocation' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_FastTravelByFeatureSymbolPiece, FakeRegionTag) == 0x000020, "Member 'WDT_MapImage_C_FastTravelByFeatureSymbolPiece::FakeRegionTag' has a wrong offset!");
@@ -4711,14 +4790,16 @@ static_assert(offsetof(WDT_MapImage_C_FastTravelByFeatureSymbolPiece, CallFunc_G
 static_assert(offsetof(WDT_MapImage_C_FastTravelByFeatureSymbolPiece, CallFunc_GetFastTravelLocation_OutPlayerRotation) == 0x000060, "Member 'WDT_MapImage_C_FastTravelByFeatureSymbolPiece::CallFunc_GetFastTravelLocation_OutPlayerRotation' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_FastTravelByFeatureSymbolPiece, CallFunc_GetFastTravelLocation_OutCameraRotation) == 0x000078, "Member 'WDT_MapImage_C_FastTravelByFeatureSymbolPiece::CallFunc_GetFastTravelLocation_OutCameraRotation' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_FastTravelByFeatureSymbolPiece, CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo) == 0x000090, "Member 'WDT_MapImage_C_FastTravelByFeatureSymbolPiece::CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_FastTravelByFeatureSymbolPiece, CallFunc_GetMapFeatureInfoFromMap_ReturnValue) == 0x000170, "Member 'WDT_MapImage_C_FastTravelByFeatureSymbolPiece::CallFunc_GetMapFeatureInfoFromMap_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_FastTravelByFeatureSymbolPiece, CallFunc_EqualEqual_NameName_ReturnValue) == 0x000171, "Member 'WDT_MapImage_C_FastTravelByFeatureSymbolPiece::CallFunc_EqualEqual_NameName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_FastTravelByFeatureSymbolPiece, CallFunc_EqualEqual_NameName_ReturnValue_1) == 0x000172, "Member 'WDT_MapImage_C_FastTravelByFeatureSymbolPiece::CallFunc_EqualEqual_NameName_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_FastTravelByFeatureSymbolPiece, CallFunc_BooleanOR_ReturnValue) == 0x000173, "Member 'WDT_MapImage_C_FastTravelByFeatureSymbolPiece::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_FastTravelByFeatureSymbolPiece, CallFunc_StartAutoMoveCursor_InMoveTime_ImplicitCast) == 0x000178, "Member 'WDT_MapImage_C_FastTravelByFeatureSymbolPiece::CallFunc_StartAutoMoveCursor_InMoveTime_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_FastTravelByFeatureSymbolPiece, CallFunc_GetMapFeatureInfoFromMap_ReturnValue) == 0x000188, "Member 'WDT_MapImage_C_FastTravelByFeatureSymbolPiece::CallFunc_GetMapFeatureInfoFromMap_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_FastTravelByFeatureSymbolPiece, CallFunc_EqualEqual_NameName_ReturnValue) == 0x000189, "Member 'WDT_MapImage_C_FastTravelByFeatureSymbolPiece::CallFunc_EqualEqual_NameName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_FastTravelByFeatureSymbolPiece, CallFunc_EqualEqual_NameName_ReturnValue_1) == 0x00018A, "Member 'WDT_MapImage_C_FastTravelByFeatureSymbolPiece::CallFunc_EqualEqual_NameName_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_FastTravelByFeatureSymbolPiece, CallFunc_EqualEqual_NameName_ReturnValue_2) == 0x00018B, "Member 'WDT_MapImage_C_FastTravelByFeatureSymbolPiece::CallFunc_EqualEqual_NameName_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_FastTravelByFeatureSymbolPiece, CallFunc_BooleanOR_ReturnValue) == 0x00018C, "Member 'WDT_MapImage_C_FastTravelByFeatureSymbolPiece::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_FastTravelByFeatureSymbolPiece, CallFunc_BooleanOR_ReturnValue_1) == 0x00018D, "Member 'WDT_MapImage_C_FastTravelByFeatureSymbolPiece::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_FastTravelByFeatureSymbolPiece, CallFunc_StartAutoMoveCursor_InMoveTime_ImplicitCast) == 0x000190, "Member 'WDT_MapImage_C_FastTravelByFeatureSymbolPiece::CallFunc_StartAutoMoveCursor_InMoveTime_ImplicitCast' has a wrong offset!");
 
 // Function WDT_MapImage.WDT_MapImage_C.GetFastTravelLocation
-// 0x0330 (0x0330 - 0x0000)
+// 0x0360 (0x0360 - 0x0000)
 struct WDT_MapImage_C_GetFastTravelLocation final
 {
 public:
@@ -4734,26 +4815,26 @@ public:
 	int32                                         L_FeatureState;                                    // 0x00A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_A4[0x4];                                       // 0x00A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMapFeatureType                        L_FeatureType;                                     // 0x00A8(0x0048)(Edit, BlueprintVisible)
-	struct FMapFeatureInfo                        L_FeatureInfo;                                     // 0x00F0(0x00E0)(Edit, BlueprintVisible)
-	class AMapSystem*                             L_MapSystem;                                       // 0x01D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_VectorVector_ReturnValue;        // 0x01D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x01D9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x01DA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1DB[0x5];                                      // 0x01DB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMapFeatureInfo                        CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo;  // 0x01E0(0x00E0)()
-	bool                                          CallFunc_GetMapFeatureInfoFromMap_ReturnValue;     // 0x02C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2C1[0x3];                                      // 0x02C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetFeatureState_OutStateIndex;            // 0x02C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetFeatureState_ReturnValue;              // 0x02C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2C9[0x7];                                      // 0x02C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMapFeatureType                        CallFunc_GetMapFeatureTypeFromMap_OutFeatureType;  // 0x02D0(0x0048)()
-	bool                                          CallFunc_GetMapFeatureTypeFromMap_ReturnValue;     // 0x0318(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_319[0x7];                                      // 0x0319(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AMapSystem*                             CallFunc_GetMapSystem_ReturnValue;                 // 0x0320(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0328(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FMapFeatureInfo                        L_FeatureInfo;                                     // 0x00F0(0x00F8)(Edit, BlueprintVisible)
+	class AMapSystem*                             L_MapSystem;                                       // 0x01E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_VectorVector_ReturnValue;        // 0x01F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x01F1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x01F2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1F3[0x5];                                      // 0x01F3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMapFeatureInfo                        CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo;  // 0x01F8(0x00F8)()
+	bool                                          CallFunc_GetMapFeatureInfoFromMap_ReturnValue;     // 0x02F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2F1[0x3];                                      // 0x02F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetFeatureState_OutStateIndex;            // 0x02F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetFeatureState_ReturnValue;              // 0x02F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2F9[0x7];                                      // 0x02F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMapFeatureType                        CallFunc_GetMapFeatureTypeFromMap_OutFeatureType;  // 0x0300(0x0048)()
+	bool                                          CallFunc_GetMapFeatureTypeFromMap_ReturnValue;     // 0x0348(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_349[0x7];                                      // 0x0349(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AMapSystem*                             CallFunc_GetMapSystem_ReturnValue;                 // 0x0350(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0358(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_MapImage_C_GetFastTravelLocation) == 0x000008, "Wrong alignment on WDT_MapImage_C_GetFastTravelLocation");
-static_assert(sizeof(WDT_MapImage_C_GetFastTravelLocation) == 0x000330, "Wrong size on WDT_MapImage_C_GetFastTravelLocation");
+static_assert(sizeof(WDT_MapImage_C_GetFastTravelLocation) == 0x000360, "Wrong size on WDT_MapImage_C_GetFastTravelLocation");
 static_assert(offsetof(WDT_MapImage_C_GetFastTravelLocation, InFeatureId) == 0x000000, "Member 'WDT_MapImage_C_GetFastTravelLocation::InFeatureId' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_GetFastTravelLocation, OutResult) == 0x000008, "Member 'WDT_MapImage_C_GetFastTravelLocation::OutResult' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_GetFastTravelLocation, OutLocation) == 0x000010, "Member 'WDT_MapImage_C_GetFastTravelLocation::OutLocation' has a wrong offset!");
@@ -4765,21 +4846,21 @@ static_assert(offsetof(WDT_MapImage_C_GetFastTravelLocation, L_FastTravelLocatio
 static_assert(offsetof(WDT_MapImage_C_GetFastTravelLocation, L_FeatureState) == 0x0000A0, "Member 'WDT_MapImage_C_GetFastTravelLocation::L_FeatureState' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_GetFastTravelLocation, L_FeatureType) == 0x0000A8, "Member 'WDT_MapImage_C_GetFastTravelLocation::L_FeatureType' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_GetFastTravelLocation, L_FeatureInfo) == 0x0000F0, "Member 'WDT_MapImage_C_GetFastTravelLocation::L_FeatureInfo' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_GetFastTravelLocation, L_MapSystem) == 0x0001D0, "Member 'WDT_MapImage_C_GetFastTravelLocation::L_MapSystem' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_GetFastTravelLocation, CallFunc_NotEqual_VectorVector_ReturnValue) == 0x0001D8, "Member 'WDT_MapImage_C_GetFastTravelLocation::CallFunc_NotEqual_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_GetFastTravelLocation, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x0001D9, "Member 'WDT_MapImage_C_GetFastTravelLocation::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_GetFastTravelLocation, CallFunc_Array_IsValidIndex_ReturnValue) == 0x0001DA, "Member 'WDT_MapImage_C_GetFastTravelLocation::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_GetFastTravelLocation, CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo) == 0x0001E0, "Member 'WDT_MapImage_C_GetFastTravelLocation::CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_GetFastTravelLocation, CallFunc_GetMapFeatureInfoFromMap_ReturnValue) == 0x0002C0, "Member 'WDT_MapImage_C_GetFastTravelLocation::CallFunc_GetMapFeatureInfoFromMap_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_GetFastTravelLocation, CallFunc_GetFeatureState_OutStateIndex) == 0x0002C4, "Member 'WDT_MapImage_C_GetFastTravelLocation::CallFunc_GetFeatureState_OutStateIndex' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_GetFastTravelLocation, CallFunc_GetFeatureState_ReturnValue) == 0x0002C8, "Member 'WDT_MapImage_C_GetFastTravelLocation::CallFunc_GetFeatureState_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_GetFastTravelLocation, CallFunc_GetMapFeatureTypeFromMap_OutFeatureType) == 0x0002D0, "Member 'WDT_MapImage_C_GetFastTravelLocation::CallFunc_GetMapFeatureTypeFromMap_OutFeatureType' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_GetFastTravelLocation, CallFunc_GetMapFeatureTypeFromMap_ReturnValue) == 0x000318, "Member 'WDT_MapImage_C_GetFastTravelLocation::CallFunc_GetMapFeatureTypeFromMap_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_GetFastTravelLocation, CallFunc_GetMapSystem_ReturnValue) == 0x000320, "Member 'WDT_MapImage_C_GetFastTravelLocation::CallFunc_GetMapSystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_GetFastTravelLocation, CallFunc_IsValid_ReturnValue) == 0x000328, "Member 'WDT_MapImage_C_GetFastTravelLocation::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_GetFastTravelLocation, L_MapSystem) == 0x0001E8, "Member 'WDT_MapImage_C_GetFastTravelLocation::L_MapSystem' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_GetFastTravelLocation, CallFunc_NotEqual_VectorVector_ReturnValue) == 0x0001F0, "Member 'WDT_MapImage_C_GetFastTravelLocation::CallFunc_NotEqual_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_GetFastTravelLocation, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x0001F1, "Member 'WDT_MapImage_C_GetFastTravelLocation::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_GetFastTravelLocation, CallFunc_Array_IsValidIndex_ReturnValue) == 0x0001F2, "Member 'WDT_MapImage_C_GetFastTravelLocation::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_GetFastTravelLocation, CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo) == 0x0001F8, "Member 'WDT_MapImage_C_GetFastTravelLocation::CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_GetFastTravelLocation, CallFunc_GetMapFeatureInfoFromMap_ReturnValue) == 0x0002F0, "Member 'WDT_MapImage_C_GetFastTravelLocation::CallFunc_GetMapFeatureInfoFromMap_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_GetFastTravelLocation, CallFunc_GetFeatureState_OutStateIndex) == 0x0002F4, "Member 'WDT_MapImage_C_GetFastTravelLocation::CallFunc_GetFeatureState_OutStateIndex' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_GetFastTravelLocation, CallFunc_GetFeatureState_ReturnValue) == 0x0002F8, "Member 'WDT_MapImage_C_GetFastTravelLocation::CallFunc_GetFeatureState_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_GetFastTravelLocation, CallFunc_GetMapFeatureTypeFromMap_OutFeatureType) == 0x000300, "Member 'WDT_MapImage_C_GetFastTravelLocation::CallFunc_GetMapFeatureTypeFromMap_OutFeatureType' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_GetFastTravelLocation, CallFunc_GetMapFeatureTypeFromMap_ReturnValue) == 0x000348, "Member 'WDT_MapImage_C_GetFastTravelLocation::CallFunc_GetMapFeatureTypeFromMap_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_GetFastTravelLocation, CallFunc_GetMapSystem_ReturnValue) == 0x000350, "Member 'WDT_MapImage_C_GetFastTravelLocation::CallFunc_GetMapSystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_GetFastTravelLocation, CallFunc_IsValid_ReturnValue) == 0x000358, "Member 'WDT_MapImage_C_GetFastTravelLocation::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
 // Function WDT_MapImage.WDT_MapImage_C.SetSingleFeatureSymbol
-// 0x0718 (0x0718 - 0x0000)
+// 0x0790 (0x0790 - 0x0000)
 struct WDT_MapImage_C_SetSingleFeatureSymbol final
 {
 public:
@@ -4790,77 +4871,77 @@ public:
 	struct FVector                                L_FeaturePosition;                                 // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UWDT_MapFeatureSymbol_C*                L_FeatureSymbolWidget;                             // 0x0038(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	struct FMapFeatureType                        L_FeatureType;                                     // 0x0040(0x0048)(Edit, BlueprintVisible)
-	struct FMapFeatureInfo                        L_FeatureInfo;                                     // 0x0088(0x00E0)(Edit, BlueprintVisible)
-	class AMapSystem*                             CallFunc_GetMapSystem_ReturnValue;                 // 0x0168(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FMapFeatureInfo                        CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo;  // 0x0170(0x00E0)()
-	bool                                          CallFunc_GetMapFeatureInfoFromMap_ReturnValue;     // 0x0250(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x0251(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_252[0x2];                                      // 0x0252(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTag                           CallFunc_GetGameplayTagFromString_ReturnValue;     // 0x0254(0x0008)(NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_25C[0x4];                                      // 0x025C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              CallFunc_GetFeatureMap2DPosition_NewParam;         // 0x0260(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSTR_FeatureQuestList                  CallFunc_Map_Find_Value;                           // 0x0270(0x0010)(HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0280(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_281[0x3];                                      // 0x0281(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0284(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSTR_MapFeatureInfoUI                  K2Node_MakeStruct_STR_MapFeatureInfoUI;            // 0x0288(0x00F0)(ContainsInstancedReference, HasGetValueTypeHash)
-	bool                                          CallFunc_CheckFeatureFilterFeatureVisibility_OutIsVisible; // 0x0378(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_379[0x3];                                      // 0x0379(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_AddUnique_ReturnValue;              // 0x037C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_GetHeight_OutHeight;                      // 0x0380(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_GetWidth_OutWidth;                        // 0x0388(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0390(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_1;        // 0x0398(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x03A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3A4[0x4];                                      // 0x03A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue;                 // 0x03A8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_Array_Get_Item;                           // 0x03B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_CheckEnableQuestTimeSeries_IsEnable;      // 0x03C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3C1[0x7];                                      // 0x03C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class ITextureInterface>     K2Node_DynamicCast_AsTexture_Interface;            // 0x03C8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x03D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D9[0x7];                                      // 0x03D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AMapSystem*                             CallFunc_GetMapSystem_ReturnValue_1;               // 0x03E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FMapFeatureType                        CallFunc_GetMapFeatureTypeFromMap_OutFeatureType;  // 0x03E8(0x0048)()
-	bool                                          CallFunc_GetMapFeatureTypeFromMap_ReturnValue;     // 0x0430(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_431[0x7];                                      // 0x0431(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AMapSystem*                             CallFunc_GetMapSystem_ReturnValue_2;               // 0x0438(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FMapFeatureInfo                        CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo_1; // 0x0440(0x00E0)()
-	bool                                          CallFunc_GetMapFeatureInfoFromMap_ReturnValue_1;   // 0x0520(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_521[0x7];                                      // 0x0521(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AMapSystem*                             CallFunc_GetMapSystem_ReturnValue_3;               // 0x0528(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetFeatureState_OutStateIndex;            // 0x0530(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetFeatureState_ReturnValue;              // 0x0534(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_535[0x3];                                      // 0x0535(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMapFeatureType                        CallFunc_GetMapFeatureTypeFromMap_OutFeatureType_1; // 0x0538(0x0048)()
-	bool                                          CallFunc_GetMapFeatureTypeFromMap_ReturnValue_1;   // 0x0580(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_581[0x3];                                      // 0x0581(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTag                           CallFunc_GetGameplayTagFromString_ReturnValue_1;   // 0x0584(0x0008)(NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_58C[0x4];                                      // 0x058C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTexture2D*                             CallFunc_Array_Get_Item_1;                         // 0x0590(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_Conv_VectorToVector2D_ReturnValue;        // 0x0598(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SetTexture_ReturnValue;                   // 0x05A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5A9[0x7];                                      // 0x05A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              CallFunc_GetOuterCoordinateForRegion_OutOuterCoordinate; // 0x05B0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetOuterCoordinateForRegion_ReturnValue;  // 0x05C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C1[0x7];                                      // 0x05C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_Conv_Vector2DToVector_ReturnValue;        // 0x05C8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UOverlaySlot*                           CallFunc_AddChildToOverlay_ReturnValue;            // 0x05E0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FSTR_MapFeatureInfoUI                  K2Node_MakeStruct_STR_MapFeatureInfoUI_1;          // 0x05E8(0x00F0)(ContainsInstancedReference, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_Subtract_Vector2DVector2D_ReturnValue;    // 0x06D8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x06E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x06EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AAppPlayerController*                   CallFunc_GetController_ReturnValue;                // 0x06F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UUserWidget*                            CallFunc_Create_ReturnValue;                       // 0x06F8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0700(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_701[0x7];                                      // 0x0701(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWDT_MapFeatureSymbol_C*                K2Node_DynamicCast_AsWDT_Map_Feature_Symbol;       // 0x0708(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0710(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_711[0x3];                                      // 0x0711(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0714(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FMapFeatureInfo                        L_FeatureInfo;                                     // 0x0088(0x00F8)(Edit, BlueprintVisible)
+	class AMapSystem*                             CallFunc_GetMapSystem_ReturnValue;                 // 0x0180(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FMapFeatureInfo                        CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo;  // 0x0188(0x00F8)()
+	bool                                          CallFunc_GetMapFeatureInfoFromMap_ReturnValue;     // 0x0280(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x0281(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_282[0x2];                                      // 0x0282(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTag                           CallFunc_GetGameplayTagFromString_ReturnValue;     // 0x0284(0x0008)(NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_28C[0x4];                                      // 0x028C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              CallFunc_GetFeatureMap2DPosition_NewParam;         // 0x0290(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSTR_FeatureQuestList                  CallFunc_Map_Find_Value;                           // 0x02A0(0x0010)(HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x02B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2B1[0x3];                                      // 0x02B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x02B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSTR_MapFeatureInfoUI                  K2Node_MakeStruct_STR_MapFeatureInfoUI;            // 0x02B8(0x0108)(ContainsInstancedReference, HasGetValueTypeHash)
+	bool                                          CallFunc_CheckFeatureFilterFeatureVisibility_OutIsVisible; // 0x03C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3C1[0x3];                                      // 0x03C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_AddUnique_ReturnValue;              // 0x03C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_GetHeight_OutHeight;                      // 0x03C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_GetWidth_OutWidth;                        // 0x03D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x03D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_1;        // 0x03E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x03E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3EC[0x4];                                      // 0x03EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue;                 // 0x03F0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_Array_Get_Item;                           // 0x0400(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_CheckEnableQuestTimeSeries_IsEnable;      // 0x0408(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_409[0x7];                                      // 0x0409(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class ITextureInterface>     K2Node_DynamicCast_AsTexture_Interface;            // 0x0410(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0420(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_421[0x7];                                      // 0x0421(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AMapSystem*                             CallFunc_GetMapSystem_ReturnValue_1;               // 0x0428(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FMapFeatureType                        CallFunc_GetMapFeatureTypeFromMap_OutFeatureType;  // 0x0430(0x0048)()
+	bool                                          CallFunc_GetMapFeatureTypeFromMap_ReturnValue;     // 0x0478(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_479[0x7];                                      // 0x0479(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AMapSystem*                             CallFunc_GetMapSystem_ReturnValue_2;               // 0x0480(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FMapFeatureInfo                        CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo_1; // 0x0488(0x00F8)()
+	bool                                          CallFunc_GetMapFeatureInfoFromMap_ReturnValue_1;   // 0x0580(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_581[0x7];                                      // 0x0581(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AMapSystem*                             CallFunc_GetMapSystem_ReturnValue_3;               // 0x0588(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetFeatureState_OutStateIndex;            // 0x0590(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetFeatureState_ReturnValue;              // 0x0594(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_595[0x3];                                      // 0x0595(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMapFeatureType                        CallFunc_GetMapFeatureTypeFromMap_OutFeatureType_1; // 0x0598(0x0048)()
+	bool                                          CallFunc_GetMapFeatureTypeFromMap_ReturnValue_1;   // 0x05E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5E1[0x3];                                      // 0x05E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTag                           CallFunc_GetGameplayTagFromString_ReturnValue_1;   // 0x05E4(0x0008)(NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5EC[0x4];                                      // 0x05EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTexture2D*                             CallFunc_Array_Get_Item_1;                         // 0x05F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_Conv_VectorToVector2D_ReturnValue;        // 0x05F8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SetTexture_ReturnValue;                   // 0x0608(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_609[0x7];                                      // 0x0609(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              CallFunc_GetOuterCoordinateForRegion_OutOuterCoordinate; // 0x0610(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetOuterCoordinateForRegion_ReturnValue;  // 0x0620(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_621[0x7];                                      // 0x0621(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_Conv_Vector2DToVector_ReturnValue;        // 0x0628(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UOverlaySlot*                           CallFunc_AddChildToOverlay_ReturnValue;            // 0x0640(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FSTR_MapFeatureInfoUI                  K2Node_MakeStruct_STR_MapFeatureInfoUI_1;          // 0x0648(0x0108)(ContainsInstancedReference, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_Subtract_Vector2DVector2D_ReturnValue;    // 0x0750(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0760(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0764(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AAppPlayerController*                   CallFunc_GetController_ReturnValue;                // 0x0768(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UUserWidget*                            CallFunc_Create_ReturnValue;                       // 0x0770(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0778(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_779[0x7];                                      // 0x0779(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWDT_MapFeatureSymbol_C*                K2Node_DynamicCast_AsWDT_Map_Feature_Symbol;       // 0x0780(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0788(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_789[0x3];                                      // 0x0789(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x078C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_MapImage_C_SetSingleFeatureSymbol) == 0x000008, "Wrong alignment on WDT_MapImage_C_SetSingleFeatureSymbol");
-static_assert(sizeof(WDT_MapImage_C_SetSingleFeatureSymbol) == 0x000718, "Wrong size on WDT_MapImage_C_SetSingleFeatureSymbol");
+static_assert(sizeof(WDT_MapImage_C_SetSingleFeatureSymbol) == 0x000790, "Wrong size on WDT_MapImage_C_SetSingleFeatureSymbol");
 static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, InFeatureId) == 0x000000, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::InFeatureId' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, L_FindedEnableFeatureQuest) == 0x000008, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::L_FindedEnableFeatureQuest' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, L_FeaturePositionUI) == 0x000010, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::L_FeaturePositionUI' has a wrong offset!");
@@ -4868,57 +4949,57 @@ static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, L_FeaturePosition)
 static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, L_FeatureSymbolWidget) == 0x000038, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::L_FeatureSymbolWidget' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, L_FeatureType) == 0x000040, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::L_FeatureType' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, L_FeatureInfo) == 0x000088, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::L_FeatureInfo' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_GetMapSystem_ReturnValue) == 0x000168, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_GetMapSystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo) == 0x000170, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_GetMapFeatureInfoFromMap_ReturnValue) == 0x000250, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_GetMapFeatureInfoFromMap_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_EqualEqual_NameName_ReturnValue) == 0x000251, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_EqualEqual_NameName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_GetGameplayTagFromString_ReturnValue) == 0x000254, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_GetGameplayTagFromString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_GetFeatureMap2DPosition_NewParam) == 0x000260, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_GetFeatureMap2DPosition_NewParam' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_Map_Find_Value) == 0x000270, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_Map_Find_ReturnValue) == 0x000280, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_Array_Length_ReturnValue) == 0x000284, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, K2Node_MakeStruct_STR_MapFeatureInfoUI) == 0x000288, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::K2Node_MakeStruct_STR_MapFeatureInfoUI' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_CheckFeatureFilterFeatureVisibility_OutIsVisible) == 0x000378, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_CheckFeatureFilterFeatureVisibility_OutIsVisible' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_Array_AddUnique_ReturnValue) == 0x00037C, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_Array_AddUnique_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_GetHeight_OutHeight) == 0x000380, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_GetHeight_OutHeight' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_GetWidth_OutWidth) == 0x000388, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_GetWidth_OutWidth' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000390, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_Divide_DoubleDouble_ReturnValue_1) == 0x000398, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_Divide_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, Temp_int_Array_Index_Variable) == 0x0003A0, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_MakeVector2D_ReturnValue) == 0x0003A8, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_MakeVector2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_Array_Get_Item) == 0x0003B8, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_CheckEnableQuestTimeSeries_IsEnable) == 0x0003C0, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_CheckEnableQuestTimeSeries_IsEnable' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, K2Node_DynamicCast_AsTexture_Interface) == 0x0003C8, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::K2Node_DynamicCast_AsTexture_Interface' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, K2Node_DynamicCast_bSuccess) == 0x0003D8, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_GetMapSystem_ReturnValue_1) == 0x0003E0, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_GetMapSystem_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_GetMapFeatureTypeFromMap_OutFeatureType) == 0x0003E8, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_GetMapFeatureTypeFromMap_OutFeatureType' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_GetMapFeatureTypeFromMap_ReturnValue) == 0x000430, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_GetMapFeatureTypeFromMap_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_GetMapSystem_ReturnValue_2) == 0x000438, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_GetMapSystem_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo_1) == 0x000440, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_GetMapFeatureInfoFromMap_ReturnValue_1) == 0x000520, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_GetMapFeatureInfoFromMap_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_GetMapSystem_ReturnValue_3) == 0x000528, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_GetMapSystem_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_GetFeatureState_OutStateIndex) == 0x000530, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_GetFeatureState_OutStateIndex' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_GetFeatureState_ReturnValue) == 0x000534, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_GetFeatureState_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_GetMapFeatureTypeFromMap_OutFeatureType_1) == 0x000538, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_GetMapFeatureTypeFromMap_OutFeatureType_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_GetMapFeatureTypeFromMap_ReturnValue_1) == 0x000580, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_GetMapFeatureTypeFromMap_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_GetGameplayTagFromString_ReturnValue_1) == 0x000584, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_GetGameplayTagFromString_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_Array_Get_Item_1) == 0x000590, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_Conv_VectorToVector2D_ReturnValue) == 0x000598, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_Conv_VectorToVector2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_SetTexture_ReturnValue) == 0x0005A8, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_SetTexture_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_GetOuterCoordinateForRegion_OutOuterCoordinate) == 0x0005B0, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_GetOuterCoordinateForRegion_OutOuterCoordinate' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_GetOuterCoordinateForRegion_ReturnValue) == 0x0005C0, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_GetOuterCoordinateForRegion_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_Conv_Vector2DToVector_ReturnValue) == 0x0005C8, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_Conv_Vector2DToVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_AddChildToOverlay_ReturnValue) == 0x0005E0, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_AddChildToOverlay_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, K2Node_MakeStruct_STR_MapFeatureInfoUI_1) == 0x0005E8, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::K2Node_MakeStruct_STR_MapFeatureInfoUI_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_Subtract_Vector2DVector2D_ReturnValue) == 0x0006D8, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_Subtract_Vector2DVector2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_Array_Add_ReturnValue) == 0x0006E8, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, Temp_int_Loop_Counter_Variable) == 0x0006EC, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_GetController_ReturnValue) == 0x0006F0, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_GetController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_Create_ReturnValue) == 0x0006F8, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_Create_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_Less_IntInt_ReturnValue) == 0x000700, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, K2Node_DynamicCast_AsWDT_Map_Feature_Symbol) == 0x000708, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::K2Node_DynamicCast_AsWDT_Map_Feature_Symbol' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, K2Node_DynamicCast_bSuccess_1) == 0x000710, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_Add_IntInt_ReturnValue) == 0x000714, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_GetMapSystem_ReturnValue) == 0x000180, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_GetMapSystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo) == 0x000188, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_GetMapFeatureInfoFromMap_ReturnValue) == 0x000280, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_GetMapFeatureInfoFromMap_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_EqualEqual_NameName_ReturnValue) == 0x000281, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_EqualEqual_NameName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_GetGameplayTagFromString_ReturnValue) == 0x000284, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_GetGameplayTagFromString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_GetFeatureMap2DPosition_NewParam) == 0x000290, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_GetFeatureMap2DPosition_NewParam' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_Map_Find_Value) == 0x0002A0, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_Map_Find_ReturnValue) == 0x0002B0, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_Array_Length_ReturnValue) == 0x0002B4, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, K2Node_MakeStruct_STR_MapFeatureInfoUI) == 0x0002B8, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::K2Node_MakeStruct_STR_MapFeatureInfoUI' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_CheckFeatureFilterFeatureVisibility_OutIsVisible) == 0x0003C0, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_CheckFeatureFilterFeatureVisibility_OutIsVisible' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_Array_AddUnique_ReturnValue) == 0x0003C4, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_Array_AddUnique_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_GetHeight_OutHeight) == 0x0003C8, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_GetHeight_OutHeight' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_GetWidth_OutWidth) == 0x0003D0, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_GetWidth_OutWidth' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x0003D8, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_Divide_DoubleDouble_ReturnValue_1) == 0x0003E0, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_Divide_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, Temp_int_Array_Index_Variable) == 0x0003E8, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_MakeVector2D_ReturnValue) == 0x0003F0, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_MakeVector2D_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_Array_Get_Item) == 0x000400, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_CheckEnableQuestTimeSeries_IsEnable) == 0x000408, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_CheckEnableQuestTimeSeries_IsEnable' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, K2Node_DynamicCast_AsTexture_Interface) == 0x000410, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::K2Node_DynamicCast_AsTexture_Interface' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, K2Node_DynamicCast_bSuccess) == 0x000420, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_GetMapSystem_ReturnValue_1) == 0x000428, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_GetMapSystem_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_GetMapFeatureTypeFromMap_OutFeatureType) == 0x000430, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_GetMapFeatureTypeFromMap_OutFeatureType' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_GetMapFeatureTypeFromMap_ReturnValue) == 0x000478, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_GetMapFeatureTypeFromMap_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_GetMapSystem_ReturnValue_2) == 0x000480, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_GetMapSystem_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo_1) == 0x000488, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_GetMapFeatureInfoFromMap_OutFeatureInfo_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_GetMapFeatureInfoFromMap_ReturnValue_1) == 0x000580, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_GetMapFeatureInfoFromMap_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_GetMapSystem_ReturnValue_3) == 0x000588, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_GetMapSystem_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_GetFeatureState_OutStateIndex) == 0x000590, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_GetFeatureState_OutStateIndex' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_GetFeatureState_ReturnValue) == 0x000594, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_GetFeatureState_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_GetMapFeatureTypeFromMap_OutFeatureType_1) == 0x000598, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_GetMapFeatureTypeFromMap_OutFeatureType_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_GetMapFeatureTypeFromMap_ReturnValue_1) == 0x0005E0, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_GetMapFeatureTypeFromMap_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_GetGameplayTagFromString_ReturnValue_1) == 0x0005E4, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_GetGameplayTagFromString_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_Array_Get_Item_1) == 0x0005F0, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_Conv_VectorToVector2D_ReturnValue) == 0x0005F8, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_Conv_VectorToVector2D_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_SetTexture_ReturnValue) == 0x000608, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_SetTexture_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_GetOuterCoordinateForRegion_OutOuterCoordinate) == 0x000610, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_GetOuterCoordinateForRegion_OutOuterCoordinate' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_GetOuterCoordinateForRegion_ReturnValue) == 0x000620, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_GetOuterCoordinateForRegion_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_Conv_Vector2DToVector_ReturnValue) == 0x000628, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_Conv_Vector2DToVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_AddChildToOverlay_ReturnValue) == 0x000640, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_AddChildToOverlay_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, K2Node_MakeStruct_STR_MapFeatureInfoUI_1) == 0x000648, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::K2Node_MakeStruct_STR_MapFeatureInfoUI_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_Subtract_Vector2DVector2D_ReturnValue) == 0x000750, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_Subtract_Vector2DVector2D_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_Array_Add_ReturnValue) == 0x000760, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, Temp_int_Loop_Counter_Variable) == 0x000764, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_GetController_ReturnValue) == 0x000768, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_GetController_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_Create_ReturnValue) == 0x000770, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_Create_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_Less_IntInt_ReturnValue) == 0x000778, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, K2Node_DynamicCast_AsWDT_Map_Feature_Symbol) == 0x000780, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::K2Node_DynamicCast_AsWDT_Map_Feature_Symbol' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, K2Node_DynamicCast_bSuccess_1) == 0x000788, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_SetSingleFeatureSymbol, CallFunc_Add_IntInt_ReturnValue) == 0x00078C, "Member 'WDT_MapImage_C_SetSingleFeatureSymbol::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
 
 // Function WDT_MapImage.WDT_MapImage_C.SetFeatureSymbols
 // 0x0058 (0x0058 - 0x0000)
@@ -5010,7 +5091,7 @@ static_assert(offsetof(WDT_MapImage_C_SetPlayerIconPosition, CallFunc_Subtract_V
 static_assert(offsetof(WDT_MapImage_C_SetPlayerIconPosition, CallFunc_SetRenderTransformAngle_Angle_ImplicitCast) == 0x000060, "Member 'WDT_MapImage_C_SetPlayerIconPosition::CallFunc_SetRenderTransformAngle_Angle_ImplicitCast' has a wrong offset!");
 
 // Function WDT_MapImage.WDT_MapImage_C.TickDetectMapFeature
-// 0x0380 (0x0380 - 0x0000)
+// 0x03C8 (0x03C8 - 0x0000)
 struct WDT_MapImage_C_TickDetectMapFeature final
 {
 public:
@@ -5019,60 +5100,60 @@ public:
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              L_DetectedPinMapPosition;                          // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector2D                              L_DetectedFeatureMapPosition;                      // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSTR_MapFeatureInfoUI                  L_DetectedFeatureInfo;                             // 0x0030(0x00F0)(Edit, BlueprintVisible, ContainsInstancedReference, HasGetValueTypeHash)
-	bool                                          L_PinDetected;                                     // 0x0120(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_121[0x7];                                      // 0x0121(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        L_MapScaleOffset;                                  // 0x0128(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         L_ScaleInputValue;                                 // 0x0130(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0134(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetNearbyFeatureOrUserMarker_OutIsFeature; // 0x0135(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0136(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_137[0x1];                                      // 0x0137(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTag                           CallFunc_GetGameplayTagFromString_ReturnValue;     // 0x0138(0x0008)(NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_GetCursorCenterPosition_OutCursorTranslation; // 0x0140(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_GetFeatureMap2DPosition_NewParam;         // 0x0150(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_Subtract_Vector2DVector2D_ReturnValue;    // 0x0160(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_VSize2D_ReturnValue;                      // 0x0170(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NearlyEqual_FloatFloat_ReturnValue;       // 0x0178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0179(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_DetectMapFeature_bDetected;               // 0x017A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_17B[0x5];                                      // 0x017B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSTR_MapFeatureInfoUI                  CallFunc_DetectMapFeature_OutFeatureInfo;          // 0x0180(0x00F0)(ContainsInstancedReference, HasGetValueTypeHash)
-	struct FGameplayTag                           CallFunc_MakeLiteralGameplayTag_ReturnValue;       // 0x0270(0x0008)(NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0278(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_279[0x7];                                      // 0x0279(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSTR_MapFeatureInfoUI                  K2Node_MakeStruct_STR_MapFeatureInfoUI;            // 0x0280(0x00F0)(ContainsInstancedReference, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_GameplayTag_ReturnValue;         // 0x0370(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_371[0x7];                                      // 0x0371(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_StickyCurosrToPosition_InInputThreshold_ImplicitCast; // 0x0378(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSTR_MapFeatureInfoUI                  L_DetectedFeatureInfo;                             // 0x0030(0x0108)(Edit, BlueprintVisible, ContainsInstancedReference, HasGetValueTypeHash)
+	bool                                          L_PinDetected;                                     // 0x0138(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_139[0x7];                                      // 0x0139(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        L_MapScaleOffset;                                  // 0x0140(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         L_ScaleInputValue;                                 // 0x0148(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x014C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetNearbyFeatureOrUserMarker_OutIsFeature; // 0x014D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x014E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14F[0x1];                                      // 0x014F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTag                           CallFunc_GetGameplayTagFromString_ReturnValue;     // 0x0150(0x0008)(NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_GetCursorCenterPosition_OutCursorTranslation; // 0x0158(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_GetFeatureMap2DPosition_NewParam;         // 0x0168(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_Subtract_Vector2DVector2D_ReturnValue;    // 0x0178(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_VSize2D_ReturnValue;                      // 0x0188(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NearlyEqual_FloatFloat_ReturnValue;       // 0x0190(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0191(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_DetectMapFeature_bDetected;               // 0x0192(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_193[0x5];                                      // 0x0193(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSTR_MapFeatureInfoUI                  CallFunc_DetectMapFeature_OutFeatureInfo;          // 0x0198(0x0108)(ContainsInstancedReference, HasGetValueTypeHash)
+	struct FGameplayTag                           CallFunc_MakeLiteralGameplayTag_ReturnValue;       // 0x02A0(0x0008)(NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x02A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2A9[0x7];                                      // 0x02A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSTR_MapFeatureInfoUI                  K2Node_MakeStruct_STR_MapFeatureInfoUI;            // 0x02B0(0x0108)(ContainsInstancedReference, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_GameplayTag_ReturnValue;         // 0x03B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3B9[0x7];                                      // 0x03B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_StickyCurosrToPosition_InInputThreshold_ImplicitCast; // 0x03C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_MapImage_C_TickDetectMapFeature) == 0x000008, "Wrong alignment on WDT_MapImage_C_TickDetectMapFeature");
-static_assert(sizeof(WDT_MapImage_C_TickDetectMapFeature) == 0x000380, "Wrong size on WDT_MapImage_C_TickDetectMapFeature");
+static_assert(sizeof(WDT_MapImage_C_TickDetectMapFeature) == 0x0003C8, "Wrong size on WDT_MapImage_C_TickDetectMapFeature");
 static_assert(offsetof(WDT_MapImage_C_TickDetectMapFeature, InDeltaSec) == 0x000000, "Member 'WDT_MapImage_C_TickDetectMapFeature::InDeltaSec' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_TickDetectMapFeature, L_SelectPin) == 0x000008, "Member 'WDT_MapImage_C_TickDetectMapFeature::L_SelectPin' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_TickDetectMapFeature, L_DetectedPinMapPosition) == 0x000010, "Member 'WDT_MapImage_C_TickDetectMapFeature::L_DetectedPinMapPosition' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_TickDetectMapFeature, L_DetectedFeatureMapPosition) == 0x000020, "Member 'WDT_MapImage_C_TickDetectMapFeature::L_DetectedFeatureMapPosition' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_TickDetectMapFeature, L_DetectedFeatureInfo) == 0x000030, "Member 'WDT_MapImage_C_TickDetectMapFeature::L_DetectedFeatureInfo' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_TickDetectMapFeature, L_PinDetected) == 0x000120, "Member 'WDT_MapImage_C_TickDetectMapFeature::L_PinDetected' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_TickDetectMapFeature, L_MapScaleOffset) == 0x000128, "Member 'WDT_MapImage_C_TickDetectMapFeature::L_MapScaleOffset' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_TickDetectMapFeature, L_ScaleInputValue) == 0x000130, "Member 'WDT_MapImage_C_TickDetectMapFeature::L_ScaleInputValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_TickDetectMapFeature, CallFunc_IsVisible_ReturnValue) == 0x000134, "Member 'WDT_MapImage_C_TickDetectMapFeature::CallFunc_IsVisible_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_TickDetectMapFeature, CallFunc_GetNearbyFeatureOrUserMarker_OutIsFeature) == 0x000135, "Member 'WDT_MapImage_C_TickDetectMapFeature::CallFunc_GetNearbyFeatureOrUserMarker_OutIsFeature' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_TickDetectMapFeature, CallFunc_Not_PreBool_ReturnValue) == 0x000136, "Member 'WDT_MapImage_C_TickDetectMapFeature::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_TickDetectMapFeature, CallFunc_GetGameplayTagFromString_ReturnValue) == 0x000138, "Member 'WDT_MapImage_C_TickDetectMapFeature::CallFunc_GetGameplayTagFromString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_TickDetectMapFeature, CallFunc_GetCursorCenterPosition_OutCursorTranslation) == 0x000140, "Member 'WDT_MapImage_C_TickDetectMapFeature::CallFunc_GetCursorCenterPosition_OutCursorTranslation' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_TickDetectMapFeature, CallFunc_GetFeatureMap2DPosition_NewParam) == 0x000150, "Member 'WDT_MapImage_C_TickDetectMapFeature::CallFunc_GetFeatureMap2DPosition_NewParam' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_TickDetectMapFeature, CallFunc_Subtract_Vector2DVector2D_ReturnValue) == 0x000160, "Member 'WDT_MapImage_C_TickDetectMapFeature::CallFunc_Subtract_Vector2DVector2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_TickDetectMapFeature, CallFunc_VSize2D_ReturnValue) == 0x000170, "Member 'WDT_MapImage_C_TickDetectMapFeature::CallFunc_VSize2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_TickDetectMapFeature, CallFunc_NearlyEqual_FloatFloat_ReturnValue) == 0x000178, "Member 'WDT_MapImage_C_TickDetectMapFeature::CallFunc_NearlyEqual_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_TickDetectMapFeature, CallFunc_Not_PreBool_ReturnValue_1) == 0x000179, "Member 'WDT_MapImage_C_TickDetectMapFeature::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_TickDetectMapFeature, CallFunc_DetectMapFeature_bDetected) == 0x00017A, "Member 'WDT_MapImage_C_TickDetectMapFeature::CallFunc_DetectMapFeature_bDetected' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_TickDetectMapFeature, CallFunc_DetectMapFeature_OutFeatureInfo) == 0x000180, "Member 'WDT_MapImage_C_TickDetectMapFeature::CallFunc_DetectMapFeature_OutFeatureInfo' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_TickDetectMapFeature, CallFunc_MakeLiteralGameplayTag_ReturnValue) == 0x000270, "Member 'WDT_MapImage_C_TickDetectMapFeature::CallFunc_MakeLiteralGameplayTag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_TickDetectMapFeature, CallFunc_BooleanAND_ReturnValue) == 0x000278, "Member 'WDT_MapImage_C_TickDetectMapFeature::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_TickDetectMapFeature, K2Node_MakeStruct_STR_MapFeatureInfoUI) == 0x000280, "Member 'WDT_MapImage_C_TickDetectMapFeature::K2Node_MakeStruct_STR_MapFeatureInfoUI' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_TickDetectMapFeature, CallFunc_NotEqual_GameplayTag_ReturnValue) == 0x000370, "Member 'WDT_MapImage_C_TickDetectMapFeature::CallFunc_NotEqual_GameplayTag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_TickDetectMapFeature, CallFunc_StickyCurosrToPosition_InInputThreshold_ImplicitCast) == 0x000378, "Member 'WDT_MapImage_C_TickDetectMapFeature::CallFunc_StickyCurosrToPosition_InInputThreshold_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_TickDetectMapFeature, L_PinDetected) == 0x000138, "Member 'WDT_MapImage_C_TickDetectMapFeature::L_PinDetected' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_TickDetectMapFeature, L_MapScaleOffset) == 0x000140, "Member 'WDT_MapImage_C_TickDetectMapFeature::L_MapScaleOffset' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_TickDetectMapFeature, L_ScaleInputValue) == 0x000148, "Member 'WDT_MapImage_C_TickDetectMapFeature::L_ScaleInputValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_TickDetectMapFeature, CallFunc_IsVisible_ReturnValue) == 0x00014C, "Member 'WDT_MapImage_C_TickDetectMapFeature::CallFunc_IsVisible_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_TickDetectMapFeature, CallFunc_GetNearbyFeatureOrUserMarker_OutIsFeature) == 0x00014D, "Member 'WDT_MapImage_C_TickDetectMapFeature::CallFunc_GetNearbyFeatureOrUserMarker_OutIsFeature' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_TickDetectMapFeature, CallFunc_Not_PreBool_ReturnValue) == 0x00014E, "Member 'WDT_MapImage_C_TickDetectMapFeature::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_TickDetectMapFeature, CallFunc_GetGameplayTagFromString_ReturnValue) == 0x000150, "Member 'WDT_MapImage_C_TickDetectMapFeature::CallFunc_GetGameplayTagFromString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_TickDetectMapFeature, CallFunc_GetCursorCenterPosition_OutCursorTranslation) == 0x000158, "Member 'WDT_MapImage_C_TickDetectMapFeature::CallFunc_GetCursorCenterPosition_OutCursorTranslation' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_TickDetectMapFeature, CallFunc_GetFeatureMap2DPosition_NewParam) == 0x000168, "Member 'WDT_MapImage_C_TickDetectMapFeature::CallFunc_GetFeatureMap2DPosition_NewParam' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_TickDetectMapFeature, CallFunc_Subtract_Vector2DVector2D_ReturnValue) == 0x000178, "Member 'WDT_MapImage_C_TickDetectMapFeature::CallFunc_Subtract_Vector2DVector2D_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_TickDetectMapFeature, CallFunc_VSize2D_ReturnValue) == 0x000188, "Member 'WDT_MapImage_C_TickDetectMapFeature::CallFunc_VSize2D_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_TickDetectMapFeature, CallFunc_NearlyEqual_FloatFloat_ReturnValue) == 0x000190, "Member 'WDT_MapImage_C_TickDetectMapFeature::CallFunc_NearlyEqual_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_TickDetectMapFeature, CallFunc_Not_PreBool_ReturnValue_1) == 0x000191, "Member 'WDT_MapImage_C_TickDetectMapFeature::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_TickDetectMapFeature, CallFunc_DetectMapFeature_bDetected) == 0x000192, "Member 'WDT_MapImage_C_TickDetectMapFeature::CallFunc_DetectMapFeature_bDetected' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_TickDetectMapFeature, CallFunc_DetectMapFeature_OutFeatureInfo) == 0x000198, "Member 'WDT_MapImage_C_TickDetectMapFeature::CallFunc_DetectMapFeature_OutFeatureInfo' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_TickDetectMapFeature, CallFunc_MakeLiteralGameplayTag_ReturnValue) == 0x0002A0, "Member 'WDT_MapImage_C_TickDetectMapFeature::CallFunc_MakeLiteralGameplayTag_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_TickDetectMapFeature, CallFunc_BooleanAND_ReturnValue) == 0x0002A8, "Member 'WDT_MapImage_C_TickDetectMapFeature::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_TickDetectMapFeature, K2Node_MakeStruct_STR_MapFeatureInfoUI) == 0x0002B0, "Member 'WDT_MapImage_C_TickDetectMapFeature::K2Node_MakeStruct_STR_MapFeatureInfoUI' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_TickDetectMapFeature, CallFunc_NotEqual_GameplayTag_ReturnValue) == 0x0003B8, "Member 'WDT_MapImage_C_TickDetectMapFeature::CallFunc_NotEqual_GameplayTag_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_TickDetectMapFeature, CallFunc_StickyCurosrToPosition_InInputThreshold_ImplicitCast) == 0x0003C0, "Member 'WDT_MapImage_C_TickDetectMapFeature::CallFunc_StickyCurosrToPosition_InInputThreshold_ImplicitCast' has a wrong offset!");
 
 // Function WDT_MapImage.WDT_MapImage_C.TickSwitchMapImage
 // 0x0018 (0x0018 - 0x0000)
@@ -5512,58 +5593,68 @@ static_assert(offsetof(WDT_MapImage_C_BuildRegionBox, CallFunc_BooleanAND_Return
 static_assert(offsetof(WDT_MapImage_C_BuildRegionBox, CallFunc_BooleanAND_ReturnValue_4) == 0x000222, "Member 'WDT_MapImage_C_BuildRegionBox::CallFunc_BooleanAND_ReturnValue_4' has a wrong offset!");
 
 // Function WDT_MapImage.WDT_MapImage_C.Initialize
-// 0x01C0 (0x01C0 - 0x0000)
+// 0x01C8 (0x01C8 - 0x0000)
 struct WDT_MapImage_C_Initialize final
 {
 public:
-	TSoftObjectPtr<class UTexture2D>              CallFunc_GetWholeMapForTimeSeries_OutMapTexture;   // 0x0000(0x0028)(HasGetValueTypeHash)
-	class UObject*                                CallFunc_LoadAsset_Blocking_ReturnValue;           // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UTexture2D*                             K2Node_DynamicCast_AsTexture_2D;                   // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AMapSystem*                             CallFunc_GetMapSystem_ReturnValue;                 // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FMapRegionInfo                         CallFunc_GetCurrentRegionInfo_OutMapRegionInfo;    // 0x0048(0x0038)()
-	bool                                          CallFunc_GetCurrentRegionInfo_ReturnValue;         // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_GetCurrentTimeSeriesText_ReturnValue;     // 0x0088(0x0010)(ConstParm)
-	class FName                                   CallFunc_GetRegionTagToRegionTabID_OutRegionName;  // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FMapRegionInfo                         CallFunc_GetCurrentRegionInfo_OutMapRegionInfo_1;  // 0x00A0(0x0038)()
-	bool                                          CallFunc_GetCurrentRegionInfo_ReturnValue_1;       // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D9[0x7];                                       // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              CallFunc_GetMapCurrentScale_ReturnValue;           // 0x00E0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AMapSystem*                             CallFunc_GetMapSystem_ReturnValue_1;               // 0x00F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ABP_MapSystem_C*                        K2Node_DynamicCast_AsBP_Map_System;                // 0x00F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0101(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_102[0x2];                                      // 0x0102(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTag                           CallFunc_GetCurrentTimeSeries_ReturnValue;         // 0x0104(0x0008)(ConstParm, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_10C[0x4];                                      // 0x010C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FName>                           CallFunc_GetAllTimeSeriesRowNames_ReturnValue;     // 0x0110(0x0010)(ReferenceParm)
-	struct FMapInfo                               CallFunc_GetCurrentMapInfo_OutMapInfo;             // 0x0120(0x0098)()
-	bool                                          CallFunc_GetCurrentMapInfo_ReturnValue;            // 0x01B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UTexture2D>              CallFunc_GetWholeMapForTimeSeries_OutMapTexture;   // 0x0008(0x0028)(HasGetValueTypeHash)
+	class UObject*                                CallFunc_LoadAsset_Blocking_ReturnValue;           // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UTexture2D*                             K2Node_DynamicCast_AsTexture_2D;                   // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsReleasedTrialArea_ReturnValue;          // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_42[0x6];                                       // 0x0042(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class AMapSystem*                             CallFunc_GetMapSystem_ReturnValue;                 // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FMapRegionInfo                         CallFunc_GetCurrentRegionInfo_OutMapRegionInfo;    // 0x0050(0x0038)()
+	bool                                          CallFunc_GetCurrentRegionInfo_ReturnValue;         // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_GetCurrentTimeSeriesText_ReturnValue;     // 0x0090(0x0010)(ConstParm)
+	class FName                                   CallFunc_GetRegionTagToRegionTabID_OutRegionName;  // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FMapRegionInfo                         CallFunc_GetCurrentRegionInfo_OutMapRegionInfo_1;  // 0x00A8(0x0038)()
+	bool                                          CallFunc_GetCurrentRegionInfo_ReturnValue_1;       // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E1[0x7];                                       // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              CallFunc_GetMapCurrentScale_ReturnValue;           // 0x00E8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AMapSystem*                             CallFunc_GetMapSystem_ReturnValue_1;               // 0x00F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ABP_MapSystem_C*                        K2Node_DynamicCast_AsBP_Map_System;                // 0x0100(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0109(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x010A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x010B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           CallFunc_GetCurrentTimeSeries_ReturnValue;         // 0x010C(0x0008)(ConstParm, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_114[0x4];                                      // 0x0114(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FName>                           CallFunc_GetAllTimeSeriesRowNames_ReturnValue;     // 0x0118(0x0010)(ReferenceParm)
+	struct FMapInfo                               CallFunc_GetCurrentMapInfo_OutMapInfo;             // 0x0128(0x0098)()
+	bool                                          CallFunc_GetCurrentMapInfo_ReturnValue;            // 0x01C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WDT_MapImage_C_Initialize) == 0x000008, "Wrong alignment on WDT_MapImage_C_Initialize");
-static_assert(sizeof(WDT_MapImage_C_Initialize) == 0x0001C0, "Wrong size on WDT_MapImage_C_Initialize");
-static_assert(offsetof(WDT_MapImage_C_Initialize, CallFunc_GetWholeMapForTimeSeries_OutMapTexture) == 0x000000, "Member 'WDT_MapImage_C_Initialize::CallFunc_GetWholeMapForTimeSeries_OutMapTexture' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_Initialize, CallFunc_LoadAsset_Blocking_ReturnValue) == 0x000028, "Member 'WDT_MapImage_C_Initialize::CallFunc_LoadAsset_Blocking_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_Initialize, K2Node_DynamicCast_AsTexture_2D) == 0x000030, "Member 'WDT_MapImage_C_Initialize::K2Node_DynamicCast_AsTexture_2D' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_Initialize, K2Node_DynamicCast_bSuccess) == 0x000038, "Member 'WDT_MapImage_C_Initialize::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_Initialize, CallFunc_GetMapSystem_ReturnValue) == 0x000040, "Member 'WDT_MapImage_C_Initialize::CallFunc_GetMapSystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_Initialize, CallFunc_GetCurrentRegionInfo_OutMapRegionInfo) == 0x000048, "Member 'WDT_MapImage_C_Initialize::CallFunc_GetCurrentRegionInfo_OutMapRegionInfo' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_Initialize, CallFunc_GetCurrentRegionInfo_ReturnValue) == 0x000080, "Member 'WDT_MapImage_C_Initialize::CallFunc_GetCurrentRegionInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_Initialize, CallFunc_GetCurrentTimeSeriesText_ReturnValue) == 0x000088, "Member 'WDT_MapImage_C_Initialize::CallFunc_GetCurrentTimeSeriesText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_Initialize, CallFunc_GetRegionTagToRegionTabID_OutRegionName) == 0x000098, "Member 'WDT_MapImage_C_Initialize::CallFunc_GetRegionTagToRegionTabID_OutRegionName' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_Initialize, CallFunc_GetCurrentRegionInfo_OutMapRegionInfo_1) == 0x0000A0, "Member 'WDT_MapImage_C_Initialize::CallFunc_GetCurrentRegionInfo_OutMapRegionInfo_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_Initialize, CallFunc_GetCurrentRegionInfo_ReturnValue_1) == 0x0000D8, "Member 'WDT_MapImage_C_Initialize::CallFunc_GetCurrentRegionInfo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_Initialize, CallFunc_GetMapCurrentScale_ReturnValue) == 0x0000E0, "Member 'WDT_MapImage_C_Initialize::CallFunc_GetMapCurrentScale_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_Initialize, CallFunc_GetMapSystem_ReturnValue_1) == 0x0000F0, "Member 'WDT_MapImage_C_Initialize::CallFunc_GetMapSystem_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_Initialize, K2Node_DynamicCast_AsBP_Map_System) == 0x0000F8, "Member 'WDT_MapImage_C_Initialize::K2Node_DynamicCast_AsBP_Map_System' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_Initialize, K2Node_DynamicCast_bSuccess_1) == 0x000100, "Member 'WDT_MapImage_C_Initialize::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_Initialize, CallFunc_IsValid_ReturnValue) == 0x000101, "Member 'WDT_MapImage_C_Initialize::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_Initialize, CallFunc_GetCurrentTimeSeries_ReturnValue) == 0x000104, "Member 'WDT_MapImage_C_Initialize::CallFunc_GetCurrentTimeSeries_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_Initialize, CallFunc_GetAllTimeSeriesRowNames_ReturnValue) == 0x000110, "Member 'WDT_MapImage_C_Initialize::CallFunc_GetAllTimeSeriesRowNames_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_Initialize, CallFunc_GetCurrentMapInfo_OutMapInfo) == 0x000120, "Member 'WDT_MapImage_C_Initialize::CallFunc_GetCurrentMapInfo_OutMapInfo' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_Initialize, CallFunc_GetCurrentMapInfo_ReturnValue) == 0x0001B8, "Member 'WDT_MapImage_C_Initialize::CallFunc_GetCurrentMapInfo_ReturnValue' has a wrong offset!");
+static_assert(sizeof(WDT_MapImage_C_Initialize) == 0x0001C8, "Wrong size on WDT_MapImage_C_Initialize");
+static_assert(offsetof(WDT_MapImage_C_Initialize, Temp_byte_Variable) == 0x000000, "Member 'WDT_MapImage_C_Initialize::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_Initialize, Temp_byte_Variable_1) == 0x000001, "Member 'WDT_MapImage_C_Initialize::Temp_byte_Variable_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_Initialize, CallFunc_GetWholeMapForTimeSeries_OutMapTexture) == 0x000008, "Member 'WDT_MapImage_C_Initialize::CallFunc_GetWholeMapForTimeSeries_OutMapTexture' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_Initialize, CallFunc_LoadAsset_Blocking_ReturnValue) == 0x000030, "Member 'WDT_MapImage_C_Initialize::CallFunc_LoadAsset_Blocking_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_Initialize, K2Node_DynamicCast_AsTexture_2D) == 0x000038, "Member 'WDT_MapImage_C_Initialize::K2Node_DynamicCast_AsTexture_2D' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_Initialize, K2Node_DynamicCast_bSuccess) == 0x000040, "Member 'WDT_MapImage_C_Initialize::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_Initialize, CallFunc_IsReleasedTrialArea_ReturnValue) == 0x000041, "Member 'WDT_MapImage_C_Initialize::CallFunc_IsReleasedTrialArea_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_Initialize, CallFunc_GetMapSystem_ReturnValue) == 0x000048, "Member 'WDT_MapImage_C_Initialize::CallFunc_GetMapSystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_Initialize, CallFunc_GetCurrentRegionInfo_OutMapRegionInfo) == 0x000050, "Member 'WDT_MapImage_C_Initialize::CallFunc_GetCurrentRegionInfo_OutMapRegionInfo' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_Initialize, CallFunc_GetCurrentRegionInfo_ReturnValue) == 0x000088, "Member 'WDT_MapImage_C_Initialize::CallFunc_GetCurrentRegionInfo_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_Initialize, CallFunc_GetCurrentTimeSeriesText_ReturnValue) == 0x000090, "Member 'WDT_MapImage_C_Initialize::CallFunc_GetCurrentTimeSeriesText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_Initialize, CallFunc_GetRegionTagToRegionTabID_OutRegionName) == 0x0000A0, "Member 'WDT_MapImage_C_Initialize::CallFunc_GetRegionTagToRegionTabID_OutRegionName' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_Initialize, CallFunc_GetCurrentRegionInfo_OutMapRegionInfo_1) == 0x0000A8, "Member 'WDT_MapImage_C_Initialize::CallFunc_GetCurrentRegionInfo_OutMapRegionInfo_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_Initialize, CallFunc_GetCurrentRegionInfo_ReturnValue_1) == 0x0000E0, "Member 'WDT_MapImage_C_Initialize::CallFunc_GetCurrentRegionInfo_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_Initialize, CallFunc_GetMapCurrentScale_ReturnValue) == 0x0000E8, "Member 'WDT_MapImage_C_Initialize::CallFunc_GetMapCurrentScale_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_Initialize, CallFunc_GetMapSystem_ReturnValue_1) == 0x0000F8, "Member 'WDT_MapImage_C_Initialize::CallFunc_GetMapSystem_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_Initialize, K2Node_DynamicCast_AsBP_Map_System) == 0x000100, "Member 'WDT_MapImage_C_Initialize::K2Node_DynamicCast_AsBP_Map_System' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_Initialize, K2Node_DynamicCast_bSuccess_1) == 0x000108, "Member 'WDT_MapImage_C_Initialize::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_Initialize, Temp_bool_Variable) == 0x000109, "Member 'WDT_MapImage_C_Initialize::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_Initialize, CallFunc_IsValid_ReturnValue) == 0x00010A, "Member 'WDT_MapImage_C_Initialize::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_Initialize, K2Node_Select_Default) == 0x00010B, "Member 'WDT_MapImage_C_Initialize::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_Initialize, CallFunc_GetCurrentTimeSeries_ReturnValue) == 0x00010C, "Member 'WDT_MapImage_C_Initialize::CallFunc_GetCurrentTimeSeries_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_Initialize, CallFunc_GetAllTimeSeriesRowNames_ReturnValue) == 0x000118, "Member 'WDT_MapImage_C_Initialize::CallFunc_GetAllTimeSeriesRowNames_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_Initialize, CallFunc_GetCurrentMapInfo_OutMapInfo) == 0x000128, "Member 'WDT_MapImage_C_Initialize::CallFunc_GetCurrentMapInfo_OutMapInfo' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_Initialize, CallFunc_GetCurrentMapInfo_ReturnValue) == 0x0001C0, "Member 'WDT_MapImage_C_Initialize::CallFunc_GetCurrentMapInfo_ReturnValue' has a wrong offset!");
 
 // Function WDT_MapImage.WDT_MapImage_C.InpActEvt_IA_UI_DecideOnRelease_K2Node_EnhancedInputActionEvent_21
 // 0x0030 (0x0030 - 0x0000)
@@ -6387,8 +6478,9 @@ public:
 	double                                        Temp_real_Variable_36;                             // 0x0950(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector2D                              CallFunc_GetMousePosition_NewParam;                // 0x0958(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0968(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_IsDesignTime;                         // 0x0969(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_96A[0x2];                                      // 0x096A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0969(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsVisible_ReturnValue_1;                  // 0x096A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_IsDesignTime;                         // 0x096B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x096C(0x0038)(IsPlainOldData, NoDestructor)
 	float                                         K2Node_Event_InDeltaTime;                          // 0x09A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x09A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -6756,7 +6848,9 @@ static_assert(offsetof(WDT_MapImage_C_ExecuteUbergraph_WDT_MapImage, Temp_real_V
 static_assert(offsetof(WDT_MapImage_C_ExecuteUbergraph_WDT_MapImage, Temp_real_Variable_36) == 0x000950, "Member 'WDT_MapImage_C_ExecuteUbergraph_WDT_MapImage::Temp_real_Variable_36' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_ExecuteUbergraph_WDT_MapImage, CallFunc_GetMousePosition_NewParam) == 0x000958, "Member 'WDT_MapImage_C_ExecuteUbergraph_WDT_MapImage::CallFunc_GetMousePosition_NewParam' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_ExecuteUbergraph_WDT_MapImage, CallFunc_BooleanAND_ReturnValue) == 0x000968, "Member 'WDT_MapImage_C_ExecuteUbergraph_WDT_MapImage::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WDT_MapImage_C_ExecuteUbergraph_WDT_MapImage, K2Node_Event_IsDesignTime) == 0x000969, "Member 'WDT_MapImage_C_ExecuteUbergraph_WDT_MapImage::K2Node_Event_IsDesignTime' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_ExecuteUbergraph_WDT_MapImage, CallFunc_IsVisible_ReturnValue) == 0x000969, "Member 'WDT_MapImage_C_ExecuteUbergraph_WDT_MapImage::CallFunc_IsVisible_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_ExecuteUbergraph_WDT_MapImage, CallFunc_IsVisible_ReturnValue_1) == 0x00096A, "Member 'WDT_MapImage_C_ExecuteUbergraph_WDT_MapImage::CallFunc_IsVisible_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WDT_MapImage_C_ExecuteUbergraph_WDT_MapImage, K2Node_Event_IsDesignTime) == 0x00096B, "Member 'WDT_MapImage_C_ExecuteUbergraph_WDT_MapImage::K2Node_Event_IsDesignTime' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_ExecuteUbergraph_WDT_MapImage, K2Node_Event_MyGeometry) == 0x00096C, "Member 'WDT_MapImage_C_ExecuteUbergraph_WDT_MapImage::K2Node_Event_MyGeometry' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_ExecuteUbergraph_WDT_MapImage, K2Node_Event_InDeltaTime) == 0x0009A4, "Member 'WDT_MapImage_C_ExecuteUbergraph_WDT_MapImage::K2Node_Event_InDeltaTime' has a wrong offset!");
 static_assert(offsetof(WDT_MapImage_C_ExecuteUbergraph_WDT_MapImage, CallFunc_IsValid_ReturnValue_2) == 0x0009A8, "Member 'WDT_MapImage_C_ExecuteUbergraph_WDT_MapImage::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");

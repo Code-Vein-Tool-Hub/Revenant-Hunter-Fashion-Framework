@@ -19,15 +19,68 @@ namespace SDK::Params
 {
 
 // Function GCN_Capture.GCN_Capture_C.ActiveEffect
-// 0x0008 (0x0008 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct GCN_Capture_C_ActiveEffect final
 {
 public:
 	class AActor*                                 TargetActor;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_CheckEffectLoop_Result;                   // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(GCN_Capture_C_ActiveEffect) == 0x000008, "Wrong alignment on GCN_Capture_C_ActiveEffect");
-static_assert(sizeof(GCN_Capture_C_ActiveEffect) == 0x000008, "Wrong size on GCN_Capture_C_ActiveEffect");
+static_assert(sizeof(GCN_Capture_C_ActiveEffect) == 0x000010, "Wrong size on GCN_Capture_C_ActiveEffect");
 static_assert(offsetof(GCN_Capture_C_ActiveEffect, TargetActor) == 0x000000, "Member 'GCN_Capture_C_ActiveEffect::TargetActor' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_ActiveEffect, CallFunc_CheckEffectLoop_Result) == 0x000008, "Member 'GCN_Capture_C_ActiveEffect::CallFunc_CheckEffectLoop_Result' has a wrong offset!");
+
+// Function GCN_Capture.GCN_Capture_C.CheckEffectLoop
+// 0x02D0 (0x02D0 - 0x0000)
+struct GCN_Capture_C_CheckEffectLoop final
+{
+public:
+	bool                                          Result;                                            // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                InSourceLocation;                                  // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                InTargetLocation;                                  // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetSocketLocation_ReturnValue;            // 0x0038(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue;          // 0x0050(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x0068(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue_1;        // 0x0080(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_98[0x8];                                       // 0x0098(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_GetSocketTransform_ReturnValue;           // 0x00A0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue;        // 0x0100(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x0118(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_BreakTransform_Rotation;                  // 0x0130(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_BreakTransform_Scale;                     // 0x0148(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x0160(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetUpVector_ReturnValue;                  // 0x0178(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue_1;      // 0x0190(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_1;           // 0x01A8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class AActor*>                         K2Node_MakeArray_Array;                            // 0x01C0(0x0010)(ConstParm, ReferenceParm)
+	struct FHitResult                             CallFunc_LineTraceSingleByProfile_OutHit;          // 0x01D0(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_LineTraceSingleByProfile_ReturnValue;     // 0x02C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x02C9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(GCN_Capture_C_CheckEffectLoop) == 0x000010, "Wrong alignment on GCN_Capture_C_CheckEffectLoop");
+static_assert(sizeof(GCN_Capture_C_CheckEffectLoop) == 0x0002D0, "Wrong size on GCN_Capture_C_CheckEffectLoop");
+static_assert(offsetof(GCN_Capture_C_CheckEffectLoop, Result) == 0x000000, "Member 'GCN_Capture_C_CheckEffectLoop::Result' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_CheckEffectLoop, InSourceLocation) == 0x000008, "Member 'GCN_Capture_C_CheckEffectLoop::InSourceLocation' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_CheckEffectLoop, InTargetLocation) == 0x000020, "Member 'GCN_Capture_C_CheckEffectLoop::InTargetLocation' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_CheckEffectLoop, CallFunc_GetSocketLocation_ReturnValue) == 0x000038, "Member 'GCN_Capture_C_CheckEffectLoop::CallFunc_GetSocketLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_CheckEffectLoop, CallFunc_Conv_DoubleToVector_ReturnValue) == 0x000050, "Member 'GCN_Capture_C_CheckEffectLoop::CallFunc_Conv_DoubleToVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_CheckEffectLoop, CallFunc_Subtract_VectorVector_ReturnValue) == 0x000068, "Member 'GCN_Capture_C_CheckEffectLoop::CallFunc_Subtract_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_CheckEffectLoop, CallFunc_Conv_DoubleToVector_ReturnValue_1) == 0x000080, "Member 'GCN_Capture_C_CheckEffectLoop::CallFunc_Conv_DoubleToVector_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_CheckEffectLoop, CallFunc_GetSocketTransform_ReturnValue) == 0x0000A0, "Member 'GCN_Capture_C_CheckEffectLoop::CallFunc_GetSocketTransform_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_CheckEffectLoop, CallFunc_Multiply_VectorVector_ReturnValue) == 0x000100, "Member 'GCN_Capture_C_CheckEffectLoop::CallFunc_Multiply_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_CheckEffectLoop, CallFunc_BreakTransform_Location) == 0x000118, "Member 'GCN_Capture_C_CheckEffectLoop::CallFunc_BreakTransform_Location' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_CheckEffectLoop, CallFunc_BreakTransform_Rotation) == 0x000130, "Member 'GCN_Capture_C_CheckEffectLoop::CallFunc_BreakTransform_Rotation' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_CheckEffectLoop, CallFunc_BreakTransform_Scale) == 0x000148, "Member 'GCN_Capture_C_CheckEffectLoop::CallFunc_BreakTransform_Scale' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_CheckEffectLoop, CallFunc_Add_VectorVector_ReturnValue) == 0x000160, "Member 'GCN_Capture_C_CheckEffectLoop::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_CheckEffectLoop, CallFunc_GetUpVector_ReturnValue) == 0x000178, "Member 'GCN_Capture_C_CheckEffectLoop::CallFunc_GetUpVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_CheckEffectLoop, CallFunc_Multiply_VectorVector_ReturnValue_1) == 0x000190, "Member 'GCN_Capture_C_CheckEffectLoop::CallFunc_Multiply_VectorVector_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_CheckEffectLoop, CallFunc_Add_VectorVector_ReturnValue_1) == 0x0001A8, "Member 'GCN_Capture_C_CheckEffectLoop::CallFunc_Add_VectorVector_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_CheckEffectLoop, K2Node_MakeArray_Array) == 0x0001C0, "Member 'GCN_Capture_C_CheckEffectLoop::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_CheckEffectLoop, CallFunc_LineTraceSingleByProfile_OutHit) == 0x0001D0, "Member 'GCN_Capture_C_CheckEffectLoop::CallFunc_LineTraceSingleByProfile_OutHit' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_CheckEffectLoop, CallFunc_LineTraceSingleByProfile_ReturnValue) == 0x0002C8, "Member 'GCN_Capture_C_CheckEffectLoop::CallFunc_LineTraceSingleByProfile_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_CheckEffectLoop, CallFunc_IsValid_ReturnValue) == 0x0002C9, "Member 'GCN_Capture_C_CheckEffectLoop::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
 // Function GCN_Capture.GCN_Capture_C.CreateEffectBegin
 // 0x0018 (0x0018 - 0x0000)
@@ -166,70 +219,80 @@ static_assert(offsetof(GCN_Capture_C_DeactiveEffectLoop, CallFunc_IsValid_Return
 static_assert(offsetof(GCN_Capture_C_DeactiveEffectLoop, CallFunc_Add_IntInt_ReturnValue) == 0x000018, "Member 'GCN_Capture_C_DeactiveEffectLoop::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
 
 // Function GCN_Capture.GCN_Capture_C.ExecuteUbergraph_GCN_Capture
-// 0x04F8 (0x04F8 - 0x0000)
+// 0x0500 (0x0500 - 0x0000)
 struct GCN_Capture_C_ExecuteUbergraph_GCN_Capture final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Event_DeltaSeconds;                         // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 K2Node_Event_Target;                               // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayCueParameters                 K2Node_Event_Parameters;                           // 0x0020(0x00D8)(ConstParm, ContainsInstancedReference)
-	struct FGameplayCueNotify_SpawnResult         K2Node_Event_SpawnResults;                         // 0x00F8(0x0058)(ConstParm, ContainsInstancedReference)
-	class AActor*                                 K2Node_Event_Target_1;                             // 0x0150(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayCueParameters                 K2Node_Event_Parameters_1;                         // 0x0158(0x00D8)(ConstParm, ContainsInstancedReference)
-	struct FGameplayCueNotify_SpawnResult         K2Node_Event_SpawnResults_1;                       // 0x0230(0x0058)(ConstParm, ContainsInstancedReference)
-	class AActor*                                 K2Node_Event_Target_2;                             // 0x0288(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayCueParameters                 K2Node_Event_Parameters_2;                         // 0x0290(0x00D8)(ConstParm, ContainsInstancedReference)
-	struct FGameplayCueNotify_SpawnResult         K2Node_Event_SpawnResults_2;                       // 0x0368(0x0058)(ConstParm, ContainsInstancedReference)
-	class AActor*                                 K2Node_Event_Target_3;                             // 0x03C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayCueParameters                 K2Node_Event_Parameters_3;                         // 0x03C8(0x00D8)(ConstParm, ContainsInstancedReference)
-	struct FGameplayCueNotify_SpawnResult         K2Node_Event_SpawnResults_3;                       // 0x04A0(0x0058)(ConstParm, ContainsInstancedReference)
+	float                                         K2Node_Event_DeltaSeconds;                         // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 K2Node_Event_Target_1;                             // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayCueParameters                 K2Node_Event_Parameters_1;                         // 0x0010(0x00D8)(ConstParm, ContainsInstancedReference)
+	struct FGameplayCueNotify_SpawnResult         K2Node_Event_SpawnResults_1;                       // 0x00E8(0x0058)(ConstParm, ContainsInstancedReference)
+	class AActor*                                 K2Node_Event_Target_2;                             // 0x0140(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayCueParameters                 K2Node_Event_Parameters_2;                         // 0x0148(0x00D8)(ConstParm, ContainsInstancedReference)
+	struct FGameplayCueNotify_SpawnResult         K2Node_Event_SpawnResults_2;                       // 0x0220(0x0058)(ConstParm, ContainsInstancedReference)
+	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0278(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_InitializeEffect_Result;                  // 0x0280(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_281[0x7];                                      // 0x0281(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 K2Node_Event_Target_3;                             // 0x0288(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayCueParameters                 K2Node_Event_Parameters_3;                         // 0x0290(0x00D8)(ConstParm, ContainsInstancedReference)
+	struct FGameplayCueNotify_SpawnResult         K2Node_Event_SpawnResults_3;                       // 0x0368(0x0058)(ConstParm, ContainsInstancedReference)
+	class AActor*                                 K2Node_Event_Target;                               // 0x03C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayCueParameters                 K2Node_Event_Parameters;                           // 0x03C8(0x00D8)(ConstParm, ContainsInstancedReference)
+	struct FGameplayCueNotify_SpawnResult         K2Node_Event_SpawnResults;                         // 0x04A0(0x0058)(ConstParm, ContainsInstancedReference)
+	bool                                          CallFunc_InitializeEffect_Result_1;                // 0x04F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_InitializeEffect_Result_2;                // 0x04F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(GCN_Capture_C_ExecuteUbergraph_GCN_Capture) == 0x000008, "Wrong alignment on GCN_Capture_C_ExecuteUbergraph_GCN_Capture");
-static_assert(sizeof(GCN_Capture_C_ExecuteUbergraph_GCN_Capture) == 0x0004F8, "Wrong size on GCN_Capture_C_ExecuteUbergraph_GCN_Capture");
+static_assert(sizeof(GCN_Capture_C_ExecuteUbergraph_GCN_Capture) == 0x000500, "Wrong size on GCN_Capture_C_ExecuteUbergraph_GCN_Capture");
 static_assert(offsetof(GCN_Capture_C_ExecuteUbergraph_GCN_Capture, EntryPoint) == 0x000000, "Member 'GCN_Capture_C_ExecuteUbergraph_GCN_Capture::EntryPoint' has a wrong offset!");
-static_assert(offsetof(GCN_Capture_C_ExecuteUbergraph_GCN_Capture, CallFunc_GetOwner_ReturnValue) == 0x000008, "Member 'GCN_Capture_C_ExecuteUbergraph_GCN_Capture::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GCN_Capture_C_ExecuteUbergraph_GCN_Capture, K2Node_Event_DeltaSeconds) == 0x000010, "Member 'GCN_Capture_C_ExecuteUbergraph_GCN_Capture::K2Node_Event_DeltaSeconds' has a wrong offset!");
-static_assert(offsetof(GCN_Capture_C_ExecuteUbergraph_GCN_Capture, K2Node_Event_Target) == 0x000018, "Member 'GCN_Capture_C_ExecuteUbergraph_GCN_Capture::K2Node_Event_Target' has a wrong offset!");
-static_assert(offsetof(GCN_Capture_C_ExecuteUbergraph_GCN_Capture, K2Node_Event_Parameters) == 0x000020, "Member 'GCN_Capture_C_ExecuteUbergraph_GCN_Capture::K2Node_Event_Parameters' has a wrong offset!");
-static_assert(offsetof(GCN_Capture_C_ExecuteUbergraph_GCN_Capture, K2Node_Event_SpawnResults) == 0x0000F8, "Member 'GCN_Capture_C_ExecuteUbergraph_GCN_Capture::K2Node_Event_SpawnResults' has a wrong offset!");
-static_assert(offsetof(GCN_Capture_C_ExecuteUbergraph_GCN_Capture, K2Node_Event_Target_1) == 0x000150, "Member 'GCN_Capture_C_ExecuteUbergraph_GCN_Capture::K2Node_Event_Target_1' has a wrong offset!");
-static_assert(offsetof(GCN_Capture_C_ExecuteUbergraph_GCN_Capture, K2Node_Event_Parameters_1) == 0x000158, "Member 'GCN_Capture_C_ExecuteUbergraph_GCN_Capture::K2Node_Event_Parameters_1' has a wrong offset!");
-static_assert(offsetof(GCN_Capture_C_ExecuteUbergraph_GCN_Capture, K2Node_Event_SpawnResults_1) == 0x000230, "Member 'GCN_Capture_C_ExecuteUbergraph_GCN_Capture::K2Node_Event_SpawnResults_1' has a wrong offset!");
-static_assert(offsetof(GCN_Capture_C_ExecuteUbergraph_GCN_Capture, K2Node_Event_Target_2) == 0x000288, "Member 'GCN_Capture_C_ExecuteUbergraph_GCN_Capture::K2Node_Event_Target_2' has a wrong offset!");
-static_assert(offsetof(GCN_Capture_C_ExecuteUbergraph_GCN_Capture, K2Node_Event_Parameters_2) == 0x000290, "Member 'GCN_Capture_C_ExecuteUbergraph_GCN_Capture::K2Node_Event_Parameters_2' has a wrong offset!");
-static_assert(offsetof(GCN_Capture_C_ExecuteUbergraph_GCN_Capture, K2Node_Event_SpawnResults_2) == 0x000368, "Member 'GCN_Capture_C_ExecuteUbergraph_GCN_Capture::K2Node_Event_SpawnResults_2' has a wrong offset!");
-static_assert(offsetof(GCN_Capture_C_ExecuteUbergraph_GCN_Capture, K2Node_Event_Target_3) == 0x0003C0, "Member 'GCN_Capture_C_ExecuteUbergraph_GCN_Capture::K2Node_Event_Target_3' has a wrong offset!");
-static_assert(offsetof(GCN_Capture_C_ExecuteUbergraph_GCN_Capture, K2Node_Event_Parameters_3) == 0x0003C8, "Member 'GCN_Capture_C_ExecuteUbergraph_GCN_Capture::K2Node_Event_Parameters_3' has a wrong offset!");
-static_assert(offsetof(GCN_Capture_C_ExecuteUbergraph_GCN_Capture, K2Node_Event_SpawnResults_3) == 0x0004A0, "Member 'GCN_Capture_C_ExecuteUbergraph_GCN_Capture::K2Node_Event_SpawnResults_3' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_ExecuteUbergraph_GCN_Capture, K2Node_Event_DeltaSeconds) == 0x000004, "Member 'GCN_Capture_C_ExecuteUbergraph_GCN_Capture::K2Node_Event_DeltaSeconds' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_ExecuteUbergraph_GCN_Capture, K2Node_Event_Target_1) == 0x000008, "Member 'GCN_Capture_C_ExecuteUbergraph_GCN_Capture::K2Node_Event_Target_1' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_ExecuteUbergraph_GCN_Capture, K2Node_Event_Parameters_1) == 0x000010, "Member 'GCN_Capture_C_ExecuteUbergraph_GCN_Capture::K2Node_Event_Parameters_1' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_ExecuteUbergraph_GCN_Capture, K2Node_Event_SpawnResults_1) == 0x0000E8, "Member 'GCN_Capture_C_ExecuteUbergraph_GCN_Capture::K2Node_Event_SpawnResults_1' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_ExecuteUbergraph_GCN_Capture, K2Node_Event_Target_2) == 0x000140, "Member 'GCN_Capture_C_ExecuteUbergraph_GCN_Capture::K2Node_Event_Target_2' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_ExecuteUbergraph_GCN_Capture, K2Node_Event_Parameters_2) == 0x000148, "Member 'GCN_Capture_C_ExecuteUbergraph_GCN_Capture::K2Node_Event_Parameters_2' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_ExecuteUbergraph_GCN_Capture, K2Node_Event_SpawnResults_2) == 0x000220, "Member 'GCN_Capture_C_ExecuteUbergraph_GCN_Capture::K2Node_Event_SpawnResults_2' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_ExecuteUbergraph_GCN_Capture, CallFunc_GetOwner_ReturnValue) == 0x000278, "Member 'GCN_Capture_C_ExecuteUbergraph_GCN_Capture::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_ExecuteUbergraph_GCN_Capture, CallFunc_InitializeEffect_Result) == 0x000280, "Member 'GCN_Capture_C_ExecuteUbergraph_GCN_Capture::CallFunc_InitializeEffect_Result' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_ExecuteUbergraph_GCN_Capture, K2Node_Event_Target_3) == 0x000288, "Member 'GCN_Capture_C_ExecuteUbergraph_GCN_Capture::K2Node_Event_Target_3' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_ExecuteUbergraph_GCN_Capture, K2Node_Event_Parameters_3) == 0x000290, "Member 'GCN_Capture_C_ExecuteUbergraph_GCN_Capture::K2Node_Event_Parameters_3' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_ExecuteUbergraph_GCN_Capture, K2Node_Event_SpawnResults_3) == 0x000368, "Member 'GCN_Capture_C_ExecuteUbergraph_GCN_Capture::K2Node_Event_SpawnResults_3' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_ExecuteUbergraph_GCN_Capture, K2Node_Event_Target) == 0x0003C0, "Member 'GCN_Capture_C_ExecuteUbergraph_GCN_Capture::K2Node_Event_Target' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_ExecuteUbergraph_GCN_Capture, K2Node_Event_Parameters) == 0x0003C8, "Member 'GCN_Capture_C_ExecuteUbergraph_GCN_Capture::K2Node_Event_Parameters' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_ExecuteUbergraph_GCN_Capture, K2Node_Event_SpawnResults) == 0x0004A0, "Member 'GCN_Capture_C_ExecuteUbergraph_GCN_Capture::K2Node_Event_SpawnResults' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_ExecuteUbergraph_GCN_Capture, CallFunc_InitializeEffect_Result_1) == 0x0004F8, "Member 'GCN_Capture_C_ExecuteUbergraph_GCN_Capture::CallFunc_InitializeEffect_Result_1' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_ExecuteUbergraph_GCN_Capture, CallFunc_InitializeEffect_Result_2) == 0x0004F9, "Member 'GCN_Capture_C_ExecuteUbergraph_GCN_Capture::CallFunc_InitializeEffect_Result_2' has a wrong offset!");
 
 // Function GCN_Capture.GCN_Capture_C.InitializeEffect
-// 0x0028 (0x0028 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct GCN_Capture_C_InitializeEffect final
 {
 public:
 	class AActor*                                 TargetActor;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AAppCharacter*                          K2Node_DynamicCast_AsApp_Character;                // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetEffectSize_Result;                     // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        K2Node_VariableSet_EffectSize_ImplicitCast;        // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Result;                                            // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AAppCharacter*                          K2Node_DynamicCast_AsApp_Character;                // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1B[0x1];                                       // 0x001B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetEffectSize_Result;                     // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        K2Node_VariableSet_EffectSize_ImplicitCast;        // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(GCN_Capture_C_InitializeEffect) == 0x000008, "Wrong alignment on GCN_Capture_C_InitializeEffect");
-static_assert(sizeof(GCN_Capture_C_InitializeEffect) == 0x000028, "Wrong size on GCN_Capture_C_InitializeEffect");
+static_assert(sizeof(GCN_Capture_C_InitializeEffect) == 0x000030, "Wrong size on GCN_Capture_C_InitializeEffect");
 static_assert(offsetof(GCN_Capture_C_InitializeEffect, TargetActor) == 0x000000, "Member 'GCN_Capture_C_InitializeEffect::TargetActor' has a wrong offset!");
-static_assert(offsetof(GCN_Capture_C_InitializeEffect, K2Node_DynamicCast_AsApp_Character) == 0x000008, "Member 'GCN_Capture_C_InitializeEffect::K2Node_DynamicCast_AsApp_Character' has a wrong offset!");
-static_assert(offsetof(GCN_Capture_C_InitializeEffect, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'GCN_Capture_C_InitializeEffect::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(GCN_Capture_C_InitializeEffect, CallFunc_GetEffectSize_Result) == 0x000014, "Member 'GCN_Capture_C_InitializeEffect::CallFunc_GetEffectSize_Result' has a wrong offset!");
-static_assert(offsetof(GCN_Capture_C_InitializeEffect, CallFunc_IsValid_ReturnValue) == 0x000018, "Member 'GCN_Capture_C_InitializeEffect::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GCN_Capture_C_InitializeEffect, CallFunc_IsValid_ReturnValue_1) == 0x000019, "Member 'GCN_Capture_C_InitializeEffect::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(GCN_Capture_C_InitializeEffect, K2Node_VariableSet_EffectSize_ImplicitCast) == 0x000020, "Member 'GCN_Capture_C_InitializeEffect::K2Node_VariableSet_EffectSize_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_InitializeEffect, Result) == 0x000008, "Member 'GCN_Capture_C_InitializeEffect::Result' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_InitializeEffect, K2Node_DynamicCast_AsApp_Character) == 0x000010, "Member 'GCN_Capture_C_InitializeEffect::K2Node_DynamicCast_AsApp_Character' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_InitializeEffect, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'GCN_Capture_C_InitializeEffect::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_InitializeEffect, CallFunc_IsValid_ReturnValue) == 0x000019, "Member 'GCN_Capture_C_InitializeEffect::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_InitializeEffect, CallFunc_Not_PreBool_ReturnValue) == 0x00001A, "Member 'GCN_Capture_C_InitializeEffect::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_InitializeEffect, CallFunc_GetEffectSize_Result) == 0x00001C, "Member 'GCN_Capture_C_InitializeEffect::CallFunc_GetEffectSize_Result' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_InitializeEffect, CallFunc_IsValid_ReturnValue_1) == 0x000020, "Member 'GCN_Capture_C_InitializeEffect::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_InitializeEffect, K2Node_VariableSet_EffectSize_ImplicitCast) == 0x000028, "Member 'GCN_Capture_C_InitializeEffect::K2Node_VariableSet_EffectSize_ImplicitCast' has a wrong offset!");
 
 // Function GCN_Capture.GCN_Capture_C.OnApplication
 // 0x0138 (0x0138 - 0x0000)
@@ -301,8 +364,10 @@ public:
 	double                                        InEndWeight;                                       // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        InBeginWeight;                                     // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         InDeltaSeconds;                                    // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue;    // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_CheckEffectLoop_Result;                   // 0x001D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue;    // 0x001E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1F[0x1];                                       // 0x001F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue_1;  // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -318,7 +383,9 @@ static_assert(offsetof(GCN_Capture_C_OnTick, Delta_Seconds) == 0x000000, "Member
 static_assert(offsetof(GCN_Capture_C_OnTick, InEndWeight) == 0x000008, "Member 'GCN_Capture_C_OnTick::InEndWeight' has a wrong offset!");
 static_assert(offsetof(GCN_Capture_C_OnTick, InBeginWeight) == 0x000010, "Member 'GCN_Capture_C_OnTick::InBeginWeight' has a wrong offset!");
 static_assert(offsetof(GCN_Capture_C_OnTick, InDeltaSeconds) == 0x000018, "Member 'GCN_Capture_C_OnTick::InDeltaSeconds' has a wrong offset!");
-static_assert(offsetof(GCN_Capture_C_OnTick, CallFunc_GreaterEqual_DoubleDouble_ReturnValue) == 0x00001C, "Member 'GCN_Capture_C_OnTick::CallFunc_GreaterEqual_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_OnTick, CallFunc_Not_PreBool_ReturnValue) == 0x00001C, "Member 'GCN_Capture_C_OnTick::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_OnTick, CallFunc_CheckEffectLoop_Result) == 0x00001D, "Member 'GCN_Capture_C_OnTick::CallFunc_CheckEffectLoop_Result' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_OnTick, CallFunc_GreaterEqual_DoubleDouble_ReturnValue) == 0x00001E, "Member 'GCN_Capture_C_OnTick::CallFunc_GreaterEqual_DoubleDouble_ReturnValue' has a wrong offset!");
 static_assert(offsetof(GCN_Capture_C_OnTick, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000020, "Member 'GCN_Capture_C_OnTick::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
 static_assert(offsetof(GCN_Capture_C_OnTick, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000028, "Member 'GCN_Capture_C_OnTick::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
 static_assert(offsetof(GCN_Capture_C_OnTick, CallFunc_GreaterEqual_DoubleDouble_ReturnValue_1) == 0x000030, "Member 'GCN_Capture_C_OnTick::CallFunc_GreaterEqual_DoubleDouble_ReturnValue_1' has a wrong offset!");
@@ -416,13 +483,13 @@ public:
 	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue;          // 0x00A0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_B9[0x7];                                       // 0x00B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class AActor*>                         K2Node_MakeArray_Array;                            // 0x00C0(0x0010)(ConstParm, ReferenceParm)
-	struct FTransform                             CallFunc_GetSocketTransform_ReturnValue;           // 0x00D0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x0130(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_BreakTransform_Rotation;                  // 0x0148(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_BreakTransform_Scale;                     // 0x0160(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue_1;        // 0x0178(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetUpVector_ReturnValue;                  // 0x0190(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTransform                             CallFunc_GetSocketTransform_ReturnValue;           // 0x00C0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x0120(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_BreakTransform_Rotation;                  // 0x0138(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_BreakTransform_Scale;                     // 0x0150(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetUpVector_ReturnValue;                  // 0x0168(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class AActor*>                         K2Node_MakeArray_Array;                            // 0x0180(0x0010)(ConstParm, ReferenceParm)
+	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue_1;        // 0x0190(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue;        // 0x01A8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x01C0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x01D8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -484,13 +551,13 @@ static_assert(offsetof(GCN_Capture_C_SetEffectParameter_EffectLoop_Begin, InWeig
 static_assert(offsetof(GCN_Capture_C_SetEffectParameter_EffectLoop_Begin, CallFunc_RandomUnitVector_ReturnValue) == 0x000088, "Member 'GCN_Capture_C_SetEffectParameter_EffectLoop_Begin::CallFunc_RandomUnitVector_ReturnValue' has a wrong offset!");
 static_assert(offsetof(GCN_Capture_C_SetEffectParameter_EffectLoop_Begin, CallFunc_Conv_DoubleToVector_ReturnValue) == 0x0000A0, "Member 'GCN_Capture_C_SetEffectParameter_EffectLoop_Begin::CallFunc_Conv_DoubleToVector_ReturnValue' has a wrong offset!");
 static_assert(offsetof(GCN_Capture_C_SetEffectParameter_EffectLoop_Begin, CallFunc_IsValid_ReturnValue) == 0x0000B8, "Member 'GCN_Capture_C_SetEffectParameter_EffectLoop_Begin::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GCN_Capture_C_SetEffectParameter_EffectLoop_Begin, K2Node_MakeArray_Array) == 0x0000C0, "Member 'GCN_Capture_C_SetEffectParameter_EffectLoop_Begin::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(GCN_Capture_C_SetEffectParameter_EffectLoop_Begin, CallFunc_GetSocketTransform_ReturnValue) == 0x0000D0, "Member 'GCN_Capture_C_SetEffectParameter_EffectLoop_Begin::CallFunc_GetSocketTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GCN_Capture_C_SetEffectParameter_EffectLoop_Begin, CallFunc_BreakTransform_Location) == 0x000130, "Member 'GCN_Capture_C_SetEffectParameter_EffectLoop_Begin::CallFunc_BreakTransform_Location' has a wrong offset!");
-static_assert(offsetof(GCN_Capture_C_SetEffectParameter_EffectLoop_Begin, CallFunc_BreakTransform_Rotation) == 0x000148, "Member 'GCN_Capture_C_SetEffectParameter_EffectLoop_Begin::CallFunc_BreakTransform_Rotation' has a wrong offset!");
-static_assert(offsetof(GCN_Capture_C_SetEffectParameter_EffectLoop_Begin, CallFunc_BreakTransform_Scale) == 0x000160, "Member 'GCN_Capture_C_SetEffectParameter_EffectLoop_Begin::CallFunc_BreakTransform_Scale' has a wrong offset!");
-static_assert(offsetof(GCN_Capture_C_SetEffectParameter_EffectLoop_Begin, CallFunc_Conv_DoubleToVector_ReturnValue_1) == 0x000178, "Member 'GCN_Capture_C_SetEffectParameter_EffectLoop_Begin::CallFunc_Conv_DoubleToVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(GCN_Capture_C_SetEffectParameter_EffectLoop_Begin, CallFunc_GetUpVector_ReturnValue) == 0x000190, "Member 'GCN_Capture_C_SetEffectParameter_EffectLoop_Begin::CallFunc_GetUpVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_SetEffectParameter_EffectLoop_Begin, CallFunc_GetSocketTransform_ReturnValue) == 0x0000C0, "Member 'GCN_Capture_C_SetEffectParameter_EffectLoop_Begin::CallFunc_GetSocketTransform_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_SetEffectParameter_EffectLoop_Begin, CallFunc_BreakTransform_Location) == 0x000120, "Member 'GCN_Capture_C_SetEffectParameter_EffectLoop_Begin::CallFunc_BreakTransform_Location' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_SetEffectParameter_EffectLoop_Begin, CallFunc_BreakTransform_Rotation) == 0x000138, "Member 'GCN_Capture_C_SetEffectParameter_EffectLoop_Begin::CallFunc_BreakTransform_Rotation' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_SetEffectParameter_EffectLoop_Begin, CallFunc_BreakTransform_Scale) == 0x000150, "Member 'GCN_Capture_C_SetEffectParameter_EffectLoop_Begin::CallFunc_BreakTransform_Scale' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_SetEffectParameter_EffectLoop_Begin, CallFunc_GetUpVector_ReturnValue) == 0x000168, "Member 'GCN_Capture_C_SetEffectParameter_EffectLoop_Begin::CallFunc_GetUpVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_SetEffectParameter_EffectLoop_Begin, K2Node_MakeArray_Array) == 0x000180, "Member 'GCN_Capture_C_SetEffectParameter_EffectLoop_Begin::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(GCN_Capture_C_SetEffectParameter_EffectLoop_Begin, CallFunc_Conv_DoubleToVector_ReturnValue_1) == 0x000190, "Member 'GCN_Capture_C_SetEffectParameter_EffectLoop_Begin::CallFunc_Conv_DoubleToVector_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(GCN_Capture_C_SetEffectParameter_EffectLoop_Begin, CallFunc_Multiply_VectorVector_ReturnValue) == 0x0001A8, "Member 'GCN_Capture_C_SetEffectParameter_EffectLoop_Begin::CallFunc_Multiply_VectorVector_ReturnValue' has a wrong offset!");
 static_assert(offsetof(GCN_Capture_C_SetEffectParameter_EffectLoop_Begin, CallFunc_Subtract_VectorVector_ReturnValue) == 0x0001C0, "Member 'GCN_Capture_C_SetEffectParameter_EffectLoop_Begin::CallFunc_Subtract_VectorVector_ReturnValue' has a wrong offset!");
 static_assert(offsetof(GCN_Capture_C_SetEffectParameter_EffectLoop_Begin, CallFunc_Add_VectorVector_ReturnValue) == 0x0001D8, "Member 'GCN_Capture_C_SetEffectParameter_EffectLoop_Begin::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
