@@ -34,6 +34,23 @@ static_assert(offsetof(BPFL_MapHelper_C_Add_to_Finger_Expose, Key) == 0x000050, 
 static_assert(offsetof(BPFL_MapHelper_C_Add_to_Finger_Expose, Value) == 0x000051, "Member 'BPFL_MapHelper_C_Add_to_Finger_Expose::Value' has a wrong offset!");
 static_assert(offsetof(BPFL_MapHelper_C_Add_to_Finger_Expose, __WorldContext) == 0x000058, "Member 'BPFL_MapHelper_C_Add_to_Finger_Expose::__WorldContext' has a wrong offset!");
 
+// Function BPFL_MapHelper.BPFL_MapHelper_C.Add to FName Array
+// 0x0028 (0x0028 - 0x0000)
+struct BPFL_MapHelper_C_Add_to_FName_Array final
+{
+public:
+	TArray<class FName>                           InArray;                                           // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	class FName                                   InNane;                                            // 0x0010(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                __WorldContext;                                    // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BPFL_MapHelper_C_Add_to_FName_Array) == 0x000008, "Wrong alignment on BPFL_MapHelper_C_Add_to_FName_Array");
+static_assert(sizeof(BPFL_MapHelper_C_Add_to_FName_Array) == 0x000028, "Wrong size on BPFL_MapHelper_C_Add_to_FName_Array");
+static_assert(offsetof(BPFL_MapHelper_C_Add_to_FName_Array, InArray) == 0x000000, "Member 'BPFL_MapHelper_C_Add_to_FName_Array::InArray' has a wrong offset!");
+static_assert(offsetof(BPFL_MapHelper_C_Add_to_FName_Array, InNane) == 0x000010, "Member 'BPFL_MapHelper_C_Add_to_FName_Array::InNane' has a wrong offset!");
+static_assert(offsetof(BPFL_MapHelper_C_Add_to_FName_Array, __WorldContext) == 0x000018, "Member 'BPFL_MapHelper_C_Add_to_FName_Array::__WorldContext' has a wrong offset!");
+static_assert(offsetof(BPFL_MapHelper_C_Add_to_FName_Array, CallFunc_Array_Add_ReturnValue) == 0x000020, "Member 'BPFL_MapHelper_C_Add_to_FName_Array::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+
 // Function BPFL_MapHelper.BPFL_MapHelper_C.Make Finger Map
 // 0x00B0 (0x00B0 - 0x0000)
 struct BPFL_MapHelper_C_Make_Finger_Map final

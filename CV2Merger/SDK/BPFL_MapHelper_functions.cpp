@@ -43,6 +43,32 @@ void UBPFL_MapHelper_C::Add_to_Finger_Expose(const TMap<ECharacterCustomizeFinge
 }
 
 
+// Function BPFL_MapHelper.BPFL_MapHelper_C.Add to FName Array
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<class FName>                     InArray                                                (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// class FName                             InNane                                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UBPFL_MapHelper_C::Add_to_FName_Array(TArray<class FName>& InArray, const class FName& InNane, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BPFL_MapHelper_C", "Add to FName Array");
+
+	Params::BPFL_MapHelper_C_Add_to_FName_Array Parms{};
+
+	Parms.InArray = std::move(InArray);
+	Parms.InNane = InNane;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	InArray = std::move(Parms.InArray);
+}
+
+
 // Function BPFL_MapHelper.BPFL_MapHelper_C.Make Finger Map
 // (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:

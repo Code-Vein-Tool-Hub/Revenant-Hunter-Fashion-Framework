@@ -23,6 +23,7 @@ class UBPFL_MapHelper_C final : public UBlueprintFunctionLibrary
 {
 public:
 	static void Add_to_Finger_Expose(const TMap<ECharacterCustomizeFinger, bool>& FingerExposeMap, const ECharacterCustomizeFinger& Key, const bool& Value, class UObject* __WorldContext);
+	static void Add_to_FName_Array(TArray<class FName>& InArray, const class FName& InNane, class UObject* __WorldContext);
 	static void Make_Finger_Map(bool Thumb, bool Index_0, bool Middle, bool Ring, bool Pinky, class UObject* __WorldContext, TMap<ECharacterCustomizeFinger, bool>* Map);
 
 public:

@@ -115,6 +115,137 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
             }
             ModPatch::DT_HairBaseList.clear();
 		}
+
+        //Addon table is for merging new parts options into an existing hair base
+        if (Config::CompanionPakLoaded)
+        {
+            if (ModPatch::DT_HairBaseListAddon.size() > 0)
+            {
+                for (auto& entry : ModPatch::DT_HairBaseListAddon)
+                {
+                    printf("[RHFF] [DT Merger] Processing HairBaseList addon \"%s\"... \n", entry.first.c_str());
+
+                    for (std::string table : entry.second.first)
+                    {
+                        if (table == "AddToAll")
+                        {
+                            printf("[RHFF] [DT Merger] Adding hair parts to all entries.\n");
+                            for (auto& rowdata : _this->RowMap)
+                            {
+                                auto row = (SDK::FCharacterCustomizeDataTableHairBase*)rowdata.Second;
+
+                                for (auto& part : entry.second.second.AvailableHairFrontList)
+                                {
+                                    if (TArrayHelper::Contains(row->AvailableHairFrontList, part))
+                                        continue;
+                                    if (row->AvailableHairFrontList.Num() <= 0)
+                                        SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairFrontList, FNameHelper::FNameFromString("Front_None"), SDK::UWorld::GetWorld());
+                                    SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairFrontList, part, SDK::UWorld::GetWorld());
+                                }
+
+                                for (auto& part : entry.second.second.AvailableHairFrontSideList)
+                                {
+                                    if (TArrayHelper::Contains(row->AvailableHairFrontSideList, part))
+                                        continue;
+                                    if (row->AvailableHairFrontSideList.Num() <= 0)
+                                        SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairFrontSideList, FNameHelper::FNameFromString("FrontSide_None"), SDK::UWorld::GetWorld());
+                                    SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairFrontSideList, part, SDK::UWorld::GetWorld());
+                                }
+
+                                for (auto& part : entry.second.second.AvailableHairSideList)
+                                {
+                                    if (TArrayHelper::Contains(row->AvailableHairSideList, part))
+                                        continue;
+                                    if (row->AvailableHairSideList.Num() <= 0)
+                                        SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairSideList, FNameHelper::FNameFromString("Side_None"), SDK::UWorld::GetWorld());
+                                    SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairSideList, part, SDK::UWorld::GetWorld());
+                                }
+
+                                for (auto& part : entry.second.second.AvailableHairTopList)
+                                {
+                                    if (TArrayHelper::Contains(row->AvailableHairTopList, part))
+                                        continue;
+                                    if (row->AvailableHairTopList.Num() <= 0)
+                                        SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairTopList, FNameHelper::FNameFromString("Top_None"), SDK::UWorld::GetWorld());
+                                    SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairTopList, part, SDK::UWorld::GetWorld());
+                                }
+
+                                for (auto& part : entry.second.second.AvailableHairBackList)
+                                {
+                                    if (TArrayHelper::Contains(row->AvailableHairBackList, part))
+                                        continue;
+                                    if (row->AvailableHairBackList.Num() <= 0)
+                                        SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairBackList, FNameHelper::FNameFromString("Back_None"), SDK::UWorld::GetWorld());
+                                    SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairBackList, part, SDK::UWorld::GetWorld());
+                                }
+
+                                for (auto& part : entry.second.second.AvailableHairOtherList)
+                                {
+                                    if (TArrayHelper::Contains(row->AvailableHairOtherList, part))
+                                        continue;
+                                    if (row->AvailableHairOtherList.Num() <= 0)
+                                        SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairOtherList, FNameHelper::FNameFromString("Other_None"), SDK::UWorld::GetWorld());
+                                    SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairOtherList, part, SDK::UWorld::GetWorld());
+                                }
+                            }
+                            break;
+                        }
+                        else
+                        {
+                            printf("[RHFF] [DT Merger] Adding hair parts to %s\n", table.c_str());
+                            SDK::FCharacterCustomizeDataTableHairBase* row = UDataTableHelper::GetDataRowByName<SDK::FCharacterCustomizeDataTableHairBase>(_this, table);
+                            if (!row)
+                            {
+                                printf("[RHFF] [DT Merger] Unable to find BaseHair entry \"%s\"\n", table.c_str());
+                                continue;
+                            }
+
+                            for (auto& part : entry.second.second.AvailableHairFrontList)
+                            {
+                                if (row->AvailableHairFrontList.Num() <= 0)
+                                    SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairFrontList, FNameHelper::FNameFromString("Front_None"), SDK::UWorld::GetWorld());
+                                SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairFrontList, part, SDK::UWorld::GetWorld());
+                            }
+
+                            for (auto& part : entry.second.second.AvailableHairFrontSideList)
+                            {
+                                if (row->AvailableHairFrontSideList.Num() <= 0)
+                                    SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairFrontSideList, FNameHelper::FNameFromString("FrontSide_None"), SDK::UWorld::GetWorld());
+                                SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairFrontSideList, part, SDK::UWorld::GetWorld());
+                            }
+
+                            for (auto& part : entry.second.second.AvailableHairSideList)
+                            {
+                                if (row->AvailableHairSideList.Num() <= 0)
+                                    SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairSideList, FNameHelper::FNameFromString("Side_None"), SDK::UWorld::GetWorld());
+                                SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairSideList, part, SDK::UWorld::GetWorld());
+                            }
+
+                            for (auto& part : entry.second.second.AvailableHairTopList)
+                            {
+                                if (row->AvailableHairTopList.Num() <= 0)
+                                    SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairTopList, FNameHelper::FNameFromString("Top_None"), SDK::UWorld::GetWorld());
+                                SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairTopList, part, SDK::UWorld::GetWorld());
+                            }
+
+                            for (auto& part : entry.second.second.AvailableHairBackList)
+                            {
+                                if (row->AvailableHairBackList.Num() <= 0)
+                                    SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairBackList, FNameHelper::FNameFromString("Back_None"), SDK::UWorld::GetWorld());
+                                SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairBackList, part, SDK::UWorld::GetWorld());
+                            }
+
+                            for (auto& part : entry.second.second.AvailableHairOtherList)
+                            {
+                                if (row->AvailableHairOtherList.Num() <= 0)
+                                    SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairOtherList, FNameHelper::FNameFromString("Other_None"), SDK::UWorld::GetWorld());
+                                SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairOtherList, part, SDK::UWorld::GetWorld());
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
     else if (TableName == "DT_HairBack")
     {

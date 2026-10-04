@@ -29,6 +29,7 @@ std::map<std::string, SDK::FCharacterCustomizeDataTableHairPart>		ModPatch::DT_H
 std::map<std::string, SDK::FCharacterCustomizeDataTableHairPart>		ModPatch::DT_HairTop;
 std::map<std::string, SDK::FCharacterCustomizeDataTableHairSet>			ModPatch::DT_HairSetList_Female;
 std::map<std::string, SDK::FCharacterCustomizeDataTableHairSet>			ModPatch::DT_HairSetList_Male;
+std::map<std::string, std::pair<std::vector<std::string>, SDK::FCharacterCustomizeDataTableHairBase>> ModPatch::DT_HairBaseListAddon;
 
 std::map<std::string, SDK::FCharacterCustomizeDataTableTextureList>		ModPatch::DT_EyeBase;
 std::map<std::string, SDK::FCharacterCustomizeDataTableEyeTexture>		ModPatch::DT_EyeDetail;
@@ -870,6 +871,106 @@ void ModPatch::ProcessHairSetTable(toml::table table, std::map<std::string, SDK:
 	}
 }
 
+void ModPatch::ProcessHairBaseAddon(toml::table table, std::map<std::string, std::pair<std::vector<std::string>, SDK::FCharacterCustomizeDataTableHairBase>>* DataTable)
+{
+	for (auto& [key, value] : table)
+	{
+		std::string name = key.str().data();
+		toml::array* data = nullptr;
+
+		if (value.is_array())
+			data = value.as_array();
+		else
+		{
+			printf("[RHFF] [TOML] entry \"%s\" in toml is not an array", name);
+			continue;
+		}
+
+		if (data->size() <= 0)
+		{
+			printf("[RHFF] [TOML] entry data for \"%s\" is empty in toml\n", name.c_str());
+			continue;
+		}
+		if (DataTable->contains(name.c_str()))
+		{
+			printf("[RHFF] [TOML] Duplicate entry for \"%s\" found in toml\n", name.c_str());
+			continue;
+		}
+
+		SDK::FCharacterCustomizeDataTableHairBase HairBase = *new SDK::FCharacterCustomizeDataTableHairBase();
+		std::vector<std::string> NameList = *new std::vector<std::string>();
+		for (auto& name : *data->get(0)->as_array())
+		{
+			std::string tablename = name.value_or("");
+			if (tablename != "" || !tablename.empty())
+				NameList.push_back(tablename);
+		}
+		auto PartsLists = data->get(1)->as_array();
+
+		if (PartsLists->get(0)->as_array()->size() > 0)
+		{
+			toml::array* HairArray = PartsLists->get(0)->as_array();
+			HairBase.AvailableHairFrontList = *new SDK::TAllocatedArray<SDK::FName>(HairArray->size() + 1);
+			for (auto& part : *HairArray)
+			{
+				HairBase.AvailableHairFrontList.Add(FNameHelper::FNameFromString(part.value_or("")));
+			}
+		}
+
+		if (PartsLists->get(1)->as_array()->size() > 0)
+		{
+			toml::array* HairArray = PartsLists->get(1)->as_array();
+			HairBase.AvailableHairFrontSideList = *new SDK::TAllocatedArray<SDK::FName>(HairArray->size() + 1);
+			for (auto& part : *HairArray)
+			{
+				HairBase.AvailableHairFrontSideList.Add(FNameHelper::FNameFromString(part.value_or("")));
+			}
+		}
+
+		if (PartsLists->get(2)->as_array()->size() > 0)
+		{
+			toml::array* HairArray = PartsLists->get(2)->as_array();
+			HairBase.AvailableHairSideList = *new SDK::TAllocatedArray<SDK::FName>(HairArray->size() + 1);
+			for (auto& part : *HairArray)
+			{
+				HairBase.AvailableHairSideList.Add(FNameHelper::FNameFromString(part.value_or("")));
+			}
+		}
+
+		if (PartsLists->get(3)->as_array()->size() > 0)
+		{
+			toml::array* HairArray = PartsLists->get(3)->as_array();
+			HairBase.AvailableHairTopList = *new SDK::TAllocatedArray<SDK::FName>(HairArray->size() + 1);
+			for (auto& part : *HairArray)
+			{
+				HairBase.AvailableHairTopList.Add(FNameHelper::FNameFromString(part.value_or("")));
+			}
+		}
+
+		if (PartsLists->get(4)->as_array()->size() > 0)
+		{
+			toml::array* HairArray = PartsLists->get(4)->as_array();
+			HairBase.AvailableHairBackList = *new SDK::TAllocatedArray<SDK::FName>(HairArray->size() + 1);
+			for (auto& part : *HairArray)
+			{
+				HairBase.AvailableHairBackList.Add(FNameHelper::FNameFromString(part.value_or("")));
+			}
+		}
+
+		if (PartsLists->get(5)->as_array()->size() > 0)
+		{
+			toml::array* HairArray = PartsLists->get(5)->as_array();
+			HairBase.AvailableHairOtherList = *new SDK::TAllocatedArray<SDK::FName>(HairArray->size() + 1);
+			for (auto& part : *HairArray)
+			{
+				HairBase.AvailableHairOtherList.Add(FNameHelper::FNameFromString(part.value_or("")));
+			}
+		}
+
+		DataTable->insert({ name, std::pair(NameList, HairBase) });
+	}
+}
+
 void ModPatch::ProcessTextureListTable(toml::table table, std::map<std::string, SDK::FCharacterCustomizeDataTableTextureList>* DataTable)
 {
 	for (auto& [key, value] : table)
@@ -1382,6 +1483,11 @@ bool ModPatch::init()
 		if (table)
 			ProcessHairSetTable(*table, &DT_HairSetList_Male);
 
+		table = config["DT_HairBaseListAddon"].as_table();
+		if (table)
+			ProcessHairBaseAddon(*table, &DT_HairBaseListAddon);
+
+		//Eyes
 		table = config["DT_EyeBase"].as_table();
 		if (table)
 			ProcessTextureListTable(*table, &DT_EyeBase);

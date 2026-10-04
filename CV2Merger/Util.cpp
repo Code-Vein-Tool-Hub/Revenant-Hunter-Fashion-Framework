@@ -33,6 +33,15 @@ namespace TArrayHelper
 	{
 		TArray_ResizeTo(TargetArray, Size);
 	}
+	bool Contains(SDK::TArray<SDK::FName> TargetArray, std::string Entry)
+	{
+		for (auto& name : TargetArray)
+		{
+			if (name.ToString() == Entry)
+				return true;
+		}
+		return false;
+	}
 }
 
 SDK::UObject* FindObjectByClass(const std::string& Name, SDK::UClass* uclass)
