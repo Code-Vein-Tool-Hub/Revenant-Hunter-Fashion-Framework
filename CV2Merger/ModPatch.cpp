@@ -116,14 +116,14 @@ void ModPatch::ProcessInnerTable(toml::table table, std::map<std::string, SDK::F
 			partVis.ClothPartTexture = clothTexturepath;
 
 			toml::array* HideParamsArray = partArray->get(1)->as_array();
-			partVis.ClothPartHideParameters = *new SDK::TAllocatedArray<SDK::FName>(20);
+			partVis.ClothPartHideParameters = *new SDK::TAllocatedArray<SDK::FName>(HideParamsArray->size() + 1);
 			for (auto& hideParam : *HideParamsArray)
 			{
 				partVis.ClothPartHideParameters.Add(FNameHelper::FNameFromString(hideParam.value_or("")));
 			}
 
 			toml::array* SubstituteParamsArray = partArray->get(2)->as_array();
-			partVis.ClothPartSubstituteParameters = *new SDK::TAllocatedArray<SDK::FName>(20);
+			partVis.ClothPartSubstituteParameters = *new SDK::TAllocatedArray<SDK::FName>(SubstituteParamsArray->size() + 1);
 			for (auto& subParam : *SubstituteParamsArray)
 			{
 				partVis.ClothPartSubstituteParameters.Add(FNameHelper::FNameFromString(subParam.value_or("")));
@@ -427,25 +427,25 @@ void ModPatch::ProcessMaskTable(toml::table table, std::map<std::string, SDK::FC
 			colorIndex++;
 		}
 		Mask.CustomizableColorNumber = data->get(4)->value_or(0);
-		Mask.PartVisibilityInfoArray = *new SDK::TAllocatedArray<SDK::FCharacterCustomizeDataTableClothPartVisibility>(data->get(5)->as_array()->size() + 5);
+		Mask.PartVisibilityInfoArray = *new SDK::TAllocatedArray<SDK::FCharacterCustomizeDataTableClothPartVisibility>(data->get(5)->as_array()->size() + 1);
 		for (auto& partVisibility : *data->get(5)->as_array())
 		{
 			toml::array* partArray = partVisibility.as_array();
 			SDK::FCharacterCustomizeDataTableClothPartVisibility partVis = *new SDK::FCharacterCustomizeDataTableClothPartVisibility();
 
 			SDK::TSoftObjectPtr<SDK::UTexture2D> clothTexturepath;
-			clothTexturepath.ObjectID = { .AssetPath = FNameHelper::FNameFromString(data->get(0)->value_or("")) };
+			clothTexturepath.ObjectID = { .AssetPath = FNameHelper::FNameFromString(partArray->get(0)->value_or("")) };
 			partVis.ClothPartTexture = clothTexturepath;
 
 			toml::array* HideParamsArray = partArray->get(1)->as_array();
-			partVis.ClothPartHideParameters = *new SDK::TAllocatedArray<SDK::FName>(20);
+			partVis.ClothPartHideParameters = *new SDK::TAllocatedArray<SDK::FName>(HideParamsArray->size() + 1);
 			for (auto& hideParam : *HideParamsArray)
 			{
 				partVis.ClothPartHideParameters.Add(FNameHelper::FNameFromString(hideParam.value_or("")));
 			}
 
 			toml::array* SubstituteParamsArray = partArray->get(2)->as_array();
-			partVis.ClothPartSubstituteParameters = *new SDK::TAllocatedArray<SDK::FName>(20);
+			partVis.ClothPartSubstituteParameters = *new SDK::TAllocatedArray<SDK::FName>(SubstituteParamsArray->size() + 1);
 			for (auto& subParam : *SubstituteParamsArray)
 			{
 				partVis.ClothPartSubstituteParameters.Add(FNameHelper::FNameFromString(subParam.value_or("")));
@@ -705,30 +705,66 @@ void ModPatch::ProcessHairBaseTable(toml::table table, std::map<std::string, SDK
 		materialpath.ObjectID = { .AssetPath = FNameHelper::FNameFromString(data->get(3)->value_or("")) };
 		HairBase.BaseShadowMaterial = materialpath;
 
-		for (auto& part : *data->get(4)->as_array())
+		if (data->get(4)->as_array()->size() > 0)
 		{
-			HairBase.AvailableHairFrontList.Add(FNameHelper::FNameFromString(part.value_or("")));
+			toml::array* HairArray = data->get(4)->as_array();
+			HairBase.AvailableHairFrontList = *new SDK::TAllocatedArray<SDK::FName>(HairArray->size() + 1);
+			for (auto& part : *HairArray)
+			{
+				HairBase.AvailableHairFrontList.Add(FNameHelper::FNameFromString(part.value_or("")));
+			}
 		}
-		for (auto& part : *data->get(5)->as_array())
+			
+		if (data->get(5)->as_array()->size() > 0)
 		{
-			HairBase.AvailableHairFrontSideList.Add(FNameHelper::FNameFromString(part.value_or("")));
+			toml::array* HairArray = data->get(5)->as_array();
+			HairBase.AvailableHairFrontSideList = *new SDK::TAllocatedArray<SDK::FName>(HairArray->size() + 1);
+			for (auto& part : *HairArray)
+			{
+				HairBase.AvailableHairFrontSideList.Add(FNameHelper::FNameFromString(part.value_or("")));
+			}
 		}
-		for (auto& part : *data->get(6)->as_array())
+			
+		if (data->get(6)->as_array()->size() > 0)
 		{
-			HairBase.AvailableHairSideList.Add(FNameHelper::FNameFromString(part.value_or("")));
+			toml::array* HairArray = data->get(6)->as_array();
+			HairBase.AvailableHairSideList = *new SDK::TAllocatedArray<SDK::FName>(HairArray->size() + 1);
+			for (auto& part : *HairArray)
+			{
+				HairBase.AvailableHairSideList.Add(FNameHelper::FNameFromString(part.value_or("")));
+			}
 		}
-		for (auto& part : *data->get(7)->as_array())
+
+		if (data->get(7)->as_array()->size() > 0)
 		{
-			HairBase.AvailableHairTopList.Add(FNameHelper::FNameFromString(part.value_or("")));
+			toml::array* HairArray = data->get(7)->as_array();
+			HairBase.AvailableHairTopList = *new SDK::TAllocatedArray<SDK::FName>(HairArray->size() + 1);
+			for (auto& part : *HairArray)
+			{
+				HairBase.AvailableHairTopList.Add(FNameHelper::FNameFromString(part.value_or("")));
+			}
 		}
-		for (auto& part : *data->get(8)->as_array())
+			
+		if (data->get(8)->as_array()->size() > 0)
 		{
-			HairBase.AvailableHairBackList.Add(FNameHelper::FNameFromString(part.value_or("")));
+			toml::array* HairArray = data->get(8)->as_array();
+			HairBase.AvailableHairBackList = *new SDK::TAllocatedArray<SDK::FName>(HairArray->size() + 1);
+			for (auto& part : *HairArray)
+			{
+				HairBase.AvailableHairBackList.Add(FNameHelper::FNameFromString(part.value_or("")));
+			}
 		}
-		for (auto& part : *data->get(9)->as_array())
+			
+		if (data->get(9)->as_array()->size() > 0)
 		{
-			HairBase.AvailableHairOtherList.Add(FNameHelper::FNameFromString(part.value_or("")));
+			toml::array* HairArray = data->get(9)->as_array();
+			HairBase.AvailableHairOtherList = *new SDK::TAllocatedArray<SDK::FName>(HairArray->size() + 1);
+			for (auto& part : *HairArray)
+			{
+				HairBase.AvailableHairOtherList.Add(FNameHelper::FNameFromString(part.value_or("")));
+			}
 		}
+
 		HairBase.bIsLengthChangeAvailable = data->get(10)->value_or(false);
 		HairBase.bIsCurlAvailable = data->get(11)->value_or(false);
 

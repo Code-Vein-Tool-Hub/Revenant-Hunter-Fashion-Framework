@@ -15,11 +15,7 @@ namespace TArrayHelper
 	void ResizeTArray(void* TargetArray, int Size);
 }
 
-namespace TMapHelper
 {
-	
 }
 
 SDK::UObject* FindObjectByClass(const std::string& Name, SDK::UClass* uclass);
-
-HWND GetProcessWindow();
