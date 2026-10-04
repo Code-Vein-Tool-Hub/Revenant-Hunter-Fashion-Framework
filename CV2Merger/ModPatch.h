@@ -33,6 +33,16 @@ public:
 	static std::map<std::string, SDK::FCharacterCustomizeDataTableTextureList> DT_EyeBase;
 	static std::map<std::string, SDK::FCharacterCustomizeDataTableEyeTexture> DT_EyeDetail;
 	static std::map<std::string, SDK::FCharacterCustomizeDataTableTextureList> DT_EyeHighlight;
+	static std::map<std::string, SDK::FCharacterCustomizeDataTableEyebrowTexture> DT_Eyebrow;
+	static std::map<std::string, SDK::FCharacterCustomizeDataTableTextureList> DT_EyeLash;
+
+	static std::map<std::string, SDK::FCharacterCustomizeDataTableKintsugiList> DT_Kintsugi;
+	static std::map<std::string, SDK::FCharacterCustomizeDataTableFacePaintMaskPreset> DT_FacePaintDLC;
+	static std::map<std::string, SDK::FCharacterCustomizeDataTableManicurePatternList> DT_Manicure;
+
+	static std::map<std::string, SDK::FCharacterCustomizeDataTablePreset> DT_AppAvatarPresetFemale;
+	static std::map<std::string, SDK::FCharacterCustomizeDataTablePreset> DT_AppAvatarPresetMale;
+
 
 private:
 	static void ProcessInnerTable(toml::table table, std::map<std::string, SDK::FCharacterCustomizeDataTableInnerList>* DataTable);
@@ -50,6 +60,13 @@ private:
 
 	static void ProcessTextureListTable(toml::table table, std::map<std::string, SDK::FCharacterCustomizeDataTableTextureList>* DataTable);
 	static void ProcessEyeTextureTable(toml::table table, std::map<std::string, SDK::FCharacterCustomizeDataTableEyeTexture>* DataTable);
+	static void ProcessEyeBrowTextureTable(toml::table table, std::map<std::string, SDK::FCharacterCustomizeDataTableEyebrowTexture>* DataTable);
+
+	static void ProcessKintsugiTable(toml::table table, std::map<std::string, SDK::FCharacterCustomizeDataTableKintsugiList>* DataTable);
+	static void ProcessFacePaintTable(toml::table table, std::map<std::string, SDK::FCharacterCustomizeDataTableFacePaintMaskPreset>* DataTable);
+	static void ProcessManicureTable(toml::table table, std::map<std::string, SDK::FCharacterCustomizeDataTableManicurePatternList>* DataTable);
+
+	static void ProcessAvatarPresetTable(toml::table table, std::map<std::string, SDK::FCharacterCustomizeDataTablePreset>* DataTable);
 
 public:
 	static bool init();

@@ -5,34 +5,45 @@
 #include "Config.h"
 #include "SDK/BPFL_MapHelper_classes.hpp"
 
-std::map<std::string, SDK::FCharacterCustomizeDataTableInnerList> ModPatch::DT_Inner_Female;
-std::map<std::string, SDK::FCharacterCustomizeDataTableInnerList> ModPatch::DT_Inner_Male;
-std::map<std::string, SDK::FCharacterCustomizeDataTableBootsList> ModPatch::DT_Boots_Female;
-std::map<std::string, SDK::FCharacterCustomizeDataTableBootsList> ModPatch::DT_Boots_Male;
-std::map<std::string, SDK::FCharacterCustomizeDataTableGlovesList> ModPatch::DT_Gloves_Female;
-std::map<std::string, SDK::FCharacterCustomizeDataTableGlovesList> ModPatch::DT_Gloves_Male;
-std::map<std::string, SDK::FCharacterCustomizeDataTableMaskList> ModPatch::DT_Mask_Female;
-std::map<std::string, SDK::FCharacterCustomizeDataTableMaskList> ModPatch::DT_Mask_Male;
-std::map<std::string, SDK::FCharacterCustomizeDataTableOuterList> ModPatch::DT_Outer_Female;
-std::map<std::string, SDK::FCharacterCustomizeDataTableOuterList> ModPatch::DT_Outer_Male;
+std::map<std::string, SDK::FCharacterCustomizeDataTableInnerList>		ModPatch::DT_Inner_Female;
+std::map<std::string, SDK::FCharacterCustomizeDataTableInnerList>		ModPatch::DT_Inner_Male;
+std::map<std::string, SDK::FCharacterCustomizeDataTableBootsList>		ModPatch::DT_Boots_Female;
+std::map<std::string, SDK::FCharacterCustomizeDataTableBootsList>		ModPatch::DT_Boots_Male;
+std::map<std::string, SDK::FCharacterCustomizeDataTableGlovesList>		ModPatch::DT_Gloves_Female;
+std::map<std::string, SDK::FCharacterCustomizeDataTableGlovesList>		ModPatch::DT_Gloves_Male;
+std::map<std::string, SDK::FCharacterCustomizeDataTableMaskList>		ModPatch::DT_Mask_Female;
+std::map<std::string, SDK::FCharacterCustomizeDataTableMaskList>		ModPatch::DT_Mask_Male;
+std::map<std::string, SDK::FCharacterCustomizeDataTableOuterList>		ModPatch::DT_Outer_Female;
+std::map<std::string, SDK::FCharacterCustomizeDataTableOuterList>		ModPatch::DT_Outer_Male;
 
 std::map<std::string, SDK::FCharacterCustomizeDataTableAccessoryPreset> ModPatch::DT_AccessoryPresetDLC_Free;
 std::map<std::string, SDK::FCharacterCustomizeDataTableAccessoryPreset> ModPatch::DT_AccessoryPresetIsHat;
-std::map<std::string, SDK::FCharacterCustomizeDataTableAttachToList> ModPatch::DT_AccessoryAttachToList;
+std::map<std::string, SDK::FCharacterCustomizeDataTableAttachToList>	ModPatch::DT_AccessoryAttachToList;
 
-std::map<std::string, SDK::FCharacterCustomizeDataTableHairBase> ModPatch::DT_HairBaseList;
-std::map<std::string, SDK::FCharacterCustomizeDataTableHairPart> ModPatch::DT_HairBack;
-std::map<std::string, SDK::FCharacterCustomizeDataTableHairPart> ModPatch::DT_HairFront;
-std::map<std::string, SDK::FCharacterCustomizeDataTableHairPart> ModPatch::DT_HairFrontSide;
-std::map<std::string, SDK::FCharacterCustomizeDataTableHairPart> ModPatch::DT_HairOther;
-std::map<std::string, SDK::FCharacterCustomizeDataTableHairPart> ModPatch::DT_HairSide;
-std::map<std::string, SDK::FCharacterCustomizeDataTableHairPart> ModPatch::DT_HairTop;
-std::map<std::string, SDK::FCharacterCustomizeDataTableHairSet> ModPatch::DT_HairSetList_Female;
-std::map<std::string, SDK::FCharacterCustomizeDataTableHairSet> ModPatch::DT_HairSetList_Male;
+std::map<std::string, SDK::FCharacterCustomizeDataTableHairBase>		ModPatch::DT_HairBaseList;
+std::map<std::string, SDK::FCharacterCustomizeDataTableHairPart>		ModPatch::DT_HairBack;
+std::map<std::string, SDK::FCharacterCustomizeDataTableHairPart>		ModPatch::DT_HairFront;
+std::map<std::string, SDK::FCharacterCustomizeDataTableHairPart>		ModPatch::DT_HairFrontSide;
+std::map<std::string, SDK::FCharacterCustomizeDataTableHairPart>		ModPatch::DT_HairOther;
+std::map<std::string, SDK::FCharacterCustomizeDataTableHairPart>		ModPatch::DT_HairSide;
+std::map<std::string, SDK::FCharacterCustomizeDataTableHairPart>		ModPatch::DT_HairTop;
+std::map<std::string, SDK::FCharacterCustomizeDataTableHairSet>			ModPatch::DT_HairSetList_Female;
+std::map<std::string, SDK::FCharacterCustomizeDataTableHairSet>			ModPatch::DT_HairSetList_Male;
 
-std::map<std::string, SDK::FCharacterCustomizeDataTableTextureList> ModPatch::DT_EyeBase;
-std::map<std::string, SDK::FCharacterCustomizeDataTableEyeTexture> ModPatch::DT_EyeDetail;
-std::map<std::string, SDK::FCharacterCustomizeDataTableTextureList> ModPatch::DT_EyeHighlight;
+std::map<std::string, SDK::FCharacterCustomizeDataTableTextureList>		ModPatch::DT_EyeBase;
+std::map<std::string, SDK::FCharacterCustomizeDataTableEyeTexture>		ModPatch::DT_EyeDetail;
+std::map<std::string, SDK::FCharacterCustomizeDataTableTextureList>		ModPatch::DT_EyeHighlight;
+std::map<std::string, SDK::FCharacterCustomizeDataTableEyebrowTexture>	ModPatch::DT_Eyebrow;
+std::map<std::string, SDK::FCharacterCustomizeDataTableTextureList>		ModPatch::DT_EyeLash;
+
+std::map<std::string, SDK::FCharacterCustomizeDataTableKintsugiList>		ModPatch::DT_Kintsugi;
+std::map<std::string, SDK::FCharacterCustomizeDataTableFacePaintMaskPreset> ModPatch::DT_FacePaintDLC;
+std::map<std::string, SDK::FCharacterCustomizeDataTableManicurePatternList> ModPatch::DT_Manicure;
+
+std::map<std::string, SDK::FCharacterCustomizeDataTablePreset>				ModPatch::DT_AppAvatarPresetFemale;
+std::map<std::string, SDK::FCharacterCustomizeDataTablePreset>				ModPatch::DT_AppAvatarPresetMale;
+
+float TableVersion = 1.0f;
 
 void ModPatch::ProcessInnerTable(toml::table table, std::map<std::string, SDK::FCharacterCustomizeDataTableInnerList>* DataTable)
 {
@@ -445,6 +456,11 @@ void ModPatch::ProcessMaskTable(toml::table table, std::map<std::string, SDK::FC
 			Mask.PartVisibilityInfoArray.Add(partVis);
 		}
 		Mask.HairAffectType = magic_enum::enum_cast<SDK::ECharacterCustomizeClothHairAffectType>(data->get(6)->value_or("None")).value_or(SDK::ECharacterCustomizeClothHairAffectType::None);
+		if (TableVersion >= 2.0f)
+		{
+			Mask.bCoverMouth = data->get(7)->value_or(true);
+			Mask.bCanWearWithSentimentalMask = data->get(8)->value_or(false);
+		}
 
 		DataTable->insert({ name, Mask });
 	}
@@ -506,6 +522,11 @@ void ModPatch::ProcessOuterTable(toml::table table, std::map<std::string, SDK::F
 
 		Outer.CustomizableColorNumber = data->get(4)->value_or(0);
 		Outer.HairAffectType = magic_enum::enum_cast<SDK::ECharacterCustomizeClothHairAffectType>(data->get(5)->value_or("General")).value_or(SDK::ECharacterCustomizeClothHairAffectType::None);
+		if (TableVersion >= 2.0f)
+		{
+			Outer.bOverrideHairAffectTypeBySentimentalMask = data->get(6)->value_or(false);
+			Outer.HairAffectTypeWithSentimentalMask = magic_enum::enum_cast<SDK::ECharacterCustomizeClothHairAffectType>(data->get(7)->value_or("General")).value_or(SDK::ECharacterCustomizeClothHairAffectType::None);
+		}
 
 		DataTable->insert({ name, Outer });
 	}
@@ -948,6 +969,255 @@ void ModPatch::ProcessAccessoryAttachToTable(toml::table table, std::map<std::st
 	}
 }
 
+void ModPatch::ProcessEyeBrowTextureTable(toml::table table, std::map<std::string, SDK::FCharacterCustomizeDataTableEyebrowTexture>* DataTable)
+{
+	for (auto& [key, value] : table)
+	{
+		std::string name = key.str().data();
+		toml::array* data = nullptr;
+
+		if (value.is_array())
+			data = value.as_array();
+		else
+		{
+			printf("[RHFF] [TOML] entry \"%s\" in toml is not an array", name);
+			continue;
+		}
+
+		if (data->size() <= 0)
+		{
+			printf("[RHFF] [TOML] entry data for \"%s\" is empty in toml\n", name.c_str());
+			continue;
+		}
+		if (DataTable->contains(name.c_str()))
+		{
+			printf("[RHFF] [TOML] Duplicate entry for \"%s\" found in toml\n", name.c_str());
+			continue;
+		}
+
+		SDK::FCharacterCustomizeDataTableEyebrowTexture EyeBrowTexture = *new SDK::FCharacterCustomizeDataTableEyebrowTexture();
+		SDK::TSoftObjectPtr<SDK::UTexture2D> thumbnailpath;
+		thumbnailpath.ObjectID = { .AssetPath = FNameHelper::FNameFromString(data->get(0)->value_or("")) };
+		EyeBrowTexture.Thumbnail = thumbnailpath;
+
+		SDK::TSoftObjectPtr<SDK::UTexture2D> lefttexturepath;
+		lefttexturepath.ObjectID = { .AssetPath = FNameHelper::FNameFromString(data->get(1)->value_or("")) };
+		EyeBrowTexture.LeftTexture = lefttexturepath;
+
+		SDK::TSoftObjectPtr<SDK::UTexture2D> righttexturepath;
+		righttexturepath.ObjectID = { .AssetPath = FNameHelper::FNameFromString(data->get(2)->value_or("")) };
+		EyeBrowTexture.RightTexture = righttexturepath;
+
+		EyeBrowTexture.NormalIntensity = data->get(3)->value_or(0.0f);
+		EyeBrowTexture.UseBrowHeightFromAlpha = data->get(4)->value_or(0.0f);
+
+		DataTable->insert({ name, EyeBrowTexture });
+	}
+}
+
+void ModPatch::ProcessKintsugiTable(toml::table table, std::map<std::string, SDK::FCharacterCustomizeDataTableKintsugiList>* DataTable)
+{
+	for (auto& [key, value] : table)
+	{
+		std::string name = key.str().data();
+		toml::array* data = nullptr;
+
+		if (value.is_array())
+			data = value.as_array();
+		else
+		{
+			printf("[RHFF] [TOML] entry \"%s\" in toml is not an array", name);
+			continue;
+		}
+
+		if (data->size() <= 0)
+		{
+			printf("[RHFF] [TOML] entry data for \"%s\" is empty in toml\n", name.c_str());
+			continue;
+		}
+		if (DataTable->contains(name.c_str()))
+		{
+			printf("[RHFF] [TOML] Duplicate entry for \"%s\" found in toml\n", name.c_str());
+			continue;
+		}
+
+		SDK::FCharacterCustomizeDataTableKintsugiList Kintsugi = *new SDK::FCharacterCustomizeDataTableKintsugiList();
+		SDK::TSoftObjectPtr<SDK::UTexture2D> thumbnailpath;
+		thumbnailpath.ObjectID = { .AssetPath = FNameHelper::FNameFromString(data->get(0)->value_or("")) };
+		Kintsugi.Thumbnail = thumbnailpath;
+
+		SDK::TSoftObjectPtr<SDK::UTexture2D> colormap;
+		colormap.ObjectID = { .AssetPath = FNameHelper::FNameFromString(data->get(1)->value_or("")) };
+		Kintsugi.ColorMap = colormap;
+
+		SDK::TSoftObjectPtr<SDK::UTexture2D> normalmap;
+		normalmap.ObjectID = { .AssetPath = FNameHelper::FNameFromString(data->get(2)->value_or("")) };
+		Kintsugi.NormalMap = normalmap;
+
+		SDK::TSoftObjectPtr<SDK::UTexture2D> specmap;
+		specmap.ObjectID = { .AssetPath = FNameHelper::FNameFromString(data->get(3)->value_or("")) };
+		Kintsugi.SpecularMap = specmap;
+
+		Kintsugi.bIsFlip = data->get(4)->value_or(false);
+		Kintsugi.Metallic = data->get(5)->value_or(0.0f);
+		Kintsugi.Opacity = data->get(6)->value_or(0.0f);
+		Kintsugi.Roughness = data->get(7)->value_or(0.0f);
+		Kintsugi.OffsetU = data->get(8)->value_or(0.0f);
+		Kintsugi.OffsetV = data->get(9)->value_or(0.0f);
+		Kintsugi.Rotate = data->get(10)->value_or(0.0f);
+		Kintsugi.ScaleU = data->get(11)->value_or(0.0f);
+		Kintsugi.ScaleV = data->get(12)->value_or(0.0f);
+
+		DataTable->insert({ name, Kintsugi });
+	}
+}
+
+void ModPatch::ProcessFacePaintTable(toml::table table, std::map<std::string, SDK::FCharacterCustomizeDataTableFacePaintMaskPreset>* DataTable)
+{
+	for (auto& [key, value] : table)
+	{
+		std::string name = key.str().data();
+		toml::array* data = nullptr;
+
+		if (value.is_array())
+			data = value.as_array();
+		else
+		{
+			printf("[RHFF] [TOML] entry \"%s\" in toml is not an array", name);
+			continue;
+		}
+
+		if (data->size() <= 0)
+		{
+			printf("[RHFF] [TOML] entry data for \"%s\" is empty in toml\n", name.c_str());
+			continue;
+		}
+		if (DataTable->contains(name.c_str()))
+		{
+			printf("[RHFF] [TOML] Duplicate entry for \"%s\" found in toml\n", name.c_str());
+			continue;
+		}
+
+		SDK::FCharacterCustomizeDataTableFacePaintMaskPreset facePaint = *new SDK::FCharacterCustomizeDataTableFacePaintMaskPreset();
+		SDK::TSoftObjectPtr<SDK::UTexture2D> thumbnailpath;
+		thumbnailpath.ObjectID = { .AssetPath = FNameHelper::FNameFromString(data->get(0)->value_or("")) };
+		facePaint.Thumbnail = thumbnailpath;
+
+		facePaint.IsSpecialColor = data->get(1)->value_or(false);
+		facePaint.ColorPaletteRowName = FNameHelper::FNameFromString(data->get(2)->value_or(""));
+		facePaint.ColorName = FNameHelper::FNameFromString(data->get(3)->value_or(""));
+		facePaint.Opacity = data->get(4)->value_or(0.0f);
+
+		SDK::TSoftObjectPtr<SDK::UTexture2D> texturepath;
+		texturepath.ObjectID = { .AssetPath = FNameHelper::FNameFromString(data->get(5)->value_or("")) };
+		facePaint.Texture = texturepath;
+
+		facePaint.OffsetV = data->get(6)->value_or(0.0f);
+		facePaint.OffsetU = data->get(7)->value_or(0.0f);
+		facePaint.Rotate = data->get(8)->value_or(0.0f);
+		facePaint.Scale = data->get(9)->value_or(0.0f);
+		facePaint.Symmetry = data->get(10)->value_or(false);
+		if (data->get(11)->value_or("") != "")
+		{
+			facePaint.FlagCondition = *new SDK::FStoryFlagEvaluationFormula();
+			facePaint.FlagCondition.EvaluationFormula = FNameHelper::FStringFromString(data->get(11)->value_or(""));
+		}
+
+		DataTable->insert({ name, facePaint });
+	}
+}
+
+void ModPatch::ProcessManicureTable(toml::table table, std::map<std::string, SDK::FCharacterCustomizeDataTableManicurePatternList>* DataTable)
+{
+	for (auto& [key, value] : table)
+	{
+		std::string name = key.str().data();
+		toml::array* data = nullptr;
+
+		if (value.is_array())
+			data = value.as_array();
+		else
+		{
+			printf("[RHFF] [TOML] entry \"%s\" in toml is not an array", name);
+			continue;
+		}
+
+		if (data->size() <= 0)
+		{
+			printf("[RHFF] [TOML] entry data for \"%s\" is empty in toml\n", name.c_str());
+			continue;
+		}
+		if (DataTable->contains(name.c_str()))
+		{
+			printf("[RHFF] [TOML] Duplicate entry for \"%s\" found in toml\n", name.c_str());
+			continue;
+		}
+
+		SDK::FCharacterCustomizeDataTableManicurePatternList Nails = *new SDK::FCharacterCustomizeDataTableManicurePatternList();
+		SDK::TSoftObjectPtr<SDK::UTexture2D> thumbnailpath;
+		thumbnailpath.ObjectID = { .AssetPath = FNameHelper::FNameFromString(data->get(0)->value_or("")) };
+		Nails.Thumbnail = thumbnailpath;
+
+		SDK::TSoftObjectPtr<SDK::UTexture2D> texturepath;
+		texturepath.ObjectID = { .AssetPath = FNameHelper::FNameFromString(data->get(1)->value_or("")) };
+		Nails.Texture = texturepath;
+
+		Nails.IsFullColor = data->get(2)->value_or(false);
+		Nails.ColorPaletteRowName1 = FNameHelper::FNameFromString(data->get(3)->value_or(""));
+		Nails.ColorName1 = FNameHelper::FNameFromString(data->get(4)->value_or(""));
+		Nails.ColorPaletteRowName2 = FNameHelper::FNameFromString(data->get(5)->value_or(""));
+		Nails.ColorName2 = FNameHelper::FNameFromString(data->get(6)->value_or(""));
+		Nails.ColorPaletteRowName3 = FNameHelper::FNameFromString(data->get(7)->value_or(""));
+		Nails.ColorName3 = FNameHelper::FNameFromString(data->get(8)->value_or(""));
+		Nails.ManicureMetallic = data->get(9)->value_or(0.0f);
+		Nails.ManicureRoughness = data->get(9)->value_or(0.0f);
+		Nails.ManicureEmissiveIntencity = data->get(9)->value_or(0.0f);
+
+		DataTable->insert({ name, Nails });
+	}
+}
+
+void ModPatch::ProcessAvatarPresetTable(toml::table table, std::map<std::string, SDK::FCharacterCustomizeDataTablePreset>* DataTable)
+{
+	for (auto& [key, value] : table)
+	{
+		std::string name = key.str().data();
+		toml::array* data = nullptr;
+
+		if (value.is_array())
+			data = value.as_array();
+		else
+		{
+			printf("[RHFF] [TOML] entry \"%s\" in toml is not an array", name);
+			continue;
+		}
+
+		if (data->size() <= 0)
+		{
+			printf("[RHFF] [TOML] entry data for \"%s\" is empty in toml\n", name.c_str());
+			continue;
+		}
+		if (DataTable->contains(name.c_str()))
+		{
+			printf("[RHFF] [TOML] Duplicate entry for \"%s\" found in toml\n", name.c_str());
+			continue;
+		}
+
+		SDK::FCharacterCustomizeDataTablePreset Preset = *new SDK::FCharacterCustomizeDataTablePreset();
+		Preset.PresetName = FNameHelper::FTextFromString(data->get(0)->value_or(""));
+
+		SDK::TSoftObjectPtr<SDK::UTexture2D> thumbnailpath;
+		thumbnailpath.ObjectID = { .AssetPath = FNameHelper::FNameFromString(data->get(1)->value_or("")) };
+		Preset.Thumbnail = thumbnailpath;
+
+		SDK::FCharacterCustomizeDataTablePresetDetail details = *new SDK::FCharacterCustomizeDataTablePresetDetail();
+		Preset.Detail = details;
+		details.Gender.Gender = magic_enum::enum_cast<SDK::ECharacterCustomizeGender>(data->get(2)->value_or("None")).value_or(SDK::ECharacterCustomizeGender::Male);
+	}
+}
+
+
+
 bool ModPatch::init()
 {
 	printf("[RHFF] [TOML] Processing toml patches...\n");
@@ -989,6 +1259,12 @@ bool ModPatch::init()
 		}
 		toml::table* table;
 
+		auto versioncheck = config["TableVersion"];
+		if (versioncheck)
+			TableVersion = config["TableVersion"].value_or(1.0f);
+		else
+			TableVersion = 1.0f;
+
 		//Inner Tables
 		table = config["DT_Inner_Female"].as_table();
 		if (table)
@@ -1013,6 +1289,7 @@ bool ModPatch::init()
 		if (table)
 			ProcessGlovesTable(*table, &DT_Gloves_Male);
 
+		//Mask
 		table = config["DT_Mask_Female"].as_table();
 		if (table)
 			ProcessMaskTable(*table, &DT_Mask_Female);
@@ -1020,6 +1297,7 @@ bool ModPatch::init()
 		if (table)
 			ProcessMaskTable(*table, &DT_Mask_Male);
 
+		//Outer
 		table = config["DT_Outer_Female"].as_table();
 		if (table)
 			ProcessOuterTable(*table, &DT_Outer_Female);
@@ -1027,7 +1305,7 @@ bool ModPatch::init()
 		if (table)
 			ProcessOuterTable(*table, &DT_Outer_Male);
 
-
+		//Accessories
 		table = config["DT_AccessoryPresetDLC_Free"].as_table();
 		if (table)
 			ProcessAccessoryPresetTable(*table, &DT_AccessoryPresetDLC_Free);
@@ -1038,6 +1316,7 @@ bool ModPatch::init()
 		if (table)
 			ProcessAccessoryAttachToTable(*table, &DT_AccessoryAttachToList);
 
+		//Hair
 		table = config["DT_HairBaseList"].as_table();
 		if (table)
 			ProcessHairBaseTable(*table, &DT_HairBaseList);
@@ -1076,6 +1355,23 @@ bool ModPatch::init()
 		table = config["DT_EyeHighlight"].as_table();
 		if (table)
 			ProcessTextureListTable(*table, &DT_EyeHighlight);
+		table = config["DT_EyeLash"].as_table();
+		if (table)
+			ProcessTextureListTable(*table, &DT_EyeLash);
+		table = config["DT_Eyebrow"].as_table();
+		if (table)
+			ProcessEyeBrowTextureTable(*table, &DT_Eyebrow);
+
+		//Makeup
+		table = config["DT_Kintsugi"].as_table();
+		if (table)
+			ProcessKintsugiTable(*table, &DT_Kintsugi);
+		table = config["DT_FacePaintDLC"].as_table();
+		if (table)
+			ProcessFacePaintTable(*table, &DT_FacePaintDLC);
+		table = config["DT_Manicure"].as_table();
+		if (table)
+			ProcessManicureTable(*table, &DT_Manicure);
 
 		i++;
 	}

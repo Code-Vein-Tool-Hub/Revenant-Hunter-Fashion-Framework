@@ -356,6 +356,45 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
                 UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
+            ModPatch::DT_EyeHighlight.clear();
+        }
+    }
+
+    else if (TableName == "DT_Kintsugi")
+    {
+        if (ModPatch::DT_Kintsugi.size() > 0)
+        {
+            for (auto& entry : ModPatch::DT_Kintsugi)
+            {
+                UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
+                printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
+            }
+            ModPatch::DT_Kintsugi.clear();
+        }
+    }
+    else if (TableName == "DT_FacePaintDLC")
+    {
+        if (ModPatch::DT_FacePaintDLC.size() > 0)
+        {
+            for (auto& entry : ModPatch::DT_FacePaintDLC)
+            {
+                UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
+                printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
+            }
+            Patch_FlagCondition(_this, ModPatch::DT_FacePaintDLC, 0x88);
+            ModPatch::DT_FacePaintDLC.clear();
+        }
+    }
+    else if (TableName == "DT_Manicure")
+    {
+        if (ModPatch::DT_Manicure.size() > 0)
+        {
+            for (auto& entry : ModPatch::DT_Manicure)
+            {
+                UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
+                printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
+            }
+            ModPatch::DT_Manicure.clear();
         }
     }
 
