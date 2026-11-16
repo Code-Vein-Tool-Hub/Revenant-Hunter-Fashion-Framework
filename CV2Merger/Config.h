@@ -10,6 +10,7 @@ public:
 	static bool CompanionPakLoaded;
 	static std::wstring PresetModName;
 	static bool PresetModLoaded;
+	static bool FixSpecialRoughness;
 
 	static bool init();
 	static bool postinit();

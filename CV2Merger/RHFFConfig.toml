@@ -1,6 +1,7 @@
 [General]
 Enable_Console = true
 Acc_Info_Tool = false
+RoughnessFixForSpecialColors = true
 
 [CompanionPaks]
 #Mods that take advantage of a unreal pak mod and c++ features in RHFF

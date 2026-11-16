@@ -42,6 +42,11 @@ void* Sig_InputHook = sigScan(
     "\x48\x89\x5C\x24\x2A\x48\x89\x74\x24\x2A\x57\x48\x83\xEC\x20\x48\x8B\x02\x41\x8B\xF8",
     "xxxx?xxxx?xxxxxxxxxxx");
 
+//0x14615e7b0 in version 2.0.3.0
+void* Sig_UCharacterCustomizeUtility_SetScalarParameterValueToAllMesh = sigScan(
+    "\x48\x85\xC9\x0F\x84\x2A\x2A\x2A\x2A\x48\x89\x5C\x24\x2A\x57\x48\x83\xEC\x40\x8B\x41\x2A",
+    "xxxxx????xxxx?xxxxxxx?");
+
 #pragma endregion
 
 #pragma region Functions
@@ -607,13 +612,39 @@ HOOK(void, __stdcall, Hook_UObject_ProcessEvent, Sig_UObject_ProcessEvent, SDK::
     else if (FuncName.contains("WDT_CharacterPresetImporter_Button_SavePreset"))
     {
 
+    return orig_Hook_UObject_ProcessEvent(_this, Function, Param);
+}
+
+//Hook to fix normal colors being set to 1.0 roughness
+HOOK(void, __stdcall, Hook_UCharacterCustomizeUtility_SetScalarParameterValueToAllMesh, Sig_UCharacterCustomizeUtility_SetScalarParameterValueToAllMesh,
+    SDK::AActor* Target,
+    SDK::FName ParameterName,
+    float Value)
+{
+    //printf("[RHFF] [Debug] Set Scalar on \"%s\" for \"%s\" to \"%f\"\n", Target->GetName().c_str(), ParameterName.ToString().c_str(), Value);
+
+    //Check for roughness
+    if (ParameterName.ToString() == "Roughness(L1)" || ParameterName.ToString() == "Roughness(L2)")
+    {
+        //make sure it's setting it to 1.0
+        if (Value == 1.0f)
+        {
+            if (std::find(MeshSlots.begin(), MeshSlots.end(), Target->GetName()) != MeshSlots.end() )
+            {
+                //printf("[RHFF] Patching roughness set on %s to 0.0\n", Target->GetName().c_str());
+                return orig_Hook_UCharacterCustomizeUtility_SetScalarParameterValueToAllMesh(Target, ParameterName, 0.0f);
+            }
+            else if (Target->GetName().starts_with("AccessoryMesh"))
+            {
+                //printf("[RHFF] Patching roughness set on %s to 0.0\n", Target->GetName().c_str());
+                return orig_Hook_UCharacterCustomizeUtility_SetScalarParameterValueToAllMesh(Target, ParameterName, 0.0f);
+            }
+        }
     }
     else if (FuncName.contains("WDT_CharacterPresetImporter_C"))
     {
         printf("[RHFF] ProcessEvent: %s\n", Function->GetFullName().c_str());
     }
-    */
-    return orig_Hook_UObject_ProcessEvent(_this, Function, Param);
 }
 
 #pragma endregion
@@ -644,6 +675,9 @@ BOOL APIENTRY DllMain( HMODULE hModule,
         }
         //Not needed right now but maybe i'll need this in the future
         INSTALL_HOOK(Hook_InputHook);
+        if (Config::FixSpecialRoughness)
+            INSTALL_HOOK(Hook_UCharacterCustomizeUtility_SetScalarParameterValueToAllMesh)
+        
 
 		return TRUE;
     case DLL_THREAD_ATTACH:
