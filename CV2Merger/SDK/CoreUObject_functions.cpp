@@ -19,7 +19,6 @@ namespace SDK
 
 // Predefined Function
 // Finds a UObject in the global object array by name, optionally with ECastFlags to reduce heavy string comparison
-
 class UObject* UObject::FindObjectFastImpl(const std::string& Name, EClassCastFlags RequiredType)
 {
 	for (int i = 0; i < GObjects->Num(); ++i)
@@ -39,7 +38,6 @@ class UObject* UObject::FindObjectFastImpl(const std::string& Name, EClassCastFl
 
 // Predefined Function
 // Finds a UObject in the global object array by full-name, optionally with ECastFlags to reduce heavy string comparison
-
 class UObject* UObject::FindObjectImpl(const std::string& FullName, EClassCastFlags RequiredType)
 {
 	for (int i = 0; i < GObjects->Num(); ++i)
@@ -59,7 +57,6 @@ class UObject* UObject::FindObjectImpl(const std::string& FullName, EClassCastFl
 
 // Predefined Function
 // Returns the name of this object in the format 'Class Package.Outer.Object'
-
 std::string UObject::GetFullName() const
 {
 	if (this && Class)
@@ -85,7 +82,6 @@ std::string UObject::GetFullName() const
 
 // Predefined Function
 // Retuns the name of this object
-
 std::string UObject::GetName() const
 {
 	return this ? Name.ToString() : "None";
@@ -94,7 +90,6 @@ std::string UObject::GetName() const
 
 // Predefined Function
 // Checks Class->FunctionFlags for TypeFlags
-
 bool UObject::HasTypeFlag(EClassCastFlags TypeFlags) const
 {
 	return (Class->CastFlags & TypeFlags);
@@ -103,7 +98,6 @@ bool UObject::HasTypeFlag(EClassCastFlags TypeFlags) const
 
 // Predefined Function
 // Checks a UObjects' type by TypeFlags
-
 bool UObject::IsA(EClassCastFlags TypeFlags) const
 {
 	return (Class->CastFlags & TypeFlags);
@@ -112,7 +106,6 @@ bool UObject::IsA(EClassCastFlags TypeFlags) const
 
 // Predefined Function
 // Checks a UObjects' type by Class
-
 bool UObject::IsA(class UClass* TypeClass) const
 {
 	return Class->IsSubclassOf(TypeClass);
@@ -121,7 +114,6 @@ bool UObject::IsA(class UClass* TypeClass) const
 
 // Predefined Function
 // Checks whether this object is a classes' default-object
-
 bool UObject::IsDefaultObject() const
 {
 	return (Flags & EObjectFlags::ClassDefaultObject);
@@ -132,7 +124,6 @@ bool UObject::IsDefaultObject() const
 // (Event, Public, BlueprintEvent)
 // Parameters:
 // int32                                   EntryPoint                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
 void UObject::ExecuteUbergraph(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
@@ -150,7 +141,6 @@ void UObject::ExecuteUbergraph(int32 EntryPoint)
 
 // Predefined Function
 // Checks if this class has a certain base
-
 bool UStruct::IsSubclassOf(const UStruct* Base) const
 {
 	if (!Base)
@@ -168,7 +158,6 @@ bool UStruct::IsSubclassOf(const UStruct* Base) const
 
 // Predefined Function
 // Gets a UFunction from this UClasses' 'Children' list
-
 class UFunction* UClass::GetFunction(const std::string& ClassName, const std::string& FuncName) const
 {
 	for(const UStruct* Clss = this; Clss; Clss = Clss->Super)
@@ -185,6 +174,7 @@ class UFunction* UClass::GetFunction(const std::string& ClassName, const std::st
 
 	return nullptr;
 }
+
 
 }
 

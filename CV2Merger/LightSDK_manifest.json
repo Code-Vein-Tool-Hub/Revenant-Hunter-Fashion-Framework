@@ -1,0 +1,6745 @@
+{
+ "tool_version": 1,
+ "engine_version": "5.4.4-387440+++Chronos+View",
+ "offsets": {
+  "GObjects": "0x09ED8790",
+  "AppendString": "0x00000000",
+  "GNames": "0x0A227340",
+  "GWorld": "0x0A1CAB08",
+  "ProcessEvent": "0x01876FA0",
+  "ProcessEventIdx": "0x0000004D"
+ },
+ "types": {
+  "AActionHumanPlayerController": {
+   "kind": "class",
+   "base": "AActionHumanPlayerController_NetSmooth",
+   "size": "0x0008B0",
+   "align": "0x000008",
+   "members": {}
+  },
+  "AActionHumanPlayerController_NetSmooth": {
+   "kind": "class",
+   "base": "APlayerController",
+   "size": "0x000870",
+   "align": "0x000008",
+   "members": {}
+  },
+  "AActor": {
+   "kind": "class",
+   "base": "UObject",
+   "size": "0x0002A0",
+   "align": "0x000008",
+   "members": {
+    "PrimaryActorTick": "0x000028",
+    "UpdateOverlapsMethodDuringLevelStreaming": "0x00005E",
+    "DefaultUpdateOverlapsMethodDuringLevelStreaming": "0x00005F",
+    "RemoteRole": "0x000060",
+    "InitialLifeSpan": "0x000064",
+    "CustomTimeDilation": "0x000068",
+    "RayTracingGroupId": "0x00006C",
+    "AttachmentReplication": "0x000070",
+    "ReplicatedMovement": "0x0000D0",
+    "Owner": "0x000140",
+    "NetDriverName": "0x000148",
+    "Role": "0x000150",
+    "NetDormancy": "0x000151",
+    "SpawnCollisionHandlingMethod": "0x000152",
+    "AutoReceiveInput": "0x000153",
+    "InputPriority": "0x000154",
+    "InputComponent": "0x000160",
+    "NetCullDistanceSquared": "0x000168",
+    "NetTag": "0x00016C",
+    "NetUpdateFrequency": "0x000170",
+    "MinNetUpdateFrequency": "0x000174",
+    "NetPriority": "0x000178",
+    "PhysicsReplicationMode": "0x00017C",
+    "Instigator": "0x000188",
+    "Children": "0x000190",
+    "RootComponent": "0x0001A0",
+    "Layers": "0x0001B0",
+    "ParentComponent": "0x0001C0",
+    "Tags": "0x0001C8",
+    "OnTakeAnyDamage": "0x0001D8",
+    "OnTakePointDamage": "0x0001D9",
+    "OnTakeRadialDamage": "0x0001DA",
+    "OnActorBeginOverlap": "0x0001DB",
+    "OnActorEndOverlap": "0x0001DC",
+    "OnBeginCursorOver": "0x0001DD",
+    "OnEndCursorOver": "0x0001DE",
+    "OnClicked": "0x0001DF",
+    "OnReleased": "0x0001E0",
+    "OnInputTouchBegin": "0x0001E1",
+    "OnInputTouchEnd": "0x0001E2",
+    "OnInputTouchEnter": "0x0001E3",
+    "OnInputTouchLeave": "0x0001E4",
+    "OnActorHit": "0x0001E5",
+    "OnDestroyed": "0x0001E6",
+    "OnEndPlay": "0x0001E7",
+    "InstanceComponents": "0x000268",
+    "BlueprintCreatedComponents": "0x000278",
+    "ObjectGroup": "0x000290",
+    "ActorKindTag": "0x000294"
+   }
+  },
+  "AAppPlayerController": {
+   "kind": "class",
+   "base": "AActionHumanPlayerController",
+   "size": "0x000EC8",
+   "align": "0x000008",
+   "members": {
+    "BugReportAnywhereCheatManagerEx": "0x0008C0",
+    "PathFollowingComp": "0x0008C8",
+    "CameraSettings": "0x0008F8",
+    "KeyAssignSettings": "0x000920",
+    "InputContextMappingTagMap": "0x000928",
+    "KeyAssignContext": "0x000978",
+    "CameraShakeDataTable": "0x000E78",
+    "GizmoActorClass": "0x000E80",
+    "NoControlAdventureTalkTime": "0x000EB8"
+   }
+  },
+  "ACharacterCustomizePawn": {
+   "kind": "class",
+   "base": "AActor",
+   "size": "0x0005B0",
+   "align": "0x000008",
+   "members": {
+    "MovementComponent": "0x0002A0",
+    "CollisionComponent": "0x0002A8",
+    "PlayerController": "0x0002B0",
+    "PlayerStart": "0x0002B8",
+    "TargetCharacter": "0x0002C0",
+    "SphereRadius": "0x0002C8",
+    "CharacterCustomizeSystem": "0x0002D0",
+    "CharacterCustomizeUIObject": "0x0002D8",
+    "ConfigurationManager": "0x0002E0",
+    "bCameraLookUpTriggerPressed": "0x0002E8",
+    "bCharacterRotateTriggerPressed": "0x0002E9",
+    "bInitialized": "0x0002EA",
+    "bCameraOperationProhibited": "0x0002EB",
+    "SpringArm": "0x0002F0",
+    "Camera": "0x0002F8",
+    "DummyRoot": "0x000300",
+    "DummyOrient": "0x000308",
+    "DummyMesh": "0x000310",
+    "Target": "0x000318",
+    "Orient": "0x000320",
+    "CameraHeight": "0x000328",
+    "CameraRangeForwardMin": "0x000330",
+    "CameraRangeForwardMax": "0x000334",
+    "CameraRangeXY": "0x000338",
+    "CameraRangeZMin": "0x00033C",
+    "CameraRangeZMax": "0x000340",
+    "MoveSpeed": "0x000344",
+    "RotateSpeed": "0x000348",
+    "ScaleSpeed": "0x00034C",
+    "CameraMoveSpeed": "0x000350",
+    "CameraRotateSpeed": "0x000354",
+    "CharacterRotateSpeed": "0x000358",
+    "MouseRotateScale": "0x00035C",
+    "MouseMoveScale": "0x000360",
+    "FreePitchFixAngle": "0x000364",
+    "FreePitchMaxAngle": "0x000368",
+    "FreePitchMinAngle": "0x00036C",
+    "LockonPitchMaxAngle": "0x000370",
+    "LockonPitchMinAngle": "0x000374",
+    "LockonArmNear": "0x000378",
+    "LockonArmFar": "0x00037C",
+    "CameraRotationThreshold": "0x000380",
+    "FreeArmLength": "0x000384",
+    "DistanceSensitivityNear": "0x000388",
+    "DistanceSensitivityFar": "0x00038C",
+    "CameraRotationAtFirstCreation": "0x000390",
+    "CameraFieldOfView": "0x0003A8",
+    "AttachmentNearFarLimit": "0x0003AC",
+    "AttachmentLowHighLimit": "0x0003B0",
+    "CV_AccessoryMoveSpeed": "0x0003B8",
+    "CV_AccessoryMoveSpeedWithMouseWheel": "0x0003C0",
+    "CV_AccessoryScaleSpeedWithMouseWheel": "0x0003C8",
+    "bMoveCameraZ": "0x0003D0",
+    "bMoveMode": "0x0003D1",
+    "AttachmentCameraZRange": "0x0003D8",
+    "MaxArmLengthOnReset": "0x0003E8",
+    "MinArmLengthOnReset": "0x0003EC",
+    "ArmLengthOnFaceReset": "0x0003F0"
+   }
+  },
+  "ACharacterCustomizeSystem": {
+   "kind": "class",
+   "base": "AActor",
+   "size": "0x002D10",
+   "align": "0x000010",
+   "members": {
+    "CustomizeParamStartBackup": "0x0002A0",
+    "CustomizeCharacterClass": "0x001708",
+    "CharacterInitialTransform": "0x001710",
+    "CustomizeCharacter": "0x001770",
+    "CustomizePawnClass": "0x001778",
+    "PawnInitialRelativeLocation": "0x001780",
+    "PawnInitialRotation": "0x0017A0",
+    "CustomizePawn": "0x0017C0",
+    "CharacterCustomizeUIObjectClass": "0x0017C8",
+    "CharacterCustomizeUIObject": "0x0017F0",
+    "CustomizeParamBackup": "0x001800",
+    "CharacterCustomizeDataManager": "0x002C60",
+    "CharacterCustomizeSettings": "0x002C68",
+    "SystemLoadCompleteEventDelegate": "0x002C70",
+    "CharacterCustomizeType": "0x002C80",
+    "SystemSaveParameterArray": "0x002C88",
+    "SystemSaveGenderArray": "0x002C98",
+    "SystemSaveIconArray": "0x002CA8",
+    "AvatarRenderTarget": "0x002CB8",
+    "bCustomizeSaveMode": "0x002CC0",
+    "AvatarIconMale": "0x002CD8",
+    "AvatarIconFemale": "0x002CE0"
+   }
+  },
+  "AController": {
+   "kind": "class",
+   "base": "AActor",
+   "size": "0x000340",
+   "align": "0x000008",
+   "members": {
+    "PlayerState": "0x0002A8",
+    "OnInstigatedAnyDamage": "0x0002B8",
+    "OnPossessedPawnChanged": "0x0002C8",
+    "StateName": "0x0002D8",
+    "Pawn": "0x0002E0",
+    "Character": "0x0002F0",
+    "TransformComponent": "0x0002F8",
+    "ControlRotation": "0x000320"
+   }
+  },
+  "APlayerController": {
+   "kind": "class",
+   "base": "AController",
+   "size": "0x000870",
+   "align": "0x000008",
+   "members": {
+    "Player": "0x000348",
+    "AcknowledgedPawn": "0x000350",
+    "MyHUD": "0x000358",
+    "PlayerCameraManager": "0x000360",
+    "PlayerCameraManagerClass": "0x000368",
+    "bAutoManageActiveCameraTarget": "0x000370",
+    "TargetViewRotation": "0x000378",
+    "SmoothTargetViewRotationSpeed": "0x0003A8",
+    "HiddenActors": "0x0003B0",
+    "HiddenPrimitiveComponents": "0x0003C0",
+    "LastSpectatorStateSynchTime": "0x0003D4",
+    "LastSpectatorSyncLocation": "0x0003D8",
+    "LastSpectatorSyncRotation": "0x0003F0",
+    "ClientCap": "0x000408",
+    "CheatManager": "0x000410",
+    "CheatClass": "0x000418",
+    "PlayerInput": "0x000420",
+    "ActiveForceFeedbackEffects": "0x000428",
+    "AsyncPhysicsDataClass": "0x000438",
+    "AsyncPhysicsDataComponent_DEPRECARED": "0x000440",
+    "NetPlayerIndex": "0x0004CC",
+    "PendingSwapConnection": "0x000528",
+    "NetConnection": "0x000530",
+    "InputYawScale": "0x000550",
+    "InputPitchScale": "0x000554",
+    "InputRollScale": "0x000558",
+    "StreamingSourcePriority": "0x000560",
+    "StreamingSourceDebugColor": "0x000564",
+    "StreamingSourceShapes": "0x000568",
+    "ForceFeedbackScale": "0x000578",
+    "ClickEventKeys": "0x000580",
+    "DefaultMouseCursor": "0x000590",
+    "CurrentMouseCursor": "0x000591",
+    "DefaultClickTraceChannel": "0x000592",
+    "CurrentClickTraceChannel": "0x000593",
+    "HitResultTraceDistance": "0x000594",
+    "SeamlessTravelCount": "0x000598",
+    "LastCompletedSeamlessTravelCount": "0x00059A",
+    "InactiveStateInputComponent": "0x000620",
+    "CurrentTouchInterface": "0x000640",
+    "OverridePlayerInputClass": "0x000648",
+    "SpectatorPawn": "0x0006C8",
+    "bIsLocalPlayerController": "0x0006D4",
+    "SpawnLocation": "0x0006D8"
+   }
+  },
+  "EActorUpdateOverlapsMethod": {
+   "kind": "enum",
+   "values": [
+    "UseConfigDefault = 0",
+    "AlwaysUpdate = 1",
+    "OnlyUpdateMovable = 2",
+    "NeverUpdate = 3",
+    "EActorUpdateOverlapsMethod_MAX = 4"
+   ]
+  },
+  "EAnimCurveType": {
+   "kind": "enum",
+   "values": [
+    "AttributeCurve = 0",
+    "MaterialCurve = 1",
+    "MorphTargetCurve = 2",
+    "MaxAnimCurveType = 3",
+    "EAnimCurveType_MAX = 4"
+   ]
+  },
+  "EAnimLinkMethod": {
+   "kind": "enum",
+   "values": [
+    "Absolute = 0",
+    "Relative = 1",
+    "Proportional = 2",
+    "EAnimLinkMethod_MAX = 3"
+   ]
+  },
+  "EAppMsgCategory": {
+   "kind": "enum",
+   "values": [
+    "Warning = 0",
+    "Error = 1",
+    "Success = 2",
+    "Info = 3",
+    "EAppMsgCategory_MAX = 4"
+   ]
+  },
+  "EAppMsgType": {
+   "kind": "enum",
+   "values": [
+    "Ok = 0",
+    "YesNo = 1",
+    "OkCancel = 2",
+    "YesNoCancel = 3",
+    "CancelRetryContinue = 4",
+    "YesNoYesAllNoAll = 5",
+    "YesNoYesAllNoAllCancel = 6",
+    "YesNoYesAll = 7",
+    "EAppMsgType_MAX = 8"
+   ]
+  },
+  "EAppReturnType": {
+   "kind": "enum",
+   "values": [
+    "No = 0",
+    "Yes = 1",
+    "YesAll = 2",
+    "NoAll = 3",
+    "Cancel = 4",
+    "Ok = 5",
+    "Retry = 6",
+    "Continue = 7",
+    "EAppReturnType_MAX = 8"
+   ]
+  },
+  "EAspectRatioAxisConstraint": {
+   "kind": "enum",
+   "values": [
+    "AspectRatio_MaintainYFOV = 0",
+    "AspectRatio_MaintainXFOV = 1",
+    "AspectRatio_MajorAxisFOV = 2",
+    "AspectRatio_MAX = 3"
+   ]
+  },
+  "EAttachLocation": {
+   "kind": "enum",
+   "values": [
+    "KeepRelativeOffset = 0",
+    "KeepWorldPosition = 1",
+    "SnapToTarget = 2",
+    "SnapToTargetIncludingScale = 3",
+    "EAttachLocation_MAX = 4"
+   ]
+  },
+  "EAttachTargetMesh": {
+   "kind": "enum",
+   "values": [
+    "BodyBase = 0",
+    "Face = 1",
+    "MAX = 2"
+   ]
+  },
+  "EAttachmentRule": {
+   "kind": "enum",
+   "values": [
+    "KeepRelative = 0",
+    "KeepWorld = 1",
+    "SnapToTarget = 2",
+    "EAttachmentRule_MAX = 3"
+   ]
+  },
+  "EAutoReceiveInput": {
+   "kind": "enum",
+   "values": [
+    "Disabled = 0",
+    "Player0 = 1",
+    "Player1 = 2",
+    "Player2 = 3",
+    "Player3 = 4",
+    "Player4 = 5",
+    "Player5 = 6",
+    "Player6 = 7",
+    "Player7 = 8",
+    "EAutoReceiveInput_MAX = 9"
+   ]
+  },
+  "EAutomationEventType": {
+   "kind": "enum",
+   "values": [
+    "Info = 0",
+    "Warning = 1",
+    "Error = 2",
+    "EAutomationEventType_MAX = 3"
+   ]
+  },
+  "EAxis": {
+   "kind": "enum",
+   "values": [
+    "None = 0",
+    "X = 1",
+    "Y = 2",
+    "Z = 3",
+    "EAxis_MAX = 4"
+   ]
+  },
+  "EAxisList": {
+   "kind": "enum",
+   "values": [
+    "None = 0",
+    "X = 1",
+    "Y = 2",
+    "Z = 4",
+    "Screen = 8",
+    "XY = 3",
+    "XZ = 5",
+    "YZ = 6",
+    "XYZ = 7",
+    "All = 15",
+    "ZRotation = 6",
+    "Rotate2D = 8",
+    "EAxisList_MAX = 16"
+   ]
+  },
+  "EBlendMode": {
+   "kind": "enum",
+   "values": [
+    "BLEND_Opaque = 0",
+    "BLEND_Masked = 1",
+    "BLEND_Translucent = 2",
+    "BLEND_Additive = 3",
+    "BLEND_Modulate = 4",
+    "BLEND_AlphaComposite = 5",
+    "BLEND_AlphaHoldout = 6",
+    "BLEND_TranslucentColoredTransmittance = 7",
+    "BLEND_MAX = 8",
+    "BLEND_TranslucentGreyTransmittance = 2",
+    "BLEND_ColoredTransmittanceOnly = 4"
+   ]
+  },
+  "ECameraShakePlaySpace": {
+   "kind": "enum",
+   "values": [
+    "CameraLocal = 0",
+    "World = 1",
+    "UserDefined = 2",
+    "ECameraShakePlaySpace_MAX = 3"
+   ]
+  },
+  "ECharacterCustomizeAccessoryColorSlot": {
+   "kind": "enum",
+   "values": [
+    "Slot1 = 0",
+    "Slot2 = 1",
+    "Slot3 = 2",
+    "MAX = 3"
+   ]
+  },
+  "ECharacterCustomizeAccessorySlot": {
+   "kind": "enum",
+   "values": [
+    "Slot1 = 0",
+    "Slot2 = 1",
+    "Slot3 = 2",
+    "Slot4 = 3",
+    "Slot5 = 4",
+    "Slot6 = 5",
+    "Slot7 = 6",
+    "Slot8 = 7",
+    "MAX = 8"
+   ]
+  },
+  "ECharacterCustomizeAdvancedBodyPart": {
+   "kind": "enum",
+   "values": [
+    "None = 0",
+    "Neck = 1",
+    "Shoulder = 2",
+    "Chest = 3",
+    "Waist = 4",
+    "Hip = 5",
+    "UpperArm = 6",
+    "LowerArm = 7",
+    "Thigh = 8",
+    "Leg = 9",
+    "MAX = 10"
+   ]
+  },
+  "ECharacterCustomizeAppAvatarPresetSlot": {
+   "kind": "enum",
+   "values": [
+    "Slot1 = 0",
+    "Slot2 = 1",
+    "Slot3 = 2",
+    "Slot4 = 3",
+    "Slot5 = 4",
+    "Slot6 = 5",
+    "Slot7 = 6",
+    "Slot8 = 7",
+    "Slot9 = 8",
+    "Slot10 = 9",
+    "Slot11 = 10",
+    "Slot12 = 11",
+    "Slot13 = 12",
+    "Slot14 = 13",
+    "Slot15 = 14",
+    "Slot16 = 15",
+    "Slot17 = 16",
+    "Slot18 = 17",
+    "Slot19 = 18",
+    "Slot20 = 19",
+    "Slot21 = 20",
+    "Slot22 = 21",
+    "Slot23 = 22",
+    "Slot24 = 23",
+    "Slot25 = 24",
+    "Slot26 = 25",
+    "Slot27 = 26",
+    "Slot28 = 27",
+    "Slot29 = 28",
+    "Slot30 = 29",
+    "Slot31 = 30",
+    "Slot32 = 31",
+    "Slot33 = 32",
+    "Slot34 = 33",
+    "Slot35 = 34",
+    "Slot36 = 35",
+    "Slot37 = 36",
+    "Slot38 = 37",
+    "Slot39 = 38",
+    "Slot40 = 39",
+    "Slot41 = 40",
+    "Slot42 = 41",
+    "Slot43 = 42",
+    "Slot44 = 43",
+    "Slot45 = 44",
+    "Slot46 = 45",
+    "Slot47 = 46",
+    "Slot48 = 47",
+    "Slot49 = 48",
+    "Slot50 = 49",
+    "Slot51 = 50",
+    "Slot52 = 51",
+    "Slot53 = 52",
+    "Slot54 = 53",
+    "Slot55 = 54",
+    "Slot56 = 55",
+    "Slot57 = 56",
+    "Slot58 = 57",
+    "Slot59 = 58",
+    "Slot60 = 59",
+    "Slot61 = 60",
+    "Slot62 = 61",
+    "Slot63 = 62",
+    "Slot64 = 63",
+    "MAX = 64"
+   ]
+  },
+  "ECharacterCustomizeAttachToMoveType": {
+   "kind": "enum",
+   "values": [
+    "Cylindrical = 0",
+    "Spherical = 1",
+    "ECharacterCustomizeAttachToMoveType_MAX = 2"
+   ]
+  },
+  "ECharacterCustomizeBackground": {
+   "kind": "enum",
+   "values": [
+    "DreamWorld = 0",
+    "Field = 1",
+    "MAX = 2"
+   ]
+  },
+  "ECharacterCustomizeBeardType": {
+   "kind": "enum",
+   "values": [
+    "NoBeard = 0",
+    "Lincanic = 1",
+    "Stubble = 2",
+    "FullBeard = 3",
+    "Mustache = 4",
+    "MAX = 5"
+   ]
+  },
+  "ECharacterCustomizeBodyShape": {
+   "kind": "enum",
+   "values": [
+    "None = 0",
+    "Type1 = 1",
+    "Type2 = 2",
+    "Type3 = 3",
+    "Type4 = 4",
+    "Type5 = 5",
+    "Type6 = 6",
+    "Type7 = 7",
+    "Type8 = 8",
+    "ExtremeShapeTest = 9",
+    "MAX = 10"
+   ]
+  },
+  "ECharacterCustomizeBootsColorSlot": {
+   "kind": "enum",
+   "values": [
+    "Slot1 = 0",
+    "Slot2 = 1",
+    "Slot3 = 2",
+    "Slot4 = 3",
+    "Slot5 = 4",
+    "Slot6 = 5",
+    "Slot7 = 6",
+    "MAX = 7"
+   ]
+  },
+  "ECharacterCustomizeBootsHeightType": {
+   "kind": "enum",
+   "values": [
+    "None = 0",
+    "Sneakers = 1",
+    "Short = 2",
+    "HighGrew = 3",
+    "High = 4",
+    "OverKnee = 5",
+    "ThighHigh = 6",
+    "Stocking = 7",
+    "MAX = 8"
+   ]
+  },
+  "ECharacterCustomizeClothHairAffectType": {
+   "kind": "enum",
+   "values": [
+    "None = 0",
+    "Hood = 1",
+    "FullFace = 2",
+    "ExposingHood = 3",
+    "MAX = 4"
+   ]
+  },
+  "ECharacterCustomizeClothPartVisibility": {
+   "kind": "enum",
+   "values": [
+    "Visible = 0",
+    "Hidden = 1",
+    "Invalid = 2",
+    "MAX = 3"
+   ]
+  },
+  "ECharacterCustomizeExpression": {
+   "kind": "enum",
+   "values": [
+    "Default = 0",
+    "Smiling = 1",
+    "Surprised = 2",
+    "Angry = 3",
+    "Sadness = 4",
+    "BaringTeeth = 5",
+    "MAX = 6"
+   ]
+  },
+  "ECharacterCustomizeEye": {
+   "kind": "enum",
+   "values": [
+    "Left = 0",
+    "Right = 1",
+    "MAX = 2"
+   ]
+  },
+  "ECharacterCustomizeFacePaintLayer": {
+   "kind": "enum",
+   "values": [
+    "Layer1 = 0",
+    "Layer2 = 1",
+    "Layer3 = 2",
+    "MAX = 3"
+   ]
+  },
+  "ECharacterCustomizeFinger": {
+   "kind": "enum",
+   "values": [
+    "Thumb = 0",
+    "Index = 1",
+    "Middle = 2",
+    "Ring = 3",
+    "Pinky = 4",
+    "MAX = 5"
+   ]
+  },
+  "ECharacterCustomizeGender": {
+   "kind": "enum",
+   "values": [
+    "Male = 0",
+    "Female = 1",
+    "MAX = 2"
+   ]
+  },
+  "ECharacterCustomizeGlovesColorSlot": {
+   "kind": "enum",
+   "values": [
+    "Slot1 = 0",
+    "Slot2 = 1",
+    "Slot3 = 2",
+    "MAX = 3"
+   ]
+  },
+  "ECharacterCustomizeHairPart": {
+   "kind": "enum",
+   "values": [
+    "Base = 0",
+    "Front = 1",
+    "FrontSide = 2",
+    "Side = 3",
+    "Top = 4",
+    "Back = 5",
+    "Other = 6",
+    "MAX = 7"
+   ]
+  },
+  "ECharacterCustomizeInnerColorSlot": {
+   "kind": "enum",
+   "values": [
+    "Slot1 = 0",
+    "Slot2 = 1",
+    "Slot3 = 2",
+    "Slot4 = 3",
+    "Slot5 = 4",
+    "Slot6 = 5",
+    "Slot7 = 6",
+    "MAX = 7"
+   ]
+  },
+  "ECharacterCustomizeLookAtType": {
+   "kind": "enum",
+   "values": [
+    "None = 0",
+    "LookAtCamera = 1",
+    "LookAtCameraOnlyEyes = 2",
+    "LookAtFront = 3",
+    "MAX = 4"
+   ]
+  },
+  "ECharacterCustomizeMaskColorSlot": {
+   "kind": "enum",
+   "values": [
+    "Slot1 = 0",
+    "Slot2 = 1",
+    "Slot3 = 2",
+    "Slot4 = 3",
+    "Slot5 = 4",
+    "Slot6 = 5",
+    "Slot7 = 6",
+    "MAX = 7"
+   ]
+  },
+  "ECharacterCustomizeOuterColorSlot": {
+   "kind": "enum",
+   "values": [
+    "Slot1 = 0",
+    "Slot2 = 1",
+    "Slot3 = 2",
+    "MAX = 3"
+   ]
+  },
+  "ECharacterCustomizePartType": {
+   "kind": "enum",
+   "values": [
+    "General = 0",
+    "Hood = 1",
+    "MAX = 2"
+   ]
+  },
+  "ECharacterCustomizePose": {
+   "kind": "enum",
+   "values": [
+    "Pose1 = 0",
+    "Pose2 = 1",
+    "Pose3 = 2",
+    "Pose4 = 3",
+    "MAX = 4"
+   ]
+  },
+  "ECharacterCustomizeType": {
+   "kind": "enum",
+   "values": [
+    "Initial = 0",
+    "InGame = 1",
+    "MAX = 2"
+   ]
+  },
+  "ECharacterCustomizeUserAvatarSlot": {
+   "kind": "enum",
+   "values": [
+    "Slot1 = 0",
+    "Slot2 = 1",
+    "Slot3 = 2",
+    "Slot4 = 3",
+    "Slot5 = 4",
+    "Slot6 = 5",
+    "Slot7 = 6",
+    "Slot8 = 7",
+    "Slot9 = 8",
+    "Slot10 = 9",
+    "Slot11 = 10",
+    "Slot12 = 11",
+    "Slot13 = 12",
+    "Slot14 = 13",
+    "Slot15 = 14",
+    "Slot16 = 15",
+    "Slot17 = 16",
+    "Slot18 = 17",
+    "Slot19 = 18",
+    "Slot20 = 19",
+    "Slot21 = 20",
+    "Slot22 = 21",
+    "Slot23 = 22",
+    "Slot24 = 23",
+    "Slot25 = 24",
+    "Slot26 = 25",
+    "Slot27 = 26",
+    "Slot28 = 27",
+    "Slot29 = 28",
+    "Slot30 = 29",
+    "Slot31 = 30",
+    "Slot32 = 31",
+    "Slot33 = 32",
+    "Slot34 = 33",
+    "Slot35 = 34",
+    "Slot36 = 35",
+    "Slot37 = 36",
+    "Slot38 = 37",
+    "Slot39 = 38",
+    "Slot40 = 39",
+    "Slot41 = 40",
+    "Slot42 = 41",
+    "Slot43 = 42",
+    "Slot44 = 43",
+    "Slot45 = 44",
+    "Slot46 = 45",
+    "Slot47 = 46",
+    "Slot48 = 47",
+    "Slot49 = 48",
+    "Slot50 = 49",
+    "Slot51 = 50",
+    "Slot52 = 51",
+    "Slot53 = 52",
+    "Slot54 = 53",
+    "Slot55 = 54",
+    "Slot56 = 55",
+    "Slot57 = 56",
+    "Slot58 = 57",
+    "Slot59 = 58",
+    "Slot60 = 59",
+    "Slot61 = 60",
+    "Slot62 = 61",
+    "Slot63 = 62",
+    "Slot64 = 63",
+    "MAX = 64"
+   ]
+  },
+  "ECharacterCustomizeWeatherType": {
+   "kind": "enum",
+   "values": [
+    "Sunny = 0",
+    "Cloudy = 1",
+    "DeepFogCloudy = 2",
+    "Rainy = 3",
+    "RainyWindy = 4",
+    "Thunder = 5",
+    "ThunderNoRainy = 6",
+    "Snow = 7",
+    "Windy = 8",
+    "MAX = 9"
+   ]
+  },
+  "EClothLODBiasMode": {
+   "kind": "enum",
+   "values": [
+    "MappingsToSameLOD = 0",
+    "MappingsToMinLOD = 1",
+    "MappingsToAnyLOD = 2",
+    "EClothLODBiasMode_MAX = 3"
+   ]
+  },
+  "ECollisionChannel": {
+   "kind": "enum",
+   "values": [
+    "ECC_WorldStatic = 0",
+    "ECC_WorldDynamic = 1",
+    "ECC_Pawn = 2",
+    "ECC_Visibility = 3",
+    "ECC_Camera = 4",
+    "ECC_PhysicsBody = 5",
+    "ECC_Vehicle = 6",
+    "ECC_Destructible = 7",
+    "ECC_EngineTraceChannel1 = 8",
+    "ECC_EngineTraceChannel2 = 9",
+    "ECC_EngineTraceChannel3 = 10",
+    "ECC_EngineTraceChannel4 = 11",
+    "ECC_EngineTraceChannel5 = 12",
+    "ECC_EngineTraceChannel6 = 13",
+    "ECC_GameTraceChannel1 = 14",
+    "ECC_GameTraceChannel2 = 15",
+    "ECC_GameTraceChannel3 = 16",
+    "ECC_GameTraceChannel4 = 17",
+    "ECC_GameTraceChannel5 = 18",
+    "ECC_GameTraceChannel6 = 19",
+    "ECC_GameTraceChannel7 = 20",
+    "ECC_GameTraceChannel8 = 21",
+    "ECC_GameTraceChannel9 = 22",
+    "ECC_GameTraceChannel10 = 23",
+    "ECC_GameTraceChannel11 = 24",
+    "ECC_GameTraceChannel12 = 25",
+    "ECC_GameTraceChannel13 = 26",
+    "ECC_GameTraceChannel14 = 27",
+    "ECC_GameTraceChannel15 = 28",
+    "ECC_GameTraceChannel16 = 29",
+    "ECC_GameTraceChannel17 = 30",
+    "ECC_GameTraceChannel18 = 31",
+    "ECC_OverlapAll_Deprecated = 32",
+    "ECC_MAX = 33"
+   ]
+  },
+  "EComponentCreationMethod": {
+   "kind": "enum",
+   "values": [
+    "Native = 0",
+    "SimpleConstructionScript = 1",
+    "UserConstructionScript = 2",
+    "Instance = 3",
+    "EComponentCreationMethod_MAX = 4"
+   ]
+  },
+  "EControllerAnalogStick": {
+   "kind": "enum",
+   "values": [
+    "CAS_LeftStick = 0",
+    "CAS_RightStick = 1",
+    "CAS_MAX = 2"
+   ]
+  },
+  "EControllerHand": {
+   "kind": "enum",
+   "values": [
+    "Left = 0",
+    "Right = 1",
+    "AnyHand = 2",
+    "Pad = 3",
+    "ExternalCamera = 4",
+    "Gun = 5",
+    "HMD = 6",
+    "Chest = 7",
+    "LeftShoulder = 8",
+    "RightShoulder = 9",
+    "LeftElbow = 10",
+    "RightElbow = 11",
+    "Waist = 12",
+    "LeftKnee = 13",
+    "RightKnee = 14",
+    "LeftFoot = 15",
+    "RightFoot = 16",
+    "Special = 17",
+    "ControllerHand_Count = 18",
+    "EControllerHand_MAX = 19"
+   ]
+  },
+  "EDataValidationResult": {
+   "kind": "enum",
+   "values": [
+    "Invalid = 0",
+    "Valid = 1",
+    "NotValidated = 2",
+    "EDataValidationResult_MAX = 3"
+   ]
+  },
+  "EDataValidationUsecase": {
+   "kind": "enum",
+   "values": [
+    "None = 0",
+    "Manual = 1",
+    "Commandlet = 2",
+    "Save = 3",
+    "PreSubmit = 4",
+    "Script = 5",
+    "EDataValidationUsecase_MAX = 6"
+   ]
+  },
+  "EDetachmentRule": {
+   "kind": "enum",
+   "values": [
+    "KeepRelative = 0",
+    "KeepWorld = 1",
+    "EDetachmentRule_MAX = 2"
+   ]
+  },
+  "EDrawDebugTrace": {
+   "kind": "enum",
+   "values": [
+    "None = 0",
+    "ForOneFrame = 1",
+    "ForDuration = 2",
+    "Persistent = 3",
+    "EDrawDebugTrace_MAX = 4"
+   ]
+  },
+  "EDynamicForceFeedbackAction": {
+   "kind": "enum",
+   "values": [
+    "Start = 0",
+    "Update = 1",
+    "Stop = 2",
+    "EDynamicForceFeedbackAction_MAX = 3"
+   ]
+  },
+  "EEndPlayReason": {
+   "kind": "enum",
+   "values": [
+    "Destroyed = 0",
+    "LevelTransition = 1",
+    "EndPlayInEditor = 2",
+    "RemovedFromWorld = 3",
+    "Quit = 4",
+    "EEndPlayReason_MAX = 5"
+   ]
+  },
+  "EEyeClosingPattern": {
+   "kind": "enum",
+   "values": [
+    "General = 0",
+    "Half = 1",
+    "Closed = 2",
+    "Narrow = 3",
+    "MAX = 4"
+   ]
+  },
+  "EGameInputAttribute": {
+   "kind": "enum",
+   "values": [
+    "None = 0",
+    "PlayerNormal = 1",
+    "PlayerBattle = 2",
+    "PlayerClimbing = 3",
+    "PlayerBullet = 4",
+    "PlayerTalk = 5",
+    "UINormal = 6",
+    "UIMovable = 7",
+    "Vehicle = 8",
+    "OverrideByInteract = 9",
+    "OverrideByDecideCancel = 10",
+    "OverrideByFieldMenu = 11",
+    "OverrideByNarrativeMenu = 12",
+    "OverrideByClimbDown = 13",
+    "CutScene = 14",
+    "Debug = 15",
+    "ForceDebug = 16",
+    "OverrideFlyMode = 17",
+    "OverrideDebugEnemyUniqueBattleAction = 18",
+    "EGameInputAttribute_MAX = 19"
+   ]
+  },
+  "EGameInputMode": {
+   "kind": "enum",
+   "values": [
+    "Player = 0",
+    "PlayerTalk = 1",
+    "UI = 2",
+    "CutScene = 3",
+    "Vehicle = 4",
+    "MAX = 5"
+   ]
+  },
+  "EInputDeviceConnectionState": {
+   "kind": "enum",
+   "values": [
+    "Invalid = 0",
+    "Unknown = 1",
+    "Disconnected = 2",
+    "Connected = 3",
+    "EInputDeviceConnectionState_MAX = 4"
+   ]
+  },
+  "EInputDeviceTriggerMask": {
+   "kind": "enum",
+   "values": [
+    "None = 0",
+    "Left = 1",
+    "Right = 2",
+    "All = 3",
+    "EInputDeviceTriggerMask_MAX = 4"
+   ]
+  },
+  "EInputEvent": {
+   "kind": "enum",
+   "values": [
+    "IE_Pressed = 0",
+    "IE_Released = 1",
+    "IE_Repeat = 2",
+    "IE_DoubleClick = 3",
+    "IE_Axis = 4",
+    "IE_MAX = 5"
+   ]
+  },
+  "EInterpCurveMode": {
+   "kind": "enum",
+   "values": [
+    "CIM_Linear = 0",
+    "CIM_CurveAuto = 1",
+    "CIM_Constant = 2",
+    "CIM_CurveUser = 3",
+    "CIM_CurveBreak = 4",
+    "CIM_CurveAutoClamped = 5",
+    "CIM_MAX = 6"
+   ]
+  },
+  "ELifetimeCondition": {
+   "kind": "enum",
+   "values": [
+    "COND_None = 0",
+    "COND_InitialOnly = 1",
+    "COND_OwnerOnly = 2",
+    "COND_SkipOwner = 3",
+    "COND_SimulatedOnly = 4",
+    "COND_AutonomousOnly = 5",
+    "COND_SimulatedOrPhysics = 6",
+    "COND_InitialOrOwner = 7",
+    "COND_Custom = 8",
+    "COND_ReplayOrOwner = 9",
+    "COND_ReplayOnly = 10",
+    "COND_SimulatedOnlyNoReplay = 11",
+    "COND_SimulatedOrPhysicsNoReplay = 12",
+    "COND_SkipReplay = 13",
+    "COND_Dynamic = 14",
+    "COND_Never = 15",
+    "COND_NetGroup = 16",
+    "COND_Max = 17"
+   ]
+  },
+  "ELocalizedTextSourceCategory": {
+   "kind": "enum",
+   "values": [
+    "Game = 0",
+    "Engine = 1",
+    "Editor = 2",
+    "ELocalizedTextSourceCategory_MAX = 3"
+   ]
+  },
+  "ELogTimes": {
+   "kind": "enum",
+   "values": [
+    "None = 0",
+    "UTC = 1",
+    "SinceGStartTime = 2",
+    "Local = 3",
+    "ELogTimes_MAX = 4"
+   ]
+  },
+  "EMaterialParameterAssociation": {
+   "kind": "enum",
+   "values": [
+    "LayerParameter = 0",
+    "BlendParameter = 1",
+    "GlobalParameter = 2",
+    "EMaterialParameterAssociation_MAX = 3"
+   ]
+  },
+  "EMontageNotifyTickType": {
+   "kind": "enum",
+   "values": [
+    "Queued = 0",
+    "BranchingPoint = 1",
+    "EMontageNotifyTickType_MAX = 2"
+   ]
+  },
+  "EMontagePlayReturnType": {
+   "kind": "enum",
+   "values": [
+    "MontageLength = 0",
+    "Duration = 1",
+    "EMontagePlayReturnType_MAX = 2"
+   ]
+  },
+  "EMouseCaptureMode": {
+   "kind": "enum",
+   "values": [
+    "NoCapture = 0",
+    "CapturePermanently = 1",
+    "CapturePermanently_IncludingInitialMouseDown = 2",
+    "CaptureDuringMouseDown = 3",
+    "CaptureDuringRightMouseDown = 4",
+    "EMouseCaptureMode_MAX = 5"
+   ]
+  },
+  "EMouseCursor": {
+   "kind": "enum",
+   "values": [
+    "None = 0",
+    "Default = 1",
+    "TextEditBeam = 2",
+    "ResizeLeftRight = 3",
+    "ResizeUpDown = 4",
+    "ResizeSouthEast = 5",
+    "ResizeSouthWest = 6",
+    "CardinalCross = 7",
+    "Crosshairs = 8",
+    "Hand = 9",
+    "GrabHand = 10",
+    "GrabHandClosed = 11",
+    "SlashedCircle = 12",
+    "EyeDropper = 13",
+    "EMouseCursor_MAX = 14"
+   ]
+  },
+  "EMouseLockMode": {
+   "kind": "enum",
+   "values": [
+    "DoNotLock = 0",
+    "LockOnCapture = 1",
+    "LockAlways = 2",
+    "LockInFullscreen = 3",
+    "EMouseLockMode_MAX = 4"
+   ]
+  },
+  "ENetDormancy": {
+   "kind": "enum",
+   "values": [
+    "DORM_Never = 0",
+    "DORM_Awake = 1",
+    "DORM_DormantAll = 2",
+    "DORM_DormantPartial = 3",
+    "DORM_Initial = 4",
+    "DORM_MAX = 5"
+   ]
+  },
+  "ENetRole": {
+   "kind": "enum",
+   "values": [
+    "ROLE_None = 0",
+    "ROLE_SimulatedProxy = 1",
+    "ROLE_AutonomousProxy = 2",
+    "ROLE_Authority = 3",
+    "ROLE_MAX = 4"
+   ]
+  },
+  "ENetworkFailure": {
+   "kind": "enum",
+   "values": [
+    "NetDriverAlreadyExists = 0",
+    "NetDriverCreateFailure = 1",
+    "NetDriverListenFailure = 2",
+    "ConnectionLost = 3",
+    "ConnectionTimeout = 4",
+    "FailureReceived = 5",
+    "OutdatedClient = 6",
+    "OutdatedServer = 7",
+    "PendingConnectionFailure = 8",
+    "NetGuidMismatch = 9",
+    "NetChecksumMismatch = 10",
+    "ENetworkFailure_MAX = 11"
+   ]
+  },
+  "ENotifyFilterType": {
+   "kind": "enum",
+   "values": [
+    "NoFiltering = 0",
+    "LOD = 1",
+    "ENotifyFilterType_MAX = 2"
+   ]
+  },
+  "EObjectGroup": {
+   "kind": "enum",
+   "values": [
+    "Core = 3",
+    "UI = 2",
+    "Cutscene = 1",
+    "Game = 0",
+    "Max = 4"
+   ]
+  },
+  "EObjectTypeQuery": {
+   "kind": "enum",
+   "values": [
+    "ObjectTypeQuery1 = 0",
+    "ObjectTypeQuery2 = 1",
+    "ObjectTypeQuery3 = 2",
+    "ObjectTypeQuery4 = 3",
+    "ObjectTypeQuery5 = 4",
+    "ObjectTypeQuery6 = 5",
+    "ObjectTypeQuery7 = 6",
+    "ObjectTypeQuery8 = 7",
+    "ObjectTypeQuery9 = 8",
+    "ObjectTypeQuery10 = 9",
+    "ObjectTypeQuery11 = 10",
+    "ObjectTypeQuery12 = 11",
+    "ObjectTypeQuery13 = 12",
+    "ObjectTypeQuery14 = 13",
+    "ObjectTypeQuery15 = 14",
+    "ObjectTypeQuery16 = 15",
+    "ObjectTypeQuery17 = 16",
+    "ObjectTypeQuery18 = 17",
+    "ObjectTypeQuery19 = 18",
+    "ObjectTypeQuery20 = 19",
+    "ObjectTypeQuery21 = 20",
+    "ObjectTypeQuery22 = 21",
+    "ObjectTypeQuery23 = 22",
+    "ObjectTypeQuery24 = 23",
+    "ObjectTypeQuery25 = 24",
+    "ObjectTypeQuery26 = 25",
+    "ObjectTypeQuery27 = 26",
+    "ObjectTypeQuery28 = 27",
+    "ObjectTypeQuery29 = 28",
+    "ObjectTypeQuery30 = 29",
+    "ObjectTypeQuery31 = 30",
+    "ObjectTypeQuery32 = 31",
+    "ObjectTypeQuery_MAX = 32",
+    "EObjectTypeQuery_MAX = 33"
+   ]
+  },
+  "EOverriddenPropertyOperation": {
+   "kind": "enum",
+   "values": [
+    "None = 0",
+    "Modified = 1",
+    "Replace = 2",
+    "Add = 3",
+    "Remove = 4",
+    "EOverriddenPropertyOperation_MAX = 5"
+   ]
+  },
+  "EPSCPoolMethod": {
+   "kind": "enum",
+   "values": [
+    "None = 0",
+    "AutoRelease = 1",
+    "ManualRelease = 2",
+    "ManualRelease_OnComplete = 3",
+    "FreeInPool = 4",
+    "EPSCPoolMethod_MAX = 5"
+   ]
+  },
+  "EPauseType": {
+   "kind": "enum",
+   "values": [
+    "None = 0",
+    "Engine = 1",
+    "System = 2",
+    "World = 3",
+    "Game = 4",
+    "Max = 5"
+   ]
+  },
+  "EPerQualityLevels": {
+   "kind": "enum",
+   "values": [
+    "Low = 0",
+    "Medium = 1",
+    "High = 2",
+    "Epic = 3",
+    "Cinematic = 4",
+    "Num = 5",
+    "EPerQualityLevels_MAX = 6"
+   ]
+  },
+  "EPhysicalSurface": {
+   "kind": "enum",
+   "values": [
+    "SurfaceType_Default = 0",
+    "SurfaceType1 = 1",
+    "SurfaceType2 = 2",
+    "SurfaceType3 = 3",
+    "SurfaceType4 = 4",
+    "SurfaceType5 = 5",
+    "SurfaceType6 = 6",
+    "SurfaceType7 = 7",
+    "SurfaceType8 = 8",
+    "SurfaceType9 = 9",
+    "SurfaceType10 = 10",
+    "SurfaceType11 = 11",
+    "SurfaceType12 = 12",
+    "SurfaceType13 = 13",
+    "SurfaceType14 = 14",
+    "SurfaceType15 = 15",
+    "SurfaceType16 = 16",
+    "SurfaceType17 = 17",
+    "SurfaceType18 = 18",
+    "SurfaceType19 = 19",
+    "SurfaceType20 = 20",
+    "SurfaceType21 = 21",
+    "SurfaceType22 = 22",
+    "SurfaceType23 = 23",
+    "SurfaceType24 = 24",
+    "SurfaceType25 = 25",
+    "SurfaceType26 = 26",
+    "SurfaceType27 = 27",
+    "SurfaceType28 = 28",
+    "SurfaceType29 = 29",
+    "SurfaceType30 = 30",
+    "SurfaceType31 = 31",
+    "SurfaceType32 = 32",
+    "SurfaceType33 = 33",
+    "SurfaceType34 = 34",
+    "SurfaceType35 = 35",
+    "SurfaceType36 = 36",
+    "SurfaceType37 = 37",
+    "SurfaceType38 = 38",
+    "SurfaceType39 = 39",
+    "SurfaceType40 = 40",
+    "SurfaceType41 = 41",
+    "SurfaceType42 = 42",
+    "SurfaceType43 = 43",
+    "SurfaceType44 = 44",
+    "SurfaceType45 = 45",
+    "SurfaceType46 = 46",
+    "SurfaceType47 = 47",
+    "SurfaceType48 = 48",
+    "SurfaceType49 = 49",
+    "SurfaceType50 = 50",
+    "SurfaceType51 = 51",
+    "SurfaceType52 = 52",
+    "SurfaceType53 = 53",
+    "SurfaceType54 = 54",
+    "SurfaceType55 = 55",
+    "SurfaceType56 = 56",
+    "SurfaceType57 = 57",
+    "SurfaceType58 = 58",
+    "SurfaceType59 = 59",
+    "SurfaceType60 = 60",
+    "SurfaceType61 = 61",
+    "SurfaceType62 = 62",
+    "SurfaceType_Max = 63",
+    "EPhysicalSurface_MAX = 64"
+   ]
+  },
+  "EPhysicsReplicationMode": {
+   "kind": "enum",
+   "values": [
+    "Default = 0",
+    "PredictiveInterpolation = 1",
+    "Resimulation = 2",
+    "EPhysicsReplicationMode_MAX = 3"
+   ]
+  },
+  "EPixelFormat": {
+   "kind": "enum",
+   "values": [
+    "PF_Unknown = 0",
+    "PF_A32B32G32R32F = 1",
+    "PF_B8G8R8A8 = 2",
+    "PF_G8 = 3",
+    "PF_G16 = 4",
+    "PF_DXT1 = 5",
+    "PF_DXT3 = 6",
+    "PF_DXT5 = 7",
+    "PF_UYVY = 8",
+    "PF_FloatRGB = 9",
+    "PF_FloatRGBA = 10",
+    "PF_DepthStencil = 11",
+    "PF_ShadowDepth = 12",
+    "PF_R32_FLOAT = 13",
+    "PF_G16R16 = 14",
+    "PF_G16R16F = 15",
+    "PF_G16R16F_FILTER = 16",
+    "PF_G32R32F = 17",
+    "PF_A2B10G10R10 = 18",
+    "PF_A16B16G16R16 = 19",
+    "PF_D24 = 20",
+    "PF_R16F = 21",
+    "PF_R16F_FILTER = 22",
+    "PF_BC5 = 23",
+    "PF_V8U8 = 24",
+    "PF_A1 = 25",
+    "PF_FloatR11G11B10 = 26",
+    "PF_A8 = 27",
+    "PF_R32_UINT = 28",
+    "PF_R32_SINT = 29",
+    "PF_PVRTC2 = 30",
+    "PF_PVRTC4 = 31",
+    "PF_R16_UINT = 32",
+    "PF_R16_SINT = 33",
+    "PF_R16G16B16A16_UINT = 34",
+    "PF_R16G16B16A16_SINT = 35",
+    "PF_R5G6B5_UNORM = 36",
+    "PF_R8G8B8A8 = 37",
+    "PF_A8R8G8B8 = 38",
+    "PF_BC4 = 39",
+    "PF_R8G8 = 40",
+    "PF_ATC_RGB = 41",
+    "PF_ATC_RGBA_E = 42",
+    "PF_ATC_RGBA_I = 43",
+    "PF_X24_G8 = 44",
+    "PF_ETC1 = 45",
+    "PF_ETC2_RGB = 46",
+    "PF_ETC2_RGBA = 47",
+    "PF_R32G32B32A32_UINT = 48",
+    "PF_R16G16_UINT = 49",
+    "PF_ASTC_4x4 = 50",
+    "PF_ASTC_6x6 = 51",
+    "PF_ASTC_8x8 = 52",
+    "PF_ASTC_10x10 = 53",
+    "PF_ASTC_12x12 = 54",
+    "PF_BC6H = 55",
+    "PF_BC7 = 56",
+    "PF_R8_UINT = 57",
+    "PF_L8 = 58",
+    "PF_XGXR8 = 59",
+    "PF_R8G8B8A8_UINT = 60",
+    "PF_R8G8B8A8_SNORM = 61",
+    "PF_R16G16B16A16_UNORM = 62",
+    "PF_R16G16B16A16_SNORM = 63",
+    "PF_PLATFORM_HDR_0 = 64",
+    "PF_PLATFORM_HDR_1 = 65",
+    "PF_PLATFORM_HDR_2 = 66",
+    "PF_NV12 = 67",
+    "PF_R32G32_UINT = 68",
+    "PF_ETC2_R11_EAC = 69",
+    "PF_ETC2_RG11_EAC = 70",
+    "PF_R8 = 71",
+    "PF_B5G5R5A1_UNORM = 72",
+    "PF_ASTC_4x4_HDR = 73",
+    "PF_ASTC_6x6_HDR = 74",
+    "PF_ASTC_8x8_HDR = 75",
+    "PF_ASTC_10x10_HDR = 76",
+    "PF_ASTC_12x12_HDR = 77",
+    "PF_G16R16_SNORM = 78",
+    "PF_R8G8_UINT = 79",
+    "PF_R32G32B32_UINT = 80",
+    "PF_R32G32B32_SINT = 81",
+    "PF_R32G32B32F = 82",
+    "PF_R8_SINT = 83",
+    "PF_R64_UINT = 84",
+    "PF_R9G9B9EXP5 = 85",
+    "PF_P010 = 86",
+    "PF_ASTC_4x4_NORM_RG = 87",
+    "PF_ASTC_6x6_NORM_RG = 88",
+    "PF_ASTC_8x8_NORM_RG = 89",
+    "PF_ASTC_10x10_NORM_RG = 90",
+    "PF_ASTC_12x12_NORM_RG = 91",
+    "PF_MAX_0 = 92"
+   ]
+  },
+  "EPlayerInputType": {
+   "kind": "enum",
+   "values": [
+    "All = 0",
+    "MoveAndLookOnly = 1",
+    "None = 2",
+    "EPlayerInputType_MAX = 3"
+   ]
+  },
+  "EPropertyAccessChangeNotifyMode": {
+   "kind": "enum",
+   "values": [
+    "Default = 0",
+    "Never = 1",
+    "Always = 2",
+    "EPropertyAccessChangeNotifyMode_MAX = 3"
+   ]
+  },
+  "ERangeBoundTypes": {
+   "kind": "enum",
+   "values": [
+    "Exclusive = 0",
+    "Inclusive = 1",
+    "Open = 2",
+    "ERangeBoundTypes_MAX = 3"
+   ]
+  },
+  "ERootMotionMode": {
+   "kind": "enum",
+   "values": [
+    "NoRootMotionExtraction = 0",
+    "IgnoreRootMotion = 1",
+    "RootMotionFromEverything = 2",
+    "RootMotionFromMontagesOnly = 3",
+    "ERootMotionMode_MAX = 4"
+   ]
+  },
+  "ERotatorQuantization": {
+   "kind": "enum",
+   "values": [
+    "ByteComponents = 0",
+    "ShortComponents = 1",
+    "ERotatorQuantization_MAX = 2"
+   ]
+  },
+  "ERoundingMode": {
+   "kind": "enum",
+   "values": [
+    "HalfToEven = 0",
+    "HalfFromZero = 1",
+    "HalfToZero = 2",
+    "FromZero = 3",
+    "ToZero = 4",
+    "ToNegativeInfinity = 5",
+    "ToPositiveInfinity = 6",
+    "ERoundingMode_MAX = 7"
+   ]
+  },
+  "ESearchCase": {
+   "kind": "enum",
+   "values": [
+    "CaseSensitive = 0",
+    "IgnoreCase = 1",
+    "ESearchCase_MAX = 2"
+   ]
+  },
+  "ESearchDir": {
+   "kind": "enum",
+   "values": [
+    "FromStart = 0",
+    "FromEnd = 1",
+    "ESearchDir_MAX = 2"
+   ]
+  },
+  "ESkeletalMeshOptimizationImportance": {
+   "kind": "enum",
+   "values": [
+    "SMOI_Off = 0",
+    "SMOI_Lowest = 1",
+    "SMOI_Low = 2",
+    "SMOI_Normal = 3",
+    "SMOI_High = 4",
+    "SMOI_Highest = 5",
+    "SMOI_MAX = 6"
+   ]
+  },
+  "ESkeletalMeshOptimizationType": {
+   "kind": "enum",
+   "values": [
+    "SMOT_NumOfTriangles = 0",
+    "SMOT_MaxDeviation = 1",
+    "SMOT_TriangleOrDeviation = 2",
+    "SMOT_MAX = 3"
+   ]
+  },
+  "ESkeletalMeshTerminationCriterion": {
+   "kind": "enum",
+   "values": [
+    "SMTC_NumOfTriangles = 0",
+    "SMTC_NumOfVerts = 1",
+    "SMTC_TriangleOrVert = 2",
+    "SMTC_AbsNumOfTriangles = 3",
+    "SMTC_AbsNumOfVerts = 4",
+    "SMTC_AbsTriangleOrVert = 5",
+    "SMTC_MAX = 6"
+   ]
+  },
+  "ESkeletalMeshVertexAttributeDataType": {
+   "kind": "enum",
+   "values": [
+    "Float = 0",
+    "HalfFloat = 1",
+    "NUInt8 = 2",
+    "ESkeletalMeshVertexAttributeDataType_MAX = 3"
+   ]
+  },
+  "ESkinCacheUsage": {
+   "kind": "enum",
+   "values": [
+    "Auto = 0",
+    "Disabled = 255",
+    "Enabled = 1",
+    "ESkinCacheUsage_MAX = 256"
+   ]
+  },
+  "ESpawnActorCollisionHandlingMethod": {
+   "kind": "enum",
+   "values": [
+    "Undefined = 0",
+    "AlwaysSpawn = 1",
+    "AdjustIfPossibleButAlwaysSpawn = 2",
+    "AdjustIfPossibleButDontSpawnIfColliding = 3",
+    "DontSpawnIfColliding = 4",
+    "ESpawnActorCollisionHandlingMethod_MAX = 5"
+   ]
+  },
+  "ESpawnActorScaleMethod": {
+   "kind": "enum",
+   "values": [
+    "OverrideRootScale = 0",
+    "MultiplyWithRoot = 1",
+    "SelectDefaultAtRuntime = 2",
+    "ESpawnActorScaleMethod_MAX = 3"
+   ]
+  },
+  "EStreamingSourcePriority": {
+   "kind": "enum",
+   "values": [
+    "Highest = 0",
+    "High = 64",
+    "Normal = 128",
+    "Low = 192",
+    "Lowest = 255",
+    "Default = 128",
+    "EStreamingSourcePriority_MAX = 256"
+   ]
+  },
+  "ESuggestProjVelocityTraceOption": {
+   "kind": "enum",
+   "values": [
+    "DoNotTrace = 0",
+    "TraceFullPath = 1",
+    "OnlyTraceWhileAscending = 2",
+    "ESuggestProjVelocityTraceOption_MAX = 3"
+   ]
+  },
+  "ETeleportType": {
+   "kind": "enum",
+   "values": [
+    "None = 0",
+    "TeleportPhysics = 1",
+    "ResetPhysics = 2",
+    "ETeleportType_MAX = 3"
+   ]
+  },
+  "ETextureAddress": {
+   "kind": "enum",
+   "values": [
+    "TA_Wrap = 0",
+    "TA_Clamp = 1",
+    "TA_Mirror = 2",
+    "TA_MAX = 3"
+   ]
+  },
+  "ETextureAvailability": {
+   "kind": "enum",
+   "values": [
+    "GPU = 0",
+    "CPU = 1",
+    "ETextureAvailability_MAX = 2"
+   ]
+  },
+  "ETextureCompressionSettings": {
+   "kind": "enum",
+   "values": [
+    "TC_Default = 0",
+    "TC_Normalmap = 1",
+    "TC_Masks = 2",
+    "TC_Grayscale = 3",
+    "TC_Displacementmap = 4",
+    "TC_VectorDisplacementmap = 5",
+    "TC_HDR = 6",
+    "TC_EditorIcon = 7",
+    "TC_Alpha = 8",
+    "TC_DistanceFieldFont = 9",
+    "TC_HDR_Compressed = 10",
+    "TC_BC7 = 11",
+    "TC_HalfFloat = 12",
+    "TC_LQ = 13",
+    "TC_EncodedReflectionCapture = 14",
+    "TC_SingleFloat = 15",
+    "TC_HDR_F32 = 16",
+    "TC_MAX = 17"
+   ]
+  },
+  "ETextureCookPlatformTilingSettings": {
+   "kind": "enum",
+   "values": [
+    "TCPTS_FromTextureGroup = 0",
+    "TCPTS_Tile = 1",
+    "TCPTS_DoNotTile = 2",
+    "TCPTS_MAX = 3"
+   ]
+  },
+  "ETextureDownscaleOptions": {
+   "kind": "enum",
+   "values": [
+    "Default = 0",
+    "Unfiltered = 1",
+    "SimpleAverage = 2",
+    "Sharpen0 = 3",
+    "Sharpen1 = 4",
+    "Sharpen2 = 5",
+    "Sharpen3 = 6",
+    "Sharpen4 = 7",
+    "Sharpen5 = 8",
+    "Sharpen6 = 9",
+    "Sharpen7 = 10",
+    "Sharpen8 = 11",
+    "Sharpen9 = 12",
+    "Sharpen10 = 13",
+    "ETextureDownscaleOptions_MAX = 14"
+   ]
+  },
+  "ETextureFilter": {
+   "kind": "enum",
+   "values": [
+    "TF_Nearest = 0",
+    "TF_Bilinear = 1",
+    "TF_Trilinear = 2",
+    "TF_Default = 3",
+    "TF_MAX = 4"
+   ]
+  },
+  "ETextureGroup": {
+   "kind": "enum",
+   "values": [
+    "TEXTUREGROUP_World = 0",
+    "TEXTUREGROUP_WorldNormalMap = 1",
+    "TEXTUREGROUP_WorldSpecular = 2",
+    "TEXTUREGROUP_Character = 3",
+    "TEXTUREGROUP_CharacterNormalMap = 4",
+    "TEXTUREGROUP_CharacterSpecular = 5",
+    "TEXTUREGROUP_Weapon = 6",
+    "TEXTUREGROUP_WeaponNormalMap = 7",
+    "TEXTUREGROUP_WeaponSpecular = 8",
+    "TEXTUREGROUP_Vehicle = 9",
+    "TEXTUREGROUP_VehicleNormalMap = 10",
+    "TEXTUREGROUP_VehicleSpecular = 11",
+    "TEXTUREGROUP_Cinematic = 12",
+    "TEXTUREGROUP_Effects = 13",
+    "TEXTUREGROUP_EffectsNotFiltered = 14",
+    "TEXTUREGROUP_Skybox = 15",
+    "TEXTUREGROUP_UI = 16",
+    "TEXTUREGROUP_Lightmap = 17",
+    "TEXTUREGROUP_RenderTarget = 18",
+    "TEXTUREGROUP_MobileFlattened = 19",
+    "TEXTUREGROUP_ProcBuilding_Face = 20",
+    "TEXTUREGROUP_ProcBuilding_LightMap = 21",
+    "TEXTUREGROUP_Shadowmap = 22",
+    "TEXTUREGROUP_ColorLookupTable = 23",
+    "TEXTUREGROUP_Terrain_Heightmap = 24",
+    "TEXTUREGROUP_Terrain_Weightmap = 25",
+    "TEXTUREGROUP_Bokeh = 26",
+    "TEXTUREGROUP_IESLightProfile = 27",
+    "TEXTUREGROUP_Pixels2D = 28",
+    "TEXTUREGROUP_HierarchicalLOD = 29",
+    "TEXTUREGROUP_Impostor = 30",
+    "TEXTUREGROUP_ImpostorNormalDepth = 31",
+    "TEXTUREGROUP_8BitData = 32",
+    "TEXTUREGROUP_16BitData = 33",
+    "TEXTUREGROUP_Project01 = 34",
+    "TEXTUREGROUP_Project02 = 35",
+    "TEXTUREGROUP_Project03 = 36",
+    "TEXTUREGROUP_Project04 = 37",
+    "TEXTUREGROUP_Project05 = 38",
+    "TEXTUREGROUP_Project06 = 39",
+    "TEXTUREGROUP_Project07 = 40",
+    "TEXTUREGROUP_Project08 = 41",
+    "TEXTUREGROUP_Project09 = 42",
+    "TEXTUREGROUP_Project10 = 43",
+    "TEXTUREGROUP_Project11 = 44",
+    "TEXTUREGROUP_Project12 = 45",
+    "TEXTUREGROUP_Project13 = 46",
+    "TEXTUREGROUP_Project14 = 47",
+    "TEXTUREGROUP_Project15 = 48",
+    "TEXTUREGROUP_Project16 = 49",
+    "TEXTUREGROUP_Project17 = 50",
+    "TEXTUREGROUP_Project18 = 51",
+    "TEXTUREGROUP_Project19 = 52",
+    "TEXTUREGROUP_Project20 = 53",
+    "TEXTUREGROUP_Project21 = 54",
+    "TEXTUREGROUP_Project22 = 55",
+    "TEXTUREGROUP_Project23 = 56",
+    "TEXTUREGROUP_Project24 = 57",
+    "TEXTUREGROUP_Project25 = 58",
+    "TEXTUREGROUP_Project26 = 59",
+    "TEXTUREGROUP_Project27 = 60",
+    "TEXTUREGROUP_Project28 = 61",
+    "TEXTUREGROUP_Project29 = 62",
+    "TEXTUREGROUP_Project30 = 63",
+    "TEXTUREGROUP_Project31 = 64",
+    "TEXTUREGROUP_Project32 = 65",
+    "TEXTUREGROUP_MAX = 66"
+   ]
+  },
+  "ETextureMipLoadOptions": {
+   "kind": "enum",
+   "values": [
+    "Default = 0",
+    "AllMips = 1",
+    "OnlyFirstMip = 2",
+    "ETextureMipLoadOptions_MAX = 3"
+   ]
+  },
+  "ETickingGroup": {
+   "kind": "enum",
+   "values": [
+    "TG_PrePhysics = 0",
+    "TG_StartPhysics = 1",
+    "TG_DuringPhysics = 2",
+    "TG_EndPhysics = 3",
+    "TG_PostPhysics = 4",
+    "TG_PostUpdateWork = 5",
+    "TG_LastDemotable = 6",
+    "TG_NewlySpawned = 7",
+    "TG_MAX = 8"
+   ]
+  },
+  "ETouchIndex": {
+   "kind": "enum",
+   "values": [
+    "Touch1 = 0",
+    "Touch2 = 1",
+    "Touch3 = 2",
+    "Touch4 = 3",
+    "Touch5 = 4",
+    "Touch6 = 5",
+    "Touch7 = 6",
+    "Touch8 = 7",
+    "Touch9 = 8",
+    "Touch10 = 9",
+    "CursorPointerIndex = 10",
+    "MAX_TOUCHES = 11",
+    "ETouchIndex_MAX = 12"
+   ]
+  },
+  "ETraceTypeQuery": {
+   "kind": "enum",
+   "values": [
+    "TraceTypeQuery1 = 0",
+    "TraceTypeQuery2 = 1",
+    "TraceTypeQuery3 = 2",
+    "TraceTypeQuery4 = 3",
+    "TraceTypeQuery5 = 4",
+    "TraceTypeQuery6 = 5",
+    "TraceTypeQuery7 = 6",
+    "TraceTypeQuery8 = 7",
+    "TraceTypeQuery9 = 8",
+    "TraceTypeQuery10 = 9",
+    "TraceTypeQuery11 = 10",
+    "TraceTypeQuery12 = 11",
+    "TraceTypeQuery13 = 12",
+    "TraceTypeQuery14 = 13",
+    "TraceTypeQuery15 = 14",
+    "TraceTypeQuery16 = 15",
+    "TraceTypeQuery17 = 16",
+    "TraceTypeQuery18 = 17",
+    "TraceTypeQuery19 = 18",
+    "TraceTypeQuery20 = 19",
+    "TraceTypeQuery21 = 20",
+    "TraceTypeQuery22 = 21",
+    "TraceTypeQuery23 = 22",
+    "TraceTypeQuery24 = 23",
+    "TraceTypeQuery25 = 24",
+    "TraceTypeQuery26 = 25",
+    "TraceTypeQuery27 = 26",
+    "TraceTypeQuery28 = 27",
+    "TraceTypeQuery29 = 28",
+    "TraceTypeQuery30 = 29",
+    "TraceTypeQuery31 = 30",
+    "TraceTypeQuery32 = 31",
+    "TraceTypeQuery_MAX = 32",
+    "ETraceTypeQuery_MAX = 33"
+   ]
+  },
+  "ETransitionRequestOverwriteMode": {
+   "kind": "enum",
+   "values": [
+    "Append = 0",
+    "Ignore = 1",
+    "Overwrite = 2",
+    "ETransitionRequestOverwriteMode_MAX = 3"
+   ]
+  },
+  "ETransitionRequestQueueMode": {
+   "kind": "enum",
+   "values": [
+    "Shared = 0",
+    "Unique = 1",
+    "ETransitionRequestQueueMode_MAX = 2"
+   ]
+  },
+  "ETransitionType": {
+   "kind": "enum",
+   "values": [
+    "None = 0",
+    "Paused = 1",
+    "Loading = 2",
+    "Saving = 3",
+    "Connecting = 4",
+    "Precaching = 5",
+    "WaitingToConnect = 6",
+    "MAX = 7"
+   ]
+  },
+  "ETravelFailure": {
+   "kind": "enum",
+   "values": [
+    "NoLevel = 0",
+    "LoadMapFailure = 1",
+    "InvalidURL = 2",
+    "PackageMissing = 3",
+    "PackageVersion = 4",
+    "NoDownload = 5",
+    "TravelFailure = 6",
+    "CheatCommands = 7",
+    "PendingNetGameCreateFailure = 8",
+    "CloudSaveFailure = 9",
+    "ServerTravelFailure = 10",
+    "ClientTravelFailure = 11",
+    "ETravelFailure_MAX = 12"
+   ]
+  },
+  "ETravelType": {
+   "kind": "enum",
+   "values": [
+    "TRAVEL_Absolute = 0",
+    "TRAVEL_Partial = 1",
+    "TRAVEL_Relative = 2",
+    "TRAVEL_MAX = 3"
+   ]
+  },
+  "EUnit": {
+   "kind": "enum",
+   "values": [
+    "Micrometers = 0",
+    "Millimeters = 1",
+    "Centimeters = 2",
+    "Meters = 3",
+    "Kilometers = 4",
+    "Inches = 5",
+    "Feet = 6",
+    "Yards = 7",
+    "Miles = 8",
+    "Lightyears = 9",
+    "Degrees = 10",
+    "Radians = 11",
+    "CentimetersPerSecond = 12",
+    "MetersPerSecond = 13",
+    "KilometersPerHour = 14",
+    "MilesPerHour = 15",
+    "DegreesPerSecond = 16",
+    "RadiansPerSecond = 17",
+    "CentimetersPerSecondSquared = 18",
+    "MetersPerSecondSquared = 19",
+    "Celsius = 20",
+    "Farenheit = 21",
+    "Kelvin = 22",
+    "Micrograms = 23",
+    "Milligrams = 24",
+    "Grams = 25",
+    "Kilograms = 26",
+    "MetricTons = 27",
+    "Ounces = 28",
+    "Pounds = 29",
+    "Stones = 30",
+    "GramsPerCubicCentimeter = 31",
+    "GramsPerCubicMeter = 32",
+    "KilogramsPerCubicCentimeter = 33",
+    "KilogramsPerCubicMeter = 34",
+    "Newtons = 35",
+    "PoundsForce = 36",
+    "KilogramsForce = 37",
+    "KilogramCentimetersPerSecondSquared = 38",
+    "NewtonMeters = 39",
+    "KilogramCentimetersSquaredPerSecondSquared = 40",
+    "NewtonSeconds = 41",
+    "KilogramCentimeters = 42",
+    "KilogramMeters = 43",
+    "Hertz = 44",
+    "Kilohertz = 45",
+    "Megahertz = 46",
+    "Gigahertz = 47",
+    "RevolutionsPerMinute = 48",
+    "Bytes = 49",
+    "Kilobytes = 50",
+    "Megabytes = 51",
+    "Gigabytes = 52",
+    "Terabytes = 53",
+    "Lumens = 54",
+    "Candela = 55",
+    "Lux = 56",
+    "CandelaPerMeter2 = 57",
+    "ExposureValue = 58",
+    "Nanoseconds = 59",
+    "Microseconds = 60",
+    "Milliseconds = 61",
+    "Seconds = 62",
+    "Minutes = 63",
+    "Hours = 64",
+    "Days = 65",
+    "Months = 66",
+    "Years = 67",
+    "PixelsPerInch = 68",
+    "Percentage = 69",
+    "Multiplier = 70",
+    "Pascals = 71",
+    "KiloPascals = 72",
+    "MegaPascals = 73",
+    "GigaPascals = 74",
+    "Unspecified = 75",
+    "EUnit_MAX = 76"
+   ]
+  },
+  "EVectorQuantization": {
+   "kind": "enum",
+   "values": [
+    "RoundWholeNumber = 0",
+    "RoundOneDecimal = 1",
+    "RoundTwoDecimals = 2",
+    "EVectorQuantization_MAX = 3"
+   ]
+  },
+  "EViewTargetBlendFunction": {
+   "kind": "enum",
+   "values": [
+    "VTBlend_Linear = 0",
+    "VTBlend_Cubic = 1",
+    "VTBlend_EaseIn = 2",
+    "VTBlend_EaseOut = 3",
+    "VTBlend_EaseInOut = 4",
+    "VTBlend_PreBlended = 5",
+    "VTBlend_MAX = 6"
+   ]
+  },
+  "FARFilter": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000150",
+   "align": "0x000008",
+   "members": {
+    "PackageNames": "0x000000",
+    "PackagePaths": "0x000010",
+    "SoftObjectPaths": "0x000020",
+    "ClassNames": "0x000030",
+    "ClassPaths": "0x000040",
+    "RecursiveClassesExclusionSet": "0x0000A0",
+    "RecursiveClassPathsExclusionSet": "0x0000F0",
+    "bRecursivePaths": "0x000140",
+    "bRecursiveClasses": "0x000141",
+    "bIncludeOnlyOnDiskAssets": "0x000142"
+   }
+  },
+  "FActiveForceFeedbackEffect": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000070",
+   "align": "0x000008",
+   "members": {
+    "ForceFeedbackEffect": "0x000000",
+    "ActiveDeviceProperties": "0x000020"
+   }
+  },
+  "FActorComponentTickFunction": {
+   "kind": "struct",
+   "base": "FTickFunction",
+   "size": "0x000030",
+   "align": "0x000008",
+   "members": {}
+  },
+  "FActorTickFunction": {
+   "kind": "struct",
+   "base": "FTickFunction",
+   "size": "0x000030",
+   "align": "0x000008",
+   "members": {}
+  },
+  "FAnimLinkableElement": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000030",
+   "align": "0x000008",
+   "members": {
+    "LinkedMontage": "0x000008",
+    "SlotIndex": "0x000010",
+    "SegmentIndex": "0x000014",
+    "LinkMethod": "0x000018",
+    "CachedLinkMethod": "0x000019",
+    "SegmentBeginTime": "0x00001C",
+    "SegmentLength": "0x000020",
+    "LinkValue": "0x000024",
+    "LinkedSequence": "0x000028"
+   }
+  },
+  "FAnimNotifyArray": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000010",
+   "align": "0x000008",
+   "members": {
+    "Notifies": "0x000000"
+   }
+  },
+  "FAnimNotifyEvent": {
+   "kind": "struct",
+   "base": "FAnimLinkableElement",
+   "size": "0x0000B8",
+   "align": "0x000008",
+   "members": {
+    "TriggerTimeOffset": "0x000030",
+    "EndTriggerTimeOffset": "0x000034",
+    "TriggerWeightThreshold": "0x000038",
+    "NotifyName": "0x00003C",
+    "Notify": "0x000048",
+    "NotifyStateClass": "0x000050",
+    "Duration": "0x000058",
+    "EndLink": "0x000060",
+    "bConvertedFromBranchingPoint": "0x000090",
+    "MontageTickType": "0x000091",
+    "NotifyTriggerChance": "0x000094",
+    "NotifyFilterType": "0x000098",
+    "NotifyFilterLOD": "0x00009C",
+    "bCanBeFilteredViaRequest": "0x0000A0",
+    "bTriggerOnDedicatedServer": "0x0000A1",
+    "bTriggerOnFollower": "0x0000A2",
+    "TrackIndex": "0x0000A4"
+   }
+  },
+  "FAnimNotifyEventReference": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000030",
+   "align": "0x000008",
+   "members": {
+    "MirrorTable": "0x000018",
+    "NotifySource": "0x000020"
+   }
+  },
+  "FAnimNotifyQueue": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000070",
+   "align": "0x000008",
+   "members": {
+    "AnimNotifies": "0x000010",
+    "UnfilteredMontageAnimNotifies": "0x000020"
+   }
+  },
+  "FAssetBundleData": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000010",
+   "align": "0x000008",
+   "members": {
+    "Bundles": "0x000000"
+   }
+  },
+  "FAssetBundleEntry": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000018",
+   "align": "0x000008",
+   "members": {
+    "BundleName": "0x000000",
+    "AssetPaths": "0x000008"
+   }
+  },
+  "FAssetData": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000068",
+   "align": "0x000008",
+   "members": {
+    "PackageName": "0x000000",
+    "PackagePath": "0x000008",
+    "AssetName": "0x000010",
+    "AssetClass": "0x000018",
+    "AssetClassPath": "0x000020"
+   }
+  },
+  "FAutomationEvent": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000038",
+   "align": "0x000008",
+   "members": {
+    "Type": "0x000000",
+    "Message": "0x000008",
+    "Context": "0x000018",
+    "Artifact": "0x000028"
+   }
+  },
+  "FAutomationExecutionEntry": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000058",
+   "align": "0x000008",
+   "members": {
+    "Event": "0x000000",
+    "Filename": "0x000038",
+    "LineNumber": "0x000048",
+    "Timestamp": "0x000050"
+   }
+  },
+  "FBoneReference": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000010",
+   "align": "0x000004",
+   "members": {
+    "BoneName": "0x000000"
+   }
+  },
+  "FBox": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000038",
+   "align": "0x000008",
+   "members": {
+    "Min": "0x000000",
+    "Max": "0x000018",
+    "IsValid": "0x000030"
+   }
+  },
+  "FBox2D": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000028",
+   "align": "0x000008",
+   "members": {
+    "Min": "0x000000",
+    "Max": "0x000010",
+    "bIsValid": "0x000020"
+   }
+  },
+  "FBox2f": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000014",
+   "align": "0x000004",
+   "members": {
+    "Min": "0x000000",
+    "Max": "0x000008",
+    "bIsValid": "0x000010"
+   }
+  },
+  "FBox3d": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000038",
+   "align": "0x000008",
+   "members": {
+    "Min": "0x000000",
+    "Max": "0x000018",
+    "IsValid": "0x000030"
+   }
+  },
+  "FBox3f": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x00001C",
+   "align": "0x000004",
+   "members": {
+    "Min": "0x000000",
+    "Max": "0x00000C",
+    "IsValid": "0x000018"
+   }
+  },
+  "FBoxSphereBounds": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000038",
+   "align": "0x000008",
+   "members": {
+    "Origin": "0x000000",
+    "BoxExtent": "0x000018",
+    "SphereRadius": "0x000030"
+   }
+  },
+  "FBoxSphereBounds3d": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000038",
+   "align": "0x000008",
+   "members": {
+    "Origin": "0x000000",
+    "BoxExtent": "0x000018",
+    "SphereRadius": "0x000030"
+   }
+  },
+  "FBoxSphereBounds3f": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x00001C",
+   "align": "0x000004",
+   "members": {
+    "Origin": "0x000000",
+    "BoxExtent": "0x00000C",
+    "SphereRadius": "0x000018"
+   }
+  },
+  "FCharacterCustomizeDataTableAccessory": {
+   "kind": "struct",
+   "base": "FTableRowBase",
+   "size": "0x000178",
+   "align": "0x000008",
+   "members": {
+    "MeshCategoryName": "0x000008",
+    "MeshRowName": "0x000010",
+    "MeshRowHandle": "0x000018",
+    "AnimClass": "0x000028",
+    "AttachToRowName": "0x000030",
+    "RootTransform": "0x000038",
+    "OrientTransform": "0x000080",
+    "MeshTransform": "0x0000C8",
+    "MaxColor": "0x000110",
+    "MaxColorNum": "0x000114",
+    "Colors": "0x000118"
+   }
+  },
+  "FCharacterCustomizeDataTableAccessoryColor": {
+   "kind": "struct",
+   "base": "FTableRowBase",
+   "size": "0x000020",
+   "align": "0x000008",
+   "members": {
+    "IsSpecialColor": "0x000008",
+    "ColorPaletteRowName": "0x00000C",
+    "ColorName": "0x000014"
+   }
+  },
+  "FCharacterCustomizeDataTableAccessoryPreset": {
+   "kind": "struct",
+   "base": "FTableRowBase",
+   "size": "0x000218",
+   "align": "0x000008",
+   "members": {
+    "Thumbnail": "0x000008",
+    "Mesh": "0x000030",
+    "AnimClass": "0x000058",
+    "AttachRowName": "0x000060",
+    "RootTransform": "0x000068",
+    "OrientTransform": "0x0000B0",
+    "MeshTransform": "0x0000F8",
+    "bTransformable": "0x000140",
+    "bScaleNegate": "0x000141",
+    "MaxColor": "0x000142",
+    "MaxColorNum": "0x000144",
+    "Color": "0x000148",
+    "Cost": "0x0001A8",
+    "FlagCondition": "0x0001B0",
+    "bIsHat": "0x0001C0",
+    "bSpaEnable": "0x0001C1",
+    "bIsToSameAsHair": "0x0001C2",
+    "ShadowMesh": "0x0001C8",
+    "ShadowMaterial": "0x0001F0"
+   }
+  },
+  "FCharacterCustomizeDataTableAttachToList": {
+   "kind": "struct",
+   "base": "FTableRowBase",
+   "size": "0x0000A0",
+   "align": "0x000010",
+   "members": {
+    "DisplayName": "0x000008",
+    "SocketName": "0x000018",
+    "AttachTargetMeshType": "0x000020",
+    "SocketTransform": "0x000030",
+    "MoveType": "0x000090",
+    "bKeepWearingInSpa": "0x000091"
+   }
+  },
+  "FCharacterCustomizeDataTableBodyShape": {
+   "kind": "struct",
+   "base": "FTableRowBase",
+   "size": "0x000048",
+   "align": "0x000008",
+   "members": {
+    "CharacterScale": "0x000008",
+    "BodyShapeType": "0x00000C",
+    "BodyShapeAdjust": "0x000010",
+    "BustShapeAdjust": "0x000014",
+    "HeadShapeAdjust": "0x000018",
+    "BodyPartAdjust": "0x00001C"
+   }
+  },
+  "FCharacterCustomizeDataTableBoots": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000110",
+   "align": "0x000008",
+   "members": {
+    "MeshRowName": "0x000000",
+    "MeshRowHandle": "0x000008",
+    "AnimClass": "0x000018",
+    "Colors": "0x000020",
+    "PartVisibilityArray": "0x000100"
+   }
+  },
+  "FCharacterCustomizeDataTableBootsList": {
+   "kind": "struct",
+   "base": "FTableRowBase",
+   "size": "0x000190",
+   "align": "0x000008",
+   "members": {
+    "Thumbnail": "0x000008",
+    "Mesh": "0x000030",
+    "FlagCondition": "0x000058",
+    "Color": "0x000068",
+    "CustomizableColorNumber": "0x000148",
+    "PartVisibilityInfoArray": "0x000150",
+    "RightHeightType": "0x000160",
+    "LeftHeightType": "0x000161",
+    "RightHeightDependentParameter": "0x000168",
+    "LeftHeightDependentParameter": "0x000178",
+    "bAffectPedicure": "0x000188"
+   }
+  },
+  "FCharacterCustomizeDataTableClothColor": {
+   "kind": "struct",
+   "base": "FTableRowBase",
+   "size": "0x000020",
+   "align": "0x000008",
+   "members": {
+    "IsSpecialColor": "0x000008",
+    "ColorPaletteRowName": "0x00000C",
+    "ColorName": "0x000014"
+   }
+  },
+  "FCharacterCustomizeDataTableClothPartVisibility": {
+   "kind": "struct",
+   "base": "FTableRowBase",
+   "size": "0x000058",
+   "align": "0x000008",
+   "members": {
+    "ClothPartTexture": "0x000008",
+    "ClothPartHideParameters": "0x000030",
+    "ClothPartSubstituteParameters": "0x000040",
+    "ParentIndex": "0x000050",
+    "PartType": "0x000054"
+   }
+  },
+  "FCharacterCustomizeDataTableEye": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000020",
+   "align": "0x000008",
+   "members": {
+    "IsOdd": "0x000000",
+    "EyeShapeRowName": "0x000004",
+    "Details": "0x000010"
+   }
+  },
+  "FCharacterCustomizeDataTableEyeDetail": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000088",
+   "align": "0x000008",
+   "members": {
+    "HighLightMapRowName": "0x000000",
+    "HighLightMapRowHandle": "0x000008",
+    "HighLightOpacity": "0x000018",
+    "HighLightVerticalPos": "0x00001C",
+    "HighLightColorPaletteRowName": "0x000020",
+    "HighLightColorName": "0x000028",
+    "Scale": "0x000030",
+    "Cats": "0x000034",
+    "PositionV": "0x000038",
+    "PositionU": "0x00003C",
+    "DetailMapRowName": "0x000040",
+    "DetailOpacity": "0x000048",
+    "BaseColorPaletteRowName": "0x00004C",
+    "BaseColorName": "0x000054",
+    "AppendColorPaletteRowName": "0x00005C",
+    "AppendColorName": "0x000064",
+    "AppendColor2PaletteRowName": "0x00006C",
+    "AppendColor2Name": "0x000074",
+    "BaseMapRowName": "0x00007C"
+   }
+  },
+  "FCharacterCustomizeDataTableEyeTexture": {
+   "kind": "struct",
+   "base": "FTableRowBase",
+   "size": "0x000080",
+   "align": "0x000008",
+   "members": {
+    "Thumbnail": "0x000008",
+    "EyeTexture": "0x000030",
+    "IrisReflectionTexture": "0x000058"
+   }
+  },
+  "FCharacterCustomizeDataTableEyebrow": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000040",
+   "align": "0x000004",
+   "members": {
+    "MapRowName": "0x000000",
+    "ColorPaletteRowName": "0x000008",
+    "ColorName": "0x000010",
+    "IsSameAsHairColor": "0x000018",
+    "EyebrowRaisingPattern": "0x00001C",
+    "EyebrowAngleMaterial": "0x000024",
+    "EyebrowAngleBone": "0x000028",
+    "EyebrowPositionVMaterial": "0x00002C",
+    "EyebrowPositionVBone": "0x000030",
+    "EyebrowDistance": "0x000034",
+    "EyebrowScaleH": "0x000038",
+    "EyebrowScaleV": "0x00003C"
+   }
+  },
+  "FCharacterCustomizeDataTableEyebrowTexture": {
+   "kind": "struct",
+   "base": "FTableRowBase",
+   "size": "0x000088",
+   "align": "0x000008",
+   "members": {
+    "Thumbnail": "0x000008",
+    "LeftTexture": "0x000030",
+    "RightTexture": "0x000058",
+    "NormalIntensity": "0x000080",
+    "UseBrowHeightFromAlpha": "0x000084"
+   }
+  },
+  "FCharacterCustomizeDataTableFace": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x0006D0",
+   "align": "0x000010",
+   "members": {
+    "FaceTypeRowHandle": "0x000000",
+    "MouthTypeRowHandle": "0x000010",
+    "EyeMouthBalancePresetRowHandle": "0x000020",
+    "FaceUpperPos": "0x000030",
+    "FaceMiddlePos": "0x000034",
+    "FaceLowerPos": "0x000038",
+    "EyeClosingPatternL": "0x00003C",
+    "EyeClosingPatternR": "0x00003D",
+    "Blink": "0x000040",
+    "bAutoBlink": "0x000044",
+    "EyeTransformL": "0x000050",
+    "EyeTransformR": "0x0000B0",
+    "EyebrowTransformL": "0x000110",
+    "EyebrowTransformR": "0x000170",
+    "CheekTransformL": "0x0001D0",
+    "CheekTransformR": "0x000230",
+    "PuffTransformL": "0x000290",
+    "PuffTransformR": "0x0002F0",
+    "ChinTransformC": "0x000350",
+    "JawTransformC": "0x0003B0",
+    "JawInverseTransformC": "0x000410",
+    "NoseTransform": "0x000470",
+    "NoseTransformC": "0x0004D0",
+    "NostrilTransformL": "0x000530",
+    "NostrilTransformR": "0x000590",
+    "EarTransformL": "0x0005F0",
+    "EarTransformR": "0x000650",
+    "EarSharpness": "0x0006B0",
+    "BeardRowName": "0x0006B4",
+    "BeardColorPaletteRowName": "0x0006BC",
+    "BeardColorName": "0x0006C4"
+   }
+  },
+  "FCharacterCustomizeDataTableFacePaint": {
+   "kind": "struct",
+   "base": "FTableRowBase",
+   "size": "0x000068",
+   "align": "0x000008",
+   "members": {
+    "IsSpecialColor": "0x000008",
+    "ColorPaletteRowName": "0x00000C",
+    "ColorName": "0x000014",
+    "MaskRowName": "0x00001C",
+    "Opacity": "0x000024",
+    "MaskDetail": "0x000028",
+    "MaskPresetCategoryName": "0x000058",
+    "MaskPresetRowName": "0x000060"
+   }
+  },
+  "FCharacterCustomizeDataTableFacePaintMaskDetail": {
+   "kind": "struct",
+   "base": "FTableRowBase",
+   "size": "0x000030",
+   "align": "0x000008",
+   "members": {
+    "MaskCategoryName": "0x000008",
+    "MaskRowName": "0x000010",
+    "OffsetV": "0x000018",
+    "OffsetU": "0x00001C",
+    "Rotate": "0x000020",
+    "Scale": "0x000024",
+    "Symmetry": "0x000028"
+   }
+  },
+  "FCharacterCustomizeDataTableFacePaintMaskPreset": {
+   "kind": "struct",
+   "base": "FTableRowBase",
+   "size": "0x000098",
+   "align": "0x000008",
+   "members": {
+    "Thumbnail": "0x000008",
+    "IsSpecialColor": "0x000030",
+    "ColorPaletteRowName": "0x000034",
+    "ColorName": "0x00003C",
+    "Opacity": "0x000044",
+    "Texture": "0x000048",
+    "OffsetV": "0x000070",
+    "OffsetU": "0x000074",
+    "Rotate": "0x000078",
+    "Scale": "0x00007C",
+    "Symmetry": "0x000080",
+    "FlagCondition": "0x000088"
+   }
+  },
+  "FCharacterCustomizeDataTableGender": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x0000D0",
+   "align": "0x000008",
+   "members": {
+    "Gender": "0x000000",
+    "BaseMesh": "0x000008",
+    "ManicureMeshLeft": "0x000030",
+    "ManicureMeshRight": "0x000058",
+    "PedicureMeshLeft": "0x000080",
+    "PedicureMeshRight": "0x0000A8"
+   }
+  },
+  "FCharacterCustomizeDataTableGloves": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000080",
+   "align": "0x000008",
+   "members": {
+    "MeshRowName": "0x000000",
+    "MeshRowHandle": "0x000008",
+    "AnimClass": "0x000018",
+    "Colors": "0x000020"
+   }
+  },
+  "FCharacterCustomizeDataTableGlovesList": {
+   "kind": "struct",
+   "base": "FTableRowBase",
+   "size": "0x000170",
+   "align": "0x000008",
+   "members": {
+    "Thumbnail": "0x000008",
+    "Mesh": "0x000030",
+    "FlagCondition": "0x000058",
+    "Color": "0x000068",
+    "CustomizableColorNumber": "0x0000C8",
+    "bAffectNail": "0x0000CC",
+    "LeftFingerExposureMap": "0x0000D0",
+    "RightFingerExposureMap": "0x000120"
+   }
+  },
+  "FCharacterCustomizeDataTableHair": {
+   "kind": "struct",
+   "base": "FTableRowBase",
+   "size": "0x000328",
+   "align": "0x000008",
+   "members": {
+    "HairSetRowName": "0x000008",
+    "HairSetRowHandle": "0x000010",
+    "BaseMeshRowName": "0x000020",
+    "BaseMeshRowHandle": "0x000028",
+    "BaseLength": "0x000038",
+    "bUseCurlBaseMesh": "0x000050",
+    "FrontMeshRowName": "0x000054",
+    "FrontMeshRowHandle": "0x000060",
+    "FrontLength": "0x000070",
+    "bUseCurlFrontMesh": "0x000088",
+    "FrontSideMeshRowName": "0x00008C",
+    "FrontSideMeshRowHandle": "0x000098",
+    "FrontSideLength": "0x0000A8",
+    "bUseCurlFrontSideMesh": "0x0000C0",
+    "SideMeshRowName": "0x0000C4",
+    "SideMeshRowHandle": "0x0000D0",
+    "SideLength": "0x0000E0",
+    "bUseCurlSideMesh": "0x0000F8",
+    "TopMeshRowName": "0x0000FC",
+    "TopMeshRowHandle": "0x000108",
+    "TopLength": "0x000118",
+    "bUseCurlTopMesh": "0x000130",
+    "BackMeshRowName": "0x000134",
+    "BackMeshRowHandle": "0x000140",
+    "BackLength": "0x000150",
+    "bUseCurlBackMesh": "0x000168",
+    "OtherMeshRowName": "0x00016C",
+    "OtherMeshRowHandle": "0x000178",
+    "OtherLength": "0x000188",
+    "bUseCurlOtherMesh": "0x0001A0",
+    "CurlPresetRowName": "0x0001A4",
+    "CurlPresetRowHandle": "0x0001B0",
+    "CurlParameter": "0x0001C0",
+    "TaperPresetRowName": "0x000200",
+    "TaperParameter": "0x000208",
+    "HairBaseColorPalette": "0x000270",
+    "HairBaseColorPaletteRowHandle": "0x000278",
+    "HairBaseColor": "0x000288",
+    "HairAppendColorPalette": "0x000290",
+    "HairAppendColorPaletteRowHandle": "0x000298",
+    "HairAppendColor": "0x0002A8",
+    "ColorAppendPatternRowName": "0x0002B0",
+    "ColorAppendPatternRowHandle": "0x0002B8",
+    "ColorAppendPatternParameter": "0x0002C8",
+    "HighlightIntensity": "0x000318",
+    "AnimClass": "0x000320"
+   }
+  },
+  "FCharacterCustomizeDataTableHairBase": {
+   "kind": "struct",
+   "base": "FTableRowBase",
+   "size": "0x000110",
+   "align": "0x000008",
+   "members": {
+    "Thumbnail": "0x000008",
+    "BaseMesh": "0x000030",
+    "BaseShadowMesh": "0x000058",
+    "BaseShadowMaterial": "0x000080",
+    "AvailableHairFrontList": "0x0000A8",
+    "AvailableHairFrontSideList": "0x0000B8",
+    "AvailableHairSideList": "0x0000C8",
+    "AvailableHairTopList": "0x0000D8",
+    "AvailableHairBackList": "0x0000E8",
+    "AvailableHairOtherList": "0x0000F8",
+    "bIsLengthChangeAvailable": "0x000108",
+    "bIsCurlAvailable": "0x000109"
+   }
+  },
+  "FCharacterCustomizeDataTableHairPart": {
+   "kind": "struct",
+   "base": "FTableRowBase",
+   "size": "0x0000B8",
+   "align": "0x000008",
+   "members": {
+    "Thumbnail": "0x000008",
+    "Mesh": "0x000030",
+    "AnimClass": "0x000058",
+    "ShadowMesh": "0x000060",
+    "ShadowMaterial": "0x000088",
+    "bIsLengthChangeAvailable": "0x0000B0",
+    "bIsCurlAvailable": "0x0000B1"
+   }
+  },
+  "FCharacterCustomizeDataTableHairSet": {
+   "kind": "struct",
+   "base": "FTableRowBase",
+   "size": "0x000070",
+   "align": "0x000008",
+   "members": {
+    "Thumbnail": "0x000008",
+    "HairBaseName": "0x000030",
+    "HairFrontName": "0x000038",
+    "HairFrontSideName": "0x000040",
+    "HairSideName": "0x000048",
+    "HairTopName": "0x000050",
+    "HairBackName": "0x000058",
+    "HairOtherName": "0x000060",
+    "bHairTaperEnabled": "0x000068",
+    "bHairCurlEnabled": "0x000069",
+    "bHairHighlightEnabled": "0x00006A",
+    "bHiddenByExposingHood": "0x00006B"
+   }
+  },
+  "FCharacterCustomizeDataTableInner": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000108",
+   "align": "0x000008",
+   "members": {
+    "MeshRowHandle": "0x000000",
+    "AnimClass": "0x000010",
+    "Colors": "0x000018",
+    "PartVisibilityArray": "0x0000F8"
+   }
+  },
+  "FCharacterCustomizeDataTableInnerList": {
+   "kind": "struct",
+   "base": "FTableRowBase",
+   "size": "0x000188",
+   "align": "0x000008",
+   "members": {
+    "Thumbnail": "0x000008",
+    "Mesh": "0x000030",
+    "FlagCondition": "0x000058",
+    "Color": "0x000068",
+    "CustomizableColorNumber": "0x000148",
+    "PartVisibilityInfoArray": "0x000150",
+    "RightVolumeType": "0x000160",
+    "LeftVolumeType": "0x000161",
+    "bHasBoots": "0x000162",
+    "HairAffectType": "0x000163",
+    "bAffectNail": "0x000164",
+    "bAffectPedicure": "0x000165",
+    "DefaultMaskRowName": "0x000168",
+    "DefaultGlovesRowName": "0x000170",
+    "DefaultBootsRowName": "0x000178",
+    "DefaultOuterRowName": "0x000180"
+   }
+  },
+  "FCharacterCustomizeDataTableKintsugi": {
+   "kind": "struct",
+   "base": "FTableRowBase",
+   "size": "0x0000A0",
+   "align": "0x000008",
+   "members": {
+    "ColorMap": "0x000008",
+    "NormalMap": "0x000030",
+    "SpecularMap": "0x000058",
+    "MapRowName": "0x000080",
+    "OffsetU": "0x000088",
+    "OffsetV": "0x00008C",
+    "Rotate": "0x000090",
+    "ScaleU": "0x000094",
+    "ScaleV": "0x000098"
+   }
+  },
+  "FCharacterCustomizeDataTableKintsugiList": {
+   "kind": "struct",
+   "base": "FTableRowBase",
+   "size": "0x0000D0",
+   "align": "0x000008",
+   "members": {
+    "Thumbnail": "0x000008",
+    "ColorMap": "0x000030",
+    "NormalMap": "0x000058",
+    "SpecularMap": "0x000080",
+    "bIsFlip": "0x0000A8",
+    "Metallic": "0x0000AC",
+    "Opacity": "0x0000B0",
+    "Roughness": "0x0000B4",
+    "OffsetU": "0x0000B8",
+    "OffsetV": "0x0000BC",
+    "Rotate": "0x0000C0",
+    "ScaleU": "0x0000C4",
+    "ScaleV": "0x0000C8"
+   }
+  },
+  "FCharacterCustomizeDataTableMake": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000080",
+   "align": "0x000004",
+   "members": {
+    "EyelashMapRowName": "0x000000",
+    "EyelashColorPaletteRowName": "0x000008",
+    "EyelashColorName": "0x000010",
+    "EyelashColorOpacity": "0x000018",
+    "ManicureMapRowName": "0x00001C",
+    "ManicureColorPaletteRowName1": "0x000024",
+    "ManicureColorName1": "0x00002C",
+    "ManicureColorPaletteRowName2": "0x000034",
+    "ManicureColorName2": "0x00003C",
+    "ManicureColorPaletteRowName3": "0x000044",
+    "ManicureColorName3": "0x00004C",
+    "EyeLineColorPaletteRowName": "0x000054",
+    "EyeLineColorName": "0x00005C",
+    "EyeLineOpacity": "0x000064",
+    "LipColorPaletteRowName": "0x000068",
+    "LipColorName": "0x000070",
+    "LipOpacity": "0x000078",
+    "LipGlossness": "0x00007C"
+   }
+  },
+  "FCharacterCustomizeDataTableManicurePatternList": {
+   "kind": "struct",
+   "base": "FTableRowBase",
+   "size": "0x000098",
+   "align": "0x000008",
+   "members": {
+    "Thumbnail": "0x000008",
+    "Texture": "0x000030",
+    "IsFullColor": "0x000058",
+    "ColorPaletteRowName1": "0x00005C",
+    "ColorName1": "0x000064",
+    "ColorPaletteRowName2": "0x00006C",
+    "ColorName2": "0x000074",
+    "ColorPaletteRowName3": "0x00007C",
+    "ColorName3": "0x000084",
+    "ManicureMetallic": "0x00008C",
+    "ManicureRoughness": "0x000090",
+    "ManicureEmissiveIntencity": "0x000094"
+   }
+  },
+  "FCharacterCustomizeDataTableMask": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000110",
+   "align": "0x000008",
+   "members": {
+    "MeshRowName": "0x000000",
+    "MeshRowHandle": "0x000008",
+    "AnimClass": "0x000018",
+    "Colors": "0x000020",
+    "PartVisibilityArray": "0x000100"
+   }
+  },
+  "FCharacterCustomizeDataTableMaskList": {
+   "kind": "struct",
+   "base": "FTableRowBase",
+   "size": "0x000168",
+   "align": "0x000008",
+   "members": {
+    "Thumbnail": "0x000008",
+    "Mesh": "0x000030",
+    "FlagCondition": "0x000058",
+    "Color": "0x000068",
+    "CustomizableColorNumber": "0x000148",
+    "PartVisibilityInfoArray": "0x000150",
+    "HairAffectType": "0x000160",
+    "bCoverMouth": "0x000161",
+    "bCanWearWithSentimentalMask": "0x000162"
+   }
+  },
+  "FCharacterCustomizeDataTableOuter": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000078",
+   "align": "0x000008",
+   "members": {
+    "MeshRowHandle": "0x000000",
+    "AnimClass": "0x000010",
+    "Colors": "0x000018"
+   }
+  },
+  "FCharacterCustomizeDataTableOuterList": {
+   "kind": "struct",
+   "base": "FTableRowBase",
+   "size": "0x0000D0",
+   "align": "0x000008",
+   "members": {
+    "Thumbnail": "0x000008",
+    "Mesh": "0x000030",
+    "FlagCondition": "0x000058",
+    "Color": "0x000068",
+    "CustomizableColorNumber": "0x0000C8",
+    "HairAffectType": "0x0000CC",
+    "bOverrideHairAffectTypeBySentimentalMask": "0x0000CD",
+    "HairAffectTypeWithSentimentalMask": "0x0000CE"
+   }
+  },
+  "FCharacterCustomizeDataTablePreset": {
+   "kind": "struct",
+   "base": "FTableRowBase",
+   "size": "0x001380",
+   "align": "0x000010",
+   "members": {
+    "PresetName": "0x000010",
+    "Thumbnail": "0x000020",
+    "Detail": "0x000050"
+   }
+  },
+  "FCharacterCustomizeDataTablePresetDetail": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x001330",
+   "align": "0x000010",
+   "members": {
+    "Gender": "0x000000",
+    "BodyShape": "0x0000D0",
+    "Skin": "0x000118",
+    "Outer": "0x000128",
+    "Inner": "0x0001A0",
+    "Gloves": "0x0002A8",
+    "Boots": "0x000328",
+    "Mask": "0x000438",
+    "Face": "0x000550",
+    "Hair": "0x000C20",
+    "Eye": "0x000F48",
+    "Eyebrow": "0x000F68",
+    "Make": "0x000FA8",
+    "Scar": "0x001028",
+    "Kintsugi": "0x001080",
+    "FacePaints": "0x001120",
+    "Accessories": "0x001130",
+    "Voice": "0x001140",
+    "CalvaryTransform": "0x001150",
+    "HeadTransform": "0x0011B0",
+    "NeckTransform": "0x001210",
+    "Spine2Transform": "0x001270",
+    "Spine3Transform": "0x0012D0"
+   }
+  },
+  "FCharacterCustomizeDataTableScar": {
+   "kind": "struct",
+   "base": "FTableRowBase",
+   "size": "0x000058",
+   "align": "0x000008",
+   "members": {
+    "Map": "0x000008",
+    "MapCategoryName": "0x000030",
+    "MapRowName": "0x000038",
+    "OffsetU": "0x000040",
+    "OffsetV": "0x000044",
+    "Rotate": "0x000048",
+    "ScaleU": "0x00004C",
+    "ScaleV": "0x000050"
+   }
+  },
+  "FCharacterCustomizeDataTableSkin": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000010",
+   "align": "0x000004",
+   "members": {
+    "ColorPaletteRowName": "0x000000",
+    "ColorName": "0x000008"
+   }
+  },
+  "FCharacterCustomizeDataTableTextureList": {
+   "kind": "struct",
+   "base": "FTableRowBase",
+   "size": "0x000058",
+   "align": "0x000008",
+   "members": {
+    "Thumbnail": "0x000008",
+    "Texture": "0x000030"
+   }
+  },
+  "FCharacterCustomizeDataTableVoice": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000008",
+   "align": "0x000004",
+   "members": {
+    "VoiceType": "0x000000"
+   }
+  },
+  "FCharacterCustomizeGenderData": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000002",
+   "align": "0x000001",
+   "members": {
+    "IsSaved": "0x000000",
+    "CharacterGender": "0x000001"
+   }
+  },
+  "FCharacterCustomizeParameter": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x001460",
+   "align": "0x000010",
+   "members": {
+    "CharacterName": "0x000000",
+    "CodeName": "0x000010",
+    "Gender": "0x000020",
+    "BodyShape": "0x0000F0",
+    "Skin": "0x000128",
+    "Outer": "0x000138",
+    "Inner": "0x000180",
+    "Gloves": "0x0001D8",
+    "Boots": "0x000220",
+    "Mask": "0x000278",
+    "Face": "0x0002D0",
+    "Hair": "0x000A40",
+    "Eye": "0x000FE8",
+    "Eyebrow": "0x001008",
+    "Make": "0x001098",
+    "Scar": "0x001170",
+    "Kintsugi": "0x0011C0",
+    "FacePaints": "0x001258",
+    "Accessories": "0x001268",
+    "Voice": "0x001278",
+    "CalvaryTransform": "0x001280",
+    "HeadTransform": "0x0012E0",
+    "NeckTransform": "0x001340",
+    "Spine2Transform": "0x0013A0",
+    "Spine3Transform": "0x001400"
+   }
+  },
+  "FCharacterCustomizeParameterAccessory": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000140",
+   "align": "0x000008",
+   "members": {
+    "IsEnable": "0x000000",
+    "Mesh": "0x000008",
+    "MeshCategoryName": "0x000030",
+    "MeshRowName": "0x000038",
+    "AnimClass": "0x000040",
+    "AttachToRowName": "0x000048",
+    "RootTransform": "0x000050",
+    "OrientTransform": "0x000098",
+    "MeshTransform": "0x0000E0",
+    "MaxColor": "0x000128",
+    "MaxColorNum": "0x00012C",
+    "Colors": "0x000130"
+   }
+  },
+  "FCharacterCustomizeParameterAccessoryColor": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000040",
+   "align": "0x000008",
+   "members": {
+    "IsSpecialColor": "0x000000",
+    "ColorPaletteRowName": "0x000004",
+    "ColorName": "0x00000C",
+    "Texture": "0x000018"
+   }
+  },
+  "FCharacterCustomizeParameterBodyShape": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000038",
+   "align": "0x000004",
+   "members": {
+    "CharacterScale": "0x000000",
+    "BodyShapeType": "0x000004",
+    "BodyShapeAdjust": "0x000008",
+    "BustShapeAdjust": "0x00000C",
+    "HeadShapeAdjust": "0x000010",
+    "BodyPartAdjust": "0x000014"
+   }
+  },
+  "FCharacterCustomizeParameterBoots": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000058",
+   "align": "0x000008",
+   "members": {
+    "Mesh": "0x000000",
+    "MeshRowName": "0x000028",
+    "AnimClass": "0x000030",
+    "Colors": "0x000038",
+    "PartVisibilityArray": "0x000048"
+   }
+  },
+  "FCharacterCustomizeParameterClothColor": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000040",
+   "align": "0x000008",
+   "members": {
+    "IsSpecialColor": "0x000000",
+    "ColorPaletteRowName": "0x000004",
+    "ColorName": "0x00000C",
+    "Texture": "0x000018"
+   }
+  },
+  "FCharacterCustomizeParameterEye": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000020",
+   "align": "0x000008",
+   "members": {
+    "IsOdd": "0x000000",
+    "EyeShapeRowName": "0x000004",
+    "Details": "0x000010"
+   }
+  },
+  "FCharacterCustomizeParameterEyeDetail": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000118",
+   "align": "0x000008",
+   "members": {
+    "HighLightMap": "0x000000",
+    "HighLightMapRowName": "0x000028",
+    "HighLightOpacity": "0x000030",
+    "HighLightVerticalPos": "0x000034",
+    "HighLightColorPaletteRowName": "0x000038",
+    "HighLightColorName": "0x000040",
+    "Scale": "0x000048",
+    "Cats": "0x00004C",
+    "PositionV": "0x000050",
+    "PositionU": "0x000054",
+    "DetailMap": "0x000058",
+    "IrisReflectionMap": "0x000080",
+    "DetailMapRowName": "0x0000A8",
+    "DetailOpacity": "0x0000B0",
+    "BaseColorPaletteRowName": "0x0000B4",
+    "BaseColorName": "0x0000BC",
+    "AppendColorPaletteRowName": "0x0000C4",
+    "AppendColorName": "0x0000CC",
+    "AppendColor2PaletteRowName": "0x0000D4",
+    "AppendColor2Name": "0x0000DC",
+    "BaseMap": "0x0000E8",
+    "BaseMapRowName": "0x000110"
+   }
+  },
+  "FCharacterCustomizeParameterEyebrow": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000090",
+   "align": "0x000008",
+   "members": {
+    "LeftMap": "0x000000",
+    "RightMap": "0x000028",
+    "MapRowName": "0x000050",
+    "ColorPaletteRowName": "0x000058",
+    "ColorName": "0x000060",
+    "IsSameAsHairColor": "0x000068",
+    "EyebrowRaisingPattern": "0x00006C",
+    "EyebrowAngleMaterial": "0x000074",
+    "EyebrowAngleBone": "0x000078",
+    "EyebrowPositionVMaterial": "0x00007C",
+    "EyebrowPositionVBone": "0x000080",
+    "EyebrowDistance": "0x000084",
+    "EyebrowScaleH": "0x000088",
+    "EyebrowScaleV": "0x00008C"
+   }
+  },
+  "FCharacterCustomizeParameterFace": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000770",
+   "align": "0x000010",
+   "members": {
+    "FaceType": "0x000000",
+    "FaceMesh": "0x000008",
+    "FaceAnimClass": "0x000030",
+    "FaceShadowMesh": "0x000038",
+    "MouthType": "0x000060",
+    "MouthMesh": "0x000068",
+    "MouthAnimClass": "0x000090",
+    "EyeMouthBalancePreset": "0x000098",
+    "FaceUpperPos": "0x0000A0",
+    "FaceMiddlePos": "0x0000A4",
+    "FaceLowerPos": "0x0000A8",
+    "EyeClosingPatternL": "0x0000AC",
+    "EyeClosingPatternR": "0x0000AD",
+    "Blink": "0x0000B0",
+    "bAutoBlink": "0x0000B4",
+    "EyeTransformL": "0x0000C0",
+    "EyeTransformR": "0x000120",
+    "EyebrowTransformL": "0x000180",
+    "EyebrowTransformR": "0x0001E0",
+    "CheekTransformL": "0x000240",
+    "CheekTransformR": "0x0002A0",
+    "PuffTransformL": "0x000300",
+    "PuffTransformR": "0x000360",
+    "ChinTransformC": "0x0003C0",
+    "JawTransformC": "0x000420",
+    "JawInverseTransformC": "0x000480",
+    "NoseTransform": "0x0004E0",
+    "NoseTransformC": "0x000540",
+    "NostrilTransformL": "0x0005A0",
+    "NostrilTransformR": "0x000600",
+    "EarTransformL": "0x000660",
+    "EarTransformR": "0x0006C0",
+    "EarSharpness": "0x000720",
+    "BeardRowName": "0x000724",
+    "BeardMesh": "0x000730",
+    "BeardColorPaletteRowName": "0x000758",
+    "BeardColorName": "0x000760"
+   }
+  },
+  "FCharacterCustomizeParameterFacePaint": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x0000A0",
+   "align": "0x000008",
+   "members": {
+    "Texture": "0x000000",
+    "IsSpecialColor": "0x000028",
+    "ColorPaletteRowName": "0x00002C",
+    "ColorName": "0x000034",
+    "Opacity": "0x00003C",
+    "MaskDetail": "0x000040",
+    "MaskPresetCategoryName": "0x000090",
+    "MaskPresetRowName": "0x000098"
+   }
+  },
+  "FCharacterCustomizeParameterFacePaintMaskDetail": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000050",
+   "align": "0x000008",
+   "members": {
+    "Mask": "0x000000",
+    "MaskCategoryName": "0x000028",
+    "MaskRowName": "0x000030",
+    "OffsetV": "0x000038",
+    "OffsetU": "0x00003C",
+    "Rotate": "0x000040",
+    "Scale": "0x000044",
+    "Symmetry": "0x000048"
+   }
+  },
+  "FCharacterCustomizeParameterGender": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x0000D0",
+   "align": "0x000008",
+   "members": {
+    "Gender": "0x000000",
+    "BaseMesh": "0x000008",
+    "ManicureMeshLeft": "0x000030",
+    "ManicureMeshRight": "0x000058",
+    "PedicureMeshLeft": "0x000080",
+    "PedicureMeshRight": "0x0000A8"
+   }
+  },
+  "FCharacterCustomizeParameterGloves": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000048",
+   "align": "0x000008",
+   "members": {
+    "Mesh": "0x000000",
+    "MeshRowName": "0x000028",
+    "AnimClass": "0x000030",
+    "Colors": "0x000038"
+   }
+  },
+  "FCharacterCustomizeParameterHair": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x0005A8",
+   "align": "0x000008",
+   "members": {
+    "HairSetRowName": "0x000000",
+    "BaseMesh": "0x000008",
+    "BaseMeshRowName": "0x000030",
+    "BaseShadowMesh": "0x000038",
+    "BaseShadowMaterial": "0x000060",
+    "BaseLength": "0x000088",
+    "bUseCurlBaseMesh": "0x0000A0",
+    "FrontMesh": "0x0000A8",
+    "FrontMeshRowName": "0x0000D0",
+    "FrontShadowMesh": "0x0000D8",
+    "FrontShadowMaterial": "0x000100",
+    "FrontLength": "0x000128",
+    "bUseCurlFrontMesh": "0x000140",
+    "FrontSideMesh": "0x000148",
+    "FrontSideMeshRowName": "0x000170",
+    "FrontSideShadowMesh": "0x000178",
+    "FrontSideShadowMaterial": "0x0001A0",
+    "FrontSideLength": "0x0001C8",
+    "bUseCurlFrontSideMesh": "0x0001E0",
+    "SideMesh": "0x0001E8",
+    "SideMeshRowName": "0x000210",
+    "SideShadowMesh": "0x000218",
+    "SideShadowMaterial": "0x000240",
+    "SideLength": "0x000268",
+    "bUseCurlSideMesh": "0x000280",
+    "TopMesh": "0x000288",
+    "TopMeshRowName": "0x0002B0",
+    "TopShadowMesh": "0x0002B8",
+    "TopShadowMaterial": "0x0002E0",
+    "TopLength": "0x000308",
+    "bUseCurlTopMesh": "0x000320",
+    "BackMesh": "0x000328",
+    "BackMeshRowName": "0x000350",
+    "BackShadowMesh": "0x000358",
+    "BackShadowMaterial": "0x000380",
+    "BackLength": "0x0003A8",
+    "bUseCurlBackMesh": "0x0003C0",
+    "OtherMesh": "0x0003C8",
+    "OtherMeshRowName": "0x0003F0",
+    "OtherShadowMesh": "0x0003F8",
+    "OtherShadowMaterial": "0x000420",
+    "OtherLength": "0x000448",
+    "bUseCurlOtherMesh": "0x000460",
+    "TaperPresetRowName": "0x000464",
+    "TaperParameter": "0x000470",
+    "CurlPresetRowName": "0x0004D8",
+    "CurlParameter": "0x0004E0",
+    "HairBaseColorPalette": "0x000520",
+    "HairBaseColor": "0x000528",
+    "HairAppendColorPalette": "0x000530",
+    "HairAppendColor": "0x000538",
+    "ColorAppendPatternRowName": "0x000540",
+    "ColorAppendPatternParameter": "0x000548",
+    "HighlightIntensity": "0x000598",
+    "AnimClass": "0x0005A0"
+   }
+  },
+  "FCharacterCustomizeParameterHairColorAppendPattern": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000050",
+   "align": "0x000008",
+   "members": {
+    "bUseHairAppendColor": "0x000000",
+    "MaskTexture": "0x000008",
+    "LayoutDensity": "0x000030",
+    "LayoutOffsetU": "0x000034",
+    "LayoutOffsetV": "0x000038",
+    "LayoutScaleU": "0x00003C",
+    "LayoutScaleV": "0x000040",
+    "LayoutPivotPointU": "0x000044",
+    "LayoutPivotPointV": "0x000048"
+   }
+  },
+  "FCharacterCustomizeParameterHairCurl": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000040",
+   "align": "0x000004",
+   "members": {
+    "StartPoint": "0x000000",
+    "EndPoint": "0x000004",
+    "GradationAlpha": "0x000008",
+    "GradationPeakStart": "0x00000C",
+    "GradationPeakEnd": "0x000010",
+    "UVOffsetNoiseMove": "0x000014",
+    "UVOffsetNoiseTilling": "0x000018",
+    "UVOffsetNoiseScale": "0x00001C",
+    "CurlRotation": "0x000020",
+    "CurlRotationPlusAlpha": "0x000024",
+    "CurlScale": "0x000028",
+    "CurlScalePlusAlpha": "0x00002C",
+    "CurlRotationOffset": "0x000030",
+    "CurlRotationOffsetPlusAlpha": "0x000034",
+    "CurlDensity": "0x000038",
+    "CurlDensityPlusAlpha": "0x00003C"
+   }
+  },
+  "FCharacterCustomizeParameterHairTaper": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000068",
+   "align": "0x000008",
+   "members": {
+    "MaskTexture": "0x000000",
+    "TaperScaleU": "0x000028",
+    "TaperScaleV": "0x00002C",
+    "TaperOffsetU": "0x000030",
+    "TaperOffsetV": "0x000034",
+    "TaperRotation": "0x000038",
+    "HeadShadowMaskTexture": "0x000040"
+   }
+  },
+  "FCharacterCustomizeParameterInner": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000058",
+   "align": "0x000008",
+   "members": {
+    "Mesh": "0x000000",
+    "MeshRowName": "0x000028",
+    "AnimClass": "0x000030",
+    "Colors": "0x000038",
+    "PartVisibilityArray": "0x000048"
+   }
+  },
+  "FCharacterCustomizeParameterKintsugi": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000098",
+   "align": "0x000008",
+   "members": {
+    "ColorMap": "0x000000",
+    "NormalMap": "0x000028",
+    "SpecularMap": "0x000050",
+    "MapRowName": "0x000078",
+    "OffsetU": "0x000080",
+    "OffsetV": "0x000084",
+    "Rotate": "0x000088",
+    "ScaleU": "0x00008C",
+    "ScaleV": "0x000090"
+   }
+  },
+  "FCharacterCustomizeParameterMake": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x0000D8",
+   "align": "0x000008",
+   "members": {
+    "EyelashMap": "0x000000",
+    "EyelashMapRowName": "0x000028",
+    "EyelashColorPaletteRowName": "0x000030",
+    "EyelashColorName": "0x000038",
+    "EyelashColorOpacity": "0x000040",
+    "ManicureMap": "0x000048",
+    "ManicureMapRowName": "0x000070",
+    "ManicureColorPaletteRowName1": "0x000078",
+    "ManicureColorName1": "0x000080",
+    "ManicureColorPaletteRowName2": "0x000088",
+    "ManicureColorName2": "0x000090",
+    "ManicureColorPaletteRowName3": "0x000098",
+    "ManicureColorName3": "0x0000A0",
+    "EyeLineColorPaletteRowName": "0x0000A8",
+    "EyeLineColorName": "0x0000B0",
+    "EyeLineOpacity": "0x0000B8",
+    "LipColorPaletteRowName": "0x0000BC",
+    "LipColorName": "0x0000C4",
+    "LipOpacity": "0x0000CC",
+    "LipGlossness": "0x0000D0"
+   }
+  },
+  "FCharacterCustomizeParameterMask": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000058",
+   "align": "0x000008",
+   "members": {
+    "Mesh": "0x000000",
+    "MeshRowName": "0x000028",
+    "AnimClass": "0x000030",
+    "Colors": "0x000038",
+    "PartVisibilityArray": "0x000048"
+   }
+  },
+  "FCharacterCustomizeParameterOuter": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000048",
+   "align": "0x000008",
+   "members": {
+    "Mesh": "0x000000",
+    "MeshRowName": "0x000028",
+    "AnimClass": "0x000030",
+    "Colors": "0x000038"
+   }
+  },
+  "FCharacterCustomizeParameterScar": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000050",
+   "align": "0x000008",
+   "members": {
+    "Map": "0x000000",
+    "MapCategoryName": "0x000028",
+    "MapRowName": "0x000030",
+    "OffsetU": "0x000038",
+    "OffsetV": "0x00003C",
+    "Rotate": "0x000040",
+    "ScaleU": "0x000044",
+    "ScaleV": "0x000048"
+   }
+  },
+  "FCharacterCustomizeParameterSkin": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000010",
+   "align": "0x000004",
+   "members": {
+    "ColorPaletteRowName": "0x000000",
+    "ColorName": "0x000008"
+   }
+  },
+  "FCharacterCustomizeParameterVoice": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000008",
+   "align": "0x000004",
+   "members": {
+    "VoiceType": "0x000000"
+   }
+  },
+  "FClassRedirect": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x00003C",
+   "align": "0x000004",
+   "members": {
+    "ObjectName": "0x000000",
+    "OldClassName": "0x000008",
+    "NewClassName": "0x000010",
+    "OldSubobjName": "0x000018",
+    "NewSubobjName": "0x000020",
+    "NewClassClass": "0x000028",
+    "NewClassPackage": "0x000030",
+    "InstanceOnly": "0x000038"
+   }
+  },
+  "FColor": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000004",
+   "align": "0x000004",
+   "members": {
+    "B": "0x000000",
+    "G": "0x000001",
+    "R": "0x000002",
+    "A": "0x000003"
+   }
+  },
+  "FDataTableRowHandle": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000010",
+   "align": "0x000008",
+   "members": {
+    "DataTable": "0x000000",
+    "RowName": "0x000008"
+   }
+  },
+  "FDateTime": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000008",
+   "align": "0x000008",
+   "members": {}
+  },
+  "FDebugDisplayProperty": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000020",
+   "align": "0x000008",
+   "members": {
+    "Obj": "0x000000",
+    "WithinClass": "0x000008"
+   }
+  },
+  "FDirectoryPath": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000010",
+   "align": "0x000008",
+   "members": {
+    "Path": "0x000000"
+   }
+  },
+  "FDoubleRange": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000020",
+   "align": "0x000008",
+   "members": {
+    "LowerBound": "0x000000",
+    "UpperBound": "0x000010"
+   }
+  },
+  "FDoubleRangeBound": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000010",
+   "align": "0x000008",
+   "members": {
+    "Type": "0x000000",
+    "Value": "0x000008"
+   }
+  },
+  "FDropNoteInfo": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000040",
+   "align": "0x000008",
+   "members": {
+    "Location": "0x000000",
+    "Rotation": "0x000018",
+    "Comment": "0x000030"
+   }
+  },
+  "FEulerAngleTransform": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000048",
+   "align": "0x000008",
+   "members": {
+    "Translation": "0x000000",
+    "Rotation": "0x000018",
+    "Scale": "0x000030"
+   }
+  },
+  "FFallbackStruct": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000001",
+   "align": "0x000001",
+   "members": {}
+  },
+  "FFieldCookedMetaDataStore": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000050",
+   "align": "0x000008",
+   "members": {
+    "FieldMetaData": "0x000000"
+   }
+  },
+  "FFieldTargetInfoSaveData": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000030",
+   "align": "0x000008",
+   "members": {
+    "TargetId": "0x000000",
+    "TargetPosition": "0x000010",
+    "TargetAreaRadius": "0x000028",
+    "UserIndex": "0x00002C"
+   }
+  },
+  "FFilePath": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000010",
+   "align": "0x000008",
+   "members": {
+    "FilePath": "0x000000"
+   }
+  },
+  "FFloatInterval": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000008",
+   "align": "0x000004",
+   "members": {
+    "Min": "0x000000",
+    "Max": "0x000004"
+   }
+  },
+  "FFloatRange": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000010",
+   "align": "0x000004",
+   "members": {
+    "LowerBound": "0x000000",
+    "UpperBound": "0x000008"
+   }
+  },
+  "FFloatRangeBound": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000008",
+   "align": "0x000004",
+   "members": {
+    "Type": "0x000000",
+    "Value": "0x000004"
+   }
+  },
+  "FFrameNumber": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000004",
+   "align": "0x000004",
+   "members": {
+    "Value": "0x000000"
+   }
+  },
+  "FFrameNumberRange": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000010",
+   "align": "0x000004",
+   "members": {
+    "LowerBound": "0x000000",
+    "UpperBound": "0x000008"
+   }
+  },
+  "FFrameNumberRangeBound": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000008",
+   "align": "0x000004",
+   "members": {
+    "Type": "0x000000",
+    "Value": "0x000004"
+   }
+  },
+  "FFrameRate": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000008",
+   "align": "0x000004",
+   "members": {
+    "Numerator": "0x000000",
+    "Denominator": "0x000004"
+   }
+  },
+  "FFrameTime": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000008",
+   "align": "0x000004",
+   "members": {
+    "FrameNumber": "0x000000",
+    "SubFrame": "0x000004"
+   }
+  },
+  "FGameNameRedirect": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000010",
+   "align": "0x000004",
+   "members": {
+    "OldGameName": "0x000000",
+    "NewGameName": "0x000008"
+   }
+  },
+  "FGameSystemSaveData": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000048",
+   "align": "0x000008",
+   "members": {
+    "bHasBeenSaved": "0x000000",
+    "MapSaveData": "0x000008"
+   }
+  },
+  "FGameplayTag": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000008",
+   "align": "0x000004",
+   "members": {
+    "TagName": "0x000000"
+   }
+  },
+  "FGuid": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000010",
+   "align": "0x000004",
+   "members": {
+    "A": "0x000000",
+    "B": "0x000004",
+    "C": "0x000008",
+    "D": "0x00000C"
+   }
+  },
+  "FInputActionKeyMapping": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000028",
+   "align": "0x000008",
+   "members": {
+    "ActionName": "0x000000",
+    "Key": "0x000010"
+   }
+  },
+  "FInputActionSpeechMapping": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000010",
+   "align": "0x000004",
+   "members": {
+    "ActionName": "0x000000",
+    "SpeechKeyword": "0x000008"
+   }
+  },
+  "FInputAxisConfigEntry": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000018",
+   "align": "0x000004",
+   "members": {
+    "AxisKeyName": "0x000000",
+    "AxisProperties": "0x000008"
+   }
+  },
+  "FInputAxisKeyMapping": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000028",
+   "align": "0x000008",
+   "members": {
+    "AxisName": "0x000000",
+    "Scale": "0x000008",
+    "Key": "0x000010"
+   }
+  },
+  "FInputAxisProperties": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000010",
+   "align": "0x000004",
+   "members": {
+    "DeadZone": "0x000000",
+    "Sensitivity": "0x000004",
+    "Exponent": "0x000008"
+   }
+  },
+  "FInputDeviceId": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000004",
+   "align": "0x000004",
+   "members": {
+    "InternalId": "0x000000"
+   }
+  },
+  "FInputDevicePropertyHandle": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000004",
+   "align": "0x000004",
+   "members": {
+    "InternalId": "0x000000"
+   }
+  },
+  "FInt32Interval": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000008",
+   "align": "0x000004",
+   "members": {
+    "Min": "0x000000",
+    "Max": "0x000004"
+   }
+  },
+  "FInt32Point": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000008",
+   "align": "0x000004",
+   "members": {
+    "X": "0x000000",
+    "Y": "0x000004"
+   }
+  },
+  "FInt32Range": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000010",
+   "align": "0x000004",
+   "members": {
+    "LowerBound": "0x000000",
+    "UpperBound": "0x000008"
+   }
+  },
+  "FInt32RangeBound": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000008",
+   "align": "0x000004",
+   "members": {
+    "Type": "0x000000",
+    "Value": "0x000004"
+   }
+  },
+  "FInt32Vector": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x00000C",
+   "align": "0x000004",
+   "members": {
+    "X": "0x000000",
+    "Y": "0x000004",
+    "Z": "0x000008"
+   }
+  },
+  "FInt32Vector2": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000008",
+   "align": "0x000004",
+   "members": {
+    "X": "0x000000",
+    "Y": "0x000004"
+   }
+  },
+  "FInt32Vector4": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000010",
+   "align": "0x000004",
+   "members": {
+    "X": "0x000000",
+    "Y": "0x000004",
+    "Z": "0x000008",
+    "W": "0x00000C"
+   }
+  },
+  "FInt64Point": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000010",
+   "align": "0x000008",
+   "members": {
+    "X": "0x000000",
+    "Y": "0x000008"
+   }
+  },
+  "FInt64Vector": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000018",
+   "align": "0x000008",
+   "members": {
+    "X": "0x000000",
+    "Y": "0x000008",
+    "Z": "0x000010"
+   }
+  },
+  "FInt64Vector2": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000010",
+   "align": "0x000008",
+   "members": {
+    "X": "0x000000",
+    "Y": "0x000008"
+   }
+  },
+  "FInt64Vector4": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000020",
+   "align": "0x000008",
+   "members": {
+    "X": "0x000000",
+    "Y": "0x000008",
+    "Z": "0x000010",
+    "W": "0x000018"
+   }
+  },
+  "FIntPoint": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000008",
+   "align": "0x000004",
+   "members": {
+    "X": "0x000000",
+    "Y": "0x000004"
+   }
+  },
+  "FIntVector": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x00000C",
+   "align": "0x000004",
+   "members": {
+    "X": "0x000000",
+    "Y": "0x000004",
+    "Z": "0x000008"
+   }
+  },
+  "FIntVector2": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000008",
+   "align": "0x000004",
+   "members": {
+    "X": "0x000000",
+    "Y": "0x000004"
+   }
+  },
+  "FIntVector4": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000010",
+   "align": "0x000004",
+   "members": {
+    "X": "0x000000",
+    "Y": "0x000004",
+    "Z": "0x000008",
+    "W": "0x00000C"
+   }
+  },
+  "FInterpCurveFloat": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000018",
+   "align": "0x000008",
+   "members": {
+    "Points": "0x000000",
+    "bIsLooped": "0x000010",
+    "LoopKeyOffset": "0x000014"
+   }
+  },
+  "FInterpCurveLinearColor": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000018",
+   "align": "0x000008",
+   "members": {
+    "Points": "0x000000",
+    "bIsLooped": "0x000010",
+    "LoopKeyOffset": "0x000014"
+   }
+  },
+  "FInterpCurvePointFloat": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000014",
+   "align": "0x000004",
+   "members": {
+    "InVal": "0x000000",
+    "OutVal": "0x000004",
+    "ArriveTangent": "0x000008",
+    "LeaveTangent": "0x00000C",
+    "InterpMode": "0x000010"
+   }
+  },
+  "FInterpCurvePointLinearColor": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000038",
+   "align": "0x000004",
+   "members": {
+    "InVal": "0x000000",
+    "OutVal": "0x000004",
+    "ArriveTangent": "0x000014",
+    "LeaveTangent": "0x000024",
+    "InterpMode": "0x000034"
+   }
+  },
+  "FInterpCurvePointQuat": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000080",
+   "align": "0x000010",
+   "members": {
+    "InVal": "0x000000",
+    "OutVal": "0x000010",
+    "ArriveTangent": "0x000030",
+    "LeaveTangent": "0x000050",
+    "InterpMode": "0x000070"
+   }
+  },
+  "FInterpCurvePointTwoVectors": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x0000A0",
+   "align": "0x000008",
+   "members": {
+    "InVal": "0x000000",
+    "OutVal": "0x000008",
+    "ArriveTangent": "0x000038",
+    "LeaveTangent": "0x000068",
+    "InterpMode": "0x000098"
+   }
+  },
+  "FInterpCurvePointVector": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000058",
+   "align": "0x000008",
+   "members": {
+    "InVal": "0x000000",
+    "OutVal": "0x000008",
+    "ArriveTangent": "0x000020",
+    "LeaveTangent": "0x000038",
+    "InterpMode": "0x000050"
+   }
+  },
+  "FInterpCurvePointVector2D": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000040",
+   "align": "0x000008",
+   "members": {
+    "InVal": "0x000000",
+    "OutVal": "0x000008",
+    "ArriveTangent": "0x000018",
+    "LeaveTangent": "0x000028",
+    "InterpMode": "0x000038"
+   }
+  },
+  "FInterpCurveQuat": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000018",
+   "align": "0x000008",
+   "members": {
+    "Points": "0x000000",
+    "bIsLooped": "0x000010",
+    "LoopKeyOffset": "0x000014"
+   }
+  },
+  "FInterpCurveTwoVectors": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000018",
+   "align": "0x000008",
+   "members": {
+    "Points": "0x000000",
+    "bIsLooped": "0x000010",
+    "LoopKeyOffset": "0x000014"
+   }
+  },
+  "FInterpCurveVector": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000018",
+   "align": "0x000008",
+   "members": {
+    "Points": "0x000000",
+    "bIsLooped": "0x000010",
+    "LoopKeyOffset": "0x000014"
+   }
+  },
+  "FInterpCurveVector2D": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000018",
+   "align": "0x000008",
+   "members": {
+    "Points": "0x000000",
+    "bIsLooped": "0x000010",
+    "LoopKeyOffset": "0x000014"
+   }
+  },
+  "FIrisNetDriverConfig": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000028",
+   "align": "0x000008",
+   "members": {
+    "NetDriverDefinition": "0x000000",
+    "NetDriverName": "0x000008",
+    "NetDriverWildcardName": "0x000010",
+    "bCanUseIris": "0x000020"
+   }
+  },
+  "FKey": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000018",
+   "align": "0x000008",
+   "members": {
+    "KeyName": "0x000000"
+   }
+  },
+  "FLevelCollection": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000078",
+   "align": "0x000008",
+   "members": {
+    "GameState": "0x000008",
+    "NetDriver": "0x000010",
+    "DemoNetDriver": "0x000018",
+    "PersistentLevel": "0x000020",
+    "Levels": "0x000028"
+   }
+  },
+  "FLightmassMaterialInterfaceSettings": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000010",
+   "align": "0x000004",
+   "members": {
+    "EmissiveBoost": "0x000000",
+    "DiffuseBoost": "0x000004",
+    "ExportResolutionScale": "0x000008"
+   }
+  },
+  "FLinearColor": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000010",
+   "align": "0x000004",
+   "members": {
+    "R": "0x000000",
+    "G": "0x000004",
+    "B": "0x000008",
+    "A": "0x00000C"
+   }
+  },
+  "FMapSaveData": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000040",
+   "align": "0x000008",
+   "members": {
+    "MapRevealAreaData": "0x000000",
+    "DiscoveredFeatures": "0x000010",
+    "ReleasedFeatures": "0x000020",
+    "UserMarkerData": "0x000030"
+   }
+  },
+  "FMaterialTextureInfo": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000010",
+   "align": "0x000004",
+   "members": {
+    "SamplingScale": "0x000000",
+    "UVChannelIndex": "0x000004",
+    "TextureName": "0x000008"
+   }
+  },
+  "FMatrix": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000080",
+   "align": "0x000010",
+   "members": {
+    "XPlane": "0x000000",
+    "YPlane": "0x000020",
+    "ZPlane": "0x000040",
+    "WPlane": "0x000060"
+   }
+  },
+  "FMatrix44d": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000080",
+   "align": "0x000010",
+   "members": {
+    "XPlane": "0x000000",
+    "YPlane": "0x000020",
+    "ZPlane": "0x000040",
+    "WPlane": "0x000060"
+   }
+  },
+  "FMatrix44f": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000040",
+   "align": "0x000010",
+   "members": {
+    "XPlane": "0x000000",
+    "YPlane": "0x000010",
+    "ZPlane": "0x000020",
+    "WPlane": "0x000030"
+   }
+  },
+  "FMeshUVChannelInfo": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000014",
+   "align": "0x000004",
+   "members": {
+    "bInitialized": "0x000000",
+    "bOverrideDensities": "0x000001",
+    "LocalUVDensities": "0x000004"
+   }
+  },
+  "FNetDriverDefinition": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x00001C",
+   "align": "0x000004",
+   "members": {
+    "DefName": "0x000000",
+    "DriverClassName": "0x000008",
+    "DriverClassNameFallback": "0x000010",
+    "MaxChannelsOverride": "0x000018"
+   }
+  },
+  "FObjectCookedMetaDataStore": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000050",
+   "align": "0x000008",
+   "members": {
+    "ObjectMetaData": "0x000000"
+   }
+  },
+  "FOrientedBox": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000078",
+   "align": "0x000008",
+   "members": {
+    "Center": "0x000000",
+    "AxisX": "0x000018",
+    "AxisY": "0x000030",
+    "AxisZ": "0x000048",
+    "ExtentX": "0x000060",
+    "ExtentY": "0x000068",
+    "ExtentZ": "0x000070"
+   }
+  },
+  "FOverriddenPropertyNode": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000068",
+   "align": "0x000008",
+   "members": {
+    "NodeID": "0x000000",
+    "Operation": "0x000010",
+    "SubPropertyNodeKeys": "0x000018"
+   }
+  },
+  "FOverriddenPropertyNodeID": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000010",
+   "align": "0x000008",
+   "members": {
+    "Path": "0x000000",
+    "Object": "0x000008"
+   }
+  },
+  "FOverriddenPropertySet": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000060",
+   "align": "0x000008",
+   "members": {
+    "Owner": "0x000000",
+    "OverriddenPropertyNodes": "0x000008"
+   }
+  },
+  "FPSCPool": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000010",
+   "align": "0x000008",
+   "members": {
+    "FreeElements": "0x000000"
+   }
+  },
+  "FPSCPoolElem": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000010",
+   "align": "0x000008",
+   "members": {
+    "PSC": "0x000000"
+   }
+  },
+  "FPackedNormal": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000004",
+   "align": "0x000001",
+   "members": {
+    "X": "0x000000",
+    "Y": "0x000001",
+    "Z": "0x000002",
+    "W": "0x000003"
+   }
+  },
+  "FPackedRGB10A2N": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000004",
+   "align": "0x000004",
+   "members": {
+    "Packed": "0x000000"
+   }
+  },
+  "FPackedRGBA16N": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000008",
+   "align": "0x000004",
+   "members": {
+    "XY": "0x000000",
+    "ZW": "0x000004"
+   }
+  },
+  "FPerPlatformBool": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000001",
+   "align": "0x000001",
+   "members": {
+    "Default": "0x000000"
+   }
+  },
+  "FPerPlatformFloat": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000004",
+   "align": "0x000004",
+   "members": {
+    "Default": "0x000000"
+   }
+  },
+  "FPerPlatformInt": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000004",
+   "align": "0x000004",
+   "members": {
+    "Default": "0x000000"
+   }
+  },
+  "FPerPlatformSettings": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000010",
+   "align": "0x000008",
+   "members": {
+    "Settings": "0x000000"
+   }
+  },
+  "FPerQualityLevelInt": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000068",
+   "align": "0x000008",
+   "members": {
+    "Default": "0x000010",
+    "PerQuality": "0x000018"
+   }
+  },
+  "FPlane": {
+   "kind": "struct",
+   "base": "FVector",
+   "size": "0x000020",
+   "align": "0x000010",
+   "members": {
+    "W": "0x000018"
+   }
+  },
+  "FPlane4d": {
+   "kind": "struct",
+   "base": "FVector3d",
+   "size": "0x000020",
+   "align": "0x000010",
+   "members": {
+    "W": "0x000018"
+   }
+  },
+  "FPlane4f": {
+   "kind": "struct",
+   "base": "FVector3f",
+   "size": "0x000010",
+   "align": "0x000010",
+   "members": {
+    "W": "0x00000C"
+   }
+  },
+  "FPlatformInputDeviceState": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000008",
+   "align": "0x000004",
+   "members": {
+    "OwningPlatformUser": "0x000000",
+    "ConnectionState": "0x000004"
+   }
+  },
+  "FPlatformUserId": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000004",
+   "align": "0x000004",
+   "members": {
+    "InternalId": "0x000000"
+   }
+  },
+  "FPluginRedirect": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000020",
+   "align": "0x000008",
+   "members": {
+    "OldPluginName": "0x000000",
+    "NewPluginName": "0x000010"
+   }
+  },
+  "FPolyglotTextData": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x0000B0",
+   "align": "0x000008",
+   "members": {
+    "Category": "0x000000",
+    "NativeCulture": "0x000008",
+    "NameSpace": "0x000018",
+    "Key": "0x000028",
+    "NativeString": "0x000038",
+    "LocalizedStrings": "0x000048",
+    "bIsMinimalPatch": "0x000098",
+    "CachedText": "0x0000A0"
+   }
+  },
+  "FPrimaryAssetId": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000010",
+   "align": "0x000004",
+   "members": {
+    "PrimaryAssetType": "0x000000",
+    "PrimaryAssetName": "0x000008"
+   }
+  },
+  "FPrimaryAssetType": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000008",
+   "align": "0x000004",
+   "members": {
+    "Name": "0x000000"
+   }
+  },
+  "FQualifiedFrameTime": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000010",
+   "align": "0x000004",
+   "members": {
+    "Time": "0x000000",
+    "Rate": "0x000008"
+   }
+  },
+  "FQuat": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000020",
+   "align": "0x000010",
+   "members": {
+    "X": "0x000000",
+    "Y": "0x000008",
+    "Z": "0x000010",
+    "W": "0x000018"
+   }
+  },
+  "FQuat4d": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000020",
+   "align": "0x000010",
+   "members": {
+    "X": "0x000000",
+    "Y": "0x000008",
+    "Z": "0x000010",
+    "W": "0x000018"
+   }
+  },
+  "FQuat4f": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000010",
+   "align": "0x000010",
+   "members": {
+    "X": "0x000000",
+    "Y": "0x000004",
+    "Z": "0x000008",
+    "W": "0x00000C"
+   }
+  },
+  "FRandomStream": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000008",
+   "align": "0x000004",
+   "members": {
+    "InitialSeed": "0x000000",
+    "Seed": "0x000004"
+   }
+  },
+  "FRay": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000030",
+   "align": "0x000008",
+   "members": {
+    "Origin": "0x000000",
+    "Direction": "0x000018"
+   }
+  },
+  "FRay3d": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000030",
+   "align": "0x000008",
+   "members": {
+    "Origin": "0x000000",
+    "Direction": "0x000018"
+   }
+  },
+  "FRay3f": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000018",
+   "align": "0x000004",
+   "members": {
+    "Origin": "0x000000",
+    "Direction": "0x00000C"
+   }
+  },
+  "FRepAttachment": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000060",
+   "align": "0x000008",
+   "members": {
+    "AttachParent": "0x000000",
+    "LocationOffset": "0x000008",
+    "RelativeScale3D": "0x000020",
+    "RotationOffset": "0x000038",
+    "AttachSocket": "0x000050",
+    "AttachComponent": "0x000058"
+   }
+  },
+  "FRepMovement": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000070",
+   "align": "0x000008",
+   "members": {
+    "LinearVelocity": "0x000000",
+    "AngularVelocity": "0x000018",
+    "Location": "0x000030",
+    "Rotation": "0x000048",
+    "ServerFrame": "0x000064",
+    "ServerPhysicsHandle": "0x000068",
+    "LocationQuantizationLevel": "0x00006C",
+    "VelocityQuantizationLevel": "0x00006D",
+    "RotationQuantizationLevel": "0x00006E"
+   }
+  },
+  "FRotator": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000018",
+   "align": "0x000008",
+   "members": {
+    "Pitch": "0x000000",
+    "Yaw": "0x000008",
+    "Roll": "0x000010"
+   }
+  },
+  "FRotator3d": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000018",
+   "align": "0x000008",
+   "members": {
+    "Pitch": "0x000000",
+    "Yaw": "0x000008",
+    "Roll": "0x000010"
+   }
+  },
+  "FRotator3f": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x00000C",
+   "align": "0x000004",
+   "members": {
+    "Pitch": "0x000000",
+    "Yaw": "0x000004",
+    "Roll": "0x000008"
+   }
+  },
+  "FSectionReference": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000004",
+   "align": "0x000004",
+   "members": {
+    "SectionIndex": "0x000000"
+   }
+  },
+  "FSkeletalMaterial": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000028",
+   "align": "0x000008",
+   "members": {
+    "MaterialInterface": "0x000000",
+    "MaterialSlotName": "0x000008",
+    "UVChannelData": "0x000010"
+   }
+  },
+  "FSkeletalMeshBuildSettings": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000018",
+   "align": "0x000004",
+   "members": {
+    "ThresholdPosition": "0x000004",
+    "ThresholdTangentNormal": "0x000008",
+    "ThresholdUV": "0x00000C",
+    "MorphThresholdPosition": "0x000010",
+    "BoneInfluenceLimit": "0x000014"
+   }
+  },
+  "FSkeletalMeshLODInfo": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x0000F0",
+   "align": "0x000008",
+   "members": {
+    "ScreenSize": "0x000000",
+    "LODHysteresis": "0x000004",
+    "LODMaterialMap": "0x000008",
+    "BuildSettings": "0x000018",
+    "ReductionSettings": "0x000030",
+    "BonesToRemove": "0x000070",
+    "BonesToPrioritize": "0x000080",
+    "SectionsToPrioritize": "0x000090",
+    "WeightOfPrioritization": "0x0000A0",
+    "BakePose": "0x0000A8",
+    "BakePoseOverride": "0x0000B0",
+    "SourceImportFilename": "0x0000B8",
+    "SkinCacheUsage": "0x0000C8",
+    "MorphTargetPositionErrorTolerance": "0x0000CC",
+    "VertexAttributes": "0x0000D8"
+   }
+  },
+  "FSkeletalMeshOptimizationSettings": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x00003C",
+   "align": "0x000004",
+   "members": {
+    "TerminationCriterion": "0x000000",
+    "NumOfTrianglesPercentage": "0x000004",
+    "NumOfVertPercentage": "0x000008",
+    "MaxNumOfTriangles": "0x00000C",
+    "MaxNumOfVerts": "0x000010",
+    "MaxDeviationPercentage": "0x000014",
+    "ReductionMethod": "0x000018",
+    "SilhouetteImportance": "0x000019",
+    "TextureImportance": "0x00001A",
+    "ShadingImportance": "0x00001B",
+    "SkinningImportance": "0x00001C",
+    "WeldingThreshold": "0x000020",
+    "NormalsThreshold": "0x000024",
+    "MaxBonesPerVertex": "0x000028",
+    "VolumeImportance": "0x000030",
+    "BaseLOD": "0x000038"
+   }
+  },
+  "FSkeletalMeshSamplingBuiltData": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000020",
+   "align": "0x000008",
+   "members": {
+    "WholeMeshBuiltData": "0x000000",
+    "RegionBuiltData": "0x000010"
+   }
+  },
+  "FSkeletalMeshSamplingInfo": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000030",
+   "align": "0x000008",
+   "members": {
+    "Regions": "0x000000",
+    "BuiltData": "0x000010"
+   }
+  },
+  "FSkeletalMeshSamplingLODBuiltData": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000048",
+   "align": "0x000008",
+   "members": {}
+  },
+  "FSkeletalMeshSamplingRegion": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000030",
+   "align": "0x000008",
+   "members": {
+    "Name": "0x000000",
+    "LODIndex": "0x000008",
+    "MaterialFilters": "0x000010",
+    "BoneFilters": "0x000020"
+   }
+  },
+  "FSkeletalMeshSamplingRegionBoneFilter": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x00000C",
+   "align": "0x000004",
+   "members": {
+    "BoneName": "0x000000"
+   }
+  },
+  "FSkeletalMeshSamplingRegionBuiltData": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000078",
+   "align": "0x000008",
+   "members": {}
+  },
+  "FSkeletalMeshSamplingRegionMaterialFilter": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000008",
+   "align": "0x000004",
+   "members": {
+    "MaterialName": "0x000000"
+   }
+  },
+  "FSkeletalMeshVertexAttributeInfo": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000010",
+   "align": "0x000004",
+   "members": {
+    "EnabledForRender": "0x000000",
+    "Name": "0x000004",
+    "DataType": "0x00000C"
+   }
+  },
+  "FSkinWeightProfileInfo": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000010",
+   "align": "0x000004",
+   "members": {
+    "Name": "0x000000",
+    "DefaultProfile": "0x000008",
+    "DefaultProfileFromLODIndex": "0x00000C"
+   }
+  },
+  "FSoftClassPath": {
+   "kind": "struct",
+   "base": "FSoftObjectPath",
+   "size": "0x000020",
+   "align": "0x000008",
+   "members": {}
+  },
+  "FSoftObjectPath": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000020",
+   "align": "0x000008",
+   "members": {
+    "AssetPath": "0x000000",
+    "SubPathString": "0x000010"
+   }
+  },
+  "FSphere": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000020",
+   "align": "0x000008",
+   "members": {
+    "Center": "0x000000",
+    "W": "0x000018"
+   }
+  },
+  "FSphere3d": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000020",
+   "align": "0x000008",
+   "members": {
+    "Center": "0x000000",
+    "W": "0x000018"
+   }
+  },
+  "FSphere3f": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000010",
+   "align": "0x000004",
+   "members": {
+    "Center": "0x000000",
+    "W": "0x00000C"
+   }
+  },
+  "FStatColorMapEntry": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000008",
+   "align": "0x000004",
+   "members": {
+    "In": "0x000000",
+    "Out": "0x000004"
+   }
+  },
+  "FStatColorMapping": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000028",
+   "align": "0x000008",
+   "members": {
+    "StatName": "0x000000",
+    "ColorMap": "0x000010"
+   }
+  },
+  "FStoryFlagEvaluationFormula": {
+   "kind": "struct",
+   "base": "FSymbolEvaluationFormulaBase",
+   "size": "0x000010",
+   "align": "0x000008",
+   "members": {}
+  },
+  "FStreamingLevelsToConsider": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000028",
+   "align": "0x000008",
+   "members": {
+    "StreamingLevels": "0x000000"
+   }
+  },
+  "FStreamingSourceShape": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000048",
+   "align": "0x000008",
+   "members": {
+    "bUseGridLoadingRange": "0x000000",
+    "LoadingRangeScale": "0x000004",
+    "Radius": "0x000008",
+    "bIsSector": "0x00000C",
+    "SectorAngle": "0x000010",
+    "Location": "0x000018",
+    "Rotation": "0x000030"
+   }
+  },
+  "FStructCookedMetaDataStore": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x0000A0",
+   "align": "0x000008",
+   "members": {
+    "ObjectMetaData": "0x000000",
+    "PropertiesMetaData": "0x000050"
+   }
+  },
+  "FStructRedirect": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000010",
+   "align": "0x000004",
+   "members": {
+    "OldStructName": "0x000000",
+    "NewStructName": "0x000008"
+   }
+  },
+  "FSymbolEvaluationFormulaBase": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000010",
+   "align": "0x000008",
+   "members": {
+    "EvaluationFormula": "0x000000"
+   }
+  },
+  "FTableRowBase": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000008",
+   "align": "0x000008",
+   "members": {}
+  },
+  "FTemplateString": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000010",
+   "align": "0x000008",
+   "members": {
+    "Template": "0x000000"
+   }
+  },
+  "FTestUndeclaredScriptStructObjectReferencesTest": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000058",
+   "align": "0x000008",
+   "members": {
+    "StrongObjectPointer": "0x000000",
+    "SoftObjectPointer": "0x000008",
+    "SoftObjectPath": "0x000030",
+    "WeakObjectPointer": "0x000050"
+   }
+  },
+  "FTestUninitializedScriptStructMembersTest": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000018",
+   "align": "0x000008",
+   "members": {
+    "UninitializedObjectReference": "0x000000",
+    "InitializedObjectReference": "0x000008",
+    "UnusedValue": "0x000010"
+   }
+  },
+  "FTickFunction": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000028",
+   "align": "0x000008",
+   "members": {
+    "TickGroup": "0x000008",
+    "EndTickGroup": "0x000009",
+    "TickInterval": "0x00000C"
+   }
+  },
+  "FTimecode": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000014",
+   "align": "0x000004",
+   "members": {
+    "Hours": "0x000000",
+    "Minutes": "0x000004",
+    "Seconds": "0x000008",
+    "Frames": "0x00000C",
+    "bDropFrameFormat": "0x000010"
+   }
+  },
+  "FTimespan": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000008",
+   "align": "0x000008",
+   "members": {}
+  },
+  "FTopLevelAssetPath": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000010",
+   "align": "0x000004",
+   "members": {
+    "PackageName": "0x000000",
+    "AssetName": "0x000008"
+   }
+  },
+  "FTransform": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000060",
+   "align": "0x000010",
+   "members": {
+    "Rotation": "0x000000",
+    "Translation": "0x000020",
+    "Scale3D": "0x000040"
+   }
+  },
+  "FTransform3d": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000060",
+   "align": "0x000010",
+   "members": {
+    "Rotation": "0x000000",
+    "Translation": "0x000020",
+    "Scale3D": "0x000040"
+   }
+  },
+  "FTransform3f": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000030",
+   "align": "0x000010",
+   "members": {
+    "Rotation": "0x000000",
+    "Translation": "0x000010",
+    "Scale3D": "0x000020"
+   }
+  },
+  "FTwoVectors": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000030",
+   "align": "0x000008",
+   "members": {
+    "V1": "0x000000",
+    "V2": "0x000018"
+   }
+  },
+  "FUint32Point": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000008",
+   "align": "0x000004",
+   "members": {
+    "X": "0x000000",
+    "Y": "0x000004"
+   }
+  },
+  "FUint32Vector": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x00000C",
+   "align": "0x000004",
+   "members": {
+    "X": "0x000000",
+    "Y": "0x000004",
+    "Z": "0x000008"
+   }
+  },
+  "FUint32Vector2": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000008",
+   "align": "0x000004",
+   "members": {
+    "X": "0x000000",
+    "Y": "0x000004"
+   }
+  },
+  "FUint32Vector4": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000010",
+   "align": "0x000004",
+   "members": {
+    "X": "0x000000",
+    "Y": "0x000004",
+    "Z": "0x000008",
+    "W": "0x00000C"
+   }
+  },
+  "FUint64Point": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000010",
+   "align": "0x000008",
+   "members": {
+    "X": "0x000000",
+    "Y": "0x000008"
+   }
+  },
+  "FUint64Vector": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000018",
+   "align": "0x000008",
+   "members": {
+    "X": "0x000000",
+    "Y": "0x000008",
+    "Z": "0x000010"
+   }
+  },
+  "FUint64Vector2": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000010",
+   "align": "0x000008",
+   "members": {
+    "X": "0x000000",
+    "Y": "0x000008"
+   }
+  },
+  "FUint64Vector4": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000020",
+   "align": "0x000008",
+   "members": {
+    "X": "0x000000",
+    "Y": "0x000008",
+    "Z": "0x000010",
+    "W": "0x000018"
+   }
+  },
+  "FUintPoint": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000008",
+   "align": "0x000004",
+   "members": {
+    "X": "0x000000",
+    "Y": "0x000004"
+   }
+  },
+  "FUintVector": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x00000C",
+   "align": "0x000004",
+   "members": {
+    "X": "0x000000",
+    "Y": "0x000004",
+    "Z": "0x000008"
+   }
+  },
+  "FUintVector2": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000008",
+   "align": "0x000004",
+   "members": {
+    "X": "0x000000",
+    "Y": "0x000004"
+   }
+  },
+  "FUintVector4": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000010",
+   "align": "0x000004",
+   "members": {
+    "X": "0x000000",
+    "Y": "0x000004",
+    "Z": "0x000008",
+    "W": "0x00000C"
+   }
+  },
+  "FVector": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000018",
+   "align": "0x000008",
+   "members": {
+    "X": "0x000000",
+    "Y": "0x000008",
+    "Z": "0x000010"
+   }
+  },
+  "FVector2D": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000010",
+   "align": "0x000008",
+   "members": {
+    "X": "0x000000",
+    "Y": "0x000008"
+   }
+  },
+  "FVector2f": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000008",
+   "align": "0x000004",
+   "members": {
+    "X": "0x000000",
+    "Y": "0x000004"
+   }
+  },
+  "FVector3d": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000018",
+   "align": "0x000008",
+   "members": {
+    "X": "0x000000",
+    "Y": "0x000008",
+    "Z": "0x000010"
+   }
+  },
+  "FVector3f": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x00000C",
+   "align": "0x000004",
+   "members": {
+    "X": "0x000000",
+    "Y": "0x000004",
+    "Z": "0x000008"
+   }
+  },
+  "FVector4": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000020",
+   "align": "0x000010",
+   "members": {
+    "X": "0x000000",
+    "Y": "0x000008",
+    "Z": "0x000010",
+    "W": "0x000018"
+   }
+  },
+  "FVector4d": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000020",
+   "align": "0x000010",
+   "members": {
+    "X": "0x000000",
+    "Y": "0x000008",
+    "Z": "0x000010",
+    "W": "0x000018"
+   }
+  },
+  "FVector4f": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000010",
+   "align": "0x000010",
+   "members": {
+    "X": "0x000000",
+    "Y": "0x000004",
+    "Z": "0x000008",
+    "W": "0x00000C"
+   }
+  },
+  "FVector_NetQuantize100": {
+   "kind": "struct",
+   "base": "FVector",
+   "size": "0x000018",
+   "align": "0x000008",
+   "members": {}
+  },
+  "FWorldPSCPool": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000058",
+   "align": "0x000008",
+   "members": {
+    "WorldParticleSystemPools": "0x000000"
+   }
+  },
+  "IEditorPathObjectInterface": {
+   "kind": "class",
+   "base": "IInterface",
+   "size": "0x000028",
+   "align": "0x000008",
+   "members": {}
+  },
+  "IInterface": {
+   "kind": "class",
+   "base": "UObject",
+   "size": "0x000028",
+   "align": "0x000008",
+   "members": {}
+  },
+  "Params::BPFL_MapHelper_C_Add_to_FName_Array": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000028",
+   "align": "0x000008",
+   "members": {
+    "InArray": "0x000000",
+    "InNane": "0x000010",
+    "__WorldContext": "0x000018",
+    "CallFunc_Array_Add_ReturnValue": "0x000020"
+   }
+  },
+  "Params::BPFL_MapHelper_C_Make_Finger_Map": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x0000B0",
+   "align": "0x000008",
+   "members": {
+    "Thumb": "0x000000",
+    "Index_0": "0x000001",
+    "Middle": "0x000002",
+    "Ring": "0x000003",
+    "Pinky": "0x000004",
+    "__WorldContext": "0x000008",
+    "Map": "0x000010",
+    "K2Node_MakeMap_Map": "0x000060"
+   }
+  },
+  "Params::CharacterCustomizeDataManager_GetMaskDataByRowName": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000178",
+   "align": "0x000008",
+   "members": {
+    "InGender": "0x000000",
+    "MaskName": "0x000004",
+    "ReturnValue": "0x000010"
+   }
+  },
+  "Params::CharacterCustomizePawn_GetAccessoryTransforms": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x0000D8",
+   "align": "0x000008",
+   "members": {
+    "LocalRoot": "0x000000",
+    "LocalOrient": "0x000048",
+    "LocalMesh": "0x000090"
+   }
+  },
+  "Params::CharacterCustomizeSystem_GetAccessoryTransforms": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x0000D8",
+   "align": "0x000008",
+   "members": {
+    "RootTransform": "0x000000",
+    "OrientTransform": "0x000048",
+    "MeshTransform": "0x000090"
+   }
+  },
+  "Params::CharacterCustomizeSystem_GetGender": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000001",
+   "align": "0x000001",
+   "members": {
+    "ReturnValue": "0x000000"
+   }
+  },
+  "Params::GameSystemManager_GetCharacterCustomizeSystem": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000010",
+   "align": "0x000008",
+   "members": {
+    "InWorldContext": "0x000000",
+    "ReturnValue": "0x000008"
+   }
+  },
+  "Params::GameplayStatics_SpawnObject": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000018",
+   "align": "0x000008",
+   "members": {
+    "ObjectClass": "0x000000",
+    "Outer_0": "0x000008",
+    "ReturnValue": "0x000010"
+   }
+  },
+  "Params::KismetStringLibrary_Contains": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000028",
+   "align": "0x000008",
+   "members": {
+    "SearchIn": "0x000000",
+    "Substring": "0x000010",
+    "bUseCase": "0x000020",
+    "bSearchFromEnd": "0x000021",
+    "ReturnValue": "0x000022"
+   }
+  },
+  "Params::KismetStringLibrary_Conv_NameToString": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000018",
+   "align": "0x000008",
+   "members": {
+    "InName": "0x000000",
+    "ReturnValue": "0x000008"
+   }
+  },
+  "Params::KismetStringLibrary_Conv_StringToName": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000018",
+   "align": "0x000008",
+   "members": {
+    "InString": "0x000000",
+    "ReturnValue": "0x000010"
+   }
+  },
+  "Params::KismetTextLibrary_Conv_NameToText": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000018",
+   "align": "0x000008",
+   "members": {
+    "InName": "0x000000",
+    "ReturnValue": "0x000008"
+   }
+  },
+  "Params::Object_ExecuteUbergraph": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000004",
+   "align": "0x000004",
+   "members": {
+    "EntryPoint": "0x000000"
+   }
+  },
+  "UActorComponent": {
+   "kind": "class",
+   "base": "UObject",
+   "size": "0x0000A0",
+   "align": "0x000008",
+   "members": {
+    "PrimaryComponentTick": "0x000030",
+    "ComponentTags": "0x000060",
+    "AssetUserData": "0x000070",
+    "UCSSerializationIndex": "0x000084",
+    "CreationMethod": "0x00008D",
+    "OnComponentActivated": "0x00008E",
+    "OnComponentDeactivated": "0x00008F"
+   }
+  },
+  "UAnimInstance": {
+   "kind": "class",
+   "base": "UObject",
+   "size": "0x000370",
+   "align": "0x000010",
+   "members": {
+    "CurrentSkeleton": "0x000028",
+    "RootMotionMode": "0x000030",
+    "OnMontageBlendingOut": "0x000038",
+    "OnMontageBlendedIn": "0x000048",
+    "OnMontageStarted": "0x000058",
+    "OnMontageEnded": "0x000068",
+    "OnAllMontageInstancesEnded": "0x000078",
+    "NotifyQueue": "0x000170",
+    "ActiveAnimNotifyState": "0x0001E0",
+    "ActiveAnimNotifyEventReference": "0x0001F0"
+   }
+  },
+  "UAppActorComponent": {
+   "kind": "class",
+   "base": "UActorComponent",
+   "size": "0x0000B0",
+   "align": "0x000008",
+   "members": {}
+  },
+  "UArrayProperty": {
+   "kind": "class",
+   "base": "UProperty",
+   "size": "0x000078",
+   "align": "0x000008",
+   "members": {}
+  },
+  "UBPFL_MapHelper_C": {
+   "kind": "class",
+   "base": "UBlueprintFunctionLibrary",
+   "size": "0x000028",
+   "align": "0x000008",
+   "members": {}
+  },
+  "UBlueprintFunctionLibrary": {
+   "kind": "class",
+   "base": "UObject",
+   "size": "0x000028",
+   "align": "0x000008",
+   "members": {}
+  },
+  "UBoolProperty": {
+   "kind": "class",
+   "base": "UProperty",
+   "size": "0x000078",
+   "align": "0x000008",
+   "members": {}
+  },
+  "UByteProperty": {
+   "kind": "class",
+   "base": "UNumericProperty",
+   "size": "0x000078",
+   "align": "0x000008",
+   "members": {}
+  },
+  "UCharacterCustomizeComponent": {
+   "kind": "class",
+   "base": "UAppActorComponent",
+   "size": "0x002C70",
+   "align": "0x000010",
+   "members": {
+    "CharacterCustomizeParameter": "0x0000C0",
+    "bFallbackEnabled": "0x001520",
+    "RootMesh": "0x0029A8",
+    "MaskMesh": "0x0029E0",
+    "InnerMesh": "0x0029E8",
+    "GlovesMesh": "0x0029F0",
+    "BootsMesh": "0x0029F8",
+    "OuterMesh": "0x002A00",
+    "IsMouthCovered": "0x002A08",
+    "FaceMesh": "0x002A50",
+    "FaceShadowMesh": "0x002A58",
+    "MouthMesh": "0x002A60",
+    "BeardMesh": "0x002A68",
+    "ManicureMeshLeft": "0x002A90",
+    "ManicureMeshRight": "0x002A98",
+    "PedicureMeshLeft": "0x002AA0",
+    "PedicureMeshRight": "0x002AA8",
+    "HairBaseMesh": "0x002AB0",
+    "HairBaseShadowMesh": "0x002AB8",
+    "HairFrontMesh": "0x002AC0",
+    "HairFrontShadowMesh": "0x002AC8",
+    "HairFrontSideMesh": "0x002AD0",
+    "HairFrontSideShadowMesh": "0x002AD8",
+    "HairSideMesh": "0x002AE0",
+    "HairSideShadowMesh": "0x002AE8",
+    "HairTopMesh": "0x002AF0",
+    "HairTopShadowMesh": "0x002AF8",
+    "HairBackMesh": "0x002B00",
+    "HairBackShadowMesh": "0x002B08",
+    "HairOtherMesh": "0x002B10",
+    "HairOtherShadowMesh": "0x002B18",
+    "IsHairCrush": "0x002B20",
+    "EmptyFacePaintTexture": "0x002B68",
+    "AccessoryMesh": "0x002B90",
+    "AccessoryShadowMesh": "0x002BD0",
+    "NonSpecialColorTexture": "0x002C10",
+    "bSaveDataWriteAllowed": "0x002C49"
+   }
+  },
+  "UCharacterCustomizeDataManager": {
+   "kind": "class",
+   "base": "UObject",
+   "size": "0x002AE0",
+   "align": "0x000010",
+   "members": {
+    "MaleAppAvatarPresetList": "0x000028",
+    "FemaleAppAvatarPresetList": "0x000030",
+    "MaxCapacity": "0x002900",
+    "DefaultPresetList": "0x002908",
+    "MaleOuterList": "0x002910",
+    "FemaleOuterList": "0x002918",
+    "OuterColorPresetList": "0x002920",
+    "MaleInnerList": "0x002928",
+    "FemaleInnerList": "0x002930",
+    "InnerColorPresetList": "0x002938",
+    "MaleGlovesList": "0x002940",
+    "FemaleGlovesList": "0x002948",
+    "GlovesColorPresetList": "0x002950",
+    "MaleBootsList": "0x002958",
+    "FemaleBootsList": "0x002960",
+    "BootsColorPresetList": "0x002968",
+    "MaleMaskList": "0x002970",
+    "FemaleMaskList": "0x002978",
+    "MaskColorPresetList": "0x002980",
+    "MaleFaceTypeList": "0x002988",
+    "FemaleFaceTypeList": "0x002990",
+    "MouthTypeList": "0x002998",
+    "EyeMouthBalanceList": "0x0029A0",
+    "BeardList": "0x0029A8",
+    "EyeHighLightList": "0x0029B0",
+    "EyeDetailList": "0x0029B8",
+    "EyeBaseList": "0x0029C0",
+    "EyeColorPresetList": "0x0029C8",
+    "EyeShapeList": "0x0029D0",
+    "EyebrowList": "0x0029D8",
+    "EyebrowRaisingPatternList": "0x0029E0",
+    "FaceScarPackList": "0x0029E8",
+    "KintsugiList": "0x0029F0",
+    "MaleHairSetList": "0x0029F8",
+    "FemaleHairSetList": "0x002A00",
+    "HairBaseList": "0x002A08",
+    "HairFrontList": "0x002A10",
+    "HairFrontSideList": "0x002A18",
+    "HairSideList": "0x002A20",
+    "HairTopList": "0x002A28",
+    "HairBackList": "0x002A30",
+    "HairOtherList": "0x002A38",
+    "HairTaperPresetList": "0x002A40",
+    "HairCurlPresetList": "0x002A48",
+    "HairColorAppendPatternList": "0x002A50",
+    "EyelashList": "0x002A58",
+    "ManicureList": "0x002A60",
+    "FacePaintMaskPackList": "0x002A68",
+    "AccessoryPackList": "0x002A70",
+    "AccessoryAttachToList": "0x002A78",
+    "MaleVoiceList": "0x002A80",
+    "FemaleVoiceList": "0x002A88",
+    "ColorPaletteList": "0x002A90",
+    "SpecialColorPaletteList": "0x002A98",
+    "ColorPalettePackList": "0x002AA0",
+    "DebugPresetList": "0x002AA8",
+    "DebugPresetListCache": "0x002AD0"
+   }
+  },
+  "UClass": {
+   "kind": "class",
+   "base": "UStruct",
+   "size": "0x000200",
+   "align": "0x000008",
+   "members": {
+    "CastFlags": "0x0000D8",
+    "DefaultObject": "0x000110"
+   }
+  },
+  "UClassCookedMetaData": {
+   "kind": "class",
+   "base": "UObject",
+   "size": "0x000118",
+   "align": "0x000008",
+   "members": {
+    "ClassMetaData": "0x000028",
+    "FunctionsMetaData": "0x0000C8"
+   }
+  },
+  "UClassProperty": {
+   "kind": "class",
+   "base": "UObjectProperty",
+   "size": "0x000080",
+   "align": "0x000008",
+   "members": {}
+  },
+  "UConsole": {
+   "kind": "class",
+   "base": "UObject",
+   "size": "0x000130",
+   "align": "0x000008",
+   "members": {
+    "ConsoleTargetPlayer": "0x000038",
+    "DefaultTexture_Black": "0x000040",
+    "DefaultTexture_White": "0x000048",
+    "HistoryBuffer": "0x000068"
+   }
+  },
+  "UDataTable": {
+   "kind": "class",
+   "base": "UObject",
+   "size": "0x0000B8",
+   "align": "0x000008",
+   "members": {
+    "RowStruct": "0x000028",
+    "RowMap": "0x000030",
+    "ImportKeyField": "0x000088"
+   }
+  },
+  "UDelegateFunction": {
+   "kind": "class",
+   "base": "UFunction",
+   "size": "0x0000E0",
+   "align": "0x000008",
+   "members": {}
+  },
+  "UDelegateProperty": {
+   "kind": "class",
+   "base": "UProperty",
+   "size": "0x000078",
+   "align": "0x000008",
+   "members": {}
+  },
+  "UDoubleProperty": {
+   "kind": "class",
+   "base": "UNumericProperty",
+   "size": "0x000070",
+   "align": "0x000008",
+   "members": {}
+  },
+  "UEngine": {
+   "kind": "class",
+   "base": "UObject",
+   "size": "0x001158",
+   "align": "0x000008",
+   "members": {
+    "TinyFont": "0x000030",
+    "TinyFontName": "0x000038",
+    "SmallFont": "0x000058",
+    "SmallFontName": "0x000060",
+    "MediumFont": "0x000080",
+    "MediumFontName": "0x000088",
+    "LargeFont": "0x0000A8",
+    "LargeFontName": "0x0000B0",
+    "SubtitleFont": "0x0000D0",
+    "SubtitleFontName": "0x0000D8",
+    "AdditionalFonts": "0x0000F8",
+    "AdditionalFontNames": "0x000108",
+    "ConsoleClass": "0x000118",
+    "ConsoleClassName": "0x000120",
+    "GameViewportClientClass": "0x000140",
+    "GameViewportClientClassName": "0x000148",
+    "LocalPlayerClass": "0x000168",
+    "LocalPlayerClassName": "0x000170",
+    "WorldSettingsClass": "0x000190",
+    "WorldSettingsClassName": "0x000198",
+    "NavigationSystemClassName": "0x0001B8",
+    "NavigationSystemClass": "0x0001D8",
+    "NavigationSystemConfigClassName": "0x0001E0",
+    "NavigationSystemConfigClass": "0x000200",
+    "AvoidanceManagerClassName": "0x000208",
+    "AvoidanceManagerClass": "0x000228",
+    "AIControllerClassName": "0x000230",
+    "PhysicsCollisionHandlerClass": "0x000250",
+    "PhysicsCollisionHandlerClassName": "0x000258",
+    "GameUserSettingsClassName": "0x000278",
+    "GameUserSettingsClass": "0x000298",
+    "GameUserSettings": "0x0002A0",
+    "LevelScriptActorClass": "0x0002A8",
+    "LevelScriptActorClassName": "0x0002B0",
+    "DefaultBlueprintBaseClassName": "0x0002D0",
+    "GameSingletonClassName": "0x0002F0",
+    "GameSingleton": "0x000310",
+    "AssetManagerClassName": "0x000318",
+    "AssetManager": "0x000338",
+    "DefaultTexture": "0x000340",
+    "DefaultTextureName": "0x000348",
+    "DefaultDiffuseTexture": "0x000368",
+    "DefaultDiffuseTextureName": "0x000370",
+    "DefaultBSPVertexTexture": "0x000390",
+    "DefaultBSPVertexTextureName": "0x000398",
+    "HighFrequencyNoiseTexture": "0x0003B8",
+    "HighFrequencyNoiseTextureName": "0x0003C0",
+    "DefaultBokehTexture": "0x0003E0",
+    "DefaultBokehTextureName": "0x0003E8",
+    "DefaultBloomKernelTexture": "0x000408",
+    "DefaultBloomKernelTextureName": "0x000410",
+    "DefaultFilmGrainTexture": "0x000430",
+    "DefaultFilmGrainTextureName": "0x000438",
+    "WireframeMaterial": "0x000458",
+    "WireframeMaterialName": "0x000460",
+    "DebugMeshMaterial": "0x000470",
+    "DebugMeshMaterialName": "0x000478",
+    "NaniteHiddenSectionMaterial": "0x000498",
+    "NaniteHiddenSectionMaterialName": "0x0004A0",
+    "EmissiveMeshMaterial": "0x0004B0",
+    "EmissiveMeshMaterialName": "0x0004B8",
+    "LevelColorationLitMaterial": "0x0004D8",
+    "LevelColorationLitMaterialName": "0x0004E0",
+    "LevelColorationUnlitMaterial": "0x0004F0",
+    "LevelColorationUnlitMaterialName": "0x0004F8",
+    "LightingTexelDensityMaterial": "0x000508",
+    "LightingTexelDensityName": "0x000510",
+    "ShadedLevelColorationLitMaterial": "0x000520",
+    "ShadedLevelColorationLitMaterialName": "0x000528",
+    "ShadedLevelColorationUnlitMaterial": "0x000538",
+    "ShadedLevelColorationUnlitMaterialName": "0x000540",
+    "RemoveSurfaceMaterial": "0x000550",
+    "RemoveSurfaceMaterialName": "0x000558",
+    "VertexColorMaterial": "0x000578",
+    "VertexColorMaterialName": "0x000580",
+    "VertexColorViewModeMaterial_ColorOnly": "0x000590",
+    "VertexColorViewModeMaterialName_ColorOnly": "0x000598",
+    "VertexColorViewModeMaterial_AlphaAsColor": "0x0005A8",
+    "VertexColorViewModeMaterialName_AlphaAsColor": "0x0005B0",
+    "VertexColorViewModeMaterial_RedOnly": "0x0005C0",
+    "VertexColorViewModeMaterialName_RedOnly": "0x0005C8",
+    "VertexColorViewModeMaterial_GreenOnly": "0x0005D8",
+    "VertexColorViewModeMaterialName_GreenOnly": "0x0005E0",
+    "VertexColorViewModeMaterial_BlueOnly": "0x0005F0",
+    "VertexColorViewModeMaterialName_BlueOnly": "0x0005F8",
+    "DebugEditorMaterialName": "0x000608",
+    "ConstraintLimitMaterial": "0x000628",
+    "ConstraintLimitMaterialX": "0x000630",
+    "ConstraintLimitMaterialXAxis": "0x000638",
+    "ConstraintLimitMaterialY": "0x000640",
+    "ConstraintLimitMaterialYAxis": "0x000648",
+    "ConstraintLimitMaterialZ": "0x000650",
+    "ConstraintLimitMaterialZAxis": "0x000658",
+    "ConstraintLimitMaterialPrismatic": "0x000660",
+    "InvalidLightmapSettingsMaterial": "0x000668",
+    "InvalidLightmapSettingsMaterialName": "0x000670",
+    "PreviewShadowsIndicatorMaterial": "0x000690",
+    "PreviewShadowsIndicatorMaterialName": "0x000698",
+    "ArrowMaterial": "0x0006B8",
+    "ArrowMaterialYellow": "0x0006C0",
+    "ArrowMaterialName": "0x0006C8",
+    "LightingOnlyBrightness": "0x0006E8",
+    "ShaderComplexityColors": "0x0006F8",
+    "QuadComplexityColors": "0x000708",
+    "LightComplexityColors": "0x000718",
+    "StationaryLightOverlapColors": "0x000728",
+    "LODColorationColors": "0x000738",
+    "HLODColorationColors": "0x000748",
+    "StreamingAccuracyColors": "0x000758",
+    "GPUSkinCacheVisualizationExcludedColor": "0x000768",
+    "GPUSkinCacheVisualizationIncludedColor": "0x000778",
+    "GPUSkinCacheVisualizationRecomputeTangentsColor": "0x000788",
+    "GPUSkinCacheVisualizationLowMemoryThresholdInMB": "0x000798",
+    "GPUSkinCacheVisualizationHighMemoryThresholdInMB": "0x00079C",
+    "GPUSkinCacheVisualizationLowMemoryColor": "0x0007A0",
+    "GPUSkinCacheVisualizationMidMemoryColor": "0x0007B0",
+    "GPUSkinCacheVisualizationHighMemoryColor": "0x0007C0",
+    "GPUSkinCacheVisualizationRayTracingLODOffsetColors": "0x0007D0",
+    "MaxPixelShaderAdditiveComplexityCount": "0x0007E0",
+    "MaxES3PixelShaderAdditiveComplexityCount": "0x0007E4",
+    "MinLightMapDensity": "0x0007E8",
+    "IdealLightMapDensity": "0x0007EC",
+    "MaxLightMapDensity": "0x0007F0",
+    "RenderLightMapDensityGrayscaleScale": "0x0007F8",
+    "RenderLightMapDensityColorScale": "0x0007FC",
+    "LightMapDensityVertexMappedColor": "0x000800",
+    "LightMapDensitySelectedColor": "0x000810",
+    "StatColorMappings": "0x000820",
+    "DefaultPhysMaterial": "0x000830",
+    "DefaultPhysMaterialName": "0x000838",
+    "DefaultDestructiblePhysMaterial": "0x000858",
+    "DefaultDestructiblePhysMaterialName": "0x000860",
+    "ActiveGameNameRedirects": "0x000880",
+    "ActiveClassRedirects": "0x000890",
+    "ActivePluginRedirects": "0x0008A0",
+    "ActiveStructRedirects": "0x0008B0",
+    "PreIntegratedSkinBRDFTexture": "0x0008C0",
+    "PreIntegratedSkinBRDFTextureName": "0x0008C8",
+    "BlueNoiseScalarTexture": "0x0008E8",
+    "BlueNoiseVec2Texture": "0x0008F0",
+    "BlueNoiseScalarTextureName": "0x0008F8",
+    "BlueNoiseVec2TextureName": "0x000918",
+    "GlintTexture": "0x000938",
+    "GlintTexture2": "0x000940",
+    "GlintTextureName": "0x000948",
+    "GlintTexture2Name": "0x000968",
+    "SimpleVolumeTexture": "0x000988",
+    "SimpleVolumeTextureName": "0x000990",
+    "SimpleVolumeEnvTexture": "0x0009B0",
+    "SimpleVolumeEnvTextureName": "0x0009B8",
+    "MiniFontTexture": "0x0009D8",
+    "MiniFontTextureName": "0x0009E0",
+    "WeightMapPlaceholderTexture": "0x000A00",
+    "WeightMapArrayPlaceholderTexture": "0x000A08",
+    "WeightMapPlaceholderTextureName": "0x000A10",
+    "WeightMapArrayPlaceholderTextureName": "0x000A30",
+    "LightMapDensityTexture": "0x000A50",
+    "LightMapDensityTextureName": "0x000A58",
+    "GameViewport": "0x000A80",
+    "DeferredCommands": "0x000A88",
+    "NearClipPlane": "0x000A98",
+    "MaximumLoopIterationCount": "0x000AA0",
+    "FixedFrameRate": "0x000AA8",
+    "SmoothedFrameRateRange": "0x000AAC",
+    "CustomTimeStep": "0x000AC0",
+    "CustomTimeStepClassName": "0x000AF0",
+    "TimecodeProvider": "0x000B10",
+    "TimecodeProviderClassName": "0x000B40",
+    "bGenerateDefaultTimecode": "0x000B60",
+    "GenerateDefaultTimecodeFrameRate": "0x000B64",
+    "GenerateDefaultTimecodeFrameDelay": "0x000B6C",
+    "NumPawnsAllowedToBeSpawnedInAFrame": "0x000B74",
+    "C_WorldBox": "0x000B7C",
+    "C_BrushWire": "0x000B80",
+    "C_AddWire": "0x000B84",
+    "C_SubtractWire": "0x000B88",
+    "C_SemiSolidWire": "0x000B8C",
+    "C_NonSolidWire": "0x000B90",
+    "C_WireBackground": "0x000B94",
+    "C_ScaleBoxHi": "0x000B98",
+    "C_VolumeCollision": "0x000B9C",
+    "C_BSPCollision": "0x000BA0",
+    "C_OrthoBackground": "0x000BA4",
+    "C_Volume": "0x000BA8",
+    "C_BrushShape": "0x000BAC",
+    "GameScreenshotSaveDirectory": "0x000BB8",
+    "UseStaticMeshMinLODPerQualityLevels": "0x000BC8",
+    "UseSkeletalMeshMinLODPerQualityLevels": "0x000BC9",
+    "UseGrassVarityPerQualityLevels": "0x000BCA",
+    "TransitionType": "0x000BCB",
+    "TransitionDescription": "0x000BD0",
+    "TransitionGameMode": "0x000BE0",
+    "CameraRotationThreshold": "0x000BF4",
+    "CameraTranslationThreshold": "0x000BF8",
+    "PrimitiveProbablyVisibleTime": "0x000BFC",
+    "MaxOcclusionPixelsFraction": "0x000C00",
+    "MaxParticleResize": "0x000C08",
+    "MaxParticleResizeWarn": "0x000C0C",
+    "PendingDroppedNotes": "0x000C10",
+    "NetClientTicksPerSecond": "0x000C20",
+    "DisplayGamma": "0x000C24",
+    "MinDesiredFrameRate": "0x000C28",
+    "DefaultSelectedMaterialColor": "0x000C2C",
+    "SelectedMaterialColor": "0x000C3C",
+    "SelectionOutlineColor": "0x000C4C",
+    "SubduedSelectionOutlineColor": "0x000C5C",
+    "SelectedMaterialColorOverride": "0x000C6C",
+    "bIsOverridingSelectedColor": "0x000C7C",
+    "bEnableVisualLogRecordingOnStart": "0x000C84",
+    "ScreenSaverInhibitorSemaphore": "0x000C88",
+    "ParticleEventManagerClassPath": "0x000C90",
+    "SelectionHighlightIntensity": "0x000CA0",
+    "BSPSelectionHighlightIntensity": "0x000CA4",
+    "SelectionHighlightIntensityBillboards": "0x000CA8",
+    "GlobalNetTravelCount": "0x000F98",
+    "NetDriverDefinitions": "0x000FA0",
+    "IrisNetDriverConfigs": "0x000FB0",
+    "ServerActors": "0x000FC0",
+    "RuntimeServerActors": "0x000FD0",
+    "NetErrorLogInterval": "0x000FE0",
+    "NextWorldContextHandle": "0x001020"
+   }
+  },
+  "UEnum": {
+   "kind": "class",
+   "base": "UField",
+   "size": "0x000068",
+   "align": "0x000008",
+   "members": {
+    "Names": "0x000040"
+   }
+  },
+  "UEnumCookedMetaData": {
+   "kind": "class",
+   "base": "UObject",
+   "size": "0x000078",
+   "align": "0x000008",
+   "members": {
+    "EnumMetaData": "0x000028"
+   }
+  },
+  "UEnumProperty": {
+   "kind": "class",
+   "base": "UProperty",
+   "size": "0x000080",
+   "align": "0x000008",
+   "members": {}
+  },
+  "UField": {
+   "kind": "class",
+   "base": "UObject",
+   "size": "0x000030",
+   "align": "0x000008",
+   "members": {
+    "Next": "0x000028"
+   }
+  },
+  "UFloatProperty": {
+   "kind": "class",
+   "base": "UNumericProperty",
+   "size": "0x000070",
+   "align": "0x000008",
+   "members": {}
+  },
+  "UFunction": {
+   "kind": "class",
+   "base": "UStruct",
+   "size": "0x0000E0",
+   "align": "0x000008",
+   "members": {
+    "FunctionFlags": "0x0000B0",
+    "ExecFunction": "0x0000D8"
+   }
+  },
+  "UGCObjectReferencer": {
+   "kind": "class",
+   "base": "UObject",
+   "size": "0x000038",
+   "align": "0x000008",
+   "members": {}
+  },
+  "UGameInstance": {
+   "kind": "class",
+   "base": "UObject",
+   "size": "0x000228",
+   "align": "0x000008",
+   "members": {
+    "LocalPlayers": "0x000038",
+    "OnlineSession": "0x000048",
+    "ReferencedObjects": "0x000050",
+    "OnPawnControllerChangedDelegates": "0x000080",
+    "OnInputDeviceConnectionChange": "0x0000A8",
+    "OnUserInputDevicePairingChange": "0x0000B8"
+   }
+  },
+  "UGameSystemManager": {
+   "kind": "class",
+   "base": "UWorldSubsystem",
+   "size": "0x0000D8",
+   "align": "0x000008",
+   "members": {
+    "SaveDataCache": "0x000030",
+    "MapSystemClassRef": "0x000078",
+    "MapSystem": "0x0000A0",
+    "CharacterCustomizeSystemClassRef": "0x0000A8",
+    "CharacterCustomizeSystem": "0x0000D0"
+   }
+  },
+  "UGameViewportClient": {
+   "kind": "class",
+   "base": "UScriptViewportClient",
+   "size": "0x000400",
+   "align": "0x000008",
+   "members": {
+    "ViewportConsole": "0x000040",
+    "DebugProperties": "0x000048",
+    "MaxSplitscreenPlayers": "0x000068",
+    "World": "0x000078",
+    "GameInstance": "0x000080"
+   }
+  },
+  "UGameplayStatics": {
+   "kind": "class",
+   "base": "UBlueprintFunctionLibrary",
+   "size": "0x000028",
+   "align": "0x000008",
+   "members": {}
+  },
+  "UInputSettings": {
+   "kind": "class",
+   "base": "UObject",
+   "size": "0x000140",
+   "align": "0x000008",
+   "members": {
+    "AxisConfig": "0x000028",
+    "PlatformSettings": "0x000038",
+    "ExcludedAutocorrectOS": "0x000050",
+    "ExcludedAutocorrectCultures": "0x000060",
+    "ExcludedAutocorrectDeviceModels": "0x000070",
+    "DefaultViewportMouseCaptureMode": "0x000080",
+    "DefaultViewportMouseLockMode": "0x000081",
+    "FOVScale": "0x000084",
+    "DoubleClickTime": "0x000088",
+    "ActionMappings": "0x000090",
+    "AxisMappings": "0x0000A0",
+    "SpeechMappings": "0x0000B0",
+    "DefaultPlayerInputClass": "0x0000C0",
+    "DefaultInputComponentClass": "0x0000E8",
+    "DefaultTouchInterface": "0x000110",
+    "ConsoleKeys": "0x000130"
+   }
+  },
+  "UInstanceDataObjectStruct": {
+   "kind": "class",
+   "base": "UScriptStruct",
+   "size": "0x0000D0",
+   "align": "0x000008",
+   "members": {}
+  },
+  "UInt16Property": {
+   "kind": "class",
+   "base": "UNumericProperty",
+   "size": "0x000070",
+   "align": "0x000008",
+   "members": {}
+  },
+  "UInt64Property": {
+   "kind": "class",
+   "base": "UNumericProperty",
+   "size": "0x000070",
+   "align": "0x000008",
+   "members": {}
+  },
+  "UInt8Property": {
+   "kind": "class",
+   "base": "UNumericProperty",
+   "size": "0x000070",
+   "align": "0x000008",
+   "members": {}
+  },
+  "UIntProperty": {
+   "kind": "class",
+   "base": "UNumericProperty",
+   "size": "0x000070",
+   "align": "0x000008",
+   "members": {}
+  },
+  "UInterfaceProperty": {
+   "kind": "class",
+   "base": "UProperty",
+   "size": "0x000078",
+   "align": "0x000008",
+   "members": {}
+  },
+  "UKismetStringLibrary": {
+   "kind": "class",
+   "base": "UBlueprintFunctionLibrary",
+   "size": "0x000028",
+   "align": "0x000008",
+   "members": {}
+  },
+  "UKismetTextLibrary": {
+   "kind": "class",
+   "base": "UBlueprintFunctionLibrary",
+   "size": "0x000028",
+   "align": "0x000008",
+   "members": {}
+  },
+  "ULazyObjectProperty": {
+   "kind": "class",
+   "base": "UObjectPropertyBase",
+   "size": "0x000078",
+   "align": "0x000008",
+   "members": {}
+  },
+  "ULinkerPlaceholderClass": {
+   "kind": "class",
+   "base": "UClass",
+   "size": "0x0003C0",
+   "align": "0x000008",
+   "members": {}
+  },
+  "ULinkerPlaceholderExportObject": {
+   "kind": "class",
+   "base": "UObject",
+   "size": "0x0000F8",
+   "align": "0x000008",
+   "members": {}
+  },
+  "ULinkerPlaceholderFunction": {
+   "kind": "class",
+   "base": "UFunction",
+   "size": "0x0002A0",
+   "align": "0x000008",
+   "members": {}
+  },
+  "ULocalPlayer": {
+   "kind": "class",
+   "base": "UPlayer",
+   "size": "0x000318",
+   "align": "0x000008",
+   "members": {
+    "ViewportClient": "0x000078",
+    "AspectRatioAxisConstraint": "0x0000B8",
+    "PendingLevelPlayerControllerClass": "0x0000C0",
+    "ControllerId": "0x0000E0"
+   }
+  },
+  "UMapProperty": {
+   "kind": "class",
+   "base": "UProperty",
+   "size": "0x000098",
+   "align": "0x000008",
+   "members": {}
+  },
+  "UMaterialInterface": {
+   "kind": "class",
+   "base": "UObject",
+   "size": "0x0000D0",
+   "align": "0x000008",
+   "members": {
+    "SubsurfaceProfile": "0x000038",
+    "SpecularProfiles": "0x000040",
+    "NeuralProfile": "0x000050",
+    "LightmassSettings": "0x000088",
+    "TextureStreamingData": "0x000098",
+    "AssetUserData": "0x0000A8"
+   }
+  },
+  "UMetaData": {
+   "kind": "class",
+   "base": "UObject",
+   "size": "0x0000C8",
+   "align": "0x000008",
+   "members": {}
+  },
+  "UMulticastDelegateProperty": {
+   "kind": "class",
+   "base": "UProperty",
+   "size": "0x000078",
+   "align": "0x000008",
+   "members": {}
+  },
+  "UMulticastDelegatePropertyWrapper": {
+   "kind": "class",
+   "base": "UPropertyWrapper",
+   "size": "0x000030",
+   "align": "0x000008",
+   "members": {}
+  },
+  "UMulticastInlineDelegateProperty": {
+   "kind": "class",
+   "base": "UMulticastDelegateProperty",
+   "size": "0x000078",
+   "align": "0x000008",
+   "members": {}
+  },
+  "UMulticastInlineDelegatePropertyWrapper": {
+   "kind": "class",
+   "base": "UMulticastDelegatePropertyWrapper",
+   "size": "0x000030",
+   "align": "0x000008",
+   "members": {}
+  },
+  "UMulticastSparseDelegateProperty": {
+   "kind": "class",
+   "base": "UMulticastDelegateProperty",
+   "size": "0x000078",
+   "align": "0x000008",
+   "members": {}
+  },
+  "UNameProperty": {
+   "kind": "class",
+   "base": "UProperty",
+   "size": "0x000070",
+   "align": "0x000008",
+   "members": {}
+  },
+  "UNumericProperty": {
+   "kind": "class",
+   "base": "UProperty",
+   "size": "0x000070",
+   "align": "0x000008",
+   "members": {}
+  },
+  "UObject": {
+   "kind": "class",
+   "base": null,
+   "size": "0x000028",
+   "align": "0x000008",
+   "members": {
+    "VTable": "0x000000",
+    "Flags": "0x000008",
+    "Index": "0x00000C",
+    "Class": "0x000010",
+    "Name": "0x000018",
+    "Outer": "0x000020"
+   }
+  },
+  "UObjectProperty": {
+   "kind": "class",
+   "base": "UObjectPropertyBase",
+   "size": "0x000078",
+   "align": "0x000008",
+   "members": {}
+  },
+  "UObjectPropertyBase": {
+   "kind": "class",
+   "base": "UProperty",
+   "size": "0x000078",
+   "align": "0x000008",
+   "members": {}
+  },
+  "UObjectReachabilityStressData": {
+   "kind": "class",
+   "base": "UObject",
+   "size": "0x000038",
+   "align": "0x000008",
+   "members": {}
+  },
+  "UObjectRedirector": {
+   "kind": "class",
+   "base": "UObject",
+   "size": "0x000030",
+   "align": "0x000008",
+   "members": {}
+  },
+  "UPackage": {
+   "kind": "class",
+   "base": "UObject",
+   "size": "0x000080",
+   "align": "0x000008",
+   "members": {}
+  },
+  "UPackageMap": {
+   "kind": "class",
+   "base": "UObject",
+   "size": "0x0000E0",
+   "align": "0x000008",
+   "members": {}
+  },
+  "UPlayer": {
+   "kind": "class",
+   "base": "UObject",
+   "size": "0x000048",
+   "align": "0x000008",
+   "members": {
+    "PlayerController": "0x000030",
+    "CurrentNetSpeed": "0x000038",
+    "ConfiguredInternetSpeed": "0x00003C",
+    "ConfiguredLanSpeed": "0x000040"
+   }
+  },
+  "UProperty": {
+   "kind": "class",
+   "base": "UField",
+   "size": "0x000070",
+   "align": "0x000008",
+   "members": {}
+  },
+  "UPropertyWrapper": {
+   "kind": "class",
+   "base": "UObject",
+   "size": "0x000030",
+   "align": "0x000008",
+   "members": {}
+  },
+  "UScriptStruct": {
+   "kind": "class",
+   "base": "UStruct",
+   "size": "0x0000C0",
+   "align": "0x000008",
+   "members": {}
+  },
+  "UScriptViewportClient": {
+   "kind": "class",
+   "base": "UObject",
+   "size": "0x000038",
+   "align": "0x000008",
+   "members": {}
+  },
+  "USetProperty": {
+   "kind": "class",
+   "base": "UProperty",
+   "size": "0x000090",
+   "align": "0x000008",
+   "members": {}
+  },
+  "USkeletalMesh": {
+   "kind": "class",
+   "base": "USkinnedAsset",
+   "size": "0x0004D8",
+   "align": "0x000008",
+   "members": {
+    "Skeleton": "0x0000F0",
+    "ImportedBounds": "0x0000F8",
+    "ExtendedBounds": "0x000130",
+    "PositiveBoundsExtension": "0x000168",
+    "NegativeBoundsExtension": "0x000180",
+    "Materials": "0x000198",
+    "LODInfo": "0x0001A8",
+    "MinQualityLevelLOD": "0x000208",
+    "MinLOD": "0x000270",
+    "DisableBelowMinLodStripping": "0x000274",
+    "BodySetup": "0x000278",
+    "PhysicsAsset": "0x000280",
+    "ShadowPhysicsAsset": "0x000288",
+    "NodeMappingData": "0x000290",
+    "RayTracingMinLOD": "0x0002A4",
+    "ClothLODBiasMode": "0x0002A8",
+    "MorphTargets": "0x0002B0",
+    "PostProcessAnimBlueprint": "0x000430",
+    "PostProcessAnimBPLODThreshold": "0x000438",
+    "MeshClothingAssets": "0x000440",
+    "SamplingInfo": "0x000450",
+    "AssetUserData": "0x000480",
+    "Sockets": "0x000490",
+    "SkinWeightProfiles": "0x0004B0",
+    "DefaultMeshDeformer": "0x0004C0",
+    "OverlayMaterial": "0x0004C8",
+    "OverlayMaterialMaxDrawDistance": "0x0004D0"
+   }
+  },
+  "USkinnedAsset": {
+   "kind": "class",
+   "base": "UStreamableRenderAsset",
+   "size": "0x0000D0",
+   "align": "0x000008",
+   "members": {}
+  },
+  "USoftClassProperty": {
+   "kind": "class",
+   "base": "USoftObjectProperty",
+   "size": "0x000080",
+   "align": "0x000008",
+   "members": {}
+  },
+  "USoftObjectProperty": {
+   "kind": "class",
+   "base": "UObjectPropertyBase",
+   "size": "0x000078",
+   "align": "0x000008",
+   "members": {}
+  },
+  "USparseDelegateFunction": {
+   "kind": "class",
+   "base": "UDelegateFunction",
+   "size": "0x0000F0",
+   "align": "0x000008",
+   "members": {}
+  },
+  "UStrProperty": {
+   "kind": "class",
+   "base": "UProperty",
+   "size": "0x000070",
+   "align": "0x000008",
+   "members": {}
+  },
+  "UStreamableRenderAsset": {
+   "kind": "class",
+   "base": "UObject",
+   "size": "0x0000C8",
+   "align": "0x000008",
+   "members": {
+    "ForceMipLevelsToBeResidentTimestamp": "0x000040",
+    "NumCinematicMipLevels": "0x000048",
+    "NoRefStreamingLODBias": "0x000050",
+    "StreamingIndex": "0x0000B8"
+   }
+  },
+  "UStruct": {
+   "kind": "class",
+   "base": "UField",
+   "size": "0x0000B0",
+   "align": "0x000008",
+   "members": {
+    "Super": "0x000040",
+    "Children": "0x000048",
+    "ChildProperties": "0x000050",
+    "Size": "0x000058",
+    "MinAlignemnt": "0x00005C"
+   }
+  },
+  "UStructCookedMetaData": {
+   "kind": "class",
+   "base": "UObject",
+   "size": "0x0000C8",
+   "align": "0x000008",
+   "members": {
+    "StructMetaData": "0x000028"
+   }
+  },
+  "UStructProperty": {
+   "kind": "class",
+   "base": "UProperty",
+   "size": "0x000078",
+   "align": "0x000008",
+   "members": {}
+  },
+  "USubsystem": {
+   "kind": "class",
+   "base": "UObject",
+   "size": "0x000030",
+   "align": "0x000008",
+   "members": {}
+  },
+  "UTextBuffer": {
+   "kind": "class",
+   "base": "UObject",
+   "size": "0x000050",
+   "align": "0x000008",
+   "members": {}
+  },
+  "UTextProperty": {
+   "kind": "class",
+   "base": "UProperty",
+   "size": "0x000070",
+   "align": "0x000008",
+   "members": {}
+  },
+  "UTexture": {
+   "kind": "class",
+   "base": "UStreamableRenderAsset",
+   "size": "0x000130",
+   "align": "0x000008",
+   "members": {
+    "LightingGuid": "0x0000D8",
+    "LevelIndex": "0x0000E8",
+    "LODBias": "0x0000EC",
+    "CompressionSettings": "0x0000F0",
+    "Filter": "0x0000F1",
+    "MipLoadOptions": "0x0000F2",
+    "CookPlatformTilingSettings": "0x0000F3",
+    "bOodlePreserveExtremes": "0x0000F4",
+    "LODGroup": "0x0000F5",
+    "Downscale": "0x0000F8",
+    "DownscaleOptions": "0x0000FC",
+    "Availability": "0x0000FD",
+    "AssetUserData": "0x000100"
+   }
+  },
+  "UTexture2D": {
+   "kind": "class",
+   "base": "UTexture",
+   "size": "0x000150",
+   "align": "0x000008",
+   "members": {
+    "FirstResourceMemMip": "0x000130",
+    "AddressX": "0x000135",
+    "AddressY": "0x000136",
+    "ImportedSize": "0x000138"
+   }
+  },
+  "UUInt16Property": {
+   "kind": "class",
+   "base": "UNumericProperty",
+   "size": "0x000070",
+   "align": "0x000008",
+   "members": {}
+  },
+  "UUInt32Property": {
+   "kind": "class",
+   "base": "UNumericProperty",
+   "size": "0x000070",
+   "align": "0x000008",
+   "members": {}
+  },
+  "UUInt64Property": {
+   "kind": "class",
+   "base": "UNumericProperty",
+   "size": "0x000070",
+   "align": "0x000008",
+   "members": {}
+  },
+  "UWeakObjectProperty": {
+   "kind": "class",
+   "base": "UObjectPropertyBase",
+   "size": "0x000078",
+   "align": "0x000008",
+   "members": {}
+  },
+  "UWorld": {
+   "kind": "class",
+   "base": "UObject",
+   "size": "0x000A08",
+   "align": "0x000008",
+   "members": {
+    "PersistentLevel": "0x000030",
+    "NetDriver": "0x000038",
+    "LineBatcher": "0x000040",
+    "PersistentLineBatcher": "0x000048",
+    "ForegroundLineBatcher": "0x000050",
+    "NetworkManager": "0x000058",
+    "PhysicsCollisionHandler": "0x000060",
+    "ExtraReferencedObjects": "0x000068",
+    "PerModuleDataObjects": "0x000078",
+    "StreamingLevels": "0x000088",
+    "StreamingLevelsToConsider": "0x000098",
+    "ServerStreamingLevelsVisibility": "0x0000C0",
+    "StreamingLevelsPrefix": "0x0000C8",
+    "CurrentLevelPendingVisibility": "0x0000E0",
+    "CurrentLevelPendingInvisibility": "0x0000E8",
+    "DemoNetDriver": "0x0000F0",
+    "MyParticleEventManager": "0x0000F8",
+    "DefaultPhysicsVolume": "0x000100",
+    "NavigationSystem": "0x000150",
+    "AuthorityGameMode": "0x000158",
+    "GameState": "0x000160",
+    "AISystem": "0x000168",
+    "AvoidanceManager": "0x000170",
+    "Levels": "0x000178",
+    "LevelCollections": "0x000188",
+    "OwningGameInstance": "0x0001E0",
+    "ParameterCollectionInstances": "0x0001E8",
+    "CanvasForRenderingToTarget": "0x0001F8",
+    "CanvasForDrawMaterialToRenderTarget": "0x000200",
+    "PhysicsField": "0x000278",
+    "ComponentsThatNeedPreEndOfFrameSync": "0x000280",
+    "ComponentsThatNeedEndOfFrameUpdate": "0x0002D0",
+    "ComponentsThatNeedEndOfFrameUpdate_OnGameThread": "0x0002E0",
+    "WorldComposition": "0x0007C8",
+    "ContentBundleManager": "0x0007D0",
+    "PSCPool": "0x0008A0"
+   }
+  },
+  "UWorldSubsystem": {
+   "kind": "class",
+   "base": "USubsystem",
+   "size": "0x000030",
+   "align": "0x000008",
+   "members": {}
+  }
+ },
+ "functions": {
+  "ACharacterCustomizePawn::GetAccessoryTransforms": "CharacterCustomizePawn.GetAccessoryTransforms",
+  "ACharacterCustomizeSystem::GetAccessoryTransforms": "CharacterCustomizeSystem.GetAccessoryTransforms",
+  "ACharacterCustomizeSystem::GetGender": "CharacterCustomizeSystem.GetGender",
+  "APlayerController::EnableCheats": "PlayerController.EnableCheats",
+  "UBPFL_MapHelper_C::Add_to_FName_Array": "BPFL_MapHelper_C.Add to FName Array",
+  "UBPFL_MapHelper_C::Make_Finger_Map": "BPFL_MapHelper_C.Make Finger Map",
+  "UCharacterCustomizeDataManager::GetMaskDataByRowName": "CharacterCustomizeDataManager.GetMaskDataByRowName",
+  "UClass::GetFunction": "predefined",
+  "UEngine::GetEngine": "predefined",
+  "UGameSystemManager::GetCharacterCustomizeSystem": "GameSystemManager.GetCharacterCustomizeSystem",
+  "UGameplayStatics::SpawnObject": "GameplayStatics.SpawnObject",
+  "UKismetStringLibrary::Contains": "KismetStringLibrary.Contains",
+  "UKismetStringLibrary::Conv_NameToString": "KismetStringLibrary.Conv_NameToString",
+  "UKismetStringLibrary::Conv_StringToName": "KismetStringLibrary.Conv_StringToName",
+  "UKismetTextLibrary::Conv_NameToText": "KismetTextLibrary.Conv_NameToText",
+  "UObject::ExecuteUbergraph": "Object.ExecuteUbergraph",
+  "UObject::FindObjectFastImpl": "predefined",
+  "UObject::FindObjectImpl": "predefined",
+  "UObject::GetFullName": "predefined",
+  "UObject::GetName": "predefined",
+  "UObject::HasTypeFlag": "predefined",
+  "UObject::IsA": "predefined",
+  "UObject::IsDefaultObject": "predefined",
+  "UStruct::IsSubclassOf": "predefined",
+  "UWorld::GetWorld": "predefined"
+ }
+}

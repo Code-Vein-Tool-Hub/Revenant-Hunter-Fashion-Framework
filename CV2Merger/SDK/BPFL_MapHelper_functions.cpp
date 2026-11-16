@@ -17,39 +17,12 @@
 namespace SDK
 {
 
-// Function BPFL_MapHelper.BPFL_MapHelper_C.Add to Finger Expose
-// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TMap<ECharacterCustomizeFinger, bool>   FingerExposeMap                                        (BlueprintVisible, BlueprintReadOnly, Parm)
-// ECharacterCustomizeFinger               Key                                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Value                                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UBPFL_MapHelper_C::Add_to_Finger_Expose(const TMap<ECharacterCustomizeFinger, bool>& FingerExposeMap, const ECharacterCustomizeFinger& Key, const bool& Value, class UObject* __WorldContext)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_MapHelper_C", "Add to Finger Expose");
-
-	Params::BPFL_MapHelper_C_Add_to_Finger_Expose Parms{};
-
-	Parms.FingerExposeMap = std::move(FingerExposeMap);
-	Parms.Key = Key;
-	Parms.Value = Value;
-	Parms.__WorldContext = __WorldContext;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-}
-
-
 // Function BPFL_MapHelper.BPFL_MapHelper_C.Add to FName Array
 // (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<class FName>                     InArray                                                (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // class FName                             InNane                                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
 void UBPFL_MapHelper_C::Add_to_FName_Array(TArray<class FName>& InArray, const class FName& InNane, class UObject* __WorldContext)
 {
 	static class UFunction* Func = nullptr;
@@ -79,7 +52,6 @@ void UBPFL_MapHelper_C::Add_to_FName_Array(TArray<class FName>& InArray, const c
 // bool                                    Pinky                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // TMap<ECharacterCustomizeFinger, bool>   Map                                                    (Parm, OutParm)
-
 void UBPFL_MapHelper_C::Make_Finger_Map(bool Thumb, bool Index_0, bool Middle, bool Ring, bool Pinky, class UObject* __WorldContext, TMap<ECharacterCustomizeFinger, bool>* Map)
 {
 	static class UFunction* Func = nullptr;
@@ -101,6 +73,7 @@ void UBPFL_MapHelper_C::Make_Finger_Map(bool Thumb, bool Index_0, bool Middle, b
 	if (Map != nullptr)
 		*Map = std::move(Parms.Map);
 }
+
 
 }
 

@@ -16,24 +16,6 @@
 namespace SDK::Params
 {
 
-// Function BPFL_MapHelper.BPFL_MapHelper_C.Add to Finger Expose
-// 0x0060 (0x0060 - 0x0000)
-struct BPFL_MapHelper_C_Add_to_Finger_Expose final
-{
-public:
-	TMap<ECharacterCustomizeFinger, bool>         FingerExposeMap;                                   // 0x0000(0x0050)(BlueprintVisible, BlueprintReadOnly, Parm)
-	ECharacterCustomizeFinger                     Key;                                               // 0x0050(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Value;                                             // 0x0051(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52[0x6];                                       // 0x0052(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                __WorldContext;                                    // 0x0058(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BPFL_MapHelper_C_Add_to_Finger_Expose) == 0x000008, "Wrong alignment on BPFL_MapHelper_C_Add_to_Finger_Expose");
-static_assert(sizeof(BPFL_MapHelper_C_Add_to_Finger_Expose) == 0x000060, "Wrong size on BPFL_MapHelper_C_Add_to_Finger_Expose");
-static_assert(offsetof(BPFL_MapHelper_C_Add_to_Finger_Expose, FingerExposeMap) == 0x000000, "Member 'BPFL_MapHelper_C_Add_to_Finger_Expose::FingerExposeMap' has a wrong offset!");
-static_assert(offsetof(BPFL_MapHelper_C_Add_to_Finger_Expose, Key) == 0x000050, "Member 'BPFL_MapHelper_C_Add_to_Finger_Expose::Key' has a wrong offset!");
-static_assert(offsetof(BPFL_MapHelper_C_Add_to_Finger_Expose, Value) == 0x000051, "Member 'BPFL_MapHelper_C_Add_to_Finger_Expose::Value' has a wrong offset!");
-static_assert(offsetof(BPFL_MapHelper_C_Add_to_Finger_Expose, __WorldContext) == 0x000058, "Member 'BPFL_MapHelper_C_Add_to_Finger_Expose::__WorldContext' has a wrong offset!");
-
 // Function BPFL_MapHelper.BPFL_MapHelper_C.Add to FName Array
 // 0x0028 (0x0028 - 0x0000)
 struct BPFL_MapHelper_C_Add_to_FName_Array final

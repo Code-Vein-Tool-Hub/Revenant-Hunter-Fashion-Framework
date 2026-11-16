@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -175,12 +175,7 @@ move /Y "$(TargetDir)RHFFConfig.toml" "G:\SteamLibrary\steamapps\common\CodeVein
     <ClInclude Include="SDK\Extensions_classes.hpp" />
     <ClInclude Include="SDK\Extensions_parameters.hpp" />
     <ClInclude Include="SDK\Extensions_structs.hpp" />
-    <ClInclude Include="SDK\StoryFlagSystem_classes.hpp" />
-    <ClInclude Include="SDK\StoryFlagSystem_parameters.hpp" />
     <ClInclude Include="SDK\StoryFlagSystem_structs.hpp" />
-    <ClInclude Include="SDK\UMG_classes.hpp" />
-    <ClInclude Include="SDK\UMG_parameters.hpp" />
-    <ClInclude Include="SDK\UMG_structs.hpp" />
     <ClInclude Include="Signature.h" />
     <ClInclude Include="Struct.h" />
     <ClInclude Include="UnrealContainers.hpp" />
@@ -196,13 +191,11 @@ move /Y "$(TargetDir)RHFFConfig.toml" "G:\SteamLibrary\steamapps\common\CodeVein
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="SDK\Basic.cpp" />
     <ClCompile Include="SDK\BPFL_MapHelper_functions.cpp" />
+    <ClCompile Include="SDK\Basic.cpp" />
     <ClCompile Include="SDK\CoreUObject_functions.cpp" />
     <ClCompile Include="SDK\Engine_functions.cpp" />
     <ClCompile Include="SDK\Extensions_functions.cpp" />
-    <ClCompile Include="SDK\StoryFlagSystem_functions.cpp" />
-    <ClCompile Include="SDK\UMG_functions.cpp" />
     <ClCompile Include="Signature.cpp" />
     <ClCompile Include="Util.cpp" />
   </ItemGroup>
