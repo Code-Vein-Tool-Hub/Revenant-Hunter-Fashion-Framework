@@ -9,7 +9,6 @@
 #include <filesystem>
 #include <thread>
 
-static bool TitleLoad = false;
 static std::vector<std::string> MeshSlots = { "InnerMesh", "GlovesMesh", "BootsMesh", "MaskMesh", "OuterMesh" };
 
 #pragma region Sigs
@@ -605,28 +604,7 @@ HOOK(HRESULT, __stdcall, hook_CreateFileW, &CreateFileW, LPCWSTR lpFileName, DWO
 HOOK(void, __stdcall, Hook_UObject_ProcessEvent, Sig_UObject_ProcessEvent, SDK::UObject* _this, SDK::UFunction* Function, void* Param)
 {
     //printf("[RHFF] ProcessEvent: %s\n", Function->GetFullName().c_str());
-    std::string FuncName = Function->GetFullName();
-    /*
-    if (FuncName.contains("WDT_CharacterPresetImporter_C.Construct"))
-    {
-        CharacterCreatorPreset::GetSaveFiles(static_cast<SDK::UUserWidget*>(_this));
-        printf("[RHFF] [CharacterPresets] Adding Save Files to Widget String Array.\n");
-    }
-    */
-
-    if (!TitleLoad)
-    {
-        if (FuncName.contains("WDT_TitleMenu_Variationable.WDT_TitleMenu_Variationable_C.OnLoaded_EBBF5C074734D80FC8EB7495CA8B515E"))
-        {
-            orig_Hook_UObject_ProcessEvent(_this, Function, Param);
-
-            SDK::UWDT_TitleMenu_Variationable_C* TitleWidget = (SDK::UWDT_TitleMenu_Variationable_C*)(_this);
-            TitleWidget->ApplicationVersionText->SetText(FNameHelper::FTextFromString(std::format("{} - RHFF v2.1.1", TitleWidget->ApplicationVersionText->GetText().ToString())));
-
-            TitleLoad = true;
-            return;
-        }
-    }
+    //std::string FuncName = Function->GetFullName();
 
     return orig_Hook_UObject_ProcessEvent(_this, Function, Param);
 }
@@ -699,7 +677,7 @@ BOOL APIENTRY DllMain( HMODULE hModule,
         }
 
         INSTALL_HOOK(hook_CreateFileW);
-        INSTALL_HOOK(Hook_UObject_ProcessEvent);
+        //INSTALL_HOOK(Hook_UObject_ProcessEvent);
 		INSTALL_HOOK(Hook_UGameFlowManager_OnShaderCompileWaitFinished);
         INSTALL_HOOK(Hook_UDataTable_Serialize);
         INSTALL_HOOK(Hook_ACharacterCustomizeSystem_SetMaskMesh);
