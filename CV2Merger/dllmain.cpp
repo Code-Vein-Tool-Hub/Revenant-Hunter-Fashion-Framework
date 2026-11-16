@@ -136,6 +136,7 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
         //Addon table is for merging new parts options into an existing hair base
         if (Config::CompanionPakLoaded)
         {
+            SDK::UWorld* World = SDK::UWorld::GetWorld();
             if (ModPatch::DT_HairBaseListAddon.size() > 0)
             {
                 for (auto& entry : ModPatch::DT_HairBaseListAddon)
@@ -156,8 +157,8 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
                                     if (TArrayHelper::Contains(row->AvailableHairFrontList, part))
                                         continue;
                                     if (row->AvailableHairFrontList.Num() <= 0)
-                                        SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairFrontList, FNameHelper::FNameFromString("Front_None"), SDK::UWorld::GetWorld());
-                                    SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairFrontList, part, SDK::UWorld::GetWorld());
+                                        SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairFrontList, FNameHelper::FNameFromString("Front_None"), World);
+                                    SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairFrontList, part, World);
                                 }
 
                                 for (auto& part : entry.second.second.AvailableHairFrontSideList)
@@ -165,8 +166,8 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
                                     if (TArrayHelper::Contains(row->AvailableHairFrontSideList, part))
                                         continue;
                                     if (row->AvailableHairFrontSideList.Num() <= 0)
-                                        SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairFrontSideList, FNameHelper::FNameFromString("FrontSide_None"), SDK::UWorld::GetWorld());
-                                    SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairFrontSideList, part, SDK::UWorld::GetWorld());
+                                        SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairFrontSideList, FNameHelper::FNameFromString("FrontSide_None"), World);
+                                    SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairFrontSideList, part, World);
                                 }
 
                                 for (auto& part : entry.second.second.AvailableHairSideList)
@@ -174,8 +175,8 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
                                     if (TArrayHelper::Contains(row->AvailableHairSideList, part))
                                         continue;
                                     if (row->AvailableHairSideList.Num() <= 0)
-                                        SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairSideList, FNameHelper::FNameFromString("Side_None"), SDK::UWorld::GetWorld());
-                                    SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairSideList, part, SDK::UWorld::GetWorld());
+                                        SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairSideList, FNameHelper::FNameFromString("Side_None"), World);
+                                    SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairSideList, part, World);
                                 }
 
                                 for (auto& part : entry.second.second.AvailableHairTopList)
@@ -183,8 +184,8 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
                                     if (TArrayHelper::Contains(row->AvailableHairTopList, part))
                                         continue;
                                     if (row->AvailableHairTopList.Num() <= 0)
-                                        SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairTopList, FNameHelper::FNameFromString("Top_None"), SDK::UWorld::GetWorld());
-                                    SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairTopList, part, SDK::UWorld::GetWorld());
+                                        SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairTopList, FNameHelper::FNameFromString("Top_None"), World);
+                                    SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairTopList, part, World);
                                 }
 
                                 for (auto& part : entry.second.second.AvailableHairBackList)
@@ -192,8 +193,8 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
                                     if (TArrayHelper::Contains(row->AvailableHairBackList, part))
                                         continue;
                                     if (row->AvailableHairBackList.Num() <= 0)
-                                        SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairBackList, FNameHelper::FNameFromString("Back_None"), SDK::UWorld::GetWorld());
-                                    SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairBackList, part, SDK::UWorld::GetWorld());
+                                        SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairBackList, FNameHelper::FNameFromString("Back_None"), World);
+                                    SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairBackList, part, World);
                                 }
 
                                 for (auto& part : entry.second.second.AvailableHairOtherList)
@@ -201,8 +202,8 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
                                     if (TArrayHelper::Contains(row->AvailableHairOtherList, part))
                                         continue;
                                     if (row->AvailableHairOtherList.Num() <= 0)
-                                        SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairOtherList, FNameHelper::FNameFromString("Other_None"), SDK::UWorld::GetWorld());
-                                    SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairOtherList, part, SDK::UWorld::GetWorld());
+                                        SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairOtherList, FNameHelper::FNameFromString("Other_None"), World);
+                                    SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairOtherList, part, World);
                                 }
                             }
                             break;
@@ -220,43 +221,43 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
                             for (auto& part : entry.second.second.AvailableHairFrontList)
                             {
                                 if (row->AvailableHairFrontList.Num() <= 0)
-                                    SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairFrontList, FNameHelper::FNameFromString("Front_None"), SDK::UWorld::GetWorld());
-                                SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairFrontList, part, SDK::UWorld::GetWorld());
+                                    SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairFrontList, FNameHelper::FNameFromString("Front_None"), World);
+                                SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairFrontList, part, World);
                             }
 
                             for (auto& part : entry.second.second.AvailableHairFrontSideList)
                             {
                                 if (row->AvailableHairFrontSideList.Num() <= 0)
-                                    SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairFrontSideList, FNameHelper::FNameFromString("FrontSide_None"), SDK::UWorld::GetWorld());
-                                SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairFrontSideList, part, SDK::UWorld::GetWorld());
+                                    SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairFrontSideList, FNameHelper::FNameFromString("FrontSide_None"), World);
+                                SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairFrontSideList, part, World);
                             }
 
                             for (auto& part : entry.second.second.AvailableHairSideList)
                             {
                                 if (row->AvailableHairSideList.Num() <= 0)
-                                    SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairSideList, FNameHelper::FNameFromString("Side_None"), SDK::UWorld::GetWorld());
-                                SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairSideList, part, SDK::UWorld::GetWorld());
+                                    SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairSideList, FNameHelper::FNameFromString("Side_None"), World);
+                                SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairSideList, part, World);
                             }
 
                             for (auto& part : entry.second.second.AvailableHairTopList)
                             {
                                 if (row->AvailableHairTopList.Num() <= 0)
-                                    SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairTopList, FNameHelper::FNameFromString("Top_None"), SDK::UWorld::GetWorld());
-                                SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairTopList, part, SDK::UWorld::GetWorld());
+                                    SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairTopList, FNameHelper::FNameFromString("Top_None"), World);
+                                SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairTopList, part, World);
                             }
 
                             for (auto& part : entry.second.second.AvailableHairBackList)
                             {
                                 if (row->AvailableHairBackList.Num() <= 0)
-                                    SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairBackList, FNameHelper::FNameFromString("Back_None"), SDK::UWorld::GetWorld());
-                                SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairBackList, part, SDK::UWorld::GetWorld());
+                                    SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairBackList, FNameHelper::FNameFromString("Back_None"), World);
+                                SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairBackList, part, World);
                             }
 
                             for (auto& part : entry.second.second.AvailableHairOtherList)
                             {
                                 if (row->AvailableHairOtherList.Num() <= 0)
-                                    SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairOtherList, FNameHelper::FNameFromString("Other_None"), SDK::UWorld::GetWorld());
-                                SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairOtherList, part, SDK::UWorld::GetWorld());
+                                    SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairOtherList, FNameHelper::FNameFromString("Other_None"), World);
+                                SDK::UBPFL_MapHelper_C::Add_to_FName_Array(row->AvailableHairOtherList, part, World);
                             }
                         }
                     }
