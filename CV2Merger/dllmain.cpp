@@ -9,6 +9,9 @@
 #include <filesystem>
 #include <thread>
 
+static bool TitleLoad = false;
+static std::vector<std::string> MeshSlots = { "InnerMesh", "GlovesMesh", "BootsMesh", "MaskMesh", "OuterMesh" };
+
 #pragma region Sigs
 
 //0x143da5900 in version 1.0.3.0
@@ -46,6 +49,11 @@ void* Sig_InputHook = sigScan(
 void* Sig_UCharacterCustomizeUtility_SetScalarParameterValueToAllMesh = sigScan(
     "\x48\x85\xC9\x0F\x84\x2A\x2A\x2A\x2A\x48\x89\x5C\x24\x2A\x57\x48\x83\xEC\x40\x8B\x41\x2A",
     "xxxxx????xxxx?xxxxxxx?");
+
+//0x146115bf0 in version 2.0.3.0
+void* Sig_ACharacterCustomizeSystem_SetMaskMesh = sigScan(
+    "\x48\x89\x5C\x24\x2A\x57\x48\x81\xEC\xA0\x01\x00\x00\x48\x8B\x05\x2A\x2A\x2A\x2A\x48\x33\xC4\x48\x89\x84\x24\x2A\x2A\x2A\x2A\x48\x8B\x02\x48\x8B\xFA\x48\x89\x81\x2A\x2A\x2A\x2A\x48\x8B\xD9\xE8\x2A\x2A\x2A\x2A\x48\x8B\xCB\xE8\x2A\x2A\x2A\x2A\x48\x85\xC0\x0F\x84\x2A\x2A\x2A\x2A\x8B\x48\x2A\xC1\xE9\x1E\xF6\xD1\xF6\xC1\x01\x0F\x84\x2A\x2A\x2A\x2A\x4C\x8B\x0F\x48\x8D\x54\x24\x2A\x44\x0F\xB6\x83\x2A\x2A\x2A\x2A\x48\x8B\xC8\xE8\x2A\x2A\x2A\x2A\x45\x33\xC9",
+    "xxxx?xxxxxxxxxxx????xxxxxxx????xxxxxxxxx????xxxx????xxxx????xxxxx????xx?xxxxxxxxxx????xxxxxxx?xxxx????xxxx????xxx");
 
 #pragma endregion
 
@@ -597,20 +605,28 @@ HOOK(HRESULT, __stdcall, hook_CreateFileW, &CreateFileW, LPCWSTR lpFileName, DWO
 HOOK(void, __stdcall, Hook_UObject_ProcessEvent, Sig_UObject_ProcessEvent, SDK::UObject* _this, SDK::UFunction* Function, void* Param)
 {
     //printf("[RHFF] ProcessEvent: %s\n", Function->GetFullName().c_str());
-    /*
     std::string FuncName = Function->GetFullName();
+    /*
     if (FuncName.contains("WDT_CharacterPresetImporter_C.Construct"))
     {
         CharacterCreatorPreset::GetSaveFiles(static_cast<SDK::UUserWidget*>(_this));
         printf("[RHFF] [CharacterPresets] Adding Save Files to Widget String Array.\n");
     }
-    /*
-    else if (FuncName.contains("WDT_CharacterPresetImporter_Button_LoadPreset"))
-    {
+    */
 
-    }
-    else if (FuncName.contains("WDT_CharacterPresetImporter_Button_SavePreset"))
+    if (!TitleLoad)
     {
+        if (FuncName.contains("WDT_TitleMenu_Variationable.WDT_TitleMenu_Variationable_C.OnLoaded_EBBF5C074734D80FC8EB7495CA8B515E"))
+        {
+            orig_Hook_UObject_ProcessEvent(_this, Function, Param);
+
+            SDK::UWDT_TitleMenu_Variationable_C* TitleWidget = (SDK::UWDT_TitleMenu_Variationable_C*)(_this);
+            TitleWidget->ApplicationVersionText->SetText(FNameHelper::FTextFromString(std::format("{} - RHFF v2.1.1", TitleWidget->ApplicationVersionText->GetText().ToString())));
+
+            TitleLoad = true;
+            return;
+        }
+    }
 
     return orig_Hook_UObject_ProcessEvent(_this, Function, Param);
 }
@@ -641,9 +657,26 @@ HOOK(void, __stdcall, Hook_UCharacterCustomizeUtility_SetScalarParameterValueToA
             }
         }
     }
-    else if (FuncName.contains("WDT_CharacterPresetImporter_C"))
+
+
+
+    return orig_Hook_UCharacterCustomizeUtility_SetScalarParameterValueToAllMesh(Target, ParameterName, Value);
+}
+
+HOOK(void, __stdcall, Hook_ACharacterCustomizeSystem_SetMaskMesh, Sig_ACharacterCustomizeSystem_SetMaskMesh, SDK::UCharacterCustomizeComponent* _this, SDK::FName* InName)
+{
+    orig_Hook_ACharacterCustomizeSystem_SetMaskMesh(_this, InName);
+
+    auto CCSystem = SDK::UGameSystemManager::GetCharacterCustomizeSystem(SDK::UWorld::GetWorld());
+    auto maskRow = CCSystem->CharacterCustomizeDataManager->GetMaskDataByRowName(CCSystem->GetGender(), *InName);
+
+    _this->CharacterCustomizeParameter.Mask.PartVisibilityArray.Clear();
+    if (_this->CharacterCustomizeParameter.Mask.PartVisibilityArray.Max() < maskRow.PartVisibilityInfoArray.Num())
+        TArrayHelper::ResizeTArray(&_this->CharacterCustomizeParameter.Mask.PartVisibilityArray, maskRow.PartVisibilityInfoArray.Num());
+
+    for (int i = 0; i < maskRow.PartVisibilityInfoArray.Num(); i++)
     {
-        printf("[RHFF] ProcessEvent: %s\n", Function->GetFullName().c_str());
+        _this->CharacterCustomizeParameter.Mask.PartVisibilityArray.Add(SDK::ECharacterCustomizeClothPartVisibility::Visible);
     }
 }
 
@@ -669,6 +702,7 @@ BOOL APIENTRY DllMain( HMODULE hModule,
         INSTALL_HOOK(Hook_UObject_ProcessEvent);
 		INSTALL_HOOK(Hook_UGameFlowManager_OnShaderCompileWaitFinished);
         INSTALL_HOOK(Hook_UDataTable_Serialize);
+        INSTALL_HOOK(Hook_ACharacterCustomizeSystem_SetMaskMesh);
         if (Config::AccessoryInfo)
         {
             INSTALL_HOOK(Hook_CameraResetPressed);
