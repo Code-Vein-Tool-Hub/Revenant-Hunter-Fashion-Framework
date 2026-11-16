@@ -67,10 +67,6 @@ void Patch_FlagCondition(SDK::UDataTable* TablePtr, std::map<std::string, T> Mod
 
 #pragma endregion
 
-#pragma region Threads
-
-#pragma endregion
-
 #pragma region Hooks
 
 HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::UDataTable* _this, uint64_t* param2)
@@ -78,7 +74,7 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
     //printf("[RHFF] UDataTable::Serialize called for DataTable: %s\n", _this->GetName().c_str());
     orig_Hook_UDataTable_Serialize(_this, param2);
     std::string TableName = _this->GetName();
-
+    
     if (TableName == "DT_Inner_Female")
     {
         if (ModPatch::DT_Inner_Female.size() > 0) {
@@ -89,7 +85,6 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
             Patch_FlagCondition(_this, ModPatch::DT_Inner_Female, 0x58);
-            ModPatch::DT_Inner_Female.clear();
         }
     }
     else if (TableName == "DT_Inner_Male")
@@ -101,7 +96,6 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
             Patch_FlagCondition(_this, ModPatch::DT_Inner_Male, 0x58);
-            ModPatch::DT_Inner_Male.clear();
         }
     }
 
@@ -113,7 +107,6 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
                 UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
-            ModPatch::DT_HairBaseList.clear();
 		}
 
         //Addon table is for merging new parts options into an existing hair base
@@ -255,7 +248,6 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
                 UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
-            ModPatch::DT_HairBack.clear();
         }
     }
     else if (TableName == "DT_HairFront")
@@ -266,7 +258,6 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
                 UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
-            ModPatch::DT_HairFront.clear();
         }
 	}
     else if (TableName == "DT_HairFrontSide")
@@ -277,7 +268,6 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
                 UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
-            ModPatch::DT_HairFrontSide.clear();
 		}
     }
     else if (TableName == "DT_HairOther")
@@ -288,7 +278,6 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
                 UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
-            ModPatch::DT_HairOther.clear();
         }
     }
     else if (TableName == "DT_HairSide")
@@ -299,7 +288,6 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
                 UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
-            ModPatch::DT_HairSide.clear();
         }
     }
     else if (TableName == "DT_HairTop")
@@ -310,7 +298,6 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
                 UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
-            ModPatch::DT_HairTop.clear();
         }
     }
     else if (TableName == "DT_HairSetList_Female")
@@ -321,7 +308,6 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
                 UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
-            ModPatch::DT_HairSetList_Female.clear();
         }
     }
     else if (TableName == "DT_HairSetList_Male")
@@ -332,7 +318,6 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
                 UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
-            ModPatch::DT_HairSetList_Male.clear();
         }
     }
 
@@ -345,7 +330,6 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
 			Patch_FlagCondition(_this, ModPatch::DT_AccessoryPresetDLC_Free, 0x01B0);
-            ModPatch::DT_AccessoryPresetDLC_Free.clear();
         }
     }
     else if (TableName == "DT_AccessoryPresetIsHat")
@@ -357,7 +341,6 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
             Patch_FlagCondition(_this, ModPatch::DT_AccessoryPresetIsHat, 0x01B0);
-            ModPatch::DT_AccessoryPresetIsHat.clear();
         }
     }
     else if (TableName == "DT_AccessoryAttachToList")
@@ -369,7 +352,6 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
                 UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
-            ModPatch::DT_AccessoryAttachToList.clear();
         }
     }
 
@@ -382,7 +364,6 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
             Patch_FlagCondition(_this, ModPatch::DT_Boots_Female, 0x058);
-            ModPatch::DT_Boots_Female.clear();
         }
     }
     else if (TableName == "DT_Boots_Male")
@@ -394,7 +375,6 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
             Patch_FlagCondition(_this, ModPatch::DT_Boots_Male, 0x058);
-            ModPatch::DT_Boots_Male.clear();
         }
     }
     else if (TableName == "DT_Gloves_Female")
@@ -407,7 +387,6 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
             Patch_FlagCondition(_this, ModPatch::DT_Gloves_Female, 0x058);
-            ModPatch::DT_Gloves_Female.clear();
         }
     }
     else if (TableName == "DT_Gloves_Male")
@@ -419,7 +398,6 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
             Patch_FlagCondition(_this, ModPatch::DT_Gloves_Male, 0x058);
-            ModPatch::DT_Gloves_Male.clear();
         }
     }
     else if (TableName == "DT_Mask_Female")
@@ -431,7 +409,6 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
             Patch_FlagCondition(_this, ModPatch::DT_Mask_Female, 0x058);
-            ModPatch::DT_Mask_Female.clear();
         }
     }
     else if (TableName == "DT_Mask_Male")
@@ -443,7 +420,6 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
             Patch_FlagCondition(_this, ModPatch::DT_Mask_Male, 0x058);
-            ModPatch::DT_Mask_Male.clear();
         }
     }
     else if (TableName == "DT_Outer_Female")
@@ -455,7 +431,6 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
             Patch_FlagCondition(_this, ModPatch::DT_Outer_Female, 0x058);
-            ModPatch::DT_Outer_Female.clear();
         }
     }
     else if (TableName == "DT_Outer_Male")
@@ -467,7 +442,6 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
             Patch_FlagCondition(_this, ModPatch::DT_Outer_Male, 0x058);
-            ModPatch::DT_Outer_Male.clear();
         }
     }
     
@@ -479,7 +453,6 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
                 UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
-            ModPatch::DT_EyeBase.clear();
         }
 	}
     else if (TableName == "DT_EyeDetail")
@@ -490,7 +463,6 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
                 UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
-            ModPatch::DT_EyeDetail.clear();
         }
     }
     else if (TableName == "DT_EyeHighlight")
@@ -501,7 +473,6 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
                 UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
-            ModPatch::DT_EyeHighlight.clear();
         }
     }
 
@@ -514,7 +485,6 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
                 UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
-            ModPatch::DT_Kintsugi.clear();
         }
     }
     else if (TableName == "DT_FacePaintDLC")
@@ -527,7 +497,6 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
             Patch_FlagCondition(_this, ModPatch::DT_FacePaintDLC, 0x88);
-            ModPatch::DT_FacePaintDLC.clear();
         }
     }
     else if (TableName == "DT_Manicure")
@@ -539,7 +508,6 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
                 UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
-            ModPatch::DT_Manicure.clear();
         }
     }
 
