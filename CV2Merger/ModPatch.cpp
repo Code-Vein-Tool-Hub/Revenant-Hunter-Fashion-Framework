@@ -5,48 +5,48 @@
 #include "Config.h"
 #include "SDK/BPFL_MapHelper_classes.hpp"
 
-std::map<std::string, SDK::FCharacterCustomizeDataTableInnerList>		ModPatch::DT_Inner_Female;
-std::map<std::string, SDK::FCharacterCustomizeDataTableInnerList>		ModPatch::DT_Inner_Male;
-std::map<std::string, SDK::FCharacterCustomizeDataTableBootsList>		ModPatch::DT_Boots_Female;
-std::map<std::string, SDK::FCharacterCustomizeDataTableBootsList>		ModPatch::DT_Boots_Male;
-std::map<std::string, SDK::FCharacterCustomizeDataTableGlovesList>		ModPatch::DT_Gloves_Female;
-std::map<std::string, SDK::FCharacterCustomizeDataTableGlovesList>		ModPatch::DT_Gloves_Male;
-std::map<std::string, SDK::FCharacterCustomizeDataTableMaskList>		ModPatch::DT_Mask_Female;
-std::map<std::string, SDK::FCharacterCustomizeDataTableMaskList>		ModPatch::DT_Mask_Male;
-std::map<std::string, SDK::FCharacterCustomizeDataTableOuterList>		ModPatch::DT_Outer_Female;
-std::map<std::string, SDK::FCharacterCustomizeDataTableOuterList>		ModPatch::DT_Outer_Male;
+ModTable<SDK::FCharacterCustomizeDataTableInnerList>		ModPatch::DT_Inner_Female;
+ModTable<SDK::FCharacterCustomizeDataTableInnerList>		ModPatch::DT_Inner_Male;
+ModTable<SDK::FCharacterCustomizeDataTableBootsList>		ModPatch::DT_Boots_Female;
+ModTable<SDK::FCharacterCustomizeDataTableBootsList>		ModPatch::DT_Boots_Male;
+ModTable<SDK::FCharacterCustomizeDataTableGlovesList>		ModPatch::DT_Gloves_Female;
+ModTable<SDK::FCharacterCustomizeDataTableGlovesList>		ModPatch::DT_Gloves_Male;
+ModTable<SDK::FCharacterCustomizeDataTableMaskList>		ModPatch::DT_Mask_Female;
+ModTable<SDK::FCharacterCustomizeDataTableMaskList>		ModPatch::DT_Mask_Male;
+ModTable<SDK::FCharacterCustomizeDataTableOuterList>		ModPatch::DT_Outer_Female;
+ModTable<SDK::FCharacterCustomizeDataTableOuterList>		ModPatch::DT_Outer_Male;
 
-std::map<std::string, SDK::FCharacterCustomizeDataTableAccessoryPreset> ModPatch::DT_AccessoryPresetDLC_Free;
-std::map<std::string, SDK::FCharacterCustomizeDataTableAccessoryPreset> ModPatch::DT_AccessoryPresetIsHat;
-std::map<std::string, SDK::FCharacterCustomizeDataTableAttachToList>	ModPatch::DT_AccessoryAttachToList;
+ModTable<SDK::FCharacterCustomizeDataTableAccessoryPreset> ModPatch::DT_AccessoryPresetDLC_Free;
+ModTable<SDK::FCharacterCustomizeDataTableAccessoryPreset> ModPatch::DT_AccessoryPresetIsHat;
+ModTable<SDK::FCharacterCustomizeDataTableAttachToList>	ModPatch::DT_AccessoryAttachToList;
 
-std::map<std::string, SDK::FCharacterCustomizeDataTableHairBase>		ModPatch::DT_HairBaseList;
-std::map<std::string, SDK::FCharacterCustomizeDataTableHairPart>		ModPatch::DT_HairBack;
-std::map<std::string, SDK::FCharacterCustomizeDataTableHairPart>		ModPatch::DT_HairFront;
-std::map<std::string, SDK::FCharacterCustomizeDataTableHairPart>		ModPatch::DT_HairFrontSide;
-std::map<std::string, SDK::FCharacterCustomizeDataTableHairPart>		ModPatch::DT_HairOther;
-std::map<std::string, SDK::FCharacterCustomizeDataTableHairPart>		ModPatch::DT_HairSide;
-std::map<std::string, SDK::FCharacterCustomizeDataTableHairPart>		ModPatch::DT_HairTop;
-std::map<std::string, SDK::FCharacterCustomizeDataTableHairSet>			ModPatch::DT_HairSetList_Female;
-std::map<std::string, SDK::FCharacterCustomizeDataTableHairSet>			ModPatch::DT_HairSetList_Male;
+ModTable<SDK::FCharacterCustomizeDataTableHairBase>		ModPatch::DT_HairBaseList;
+ModTable<SDK::FCharacterCustomizeDataTableHairPart>		ModPatch::DT_HairBack;
+ModTable<SDK::FCharacterCustomizeDataTableHairPart>		ModPatch::DT_HairFront;
+ModTable<SDK::FCharacterCustomizeDataTableHairPart>		ModPatch::DT_HairFrontSide;
+ModTable<SDK::FCharacterCustomizeDataTableHairPart>		ModPatch::DT_HairOther;
+ModTable<SDK::FCharacterCustomizeDataTableHairPart>		ModPatch::DT_HairSide;
+ModTable<SDK::FCharacterCustomizeDataTableHairPart>		ModPatch::DT_HairTop;
+ModTable<SDK::FCharacterCustomizeDataTableHairSet>			ModPatch::DT_HairSetList_Female;
+ModTable<SDK::FCharacterCustomizeDataTableHairSet>			ModPatch::DT_HairSetList_Male;
 std::map<std::string, std::pair<std::vector<std::string>, SDK::FCharacterCustomizeDataTableHairBase>> ModPatch::DT_HairBaseListAddon;
 
-std::map<std::string, SDK::FCharacterCustomizeDataTableTextureList>		ModPatch::DT_EyeBase;
-std::map<std::string, SDK::FCharacterCustomizeDataTableEyeTexture>		ModPatch::DT_EyeDetail;
-std::map<std::string, SDK::FCharacterCustomizeDataTableTextureList>		ModPatch::DT_EyeHighlight;
-std::map<std::string, SDK::FCharacterCustomizeDataTableEyebrowTexture>	ModPatch::DT_Eyebrow;
-std::map<std::string, SDK::FCharacterCustomizeDataTableTextureList>		ModPatch::DT_EyeLash;
+ModTable<SDK::FCharacterCustomizeDataTableTextureList>		ModPatch::DT_EyeBase;
+ModTable<SDK::FCharacterCustomizeDataTableEyeTexture>		ModPatch::DT_EyeDetail;
+ModTable<SDK::FCharacterCustomizeDataTableTextureList>		ModPatch::DT_EyeHighlight;
+ModTable<SDK::FCharacterCustomizeDataTableEyebrowTexture>	ModPatch::DT_Eyebrow;
+ModTable<SDK::FCharacterCustomizeDataTableTextureList>		ModPatch::DT_EyeLash;
 
-std::map<std::string, SDK::FCharacterCustomizeDataTableKintsugiList>		ModPatch::DT_Kintsugi;
-std::map<std::string, SDK::FCharacterCustomizeDataTableFacePaintMaskPreset> ModPatch::DT_FacePaintDLC;
-std::map<std::string, SDK::FCharacterCustomizeDataTableManicurePatternList> ModPatch::DT_Manicure;
+ModTable<SDK::FCharacterCustomizeDataTableKintsugiList>		ModPatch::DT_Kintsugi;
+ModTable<SDK::FCharacterCustomizeDataTableFacePaintMaskPreset> ModPatch::DT_FacePaintDLC;
+ModTable<SDK::FCharacterCustomizeDataTableManicurePatternList> ModPatch::DT_Manicure;
 
-std::map<std::string, SDK::FCharacterCustomizeDataTablePreset>				ModPatch::DT_AppAvatarPresetFemale;
-std::map<std::string, SDK::FCharacterCustomizeDataTablePreset>				ModPatch::DT_AppAvatarPresetMale;
+ModTable<SDK::FCharacterCustomizeDataTablePreset>				ModPatch::DT_AppAvatarPresetFemale;
+ModTable<SDK::FCharacterCustomizeDataTablePreset>				ModPatch::DT_AppAvatarPresetMale;
 
 float TableVersion = 1.0f;
 
-void ModPatch::ProcessInnerTable(toml::table table, std::map<std::string, SDK::FCharacterCustomizeDataTableInnerList>* DataTable)
+void ModPatch::ProcessInnerTable(toml::table table, ModTable<SDK::FCharacterCustomizeDataTableInnerList>* DataTable)
 {
 	for (auto& [key, value] : table)
 	{
@@ -145,11 +145,11 @@ void ModPatch::ProcessInnerTable(toml::table table, std::map<std::string, SDK::F
 		Inner.DefaultBootsRowName = FNameHelper::FNameFromString(data->get(14)->value_or("None_Boots"));
 		Inner.DefaultOuterRowName = FNameHelper::FNameFromString(data->get(15)->value_or("None_Outer"));
 
-		DataTable->insert({ name, Inner });
+		DataTable->insert({ name, { FNameHelper::FNameFromString(name), Inner } });
 	}
 }
 
-void ModPatch::ProcessBootsTable(toml::table table, std::map<std::string, SDK::FCharacterCustomizeDataTableBootsList>* DataTable)
+void ModPatch::ProcessBootsTable(toml::table table, ModTable<SDK::FCharacterCustomizeDataTableBootsList>* DataTable)
 {
 	for (auto& [key, value] : table)
 	{
@@ -246,11 +246,11 @@ void ModPatch::ProcessBootsTable(toml::table table, std::map<std::string, SDK::F
 		}
 		Boots.bAffectPedicure = data->get(10)->value_or(false);
 
-		DataTable->insert({ name, Boots });
+		DataTable->insert({ name, { FNameHelper::FNameFromString(name), Boots } });
 	}
 }
 
-void ModPatch::ProcessGlovesTable(toml::table table, std::map<std::string, SDK::FCharacterCustomizeDataTableGlovesList>* DataTable)
+void ModPatch::ProcessGlovesTable(toml::table table, ModTable<SDK::FCharacterCustomizeDataTableGlovesList>* DataTable)
 {
 	for (auto& [key, value] : table)
 	{
@@ -370,11 +370,11 @@ void ModPatch::ProcessGlovesTable(toml::table table, std::map<std::string, SDK::
 			printf("[RHFF] Failed to load companion pak, some functions will not be available\n");
 			printf("[RHFF] please install the z10_RHFF_P.pak\\z10_RHFF_P.ucas\\z10_RHFF_P.utoc to your ~mods folder and restart the game. \ndo NOT rename the pak\\ucas\\utoc files.\n");
 		}
-		DataTable->insert({ name, Gloves });
+		DataTable->insert({ name, { FNameHelper::FNameFromString(name), Gloves } });
 	}
 }
 
-void ModPatch::ProcessMaskTable(toml::table table, std::map<std::string, SDK::FCharacterCustomizeDataTableMaskList>* DataTable)
+void ModPatch::ProcessMaskTable(toml::table table, ModTable<SDK::FCharacterCustomizeDataTableMaskList>* DataTable)
 {
 	for (auto& [key, value] : table)
 	{
@@ -463,11 +463,11 @@ void ModPatch::ProcessMaskTable(toml::table table, std::map<std::string, SDK::FC
 			Mask.bCanWearWithSentimentalMask = data->get(8)->value_or(false);
 		}
 
-		DataTable->insert({ name, Mask });
+		DataTable->insert({ name, { FNameHelper::FNameFromString(name), Mask } });
 	}
 }
 
-void ModPatch::ProcessOuterTable(toml::table table, std::map<std::string, SDK::FCharacterCustomizeDataTableOuterList>* DataTable)
+void ModPatch::ProcessOuterTable(toml::table table, ModTable<SDK::FCharacterCustomizeDataTableOuterList>* DataTable)
 {
 	for (auto& [key, value] : table)
 	{
@@ -529,11 +529,11 @@ void ModPatch::ProcessOuterTable(toml::table table, std::map<std::string, SDK::F
 			Outer.HairAffectTypeWithSentimentalMask = magic_enum::enum_cast<SDK::ECharacterCustomizeClothHairAffectType>(data->get(7)->value_or("General")).value_or(SDK::ECharacterCustomizeClothHairAffectType::None);
 		}
 
-		DataTable->insert({ name, Outer });
+		DataTable->insert({ name, { FNameHelper::FNameFromString(name), Outer } });
 	}
 }
 
-void ModPatch::ProcessAccessoryPresetTable(toml::table table, std::map<std::string, SDK::FCharacterCustomizeDataTableAccessoryPreset>* DataTable)
+void ModPatch::ProcessAccessoryPresetTable(toml::table table, ModTable<SDK::FCharacterCustomizeDataTableAccessoryPreset>* DataTable)
 {
 	for (auto& [key, value] : table)
 	{
@@ -659,11 +659,11 @@ void ModPatch::ProcessAccessoryPresetTable(toml::table table, std::map<std::stri
 		AccessoryPreset.bSpaEnable = data->get(15)->value_or(false);
 		AccessoryPreset.bIsToSameAsHair = data->get(16)->value_or(false);
 
-		DataTable->insert({ name, AccessoryPreset });
+		DataTable->insert({ name, { FNameHelper::FNameFromString(name), AccessoryPreset } });
 	}
 }
 
-void ModPatch::ProcessHairBaseTable(toml::table table, std::map<std::string, SDK::FCharacterCustomizeDataTableHairBase>* DataTable)
+void ModPatch::ProcessHairBaseTable(toml::table table, ModTable<SDK::FCharacterCustomizeDataTableHairBase>* DataTable)
 {
 	for (auto& [key, value] : table)
 	{
@@ -769,11 +769,11 @@ void ModPatch::ProcessHairBaseTable(toml::table table, std::map<std::string, SDK
 		HairBase.bIsLengthChangeAvailable = data->get(10)->value_or(false);
 		HairBase.bIsCurlAvailable = data->get(11)->value_or(false);
 
-		DataTable->insert({ name, HairBase });
+		DataTable->insert({ name, { FNameHelper::FNameFromString(name), HairBase } });
 	}
 }
 
-void ModPatch::ProcessHairPartTable(toml::table table, std::map<std::string, SDK::FCharacterCustomizeDataTableHairPart>* DataTable)
+void ModPatch::ProcessHairPartTable(toml::table table, ModTable<SDK::FCharacterCustomizeDataTableHairPart>* DataTable)
 {
 	for (auto& [key, value] : table)
 	{
@@ -821,11 +821,11 @@ void ModPatch::ProcessHairPartTable(toml::table table, std::map<std::string, SDK
 		HairPart.bIsLengthChangeAvailable = data->get(5)->value_or(false);
 		HairPart.bIsCurlAvailable = data->get(6)->value_or(false);
 
-		DataTable->insert({ name, HairPart });
+		DataTable->insert({ name, { FNameHelper::FNameFromString(name), HairPart } });
 	}
 }
 
-void ModPatch::ProcessHairSetTable(toml::table table, std::map<std::string, SDK::FCharacterCustomizeDataTableHairSet>* DataTable)
+void ModPatch::ProcessHairSetTable(toml::table table, ModTable<SDK::FCharacterCustomizeDataTableHairSet>* DataTable)
 {
 	for (auto& [key, value] : table)
 	{
@@ -867,7 +867,7 @@ void ModPatch::ProcessHairSetTable(toml::table table, std::map<std::string, SDK:
 		HairSet.bHairCurlEnabled = data->get(9)->value_or(false);
 		HairSet.bHairHighlightEnabled = data->get(10)->value_or(false);
 
-		DataTable->insert({ name, HairSet });
+		DataTable->insert({ name, { FNameHelper::FNameFromString(name), HairSet } });
 	}
 }
 
@@ -971,7 +971,7 @@ void ModPatch::ProcessHairBaseAddon(toml::table table, std::map<std::string, std
 	}
 }
 
-void ModPatch::ProcessTextureListTable(toml::table table, std::map<std::string, SDK::FCharacterCustomizeDataTableTextureList>* DataTable)
+void ModPatch::ProcessTextureListTable(toml::table table, ModTable<SDK::FCharacterCustomizeDataTableTextureList>* DataTable)
 {
 	for (auto& [key, value] : table)
 	{
@@ -1006,11 +1006,11 @@ void ModPatch::ProcessTextureListTable(toml::table table, std::map<std::string, 
 		texturepath.ObjectID = { .AssetPath = FNameHelper::FNameFromString(data->get(1)->value_or("")) };
 		TextureList.Texture = texturepath;
 
-		DataTable->insert({ name, TextureList });
+		DataTable->insert({ name, { FNameHelper::FNameFromString(name), TextureList } });
 	}
 }
 
-void ModPatch::ProcessEyeTextureTable(toml::table table, std::map<std::string, SDK::FCharacterCustomizeDataTableEyeTexture>* DataTable)
+void ModPatch::ProcessEyeTextureTable(toml::table table, ModTable<SDK::FCharacterCustomizeDataTableEyeTexture>* DataTable)
 {
 	for (auto& [key, value] : table)
 	{
@@ -1049,11 +1049,11 @@ void ModPatch::ProcessEyeTextureTable(toml::table table, std::map<std::string, S
 		Irispath.ObjectID = { .AssetPath = FNameHelper::FNameFromString(data->get(2)->value_or("")) };
 		EyeTexture.IrisReflectionTexture = Irispath;
 
-		DataTable->insert({ name, EyeTexture });
+		DataTable->insert({ name, { FNameHelper::FNameFromString(name), EyeTexture } });
 	}
 }
 
-void ModPatch::ProcessAccessoryAttachToTable(toml::table table, std::map<std::string, SDK::FCharacterCustomizeDataTableAttachToList>* DataTable)
+void ModPatch::ProcessAccessoryAttachToTable(toml::table table, ModTable<SDK::FCharacterCustomizeDataTableAttachToList>* DataTable)
 {
 	for (auto& [key, value] : table)
 	{
@@ -1102,11 +1102,11 @@ void ModPatch::ProcessAccessoryAttachToTable(toml::table table, std::map<std::st
 		AttachTo.MoveType = magic_enum::enum_cast<SDK::ECharacterCustomizeAttachToMoveType>(data->get(4)->value_or("Cylindrical")).value_or(SDK::ECharacterCustomizeAttachToMoveType::Cylindrical);
 		AttachTo.bKeepWearingInSpa = data->get(5)->value_or(false);
 
-		DataTable->insert({ name, AttachTo });
+		DataTable->insert({ name, { FNameHelper::FNameFromString(name), AttachTo } });
 	}
 }
 
-void ModPatch::ProcessEyeBrowTextureTable(toml::table table, std::map<std::string, SDK::FCharacterCustomizeDataTableEyebrowTexture>* DataTable)
+void ModPatch::ProcessEyeBrowTextureTable(toml::table table, ModTable<SDK::FCharacterCustomizeDataTableEyebrowTexture>* DataTable)
 {
 	for (auto& [key, value] : table)
 	{
@@ -1148,11 +1148,11 @@ void ModPatch::ProcessEyeBrowTextureTable(toml::table table, std::map<std::strin
 		EyeBrowTexture.NormalIntensity = data->get(3)->value_or(0.0f);
 		EyeBrowTexture.UseBrowHeightFromAlpha = data->get(4)->value_or(0.0f);
 
-		DataTable->insert({ name, EyeBrowTexture });
+		DataTable->insert({ name, { FNameHelper::FNameFromString(name), EyeBrowTexture } });
 	}
 }
 
-void ModPatch::ProcessKintsugiTable(toml::table table, std::map<std::string, SDK::FCharacterCustomizeDataTableKintsugiList>* DataTable)
+void ModPatch::ProcessKintsugiTable(toml::table table, ModTable<SDK::FCharacterCustomizeDataTableKintsugiList>* DataTable)
 {
 	for (auto& [key, value] : table)
 	{
@@ -1205,11 +1205,11 @@ void ModPatch::ProcessKintsugiTable(toml::table table, std::map<std::string, SDK
 		Kintsugi.ScaleU = data->get(11)->value_or(0.0f);
 		Kintsugi.ScaleV = data->get(12)->value_or(0.0f);
 
-		DataTable->insert({ name, Kintsugi });
+		DataTable->insert({ name, { FNameHelper::FNameFromString(name), Kintsugi } });
 	}
 }
 
-void ModPatch::ProcessFacePaintTable(toml::table table, std::map<std::string, SDK::FCharacterCustomizeDataTableFacePaintMaskPreset>* DataTable)
+void ModPatch::ProcessFacePaintTable(toml::table table, ModTable<SDK::FCharacterCustomizeDataTableFacePaintMaskPreset>* DataTable)
 {
 	for (auto& [key, value] : table)
 	{
@@ -1260,11 +1260,11 @@ void ModPatch::ProcessFacePaintTable(toml::table table, std::map<std::string, SD
 			facePaint.FlagCondition.EvaluationFormula = FNameHelper::FStringFromString(data->get(11)->value_or(""));
 		}
 
-		DataTable->insert({ name, facePaint });
+		DataTable->insert({ name, { FNameHelper::FNameFromString(name), facePaint } });
 	}
 }
 
-void ModPatch::ProcessManicureTable(toml::table table, std::map<std::string, SDK::FCharacterCustomizeDataTableManicurePatternList>* DataTable)
+void ModPatch::ProcessManicureTable(toml::table table, ModTable<SDK::FCharacterCustomizeDataTableManicurePatternList>* DataTable)
 {
 	for (auto& [key, value] : table)
 	{
@@ -1310,11 +1310,11 @@ void ModPatch::ProcessManicureTable(toml::table table, std::map<std::string, SDK
 		Nails.ManicureRoughness = data->get(9)->value_or(0.0f);
 		Nails.ManicureEmissiveIntencity = data->get(9)->value_or(0.0f);
 
-		DataTable->insert({ name, Nails });
+		DataTable->insert({ name, { FNameHelper::FNameFromString(name), Nails } });
 	}
 }
 
-void ModPatch::ProcessAvatarPresetTable(toml::table table, std::map<std::string, SDK::FCharacterCustomizeDataTablePreset>* DataTable)
+void ModPatch::ProcessAvatarPresetTable(toml::table table, ModTable<SDK::FCharacterCustomizeDataTablePreset>* DataTable)
 {
 	for (auto& [key, value] : table)
 	{

@@ -8,6 +8,8 @@
 #include "SDK/BPFL_MapHelper_classes.hpp"
 #include <filesystem>
 #include <thread>
+#include <atomic>
+#include <unordered_set>
 
 static std::vector<std::string> MeshSlots = { "InnerMesh", "GlovesMesh", "BootsMesh", "MaskMesh", "OuterMesh" };
 
@@ -76,17 +78,60 @@ void EnableConsole()
 
 }
 
-template <typename T>
-void Patch_FlagCondition(SDK::UDataTable* TablePtr, std::map<std::string, T> ModTable, uint64_t offset)
+// Packs both FName fields into one integer so it can be hashed; equal FNames give equal keys.
+inline uint64_t FNameKey(const SDK::FName& Name)
 {
+    return (static_cast<uint64_t>(static_cast<uint32_t>(Name.ComparisonIndex)) << 32) | static_cast<uint32_t>(Name.Number);
+}
+
+// Clears the flag condition on the table's copy of every merged row (AddRow copies rows into the table).
+template <typename T>
+void Patch_FlagCondition(SDK::UDataTable* TablePtr, const ModTable<T>& ModRows, uint64_t offset)
+{
+    std::unordered_set<uint64_t> ModRowNames;
+    ModRowNames.reserve(ModRows.size());
+    for (const auto& [key, row] : ModRows)
+        ModRowNames.insert(FNameKey(row.Name));
+
     for (auto& entry : TablePtr->RowMap)
     {
-        if (ModTable.contains(entry.First.ToString()))
+        if (ModRowNames.contains(FNameKey(entry.First)))
         {
             //printf("[RHFF] Row Location %p\n", entry.Second);
             WRITE_MEMORY(entry.Second + offset, uint8_t, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0)
         }
     }
+}
+
+// Every DataTable the merger patches. Add a table here to get a matching TableNames::<name> FName.
+#define MERGED_DATATABLES(X) \
+    X(DT_Inner_Female) X(DT_Inner_Male) \
+    X(DT_HairBaseList) X(DT_HairBack) X(DT_HairFront) X(DT_HairFrontSide) X(DT_HairOther) X(DT_HairSide) X(DT_HairTop) \
+    X(DT_HairSetList_Female) X(DT_HairSetList_Male) \
+    X(DT_AccessoryPresetDLC_Free) X(DT_AccessoryPresetIsHat) X(DT_AccessoryAttachToList) \
+    X(DT_Boots_Female) X(DT_Boots_Male) X(DT_Gloves_Female) X(DT_Gloves_Male) \
+    X(DT_Mask_Female) X(DT_Mask_Male) X(DT_Outer_Female) X(DT_Outer_Male) \
+    X(DT_EyeBase) X(DT_EyeDetail) X(DT_EyeHighlight) \
+    X(DT_Kintsugi) X(DT_FacePaintDLC) X(DT_Manicure)
+
+// FNames for the table names, built once so the Serialize hook compares integers instead of strings.
+namespace TableNames
+{
+#define DECLARE_TABLE_FNAME(Name) static SDK::FName Name;
+    MERGED_DATATABLES(DECLARE_TABLE_FNAME)
+#undef DECLARE_TABLE_FNAME
+}
+
+// Set once TableNames is built. Before that, ModPatch::init() hasn't run, so there's nothing to merge anyway.
+static std::atomic<bool> TableNamesReady = false;
+
+// Conv_StringToName needs the UObject system up and goes through ProcessEvent, so call this on the game thread.
+void InitTableNames()
+{
+#define INIT_TABLE_FNAME(Name) TableNames::Name = FNameHelper::FNameFromString(#Name);
+    MERGED_DATATABLES(INIT_TABLE_FNAME)
+#undef INIT_TABLE_FNAME
+    TableNamesReady.store(true, std::memory_order_release);
 }
 
 #pragma endregion
@@ -97,38 +142,42 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
 {
     //printf("[RHFF] UDataTable::Serialize called for DataTable: %s\n", _this->GetName().c_str());
     orig_Hook_UDataTable_Serialize(_this, param2);
-    std::string TableName = _this->GetName();
-    
-    if (TableName == "DT_Inner_Female")
+
+    if (!TableNamesReady.load(std::memory_order_acquire))
+        return;
+
+    const SDK::FName& TableName = _this->Name;
+
+    if (TableName == TableNames::DT_Inner_Female)
     {
         if (ModPatch::DT_Inner_Female.size() > 0) {
             //printf("[RHFF] DataTableName: %s\n", _this->GetFullName().c_str());
             for (auto& entry : ModPatch::DT_Inner_Female)
             {
-                UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
+                UDataTable_AddRow(_this, entry.second.Name, (SDK::FTableRowBase*)(&entry.second.Data));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
             Patch_FlagCondition(_this, ModPatch::DT_Inner_Female, 0x58);
         }
     }
-    else if (TableName == "DT_Inner_Male")
+    else if (TableName == TableNames::DT_Inner_Male)
     {
         if (ModPatch::DT_Inner_Male.size() > 0) {
             for (auto& entry : ModPatch::DT_Inner_Male)
             {
-                UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
+                UDataTable_AddRow(_this, entry.second.Name, (SDK::FTableRowBase*)(&entry.second.Data));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
             Patch_FlagCondition(_this, ModPatch::DT_Inner_Male, 0x58);
         }
     }
 
-    else if (TableName == "DT_HairBaseList")
+    else if (TableName == TableNames::DT_HairBaseList)
     {
         if (ModPatch::DT_HairBaseList.size() > 0) {
             for (auto& entry : ModPatch::DT_HairBaseList)
             {
-                UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
+                UDataTable_AddRow(_this, entry.second.Name, (SDK::FTableRowBase*)(&entry.second.Data));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
 		}
@@ -265,272 +314,272 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
             }
         }
     }
-    else if (TableName == "DT_HairBack")
+    else if (TableName == TableNames::DT_HairBack)
     {
         if (ModPatch::DT_HairBack.size() > 0) {
             for (auto& entry : ModPatch::DT_HairBack)
             {
-                UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
+                UDataTable_AddRow(_this, entry.second.Name, (SDK::FTableRowBase*)(&entry.second.Data));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
         }
     }
-    else if (TableName == "DT_HairFront")
+    else if (TableName == TableNames::DT_HairFront)
     {
         if (ModPatch::DT_HairFront.size() > 0) {
             for (auto& entry : ModPatch::DT_HairFront)
             {
-                UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
+                UDataTable_AddRow(_this, entry.second.Name, (SDK::FTableRowBase*)(&entry.second.Data));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
         }
 	}
-    else if (TableName == "DT_HairFrontSide")
+    else if (TableName == TableNames::DT_HairFrontSide)
     {
         if (ModPatch::DT_HairFrontSide.size() > 0) {
             for (auto& entry : ModPatch::DT_HairFrontSide)
             {
-                UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
+                UDataTable_AddRow(_this, entry.second.Name, (SDK::FTableRowBase*)(&entry.second.Data));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
 		}
     }
-    else if (TableName == "DT_HairOther")
+    else if (TableName == TableNames::DT_HairOther)
     {
         if (ModPatch::DT_HairOther.size() > 0) {
             for (auto& entry : ModPatch::DT_HairOther)
             {
-                UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
+                UDataTable_AddRow(_this, entry.second.Name, (SDK::FTableRowBase*)(&entry.second.Data));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
         }
     }
-    else if (TableName == "DT_HairSide")
+    else if (TableName == TableNames::DT_HairSide)
     {
         if (ModPatch::DT_HairSide.size() > 0) {
             for (auto& entry : ModPatch::DT_HairSide)
             {
-                UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
+                UDataTable_AddRow(_this, entry.second.Name, (SDK::FTableRowBase*)(&entry.second.Data));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
         }
     }
-    else if (TableName == "DT_HairTop")
+    else if (TableName == TableNames::DT_HairTop)
     {
         if (ModPatch::DT_HairTop.size() > 0) {
             for (auto& entry : ModPatch::DT_HairTop)
             {
-                UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
+                UDataTable_AddRow(_this, entry.second.Name, (SDK::FTableRowBase*)(&entry.second.Data));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
         }
     }
-    else if (TableName == "DT_HairSetList_Female")
+    else if (TableName == TableNames::DT_HairSetList_Female)
     {
         if (ModPatch::DT_HairSetList_Female.size() > 0) {
             for (auto& entry : ModPatch::DT_HairSetList_Female)
             {
-                UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
+                UDataTable_AddRow(_this, entry.second.Name, (SDK::FTableRowBase*)(&entry.second.Data));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
         }
     }
-    else if (TableName == "DT_HairSetList_Male")
+    else if (TableName == TableNames::DT_HairSetList_Male)
     {
         if (ModPatch::DT_HairSetList_Male.size() > 0) {
             for (auto& entry : ModPatch::DT_HairSetList_Male)
             {
-                UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
+                UDataTable_AddRow(_this, entry.second.Name, (SDK::FTableRowBase*)(&entry.second.Data));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
         }
     }
 
-    else if (TableName == "DT_AccessoryPresetDLC_Free")
+    else if (TableName == TableNames::DT_AccessoryPresetDLC_Free)
     {
         if (ModPatch::DT_AccessoryPresetDLC_Free.size() > 0) {
             for (auto& entry : ModPatch::DT_AccessoryPresetDLC_Free)
             {
-                UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
+                UDataTable_AddRow(_this, entry.second.Name, (SDK::FTableRowBase*)(&entry.second.Data));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
 			Patch_FlagCondition(_this, ModPatch::DT_AccessoryPresetDLC_Free, 0x01B0);
         }
     }
-    else if (TableName == "DT_AccessoryPresetIsHat")
+    else if (TableName == TableNames::DT_AccessoryPresetIsHat)
     {
         if (ModPatch::DT_AccessoryPresetIsHat.size() > 0) {
             for (auto& entry : ModPatch::DT_AccessoryPresetIsHat)
             {
-                UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
+                UDataTable_AddRow(_this, entry.second.Name, (SDK::FTableRowBase*)(&entry.second.Data));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
             Patch_FlagCondition(_this, ModPatch::DT_AccessoryPresetIsHat, 0x01B0);
         }
     }
-    else if (TableName == "DT_AccessoryAttachToList")
+    else if (TableName == TableNames::DT_AccessoryAttachToList)
     {
         if (ModPatch::DT_AccessoryAttachToList.size() > 0)
         {
             for (auto& entry : ModPatch::DT_AccessoryAttachToList)
             {
-                UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
+                UDataTable_AddRow(_this, entry.second.Name, (SDK::FTableRowBase*)(&entry.second.Data));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
         }
     }
 
-    else if (TableName == "DT_Boots_Female")
+    else if (TableName == TableNames::DT_Boots_Female)
     {
         if (ModPatch::DT_Boots_Female.size() > 0) {
             for (auto& entry : ModPatch::DT_Boots_Female)
             {
-                UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
+                UDataTable_AddRow(_this, entry.second.Name, (SDK::FTableRowBase*)(&entry.second.Data));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
             Patch_FlagCondition(_this, ModPatch::DT_Boots_Female, 0x058);
         }
     }
-    else if (TableName == "DT_Boots_Male")
+    else if (TableName == TableNames::DT_Boots_Male)
     {
         if (ModPatch::DT_Boots_Male.size() > 0) {
             for (auto& entry : ModPatch::DT_Boots_Male)
             {
-                UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
+                UDataTable_AddRow(_this, entry.second.Name, (SDK::FTableRowBase*)(&entry.second.Data));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
             Patch_FlagCondition(_this, ModPatch::DT_Boots_Male, 0x058);
         }
     }
-    else if (TableName == "DT_Gloves_Female")
+    else if (TableName == TableNames::DT_Gloves_Female)
     {
         if (ModPatch::DT_Gloves_Female.size() > 0) {
             for (auto& entry : ModPatch::DT_Gloves_Female)
             {
                 //printf("[CVMerger] Entry location %p\n", &entry.second);
-                UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
+                UDataTable_AddRow(_this, entry.second.Name, (SDK::FTableRowBase*)(&entry.second.Data));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
             Patch_FlagCondition(_this, ModPatch::DT_Gloves_Female, 0x058);
         }
     }
-    else if (TableName == "DT_Gloves_Male")
+    else if (TableName == TableNames::DT_Gloves_Male)
     {
         if (ModPatch::DT_Gloves_Male.size() > 0) {
             for (auto& entry : ModPatch::DT_Gloves_Male)
             {
-                UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
+                UDataTable_AddRow(_this, entry.second.Name, (SDK::FTableRowBase*)(&entry.second.Data));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
             Patch_FlagCondition(_this, ModPatch::DT_Gloves_Male, 0x058);
         }
     }
-    else if (TableName == "DT_Mask_Female")
+    else if (TableName == TableNames::DT_Mask_Female)
     {
         if (ModPatch::DT_Mask_Female.size() > 0) {
             for (auto& entry : ModPatch::DT_Mask_Female)
             {
-                UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
+                UDataTable_AddRow(_this, entry.second.Name, (SDK::FTableRowBase*)(&entry.second.Data));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
             Patch_FlagCondition(_this, ModPatch::DT_Mask_Female, 0x058);
         }
     }
-    else if (TableName == "DT_Mask_Male")
+    else if (TableName == TableNames::DT_Mask_Male)
     {
         if (ModPatch::DT_Mask_Male.size() > 0) {
             for (auto& entry : ModPatch::DT_Mask_Male)
             {
-                UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
+                UDataTable_AddRow(_this, entry.second.Name, (SDK::FTableRowBase*)(&entry.second.Data));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
             Patch_FlagCondition(_this, ModPatch::DT_Mask_Male, 0x058);
         }
     }
-    else if (TableName == "DT_Outer_Female")
+    else if (TableName == TableNames::DT_Outer_Female)
     {
         if (ModPatch::DT_Outer_Female.size() > 0) {
             for (auto& entry : ModPatch::DT_Outer_Female)
             {
-                UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
+                UDataTable_AddRow(_this, entry.second.Name, (SDK::FTableRowBase*)(&entry.second.Data));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
             Patch_FlagCondition(_this, ModPatch::DT_Outer_Female, 0x058);
         }
     }
-    else if (TableName == "DT_Outer_Male")
+    else if (TableName == TableNames::DT_Outer_Male)
     {
         if (ModPatch::DT_Outer_Male.size() > 0) {
             for (auto& entry : ModPatch::DT_Outer_Male)
             {
-                UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
+                UDataTable_AddRow(_this, entry.second.Name, (SDK::FTableRowBase*)(&entry.second.Data));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
             Patch_FlagCondition(_this, ModPatch::DT_Outer_Male, 0x058);
         }
     }
     
-    else if (TableName == "DT_EyeBase")
+    else if (TableName == TableNames::DT_EyeBase)
     {
         if (ModPatch::DT_EyeBase.size() > 0) {
             for (auto& entry : ModPatch::DT_EyeBase)
             {
-                UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
+                UDataTable_AddRow(_this, entry.second.Name, (SDK::FTableRowBase*)(&entry.second.Data));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
         }
 	}
-    else if (TableName == "DT_EyeDetail")
+    else if (TableName == TableNames::DT_EyeDetail)
     {
         if (ModPatch::DT_EyeDetail.size() > 0) {
             for (auto& entry : ModPatch::DT_EyeDetail)
             {
-                UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
+                UDataTable_AddRow(_this, entry.second.Name, (SDK::FTableRowBase*)(&entry.second.Data));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
         }
     }
-    else if (TableName == "DT_EyeHighlight")
+    else if (TableName == TableNames::DT_EyeHighlight)
     {
         if (ModPatch::DT_EyeHighlight.size() > 0) {
             for (auto& entry : ModPatch::DT_EyeHighlight)
             {
-                UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
+                UDataTable_AddRow(_this, entry.second.Name, (SDK::FTableRowBase*)(&entry.second.Data));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
         }
     }
 
-    else if (TableName == "DT_Kintsugi")
+    else if (TableName == TableNames::DT_Kintsugi)
     {
         if (ModPatch::DT_Kintsugi.size() > 0)
         {
             for (auto& entry : ModPatch::DT_Kintsugi)
             {
-                UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
+                UDataTable_AddRow(_this, entry.second.Name, (SDK::FTableRowBase*)(&entry.second.Data));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
         }
     }
-    else if (TableName == "DT_FacePaintDLC")
+    else if (TableName == TableNames::DT_FacePaintDLC)
     {
         if (ModPatch::DT_FacePaintDLC.size() > 0)
         {
             for (auto& entry : ModPatch::DT_FacePaintDLC)
             {
-                UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
+                UDataTable_AddRow(_this, entry.second.Name, (SDK::FTableRowBase*)(&entry.second.Data));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
             Patch_FlagCondition(_this, ModPatch::DT_FacePaintDLC, 0x88);
         }
     }
-    else if (TableName == "DT_Manicure")
+    else if (TableName == TableNames::DT_Manicure)
     {
         if (ModPatch::DT_Manicure.size() > 0)
         {
             for (auto& entry : ModPatch::DT_Manicure)
             {
-                UDataTable_AddRow(_this, FNameHelper::FNameFromString(entry.first), (SDK::FTableRowBase*)(&entry.second));
+                UDataTable_AddRow(_this, entry.second.Name, (SDK::FTableRowBase*)(&entry.second.Data));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
         }
@@ -542,6 +591,7 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
 HOOK(void, __stdcall, Hook_UGameFlowManager_OnShaderCompileWaitFinished, Sig_UGameFlowManager_OnShaderCompileWaitFinished, uint64_t* param1)
 {
     ModPatch::init();
+    InitTableNames();
     orig_Hook_UGameFlowManager_OnShaderCompileWaitFinished(param1);
 }
 
