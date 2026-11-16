@@ -53,6 +53,30 @@ namespace TArrayHelper
 	}
 }
 
+namespace WorldHelper
+{
+	static SDK::UWorld** GWorldPtr = nullptr;
+
+	void Init(void* GWorldAddress)
+	{
+		GWorldPtr = static_cast<SDK::UWorld**>(GWorldAddress);
+	}
+
+	SDK::UWorld* GetWorld()
+	{
+		if (GWorldPtr)
+			return *GWorldPtr;
+
+		// Signature not found: fall back to the game viewport's world. UEngine::GetEngine() finds the
+		// engine through GObjects, so this doesn't depend on any build-specific offset either.
+		SDK::UEngine* Engine = SDK::UEngine::GetEngine();
+		if (Engine && Engine->GameViewport)
+			return Engine->GameViewport->World;
+
+		return nullptr;
+	}
+}
+
 SDK::UObject* FindObjectByClass(const std::string& Name, SDK::UClass* uclass)
 {
 	for (int i = 0; i < SDK::UObject::GObjects->Num(); ++i)

@@ -45,4 +45,13 @@ namespace UDataTableHelper
 	}
 }
 
+namespace WorldHelper
+{
+	// Address of the engine's GWorld global, found by signature at startup (nullptr if the scan failed).
+	void Init(void* GWorldAddress);
+
+	// Current world. Use this instead of SDK::UWorld::GetWorld(), which reads a build-specific offset.
+	SDK::UWorld* GetWorld();
+}
+
 SDK::UObject* FindObjectByClass(const std::string& Name, SDK::UClass* uclass);

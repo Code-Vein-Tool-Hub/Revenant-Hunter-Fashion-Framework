@@ -335,7 +335,7 @@ void ModPatch::ProcessGlovesTable(toml::table table, ModTable<SDK::FCharacterCus
 					continue;
 				}
 			}
-			SDK::UBPFL_MapHelper_C::Make_Finger_Map(Thumb, Index, Middle, Ring, Pinky, SDK::UWorld::GetWorld(), &Gloves.LeftFingerExposureMap);
+			SDK::UBPFL_MapHelper_C::Make_Finger_Map(Thumb, Index, Middle, Ring, Pinky, WorldHelper::GetWorld(), &Gloves.LeftFingerExposureMap);
 			
 			for (auto& finger : *data->get(7)->as_array())
 			{
@@ -363,7 +363,7 @@ void ModPatch::ProcessGlovesTable(toml::table table, ModTable<SDK::FCharacterCus
 					continue;
 				}
 			}
-			SDK::UBPFL_MapHelper_C::Make_Finger_Map(Thumb, Index, Middle, Ring, Pinky, SDK::UWorld::GetWorld(), &Gloves.RightFingerExposureMap);
+			SDK::UBPFL_MapHelper_C::Make_Finger_Map(Thumb, Index, Middle, Ring, Pinky, WorldHelper::GetWorld(), &Gloves.RightFingerExposureMap);
 		}
 		else
 		{

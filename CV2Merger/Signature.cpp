@@ -56,3 +56,20 @@ FORCEINLINE void* sigScan(const char* signature, const char* mask, void* hint)
 
     return sigScan(signature, mask, sigSize, info.lpBaseOfDll, info.SizeOfImage);
 }
+
+void* resolveRipRelative(void* match, size_t dispOffset, size_t instrEnd)
+{
+    if (!match)
+        return nullptr;
+
+    char* instr = (char*)match;
+    char* target = instr + instrEnd + *(int32_t*)(instr + dispOffset);
+
+    // A bad match can resolve anywhere; only trust targets inside the game image.
+    const MODULEINFO& info = getModuleInfo();
+    char* base = (char*)info.lpBaseOfDll;
+    if (target < base || target >= base + info.SizeOfImage)
+        return nullptr;
+
+    return target;
+}

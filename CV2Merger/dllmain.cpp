@@ -56,16 +56,64 @@ void* Sig_ACharacterCustomizeSystem_SetMaskMesh = sigScan(
     "\x48\x89\x5C\x24\x2A\x57\x48\x81\xEC\xA0\x01\x00\x00\x48\x8B\x05\x2A\x2A\x2A\x2A\x48\x33\xC4\x48\x89\x84\x24\x2A\x2A\x2A\x2A\x48\x8B\x02\x48\x8B\xFA\x48\x89\x81\x2A\x2A\x2A\x2A\x48\x8B\xD9\xE8\x2A\x2A\x2A\x2A\x48\x8B\xCB\xE8\x2A\x2A\x2A\x2A\x48\x85\xC0\x0F\x84\x2A\x2A\x2A\x2A\x8B\x48\x2A\xC1\xE9\x1E\xF6\xD1\xF6\xC1\x01\x0F\x84\x2A\x2A\x2A\x2A\x4C\x8B\x0F\x48\x8D\x54\x24\x2A\x44\x0F\xB6\x83\x2A\x2A\x2A\x2A\x48\x8B\xC8\xE8\x2A\x2A\x2A\x2A\x45\x33\xC9",
     "xxxx?xxxxxxxxxxx????xxxxxxx????xxxxxxxxx????xxxx????xxxx????xxxxx????xx?xxxxxxxxxx????xxxxxxx?xxxx????xxxx????xxx");
 
+// Engine globals. Each sig matches an instruction that loads the global RIP-relative,
+// so the address is resolved at startup instead of using the SDK's build-specific Offsets.
+
+//0x1417270a0 in version 2.0.3.0 - object-index lookup, MOV RCX,[GObjects] (disp at +16, ends at +20)
+void* Sig_GObjects = sigScan(
+    "\x0F\xB7\xC8\x8B\xD0\x48\xC1\xEA\x10\x4C\x8D\x04\x49\x48\x8B\x0D\x2A\x2A\x2A\x2A\x48\x8B\x14\xD1\x4A\x83\x3C\xC2\x00",
+    "xxxxxxxxxxxxxxxx????xxxxxxxxx");
+
+//0x1416552c0 in version 2.0.3.0 - FNameEntry lookup, LEA RDX,[GNames] (disp at +20, ends at +24)
+void* Sig_GNames = sigScan(
+    "\x40\x53\x48\x83\xEC\x20\x80\x3D\x2A\x2A\x2A\x2A\x00\x8B\xD9\x74\x09\x48\x8D\x15\x2A\x2A\x2A\x2A\xEB\x16\x48\x8D\x0D\x2A\x2A\x2A\x2A\xE8",
+    "xxxxxxxx????xxxxxxxx????xxxxx????x");
+
+//0x143837860 in version 2.0.3.0 - GetWorld-style accessor, MOV RAX,[GWorld] (disp at +21, ends at +25)
+void* Sig_GWorld = sigScan(
+    "\x48\x8B\x41\x18\x48\x85\xC0\x74\x09\x48\x8B\x40\x30\x48\x85\xC0\x75\x07\x48\x8B\x05\x2A\x2A\x2A\x2A\xC3",
+    "xxxxxxxxxxxxxxxxxxxxx????x");
+
 #pragma endregion
 
 #pragma region Functions
 
 FUNCTION_PTR(void, __fastcall, UDataTable_AddRow, Sig_UDataTable_AddRow, SDK::UDataTable* _this, SDK::FName RowName, SDK::FTableRowBase* RowData);
 
+// Points the SDK at GObjects/GNames and the world helper at GWorld. Must run before any SDK call.
+// If a signature isn't found, GObjects/GNames fall back to the SDK's built-in offsets (only right
+// for the game version the SDK was dumped from) and GetWorld falls back to the viewport's world.
+void InitEngineGlobals()
+{
+    uintptr_t Base = (uintptr_t)GetModuleHandle(nullptr);
+
+    void* GObjects = resolveRipRelative(Sig_GObjects, 16, 20);
+    void* GNames = resolveRipRelative(Sig_GNames, 20, 24);
+    void* GWorld = resolveRipRelative(Sig_GWorld, 21, 25);
+
+    if (GObjects)
+        SDK::UObject::GObjects.InitManually(GObjects);
+    if (GNames)
+        SDK::FName::InitManually(GNames);
+    WorldHelper::Init(GWorld);
+
+    // Offsets are printed relative to the image base so they can be compared against a fresh SDK dump's Offsets.
+    auto Report = [Base](const char* Name, void* Address, const char* Fallback)
+    {
+        if (Address)
+            printf("[RHFF] %s found at base+0x%llX\n", Name, (unsigned long long)((uintptr_t)Address - Base));
+        else
+            printf("[RHFF] [Warning] %s signature not found, %s\n", Name, Fallback);
+    };
+    Report("GObjects", GObjects, "using the SDK's built-in offset");
+    Report("GNames", GNames, "using the SDK's built-in offset");
+    Report("GWorld", GWorld, "using the game viewport's world instead");
+}
+
 void EnableConsole()
 {
     SDK::UEngine* Engine = SDK::UEngine::GetEngine();
-    SDK::UWorld* World = SDK::UWorld::GetWorld();
+    SDK::UWorld* World = WorldHelper::GetWorld();
 
     SDK::UInputSettings::GetDefaultObj()->ConsoleKeys[0].KeyName = SDK::UKismetStringLibrary::Conv_StringToName(L"Tilde");
     SDK::UObject* NewObject = SDK::UGameplayStatics::SpawnObject(Engine->ConsoleClass, Engine->GameViewport);
@@ -157,7 +205,7 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
                 UDataTable_AddRow(_this, entry.second.Name, (SDK::FTableRowBase*)(&entry.second.Data));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
-            Patch_FlagCondition(_this, ModPatch::DT_Inner_Female, 0x58);
+            Patch_FlagCondition(_this, ModPatch::DT_Inner_Female, offsetof(SDK::FCharacterCustomizeDataTableInnerList, FlagCondition));
         }
     }
     else if (TableName == TableNames::DT_Inner_Male)
@@ -168,7 +216,7 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
                 UDataTable_AddRow(_this, entry.second.Name, (SDK::FTableRowBase*)(&entry.second.Data));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
-            Patch_FlagCondition(_this, ModPatch::DT_Inner_Male, 0x58);
+            Patch_FlagCondition(_this, ModPatch::DT_Inner_Male, offsetof(SDK::FCharacterCustomizeDataTableInnerList, FlagCondition));
         }
     }
 
@@ -185,7 +233,7 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
         //Addon table is for merging new parts options into an existing hair base
         if (Config::CompanionPakLoaded)
         {
-            SDK::UWorld* World = SDK::UWorld::GetWorld();
+            SDK::UWorld* World = WorldHelper::GetWorld();
             if (ModPatch::DT_HairBaseListAddon.size() > 0)
             {
                 for (auto& entry : ModPatch::DT_HairBaseListAddon)
@@ -403,7 +451,7 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
                 UDataTable_AddRow(_this, entry.second.Name, (SDK::FTableRowBase*)(&entry.second.Data));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
-			Patch_FlagCondition(_this, ModPatch::DT_AccessoryPresetDLC_Free, 0x01B0);
+			Patch_FlagCondition(_this, ModPatch::DT_AccessoryPresetDLC_Free, offsetof(SDK::FCharacterCustomizeDataTableAccessoryPreset, FlagCondition));
         }
     }
     else if (TableName == TableNames::DT_AccessoryPresetIsHat)
@@ -414,7 +462,7 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
                 UDataTable_AddRow(_this, entry.second.Name, (SDK::FTableRowBase*)(&entry.second.Data));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
-            Patch_FlagCondition(_this, ModPatch::DT_AccessoryPresetIsHat, 0x01B0);
+            Patch_FlagCondition(_this, ModPatch::DT_AccessoryPresetIsHat, offsetof(SDK::FCharacterCustomizeDataTableAccessoryPreset, FlagCondition));
         }
     }
     else if (TableName == TableNames::DT_AccessoryAttachToList)
@@ -437,7 +485,7 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
                 UDataTable_AddRow(_this, entry.second.Name, (SDK::FTableRowBase*)(&entry.second.Data));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
-            Patch_FlagCondition(_this, ModPatch::DT_Boots_Female, 0x058);
+            Patch_FlagCondition(_this, ModPatch::DT_Boots_Female, offsetof(SDK::FCharacterCustomizeDataTableBootsList, FlagCondition));
         }
     }
     else if (TableName == TableNames::DT_Boots_Male)
@@ -448,7 +496,7 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
                 UDataTable_AddRow(_this, entry.second.Name, (SDK::FTableRowBase*)(&entry.second.Data));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
-            Patch_FlagCondition(_this, ModPatch::DT_Boots_Male, 0x058);
+            Patch_FlagCondition(_this, ModPatch::DT_Boots_Male, offsetof(SDK::FCharacterCustomizeDataTableBootsList, FlagCondition));
         }
     }
     else if (TableName == TableNames::DT_Gloves_Female)
@@ -460,7 +508,7 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
                 UDataTable_AddRow(_this, entry.second.Name, (SDK::FTableRowBase*)(&entry.second.Data));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
-            Patch_FlagCondition(_this, ModPatch::DT_Gloves_Female, 0x058);
+            Patch_FlagCondition(_this, ModPatch::DT_Gloves_Female, offsetof(SDK::FCharacterCustomizeDataTableGlovesList, FlagCondition));
         }
     }
     else if (TableName == TableNames::DT_Gloves_Male)
@@ -471,7 +519,7 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
                 UDataTable_AddRow(_this, entry.second.Name, (SDK::FTableRowBase*)(&entry.second.Data));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
-            Patch_FlagCondition(_this, ModPatch::DT_Gloves_Male, 0x058);
+            Patch_FlagCondition(_this, ModPatch::DT_Gloves_Male, offsetof(SDK::FCharacterCustomizeDataTableGlovesList, FlagCondition));
         }
     }
     else if (TableName == TableNames::DT_Mask_Female)
@@ -482,7 +530,7 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
                 UDataTable_AddRow(_this, entry.second.Name, (SDK::FTableRowBase*)(&entry.second.Data));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
-            Patch_FlagCondition(_this, ModPatch::DT_Mask_Female, 0x058);
+            Patch_FlagCondition(_this, ModPatch::DT_Mask_Female, offsetof(SDK::FCharacterCustomizeDataTableMaskList, FlagCondition));
         }
     }
     else if (TableName == TableNames::DT_Mask_Male)
@@ -493,7 +541,7 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
                 UDataTable_AddRow(_this, entry.second.Name, (SDK::FTableRowBase*)(&entry.second.Data));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
-            Patch_FlagCondition(_this, ModPatch::DT_Mask_Male, 0x058);
+            Patch_FlagCondition(_this, ModPatch::DT_Mask_Male, offsetof(SDK::FCharacterCustomizeDataTableMaskList, FlagCondition));
         }
     }
     else if (TableName == TableNames::DT_Outer_Female)
@@ -504,7 +552,7 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
                 UDataTable_AddRow(_this, entry.second.Name, (SDK::FTableRowBase*)(&entry.second.Data));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
-            Patch_FlagCondition(_this, ModPatch::DT_Outer_Female, 0x058);
+            Patch_FlagCondition(_this, ModPatch::DT_Outer_Female, offsetof(SDK::FCharacterCustomizeDataTableOuterList, FlagCondition));
         }
     }
     else if (TableName == TableNames::DT_Outer_Male)
@@ -515,7 +563,7 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
                 UDataTable_AddRow(_this, entry.second.Name, (SDK::FTableRowBase*)(&entry.second.Data));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
-            Patch_FlagCondition(_this, ModPatch::DT_Outer_Male, 0x058);
+            Patch_FlagCondition(_this, ModPatch::DT_Outer_Male, offsetof(SDK::FCharacterCustomizeDataTableOuterList, FlagCondition));
         }
     }
     
@@ -570,7 +618,7 @@ HOOK(void, __stdcall, Hook_UDataTable_Serialize, Sig_UDataTable_Serialize, SDK::
                 UDataTable_AddRow(_this, entry.second.Name, (SDK::FTableRowBase*)(&entry.second.Data));
                 printf("[RHFF] [DT Merger] Added entry %s to DataTable \"%s\"\n", entry.first.c_str(), _this->GetName().c_str());
             }
-            Patch_FlagCondition(_this, ModPatch::DT_FacePaintDLC, 0x88);
+            Patch_FlagCondition(_this, ModPatch::DT_FacePaintDLC, offsetof(SDK::FCharacterCustomizeDataTableFacePaintMaskPreset, FlagCondition));
         }
     }
     else if (TableName == TableNames::DT_Manicure)
@@ -696,7 +744,7 @@ HOOK(void, __stdcall, Hook_ACharacterCustomizeSystem_SetMaskMesh, Sig_ACharacter
 {
     orig_Hook_ACharacterCustomizeSystem_SetMaskMesh(_this, InName);
 
-    auto CCSystem = SDK::UGameSystemManager::GetCharacterCustomizeSystem(SDK::UWorld::GetWorld());
+    auto CCSystem = SDK::UGameSystemManager::GetCharacterCustomizeSystem(WorldHelper::GetWorld());
     auto maskRow = CCSystem->CharacterCustomizeDataManager->GetMaskDataByRowName(CCSystem->GetGender(), *InName);
 
     _this->CharacterCustomizeParameter.Mask.PartVisibilityArray.Clear();
@@ -726,6 +774,8 @@ BOOL APIENTRY DllMain( HMODULE hModule,
             AttachConsole(GetCurrentProcessId());
             freopen("CON", "w", stdout);
         }
+
+        InitEngineGlobals();
 
         INSTALL_HOOK(hook_CreateFileW);
         //INSTALL_HOOK(Hook_UObject_ProcessEvent);
