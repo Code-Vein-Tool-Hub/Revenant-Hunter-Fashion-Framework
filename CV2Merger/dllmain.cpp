@@ -12,26 +12,32 @@
 #pragma region Sigs
 
 //0x143da5900 in version 1.0.3.0
+//0x143e76120 in version 2.0.3.0
 void* Sig_UDataTable_AddRow = sigScan(
     "\x48\x89\x5C\x24\x2A\x48\x89\x6C\x24\x2A\x56\x57\x41\x56\x48\x83\xEC\x20\x48\x8B\xF9\x48\x89\x4C\x24\x2A",
     "xxxx?xxxx?xxxxxxxxxxxxxxx?");
 
+//0x1461a0370 in version 2.0.3.0
 void* Sig_UGameFlowManager_OnShaderCompileWaitFinished = sigScan(
     "\x40\x55\x41\x56\x48\x83\xEC\x58\x48\x8B\x15\x2A\x2A\x2A\x2A",
     "xxxxxxxxxxx????");
 
+//0x143da4ff0 in version 2.0.3.0
 void* Sig_UDataTable_Serialize = sigScan(
     "\x48\x89\x5C\x24\x2A\x57\x48\x81\xEC\xC0\x01\x00\x00\x48\x8B\x05\x2A\x2A\x2A\x2A\x48\x33\xC4\x48\x89\x84\x24\x2A\x2A\x2A\x2A\x48\x8D\x05\x2A\x2A\x2A\x2A\x48\x89\x54\x24\x2A\x48\x89\x44\x24\x2A\x48\x8B\xFA",
     "xxxx?xxxxxxxxxxx????xxxxxxx????xxx????xxxx?xxxx?xxx");
 
+//0x146151e90 in version 2.0.3.0
 void* Sig_ACharacterCustomizePawn_CameraResetPressed = sigScan(
-    "\x40\x53\x48\x83\xEC\x30\x80\xB9\x2A\x2A\x2A\x2A\x00\x48\x89\xCB",
-    "xxxxxxxx????xxxx");
+    "\x40\x53\x48\x83\xEC\x30\x80\xB9\x2A\x2A\x2A\x2A\x00\x48\x8B\xD9\x74\x2A\x48\x8B\x81\x2A\x2A\x2A\x2A\x48\x85\xC0",
+    "xxxxxxxx????xxxxx?xxx????xxx");
 
+//0x141876fa0 in version 2.0.3.0
 void* Sig_UObject_ProcessEvent = sigScan(
     "\x40\x55\x56\x57\x41\x54\x41\x55\x41\x56\x41\x57\x48\x81\xEC\x10\x01\x00\x00",
     "xxxxxxxxxxxxxxxxxxx");
 
+//0x143f7f640 in version 2.0.3.0
 void* Sig_InputHook = sigScan(
     "\x48\x89\x5C\x24\x2A\x48\x89\x74\x24\x2A\x57\x48\x83\xEC\x20\x48\x8B\x02\x41\x8B\xF8",
     "xxxx?xxxx?xxxxxxxxxxx");
@@ -47,9 +53,15 @@ void EnableConsole()
     SDK::UEngine* Engine = SDK::UEngine::GetEngine();
     SDK::UWorld* World = SDK::UWorld::GetWorld();
 
-    SDK::UInputSettings::GetDefaultObj()->ConsoleKeys[0].KeyName = SDK::UKismetStringLibrary::Conv_StringToName(L"F2");
+    SDK::UInputSettings::GetDefaultObj()->ConsoleKeys[0].KeyName = SDK::UKismetStringLibrary::Conv_StringToName(L"Tilde");
     SDK::UObject* NewObject = SDK::UGameplayStatics::SpawnObject(Engine->ConsoleClass, Engine->GameViewport);
     Engine->GameViewport->ViewportConsole = static_cast<SDK::UConsole*>(NewObject);
+
+    SDK::APlayerController* MyController = World->OwningGameInstance->LocalPlayers[0]->PlayerController;
+    //MyController->CheatClass = SDK::UAppCheatManager::StaticClass();
+    //MyController->CheatManager = static_cast<SDK::UAppCheatManager*>(SDK::UGameplayStatics::SpawnObject(MyController->CheatClass, MyController));
+    MyController->EnableCheats();
+
 }
 
 template <typename T>
@@ -623,7 +635,7 @@ BOOL APIENTRY DllMain( HMODULE hModule,
         }
 
         INSTALL_HOOK(hook_CreateFileW);
-        //INSTALL_HOOK(Hook_UObject_ProcessEvent);
+        INSTALL_HOOK(Hook_UObject_ProcessEvent);
 		INSTALL_HOOK(Hook_UGameFlowManager_OnShaderCompileWaitFinished);
         INSTALL_HOOK(Hook_UDataTable_Serialize);
         if (Config::AccessoryInfo)
@@ -631,7 +643,7 @@ BOOL APIENTRY DllMain( HMODULE hModule,
             INSTALL_HOOK(Hook_CameraResetPressed);
         }
         //Not needed right now but maybe i'll need this in the future
-        //INSTALL_HOOK(Hook_InputHook);
+        INSTALL_HOOK(Hook_InputHook);
 
 		return TRUE;
     case DLL_THREAD_ATTACH:

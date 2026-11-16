@@ -96,12 +96,6 @@
     <ClInclude Include="SDK\BPFL_MapHelper_parameters.hpp">
       <Filter>SDK</Filter>
     </ClInclude>
-    <ClInclude Include="SDK\WDT_CharacterPresetImporter_classes.hpp">
-      <Filter>SDK</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\WDT_CharacterPresetImporter_parameters.hpp">
-      <Filter>SDK</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -141,9 +135,6 @@
       <Filter>SDK</Filter>
     </ClCompile>
     <ClCompile Include="SDK\BPFL_MapHelper_functions.cpp">
-      <Filter>SDK</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\WDT_CharacterPresetImporter_functions.cpp">
       <Filter>SDK</Filter>
     </ClCompile>
   </ItemGroup>

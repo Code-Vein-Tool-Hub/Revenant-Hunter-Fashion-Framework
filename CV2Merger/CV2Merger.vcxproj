@@ -181,8 +181,6 @@ move /Y "$(TargetDir)RHFFConfig.toml" "G:\SteamLibrary\steamapps\common\CodeVein
     <ClInclude Include="SDK\UMG_classes.hpp" />
     <ClInclude Include="SDK\UMG_parameters.hpp" />
     <ClInclude Include="SDK\UMG_structs.hpp" />
-    <ClInclude Include="SDK\WDT_CharacterPresetImporter_classes.hpp" />
-    <ClInclude Include="SDK\WDT_CharacterPresetImporter_parameters.hpp" />
     <ClInclude Include="Signature.h" />
     <ClInclude Include="Struct.h" />
     <ClInclude Include="UnrealContainers.hpp" />
@@ -205,7 +203,6 @@ move /Y "$(TargetDir)RHFFConfig.toml" "G:\SteamLibrary\steamapps\common\CodeVein
     <ClCompile Include="SDK\Extensions_functions.cpp" />
     <ClCompile Include="SDK\StoryFlagSystem_functions.cpp" />
     <ClCompile Include="SDK\UMG_functions.cpp" />
-    <ClCompile Include="SDK\WDT_CharacterPresetImporter_functions.cpp" />
     <ClCompile Include="Signature.cpp" />
     <ClCompile Include="Util.cpp" />
   </ItemGroup>

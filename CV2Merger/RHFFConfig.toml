@@ -5,4 +5,3 @@ Acc_Info_Tool = false
 [CompanionPaks]
 #Mods that take advantage of a unreal pak mod and c++ features in RHFF
 RHFFCompanionPak = "z10_RHFF_P.pak"
-CharacterPresetMod = "z11_CharacterPreset_P.pak"
