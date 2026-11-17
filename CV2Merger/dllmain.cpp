@@ -802,7 +802,8 @@ HOOK(SDK::FString*, __stdcall, Hook_UTitleMenuUIObject_GetApplicationVersionStri
     if (!Version)
         return nullptr;
 
-    *Version = SDK::UKismetStringLibrary::Concat_StrStr(*Version, SDK::FString(ModVersionSuffix));
+    if (!SDK::UKismetStringLibrary::Contains(*Version, SDK::FString(ModVersionSuffix), false, false))
+        *Version = SDK::UKismetStringLibrary::Concat_StrStr(*Version, SDK::FString(ModVersionSuffix));
     return Version;
 }
 
