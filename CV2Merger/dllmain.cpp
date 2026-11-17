@@ -12,6 +12,8 @@
 #include <unordered_set>
 
 static std::vector<std::string> MeshSlots = { "InnerMesh", "GlovesMesh", "BootsMesh", "MaskMesh", "OuterMesh" };
+static const wchar_t* const ModVersionSuffix = L" - RHFF v2.2.0";
+static SDK::UFunction::FNativeFuncPtr orig_Exec_GetApplicationVersionString = nullptr;
 
 #pragma region Sigs
 
@@ -55,6 +57,11 @@ void* Sig_UCharacterCustomizeUtility_SetScalarParameterValueToAllMesh = sigScan(
 void* Sig_ACharacterCustomizeSystem_SetMaskMesh = sigScan(
     "\x48\x89\x5C\x24\x2A\x57\x48\x81\xEC\xA0\x01\x00\x00\x48\x8B\x05\x2A\x2A\x2A\x2A\x48\x33\xC4\x48\x89\x84\x24\x2A\x2A\x2A\x2A\x48\x8B\x02\x48\x8B\xFA\x48\x89\x81\x2A\x2A\x2A\x2A\x48\x8B\xD9\xE8\x2A\x2A\x2A\x2A\x48\x8B\xCB\xE8\x2A\x2A\x2A\x2A\x48\x85\xC0\x0F\x84\x2A\x2A\x2A\x2A\x8B\x48\x2A\xC1\xE9\x1E\xF6\xD1\xF6\xC1\x01\x0F\x84\x2A\x2A\x2A\x2A\x4C\x8B\x0F\x48\x8D\x54\x24\x2A\x44\x0F\xB6\x83\x2A\x2A\x2A\x2A\x48\x8B\xC8\xE8\x2A\x2A\x2A\x2A\x45\x33\xC9",
     "xxxx?xxxxxxxxxxx????xxxxxxx????xxxxxxxxx????xxxx????xxxx????xxxxx????xx?xxxxxxxxxx????xxxxxxx?xxxx????xxxx????xxx");
+
+//0x141600eb0 in version 2.0.3.0
+void* Sig_UTitleMenuUIObject_GetApplicationVersionString = sigScan(
+    "\x40\x53\x48\x83\xEC\x20\x65\x48\x8B\x04\x25\x2A\x2A\x2A\x2A\xBA\x74\x01\x00\x00\x48\x8B\x08\x8B\x04\x2A\x39\x05\x2A\x2A\x2A\x2A\x7F\x2A\x48\x8D\x05\x2A\x2A\x2A\x2A\x48\x83\xC4\x20\x5B\xC3\x4C\x8B\x05\x2A\x2A\x2A\x2A\x48\x8D\x0D\x2A\x2A\x2A\x2A\xF2\x0F\x10\x05\x2A\x2A\x2A\x2A",
+    "xxxxxxxxxxx????xxxxxxxxxx?xx????x?xxx????xxxxxxxxx????xxx????xxxx????");
 
 // Engine globals. Each sig matches an instruction that loads the global RIP-relative,
 // so the address is resolved at startup instead of using the SDK's build-specific Offsets.
@@ -180,6 +187,38 @@ void InitTableNames()
     MERGED_DATATABLES(INIT_TABLE_FNAME)
 #undef INIT_TABLE_FNAME
     TableNamesReady.store(true, std::memory_order_release);
+}
+
+// Replaces the native thunk of UTitleMenuUIObject::GetApplicationVersionString, which the title menu
+// Blueprint's event graph calls to fill ApplicationVersionText. Only runs when the title menu asks for it.
+static void Exec_GetApplicationVersionString(void* Context, void* Stack, void* Result)
+{
+    orig_Exec_GetApplicationVersionString(Context, Stack, Result);
+
+    if (!Result)
+        return;
+
+    SDK::FString* Version = static_cast<SDK::FString*>(Result);
+    *Version = SDK::UKismetStringLibrary::Concat_StrStr(*Version, SDK::FString(ModVersionSuffix));
+}
+
+// Swaps the UFunction's native pointer (no signature needed: the function is found by name).
+// Needs the UObject system up, so it's called from the OnShaderCompileWaitFinished hook.
+static void InstallTitleVersionText()
+{
+    if (orig_Exec_GetApplicationVersionString)
+        return;
+
+    SDK::UClass* TitleUIObjectClass = SDK::UTitleMenuUIObject::StaticClass();
+    SDK::UFunction* Func = TitleUIObjectClass ? TitleUIObjectClass->GetFunction("TitleMenuUIObject", "GetApplicationVersionString") : nullptr;
+    if (!Func || !Func->ExecFunction)
+    {
+        printf("[RHFF] [Warning] Couldn't find TitleMenuUIObject.GetApplicationVersionString, title version text won't show the mod version\n");
+        return;
+    }
+
+    orig_Exec_GetApplicationVersionString = Func->ExecFunction;
+    Func->ExecFunction = &Exec_GetApplicationVersionString;
 }
 
 #pragma endregion
@@ -757,6 +796,17 @@ HOOK(void, __stdcall, Hook_ACharacterCustomizeSystem_SetMaskMesh, Sig_ACharacter
     }
 }
 
+HOOK(SDK::FString*, __stdcall, Hook_UTitleMenuUIObject_GetApplicationVersionString, Sig_UTitleMenuUIObject_GetApplicationVersionString)
+{
+    SDK::FString* Version = orig_Hook_UTitleMenuUIObject_GetApplicationVersionString();
+    if (!Version)
+        return nullptr;
+
+    *Version = SDK::UKismetStringLibrary::Concat_StrStr(*Version, SDK::FString(ModVersionSuffix));
+    return Version;
+}
+
+
 #pragma endregion
 
 BOOL APIENTRY DllMain( HMODULE hModule,
@@ -777,6 +827,7 @@ BOOL APIENTRY DllMain( HMODULE hModule,
 
         InitEngineGlobals();
 
+        INSTALL_HOOK(Hook_UTitleMenuUIObject_GetApplicationVersionString);
         INSTALL_HOOK(hook_CreateFileW);
         //INSTALL_HOOK(Hook_UObject_ProcessEvent);
 		INSTALL_HOOK(Hook_UGameFlowManager_OnShaderCompileWaitFinished);

@@ -9,24 +9,42 @@
 // FORWARD DECLARATIONS
 
 
-namespace GameplayAbilities { struct FServerAbilityRPCBatch; }
-
-namespace ABP_ActionHuman_WeponBlendAnimLayer_GreatSword { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_ActionHuman_Loco_SingleSwordEquipped { struct FAnimBlueprintGeneratedConstantData; }
+namespace ABP_ActionHuman_Loco_SingleSwordEquipped_Female { struct FAnimBlueprintGeneratedConstantData; }
 
 namespace ABP_WP090_PCSFTHSword_000_HandTest { struct FAnimBlueprintGeneratedConstantData; }
 
-namespace PPABP_WP060_JoseeZanbaMagicGreatSword_000 { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_ActionHuman_Loco_BareFistEquipped_Female { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_ActionHuman_Loco_SingleSwordEquipped_Female { struct FAnimBlueprintGeneratedConstantData; }
+namespace GameplayAbilities { struct FServerAbilityRPCBatch; }
 
 namespace ABP_ActionHuman_Loco_GreatSwordEquipped_Female { struct FAnimBlueprintGeneratedConstantData; }
 
+namespace PPABP_WP060_JoseeZanbaMagicGreatSword_000 { struct FAnimBlueprintGeneratedConstantData; }
 
-namespace ABP_Cinematics_HumanBone
+namespace ABP_ActionHuman_WeponBlendAnimLayer_GreatSword { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_ActionHuman_Loco_BareFistEquipped_Female { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_ActionHuman_Loco_SingleSwordEquipped { struct FAnimBlueprintGeneratedConstantData; }
+
+
+namespace PPABP_Gobbo
+{
+	struct FAnimBlueprintGeneratedMutableData;
+	struct FAnimBlueprintGeneratedConstantData;
+}
+
+namespace HumanBone_AuxBone_CtrlRig
+{
+	class URigVMMemory_Literal;
+	class URigVMMemory_Work;
+}
+
+namespace CR_BF_GiantNBone_AuxBone
+{
+	class URigVMMemory_Literal;
+	class URigVMMemory_Work;
+}
+
+namespace ABP_ActionHuman
 {
 	struct FAnimBlueprintGeneratedConstantData;
 	struct FAnimBlueprintGeneratedMutableData;
@@ -38,13 +56,7 @@ namespace PPABP_CopyPose
 	struct FAnimBlueprintGeneratedMutableData;
 }
 
-namespace ABP_ActionHuman
-{
-	struct FAnimBlueprintGeneratedConstantData;
-	struct FAnimBlueprintGeneratedMutableData;
-}
-
-namespace ABP_ActionHuman_WeponBlendAnimLayer
+namespace ABP_ActionHuman_Loco_BareFistEquipped
 {
 	struct FAnimBlueprintGeneratedConstantData;
 	struct FAnimBlueprintGeneratedMutableData;
@@ -56,28 +68,22 @@ namespace ABPL_Cinematics_ShoeSole
 	struct FAnimBlueprintGeneratedMutableData;
 }
 
+namespace ABP_ActionHuman_WeponBlendAnimLayer
+{
+	struct FAnimBlueprintGeneratedConstantData;
+	struct FAnimBlueprintGeneratedMutableData;
+}
+
 namespace PPABP_BF_GiantNolegs
 {
 	struct FAnimBlueprintGeneratedConstantData;
 	struct FAnimBlueprintGeneratedMutableData;
 }
 
-namespace ABP_ActionHuman_Loco_BareFistEquipped
-{
-	struct FAnimBlueprintGeneratedMutableData;
-	struct FAnimBlueprintGeneratedConstantData;
-}
-
-namespace ABPL_Cinematics_SkeletalControl
+namespace ABP_Cinematics_HumanBone
 {
 	struct FAnimBlueprintGeneratedConstantData;
 	struct FAnimBlueprintGeneratedMutableData;
-}
-
-namespace HumanBone_AuxBone_CtrlRig
-{
-	class URigVMMemory_Literal;
-	class URigVMMemory_Work;
 }
 
 namespace PPABP_BodyBase
@@ -86,13 +92,7 @@ namespace PPABP_BodyBase
 	struct FAnimBlueprintGeneratedMutableData;
 }
 
-namespace CR_BF_GiantNBone_AuxBone
-{
-	class URigVMMemory_Literal;
-	class URigVMMemory_Work;
-}
-
-namespace PPABP_Gobbo
+namespace ABPL_Cinematics_SkeletalControl
 {
 	struct FAnimBlueprintGeneratedConstantData;
 	struct FAnimBlueprintGeneratedMutableData;

@@ -914,6 +914,48 @@
     "ECC_MAX = 33"
    ]
   },
+  "ECommonUserOnlineContext": {
+   "kind": "enum",
+   "values": [
+    "Game = 0",
+    "Default = 1",
+    "Service = 2",
+    "ServiceOrDefault = 3",
+    "Platform = 4",
+    "PlatformOrDefault = 5",
+    "Invalid = 6",
+    "ECommonUserOnlineContext_MAX = 7"
+   ]
+  },
+  "ECommonUserPrivilege": {
+   "kind": "enum",
+   "values": [
+    "CanPlay = 0",
+    "CanPlayOnline = 1",
+    "CanCommunicateViaTextOnline = 2",
+    "CanCommunicateViaVoiceOnline = 3",
+    "CanUseUserGeneratedContent = 4",
+    "CanUseCrossPlay = 5",
+    "Invalid_Count = 6",
+    "ECommonUserPrivilege_MAX = 7"
+   ]
+  },
+  "ECommonUserPrivilegeResult": {
+   "kind": "enum",
+   "values": [
+    "Unknown = 0",
+    "Available = 1",
+    "UserNotLoggedIn = 2",
+    "LicenseInvalid = 3",
+    "VersionOutdated = 4",
+    "NetworkConnectionUnavailable = 5",
+    "AgeRestricted = 6",
+    "AccountTypeRestricted = 7",
+    "AccountUseRestricted = 8",
+    "PlatformFailure = 9",
+    "ECommonUserPrivilegeResult_MAX = 10"
+   ]
+  },
   "EComponentCreationMethod": {
    "kind": "enum",
    "values": [
@@ -955,6 +997,24 @@
     "Special = 17",
     "ControllerHand_Count = 18",
     "EControllerHand_MAX = 19"
+   ]
+  },
+  "EDLCGroup": {
+   "kind": "enum",
+   "values": [
+    "Group0 = 0",
+    "Group1 = 1",
+    "MAX = 2"
+   ]
+  },
+  "EDLCType": {
+   "kind": "enum",
+   "values": [
+    "DLC1 = 0",
+    "DLC2 = 1",
+    "DLC3 = 2",
+    "DLC4 = 3",
+    "MAX = 4"
    ]
   },
   "EDataValidationResult": {
@@ -1024,6 +1084,21 @@
     "Closed = 2",
     "Narrow = 3",
     "MAX = 4"
+   ]
+  },
+  "EGameFlowTitleMenuType": {
+   "kind": "enum",
+   "values": [
+    "None = 0",
+    "NewGame = 1",
+    "Continue = 2",
+    "LoadGame = 3",
+    "NewGame_LouRescue = 4",
+    "LoadGame_LouRescue = 5",
+    "GotoAfterEndingAfterHarmonyMoon = 6",
+    "Tutorial = 7",
+    "QuitGame = 8",
+    "MAX = 9"
    ]
   },
   "EGameInputAttribute": {
@@ -1154,6 +1229,35 @@
     "BlendParameter = 1",
     "GlobalParameter = 2",
     "EMaterialParameterAssociation_MAX = 3"
+   ]
+  },
+  "EMenuCategory": {
+   "kind": "enum",
+   "values": [
+    "GameMenu = 0",
+    "SystemMenu = 1",
+    "Indicator = 2",
+    "EMenuCategory_MAX = 3"
+   ]
+  },
+  "EMenuLayer": {
+   "kind": "enum",
+   "values": [
+    "Base = 0",
+    "Movie = 1",
+    "GameObject = 2",
+    "ObjectiveHUD = 3",
+    "PlayerHUD = 4",
+    "GameMenu = 5",
+    "GameDialog = 6",
+    "ScenarioDialog = 7",
+    "ScreenMask = 8",
+    "GameInformation = 9",
+    "ApplicationMenu = 10",
+    "ApplicationDialog = 11",
+    "NetworkIndicator = 12",
+    "Debug = 13",
+    "Max = 14"
    ]
   },
   "EMontageNotifyTickType": {
@@ -1879,6 +1983,15 @@
     "TG_MAX = 8"
    ]
   },
+  "ETitleProgressType": {
+   "kind": "enum",
+   "values": [
+    "Normal = 0",
+    "AfterMoonOfCraving = 1",
+    "LouReliefs = 2",
+    "Max = 3"
+   ]
+  },
   "ETouchIndex": {
    "kind": "enum",
    "values": [
@@ -1991,6 +2104,16 @@
     "TRAVEL_Partial = 1",
     "TRAVEL_Relative = 2",
     "TRAVEL_MAX = 3"
+   ]
+  },
+  "EUISaveDataStatus": {
+   "kind": "enum",
+   "values": [
+    "FutureVersion = 254",
+    "Broken = 255",
+    "NoFile = 0",
+    "Valid = 1",
+    "EUISaveDataStatus_MAX = 256"
    ]
   },
   "EUnit": {
@@ -4359,6 +4482,24 @@
     "WPlane": "0x000030"
    }
   },
+  "FMenuContext": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000038",
+   "align": "0x000008",
+   "members": {
+    "MenuClass": "0x000000",
+    "MenuName": "0x000008",
+    "UIGroupName": "0x000010",
+    "Layer": "0x000018",
+    "Category": "0x000019",
+    "LayerPriorityOffset": "0x00001C",
+    "bExclusiveFlag": "0x000020",
+    "bRestrictiveFlag": "0x000021",
+    "Caller": "0x000028",
+    "UIObject": "0x000030"
+   }
+  },
   "FMeshUVChannelInfo": {
    "kind": "struct",
    "base": null,
@@ -5528,6 +5669,17 @@
     "ReturnValue": "0x000010"
    }
   },
+  "Params::KismetStringLibrary_Concat_StrStr": {
+   "kind": "struct",
+   "base": null,
+   "size": "0x000030",
+   "align": "0x000008",
+   "members": {
+    "A": "0x000000",
+    "B": "0x000010",
+    "ReturnValue": "0x000020"
+   }
+  },
   "Params::KismetStringLibrary_Contains": {
    "kind": "struct",
    "base": null,
@@ -6635,6 +6787,25 @@
     "ImportedSize": "0x000138"
    }
   },
+  "UTitleMenuUIObject": {
+   "kind": "class",
+   "base": "UUIObjectBase",
+   "size": "0x0000A0",
+   "align": "0x000008",
+   "members": {
+    "TitleCharacter": "0x000090",
+    "CharacterActor": "0x000098"
+   }
+  },
+  "UUIObjectBase": {
+   "kind": "class",
+   "base": "UObject",
+   "size": "0x000060",
+   "align": "0x000008",
+   "members": {
+    "TopMenuContext": "0x000028"
+   }
+  },
   "UUInt16Property": {
    "kind": "class",
    "base": "UNumericProperty",
@@ -6727,6 +6898,7 @@
   "UEngine::GetEngine": "predefined",
   "UGameSystemManager::GetCharacterCustomizeSystem": "GameSystemManager.GetCharacterCustomizeSystem",
   "UGameplayStatics::SpawnObject": "GameplayStatics.SpawnObject",
+  "UKismetStringLibrary::Concat_StrStr": "KismetStringLibrary.Concat_StrStr",
   "UKismetStringLibrary::Contains": "KismetStringLibrary.Contains",
   "UKismetStringLibrary::Conv_NameToString": "KismetStringLibrary.Conv_NameToString",
   "UKismetStringLibrary::Conv_StringToName": "KismetStringLibrary.Conv_StringToName",
